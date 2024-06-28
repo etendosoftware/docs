@@ -19393,17 +19393,65 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 -  :material-translate: Spanish: [Platform Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
 #### Modules
-##### Print Document Web Service
 
-:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
+##### Dependency Manager
 
-:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
 
-It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
+The user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc.
 
 !!! info
-    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
+    For more information, visit the [Dependency Manager Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager.md)
 
+##### Dynamic App 
+
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
+
+Dynamic App allows you to create sub applications in Etendo Mobile.
+
+!!! info
+    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
+
+##### EAN 128
+
+:octicons-package-16: Javapackage: `com.smf.ean128`
+
+EAN 128 allows to use bar code in your application
+
+!!! info
+    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
+
+##### Etendo Advanced Security
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
+
+Etendo Advanced Security allows extending and enhancing some of the security features of the system.
+
+!!! info
+    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
+
+##### Etendo Async Processes
+
+:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
+
+##### Etendo Reactor
+
+:octicons-package-16: Javapackage: `com.etendoerp.reactor`
+
+##### Etendo RX
+
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
+
+##### Javax XML SOAP API
+
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+
+This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+
+!!! info
+    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
 
 
 ##### Number To Word (English)
@@ -19417,16 +19465,16 @@ It provides the infrastructure to convert a number into its equivalent in words.
 !!! info
     For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
+##### Print Document Web Service
 
-##### Javax XML SOAP API
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
-
+    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 
 ##### Report Cache Management
 
@@ -19436,43 +19484,6 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 
 !!! info
     For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
-
-##### Etendo Advanced Security
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
-
-Etendo Advanced Security allows extending and enhancing some of the security features of the system.
-
-!!! info
-    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
-
-##### Dynamic App 
-
-:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
-
-Dynamic App allows you to create sub applications in Etendo Mobile.
-
-!!! info
-    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
-        
-##### EAN 128
-
-:octicons-package-16: Javapackage: `com.smf.ean128`
-
-EAN 128 allows to use bar code in your application
-
-!!! info
-    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
-
-##### Etendo RX
-
-:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
-
-##### Etendo Reactor
-
-:octicons-package-16: Javapackage: `com.etendoerp.reactor`
 
 ##### Webhook Events
 
@@ -19484,14 +19495,9 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
     For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
 
 
-##### Etendo Async Processes
-
-:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
-
 ---
 
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
- by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Advanced Security
@@ -31595,6 +31601,67 @@ All the Etendo development tasks used with the core in sources should still be w
     Etendo Core, (**Sources** and **Jar**), allows the user to work with  modules in both formats.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Format xml
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Format xml
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/format-xml
+## Article Content: 
+#### Overview
+
+`Format.xml` is a configuration file for Etendo installation that allows configuring the format output for numeric values. It is used by the different **numeric references** in Application Dictionary, but also can be used in **manual** code. By default, Etendo ships a `Format.xml.template` that can be copied as it is without any modification.
+
+!!!info
+    If you are building Etendo from sources, the setup-properties binary makes a copy of it for you.
+
+#### Format.xml example
+
+```xml
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <!-- license -->
+    <Formats>
+    <!-- other formats -->
+       <Number name="euroEdition"
+           decimal="." grouping="," formatOutput="#0.00" formatInternal="#0.00" />
+    <!-- other formats -->
+    </Formats>
+```
+
+##### Attributes
+
+  * **name**: Name of the format, used to identify it.
+  * **decimal**: Symbol (character) to be used as decimal separator.
+  * **grouping**: Symbol (character) to be used as grouping separator (used in thousands).
+  * **formatOutput**: Format mask used to mask and print numeric inputs. It must be `DecimalFormat` output format type: For more information, see [DecimalFormat](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html){target="\_blank"} class.
+  * **formatInternal**: Used internally by `XmlEngine`.
+
+#### Application dictionary - format name mapping
+
+| AD Reference     | Output format       |
+|------------------|---------------------|
+| Decimal, Amount  | `euroEdition`       |
+| Quantity         | `qtyEdition`        |
+| Price            | `priceEdition`      |
+| Integer          | `integerEdition`    |
+| Number           | `generalQtyEdition` |
+| Others numeric   | `generalQtyEdition` |
+
+#### Important Notes
+
+Ultimately, copy `$EtendoERP/config/Format.xml.template` as `Format.xml` and `./gradlew compile.complete -Dtab=xx -Dtr=no` because this way the changes will be permament and will not be lost upon the next rebuild.
+
+#### Export to CSV format
+
+The export to CSV functionality uses the `Format.xml` information to format the data (specifically, it uses the decimal separator defined for the system for numeric values).
+
+This can be overwritten in case it is needed, by using the following preferences:
+
+  * **CSV Decimal Separator**: If this preference is defined, this will be used as the decimal separator for numbers.
+  * **CSV Field Separator**: If this preference is defined, this will be used as the field separator. Otherwise, a single comma `,` will be used.
+  * **CSV Text Encoding**: If this preference is set, this will be used as the encoding type of the generated file. The default encoding used is the Windows iso-8859-1, which will work correctly in Windows environments which use Microsoft Excel. Other popular encodings such as UTF-8 can be used in Linux or Mac environments which use other spreadsheets.
+
+This work is a derivative of [Format xml](http://wiki.openbravo.com/wiki/Format.xml){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Inventory Status
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Inventory Status
 ## Article URL: 
@@ -32134,6 +32201,281 @@ When a process is killed, the status in the process monitor will be *Killed by U
 ---
 
 This work is a derivative of [Processes](http://wiki.openbravo.com/wiki/Processes){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Selectors
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Selectors
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/selectors
+## Article Content: 
+### Selectors
+
+#### Overview
+
+In this section, the process to define selectors in the Etendo system is described.
+
+Selectors combine a suggestion box with a popup window with filter and sorting capabilities. They have a number of important features:
+
+  * They can be completely defined without manual coding.
+  * The selector definition (columns, search criteria, where clause) can be changed at runtime without re-compiling or re-starting the system.
+  * The selector makes it very easy to show linked information of a selected entity or search, sort and filter on linked information.
+  * The selector suggestion box, as well as the popup grid, support paging with lookahead. This makes them also suitable for large datasets.
+
+#### Selector Concept
+
+A selector is defined within the Application Dictionary, as part of a Reference definition (a domain type) and is used to represent foreign key references in the Etendo user interface.
+
+A selector consists of three parts:
+
+  * The reference definition.
+  * The selector header defining which table to select from and the where clause to use.
+  * The selector fields which define which columns are searched and what columns are shown in the popup window.
+
+#### Defining a Selector
+
+To define a new selector go to `Application Dictionary` > `Reference` window.
+Defining the selector is a three-step procedure:
+
+  1. Create a new reference.
+  2. Create a selector header.
+  3. Create zero or more selector fields.
+
+This section guides you through all three steps.
+
+##### Step 1: Define a Reference
+
+The reference is used in the column definition. The definition is shown below in the screenshot.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-2.png)
+
+A description of the fields:
+
+  * Name, Description and Help should be set to a specific value for the reference you are creating.
+  * Base Reference **must** be set to false.
+  * Parent Reference **must** be set to `OBUISEL_Selector_Reference`.
+  * Model, WAD and Runtime UI Implementation can be left empty most of the time.
+
+##### Step 2: Define the Selector
+
+After defining the reference, the selector information can be entered. This is also done in the reference window. Make sure that the reference window shows the reference you have created in step 1 then click **Defined Selector** in the top right of the window and press the **new** button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-3.png)
+
+A description of the fields:
+
+  * **Name and Help/Comment**: set these to values describing the selector.
+  * **Description**: this is used as the title of the popup window.
+  * **Template**: there should normally be only one option: Selector Template. Multiple options are possible if additional templates have been installed for selectors.
+  * **Table**: normally a selector selects from a table, select the relevant table from the list.
+  * **Column**: the column in the referenced table to which the foreign key column points. If nothing is set here (the default) then the primary key column is used.
+  * **Datasource**: can be set when no table is selected. A data source can be used to provide data which is not read from the database but is, for example, computed at runtime. For more information on Datasources, see the [Datasource](https://docs.etendo.software/latest/concepts/datasources.md) Developers Manual.
+  * **HQL Where Clause**: this where clause is used to filter the data read from the database.
+
+!!! Note
+    Currently it is not possible to use session variables in the where clause.
+
+!!! Note
+    When using properties of the entity in the whereclause always the prefix `e.` has to be used, for example `e.seqno`
+
+  * **Display Field**: this selector field is displayed in the drop-down of the suggestion box. Some specific aspects:
+    * An empty value (the default one) means that the identifier columns of the referenced table are used to display information in the suggestion box. This default value is often a good choice.
+    * Initially, when creating a selector, it is not possible to select a field here as no selector fields have been defined yet (see next section). After defining one or more selector fields, it is possible to choose one of these fields here.
+  * **Value Field**: this selector field is set as the value and stored in the database as the foreign key field. Some specific aspects:
+    * An empty value (the default one) means that the primary key column of the referenced table is used. This is by far the most common case and therefore a good choice for most if not practically all cases.
+    * Initially, when creating a selector, it is not possible to select a field here as no selector fields have been defined yet (see next section). After defining one or more selector fields, it is possible to choose one of these fields here.
+  * **Sort By Field**: this selector field is used to sort the records in the drop-down of the suggestion box. Some specific aspects:
+    * An empty value (the default one) means that the records are ordered by the values of the display field. And in case the display field is neither defined, the identifier columns of the referenced table are used to sort information in the suggestion box. This default is often a good choice.
+    * initially, when creating a selector, it is not possible to select a field here as no selector fields have been defined yet (see next section). After defining one or more selector fields, it is possible to choose one of these fields here.
+
+##### Step 3: Defining Selector Fields
+
+After defining the selector header, the next step is to define the selector field. A selector field is used for the following things:
+
+  * To define a column in the popup search grid.
+  * To define a column of the target table which is searched for the suggestion box.
+  * To define the display field of the suggestion box (what gets displayed when a user types in values in the field).
+  * To define the value field, the column which is used to set the value in the foreign key column.
+  * To define the sort by field of the suggestion box.
+
+A selector can have zero or more selector fields. It is possible to define a selector without selector fields. The system will use the default which is to show the identifier in the suggestion box and use the primary key of the referenced table as the value. The suggestion box is shown in the field but no popup window is shown. So this is a light-weight selector definition.
+
+To define a selector field click on the **Defined Selector Field** link shown in the top-right of the Defined Selector tab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-6.png)
+
+The description of the fields of the Defined Selector Field:
+
+  * **Name**: use a descriptive name here.
+  * **Property**: is a column/property from the table set in the selector header. This field is implemented using the selector itself. This makes it easy for a user to select the correct model property. It is possible to enter a property path. For the business partner table, it is possible, for example, to specify `name` which will show the name of the bank of the bank account of the business partner. See the [next section](#property-paths-showing-linked-information) on Property Paths for more information.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-7.png)
+
+  * **Description and Help/Comment**: set these to meaningful values for your specific case (see also the **Central Maintenance** field below). The description field is for future usage.
+  * **Show in grid**: if checked, then the field is visible in the popup grid. If not checked then the field is not shown in the popup grid. It can still be used as the value field, display field, sort by field or as a search field for the suggestion box.
+  * **Sorting of columns in a grid**: the order in which the columns are shown in the popup grid. Only relevant if **Show in grid** is checked.
+  * **Sortable**: determines if the user can sort on this column in the popup grid. Only relevant if **Show in grid** is checked.
+  * **Filterable**: determines if the user filter on this column in the popup grid. Only relevant if **Show in grid** is checked.
+  * **Central Maintenance**: if checked then the name, description and help/comment are copied/used from the column. This is handled by the [Synchronize Terminology](https://docs.etendo.software/latest/concepts/Element_and_Synchronize_Terminology.md) process.
+  * **Search in suggestion box**: as a default, the suggestion box will use the string entered by the user to search in the display field (set in the selector header) or identifier. You can select additional fields to search in by setting this field (Search in suggestion box) to yes/checking it. To make search field invisible just uncheck the field **show in grid**, then the field is only used to search and not displayed in the popup grid.
+
+!!! note
+    * If none of the selector fields have **show in grid** checked/set to yes, then no popup grid is available and the magnifier icon is not shown, the user can only select data through the suggestion box.
+    * when setting a column to filterable or sortable, it is possible that a decreasing performance is encountered with a table with many thousands of records. If this happens, contact the database administrator to optimize the table by adding indexes. Note that these new indexes have to be exported to the Etendo metadata using standard `export.database` procedures.
+
+##### Property Paths, Showing Linked Information
+
+The selector has a very powerful feature that makes it easy to show linked information in the suggestion box and popup windows.
+
+To give an example of linked information. For a business partner selector, it is quite easy to show the identifier of the business partner category. This linked information can take multiple steps, so it is possible to show the name of the bank of the bankaccount of the business partner. These two examples are entered like this in the property field of the Defined Selector Field:
+
+  * `businessPartnerCategory._identifier`
+  * `name`
+
+By using the dot (.), the path takes the next step in the model. The suggestion box in the Defined Selector Field window gives support in entering the correct path.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-8.png)
+
+This is then displayed like this:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-9.png)
+
+##### Table and Datasource
+
+A selector can retrieve its content from a table or from a Datasource. When in the selector definition a table is defined then on the server Etendo will create a datasource for this table. So internally for Etendo there is no real difference between a table or datasource for the selector.
+
+There are a number of use-cases for which using a datasource makes sense:
+
+  * When the data for a selector requires preprocessing after retrieval from the database.
+  * When the data in a selector is not even read from the database but computed in memory by the system.
+
+A datasource is implemented by a developer and then defined in the Application Dictionary. After this, it can be used to define selectors.
+
+!!!note
+    For more information on how to implement a datasource, see its [Datasources](https://docs.etendo.software/latest/concepts/datasources.md) page.
+
+##### Translated information
+
+The Selector and Selector Fields also allow you to specify translated versions of names and titles shown in the user interface. To use translated names and titles, go to the **Defined Selector translation** and **Defined Selector Field Translation** tabs. These tabs are available at the top of the window when editing a Selector or Selector Field.
+
+#### Using a Selector
+
+The next step is making use of the selector in the data model. The selector is the same as any other Reference in Etendo. The Reference is used in the definition of a Column. To use the defined selector and set it in a column, go to `Application Dictionary` > `Tables and Columns`. Then select the table and the column you want to set the reference for.
+
+Then, in the reference field, choose `OBUISEL_Selector` Reference. Then in the next combo box **Reference Search Key**, select the specific selector. In the screenshot below a Business Partner Selector is chosen.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-11.png)
+
+The column can be used to define a field in the Etendo window in a standard way. So in the Etendo Window/Tab/Field definition there is no special setting or handling required for the selector.
+
+After setting the reference in the column and using it in a specific window, you need to restart Etendo to see it in action.
+
+#### Changing a Selector at Runtime
+
+The selector definition itself can be changed at runtime without re-compiling the system. There are no real limits to what part of the selector definition which can be changed at runtime, a non-excluding list:
+
+  * Add/remove columns from the popup grid.
+  * Change the where clause.
+  * Change the fields which are searched as part of the suggestion box display.
+
+!!! note
+    In order to change a selector, the module it belongs to needs to be in development.
+    If not, then it is possible that the client-side javascript (representing the selector) is not refreshed automatically.
+
+#### Defining Out Fields
+
+The usual return values from a Selector is the record **id** and **indentifier**. In some cases the developer wants to return more fields and not only these two. You can mark a Selector Field as **Out Field** and will be part of the JavaScript returned object.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-13.png)
+
+!!! note
+    By default the **id** and **identifier** fields are part of the returned object.
+
+##### Using Out Fields in Manual Code (Advanced)
+
+You can use the New Selectors in manual code (not generated by WAD). You must include all the necessary JS imports. There is an empty hook function `onValueChanged` that you can override in your manual window, to perform any custom action. When the user picks a row, this function gets executed. By default it does not do anything.
+
+###### Example of Function
+
+!!! note
+    To test this code, you must have a browser with console enabled, e.g. Firefox with Firebug.
+
+```javascript
+    isc.OBSelectorLinkWidget.addProperties({
+      onValueChanged: function(selected) {
+        // selected is an object with members id and _identifier
+        // plus all Out Fields
+        window.console.log("%o", selected); 
+      }
+    });
+```
+
+In this case, all instances of the OBSelectorLinkWidget will execute the same function, this example function just prints the object passed as parameter.
+
+You can also only override the function on a particular instance.
+
+```javascript
+    // sc_C_Bpartner_One_ID is an instance of OBSelectorWidget or OBSelectorLinkWidget
+    sc_C_Bpartner_One_ID.onValueChanged = function(selected) {
+      window.console.log("%o", selected);
+    };
+```
+
+#### Providing a New Selector Template (Advanced)
+
+The selector definition is converted to javascript code using a template. The template is selected in the selector (see step 2 above). It is possible for a module to add a new template which can be used for creating selectors.
+Creating a new template needs to be done by a developer with a good understanding of Etendo.
+
+Also to implement a new template it is necessary to understand the template processing and template handling functionality used by Etendo. The [Etendo Architecture](https://docs.etendo.software/latest/concepts/etendo-architecture.md) page provides detailed information. It discusses both template processing, caching, i18n and also gives pointers on how to implement a custom template.
+
+The template used for the selector can be found in the source tree of the `org.openbravo.userinterface.selector` module inside the `org.openbravo.userinterface.selector.templates` package in the `selector.ftl` file.
+
+A custom template should be created inside a separate module. To make use of it, define it inside `Application Dictionary` > `Templates`.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-15.png)
+
+The main fields to set:
+
+  * The TemplateClasspathLocation should point to the location in the source tree of the custom template.
+  * The ComponentType **must** be set to selector. The ComponentType determines if the template can be selected in the selector definition.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Selectors-16.png)
+
+When defining selectors, the user can select the custom template.
+
+#### Customizing the Look and Feel of the Selector
+
+The styling of the selector is mostly automatically derived from the styling of other components. Only the icon on the right of the field needs to be styled, see [this page](https://docs.etendo.software/latest/concepts/skins.md#selector) for more information.
+
+#### Troubleshooting
+
+##### The Suggestion Box does not Filter
+
+**Symptom** : When typing in values in the selection box it does not filter, all records are shown.
+
+**Cause** : This can happen when you have accidentally added boolean/yes/no fields to be **search in suggestionbox**.
+
+**Solution** : uncheck the **search in suggestionbox** fields for the boolean/yes/no fields, searching these fields is not supported by the selector in the suggestion box.
+
+##### The Suggestion Box is Always Empty
+
+**Symptom** : When typing values in the selection field the suggestion box is empty or shows much less results than expected, also selecting the direct drop down results in an empty/smaller than expected list.
+
+**Cause** : this happens because there are **search in suggestionbox** fields which require a join to a table while the foreign key is not always set. Only the records which have a value in the foreign key are shown.
+
+**Solution** : if the foreign key selection field is the only one on which is filtered this is fine, however if there are multiple search fields then searching on non-mandatory foreign key fields is not supported by the selector.
+
+#### Advanced Topics
+
+##### HQL Transformers
+
+It is possible to modify an HQL query entirely via java and dependency injection using transformers. To implement the new functionality, visit [HQL Transformers](https://docs.etendo.software/latest/how-to-guides/How_to_create_a_HQL_Based_Table.md#HQL_Transformers).
+
+##### Using foreign keys in HQL Custom queries
+
+In order to do that, the HQL select clause for that property needs to point to an entity (i.e. e.organization, instead of e.organization.name). Then in the definition of the selector field we have to select a Table reference that points to the target entity.
+
+---
+This work is a derivative of [Selectors](http://wiki.openbravo.com/wiki/Selectors){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Tables
@@ -36606,6 +36948,101 @@ This work is a derivative of [How to create an alert](http://wiki.openbravo.com/
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create and Update Business Entities Using Web Services
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Business Entities Using Web Services
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services
+## Article Content: 
+### How to Create and Update Business Entities Using Web Services
+
+#### Overview
+
+The aim of this section is to show how to use some of **Etendo's available web services** to create business entities and/or to update them.
+
+Therefore, these web services features will be explained in detail:
+
+  * **JSON REST**
+  * **Secure Web Services**
+
+#### Execution Steps
+
+To add or update entities, use `HTTP` commands. To execute any `HTTP commands`, a [**Java class**](https://docs.etendo.software/latest/how-to-guides/how-to-call-an-etendo-webservice-from-java.md) could be created and use the available classes related to the HTTP protocol.
+
+!!!note
+    We could do the same for any other protocol or scripting language like PHP.
+
+Alternatively, use any plugin or application like [**Postman**](https://www.postman.com/downloads/){target="\_blank"} which allows executing any HTTP command on an URL of your choice. In the following examples we will make use of this plugin and we will assume that our Etendo environment is running on a local machine via `http://localhost:8080/etendo`.
+
+##### JSON REST
+
+We are about to create a new **invoice header**, so that the URL for this case will be:
+
+    http://localhost:8080/etendo/org.openbravo.service.json.jsonrest/Invoice
+
+In `Authorization` we have to select the **Basic Auth** type and add the credentials which we use to get access to the **Web Service** (which are by the way the same that we use to get into the application). Take into account that the visibility of the data within the web service will be the same as if you logged into the application with the default role of this user. The `Content-Type` of the Request will be `application/json` and the **body** content of the request will be as follows, where the `ID`s will be replaced by those needed to be present in the invoice. 
+
+
+We have set the attribute `salesTransaction` to `true`, indicating that this is a sales invoice:
+
+
+```json
+    {
+      "data":
+      {
+        "entityName":          "Invoice",
+        "active":              true,
+        "organization":        { "id": "E443A31992CB4635AFCAEABE7183CE85" },
+        "salesTransaction":    true,
+        "documentType":        { "id": "7FCD49652E104E6BB06C3A0D787412E3" },
+        "transactionDocument": { "id": "7FCD49652E104E6BB06C3A0D787412E3" },
+        "documentNo":          "1000050",
+        "accountingDate":      "2012-05-29",
+        "invoiceDate":         "2012-05-29",
+        "currency":            { "id": "102" },
+        "priceList":           { "id": "AEE66281A08F42B6BC509B8A80A33C29" },
+        "businessPartner":     { "id": "9E6850C866BD4921AD0EB7F7796CE2C7" },
+        "partnerAddress":      { "id": "BFE1FB707BA84A6D8AF61A785F3CE1C1" },
+        "paymentTerms":        { "id": "66BA1164A7394344BB9CD1A6ECEED05D" },
+        "paymentMethod":       { "id": "A97CFD2AFC234B59BB0A72189BD8FC2A" }
+      }
+    }
+```
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-0.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-1.png)
+
+We use the HTTP `POST` command with this data. We will get a `200 OK` response back, indicating that everything went well with the invoice data that was just created.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-2.png)
+
+To make an update, we will use the `PUT` command. For instance, to update a Business Partner's name, we will execute that command on this URL:
+
+  `http://localhost:8080/etendo/org.openbravo.service.json.jsonrest/BusinessPartner`
+
+with the following content:
+
+```json
+    {
+      "data":
+      {
+        "entityName": "BusinessPartner",
+        "id":         "A6750F0D15334FB890C254369AC750A8",
+        "name":       "New Name"
+      }
+    }
+```
+
+##### Secure Web Services
+
+!!!note
+    To know more about how Etendo introduces its own Secure Web Services with unique features, visit [How to Use Secure Webservices](https://docs.etendo.software/latest/how-to-guides/how-to-use-secure-webservices.md).
+
+---
+
+This work is a derivative of [How to Create and Update Business Entities using Web Services](https://wiki.openbravo.com/wiki/How_to_Create_And_Update_Business_Entities_Using_Web_Services){target="\_blank"} by [Openbravo Wiki](https://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Create and Update Translation Modules
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Translation Modules
 ## Article URL: 
@@ -38520,6 +38957,84 @@ This work is a derivative of [How to develop a DAL background process](http://wi
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How To Exclude Database Physical Objects From Model
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Exclude Database Physical Objects From Model
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model
+## Article Content: 
+### How To Exclude Database Physical Objects From Model
+
+#### Overview
+
+Etendo Classic keeps track of the database physical objects (such as tables, views, functions, sequences or triggers) through an utility called `dbsourcemanager`. This utility is able to export all the database model object definitions to `XML` files, which are stored in the `src-db/database/model` folder (both in Core and in modules).
+
+This tool is designed to work in a multiplatform environment, both supporting Oracle and PostgreSQL. This means that sometimes if specific syntax or features of a particular Database Management System are used, the tool might not support them.
+
+In these cases, a possible approach is to create these specific objects using a Module Script (you can find more about them [here](https://docs.etendo.software/latest/how-to-guides/how-to-create-build-validations-and-module-scripts.md)), and then exclude them from the database physical model of Etendo Classic.
+
+#### Excluding objects in modules
+
+Objects are excluded through a file called `excludeFilter.xml`. This file should be located inside the `src-db/database/model/` folder of the module (if it doesn't exist, you will need to create it), and it follows a very simple XML format. Here is an example:
+
+```xml
+    <?xml version="1.0"?>
+      <vector>
+        <excludedTable name="TEST_TABLE"/>
+        <excludedView name="TEST_VIEW"/>
+        <excludedFunction name="TEST_FUNCTION"/>
+        <excludedTrigger name="TEST_TRIGGER"/>
+        <excludedSequence name="TEST\_%"/>
+      </vector>
+```
+
+This file will exclude the table **TEST_TABLE**, the view **TEST_VIEW**, the function **TEST_FUNCTION**, and the trigger **TEST_TRIGGER** from the model, and therefore they will be neither exported nor removed, nor modified in any way during the normal database management tasks (`update.database` and `export.database`).
+
+The use of [SQL Wildcards](https://www.w3schools.com/sql/sql_wildcards.asp){target="\_blank"} is supported, so the same treatment will be done to all sequences whose name begins with **TEST_**. All exclusions whose name contain the `%` character will be treated as wildcards. When defining an exclusion using a wildcard, remember to escape with a backslash the `_` characters, unless it is meant to be used as a substitute for any single character.
+
+---
+
+This work is a derivative of [How to Exclude Database Physical Objects from Model](https://wiki.openbravo.com/wiki/How_to_exclude_Database_Physical_Objects_From_Model){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Export Sample Data
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Export Sample Data
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data
+## Article Content: 
+### How to Export Sample Data
+
+#### Overview
+
+The objective of this document is to explain how the Etendo sample data is exported using the `export.sample.data` task.
+
+#### Sample Data Dataset
+
+The tables that will be exported when the `export.sample.data` task is run are included in the Client Definition dataset. You can read more about datasets in [Datasets](https://docs.etendo.software/latest/concepts/Datasets.md).
+
+!!!note 
+    The way the `export.sample.data` task currently works, the SQL Where Clause defined in the dataset tables of the Client Definition dataset will be ignored and replaced by a client filter.
+
+#### Exporting the Sample Data
+
+To export the sample data of a given client, this `export.sample.data` gradle task, available from the Etendo root folder must be run. It has the following parameters:
+
+  * Client: The name of the client whose sample data will be exported.
+  * Module: The module where the sample.data will be exported. The exported sample data will be stored in the referencedata/sampledata/clientName folder relative to the module path. To export to the core sample data folder, 'org.openbravo' must be specified in the client parameter.
+  * ExportFormat (optional): It is used to specify the export format of the sample data. Currently there are two available export formats: xml (the default one) and copy. The copy export format will be only available when exporting the sample data from a PostgreSQL database. Sample data exported with the copy format can only be imported in PostgreSQL databases. If the copy parameter is used in an Oracle environment, a warning message will be shown and the xml format will be used instead.
+
+For instance, to export the sample data of the 'F&B International Group' client to core using the COPY format, the following command must be used:
+
+```bash title="Terminal"
+./gradlew export.sample.data -Dclient="F&B International Group" -Dmodule=org.openbravo -DexportFormat=copy
+```
+
+For a more detailed info, visit [QA Sample Data Export](https://docs.etendo.software/latest/how-to-guides/QA-sampledata-export.md).
+
+---
+
+This work is a derivative of [How to Export Sample Data](http://wiki.openbravo.com/wiki/How_to_export_sample_data){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Implement a Business Event Handler
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Implement a Business Event Handler
 ## Article URL: 
@@ -38908,7 +39423,7 @@ Partners will have access to Etendo’s public and commercial repositories to do
 To generate the `build.gradle` with all the necessary information to publish, execute the following task:
 
 ``` bash title="Terminal"
-./gradlew createModuleBuild `-Ppkg=<javapackage> -Prepo=<repositoryURL> --info
+./gradlew createModuleBuild -Ppkg=<javapackage> -Prepo=<repositoryURL> --info
 ```
 Example:
 ``` bash title="Terminal"
@@ -45421,7 +45936,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q1.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.7){target="_blank"} | 31/05/2024 | 24.1.7 | QAA |  | :white_check_mark: |
+| [24Q1.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.8){target="_blank"} | 14/06/2024 | 24.1.8 | QAA |  | :white_check_mark: |
+| [24Q1.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.7){target="_blank"} | 31/05/2024 | 24.1.7 | C |  | :white_check_mark: |
 | [24Q1.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.6){target="_blank"} | 17/05/2024 | 24.1.6 | C |  | :white_check_mark: |
 | [24Q1.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.5){target="_blank"} | 10/05/2024 | 24.1.5 | C |  | :white_check_mark: |
 | [24Q1.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.4){target="_blank"} | 03/05/2024 | 24.1.4 | C | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso){target="_blank"} | :white_check_mark: |
@@ -45544,7 +46060,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.16.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.0){target="_blank"} | 20/05/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.16.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.1){target="_blank"} | 14/06/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.16.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.0){target="_blank"} | 20/05/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.15.0){target="_blank"} | 08/05/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.14.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.14.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.13.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.3){target="_blank"} | 22/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
@@ -45618,7 +46135,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.8.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.1){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.7.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.6.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
 | [1.5.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.2){target="_blank"} | 16/07/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
@@ -45635,7 +46153,6 @@ Article URL: https://etendo.software
 | 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
 | 1.0.100 | 06/01/2022 | 21.4.0 | 22.1.3 | C | |
 | 1.0.000 | 03/01/2022 | 21.4.0 | 22.1.3 | C | |
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Financial Extensions Bundle
@@ -45647,7 +46164,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.14.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.1){target="_blank"} | 26/04/2024 | 23.1.4 | 24.1.x | CS | :white_check_mark: |
+| [1.14.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.2){target="_blank"} | 14/06/2024 | 23.1.4 | 24.1.x | CS | :white_check_mark: |
+| [1.14.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.1){target="_blank"} | 26/04/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
 | [1.14.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.0){target="_blank"} | 28/03/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
 | [1.13.5](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.5){target="_blank"} | 15/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
@@ -45694,7 +46212,7 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.11.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.1){target="_blank"} | 17/05/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.11.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.1){target="_blank"} | 17/05/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.11.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.0){target="_blank"} | 03/05/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.10.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.1){target="_blank"} | 19/04/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
@@ -45732,7 +46250,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.1){target="_blank"} | 31/05/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.2){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.1){target="_blank"} | 31/05/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | 22.1.0 | 24.1.0 | C | :white_check_mark: |
 ==ARTICLE_END==
@@ -46096,7 +46615,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.1){target="_blank"} | 21/05/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.0){target="_blank"} | 13/06/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.1){target="_blank"} | 21/05/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.0){target="_blank"} | 20/05/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.0.0){target="_blank"} | 29/04/2024 | 23.4.0 | * | C   | :white_check_mark:|
 ==ARTICLE_END==
