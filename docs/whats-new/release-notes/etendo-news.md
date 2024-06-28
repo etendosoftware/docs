@@ -15,12 +15,10 @@ tags:
 
 ### Copilot Extensions
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <a href="/user-guide/etendo-copilot/bundles/sql-expert/"><strong>SQL Expert</strong></a><br>
-    With the SQL Expert, you will be allowed to <strong>formulate questions</strong> in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
-  </div>
-</div>
+[**SQL Expert**](../../user-guide/etendo-copilot/bundles/sql-expert.md)
+
+In the version [1.1.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
+With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
 
 ---
 
@@ -28,66 +26,44 @@ tags:
 
 ### Copilot Extensions
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <a href="/user-guide/etendo-copilot/bundles/copilot-purchase-expert/"><strong>Purchase Expert Assistant</strong></a><br>
-    Your purchase orders are made easier with the new Copilot assistant. Interact via <strong>text or by uploading images or PDFs</strong> with the purchase order data, and the assistant will automatically generate a draft.
-  </div>
-</div>
+[**Purchase Expert Assistant**](../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+
+In the version [1.1.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
+Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
 
 ### Spanish Localization
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <strong>Optimizations</strong></a><br>
-    As of version 1.9.4 of this bundle, we have simplified maintenance by replacing the <code>org.openbravo.util.saaj.impl</code> and <code>org.openbravo.util.javax.xml.soap</code> module dependencies with the new Maven dependencies <a href="https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3" target="\_blank"><strong>Jakarta SOAP Implementation</strong></a> and <a href="https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2" target="\_blank"><strong>Jakarta SJOAP with Attachments API</strong></a>.
-    To take advantage of these enhancements, when upgrading to version 1.9.4 or higher, be sure to manually remove the old modules from the <strong>modules directory</strong></a> so that the new build will use the new dependencies.
-  </div>
-</div>
+**Optimizations**
+
+As of version [1.9.4](../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [**Jakarta SOAP Implementation**](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [**Jakarta SOAP with Attachments API**](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
+
+To take advantage of these enhancements, when upgrading to version 1.9.4 or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
 
 ---
-
 
 ## March 2024
 
 ### Etendo Classic
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <strong>Optimizations</strong></a><br>
-    As of version 24.1.0, the support for <a href="https://tomcat.apache.org/download-90.cgi/" target="\_blank"><strong>Tomcat 9</strong></a> has been updated.
-  </div>
-</div>
+**Optimizations**
+
+As of version [24.1.0](../../whats-new/release-notes/etendo-classic/release-notes.md), the support for [**Tomcat 9**](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
 
 ### Copilot Extensions
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <a href="/developer-guide/etendo-copilot/available-tools/ocr-tool/"><strong>OCR Tool</strong></a><br>
-    With the OCR Tool designed for <strong>optical character recognition</strong>, you will be able to extract text from images or PDF files.
-  </div>
-</div>
+[**OCR Tool**](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+
+In the version [1.0.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
+With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
 
 ### Procurement Extensions
 
+[**Purchase Invoice Validation**](../../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <a href="/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation/"><strong>Purchase Invoice Validation </strong></a><br>
-    In the version 1.0.0 of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to <strong>avoid the duplication of purchase invoices</strong> through established rules and automatic validations.
-  </div>
-</div>
+In the version [1.0.0](../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
 
 ### Platform Extensions
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <strong>Optimizations</strong></a><br>
-    As of version 1.13.2 of this bundle, the module dependency <code>org.openbravo.util.javax.xml.soap</code> has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the <a href="https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2" target="\_blank"><strong>Maven Jakarta SOAP with Attachments API dependency</strong></a>.
-  </div>
-</div>
+**Optimizations**
 
-
- 
-
- 
+As of version [1.13.2](../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [**Jakarta SOAP with Attachments API**](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
