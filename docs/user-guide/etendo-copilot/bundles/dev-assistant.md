@@ -1,5 +1,6 @@
 ---
 tags:
+    - Alpha
     - Copilot
     - IA
     - Windows, tabs and fields
@@ -15,6 +16,17 @@ tags:
 This assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
 It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
 
+!!!warning
+    This intelligent Assistant is currently in its alpha testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, and checking the "link to a parent column" option in a column of a tab.
+
+    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
+
+    Thank you for your understanding as we continue to improve the functionality and reliability of this tool.
+
+## Installation
+You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+
+
 ## Components
 
 The Dev Assistant is composed of the following components:
@@ -26,19 +38,25 @@ The Dev Assistant is composed of the following components:
 
 ## Functionality
 
-To use this tool, it is necessary to log in as System Administrator role.
 
-1. Ask the **Dev Assistant** for a window to add in the system and  the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name.
+!!! info
+Its posible to create: 
+
+To use this tool, it is necessary to log in as `System Administrator` role.
+
+1. Ask the **Dev Assistant** for a window to add in the system and the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
 
 2. The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
 
 3. The user must confirm the steps or set up a modification about the given information.
 
-4. Recompile and restart Tomcat to a successful application of changes.
+4. Recompile and restart Tomcat to a successful application of changes. 
+
+```bash Title="Terminal"
+./gradlew smartbuild --info 
+```
 
 5. The window can be viewed with the user role.
-
-
 
 
 ## Usage Example 
