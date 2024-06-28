@@ -477,6 +477,7 @@ nav:
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://etendo.software"
     - Release Notes:
+      - ✨ Etendo News: whats-new/release-notes/etendo-news.md
       - Etendo Classic:
         - Release Notes: whats-new/release-notes/etendo-classic/release-notes.md
         - Plugins:
