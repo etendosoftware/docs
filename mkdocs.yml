@@ -260,7 +260,7 @@ nav:
           - Resolving Dependencies on GitHub: developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github.md
       - Concepts:
         - Alerts: developer-guide/etendo-classic/concepts/Alerts.md
-#        - Application Menu: developer-guide/etendo-classic/concepts/Application_Menu.md
+        - Application Menu: developer-guide/etendo-classic/concepts/application-menu.md
 #        - Attachments: developer-guide/etendo-classic/concepts/Attachments.md
 #        - Authentication: developer-guide/etendo-classic/concepts/Authentication.md
 #        - Categories: developer-guide/etendo-classic/concepts/Categories.md
