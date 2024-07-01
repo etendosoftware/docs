@@ -13,7 +13,7 @@ This section explains how a component can be added to the Etendo main navigation
 
 Some main features of the Etendo Classic navigation bar components:
 
-  * a navigation bar component can be any [Smartclient]() canvas. 
+  * a navigation bar component can be any [Smartclient](https://smartclient.com/product/documentation.jsp){target="blank"} canvas. 
   * modules can provide new navigation bar components. 
   * the position of a navigation bar component can be controlled. 
   * navigation bar components can be enabled by role. 
@@ -87,7 +87,7 @@ The example module has a hello world component which provides the current logged
 
 The template contains the actual javascript. A template consists of two parts:
 
-  1. a template file (the template source) ending on `.FTL` (a [freemarker]() extension) which is located in the source tree (in the classpath). 
+  1. a template file (the template source) ending on `.FTL` (a [freemarker](https://freemarker.sourceforge.io/docs/){target="blank"} extension) which is located in the source tree (in the classpath). 
   2. a record in the template table 
 
 The template is a powerful mechanism of Etendo as it makes it possible to combine dynamic generated information and allows overriding of templates by other modules.
@@ -113,12 +113,12 @@ As an example, the hello world template can be found in the `org.openbravo.clien
       }
     })
 
-Some special things in this javascript source:
+Some aspects to note in this javascript source:
 
-  * The **/* jslint */** tells Etendo to do a check on the generated javascript. Errors are printed in the console or output log. 
+  * The /*jslint*/ tells Etendo to do a check on the generated javascript. Errors are printed in the console or output log. 
   * as you can see, the templates create a canvas (the Button). It is also allowed to create an array of canvasses. 
   * the title of the button is retrieved through the `OB.I18N.getLabel` method. This is to support translation, see a section below in this article for more information. 
-  * See the `${data.name}` part, this is a [freemarker]()  template construct whereby information is retrieved from a java object. In the Etendo templating system, the component instance is available as the **data** object. The `${data.name}` will call the accessor `getName` on the HelloWorldComponent. 
+  * See the `${data.name}` part, this is a [freemarker](https://freemarker.sourceforge.io/docs/){target="blank"} template construct whereby information is retrieved from a java object. In the Etendo templating system, the component instance is available as the **data** object. The `${data.name}` will call the accessor `getName` on the HelloWorldComponent. 
 
 ####  Template Record
 
