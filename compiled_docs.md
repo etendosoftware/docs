@@ -16056,6 +16056,22 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
 
+##### G/L Journal Clone
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+With this functionality, the user is able to seamlessly clone a selected entry. This feature not only duplicates the entry but also creates a detailed description that includes the original order number.
+
+In order to do this, select the record to clone and click the copy record button in the toolbar.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone.png)
+
+In this way, a copy of the original record is generated, including a description and a copy number, as seen below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone2.png)
+
+This functionality enhances the efficiency of managing journal entries, making it easier to replicate and document transactions accurately.
 
 #### **G/L Journal**
 
@@ -19393,17 +19409,65 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 -  :material-translate: Spanish: [Platform Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
 #### Modules
-##### Print Document Web Service
 
-:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
+##### Dependency Manager
 
-:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
 
-It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
+The user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc.
 
 !!! info
-    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
+    For more information, visit the [Dependency Manager Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager.md)
 
+##### Dynamic App 
+
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
+
+Dynamic App allows you to create sub applications in Etendo Mobile.
+
+!!! info
+    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
+
+##### EAN 128
+
+:octicons-package-16: Javapackage: `com.smf.ean128`
+
+EAN 128 allows to use bar code in your application
+
+!!! info
+    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
+
+##### Etendo Advanced Security
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
+
+Etendo Advanced Security allows extending and enhancing some of the security features of the system.
+
+!!! info
+    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
+
+##### Etendo Async Processes
+
+:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
+
+##### Etendo Reactor
+
+:octicons-package-16: Javapackage: `com.etendoerp.reactor`
+
+##### Etendo RX
+
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
+
+##### Javax XML SOAP API
+
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+
+This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+
+!!! info
+    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
 
 
 ##### Number To Word (English)
@@ -19417,16 +19481,16 @@ It provides the infrastructure to convert a number into its equivalent in words.
 !!! info
     For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
+##### Print Document Web Service
 
-##### Javax XML SOAP API
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
-
+    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 
 ##### Report Cache Management
 
@@ -19436,43 +19500,6 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 
 !!! info
     For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
-
-##### Etendo Advanced Security
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
-
-Etendo Advanced Security allows extending and enhancing some of the security features of the system.
-
-!!! info
-    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
-
-##### Dynamic App 
-
-:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
-
-Dynamic App allows you to create sub applications in Etendo Mobile.
-
-!!! info
-    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
-        
-##### EAN 128
-
-:octicons-package-16: Javapackage: `com.smf.ean128`
-
-EAN 128 allows to use bar code in your application
-
-!!! info
-    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
-
-##### Etendo RX
-
-:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
-
-##### Etendo Reactor
-
-:octicons-package-16: Javapackage: `com.etendoerp.reactor`
 
 ##### Webhook Events
 
@@ -19484,14 +19511,9 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
     For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
 
 
-##### Etendo Async Processes
-
-:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
-
 ---
 
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
- by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Advanced Security
@@ -19782,6 +19804,85 @@ This module allows setting a non deductible tax's amount to a specified financia
 !!! info
     For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
+##### Advanced Financial Docs. Processing
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
+
+!!! info
+    For more information, visit:
+
+    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
+    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
+    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
+    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
+    - [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
+    - and the [Advanced Financial Docs. Processing developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#advanced-financial-docs-processing)
+
+##### Advanced Business Partner Settlement
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
+
+!!! info
+    For more information, visit:
+
+    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
+    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
+    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
+
+##### Asset Amortization Report
+
+:octicons-package-16: Javapackage: `com.smf.asset.amortization.report`
+
+The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
+
+!!! info
+    For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
+
+##### Banking Pool
+
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sdPnyewiPbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This feature allows entering in the system all the financings the company has. It is possible to exploit the information through the bank pool report.
+
+!!! info
+    For more information, visit [the Banking Pool user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#financial-type-configuration) and the [Banking Pool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#banking-pool).
+
+
+##### Bulk Posting
+
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality allows the user to post or unpost multiple records at the same time.
+
+!!! info
+    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
+
+##### Business Partner Settlement
+
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
+
+!!! info
+    For more information, visit the [Business Partner Settlement user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#business-partner-settlement) and the [Business Partner Settlement developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#business-partner-settlement).
+
+
 ##### Conversion Rate Downloader
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
@@ -19796,28 +19897,6 @@ This process allows keeping currency conversions up to date by generating conver
 
 :octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
-##### Banking Pool
-
-:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sdPnyewiPbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This feature allows entering in the system all the financings the company has. It is possible to exploit the information through the bank pool report.
-
-!!! info
-    For more information, visit [the Banking Pool user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#financial-type-configuration) and the [Banking Pool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#banking-pool).
-
-##### Business Partner Settlement
-
-:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
-
-!!! info
-    For more information, visit the [Business Partner Settlement user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#business-partner-settlement) and the [Business Partner Settlement developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#business-partner-settlement).
-
 ##### Deferred GL Journal
 
 :octicons-package-16: Javapackage: `com.etendoerp.gljournal.advanced`
@@ -19829,6 +19908,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 !!! info
     For more information, visit [the Deferred GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#deferred-gl-journal).
 
+
 ##### Financial Advanced Reports
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
@@ -19839,6 +19919,26 @@ The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced
 
 !!! info
     For more information, visit [the Balance Sheet and P&L Structure user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced), [the General Ledger Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) and [the Journal Entries Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced).
+
+##### G/L Journal Clone
+
+:octicons-package-16: Javapackage: `com.etendoerp.gljournal.clone`
+
+This functionality allows the user to clone a G/L journal in the Simple G/L Journal window, part of the accounting transactions of financial management.
+
+!!! info
+    For more information, visit the [G/L Journal Clone user guide](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#gl-journal-clone).
+
+##### Intercompany
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bQjT7iPkYtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
+
+!!! info
+    For more information, visit [the Intercompany Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
 
 ##### Payment Removal
 
@@ -19868,7 +19968,6 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 
 ##### Remittances
 
-
 :octicons-package-16: Javapackage: `org.openbravo.module.remittance`
 
 :octicons-package-16: Javapackage: `org.openbravo.module.remittance.template`
@@ -19880,16 +19979,6 @@ This functionality allows creating a remittance which is a group of "payments" (
 !!! info
     For more information, visit [the Remittances Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
 
-##### Intercompany
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bQjT7iPkYtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
-
-!!! info
-    For more information, visit [the Intercompany Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
 
 ##### Reverse GL Journal
 
@@ -19903,61 +19992,6 @@ This functionality is specifically useful for companies that have a month close,
 
 !!! info
     For more information, visit the [GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#gl-journal) and the [Simple GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#simple-gl-journal).
-
-##### Asset Amortization Report
-
-:octicons-package-16: Javapackage: `com.smf.asset.amortization.report`
-
-The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
-
-!!! info
-    For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
-
-##### Advanced Financial Docs. Processing
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
-
-!!! info
-    For more information, visit:
-
-    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
-    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
-    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
-    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
-    - [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
-    - and the [Advanced Financial Docs. Processing developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#advanced-financial-docs-processing)
-
-##### Bulk Posting
-
-:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality allows the user to post or unpost multiple records at the same time.
-
-!!! info
-    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
-
-##### Advanced Business Partner Settlement
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
-
-!!! info
-    For more information, visit:
-
-    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
-    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
-    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -27854,14 +27888,23 @@ For this particular case, we have configured an assistant with the functional me
 ## Article Content: 
 ### Dev Assistant
 
-
 #### Overview
 
 This assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
 It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
 
-#### Components
+!!!warning
+    This Assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
 
+    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
+
+    Thank you for your understanding as we continue to improve the functionality and reliability of this assistant.
+
+#### Installation
+You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+
+
+#### Components
 The Dev Assistant is composed of the following components:
 
 - [**DDL Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
@@ -27871,74 +27914,66 @@ The Dev Assistant is composed of the following components:
 
 #### Functionality
 
-To use this tool, it is necessary to log in as System Administrator role.
+!!! info
+    With this assistant, it is possible to create: 
 
-1. Ask the **Dev Assistant** for a window to add in the system and  the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name.
+    - **Tables and Columns**: both tables and columns are created based on user specification and the supported types are `string`, `number`, `tableDir`, `date`, `text` and `boolean` (each field will have default lengths unless specified).  
+    - **Windows**: only Mantein type windows are supported
+    - **Tabs**: Can be created at multiple levels, although it is important to make it clear to the assistant to add the corresponding foreign keys.
+    - **Fields**: Fields are created from columns, respecting the same name but without *"_"*.
+    - **Elements**: The elements will be created automatically, sharing the name of the columns, but replacing the *"_"* with spaces. The help and description fields will also be added automatically.
+    - **Menu**: A menu entry is automatically created, the developer must manually place it in the desired position.
 
-2. The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
+ - Ask the **Dev Assistant** for a window to add in the system and the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
 
-3. The user must confirm the steps or set up a modification about the given information.
+- The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
 
-4. Recompile and restart Tomcat to a successful application of changes.
-
-5. The window can be viewed with the user role.
-
-
+- The user must confirm the steps or set up a modification about the given information.
 
 
 #### Usage Example 
 
+##### 1. Setup
+To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+
+##### 2. Open Copilot, and select Dev assistant
 ![dev-assistant.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant.png)
 
-**User**: "I want to create a window "Workers dates" that contains information about employees' work dates, use the prefix 'copdev'."
+##### 3. Ask the assistant for what you need to create.
+![dev-assistant.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
 
-**Copilot**: "Let's start by registering the table for "Workers Dates".
-Please provide the following for better definition:
-Table name in singular (e.g., WorkerDate, EmploymentDate, etc.).
-A valid prefix, which is 'copdev' in your case.
-Any specific data columns (except default columns) you want in the table initially.
-Optionally, if you have a specific class name in mind for this table, please provide it.
-Based on the provided prefix 'copdev' and the idea of the table, I'm suggesting the table name as WorkerDate. Let's proceed if the suggested name is acceptable to you?"
+**User**: *"You can create the Pets Health window, you have to include the fields, pet name, patient start date and description. You can also add a Visits Registration tab, associated to the Pets Health window, where you have to add the fields, date and description. Remember to add the corresponding foreign key.  All this export it in the module with copdev prefix."*
 
-**User**: "Proceed and add some useful columns."
-
-**Copilot**: "The table copdev_WorkerDate has been successfully created and registered in the system. Specific columns for Start Date, End Date, and Role have also been added to the table. Additionally, a window titled "Workers dates" has been created to manage this table's data. The necessary fields in the window's tab have been registered and synchronized as well.
-Summary of Steps Completed:
-Registered the copdev_WorkerDate table in the Application Dictionary.
-Created the copdev_WorkerDate table in the database.
-Added specific columns:
-Start Date (type: Date, not null, default: now())
-End Date (type: Date, can be null)
-Role (type: String, can be null)
-Registered the columns in the Application Dictionary.
-Synchronized the terminology.
-Created a window and tab to manage WorkerDate records.
-Registered fields in the window's tab.
-Synchronized the terminology again.
-Next Steps:
-Compile the project.
-Restart Etendo.
-This will ensure that all changes take effect, and you can start using the new table and window.
-Is there anything else you'd like to do or adjust?"
+**Copilot**: *"The following steps have already been completed: 
+Tables: PetsHealth and VisitsRegistration have been registered in the system and created in the database. 
+Columns: The necessary columns have been added and registered. 
+Terminology: Terminology has been synchronized. 
+Window and Tabs: Pets Health window and the associated Pets Health Header and Visits Registration tabs have been registered. 
+Foreign Key: Foreign key between PetsHealth and VisitsRegistration has been added.    Please proceed with the compilation and restart Etendo to ensure all changes take effect.    If there's anything else you'd like to address or if you need further modifications, please let me know!"*
 
 
-#### Results
-
-With the task complete, it is necessary recompile with a smartbuild and restart Tomcat**
-
-![dev-assistant1.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant1.png)
+##### 4. Compile
+    
+With the task complete, it is necessary recompile with a smartbuild and restart Tomcat
 
 ```title="Terminal"
 ./gradlew smartbuild --info
 ```
-
 ![dev-assistant2.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
 
-**Window in the system**
+##### 5. Reviewing the results
+    
+Window in the System,the window can be viewed with the user role.
 ![dev-assistant3.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
-
 ![dev-assistant4.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
 
+##### 6. Export the changes
+    
+Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+
+```title="Terminal"
+./gradlew export.database --info
+```
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: SQL Expert
@@ -29772,6 +29807,49 @@ define if the user(s) should be notified by email.
 
 This work is a derivative of [Alerts](https://wiki.openbravo.com/wiki/Alerts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Application Menu
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Application Menu
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/application-menu
+## Article Content: 
+### Application Menu
+
+#### Overview
+
+Application Menu is shown in the window's left side. It is used to make all the application elements accessible to the user.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Application_Menu-0.png)
+
+##### Managing the menu
+
+Menu is managed from `General Setup` > `Application` > `Menu` window.
+
+To create a new menu entry:
+
+  1. Create a new record in this window.
+  2. Select the element type for the entry, this is done setting the **Action** field, the elements callable from menu are **Window**, **Report**, **Process**, **Form**, **Workflow**, **Internal/External link** and **Task**.
+  3. Depending on the selected action, a different drop down list will be shown to select one element of the selected type. Note that name and description will be overwritten when synchronize process is executed.
+  4. Place the new menu entry in the correct position, this is done by:
+    * Selecting a record in the grid.
+    * Opening the tree window clicking in tree menu icon ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Application_Menu-1.png)
+    * Select the entry to relocate and select the new position.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Application_Menu-2.png)
+
+Folders are created checking the **Summary Level** field.
+
+##### Security
+
+Although a menu entry is defined, it will not be displayed in case the role that has log in the application has not granted permission for that element.
+
+##### Information folder
+
+In the bottom of the menu, there is an **Information Folder** which contains links to the **Searchs**. The elements displayed in this folder are the ones that are used in at least one accessible window for the current role.
+
+---
+This work is a derivative of [Application Menu](http://wiki.openbravo.com/wiki/Application_Menu){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Constraints
@@ -36942,6 +37020,101 @@ This work is a derivative of [How to create an alert](http://wiki.openbravo.com/
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create and Update Business Entities Using Web Services
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Business Entities Using Web Services
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services
+## Article Content: 
+### How to Create and Update Business Entities Using Web Services
+
+#### Overview
+
+The aim of this section is to show how to use some of **Etendo's available web services** to create business entities and/or to update them.
+
+Therefore, these web services features will be explained in detail:
+
+  * **JSON REST**
+  * **Secure Web Services**
+
+#### Execution Steps
+
+To add or update entities, use `HTTP` commands. To execute any `HTTP commands`, a [**Java class**](https://docs.etendo.software/latest/how-to-guides/how-to-call-an-etendo-webservice-from-java.md) could be created and use the available classes related to the HTTP protocol.
+
+!!!note
+    We could do the same for any other protocol or scripting language like PHP.
+
+Alternatively, use any plugin or application like [**Postman**](https://www.postman.com/downloads/){target="\_blank"} which allows executing any HTTP command on an URL of your choice. In the following examples we will make use of this plugin and we will assume that our Etendo environment is running on a local machine via `http://localhost:8080/etendo`.
+
+##### JSON REST
+
+We are about to create a new **invoice header**, so that the URL for this case will be:
+
+    http://localhost:8080/etendo/org.openbravo.service.json.jsonrest/Invoice
+
+In `Authorization` we have to select the **Basic Auth** type and add the credentials which we use to get access to the **Web Service** (which are by the way the same that we use to get into the application). Take into account that the visibility of the data within the web service will be the same as if you logged into the application with the default role of this user. The `Content-Type` of the Request will be `application/json` and the **body** content of the request will be as follows, where the `ID`s will be replaced by those needed to be present in the invoice. 
+
+
+We have set the attribute `salesTransaction` to `true`, indicating that this is a sales invoice:
+
+
+```json
+    {
+      "data":
+      {
+        "entityName":          "Invoice",
+        "active":              true,
+        "organization":        { "id": "E443A31992CB4635AFCAEABE7183CE85" },
+        "salesTransaction":    true,
+        "documentType":        { "id": "7FCD49652E104E6BB06C3A0D787412E3" },
+        "transactionDocument": { "id": "7FCD49652E104E6BB06C3A0D787412E3" },
+        "documentNo":          "1000050",
+        "accountingDate":      "2012-05-29",
+        "invoiceDate":         "2012-05-29",
+        "currency":            { "id": "102" },
+        "priceList":           { "id": "AEE66281A08F42B6BC509B8A80A33C29" },
+        "businessPartner":     { "id": "9E6850C866BD4921AD0EB7F7796CE2C7" },
+        "partnerAddress":      { "id": "BFE1FB707BA84A6D8AF61A785F3CE1C1" },
+        "paymentTerms":        { "id": "66BA1164A7394344BB9CD1A6ECEED05D" },
+        "paymentMethod":       { "id": "A97CFD2AFC234B59BB0A72189BD8FC2A" }
+      }
+    }
+```
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-0.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-1.png)
+
+We use the HTTP `POST` command with this data. We will get a `200 OK` response back, indicating that everything went well with the invoice data that was just created.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-2.png)
+
+To make an update, we will use the `PUT` command. For instance, to update a Business Partner's name, we will execute that command on this URL:
+
+  `http://localhost:8080/etendo/org.openbravo.service.json.jsonrest/BusinessPartner`
+
+with the following content:
+
+```json
+    {
+      "data":
+      {
+        "entityName": "BusinessPartner",
+        "id":         "A6750F0D15334FB890C254369AC750A8",
+        "name":       "New Name"
+      }
+    }
+```
+
+##### Secure Web Services
+
+!!!note
+    To know more about how Etendo introduces its own Secure Web Services with unique features, visit [How to Use Secure Webservices](https://docs.etendo.software/latest/how-to-guides/how-to-use-secure-webservices.md).
+
+---
+
+This work is a derivative of [How to Create and Update Business Entities using Web Services](https://wiki.openbravo.com/wiki/How_to_Create_And_Update_Business_Entities_Using_Web_Services){target="\_blank"} by [Openbravo Wiki](https://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Create and Update Translation Modules
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Translation Modules
 ## Article URL: 
@@ -38856,6 +39029,45 @@ This work is a derivative of [How to develop a DAL background process](http://wi
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How To Exclude Database Physical Objects From Model
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Exclude Database Physical Objects From Model
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model
+## Article Content: 
+### How To Exclude Database Physical Objects From Model
+
+#### Overview
+
+Etendo Classic keeps track of the database physical objects (such as tables, views, functions, sequences or triggers) through an utility called `dbsourcemanager`. This utility is able to export all the database model object definitions to `XML` files, which are stored in the `src-db/database/model` folder (both in Core and in modules).
+
+This tool is designed to work in a multiplatform environment, both supporting Oracle and PostgreSQL. This means that sometimes if specific syntax or features of a particular Database Management System are used, the tool might not support them.
+
+In these cases, a possible approach is to create these specific objects using a Module Script (you can find more about them [here](https://docs.etendo.software/latest/how-to-guides/how-to-create-build-validations-and-module-scripts.md)), and then exclude them from the database physical model of Etendo Classic.
+
+#### Excluding objects in modules
+
+Objects are excluded through a file called `excludeFilter.xml`. This file should be located inside the `src-db/database/model/` folder of the module (if it doesn't exist, you will need to create it), and it follows a very simple XML format. Here is an example:
+
+```xml
+    <?xml version="1.0"?>
+      <vector>
+        <excludedTable name="TEST_TABLE"/>
+        <excludedView name="TEST_VIEW"/>
+        <excludedFunction name="TEST_FUNCTION"/>
+        <excludedTrigger name="TEST_TRIGGER"/>
+        <excludedSequence name="TEST\_%"/>
+      </vector>
+```
+
+This file will exclude the table **TEST_TABLE**, the view **TEST_VIEW**, the function **TEST_FUNCTION**, and the trigger **TEST_TRIGGER** from the model, and therefore they will be neither exported nor removed, nor modified in any way during the normal database management tasks (`update.database` and `export.database`).
+
+The use of [SQL Wildcards](https://www.w3schools.com/sql/sql_wildcards.asp){target="\_blank"} is supported, so the same treatment will be done to all sequences whose name begins with **TEST_**. All exclusions whose name contain the `%` character will be treated as wildcards. When defining an exclusion using a wildcard, remember to escape with a backslash the `_` characters, unless it is meant to be used as a substitute for any single character.
+
+---
+
+This work is a derivative of [How to Exclude Database Physical Objects from Model](https://wiki.openbravo.com/wiki/How_to_exclude_Database_Physical_Objects_From_Model){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Export Sample Data
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Export Sample Data
 ## Article URL: 
@@ -39283,7 +39495,7 @@ Partners will have access to Etendo’s public and commercial repositories to do
 To generate the `build.gradle` with all the necessary information to publish, execute the following task:
 
 ``` bash title="Terminal"
-./gradlew createModuleBuild `-Ppkg=<javapackage> -Prepo=<repositoryURL> --info
+./gradlew createModuleBuild -Ppkg=<javapackage> -Prepo=<repositoryURL> --info
 ```
 Example:
 ``` bash title="Terminal"
@@ -45785,6 +45997,71 @@ Article URL: https://etendo.software
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: ✨ Etendo News
+## Article Path: /What's New/Release Notes/✨ Etendo News
+## Article URL: 
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
+## Article Content: 
+
+#### May 2024
+
+##### Copilot Extensions
+
+[**SQL Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md)
+
+In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
+With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
+
+---
+
+#### April 2024
+
+##### Copilot Extensions
+
+[**Purchase Expert Assistant**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+
+In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
+Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
+
+##### Spanish Localization
+
+**Optimizations**
+
+As of version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [**Jakarta SOAP Implementation**](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [**Jakarta SOAP with Attachments API**](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
+
+To take advantage of these enhancements, when upgrading to version 1.9.4 or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
+
+---
+
+#### March 2024
+
+##### Etendo Classic
+
+**Optimizations**
+
+As of version [24.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), the support for [**Tomcat 9**](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
+
+##### Copilot Extensions
+
+[**OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+
+In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
+With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
+
+##### Procurement Extensions
+
+[**Purchase Invoice Validation**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+
+In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
+
+##### Platform Extensions
+
+**Optimizations**
+
+As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [**Jakarta SOAP with Attachments API**](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Release Notes
 ## Article Path: /What's New/Release Notes/Etendo Classic/Release Notes
 ## Article URL: 
@@ -45796,7 +46073,9 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q1.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.7){target="_blank"} | 31/05/2024 | 24.1.7 | QAA |  | :white_check_mark: |
+| [24Q2.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.0){target="_blank"} | 28/06/2024 | 24.2.0 | QAA | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso){target="_blank"} | :white_check_mark: |
+| [24Q1.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.8){target="_blank"} | 14/06/2024 | 24.1.8 | CS |  | :white_check_mark: |
+| [24Q1.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.7){target="_blank"} | 31/05/2024 | 24.1.7 | C |  | :white_check_mark: |
 | [24Q1.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.6){target="_blank"} | 17/05/2024 | 24.1.6 | C |  | :white_check_mark: |
 | [24Q1.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.5){target="_blank"} | 10/05/2024 | 24.1.5 | C |  | :white_check_mark: |
 | [24Q1.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.4){target="_blank"} | 03/05/2024 | 24.1.4 | C | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso){target="_blank"} | :white_check_mark: |
@@ -45903,7 +46182,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.4.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.5.0){target="_blank"} | 28/06/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.3.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.1.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
@@ -45919,7 +46199,9 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.16.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.0){target="_blank"} | 20/05/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.17.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.17.0){target="_blank"} | 28/06/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [1.16.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.1){target="_blank"} | 14/06/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
+| [1.16.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.0){target="_blank"} | 20/05/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.15.0){target="_blank"} | 08/05/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.14.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.14.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.13.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.3){target="_blank"} | 22/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
@@ -45953,7 +46235,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.6.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.1){target="_blank"} | 17/05/2024 | 21.4.0 | 24.1.x | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.7.0){target="_blank"} | 29/06/2024 | 21.4.0 | 24.2.x | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.1){target="_blank"} | 17/05/2024 | 21.4.0 | 24.1.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.0){target="_blank"} | 29/03/2024 | 21.4.0 | 24.1.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 21.4.0 | 23.4.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.4.0){target="_blank"} | 29/09/2023 | 21.4.0 | 23.3.x | C | :white_check_mark: |
@@ -45975,7 +46258,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.6.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.6.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.7.0){target="_blank"} | 28/06/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.6.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.4.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.3.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
@@ -45993,7 +46277,9 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.8.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.1){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.7.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.6.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
 | [1.5.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.2){target="_blank"} | 16/07/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
@@ -46010,7 +46296,6 @@ Article URL: https://etendo.software
 | 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
 | 1.0.100 | 06/01/2022 | 21.4.0 | 22.1.3 | C | |
 | 1.0.000 | 03/01/2022 | 21.4.0 | 22.1.3 | C | |
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Financial Extensions Bundle
@@ -46022,7 +46307,9 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.14.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.1){target="_blank"} | 26/04/2024 | 23.1.4 | 24.1.x | CS | :white_check_mark: |
+| [1.15.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.15.0){target="_blank"} | 28/06/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.14.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.2){target="_blank"} | 14/06/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
+| [1.14.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.1){target="_blank"} | 26/04/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
 | [1.14.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.0){target="_blank"} | 28/03/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
 | [1.13.5](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.5){target="_blank"} | 15/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
@@ -46069,7 +46356,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.11.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.1){target="_blank"} | 17/05/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.12.0){target="_blank"} | 28/06/2024 | 22.4.3 | 24.2.x | CS | :white_check_mark: |
+| [1.11.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.1){target="_blank"} | 17/05/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.11.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.0){target="_blank"} | 03/05/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.10.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.1){target="_blank"} | 19/04/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
@@ -46107,7 +46395,9 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.1){target="_blank"} | 31/05/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.2.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.2){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.1){target="_blank"} | 31/05/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | 22.1.0 | 24.1.0 | C | :white_check_mark: |
 ==ARTICLE_END==
@@ -46121,7 +46411,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.4.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.1){target="_blank"} | 10/05/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.5.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.1){target="_blank"} | 10/05/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.0){target="_blank"} | 03/04/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.3.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
 | [1.2.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.2.1){target="_blank"} | 15/11/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
@@ -46247,6 +46538,7 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [24.2.0](#2420) | 28/06/2024 | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso) |
 | [24.1.4](#2414) | 03/05/2024 | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso) |
 | [24.1.0](#2410) | 28/03/2024 | [24Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.0.iso) |
 | [23.4.0](#2340) | 28/12/2023 | [23Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) |
@@ -46254,6 +46546,9 @@ Article URL: https://etendo.software
 | [23.2.0](#2320) | 27/06/2023 | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) |
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
+
+#### 24.2.0
+New ISO with Etendo Classsic version 24.2.0
 
 #### 24.1.4
 New ISO with Etendo Classsic version 24.1.4
@@ -46455,7 +46750,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.4.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.5.0){target="_blank"} | 29/06/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.3.0){target="_blank"}  | 04/01/2024 | 23.2.0 | 23.4.x | C  | :white_check_mark:|
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.2.0){target="_blank"}  | 29/09/2023 | 23.2.0 | 23.3.x | C   | :white_check_mark:|
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.1.0){target="_blank"}  | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark:|
@@ -46471,7 +46767,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.1){target="_blank"} | 21/05/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.0){target="_blank"} | 13/06/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.1){target="_blank"} | 21/05/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.0){target="_blank"} | 20/05/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.0.0){target="_blank"} | 29/04/2024 | 23.4.0 | * | C   | :white_check_mark:|
 ==ARTICLE_END==
@@ -46503,9 +46800,9 @@ Step into a world of exploration using either Postgres or Oracle as database man
 
 This page holds live testing instances. These live builds are updated and reset once per day at 03:30 UTC.
 
-[ :simple-esbuild: Etendo 23.4.0 - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
+[ :simple-esbuild: Etendo 24.2.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
 
-[:simple-esbuild: Etendo 23.4.0 - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+[:simple-esbuild: Etendo 24.2.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 ??? warning "Oracle"
     If you need to test on Oracle, please feel free to [contact us](https://docs.etendo.software/latest/help-and-support/overview.md).
