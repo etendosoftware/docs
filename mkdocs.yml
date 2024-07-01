@@ -272,7 +272,7 @@ nav:
 #        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md
         - Constraints: developer-guide/etendo-classic/concepts/Constraints.md
         - Data Access Layer: developer-guide/etendo-classic/concepts/Data_Access_Layer.md
-#        - Data Model: developer-guide/etendo-classic/concepts/Data_Model.md
+        - Data Model: developer-guide/etendo-classic/concepts/data-model.md
         - Datasets: developer-guide/etendo-classic/concepts/Datasets.md
 #        - Datasources: developer-guide/etendo-classic/concepts/Datasources.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
