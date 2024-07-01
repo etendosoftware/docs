@@ -1,84 +1,30 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+---
+tags:
+  - create a table
+  - table
+  - application dictionary
+  - user defined datasource
+---
 
 #  How to Create a Table Based on a User Defined Datasource
 
-##  Contents
+##  Overview
 
-  * 1  How to create a Table Based on a User Defined Datasource 
-    * 1.1  Introduction 
-    * 1.2  Creating the Java Datasource 
-    * 1.3  Defining the Datasource in the Application Dictionary 
-    * 1.4  Defining the Table and its Columns 
-    * 1.5  Defining the Window, its Tabs and its Fields 
-    * 1.6  Design considerations 
-    * 1.7  Example: A Window Based on a Google Spreadsheet 
-      * 1.7.1  Java Datasource 
-        * 1.7.1.1  Security Datasource 
-      * 1.7.2  Datasource Definition in the Application Dictionary 
-      * 1.7.3  Table and Columns Definition in the Application Dictionary 
-      * 1.7.4  Window, Tab and Fields Definition in the Application Dictionary 
-
-  
----  
-  
-##  How to create a Table Based on a User Defined Datasource
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-Tables Based on User Defind Datasources are available in MP24 and later MPs.  
----|---  
-  
-###  Introduction
-
-Two different data origins can be set for tables defined in the application
-dictionary: 'Tables' (database tables and views) and 'Datasource'. There are
-two main reasons why to use a datasource based table.
+Two different data origins can be set for tables defined in the application dictionary: 'Tables' (database tables and views) and 'Datasource'. There are two main reasons why to use a datasource based table.
 
   * To use as data origin objects other than database tables or views. For instance, a datasource based table can be defined that uses as data origin a Google Docs Spreadsheet, a CSV file, data obtained from a webservice, etc. 
   * To solve performance related problems. For instance, the Return from Customer window has a pick and execute window that suffers performance problems in systems with very high volumes. The cause of this problem is that the table used in that pick and execute window is based in a very complex database view. An user defined datasource can be created to build that view manually. This datasource has been included in the module org.openbravo.highvolumedatasources and has reduced the response time of that particular pick an execute window from >60 seconds to <1 second. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-Defining a datasource requires of quite a big effort (filtering, pagination,
-sorting and so on needs to be coded). If it is suitable for your needs, a  HQL
-Based Table  can be used.  
----|---  
+!!!note
+    Defining a datasource requires of quite a big effort (filtering, pagination, sorting and so on needs to be coded). If it is suitable for your needs, an HQL Based Table  can be used.  
   
-###  Creating the Java Datasource
+##  Creating the Java Datasource
 
-This  wiki entry  describes how to create a Java Datasource, and provides some
-examples  .
+This  wiki entry  describes how to create a Java Datasource, and provides some examples  .
 
-If the datasource is read only (for instance to be used in a pick and execute
-window) then it is recommended to create a new class that extends the
-ReadOnlyDataSourceService class. Is the datasource is going to be used also to
-add, update or delete existing records, then it is recommended to extend the
-DefaultDataSourceService class.
+If the datasource is read only (for instance to be used in a pick and execute window) then it is recommended to create a new class that extends the ReadOnlyDataSourceService class. Is the datasource is going to be used also to add, update or delete existing records, then it is recommended to extend the DefaultDataSourceService class.
 
-The datasource must override the getEntity() method. This template can be
-used, the only thing that needs to be changed is the value of the AD_TABLE_ID
-constant.
-
-    
+The datasource must override the getEntity() method. This template can be used, the only thing that needs to be changed is the value of the AD_TABLE_ID constant.
     
      
       //Table ID of the datasource based table defined in the application dictionary
@@ -89,99 +35,65 @@ constant.
         return ModelProvider.getInstance().getEntityByTableId(AD_TABLE_ID);
       }
 
-###  Defining the Datasource in the Application Dictionary
+##  Defining the Datasource in the Application Dictionary
 
-This  wiki entry  describes how to define a datasource in the application
-dictionary.
+This  wiki entry  describes how to define a datasource in the application dictionary.
 
-The flag 'Use as Table Data Origin' should be checked in datasources that will
-be used as data origin for tables defined in the application dictionary. If
-this flag is checked:
+The flag 'Use as Table Data Origin' should be checked in datasources that will be used as data origin for tables defined in the application dictionary. If this flag is checked:
 
   * The Datasource Fields subtab of the Datasource window will be hidden. The columns returned from datasource that will be used as table data origin will be defined in the Tables and Columns window, so defining them also in the Datasource window would be redundant and confusing. 
   * Datasources with this flag checked will be shown in the Datasource combo of the Table header tab. 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-2.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-2.png){: .legacy-image-style}
 
-###  Defining the Table and its Columns
+##  Defining the Table and its Columns
 
-This  wiki entry  describes how to define in the application dictionary tables
-based on database tables or views.
+This  wiki entry  describes how to define in the application dictionary tables based on database tables or views.
 
-The 'Data Origin' field allows the user to select the type of data origin for
-the table he is defining. This field is a combo that contains two options:
-Datasource and Table. If the Table option is selected, the Datasource combo
-will be hidden. If the Datasource option is selected, the 'DB Table Name' and
-'Java Class Name' fields will be hidden, and the Datasource combo will be
-shown. This combo will be used to select the user defined datasource that will
-work as the table data origin.
+The 'Data Origin' field allows the user to select the type of data origin for the table he is defining. This field is a combo that contains two options: Datasource and Table. If the Table option is selected, the Datasource combo will be hidden. If the Datasource option is selected, the 'DB Table Name' and 'Java Class Name' fields will be hidden, and the Datasource combo will be shown. This combo will be used to select the user defined datasource that will work as the table data origin.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-3.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-3.png){: .legacy-image-style}
 
-It is not possible to use the 'Create Columns from DB' to define the columns
-of datasource based tables, so they will have to be added manually.
+It is not possible to use the 'Create Columns from DB' to define the columns of datasource based tables, so they will have to be added manually.
 
-###  Defining the Window, its Tabs and its Fields
+##  Defining the Window, its Tabs and its Fields
 
-Once the table its columns have been defined, it is the Window's turn. Windows
-with tabs associated with datasource based tables are defined in the exact
-same way as with tabs associated with database table based tables. This  wiki
-entry  describes how to do it.
+Once the table its columns have been defined, it is the Window's turn. Windows with tabs associated with datasource based tables are defined in the exact same way as with tabs associated with database table based tables. This  wiki entry  describes how to do it.
 
-###  Design considerations
+##  Design considerations
 
-There are some design considerations that must be taken into account when
-creating a datasource based table:
+There are some design considerations that must be taken into account when creating a datasource based table:
 
   * Tabs associated with datasource based tables can not have sub tabs. 
   * No Java class is generated for datasource based tables. 
   * Manual datasources must implement the filtering, sorting and pagination of the tables. If the manual datasource being defined do not support filtering foreign keys based on their id, the Support Filtering Foreign Key Columns Using Their ID flag must be unchecked. For instance, the criteria built when filtering the '*' organization using its id would be: {fieldName: 'organization', operator: 'equals', value: '0'}. 
 
-###  Example: A Window Based on a Google Spreadsheet
+##  Example: A Window Based on a Google Spreadsheet
 
-This section is a summary of a datasource based table that uses a Google
-Spreadsheet as its data origin.
+This section is a summary of a datasource based table that uses a Google Spreadsheet as its data origin.
 
 In this example a Google Spreadsheet that serves as an issue tracker
-
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-4.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-4.png){: .legacy-image-style}
 
 is used as data origin for an Openbravo window
 
-  
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-5.png){: .legacy-image-style}
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-5.png){: .legacy-image-style}
-
-.
-
-The window defined in this example has the same functionality as if it had
-been defined based on a database table. It is possible to: \- Fetch records \-
+The window defined in this example has the same functionality as if it had been defined based on a database table. It is possible to: \- Fetch records \-
 Update records in grid and form view \- Create new records \- Sort the grid
 using any column \- Filter the grid
 
-When a record is updated from the Openbravo window, the google spreadsheet is
-updated in real time. If the google spreadsheet is updated manually, the
-Openbravo grid must be refreshed in order to fetch the updated records.
+When a record is updated from the Openbravo window, the google spreadsheet is updated in real time. If the google spreadsheet is updated manually, the Openbravo grid must be refreshed in order to fetch the updated records.
 
-#####  Java Datasource
+####  Java Datasource
 
-Implementing the Java Datasource is the most time consuming step of the whole
-process. In this section only the fetch operation is going to be demonstrated,
-the full implementation of the datasource can be found  here  .
+Implementing the Java Datasource is the most time consuming step of the whole process. In this section only the fetch operation is going to be demonstrated, the full implementation of the datasource can be found  here  .
 
-This datasource will be used in an Openbravo window and it will allow to
-fetch, add, update and delete registers. In this case it is very convenient to
-extend the DefaultDataSourceService class.
+This datasource will be used in an Openbravo window and it will allow to fetch, add, update and delete registers. In this case it is very convenient to extend the DefaultDataSourceService class.
 
-This is the implementation of the fetch method:
-
-    
+This is the implementation of the fetch method:    
     
      
       @Override
@@ -220,15 +132,9 @@ The datasource must return a Json string with the following attributes:
   * totalRows: Total number of rows that the datasource can return given the filters of the current fetch request. 
   * data: a Json array containing all the fetched objects. 
 
-A convenience class called GoogleSpreadsheet has been created as a link
-between the datasource and the Google Docs API. Its implementation can be
-found here.
+A convenience class called GoogleSpreadsheet has been created as a link between the datasource and the Google Docs API. Its implementation can be found here.
 
 The data objects are retrieved using the fetchJSONObject method:
-
-  
-
-    
     
      
       private List<JSONObject> fetchJSONObject(Map<String, String> parameters) {
@@ -277,8 +183,7 @@ The data objects are retrieved using the fetchJSONObject method:
         return toJsonConverter.convertToJsonObjects(data);
       }
 
-The getData method returns the records that will be actually returned given
-the ListFeed and the filter criteria:
+The getData method returns the records that will be actually returned given the ListFeed and the filter criteria:
 
     
     
@@ -313,7 +218,7 @@ the ListFeed and the filter criteria:
 Another convenience class called 'IssueTrackerItem' has been created to handle
 each issue tracker record.
 
-######  Security Datasource
+#####  Security Datasource
 
 The datasources should implement security mechanism. The
 checkFetchDatasourceAccess method allows to implement a security access to a
@@ -353,7 +258,7 @@ EntityAccessChecker class 3 check methods:
   * checkDerivedAccess(Entity entity): Checks if an entity is derived for current user. 
   * checkWritableAccess(Entity entity): Checks if an entity is writable for current user. 
 
-#####  Datasource Definition in the Application Dictionary
+####  Datasource Definition in the Application Dictionary
 
 It is very easy to define the datasource in the application dictionary. Just
 make sure to enter the correct Java class name and to check the 'Use as Table
@@ -368,7 +273,7 @@ guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-6.png){: .legacy
 
   
 
-#####  Table and Columns Definition in the Application Dictionary
+####  Table and Columns Definition in the Application Dictionary
 
 Make sure you select the 'Datasource' option in the 'Data Origin' combo. The
 datasource defined in the previous step should be shown in the 'Datasource'
@@ -386,7 +291,7 @@ The name of the columns in the application dictionary is the same as the title
 of the columns in the google spreadsheet, this simplifies the implementation
 of the datasource.
 
-#####  Window, Tab and Fields Definition in the Application Dictionary
+####  Window, Tab and Fields Definition in the Application Dictionary
 
 Defining the window, tab and field in the application dictionary is done in
 the same way as with the standard tables:
@@ -394,18 +299,6 @@ the same way as with the standard tables:
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource-8.png){: .legacy-image-style}
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource
-"
+---
 
-This page has been accessed 13,488 times. This page was last modified on 26
-April 2016, at 09:29. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
-
+This work is a derivative of [How to Create a Table Based on a User Defined Datasource](http://wiki.openbravo.com/wiki/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
