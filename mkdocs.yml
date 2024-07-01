@@ -317,7 +317,7 @@ nav:
 #        - Client Side Development and API: developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API.md
 #        - Data Access Layer: developer-guide/etendo-classic/how-to-guides/Data_Access_Layer.md
 #        - Data Access Layer: developer-guide/etendo-classic/how-to-guides/Data_Access_Layer.md
-#        - How Price Including Taxes are Calculated: developer-guide/etendo-classic/how-to-guides/How_Price_Including_Taxes_are_Calculated.md
+        - How Price Including Taxes are Calculated: developer-guide/etendo-classic/how-to-guides/how-price-including-taxes-are-calculated.md
         - How to Add a Button to the Toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
 #        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
 #        - How to add a Constraint: developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint.md
