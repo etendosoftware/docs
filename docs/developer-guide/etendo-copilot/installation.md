@@ -50,7 +50,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
     | **Environment Variable**   | **Options**  | **Info** |
     | -------------------------- | -------------| -------- |
     | COPILOT_PORT           | `5000`   | **Required** The copilot port can be defined by the user |
-    | OPENAI_API_KEY         | `***********************` | **Required** You can get it from [OpenAI API keys](https://platform.openai.com/account/api-keys){target="_blank"} if you use an own API key or get in touch with Etendo support team |
+    | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
     | ETENDO_HOST            | `http://your.etendo.instance/etendo` | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. |
 
 
@@ -65,7 +65,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
     | COPILOT_PULL_IMAGE | `Boolean` | `true` | If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
     | COPILOT_DOCKER_CONTAINER_NAME | `String` | `etendo-default` | The name of the docker container that will be created to run the copilot docker image. |
 
-3.  Onece the Copilot dependency was added and the variables configurated, in the terminal execute:
+3.  Once the Copilot dependency was added and the variables configurated, in the terminal execute:
     
     ``` bash title="Terminal"
     ./gradlew setup
