@@ -846,7 +846,7 @@ In order to enable an account to be part of the VAT regularization process, it i
 #### GL Journal Entry Generation
 1. Click the **Process** button to generate the simple GL journal entry.
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png)
-2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000113**).
+2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000115**).
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png)
 3. Here, verify that the header has been created with the corresponding lines.
 
