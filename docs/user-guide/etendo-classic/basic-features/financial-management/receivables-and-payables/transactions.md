@@ -889,13 +889,14 @@ Finally, the "**Cancel**" process button just closes the reconciliation window a
 
 ##### **Import Statement**
 
-The header process button "Import Statement" is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.
+The header process button **Import Statement** is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.
 
 !!! info
-    Etendo currently delivers the "Standard" matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".
+    Etendo currently delivers the **Standard** matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".
 
 !!! info
-    Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed.
+    Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed. 
+
 
 Etendo currently delivers below listed import bank file modules:
 
@@ -910,10 +911,21 @@ The "Import Statement" process button opens the "Import Bank File" window.
 
 ![Import Statement](../../../../../assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
 
+
 This window allows to:
 
 - select a **bank statement file**
 - and select the **file format** of the selected bank statement file to import.
+
+##### **Get Bank Statement**
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+Instead of manually import the bank statements, Etendo allows you to **synchronize** the bank accounts with the financial accounts in order to automatically download bank transactions. This functionality facilitates a faster and safer integration between the financial accounts' and bank statements' information to accelerate the process of generating bank statements. 
+
+!!! info
+    For more information about bank integration to automatically import bank statements visit [PSD2 Bank Integration](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md).
 
 ##### **Match Statement**
 

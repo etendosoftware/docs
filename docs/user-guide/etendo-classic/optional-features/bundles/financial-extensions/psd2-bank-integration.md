@@ -9,11 +9,15 @@ tags:
 
 # PSD2 Bank Integration
 
+
 ## Overview
 
 This section describes an enhancement of the **Financial Extensions Bundle** in Etendo which uses the **PSD2 (Payment Services Directive 2) feature**. This functionality allows users to securely connect to their bank, synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions  within specified date ranges. 
 
 This section serves as a guide for users to understand the functionality and usage of the PSD2 module.
+
+!!!info
+    To be able to include this functionality, the **Financial Extensions Bundle** must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. 
 
 ## Connect to the Bank
 
@@ -22,22 +26,31 @@ In the Financial Account window in `financial management`> `receivables and paya
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-0.png)
 
-For this, users must provide necessary **authentication credentials** to connect their bank accounts with Etendo, this allows automating the process of updating financial records with bank account information in order to be able to download the bank transactions needed. 
-
 ## Configuration
-### OAuth Authentication
 
-Before continuing with the process from the Financial Account window, it is necessary to configure the imported bank statement type provider which is **fundamental to use this functionality**. The configuration process is set up through OAuth in the **OAuth Provider window** in `application`> `oauth-provider`. OAuth facilitates an authentication method through a security protocol for obtaining a token needed to give consent to the bank. This authentication will allow Etendo to get the necessary bank information to access the bank statements.
+Users must provide necessary **authentications** to connect their bank accounts with Etendo, this allows automating the process of updating financial records with bank account information in order to be able to download the bank transactions needed. 
 
-!!!note
-        Even though this module provides generic information about different banks, information about the endpoint must be manually included.
+So, before continuing with the process from the Financial Account window to get to download bank transactions, it is necessary to apply the dataset that is included in this module.
 
+!!! note
+        This dataset includes the configuration needed for the supported provider offered by  [Redsys](https://redsys.es/){target="_blank"}. 
 
 !!! info
-        Continue with the setup process in the [OAuth Authentication section](../platform-extensions/oauth-authentication.md) which is part of the [Platform Extensions Bundle](../platform-extensions/overview.md).  
- 
+        For more information about how to apply a dataset visit [How to Create a dataset](../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md). 
 
-## Get token
+
+ Apply the dataset through OAuth in the **OAuth Provider window** in `application`> `oauth-provider`. OAuth facilitates an authentication method through a security protocol for obtaining a token needed to give consent to the bank. This authentication will allow Etendo to get the necessary bank information to access the bank statements.
+  
+
+Once in the OAuth Provider window, add the user authentication URL in the **API OAuth URL field**. This URL can be found in the provider documentation API.  
+
+
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/oauthprovider-0.png)
+
+The other fields will be automatically completed with data referring to the corresponding provider.
+
+
+### Get token
 
 Once the imported bank statement type provider is configured through the OAuth Authentication method, the following steps are needed to get to download the bank statements: 
 
@@ -52,7 +65,7 @@ From the Financial Account window, the **Get Token button** allows logging into 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-2.png)
 
 
-## Get consent
+### Get consent
 
 For Etendo to be able to use the token generated, it is necessary to click on the **Get Consent button** in order for the user to authorize Etendo to access the bank information through the token generated.
 
@@ -64,7 +77,7 @@ For Etendo to be able to use the token generated, it is necessary to click on th
 !!!info
         The state of the consent (approved or not approved) can be checked in the **OAuth Provider configuration window**. 
 
-## Account Synchronization
+### Account Synchronization
 
 The following step is to synchronize the accounts. For this, go to the **Get Bank Account Identifiers** window in `general-setup`> `integrations-configuration` >`psd2`>`get-bank-account-identifiers` and select the bank provider to synchronize the accounts with. This brings the bank accounts synchronized with the chosen provider and starts synchronizing the account IDs. 
 

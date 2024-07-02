@@ -198,3 +198,13 @@ This functionality allows the user to create settlements for invoices, both sale
     - [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
     - [Payment Out](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
     - [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
+
+### PSD2 Bank Integration
+
+:octicons-package-16: Javapackage: com.etendoerp.psd2.bank.integration
+
+
+This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
+
+!!!info
+        For more information, visit [PSD2 Bank Integration](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
