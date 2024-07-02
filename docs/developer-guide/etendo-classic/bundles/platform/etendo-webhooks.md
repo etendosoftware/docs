@@ -2,7 +2,7 @@
 title: Etendo Webhooks | Technical Documentation
 ---
 
-:octicons-package-16: Javapackage: com.etendoerp.webhookevents
+:octicons-package-16: Javapackage: `com.etendoerp.webhookevents`
 
 ## Overview
 
