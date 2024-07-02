@@ -339,7 +339,7 @@ nav:
 #        - How to create a callout that extends from another callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout.md
         - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module.md 
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
-#        - How to create a Computed Column: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Computed_Column.md
+        - How to create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
 #        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
 #        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md
