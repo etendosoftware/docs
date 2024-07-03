@@ -291,7 +291,7 @@ nav:
 #        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/javascript-coding-conventions.md
 #        - JSON REST Web Services: developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md
 #        - Main Development Concepts: developer-guide/etendo-classic/concepts/Main_Development_Concepts.md
-#        - Merging Modules: developer-guide/etendo-classic/concepts/Merging_Modules.md
+        - Merging Modules: developer-guide/etendo-classic/concepts/merging-modules.md
 #        - Messages: developer-guide/etendo-classic/concepts/Messages.md
 #        - Model Object Mapping: developer-guide/etendo-classic/concepts/Model_Object_Mapping.md
 #        - Modularity Concepts: developer-guide/etendo-classic/concepts/Modularity_Concepts.md
