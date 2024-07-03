@@ -6226,9 +6226,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-copilot-locally" class="md-nav__link">
+  <a href="#instalation" class="md-nav__link">
     <span class="md-ellipsis">
-      Run copilot locally
+      Instalation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-etendo-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Etendo Copilot
     </span>
   </a>
   
@@ -7962,9 +7971,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-copilot-locally" class="md-nav__link">
+  <a href="#instalation" class="md-nav__link">
     <span class="md-ellipsis">
-      Run copilot locally
+      Instalation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-etendo-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Etendo Copilot
     </span>
   </a>
   
@@ -7994,7 +8012,13 @@
     
     
     
-      <span class="md-tag">Copilot</span>
+      <span class="md-tag">Etendo Copilot</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Copilot Core</span>
     
   
     
@@ -8006,7 +8030,19 @@
     
     
     
-      <span class="md-tag">Machine Learning</span>
+      <span class="md-tag">Infrastructure</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Chat</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Assistants</span>
     
   
 </nav>
@@ -8019,37 +8055,34 @@
   <h1>Copilot Installation</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The getting started guide for the Copilot API is a tool that allows interaction with a bot that selects the appropriate tool to answer a query.</p>
+<p>This guide provides detailed instructions on how to get started with Etendo Copilot, an API that allows interaction with a bot capable of selecting the appropriate tools to respond to user queries. It includes the necessary requirements, instructions for adding dependencies, environment variable configurations, and steps to run Copilot on an Etendo Classic project. Additionally, it covers optional configurations to customize Copilot's behavior and provides links to detailed installation guides for required software.</p>
 <h2 id="etendo-copilot">Etendo Copilot</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.copilot</code></p>
 <h3 id="requirements">Requirements</h3>
 <ul>
 <li><em>Etendo Classic</em>. If you do not have it, you can install it using the <a href="../../etendo-classic/getting-started/installation/install-etendo-development-environment/" target="_blank">Etendo Installation Developer Guide</a>.</li>
 <li><em>Python</em> version ^3.10, to install it follow <a href="https://www.python.org/downloads/" target="_blank">The Official Installation Guide</a>.</li>
-<li><em>Docker</em> to install it follow <a href="https://docs.docker.com/engine/install/">The Official Installation Guide</a></li>
+<li><em>Docker</em> to install it follow <a href="https://docs.docker.com/get-docker/" target="_blank">The Official Installation Guide</a>.</li>
 </ul>
-<h3 id="run-copilot-locally">Run copilot locally</h3>
+<h3 id="instalation">Instalation</h3>
+<p>This module is included in the Copilot Extensions bundle</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md">Copilot Extensions - Release notes</a>.</p>
+</div>
+<p>In addition, you can install only the module containing the <strong>Etendo Copilot</strong> by following the guide on <a href="../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md">How to install modules in Etendo</a>, looking for the GitHub Package <code>com.etendoerp.copilot</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ensure you have 1.3.2 plugin version or greater:</p>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.gradleplugin&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;1.3.2&#39;</span>
+</span></code></pre></div>
+</div>
+<h3 id="run-etendo-copilot">Run Etendo Copilot</h3>
 <ol>
 <li>
-<p>Add copilot dependency in the Etendo Classic project, In <code>build.gradle</code>, add:
-    <div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:copilot:1.2.4&#39;</span><span class="o">)</span>
-</span></code></pre></div></p>
-<details class="warning">
-<summary>Ensure you have 1.3.2 plugin version or greater:</summary>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.gradleplugin&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;1.3.2&#39;</span>
-</span></code></pre></div>
-</details>
-</li>
-<li>
-<p>In the terminal, execute:
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild<span class="w"> </span>--info
-</span></code></pre></div></p>
-</li>
-<li>
 <p>In <code>gradle.properties</code> file is necessary to add some environment variables as a mandatory requirement</p>
-<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5000</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//your.etendo.instance/etendo</span>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5000</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//your.etendo.instance/etendo</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -8068,7 +8101,7 @@
 <tr>
 <td>OPENAI_API_KEY</td>
 <td><code>***********************</code></td>
-<td><strong>Required</strong> You can get it from <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API keys</a></td>
+<td><strong>Required</strong> You can use an <a href="https://platform.openai.com/account/api-keys" target="_blank">OPEN API Key</a> of your own, or you can contact the Etendo support team to obtain one.</td>
 </tr>
 <tr>
 <td>ETENDO_HOST</td>
@@ -8130,15 +8163,28 @@
 </table>
 </li>
 <li>
-<p>Remember to add this configurations in <code>config/Openbravo.properties</code> file or do a <code>./gradlew setup</code> to copy the properties automatically.</p>
+<p>Once the Copilot dependency was added and the variables configurated, in the terminal execute:</p>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>setup
+</span></code></pre></div>
+To apply changes </p>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
+</span></code></pre></div>
+To complile the environment </p>
 </li>
 <li>
-<p>To download the latest copilot Docker image and run it:</p>
+<p>To download and run the latest copilot Docker image, execute:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>copilot.start
 </span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In the terminal Etendo Copilot will be running, and you can see the corresponding log, in case you want to return to the terminal you can exit with Ctrl + C, although the docker container will continue running. We recommend using <a href="https://github.com/jesseduffield/lazydocker#installation" target="_blank">lazydocker</a> or <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> for a simple and fast container management. </p>
+</div>
+<p>To stop the Copilot container you can run: 
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>copilot.stop
+</span></code></pre></div></p>
 </li>
 <li>
-<p>Try Copilot in your Etendo instance. To configure an assistant to use Copilot, follow the <a href="../../../user-guide/etendo-copilot/setup/" target="_blank">Assistant Configuration Guide</a>.</p>
+<p>Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the <a href="../../../user-guide/etendo-copilot/setup/" target="_blank">Assistant Configuration Guide</a>.</p>
 </li>
 </ol>
 
