@@ -31,7 +31,7 @@ The code of the example module can be downloaded from this repository: [com.eten
 
 Property fields are defined in the same way as a normal field in an Etendo tab. The only difference is that instead of selecting a column a property is set.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-1.png)
   
 The property can consist of multiple steps separated by a dot, the system will help you to set the correct property value. If you make a typo then the system will report an error.
 
@@ -59,15 +59,15 @@ You can set a display logic that references a property field. The way of setting
 
 The first usage of a property field is to show related information in the user interface. The example in the previous section showed how to define a new business partner category field in the sales invoice header window/tab. This is visualized as follows in the user interface:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-2.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-2.png)
 
 And you can sort and filter on the related/derived field:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-3.png)
 
 And also display it in the form:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-4.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-4.png)
 
 !!!note
       Note that direct linking also works for derived fields, so in this example you can 'jump' directly to the business partner category window for the business partner category.
@@ -78,12 +78,14 @@ A great usage of the property field concept is to show child records (for exampl
 
 The screenshot below shows an example of a sales invoice line window which shows all sales invoice lines accross multiple sales invoice headers. It makes it really easy to filter and sort accross all sales invoice lines in the system.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-5.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-5.png)
   
 Some things to note when creating these type of windows:
 
   * The main restriction for these types of grids is that insertion of records is not possible, editing and deletion are however no problem. So, for these types of windows/tabs set the UI pattern to **Edit Only**. 
   * For editing it is possible that certain fields need parent or other context information. This context information needs to be added as fields to the tab. If you do not want these context info fields to show up in the grid or form set the following properties to no (unchecked): displayed and show in grid view. 
   See the screenshot below which shows how the organization is added to the tab as a field, so that combos show the correct information when editing the sales invoice lines: 
+
+---
 
 This work is a derivative of [How to add a canvas field to a form or grid](http://wiki.openbravo.com/wiki/How_to_use_property_fields){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
