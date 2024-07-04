@@ -52,6 +52,7 @@ exclude_docs: |
 markdown_extensions:
   - abbr
   - attr_list
+  - footnotes
   - pymdownx.snippets
   - tables
   - pymdownx.highlight:
