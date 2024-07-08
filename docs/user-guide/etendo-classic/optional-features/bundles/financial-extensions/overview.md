@@ -89,7 +89,6 @@ This functionality allows the user to post or unpost multiple records at the sam
 !!! info
     For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
 
-
 ### Business Partner Settlement
 
 :octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
@@ -126,6 +125,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 !!! info
     For more information, visit [the Deferred GL Journal user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#deferred-gl-journal).
 
+
 ### Financial Advanced Reports
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
@@ -136,6 +136,15 @@ The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced
 
 !!! info
     For more information, visit [the Balance Sheet and P&L Structure user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced), [the General Ledger Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) and [the Journal Entries Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced).
+
+### G/L Journal Clone
+
+:octicons-package-16: Javapackage: `com.etendoerp.gljournal.clone`
+
+This functionality allows the user to clone a G/L journal in the Simple G/L Journal window, part of the accounting transactions of financial management.
+
+!!! info
+    For more information, visit the [G/L Journal Clone user guide](../../../basic-features/financial-management/accounting/transactions.md#gl-journal-clone).
 
 ### Intercompany
 
@@ -210,3 +219,4 @@ This functionality allows the user to adjust the accounts to ensure that the VAT
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+    For more information, visit the [GL Journal user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#gl-journal) and the [Simple GL Journal user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#simple-gl-journal).
