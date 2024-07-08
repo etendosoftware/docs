@@ -772,8 +772,6 @@ These are the actions which can be executed from the header in order to create b
 
 ![](../../../../../assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png)
 
-
-
 ### Lines
 
 The user is able to add budget lines. Each line may refer to a specified period, business partner, product, etc.
@@ -783,8 +781,6 @@ The user is able to add budget lines. Each line may refer to a specified period,
 By using the necessary filters such as business partner, product, partner group, product category, etc, the user is able to generate budget reports in Excel to be used for specific purposes.  
 
 ![](../../../../../assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png)
-
-
 
 ## Not Posted Transaction Report
 
@@ -862,7 +858,7 @@ In order to enable an account to be part of the VAT regularization process, it i
 #### GL Journal Entry Generation
 1. Click the **Process** button to generate the simple GL journal entry.
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png)
-2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000115**).
+2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000123**).
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png)
 3. Here, verify that the header has been created with the corresponding lines.
 
