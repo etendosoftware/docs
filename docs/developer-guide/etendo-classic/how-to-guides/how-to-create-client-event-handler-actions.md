@@ -20,7 +20,7 @@ The code of the example module can be downloaded from this mercurial repository:
 ##  Defining Client Event Handler Actions
 
 A client event handler action is a function in javascript available through a global ID. **The global ID should be unique, it is strongly adviced to use the module's db prefix.** The action has to be defined in a javascript file
-located in the module, see here for information on how to add javascript code to Etendo.
+located in the module, see [here](../how-to-guides/client-side-development-and-api.md#adding-javascript-to-etendo) for information on how to add javascript code to Etendo.
 
 The following is an example of this kind of actions: it shows a message **after** saving a record. The message type and content depends on if we are creating or updating the record.
   
@@ -53,9 +53,9 @@ As you can see, the action is placed in a global object, in this case the module
 
 This kind of actions receives 5 arguments:
 
-  * **view** : the standard view (OBStandardView) which provides access to the complete window and tab structure in a loaded window. 
-  * **form** : the  OBViewForm  which contains the fields, the form can also be the form used in inline grid editing. 
-  * **grid** : the  OBViewGrid  which contains the list of records loaded for the tab. 
+  * **view** : the standard view ([`OBStandardView`](../how-to-guides/client-side-development-and-api.md#OBStandardView)) which provides access to the complete window and tab structure in a loaded window. 
+  * **form** : the  [OBViewForm](../how-to-guides/client-side-development-and-api.md#OBViewForm)  which contains the fields, the form can also be the form used in inline grid editing. 
+  * **grid** : the  [OBViewGrid](../how-to-guides/client-side-development-and-api.md#OBViewGrid)  which contains the list of records loaded for the tab. 
   * **extraParameters** : extra information provided by the event handler. Its content depends on the type of event. 
   * **actions** : the stack of actions to be executed. It must **not be modified**. It must be used just for invoking `OB.EventHandlerRegistry.callbackExecutor` as shown in the code above. This ensures the correct execution of all actions. 
 
@@ -75,36 +75,34 @@ A client event handler action is registered through the `OB.EventHandlerRegistry
   * **event type** : the type of event that will cause the execution of the action 
   * **callback function** : the client event handler action itself 
   * **action id** : can be used to overwrite an existing action registered using the same id 
-    
-    OB.EventHandlerRegistry.register(OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.showMessage, 'OBPFCI_ShowMessage');
+        
+        OB.EventHandlerRegistry.register(OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.showMessage, 'OBPFCI_ShowMessage');
 
 Some comments about this code:
 
-  * `OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB` is a constant we have defined which holds the ID of the Product Category  header tab. 
+  * `OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB` is a constant we have defined which holds the ID of the [Product Category](../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md#product-category) header tab. 
   * `OB.EventHandlerRegistry.POSTSAVE` is the event type. 
 
 The **event types** currently supported are:
 
-  * **OB.EventHandlerRegistry.PRESAVE** : the action will be launched before creating or updating a record in a tab of a standard window. 
-  * **OB.EventHandlerRegistry.POSTSAVE** : the action will be launched after creating or updating a record in a tab of a standard window. 
-  * **OB.EventHandlerRegistry.PREDELETE** : the action will be launched before deleting a record in a tab of a standard window.
+  * **OB.EventHandlerRegistry.PRESAVE**: the action will be launched before creating or updating a record in a tab of a standard window. 
+  * **OB.EventHandlerRegistry.POSTSAVE**: the action will be launched after creating or updating a record in a tab of a standard window. 
+  * **OB.EventHandlerRegistry.PREDELETE**: the action will be launched before deleting a record in a tab of a standard window.
 
 In the case of PRESAVE and POSTSAVE, the **extraParameters** argument will contain the following information:
 
-  * **data**: the values of the record (before saving it in the case of **PRESAVE** and after saving it in the case of **POSTSAVE** ) 
+  * **data**: the values of the record (before saving it, in the case of **PRESAVE**, and after saving it, in the case of **POSTSAVE**) 
   * **isNewRecord**: a flag that indicates if the record is new. It can be used to distinguish between the **save** and **update** events. 
 
-In the case of PREDELETE the **extraParameters** argument will contain the following information:
+In the case of PREDELETE, the **extraParameters** argument will contain the following information:
 
-  * **recordsToDelete** : the selected records in the grid which are going to be deleted, with the values of each record. 
+  * **recordsToDelete**: the selected records in the grid which are going to be deleted, with the values of each record. 
 
 ####  Multiple Actions Functions per Event, Call Order
 
 The client event handler actions can have a sort property to control the call-order, if there are multiple actions for one event in the same tab.
 
 It is, for example, set like this:
-
-    
     
     OB.OBPFCI.ClientSideEventHandlers.showMessage.sort = 20;
 
@@ -112,7 +110,7 @@ Actions with a lower sort value will be executed before actions with a higher on
 
 ####  Overriding/Replacing an Action
 
-An action can be registered using an ID (**action id**). If there is already an action registered with the same ID for the same tab and event type then it is replaced by the new registration.
+An action can be registered using an ID (**action id**). If there is already an action registered with the same ID for the same tab and event type, then it is replaced by the new registration.
 
 ##  Examples
 
@@ -135,14 +133,11 @@ The following example shows how to open a new tab **after** saving a record.
     OB.OBPFCI.ClientSideEventHandlers.openTab.sort = 120;
     OB.EventHandlerRegistry.register(OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.openTab, 'OBPFCI_OpenTab');
 
-In this case we are opening the  Product  window after creating a new  Product Category  . We use _extraParameters.isNewRecord_ to identify the save flow. Finally we are invoking _OB.EventHandlerRegistry.callbackExecutor_ to ensure
-the execution of the subsequent actions. In addition, we are giving a sort number of 120.
+In this case, we are opening the [Product](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) window after creating a new [Product Category](../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md#product-category). We use `extraParameters.isNewRecord` to identify the save flow. Finally, we are invoking `OB.EventHandlerRegistry.callbackExecutor` to ensure the execution of the subsequent actions. In addition, we are giving a sort number of 120.
 
 ###  Post-save Action: Refresh the Grid
 
 The following example shows how to refresh the grid **after** saving or updating a record.
-
-    
     
      
     OB.OBPFCI.COUNTRY_HEADER_TAB = '135';
@@ -161,9 +156,9 @@ The following example shows how to refresh the grid **after** saving or updating
      
     OB.EventHandlerRegistry.register(OB.OBPFCI.COUNTRY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.refreshGrid, 'OBPFCI_RefreshGrid');
 
-Note that we are making use of a function of the grid called _refreshGridFromClientEventHandler_ , that is a special grid refresh method adapted to be used within this type of actions.
+Note that we are making use of a function of the grid called `refreshGridFromClientEventHandler`, that is a special grid refresh method adapted to be used within this type of actions.
 
-This way, we are forcing the grid in the header of the  Country and Region window to be refreshed every time a new record is created/updated on it by using the grid view.
+This way, we are forcing the grid in the header of the [Country and Region](../../../user-guide/etendo-classic/basic-features/general-setup/application.md#country-and-region) window to be refreshed every time a new record is created/updated on it by using the grid view.
 
 ###  Pre-save Action: Client Validation
 
@@ -186,11 +181,11 @@ In this example, we are checking a user's e-mail **before** saving/updating a re
      
     OB.EventHandlerRegistry.register(OB.OBPFCI.USER_HEADER_TAB, OB.EventHandlerRegistry.PRESAVE, OB.OBPFCI.ClientSideEventHandlers.validateEmail, 'OBPFCI_ValidateEmail');
 
-Note that if the e-mail is not valid, we do not call _OB.EventHandlerRegistry.callbackExecutor_ so the save operation will **not** be performed.
+Note that if the e-mail is not valid, we do not call `OB.EventHandlerRegistry.callbackExecutor` so the save operation is **not** performed.
 
 ###  Pre-save Action: Calling Server Side
 
-In this case we are going to call a server side action **before** saving a Goods Shipment  line. To understand this example is important to know the concept of  Action Handler  .
+In this case, we are going to call a server side action **before** saving a [Goods Shipment](../../..//user-guide/etendo-classic/basic-features/sales-management/transactions.md#goods-shipment) line. To understand this example is important to know the concept of [Action Handler](../../../developer-guide/etendo-classic/concepts/etendo-architecture.md#actionhandler-server-side-calling-from-the-client).
 
     
     
@@ -228,14 +223,13 @@ In this case we are going to call a server side action **before** saving a Goods
      
     OB.EventHandlerRegistry.register(OB.OBPFCI.GOODS_SHIPMENT_LINES_TAB, OB.EventHandlerRegistry.PRESAVE, OB.OBPFCI.ClientSideEventHandlers.checkStorageBin, 'OBPFCI_CheckStorageBin');
 
-The above example calls to  GoodsShipmentLinesActionHandler  . This action handler returns the row, stack and level of the storage bin whose id has been sent in the request. This id has been retrieved from the goods shipment line
-that we are about to save.
+The above example calls to `GoodsShipmentLinesActionHandler`. This action handler returns the row, stack and level of the storage bin whose ID has been sent in the request. This ID has been retrieved from the goods shipment line that we are about to save.
 
-The record will **not** be saved if the storage bin row is not 0. Otherwise, we show a message with the storage bin information.
+The record is **not** saved if the storage bin row is not 0. Otherwise, we show a message with the storage bin information.
 
 ###  Pre-delete Action: Client Validation
   
-In this case we are going to call a server side action **before** deleting a Sales Order  line. As in the previous example, to understand this one is important to know the concept of  Action Handler  .
+In this case, we are going to call a server side action **before** deleting a [Sales Order](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) line. As in the previous example, to understand this one is important to know the concept of [Action Handler](../../../developer-guide/etendo-classic/concepts/etendo-architecture.md#actionhandler-server-side-calling-from-the-client).
 
     
      
