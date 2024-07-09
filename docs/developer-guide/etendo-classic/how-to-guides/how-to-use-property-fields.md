@@ -84,7 +84,9 @@ Some things to note when creating these type of windows:
 
   * The main restriction for these types of grids is that insertion of records is not possible, editing and deletion are however no problem. So, for these types of windows/tabs set the UI pattern to **Edit Only**. 
   * For editing it is possible that certain fields need parent or other context information. This context information needs to be added as fields to the tab. If you do not want these context info fields to show up in the grid or form set the following properties to no (unchecked): displayed and show in grid view. 
-  See the screenshot below which shows how the organization is added to the tab as a field, so that combos show the correct information when editing the sales invoice lines: 
+  See the screenshot below which shows how the organization is added to the tab as a field, so that combos show the correct information when editing the sales invoice lines:
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-6.png)
 
 ---
 
