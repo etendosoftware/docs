@@ -8111,7 +8111,7 @@
 <p>The code of the example module can be downloaded from this repository: <a href="https://github.com/etendosoftware/com.etendoerp.client.application.examples">com.etendoerp.client.application.examples</a></p>
 <h2 id="defining-property-fields">Defining property fields</h2>
 <p>Property fields are defined in the same way as a normal field in an Etendo tab. The only difference is that instead of selecting a column a property is set.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-1.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-1.png" /></a></p>
 <p>The property can consist of multiple steps separated by a dot, the system will help you to set the correct property value. If you make a typo then the system will report an error.</p>
 <p>Property fields are not editable in the user interface, they are however automatically updated when inserting or updating a record in the system.</p>
 <div class="admonition note">
@@ -8130,11 +8130,11 @@
 </ul>
 <h2 id="use-case-show-related-information">Use case: show related information</h2>
 <p>The first usage of a property field is to show related information in the user interface. The example in the previous section showed how to define a new business partner category field in the sales invoice header window/tab. This is visualized as follows in the user interface:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-2.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-2.png" /></a></p>
 <p>And you can sort and filter on the related/derived field:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-3.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-3.png" /></a></p>
 <p>And also display it in the form:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-4.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-4.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note that direct linking also works for derived fields, so in this example you can 'jump' directly to the business partner category window for the business partner category.</p>
@@ -8142,13 +8142,15 @@
 <h2 id="use-case-show-child-table-in-top-of-the-window">Use case: show child table in top of the window</h2>
 <p>A great usage of the property field concept is to show child records (for example: sales invoice lines) in the root of a window. This then makes it possible to filter and sort the child records accross multiple parents (for example: sales invoice headers).</p>
 <p>The screenshot below shows an example of a sales invoice line window which shows all sales invoice lines accross multiple sales invoice headers. It makes it really easy to filter and sort accross all sales invoice lines in the system.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-5.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-5.png" /></a></p>
 <p>Some things to note when creating these type of windows:</p>
 <ul>
 <li>The main restriction for these types of grids is that insertion of records is not possible, editing and deletion are however no problem. So, for these types of windows/tabs set the UI pattern to <strong>Edit Only</strong>. </li>
 <li>For editing it is possible that certain fields need parent or other context information. This context information needs to be added as fields to the tab. If you do not want these context info fields to show up in the grid or form set the following properties to no (unchecked): displayed and show in grid view. 
-  See the screenshot below which shows how the organization is added to the tab as a field, so that combos show the correct information when editing the sales invoice lines: </li>
+  See the screenshot below which shows how the organization is added to the tab as a field, so that combos show the correct information when editing the sales invoice lines:</li>
 </ul>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-6.png" /></a></p>
+<hr />
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_use_property_fields" target="_blank">How to add a canvas field to a form or grid</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
