@@ -92,7 +92,7 @@ The first approach allows you to define the `OnChange` directly in the Field def
 
 The Application Dictionary allows you to set the `OnChange` for a specific field, see the `OnChange` function field in the `Window, Tabs and Fields` window.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-0.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-0.png)
 
 The value should be the unique global ID mentioned above.
 
@@ -183,12 +183,14 @@ If a field has both an `OnChange` and a classic callout defined, then the follow
 
 The Example Module has an example window with several examples of a callout/onchange function. You can find the example window in `Application Examples` >`Callout/OnChange Function`.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-1.png)
 
 To test out the onchange, create a new record and set some values in the fields. You should see automatic behavior.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-2.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-2.png)
 
 You can **enable/disable** different onchange functions by going into the web/com.etendoerp.client.application.examples/js/example-onchange.js file and uncomment some of the commented lines.
+
+---
 
 This work is a derivative of [How to create client side callout onchange function](http://wiki.openbravo.com/wiki/How_to_create_client_side_callout_onchange_function){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
