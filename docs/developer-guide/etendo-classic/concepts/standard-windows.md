@@ -109,7 +109,7 @@ The applied filter is all the documents with status Draft or which date is in th
 
 To define a window as transactional, go to `Application Dictionary` > `Windows, Tabs, and Fields` > `Window` tab and select the `Window Type` as `Transaction`.
 
-To define the **Transaction Range**, go to ``General Setup` > `Application` > `Session Preferences` and define in the `Transaction Range` the maximum number of days that processed documents will be shown in.
+To define the **Transaction Range**, go to `General Setup` > `Application` > `Session Preferences` and define in the `Transaction Range` the maximum number of days that processed documents will be shown in.
 
 ##### High Volume Tables
 
