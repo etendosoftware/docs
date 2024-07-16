@@ -8273,6 +8273,10 @@
 <p>This process is only available when the application type is <strong>Open AI Assistant</strong> and takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of Open AI Models, and finally gets and uploads the files used as knowledge base.</p>
 <h3 id="app-source-tab">App Source Tab</h3>
 <p>In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. </p>
+<div class="admonition warning">
+<p class="admonition-title">File Limitation for Code Interpreter</p>
+<p>If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the <strong>Exclude from Code Interpreter</strong> option on the files that you do not want to be processed by the Code Interpreter.</p>
+</div>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/setup/app-source-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/app-source-tab.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -8289,6 +8293,8 @@
 </li>
 <li><strong>Type</strong>: read-only field showing the type of file selected in the <a href="#copilot-file-window">Copilot File window</a>.</li>
 <li><strong>Active</strong>: checkbox to activate the app source.</li>
+<li><strong>Exclude from Code Interpreter</strong>: Checkbox to exclude files from being processed by the Code Interpreter during synchronization. This checkbox is only editable if the assistant has the Code Interpreter option enabled.</li>
+<li><strong>Exclude from Retrieval</strong>: Checkbox to exclude files from being considered in the Retrieval process during synchronization.This checkbox is only editable if the assistant has the Retrieval option enabled.</li>
 </ul>
 <h3 id="tool-tab">Tool Tab</h3>
 <p>In this tab, you can define the tools to be used by the assistant.</p>
