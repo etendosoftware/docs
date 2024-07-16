@@ -12,35 +12,35 @@ tags:
 
 ## Overview
 
-The **DDLTool** is an Etendo Copilot tool, developed in Python, to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is able to create and register tables, windows, items and menu options in the system so that data can be displayed.
+The **DDLTool** is an Etendo Copilot tool, developed in Python, to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is possible to create and register tables, windows, items and menu options in the system so that data can be displayed.
 
 ## Functionality
 
-The **DDLTool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode is needed to do the task request by the user, the tool has a variable that contains a list with the availables modes, and with the prompt the assistant choose wich is better for the task.
+The **DDLTool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
 
 Users can choose modes using the chat:
 
-- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named RegisterTableWebHook to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
+- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named `RegisterTableWebHook` to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
 
-- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the ad_org and ad_client table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
+- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the `ad_org` and `ad_client` table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
 
-- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook CreateTableWebHook, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
+- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook `CreateTableWebHook`, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
 
-- **REGISTER_COLUMNS:** This mode is executed automatically after the ADD_COLUMN mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
+- **REGISTER_COLUMNS:** This mode is executed automatically after the `ADD_COLUMN` mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
 
-- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named SyncTermsWebHook.
+- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named `SyncTermsWebHook`.
 
-- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the RegisterWindowAndTabWebHook java file.
+- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the `RegisterWindowAndTabWebHook` java file.
 
 - **REGISTER_FIELDS:** Registers the fields of a tab in Etendo System to be recognized for it. It works by calling a webhook to run a Java file.
 
 ## Usage Example 
 
-In the section of Copilot App, it is possible configure the assistants and the tool that it can use.
+In the section of Copilot App, it is possible to configure the assistant and the tool that it can use.
 
 ![ddl-tool.png](../../../assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
 
-Also in Copilot App, it cans insert a prompt where is possible indicates the tool will use. Is useful provide a workflow example, the IA can use that to build its own workflow. 
+Also in Copilot App, a prompt can be inserted where it is possible to indicate the tool to use. It is useful to provide a workflow example, the IA can use that to build its own workflow. 
 
 ![ddl-tool1.png](../../../assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
 

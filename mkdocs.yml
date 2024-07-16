@@ -236,6 +236,7 @@ nav:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
           - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md
+          - Create References: user-guide/etendo-copilot/bundles/create-references.md
           - Dev Assistant: user-guide/etendo-copilot/bundles/dev-assistant.md
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
           
