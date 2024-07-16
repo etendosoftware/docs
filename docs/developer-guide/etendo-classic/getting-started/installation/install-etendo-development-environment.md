@@ -1,6 +1,7 @@
 ---
 title: Install Etendo Development Environment
 ---
+# Install Etendo Development Environment
 
 ## Overview
 
@@ -9,7 +10,7 @@ This section explains how to install and run a new local Etendo environment.
 
 ## Install Etendo in local Environment
 
-To install Etendo in a development environment, follow the same steps as described in the [Etendo Installation Guide](/getting-started/installation), the only difference is that we open the project with intelliJ and run Tomcat locally.
+To install Etendo in a development environment, follow the same steps as described in the [Etendo Installation Guide](../../../../getting-started/installation.md), the only difference is that we open the project with intelliJ and run Tomcat locally.
 
 
 ## Run Etendo Development Environment

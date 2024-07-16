@@ -12,7 +12,7 @@ This section explains how to install a new Etendo environment. It includes:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Requirements 
-In this section, you can read the [System Requirements](/getting-started/requirements).
+In this section, you can read the [System Requirements](../getting-started/requirements.md).
 
 ## PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
@@ -35,7 +35,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         cd /opt/EtendoERP
         ```
 
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
        
         ```groovy
         nexusUser=
@@ -120,7 +120,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
         
         !!! note
-            If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+            If you want to run Etendo locally, go to [Run Etendo Development Environment](../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md#run-etendo-development-environment).
 
     10. Open your browser in `https://<Public server IP>/<Context Name>`
 
@@ -140,7 +140,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
         ```groovy
         nexusUser=
         nexusPassword=
@@ -158,7 +158,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encod>
         ```
 
-    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "[<version>,<version>)"`. The following code is an example, you must modify your current file
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`. The following code is an example, you must modify your current file
         
         ``` groovy
         plugins {
@@ -227,7 +227,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
 
         !!! note
-            If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+            If you want to run Etendo locally, go to [Run Etendo Development Environment](../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md#run-etendo-development-environment).
                 
     11. Open your browser in `https://<Public server IP>/<Context Name>`
 

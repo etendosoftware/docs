@@ -5,27 +5,27 @@ title: Reports - Accounting
 
 This section describes the windows related to accounting financial reports in Etendo. These are:
 
-[:material-file-document-outline: Accounting Transaction Details](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Transaction Details](#accounting-transaction-details){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure](#balance-sheet-and-pl-structure){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](#balance-sheet-and-pl-structure-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Trial Balance](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Trial Balance](#trial-balance){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Report](#general-ledger-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report Advanced](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Report Advanced](#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Journal Entries Report](#journal-entries-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report Advanced](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Journal Entries Report Advanced](#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Tax Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#create-tax-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Create Tax Report](#create-tax-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Customer Statement](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#customer-statement){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Customer Statement](#customer-statement){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Report Setup](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#tax-report-setup_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Report Setup](#tax-report-setup_1){ .md-button .md-button--primary } <br>
 
 
 
@@ -108,7 +108,7 @@ Under the *"Primary Filters"* section, it is possible to specify:
 ## **Balance Sheet and P&L Structure Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -276,7 +276,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 ## **General Ledger Report Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -349,7 +349,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 ## **Journal Entries Report Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This **Journal Entries Advanced** report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 

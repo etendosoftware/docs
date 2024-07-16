@@ -9,7 +9,7 @@ tags:
 
 # Translation Tool: XMLTranslatorTool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
 ## Overview
 

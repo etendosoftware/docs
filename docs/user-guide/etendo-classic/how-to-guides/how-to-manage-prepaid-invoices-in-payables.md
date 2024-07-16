@@ -12,9 +12,9 @@ In these situations, a particular payment term is agreed upon by the Company and
 
 ## Recommended articles
 
-Managing prepaid invoices requires a clear understanding on how to create a [Purchase Order](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) and a [Purchase Invoice](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice) as well as how to register a [Vendor Payment](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out).
+Managing prepaid invoices requires a clear understanding on how to create a [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) and a [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) as well as how to register a [Vendor Payment](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
 
-It is recommended as well to understand how to set up a [Payment Term](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term) and how to launch the [Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report).
+It is recommended as well to understand how to set up a [Payment Term](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) and how to launch the [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 ## Order prepayment: execution steps
 
@@ -37,7 +37,7 @@ Please note that, prepay payment term has a header and a line:
 
 ### Purchase Order creation
 
-As already mentioned, the first step is to create a [Purchase Order](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) which contains the goods that the company needs.
+As already mentioned, the first step is to create a [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) which contains the goods that the company needs.
 
 In this scenario, the parties have agreed a specific payment term which can be filled in the corresponding field of the purchase order header.
 
@@ -50,7 +50,7 @@ Once every required data is filled in as appropriate, the Purchase Order needs t
 
 ### Payment creation and accounting
 
-Payments made to a vendor are registered in the [payment out](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out) window. Etendo allows to register vendor payments created against purchase orders and/or invoices.
+Payments made to a vendor are registered in the [payment out](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out) window. Etendo allows to register vendor payments created against purchase orders and/or invoices.
 
 The main fields to fill in the header section of the payment in window are:
 
@@ -70,20 +70,20 @@ The company in this example needs to choose "Orders" and then the order which is
 
 Once everything is filled in, press the button Process.
 
-The payment is made and withdrawn from the bank at the same time, that means that a withdrawal transactions is created in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#transaction) window, in the "Transaction" tab.
+The payment is made and withdrawn from the bank at the same time, that means that a withdrawal transactions is created in the [Financial Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#transaction) window, in the "Transaction" tab.
 
 Just created payment can be posted in the Payment Out window by pressing the process button Post if:
 
-- the "Payment Method" used has the proper configuration in the [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method) tab of the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) used to make the payment.
+- the "Payment Method" used has the proper configuration in the [Payment Method](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-method) tab of the [Financial Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) used to make the payment.
      - the company in this example needs to set the field "Upon Payment Use" as "In Transit Payment Account"
-- besides, there should be an "In Transit Payment Out Account" in the [Accounting Configuration](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration) tab of the financial account used to make the payment.
+- besides, there should be an "In Transit Payment Out Account" in the [Accounting Configuration](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) tab of the financial account used to make the payment.
 
 The posting will look like:
 
 | Account                    | Debit | Credit |
 |----------------------------|-------|--------|
-| [Vendor Prepayment](user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting)          | 50    |        |
-| [In Transit Payment Out Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration) |       | 50     |
+| [Vendor Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)          | 50    |        |
+| [In Transit Payment Out Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) |       | 50     |
 
 
 It is possible to check once more the Payment Out Plan of the purchase order in this example.
@@ -92,7 +92,7 @@ The purchase order payment plan includes the payment registered in the Payment O
 
 ### Payment check
 
-Back to the [Purchase Order](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order), it is possible to check the recently created Payment Plan with its Payment Details.
+Back to the [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order), it is possible to check the recently created Payment Plan with its Payment Details.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png)
 
@@ -106,7 +106,7 @@ To summarize:
 
 ### Pre-Paid invoice management and accounting
 
-The company in this example can register the [Goods Receipt](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts) before registering the vendor invoice by using the process [Pending Goods Receipts](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#pending-goods-receipts).
+The company in this example can register the [Goods Receipt](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) before registering the vendor invoice by using the process [Pending Goods Receipts](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts).
 
 This process allows introducing the exact amount of goods received from the vendor against each purchase order line.
 
@@ -116,7 +116,7 @@ Once processed, Etendo informs about the Goods Receipt number just registered.
 
 Next step is to enter the vendor invoice. There are several ways of entering a vendor invoice.
 
-The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
+The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines-4) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
 
@@ -133,12 +133,12 @@ Above situation it is also reflected in accounting, as purchase invoice posting 
 
 | Account              | Debit | Credit |
 |----------------------|-------|--------|
-| [Product Expense](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting)      | 110   |        |
-| [Vendor Liability](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting)     |       | 60     |
-| [Vendor Prepayment](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting)    |       | 50     |
+| [Product Expense](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      | 110   |        |
+| [Vendor Liability](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)     |       | 60     |
+| [Vendor Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)    |       | 50     |
 
 
-There is a report named [Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report) which allows monitoring every payment received or made.
+There is a report named [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) which allows monitoring every payment received or made.
 
 In this example, this report shows in an intuitive way:
 
@@ -192,7 +192,7 @@ The payment can be posted from the "Payment Out" window.
 
 Payment posting looks like:
 
-![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport .png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport.png)
 
 Above posting reflects the moment in which the vendor liability is canceled by the prepayment, which is also canceled by the recognition of the payment withdrawn.
 

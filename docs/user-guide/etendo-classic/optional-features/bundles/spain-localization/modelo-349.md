@@ -3,7 +3,7 @@ title: Modelo 349
 ---
 ## Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat349.es <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es` <br>
 
 ## **Introducción**
 
@@ -277,7 +277,7 @@ e introducir los datos relativos al abono y devolución de mercancía y, en la p
     -   el Año de la factura original que se rectifica
     -   el Periodo de la factura original y, por tanto, el periodo en el cual dicha factura original se incluyó en un 349
     -   La base imponible del 349 de productos o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de productos (Clave A en compras, Clave E en ventas)
-    -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios Clave I en compras, Clave S en ventas)
+    -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios (Clave I en compras, Clave S en ventas)
 
 ![](../../../../../assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
 
@@ -301,7 +301,7 @@ En este último escenario, el sistema, para un mismo proveedor o cliente y perio
 
 La presentación telemática del modelo 349 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
 
-La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde el enlace “Oficina virtual”-”Presentación de declaraciones” - “Todas las declaraciones” - “Modelo 349”\]
+La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde el enlace “Oficina virtual”-”Presentación de declaraciones” - “Todas las declaraciones” - “Modelo 349”
 
 !!! info
     Existe una “Guía de presentación telemática” en la página web de Hacienda que nos explica cómo debe realizarse la presentación telemática de las declaraciones y que se puede descargar [*aquí*](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).

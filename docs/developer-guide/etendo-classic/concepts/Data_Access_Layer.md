@@ -346,7 +346,7 @@ applies specific conversion logic to always ensure that names are allowed and
 unique for xml/Java.
 
 For a full listing of all entity and property names, see the [Data Model
-Reference](/developer-guide/etendo-classic/concepts/Data_Model) section.
+Reference](/developer-guide/etendo-classic/concepts/data-model) section.
 
 ####  Entity Naming
 
@@ -1056,7 +1056,7 @@ The code formatting template and his configuration can be found in the following
 ##  Tips & Tricks and Troubleshooting
 
 !!!info
-    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer.md) section.
+    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md#data-access-layer) section.
 
 ---
 

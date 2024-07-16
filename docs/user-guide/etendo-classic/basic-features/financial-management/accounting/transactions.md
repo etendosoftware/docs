@@ -5,31 +5,32 @@ title: Accounting
 
 This section describes the windows related to the accounting transactions that are part of the Financial Management in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Financial Type Configuration](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#financial-type-configuration){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Financial Type Configuration](#financial-type-configuration){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Simple G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#simple-gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Simple G/L Journal](#simple-gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Journal](#gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: End Year Close](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: End Year Close](#end-year-close){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: GL Posting by DB Tables ](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: GL Posting by DB Tables ](#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Budget](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#budget){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Budget](#budget){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Budget Reports in Excel](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Create Budget Reports in Excel](#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Not Posted Transaction Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Reset Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: VAT Regularization](#vat-regularization){ .md-button .md-button--primary } <br>
 
 ## Financial Type Configuration
 
-### Introduction
+### Overview
 
 This feature allows entering in the system all the financings the company has. It is possible  to exploit the information through the bank pool report. 
-Depending on the financial product used in this new "Financing" window, Etendo generates financing plans automatically (Leasing, Renting and Loans) and also manages the invoices and payments from this same window. 
+Depending on the financial product used in this new **Financing** window, Etendo generates financing plans automatically (Leasing, Renting and Loans) and also manages the invoices and payments from this same window. 
 
 The usual financing products are: 
 
@@ -47,7 +48,7 @@ The usual financing products are:
 These financing methods are loaded into the system using a dataset.
 
 !!! info
-    For more information, visit [Financial Type](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#financial-type).
+    For more information, visit [Financial Type](../../financial-management/accounting/setup.md#financial-type).
 
 
 ### Header
@@ -108,7 +109,7 @@ Lines contain the following fields:
  
 ### Accounting 
  
- There are three sections: “Amortization/Renting”, “Interest” and “Commission”. There are six fields in total where three of them represent the product and the other three, the accounting concept. The 2 fields (product and accounting concept) cannot be filled in the same section. In each of these related fields, the product must be indicated from the "Products" window or "Accounting Concept" if the "Available in Financial Invoices" check box needed to assign to each column is activated. In the case of the type of financing "Loan", it is obligatory to fill in the part of accounting concepts.
+ There are three sections: “Amortization/Renting”, “Interest” and “Commission”. There are six fields in total where three of them represent the product and the other three, the accounting concept. The 2 fields (product and accounting concept) cannot be filled in the same section. In each of these related fields, the product must be indicated from the **Products** window or **Accounting Concept** if the **Available in Financial Invoices** check box needed to assign to each column is activated. In the case of the type of financing **Loan**, it is obligatory to fill in the part of accounting concepts.
  
  ![](../../../../../assets/drive/1eQLGjpM9vAMRCbo4_gh2-J9Nc6yd36lU.png)
  
@@ -211,19 +212,19 @@ Once this credit account/credit card is created in the financings and its inform
  
 The fields to be copied from the account or credit card are the equivalent ones in the “Financial Account” field, the amount of residual value to be indicated in the “Amount Available” field and the “Credit Limit” amount to be indicated in the “Amount Granted” field. All other fields in the header are editable to include the rest of the information.
 
-## **Simple G/L Journal**
+## Simple G/L Journal
 
-### **Introduction**
+### Overview
 
 In Etendo there is a GL Journal window that allows the user to manually enter GL journals in the system. This window has three tabs (Batch, Header and Lines) and in some cases this can be difficult for the user since it might be enough with just two levels (Header and lines). Another issue that this window has is that only accounting schemas can be selected, so when posting the GL journal there is only one entry in the fact\_Acct table.
 
-##### **Benefits of the Simple G/L Journal**
+##### Benefits of the Simple G/L Journal
 
 -   It is a simpler window since it is not necessary to enter a batch. There is one less level of data entry.
 -   It is simpler to search journal entries. Without the batch level, it is possible to directly search for specific journal entries.
 -   In this window, it is possible to see journal entries that have been created using the GL Journal window, so it is possible to search journal entries as well.
 
-### **Header**
+### Header
 
 A G/L journal header can include journals which can contain several journal lines.
 
@@ -233,7 +234,7 @@ Important field to note:
     -   If it is not marked, the General ledger field is shown from then on.
     -   If it is marked, the system will not show the General ledger field, and it will not be taken into account for next operations.
 
-### **Lines**
+### Lines
 
 The lines tab allows the user to enter the journal entries of a G/L journal as well as G/L item payment related information.
 
@@ -245,7 +246,7 @@ One field to note:
     If **Multi-general ledger** is not flagged, then the Account field is shown instead.
 
 
-#### **Accounting**
+#### Accounting
 
 Accounting information related to the GL Journal
 
@@ -256,7 +257,7 @@ When Posting the Header:
     -   Not marked: It can only select accounts that belong to just one accounting schema (defined in the header) so when posting the document there will be just one journal entry. This behaviour will not change. Posting process exactly as GL Journal window
     -   Marked: the user selects G/L Items and since it can have different valid combinations when posting the document, it will have as many entries as in different accounts it is defined the GL item and the organization defined in the header.
 
-#### **Exchange Rates**
+#### Exchange Rates
 
 The exchange rate tab allows the user to enter an exchange rate between the organization's general ledger currency and the currency of the G/L Journal to be used while posting the G/L Journal to the ledger.
 
@@ -266,7 +267,7 @@ The exchange rate tab allows the user to enter an exchange rate between the orga
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -304,19 +305,35 @@ This is useful to distinguish between the original GL journal and the reverse on
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
 
+### G/L Journal Clone
 
-## **G/L Journal**
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-### **Introduction**
+With this functionality, the user is able to seamlessly clone a selected entry. This feature not only duplicates the entry but also creates a detailed description that includes the original order number.
+
+In order to do this, select the record to clone and click the copy record button in the toolbar.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone.png)
+
+In this way, a copy of the original record is generated, including a description and a copy number, as seen below.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone2.png)
+
+This functionality enhances the efficiency of managing journal entries, making it easier to replicate and document transactions accurately.
+
+## G/L Journal
+
+### Overview
 
 A G/L (General Ledger) journal allows the user to post journal entries to the ledger and create G/L item payments.
 
@@ -324,7 +341,7 @@ As already explained, most of the accounting entries are created while posting d
 
 The accounting entries which do not match with an existing Document Type need to be posted to the ledger by using a G/L Journal.
 
-Besides, a G/L Journal can be used to create "**G/L Item Payments**" or payments not related to orders or invoices.
+Besides, a G/L Journal can be used to create **G/L Item Payments** or payments not related to orders or invoices.
 
 !!! info
     This feature is very useful while posting an employee payroll to the ledger as the payroll payment can be created at the same time.
@@ -336,7 +353,7 @@ This feature allows the user to create the same journal entries as the ones cont
 
 This feature is also very useful while posting employee payroll, for instance.
 
-#### **Batch**
+#### Batch
 
 A G/L journal batch allows the user to group G/L journals of similar characteristics which can all be processed at the same time.
 
@@ -350,17 +367,17 @@ As shown in the image above, a *G/L Journal batch* can contain below data:
 
 None of the data above is mandatory at this point because a G/L journal can contain several journals having different accounting periods and accounting dates. The same applies to the currency as a G/L journal can contain several journals of different general ledger configurations.
 
-Once a batch is created and saved, it is possible to create as many G/L Journals as required, which once ready can be completed and processed at the same time as a "unique" batch.
+Once a batch is created and saved, it is possible to create as many G/L Journals as required, which once ready can be completed and processed at the same time as a **unique** batch.
 
-A G/L journal and therefore its content can be set up as "Template", that template can be later on used while creating a new G/L journal by using the process button "Copy Lines" as described in the next section.
+A G/L journal and therefore its content can be set up as **Template**, that template can be later on used while creating a new G/L journal by using the process button **Copy Lines** as described in the next section.
 
-##### **G/L Journal set up as “Template”**
+##### G/L Journal set up as “Template”
 
-As already mentioned, a G/L Journal and therefore its content can be configured as a "Template". In order to do so,  it is required to follow the steps below:
+As already mentioned, a G/L Journal and therefore its content can be configured as a **Template**. In order to do so,  it is required to follow the steps below:
 
-**1.** **create a G/L journal** to account the employee payroll corresponding to the period of January 2022, for instance. That G/L Journal needs to be marked as "Template".
+**1.** **create a G/L journal** to account the employee payroll corresponding to the period of January 2022, for instance. That G/L Journal needs to be marked as **Template**.
 
-**2.** Create a **new G/L journal** to account the employee payroll corresponding to the period of January 2022. Enter an **Accounting Date**" and a "**Period**":
+**2.** Create a **new G/L journal** to account the employee payroll corresponding to the period of January 2022. Enter an **Accounting Date** and a **Period**:
 
 ![](../../../../../assets/drive/1FoRVJ89HIyQt4zO2WhyYkSm3riRyKGpx.png)
 
@@ -379,7 +396,7 @@ It may be necessary to change the journal entries amounts. In order to do so, it
 
 The last step is to post the G/L Journal, therefore the corresponding journal entries are posted to the ledger.
 
-### **Header**
+### Header
 
 A G/L journal header can include journals, which can contain several journal lines.
 
@@ -387,30 +404,30 @@ A G/L journal header can include journals, which can contain several journal lin
 
 A G/L Journal header contains the following data:
 
--   The organization and the organization's General Ledger configuration which once selected defaulted the field "**Currency**" to the one of the general ledger configuration, for instance USD. The currency can however be changed to EUR for instance. Etendo will apply the corresponding EUR -> USD conversion rate as the posting to the ledger must be in USD.
+-   The organization and the organization's General Ledger configuration which once selected defaulted the field **Currency** to the one of the general ledger configuration, for instance USD. The currency can however be changed to EUR for instance. Etendo will apply the corresponding EUR -> USD conversion rate as the posting to the ledger must be in USD.
 -   The *document date* which does not have to be the same as the accounting date.  
     The document date is automatically populated with the current date by default, but can always be changed.
 -   The *accounting period* and the *accounting date* within that period. These dates can be automatically populated with the values entered in the Journal batch if any, however these dates can always be changed.
 
-There is a checkbox named "*Opening*" which can be flagged just to state that a journal contains **opening balance accounts entries.**
+There is a checkbox named ***Opening*** which can be flagged just to state that a journal contains **opening balance accounts entries.**
 
 There is a **list of actions** which can be executed from the G/L Journal header:
 
--   "**Copy Details**" button allows the user to copy the journal entries of a journal configured as a *"Template"* into the current journal
--   "**Complete**" button allows the user to complete the G/L Journal once the corresponding journal lines have been entered whenever the total debit amount matches the total credit amount
--   "**Post/Unpost**" button allows the user to Post/Unpost a G/L Journal once completed
--   "**Close**" button allows the user to close a G/L Journal for which no other action needs to take place or to reactivate it if it is not already posted
--   "**Process Batch**" button completes the G/L Journal/s of the batch
+-   **Copy Details** button allows the user to copy the journal entries of a journal configured as a ***Template*** into the current journal
+-   **Complete** button allows the user to complete the G/L Journal once the corresponding journal lines have been entered whenever the total debit amount matches the total credit amount
+-   **Post/Unpost** button allows the user to Post/Unpost a G/L Journal once completed
+-   **Close** button allows the user to close a G/L Journal for which no other action needs to take place or to reactivate it if it is not already posted
+-   **Process Batch** button completes the G/L Journal/s of the batch
 
 !!! info
-    Note that upon **G/L Journal completion a "G/L Item" payment** will be created for each journal line that has the "Open Items" checkbox selected as explained in the G/L Item payments creation section.
+    Note that upon **G/L Journal completion a **G/L Item** payment** will be created for each journal line that has the **Open Items** checkbox selected as explained in the G/L Item payments creation section.
 
 
 !!! info
     The Journal will be completed even if any of the Payment/s creation failed. In this case, an error message is shown indicating the Lines that tried to create a Payment but failed.
 
 
-### **Lines**
+### Lines
 
 The lines tab allows the user to enter the journal entries of a G/L journal as well as G/L item payment related information.
 
@@ -422,9 +439,9 @@ Accounting information related to the GL Journal
 #### Duplicate Journal Entries
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width=**854** height=**480** src=**https://www.youtube.com/embed/K7XOBkmRLAQ** title=**YouTube video player** frameborder=**0** allow=**accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture** allowfullscreen></iframe>
 
 This functionality allows the user to duplicate a journal entry as many times as required, indicating the regularity and the period in which the first copy must be made. Starting from the second copy, the duplication will take place with the corresponding regularity.
 The process to create a journal entry from the beginning and duplicate it later is shown below.
@@ -466,7 +483,7 @@ Once this preference is configured, the button will be enabled in “Simple GL J
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -499,21 +516,21 @@ This is useful to distinguish between the original GL journal and the reverse on
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 
-## **End Year Close**
+## End Year Close
 
-### **Introduction**
+### Overview
 
-The **"Close Year"** process allows the user to close a fiscal year. This process also permanently closes all the periods of the year (standard ones and adjustment ones).
+The **Close Year** process allows the user to close a fiscal year. This process also permanently closes all the periods of the year (standard ones and adjustment ones).
 
 It is important to remark that it is not required to close the standard periods of a year prior to closing that year, however it can help to keep tracking of the periods of the year already reviewed and closed.
 
@@ -523,80 +540,79 @@ The close year process requires that the next year is started, and its first per
     Once a year is closed, the status of that year and all its periods can be reviewed in the Open/Close Period Control window.
 
 
-As already mentioned, all the periods of the year are now shown as "Period Status"="Permanently Closed", that means that it is not possible to post any transaction within that year anymore, unless the **Undo Close Year** process is run for that year.
+As already mentioned, all the periods of the year are now shown as **Period Status**=**Permanently Closed**, that means that it is not possible to post any transaction within that year anymore, unless the **Undo Close Year** process is run for that year.
 
-"Close Year" process creates the following accounting entries:
+**Close Year** process creates the following accounting entries:
 
-1\. The **"Profit and Loss Closing"** entry.
+1\. The **Profit and Loss Closing** entry.
 
--   This accounting entry resets all "Revenue" and "Expense" Account Types and the difference is posted in the Income Summary account.
-    -   In other words, the "Expense" accounts are "Credited and the "Revenue" accounts are "Debited" and the difference, if any, is posted in the Income Summary account.  
+-   This accounting entry resets all **Revenue** and **Expense** Account Types and the difference is posted in the Income Summary account.
+    -   In other words, the **Expense** accounts are **Credited and the **Revenue** accounts are **Debited** and the difference, if any, is posted in the Income Summary account.  
         Let us take an expense account with a debit balance of 500,00. The P&L Closing entry creates a credit accounting entry of 500,00 in the Expense account of the example, therefore it gets a balance equal to zero.  
         If the revenue accounts total balance is higher than the expense accounts total balance that difference is credited in the Income Summary account, that means a positive result or a profit.  
         If the revenue accounts total balance is lower than the expense accounts total balance that difference is debited in the Income Summary account, that means a negative result or a loss.
--   This accounting entry is posted the last day of the last period of the year being closed, that is the "**Adjustment Period**" or "13th Period" of the year.
+-   This accounting entry is posted the last day of the last period of the year being closed, that is the **Adjustment Period** or **13th Period** of the year.
 -   Etendo does not create a G/L Journal for this accounting entry but just the accounting entry.
 
-2\. The "Closing" entry or "**Balance Sheet Closing**" entry.
+2\. The **Closing** entry or **Balance Sheet Closing** entry.
 
 -   This accounting entry credits all the accounts which have a debit balance and debits all the accounts which have a credit balance. The aim of this accounting entry is to get that Asset and Liability accounts get a zero balance.
     -   In order words, let us take an Asset account with a debit balance of 8.000,00. The closing entry creates a credit accounting entry of 8.000,00 in the Asset account of the example.
--   This account entry is posted the last day of the last period of the year being closed, that is the "**Adjustment Period**" or "13th Period" of the year.
+-   This account entry is posted the last day of the last period of the year being closed, that is the **Adjustment Period** or **13th Period** of the year.
 -   Etendo does not create a G/L Journal for this accounting entry but just the accounting entry.
 -   This entry is created only if the Reverse Permanent Account Balances checkbox is set to yes.
 
 Finally, if a Retained Earnings account is specified for the general ledger configuration, an additional entry dated on the last day of the year is created.
 
-This entry moves the Income Summary account balance to the "Retained Earnings" account.
+This entry moves the Income Summary account balance to the **Retained Earnings** account.
 
-3\. And the "Opening" or "**Balance Sheet Opening**" entry.
+3\. And the **Opening** or **Balance Sheet Opening** entry.
 
 -   This accounting entry is the reversal entry of the closing entry.
     -   Following the example of point 2 above, the opening entry creates a debit accounting entry of 8.000,000 in the Asset account of the example. That amount is the opening balance of the asset account for the new year.
 -   This accounting entry is posted the first day of the first period of the next year.
 -   This entry is created only if the Reverse Permanent Account Balances checkbox is set to yes.
 
-##### **End-year close process example**
+##### End-year close process example
 
-This example describes the "2019 end-year closing" process of a sample legal with an accounting organization.
+This example describes the **2019 end-year closing** process of a sample legal with an accounting organization.
 
 
 This article describes the end-year closing process intentionally keeping the organization's activity as simple as possible.
 
-The company in this example started its activity prior to 2019, therefore a G/L Journal set as "Opening" can be created to record the 2019 opening entry and get it posted to the ledger.
+The company in this example started its activity prior to 2019, therefore a G/L Journal set as **Opening** can be created to record the 2019 opening entry and get it posted to the ledger.
 
 ![](../../../../../assets/drive/1aYBdLPYhLuzH26wsAf2zzFeaEcWS5Eab.png)
 
 
-
-To make it simple, the company in this example executed detailed "regular" activities which created the corresponding "regular" journal entries in the general ledger:
+To make it simple, the company in this example executed detailed **regular** activities which created the corresponding **regular** journal entries in the general ledger:
 
 
 ![](../../../../../assets/drive/1UE0WYDFJLdbDQkApYSinHkXYyM4p-1Hr.png)
 
-Let us imagine that "F&B España" closes the standard periods as soon as each period is over and that is done even for the last standard period which is "December 2019".
+Let us imagine that **F&B España** closes the standard periods as soon as each period is over and that is done even for the last standard period which is **December 2019**.
 
-The accountants can use the "13th Period" to post accounting adjustment to the ledger through the posting of G/L Journal/s, prior running the "Year Close" process.
+The accountants can use the **13th Period** to post accounting adjustment to the ledger through the posting of G/L Journal/s, prior running the **Year Close** process.
 
-Once 2019 is over and ready to be closed, the company in this example can execute the 2019 "Close Year" process from the End Year Close window.
+Once 2019 is over and ready to be closed, the company in this example can execute the 2019 **Close Year** process from the End Year Close window.
 
-The process button "Year Close" runs the end-year close process for this sample organization.
+The process button **Year Close** runs the end-year close process for this sample organization.
 
 ![](../../../../../assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png)
 
-##### **Reverse Permanent Account Balances set to "Yes"**
+##### Reverse Permanent Account Balances set to **Yes**
 
-Etendo creates "closing entries" detailed below if the "**Reverse Permanent Account Balances**" checkbox of the Organization's general ledger is set to "Yes" before running the "Close Year" process.
+Etendo creates **closing entries** detailed below if the **Reverse Permanent Account Balances** checkbox of the Organization's general ledger is set to **Yes** before running the **Close Year** process.
 
 !!! info
-    Note that below accounting entries can also be reviewed in the "**End Year Close**" window in the Accounting Tab.
+    Note that below accounting entries can also be reviewed in the **End Year Close** window in the Accounting Tab.
 
 -   Dated on the latest day of the year below **P&L Closing Entry**.  
-    This entry resets all "Revenue" and "Expense" account which is posted in the account defined as Income Summary.  
+    This entry resets all **Revenue** and **Expense** account which is posted in the account defined as Income Summary.  
     ![](../../../../../assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
  
 -   Dated on the latest day of the year below **Closing Entry**.
-    This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.x Besides, an additional entry is created to move the Income Summary account balance to the Retained Earning account:
+    This entry resets all **Asset**, **Liability** and **Owner's Equity** accounts.x Besides, an additional entry is created to move the Income Summary account balance to the Retained Earning account:
     ![](../../../../../assets/drive/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png)
  
 -   Dated on the day of the following year (01-01-2022) below **Opening Entry**. This entry is the reversal entry of the above closing entry:
@@ -612,28 +628,28 @@ Etendo creates "closing entries" detailed below if the "**Reverse Permanent Acco
 ![](../../../../../assets/drive/1F6LMtj4tZdBSdt1yKsYhoO4Tv8nxyiGH.png)
 
 
-##### **Reverse Permanent Account Balances set to "No"**
+##### Reverse Permanent Account Balances set to **No**
 
-Etendo creates below "closing" entries if the "**Reverse Permanent Account Balances**" checkbox of the Organization's general ledger is set to "No" before running the "Close Year" process.
+Etendo creates below **closing** entries if the **Reverse Permanent Account Balances** checkbox of the Organization's general ledger is set to **No** before running the **Close Year** process.
 
 !!! info
-    Note that below accounting entries can also be reviewed in the "**End Year Close**" window in the Accounting Tab.
+    Note that below accounting entries can also be reviewed in the **End Year Close** window in the Accounting Tab.
 
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
  ![](../../../../../assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](../../../../../assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png .png)
+ ![](../../../../../assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png)
      
 
-The organization in this example can launch the 2019 Balance Sheet and the 2019 Income Statement reports from the Balance Sheet and P&L structure window. It will get the same Balance Sheet and Income Statement as the ones shown for the "Reverse Permanent Account Balances set to "Yes" scenario.
+The organization in this example can launch the 2019 Balance Sheet and the 2019 Income Statement reports from the Balance Sheet and P&L structure window. It will get the same Balance Sheet and Income Statement as the ones shown for the **Reverse Permanent Account Balances set to **Yes** scenario.
 
-#### **End Year Close**
+#### End Year Close
 
 In the **End Year Close** window, all the Years previously created in the Fiscal Calendar window are shown. Those years can be closed in this window.
 
-The records shown in this window are filtered by their "Status" and the "Organization", by showing only the Years which are not closed yet and belongs to the Organization in which the User is logged. These filters can be removed by clicking in the funnel icon.
+The records shown in this window are filtered by their **Status** and the **Organization**, by showing only the Years which are not closed yet and belongs to the Organization in which the User is logged. These filters can be removed by clicking in the funnel icon.
 
 This window shows two Tabs. The first Tab shows all the existing Years. Once selected a record in this Tab, the lower tab shows the related Accounting entries, meaning the closing entries generated by the Close Year process as well as the corresponding opening entries of the next year.
 
@@ -657,15 +673,15 @@ As shown in the image above, the main fields in this window are:
 -   Calendar.
 -   Year.
 
-#### **Undo Close Year**
+#### Undo Close Year
 
-If a year (i.e 2019) is closed, it will not be possible to do any posting within that year unless the "Undo Close Year" process is run for that year.
+If a year (i.e 2019) is closed, it will not be possible to do any posting within that year unless the **Undo Close Year** process is run for that year.
 
 This process opens the year and all the periods of the year. It also reverts all the ledger entries posted by the end-year close process; therefore closing/opening entries are not shown in the Journal Entries Report anymore, unless the end-year close process is run once again for the year.
 
 -   Status: It can be **Year Not Closed** or **Year Closed**
 
-#### **Accounting**
+#### Accounting
 
 In the **Accounting** Tab of the End Year Close Window, all the Accounting entries generated when a Year is Closed or when it is Opened are shown, grouped by Account. This Account entries can be:
 
@@ -689,47 +705,47 @@ As shown in the image above, the main fields in this window are:
 
 For explaining this Tab, it is better to follow the same example as in the Introduction section and show how this Tab presents the results.
 
-##### **Reverse Permanent Account Balances set to "Yes"**
+##### Reverse Permanent Account Balances set to **Yes**
 
-Etendo creates below "closing entries" if the "**Reverse Permanent Account Balances**" checkbox of the Organization's general ledger is set to "Yes":
+Etendo creates below **closing entries** if the **Reverse Permanent Account Balances** checkbox of the Organization's general ledger is set to **Yes**:
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**.  
-    This entry resets all "Revenue" and "Expense" accounts.
+    This entry resets all **Revenue** and **Expense** accounts.
     
- ![](../../../../../assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png .png)
+ ![](../../../../../assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png)
      
 -   Dated on the latest day of the year (31-12-2019) below **Closing Entry**.  
-    This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.
- ![](../../../../../assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png .png)
+    This entry resets all **Asset**, **Liability** and **Owner's Equity** accounts.
+ ![](../../../../../assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png)
      
 -   Dated on the day of the following year (01-01-2020) below **Opening Entry**.  
     This entry is the reversal entry of the above closing entry:
- ![](../../../../../assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png .png)
+ ![](../../../../../assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png)
      
 
-##### **Reverse Permanent Account Balances set to "No"**
+##### Reverse Permanent Account Balances set to **No**
 
-Etendo creates below "closing" entries if the "**Reverse Permanent Account Balances**" checkbox of the Organization's general ledger is set to "No":
+Etendo creates below **closing** entries if the **Reverse Permanent Account Balances** checkbox of the Organization's general ledger is set to **No**:
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
- ![](../../../../../assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png .png)
+ ![](../../../../../assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](../../../../../assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png .png)
+ ![](../../../../../assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png)
 
-## **GL Posting by DB Tables**
+## GL Posting by DB Tables
 
-### **Introduction**
+### Overview
 
 The G/L Posting by DB Table allows the user to massively post the transactions related to a given transactional table or to all of them.
 
 ![](../../../../../assets/drive/1tAh4RfUDcPvDgSG9PeBYX79MhpW-csWW.png)
 
-As shown in the image above, the "G/L Posting by DB Tables" feature allows the user to:
+As shown in the image above, the **G/L Posting by DB Tables** feature allows the user to:
 
 -   select an Organization or all of them if a particular organization is not selected
 -   select a Table or all of them if a particular table is not selected.
--   and select a "From date" and "To date", if no dates are selected all the transactions available will be posted.
+-   and select a **From date** and **To date**, if no dates are selected all the transactions available will be posted.
 
 After running the process, Etendo informs about the number of ledger entries posted to the ledger for each table in order to post once again the transactional table/s to the ledger.
 
@@ -740,13 +756,13 @@ This process can be launched whenever it is required:
 -   It can be run if there are pending transactions to be massively posted whenever the Accounting Sever Process is not enabled or if it is not enabled for a given set of tables.
 -   It can also be run after running the process Reset Accounting as a way of regenerate the ledger entries.
 
-## **Budget**
+## Budget
 
-### **Introduction**
+### Overview
 
 Etendo creates and edits budgets to be used for informative purposes allowing the user to access the data about budget versus actual. 
 
-### **Header**
+### Header
 
 These are the actions which can be executed from the header in order to create budgets for a selected year to be used for informative purposes: 
  
@@ -756,9 +772,7 @@ These are the actions which can be executed from the header in order to create b
 
 ![](../../../../../assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png)
 
-
-
-### **Lines**
+### Lines
 
 The user is able to add budget lines. Each line may refer to a specified period, business partner, product, etc.
 
@@ -768,13 +782,11 @@ By using the necessary filters such as business partner, product, partner group,
 
 ![](../../../../../assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png)
 
+## Not Posted Transaction Report
 
+### Overview
 
-## **Not Posted Transaction Report**
-
-### **Introduction**
-
-Not Posted Transaction Report lists the transactions and/or documents in status "Complete" which are not already posted.
+Not Posted Transaction Report lists the transactions and/or documents in status **Complete** which are not already posted.
 
 This report can be used to make sure that there are no documents pending to be post:
 
@@ -793,17 +805,72 @@ Not posted transactions and/or documents shown are split by type, for instance:
 -   Receipt or payment in
 -   etc
 
-and it is possible to navigate to the document not posted and therefore get it posted by clicking on the "Date" field next to the document or transaction.
+and it is possible to navigate to the document not posted and therefore get it posted by clicking on the **Date** field next to the document or transaction.
 
 Finally, it is important to remark that:
 
--   "**Date From**" and "**Date To**" filters allows the user to narrow down the not posted transactions to be shown in the report by taking into account their transaction or document date.
--   It is not required to enter a "**general ledger configuration**" to narrow down the accounting information because:
+-   **Date From** and **Date To** filters allows the user to narrow down the not posted transactions to be shown in the report by taking into account their transaction or document date.
+-   It is not required to enter a **general ledger configuration** to narrow down the accounting information because:
     -   if a document is not posted, it is not posted for any of the general ledgers for which it should be posted
     -   and if a document is posted, it is posted for all the general ledgers for which it should be posted.
 
-## **Reset Accounting**
+## Reset Accounting
 
-### **Introduction**
+### Overview
 
-The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the "Accounting Server Process" or the "G/L Posting by DB Tables" process. The manual changes done for the accounting entries description will obviously be lost after running this process.
+The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the **Accounting Server Process** or the **G/L Posting by DB Tables** process. The manual changes done for the accounting entries description will obviously be lost after running this process.
+
+## VAT Regularization
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/){target="\_blank"}.
+
+### Overview
+
+The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correctly balanced.
+The following are the steps necessary to carry out the VAT regularization on a specific account.
+
+### VAT Regularization Process
+
+#### Account Setup
+
+In order to enable an account to be part of the VAT regularization process, it is necessary to enter the Account tree window, select the organization to which the account belongs, and, in the Element Value tab, select the corresponding account and check the VAT Regularization box as active.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization1.png)
+
+#### VAT Regularization Process
+
+1. Go to `Application` > `Financial Management` > `Accounting` > `Transactions` > `VAT Regularization Process` window.
+2. Complete the following required fields:
+    - **General Ledger**: Select the general ledger to which the account to be regularized belongs.
+    - **Organization**: Select the organization to which the account belongs.
+    - **Date From**: Start date of the regularization.
+    - **Date To**: End date of the regularization.
+    - **VAT Regularization Date**: Date on which the regularization will take place.
+    - **Description**: Description identifying the periods being regularized.
+    ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization2.png)
+3. Click the **Search** button. This will display a grid with the accounts marked with the VAT Regularization checkbox, as explained in [Account Setup](#account-setup).
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization3.png)
+4. The Amount field shows us the value to be regularized. In addition, the Amount field in the header gives us a sum of all the amounts of the accounts that were chosen to regularize. In this case, it is the same value as the amount of the line because there is only one account to regularize.
+5. Select an account in the VAT debtor/creditor account field to balance the accounts once the VAT accounts once the simple GL journal entry is generated.
+
+
+#### GL Journal Entry Generation
+1. Click the **Process** button to generate the simple GL journal entry.
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png)
+2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000123**).
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png)
+3. Here, verify that the header has been created with the corresponding lines.
+
+#### Entry Review and Posting
+
+1. Check that a line has been created per account to be regularized (in this case, account 40000) and that the amount to be regularized (-1,377,222.00) has been added in the Debit field in positive.
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization6.png)
+2. Verify that another line has been created with the account selected in the VAT debtor/creditor account field with the corresponding amount in the Credit field.
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization7.png)
+3. Post the manual journal entry with the **Post** process.
+4. Generate the GL journal report again and verify that the **Balance** for account 40000 is zero, which indicates that the VAT has been regularized correctly.
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization8.png)
+
+!!!info
+    With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.

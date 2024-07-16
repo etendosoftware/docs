@@ -16,7 +16,7 @@ The main advantage of these new sequences is dynamic masking, which makes it pos
     The user can run this process only after a developer configures the sequence fields using transactional or non-transactional sequences.
 
 !!! info
-    For more information about this configuration, visit the technical documentation about [Sequences](/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences).
+    For more information about this configuration, visit the technical documentation about [Sequences](../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md).
 
 After that, in the `Financial Management`>`Accounting`>`Setup`>`Document Sequence` window the user can see and edit the sequences generated.
 
@@ -27,7 +27,7 @@ After that, in the `Financial Management`>`Accounting`>`Setup`>`Document Sequenc
 ## Conversion Rate Download Rule
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This module automatically generates conversion ranks with a background process using Apilayer. It allows keeping currency conversions up to date.
 
@@ -44,7 +44,7 @@ Fields to note:
 ## Dynamic App
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 ### Overview
 
@@ -54,7 +54,7 @@ In the Dynamic App window, located in General Setup/Application/Dynamic App, you
 When logging into Etendo Mobile, the subapplications are displayed according to these settings.
 
 !!! info
-    For more information visit the [Etendo Mobile](/user-guide/etendo-mobile/getting-started/) documentation.
+    For more information visit the [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) documentation.
 
 ### Header
 
@@ -81,7 +81,7 @@ Fields to note:
 - **Active**: To select if this application version is active or not.
 - **Is Development**: This check defines that this version is in development that can be deployed locally.
 
-Finally, configure this application in the [Role Configuration](/user-guide/etendo-classic/basic-features/general-setup/security/#dynamic-app).
+Finally, configure this application in the [Role Configuration](../general-setup/security.md#dynamic-app).
 
 ## Currency
 
@@ -432,7 +432,7 @@ Finally, the **Save Preferences** button allows saving the changes.
 ## Number to Word Converter
 
 !!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 This module provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 

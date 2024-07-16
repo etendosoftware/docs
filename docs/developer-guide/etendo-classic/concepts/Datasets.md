@@ -6,7 +6,6 @@ tags:
   - reference data
   - business objects
 ---
- 
 
 #  Datasets
   
@@ -170,6 +169,6 @@ Select the organization and the module from which to import the reference data i
 !!!note
     If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) utility to create a new client.
 
+---
   
 This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-

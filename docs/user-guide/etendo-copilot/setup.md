@@ -68,6 +68,11 @@ This process is only available when the application type is **Open AI Assistant*
 
 In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
 
+!!!warning "File Limitation for Code Interpreter"
+    If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
+
+
+
 ![](../../assets/user-guide/etendo-copilot/setup/app-source-tab.png)
 
 !!!info
@@ -82,6 +87,8 @@ Fields to note:
     - Add content to each question: In this case, the same restrictions from the previous option apply. 
 - **Type**: read-only field showing the type of file selected in the [Copilot File window](#copilot-file-window).
 - **Active**: checkbox to activate the app source.
+- **Exclude from Code Interpreter**: Checkbox to exclude files from being processed by the Code Interpreter during synchronization. This checkbox is only editable if the assistant has the Code Interpreter option enabled.
+- **Exclude from Retrieval**: Checkbox to exclude files from being considered in the Retrieval process during synchronization.This checkbox is only editable if the assistant has the Retrieval option enabled.
 
 ### Tool Tab
 
@@ -134,6 +141,10 @@ In the *Role* window, select a role and in the *Copilot App* tab add a new recor
 !!!info
     For more information, visit [Role](../../user-guide/etendo-classic/basic-features/general-setup/security.md#role).
 
+## Webhook Window
+  Some tools require to communicate with Etendo through WebHooks, so it is necessary to configure the access for each role in the WebHook window.
+  For example, for the Database Query Tool, the WebHook "DBQueryExec" is used, to the Role that will use this tool in an assistant, it is necessary to configure the access to this WebHook.
+  ![WebHook](../../assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
 ## Process Request Window
 
 Open `Application`>`General Setup`>`Process Scheduling`>`Process Request`. In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
