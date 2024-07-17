@@ -10050,8 +10050,8 @@ The process to create a journal entry from the beginning and duplicate it later 
 <p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" target="_blank">Financial Extensions - Release notes</a>.</p>
 </div>
 <h3 id="overview_9">Overview</h3>
-<p>The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correctly balanced.
-The following are the steps necessary to carry out the VAT regularization on a specific account.</p>
+<p>The VAT Regularization module allows you to automatically adjust the accounts to ensure that the VAT balance is correct. This means, checking the accounts in which this process is necessary and creating the corresponding GL journal to regularize the VAT. This process is essential for maintaining accurate financial records and compliance with tax regulations.</p>
+<p>The following are the required steps to carry this out for a specific period of time.</p>
 <h3 id="vat-regularization-process">VAT Regularization Process</h3>
 <h4 id="account-setup">Account Setup</h4>
 <p>In order to enable an account to be part of the VAT regularization process, it is necessary to enter the Account tree window, select the organization to which the account belongs, and, in the Element Value tab, select the corresponding account and check the VAT Regularization box as active.</p>
@@ -10076,10 +10076,18 @@ The following are the steps necessary to carry out the VAT regularization on a s
 </ol>
 <h4 id="gl-journal-entry-generation">GL Journal Entry Generation</h4>
 <ol>
-<li>Click the <strong>Process</strong> button to generate the simple GL journal entry.
-<a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png" /></a></li>
-<li>Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. <strong>1000123</strong>).
-<a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png" /></a></li>
+<li>
+<p>Click the <strong>Process</strong> button to generate the simple GL journal entry.
+<a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png" /></a></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Remember this process affects all the accounts resulting from the search, so selecting the corresponding accounts must be done when marking the VAT regulularization checkbox in the setup step.</p>
+</div>
+</li>
+<li>
+<p>Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. <strong>1000123</strong>).
+<a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png" /></a></p>
+</li>
 <li>Here, verify that the header has been created with the corresponding lines.</li>
 </ol>
 <h4 id="entry-review-and-posting">Entry Review and Posting</h4>
