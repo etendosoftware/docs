@@ -827,8 +827,9 @@ The reset accounting process allows the user to totally or partially remove the 
 
 ### Overview
 
-The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correct.
-The following are the steps necessary to carry out the VAT regularization on a specific account.
+The VAT Regularization module allows you to automatically adjust the accounts to ensure that the VAT balance is correct. This means, checking the accounts in which this process is necessary and creating the corresponding GL journal to regularize the VAT. This process is essential for maintaining accurate financial records and compliance with tax regulations.
+
+The following are the required steps to carry this out for a specific period of time.
 
 ### VAT Regularization Process
 
