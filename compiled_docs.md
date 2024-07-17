@@ -33148,13 +33148,11 @@ This work is a derivative of [Selectors](http://wiki.openbravo.com/wiki/Selector
 
 **Standard Windows** are the windows completely defined in **Application Dictionary**. They allow viewing and editing records in tables.
 
-After defining (or modifying) a standard window, the system must be rebuilt (`gradle.smartbuild`). During this process `WAD` generates automatically the `Java`, `XSQL`, `HTML` and `XML` code for that window and it is compiled. This means that the complete definition for standard windows is within Application Dictionary without any need of manual developments. This has a number of benefits:
+After defining (or modifying) a standard window, the system must be rebuilt (`./gradlew smartbuild`). During this process `WAD` generates automatically the `Java`, `XSQL`, `HTML` and `XML` code for that window and it is compiled. This means that the complete definition for standard windows is within Application Dictionary without any need of manual developments. This has a number of benefits:
 
   * No need to write manual code: This reduces the possibility of introducing bugs.
   * Faster development: As a window creation consists only in defining it in Application Dictionary, it is faster that doing it manually.
   * Automatic inclusion of new features and bug fixes: Whenever `WAD` fixes a bug or adds a new feature, this is automatically propagated to all standard windows when the system is rebuilt without needing to re-code or re-define anything.
-
-Due to these reasons, it is a best practice to use standard windows, if possible, rather than manual ones.
 
 #### Structure: Windows, Tabs and Fields
 
@@ -33202,16 +33200,16 @@ The conjunction of these two values gives the position and hierarchy for each ta
      |-A3
 ```
 
-Tab  |  Sequence number  |  Tab level
----|---|---
-A  |  10  |  0
-A1  |  20  |  1
-A11  |  30  |  2
-A2  |  40  |  1
-A21  |  50  |  2
-A22  |  60  |  2
-A221  |  70  |  3
-A3  |  80  |  1
+| Tab | Sequence number | Tab level |
+|-----|-----------------|-----------|
+| A   | 10              | 0         |
+| A1  | 20              | 1         |
+| A11 | 30              | 2         |
+| A2  | 40              | 1         |
+| A21 | 50              | 2         |
+| A22 | 60              | 2         |
+| A221| 70              | 3         |
+| A3  | 80              | 1         |
 
 When creating subtabs, it is necessary to set which column in the parent column is going to be the master for the subtab. In order to show in the subtabs only the records that are linked to the current record in the parent one. For example let's suppose tab A is a tab for `C_Invoice` table and tab A1 is for `C_InvoiceLine` , in this case `C_Invoice.C_Invoice_ID` in tab A must be the master column for tab A1, showing in A1 only the records linking to the selected record in A.
 
@@ -33265,19 +33263,6 @@ Some of the things to take into account when configuring a field are:
   * `Central Maintenance`, how it works is explained in the document about [Elements and Synchronize Terminology](https://docs.etendo.software/latest/concepts/Element_and_Synchronize_Terminology.md).
   * [`Callout`](https://docs.etendo.software/latest/concepts/data_model.md#callout), although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.
   * `Field group`, fields can be assigned to a field group, when a group of fields has a field group, a separator is shown in the tab. Field Groups are defined in `Application Dictionary` > `Setup` > `Field Category` tab.
-
-#### Classic Window Visualization
-
-As a default, Etendo will visualize windows using rich internet technology. There are however some situations in which Etendo will use classic servlet based technology (i.e. classic mode):
-
-  * In case of a specific `preference` setting, visit [this page](https://docs.etendo.software/latest/how-to-guides/How_To_Switch_to_Classic_Mode.md) for more information.
-  * When the window has a tab with one of the following settings:
-    * A `manual` form.
-    * An `SQL filterClause` but the `HQL filter clause` field is empty.
-    * An `SQL order by clause` but the `HQL order by clause` is empty.
-    * An `SQL where clause` set but the `HQL where clause` is empty.
-
-In this second case, you will notice the following warning message when compiling: _INFO org.openbravo.wad.Wad - Window: WindowName is needed in classic 2.50 mode._
 
 ---
 
