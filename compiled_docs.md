@@ -16570,8 +16570,9 @@ The reset accounting process allows the user to totally or partially remove the 
 
 ##### Overview
 
-The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correctly balanced.
-The following are the steps necessary to carry out the VAT regularization on a specific account.
+The VAT Regularization module allows you to automatically adjust the accounts to ensure that the VAT balance is correct. This means, checking the accounts in which this process is necessary and creating the corresponding GL journal to regularize the VAT. This process is essential for maintaining accurate financial records and compliance with tax regulations.
+
+The following are the required steps to carry this out for a specific period of time.
 
 ##### VAT Regularization Process
 
@@ -16601,6 +16602,10 @@ In order to enable an account to be part of the VAT regularization process, it i
 ###### GL Journal Entry Generation
 1. Click the **Process** button to generate the simple GL journal entry.
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png)
+
+    !!!important
+        Remember this process affects all the accounts resulting from the search, so selecting the corresponding accounts must be done when marking the VAT regulularization checkbox in the setup step.
+
 2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000123**).
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png)
 3. Here, verify that the header has been created with the corresponding lines.
@@ -20047,6 +20052,8 @@ This functionality is specifically useful for companies that have a month close,
 ##### VAT Regularization 
 
 :octicons-package-16: Javapackage: `com.etendoerp.vat.regularization`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/udarQ6h6EXQ?si=4CNi7Qgi2_yHdW5z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
 
