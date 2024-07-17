@@ -215,6 +215,8 @@ This functionality is specifically useful for companies that have a month close,
 
 :octicons-package-16: Javapackage: `com.etendoerp.vat.regularization`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/udarQ6h6EXQ?si=4CNi7Qgi2_yHdW5z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
 
 !!!info
