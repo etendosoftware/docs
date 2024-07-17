@@ -827,7 +827,7 @@ The reset accounting process allows the user to totally or partially remove the 
 
 ### Overview
 
-The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correctly balanced.
+The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correct.
 The following are the steps necessary to carry out the VAT regularization on a specific account.
 
 ### VAT Regularization Process
@@ -858,6 +858,10 @@ In order to enable an account to be part of the VAT regularization process, it i
 #### GL Journal Entry Generation
 1. Click the **Process** button to generate the simple GL journal entry.
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png)
+
+    !!!important
+        Remember this process affects all the accounts resulting from the search, so selecting the corresponding accounts must be done when marking the VAT regulularization checkbox in the setup step.
+
 2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000123**).
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png)
 3. Here, verify that the header has been created with the corresponding lines.
