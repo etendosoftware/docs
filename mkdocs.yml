@@ -305,7 +305,7 @@ nav:
         - Selectors: developer-guide/etendo-classic/concepts/selectors.md
 #        - Skins: developer-guide/etendo-classic/concepts/Skins.md
 #        - SQLC: developer-guide/etendo-classic/concepts/SQLC.md
-#        - Standard Windows: developer-guide/etendo-classic/concepts/Standard_Windows.md
+        - Standard Windows: developer-guide/etendo-classic/concepts/standard-windows.md
         - Tables: developer-guide/etendo-classic/concepts/Tables.md
 #        - User Interface Design Guidelines: developer-guide/etendo-classic/concepts/User_Interface_Design_Guidelines.md
 #        - Widgets: developer-guide/etendo-classic/concepts/Widgets.md
