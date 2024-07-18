@@ -23,7 +23,7 @@ It is possible to give an input with all the necessary information, or the assis
     Thank you for your understanding as we continue to improve the functionality and reliability of this assistant.
 
 ## Installation
-You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](../../etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
 
 
 ## Components
@@ -59,10 +59,10 @@ The Dev Assistant is composed of the following components:
 To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
 ### 2. Open Copilot, and select Dev assistant
-![dev-assistant.png](../../../assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant.png)
+![dev-assistant.png](../../../assets/developer-guide/etendo-copilot/assistants/dev-assistant/dev-assistant.png)
 
 ### 3. Ask the assistant for what you need to create.
-![dev-assistant.png](../../../assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
+![dev-assistant.png](../../../assets/developer-guide/etendo-copilot/assistants/dev-assistant/dev-assistant5.png)
 
 **User**: *"You can create the Pets Health window, you have to include the fields, pet name, patient start date and description. You can also add a Visits Registration tab, associated to the Pets Health window, where you have to add the fields, date and description. Remember to add the corresponding foreign key.  All this export it in the module with copdev prefix."*
 
@@ -81,13 +81,13 @@ With the task complete, it is necessary recompile with a smartbuild and restart 
 ```title="Terminal"
 ./gradlew smartbuild --info
 ```
-![dev-assistant2.png](../../../assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
+![dev-assistant2.png](../../../assets/developer-guide/etendo-copilot/assistants/dev-assistant/dev-assistant2.png)
 
 ### 5. Reviewing the results
     
 Window in the System,the window can be viewed with the user role.
-![dev-assistant3.png](../../../assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
-![dev-assistant4.png](../../../assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
+![dev-assistant3.png](../../../assets/developer-guide/etendo-copilot/assistants/dev-assistant/dev-assistant3.png)
+![dev-assistant4.png](../../../assets/developer-guide/etendo-copilot/assistants/dev-assistant/dev-assistant4.png)
 
 ### 6. Export the changes
     
