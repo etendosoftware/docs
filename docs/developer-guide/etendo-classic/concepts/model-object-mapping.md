@@ -11,13 +11,13 @@ tags:
 
 ## Overview
 
-Web Applications (as Etendo ERP) have a _Deployment Descriptor_. It is actually a xml file (_web.xml_) which defines everything about the application the server needs to know (servlets, mappings and other components).
+Web Applications (as Etendo ERP) have a **Deployment Descriptor**. It is actually a xml file (`web.xml`) which defines everything about the application the server needs to know (servlets, mappings and other components).
 
 Etendo ERP generates this file in compilation time with the information stored in `AD_Model_Object` and `AD_Model_Object_Mapping` tables. This document explains these two tables.
 
 ## Model - Implementation concept
 
-`AD_Model_Object` is a table in Etendo Application Dictionary to link Application Dictionary components and the class (servlet) that implement that object. So this table is a mapping between the logical side (AD components) and the physical side (classes). It is useful for two main reasons:
+`AD_Model_Object` is a table in **Etendo Application Dictionary** to link Application Dictionary components and the class (servlet) that implement that object. So this table is a mapping between the logical side (AD components) and the physical side (classes). It is useful for two main reasons:
 
   1. It allows to implement in a generic way rules that apply to all AD components like security, navigation and others.
   2. It is the mechanism to automatically populate the web.xml file where classes (servlets) are declared. The `AD_Model_Object_Mapping` is an utility to create the mapping entries in the web.xml file.
@@ -34,11 +34,15 @@ In previous versions of Etendo, when a tab was created, new Model Objetcs were c
 
 #### Other Servlets
 
-As explained in Model - Implementation concept section there are some situations where it is necessary to define a Servlet which does not implements an Application Dictionary Object. These cases are defined in **Application Dictionary > AD Implementation Mapping** window. Selecting in **Object** tab the _Servlet_ Object Type , setting the Java class with the Servlet implementation and adding in the **Mapping** tab the mapping to access the Servlet.
+As explained in Model - Implementation concept section, there are some situations where it is necessary to define a Servlet which does not implements an Application Dictionary Object. 
+
+These cases are defined in `Application Dictionary > AD Implementation Mapping` window. Selecting in **Object** tab the `Servlet_ Object` Type , setting the Java class with the Servlet implementation and adding in the **Mapping** tab the mapping to access the Servlet.
 
 ### Filters
 
-Filters can also be defined in **Application Dictionary > AD Implementation Mapping** window. Select _Filter_ object type, and set the Java class that implements the filter. In **Mapping** tab add the url patterns for the object to be filtered, and in case the filter receives any parameter set them in the **Parameters** tab with the values they will have. To retrieve the parameters values in the implementation use implement _init_ method like follows:
+Filters can also be defined in `Application Dictionary > AD Implementation Mapping` window. Select **Filter object type**, and set the Java class that implements the filter. In **Mapping** tab add the url patterns for the object to be filtered, and in case the filter receives any parameter set them in the **Parameters** tab with the values they will have. 
+
+To retrieve the parameters values in the implementation use implement _init_ method like follows:
 
 ```java
 public void init(FilterConfig config) throws ServletException {
@@ -50,11 +54,11 @@ public void init(FilterConfig config) throws ServletException {
 
 ### Listeners
 
-Listeners are defined in **Application Dictionary > AD Implementation Mapping** window with type _Listener_ . In this case it is not necessary to define _Mapping_ or _Parameters_, just the java class implementing it. Take into account that listeners must be executed in certain order, this order is defined by the _Sequence number_ field.
+Listeners are defined in `Application Dictionary > AD Implementation Mapping` window with type **Listener** . In this case it is not necessary to define _Mapping_ or _Parameters_, just the java class implementing it. Take into account that listeners must be executed in certain order, this order is defined by the **Sequence number** field.
 
 ### Resources
 
-Resources are defined in **Application Dictionary > AD Implementation Mapping** window with type _Resource_.
+Resources are defined in `Application Dictionary > AD Implementation Mapping` window with type _Resource_.
 
 Let's see the following example in web.xml:
 
@@ -76,13 +80,11 @@ This resource is defined by assigning the following values to the following fiel
 
 ### Error Pages
 
-Error pages can be defined in **Application Dictionary > AD Implementation Mapping** window using the type _Error page_.
+Error pages can be defined in `Application Dictionary > AD Implementation Mapping` window using the type _Error page_.
 
 If multiple pages of the same kind (e.g. multiple 404 pages) are found, the last one in web.xml is the one that will be used to handle the error. This order is determined by the Error code object's sequence number.
 
 Core module implements a default error page with sequence number 10. To override this page, the created page must have a sequence number higher than 10 or be either an error code or an exception type page.
-
-Examples of usages for this feature can be found in the Platform Features module.
 
 _Error page_ objects accepts the following parameters:
 
@@ -134,13 +136,19 @@ Parameters:
 
 ## Modularity and the Model Object Definition
 
-Etendo Modularity aims to allow through modules the deployment of any type of optional content in an Etendo instance, including additional entries in the web.xml file of Etendo context. This is done through the `AD_Model_Object` table. Developers can create entries in this window not linked to any AD component. To support any type of web.xml content (servlet, listeners, filters, etc.) a new column is added to the `AD_Model_Object` to represent the type of web.xml entry that the developer is adding. They can also declare a set of mappings for the entry and a set of parameters if needed.
+Etendo Modularity aims to allow through modules the **deployment of any type of optional content** in an Etendo instance, including additional entries in the web.xml file of Etendo context. This is done through the `AD_Model_Object` table. 
 
-The module of a `AD_Model_Object` entry is calculated with the following rule: if it is linked to any AD component then the module is the one assigned to that AD component, otherwise the module is the one assigned to the `AD_Model_Object` record itself. Note that the module for the `AD_Model_Object` child tables (`AD_Model_Object_Mapping` and `AD_Model_Object_Para`) is the same as their parent record.
+Developers can create entries in this window not linked to any AD component. To support any type of web.xml content (servlet, listeners, filters, etc.) a new column is added to the `AD_Model_Object` to represent the type of web.xml entry that the developer is adding. They can also declare a set of mappings for the entry and a set of parameters if needed.
 
-With this extension the web.xml file in the Etendo context is fully extensible through modules.
+The module of a `AD_Model_Object` entry is calculated with the following rule: if it is linked to any AD component then the module is the one assigned to that AD component, otherwise the module is the one assigned to the `AD_Model_Object` record itself. 
 
-In previous releases `AD_Model_Object` table defined just Servlets, other objects in web.xml file were added directly to its template. In r2.50 model was extended to allow definition of other objects (filters, listeners, resources and Servlets not linked to AD elements) adding the `AD_Model_Object_Para` table and the **Application Dictionary > AD Implementation Mapping** window to manage it.
+!!!note 
+    The module for the `AD_Model_Object` child tables (`AD_Model_Object_Mapping` and `AD_Model_Object_Para`) is the same as their parent record.
+
+!!!info
+    With this extension the web.xml file in the Etendo context is fully extensible through modules.
+
+In previous releases `AD_Model_Object` table defined just Servlets, other objects in web.xml file were added directly to its template. In r2.50 model was extended to allow definition of other objects (filters, listeners, resources and Servlets not linked to AD elements) adding the `AD_Model_Object_Para` table and the `Application Dictionary > AD Implementation Mapping` window to manage it.
 
 ---
 This work is a derivative of [Model Object Mapping](https://wiki.openbravo.com/wiki/Model_Object_Mapping){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
