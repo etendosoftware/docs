@@ -18,7 +18,7 @@ This tool is useful in the context of module administration and configuration on
 
 
 ## Installation
-You can install only the module containing the **Create References** by following the guide on [How to install modules in Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+You can install only the module containing the **Create References** by following the guide on [How to install modules in Etendo](../../etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
 
 
 ## Components
@@ -43,11 +43,11 @@ To use this assistant, it is necessary to log in as `System Administrator` role 
 
 ### 2. Open Copilot and select Create Reference Assistant
 
-![alt text](../../../assets/developer-guide/etendo-copilot/assistants/create-references/create-references-0.png)
+![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
 
 ### 3. Ask the assistant which reference type you need to create
 
-![alt text](../../../assets/developer-guide/etendo-copilot/assistants/create-references/create-references1.png)
+![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references1.png)
 
 **User:** *"Create a list with the current currencies used in all European countries and suggest a name for the reference. The prefix to export this information in the module is copdev."*.
 
@@ -59,7 +59,7 @@ The Create References Tool will process these parameters, verify the access toke
 
 In the Reference window, Etendo shows all the fields with the corresponding information generated and in the List Reference tab, it is possible to see the new list reference created. 
 
-![alt text](../../../assets/developer-guide/etendo-copilot/assistants/create-references/create-references-2.png)
+![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-2.png)
 
 
 ### 5. Export the changes

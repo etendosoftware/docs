@@ -457,9 +457,11 @@ nav:
         - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
-      - Assistants: 
-        - Create References: developer-guide/etendo-copilot/assistants.md/create-references.md
-        - Dev Assistant: developer-guide/etendo-copilot/assistants.md/dev-assistant.md
+      - Bundles: 
+        - Copilot Extensions:
+          - Overview: developer-guide/etendo-copilot/bundles.md/overview.md
+          - Create References: developer-guide/etendo-copilot/bundles.md/create-references.md
+          - Dev Assistant: developer-guide/etendo-copilot/bundles.md/dev-assistant.md
       - Tools:
         - Create Reference Tool: developer-guide/etendo-copilot/available-tools/create-reference-tool.md
         - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md

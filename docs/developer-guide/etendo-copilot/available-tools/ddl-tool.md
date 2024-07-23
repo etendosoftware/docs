@@ -16,7 +16,7 @@ The **DDLTool** is an Etendo Copilot tool developed in Python to create a table 
 
 ## Functionality
 
-The **DDLTool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
+The **DDL Tool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
 
 Users can choose modes using the chat:
 
