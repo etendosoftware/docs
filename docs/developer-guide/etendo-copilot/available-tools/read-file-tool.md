@@ -2,7 +2,6 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - Tool
     - Read
     - File
@@ -10,12 +9,18 @@ tags:
 
 # Read File Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
 ## Overview
+
 The **Read File Tool** is designed to read the contents of files given a filepath parameter. It provides a simple way to access the contents of text files on the local system.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
 
 ## Functionality
 
-This tool is especially useful when you need to access the contents of a file for processing or viewing. It can be used in several situations, such as:
+This tool is especially useful to access the contents of a file for processing or viewing. It can be used in several situations, such as:
 
 - Reading configuration files.
 - Accessing logs and log files.
@@ -26,10 +31,6 @@ This process consists of the following actions.
 - **Receiving Parameters**
 
     The tool receives an input parameter called `filepath` which is the path to the file to be read.
-
-- **Converting JSON**
-    If the input is a JSON string, it tries to convert it to a dictionary. If the input is a dictionary directly, it uses it as is.
-    If the parameter is directly a string representing the path, it handles that case also by converting it to a dictionary.
 
 - **Reading File**
     - It opens the file specified by `filepath`.

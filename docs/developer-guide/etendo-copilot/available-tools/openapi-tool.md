@@ -2,7 +2,6 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - OpenAPI
     - Swagger
     - API
@@ -20,10 +19,12 @@ tags:
 The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. 
 
 !!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
+
+!!!info
     For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
 
 This specification can be useful for Copilot since it can be used as a guide to Copilot to interact with the services, without the need to know the implementation details and implementing specific code for each service is not be necessary.
-
 
 ## Tools
 
@@ -41,7 +42,7 @@ In the basic use case, a **Purchase Assistant** was implemented, in which an ass
 
 ### Configuration
 
- - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
+ - In the module `com.etendoerp.copilot.openapi.purchase` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
  - After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.
  - Finally, give access to the role and configure the permissions in "Role" Window.
 !!! note
@@ -49,7 +50,7 @@ In the basic use case, a **Purchase Assistant** was implemented, in which an ass
 
 ### Other Configurations
 
-- It is necessary to add the ```gradle.properties``` file with the following configuration:
+- It is necessary to add the `gradle.properties` file with the following configuration:
 ``` properties
     ETENDO_HOST=http://localhost:8080/etendo
 ```

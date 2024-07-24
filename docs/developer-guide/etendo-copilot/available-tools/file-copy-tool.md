@@ -2,16 +2,20 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - Tool
     - File Copy
 ---
 
 # File Copy Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
 ## Overview
 
 The **File Copy Tool** receives two paths: one from a file and one from a directory. Its function is to copy the specified file to the specified directory and return the path of the copied file.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
 
 ## Functionality
 
@@ -22,8 +26,9 @@ This process consists of the following actions:
 - **Receiving Parameters**
 
     The tool receives an input object containing two keys:
-        - `source_path`: path to the source file to be copied.
-        - `destination_directory`: path to the destination directory where you want to copy the file.
+
+    - `source_path`: path to the source file to be copied.
+    - `destination_directory`: path to the destination directory where you want to copy the file.
 
 - **Creating the Output Directory**
 

@@ -2,7 +2,6 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - Tool
     - Print
     - Directory
@@ -10,9 +9,15 @@ tags:
 
 # Print Directory Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
 ## Overview
+
 The **Print Directory Tool** is a tool designed to print files and directories from the current directory or from a specified upstream directory. It allows the option to list the contents recursively.
 
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
+    
 This tool is extremely valuable for file system management and monitoring. It makes it easy to view the directory structure, either locally or upwards, and allows for detailed audits of the structure. Its ability to ignore specific directories common in development environments ensures that listings are relevant and clean, making the tool efficient and practical.
 
 ## Functionality
@@ -50,10 +55,6 @@ This process consists of the following actions:
 
     - If recursive is True, it will use `os.walk` to list all files and subdirectories recursively.
     - If recursive is False, it will use `os.listdir` to list only the contents of the specified directory.
-
-- **Filtering Specific Directories**
-
-    It ignores certain directories in the results, such as `.git`, `.idea`, `venv`, and `web/com.etendoerp.copilot.dist`.
 
 - **Returning the Result**
 

@@ -2,20 +2,24 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - Tool
     - Uncompress files
 ---
 
 # Uncompress Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
 ## Overview
 
 The **Uncompress Tool** is a utility designed to uncompress various types of compressed files and return the paths of the uncompressed files. It supports common file types including `zip`, `gzip`, `bzip2`, and `rar`.
 
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
+
 ## Functionality
 
-The primary purpose of the UncompressTool is to streamline the process of extracting files from compressed formats. This tool is particularly useful in scenarios where automated file extraction is needed, such as data processing pipelines, backup restoration, and file management systems. By supporting multiple common compression formats and providing a straightforward interface for file extraction, it simplifies workflows involving compressed files and ensures efficient handling of data archives.
+The primary purpose of the this tool is to streamline the process of extracting files from compressed formats. It is particularly useful in scenarios where automated file extraction is needed, such as data processing pipelines, backup restoration, and file management systems. By supporting multiple common compression formats and providing a straightforward interface for file extraction, it simplifies workflows involving compressed files and ensures efficient handling of data archives.
 
 This process consists of the following actions.
 
@@ -50,7 +54,7 @@ This process consists of the following actions.
 
 ## Usage Example
 
-If you have a compressed file at `/home/user/archive.zip` and you want to uncompress it, you would use the tool as follows:
+If there is a compressed file at `/home/user/archive.zip` and it is necessary to uncompress it, the tool would be used as follows:
 
 - **Input**:
 

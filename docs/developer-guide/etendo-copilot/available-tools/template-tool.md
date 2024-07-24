@@ -2,16 +2,20 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - Tool
     - Template
 ---
 
 # Template Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
 ## Overview
 
 The **Template Tool** is a template for creating new tools in Python-based applications. It is designed to provide a basic structure on which to build custom functionality. The input parameters it accepts are: input1 and input2. The output consists of a message that confirms a predetermined action.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
 
 ## Functionality
 
@@ -46,13 +50,9 @@ Imagine you want to create a tool that adds two numbers together. We would use t
 - input1: 3
 - input2: 5
 
-We can add the necessary code inside the “code here” section to perform the addition:
+We can add the necessary code inside the **code here** section to perform the addition:
 
 ```
 result = p_input1 + p_input2
 return {“message”: f “Sum result is {result}”}
 ```
-
-## Conclusion
-
-This is a versatile template designed to be the foundation on which new tools are built. It provides an initial structure that can be easily adapted to various applications, allowing developers to focus on specific logic without worrying about the basic configuration of the tool.

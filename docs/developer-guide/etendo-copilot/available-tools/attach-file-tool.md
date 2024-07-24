@@ -2,20 +2,24 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - Tool
     - Attach file
 ---
 
 # Attach File Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
+
 ## Overview
 
-The **Attach File tool** uploads a file to an API after verifying its existence and accessibility. It involves reading the file from a specified path, encoding it in base64, and then sending it to the API endpoint along with necessary identifiers and an access token.
+The **Attach File tool** uploads a file using the `AttachFile` webhook after verifying its existence and accessibility. It involves reading the file from a specified path, encoding it in base64, and then sending it to Etendo using the webhook, along with necessary identifiers and an access token.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
 
 ## Functionality
 
-The primary purpose of the Attach File Tool is to facilitate the process of attaching files to records in remote systems, such as the Etendo API, by ensuring the file is accessible and correctly encoded before upload. It is highly valuable in automated processes that require attaching files to records in a remote system. 
+The primary purpose of the Attach File Tool is to facilitate the process of attaching files to records in Etendo, by ensuring the file is accessible and correctly encoded before upload. It is highly valuable in automated processes that require attaching files to records. 
 
 This process consists of the following actions:
 
@@ -51,11 +55,9 @@ This process consists of the following actions:
 
 ## Usage Example
 
-Imagine you have a file at `/home/user/document.pdf`, and you want to upload it to a specific record identified by its tab ID and record ID. You would use the tool as follows:
+Imagine there is a file at `/home/user/document.pdf`, and it is necessary to upload it to a specific record identified by its tab ID and record ID. The tool is used as follows:
 
 - **Input**:
-
-    Copy code
 
     ```
     {
@@ -67,12 +69,8 @@ Imagine you have a file at `/home/user/document.pdf`, and you want to upload it 
 
 - **Output**:
 
-    Copy code
-
     ```
     {
-    "result": {
-        // ...response from the API...
-    }
+    "result": { "message", "Attachment created successfully"}
     }
     ```
