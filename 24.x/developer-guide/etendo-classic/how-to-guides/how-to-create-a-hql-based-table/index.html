@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/24.x/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview/">
+        <link rel="canonical" href="https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table/">
       
       
-        <link rel="prev" href="../../etendobi-extensions/etendo-bi-connector/">
+        <link rel="prev" href="../how-to-create-a-page-in-etendo-documentation/">
       
       
-        <link rel="next" href="../purchase-invoice-validation/">
+        <link rel="next" href="../How_To_Create_a_Module/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../../../../images/favicon.png">
+      <link rel="icon" href="../../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>Procurement Extensions Bundle - Etendo Documentation</title>
+        <title>How to create a HQL Based Table - Etendo Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -51,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +70,7 @@
     
     
     
-   <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -79,7 +79,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#how-to-create-a-hql-based-table" class="md-skip">
           Skip to content
         </a>
       
@@ -116,9 +116,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+    <a href="../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
       
-  <img src="../../../../../../assets/logo.png" alt="logo">
+  <img src="../../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Procurement Extensions Bundle
+              How to create a HQL Based Table
             
           </span>
         </div>
@@ -249,7 +249,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -268,10 +268,28 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../getting-started/overview/" class="md-tabs__link">
+        <a href="../../../../getting-started/overview/" class="md-tabs__link">
           
   
   Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../user-guide/overview/" class="md-tabs__link">
+          
+  
+  User Guide
 
         </a>
       </li>
@@ -288,25 +306,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../../overview/" class="md-tabs__link">
-          
-  
-  User Guide
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../../developer-guide/overview/" class="md-tabs__link">
+        <a href="../../../overview/" class="md-tabs__link">
           
   
   Developer Guide
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../whats-new/overview/" class="md-tabs__link">
+        <a href="../../../../whats-new/overview/" class="md-tabs__link">
           
   
   What's New
@@ -340,7 +340,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../live-builds/overview/" class="md-tabs__link">
+      <a href="../../../../live-builds/overview/" class="md-tabs__link">
         
   
     
@@ -359,7 +359,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../help-and-support/overview/" class="md-tabs__link">
+        <a href="../../../../help-and-support/overview/" class="md-tabs__link">
           
   
   Help and Support
@@ -392,9 +392,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+    <a href="../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
       
-  <img src="../../../../../../assets/logo.png" alt="logo">
+  <img src="../../../../assets/logo.png" alt="logo">
 
     </a>
     Etendo Documentation
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../getting-started/overview/" class="md-nav__link">
+      <a href="../../../../getting-started/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -502,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../getting-started/requirements/" class="md-nav__link">
+      <a href="../../../../getting-started/requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -523,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../getting-started/installation/" class="md-nav__link">
+      <a href="../../../../getting-started/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+      <a href="../../../../getting-started/user-interface/workspace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+      <a href="../../../../getting-started/user-interface/navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+      <a href="../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,30 +659,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -693,7 +688,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             User Guide
@@ -707,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../overview/" class="md-nav__link">
+      <a href="../../../../user-guide/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,30 +720,25 @@
                 
   
   
-    
   
   
-  
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -759,7 +749,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Etendo Classic
@@ -853,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/clear-report-cache/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/attachments-configuration/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/attachments-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/application/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/application/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -937,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/client/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -958,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/crm-connector/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/crm-connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -979,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/enterprise-model/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/security/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1021,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/general-setup/process-scheduling/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/master-data-management/master-data/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/master-data-management/business-partner-setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/master-data-management/product-setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/master-data-management/pricing/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/procurement-management/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/procurement-management/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/procurement-management/transactions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/procurement-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1333,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/warehouse-management/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1354,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/warehouse-management/transactions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1375,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/warehouse-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1396,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/warehouse-management/setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/production-management/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/production-management/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1486,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/production-management/transactions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/production-management/transactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1507,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/production-management/setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/production-management/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1576,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/material-requirement-planning/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/material-requirement-planning/transactions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1618,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/material-requirement-planning/setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1687,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/sales-management/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/sales-management/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1708,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/sales-management/transactions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/sales-management/transactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1729,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/sales-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1750,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/sales-management/setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/sales-management/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1819,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1880,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1901,7 +1891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1922,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/receivables-and-payables/setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1991,7 +1981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/accounting/transactions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2012,7 +2002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/accounting/analysis-tools/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2033,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/accounting/setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2062,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic-features/financial-management/assets/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2096,8 +2086,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2109,11 +2097,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
@@ -2127,7 +2115,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_2">
             <span class="md-nav__icon md-icon"></span>
             Optional Features
@@ -2138,8 +2126,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2151,11 +2137,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" >
         
           
           <label class="md-nav__link" for="__nav_3_2_2_1" id="__nav_3_2_2_1_label" tabindex="0">
@@ -2169,7 +2155,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             Bundles
@@ -2223,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../essentials-extensions/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2244,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../essentials-extensions/advanced-business-partner/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2313,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../platform-extensions/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2334,7 +2320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../platform-extensions/etendo-advanced-security/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2363,7 +2349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../warehouse-extensions/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2384,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-extensions/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/production-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2405,7 +2391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-extensions/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2426,7 +2412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-extensions/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2487,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2508,7 +2494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/sii-para-iva/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2529,7 +2515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/modelo-303/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2550,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/modelo-190/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2571,7 +2557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/modelo-347/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2592,7 +2578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/modelo-349/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2613,7 +2599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/impuestos-para-espa%C3%B1a/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-espa%C3%B1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2634,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/intrastat/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2655,7 +2641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/modelo-390/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2676,7 +2662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/libro-de-facturas/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2697,7 +2683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spain-localization/configuracion-de-impuestos-para-libro-de-facturas/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2766,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../etendobi-extensions/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2787,7 +2773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../etendobi-extensions/inclusion-exclusion-configuration/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2808,7 +2794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../etendobi-extensions/etendo-bi-connector/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2834,8 +2820,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2847,11 +2831,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1_9" >
         
           
           <label class="md-nav__link" for="__nav_3_2_2_1_9" id="__nav_3_2_2_1_9_label" tabindex="0">
@@ -2865,7 +2849,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_2_1_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_2_1_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_2_1_9">
             <span class="md-nav__icon md-icon"></span>
             Procurement Extensions
@@ -2876,28 +2860,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2906,68 +2872,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#translations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Translations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purchase-invoice-validations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purchase Invoice Validations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2980,7 +2884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../purchase-invoice-validation/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3057,7 +2961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../supported-modules/tax-report-launcher/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3134,7 +3038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3155,7 +3059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how-to-guides/how-to-manage-prepaid-invoices-in-payables/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3176,7 +3080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how-to-guides/how-to-manage-prepaid-invoices-in-receivables/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3197,7 +3101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how-to-guides/how-to-transfer-funds-between-financial-accounts/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3239,20 +3143,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3277,7 +3178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-mobile/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-mobile/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3298,7 +3199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-mobile/user-interface/user-interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3359,7 +3260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3401,20 +3302,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3439,7 +3337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-copilot/getting-started/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-copilot/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3460,7 +3358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-copilot/setup/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-copilot/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3561,7 +3459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-copilot/bundles/overview/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-copilot/bundles/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3582,7 +3480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-copilot/bundles/copilot-purchase-expert/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3603,7 +3501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-copilot/bundles/dev-assistant/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-copilot/bundles/dev-assistant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3624,7 +3522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../etendo-copilot/bundles/sql-expert/" class="md-nav__link">
+      <a href="../../../../user-guide/etendo-copilot/bundles/sql-expert/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3673,25 +3571,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -3702,7 +3605,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Developer Guide
@@ -3716,7 +3619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/overview/" class="md-nav__link">
+      <a href="../../../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3734,25 +3637,30 @@
                 
   
   
+    
   
   
+  
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -3763,7 +3671,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Etendo Classic
@@ -3857,7 +3765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+      <a href="../../getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3878,7 +3786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+      <a href="../../getting-started/installation/intellij-code-formatting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3899,7 +3807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+      <a href="../../getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3920,7 +3828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+      <a href="../../getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3941,7 +3849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
+      <a href="../../getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3962,7 +3870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/" class="md-nav__link">
+      <a href="../../getting-started/installation/postgresql-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4031,7 +3939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+      <a href="../../getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4052,7 +3960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+      <a href="../../getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4121,7 +4029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+      <a href="../../getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4142,7 +4050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+      <a href="../../getting-started/upgrade/core-format-migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4163,7 +4071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+      <a href="../../getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4240,7 +4148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/Alerts/" class="md-nav__link">
+      <a href="../../concepts/Alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4261,7 +4169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/application-menu/" class="md-nav__link">
+      <a href="../../concepts/application-menu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4282,7 +4190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/Constraints/" class="md-nav__link">
+      <a href="../../concepts/Constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4303,7 +4211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/Data_Access_Layer/" class="md-nav__link">
+      <a href="../../concepts/Data_Access_Layer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4324,7 +4232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/data-model/" class="md-nav__link">
+      <a href="../../concepts/data-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4345,7 +4253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/Datasets/" class="md-nav__link">
+      <a href="../../concepts/Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4366,7 +4274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/development-build-tasks/" class="md-nav__link">
+      <a href="../../concepts/development-build-tasks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4387,7 +4295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology/" class="md-nav__link">
+      <a href="../../concepts/Element_and_Synchronize_Terminology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4408,7 +4316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+      <a href="../../concepts/etendo-jars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4429,7 +4337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/format-xml/" class="md-nav__link">
+      <a href="../../concepts/format-xml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4450,7 +4358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+      <a href="../../concepts/inventory-status/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4471,7 +4379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+      <a href="../../concepts/naming-guidelines-for-modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4492,7 +4400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/Processes/" class="md-nav__link">
+      <a href="../../concepts/Processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4513,7 +4421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/selectors/" class="md-nav__link">
+      <a href="../../concepts/selectors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4534,7 +4442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/standard-windows/" class="md-nav__link">
+      <a href="../../concepts/standard-windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4555,7 +4463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/concepts/Tables/" class="md-nav__link">
+      <a href="../../concepts/Tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4581,8 +4489,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -4592,11 +4502,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
@@ -4610,7 +4520,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_3">
             <span class="md-nav__icon md-icon"></span>
             How to guides
@@ -4624,7 +4534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar/" class="md-nav__link">
+      <a href="../how-to-add-a-button-to-the-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4645,7 +4555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab/" class="md-nav__link">
+      <a href="../how-to-add-a-field-to-a-window-tab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4666,7 +4576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column/" class="md-nav__link">
+      <a href="../How_to_add_a_rich_text_field_and_column/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4687,7 +4597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table/" class="md-nav__link">
+      <a href="../how-to-add-columns-to-a-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4708,7 +4618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window/" class="md-nav__link">
+      <a href="../How_to_change_an_existing_Window/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4729,7 +4639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+      <a href="../how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4750,7 +4660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process/" class="md-nav__link">
+      <a href="../How_to_create_a_Background_Process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4771,7 +4681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout/" class="md-nav__link">
+      <a href="../How_to_create_a_Callout/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4792,7 +4702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module/" class="md-nav__link">
+      <a href="../How-to-Create-a-Chart-of-Accounts-Module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4813,7 +4723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+      <a href="../how-to-create-a-clone-hook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4834,7 +4744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column/" class="md-nav__link">
+      <a href="../how-to-create-a-computed-column/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4855,7 +4765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset/" class="md-nav__link">
+      <a href="../How_to_create_a_Dataset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4876,7 +4786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/" class="md-nav__link">
+      <a href="../how-to-create-a-page-in-etendo-documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4894,10 +4804,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How to create a HQL Based Table
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4906,6 +4836,136 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-a-hql-based-table-in-the-application-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining a HQL Based Table in the Application Dictionary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining a HQL Based Table in the Application Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-and-fields-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab and Fields Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hql-inserters" class="md-nav__link">
+    <span class="md-ellipsis">
+      HQL Inserters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HQL Inserters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hql-insertion-points-in-the-hql-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      HQL Insertion points in the HQL Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-hql-inserter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining a HQL Inserter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hql-transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      HQL Transformers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4918,7 +4978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module/" class="md-nav__link">
+      <a href="../How_To_Create_a_Module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4939,7 +4999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+      <a href="../how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4960,7 +5020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process/" class="md-nav__link">
+      <a href="../how-to-create-a-pick-and-execute-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4981,7 +5041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report/" class="md-nav__link">
+      <a href="../How_to_create_a_Report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5002,7 +5062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/" class="md-nav__link">
+      <a href="../how-to-create-a-standard-process-definition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5023,7 +5083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure/" class="md-nav__link">
+      <a href="../how-to-create-a-stored-procedure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5044,7 +5104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-table/" class="md-nav__link">
+      <a href="../how-to-create-a-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5065,7 +5125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window/" class="md-nav__link">
+      <a href="../How_to_create_a_Window/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5086,7 +5146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files/" class="md-nav__link">
+      <a href="../How-to-Create-Accounts-Files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5107,7 +5167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/" class="md-nav__link">
+      <a href="../How_to_create_an_Alert/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5128,7 +5188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services/" class="md-nav__link">
+      <a href="../how-to-create-and-update-business-entities-using-web-services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5149,7 +5209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+      <a href="../how-to-create-and-update-translation-modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5170,7 +5230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/" class="md-nav__link">
+      <a href="../how-to-create-build-validations-and-module-scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5191,7 +5251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/" class="md-nav__link">
+      <a href="../how-to-create-client-side-callout-onchange-function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5212,7 +5272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+      <a href="../how-to-create-jobs-and-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5233,7 +5293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+      <a href="../how-to-create-scan-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5294,7 +5354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/" class="md-nav__link">
+      <a href="../how-to-create-testcases/how-to-create-jest-testcases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5315,7 +5375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases/" class="md-nav__link">
+      <a href="../how-to-create-testcases/how-to-create-junit-testcases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5344,7 +5404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level/" class="md-nav__link">
+      <a href="../how-to-define-display-logic-evaluated-at-server-level/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5365,7 +5425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process/" class="md-nav__link">
+      <a href="../How_to_develop_a_DAL_background_process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5386,7 +5446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab/" class="md-nav__link">
+      <a href="../how-to-embed-a-widget-into-a-window-tab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5407,7 +5467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model/" class="md-nav__link">
+      <a href="../how-to-exclude-database-physical-objects-from-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5428,7 +5488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data/" class="md-nav__link">
+      <a href="../how-to-export-sample-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5449,7 +5509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler/" class="md-nav__link">
+      <a href="../How_to_implement_a_business_event_handler/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5470,7 +5530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+      <a href="../how-to-publish-modules-to-github-repository/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5491,7 +5551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process/" class="md-nav__link">
+      <a href="../How_to_run_an_initial_client_setup_process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5512,7 +5572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+      <a href="../how-to-use-advanced-sequences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5533,7 +5593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/" class="md-nav__link">
+      <a href="../how-to-use-property-fields/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5554,7 +5614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+      <a href="../how-to-use-secure-webservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5623,7 +5683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+      <a href="../../developer-tools/etendo-gradle-plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5644,7 +5704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+      <a href="../../developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5753,7 +5813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/overview/" class="md-nav__link">
+      <a href="../../bundles/platform/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5774,7 +5834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks/" class="md-nav__link">
+      <a href="../../bundles/platform/etendo-webhooks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5795,7 +5855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/dependency-manager/" class="md-nav__link">
+      <a href="../../bundles/platform/dependency-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5824,7 +5884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+      <a href="../../bundles/warehouse-extensions-bundle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5845,7 +5905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/" class="md-nav__link">
+      <a href="../../bundles/financial-extensions-bundle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5866,7 +5926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle/" class="md-nav__link">
+      <a href="../../bundles/etendo-bi-bundle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5908,17 +5968,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -5943,7 +6006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+      <a href="../../../etendo-rx/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6004,7 +6067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/concepts/config-server/" class="md-nav__link">
+      <a href="../../../etendo-rx/concepts/config-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6025,7 +6088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/concepts/edge-server/" class="md-nav__link">
+      <a href="../../../etendo-rx/concepts/edge-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6046,7 +6109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/concepts/projections/" class="md-nav__link">
+      <a href="../../../etendo-rx/concepts/projections/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6115,7 +6178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+      <a href="../../../etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6184,7 +6247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+      <a href="../../../etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6205,7 +6268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code/" class="md-nav__link">
+      <a href="../../../etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6226,7 +6289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-change-date-format/" class="md-nav__link">
+      <a href="../../../etendo-rx/how-to-guides/how-to-change-date-format/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6247,7 +6310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/" class="md-nav__link">
+      <a href="../../../etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6289,17 +6352,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -6324,7 +6390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-copilot/installation/" class="md-nav__link">
+      <a href="../../../etendo-copilot/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6385,7 +6451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/database-query-tool/" class="md-nav__link">
+      <a href="../../../etendo-copilot/available-tools/database-query-tool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6406,7 +6472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/ddl-tool/" class="md-nav__link">
+      <a href="../../../etendo-copilot/available-tools/ddl-tool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6427,7 +6493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/openapi-tool/" class="md-nav__link">
+      <a href="../../../etendo-copilot/available-tools/openapi-tool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6448,7 +6514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/ocr-tool/" class="md-nav__link">
+      <a href="../../../etendo-copilot/available-tools/ocr-tool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6469,7 +6535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool/" class="md-nav__link">
+      <a href="../../../etendo-copilot/available-tools/xml-translation-tool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6498,7 +6564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-copilot/how-to-create-copilot-tools/" class="md-nav__link">
+      <a href="../../../etendo-copilot/how-to-create-copilot-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6532,17 +6598,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -6567,7 +6636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+      <a href="../../../etendo-mobile/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6628,7 +6697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+      <a href="../../../etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6649,7 +6718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx/" class="md-nav__link">
+      <a href="../../../etendo-mobile/tutorials/example-subapplication-using-etendo-rx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6670,7 +6739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/use-pdf-utilities/" class="md-nav__link">
+      <a href="../../../etendo-mobile/tutorials/use-pdf-utilities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6775,7 +6844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/overview/" class="md-nav__link">
+      <a href="../../../../whats-new/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6796,7 +6865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+      <a href="../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6878,7 +6947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-news/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-news/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6939,7 +7008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7000,7 +7069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7021,7 +7090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7090,7 +7159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7111,7 +7180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7132,7 +7201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7153,7 +7222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7174,7 +7243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7195,7 +7264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7216,7 +7285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7237,7 +7306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7258,7 +7327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7327,7 +7396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7348,7 +7417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7369,7 +7438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7390,7 +7459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7411,7 +7480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7432,7 +7501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7453,7 +7522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7474,7 +7543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7503,7 +7572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/iso/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/iso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7524,7 +7593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7633,7 +7702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7750,7 +7819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7819,7 +7888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../whats-new/release-notes/etendo-copilot/translation-bundles/release-notes/" class="md-nav__link">
+      <a href="../../../../whats-new/release-notes/etendo-copilot/translation-bundles/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7871,7 +7940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../live-builds/overview/" class="md-nav__link">
+      <a href="../../../../live-builds/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7931,7 +8000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../help-and-support/overview/" class="md-nav__link">
+      <a href="../../../../help-and-support/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7952,7 +8021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../help-and-support/support-service/" class="md-nav__link">
+      <a href="../../../../help-and-support/support-service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7973,7 +8042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+      <a href="../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8013,6 +8082,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8021,37 +8092,103 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#translations" class="md-nav__link">
+  <a href="#defining-a-hql-based-table-in-the-application-dictionary" class="md-nav__link">
     <span class="md-ellipsis">
-      Translations
+      Defining a HQL Based Table in the Application Dictionary
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Modules">
+    <nav class="md-nav" aria-label="Defining a HQL Based Table in the Application Dictionary">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#purchase-invoice-validations" class="md-nav__link">
+  <a href="#table-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Purchase Invoice Validations
+      Table Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-and-fields-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab and Fields Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hql-inserters" class="md-nav__link">
+    <span class="md-ellipsis">
+      HQL Inserters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HQL Inserters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hql-insertion-points-in-the-hql-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      HQL Insertion points in the HQL Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-hql-inserter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining a HQL Inserter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hql-transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      HQL Transformers
     </span>
   </a>
   
@@ -8075,31 +8212,162 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">HQL</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Table</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Column</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Field</span>
+    
+  
+</nav>
+
 
   
   
 
 
-  <h1>Overview</h1>
-
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.procurement.extensions</code></p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18H6v-4h6m9 0v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6m0-10H4v2h16V4Z"/></svg></span> Etendo Marketplace:  <a href="https://marketplace.etendo.cloud/#/product-details?module=08BDBA6C314149DBA05CB1A1694F2959" target="_blank">Procurement Extensions Bundle</a></p>
-<h2 id="overview">Overview</h2>
-<p>This bundle includes enhancements for Procurement functionalities in Etendo.</p>
-<h2 id="translations">Translations</h2>
+<h1 id="how-to-create-a-hql-based-table">How to create a HQL Based Table</h1>
+<h2 id="introduction">Introduction</h2>
+<p>There are three available data origin in the definition of a table in the application dictionary:</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg></span> Spanish: <a href="https://marketplace.etendo.cloud/#/product-details?module=F863020C58E94632A7134A8031A3AA9D" target="_blank">Procurement Extensions Bundle ES</a></li>
+<li>Table: A table actually defined in a DBMS.</li>
+<li>Datasource: A manual datasource will be used for the data origin of this table.</li>
+<li>HQL Table.</li>
 </ul>
-<h2 id="modules">Modules</h2>
-<h3 id="purchase-invoice-validations">Purchase Invoice Validations</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.purchase.invoice.validations</code></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<p>This module allows users to prevent the duplication of purchase invoices within the system. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>For more information, visit <a href="../purchase-invoice-validation/">the Purchase Invoice Validations user guide</a>.</p>
-</div>
+<p>The <em>HQL Table</em> data origin allows to define a table without the need of a physical table in the database and without having to define a manual datasource.</p>
+<p>HQL Based Tables must define a HQL select query, that will be used to obtain the proper records when a request to its datasource is done.</p>
+<h2 id="defining-a-hql-based-table-in-the-application-dictionary">Defining a HQL Based Table in the Application Dictionary</h2>
+<h3 id="table-definition">Table Definition</h3>
+<p>When a HQL based table is defined in the application dictionary, there is no need to fill in the <em>DB Table Name</em> and <em>Java Class Name</em> fields. There are two new fields that must be set for these tables:</p>
+<ul>
+<li>HQL Query: The HQL query that will be used to fetch the records for this table.</li>
+<li>Entity Alias: The alias of one of the tables used in the HQL Query. It will be used to add automatically the mandatory client and organization filters.</li>
+</ul>
+<p>Design considerations for HQL queries:</p>
+<ul>
+<li>Use alias for all the columns and tables used in the query. It will simplify the column definition in the application dictionary.</li>
+<li>Include the string <em>@additional_filters@</em> inside a where clause in the HQL Query. That string will be replaced with the mandatory client and organization filters, and with the filters generated from the criteria included in the datasource request.</li>
+<li>All HQL queries should include a column that acts as its primery key. The alias of this column should be <em>id</em>.</li>
+<li>If a HQL query contains several from clauses because it uses subqueries in the select clause or in the where clause, then the MAINFROM text must be used instead of FROM in the main from clause.</li>
+</ul>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_HQL_Based_Table-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_HQL_Based_Table-1.png" /></a></p>
+<h3 id="column-definition">Column Definition</h3>
+<p>The <em>Create Columns from DB</em> process does not apply to HQL based tables, so they have to be created manually.</p>
+<p>Considerations in the definition of columns of HQL tables in the application dictionary:</p>
+<ul>
+<li>The <em>DB Column Name</em> and the <em>Name</em> of the column must be the alias used for the column in the HQL Query.</li>
+<li>The <em>Clause Left Part</em> field must be filled with the left part definition of the column in the HQL query. For instance, if a column is defined in the HQL query is <code>e.name as countryName</code> , then the <em>Name</em> and <em>DB Column Name</em> of the column must be <code>countryName</code> and its <em>Clause Left Part</em> must be <code>e.name</code>.</li>
+</ul>
+<p>To include a foreign key in a column of a HQL table, the column must point to the referenced entity itself, not to its id. Then, when that column is defined in the application dictionary, the <em>Table</em> reference must be used, and the proper table instance must be selected in the <em>Reference Search Key</em> field.</p>
+<p>For instance, if <code>e</code> is the alias of the Country table and we want to include its currency, we must enter <code>e.currency as countryCurrency</code> in the HQL query. Then we must select the <em>Table</em> reference in the definition of that column in the application dictionary and <code>c_currency</code> in the <em>Reference Search Key</em> field.</p>
+<h2 id="tab-and-fields-definition">Tab and Fields Definition</h2>
+<p>The tab and the fields of a HQL based table are defined in the application dictionary in the same way as with standard tables.
+The only restriction is that all tabs associated with HQL based tables will be read only.</p>
+<h2 id="advanced-topics">Advanced Topics</h2>
+<h3 id="hql-inserters">HQL Inserters</h3>
+<p>HQL Inserters allow to add code to a HQL query at a point specified in the HQL Query defined in the application dictionary.</p>
+<h4 id="hql-insertion-points-in-the-hql-query">HQL Insertion points in the HQL Query</h4>
+<p>To define a HQL Insertion point in your HQL query you need to use the <code>@insertion_point#@</code> string, <code>#</code> being the index of the insertion point. The
+index of the first injection point must be 0, the index for the second must be 1, etc. There cannot be gaps in the indexes of insertion points.</p>
+<p>Insertion points can only be defined in <code>where clauses</code>. If the HQL Query defines an insertion point but then there are no <code>HQLInserter</code> defined for it, then the insertion point will be replaced by <code>1 = 1</code> in the HQL query.</p>
+<p>For instance, this HQL Query defines a place to enter the additional filters and an HQL insertion point:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SELECT 
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  e.id, 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  e.name, 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  e.eDICode, 
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  e.costingPrecision, 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  e.client, 
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  e.client.organization, 
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  e.active
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>FROM 
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  UOM AS e
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>WHERE 
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  @additional_filters@
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>AND 
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  @insertion_point_0@
+</span></code></pre></div>
+<h4 id="defining-a-hql-inserter">Defining a HQL Inserter</h4>
+<p>Custom HQL inserters must extend the <code>HQLInserter</code> class. Subclasses of the <code>HQLInserter</code> class must implement this method:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/**</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm">  * Returns some code to be inserted in a HQL query, and adds query named parameters when needed</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm">  * </span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm">  * @param requestParameters</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm">  *          the parameters of the request. The inserted code may vary depending on these</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm">  *          parameters</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="cm">  * @param queryNamedParameters</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cm">  *          the named parameters of the hql query that will be used to fetch the table data. If</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="cm">  *          the inserted code uses named parameters, the named parameters must be added to this</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="cm">  *          map</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="cm">  * @return the hql code to be inserted</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="cm">  */</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">insertHql</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">requestParameters</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queryNamedParameters</span><span class="p">);</span>
+</span></code></pre></div>
+<p>The string returned by this method will be used to replace the @insertion_point_#@.</p>
+<p><code>HQLInserter</code> are instantiated using dependency injection. A particular <code>HQLInserter</code> is used to replace a specific injection point of a particular table. For instance, the following <code>HQLInserter</code> is used to replace the <code>@insertion_point_0@</code> defined in the HQL query of the table with ID <code>59ED9B23854A4B048CBBAE38436B99C2</code>:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">  </span><span class="nd">@HQLInserterQualifier.Qualifier</span><span class="p">(</span><span class="n">tableId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;59ED9B23854A4B048CBBAE38436B99C2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">injectionId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AddPaymentCreditToUseInjector</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HqlInserter</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">insertHql</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">requestParameters</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queryNamedParameters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strBusinessPartnerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">requestParameters</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;received_from&quot;</span><span class="p">);</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">BusinessPartner</span><span class="w"> </span><span class="n">businessPartner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">BusinessPartner</span><span class="p">.</span><span class="na">class</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="n">strBusinessPartnerId</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isSalesTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">requestParameters</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;issotrx&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">queryNamedParameters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;bp&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">businessPartner</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">queryNamedParameters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;issotrx&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">isSalesTransaction</span><span class="p">);</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;f.businessPartner.id = :bp and f.receipt = :issotrx&quot;</span><span class="p">;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="hql-transformers">HQL Transformers</h3>
+<p>While HQL Inserters only allow to add some criterion on a point predefined by the user that created the HQL Query, HQL Transformers allow to modify the whole structure of the query.</p>
+<p>To implement a HQL transformer, you have to subclass the HqlQueryTransformer class.
+This class has an abstract method that must be implemented in the custom HQL transformer:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cm">/**</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cm">  * Returns the transformed hql query</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cm">  * </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cm">  * @param hqlQuery</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="cm">  *          original hql query</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="cm">  * @param requestParameters</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="cm">  *          the parameters of the request</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="cm">  * @param queryNamedParameters</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="cm">  *          the named parameters of the hql query that will be used to fetch the table data. If</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="cm">  *          the transformed hql query uses named parameters that did not exist in the original hql</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="cm">  *          query, the named parameters must be added to this map</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="cm">  * @return the transformed hql query</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="cm">  */</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">transformHqlQuery</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">hqlQuery</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">requestParameters</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queryNamedParameters</span><span class="p">);</span>
+</span></code></pre></div>
+<p>This function receives a HQL query, a map with the parameters sent in the request and a map with all the named parameters that are used in the HQL query. It returns the transformed HQL query, and if in the transformation some named parameters have been added to the query, they must be included in the queryNamedParameters map.</p>
+<p>HQL transformers are instantiated using dependency injection. To apply a HQL transformer to a HQL table you must include the table id in the qualifier, for instance:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nd">@ComponentProvider.Qualifier</span><span class="p">(</span><span class="s">&quot;58AF4D3E594B421A9A7307480736F03E&quot;</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AddPaymentOrderInvoicesTransformer</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HqlQueryTransformer</span><span class="w"> </span><span class="p">{</span>
+</span></code></pre></div>
+<hr />
+<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_create_a_HQL_Based_Table" target="_blank">How to create a HQL Based Table</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
@@ -8191,11 +8459,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
 
-      <script src="../../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
