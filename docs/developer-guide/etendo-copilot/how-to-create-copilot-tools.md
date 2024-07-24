@@ -58,41 +58,28 @@ For this example, we will create a tool that will allow us to make a ping to a h
     *tools_deps.toml*: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
 
 
-2. Create the file `PingTool.py` in the `tools` folder. This file will contain the code of the tool. The code of the tool will be as follows, the comments explain the code:
-
-    ```python title="PingTool.py"
-    import os
-    from copilot.core.tool_wrapper import ToolWrapper # Import the ToolWrapper class from the copilot.core.tool_wrapper module. This class is the one that must be extended to create a new tool.
-
-    class PingTool (ToolWrapper):
-        name = 'PingTool' # Name of the tool
-        description = ('''This tool receives a hostname and returns the ping result.''') # Description of the tool. This description tells Copilot what the tool does and based on this description it will decide if this tool will solve the user's request.
-
-        def run(self, host: str, *args, **kwargs): # The run method is the one that will be executed when the tool is executed. The inputs of the method are the inputs of the tool.
-            import requests # Import the necessary libraries to execute the tool. It is recommended to import the libraries inside the run method to avoid conflicts with other tools.
-            response = requests.get(host)
-            return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
-    ``` 
-    !!!Note 
-        The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
+    
 
 3. In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
+    
+    !!!Warning 
+        The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
 
     ```python title="PingTool.py"
     import os
     from typing import Type, Dict
 
-    from pydantic import BaseModel, Field
+    from copilot.core.tool_input import ToolInput, ToolField
 
     from copilot.core.tool_wrapper import ToolWrapper  # Import the ToolWrapper class from the copilot.core.tool_wrapper module. This class is the one that must be extended to create a new tool.
 
 
-    class PingToolInput(BaseModel):
-        host: str = Field(
+    class PingToolInput(ToolInput):
+        host: str = ToolField(
             title="Host",
             description='''The host to ping.''',
         )
-        message_to_print: str = Field(
+        message_to_print: str = ToolField(
             default="default message!",  # Default value of the input, if there is no default value, the input is mandatory.
             title="Message to print",
             description=" Custom message to print before the ping result.",
@@ -105,8 +92,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
         # This description tells Copilot what the tool does and based on this description it will decide if this tool will solve the user's request.
         description = (
             '''This tool receives a hostname and returns the ping result.''')
-        args_schema: Type[
-            BaseModel] = PingToolInput  # The args_schema attribute must be a Pydantic model that defines the inputs of the tool.
+        args_schema: Type[ToolInput] = PingToolInput  # The args_schema attribute must be a Pydantic model that defines the inputs of the tool.
         
         #return_direct = True  # If return_direct is True, the tool will return the result directly, without execute any other tool. If return_direct is not defined, the tool output can be used as input of another tool. This is only available for tools in the Langchain agent. In the OpenAI agent, the return_direct attribute is taken into account, and the tool output can be used as input of another tool.
 
@@ -126,6 +112,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
         Automatically, Copilot reads the `gradle.properties` file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the gradle.properties file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
          This allows us to use the environment variables in the tools. 
         
+    
 
 4. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows:
 
