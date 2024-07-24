@@ -16570,8 +16570,9 @@ The reset accounting process allows the user to totally or partially remove the 
 
 ##### Overview
 
-The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correctly balanced.
-The following are the steps necessary to carry out the VAT regularization on a specific account.
+The VAT Regularization module allows you to automatically adjust the accounts to ensure that the VAT balance is correct. This means, checking the accounts in which this process is necessary and creating the corresponding GL journal to regularize the VAT. This process is essential for maintaining accurate financial records and compliance with tax regulations.
+
+The following are the required steps to carry this out for a specific period of time.
 
 ##### VAT Regularization Process
 
@@ -16601,6 +16602,10 @@ In order to enable an account to be part of the VAT regularization process, it i
 ###### GL Journal Entry Generation
 1. Click the **Process** button to generate the simple GL journal entry.
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png)
+
+    !!!important
+        Remember this process affects all the accounts resulting from the search, so selecting the corresponding accounts must be done when marking the VAT regulularization checkbox in the setup step.
+
 2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000123**).
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png)
 3. Here, verify that the header has been created with the corresponding lines.
@@ -20047,6 +20052,8 @@ This functionality is specifically useful for companies that have a month close,
 ##### VAT Regularization 
 
 :octicons-package-16: Javapackage: `com.etendoerp.vat.regularization`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/udarQ6h6EXQ?si=4CNi7Qgi2_yHdW5z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
 
@@ -27690,6 +27697,11 @@ This process is only available when the application type is **Open AI Assistant*
 
 In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
 
+!!!warning "File Limitation for Code Interpreter"
+    If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
+
+
+
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/app-source-tab.png)
 
 !!!info
@@ -27704,6 +27716,8 @@ Fields to note:
     - Add content to each question: In this case, the same restrictions from the previous option apply. 
 - **Type**: read-only field showing the type of file selected in the [Copilot File window](#copilot-file-window).
 - **Active**: checkbox to activate the app source.
+- **Exclude from Code Interpreter**: Checkbox to exclude files from being processed by the Code Interpreter during synchronization. This checkbox is only editable if the assistant has the Code Interpreter option enabled.
+- **Exclude from Retrieval**: Checkbox to exclude files from being considered in the Retrieval process during synchronization.This checkbox is only editable if the assistant has the Retrieval option enabled.
 
 ##### Tool Tab
 
@@ -33128,6 +33142,138 @@ In order to do that, the HQL select clause for that property needs to point to a
 
 ---
 This work is a derivative of [Selectors](http://wiki.openbravo.com/wiki/Selectors){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Standard Windows
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Standard Windows
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/standard-windows
+## Article Content: 
+### Standard Windows
+
+#### Overview
+
+**Standard Windows** are the windows completely defined in **Application Dictionary**. They allow viewing and editing records in tables.
+
+After defining (or modifying) a standard window, the system must be rebuilt (`./gradlew smartbuild`). During this process `WAD` generates automatically the `Java`, `XSQL`, `HTML` and `XML` code for that window and it is compiled. This means that the complete definition for standard windows is within Application Dictionary without any need of manual developments. This has a number of benefits:
+
+  * No need to write manual code: This reduces the possibility of introducing bugs.
+  * Faster development: As a window creation consists only in defining it in Application Dictionary, it is faster that doing it manually.
+  * Automatic inclusion of new features and bug fixes: Whenever `WAD` fixes a bug or adds a new feature, this is automatically propagated to all standard windows when the system is rebuilt without needing to re-code or re-define anything.
+
+#### Structure: Windows, Tabs and Fields
+
+The structure for standard windows consists in `Windows`, `Tabs` and `Fields`.
+
+  * [**Windows**](#windows): Windows are holders for tabs. Their main purpose is to group a set of related tabs. They can be added to the application's menu.
+  * [**Tabs**](#tabs): Tabs are placed inside windows and can be ordered hierarchically. Each tab is linked to a unique [Application Dictionary Table](https://docs.etendo.software/latest/concepts/data_model.md#tables-in-application-dictionary) and contains a number of fields.
+  * [**Fields**](#fields): Fields are contained within tabs. Each field is associated to a [Column](https://docs.etendo.software/latest/concepts/data_model.md#columns_in_application_dictionary) in the same table than its tab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Standard_Windows-0.png)
+
+The following sections explain how **Windows**, **Tabs** and **Fields** are defined. They are managed from `Application Dictionary` > `Windows, Tabs, and Fields` window.
+
+#### Windows
+
+Windows are generated automatically by `WAD` from their definition in Application Dictionary, all windows have a common layout.
+
+##### Menu
+
+Windows can be added to [Application Menu](https://docs.etendo.software/latest/concepts/application_menu.md).
+
+#### Tabs
+
+`Tabs` are included within `Windows`. Each tab is limited to a single Application Dictionary `Table`. The following subsections detail some important topics to be taken into account when creating a tab.
+
+##### Tabs Hierarchy
+
+`Tabs` are shown hierarchically, they are defined in a tree way. This means that a tab can have subtabs (it is the parent tab for them), consequently a tab can also be a child for another one and it is possible to have several tabs at the same level.
+
+This hierarchy is specified using two fields in the tab:
+
+  * `Tab Level`: Indicates the level in the hierarchy, being 0 the top level, 1 child tabs for ones in 0, etc. Usually there is a single tab at 0 level and the rest of tabs in the window are subtabs for this one. 
+  * `Sequence Number`: It is a number that defines the order tabs are displayed. They are sorted ascendantly, so lower ones and in the left side and higher ones in the right. It is a good idea not to use consecutive numbers in order to allow new tabs inclusions between existent ones. 
+
+The conjunction of these two values gives the position and hierarchy for each tab. Let's see through an example how the following tab structure could be defined:
+
+```
+     A
+     |-A1
+     |  |-A11
+     |-A2
+     |  |-A21
+     |  |-A22
+     |     |-A221
+     |-A3
+```
+
+| Tab | Sequence number | Tab level |
+|-----|-----------------|-----------|
+| A   | 10              | 0         |
+| A1  | 20              | 1         |
+| A11 | 30              | 2         |
+| A2  | 40              | 1         |
+| A21 | 50              | 2         |
+| A22 | 60              | 2         |
+| A221| 70              | 3         |
+| A3  | 80              | 1         |
+
+When creating subtabs, it is necessary to set which column in the parent column is going to be the master for the subtab. In order to show in the subtabs only the records that are linked to the current record in the parent one. For example let's suppose tab A is a tab for `C_Invoice` table and tab A1 is for `C_InvoiceLine` , in this case `C_Invoice.C_Invoice_ID` in tab A must be the master column for tab A1, showing in A1 only the records linking to the selected record in A.
+
+There are three possible ways of setting which is the master column in the parent tab:
+
+  1. Using the `AD_Column.IsParent` check in the table used in the subtab. When a table in a tab contains columns checked as `Link to Parent Column`, it is looked in the parent tab a column with the same name and if found that one will be the master.
+  2. By `name`. In case the table in subtab has a column with the same name as the parent's `primary key` one, the link will be generated using them.
+  3. Using `AD_Tab.WhereClause`. In case it is not possible to use #1 or #2, the relation must be set in the child tab's `Where Clause` field. For more info about this clause, read the document about [Dynamic Expressions](https://docs.etendo.software/latest/concepts/dynamic_expressions.md). In these cases, it is possible to mark the `Disable Parent Key Property` flag, doing so only where clause will be used to create the relationship not adding any other criteria.
+
+###### Locking mechanism
+
+All `WAD` generated tabs implement a simple [Optimistic locking mechanism](https://en.wikipedia.org/wiki/Optimistic_concurrency_control){target="\_blank"}.
+
+When a record is loaded in edition mode, its updated `timestamp` is stored. If the record is modified and saved, this stored timestamp is compared with the current one in database for that record. In case they are different, that record has been modified by another user or process and the application does not allow to save the current modifications. Because otherwise, the modifications done from the record was loaded till the current time would be overwritten.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Standard_Windows-1.png)
+
+####### Transactional Windows
+
+Windows for documents can be set as `Transactional`. Documents have a status, which initially is **Draft**.
+When a transactional window is accessed, it appears filtered by default. This is visualized using a `message` and a small `funnel` icon on the top right.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Standard_Windows-2.png)
+
+The applied filter is all the documents with status Draft or which date is in the defined `Transaction Range`. To clear the filter, click the `funnel` icon.
+
+To define a window as transactional, go to `Application Dictionary` > `Windows, Tabs, and Fields` > `Window` tab and select the `Window Type` as `Transaction`.
+
+To define the **Transaction Range**, go to `General Setup` > `Application` > `Session Preferences` and define in the `Transaction Range` the maximum number of days that processed documents will be shown in.
+
+####### High Volume Tables
+
+When a table is set defined as `High Volume` (in `Application Dictionary` > `Tables and Columns` > `Table` tab) and the tab that displays it is set to by default be shown in edition mode ( `Default Edit Mode` in `Application Dictionary` > `Windows, Tabs, and Fields` > `Window` > `tab` tab), when the tab is accessed a filter is shown.
+
+####### Filter Clause in Tab
+
+In `Application Dictionary` > `Windows, Tabs, and Fields` > `Window` > `tab` tab there is a **Filter Clause** field,  `HQL Filter Clause`. This field allows `HQL where clauses` to be used as default filter for the tab. When the tab is accessed this filter is applied, to remove it just click on the `funnel` filter icon.
+
+!!!note
+    This field is different than the `HQL Where Clause` which also accepts where clauses, but this clause is permanent and cannot be removed by the user.
+
+#### Fields
+
+`Fields` are contained in tabs, each field has a `column` (from the same `table` as the tab's one) associated. It displays and allows editing the column's value. The way a field is displayed within the tab is determined by the [reference](https://docs.etendo.software/latest/concepts/data_model.md#references) its associated column has.
+
+Some of the things to take into account when configuring a field are:
+
+  * `Read Only Logic` which allows determining if field is read only (applies only when field is read-write).The Read Only indicates that this field may only be Read. It may not be updated. Note that it is defined at Column level in the Application Dictionary. It is a [Dynamic Expression](https://docs.etendo.software/latest/concepts/dynamic_expressions.md).
+  * `Display Logic` which allows showing or hiding the field depending on other fields' values. It is a [Dynamic Expression](https://docs.etendo.software/latest/concepts/dynamic_expressions.md).
+    * Display logic is taken into account in `grid view` as read only logic, being only applied when a record is edited in grid view. 
+  * `Central Maintenance`, how it works is explained in the document about [Elements and Synchronize Terminology](https://docs.etendo.software/latest/concepts/Element_and_Synchronize_Terminology.md).
+  * [`Callout`](https://docs.etendo.software/latest/concepts/data_model.md#callout), although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.
+  * `Field group`, fields can be assigned to a field group, when a group of fields has a field group, a separator is shown in the tab. Field Groups are defined in `Application Dictionary` > `Setup` > `Field Category` tab.
+
+---
+
+This work is a derivative of [Standard Windows](http://wiki.openbravo.com/wiki/Standard_Windows){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Tables
@@ -39931,6 +40077,168 @@ Then, navigate to the `Master Data Management` > `Product` window and find the p
 
 This work is a derivative of [How to develop a DAL background process](http://wiki.openbravo.com/wiki/How_to_develop_a_DAL_background_process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to embed a Widget into a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to embed a Widget into a Window Tab
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab
+## Article Content: 
+###  How to embed a Widget into a Window Tab
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-0.png) 
+This document is still a work in progress. It may contain inaccuracies or errors.   
+
+####  Introduction
+
+This Howto assumes familiarity with both how windows, tabs and fields work and also how widgets are defined in general.
+  
+This HowTo describes how to embed a widget into a tab of a generated window. In detail it will show the restrictions/differences in the Widget definition itself and explains the following two examples:
+
+  1. How to embed a simple widget into a Tab.
+  2. How to embed a QueryList widget into a Tab which filters its data according to the currently displayed record.
+
+####  How to place a Widget into a Tab
+
+In this part we will define two simple Widgets and place them into a generated Window/Tab.
+
+The goal of this section is to show define a generated Window/Tab which looks like in the following screenshot.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-2.png)
+
+Widget embedded in a Tab
+
+In this example one widget is placed next to a few normal fields in a demo tab. This widget spans a single column but four rows on the top right and does not have a field label (to use the extra space of the label for the content itself). The widget content shows twitter entries including the text "Openbravo".
+
+The rest of this sections assumes the following action to be done:
+
+  * Creation of a table.
+  * Creation of a window & tab to show this table.
+
+The following now concentrates on how to add the two widgets in the positions shown above to this tab. This will consist of four basic steps for each of the widgets:
+
+  1. Define the widget itself.
+  2. Define a new reference entry to use the widget.
+  3. Add a new column & field to the table & tab.
+  4. Configure the new field to match the layout shown above.
+
+The third step of this uses the same flow as adding any other field and is described in detail in  these  two  other documents.
+
+First step is to create a new widget definition which will show the twitter content matching 'Openbravo'. This widget will reuse the code from the already defined Twitter widget shipped with the Openbravo 3 distribution.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-4.png)
+
+Twitter widget definition
+
+One important detail in this definition is that the parameter is defined as **Fixed** as for widgets embedded in a Window/Tab there are no Widget Instances as described  here.
+
+The next step is to define a reference which can be used in the column for the widget.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-6.png)
+
+Reference definition for Twitter widget
+
+The important details in this definition are:
+
+  * On reference Tab: _Parent Reference_ = **OBKMO_Widget in Form Reference**
+  * On 'Widget in Form' tab: the newly created _Widget Class' & unmark _ Show Field Title _to use the extra available space for the widget content itself._
+
+The last step for this widget is to add a column CHAR(1) to the table and a new field to the demo tab. The column needs to be defined according to the following details:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-8.png)
+
+Column definition for Twitter widget
+
+The last step is to add a form field to the tab and configure this form field with the wanted UI details consisting of:
+
+  * Sequence No: for the usual field ordering.
+  * Colspan: to define how many columns the field/widget should occupy.
+  * Rowspan: to define how many rows the field/widget should occupy.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-10.png)
+
+Field definition for Twitter widget
+
+####  How to link a Widget to the current Record
+
+The goal of this section is to create a QueryList widget similar to the existing _Invoice to collect_ widget available for placement in the workspace which shows data for all business partners.
+
+In order to see changes done in the widget is necessary to refresh the entire Workspace not only the tab. This can be done in the Workspace Tab - Manage Workspace - Refresh
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-14.png)
+
+Invoice to collect in Workspace
+
+The widget to be create here should instead be shown in the Business Partner window and only show the data for the currently displayed record.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-16.png)
+
+Invoice to collect in Business Partner Window
+
+Comparing to the original _Invoices to collect_ widget the following changes need to be done:
+
+  1. Removal of the _Business Partner_ column, as instead the new widget should be filtered by the current business partner.
+  2. Removal of the user-editable parameter definition.
+  3. Addition of one new named parameter **businessPartnerID** linking to the current record.
+  4. Changes to the HQL-Query to adjust it to the last two changes listed here.
+
+The following shows the changed HQL in detail. Examining the HQL for the newly added named parameter it can be seen that the named parameter definition is identical to a 'normal' named parameter like it would be used for a user-editable value.
+
+```
+  SELECT
+    inv.id AS invoiceId,
+    inv.documentNo AS documentNo,
+    inv.businessPartner.id AS businessPartnerId,
+    inv.businessPartner.name AS businessPartnerName,
+    inv.invoiceDate AS invoiceDate,
+    inv.grandTotalAmount AS grandTotalAmount,
+    inv.currency.iSOCode AS currency,
+    inv.paymentTerms.name AS paymentTerms,
+    inv.outstandingAmount AS outstandingAmount,
+    inv.daysTillDue AS daysTillDue,
+    inv.dueAmount AS dueAmount,
+    inv.organization.name AS organizationName
+  FROM
+    Invoice AS inv
+  WHERE
+    inv.businessPartner.id = :businessPartnerID
+  AND inv.processed = true
+  AND inv.paymentComplete = false
+  AND inv.salesTransaction = true
+  AND inv.client.id = :client
+  AND inv.organization.id IN (:organizationList)
+  AND @optional_filters@
+  ORDER BY
+    inv.invoiceDate
+```
+
+The last and interesting difference in the definition of the new parameter **businessPartnerID** so that it automatically takes the _id_ -value of the currently displayed record.
+
+To achieve this a new parameter entry needs to be created having the following details:
+
+  * _DB Column Name_ = _businessPartnerID_ matching the named parameter in the query.
+  * _Fixed_ = not marked.
+  * _Default Value_ = ${formValues.id} to refer to the _id_ property of the currently displayed record.
+
+This dynamic parameter definition and the naming rules for the properties are explained in more detail in  this  section of the Widgets documentation.
+
+Copying the _Invoices to collect_ widget definition and doing the adjustments described above will lead to a parameter definition as seen in the following image:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-18.png)
+
+Invoices Widget Parameter definition
+
+The placement of this widget definition in the business partner definition works exactly like outlined in the previous section by following its steps of:
+
+  * Definition new reference for the widget.
+  * Adding a new column using this reference.
+  * Adding a new field using this column + configuring its layout.
+
+This concludes this HowTo which placed the information about collectible invoices the current Business Partner directly into the view of a user looking at the Business Partner tab.
+
+---
+
+This work is a derivative of [How to embed a widget into a window tab](http://wiki.openbravo.com/wiki/How_to_embed_a_Widget_into_a_Window_Tab){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How To Exclude Database Physical Objects From Model
@@ -47000,7 +47308,9 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q2.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.1){target="_blank"} | 05/07/2024 | 24.2.1 | QAA |  | :white_check_mark: |
+| [24Q2.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.3){target="_blank"} | 19/07/2024 | 24.2.3 | QAA |  | :white_check_mark: |
+| [24Q2.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.2){target="_blank"} | 12/07/2024 | 24.2.2 | C |  | :white_check_mark: |
+| [24Q2.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.1){target="_blank"} | 05/07/2024 | 24.2.1 | C |  | :white_check_mark: |
 | [24Q2.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.0){target="_blank"} | 28/06/2024 | 24.2.0 | C | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso){target="_blank"} | :white_check_mark: |
 | [24Q1.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.8){target="_blank"} | 14/06/2024 | 24.1.8 | CS |  | :white_check_mark: |
 | [24Q1.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.7){target="_blank"} | 31/05/2024 | 24.1.7 | C |  | :white_check_mark: |
@@ -47236,7 +47546,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.16.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.0){target="_blank"} | 08/07/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.16.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.1){target="_blank"} | 19/07/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.16.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.0){target="_blank"} | 08/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.15.0){target="_blank"} | 28/06/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.14.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.2){target="_blank"} | 14/06/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
 | [1.14.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.1){target="_blank"} | 26/04/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
@@ -47425,7 +47736,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.6.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 08/07/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.1){target="_blank"} | 19/07/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 08/07/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.5.0){target="_blank"} | 23/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.4.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.3){target="_blank"} | 12/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.4.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.2){target="_blank"} | 07/12/2023 | [1.11.3, 1.13.0] | C | :white_check_mark: |
@@ -47698,7 +48010,11 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.2.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.1){target="_blank"} | 09/07/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.3.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.1){target="_blank"} | 22/07/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.0){target="_blank"} | 19/07/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.2.3](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.3){target="_blank"} | 19/07/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.2.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.2){target="_blank"} | 16/07/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.1){target="_blank"} | 09/07/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.0){target="_blank"} | 13/06/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.1.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.1){target="_blank"} | 21/05/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.0){target="_blank"} | 20/05/2024 | 23.4.0 | * | C | :white_check_mark: |
