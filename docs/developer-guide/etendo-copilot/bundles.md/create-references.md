@@ -10,11 +10,13 @@ tags:
 
 # Create References
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
 ## Overview
 
-The Create References Tool is a tool that **creates a reference** in the Etendo Application Dictionary. With this tool, it is for example, possible to add new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+The Create References Tool is a tool that **creates references** in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
-This tool is useful in the context of module administration and configuration on the Etendo platform. It allows system administrators or developers to define new references that can be used later in applications. It is especially useful to **automate the creation of these references and ensure consistency** in the configuration.
+It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
 
 
 ## Installation

@@ -10,9 +10,11 @@ tags:
 
 # Dev Assistant
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
 ## Overview
 
-This assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
+The **Dev Assistant** assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
 It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
 
 !!!warning
