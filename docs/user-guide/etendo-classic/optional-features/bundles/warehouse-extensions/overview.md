@@ -46,7 +46,7 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 
 :octicons-package-16: Javapackage: `com.etendoerp.product.operations`
 
-This module allows you to observe and analyze in detail all operations associated with the selected product. 
+This module allows you to observe and analyze in detail all transactions associated with the selected product. 
 
 !!! info
     For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).

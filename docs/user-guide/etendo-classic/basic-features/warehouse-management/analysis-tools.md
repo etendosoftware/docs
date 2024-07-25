@@ -216,12 +216,11 @@ Additionally, the user can include or exclude these documents:
 ## Product Operations
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/).
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 
-  
-This functionality allows you to **observe and analyze** in detail all the operations associated with the product selected.
+This functionality **centralizes of all the transactions** associated with the product selected allowing the visualization of every movement and actions such as goods shipment/receip line, tax original cost, unit cost, storage bin and many other related actions to the products. 
 
-It includes the visualization of every **transaction, movement** and **actions** such as goods shipment/receip line, tax original cost, unit cost, storage bin and many other related actions to the products. This visualization facilitates the analysis and a complete understanding of the product operation performance.
+This centralization facilitates the analysis and a complete understanding of the product operation performance.
 
 ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
