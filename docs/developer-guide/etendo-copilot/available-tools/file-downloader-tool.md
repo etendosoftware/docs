@@ -15,7 +15,7 @@ tags:
 The **File Downloader Tool** is designed to receive a URL and download the corresponding file to a temporary directory, returning the path to the temporary file. This tool is extremely valuable for any application that needs to dynamically interact with files on the web. It allows you to efficiently download files and store them temporarily, facilitating their later use and manipulation without the need to worry about file management in the system. In addition, it handles different types of content (text and binary) automatically, making the operation transparent and simple for the user.
 
 !!!info
-    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md){target="\_blank"}.
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 ## Functionality
 
