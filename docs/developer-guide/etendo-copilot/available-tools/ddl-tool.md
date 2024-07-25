@@ -2,23 +2,28 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - Tool
     - Dev Assistant
     - Assistant
     - Create Windows, Tabs and Fields
     - Create Table
 ---
+# DDL Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
 ## Overview
 
 The **DDLTool** is an Etendo Copilot tool developed in Python to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is possible to create and register tables, windows, items and menu options in the system so that data can be displayed.
 
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
 ## Functionality
 
 The **DDL Tool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
 
-Users can choose modes using the chat:
+Assistants can choose from these modes:
 
 - **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named `RegisterTableWebHook` to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
 
@@ -40,14 +45,13 @@ In the section of Copilot App, it is possible to configure the assistant and the
 
 ![ddl-tool.png](../../../assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
 
-Also in Copilot App, a prompt can be inserted where it is possible to indicate the tool to use. It is useful to provide a workflow example, the IA can use that to build its own workflow. 
+Also in Copilot App, it can insert a prompt where is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
 
 ![ddl-tool1.png](../../../assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
 
-
 Prompt Example:
 
-*Your are a developer assistant that can create register tables for Etendo.*
+*You are a developer assistant that can create register tables for Etendo.*
 
 *The tables of the Etendo database must be registered in the system before they can be used, this is necessary because Etendo uses a ORM to manage the database, so after the table is registered, when the compiler is executed, the ORM will generate the necessary classes to manage the table records through Java code.*
 
@@ -99,7 +103,7 @@ Prompt Example:
 
 *ADD_FOREIGN: This mode is used to ...*
 
-*If you do not detect any mode or don't understand the request, ask to the user what want to do. *
+*If you do not detect any mode or don't understand the request, ask to the user what they want to do. *
 
 *Example workflow:*
 

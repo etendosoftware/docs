@@ -823,12 +823,13 @@ The reset accounting process allows the user to totally or partially remove the 
 ## VAT Regularization
 
 !!!info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/){target="\_blank"}.
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ### Overview
 
-The VAT Regularization module allows you to adjust the accounts to ensure that the VAT balance is correctly balanced.
-The following are the steps necessary to carry out the VAT regularization on a specific account.
+The VAT Regularization module allows you to automatically adjust the accounts to ensure that the VAT balance is correct. This means, checking the accounts in which this process is necessary and creating the corresponding GL journal to regularize the VAT. This process is essential for maintaining accurate financial records and compliance with tax regulations.
+
+The following are the required steps to carry this out for a specific period of time.
 
 ### VAT Regularization Process
 
@@ -858,6 +859,10 @@ In order to enable an account to be part of the VAT regularization process, it i
 #### GL Journal Entry Generation
 1. Click the **Process** button to generate the simple GL journal entry.
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization4.png)
+
+    !!!important
+        Remember this process affects all the accounts resulting from the search, so selecting the corresponding accounts must be done when marking the VAT regulularization checkbox in the setup step.
+
 2. Go to the Simple G/L Journal window and filter the Document No. field by the number generated in the process (e.g. **1000123**).
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization5.png)
 3. Here, verify that the header has been created with the corresponding lines.
