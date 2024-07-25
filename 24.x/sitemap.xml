@@ -431,6 +431,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/create-reference-tool/</loc>
+         <lastmod>2024-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/database-query-tool/</loc>
          <lastmod>2024-07-25</lastmod>
          <changefreq>daily</changefreq>
@@ -507,6 +512,21 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/xml-translation-tool/</loc>
+         <lastmod>2024-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/bundles.md/create-references/</loc>
+         <lastmod>2024-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/bundles.md/dev-assistant/</loc>
+         <lastmod>2024-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/bundles.md/overview/</loc>
          <lastmod>2024-07-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1002,11 +1022,6 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/bundles/copilot-purchase-expert/</loc>
-         <lastmod>2024-07-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/bundles/dev-assistant/</loc>
          <lastmod>2024-07-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
