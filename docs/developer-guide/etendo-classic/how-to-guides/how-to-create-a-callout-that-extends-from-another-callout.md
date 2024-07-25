@@ -10,13 +10,13 @@ tags:
   
 ##  Overview
 
-This section discusses how to implement a callout that extends from another callout. The main important elements needed for the new feature are explained. More details about callouts can be found in [How to create a Callout](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout.md).
+This section discusses how to implement a callout that extends from another callout. The main important elements needed for the new feature are explained. More details about callouts can be found in [How to create a Callout](How_to_create_a_Callout.md).
   
 ##  Example Module
 
 This section is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this public mercurial repository:  org.openbravo.client.application.examples.
+The code of the example module can be downloaded from this public GitHub repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples).
 
 ##  Defining Callouts
 
@@ -24,12 +24,11 @@ Two callouts will be shown. One of them is the parent callout and the other one 
 
 ####  Defining Parent Callout
 
-The following example follows [this guide](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout.md) to implement the callout. The example shows a callout that edits value of the **Name** field.
+The following example follows [this guide](how-to-create-a-callout.md) to implement the callout. The example shows a callout that edits value of the **Name** field.
 
-```
-   
-  package org.openbravo.client.application.examples.callouts;
-   
+```java
+  package com.etendoerp.client.application.examples.callouts;
+  
   import javax.servlet.ServletException;
    
   import org.openbravo.erpCommon.ad_callouts.SimpleCallout;
@@ -63,10 +62,9 @@ As you can see, the callout gets the value of **Name** field and concatenates th
 
 This example callout extends from the parent callout that is defined above. Combo example is explained in next section.
 
-```
-   
-  package org.openbravo.client.application.examples.callouts;
-   
+```java
+  package com.etendoerp.client.application.examples.callouts;
+  
   import javax.servlet.ServletException;
    
   public class OBEXAPP_Assets_Desc extends OBEXAPP_Assets_Name {
@@ -105,15 +103,14 @@ First of all, `OBEXAPP_Assets_Desc` callout extends from `OBEXAPP_Assets_Name`. 
 
   * Run parent callout. 
   
-  ```
-     
+  ```java
       // OBEXAPP_Assets_Name callout is executed
       super.execute(info);
   ```
 
   * Operations for **combo** field are executed. This code is explained in the next section. 
   
-  ```
+  ```java
       // Combo example. Removed USD currency from combo and select DEM currency.
       info.addSelect("inpcCurrencyId");
       info.removeSelectResult("100");
@@ -123,8 +120,7 @@ First of all, `OBEXAPP_Assets_Desc` callout extends from `OBEXAPP_Assets_Name`. 
   
   * Operations **after** parent callout is executed. In this case, child callout checks if name is been modified by parent callout. Then, child callout takes two actions. Update the description field with a message and shows an information or failure message. Finally, the name field is updated again. 
 
-  ```
-
+  ```java
       // Checks if name field has been updated by parent callout.
       String name = info.getStringParameter("inpname");
       String message = "Feature 'Extends a Callout' works as expected.";
@@ -136,21 +132,22 @@ First of all, `OBEXAPP_Assets_Desc` callout extends from `OBEXAPP_Assets_Name`. 
         info.addResult("inpdescription", message);
         info.addResult("ERROR", message);
       } 
-       
+        
       // Now it is possible to update the 'name' field again and the value will be overwritten
       info.addResult("inpname", "UPDATED...");
   ```
 
 In the following screenshot, you can see how a failure message is displayed.
 
+!!!note
+    For the purpose of this example, a new column named 'EM_Obexapp_Callout' was created to trigger the callout.  
+
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-1.png)
 
 ##  Working with Combos
 
 As you can see in above sections, the `OBEXAPP_Assets_Name` callout builds a currency combo. This combo is populated with 3 currencies and one of them is selected.
-  
-      ............
-   
+  ```java
       // Combo example. Added three currencies to currency combo.
       info.addSelect("inpcCurrencyId");
       // USD currency is selected.
@@ -158,8 +155,7 @@ As you can see in above sections, the `OBEXAPP_Assets_Name` callout builds a cur
       info.addSelectResult("102", "EUR", false);
       info.addSelectResult("103", "DEM", false);
       info.endSelect();
-   
-      ............
+  ```
 
 You can see the currency combo with 3 currencies and **USD** as selected currency.
 
@@ -167,23 +163,19 @@ You can see the currency combo with 3 currencies and **USD** as selected currenc
 
   
 Then, child callout `OBEXAPP_Assets_Desc` removes a currency and select another one. This child callout extends `OBEXAPP_Assets_Name` and change the currency combo.
-
-      ............
-   
+  ```java
       // Combo example. Removed USD currency from combo and select DEM currency.
       info.addSelect("inpcCurrencyId");
       info.removeSelectResult("100");
       info.addSelectResult("103", "DEM", true);
       info.endSelect();
-   
-      ............
-
+  ```
 In this screenshot, you can see how currency combo is displayed when child callout is executed.
 
 !!!note
     The DEM currency is selected and USD currency has been removed.    
   
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-4.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-3.png)
 
 ##  Using getStringParameter method
 
@@ -194,4 +186,4 @@ Now, with the inclusion of this project this method takes into account if a pare
 
 ---
 
-This work is a derivative of [How to Create a Callout that Extends from Another Callout](http://wiki.openbravo.com/wiki/How_to_create_a_callout_that_extends_from_another_callout){target="blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+This work is a derivative of [How to Create a Callout that Extends from Another Callout](http://wiki.openbravo.com/wiki/How_to_create_a_callout_that_extends_from_another_callout){target="blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
