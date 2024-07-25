@@ -27842,35 +27842,6 @@ The apps described below belong to preconfigured reference data included in the 
 
 #### Modules
 
-##### Etendo Copilot
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot`
-
-Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
-
-!!! info
-    For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md).
-
-##### XML Translation Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
-
-!!! info
-    For more information, visit [XML Translation Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
-
-##### Database Query Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
-
-!!! info
-    For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
-
 ##### Copilot OCR Tool
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
@@ -27897,8 +27868,34 @@ This module includes an assistant capable of performing operations related to th
 !!! info
     For more information, visit [Copilot Purchase Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
 
+##### Database Query Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
+This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
+
+!!! info
+    For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
+
+##### Etendo Copilot
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot`
+
+Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
+
+!!! info
+    For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md).
+
+##### XML Translation Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
+
+!!! info
+    For more information, visit [XML Translation Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Copilot Purchase Expert
@@ -27953,101 +27950,6 @@ For this particular case, we have configured an assistant with the functional me
 
 !!! Info "Technical Details for Developers"
     More information about how to integrate Copilot with other APIs can be found in the [OpenAPI interaction with Copilot](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md) page.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Dev Assistant
-## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/Dev Assistant
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/dev-assistant
-## Article Content: 
-### Dev Assistant
-
-#### Overview
-
-This assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
-It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
-
-!!!warning
-    This Assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
-
-    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
-
-    Thank you for your understanding as we continue to improve the functionality and reliability of this assistant.
-
-#### Installation
-You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
-
-
-#### Components
-The Dev Assistant is composed of the following components:
-
-- [**DDL Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
-
-- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
-
-
-#### Functionality
-
-!!! info
-    With this assistant, it is possible to create: 
-
-    - **Tables and Columns**: both tables and columns are created based on user specification and the supported types are `string`, `number`, `tableDir`, `date`, `text` and `boolean` (each field will have default lengths unless specified).  
-    - **Windows**: only Mantein type windows are supported
-    - **Tabs**: Can be created at multiple levels, although it is important to make it clear to the assistant to add the corresponding foreign keys.
-    - **Fields**: Fields are created from columns, respecting the same name but without *"_"*.
-    - **Elements**: The elements will be created automatically, sharing the name of the columns, but replacing the *"_"* with spaces. The help and description fields will also be added automatically.
-    - **Menu**: A menu entry is automatically created, the developer must manually place it in the desired position.
-
- - Ask the **Dev Assistant** for a window to add in the system and the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
-
-- The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
-
-- The user must confirm the steps or set up a modification about the given information.
-
-
-#### Usage Example 
-
-##### 1. Setup
-To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
-
-##### 2. Open Copilot, and select Dev assistant
-![dev-assistant.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant.png)
-
-##### 3. Ask the assistant for what you need to create.
-![dev-assistant.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
-
-**User**: *"You can create the Pets Health window, you have to include the fields, pet name, patient start date and description. You can also add a Visits Registration tab, associated to the Pets Health window, where you have to add the fields, date and description. Remember to add the corresponding foreign key.  All this export it in the module with copdev prefix."*
-
-**Copilot**: *"The following steps have already been completed: 
-Tables: PetsHealth and VisitsRegistration have been registered in the system and created in the database. 
-Columns: The necessary columns have been added and registered. 
-Terminology: Terminology has been synchronized. 
-Window and Tabs: Pets Health window and the associated Pets Health Header and Visits Registration tabs have been registered. 
-Foreign Key: Foreign key between PetsHealth and VisitsRegistration has been added.    Please proceed with the compilation and restart Etendo to ensure all changes take effect.    If there's anything else you'd like to address or if you need further modifications, please let me know!"*
-
-
-##### 4. Compile
-    
-With the task complete, it is necessary recompile with a smartbuild and restart Tomcat
-
-```title="Terminal"
-./gradlew smartbuild --info
-```
-![dev-assistant2.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
-
-##### 5. Reviewing the results
-    
-Window in the System,the window can be viewed with the user role.
-![dev-assistant3.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
-![dev-assistant4.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
-
-##### 6. Export the changes
-    
-Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
-
-```title="Terminal"
-./gradlew export.database --info
-```
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: SQL Expert
@@ -44972,6 +44874,212 @@ In addition, you can install only the module containing the **Etendo Copilot** b
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
+## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Overview
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/overview
+## Article Content: 
+### Copilot Extensions
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
+
+:material-store: Etendo Marketplace:  [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}
+
+#### Overview
+
+The Copilot Extensions Bundle includes functionalities for developers to help them streamline daily tasks using AI.
+
+#### Create References
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+The **Create Reference Assistant** is a tool that creates a reference in the Etendo Application Dictionary. 
+
+!!!info
+    For more information, visit: [Create Reference Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles.md/create-references.md).
+
+#### Dev Assistant
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+The **Dev Assistant** is designed to speed up the process of creating windows, tabs, fields, system elements and menu entries.
+
+!!!info
+    For more information, visit: [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles.md/dev-assistant.md).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Create References
+## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Create References
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/create-references
+## Article Content: 
+### Create References
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+#### Overview
+
+The Create References Tool is a tool that **creates references** in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+
+It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
+
+
+#### Installation
+You can install only the module containing the **Create References** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+
+
+#### Components
+
+The Create References Assistant is composed of the following component: 
+
+- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md): This tool allows to create references on Etendo and on the database using queries generated with the parameters given in the tool. 
+
+
+#### Functionality
+
+The **Creates References Assistant** is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
+
+Let's see an example about how the user can interact with the assistant and create the needed references in Etendo. 
+
+
+#### Usage Example 
+
+##### 1. Setup
+
+To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+
+##### 2. Open Copilot and select Create Reference Assistant
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
+
+##### 3. Ask the assistant which reference type you need to create
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/create-references/create-references1.png)
+
+**User:** *"Create a list with the current currencies used in all European countries and suggest a name for the reference. The prefix to export this information in the module is copdev."*.
+
+**Copilot:** *"Great! Let's start creating the reference list with the currencies used in European countries. Prefix: copdev Reference Name Suggestion: European Currencies. Reference Items:  Euro (EUR) British Pound (GBP) Swiss Franc (CHF) Norwegian Krone (NOK) Swedish Krona (SEK) Danish Krone (DKK) Polish Zloty (PLN) Hungarian Forint (HUF) Czech Koruna (CZK) Bulgarian Lev (BGN) Romanian Leu (RON) Croatian Kuna (HRK) (Note: Replaced by Euro in 2023 but might be useful historically) Serbian Dinar (RSD) Turkish Lira (TRY) Russian Ruble (RUB) Do you want to provide the list of currencies yourself, or should we go with this list?    Additionally, would you like me to infer the description and help text, or do you want to provide them? Here's what I suggest: Description:List of currencies currently used in various European countries. Help: Select the appropriate currency from the list that represents the currencies used in Europe.Is this okay with you?"*
+
+##### 4. Receiving the results
+
+The Create References Tool will process these parameters, verify the access token, build the request body and call the Etendo webhook to create the reference.
+
+In the Reference window, Etendo shows all the fields with the corresponding information generated and in the List Reference tab, it is possible to see the new list reference created. 
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/create-references/create-references-2.png)
+
+
+##### 5. Export the changes
+
+Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+
+```title="Terminal"
+./gradlew export.database --info
+```
+
+
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Dev Assistant
+## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Dev Assistant
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/dev-assistant
+## Article Content: 
+### Dev Assistant
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+#### Overview
+
+The **Dev Assistant** assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
+It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
+
+!!!warning
+    This Assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
+
+    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
+
+    Thank you for your understanding as we continue to improve the functionality and reliability of this assistant.
+
+#### Installation
+You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+
+
+#### Components
+The Dev Assistant is composed of the following components:
+
+- [**DDL Tool**](https://docs.etendo.software/latest/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+
+- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+
+
+#### Functionality
+
+!!! info
+    With this assistant, it is possible to create: 
+
+    - **Tables and Columns**: both tables and columns are created based on user specification and the supported types are `string`, `number`, `tableDir`, `date`, `text` and `boolean` (each field will have default lengths unless specified).  
+    - **Windows**: only Mantein type windows are supported
+    - **Tabs**: Can be created at multiple levels, although it is important to make it clear to the assistant to add the corresponding foreign keys.
+    - **Fields**: Fields are created from columns, respecting the same name but without *"_"*.
+    - **Elements**: The elements will be created automatically, sharing the name of the columns, but replacing the *"_"* with spaces. The help and description fields will also be added automatically.
+    - **Menu**: A menu entry is automatically created, the developer must manually place it in the desired position.
+
+ - Ask the **Dev Assistant** for a window to add in the system and the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
+
+- The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
+
+- The user must confirm the steps or set up a modification about the given information.
+
+
+#### Usage Example 
+
+##### 1. Setup
+To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+
+##### 2. Open Copilot, and select Dev assistant
+![dev-assistant.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant.png)
+
+##### 3. Ask the assistant for what you need to create.
+![dev-assistant.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
+
+**User**: *"You can create the Pets Health window, you have to include the fields, pet name, patient start date and description. You can also add a Visits Registration tab, associated to the Pets Health window, where you have to add the fields, date and description. Remember to add the corresponding foreign key.  All this export it in the module with copdev prefix."*
+
+**Copilot**: *"The following steps have already been completed: 
+Tables: PetsHealth and VisitsRegistration have been registered in the system and created in the database. 
+Columns: The necessary columns have been added and registered. 
+Terminology: Terminology has been synchronized. 
+Window and Tabs: Pets Health window and the associated Pets Health Header and Visits Registration tabs have been registered. 
+Foreign Key: Foreign key between PetsHealth and VisitsRegistration has been added.    Please proceed with the compilation and restart Etendo to ensure all changes take effect.    If there's anything else you'd like to address or if you need further modifications, please let me know!"*
+
+
+##### 4. Compile
+    
+With the task complete, it is necessary recompile with a smartbuild and restart Tomcat
+
+```title="Terminal"
+./gradlew smartbuild --info
+```
+![dev-assistant2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
+
+##### 5. Reviewing the results
+    
+Window in the System,the window can be viewed with the user role.
+![dev-assistant3.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
+![dev-assistant4.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
+
+##### 6. Export the changes
+    
+Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+
+```title="Terminal"
+./gradlew export.database --info
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Overview
 ## Article Path: /Developer Guide/Etendo Copilot/Tools/Overview
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview
@@ -45072,6 +45180,63 @@ Imagine there is a file at `/home/user/document.pdf`, and it is necessary to upl
     ```
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Create Reference Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Create Reference Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool
+## Article Content: 
+#### Overview
+
+The **Create Reference Tool** is an Etendo Copilot tool developed by Python to create references in the database. This tool is useful to automate the creation of references saving time and manual effort.  
+
+#### Functionality
+
+This process consists of the following actions:
+
+- **Argument Processing** 
+
+    Takes various input parameters defined in a pydantic model:
+
+    - `i_prefix`: The prefix of the module in the database.
+    - `i_name`: The name of the reference.
+    - `i_reference_list`: A comma-separated list of reference items.
+    - `i_help` (optional): Help text for the reference.
+    - `i_description` (optional): Description of the reference.
+
+- **Access Token Verification**
+
+Gets and verifies the access token from the thread context (`ThreadContext`).
+
+- **Request Body Construction**
+
+Constructs the body of the request parameters for the webhook.
+
+- **Webhook Call**
+
+Uses the `call_webhook` function to make an `HTTP POST` request to the Etendo webhook endpoint, providing the necessary parameters and the access token.
+
+- **Result Handling**
+
+Returns the result of the request to the webhook, which may contain a success message or an error in JSON format.
+
+
+The system returns a dictionary with the result of the operation. For example:
+
+- If the request was successful:
+
+```
+ { `success: true, message: Reference created successfully`}
+
+```
+
+- If there was an error:
+
+```
+ { `error: Description of the error`}
+
+```
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Database Query Tool
 ## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
 ## Article URL: 
@@ -45135,34 +45300,34 @@ inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id 
 
 #### Overview
 
-The **DDLTool** is an Etendo Copilot tool, developed in Python, to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is able to create and register tables, windows, items and menu options in the system so that data can be displayed.
+The **DDLTool** is an Etendo Copilot tool developed in Python to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is possible to create and register tables, windows, items and menu options in the system so that data can be displayed.
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 #### Functionality
 
-The **DDLTool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode is needed to do the task request by the user, the tool has a variable that contains a list with the availables modes, and with the prompt the assistant choose wich is better for the task.
+The **DDL Tool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
 
 Assistants can choose from these modes:
 
-- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named RegisterTableWebHook to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
+- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named `RegisterTableWebHook` to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
 
-- **CREATE_TABLE:** It creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the ad_org and ad_client table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
+- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the `ad_org` and `ad_client` table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
 
-- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook CreateTableWebHook, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
+- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook `CreateTableWebHook`, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
 
-- **REGISTER_COLUMNS:** This mode is executed automatically after the ADD_COLUMN mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
+- **REGISTER_COLUMNS:** This mode is executed automatically after the `ADD_COLUMN` mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
 
-- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named SyncTermsWebHook.
+- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named `SyncTermsWebHook`.
 
-- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the RegisterWindowAndTabWebHook java file.
+- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the `RegisterWindowAndTabWebHook` java file.
 
 - **REGISTER_FIELDS:** Registers the fields of a tab in Etendo System to be recognized for it. It works by calling a webhook to run a Java file.
 
 #### Usage Example 
 
-In the section of Copilot App, it is possible configure the assistants and the tool that it can use.
+In the section of Copilot App, it is possible to configure the assistant and the tool that it can use.
 
 ![ddl-tool.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
 
