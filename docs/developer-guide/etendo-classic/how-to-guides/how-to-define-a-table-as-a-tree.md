@@ -77,7 +77,7 @@ The following fields apply to all trees, regardless of its tree structure:
   * **Datasource**: A datasource that will handle all the tree operations. 
   
 !!!info
-    For more information, visit [How to Create a Custom Tree](developer-guide/etendo-classic/how-to-guides/.How_to_Create_a_Custom_Tree/?h=custom+tree).
+    For more information, visit [How to Create a Custom Tree](../how-to-guides/How_to_Create_a_Custom_Tree.md).
 
 ## Enabling the Tree Grid View in a Tab
 
@@ -94,6 +94,6 @@ By default, the root nodes will be those whose parent is null or '0'. The user c
 Tables that have trees defined are bound to be used in **Tree Selectors**. Tree Selector are a variant of the Etendo selectors, that take advantage of the hierarchical data of the tables, allowing to use trees for filtering and picking records.
 
 !!!info
-    For more information, visit [How to Create a Tree Selector](developer-guide/etendo-classic/how-to-guides/.How_to_Create_a_Tree_Selector/?h=tree). 
+    For more information, visit [How to Create a Tree Selector](../../etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md). 
 
 This work is a derivative of [How to define a table as a tree](https://wiki.openbravo.com/wiki/How_to_Define_a_Table_as_a_Tree){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
