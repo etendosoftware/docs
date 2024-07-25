@@ -511,11 +511,40 @@ A standard process can be defined as multi record process to be able to execute 
 
 ###  Uploading files
 
+:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
+
+This section describes the Etendo **Upload File module** included in the Platform Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+
+The **File** reference enhances the ERP system's capabilities by enabling file uploads directly within process definitions. This functionality allows uploading files which can then be processed by the system, streamlining workflows and improving efficiency.
+
+Reference field make it possible to:
+
+- Incorporate a **File reference as a process parameter** within process definitions, making file handling an integral part of the process.
+ 	
+- Enable a **user-friendly file upload interface** in process forms, allowing users to easily upload files for processing.
 Process definitions can receive files as parameters. To do that, add a `Process File upload`  Reference as a process parameter. This parameter will show a file upload element in the process form where a single file can be uploaded.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-20.png)
+#### New Reference
 
-By default, files uploaded using this component are limited to be 10MB at most. To override this configuration, set the Preference **MaximumProcess File Upload size (MB)** and change this value. File size validation will be performed both client-side and server-side.
+This feature introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing, which is then used by the system as specified in the process definition.
+
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/upload-file-0.png)
+
+#### Reference Use in Process Definition
+
+The proposed solution involves incorporating a **Process File Upload** Reference as a process parameter in process definitions.
+
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/upload-file-1.png)
+
+Finally, it is possible to visualize the uploaded file. 
+
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/upload-file-2.png)
+
+!!!info
+    By default, files uploaded using this component are limited to be 10MB at most. To override this configuration, set the Preference **MaximumProcess File Upload size (MB)** and change this value. File size validation will be performed both client-side and server-side.
 
 Once uploaded a file, file contents and additional data will be available as a parameter entry in the **doExecute(parameters, content)** function in the **Process Event Handler**. The entry corresponding to the file upload will contain a Map with the following information:
 
