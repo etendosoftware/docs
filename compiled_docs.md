@@ -8123,6 +8123,7 @@ This kind of transactions are actually Goods Movements created on the fly when c
 
 This section describes the windows related to warehouse reports in Etendo. These are:
 
+
 [:material-file-document-outline: Pareto Product Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Material Transaction Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report){ .md-button .md-button--primary } <br>
@@ -8135,6 +8136,7 @@ This section describes the windows related to warehouse reports in Etendo. These
 
 [:material-file-document-outline: Product Movements Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Product Operations](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-operations){ .md-button .md-button--primary } <br>
 
 #### Pareto Product Report
 
@@ -8328,6 +8330,18 @@ Additionally, the user can include or exclude these documents:
 ##### Sample Report Output
 
 ![Product Movements Report](https://docs.etendo.software/latest/assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+
+#### Product Operations
+
+!!! info
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+
+
+This functionality **centralizes of all the transactions** associated with the product selected allowing the visualization of every movement and actions such as goods shipment/receip line, tax original cost, unit cost, storage bin and many other related actions to the products. 
+
+This centralization facilitates the analysis and a complete understanding of the product operation performance.
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup
@@ -19722,11 +19736,12 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 #### Modules
 
+
 ##### Stock History
 
 :octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
-It provides updated information about the daily history stock of the products. 
+This module provides updated information about the daily history stock of the products. 
 
 !!! info
     For more information, visit [the Stock History user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
@@ -19748,6 +19763,15 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     - [Goods Receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Goods Shipments](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+
+##### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](https://docs.etendo.software/latest/basic-features/warehouse-management/analysis-tools.md/#product-operations).
 
 #### Uninstall bundle
 
