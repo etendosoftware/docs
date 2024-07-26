@@ -70,7 +70,7 @@ A Chart of Accounts module is like any other module, but it has just the followi
 
 ### Publishing the Chart of Accounts Module
 
-The way to package a chart of accounts module is similar to the [how to publish modules to github repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/) process.
+The way to package a chart of accounts module is similar to the [how to publish modules to github repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md) process.
 
 The summarized process is:
 
