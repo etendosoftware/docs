@@ -211,6 +211,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree/</loc>
+         <lastmod>2024-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector/</loc>
+         <lastmod>2024-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid/</loc>
          <lastmod>2024-07-26</lastmod>
          <changefreq>daily</changefreq>
@@ -362,6 +372,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/</loc>
+         <lastmod>2024-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree/</loc>
          <lastmod>2024-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
