@@ -5,6 +5,7 @@ title: Warehouse Reports
 
 This section describes the windows related to warehouse reports in Etendo. These are:
 
+
 [:material-file-document-outline: Pareto Product Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Material Transaction Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report){ .md-button .md-button--primary } <br>
@@ -17,6 +18,7 @@ This section describes the windows related to warehouse reports in Etendo. These
 
 [:material-file-document-outline: Product Movements Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Product Operations](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-operations){ .md-button .md-button--primary } <br>
 
 ## Pareto Product Report
 
@@ -210,3 +212,15 @@ Additionally, the user can include or exclude these documents:
 ### Sample Report Output
 
 ![Product Movements Report](../../../../assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+
+## Product Operations
+
+!!! info
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+
+
+This functionality **centralizes of all the transactions** associated with the product selected allowing the visualization of every movement and actions such as goods shipment/receip line, tax original cost, unit cost, storage bin and many other related actions to the products. 
+
+This centralization facilitates the analysis and a complete understanding of the product operation performance.
+
+![alt text](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
