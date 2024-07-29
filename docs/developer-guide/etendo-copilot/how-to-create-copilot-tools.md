@@ -60,10 +60,11 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
     
 
-3. In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
+2. Its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. 
+For the case of the PingTool, we will create a class called `PingToolInput` that will define the inputs of the tool. The class will be located in the `PingTool.py` file. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
     
     !!!Warning 
-        The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
+        The SearchKey of the tool must be the same as the name of the class that extends the ToolWrapper class.
 
     ```python title="PingTool.py"
     import os
@@ -114,7 +115,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
         
     
 
-4. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows:
+3. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows:
 
     ``` toml
     [ToolName]
@@ -127,7 +128,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     [PingTool]
     requests = "*"
     ```
-    The name of the tool must be the same as the name of the class that extends the ToolWrapper class. In our case, the name of the tool is `PingTool` and the name of the class that extends the ToolWrapper class is also `PingTool`. During the load of copilot, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
+    The SearchKey of the tool must be the same as the name of the class that extends the ToolWrapper class. In our case, the SearchKey of the tool is `PingTool` and the name of the class that extends the ToolWrapper class is also `PingTool`. During the load of copilot, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
 
     The version of the dependency can be specified or not. If the version is not specified, the latest version will be installed. If the version is specified, the version specified will be installed. The version can be specified with the following operators:
     ``` toml
@@ -145,7 +146,8 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
 
     !!! warning "Different name of depedency while installing and importing"
-        If the name of the dependency is different from the name of the dependency that is imported in the tool, it is necessary to specify the name of the dependency that is imported in the tool. For example, if the dependency is installed with the name `pyscopg2-binary` but is imported with the name `psycopg2`, we can use a | to specify both names. The content of the file will be as follows:
+        If the name of the dependency is different from the name of the dependency that is imported in the tool, it is necessary to specify the name of the dependency that is imported in the tool. For example, if the dependency is installed with the name `pyscopg2-binary` but is imported with the name `psycopg2`, we can use a | to specify both names. If this clarification is not made, the tool will not be able to import the dependency to "test" if it is installed correctly, this will throw a warning, but the tool will be able to run correctly.
+        The content of the file will be as follows:
 
 
         ``` toml
@@ -156,7 +158,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
         "pyscopg2-binary|psycopg2" = "*"   # First name is the name of the dependency that is installed, second name is the name of the dependency that is imported. In the tool code, we will do import psycopg2
         ```
 
-5. Additionaly, open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
+4. Additionaly, open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
 
     - *Search key*: The tool search key. The same name as the tool class must be used, this field is mandatory to find the tool in the `Sync Tool Structure` process. 
     - *Name*: The name of the tool. It is the name that will be shown in the Copilot UI.
@@ -183,7 +185,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     !!! note "OpenAI Assistants tools"
         Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
-6. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
+5. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
 To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
 
     ``` bash title="Terminal"
