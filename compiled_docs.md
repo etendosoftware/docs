@@ -8123,6 +8123,7 @@ This kind of transactions are actually Goods Movements created on the fly when c
 
 This section describes the windows related to warehouse reports in Etendo. These are:
 
+
 [:material-file-document-outline: Pareto Product Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Material Transaction Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report){ .md-button .md-button--primary } <br>
@@ -8135,6 +8136,7 @@ This section describes the windows related to warehouse reports in Etendo. These
 
 [:material-file-document-outline: Product Movements Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Product Operations](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-operations){ .md-button .md-button--primary } <br>
 
 #### Pareto Product Report
 
@@ -8218,7 +8220,7 @@ The outcome of this report can be viewed in HTML and PDF format.
 #### Stock History
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/).
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
  
 
 This is a read-only window in which the user is able to consult the daily stock. This functionality updates the daily information collected by the process in Background which was previously created for this purpose. 
@@ -8328,6 +8330,18 @@ Additionally, the user can include or exclude these documents:
 ##### Sample Report Output
 
 ![Product Movements Report](https://docs.etendo.software/latest/assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+
+#### Product Operations
+
+!!! info
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+
+
+This functionality **centralizes of all the transactions** associated with the product selected allowing the visualization of every movement and actions such as goods shipment/receip line, tax original cost, unit cost, storage bin and many other related actions to the products. 
+
+This centralization facilitates the analysis and a complete understanding of the product operation performance.
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup
@@ -16566,7 +16580,7 @@ The reset accounting process allows the user to totally or partially remove the 
 #### VAT Regularization
 
 !!!info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/){target="\_blank"}.
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ##### Overview
 
@@ -19722,11 +19736,12 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 #### Modules
 
+
 ##### Stock History
 
 :octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
-It provides updated information about the daily history stock of the products. 
+This module provides updated information about the daily history stock of the products. 
 
 !!! info
     For more information, visit [the Stock History user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
@@ -19748,6 +19763,15 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     - [Goods Receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Goods Shipments](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+
+##### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](https://docs.etendo.software/latest/basic-features/warehouse-management/analysis-tools.md/#product-operations).
 
 #### Uninstall bundle
 
@@ -20059,7 +20083,6 @@ This functionality allows the user to adjust the accounts to ensure that the VAT
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -27367,7 +27390,7 @@ If the drawer is displayed, you can navigate to Home and also to the sub applica
 
     In this case shown the subapplication when acces whit "Demo try". <br>
     To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
 
@@ -27843,35 +27866,6 @@ The apps described below belong to preconfigured reference data included in the 
 
 #### Modules
 
-##### Etendo Copilot
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot`
-
-Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
-
-!!! info
-    For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md).
-
-##### XML Translation Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
-
-!!! info
-    For more information, visit [XML Translation Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
-
-##### Database Query Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
-
-!!! info
-    For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
-
 ##### Copilot OCR Tool
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
@@ -27898,8 +27892,34 @@ This module includes an assistant capable of performing operations related to th
 !!! info
     For more information, visit [Copilot Purchase Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
 
+##### Database Query Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
+This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
+
+!!! info
+    For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
+
+##### Etendo Copilot
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot`
+
+Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
+
+!!! info
+    For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md).
+
+##### XML Translation Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
+
+!!! info
+    For more information, visit [XML Translation Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Copilot Purchase Expert
@@ -27954,101 +27974,6 @@ For this particular case, we have configured an assistant with the functional me
 
 !!! Info "Technical Details for Developers"
     More information about how to integrate Copilot with other APIs can be found in the [OpenAPI interaction with Copilot](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md) page.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Dev Assistant
-## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/Dev Assistant
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/dev-assistant
-## Article Content: 
-### Dev Assistant
-
-#### Overview
-
-This assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
-It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
-
-!!!warning
-    This Assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
-
-    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
-
-    Thank you for your understanding as we continue to improve the functionality and reliability of this assistant.
-
-#### Installation
-You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
-
-
-#### Components
-The Dev Assistant is composed of the following components:
-
-- [**DDL Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
-
-- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
-
-
-#### Functionality
-
-!!! info
-    With this assistant, it is possible to create: 
-
-    - **Tables and Columns**: both tables and columns are created based on user specification and the supported types are `string`, `number`, `tableDir`, `date`, `text` and `boolean` (each field will have default lengths unless specified).  
-    - **Windows**: only Mantein type windows are supported
-    - **Tabs**: Can be created at multiple levels, although it is important to make it clear to the assistant to add the corresponding foreign keys.
-    - **Fields**: Fields are created from columns, respecting the same name but without *"_"*.
-    - **Elements**: The elements will be created automatically, sharing the name of the columns, but replacing the *"_"* with spaces. The help and description fields will also be added automatically.
-    - **Menu**: A menu entry is automatically created, the developer must manually place it in the desired position.
-
- - Ask the **Dev Assistant** for a window to add in the system and the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
-
-- The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
-
-- The user must confirm the steps or set up a modification about the given information.
-
-
-#### Usage Example 
-
-##### 1. Setup
-To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
-
-##### 2. Open Copilot, and select Dev assistant
-![dev-assistant.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant.png)
-
-##### 3. Ask the assistant for what you need to create.
-![dev-assistant.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
-
-**User**: *"You can create the Pets Health window, you have to include the fields, pet name, patient start date and description. You can also add a Visits Registration tab, associated to the Pets Health window, where you have to add the fields, date and description. Remember to add the corresponding foreign key.  All this export it in the module with copdev prefix."*
-
-**Copilot**: *"The following steps have already been completed: 
-Tables: PetsHealth and VisitsRegistration have been registered in the system and created in the database. 
-Columns: The necessary columns have been added and registered. 
-Terminology: Terminology has been synchronized. 
-Window and Tabs: Pets Health window and the associated Pets Health Header and Visits Registration tabs have been registered. 
-Foreign Key: Foreign key between PetsHealth and VisitsRegistration has been added.    Please proceed with the compilation and restart Etendo to ensure all changes take effect.    If there's anything else you'd like to address or if you need further modifications, please let me know!"*
-
-
-##### 4. Compile
-    
-With the task complete, it is necessary recompile with a smartbuild and restart Tomcat
-
-```title="Terminal"
-./gradlew smartbuild --info
-```
-![dev-assistant2.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
-
-##### 5. Reviewing the results
-    
-Window in the System,the window can be viewed with the user role.
-![dev-assistant3.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
-![dev-assistant4.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
-
-##### 6. Export the changes
-    
-Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
-
-```title="Terminal"
-./gradlew export.database --info
-```
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: SQL Expert
@@ -34710,7 +34635,7 @@ A Chart of Accounts module is like any other module, but it has just the followi
 
 ##### Publishing the Chart of Accounts Module
 
-The way to package a chart of accounts module is similar to the [how to publish modules to github repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/) process.
+The way to package a chart of accounts module is similar to the [how to publish modules to github repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md) process.
 
 The summarized process is:
 
@@ -35828,6 +35753,174 @@ Some important recommendations:
 ---
 
 This work is a derivative of [Documentation Style Guide](https://wiki.openbravo.com/wiki/Documentation_Style_Guide){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to create a HQL Based Table
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a HQL Based Table
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table
+## Article Content: 
+### How to create a HQL Based Table
+
+#### Introduction
+
+There are three available data origin in the definition of a table in the application dictionary:
+
+  * Table: A table actually defined in a DBMS.
+  * Datasource: A manual datasource will be used for the data origin of this table.
+  * HQL Table.
+
+The _HQL Table_ data origin allows to define a table without the need of a physical table in the database and without having to define a manual datasource.
+
+HQL Based Tables must define a HQL select query, that will be used to obtain the proper records when a request to its datasource is done.
+
+#### Defining a HQL Based Table in the Application Dictionary
+
+##### Table Definition
+
+When a HQL based table is defined in the application dictionary, there is no need to fill in the _DB Table Name_ and _Java Class Name_ fields. There are two new fields that must be set for these tables:
+
+  * HQL Query: The HQL query that will be used to fetch the records for this table.
+  * Entity Alias: The alias of one of the tables used in the HQL Query. It will be used to add automatically the mandatory client and organization filters.
+
+Design considerations for HQL queries:
+
+  * Use alias for all the columns and tables used in the query. It will simplify the column definition in the application dictionary.
+  * Include the string _@additional_filters@_ inside a where clause in the HQL Query. That string will be replaced with the mandatory client and organization filters, and with the filters generated from the criteria included in the datasource request.
+  * All HQL queries should include a column that acts as its primery key. The alias of this column should be _id_.
+  * If a HQL query contains several from clauses because it uses subqueries in the select clause or in the where clause, then the MAINFROM text must be used instead of FROM in the main from clause.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_HQL_Based_Table-1.png)
+
+##### Column Definition
+
+The _Create Columns from DB_ process does not apply to HQL based tables, so they have to be created manually.
+
+Considerations in the definition of columns of HQL tables in the application dictionary:
+
+  * The _DB Column Name_ and the _Name_ of the column must be the alias used for the column in the HQL Query.
+  * The _Clause Left Part_ field must be filled with the left part definition of the column in the HQL query. For instance, if a column is defined in the HQL query is `e.name as countryName` , then the _Name_ and _DB Column Name_ of the column must be `countryName` and its _Clause Left Part_ must be `e.name`.
+
+To include a foreign key in a column of a HQL table, the column must point to the referenced entity itself, not to its id. Then, when that column is defined in the application dictionary, the _Table_ reference must be used, and the proper table instance must be selected in the _Reference Search Key_ field.
+
+For instance, if `e` is the alias of the Country table and we want to include its currency, we must enter `e.currency as countryCurrency` in the HQL query. Then we must select the _Table_ reference in the definition of that column in the application dictionary and `c_currency` in the _Reference Search Key_ field.
+
+#### Tab and Fields Definition
+
+The tab and the fields of a HQL based table are defined in the application dictionary in the same way as with standard tables.
+The only restriction is that all tabs associated with HQL based tables will be read only.
+
+#### Advanced Topics
+
+##### HQL Inserters
+
+HQL Inserters allow to add code to a HQL query at a point specified in the HQL Query defined in the application dictionary.
+
+###### HQL Insertion points in the HQL Query
+
+To define a HQL Insertion point in your HQL query you need to use the `@insertion_point#@` string, `#` being the index of the insertion point. The
+index of the first injection point must be 0, the index for the second must be 1, etc. There cannot be gaps in the indexes of insertion points.
+
+Insertion points can only be defined in `where clauses`. If the HQL Query defines an insertion point but then there are no `HQLInserter` defined for it, then the insertion point will be replaced by `1 = 1` in the HQL query.
+
+For instance, this HQL Query defines a place to enter the additional filters and an HQL insertion point:
+
+```HQL
+SELECT 
+  e.id, 
+  e.name, 
+  e.eDICode, 
+  e.costingPrecision, 
+  e.client, 
+  e.client.organization, 
+  e.active
+FROM 
+  UOM AS e
+WHERE 
+  @additional_filters@
+AND 
+  @insertion_point_0@
+```
+
+###### Defining a HQL Inserter
+
+Custom HQL inserters must extend the `HQLInserter` class. Subclasses of the `HQLInserter` class must implement this method:
+
+```java
+/**
+  * Returns some code to be inserted in a HQL query, and adds query named parameters when needed
+  * 
+  * @param requestParameters
+  *          the parameters of the request. The inserted code may vary depending on these
+  *          parameters
+  * @param queryNamedParameters
+  *          the named parameters of the hql query that will be used to fetch the table data. If
+  *          the inserted code uses named parameters, the named parameters must be added to this
+  *          map
+  * @return the hql code to be inserted
+  */
+public abstract String insertHql(Map<String, String> requestParameters,
+    Map<String, Object> queryNamedParameters);
+```
+
+The string returned by this method will be used to replace the @insertion_point_#@.
+
+`HQLInserter` are instantiated using dependency injection. A particular `HQLInserter` is used to replace a specific injection point of a particular table. For instance, the following `HQLInserter` is used to replace the `@insertion_point_0@` defined in the HQL query of the table with ID `59ED9B23854A4B048CBBAE38436B99C2`:
+
+```java
+  @HQLInserterQualifier.Qualifier(tableId = "59ED9B23854A4B048CBBAE38436B99C2", injectionId = "0")
+public class AddPaymentCreditToUseInjector extends HqlInserter {
+ 
+  @Override
+  public String insertHql(Map<String, String> requestParameters,
+      Map<String, Object> queryNamedParameters) {
+    final String strBusinessPartnerId = requestParameters.get("received_from");
+    final BusinessPartner businessPartner = OBDal.getInstance().get(BusinessPartner.class,
+        strBusinessPartnerId);
+    boolean isSalesTransaction = "true".equals(requestParameters.get("issotrx")) ? true : false;
+    queryNamedParameters.put("bp", businessPartner.getId());
+    queryNamedParameters.put("issotrx", isSalesTransaction);
+    return "f.businessPartner.id = :bp and f.receipt = :issotrx";
+  }
+}
+```
+
+##### HQL Transformers
+
+While HQL Inserters only allow to add some criterion on a point predefined by the user that created the HQL Query, HQL Transformers allow to modify the whole structure of the query.
+
+To implement a HQL transformer, you have to subclass the HqlQueryTransformer class.
+This class has an abstract method that must be implemented in the custom HQL transformer:
+
+```java
+/**
+  * Returns the transformed hql query
+  * 
+  * @param hqlQuery
+  *          original hql query
+  * @param requestParameters
+  *          the parameters of the request
+  * @param queryNamedParameters
+  *          the named parameters of the hql query that will be used to fetch the table data. If
+  *          the transformed hql query uses named parameters that did not exist in the original hql
+  *          query, the named parameters must be added to this map
+  * @return the transformed hql query
+  */
+public abstract String transformHqlQuery(String hqlQuery, Map<String, String> requestParameters,
+    Map<String, Object> queryNamedParameters);
+```
+
+This function receives a HQL query, a map with the parameters sent in the request and a map with all the named parameters that are used in the HQL query. It returns the transformed HQL query, and if in the transformation some named parameters have been added to the query, they must be included in the queryNamedParameters map.
+
+HQL transformers are instantiated using dependency injection. To apply a HQL transformer to a HQL table you must include the table id in the qualifier, for instance:
+
+```java
+@ComponentProvider.Qualifier("58AF4D3E594B421A9A7307480736F03E")
+public class AddPaymentOrderInvoicesTransformer extends HqlQueryTransformer {
+```
+
+---
+This work is a derivative of [How to create a HQL Based Table](http://wiki.openbravo.com/wiki/How_to_create_a_HQL_Based_Table){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How To Create a Module
@@ -39835,6 +39928,103 @@ This limitation does not apply when using ` WeldBaseTest ` tests.
 ---
 
 This work is a derivative of [How to Create JUnit testcases](https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Define a Table as a Tree
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Define a Table as a Tree
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree
+## Article Content: 
+### How to Define a Table as a Tree
+
+#### Overview
+
+If a table contains data that is bound to be represented hierarchically using a tree, the developer can define **tree categories** for it.
+
+Defining tree categories for a table has two advantages:
+
+  * It enables using the tree grid view for tabs associated with that table.
+  * It enables using that table in Tree Selectors.
+
+#### Table Tree Category subtab
+
+The Table Tree Category tab allows to **define tree categories for tables**. It is possible to define several tree categories for a table, if it can be expresses in different ways hierarchically.
+
+##### Enabling the Table Tree Category subtab
+
+The Table Tree Category is a subtab of the header tab of the Tables and Columns windows. It is hidden by default, in order to enable it the user has to check the table Is Tree flag.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-1.png)
+
+##### Tree Structures
+
+There are three tree structures available:
+
+###### AD Tree Structure
+
+If this structure is used, the information needed to handle the hierarchy of the tree data will be stored internally by Etendo in the `AD_Tree` and `AD_TreeNode` tables.
+
+###### Link to Parent Tree Structure
+
+This structure should be used if the table contains a column that represents the parent node of the record. For instance, consider a table called `Employee`, that has a column called `reportsTo`. This column points to the employee who the current employee must report to.
+
+###### Custom Tree Structure
+
+There may be other cases where the information needed to handle the hierarchy is stored within the table but by means other than a column pointing directly to the parent node. For instance, this is the case of the `AD_Tab` table, where the hierarchy of the tabs is defined using the `seqNo` and `tabLevel` columns. In this case, the user has to provide a manual datasource to handle the tree hierarchy.
+
+##### Common Fields for all Tree Structures
+
+The following fields apply to all trees, regardless of its tree structure:
+
+  * **Name**: Name of the tree. This is the display field shown in the references to this table from the Tabs and the Tree Reference.
+  * **Tree Structure**: Tree structure that this tree will use
+  * **Is Ordered**: This flag specifies if the tree is ordered, that is, if it matters the order of the nodes within its parent node.
+  * **Is Parent Selection Allowed**: If false, then in the tree references that point to this tree will only allow to pick leaf nodes. Otherwise it will be possible to select both folder and leaf nodes.
+  * **Is Main Tree**: Several trees can be defined for a table, but only one of them can be the main tree. Each tree can define a different behavior for the creation and deletion of nodes, but only the behavior defined by the main tree will be taken into account.
+  * **Apply HQL Where Clause to Child Nodes**: If this property is set, then if there is a HQL Where Clause defined for the table, it will be applied to all nodes. If it is unchecked, then it will be applied only to the root nodes. This field should only be unchecked in the tree grid view should show records that are not shown in the standard grid view. For instance, consider a sub tab called Children, that shows the children of a person. The HQL Where Clause of the table is in charge of showing only the children of the person selected in the parent tab. The user might decide that he wants to see all the person descendants in the tree grid view, so the HQL Where Clause should only be applied to the root nodes.
+  * **Node Deletion Policy**: The are two options:
+    * **Reparent Child Nodes**: If a node is deleted, all its child nodes are transfered to its parent node.
+    * **Do Not Allow If Has Children**: A node with children cannot be deleted.
+
+##### ADTree Structure Fields
+
+  * **Handle Nodes Manually**: Each time a new record is created or deleted in a table that contains an `ADTree`, an `ADTree` node must be created or deleted respectively. The developer can define using this flag if Etendo should automatically create and delete the `ADTree` nodes, or if the new nodes are going to be handled manually (i.e. using triggers or event handlers).
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-2.png)
+
+##### LinkToParent Structure Fields
+
+  * **Link to Parent Column**: Column that points to the parent node of the record.
+  * **Node Id Column Column**: Column pointed by the Link to Parent Column. In most cases the key column of the table should be used.
+  * **Has Multiparent nodes**: In some cases the table contains hierarchical data that is not strictly a tree because each record may have several parent nodes. Consider for instance a table that represents product bundles. Each bundle can contain several bundles (has several children), and be contained in several other bundlers (has several parents). Only if this is the case should this flagged be checked.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-3.png)
+
+##### Custom Tree Structure Fields
+
+  * **Datasource**: A datasource that will handle all the tree operations. 
+  
+!!!info
+    For more information, visit [How to Create a Custom Tree](https://docs.etendo.software/latest/how-to-guides/How_to_Create_a_Custom_Tree.md).
+
+#### Enabling the Tree Grid View in a Tab
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-4.png)
+
+In order to enable the Tree Grid View in a Tab, the system admin has to pick a tree category in the Table Tree Category field.
+
+By default, the root nodes will be those whose parent is null or '0'. The user can overwrite this by defining a HQL Where Clause for Root Nodes that will be used to pick the root nodes for this tab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-5.png)
+
+#### Defining a Tree Selector
+
+Tables that have trees defined are bound to be used in **Tree Selectors**. Tree Selector are a variant of the Etendo selectors, that take advantage of the hierarchical data of the tables, allowing to use trees for filtering and picking records.
+
+!!!info
+    For more information, visit [How to Create a Tree Selector](https://docs.etendo.software/latest/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md). 
+
+This work is a derivative of [How to define a table as a tree](https://wiki.openbravo.com/wiki/How_to_Define_a_Table_as_a_Tree){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to define Display Logic Evaluated at Server Level
@@ -44804,6 +44994,370 @@ In addition, you can install only the module containing the **Etendo Copilot** b
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Overview
+## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Overview
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/overview
+## Article Content: 
+### Copilot Extensions
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
+
+:material-store: Etendo Marketplace:  [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}
+
+#### Overview
+
+The Copilot Extensions Bundle includes functionalities for developers to help them streamline daily tasks using AI.
+
+#### Create References
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+The **Create Reference Assistant** is a tool that creates a reference in the Etendo Application Dictionary. 
+
+!!!info
+    For more information, visit: [Create Reference Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles.md/create-references.md).
+
+#### Dev Assistant
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+The **Dev Assistant** is designed to speed up the process of creating windows, tabs, fields, system elements and menu entries.
+
+!!!info
+    For more information, visit: [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles.md/dev-assistant.md).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Create References
+## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Create References
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/create-references
+## Article Content: 
+### Create References
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+#### Overview
+
+The Create References Tool is a tool that **creates references** in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+
+It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
+
+
+#### Installation
+You can install only the module containing the **Create References** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+
+
+#### Components
+
+The Create References Assistant is composed of the following component: 
+
+- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md): This tool allows to create references on Etendo and on the database using queries generated with the parameters given in the tool. 
+
+
+#### Functionality
+
+The **Creates References Assistant** is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
+
+Let's see an example about how the user can interact with the assistant and create the needed references in Etendo. 
+
+
+#### Usage Example 
+
+##### 1. Setup
+
+To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+
+##### 2. Open Copilot and select Create Reference Assistant
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
+
+##### 3. Ask the assistant which reference type you need to create
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/create-references/create-references1.png)
+
+**User:** *"Create a list with the current currencies used in all European countries and suggest a name for the reference. The prefix to export this information in the module is copdev."*.
+
+**Copilot:** *"Great! Let's start creating the reference list with the currencies used in European countries. Prefix: copdev Reference Name Suggestion: European Currencies. Reference Items:  Euro (EUR) British Pound (GBP) Swiss Franc (CHF) Norwegian Krone (NOK) Swedish Krona (SEK) Danish Krone (DKK) Polish Zloty (PLN) Hungarian Forint (HUF) Czech Koruna (CZK) Bulgarian Lev (BGN) Romanian Leu (RON) Croatian Kuna (HRK) (Note: Replaced by Euro in 2023 but might be useful historically) Serbian Dinar (RSD) Turkish Lira (TRY) Russian Ruble (RUB) Do you want to provide the list of currencies yourself, or should we go with this list?    Additionally, would you like me to infer the description and help text, or do you want to provide them? Here's what I suggest: Description:List of currencies currently used in various European countries. Help: Select the appropriate currency from the list that represents the currencies used in Europe.Is this okay with you?"*
+
+##### 4. Receiving the results
+
+The Create References Tool will process these parameters, verify the access token, build the request body and call the Etendo webhook to create the reference.
+
+In the Reference window, Etendo shows all the fields with the corresponding information generated and in the List Reference tab, it is possible to see the new list reference created. 
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/create-references/create-references-2.png)
+
+
+##### 5. Export the changes
+
+Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+
+```title="Terminal"
+./gradlew export.database --info
+```
+
+
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Dev Assistant
+## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Dev Assistant
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/dev-assistant
+## Article Content: 
+### Dev Assistant
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+#### Overview
+
+The **Dev Assistant** assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
+It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
+
+!!!warning
+    This Assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
+
+    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
+
+    Thank you for your understanding as we continue to improve the functionality and reliability of this assistant.
+
+#### Installation
+You can install only the module containing the **Dev Assistant** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.devassistant`.
+
+
+#### Components
+The Dev Assistant is composed of the following components:
+
+- [**DDL Tool**](https://docs.etendo.software/latest/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+
+- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+
+
+#### Functionality
+
+!!! info
+    With this assistant, it is possible to create: 
+
+    - **Tables and Columns**: both tables and columns are created based on user specification and the supported types are `string`, `number`, `tableDir`, `date`, `text` and `boolean` (each field will have default lengths unless specified).  
+    - **Windows**: only Mantein type windows are supported
+    - **Tabs**: Can be created at multiple levels, although it is important to make it clear to the assistant to add the corresponding foreign keys.
+    - **Fields**: Fields are created from columns, respecting the same name but without *"_"*.
+    - **Elements**: The elements will be created automatically, sharing the name of the columns, but replacing the *"_"* with spaces. The help and description fields will also be added automatically.
+    - **Menu**: A menu entry is automatically created, the developer must manually place it in the desired position.
+
+ - Ask the **Dev Assistant** for a window to add in the system and the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
+
+- The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
+
+- The user must confirm the steps or set up a modification about the given information.
+
+
+#### Usage Example 
+
+##### 1. Setup
+To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+
+##### 2. Open Copilot, and select Dev assistant
+![dev-assistant.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant.png)
+
+##### 3. Ask the assistant for what you need to create.
+![dev-assistant.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
+
+**User**: *"You can create the Pets Health window, you have to include the fields, pet name, patient start date and description. You can also add a Visits Registration tab, associated to the Pets Health window, where you have to add the fields, date and description. Remember to add the corresponding foreign key.  All this export it in the module with copdev prefix."*
+
+**Copilot**: *"The following steps have already been completed: 
+Tables: PetsHealth and VisitsRegistration have been registered in the system and created in the database. 
+Columns: The necessary columns have been added and registered. 
+Terminology: Terminology has been synchronized. 
+Window and Tabs: Pets Health window and the associated Pets Health Header and Visits Registration tabs have been registered. 
+Foreign Key: Foreign key between PetsHealth and VisitsRegistration has been added.    Please proceed with the compilation and restart Etendo to ensure all changes take effect.    If there's anything else you'd like to address or if you need further modifications, please let me know!"*
+
+
+##### 4. Compile
+    
+With the task complete, it is necessary recompile with a smartbuild and restart Tomcat
+
+```title="Terminal"
+./gradlew smartbuild --info
+```
+![dev-assistant2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
+
+##### 5. Reviewing the results
+    
+Window in the System,the window can be viewed with the user role.
+![dev-assistant3.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
+![dev-assistant4.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
+
+##### 6. Export the changes
+    
+Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+
+```title="Terminal"
+./gradlew export.database --info
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Overview
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Overview
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview
+## Article Content: 
+### Overview
+
+Here you can find a list of the all the available tools in the Copilot bundle.
+
+- [Attach File Tool](https://docs.etendo.software/latest/available-tools/attach-file-tool.md)
+- [Database Query Tool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
+- [DDL Tool](https://docs.etendo.software/latest/available-tools/ddl-tool.md)
+- [File Copy Tool](https://docs.etendo.software/latest/available-tools/file-copy-tool.md)
+- [File Downloader Tool](https://docs.etendo.software/latest/available-tools/file-downloader-tool.md)
+- [OpenAPI Interaction with Copilot](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
+- [Optical Character Recognition (OCR) Tool](https://docs.etendo.software/latest/available-tools/ocr-tool.md)
+- [PDF to Images Tool](https://docs.etendo.software/latest/available-tools/pdf-to-images-tool.md)
+- [Print Directory Tool](https://docs.etendo.software/latest/available-tools/print-directory-tool.md)
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+- [Send Email Tool](https://docs.etendo.software/latest/available-tools/send-email-tool.md)
+- [Tavily Tool](https://docs.etendo.software/latest/available-tools/tavily-tool.md)
+- [Template Tool](https://docs.etendo.software/latest/available-tools/template-tool.md)
+- [Uncompress Tool](https://docs.etendo.software/latest/available-tools/uncompress-tool.md)
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Attach File Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Attach File Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool
+## Article Content: 
+### Attach File Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
+
+#### Overview
+
+The **Attach File tool** uploads a file using the `AttachFile` webhook after verifying its existence and accessibility. It involves reading the file from a specified path, encoding it in base64, and then sending it to Etendo using the webhook, along with necessary identifiers and an access token.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+The primary purpose of the Attach File Tool is to facilitate the process of attaching files to records in Etendo, by ensuring the file is accessible and correctly encoded before upload. It is highly valuable in automated processes that require attaching files to records. 
+
+This process consists of the following actions:
+
+- **Receiving Parameters**
+
+    The tool receives an input object containing the following keys:
+
+    - `filepath` : The path of the file to upload.
+
+    - `ad_tab_id` : A 32-character string which is the ID of the Tab.
+
+    - `record_id` : A 32-character string which is the ID of the record.
+
+- **File Verification**
+
+    The tool checks if the file at the specified path exists and is readable. If the file does not exist or is not accessible, it returns an error.
+
+- **File Reading and Encoding**
+
+    If the file is available, it reads the file content and encodes it in base64 format.
+
+- **Authentication**
+
+    The tool retrieves an access token from the extra information stored in the thread context. If no access token is provided, it returns an error.
+
+- **API Communication**
+
+    The tool constructs the necessary headers and body parameters and sends the encoded file to the specified API endpoint using an HTTP POST request.
+
+- **Returning the Result**
+
+    Once the operation is completed, the tool returns the result of the API call, which could be a success or an error message.
+
+#### Usage Example
+
+Imagine there is a file at `/home/user/document.pdf`, and it is necessary to upload it to a specific record identified by its tab ID and record ID. The tool is used as follows:
+
+- **Input**:
+
+    ```
+    {
+    "filepath": "/home/user/document.pdf",
+    "ad_tab_id": "1234567890abcdef1234567890abcdef",
+    "record_id": "abcdef1234567890abcdef1234567890"
+    }
+    ```
+
+- **Output**:
+
+    ```
+    {
+    "result": { "message", "Attachment created successfully"}
+    }
+    ```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Create Reference Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Create Reference Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool
+## Article Content: 
+#### Overview
+
+The **Create Reference Tool** is an Etendo Copilot tool developed by Python to create references in the database. This tool is useful to automate the creation of references saving time and manual effort.  
+
+#### Functionality
+
+This process consists of the following actions:
+
+- **Argument Processing** 
+
+    Takes various input parameters defined in a pydantic model:
+
+    - `i_prefix`: The prefix of the module in the database.
+    - `i_name`: The name of the reference.
+    - `i_reference_list`: A comma-separated list of reference items.
+    - `i_help` (optional): Help text for the reference.
+    - `i_description` (optional): Description of the reference.
+
+- **Access Token Verification**
+
+Gets and verifies the access token from the thread context (`ThreadContext`).
+
+- **Request Body Construction**
+
+Constructs the body of the request parameters for the webhook.
+
+- **Webhook Call**
+
+Uses the `call_webhook` function to make an `HTTP POST` request to the Etendo webhook endpoint, providing the necessary parameters and the access token.
+
+- **Result Handling**
+
+Returns the result of the request to the webhook, which may contain a success message or an error in JSON format.
+
+
+The system returns a dictionary with the result of the operation. For example:
+
+- If the request was successful:
+
+```
+ { `success: true, message: Reference created successfully`}
+
+```
+
+- If there was an error:
+
+```
+ { `error: Description of the error`}
+
+```
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Database Query Tool
 ## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
 ## Article URL: 
@@ -44814,7 +45368,11 @@ In addition, you can install only the module containing the **Etendo Copilot** b
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
 #### Overview
- This tool allows to ask to Etendo for tables available in the database and the columns of each table. It also allows Copilot to execute SQL queries in the database that are generated by the Assistant.
+
+This tool allows asking to Etendo for tables available in the database and the columns of each table. It also allows Copilot to execute SQL queries in the database that are generated by the Assistant.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 #### Installation
 The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
@@ -44850,7 +45408,6 @@ For security and data segmentation:
 ``` sql
 inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id IN ('0','E443A31992CB4635AFCAEABE7183CE85','B843C30461EA4501935CB1D125C9C25A','BAE22373FEBE4CCCA24517E23F0C8A48','DC206C91AA6A4897B44DA897936E0EC3','2E60544D37534C0B89E765FE29BC0B43','19404EAD144C49A0AF37D54377CF452D','7BABA5FF80494CAFA54DEBD22EC46F01')
 ```
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: DDL Tool
@@ -44858,44 +45415,50 @@ inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id 
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool
 ## Article Content: 
+### DDL Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
 #### Overview
 
-The **DDLTool** is an Etendo Copilot tool, developed in Python, to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is able to create and register tables, windows, items and menu options in the system so that data can be displayed.
+The **DDLTool** is an Etendo Copilot tool developed in Python to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is possible to create and register tables, windows, items and menu options in the system so that data can be displayed.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 #### Functionality
 
-The **DDLTool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode is needed to do the task request by the user, the tool has a variable that contains a list with the availables modes, and with the prompt the assistant choose wich is better for the task.
+The **DDL Tool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
 
-Users can choose modes using the chat:
+Assistants can choose from these modes:
 
-- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named RegisterTableWebHook to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
+- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named `RegisterTableWebHook` to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
 
-- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the ad_org and ad_client table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
+- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the `ad_org` and `ad_client` table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
 
-- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook CreateTableWebHook, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
+- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook `CreateTableWebHook`, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
 
-- **REGISTER_COLUMNS:** This mode is executed automatically after the ADD_COLUMN mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
+- **REGISTER_COLUMNS:** This mode is executed automatically after the `ADD_COLUMN` mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
 
-- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named SyncTermsWebHook.
+- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named `SyncTermsWebHook`.
 
-- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the RegisterWindowAndTabWebHook java file.
+- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the `RegisterWindowAndTabWebHook` java file.
 
 - **REGISTER_FIELDS:** Registers the fields of a tab in Etendo System to be recognized for it. It works by calling a webhook to run a Java file.
 
 #### Usage Example 
 
-In the section of Copilot App, it is possible configure the assistants and the tool that it can use.
+In the section of Copilot App, it is possible to configure the assistant and the tool that it can use.
 
 ![ddl-tool.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
 
-Also in Copilot App, it cans insert a prompt where is possible indicates the tool will use. Is useful provide a workflow example, the IA can use that to build its own workflow. 
+Also in Copilot App, it can insert a prompt where is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
 
 ![ddl-tool1.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
 
-
 Prompt Example:
 
-*Your are a developer assistant that can create register tables for Etendo.*
+*You are a developer assistant that can create register tables for Etendo.*
 
 *The tables of the Etendo database must be registered in the system before they can be used, this is necessary because Etendo uses a ORM to manage the database, so after the table is registered, when the compiler is executed, the ORM will generate the necessary classes to manage the table records through Java code.*
 
@@ -44947,7 +45510,7 @@ Prompt Example:
 
 *ADD_FOREIGN: This mode is used to ...*
 
-*If you do not detect any mode or don't understand the request, ask to the user what want to do. *
+*If you do not detect any mode or don't understand the request, ask to the user what they want to do. *
 
 *Example workflow:*
 
@@ -44972,7 +45535,131 @@ Prompt Example:
 *Step 9: Execute the process to check if the elements have the description and help comment complete.*
 
 *Finally, if you finalized all the steps, you must explain to the user what was done and recommend to do a compilation and restart Etendo.*
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: File Copy Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/File Copy Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/file-copy-tool
+## Article Content: 
+### File Copy Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **File Copy Tool** receives two paths: one from a file and one from a directory. Its function is to copy the specified file to the specified directory and return the path of the copied file.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool is useful when you need to duplicate files in different locations within the file system. This can be essential for backup tasks, file organization, or preparing files for processing in specific locations. This simplifies the process of copying files and managing directories, ensuring the existence of the destination directory and providing clear feedback with the path of the copied file.
+
+This process consists of the following actions:
+
+- **Receiving Parameters**
+
+    The tool receives an input object containing two keys:
+
+    - `source_path`: path to the source file to be copied.
+    - `destination_directory`: path to the destination directory where you want to copy the file.
+
+- **Creating the Output Directory**
+
+    If the output directory does not exist, the tool automatically creates it to ensure that the copy operation does not fail due to a missing path.
+
+- **Copying the file**
+
+    Use Python's `shutil.copy` function to copy the source file to the target directory.
+
+- **Returning the Result**
+
+    Once the process is complete, the tool returns an object containing the full path to the copied file in the output directory.
+
+#### Usage Example
+
+If you have a file in `/home/user/file.txt` and you want to copy it to the `/home/user/destination_directory` directory, you would use the tool as follows:
+
+- **Input**
+```
+{"source_path": "/home/user/file.txt", "destination_directory": "/home/user/destination_directory"}
+```
+
+- **Output**
+```
+{"file_path": "/home/user/destination_directory/file.txt"}
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: File Downloader Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/File Downloader Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/file-downloader-tool
+## Article Content: 
+### File Downloader Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **File Downloader Tool** is designed to receive a URL and download the corresponding file to a temporary directory, returning the path to the temporary file. This tool is extremely valuable for any application that needs to dynamically interact with files on the web. It allows you to efficiently download files and store them temporarily, facilitating their later use and manipulation without the need to worry about file management in the system. In addition, it handles different types of content (text and binary) automatically, making the operation transparent and simple for the user.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool is especially useful when you need to download files from the web for further processing without worrying about managing the files on the local system. It can be useful for tasks such as:
+
+- Downloading images, documents or other files for analysis and processing.
+- Getting files for temporary storage, avoiding the need for direct file system management.
+
+This process consists of the following actions:
+
+- **Receiving Parameters**
+    
+    The tool receives a URL as a string via the `file_path_or_url` parameter.
+
+- **Verifying URL**
+    
+    It checks if the entry is a valid URL (starts with `http://` or `https://`).
+
+- **Downloading File**
+
+    - It performs an HTTP GET request to the URL.
+    - If the request is successful (status code 200):
+        - It attempts to determine the file name from the URL.
+        - If the name cannot be determined, it determines a generic name such as
+        `downloaded_file`.
+        - It determines the content type of the file (text or other):
+            - If text, it writes the contents to a temporary file with the extension `.txt`, if it does not have another extension.
+            - If other, it copies the content to a temporary file with the corresponding extension.
+
+- **Returning the Result**
+    
+    It returns a dictionary with the path to the temporary file created under the `temp_file_path` key.
+
+- **Handling the Error**
+
+    If the URL is invalid or the download fails, it returns a relevant error message.
+
+#### Usage Example
+
+If there is a file hosted at `https://example.com/file.txt` and it is necessary to download it temporarily:
+
+- **Input**
+
+```
+file_path_or_url: "https://example.com/file.txt"
+```
+
+- **Output**
+
+```
+{"temp_file_path": "/path/to/temp/downloaded_file.txt"}
+```
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: OpenAPI Interaction with Copilot
@@ -44992,10 +45679,12 @@ Prompt Example:
 The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. 
 
 !!!info
-    For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+!!!info
+    For more information, see the [OpenAPI Initiative](https://www.openapis.org/){target="_blank"}.
 
 This specification can be useful for Copilot since it can be used as a guide to Copilot to interact with the services, without the need to know the implementation details and implementing specific code for each service is not be necessary.
-
 
 #### Tools
 
@@ -45013,7 +45702,7 @@ In the basic use case, a **Purchase Assistant** was implemented, in which an ass
 
 ##### Configuration
 
- - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
+ - In the module `com.etendoerp.copilot.openapi.purchase` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
  - After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.
  - Finally, give access to the role and configure the permissions in "Role" Window.
 !!! note
@@ -45021,7 +45710,7 @@ In the basic use case, a **Purchase Assistant** was implemented, in which an ass
 
 ##### Other Configurations
 
-- It is necessary to add the ```gradle.properties``` file with the following configuration:
+- It is necessary to add the `gradle.properties` file with the following configuration:
 ``` properties
     ETENDO_HOST=http://localhost:8080/etendo
 ```
@@ -45136,6 +45825,9 @@ This way, we can create assistants for any API, as long as we have the OpenAPI S
 
 The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
 
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
 #### Functionality
 
 
@@ -45162,7 +45854,7 @@ The Optical Character Recognition (OCR) Tool is a tool that recognizes text from
     ./gradlew copilot.start
     ```
 
-5. Now your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
+5. Now, your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
 
 #### Examples
 
@@ -45192,76 +45884,540 @@ and Copilot will return the recognized(and interpreted) text in the chat.
 Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: XML Translation Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/XML Translation Tool
+# Article Title: PDF to Images Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/PDF to Images Tool
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/pdf-to-images-tool
 ## Article Content: 
-### Translation Tool: XMLTranslatorTool
+### PDF to Images Tool
 
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
 #### Overview
 
-This tool translates the content of an XML file from one language to another, as specified within the XML.  
+The **PDF to Images Tool** is a tool that converts a PDF file into an array of images, with each image representing a page of the PDF. The tool utilizes specialized Python libraries for PDF processing and image handling to achieve this conversion efficiently.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=E5JPpLafZG04-tJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 #### Functionality
 
-1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot.xmltranslationtool:1.1.1')
+This tool allows assistants to convert PDF documents into image formats. This is particularly useful for scenarios where individual pages of a PDF need to be processed as images, such as in digital archiving, document review, or further image analysis tasks.
+
+It is invaluable for any automated workflow that requires handling PDF contents as image data. It simplifies the process of converting PDF pages to images, ensuring each page is accurately rendered and saved as a high-quality image. This tool is essential in fields such as digital archiving, where documents need to be preserved in an easily accessible and viewable format, and in applications involving image analysis, where each page of a PDF document can be independently processed.
+
+Using this tool consists of the following actions:
+
+- **Receiving Parameters** 
+
+    The tool receives an input object that contains the following key:
+
+    - path
+
+        (str): the path to the PDF file to be converted.
+
+- **Processing**
+
+    - Validation: The tool first checks if the provided PDF path points to an existing file. If the file does not exist, it raises an exception with a relevant error message.
+
+    - PDF Loading: The tool uses the pypdfium2 library to load the PDF document.
+
+    - Page Rendering: For each page in the PDF:
+
+        - The page is rendered at a scale of 2.0 to produce a high-quality image.
+
+        - The rendered bitmap is then converted to a PIL (Python Imaging Library) image.
+
+    - Temporary Storage: Each converted image is temporarily stored on the filesystem at a predefined path (`/tmp/page_{page_number}.png`).
+
+    - Collecting Results: Paths to the stored images are collected in a list, which is returned as the final output.
+
+- **Returning the Result**
+
+    Once the conversion process is completed, the tool returns a list of file paths, each pointing to the respective converted image for each page of the PDF.
+
+
+#### Usage Example
+
+If you have a PDF file located at `/home/user/document.pdf` and you want to convert its pages into images, you would use the tool as follows:
+
+- **Input**:
+
+```
+{
+  "path": "/home/user/document.pdf"
+}
+```
+
+- **Output**:
+
+```
+[
+  "/tmp/page_0.png",
+  "/tmp/page_1.png",
+  "/tmp/page_2.png"
+  // paths for all pages
+]
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Print Directory Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Print Directory Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/print-directory-tool
+## Article Content: 
+### Print Directory Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **Print Directory Tool** is a tool designed to print files and directories from the current directory or from a specified upstream directory. It allows the option to list the contents recursively.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+    
+This tool is extremely valuable for file system management and monitoring. It makes it easy to view the directory structure, either locally or upwards, and allows for detailed audits of the structure. Its ability to ignore specific directories common in development environments ensures that listings are relevant and clean, making the tool efficient and practical.
+
+#### Functionality
+
+This tool is used when you need to get a clear view of the file and directory structure in a specific directory on the system, either the current directory or one of its parent directories. It can be useful for:
+
+- Auditing and reviewing the file structure.
+- Automate operations that depend on the existence of certain files.
+- Obtain directory listings for further processing.
+
+This process consists of the following actions:
+
+- **Receiving Parameters**
+
+    The tool receives two key parameters:
+
+    - Recursive (boolean): It indicates whether to list subdirectories recursively.
+    - `parent_doubledot_qty` (integer): It specifies how many parent directories to ascend from the current directory.
+
+    **Input example**
+
     ```
-2. In `gradle.properties` file you can add some environment variables. If they are not set, the default values will be used.
-
-
-    ```groovy title="gradle.properties"
-    OPENAI_MODEL=gpt-4
-    BUSINESS_TOPIC=ERP
+    {
+    "recursive": true,
+    "parent_doubledot_qty": 2
+    }
     ```
 
-    | **Environment Variable**   | **Options**                                | **Default**| **Info**                                                                                             |
-    | ---------------------- | ---------------------------------------------- |----------| ---------------------------------------------------------------------------------------------------- |
-    | OPENAI_MODE            | `gpt-4`, `gpt-3.5-turbo-16k` , `gpt-3.5-turbo` |`gpt-3.5-turbo` | Among others that have the same number of requests per minute                                        |
-    | BUSINESS_TOPIC         | `ERP` , `Human Resorces`, `Finance`, `Other`  | `ERP` | This parameter indicates the category to which the translations will be focused.                     |
-  
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+    Calculation of the Directory to List:
 
-4. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
+    - Calculates the directory path based on the number of parents specified.
+    - For example, if `parent_doubledot_qty` is 2, it will go up two levels from the current directory (../../).
 
-    ```xml
-    <compiereTrl baseLanguage="en_US" language="es_ES" table="AD_ELEMENT" version="">
+- **Directory list**
+
+    - If recursive is True, it will use `os.walk` to list all files and subdirectories recursively.
+    - If recursive is False, it will use `os.listdir` to list only the contents of the specified directory.
+
+- **Returning the Result**
+
+    It returns a dictionary with the list of files and directories under the message key.
+
+#### Usage Example
+
+If you want to recursively list the files and directories in the grandparent directory of the current directory:
+
+- **Input**
+```
+{ "recursive": true, "parent_doubledot_qty": 2 }
+```
+- **Output**
+```
+{ "message": ["/path/to/parent/dir/file1", "/path/to/parent/dir/subdir/file2", ...] }
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Read File Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Read File Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/read-file-tool
+## Article Content: 
+### Read File Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **Read File Tool** is designed to read the contents of files given a filepath parameter. It provides a simple way to access the contents of text files on the local system.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool is especially useful to access the contents of a file for processing or viewing. It can be used in several situations, such as:
+
+- Reading configuration files.
+- Accessing logs and log files.
+- Viewing or processing data stored in text files.
+
+This process consists of the following actions.
+
+- **Receiving Parameters**
+
+    The tool receives an input parameter called `filepath` which is the path to the file to be read.
+
+- **Reading File**
+    - It opens the file specified by `filepath`.
+    - It reads the entire contents of the file.
+
+- **Returning the Result**
+    It returns a dictionary with the contents of the file under the `message` key.
+
+#### Usage Example
+
+If you want to read the contents of the `/tmp/test.txt` file:
+    
+- **Input**
+```
+{ "filepath": "/tmp/test.txt" }
+```
+- **Output**
+```
+{ "message": "Content of the read file..." }
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Send Email Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Send Email Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/send-email-tool
+## Article Content: 
+### Send Email Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **Send Email Tool** is designed to send emails. This tool facilitates sending emails in an efficient and structured way. It accepts the following input parameters: subject (the email subject), mailto (the recipient's email address), and html (the HTML content of the email). As output, it returns a message indicating the result of sending the mail. 
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+This tool provides the assistant with:
+
+- Automation: It automates the sending of emails in web applications and systems.
+- Flexibility: It allows selecting between different sending methods (Resend or SMTP), depending on the environment configuration.
+- Efficiency: It facilitates the management of email notifications and communications, improving operational efficiency.
+
+This tool is essential for developers and system administrators who need to easily integrate email functionalities into their applications or services.
+
+#### Setup
+
+To use this tool, it is necessary to configure the variable `MAIL_METHOD`:
+
+- SMTP: It uses the SMTP protocol to send mail. It configures and sends mail using an SMTP server such as Gmail. The SMTP is the default value for this variable. Additionally, credentials must be setup: `MAIL_FROM` with the sender email and `SMTP_PASSWORD` with the sender password.
+
+For example:
+
+``` groovy title="gradle.properties"
+MAIL_METHOD=SMTP
+MAIL_FROM= example@example.com
+SMTP_PASSWORD= ******
+```
+- resend: In this case, the [resend API service](https://resend.com/){target="\_blank"} is used, designed to resend email requests. In case this is selected, it is necessary to set up the variable `RESEND_API_KEY`. For example:
+
+``` groovy title="gradle.properties"
+MAIL_METHOD=resend
+RESEND_API_KEY=******
+```
+
+#### Functionality
+
+This tool is useful in any application or service that needs to send emails automatically. It can be used for notifications, updates, order confirmations, password resets, among other things.
+
+This process consists of the following actions:
+
+- **Processing Arguments** 
+
+    It takes the input parameters specifying the subject, recipient and HTML content of the mail.
+
+- **Verifying Sending Method** 
+
+    It determines the sending method using a `MAIL_METHOD` environment variable. The options are mentioned in the [Setup](#setup) section above.
+
+- **Sending Mail**
+    
+    Depending on the sending method, it configures and sends mail with the information provided.
+
+- **Returning the Result**
+    
+    Returns a message indicating if the mail was sent successfully or if there was an error. For example:
+    
+    ```
+    { “message”: “Mail sent successfully”}
+    ```
+ 
+    if the mail was sent successfully.
+
+    ```
+    { “message”: “Mail method not supported”}
+    ```
+    
+    if the sending method is not supported.
+
+#### Usage Example
+
+Imagine you want to send a notification email. The input parameters for the assistant would be:
+
+- `subject`: Account update
+- `mailto`: user@example.com
+- `html`: 
+    ```html
+    <h1>Account Upgrade</h1>
+    <p>Your account has been successfully upgraded.</p>
+    <p><p>Your account has been successfully upgraded.
     ```
 
-    The tool will know that the language to be translated will be Spanish.
 
-5. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
+The Send Email Tool will process these parameters and select the configured sending method. It will then send the mail and return a message indicating whether the mail was sent successfully.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Tavily Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Tavily Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/tavily-tool
+## Article Content: 
+### Tavily Tool
 
-#### How to use the XML translation tool shown in an example
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-First of all, we start from the module `com.etendoerp.bankingpool` originally in English and we can see the Financial Type Configuration window:
+#### Overview 
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-en.png)
+The **TavilySearchTool** is a custom tool designed to perform searches using the Tavily search engine, which is known for allowing users to search the Internet for various types of information.
 
-1. Generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
-  
-    After having created the translation module in the modules folder, we will find `com.etendoerp.bankingpool.es_es`
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-2.  To execute translation tool, in a new terminal, run:
-    ``` bash title="Terminal"
-    ./gradlew copilot.translate -Parg=com.etendoerp.bankingpool.es_es
+#### Configuration 
+
+##### Tavily API key Configuration
+
+1. Visit the [Tavily website](https://tavily.com/){target="_blank"} and sign up for an account.
+2. Once logged in, navigate to the API key section of your account.
+3. Generate a new API key.
+4. It is necessary to add the `gradle.properties` file with the following configuration:
+
+    ``` groovy title="gradle.properties"
+    TAVILY_API_KEY=<your_api_key_here>
     ```
 
-3. In the folder ```modules/com.etendoerp.bankingpool.es_es``` you will find the automatic translations.
+5. Restart Copilot service
 
-4. To apply the translation, compile the enviroment
-    ``` bash title="Terminal"
-    ./gradlew update.database smartbuild --info
+    ``` bash title="terminal"
+    ./gradlew copilot.stop copilot.start
     ```
 
-5. Now we can see the *Financial Type Configuration* windows with their respective fields translated into Spanish.
-    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
+
+#### Functionality
+
+This tool is used to interface with the Tavily search engine and retrieve search results for a given query.
+
+Everytime this tool is called, the parameter to use is a JSON like:
+
+```json 
+{ "query": "What is the capital of Spain?" }
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Template Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Template Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/template-tool
+## Article Content: 
+### Template Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **Template Tool** is a template for creating new tools in Python-based applications. It is designed to provide a basic structure on which to build custom functionality. The input parameters it accepts are: input1 and input2. The output consists of a message that confirms a predetermined action.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool is useful for developers who want to create new tools quickly following a standard format. It can be used as a starting point to develop specific functions without having to worry about the initial code setup. It provides the user with:
+
+- Standardization: It facilitates the creation of new tools following a standard format, ensuring consistency in development.
+- Development Speed: It speeds up the development process by providing a predefined basic structure.
+- Flexibility: It allows developers to modify and customize functionality according to the specific needs of their application.
+
+Using this tool consists of the following actions:
+
+- **Processing Arguments**
+
+    It takes input parameters that are in JSON format. If the input is a string, it converts it to a JSON object; if it is already a JSON object, it uses it directly.
+
+- **Accessing Parameters**
+    
+    It extracts the values of input1 and input2 from the provided JSON object.
+
+- **Personalized Code**
+    
+    It contains a space where you can add specific code to perform the desired actions using input1 and input2.
+
+- **Returning the Result**
+
+    It returns a message that currently reads `{“message”: “Mail sent successfully”}`, but can be customized according to the action performed.
+
+#### Usage Example
+
+Imagine you want to create a tool that adds two numbers together. We would use the Template Tool as follows:
+    
+- input1: 3
+- input2: 5
+
+We can add the necessary code inside the **code here** section to perform the addition:
+
+```
+result = p_input1 + p_input2
+return {“message”: f “Sum result is {result}”}
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Uncompress Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Uncompress Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/uncompress-tool
+## Article Content: 
+### Uncompress Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **Uncompress Tool** is a utility designed to uncompress various types of compressed files and return the paths of the uncompressed files. It supports common file types including `zip`, `gzip`, `bzip2`, and `rar`.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+The primary purpose of the this tool is to streamline the process of extracting files from compressed formats. It is particularly useful in scenarios where automated file extraction is needed, such as data processing pipelines, backup restoration, and file management systems. By supporting multiple common compression formats and providing a straightforward interface for file extraction, it simplifies workflows involving compressed files and ensures efficient handling of data archives.
+
+This process consists of the following actions.
+
+- **Receiving Parameters**
+    The tool expects a single input parameter:
+
+    `compressed_file_path` : Path to the compressed file that needs to be uncompressed.
+
+- **Determining the File Type**
+
+    The tool inspects the file extension to determine the type of compressed file and selects the appropriate uncompression method.
+
+- **Creating the Output Directory**
+
+    The tool creates an output directory based on the name of the compressed file to store the uncompressed contents.
+
+- **Uncompressing the File**
+
+    The tool supports multiple compression formats and uses corresponding Python libraries to uncompress files:
+
+    - `gzip` : Uses the `gzip` library to uncompress `.gz` files.
+
+    - `bzip2` : Utilizes the `bz2` library to handle `.bz2` files.
+
+    - `rar` : Employs the rarfile library to extract `.rar` files.
+
+    - `zip` : Leverages the `zipfile` library to uncompress `.zip` files.
+
+- **Returning the Result**
+
+    After successfully uncompressing the files, the tool returns an object containing the paths of the uncompressed files.
+
+#### Usage Example
+
+If there is a compressed file at `/home/user/archive.zip` and it is necessary to uncompress it, the tool would be used as follows:
+
+- **Input**:
+
+```
+{"compressed_file_path": "/home/user/archive.zip"}
+```
+
+- **Output**:
+
+```
+{"uncompressed_files_paths": ["/home/user/archive/file1.txt", "/home/user/archive/file2.jpg", ...]}
+```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Write File Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Write File Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/write-file-tool
+## Article Content: 
+### Write File Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **Write File Tool** is a tool for writing and editing files. It allows specifying the file you want to write, the content to write and the option to overwrite the file or not. It also allows you to specify the exact line where you want to write the content. This tool returns a message indicating the result of the operation.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool is useful in any application or system that needs to manipulate text files programmatically. It can be used to edit settings, record data, create log files, among other things. This makes it easier for the user to handle:
+
+- File Manipulation: It facilitates editing and manipulation of text files without the need to manually open the files in an editor.
+- Task Standardization: It standardizes writing files from different parts of an application.
+- Security: It creates automatic backups when writing existing files, preventing data loss.
+
+Using this tool consists of the following actions:
+
+- **Processing Arguments**
+
+    It takes the following input parameters:
+
+    - `filepath`: It specifies the file (file path)
+    - `content`: The content to write
+    - `override`: Whether the file should be overwritten
+    - `lineno`: The line on which the content should be written
+
+- **Creating the File**
+
+    If the specified file does not exist, it creates it.
+
+- **Backup**
+
+    If the file exists, it reads it and creates a backup copy of it by adding a timestamp to the file name (`.bak%timestamp%`).
+
+- **Writing the Content**
+    - Override: If the override option is enabled, the file is cleaned up and the specified content is written, either at the end of the file (if line number is not specified) or on a specific line.
+    - No Override: If no override is chosen, the content is appended to the end of the existing file.
+
+- **Returning the Result**
+    It returns a message including the file path and whether a backup was created. For example:
+    ```
+    { “message”: “File /tmp/test.txt written successfully, backup: True”}
+    ```
+    if the file was modified and a backup was created.
+    ```
+    { “message”: “File /tmp/test.txt written successfully, backup: False”}
+    ```
+    if a backup did not need to be created.
+
+#### Usage Example
+
+Imagine we want to write *Hello World* in the file `/tmp/test.txt`, overwriting its contents, in the first line of the file. Our entry could be:
+- filepath: /tmp/test.txt
+- content: Hello World
+- override: True
+- lineno: 1
+
+The Write File Tool will process these parameters, write *Hello World* to the first line of the `/tmp/test.txt` file and return a message indicating that the operation completed successfully and whether a backup was created.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
@@ -47516,7 +48672,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.8.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.1){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.7.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
