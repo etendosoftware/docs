@@ -1,8 +1,7 @@
 ---
 tags: 
   - callout
-  - price lists
-  - net amount calculation
+  - extended callout
   - Etendo Classic
 ---
 
@@ -16,7 +15,7 @@ This section discusses how to implement a callout that extends from another call
 
 This section is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this public GitHub repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples).
+The code of the example module can be downloaded from this public GitHub repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="_blank"}.
 
 ##  Defining Callouts
 
@@ -24,7 +23,7 @@ Two callouts will be shown. One of them is the parent callout and the other one 
 
 ####  Defining Parent Callout
 
-The following example follows [this guide](how-to-create-a-callout.md) to implement the callout. The example shows a callout that edits value of the **Name** field.
+The following example follows [this guide](How_to_create_a_Callout.md) to implement the callout. The example shows a callout that edits value of the **Name** field.
 
 ```java
   package com.etendoerp.client.application.examples.callouts;
