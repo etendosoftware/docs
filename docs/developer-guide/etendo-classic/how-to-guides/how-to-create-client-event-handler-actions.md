@@ -9,274 +9,117 @@ tags:
   
 ##  Overview
 
-This section discusses how to implement client side (javascript) functions which are executed before or after an event fired on a standard window of the User Interface.
+  This section discusses how to implement client-side functions (JavaScript) that are executed before or after an event is fired in a standard window of the User Interface.
   
 ##  Example Module
 
-This is supported by an example module which shows examples of the code shown and discussed.
+  This is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this mercurial repository:  https://code.openbravo.com/erp/mods/org.openbravo.platform.ci/
+  The code of the example module can be downloaded from this repository:
+  [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java).
 
 ##  Defining Client Event Handler Actions
 
-A client event handler action is a function in javascript available through a global ID. **The global ID should be unique, it is strongly adviced to use the module's db prefix.** The action has to be defined in a javascript file
-located in the module, see [here](../how-to-guides/client-side-development-and-api.md#adding-javascript-to-etendo) for information on how to add javascript code to Etendo.
+  A **Client Event Handler is a component that allows developers to respond to specific events in Etendo**, such as the creation, update or deletion of entities. These handlers are essential for implementing custom business logic that executes when certain changes occur in the database.
 
-The following is an example of this kind of actions: it shows a message **after** saving a record. The message type and content depends on if we are creating or updating the record.
-  
-    
-     
-    OB.OBPFCI = {};
-    OB.OBPFCI.ClientSideEventHandlers = {};
-    OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB = '189';
-     
-    OB.OBPFCI.ClientSideEventHandlers.showMessage = function (view, form, grid, extraParameters, actions) {
-      var data = extraParameters.data;
-     
-      view.messageBar.keepOnAutomaticRefresh = true;
-      if (extraParameters.isNewRecord) {
-        // Save flow
-        view.messageBar.setMessage(isc.OBMessageBar.TYPE_SUCCESS, 'New Record', 'Created Product Category with name ' + data.name);
-      } else {
-        // Update flow
-        view.messageBar.setMessage(isc.OBMessageBar.TYPE_INFO, 'Updated Record', 'Updated Product Category with name ' + data.name);
-      }
-      OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-    };
-     
-    OB.EventHandlerRegistry.register(OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.showMessage, 'OBPFCI_ShowMessage');
+### Step 1: Creating an Action
 
-As you can see, the action is placed in a global object, in this case the module's **dbprefix** is used. 
-
-!!!important
-    You should not use **var** before the global object definition, otherwise your var is not global. This is because the global javascript code included in Etendo is in fact executed within a function.
-
-This kind of actions receives 5 arguments:
-
-  * **view** : the standard view ([`OBStandardView`](../how-to-guides/client-side-development-and-api.md#OBStandardView)) which provides access to the complete window and tab structure in a loaded window. 
-  * **form** : the  [OBViewForm](../how-to-guides/client-side-development-and-api.md#OBViewForm)  which contains the fields, the form can also be the form used in inline grid editing. 
-  * **grid** : the  [OBViewGrid](../how-to-guides/client-side-development-and-api.md#OBViewGrid)  which contains the list of records loaded for the tab. 
-  * **extraParameters** : extra information provided by the event handler. Its content depends on the type of event. 
-  * **actions** : the stack of actions to be executed. It must **not be modified**. It must be used just for invoking `OB.EventHandlerRegistry.callbackExecutor` as shown in the code above. This ensures the correct execution of all actions. 
+  * Navigate to the **Process Definition** window.
+  * Create a new record and define the **UI pattern** as **Action**.
+  * Mark the process as **Multi Record**.
 
 !!!info
-    Each action is responsible of invoking `OB.EventHandlerRegistry.callbackExecutor`. If an action does not call it, the subsequent actions (if any) will not be executed.  
+    Check the box to indicate that the process is **Multi Record** (if it is necessary to handle multiple registrations at the same time).
 
-##  Registering, Setting an Action for an Event within a Tab
+![createjobs1.png](https://docs.etendo.software/latest/assets/legacy/technicaldocumentation/platform/createjobs1.png)
 
-A client event handler action is linked to an event launched in a particular tab. This link is created by registering the action programmatically. Thus, it is possible to:
+### Step 2: Create a Button to Execute the Action
 
-  * Add more than one action for a particular event in a tab 
-  * Override/overwrite actions defined by other modules 
+  * Create Column: Adds a column in the corresponding table.
+  * Create Field: Create a field in the window where you want the button to appear.
+  * Set the field to execute the action.
+  * Implementing the Java Class for Action.
 
-A client event handler action is registered through the `OB.EventHandlerRegistry.register` method. It expects 4 parameters:
+##  Define the Event Handler Class
+  In this step, the key methods needed to handle event actions will be implemented:
 
-  * **tab id**
-  * **event type** : the type of event that will cause the execution of the action 
-  * **callback function** : the client event handler action itself 
-  * **action id** : can be used to overwrite an existing action registered using the same id 
-        
-        OB.EventHandlerRegistry.register(OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.showMessage, 'OBPFCI_ShowMessage');
+  * Method getObservedEntities() : This method defines the entities that will be observed by the Event Handler. This information is essential for the event handler to know what kind of entities it should react to.
 
-Some comments about this code:
+  * Method onUpdate() : This method is executed when a watched entity is updated.
 
-  * `OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB` is a constant we have defined which holds the ID of the [Product Category](../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md#product-category) header tab. 
-  * `OB.EventHandlerRegistry.POSTSAVE` is the event type. 
+  * Method onSave() : This method is executed when a new entity is created.
 
-The **event types** currently supported are:
+  * Method onDelete() : This method is executed when an observed entity is eliminated.
 
-  * **OB.EventHandlerRegistry.PRESAVE**: the action will be launched before creating or updating a record in a tab of a standard window. 
-  * **OB.EventHandlerRegistry.POSTSAVE**: the action will be launched after creating or updating a record in a tab of a standard window. 
-  * **OB.EventHandlerRegistry.PREDELETE**: the action will be launched before deleting a record in a tab of a standard window.
+## Examples
 
-In the case of PRESAVE and POSTSAVE, the **extraParameters** argument will contain the following information:
+### getObservedEntities()
+In the following code, getObservedEntities returns the entities to be observed.
+```java 
+@Override
+protected Entity[] getObservedEntities() {
+  return entities;
+}
+```   
 
-  * **data**: the values of the record (before saving it, in the case of **PRESAVE**, and after saving it, in the case of **POSTSAVE**) 
-  * **isNewRecord**: a flag that indicates if the record is new. It can be used to distinguish between the **save** and **update** events. 
+### onUpdate()
+The following method listens for update events and adds a dot to the title if it is not present.
+```java
+public void onUpdate(@Observes EntityUpdateEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  final Greeting greeting = (Greeting) event.getTargetInstance();
+  final String title = greeting.getTitle();
+  if (title != null && !title.endsWith(".")) {
+    final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+    event.setCurrentState(greetingTitleProperty, title + ".");
+  }
+  logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
+}
+```
+### onSave()
+In the following code, onSave adjusts the title and adds a translation when a new greeting is created.
+```java 
+public void onSave(@Observes EntityNewEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+  final Greeting greeting = (Greeting) event.getTargetInstance();
+  final String title = greeting.getTitle();
+  if (title != null && !title.endsWith(".")) {
+    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+    event.setCurrentState(greetingTitleProperty, title + ".");
+  }
 
-In the case of PREDELETE, the **extraParameters** argument will contain the following information:
+  final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
+  greetingTrl.setGreeting(greeting);
+  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+  greetingTrl.setName(greeting.getName());
+  greetingTrl.setTitle(greeting.getTitle());
+  greetingTrl.setTranslation(false);
 
-  * **recordsToDelete**: the selected records in the grid which are going to be deleted, with the values of each record. 
+  final Property greetingTrlProperty = greetingEntity.getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
+  @SuppressWarnings("unchecked")
+  final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
+  greetingTrls.add(greetingTrl);
 
-####  Multiple Actions Functions per Event, Call Order
+  logger.info("Greeting {} is being created", event.getTargetInstance().getId());
+}
+``` 
 
-The client event handler actions can have a sort property to control the call-order, if there are multiple actions for one event in the same tab.
-
-It is, for example, set like this:
-    
-    OB.OBPFCI.ClientSideEventHandlers.showMessage.sort = 20;
-
-Actions with a lower sort value will be executed before actions with a higher one. If an action does not have a sort defined, it gets the sort 100 by default.
-
-####  Overriding/Replacing an Action
-
-An action can be registered using an ID (**action id**). If there is already an action registered with the same ID for the same tab and event type, then it is replaced by the new registration.
-
-##  Examples
-
-###  Post-save Action: Open a Tab
-
-The following example shows how to open a new tab **after** saving a record.
-
-    
-    
-     
-    OB.OBPFCI.PRODUCT_HEADER_TAB = '180';
-    OB.OBPFCI.ClientSideEventHandlers.openTab = function (view, form, grid, extraParameters, actions) {
-      if (extraParameters.isNewRecord) {
-        // Save flow
-        OB.Utilities.openDirectTab(OB.OBPFCI.PRODUCT_HEADER_TAB);
-      }
-      OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-    };
-     
-    OB.OBPFCI.ClientSideEventHandlers.openTab.sort = 120;
-    OB.EventHandlerRegistry.register(OB.OBPFCI.PRODUCT_CATEGORY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.openTab, 'OBPFCI_OpenTab');
-
-In this case, we are opening the [Product](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) window after creating a new [Product Category](../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md#product-category). We use `extraParameters.isNewRecord` to identify the save flow. Finally, we are invoking `OB.EventHandlerRegistry.callbackExecutor` to ensure the execution of the subsequent actions. In addition, we are giving a sort number of 120.
-
-###  Post-save Action: Refresh the Grid
-
-The following example shows how to refresh the grid **after** saving or updating a record.
-    
-     
-    OB.OBPFCI.COUNTRY_HEADER_TAB = '135';
-    OB.OBPFCI.ClientSideEventHandlers.refreshGrid = function (view, form, grid, extraParameters, actions) {
-      var viewInGridMode = !view.isShowingForm,
-          callback;
-     
-      callback = function () {
-        OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-      };
-     
-      if (viewInGridMode) {
-        grid.refreshGridFromClientEventHandler(callback);
-      }
-    };
-     
-    OB.EventHandlerRegistry.register(OB.OBPFCI.COUNTRY_HEADER_TAB, OB.EventHandlerRegistry.POSTSAVE, OB.OBPFCI.ClientSideEventHandlers.refreshGrid, 'OBPFCI_RefreshGrid');
-
-Note that we are making use of a function of the grid called `refreshGridFromClientEventHandler`, that is a special grid refresh method adapted to be used within this type of actions.
-
-This way, we are forcing the grid in the header of the [Country and Region](../../../user-guide/etendo-classic/basic-features/general-setup/application.md#country-and-region) window to be refreshed every time a new record is created/updated on it by using the grid view.
-
-###  Pre-save Action: Client Validation
-
-In this example, we are checking a user's e-mail **before** saving/updating a record.
-
-    
-    
-     
-    OB.OBPFCI.USER_HEADER_TAB = '118';
-    OB.OBPFCI.ClientSideEventHandlers.validateEmail = function (view, form, grid, extraParameters, actions) {
-      var data = extraParameters.data,
-          emailPattern = /^\w+([\.\-]?\w+)*@\w+([\.\-]?\w+)*(\.\w{2,3})+$/;
-     
-      if (data.email && !emailPattern.test(data.email)) {
-        view.messageBar.setMessage(isc.OBMessageBar.TYPE_ERROR, 'Invalid Email', 'The email address ' + data.email + ' is not valid');
-        return; // Interrupting save action: not calling OB.EventHandlerRegistry.callbackExecutor
-      }
-      OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-    };
-     
-    OB.EventHandlerRegistry.register(OB.OBPFCI.USER_HEADER_TAB, OB.EventHandlerRegistry.PRESAVE, OB.OBPFCI.ClientSideEventHandlers.validateEmail, 'OBPFCI_ValidateEmail');
-
-Note that if the e-mail is not valid, we do not call `OB.EventHandlerRegistry.callbackExecutor` so the save operation is **not** performed.
-
-###  Pre-save Action: Calling Server Side
-
-In this case, we are going to call a server side action **before** saving a [Goods Shipment](../../..//user-guide/etendo-classic/basic-features/sales-management/transactions.md#goods-shipment) line. To understand this example is important to know the concept of [Action Handler](../../../developer-guide/etendo-classic/concepts/etendo-architecture.md#actionhandler-server-side-calling-from-the-client).
-
-    
-    
-     
-    OB.OBPFCI.GOODS_SHIPMENT_LINES_TAB = '258';
-    OB.OBPFCI.ClientSideEventHandlers.checkStorageBin = function (view, form, grid, extraParameters, actions) {
-      var data = extraParameters.data,
-          callback, storageBin;
-     
-      if (data.storageBin) {
-        storageBin = data.storageBin;
-      }
-     
-      callback = function (response, cdata, request) {
-        var row, stack, level;
-        if (cdata && cdata.storageBinInfo) {
-          row = cdata.storageBinInfo.row;
-          stack = cdata.storageBinInfo.stack;
-          level = cdata.storageBinInfo.level;
-          if (row !== '0') {
-            view.messageBar.setMessage(isc.OBMessageBar.TYPE_ERROR, 'Invalid Storage Bin', 'Only storage bins with Row 0 are allowed');
-            return; // Interrupting save action: not calling OB.EventHandlerRegistry.callbackExecutor
-          }
-          view.messageBar.setMessage(isc.OBMessageBar.TYPE_INFO, 'Shipment Line Saved', 'Storage Bin Info: Row ' + row + ', Stack ' + stack + ', Level ' + level);
-          OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-        }
-      };
-     
-      // Calling action handler
-      OB.RemoteCallManager.call('org.openbravo.platform.ci.actionhandler.GoodsShipmentLinesActionHandler', {
-        storageBinId: storageBin
-      }, {}, callback);
-     
-    };
-     
-    OB.EventHandlerRegistry.register(OB.OBPFCI.GOODS_SHIPMENT_LINES_TAB, OB.EventHandlerRegistry.PRESAVE, OB.OBPFCI.ClientSideEventHandlers.checkStorageBin, 'OBPFCI_CheckStorageBin');
-
-The above example calls to `GoodsShipmentLinesActionHandler`. This action handler returns the row, stack and level of the storage bin whose ID has been sent in the request. This ID has been retrieved from the goods shipment line that we are about to save.
-
-The record is **not** saved if the storage bin row is not 0. Otherwise, we show a message with the storage bin information.
-
-###  Pre-delete Action: Client Validation
-  
-In this case, we are going to call a server side action **before** deleting a [Sales Order](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) line. As in the previous example, to understand this one is important to know the concept of [Action Handler](../../../developer-guide/etendo-classic/concepts/etendo-architecture.md#actionhandler-server-side-calling-from-the-client).
-
-    
-     
-    OB.CancelAndReplace.ClientSideEventHandlersPreDelete.showMessage = function (view, form, grid, extraParameters, actions) {
-      var selectedRecords = extraParameters.recordsToDelete,
-          record, replacementRecords = [],
-          record, deliveredQuantity;
-     
-      view.messageBar.keepOnAutomaticRefresh = true;
-     
-      callback = function (response, cdata, request) {
-        for (i = 0; i < cdata.result.length; i++) {
-          record = cdata.result[i].record;
-          deliveredQuantity = cdata.result[i].deliveredQuantity;
-          if (deliveredQuantity !== 0) {
-            var msgInfo = [];
-            msgInfo.push(record.lineNo);
-            msgInfo.push(record.product$_identifier);
-            view.messageBar.setMessage(isc.OBMessageBar.TYPE_ERROR, null, OB.I18N.getLabel('CannotDeleteLineWithDeliveredQtyInReplacementLine', msgInfo));
-            return;
-          }
-        }
-        OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-      };
-     
-      if (view.getParentRecord().documentStatus === 'TMP') {
-        for (i = 0; i < selectedRecords.length; i++) {
-          record = selectedRecords[i];
-          if (record.replacedorderline) {
-            replacementRecords.push(record);
-          }
-        }
-     
-        if (replacementRecords.length) {
-          //Calling action handler
-          OB.RemoteCallManager.call('org.openbravo.common.actionhandler.CancelAndReplaceGetCancelledOrderLine', {
-            records: replacementRecords
-          }, {}, callback);
-        } else {
-          OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-        }
-      } else {
-        OB.EventHandlerRegistry.callbackExecutor(view, form, grid, extraParameters, actions);
-      }
-    };
-     
-    OB.EventHandlerRegistry.register(OB.CancelAndReplace.SALES_ORDERLINES_TAB, OB.EventHandlerRegistry.PREDELETE, OB.CancelAndReplace.ClientSideEventHandlersPreDelete.showMessage, 'OBCancelAndReplace_ShowMessage');
+### onDelete()
+The following method is executed when a greeting is deleted and records the deletion in the log.
+```java 
+public void onDelete(@Observes EntityDeleteEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
+}
+```
 
 ---
 
