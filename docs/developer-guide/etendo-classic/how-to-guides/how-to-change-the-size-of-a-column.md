@@ -6,7 +6,7 @@ tags:
   - Column Size
 ---
 
-# How To Change The Size of a Column
+# How to Change the Size of a Column
 
 ## Overview
 
