@@ -10,20 +10,13 @@ tags:
 
 ## Overview
 
-This section explains **how to change the size of a column** inside the database. It enables the user to have a certain amount of flexibility within his/her database.
-
-## Recommended articles
-
-Before reading this guide, it is necessary to have a proper understanding of Etendo Modularity concept and how to create and package a module.
-
-!!!info
-    In case you are working with configuration scripts or templates on a regular basis, visit [How to Create a Configuration Script](../../etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md).
+This section explains **how to change the size of a column** inside the database. It enables the user to have a certain amount of flexibility within the database.
 
 ## Execution Steps
 
-In Etendo you are able to **change the size of a column**. To achieve this you must follow the following steps:
+In Etendo, it is possible to **change the size of a column**. To achieve this, these steps must be followed:
 
-  1. Create a template and set its status as _In Development_.
+  1. Create a template and set its status as **In Development**.
   2. Modify the column size within the database with the **ALTER TABLE** SQL command.
 
     !!!info
@@ -38,15 +31,15 @@ In Etendo you are able to **change the size of a column**. To achieve this you m
     ALTER TABLE <table_name> MODIFY <column_name> <type>(<new_size>)
     ```
 
-  3. Update the new column size in the **Application Dictionary**. For this, we go to the **Tables and Columns** window, find the column definition and specify the new size there.
-  4. Export the database: `./gradlew export.database` (with this you are exporting the template definitions).
-  5. Export the configuration script: `./gradlew export.config.script` (with this you are exporting the core changes into the template).
+  3. Update the new column size in the **Application Dictionary**. For this, go to the **Tables and Columns** window, find the column definition and specify the new size there.
+  4. Export the database: `./gradlew export.database` (with this action, the template definitions are being exported).
+  5. Export the configuration script: `./gradlew export.config.script` (with this action, the core changes into the template are being exported).
   6. Check the generated configuration script and verify that the change regarding the new column size appears in the first lines.
 
 !!!note
-    As a final remark with great importance: If the column that has been modified is being used by a database function by giving its value to another variable for example, you must check that this variable has an equal or greater size (at least the size of the new modified column). Since if not, the process would fail. This means, if the variable's size was not enough to store the columns content, you have to modify the function as well, by adjusting the size of the variable in question and exporting this change into your template.
+    If the column that has been modified is being used by a database function by giving its value to another variable, this variable must have an equal or greater size (at least the size of the new modified column). Since if not, the process would fail. This means, if the variable's size was not enough to store the columns content, the function as well must be modified by adjusting the size of the variable in question and exporting this change into the template.
 
-So please **verify that your new column size does not affect** you in any way (functions or triggers) working with your database.
+As a last consideration, **verify that the new column size does not affect** functions or triggers working with the database.
 
 ---
 
