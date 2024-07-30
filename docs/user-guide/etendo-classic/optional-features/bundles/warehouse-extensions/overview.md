@@ -14,11 +14,12 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ## Modules
 
+
 ### Stock History
 
 :octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
-It provides updated information about the daily history stock of the products. 
+This module provides updated information about the daily history stock of the products. 
 
 !!! info
     For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
@@ -40,6 +41,15 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+
+### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
 
 ## Uninstall bundle
 

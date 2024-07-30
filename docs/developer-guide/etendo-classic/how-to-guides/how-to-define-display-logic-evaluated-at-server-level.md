@@ -27,7 +27,7 @@ This expression must follow the same syntactic rules that are used in the normal
 An example of an expression would be:
 `@uomManagement@ = 'Y' & @enableNegativeStockCorrections@ = 'Y'`
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level-1.png)
 
 ### Limitations
 

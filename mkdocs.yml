@@ -236,7 +236,6 @@ nav:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
           - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md
-          - Dev Assistant: user-guide/etendo-copilot/bundles/dev-assistant.md
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
           
 
@@ -305,7 +304,7 @@ nav:
         - Selectors: developer-guide/etendo-classic/concepts/selectors.md
 #        - Skins: developer-guide/etendo-classic/concepts/Skins.md
 #        - SQLC: developer-guide/etendo-classic/concepts/SQLC.md
-#        - Standard Windows: developer-guide/etendo-classic/concepts/Standard_Windows.md
+        - Standard Windows: developer-guide/etendo-classic/concepts/standard-windows.md
         - Tables: developer-guide/etendo-classic/concepts/Tables.md
 #        - User Interface Design Guidelines: developer-guide/etendo-classic/concepts/User_Interface_Design_Guidelines.md
 #        - Widgets: developer-guide/etendo-classic/concepts/Widgets.md
@@ -339,13 +338,13 @@ nav:
         - How to Create a Callout that Extends from Another Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout.md
         - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module.md 
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
-#        - How to create a Computed Column: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Computed_Column.md
+        - How to create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
 #        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
 #        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
-#        - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md
+        - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Manual UI Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Manual_UI_Process.md
@@ -362,7 +361,7 @@ nav:
 #        - How to create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
         - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
-#        - How to create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure.md
+        - How to create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
 #        - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource.md
         - How to Create a Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table.md
 #        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md
@@ -385,7 +384,7 @@ nav:
           - How to Create Jest Test Cases: developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases.md
           - How to Create JUnit Test Cases: developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases.md
 #        - How to Create Your Own Import Process with IDL: developer-guide/etendo-classic/how-to-guides/How_to_Create_Your_Own_Import_Process_with_IDL.md
-#        - How to Define a Table as a Tree: developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree.md
+        - How to Define a Table as a Tree: developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree.md
 #        - How to define an on Create Default: developer-guide/etendo-classic/how-to-guides/How_to_define_an_on_Create_Default.md
         - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
 #        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/How_To_Define_Display_Logic_For_Tabs.md
@@ -393,7 +392,7 @@ nav:
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
 #        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1.md
 #        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
-#        - How to embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab.md
+        - How to embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab.md
 #        - How To Enable Customization Of The Login Page: developer-guide/etendo-classic/how-to-guides/How_To_Enable_Customization_Of_The_Login_Page.md
         - How To Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
@@ -402,7 +401,7 @@ nav:
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
 #        - How to implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors.md
 #        - How To Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/How_To_Implement_FICExtension_Hook.md
-#        - How To Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/How_To_Implement_JsonDataServiceExtraActions_Hook.md
+#        - How To Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/How_Tuo_Implement_JsonDataServiceExtraActions_Hook.md
 #        - How To Log: developer-guide/etendo-classic/how-to-guides/How_To_Log.md
 #        - How to Migrate 2.50 Modules to 3.0: developer-guide/etendo-classic/how-to-guides/How_to_Migrate_2_50_Modules_to_3_0.md
 #        - How to migrate reports and processes to new Cost Engine: developer-guide/etendo-classic/how-to-guides/How_to_migrate_reports_and_processes_to_new_Cost_Engine.md
@@ -458,12 +457,29 @@ nav:
         - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
+      - Bundles: 
+        - Copilot Extensions:
+          - Overview: developer-guide/etendo-copilot/bundles.md/overview.md
+          - Create References: developer-guide/etendo-copilot/bundles.md/create-references.md
+          - Dev Assistant: developer-guide/etendo-copilot/bundles.md/dev-assistant.md
       - Tools:
+        - Overview: developer-guide/etendo-copilot/available-tools/overview.md
+        - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
+        - Create Reference Tool: developer-guide/etendo-copilot/available-tools/create-reference-tool.md
         - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
         - DDL Tool: developer-guide/etendo-copilot/available-tools/ddl-tool.md
+        - File Copy Tool: developer-guide/etendo-copilot/available-tools/file-copy-tool.md
+        - File Downloader Tool: developer-guide/etendo-copilot/available-tools/file-downloader-tool.md
         - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
-        - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md    
+        - PDF to Images Tool: developer-guide/etendo-copilot/available-tools/pdf-to-images-tool.md
+        - Print Directory Tool: developer-guide/etendo-copilot/available-tools/print-directory-tool.md
+        - Read File Tool: developer-guide/etendo-copilot/available-tools/read-file-tool.md
+        - Send Email Tool: developer-guide/etendo-copilot/available-tools/send-email-tool.md
+        - Tavily Tool: developer-guide/etendo-copilot/available-tools/tavily-tool.md
+        - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
+        - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
+        - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
       - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
