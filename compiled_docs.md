@@ -34567,6 +34567,194 @@ Last, save changes.
 This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create a Callout that Extends from Another Callout
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Callout that Extends from Another Callout
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout
+## Article Content: 
+###  How to Create a Callout that Extends from Another Callout
+  
+####  Overview
+
+This section discusses how to implement a callout that extends from another callout. The main important elements needed for the new feature are explained. More details about callouts can be found in [How to create a Callout](How_to_create_a_Callout.md).
+  
+####  Example Module
+
+This section is supported by an example module which shows examples of the code shown and discussed.
+
+The code of the example module can be downloaded from this public GitHub repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="_blank"}.
+
+####  Defining Callouts
+
+Two callouts will be shown. One of them is the parent callout and the other one is the child callout. In this example, these two callouts are working in **Assets** window.
+
+######  Defining Parent Callout
+
+The following example follows [this guide](How_to_create_a_Callout.md) to implement the callout. The example shows a callout that edits value of the **Name** field.
+
+```java
+  package com.etendoerp.client.application.examples.callouts;
+  
+  import javax.servlet.ServletException;
+   
+  import org.openbravo.erpCommon.ad_callouts.SimpleCallout;
+   
+  public class OBEXAPP_Assets_Name extends SimpleCallout {
+   
+    protected static final String MODIFIED_FIELD = "_UPDATED";
+   
+    @Override
+    protected void execute(CalloutInfo info) throws ServletException {
+   
+      // get value of field name and update value
+      final String name = info.getStringParameter("inpname");
+      info.addResult("inpname", name + MODIFIED_FIELD);
+   
+      // Combo example. Added three currencies to currency combo.
+      info.addSelect("inpcCurrencyId");
+      // USD currency is selected.
+      info.addSelectResult("100", "USD", true);
+      info.addSelectResult("102", "EUR", false);
+      info.addSelectResult("103", "DEM", false);
+      info.endSelect();
+    }
+   
+  }
+```
+
+As you can see, the callout gets the value of **Name** field and concatenates the following string: `_UPDATED`. Besides you can see a code that defines a combo. This code will be explained in the following section.
+
+######  Defining Child Callout
+
+This example callout extends from the parent callout that is defined above. Combo example is explained in next section.
+
+```java
+  package com.etendoerp.client.application.examples.callouts;
+  
+  import javax.servlet.ServletException;
+   
+  public class OBEXAPP_Assets_Desc extends OBEXAPP_Assets_Name {
+   
+    @Override
+    protected void execute(CalloutInfo info) throws ServletException {
+   
+      // OBEXAPP_Assets_Name callout is executed
+      super.execute(info);
+   
+      // Combo example. Removed USD currency from combo and select DEM currency.
+      info.addSelect("inpcCurrencyId");
+      info.removeSelectResult("100");
+      info.addSelectResult("103", "DEM", true);
+      info.endSelect();
+   
+      // Checks if name field has been updated by parent callout.
+      String name = info.getStringParameter("inpname");
+      String message = "Feature 'Extends a Callout' works as expected.";
+      if (name.endsWith(MODIFIED_FIELD)) {
+        info.addResult("inpdescription", message);
+        info.addResult("MESSAGE", message);
+      } else {
+        message = "Feature 'Extends a Callout' not works as expected.";
+        info.addResult("inpdescription", message);
+        info.addResult("ERROR", message);
+      }
+   
+      // Now it is possible to update the 'name' field again and the value will be overwritten
+      info.addResult("inpname", "UPDATED...");
+    }
+  }
+```
+
+First of all, `OBEXAPP_Assets_Desc` callout extends from `OBEXAPP_Assets_Name`. In this situation, you should take into account the following sections in this callout:
+
+  * Run parent callout. 
+  
+  ```java
+      // OBEXAPP_Assets_Name callout is executed
+      super.execute(info);
+  ```
+
+  * Operations for **combo** field are executed. This code is explained in the next section. 
+  
+  ```java
+      // Combo example. Removed USD currency from combo and select DEM currency.
+      info.addSelect("inpcCurrencyId");
+      info.removeSelectResult("100");
+      info.addSelectResult("103", "DEM", true);
+      info.endSelect();
+  ```
+  
+  * Operations **after** parent callout is executed. In this case, child callout checks if name is been modified by parent callout. Then, child callout takes two actions. Update the description field with a message and shows an information or failure message. Finally, the name field is updated again. 
+
+  ```java
+      // Checks if name field has been updated by parent callout.
+      String name = info.getStringParameter("inpname");
+      String message = "Feature 'Extends a Callout' works as expected.";
+      if (name.endsWith(MODIFIED_FIELD)) {
+        info.addResult("inpdescription", message);
+        info.addResult("MESSAGE", message);
+      } else {
+        message = "Feature 'Extends a Callout' not works as expected.";
+        info.addResult("inpdescription", message);
+        info.addResult("ERROR", message);
+      } 
+        
+      // Now it is possible to update the 'name' field again and the value will be overwritten
+      info.addResult("inpname", "UPDATED...");
+  ```
+
+In the following screenshot, you can see how a failure message is displayed.
+
+!!!note
+    For the purpose of this example, a new column named 'EM_Obexapp_Callout' was created to trigger the callout.  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-1.png)
+
+####  Working with Combos
+
+As you can see in above sections, the `OBEXAPP_Assets_Name` callout builds a currency combo. This combo is populated with 3 currencies and one of them is selected.
+  ```java
+      // Combo example. Added three currencies to currency combo.
+      info.addSelect("inpcCurrencyId");
+      // USD currency is selected.
+      info.addSelectResult("100", "USD", true);
+      info.addSelectResult("102", "EUR", false);
+      info.addSelectResult("103", "DEM", false);
+      info.endSelect();
+  ```
+
+You can see the currency combo with 3 currencies and **USD** as selected currency.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-2.png)
+
+  
+Then, child callout `OBEXAPP_Assets_Desc` removes a currency and select another one. This child callout extends `OBEXAPP_Assets_Name` and change the currency combo.
+  ```java
+      // Combo example. Removed USD currency from combo and select DEM currency.
+      info.addSelect("inpcCurrencyId");
+      info.removeSelectResult("100");
+      info.addSelectResult("103", "DEM", true);
+      info.endSelect();
+  ```
+In this screenshot, you can see how currency combo is displayed when child callout is executed.
+
+!!!note
+    The DEM currency is selected and USD currency has been removed.    
+  
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-3.png)
+
+####  Using getStringParameter method
+
+This method is used in callouts to get values of any field of the window (e.g. value of name field in Assets window).
+
+Now, with the inclusion of this project this method takes into account if a parent callout modified a value. If a value was modified,
+`getStringParameter()` method returns value modified by parent callout. If not, `getStringParameter()` method returns the initial value of the parameter. 
+
+---
+
+This work is a derivative of [How to Create a Callout that Extends from Another Callout](http://wiki.openbravo.com/wiki/How_to_create_a_callout_that_extends_from_another_callout){target="blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Create a Chart of Accounts Module
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Chart of Accounts Module
 ## Article URL: 
@@ -48383,6 +48571,35 @@ Article URL: https://etendo.software
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
 
+#### June 2024
+
+##### Etendo Classic
+
+<div style="display: flex;">
+  <div style="flex: 1; padding-right: 10px;">
+    <a href="/whats-new/release-notes/etendo-classic/release-notes"><strong>24.2.0</strong></a><br>
+    Etendo Classic version 24.2.0 has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
+  </div>
+  <div style="flex: 1; padding-right: 10px;">
+    <strong>Fixed Issues</strong><br>
+    In version <a href="/whats-new/release-notes/etendo-classic/release-notes">24.1.8</a>, Issue <a href="https://github.com/etendosoftware/etendo_core/issues/270" target="_blank">#270</a>, which caused unexpected execution of callouts in the <strong>Sales Order</strong> window, has been resolved.
+  </div>
+</div>
+
+##### Copilot Extensions
+
+**Optimizations**
+
+Starting with version [1.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
+
+##### Financial Extensions
+
+[**G/L Journal Clone**](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
+
+Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
+
+---
+
 #### May 2024
 
 ##### Copilot Extensions
@@ -48407,9 +48624,9 @@ Your purchase orders are made easier with the new Copilot assistant. Interact vi
 
 **Optimizations**
 
-As of version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [**Jakarta SOAP Implementation**](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [**Jakarta SOAP with Attachments API**](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
+As of version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
 
-To take advantage of these enhancements, when upgrading to version 1.9.4 or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
+To take advantage of these enhancements, when upgrading to version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
 
 ---
 
@@ -48419,7 +48636,7 @@ To take advantage of these enhancements, when upgrading to version 1.9.4 or high
 
 **Optimizations**
 
-As of version [24.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), the support for [**Tomcat 9**](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
+As of version [24.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
 
 ##### Copilot Extensions
 
@@ -48438,7 +48655,7 @@ In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-not
 
 **Optimizations**
 
-As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [**Jakarta SOAP with Attachments API**](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
+As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
 
 ==ARTICLE_END==
 ==ARTICLE_START==
