@@ -45185,7 +45185,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
 # Article Title: Overview
 ## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Overview
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/overview
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/overview
 ## Article Content: 
 ### Copilot Extensions
 
@@ -45204,7 +45204,7 @@ The Copilot Extensions Bundle includes functionalities for developers to help th
 The **Create Reference Assistant** is a tool that creates a reference in the Etendo Application Dictionary. 
 
 !!!info
-    For more information, visit: [Create Reference Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles.md/create-references.md).
+    For more information, visit: [Create Reference Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles/create-references.md).
 
 #### Dev Assistant
 
@@ -45213,13 +45213,13 @@ The **Create Reference Assistant** is a tool that creates a reference in the Ete
 The **Dev Assistant** is designed to speed up the process of creating windows, tabs, fields, system elements and menu entries.
 
 !!!info
-    For more information, visit: [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles.md/dev-assistant.md).
+    For more information, visit: [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles/dev-assistant.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Create References
 ## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Create References
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/create-references
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/create-references
 ## Article Content: 
 ### Create References
 
@@ -45294,7 +45294,7 @@ Once the development is validated by the developer, and the necessary manual mod
 # Article Title: Dev Assistant
 ## Article Path: /Developer Guide/Etendo Copilot/Bundles/Copilot Extensions/Dev Assistant
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles.md/dev-assistant
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant
 ## Article Content: 
 ### Dev Assistant
 
@@ -48571,30 +48571,71 @@ Article URL: https://etendo.software
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
 
+#### July 2024
+
+##### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+-   [:material-tools: **Tool Pack**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview.md)
+
+    ---
+    
+    The Tool Pack module, available from version [1.3.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
+
+-   [:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+
+    ---
+
+    From version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
+
+-   [:material-robot: **Purchase Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+    
+    ---   
+
+    As of version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
+
+-   [:material-robot: **Dev Assistant**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md)
+
+    ---
+
+    From version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
+
+</div>
+
+:material-bug: **Fixed Issues**
+
+In version [1.2.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
+
+##### Financial Extensions
+
+[:octicons-package-16: **VAT Regularization**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization)
+
+In version [1.16.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
+
+---
+
 #### June 2024
 
 ##### Etendo Classic
 
-<div style="display: flex;">
-  <div style="flex: 1; padding-right: 10px;">
-    <a href="/whats-new/release-notes/etendo-classic/release-notes"><strong>24.2.0</strong></a><br>
-    Etendo Classic version 24.2.0 has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
-  </div>
-  <div style="flex: 1; padding-right: 10px;">
-    <strong>Fixed Issues</strong><br>
-    In version <a href="/whats-new/release-notes/etendo-classic/release-notes">24.1.8</a>, Issue <a href="https://github.com/etendosoftware/etendo_core/issues/270" target="_blank">#270</a>, which caused unexpected execution of callouts in the <strong>Sales Order</strong> window, has been resolved.
-  </div>
-</div>
+:octicons-rocket-24: **New Release Available!**
+
+Etendo Classic version [24.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
+
+:material-bug: **Fixed Issues**
+
+In version [24.1.8](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
 
 ##### Copilot Extensions
 
-**Optimizations**
+:material-trending-up: **Optimizations**
 
 Starting with version [1.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
 
 ##### Financial Extensions
 
-[**G/L Journal Clone**](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
+[:octicons-package-16: **G/L Journal Clone**](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
 
 Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 
@@ -48604,7 +48645,7 @@ Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/rel
 
 ##### Copilot Extensions
 
-[**SQL Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md)
+[:material-robot: **SQL Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md)
 
 In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
 With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
@@ -48615,14 +48656,14 @@ With this assistant, you will be allowed to **formulate questions** in natural l
 
 ##### Copilot Extensions
 
-[**Purchase Expert Assistant**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+[:material-robot: **Purchase Expert Assistant**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
 
 In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
 Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
 
 ##### Spanish Localization
 
-**Optimizations**
+:material-trending-up: **Optimizations**
 
 As of version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
 
@@ -48634,26 +48675,26 @@ To take advantage of these enhancements, when upgrading to version [1.9.4](https
 
 ##### Etendo Classic
 
-**Optimizations**
+:material-trending-up: **Optimizations**
 
 As of version [24.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
 
 ##### Copilot Extensions
 
-[**OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+[:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
 In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
 With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
 
 ##### Procurement Extensions
 
-[**Purchase Invoice Validation**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+[:octicons-package-16: **Purchase Invoice Validation**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
 In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
 
 ##### Platform Extensions
 
-**Optimizations**
+:material-trending-up: **Optimizations**
 
 As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
 
