@@ -20,30 +20,6 @@ The Optical Character Recognition (OCR) Tool is a tool that recognizes text from
 ## Functionality
 
 
-1. Add Copilot OCR Tool dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot.ocrtool:1.0.0')
-    ```
-
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
-
-4. Do an `update.database smartbuild` to compile the environment of Etendo Classic.
-
-    ``` bash title="Terminal"
-    ./gradlew update.database smartbuild --info
-    ``` 
-
-4. After that, configure the tool in a Copilot App, in order to do that, go to **Copilot App** and pick the **OCR Tool** option in the **Tool** tab.
-
-5. Update you application:
-    - If its an OpenAI Assistant, click in the **Sync OpenAI Assistant** button.
-    - If its a Langchain App, restart copilot with the following commands:
-    ``` bash title="Terminal"
-    ./gradlew copilot.stop
-    ./gradlew copilot.start
-    ```
-
-5. Now, your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
 
 ## Examples
 
