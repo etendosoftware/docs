@@ -459,9 +459,9 @@ nav:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Bundles: 
         - Copilot Extensions:
-          - Overview: developer-guide/etendo-copilot/bundles.md/overview.md
-          - Create References: developer-guide/etendo-copilot/bundles.md/create-references.md
-          - Dev Assistant: developer-guide/etendo-copilot/bundles.md/dev-assistant.md
+          - Overview: developer-guide/etendo-copilot/bundles/overview.md
+          - Create References: developer-guide/etendo-copilot/bundles/create-references.md
+          - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
