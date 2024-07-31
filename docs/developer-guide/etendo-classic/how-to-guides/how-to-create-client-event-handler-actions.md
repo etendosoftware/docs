@@ -15,8 +15,7 @@ tags:
 
   This is supported by an example module which shows examples of the code shown and discussed.
 
-  The code of the example module can be downloaded from this repository:
-  [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java).
+  The code of this module can be downloaded from [this repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java).
 
 ##  Defining Client Event Handler Actions
 
@@ -35,25 +34,25 @@ tags:
 
 ### Step 2: Create a Button to Execute the Action
 
-  * Create Column: Adds a column in the corresponding table.
+  * Create Column: Add a column in the corresponding table.
   * Create Field: Create a field in the window where you want the button to appear.
   * Set the field to execute the action.
   * Implementing the Java Class for Action.
 
-##  Define the Event Handler Class
+##  Defining the Event Handler Class
   In this step, the key methods needed to handle event actions will be implemented:
 
-  * Method getObservedEntities() : This method defines the entities that will be observed by the Event Handler. This information is essential for the event handler to know what kind of entities it should react to.
+  * `Method getObservedEntities()` : This method defines the entities that will be observed by the Event Handler. This information is essential for the event handler to know what kind of entities it should react to.
 
-  * Method onUpdate() : This method is executed when a watched entity is updated.
+  * `Method onUpdate()` : It is executed when a watched entity is updated.
 
-  * Method onSave() : This method is executed when a new entity is created.
+  * `Method onSave()` : It is executed when a new entity is created.
 
-  * Method onDelete() : This method is executed when an observed entity is eliminated.
+  * `Method onDelete()` : It is executed when an observed entity is eliminated.
 
 ## Examples
 
-### getObservedEntities()
+### `getObservedEntities()`
 In the following code, getObservedEntities returns the entities to be observed.
 ```java 
 @Override
@@ -62,7 +61,7 @@ protected Entity[] getObservedEntities() {
 }
 ```   
 
-### onUpdate()
+### `onUpdate()`
 The following method listens for update events and adds a dot to the title if it is not present.
 ```java
 public void onUpdate(@Observes EntityUpdateEvent event) {
@@ -79,7 +78,7 @@ public void onUpdate(@Observes EntityUpdateEvent event) {
   logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
 }
 ```
-### onSave()
+### `onSave()`
 In the following code, onSave adjusts the title and adds a translation when a new greeting is created.
 ```java 
 public void onSave(@Observes EntityNewEvent event) {
@@ -110,7 +109,7 @@ public void onSave(@Observes EntityNewEvent event) {
 }
 ``` 
 
-### onDelete()
+### `onDelete()`
 The following method is executed when a greeting is deleted and records the deletion in the log.
 ```java 
 public void onDelete(@Observes EntityDeleteEvent event) {
