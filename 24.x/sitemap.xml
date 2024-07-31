@@ -941,6 +941,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview/</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
