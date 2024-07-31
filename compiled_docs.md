@@ -20051,6 +20051,8 @@ This section describes the Bulk Posting module included in the Etendo Financial 
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
+![](https://docs.etendo.software/latest/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
+
 This functionality is available in the following windows:
 
 - [Amortization](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#bulk-posting)
@@ -20082,13 +20084,13 @@ All the records existing previously to the installation of this new functionalit
 
 ###### Preference Configuration
 
-To configure the preference, go to the **Preference** window and create a new record with the property **Days Back to Refresh Accounting** and the default value **90**. If necessary, it is possible to create another preference by entering a new value and checking the **selected** box.
+To configure the preference, go to the **Preference** window and create a new record with the property **Amount of Days** and the default value **90**. If necessary, it is possible to create another preference by entering a new value and checking the **selected** box.
 
 ###### Background Process
 
-It is necessary to run the **Refresh Accounting Status** background process to update the accounting status column.
+It is necessary to run the **Days Back to Refresh Accounting** background process to update the accounting status column.
 
-![](https://docs.etendo.software/latest/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
