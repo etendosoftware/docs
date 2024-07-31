@@ -346,7 +346,7 @@ applies specific conversion logic to always ensure that names are allowed and
 unique for xml/Java.
 
 For a full listing of all entity and property names, see the [Data Model
-Reference](/developer-guide/etendo-classic/concepts/Data_Model) section.
+Reference](/developer-guide/etendo-classic/concepts/data-model) section.
 
 ####  Entity Naming
 
