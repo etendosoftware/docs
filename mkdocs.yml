@@ -197,7 +197,9 @@ nav:
           - Warehouse Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
-          - Financial Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+          - Financial Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+            - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
