@@ -6130,12 +6130,12 @@ Once the receipt is successfully reactivated, the state of the document changes 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Pending Goods Receipts
 
@@ -6312,12 +6312,12 @@ In case the user has to create orders or invoices among two or more organization
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Matched Invoices
 
@@ -6356,12 +6356,12 @@ Accounting information related to the matched invoices
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Return to Vendor (RTV)
 
@@ -6495,12 +6495,12 @@ The RTV shipment can be posted **if the table "MaterialMgmtShipmentInOut" is** a
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Landed Cost
 
@@ -6813,12 +6813,12 @@ This tab provides Landed Cost Matching accounting information.
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. In this case, this functionality can be used in the "Landed Cost" window and in the "Cost" tab.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button. In this case, this functionality can be used in the **Landed Cost** window and in the **Cost** tab.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ---
 
@@ -7175,12 +7175,12 @@ Once the Inventory is successfully reactivated, the state of the document change
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Goods Movement
 
@@ -7269,12 +7269,12 @@ Once the movement is successfully reactivated, the state of the document changes
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Bill of Materials Production
 
@@ -7325,12 +7325,12 @@ There is a check named **Force Use Of Warehouse Of Selected Storage Bin.** When 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Goods Transaction
 
@@ -8024,12 +8024,12 @@ Product's cost gets decreased.
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Referenced Inventory
 
@@ -9113,12 +9113,12 @@ Once the effort is successfully reactivated, the state of the document changes t
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md) in the Financial Extensions Bundle Documentation.
 
 #### Production Run
 
@@ -9324,12 +9324,12 @@ The information of the product, its location in the warehouse and the quantity u
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md) in the Financial Extensions Bundle Documentation.
 
 #### Maintenance Order
 
@@ -11268,12 +11268,12 @@ Once the shipment is successfully reactivated, the state of the document changes
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Return from Customer
 
@@ -11460,12 +11460,12 @@ Accounting information related to the return material receipt.
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Create Shipments from Orders
 
@@ -11881,12 +11881,12 @@ In case the user has to create orders or invoices among two or more organization
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ##### Advanced Rappels
 
@@ -13118,12 +13118,12 @@ In both cases:
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ##### Advanced Business Partner Settlement
 
@@ -13514,12 +13514,12 @@ In both cases:
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ##### Advanced Business Partner Settlement
 
@@ -14253,12 +14253,12 @@ The following situations can be possible:
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. In the case of the "Financial Account" window, this option can be used in three tabs: Transaction, Imported Bank Statements and Reconciliations.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button. In the case of the "Financial Account" window, this option can be used in three tabs: Transaction, Imported Bank Statements and Reconciliations.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ##### Advanced Business Partner Settlement
 
@@ -14836,12 +14836,12 @@ Accounting information related to the doubtful debt.
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### **Doubtful Debt Run**
 
@@ -16064,12 +16064,12 @@ This is useful to distinguish between the original GL journal and the reverse on
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ##### G/L Journal Clone
 
@@ -16275,12 +16275,12 @@ This is useful to distinguish between the original GL journal and the reverse on
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 
 #### End Year Close
@@ -19118,59 +19118,6 @@ An example for a Profit and Loss report would be:
         -   Node: Profit and Loss linked to the "Heading" Account Tree element which collects all the "Expenses" and "Revenue" account tree elements.
 
 Above node must be an Account Tree element properly configured.
-
-#### Bulk Posting
-
-##### **Introduction**
-
-This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
-
-!!! warning
-    Before using this functionality, remember that this module's background process can affect the performance of the system.
-
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
-
-This functionality is available in the following windows:
-
-- [Amortization](https://docs.etendo.software/latest/financial-management/assets/overview.md#bulk-posting)
-- [Goods Movements](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting_1)
-- [Financial Account](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
-- [Matched Invoices](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_2)
-- [Cost Adjustment](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting_3)
-- [Bill of Materials Production](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting_2)
-- [Internal Consumption](https://docs.etendo.software/latest/production-management/transactions.md#bulk-posting_1)
-- [Doubtful Debt](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
-- [Landed Cost](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_4)
-- [G/L Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#bulk-posting_1)
-- [Simple G/L Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#bulk-posting)
-- [Work Effort](https://docs.etendo.software/latest/production-management/transactions.md#bulk-posting)
-- [Goods Receipt](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting)
-- [Goods Shipment](https://docs.etendo.software/latest/sales-management/transactions.md#bulk-posting)
-- [Return Material Receipt](https://docs.etendo.software/latest/sales-management/transactions.md#bulk-posting_1)
-- [Return to Vendor Shipment](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_3)
-- [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#bulk-posting_2)
-- [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_1)
-- [Payment In](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting_1)
-- [Payment Out](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting)
-- [Physical Inventory](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting)
-
-
-###### Accounting Status
-
-All the records existing previously to the installation of this new functionality have a default “pending refresh” value in the column Accounting Status. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
-
-####### Preference Configuration
-
-To configure the preference, go to the “Preference” window and create a new record with the property “Days Back to Refresh Accounting” and the default value “90”. If necessary, it is possible to create another preference by entering a new value and checking the “selected” box.
-
-####### Background Process
-
-It is necessary to run the “Refresh Accounting Status” background process to update the accounting status column.
-
-![](https://docs.etendo.software/latest/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Assets
@@ -19340,12 +19287,12 @@ Etendo allows multiple amortizations to be processed and unprocessed. This proce
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 > 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 
 #### Asset Amortization Report (Excel)
@@ -19862,8 +19809,8 @@ This functionality allows the user to configure and grant rappels to business pa
 	For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Financial Extensions Bundle
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Overview
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview
 ## Article Content: 
@@ -19949,7 +19896,7 @@ This feature allows entering in the system all the financings the company has. I
 This functionality allows the user to post or unpost multiple records at the same time.
 
 !!! info
-    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
+    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ##### Business Partner Settlement
 
@@ -20083,6 +20030,65 @@ This functionality allows the user to adjust the accounts to ensure that the VAT
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Bulk Posting
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Bulk Posting
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting
+## Article Content: 
+### Bulk Posting
+
+#### Overview
+
+This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+!!! warning
+    Before using this functionality, remember that this module's background process can affect the performance of the system.
+
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
+
+This functionality is available in the following windows:
+
+- [Amortization](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#bulk-posting)
+- [Goods Movements](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#bulk-posting_1)
+- [Financial Account](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
+- [Matched Invoices](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#bulk-posting_2)
+- [Cost Adjustment](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#bulk-posting_3)
+- [Bill of Materials Production](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#bulk-posting_2)
+- [Internal Consumption](https://docs.etendo.software/latest/basic-features/production-management/transactions.md#bulk-posting_1)
+- [Doubtful Debt](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
+- [Landed Cost](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#bulk-posting_4)
+- [G/L Journal](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#bulk-posting_1)
+- [Simple G/L Journal](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#bulk-posting)
+- [Work Effort](https://docs.etendo.software/latest/basic-features/production-management/transactions.md#bulk-posting)
+- [Goods Receipt](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#bulk-posting)
+- [Goods Shipment](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#bulk-posting)
+- [Return Material Receipt](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#bulk-posting_1)
+- [Return to Vendor Shipment](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#bulk-posting_3)
+- [Sales Invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#bulk-posting_2)
+- [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#bulk-posting_1)
+- [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_1)
+- [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
+- [Physical Inventory](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#bulk-posting)
+
+
+##### Accounting Status
+
+All the records existing previously to the installation of this new functionality have a default **pending refresh** value in the column **Accounting Status**. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
+
+###### Preference Configuration
+
+To configure the preference, go to the **Preference** window and create a new record with the property **Days Back to Refresh Accounting** and the default value **90**. If necessary, it is possible to create another preference by entering a new value and checking the **selected** box.
+
+###### Background Process
+
+It is necessary to run the **Refresh Accounting Status** background process to update the accounting status column.
+
+![](https://docs.etendo.software/latest/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
