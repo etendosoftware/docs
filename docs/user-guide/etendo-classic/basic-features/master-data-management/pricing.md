@@ -302,7 +302,7 @@ This feature requires to set as "Active":
   - Sales Invoice
   - and Sales Quotation
 
-#### How Promotions are applied
+#### How Promotions are Applied
 
 Rules are applied to order or invoice lines based on the filters in that rule, for example to a specific Business Partner Category acquiring a concrete set of products during a fixed period of time.
 
