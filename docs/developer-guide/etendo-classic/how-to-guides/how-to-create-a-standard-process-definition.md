@@ -527,13 +527,11 @@ This functionality, which can be used in processes as well as in windows, allows
 This feature introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing, which is then used by the system as specified in the process definition.
 
 
-#### Reference Use in Process Definition
+#### Example in Process Definition
 
 The proposed solution involves incorporating a **Process File Upload** Reference as a process parameter in process definitions.
 
-##### Reference
-
-This reference has a USER INTERFACE DEFINITION which calls the process 
+This reference has a User Interface Definition which calls the process, this can be seen in the **Process Definition tab**:
 
 `com.etendoerp.upload.file.definition.ProcessFileUploadUIDefinition`
 
@@ -543,8 +541,6 @@ This definition calls a process `OBProcessFileUpload` that executes a JavaScript
 
 !!!info
     Any file can be selected because this module was thought as a base so that programmers can use it for their needs. 
-
-##### Example
 
 This is an example of a `Process Definition` created, it is defined as follows:
 
