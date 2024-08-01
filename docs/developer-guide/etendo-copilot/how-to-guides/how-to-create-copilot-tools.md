@@ -3,29 +3,33 @@ tags:
     - Copilot
     - IA
     - Machine Learning
+    - Creating tools
 ---
 
 # How to create Copilot tools
 
 ## Overview
-This article explains how to create a new tool for Copilot.
+
+This article explains **how to create** a new tool for Copilot.
 
 ## Etendo Copilot
 
-Etendo Copilot module allows the creation of tools that add functionality to it. These tools are developed in Python and run in the Docker container where Copilot runs. Next, we explain how to create a new tool for Copilot, in a new module. But you can also add a new tool in an existing module and it can contain several tools.
+**Etendo Copilot** module allows the creation of tools that add functionality to it. These tools are developed in Python and run in the Docker container where Copilot runs. Next, there will be an explanation about how to create a new tool for Copilot in a new module. Anyway, a new tool can be added in an existing module and it can contain several tools.
 
 !!! note "Etendo Copilot is based on Langchain"
-    The Langchain libraries are available by default in Copilot. You can use them in your tools. See [Langchain documentation](https://python.langchain.com/){target="_blank"} for more information.
+    The Langchain libraries are available by default in Copilot. Use them in your tools. See [Langchain documentation](https://python.langchain.com/){target="_blank"} for more information.
 
 ### Requirements
-- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](../../developer-guide/etendo-copilot/installation.md){target="_blank"}.
+
+- Copilot module installed in Etendo Classic. If you do not have it, install it using the getting started guide for the [Copilot API Installation](../installation.md){target="_blank"}.
 
 ### Create a new tool
-For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
+
+For this example, a tool will be created allowing us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
 
 !!! note "Create the classic module"
     
-    Copilot tools are created within an Etendo Classic module. So the first thing we have to do is create an Etendo Classic module. 
+    Copilot tools are created within an Etendo Classic module. So, the first thing we have to do is to create an Etendo Classic module. 
 
 1. The structure of the module will be as follows:
 
@@ -47,26 +51,30 @@ For this example, we will create a tool that will allow us to make a ping to a h
     ```
     *src-db*: Contains the database structure of the module. This folder is created automatically when creating and exporting the module from Etendo Classic.
    
-    *tools*: Contains the tools of the module. Can contain one or more tools.
+    *tools*: Contains the tools of the module. It can contain one or more tools.
     
     *.gitignore*: Contains the files that will be ignored by git.
    
-    *build.gradle*: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
-    [How to publish modules to GitHub repository](../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
+    *build.gradle*: Contains the configuration of the module. This file is created when the module is prepared to be published. 
+    
+    !!!info 
+            For more information, visit [How to publish modules to GitHub repository](../../etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
     
    
     *tools_deps.toml*: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
 
 
-    
+2. It's necessary to use a Dict as input. In order to do that, create a new class that defines the inputs of the tool using pydantic.
 
-2. Its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. 
-For the case of the PingTool, we will create a class called `PingToolInput` that will define the inputs of the tool. The class will be located in the `PingTool.py` file. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
+For the PingTool case, we will create a class called `PingToolInput` that will define the inputs of the tool. The class will be located in the `PingTool.py` file. Here, there is an example of a tool that receives a Dict as input with the structure of the Dict defined in a class:
     
-    !!!Warning 
+!!!Warning 
         The SearchKey of the tool must be the same as the name of the class that extends the ToolWrapper class.
 
-    ```python title="PingTool.py"
+---
+
+    
+    python title="PingTool.py"
     import os
     from typing import Type, Dict
 
@@ -108,10 +116,12 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
             print('MESSAGE:' + message_to_print)
             response = requests.get(host)
             return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
-    ```
-    !!! note "Enviroment variables"
-        Automatically, Copilot reads the `gradle.properties` file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the gradle.properties file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
-         This allows us to use the environment variables in the tools. 
+    
+---
+
+!!! note "Enviroment variables"
+        Automatically, Copilot reads the `gradle.properties` file of Etendo Classic and adds configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the `gradle.properties` file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
+        This allows using the environment variables in the tools. 
         
     
 
@@ -128,7 +138,7 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     [PingTool]
     requests = "*"
     ```
-    The SearchKey of the tool must be the same as the name of the class that extends the ToolWrapper class. In our case, the SearchKey of the tool is `PingTool` and the name of the class that extends the ToolWrapper class is also `PingTool`. During the load of copilot, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
+    The SearchKey of the tool must be the same as the name of the class that extends the ToolWrapper class. In this case, the SearchKey of the tool is `PingTool` and the name of the class that extends the ToolWrapper class is also `PingTool`. During the load of copilot, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
 
     The version of the dependency can be specified or not. If the version is not specified, the latest version will be installed. If the version is specified, the version specified will be installed. The version can be specified with the following operators:
     ``` toml
@@ -145,10 +155,11 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     ```
 
 
-    !!! warning "Different name of depedency while installing and importing"
+!!! warning "Different name of depedency while installing and importing"
         If the name of the dependency is different from the name of the dependency that is imported in the tool, it is necessary to specify the name of the dependency that is imported in the tool. For example, if the dependency is installed with the name `pyscopg2-binary` but is imported with the name `psycopg2`, we can use a | to specify both names. If this clarification is not made, the tool will not be able to import the dependency to "test" if it is installed correctly, this will throw a warning, but the tool will be able to run correctly.
         The content of the file will be as follows:
 
+---
 
         ``` toml
         [PingTool]
@@ -158,35 +169,36 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
         "pyscopg2-binary|psycopg2" = "*"   # First name is the name of the dependency that is installed, second name is the name of the dependency that is imported. In the tool code, we will do import psycopg2
         ```
 
-4. Additionaly, open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
+4. Additionaly, open the Copilot Tool window as **System Administrator** role. In this window, create a new record with the following information:
 
     - *Search key*: The tool search key. The same name as the tool class must be used, this field is mandatory to find the tool in the `Sync Tool Structure` process. 
     - *Name*: The name of the tool. It is the name that will be shown in the Copilot UI.
     - *Description*: This is a description of what the tool does. This field is automatically populated when the tool is synchronized.
-    - *Module*: The module where the tool is located. This field is a reference to the module that we have created in the first step, and where these configurations will be exported.
+    - *Module*: The module where the tool is located. This field is a reference to the module that was created in the first step, and where these configurations will be exported.
     - *JSON Info*: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. 
  
 
-    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is obtained from the tool class.
+    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the **Description** and the **JSON Info** fields of the tool. This data is obtained from the tool class.
 
     !!! Warning Before Sync Tool Structure
         It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
 
-    ![how-to-create-copilot-tools.png](../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+    ![how-to-create-copilot-tools.png](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.png)
 
-    After creating the record, we have to export the module to persist the changes in the database:
+    After creating the record, export the module to persist the changes in the database:
     ```bash title="Terminal"
     ./gradlew export.database
     ```
-    Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
+    Once the **Copilot Tool** is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the **tools** tab of the **Copilot App** window, this record will allow us to activate or deactivate the tool.
 
-    ![how-to-create-copilot-tools-2.png](../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+    ![how-to-create-copilot-tools-2.png](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools-2.png)
 
     !!! note "OpenAI Assistants tools"
         Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
 5. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
-To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
+
+To test the developed Tool, ask Copilot to run it or, for example, to list which tools are available.
 
     ``` bash title="Terminal"
     ./gradlew copilot.do -Pprompt="What tools do you have available?"

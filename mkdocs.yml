@@ -464,6 +464,9 @@ nav:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Create References: developer-guide/etendo-copilot/bundles/create-references.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
+      - How to guides: 
+        - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
+        - How to Create Langsmith Traced Unit Tests for Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-langsmith-traced-unit-tests-for-tools.md  
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
@@ -482,7 +485,6 @@ nav:
         - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
         - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
-      - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
       - Tutorials: 
