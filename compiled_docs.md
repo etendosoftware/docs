@@ -49158,7 +49158,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions.es_es/releases/tag/1.4.0){target="_blank"} | 02/08/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Production Extensions Bundle ES
