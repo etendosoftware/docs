@@ -268,3 +268,14 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 
 !!! info
     For more information, visit the [Webhook Events Developer Guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
+
+## Upload Files
+
+:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
+
+**Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
+
+!!!info
+    For more information, visit [How to Create a Standard Process Definition Developer Guide](../../how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
+
+
