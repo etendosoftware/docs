@@ -87,7 +87,7 @@ This feature allows entering in the system all the financings the company has. I
 This functionality allows the user to post or unpost multiple records at the same time.
 
 !!! info
-    For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
+    For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ### Business Partner Settlement
 
