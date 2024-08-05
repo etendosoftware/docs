@@ -37486,21 +37486,44 @@ A standard process can be defined as multi record process to be able to execute 
 
 #####  Uploading files
 
-Process definitions can receive files as parameters. To do that, add a `Process File upload`  Reference as a process parameter. This parameter will show a file upload element in the process form where a single file can be uploaded.
+:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-20.png)
+This section describes the Etendo **Upload File module** included in the Platform Extensions bundle.
 
-By default, files uploaded using this component are limited to be 10MB at most. To override this configuration, set the Preference **MaximumProcess File Upload size (MB)** and change this value. File size validation will be performed both client-side and server-side.
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
-Once uploaded a file, file contents and additional data will be available as a parameter entry in the **doExecute(parameters, content)** function in the **Process Event Handler**. The entry corresponding to the file upload will contain a Map with the following information:
+The **File reference** enhances the Etendo Classic capabilities by enabling file uploads directly within process definitions. 
 
-```java
-Map<String, Object> params = (Map<String, Object>) parameters.get(paramName);
- 
-String fileName = params.get(PARAM_FILE_NAME); // The file name
-InputStream content = params.get(PARAM_FILE_CONTENT); // The content of the file as an Stream
-Long size = params.get(PARAM_FILE_SIZE); // The file size in bytes
-```
+This functionality, which can be used in processes as well as in windows, allows uploading files which can then be processed by the system, streamlining workflows and improving efficiency.
+
+###### New Reference
+
+This feature introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing, which is then used by the system as specified in the process definition.
+
+
+###### Example in Process Definition
+
+The proposed solution involves incorporating a **Process File Upload** Reference as a process parameter in process definitions.
+
+This reference has a User Interface Definition which calls the process, this can be seen in the **Process Definition tab**:
+
+`com.etendoerp.upload.file.definition.ProcessFileUploadUIDefinition`
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/upload-file-2.png)
+
+This definition calls a process `OBProcessFileUpload` that executes a JavaScript that has all the definitions, rules and configurations to make the reference work, and allows to select a file for later upload.
+
+!!!info
+    Any file can be selected because this module was thought as a base so that programmers can use it for their needs. 
+
+This is an example of a `Process Definition` created, it is defined as follows:
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/upload-file-1.png)
+
+After creating the `Process Definition`, a **Menu** is created to visualize the process which, in its corresponding window, allows choosing a file to upload. 
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/upload-file-0.png)
 
 #####  Downloading files
 
@@ -42963,6 +42986,17 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 
 !!! info
     For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
+
+#### Upload Files
+
+:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
+
+**Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
+
+!!!info
+    For more information, visit [How to Create a Standard Process Definition Developer Guide](https://docs.etendo.software/latest/how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
