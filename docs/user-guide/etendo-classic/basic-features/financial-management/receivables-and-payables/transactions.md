@@ -2,13 +2,15 @@
 title: Financial Management
 ---
 
-## **Overview**
+## Overview
 
 Financial Management functional documentation provides a detailed description of all windows of the Financial Management application area.
 
-## **Purchase Invoice Payment Plan**
+## Purchase Invoice Payment Plan
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Purchase Invoice Payment Plan`
+
+### Overview
 
 The purchase invoice payment plan window displays all the purchase invoice payment plans which are not fully paid.
 
@@ -16,7 +18,7 @@ This window offers another possibility of managing the same information found in
 
 The advantage of this window is that it offers a more immediate view of all the purchase invoice payment plans which still have an outstanding amount to be paid.
 
-#### **Payment Plan**
+#### Payment Plan
 
 Purchase invoice payment plan information is shown grouped in two sections.
 
@@ -45,7 +47,9 @@ Purchase invoice payment plan information is shown grouped in two sections.
 
 ## Payment Out
 
-### Introduction
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Payment Out`
+
+### Overview
 
 Supplier's payments and prepayments can be made and managed in the payment out window. G/L item payments not related to orders/invoices can also be managed in this window.
 
@@ -283,9 +287,11 @@ The settlement record is registered in the **Business Partner Settlement** windo
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
 
-## **Payment Proposal**
+## Payment Proposal
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Payment Proposal`
+
+### Overview
 
 The payment proposal is a tool that helps the user to make payments by selecting the documents related to a given payment method or scheduled to be paid before a given due date. The system proposes what should be paid based on the selection criteria provided by the user.
 
@@ -357,9 +363,11 @@ The lines tab shows the transactions (orders and/or invoices) included in the pa
 
 A payment proposal can be "**Reactivated**" that means that the payment/s created are deleted and therefore removed from the Payment Out window.
 
-## **Sales Invoice Payment Plan**
+## Sales Invoice Payment Plan
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Sales Invoice Payment Plan`
+
+### Overview
 
 The sales invoice payment plan window displays all the sales invoice payment plans which are not fully paid.
 
@@ -396,7 +404,9 @@ This is the number of days from the expected date until the current day.
 
 ## Payment In
 
-### Introduction
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Payment In`
+
+### Overview
 
 Customer's payments and prepayments received can be recorded and managed in the Payment In window. Besides, G/L item payments not related to orders/invoices can also be managed in this window.
 
@@ -677,9 +687,11 @@ The settlement record is registered in the **Business Partner Settlement** windo
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
 
-## **Financial Account**
+## Financial Account
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Financial Account`
+
+### Overview
 
 A Financial Account represents an account at a financial institution such as a bank account, a credit card issuer, an electronic payment service, as well as a cash or petty cash register.
 
@@ -689,8 +701,6 @@ Payment obligations and amounts due from customers are created in the Purchase a
 
 !!! warning
     It is very important to properly define every parameter of each Financial Account. During your Financial Account setup process, you will need information like: the bank account information, the payment methods allowed, the bank account currency/ies, the accounting information, etc.
-
-   
 
 #### **Account**
 
@@ -1419,9 +1429,11 @@ The settlement record (payment in and payment out) is also registered in the **B
 !!! info
     For more information, visit the [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
 
-## **Payment Execution**
+## Payment Execution
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Payment Execution`
+
+### Overview
 
 Payment Execution form allows the user to massively execute deferred payments in an "Awaiting Execution" status.
 
@@ -1455,7 +1467,9 @@ If that is the case, more than one payment for the same business partner can be 
 
 ## Business Partner Settlement
 
-### Introduction
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Business Partner Settlement`
+
+### Overview
 
 This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers. When a Business Partner is a Customer and a Provider, it is possible to have credit as both types. But it is not possible to consume a customer credit in a Payment Out document. In the same way, it is not possible to mix purchase or sales invoices on a single payment document. In some scenarios, when a business partner has sales and purchase invoices, it is desirable to cancel both debts without needing a financial transaction.
 
@@ -1570,9 +1584,11 @@ As in the Reactivate process, the settlement payments are canceled by creating a
 !!! info
     In this status, it is not possible to modify the settlement anymore.
 
-## **Tax Payment**
+## Tax Payment
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Tax Payment`
+
+### Overview
 
 The "Tax Payment" process helps to calculate the amount of taxes to be paid to or received from the tax authority.
 
@@ -1589,7 +1605,7 @@ Tax payment process can be run after below detailed configuration is done:
   - The "**G/L item Credit Account**" of the G/L item is the account to use while posting a tax payment to be made to the tax authority.
 - As many Tax Register Type as required are linked to the tax rates of each type to take into account for the calculation of the tax payment.
 
-#### **Header**
+#### Header
 
 The tax payment window allows the user to calculate the amount of taxes to be paid to or received from the tax authority within a given period of time. It also allows the user to generate the corresponding payment to/from the tax authority.
 
@@ -1642,12 +1658,14 @@ Some relevant fields to note are:
 
 ## Remittance
 
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Remittance`
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3t-E_sV0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-### Introduction
+### Overview
 
 In the remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.
 
@@ -1858,9 +1876,11 @@ There are two types of remittances:
       ![](../../../../../assets/drive/1ZbcAE5TCXIEo4wQU6AHrdtlhaQAVmZeC.png)
       The status of the settled collections changed to Settled in Remittance and the status of the total payments of the remittance operations changed to Payment cleared.
 
-## **Doubtful Debt**
+## Doubtful Debt
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Doubtful Debt`
+
+### Overview
 
 Doubtful debts are those debts which the company is unlikely to be able to collect. Moreover, a doubtful debt becomes a bad debt when there is no longer any doubt that the debt is uncollectible, therefore:
 
@@ -1869,7 +1889,7 @@ Doubtful debts are those debts which the company is unlikely to be able to colle
 
 Doubtful debts are useful in order to make provisions for possible losses beforehand.
 
-#### **User Story**
+#### User Story
 
 The following example illustrates how Etendo manages Doubtful Debts posting to the ledger.
 
@@ -1915,7 +1935,7 @@ Later, the client becomes bankrupt, so its debt is considered bad:
 | Allowance For Doubtful Debt Account | 650   |        |
 | Bad Debt Revenue Account            |       | 650    |
 
-#### **Configuration**
+#### Configuration
 
 Before starting working with Doubtful Debt, some previous configuration steps are required:
 
@@ -1930,7 +1950,7 @@ Before starting working with Doubtful Debt, some previous configuration steps ar
 - To create a Document Type for Doubtful Debts.  
   This step is not a must, since there is already a Standard Document Type defined for Doubtful Debts.
 
-#### **Doubtful Debt**
+#### Doubtful Debt
 
 Doubtful Debts are defined in the Doubtful Debt Run Window. After being created, a record will appear in the grid of this window.
 
@@ -1957,7 +1977,7 @@ Possible Actions:
 | Bad Debt Expense Account            | Doubtful Debt Amount |                      |
 | Allowance For Doubtful Debt Account |                      | Doubtful Debt Amount |
 
-#### **Accounting**
+#### Accounting
 
 Accounting information related to the doubtful debt.
 
@@ -1973,7 +1993,9 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
-## **Doubtful Debt Run**
+## Doubtful Debt Run
+
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Doubtful Debt Run`
 
 **Doubtful Debt Run** window is used to define which debts, and in what percentage, are considered doubtful. These Doubtful Debts are shown in the Doubtful Debt Window afterwards.
 
@@ -2003,7 +2025,7 @@ It is necessary to click the Process button after selecting the records in order
 
 Once created, it will be possible to post them or to reactivate them through the Doubtful Debt Window.
 
-#### **Doubtful Debt**
+#### Doubtful Debt
 
 In this tab, the previously selected records are shown. Afterwards, it will be necessary to Process the Doubtful Debt in order for it to be available in the Doubtful Debt Window.
 

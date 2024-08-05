@@ -10,6 +10,8 @@ The process starts by the creation and management of purchase requisitions and c
 
 ## Requisition
 
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Requisition`
+
 A Requisition is a document that specifies a request to order products.
 
 The user can create requisitions and monitor them in this window:
@@ -71,6 +73,8 @@ It is important to remark that *Requisitions* does not have any impact on:
 
 ## Manage Requisitions
 
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Manage Requisitions`
+
 Manage Requisitions window is intended to be used to provide an overall picture of the items needed.
 
 ### Header
@@ -129,6 +133,8 @@ This tab allows the user to either review the purchase order line automatically 
 
 ## Requisition to Order
 
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Requisition to Order`
+
 Requisition to Order window shows all the "Completed" requisitions which match the criteria used in the "filter" section and it also shows the requisition lines selected as locked, therefore the same product demand can not be included more than once in a purchase order.
 
 ![Requisition to order](../../../../assets/drive/1Xl_R8oaUrOaO0SK4wB5BYNw3wJDEjHBX.png)
@@ -148,6 +154,8 @@ A requisition can be unlocked manually by the purchase manager or the one who lo
 Once the product demands are clear and locked, the last step to take in this window is to create a purchase order for those needs using the process button "Create".
 
 ## Purchase Order
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Order`
 
 Purchase Order window allows the user to manage orders which once booked will be sent to the external suppliers. In other words, it is a document to register products and/or services to be purchased and documented.
 
@@ -317,6 +325,8 @@ In case the user has to create orders or invoices among two or more organization
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ## Goods Receipts
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipts`
 
 A Goods Receipt is a document issued to acknowledge the receipt of the items listed in it. In other words, it is a document used to register in Etendo the specifics of items physically received in the warehouse.
 
@@ -492,6 +502,8 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 ## Pending Goods Receipts
 
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Pending Goods Receipts`
+
 This window allows the user to:
 
 - **Use the Filter options** to narrow down the search of pending purchase orders to be delivered. It is possible to search by:
@@ -507,6 +519,8 @@ This window allows the user to:
 ![Pending goods receipts window](../../../../assets/drive/1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8.png)
 
 ## Purchase Invoice
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Invoice`
 
 The Purchase Invoice window allows the user to register and manage supplier's invoices.
 
@@ -674,6 +688,8 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 ## Matched Invoices
 
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Matched Invoices`
+
 This window helps the user to post the discrepancies between inventory and financial accounting of those items for which the corresponding goods receipts were posted.
 
 Above mentioned discrepancies are mainly caused by differences between:
@@ -717,6 +733,8 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
     For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Return to Vendor (RTV)
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Return to Vendor`
 
 This window allows the user to create a Return Material document in case a given product needs to be sent back either to be returned for a refund or replacement, or to be repaired.
 
@@ -771,6 +789,8 @@ You can define the Return Reason at header level. In this case when picking a li
     To delete a line you need to unmark the line and then click Done.
 
 ## Return to Vendor Shipment
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Return to Vendor Shipment`
 
 From this window, the user can deliver the returned goods to the vendor.
 
@@ -856,6 +876,8 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
     For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Landed Cost
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Landed Cost`
 
 Landed Cost window allows the user to allocate additional costs such as freight, insurance or duties to goods receipt(s), therefore the cost of the products included in the receipt(s) is adjusted as applicable.
 

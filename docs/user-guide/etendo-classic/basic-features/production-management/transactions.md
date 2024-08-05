@@ -2,10 +2,11 @@
 title: Production Management
 ---
 
-
 ## Work Requirement
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Work Requirement`
+
+### Overview
 
 In this window, the user is able to create and manage an order for a [_Process Plan_](setup.md#process-plan) to be executed a certain number of times to satisfy the production requirements.
 
@@ -93,7 +94,9 @@ The information in the Product tab is populated from the information in the I/O 
 
 ## Work Effort
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Work Effort`
+
+### Overview
 
 In this window, the use can edit precisely what has been produced from a selected product order.
 
@@ -246,7 +249,9 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 ## Production Run
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Production Run`
+
+### Overview
 
 Here, the user can edit precisely what has been produced from a selected product order.
 
@@ -331,7 +336,9 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 
 ## Quality Control Report
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Quality Control Report`
+
+### Overview
 
 In this window, it is possible to create and edit measurements and report findings at predefined checkpoints. The goal is to ensure output quality during production.
 
@@ -390,7 +397,9 @@ Here, it is possible to create and edit values for a related measurement.
 
 ## Periodic Quality Control Data
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Periodic Quality Control Data`
+
+### Overview
 
 In this window, the user can create and edit data collection and measurements related to quality control. This is done at predefined checkpoints for a manufactured product.
 
@@ -418,7 +427,9 @@ In this tab, it is possible to create and edit quality tests for a specified che
 
 ## Internal Consumption
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Internal Consumption`
+
+### Overview
 
 In this window, it is possible to define products which are only to be used inside the company.
 
@@ -457,7 +468,9 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 ## Maintenance Order
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Maintenance Order`
+
+### Overview
 
 In this window, it is possible to create and edit the results of a scheduled maintenance order.
 
@@ -500,7 +513,9 @@ In this tab, it is possible to edit maintenance tasks of a specified order.
 
 ## Insert Maintenances
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Insert Maintenances`
+
+### Overview
 
 The insert maintenances process executes population of the scheduled maintenance tasks to the [Maintenance Plan](#maintenance-plan) based on the maintenance information in the machine category and/or machine screen.
 
@@ -510,7 +525,9 @@ The creation of the maintenance plan is based on a date range that is entered up
 
 ## Maintenance Plan
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Maintenance Plan`
+
+### Overview
 
 Here, it is possible to add and edit predefined maintenance plans.
 
@@ -533,7 +550,9 @@ Once the maintenance task is correctly reflected, the confirmation checkbox is s
 
 ## Calculate Standard Costs
 
-### **Introduction**
+:material-menu: `Application` > `Production Management` > `Transactions` > `Calculate Standard Costs`
+
+### Overview
 
 The Calculate Standard Costs process is run to generate the standard (= theoretical) cost of manufactured products.
 
@@ -573,3 +592,7 @@ For Indirect costs, the additional unit of measure percentage is available. This
 The outcome of the calculation appears in the tabs of the Process Plan:
 
 In the Employee, Machine and Indirect Cost tabs, the result of the costs are automatically populated.
+
+---
+
+This work is a derivative of ["Production Management"](http://wiki.openbravo.com/wiki/Production_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

@@ -20,11 +20,15 @@ This section describes the windows related to procurement reports in Etendo. The
 
 ## Purchase Order Report
 
+:material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Purchase Order Report`
+
 This report displays a detailed list of the purchase orders issued to the suppliers. 
 
 ## Purchase Dimensional Report
 
-### Introduction
+:material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Purchase Dimensional Report`
+
+### Overview
 
 This report displays information about the purchase orders issued and sent to the suppliers.
 
@@ -47,7 +51,9 @@ There is no specific field to note, but just the dimensional primary and seconda
 
 ## Goods Receipts Dimensional Report
 
-### Introduction
+:material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Goods Receipts Dimensional Report`
+
+### Overview
 
 This report displays information about the goods received in the organization.
 
@@ -70,7 +76,9 @@ There is no specific field to note but just the dimensional primary and secondar
 
 ## Purchase Invoice Dimensional Report
 
-### Introduction
+:material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Purchase Invoice Dimensional Report`
+
+### Overview
 
 This report displays information about the purchase invoices received in the organization. It is a dimensional type of report that shows information about registered purchase invoices (Purchase Invoices in a status *Completed* or *Voided*) during a selected period of time.
 
@@ -107,7 +115,9 @@ PDF format shows the same fields explained before, but in XLS format, it shows i
 
 ## Matched Purchase Orders
 
-### Introduction
+:material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Matched Purchase Orders`
+
+### Overview
 
 This window informs about the matching between each purchase order, goods receipt and invoice line.
 
@@ -121,7 +131,9 @@ In other words, this window provides valuable information which helps to get a q
 
 ## Vendor Invoice Report
 
-### Introduction
+:material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Vendor Invoice Report`
+
+### Overview
 
 This report provides information about the total amount invoiced by each supplier within a given time period and for a given currency.
 

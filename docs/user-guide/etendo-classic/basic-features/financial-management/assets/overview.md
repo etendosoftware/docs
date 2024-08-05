@@ -14,13 +14,15 @@ This section describes the windows related to assets, part of the Financial Mana
 [:material-file-document-outline: Asset Amortization Report (Excel)](#amortization-report){ .md-button .md-button--primary } <br>
 
 
-## **Assets**
+## Assets
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Assets` > `Assets`
+
+### Overview
 
 The user can define amortization characteristics for assets owned by the company.
 
-#### **Assets**
+#### Assets
 
 The user can define assets owned by the company and create an amortization for them.
 
@@ -93,13 +95,15 @@ The user can create and edit G/L accounts to be used in transactions which inclu
 
 ![](../../../../../assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
 
-## **Asset Group**
+## Asset Group
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Assets` > `Asset Group`
+
+### Overview
 
 Assets can be grouped into different categories with the aim of helping their depreciation management and analysis.
 
-#### **Asset Category**
+#### Asset Category
 
 Asset category window allows the user to create and configure every asset category your organization may need.
 
@@ -119,15 +123,17 @@ As shown in the image above, the creation of an asset category requires the user
 
 Depreciation configuration will be inherited from the asset category when creating a new asset.
 
-#### **Accounting**
+#### Accounting
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
 ![](../../../../../assets/drive/1jZl_RGgZw2i1Ogq4d1D-fhNcd59AI6ev.png)
 
-## **Amortization**
+## Amortization
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Assets` > `Amortization`
+
+### **Overview**
 
 The user can create and edit amortization for a selected year.
 
@@ -172,6 +178,8 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 
 ## Asset Amortization Report (Excel)
+
+:material-menu: `Application` > `Financial Management` > `Assets` > `Asset Amortization Report (Excel)`
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
