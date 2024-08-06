@@ -2,8 +2,7 @@
 tags:
   - Docker
   - Management
-  - Module
-  - Compose
+  - Infrastructure
 ---
 
 # Docker Management
@@ -12,48 +11,66 @@ tags:
 
 Docker is a platform that enables developers to automate the deployment, scaling, and management of applications. It uses containerization technology, which packages an application and its dependencies into a standardized unit called a "container." Containers can run consistently across different computing environments, making them highly portable and efficient.
 
-The `com.etendoerp.docker` module introduces new tasks to Etendo Classic and the infrastructure needed to launch all the necessary containers. This module operates incrementally, and there are additional modules that extend functionality using the same format. For instance, by using the `com.etendoerp.tomcat` module, you can add the functionality of using Tomcat within Docker. There are several similar modules available that extend various functionalities.
+The `com.etendoerp.docker` module enables the use of Dockerized containers in Etendo Classic. This allows for the distribution and encapsulation of new functionalities using Etendo's existing module infrastructure. It also provides the capability to Dockerize the database, Tomcat, or any current or future Etendo infrastructure dependencies. Also, the module includes Gradle tasks to manage containers.
 
-## Prerequisites
+!!! Info 
+    This module includes the infrastructure for container management and the Postgres database service, as an example. In case you want to run other services, add the corresponding modules that implement the dockerization.  
 
-Docker and Docker Compose must be installed on your system.
+Additionally, the infrastructure could be extended, and allows other modules to include in it their own specific containers within each module.  This module operates incrementally, and there are additional modules that extend functionality using the same format.
 
-## Installation and Setup
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
-1. Adding the Module
+## Requirements
 
-    To add the `com.etendoerp.docker` module as a dependency to your ERP, include it in your project's build configuration and add `docker_com.etendoerp.docker_db=true` in **gradle.properties** file
+- [Docker](https://docs.docker.com/get-docker/){target="_blank"}
+- [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}
 
-2. Installing Additional Modules
+## Using Containers Distributed in Modules
 
-    You can enhance the functionality by installing related modules. For example:
+  It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
 
-    com.etendoerp.tomcat: Adds the capability to use Tomcat within Docker
+  `docker_<javapackage>=true`
+  
+  
+  Example:
+  ``` groovy title="gradle.properties"
+  docker_com.etendoerp.docker=true
+  ```
 
-    And docker_com.etendoerp.tomcat=true in gradle.properties file.
+  Finally, to apply changes, execute 
 
-    Then, run ./gradlew deploy to compile and deploy etendo classic on tomcat container
+  ``` bash title="Terminal"
+  ./gradlew setup
+  ```
 
-3. Executing the Tasks
+## Tasks to Manage Containers
 
-Once the `com.etendoerp.docker` module and any other related modules are installed and configured, execute the following command to initiate the derived infrastructure:
+Execute the following command to use the infrastructure:
 
-Running
+### Running
 
+``` bash title="Terminal"
 ./gradlew resources.up
-If you only have the base `com.etendoerp.docker` module installed, this command will start a PostgreSQL database.
+```
+This command will search for all configured resources and start the containers.
 
-Stopping
-Execute:
+!!! note 
+    If you only have the base `com.etendoerp.docker` module installed and configured, this command will start a PostgreSQL database.
 
+### Stopping
+``` bash title="Terminal"
 ./gradlew resources.stop
-This command will stop all containers.
+```
+This command will stop the containers.
 
-Down
-Execute:
+### Down
 
+``` bash title="Terminal"
 ./gradlew resources.down
-This command will stop and remove all containers.
+```
+This command will stop and remove the containers.
+
 
 ## Verifying the Status
 
@@ -61,22 +78,8 @@ To verify the status of the resources started by Docker Compose, you can use the
 
 `docker ps`
 
-This command lists all running Docker containers. You should see the containers related to your ERP system.
+This command lists all running Docker containers. You should see the containers related to Etendo
 
 `docker compose logs`
 
 This command shows the logs of all the services defined in your Docker Compose configuration, which can help in troubleshooting and verifying that the services are running correctly.
-
----
-
-How to extend
-On a module level, create a new folder called compose and add a <>.yml file with the configuration of the new service.
-
-Example:
-
-module/com.etendoerp.busybox/compose/com.etendoerp.busybox.yml
-
-services:
-  busybox:
-    image: busybox:latest
-    command: [ "/bin/busybox", "watch", "ls", "-l" ]
