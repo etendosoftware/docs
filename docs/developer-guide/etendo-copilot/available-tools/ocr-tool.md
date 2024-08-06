@@ -52,41 +52,151 @@ Using this tool consists of the following actions:
 
 ## Usage Example
 
-!!! info 
-    It is important to clarify that this is a first version subject to improvements. Maybe the tool is not able to recognize all the images or pdfs that are presented to it.
-    In general, the Tool returns the information in JSON format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
     
 ### Requesting text recognition from an image/pdf
 
-After the configuration, you can upload an image or pdf to the chat and the tool will recognize the text:
-    
-1. Open Copilot button and open a chat with the OpenAI Assistant.
-2. Suppose you have an image at `/home/user/image.png` and you want to extract text related to an invoice number:
 
-    - Use the tool as follows:
-
-        - Input:
-```
-{"path": "/home/user/image.png", "question": "What is the invoice number in the image?"}
-
-```
-
-        - Output:
-```
-{"invoice_number": "INV123456"}
-
-```
-
-3. The tool will recognize the text and return it in the chat.
-
+Suppose you have an image at `/home/user/invoice.png` and you want to extract text related to an invoice information:
 
 The following is an example image of an invoice:
 
 ![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
 
-Copilot will return the recognized(and interpreted) text in the chat.
 
-![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
+- Use the tool as follows:
+
+    - Input:
+
+        ```
+        {"path": "/home/user/invoice.png", "question": "Give me the content of this invoice"}
+
+        ```
+
+    - Output:
+
+        ``` Json title="Output Json"
+        {
+        "company": {
+            "name": "F&B España, S.A.",
+            "tax_id": "B-1579173",
+            "address": "Pg. de Gracia, 123 2-1ª",
+            "city": "08009 - Barcelona (BARCELONA)"
+        },
+        "invoice": {
+            "title": "This is a Sales invoice",
+            "number": "1000000",
+            "currency": "EUR",
+            "date": "15-02-2011"
+        },
+        "customer": {
+            "name": "Restaurantes Luna Llena, S.A.",
+            "contact": "Ana Cortes",
+            "phone": "092765188",
+            "address": "Pl. Mayor, 78",
+            "postal_code": "76764"
+        },
+        "items": [
+            {
+            "reference": "ES0024",
+            "product_name": "Agua sin Gas 1L",
+            "uom": "Unit",
+            "quantity": 25000,
+            "price": 1.13,
+            "total": 28250.00
+            },
+            {
+            "reference": "ES0021",
+            "product_name": "Bebida Energética 0,5L",
+            "uom": "Unit",
+            "quantity": 45000,
+            "price": 1.49,
+            "total": 67050.00
+            },
+            {
+            "reference": "ES1000",
+            "product_name": "Cerveza Ale 0,5L",
+            "uom": "Unit",
+            "quantity": 33000,
+            "price": 2.48,
+            "total": 81840.00
+            },
+            {
+            "reference": "ES1002",
+            "product_name": "Cerveza Lager 0,5L",
+            "uom": "Unit",
+            "quantity": 45000,
+            "price": 2.64,
+            "total": 118800.00
+            },
+            {
+            "reference": "ES0030",
+            "product_name": "Cola de Cereza 0,5L",
+            "uom": "Unit",
+            "quantity": 40000,
+            "price": 0.83,
+            "total": 33200.00
+            },
+            {
+            "reference": "ES0032",
+            "product_name": "Limonada 0,5L",
+            "uom": "Unit",
+            "quantity": 40000,
+            "price": 0.83,
+            "total": 33200.00
+            },
+            {
+            "reference": "ES0023",
+            "product_name": "Vino Blanco 0,75L",
+            "uom": "Unit",
+            "quantity": 36000,
+            "price": 3.05,
+            "total": 109800.00
+            },
+            {
+            "reference": "ES0025",
+            "product_name": "Vino Rosado 0,75L",
+            "uom": "Unit",
+            "quantity": 36000,
+            "price": 5.83,
+            "total": 209880.00
+            },
+            {
+            "reference": "ES1004",
+            "product_name": "Vino Tinto 0,75L",
+            "uom": "Unit",
+            "quantity": 36000,
+            "price": 5.07,
+            "total": 182520.00
+            },
+            {
+            "reference": "ES0037",
+            "product_name": "Zumo de Naranja 0,5L",
+            "uom": "Unit",
+            "quantity": 45000,
+            "price": 1.13,
+            "total": 50850.00
+            },
+            {
+            "reference": "ES1014",
+            "product_name": "Zumo de Piña 0,5L",
+            "uom": "Unit",
+            "quantity": 33000,
+            "price": 1.13,
+            "total": 37390.00
+            }
+        ],
+        "payment_terms": "30 days",
+        "totals": {
+            "subtotal": 927640.00,
+            "tax": {
+            "rate": "IVA 18%",
+            "amount": 166975.20
+            },
+            "total": 1094615.20
+        }
+        }
+
+        ```
 
 ### Result Chaining
 
