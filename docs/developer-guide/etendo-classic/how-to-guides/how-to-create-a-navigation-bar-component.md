@@ -51,10 +51,22 @@ To create a component which is shown in the navigation bar, the following parts 
 
 Each of these steps is described in more detail below.
 
-The example module contains a "Hello World" component with a template. This example adds a button to the navigation bar which (when clicked) will say hello to the current user.
+The example module contains a **Hello World** component with a template. This example adds a button to the navigation bar which (when clicked) will say hello to the current user.
 
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-1.png)
+``` 
+modules
+└── com.etendoerp.client.application.examples
+    ├── referencedata
+    └── src
+        └── com
+            └── etendoerp
+                └── client
+                    └── application
+                        └── examples
+                            └── templates
+                            │   └── hello_world.js.ftl
+                            └── HelloWordlComponent.java
+```
 
 ###  Creating a Component
 
@@ -64,25 +76,25 @@ A component is useful when you want to add runtime information to the navigation
 !!!info
     If you do not have the requirement to use dynamic information in the generated JavaScript of your component, then you do not need to implement a component (only a template). You can make use of the standard Etendo template component: org.openbravo.client.kernel.BaseTemplateComponent, in the navigation bar component definition table.
 
-The example module has a hello world component which provides the current logged in user to the template. The component can be found in the module's [src]() directory. Here is the code:
+The example module has a hello world component which provides the current logged in user to the template. The component can be found in the module's src directory. Here is the code:
     
-  ```java
-    package com.etendoerp.client.application.examples;
-     
-    import org.openbravo.client.kernel.BaseTemplateComponent;
-    import org.openbravo.dal.core.OBContext;
-  
-    /**
-     * Provides a widget which shows a hello world message when clicked.
-     * 
-     * @author mtaal
-     */
-    public class HelloWorldComponent extends BaseTemplateComponent {
-     
-      public String getUserName() {
-        return OBContext.getOBContext().getUser().getName();
-      }
+  ```java title="HelloWorldComponent.java"
+  package com.etendoerp.client.application.examples;
+   
+  import org.openbravo.client.kernel.BaseTemplateComponent;
+  import org.openbravo.dal.core.OBContext;
+
+  /**
+   * Provides a widget which shows a hello world message when clicked.
+   * 
+   * @author mtaal
+   */
+  public class HelloWorldComponent extends BaseTemplateComponent {
+   
+    public String getUserName() {
+      return OBContext.getOBContext().getUser().getName();
     }
+  }
   ```
 
 ###  Creating a Template
@@ -98,23 +110,23 @@ The template is a powerful mechanism of Etendo as it makes it possible to combin
 
 To create the template for your navigation bar component, create a `.FTL` file in the source tree of your module. The `.FTL` file should contain plain JavaScript with possible freemarker constructs to read information from the component. The JavaScript should create one Smartclient canvas or a JavaScript array with Smartclient canvas instances.
 
-As an example, the "Hello World" template can be found in the `com.etendoerp.client.application.examples` package, it creates a button which can be clicked to say hello. The content of the template is this:
+As an example, the **Hello World** template can be found in the `com.etendoerp.client.application.examples` package, it creates a button which can be clicked to say hello. The content of the template is this:
     
-  ```javascript  
-    /* jslint */
-    isc.Button.create({
-      baseStyle: 'navBarButton',
-      title: OB.I18N.getLabel('OBEXAPP_HelloWorld'),
-      overflow: "visible",
-      width: 100,
-      layoutAlign: "center",
-      showRollOver: false,
-      showFocused: false,
-      showDown: false,
-      click: function() {
-        isc.say(OB.I18N.getLabel('OBEXAPP_SayHello', ['${data.userName?js_string}']));
-      }
-    })
+  ```javascript title="hello_world.js.ftl"
+  /* jslint */
+  isc.Button.create({
+    baseStyle: 'navBarButton',
+    title: OB.I18N.getLabel('OBEXAPP_HelloWorld'),
+    overflow: "visible",
+    width: 100,
+    layoutAlign: "center",
+    showRollOver: false,
+    showFocused: false,
+    showDown: false,
+    click: function() {
+      isc.say(OB.I18N.getLabel('OBEXAPP_SayHello', ['${data.userName?js_string}']));
+    }
+  })
   ```
 
 Some aspects to note in this JavaScript source:
@@ -147,18 +159,20 @@ After executing the above steps, you should see a **Hello World** button in the 
 By checking the **Static Component** flag of a a navigation bar component in `Application Dictionary` > `User Interface` > `Navigation Bar Components` it is declared as **static** . This kind of components differ from their counterparts in the way they are created. **Static Navigation Bar Components** are loaded at the beginning of the **JavaScript** content used within the application and they do not require an extra request to be loaded.
 
 Besides, the content of the template of a **Static Navigation Bar Components** is defined in a slightly different way:
-    
-    /* jslint */
-    {
-      className: 'OBApplicationMenuButton',
-      properties: {
-        title: 'UINAVBA_APPLICATION_MENU',
-        initWidget: function () {
-          this.Super('initWidget', arguments);
-          this.baseData = isc.clone(OB.Application.menu);
-        }
+
+  ```javascript    
+  /* jslint */
+  {
+    className: 'OBApplicationMenuButton',
+    properties: {
+      title: 'UINAVBA_APPLICATION_MENU',
+      initWidget: function () {
+        this.Super('initWidget', arguments);
+        this.baseData = isc.clone(OB.Application.menu);
       }
     }
+  }
+  ```
 
 !!!note
     The template defines a JSON object with two properties:
