@@ -28,23 +28,47 @@ Additionally, the infrastructure could be extended, and allows other modules to 
 
 ## Using Containers Distributed in Modules
 
-  It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
+  ### Configuration Variables
 
-  `docker_<javapackage>=true`
-  
-  
-  Example:
-  ``` groovy title="gradle.properties"
-  docker_com.etendoerp.docker=true
-  ```
+  - It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
+    
+    `docker_<javapackage>=true`
+    
+    
+    Example:
+    ``` groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    ```
 
-  Finally, to apply changes, execute 
+  - In case you want to configure only one service belonging to a module, it is possible by adding a variable with the format:
+
+    `docker_<javapackage>_<service>=true`
+
+    Example:
+    ``` groovy title="gradle.properties"
+    docker_com.etendoerp.docker_db=true
+    ```
+    !!!note
+        In this case, only the database service will be taken into account when raising and lowering services related to the `com.etendoerp.docker` module. 
+    
+  - It is also possible that some services may require configuration variables, in which case they should be added: 
+
+    `docker_<javapackage>_<variable>=<value>`
+
+    Example:
+    ``` groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat_port=8080
+    ``` 
+    !!!note
+        In this example, this variable configures the [Dockerized Tomcat Service](../dockerized-tomcat-service.md) module port, although the necessary configurations will be included in the documentation of each module.
+
+  Finally, always to apply changes, execute 
 
   ``` bash title="Terminal"
   ./gradlew setup
   ```
 
-## Tasks to Manage Containers
+## Gradle Tasks to Manage Containers
 
 Execute the following command to use the infrastructure:
 
@@ -83,3 +107,25 @@ This command lists all running Docker containers. You should see the containers 
 `docker compose logs`
 
 This command shows the logs of all the services defined in your Docker Compose configuration, which can help in troubleshooting and verifying that the services are running correctly.
+
+It is also possible to manage containers with tools such as [Lazydocker](https://github.com/jesseduffield/lazydocker#installation){target=_isblank} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
+
+
+## Postgres Database Service
+
+In this module a Postgres database service is included, this allows to use the dockerized database in Etendo. To use it the following steps must be followed:
+
+1. Once the `com.etendoerp.docker` module is installed, it is necessary to add a configuration variable in the `gradle.properties` to enable the use of the service:
+
+  ```` groovy title=gradle.properties
+  docker_com.etendoerp.docker_db=true
+  ```
+
+2. Then it is necessary to run `./gradlew setup`, to apply the configuration changes.
+
+3. When `./gradlew resources.up` is executed, a new Docker container with the database service will be raised using the configuration variables defined in the `gradle.properties`, such as port, user, password, etc. 
+
+  !!! warning
+      In case you have the same service running locally on the same port it should be down. 
+
+4. Finally, using this service it is possible to run `./gradlew install` to install the database from scratch, or it is possible to restore a backup and start using the new dockerized service. 
