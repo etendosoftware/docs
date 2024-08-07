@@ -6,7 +6,9 @@ Security folder allows creating and configuring basic security entities such as 
 
 ## User
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Security` > `User`
+
+### Overview
 
 A user is an entity which can log into Etendo whenever it has a password and at least one role assigned to it.
 
@@ -45,7 +47,9 @@ There can be a user having a given role set up as "Role Administrator", that use
 
 ## Role
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
+
+### Overview
 
 The aim of a role is to group user/s depending on what parts of Etendo they are allowed to access to and therefore to work in.
 
@@ -306,6 +310,8 @@ Fields to note:
 
 ## Role Access
 
+:material-menu: `Application` > `General Setup` > `Security` > `Role Access`
+
 This window defines access to DB /database tables and columns for selected roles.  
 Edit a role to give or withhold the necessary access to tables and columns tables.
 
@@ -317,7 +323,9 @@ Create or edit access to DB tables for a selected role. The user can give access
 
 ## Audit Trail
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Security` > `Audit Trail`
+
+### Overview
 
 Audit Trail allows the user to monitor every data change done in any table or entity through the user interface.
 

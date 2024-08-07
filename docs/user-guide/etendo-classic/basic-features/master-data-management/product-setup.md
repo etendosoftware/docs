@@ -2,9 +2,11 @@
 title: Product Setup
 ---
 
-## **Product Characteristic**
+## Product Characteristic
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Product Characteristic`
+
+### Overview
 
 Product Characteristic can be defined to complete the definition of a product using variants.
 
@@ -14,7 +16,7 @@ Once the definition of the characteristics is created, these can be assigned to 
 
 For example, the Generic product _Shirts Summer Season 2013 by My Provider_ implements the Characteristics _Size_ and _Color_ as variants. This _Generic Product_ will have as Product Variant each combination of Color and Size.
 
-### **Characteristic**
+### Characteristic
 
 **Characteristic Definition**
 
@@ -36,7 +38,7 @@ It will create four variants/products and for all of them with the characteristi
 
 ![](../../../../assets/drive/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg.png)
 
-### **Value**
+### Value
 
 Each of the values of a characteristic.
 
@@ -50,7 +52,7 @@ Fields to be into account:
 
 ![](../../../../assets/drive/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA.png)
 
-#### **Button Add Products**
+#### Button Add Products
 
 The " Add Products" button is shown when a product characteristic value is NOT a "Variant", therefore it can be assigned to any product.
 
@@ -67,7 +69,7 @@ It does not update current values. That is why the button only shows products wh
   - Once a product characteristic has been entered in "Value" tab, a process button "Add Products" is shown.
   - "Add Products" button opens a pick/execute window where any product or set of products can be related to that product characteristic value.
 
-### **Subset**
+### Subset
 
 A subset is a collection of values of a Product Characteristic.
 
@@ -97,7 +99,7 @@ But finally you have different products, for example t-shirts and pants:Subsets:
 
 The aim of this feature is to avoid having duplicate values (blue, blue, green, green) because of different purposes. With this subset when selecting a product that is a pant, for example, instead of selecting the characteristic _Color_ you select the subset _Pants_. This way, instead of retrieving seven values, it will retrieve just four. Another advantage of doing this is when searching for variants instead of having blue two times (and you would not know if the blue is for pants or t-shirts), you will have blue one time. So when searching for variants which have the characteristics _Blue,_ the system will retrieve pants and t-shirts.
 
-### **Subset Value**
+### Subset Value
 
 Each of the values of the product characteristic assigned to the subset.
 
@@ -107,7 +109,7 @@ Each of the values of the product characteristic assigned to the subset.
 - Name: Value. Notice that only values from the characteristic can be selected.
 - Code: If it is filled, it will overwrite the code setup in the characteristic
 
-### **Filtering**
+### Filtering
 
 Fields based on columns whose reference is Product Characteristics can be filtered in grid assisted with a popup where the tree of available characteristics is displayed.
 
@@ -116,13 +118,13 @@ Fields based on columns whose reference is Product Characteristics can be filter
 !!! info
     The characteristics available in this popup are limited to the ones applicable to data filtered in the grid where it is displayed with the current filtering criteria for the rest of the fields.
 
-### **Configuration**
+### Configuration
 
 Product Characteristics is ready to be used out of the box.
 
 Anyway, some new features can be displayed as well with some simple configuration options (these changes need to be exported to the template).
 
-#### **Improving product selector**
+#### Improving product selector
 
 You can select between the different product characteristics using the product selector. There you have a column showing product characteristics description (See image).
 
@@ -154,9 +156,11 @@ Follow these simple steps to enable this configuration, and please do not forget
 
 - Last point would be to export these changes to the template. This is really important to avoid problems in future update processes and to keep these changes after the update.
 
-## **Update Product Characteristics Description**
+## Update Product Characteristics Description
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Update Product Characteristics Description`
+
+### Overview
 
 Every variant has its product _Characteristic Description_ and this field is calculated automatically when:
 
@@ -174,9 +178,11 @@ This process should be used just in some special cases:
 - When the name of the Characteristic is changed, for example from Color to Tint
 - When through the database characteristics or values are changed
 
-## **Unit of Measure**
+## Unit of Measure
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Unit of Measure`
+
+### Overview
 
 A unit of measure is a standard unit or combination of units to be used alongside the quantity of a product.
 
@@ -196,7 +202,7 @@ Below, you can find a list of the unit of measure you could setup in Etendo:
 - **Pack**
 - etc.
 
-### **Unit of Measure**
+### Unit of Measure
 
 Products of any type are managed in non-monetary units of measure.
 
@@ -210,7 +216,7 @@ As shown in the image above, a non-monetary unit of measure can be created in Et
 - the **Costing Precision** to be used while rounding calculated cost of the products having that unit of measure.
 - and the **Symbol** or commonly used unit of measure abbreviation
 
-### **Translation**
+### Translation
 
 Units of Measure can be translated to any language required.
 
@@ -219,13 +225,15 @@ The way to get that is as simple as:
 - select first the language required
 - and then enter the unit of measure translated into that language.
 
-### **Conversion**
+### Conversion
 
 Edit the conversion rate of one unit of measure into another one.
 
-## **Product Category**
+## Product Category
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Product Category`
+
+### Overview
 
 Similar products can be grouped into different categories, which must be created with the aim of helping their management and analysis.
 
@@ -235,7 +243,7 @@ To learn more, visit Procurement Analysis Tools and Sales Analysis Tools.
 
 Besides, each product category allows the user to set up a different set of ledger accounts to be used while posting product related transactions such as purchase and sales invoices.
 
-### **Product Category**
+### Product Category
 
 Product category window allows the user to create and configure every product group your company may need.
 
@@ -250,7 +258,7 @@ As shown in the image above, the creation of a product category requires enterin
 
 Product categories can be arranged into a hierarchical structure, which can be later on exploited by other reports or processes. For more information about how to work with trees, visit the Tree structure section.
 
-### **Accounting**
+### Accounting
 
 Each product category allows the user to configure a different set of ledger accounts.
 
@@ -291,7 +299,7 @@ This account is typically an asset account.
 !!! info
     The "Copy Accounts" action button allows the user to copy the accounts defaulted in this window to the Product Accounting tab.
 
-### **Assigned Products**
+### Assigned Products
 
 Assigned products is a view of all the products which belong to a product category.
 
@@ -299,13 +307,15 @@ As a side note, not real products such as discount products should belong to a s
 
 To learn more about discount products, visit Discount.
 
-### **Translation**
+### Translation
 
 It maintains translations of Product Categories to different languages.
 
-## **Attribute**
+## Attribute
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Attribute`
+
+### Overview
 
 Products can have an attribute or a set of attributes which makes them different to the rest.
 
@@ -322,7 +332,7 @@ Etendo allows managing product attributes by following below steps:
 3.  Set up the relationship between the product and the attribute set.  
     To learn more, visit Product
 
-### **Attribute**
+### Attribute
 
 Attribute window allows the user to create and edit attributes such as color or size to be assigned to attribute sets.
 
@@ -337,7 +347,7 @@ As shown in the image above, an attribute can be easily defined by entering the 
   To learn more, visit Attribute Value.
 - **Mandatory** flag defines the attribute as mandatory, therefore it must always be specified for the product.
 
-### **Attribute Value**
+### Attribute Value
 
 An attribute can have several values or individual characteristics to be detailed for each attribute.
 
@@ -345,9 +355,11 @@ Above applies to attributes such as color or size.
 
 Attribute Value tab allows the creation of as many attribute values as required for an attribute.
 
-## **Attribute Set**
+## Attribute Set
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Attribute Set`
+
+### Overview
 
 An attribute set can be defined by a single attribute or by a set of attributes to apply to specific products.
 
@@ -360,7 +372,7 @@ The steps to follow are:
 - **Set up the relationship between** the previously created **Lot/Serial Number Sequence/s** and the **Attribute Set**, in the Attribute Set window.  
   To learn how, keep reading this section.
 
-### **Attribute Set**
+### Attribute Set
 
 Attribute Set window allows creating as many combinations of attributes as required to define products with few or multiple characteristics.
 
@@ -378,7 +390,7 @@ As shown in the image above, an attribute set to be assigned to a specific produ
   If **Expiration Date flag is checked,** a new field named "**Guaranteed Days**" is shown for you to enter the number of days a product can be guaranteed.
 - finally, the flag "**Require At Least One Value**" implies that at least one attribute set value will be required in product related transactions.
 
-### **Assigned Attribute**
+### Assigned Attribute
 
 An attribute set can have a single or a set of attributes assigned.
 
@@ -392,15 +404,17 @@ You should take into account that:
 
 - if one of the selected attributes is a "Lot" or a "Serial N?" type attribute, the corresponding Number Sequence must have been properly set up in the Attribute Set window.
 
-## **Lot Number Sequence**
+## Lot Number Sequence
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Lot Number Sequence`
+
+### Overview
 
 A product attribute can be a Lot Number.
 
 Some products require lot numbering to assure compliance with the tracking requirements imposed by the majority of industries, which implies that a given quantity of a product has always to be linked to a unique lot number.
 
-### **Lot Control**
+### Lot Control
 
 A Lot Number is a unique number given to a particular quantity of a product, which can be defined to have a prefix or a suffix among other characteristics.
 
@@ -414,9 +428,11 @@ A Lot Number Sequence can be setup:
 - by entering a **Prefix** such as **Lot N?/** which easily helps to understand that the number in question is a lot number.
 - by entering a **Suffix** such as **/2011** which helps to provide additional information if needed.
 
-## **Serial Number Sequence**
+## Serial Number Sequence
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Serial Number Sequence`
+
+### Overview
 
 A product attribute can be a serial number.
 
@@ -424,7 +440,7 @@ Some products require serial numbering to assure compliance with the tracking re
 
 - each unit of a product has always to be linked to a unique serial number.
 
-### **Number Control**
+### Number Control
 
 A Serial Number is a unique number given to each unit of a product/item which can be defined to have a prefix or a suffix among other characteristics.
 
@@ -439,9 +455,11 @@ A Serial Number Sequence can be setup:
 - by entering a **Prefix** such as **Serial N?/** which easily helps to understand that the number in question is a serial number.
 - by entering a **Suffix** such as **/2011** which helps to provide additional information if needed.
 
-## **Brand**
+## Brand
 
-### Introduction
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Brand`
+
+### Overview
 
 This window allows the user to enter brands associated with one product.
 The brands are manufacturers or commercial names used by manufacturers to identify a product line.

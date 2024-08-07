@@ -2,7 +2,7 @@
 title: Business Partner Setup
 ---
 
-## **Introduction**
+## Overview
 
 Business partners can be grouped into different categories with the aim of helping their management and analysis.
 
@@ -16,9 +16,11 @@ To learn more, visit Procurement Analysis Tools and Sales Analysis Tools.
 
 Finally, it is also important for you to take into account that each business partner category allows the user to set up a different set of ledger accounts to be used while posting transactions such as customer receivables or vendor liabilities.
 
-## **Business Partner Set**
+## Business Partner Set
 
-### Introduction
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Business Partner Set`
+
+### Overview
 
 In this window the user can define lists of business partners to use in other functionalities.
 
@@ -32,7 +34,9 @@ The lines tab allows the user to add the required business partners to the corre
 
 ![](../../../../assets/drive/8ZKuObE2Ho1XC21yS8iC2Y_OpEE2O90ARCMJbxiSHrqbvwIeoi03nkb_k4uo2xp5B7gbzB2cnINPV2kjKyK-8pkyMz4NNhduzwIAmCwe4ijlZ_wzZU5mefhkcGPg-4DmOdAdc0_fDmHBhC3Gl78.png)
 
-## **Business Partner Category**
+## Business Partner Category
+
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Business Partner Category`
 
 Business partner category window allows the user to create and configure every business partner category your organization may need.
 
@@ -44,7 +48,7 @@ As shown in the image above, the creation of a business partner category require
 - a Name
 - and a Description
 
-### **Accounting**
+### Accounting
 
 Each business partner category allows the user to configure a different set of ledger accounts.
 
@@ -86,13 +90,16 @@ The "Copy Accounts" action button allows the user to copy the accounts defaulted
 - the Customer Accounting tab
 - or the Vendor Accounting tab
 
-## **Invoice Schedule**
+## Invoice Schedule
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Invoice Schedule`
+
+### Overview
+
 
 Invoice schedule window allows the user to define and configure how often and by when an organization can issue invoices to be sent to customers.
 
-### **Invoice Schedule**
+### Invoice Schedule
 
 An organization can agree and therefore define specific schedules for issuing invoices, schedules which will then need to be linked to the corresponding customers.
 
@@ -121,9 +128,11 @@ agreed and therefore assigned to each customer.
 
 To learn more about this process, visit "Sales Management // Transactions".
 
-## **Title**
+## Title
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Title`
+
+### Overview
 
 Title window allows the user to set up business partner titles such as Mr or Madame to be used while contacting business partners.
 
@@ -131,7 +140,7 @@ The same applies to any type of "Contacts" entered in Etendo.
 
 This is an "Advanced Feature". To be reviewed, as I do not see where Titles can be assigned to business partners and contacts.
 
-### **Title**
+### Title
 
 There are many titles to use while contacting business partners of any type as well as contacts.
 
@@ -139,7 +148,7 @@ There are many titles to use while contacting business partners of any type as w
 
 Once the required titles have been properly entered and configured, you can link them to the corresponding business Partner "Contact/s" in the Business Partner window.
 
-### **Translation**
+### Translation
 
 Business partner titles can be translated to any language required.
 
@@ -148,9 +157,11 @@ The way to get that is as simple as:
 - select first the language required
 - and then enter the title name translated into that language.
 
-## **Payment Term**
+## Payment Term
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Payment Term`
+
+### Overview
 
 A payment term specifies the period allowed to pay off an amount due.
 
@@ -167,7 +178,7 @@ The way it works is:
 3.  Finally, every time an invoice is booked for that business partner the payment terms setup by default will be applied and therefore used for the creation of the corresponding Invoice "Payment In/Out Plan".  
     A payment in/out plan lists as many scheduled payments against an invoice as due dates configured in the payment term associated with that invoice.
 
-### **Header**
+### Header
 
 Payment Term window allows the user to create and configure the payment terms to be linked to the business partners.
 
@@ -185,7 +196,7 @@ It is important to remark that in the case of defining a payment term split into
 
 ![](../../../../assets/drive/WiK0QfJlcL1hhV_wm--ADnkVzNO8_O857PO7qGn1hV_3-1vz-WZCWM4DB2HPzQAaDhRNtHM8LE2ZgsVjUZW-A1udQ4Lq6BDpsbztFPRTv_S0t2mUPFLdaJsE_KB9TYOeGbo0xjlDuYBbDG1jiw.png)
 
-### **Translation**
+### Translation
 
 Payment Terms can be translated to the language required.
 
@@ -194,7 +205,7 @@ The way to get that is as simple as:
 - selecting first the language required
 - and then entering the payment term name translated into that language.
 
-### **Lines**
+### Lines
 
 It is possible to split payment terms into more than just one payment term line.
 
@@ -216,13 +227,15 @@ The information you can enter for each payment term line is:
 - **Fixed Week Day** - a fixed day of the week can be selected to get that calculated due dates matches exactly that day of the week.
 - **Next Business Day** - allows you to set as payment date not exactly the due date but the next business day.
 
-## **Return Reasons**
+## Return Reasons
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Return Reasons`
+
+### Overview
 
 In this window you can configure different reasons because either you return goods or the customer returns goods. This is the reason why these values are used in Return to Vendor and Return from Customer windows
 
-### **Return Reasons**
+### Return Reasons
 
 This window is in Application||Master Data Management||Business Partner Setup||Return Reasons
 
@@ -233,15 +246,17 @@ Fields:
 - **Return from customer**: When this flag is marked, the value will be available in the window Return from Customer window
 - **Return to vendor**: When this flag is marked, the value will be available in the window Return to vendor window
 
-## **Volume Discount**
+## Volume Discount
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Volume Discount`
+
+### Overview
 
 Volume discounts are discounts which apply after getting a certain volume of sales of specific products or product groups.
 
 Volume discounts are incentives intended to encourage the purchase of goods in greater quantities. This incentive is normally offered to pass on some of the economic efficiencies gained through larger orders, to improve customer relations, and to increase total volume of sales.
 
-### **Volume Discounts**
+### Volume Discounts
 
 Volume Discount window allows the user to create and properly configure volume discounts related to specific products and/or product groups, which are later on assigned to selected business partners.
 
@@ -259,19 +274,19 @@ As shown in the image above, a volume discount can be created by just entering b
   - or All excluding defined - which means all product groups but the ones defined in the "Product Category" tab below.
 - **Scaled** - A volume discount can be scaled which means that it is possible to define a set of amount ranges having a different discount. To learn more, visit the "Volume Discount Parameters" tab below.
 
-### **Product Category**
+### Product Category
 
 A volume discount can be configured for a set of product categories or can be configured for all product categories but for a set of them.
 
 Therefore, and depending on the criteria taken, you could select here the products to either include or exclude of a given volume discount.
 
-### **Product**
+### Product
 
 A volume discount can be configured for a set of products or can be configured for all products but a set of them.
 
 Therefore, and depending on the criteria taken, you could select here the product groups to either get included or excluded of a given volume discount.
 
-### **Volume Discount Parameters**
+### Volume Discount Parameters
 
 Volume discount parameters are a discount % as well as the minimum amount up to which the discount % is applied.
 
@@ -283,7 +298,7 @@ As an example, you could configure a volume discount which applies:
 - a 5% to the amount range = 10,000.00 to 24,999.99
 - and a 10% to a minimum amount up to 25,000.00
 
-### **Business Partners**
+### Business Partners
 
 Volume Discounts can be assigned to selected business partners within a given time period.
 
@@ -294,11 +309,13 @@ Regardless volume discount makes more sense for "Sales Transaction", it is also 
 - removing the "Sales Transactions" flag
 - and by removing the filter "Customer" while selecting business partners in the business partner selector.
 
-## **Basic Discount**
+## Basic Discount
+
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Basic Discount`
 
 A Basic Discount is a deduction from the total amount of an order or an invoice.
 
-### **Introduction**
+### Overview
 
 Discounts of this type means a sum of the total order / invoice discount amounts, excluding taxes per each tax rate.
 
@@ -338,7 +355,7 @@ Discounts
     - **Invoiced Quantity** equals to _1_.
     - **Net Unit Price** equals the applicable discount amount, which in our example is _\-50_ (_5%_ of the total net amount at a given tax rate _1,000.00_).
 
-### **Basic Discount**
+### Basic Discount
 
 A total discount can be created and configured by entering a discount name, a discount product and a discount %.
 
@@ -348,9 +365,11 @@ Fields to note:
 
 - Previously created Product you could name the same as the discount name. That product is the one to be filled in the new orders / invoice line/s to manage this type of discounts (see above).
 
-## **Salary Category**
+## Salary Category
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Salary Category`
+
+### Overview
 
 Create salary categories to be applied to your employees/workers.
 
@@ -362,19 +381,21 @@ The salary category and related cost is also used in the **Project and Service m
 
 The setup of the salary category of the employee is done in the \[Cost Salary Category\] tab underneath the \[Employee\] tab of the Business Partner
 
-### **Salary Category**
+### Salary Category
 
 It defines costs and date ranges for a specified salary category.
 
 For the use of the salary category for the cost calculation in the Production and Project and Service management module, the cost applied checkbox is selected.
 
-### **Cost**
+### Cost
 
 It creates a salary category.
 
 **Cost UOM**: for Project and Service Management, the salary is set up per Hour, so that when the time expenses are entered, the cost of that time can be added to the profitability report.
 
 ## Rappel Configurations
+
+:material-menu: `Application` > `Master Data Management` > `Business Partner Setup` > `Rappel Configurations`
 
 !!! info
     To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
@@ -477,4 +498,4 @@ Remember that the options selected in the tabs “Product Category”,“Product
 When selecting the option “only those defined” in the fields “include product categories” and “include products” of the header, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “white wine”, the rappel will only include the products belonging to the category “water” and not “white wine”.
 >
 !!! warning
-    -When selecting the option “All excluding defined” in the “Include product categories” field and the option “Only those defined” in the “include products” field, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “sparkling water”, the rappel will not include the product “sparkling water” despite what is defined in the “product” tab, since the priority is in the defined “product category”.
+    When selecting the option “All excluding defined” in the “Include product categories” field and the option “Only those defined” in the “include products” field, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “sparkling water”, the rappel will not include the product “sparkling water” despite what is defined in the “product” tab, since the priority is in the defined “product category”.
