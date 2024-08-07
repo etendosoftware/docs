@@ -12,7 +12,7 @@ tags:
 
 ## Overview
 
-The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Assistants to extract information from images or pdfs that are uploaded to the chat.
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -33,17 +33,17 @@ The Optical Character Recognition (OCR) Tool is a tool that recognizes text from
     ./gradlew update.database smartbuild --info
     ``` 
 
-4. After that, configure the tool in a Copilot App, in order to do that, go to **Copilot App** and pick the **OCR Tool** option in the **Tool** tab.
+4. After that, configure the tool in a Assistant, in order to do that, go to **Assistant** and pick the **OCR Tool** option in the **Skill and Tools** tab.
 
 5. Update you application:
-    - If its an OpenAI Assistant, click in the **Sync OpenAI Assistant** button.
+    - If its an OpenAI Assistant, click in the **Sync Assistant** button.
     - If its a Langchain App, restart copilot with the following commands:
     ``` bash title="Terminal"
     ./gradlew copilot.stop
     ./gradlew copilot.start
     ```
 
-5. Now, your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
+5. Now, your Assistant is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
 
 ## Examples
 

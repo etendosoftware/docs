@@ -33,7 +33,7 @@ For this particular case, we have configured an assistant with the functional me
 
  - In the module `com.etendoerp.copilot.openapi.purchase` there is a dataset with the basic configuration of the **Copilot Purchase Expert**. It can be imported in the `Application`>`General Setup` > `Enterpice Model` > `Enterprise module management` window. 
  
- - After importing the configuration, it is necessary to configure the OpenAI model for the imported **Copilot App** and click [Sync OpenAI Assistant](../setup.md#sync-open-ai-assistant-button) button to create the corresponding assistant.
+ - After importing the configuration, it is necessary to configure the OpenAI model for the imported **Assistant** and click [Sync Assistant](../setup.md#sync-open-ai-assistant-button) button to create the corresponding assistant.
  
  - Finally, give access to the role and configure the permissions in [Role](../setup.md#role-window) Window.
 

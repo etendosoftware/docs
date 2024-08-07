@@ -167,7 +167,7 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     - *JSON Info*: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. 
  
 
-    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is obtained from the tool class.
+    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Assistant. To do so, we have to execute the button `Sync Tool Structure` in the `Skill/Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is obtained from the tool class.
 
     !!! Warning Before Sync Tool Structure
         It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
@@ -178,12 +178,12 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     ```bash title="Terminal"
     ./gradlew export.database
     ```
-    Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
+    Once the *Copilot Tool* is defined, this tool must be associated to the assistant(s), to do so, a record must be created in the *tools* tab of the **Assistant** window, this record will allow us to activate or deactivate the tool.
 
     ![how-to-create-copilot-tools-2.png](../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
 
     !!! note "OpenAI Assistants tools"
-        Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
+        Remember to execute `Sync Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
 5. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
 To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.

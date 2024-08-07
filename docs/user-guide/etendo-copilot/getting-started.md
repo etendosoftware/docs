@@ -21,12 +21,12 @@ Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, 
 
 ![Copilot Chat](../../assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
 
-At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
+At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Assistant* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
 
-## Agent
+## Assistant
 
-The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
+The Assistant serves you making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
 
 ## Tools
 
@@ -51,4 +51,4 @@ In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you 
 
 ![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select a Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
+Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`, `LangGraph` and `Open AI Assistant` types.
