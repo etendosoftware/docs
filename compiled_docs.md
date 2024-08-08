@@ -43759,6 +43759,239 @@ Since the information about packages is updated frequently, the user can execute
     Each time the server is restarted, the update process is executed automatically.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Docker Management
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Docker Management
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management
+## Article Content: 
+### Docker Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.docker`
+
+#### Overview
+
+[Docker](https://docs.docker.com/){target=_isblank} is a platform that enables developers to automate the deployment, scaling, and management of applications. It uses containerization technology, which packages an application and its dependencies into a standardized unit called a **container**. Containers can run consistently across different computing environments, making them highly portable and efficient.
+
+The `com.etendoerp.docker` module enables the use of Dockerized containers in Etendo Classic. This allows for the distribution and encapsulation of new functionalities using Etendo's existing module infrastructure. It also provides the capability to Dockerize the database, Tomcat, or any current or future Etendo infrastructure dependencies. Also, the module includes Gradle tasks to manage containers.
+
+!!! Info 
+    This module includes the infrastructure for container management and the Postgres database service, as an example. In case you want to run other services, add the corresponding modules that implement the dockerization.  
+
+Additionally, the infrastructure could be extended, and allows other modules to include in it their own specific containers.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+
+#### Requirements
+
+- [Docker](https://docs.docker.com/get-docker/){target="_blank"}
+- [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}
+
+
+#### Using Containers Distributed in Modules
+
+##### Configuration Variables
+
+  - It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
+    
+    `docker_<javapackage>=true`
+    
+    
+    Example:
+    ``` groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    ```
+
+  - In case you want to configure only one service belonging to a module, it is possible by adding a variable with the format:
+
+    `docker_<javapackage>_<service>=true`
+
+    Example:
+    ``` groovy title="gradle.properties"
+    docker_com.etendoerp.docker_db=true
+    ```
+    !!!note
+        In this case, only the database service will be taken into account when raising and lowering services related to the `com.etendoerp.docker` module. 
+    
+  - It is also possible that some services may require configuration variables, in which case they should be added: 
+
+    `docker_<javapackage>_<variable>=<value>`
+
+    Example:
+    ``` groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat_port=8080
+    ``` 
+    !!!note
+        In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
+
+  Finally, always to apply changes, execute 
+
+  ``` bash title="Terminal"
+  ./gradlew setup
+  ```
+
+#### Gradle Tasks to Manage Containers
+Execute the following command to use the infrastructure:
+
+##### Running
+
+``` bash title="Terminal"
+./gradlew resources.up
+```
+This command will search for all configured resources and start the containers.
+
+!!! note 
+    If you only have the base `com.etendoerp.docker` module installed and configured, this command will start a PostgreSQL database.
+
+##### Stopping
+``` bash title="Terminal"
+./gradlew resources.stop
+```
+This command will stop the containers.
+
+##### Down
+
+``` bash title="Terminal"
+./gradlew resources.down
+```
+This command will stop and remove the containers.
+
+
+#### Verifying the Status
+
+To verify the status of the resources started by Docker Compose, you can use the following Docker commands:
+
+`docker ps`
+
+This command lists all running Docker containers. You should see the containers related to Etendo
+
+`docker compose logs`
+
+This command shows the logs of all the services defined in your Docker Compose configuration, which can help in troubleshooting and verifying that the services are running correctly.
+
+It is also possible to manage containers with tools such as [Lazydocker](https://github.com/jesseduffield/lazydocker#installation){target=_isblank} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
+
+
+#### Postgres Database Service
+
+In this module a Postgres database service is included, this allows to use the dockerized database in Etendo. To use it the following steps must be followed:
+
+1. Once the `com.etendoerp.docker` module is installed, it is necessary to add a configuration variable in the `gradle.properties` to enable the use of the service:
+
+    ``` groovy title="gradle.properties"
+    docker_com.etendoerp.docker_db=true
+    ```
+
+2. Then it is necessary to run `./gradlew setup`, to apply the configuration changes.
+
+3. When `./gradlew resources.up` is executed, a new Docker container with the database service will be raised using the configuration variables defined in the `gradle.properties`, such as port, user, password, etc. 
+
+    !!! warning
+        In case you have the same service running locally on the same port it should be down. 
+
+4. Finally, using this service it is possible to run `./gradlew install` to install the database from scratch, or it is possible to restore a backup and start using the new dockerized database service. 
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Tomcat Dockerized Service
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Tomcat Dockerized Service
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service
+## Article Content: 
+### Dockerized Tomcat Service
+:octicons-package-16: Javapackage: `com.etendoerp.tomcat`
+
+#### Overview
+
+The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+
+#### Configuration Variables
+
+To enable and configure the Tomcat service, the following configuration variables are available:
+
+- **Enable the Service**
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    ```
+    This variable enables the Tomcat service.
+
+- **Configure Tomcat Port** (Optional)
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat_port=<port>
+    ```
+    This variable sets the port for the Tomcat service. The default port is `8080`
+
+- **Configure Debug Port** (Optional)
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat_debug=<debug_port>
+    ```
+    This variable sets the debug port for the Tomcat service. The default debug port is `8009`
+
+    !!! info
+        For debugging in IntelliJ, create a new configuration of type **Remote JVM Debug** and set the port to listen on.
+
+        ![Debug-Mode.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/tomcat-dockeridez-service/debug-mode.png)
+
+
+Execute the following command to apply the configuration changes:
+
+```groovy title="Terminal"
+./gradlew setup
+```
+
+#### Compile the Environment
+
+- The first time Tomcat is used within a Docker environment, the setup must be compiled by executing:
+    
+    ``` bash title="Terminal"
+    ./gradlew update.database compile.complete smartbuild
+    ```
+
+    This command will update the database and recompile the java classes and deploy the `WAR` to the dockerized Tomcat service. 
+
+    !!! info
+        This module modifies **Gradle tasks**. Executing the `update.database` command will automatically stop the Tomcat service. The `smartbuild` task will then ensure that the `WAR` file is correctly deployed in the container. After the smartbuild execution, the service will automatically restart, enabling an automated compilation from the command line.
+         
+
+
+- Refer to [Docker Management](./docker-management.md) page for more information on container management.
+
+
+#### Extra Configuration to Use Tomcat (Dockerized) with a Host Database in Linux Environments
+
+1. Listen on the Docker Network
+
+    Create the `etendo.conf` file in the location `/etc/postgresql/<your_pg_version>/main/conf.d/etendo.conf` with the following content:
+
+    ``` title="etendo.conf"
+    listen_addresses = 'localhost,172.17.0.1'
+    ```
+
+2. Allow Access from the Docker Subnetwork
+
+    Add the following line to the `/etc/postgresql/<your_pg_version>/main/pg_hba.conf` file:
+    
+    ``` title="pg_hba.conf"
+    host all all 172.0.0.0/8 scram-sha-256
+    ```
+
+3. Restart the PostgreSQL Service
+
+    Finally, restart the PostgreSQL service by running the following command in the terminal:
+
+    ``` bash title="Terminal"
+    sudo systemctl restart postgresql
+    ```
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
 ## Article Path: /Developer Guide/Etendo Classic/Bundles/Warehouse Extensions Bundle
 ## Article URL: 
