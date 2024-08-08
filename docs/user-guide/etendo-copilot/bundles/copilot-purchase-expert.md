@@ -22,7 +22,7 @@ By using certain tools and a prompt that gives the Assistant appropriate context
 
 For this particular case, we have configured an assistant with the functional methodology of creating purchase orders, and we have equipped it with 3 tools:
 
-- **OCR Tool**: This tool is capable of reading images and PDF and returning a JSON object with the extracted information
+- [**OCR Tool**](../../../developer-guide/etendo-copilot/available-tools/ocr-tool.md): This tool is capable of reading images and PDF and returning a JSON object with the extracted information.
 
 - **Etendo API Tool**: This tool explains to the assistant how to interact with the Etendo API, and what are the available endpoints and their descriptions.
 
