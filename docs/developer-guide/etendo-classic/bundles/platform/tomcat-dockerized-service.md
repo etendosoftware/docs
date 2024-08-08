@@ -68,3 +68,31 @@ Execute the following command to apply the configuration changes:
 
 
 - Refer to [Docker Management](./docker-management.md) page for more information on container management.
+
+
+## Extra Configuration to Use Tomcat (Dockerized) with a Host Database in Linux Environments
+
+1. Listen on the Docker Network
+
+    Create the `etendo.conf` file in the location `/etc/postgresql/<your_pg_version>/main/conf.d/etendo.conf` with the following content:
+
+    ``` title="etendo.conf"
+    listen_addresses = 'localhost,172.17.0.1'
+    ```
+
+2. Allow Access from the Docker Subnetwork
+
+    Add the following line to the `/etc/postgresql/<your_pg_version>/main/pg_hba.conf` file:
+    
+    ``` title="pg_hba.conf"
+    host all all 172.0.0.0/8 scram-sha-256
+    ```
+
+3. Restart the PostgreSQL Service
+
+    Finally, restart the PostgreSQL service by running the following command in the terminal:
+
+    ``` bash title="Terminal"
+    sudo systemctl restart postgresql
+    ```
+
