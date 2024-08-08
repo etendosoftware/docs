@@ -6,7 +6,9 @@ Process Scheduling folder allows the user to schedule and monitor Etendo backgro
 
 ## Process Request
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Request`
+
+### Overview
 
 A background process is a system action requested by the user, who has to previously provide auxiliary parameter values to execute that action.
 
@@ -153,7 +155,9 @@ More information in [Process Group](#process-group_1).
 
 ## Process Monitor
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Monitor`
+
+### Overview
 
 Process monitor feature allows reviewing the status of processes executed by a user as well as the ones scheduled in the process request window.
 
@@ -193,7 +197,9 @@ More information in [Process Group](#process-group_1).
 
 ## Process Group
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Group`
+
+### Overview
 
 Create a Process Group to be able to schedule and execute a group of processes as a single unit from the Process Scheduler. The batch of processes will be executed in series.
 

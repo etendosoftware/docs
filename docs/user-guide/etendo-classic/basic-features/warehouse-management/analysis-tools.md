@@ -22,7 +22,9 @@ This section describes the windows related to warehouse reports in Etendo. These
 
 ## Pareto Product Report
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Pareto Product Report`
+
+### **Overview**
 
 **Pareto Product Report** distributes products into three classes (A, B or C) according to the cost value that each product inventory has in the warehouse. Based on this classification the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
 
@@ -63,6 +65,8 @@ Aggregated information calculated for the Valued Stock can be used. Please refer
 
 ## Material Transaction Report
 
+:material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Material Transaction Report`
+
 Material Transaction Report lists all documents (outgoing shipments and incoming receipts) grouped by Business Partner and document. For each document number data, product, warehouse, bin and quantity are shown.
 
 ### Window Parameters
@@ -76,9 +80,9 @@ Information on this report can be filtered using movement date, business partner
 ![Material Transaction Report](../../../../assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
 
 
-
-
 ## Stock Report
+
+:material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Stock Report`
 
 Stock Report shows a stock level of all products (that have quantity on hand different from zero) and their location (warehouse and storage bin) grouped by product category. For each row product, quantity, unit, attribute, shelves, column, height and warehouse.
 
@@ -87,8 +91,6 @@ Stock Report shows a stock level of all products (that have quantity on hand dif
 The outcome of this report can be filtered by using movement date, product category, product and warehouse locators.
 
 ![Material Transaction Report](../../../../assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
-
-
 
 The outcome of this report can be viewed in HTML and PDF format.
 
@@ -100,6 +102,8 @@ The outcome of this report can be viewed in HTML and PDF format.
 
 
 ## Stock History
+
+:material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Stock History`
 
 !!! info
     To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
@@ -134,7 +138,9 @@ This functionality includes a process to close the stock and save the historical
 
 ## Valued Stock Report
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Valued Stock Report`
+
+### **Overview**
 
 Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.
 
@@ -182,8 +188,6 @@ The information will persist until the first not closed Period. By doing so, it 
 
 ![Material Transaction Report](../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
 
-
-
 !!! info
     It is recommended to schedule it daily, at a moment when the System does not have plenty of activity. It will aggregate data only when a new Period is Closed or Permanently Closed.
 
@@ -193,6 +197,8 @@ The information will persist until the first not closed Period. By doing so, it 
 By aggregating the information per each Closed Period, it is not possible to keep the date of each Transaction. So, when the Report is launched for a different Currency, all that information will be converted at the Period's Closing Date. This can result in minor discrepancies with the previous version due to conversions between currencies at different dates.
 
 ## Product Movements Report
+
+:material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Product Movements Report`
 
 Product Movements Report shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner. For each row, document number, date, description, locators and quantity are shown.
 
@@ -214,6 +220,8 @@ Additionally, the user can include or exclude these documents:
 ![Product Movements Report](../../../../assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
 
 ## Product Operations
+
+:material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Product Operations`
 
 !!! info
     To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).

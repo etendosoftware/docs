@@ -18,19 +18,25 @@ This section describes the different windows that are necessary to set up the sa
 [:material-file-document-outline:Reject Reason](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#reject-reason){ .md-button .md-button--primary } <br>
 
 
-## **Condition of the goods**
+## Condition of the goods
+
+:material-menu: `Application` > `Sales Management` > `Setup` > `Condition of the goods`
 
 In this window, the user defines in which status the goods come from the customer. These values are used in the **Return Material Receipt** window.
 
 ![Condition of the goods](../../../../assets/drive/12vgLwH05GA2eHFM0hO6gh-oMJB8wQnae.png)
 
-## **Sales Region**
+## Sales Region
+
+:material-menu: `Application` > `Sales Management` > `Setup` > `Sales Region`
 
 In this section, the user can create sales regions to be used in sales operations and define a sales region to be used in the sales process.
 
 ![Sales region](../../../../assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F.png)
 
-## **Commission**
+## Commission
+
+:material-menu: `Application` > `Sales Management` > `Setup` > `Commission`
 
 The user can define how and when commissions are going to be calculated and to whom they are going to be paid.
 
@@ -95,20 +101,26 @@ Finally, the result of the commission will be the combination of these three lin
 
 ![Commission's pop up](../../../../assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png)
 
-## **Channel**
+## Channel
+
+:material-menu: `Application` > `Sales Management` > `Setup` > `Channel`
 
 In this section, the user can create specific sales channels to be used in sales operations and define a sales channel to be used in the sales process.
 
 ![Channel window](../../../../assets/drive/1BFtERRlthvXGBH9eadge2BdYwXJTqm4Z.png)
 
-## **Sales Campaign**
+## Sales Campaign
+
+:material-menu: `Application` > `Sales Management` > `Setup` > `Sales Campaign`
 
 In this section, the user can create specific sales campaigns to be used in sales operations and define a sales campaign to be used in the sales process.
 
 ![Sales campaign window](../../../../assets/drive/1SwdM8FP349N8HNZhQF546HuE6rIzvoak.png)
 
 
-## **Reject Reason**
+## Reject Reason
+
+:material-menu: `Application` > `Sales Management` > `Setup` > `Reject Reason`
 
 In this window, the user defines the reasons to reject quotations. These values are used in the **Sales Quotation** window.
 
