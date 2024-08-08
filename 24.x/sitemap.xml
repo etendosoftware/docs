@@ -31,12 +31,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/docker-management/</loc>
+         <lastmod>2024-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/</loc>
          <lastmod>2024-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/overview/</loc>
+         <lastmod>2024-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service/</loc>
          <lastmod>2024-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
