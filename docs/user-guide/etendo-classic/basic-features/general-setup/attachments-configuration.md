@@ -2,6 +2,8 @@
 title: Attachments Configuration
 ---
 
+:material-menu: `Application` > `General Setup` > `Attachments Configuration`
+
 ## Overview
 
 Client configuration of the Attachment Method to be used. Each attachment method can include its own extra fields to complete the configuration of the attachment method. It is only possible to have one active configuration on each client.

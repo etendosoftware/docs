@@ -469,6 +469,7 @@ nav:
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
+        - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
         - Create Reference Tool: developer-guide/etendo-copilot/available-tools/create-reference-tool.md
         - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
         - DDL Tool: developer-guide/etendo-copilot/available-tools/ddl-tool.md

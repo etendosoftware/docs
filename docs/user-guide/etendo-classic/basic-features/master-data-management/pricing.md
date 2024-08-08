@@ -2,9 +2,11 @@
 title: Pricing
 ---
 
-## **Price List Schema**
+## Price List Schema
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Price List Schema`
+
+### Overview
 
 A price list schema is a template used to automatically populate a new version of a price list.
 
@@ -42,7 +44,7 @@ The way these concepts work in Etendo is described below:
     2.  The Price list/s versions created can be linked to the business partners as required.  
         To learn more, visit Business Partner.
 
-### **Header**
+### Header
 
 Price list schema window supports the creation of as many price list schemas as required with the aim of obtaining an easy management of price lists and price list versions.
 
@@ -52,7 +54,7 @@ As shown in the image below, the creation of a price list schema is as easy as t
 
 The set of price and discount rules which might apply to a set of product categories or specific products must be configured in the "Lines" tab.
 
-### **Lines**
+### Lines
 
 Price list schema lines tab allows defining a set of price rules such as to apply a discount % to the net unit price of a given product category or specific product.
 
@@ -138,9 +140,11 @@ Using non-hierarchical behavior:
 - unit price discount of 10% is applied to the products which belong to a Product Category Y.
 - unit price discount of 15% is applied to Product X.
 
-## **Price List**
+## Price List
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Price List`
+
+### Overview
 
 A price list is a listing of prices for different products or services.
 
@@ -168,7 +172,7 @@ Price List version creation:
 5.  Documents will automatically default the most recent version of a price list.
 6.  There is no end date on price list versions, but old versions can be deactivated.
 
-### **Price List**
+### Price List
 
 Price List window allows creating purchase and sales price lists to be assigned to the business partners for its use in purchase and sales transactions such as orders and invoices.
 
@@ -207,7 +211,7 @@ Due to this (Net amount vs Gross amount), when using prices that include taxes, 
 - When the price list does not include taxes, the _gross unit price_ and _line gross amount_ fields are not displayed and both fields are not calculated at all in the line of the document. The final gross amount of the document will be the result of the sum of the lines net amounts plus the tax amounts.
 - The price list is defined at document level (header) so there cannot be lines where the price includes taxes and others where not. This is clear for orders, but for invoices where orders can be grouped in one just invoice the rule is also applied. One invoice cannot have orders where the price list includes taxes and orders where the price list does not include taxes.
 
-### **Price List Version**
+### Price List Version
 
 There could be as many versions of an existing price list as required, versions which can be valid for a given time period and which can be defined according to certain commercial rules.
 
@@ -226,7 +230,7 @@ The process button named "Create Price List" must be used only in the case of cr
 - if Base version is blank, the application calculates the unit price and list price for all the products (excluding discounts products) plus the margin defined.
 - if Base version value is selected, the application calculates the unit price and list price for all the products defined in the base price list as cost plus margin.
 
-### **Product Price**
+### Product Price
 
 Product Price tab allows the user to either add or edit products and their prices for a selected price list.
 
@@ -243,9 +247,11 @@ Overall, this tab includes two main fields:
 - 'the _List Price'_ field, as the price used as a reference in a given price list or price list version. This price can be the result of a discount or any other commercial rule applied by a Price List Schema.
 - and the **Unit Price** field, as the final price used in documents such as orders and invoices. This price can be the result of a discount or any other commercial rule applied by a Price List Schema.
 
-## **Create all price lists**
+## Create All Price Lists
 
-### Introduction
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Create All Price Lists`
+
+### Overview
 
 On daily sales, especially on retail and distribution, price lists are very important. Therefore, Etendo includes plenty of information to manage and update price list versions per business partner.
 
@@ -275,9 +281,11 @@ The Create All Price Lists generates all price lists pending from the selected p
 
 ![](../../../../assets/drive/1JC58tbBLqjqN5hDZv5Puwp_lAmDafJqd.png)
 
-## **Discounts and Promotions**
+## Discounts and Promotions
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Discounts and Promotions`
+
+### Overview
 
 Discounts and Promotions is a mechanism that allows the user to adjust prices based on different rules. External modules can extend this definition by providing additional rules (Discount Types) implementations.
 
@@ -294,7 +302,7 @@ This feature requires to set as "Active":
   - Sales Invoice
   - and Sales Quotation
 
-#### **How Promotions are applied**
+#### How Promotions are Applied
 
 Rules are applied to order or invoice lines based on the filters in that rule, for example to a specific Business Partner Category acquiring a concrete set of products during a fixed period of time.
 
@@ -311,7 +319,7 @@ Etendo manages prices in 3 chunks:
 
 Multiple promotions can be chained in cascade, in this case the one applied in 2nd position will use as base the actual price obtained after applying the first one. An alternative mechanism to apply promotions in _WebPOS_ is implemented by the Promotions Best Deal Case module.
 
-#### **How Promotions are defined**
+#### How Promotions are defined
 
 The main fields to take into account when defining a promotion are:
 
@@ -329,7 +337,7 @@ The main fields to take into account when defining a promotion are:
   - _Only those defined_: Restricts the filter to just the items that are included in the correspondent sub tab.
 - _Definition_ section: Fields shown in this section vary depending on the selected promotion type. Here it is typically defined how much to discount and additional conditions to be met to apply the rule.
 
-#### **Price Adjustment**
+#### Price Adjustment
 
 _Price Adjustment_ is the promotion type included by default, it behaves almost in the same way _Price Adjustments_ did before they were extended to _Promotions and Discounts_.
 
@@ -345,49 +353,51 @@ To define a promotion of _Price Adjustment_ type, follow the indications in the 
 - _Fixed Unit Price_: Sets the price per unit. If this field is set, the two mentioned above are not used.
 - _Min_ and _Max_ quantities: Specifies which is the quantity range to apply the rule, values here are included and any (or both) of them can be empty. For example, a promotion with _Min Quantity_ 5 to product A (which UOM is unit) would apply whenever there is a line with 5 or more units of product A.
 
-### **Discounts and Promotions**
+### Discounts and Promotions
 
 Defines the Discounts and Promotions main characteristics such as Discount Type, how it is filtered and actual discount information based on type.
 
-### **Translation**
+### Translation
 
 Maintains translations of Discounts and Promotions to different languages.
 
-### **Business Partner Category**
+### Business Partner Category
 
 The user can add business partner categories in order to include or exclude them from a selected Promotion/Discount.
 
-### **Business Partner**
+### Business Partner
 
 The user can add business partners in order to include or exclude them from a selected Promotion/Discount.
 
-### **Business Partner Set**
+### Business Partner Set
 
 The user can define business partner sets for the discount.
 
-### **Product Category**
+### Product Category
 
 The user can add product categories in order to include or exclude them from a selected Promotion/Discount.
 
-### **Products**
+### Products
 
 The user can add products in order to include or exclude them from a selected Promotion/Discount..
 
-### **Price List**
+### Price List
 
 The user can add price lists in order to include or exclude them from a selected Promotion/Discount.
 
-### **Organization**
+### Organization
 
 The user can add organizations in order to include or exclude them from a selected Promotion/Discount.
 
-## **Service Price Rule**
+## Service Price Rule
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Service Price Rule`
+
+### Overview
 
 In this window Price Rules assigned to Price Rule Based services will be configured. Instead of having a fixed price, there will be rules that will determine the price of the Service.
 
-### **Service Price Rule**
+### Service Price Rule
 
 ![](../../../../assets/drive/X9LCI62xbhWb8fv-Kd56CnOQGzy2Bw1KXj1frgulzwbMa3UkXVFW2GtKdR1a0-BIXVVRePT4wgfzFCFI8LpQAZv66zLqQTzVV_5LuiBKK8wZecnNvki6Pu3rJ-4OBccqbSfCm45H2zJ4eX4xgw.png)
 
@@ -401,7 +411,7 @@ Configuration fields:
     - **After Discounts**: If selected, the percentage will be applied after adding the discounts to the ticket.
   - **Ranges**: If selected, a new tab Ranges will be displayed allowing to create different Ranges based on the amount of the related lines.
 
-### **Ranges**
+### Ranges
 
 ![](../../../../assets/drive/QwjLn0C5fh2kKYl7P1q381tMurECKsFm_xLVCviWtFqf48yaxSa0PfpjwM80ji2kQQmDQC3VQVL6YQYyRu9y39AgLl19QBGYO4E2iAXV7cC1qINdvHtHTYAQGmQCDrVeqBr-Jnhd_TVcKDDWcw.png)
 

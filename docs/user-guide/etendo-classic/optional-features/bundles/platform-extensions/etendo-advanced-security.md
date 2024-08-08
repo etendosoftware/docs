@@ -2,7 +2,7 @@
 title: Etendo Advanced Security
 ---
 
-### **Introduction**
+### Overview
 
 This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.
 
@@ -44,7 +44,7 @@ This process can also be executed from the **User** window by applying the same 
 
 ![](../../../../../assets/drive/jUjckeZt5RPHdHYZcD0xN9BXUkKoNLOYPrkLIkG4pyqPJBYvFFtkWWKBzgy3pZ2Qr1M-kGZPzd2YXiNxOuOlNdVj26PDen8jOxw-44zBzZsX1G3eNTiIzIHidjO8eiDmrY-uU-XhkUxG2RiUbahRbbQ.png)
 
-### **Password History**
+### Password History
 
 When changing the password, one of the conditions to be fulfilled is that the new password cannot be the same as a previously used one. Etendo creates records of the previously used passwords so, if the user enters a previously used one, the system informs with an **error message.**
 
@@ -63,7 +63,7 @@ The following example shows the same error message when changing the password fr
 !!! info
     Etendo also allows entering the same password an indefinite number of times. In case the user wishes to maintain the same password, just keep the field **Enable Password History** from the System Info window **unchecked**. 
 
-### **User Lockout** 
+### User Lockout
 
 Another feature of this module is the **blocking** of the user after N number of **unsuccessful login attempts**. When entering a wrong password, Etendo shows an error message indicating the number of attempts left.
 
@@ -85,7 +85,7 @@ To configure the number of unsuccessful login attempts, it is necessary to creat
 !!! warning
     It is important to note that once the new password has been entered, if the user enters again a wrong password, the system will automatically block the login at the first try. 
 
-### **Multiple Session Verification**  
+### Multiple Session Verification  
 
 Another functional innovation that facilitates this module is the ability to allow or block to have multiple sessions opened from another browser.
 
@@ -104,7 +104,7 @@ This way, when trying to log in, the system verifies that an active session alre
 !!! info
     By default, Etendo with this module installed, only allows to have one session active. 
 
-### **Changing Password after Login**
+### Changing Password after Login
 
 After logging in for the **first time** with a user, Etendo asks to **change the password**. When trying to log in, the system mentions that the password has expired and that the user needs to change it to a new one to be able to log in.
 
@@ -112,7 +112,7 @@ After logging in for the **first time** with a user, Etendo asks to **change the
 
 Once the change has been made, the user is redirected to the main interface of the application.
 
-### **Expiration Time (Autolock Password)**
+### Expiration Time (Autolock Password)
 
 As part of the security management, Etendo also allows the management of the days for the **password expiration time**.
 
