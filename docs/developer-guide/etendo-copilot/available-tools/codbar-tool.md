@@ -53,16 +53,24 @@ Using this tool consists of the following actions:
 
 ## Usage Example
 
-- Suppose there are images stored at
+- Suppose there is an image at `/tmp/goods-receipt.png` and you want to extract the barcode related to the goods receipt information:
 
-    `/tmp/test.png` and `/tmp/test1.png`
+The following is an example image of a goods receipt: 
+
+![alt text](../../../assets/developer-guide/etendo-copilot/available-tools/codbar-tool-0.jpg)
 
 - The tool will be used as follows: 
 
     - Input
 
-        `{"filepath": ["/tmp/test.png", "/tmp/test1.png"]}`
+        ```
+        `{"filepath": ["/tmp/goods-receipt.png"]}`
+
+        ```
 
     - Output
 
-        `{"message": ["123456789012", "987654321098"]}`
+        ```
+        `{"message": ['ALV-4066905', '871000003252']}`
+
+        ```
