@@ -15,7 +15,7 @@ This section explains how to install a new Etendo environment. It includes:
 In this section, you can read the [System Requirements](../getting-started/requirements.md).
 
 !!!info
-   The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module. If these containers are used, the **services must be launched**, followed by the installation guide.
+   The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module. If these containers are used, the **services must be launched**, and then follow with the installation guide.
 
 ## PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
