@@ -2,7 +2,9 @@
 title: Client
 ---
 
-## Introduction
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+## Overview
 
 A client is an independent entity composed of at least an organization. A client can include and manage master data such as users, customers and vendors. That master data is then shared among all the organizations which belong to that client.
 

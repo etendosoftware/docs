@@ -11,6 +11,8 @@ In order to initiate the Material Requirement Planning (MRP) process, the Planni
 
 ## Planning Method
 
+:material-menu: `Application` > `Material Requirement Planning` > `Setup` > `Planning Method`
+
 ### Overview
 
 Define how transaction types will be dealt with in the application.
@@ -40,7 +42,7 @@ By **default**, MRP takes **stock** and **safety stock** into account when creat
     For more details, see the [_Purchase Order_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) section.
 
 
-### **Header**
+### Header
 
 Use the header to create a planning method.
 
@@ -48,7 +50,7 @@ In this tab, the organization and the **name of the planning method** is entered
 
 ![](../../../../assets/drive/r-sIhmWnmoYNZsemrEKq3Il7LQsg1iDrcrq5K3H2HprddfyVZa7wiE5nmb6uaDHTpzSWHiHnvCetwhHQ_RBq1NJP3cIv17F96ZxBnqmyeWowc_zmB432U68KEEtdZbheLdRHdx9w00xaewhcEybYe4E.png)
 
-### **Lines**
+### Lines
 
 Add transactions to be included in your plan. Each transaction is shown on its own line.
 
@@ -61,15 +63,17 @@ Also, a percentage of the quantity to be considered by MRP is configured with th
 
 ![](../../../../assets/drive/r3xp-vXHNSPnrw9FA7ashqCDRgL0s5LE9i_8sNTRssgBQiOX5bDavCyyxMCmCXIUKzvbPdxvrp6wkfXKLFftUwcqNn3u57H56hpHgKp4z0YkfjBobN-fV1M_gGf09M7MyrjutIBaZzR40_IdhQn8fb0.png)
 
-## **Planner**
+## Planner
 
-### **Overview** 
+:material-menu: `Application` > `Material Requirement Planning` > `Setup` > `Planner`
+
+### Overview
 
 Define the entity in charge of managing the purchase or production of specific products.
 
 An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](../master-data-management/master-data.md#product) tab in the Master Data Management section.
 
-### **Planner**
+### Planner
 
 Define the planner in charge of managing the purchase or production of specific products.
 

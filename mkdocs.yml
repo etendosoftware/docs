@@ -197,7 +197,9 @@ nav:
           - Warehouse Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
-          - Financial Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+          - Financial Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+            - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
@@ -330,7 +332,7 @@ nav:
 #        - How to change an existing Report: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Report.md
         - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window.md
 #        - How to Change Fonts in Openbravo Reports: developer-guide/etendo-classic/how-to-guides/How_to_Change_Fonts_in_Openbravo_Reports.md
-#        - How To Change The Size of a Column: developer-guide/etendo-classic/how-to-guides/How_To_Change_The_Size_of_a_Column.md
+        - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
 #        - How To Configure Log: developer-guide/etendo-classic/how-to-guides/How_To_Configure_Log.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process.md
@@ -459,9 +461,9 @@ nav:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Bundles: 
         - Copilot Extensions:
-          - Overview: developer-guide/etendo-copilot/bundles.md/overview.md
-          - Create References: developer-guide/etendo-copilot/bundles.md/create-references.md
-          - Dev Assistant: developer-guide/etendo-copilot/bundles.md/dev-assistant.md
+          - Overview: developer-guide/etendo-copilot/bundles/overview.md
+          - Create References: developer-guide/etendo-copilot/bundles/create-references.md
+          - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md

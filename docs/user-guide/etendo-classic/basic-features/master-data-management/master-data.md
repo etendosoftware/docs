@@ -15,6 +15,8 @@ Having a single repository of data avoids data duplication, provides a unique wa
 
 ## Business Partner General View
 
+:material-menu: `Application` > `Master Data Management` > `Business Partner General View`
+
 !!! info
     To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
@@ -24,6 +26,8 @@ The “Advanced Business Partner” module allows the user to have a general vie
     For more information, visit [Advanced Business Partner](../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md) in the Essentials Extensions Bundle Documentation.
 
 ## Currency Converters
+
+:material-menu: `Application` > `Master Data Management` > `Currency Converters`
 
 In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
 
@@ -37,7 +41,9 @@ In the Currency Converters window, the necessary Apilayer data has to be configu
 
 ## Business Partner
 
-### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner`
+
+### **Overview**
 
 Business partner master data window is the place where the user can easily organize and centralize business partner data.
 
@@ -393,8 +399,6 @@ Three Discounts, each one of 10%, the first two ones are defined as not Cascade 
 In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
 
-
-
 ### Rappel Configuration
 
 !!! info
@@ -428,7 +432,9 @@ Each time a rappel is granted to a business partner, a new sales invoice is auto
 
 ## Business Partner Info
 
-#### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Business Partner Info`
+
+#### **Overview**
 
 In this section, the user can view information related to business partner orders, receipts/shipments, invoices, and assets.
 
@@ -459,7 +465,9 @@ The user can view invoices related to a specific business partner.
 
 ## Product
 
-#### **Introduction**
+:material-menu: `Application` > `Master Data Management` > `Product`
+
+#### **Overview**
 
 Product master data window is the place where you can easily organize and centralize the key data of the items of any type you might manage as part of the organization processes and/or activities.
 
@@ -896,7 +904,7 @@ This pop-up allows entering below detailed data:
   - if not checked, the incremental amount entered in the field total cost amount is not going to be considered part of the transaction unit cost but total cost. This is like entering an *extra* cost such as *Landed Cost*, which does not change the unit cost of that transaction but the total cost.
   - if checked, the incremental amount entered in the field total cost amount is going to be considered part of the unit cost of the transaction.
 
-For additional information about which cost adjustment is, or it is not unit cost, please review the section Cost Adjustments - Introduction.
+For additional information about which cost adjustment is, or it is not unit cost, please review the section Cost Adjustments - Overview.
 
 Once done, a *manual cost correction* cost adjustment will be created.
 
