@@ -7,6 +7,8 @@ tags:
 
 # Docker Management
 
+:octicons-package-16: Javapackage: `com.etendoerp.docker`
+
 ## Overview
 
 Docker is a platform that enables developers to automate the deployment, scaling, and management of applications. It uses containerization technology, which packages an application and its dependencies into a standardized unit called a "container." Containers can run consistently across different computing environments, making them highly portable and efficient.
@@ -60,7 +62,7 @@ Additionally, the infrastructure could be extended, and allows other modules to 
     docker_com.etendoerp.tomcat_port=8080
     ``` 
     !!!note
-        In this example, this variable configures the [Dockerized Tomcat Service](../dockerized-tomcat-service.md) module port, although the necessary configurations will be included in the documentation of each module.
+        In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
 
   Finally, always to apply changes, execute 
 
@@ -129,3 +131,4 @@ In this module a Postgres database service is included, this allows to use the d
       In case you have the same service running locally on the same port it should be down. 
 
 4. Finally, using this service it is possible to run `./gradlew install` to install the database from scratch, or it is possible to restore a backup and start using the new dockerized service. 
+
