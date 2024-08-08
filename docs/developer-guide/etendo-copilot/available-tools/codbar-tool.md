@@ -16,7 +16,7 @@ tags:
 The **CodbarTool** is a tool that reads barcodes from image files. It accepts an array of file paths as an input and returns an array of barcodes found in those images.
 
 !!!info
-        To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 ## Functionality
 
@@ -45,11 +45,11 @@ Using this tool consists of the following actions:
 
 
 !!!info
-        The tool utilizes the PIL library to open image files.
+    The tool utilizes the PIL library to open image files.
 
 
 !!!note
-        The **pyzbar library** is used to decode barcodes from the image. If no barcodes are found, it returns None for that image. If barcodes are found, it decodes each barcode’s data.
+    The **pyzbar library** is used to decode barcodes from the image. If no barcodes are found, it returns None for that image. If barcodes are found, it decodes each barcode’s data.
 
 ## Usage Example
 

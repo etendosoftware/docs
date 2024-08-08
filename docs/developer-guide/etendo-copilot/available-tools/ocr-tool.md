@@ -76,129 +76,128 @@ The following is an example image of an invoice:
 
         ``` Json title="Output Json"
         {
-        "company": {
-            "name": "F&B España, S.A.",
-            "tax_id": "B-1579173",
-            "address": "Pg. de Gracia, 123 2-1ª",
-            "city": "08009 - Barcelona (BARCELONA)"
-        },
-        "invoice": {
-            "title": "This is a Sales invoice",
-            "number": "1000000",
-            "currency": "EUR",
-            "date": "15-02-2011"
-        },
-        "customer": {
-            "name": "Restaurantes Luna Llena, S.A.",
-            "contact": "Ana Cortes",
-            "phone": "092765188",
-            "address": "Pl. Mayor, 78",
-            "postal_code": "76764"
-        },
-        "items": [
-            {
-            "reference": "ES0024",
-            "product_name": "Agua sin Gas 1L",
-            "uom": "Unit",
-            "quantity": 25000,
-            "price": 1.13,
-            "total": 28250.00
+            "company": {
+                "name": "F&B España, S.A.",
+                "tax_id": "B-1579173",
+                "address": "Pg. de Gracia, 123 2-1ª",
+                "city": "08009 - Barcelona (BARCELONA)"
             },
-            {
-            "reference": "ES0021",
-            "product_name": "Bebida Energética 0,5L",
-            "uom": "Unit",
-            "quantity": 45000,
-            "price": 1.49,
-            "total": 67050.00
+            "invoice": {
+                "title": "This is a Sales invoice",
+                "number": "1000000",
+                "currency": "EUR",
+                "date": "15-02-2011"
             },
-            {
-            "reference": "ES1000",
-            "product_name": "Cerveza Ale 0,5L",
-            "uom": "Unit",
-            "quantity": 33000,
-            "price": 2.48,
-            "total": 81840.00
+            "customer": {
+                "name": "Restaurantes Luna Llena, S.A.",
+                "contact": "Ana Cortes",
+                "phone": "092765188",
+                "address": "Pl. Mayor, 78",
+                "postal_code": "76764"
             },
-            {
-            "reference": "ES1002",
-            "product_name": "Cerveza Lager 0,5L",
-            "uom": "Unit",
-            "quantity": 45000,
-            "price": 2.64,
-            "total": 118800.00
-            },
-            {
-            "reference": "ES0030",
-            "product_name": "Cola de Cereza 0,5L",
-            "uom": "Unit",
-            "quantity": 40000,
-            "price": 0.83,
-            "total": 33200.00
-            },
-            {
-            "reference": "ES0032",
-            "product_name": "Limonada 0,5L",
-            "uom": "Unit",
-            "quantity": 40000,
-            "price": 0.83,
-            "total": 33200.00
-            },
-            {
-            "reference": "ES0023",
-            "product_name": "Vino Blanco 0,75L",
-            "uom": "Unit",
-            "quantity": 36000,
-            "price": 3.05,
-            "total": 109800.00
-            },
-            {
-            "reference": "ES0025",
-            "product_name": "Vino Rosado 0,75L",
-            "uom": "Unit",
-            "quantity": 36000,
-            "price": 5.83,
-            "total": 209880.00
-            },
-            {
-            "reference": "ES1004",
-            "product_name": "Vino Tinto 0,75L",
-            "uom": "Unit",
-            "quantity": 36000,
-            "price": 5.07,
-            "total": 182520.00
-            },
-            {
-            "reference": "ES0037",
-            "product_name": "Zumo de Naranja 0,5L",
-            "uom": "Unit",
-            "quantity": 45000,
-            "price": 1.13,
-            "total": 50850.00
-            },
-            {
-            "reference": "ES1014",
-            "product_name": "Zumo de Piña 0,5L",
-            "uom": "Unit",
-            "quantity": 33000,
-            "price": 1.13,
-            "total": 37390.00
+            "items": [
+                {
+                "reference": "ES0024",
+                "product_name": "Agua sin Gas 1L",
+                "uom": "Unit",
+                "quantity": 25000,
+                "price": 1.13,
+                "total": 28250.00
+                },
+                {
+                "reference": "ES0021",
+                "product_name": "Bebida Energética 0,5L",
+                "uom": "Unit",
+                "quantity": 45000,
+                "price": 1.49,
+                "total": 67050.00
+                },
+                {
+                "reference": "ES1000",
+                "product_name": "Cerveza Ale 0,5L",
+                "uom": "Unit",
+                "quantity": 33000,
+                "price": 2.48,
+                "total": 81840.00
+                },
+                {
+                "reference": "ES1002",
+                "product_name": "Cerveza Lager 0,5L",
+                "uom": "Unit",
+                "quantity": 45000,
+                "price": 2.64,
+                "total": 118800.00
+                },
+                {
+                "reference": "ES0030",
+                "product_name": "Cola de Cereza 0,5L",
+                "uom": "Unit",
+                "quantity": 40000,
+                "price": 0.83,
+                "total": 33200.00
+                },
+                {
+                "reference": "ES0032",
+                "product_name": "Limonada 0,5L",
+                "uom": "Unit",
+                "quantity": 40000,
+                "price": 0.83,
+                "total": 33200.00
+                },
+                {
+                "reference": "ES0023",
+                "product_name": "Vino Blanco 0,75L",
+                "uom": "Unit",
+                "quantity": 36000,
+                "price": 3.05,
+                "total": 109800.00
+                },
+                {
+                "reference": "ES0025",
+                "product_name": "Vino Rosado 0,75L",
+                "uom": "Unit",
+                "quantity": 36000,
+                "price": 5.83,
+                "total": 209880.00
+                },
+                {
+                "reference": "ES1004",
+                "product_name": "Vino Tinto 0,75L",
+                "uom": "Unit",
+                "quantity": 36000,
+                "price": 5.07,
+                "total": 182520.00
+                },
+                {
+                "reference": "ES0037",
+                "product_name": "Zumo de Naranja 0,5L",
+                "uom": "Unit",
+                "quantity": 45000,
+                "price": 1.13,
+                "total": 50850.00
+                },
+                {
+                "reference": "ES1014",
+                "product_name": "Zumo de Piña 0,5L",
+                "uom": "Unit",
+                "quantity": 33000,
+                "price": 1.13,
+                "total": 37390.00
+                }
+            ],
+            "payment_terms": "30 days",
+            "totals": {
+                "subtotal": 927640.00,
+                "tax": {
+                "rate": "IVA 18%",
+                "amount": 166975.20
+                },
+                "total": 1094615.20
             }
-        ],
-        "payment_terms": "30 days",
-        "totals": {
-            "subtotal": 927640.00,
-            "tax": {
-            "rate": "IVA 18%",
-            "amount": 166975.20
-            },
-            "total": 1094615.20
         }
-        }
-
         ```
 
 ### Result Chaining
 
 !!!note
-        Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
+    Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
