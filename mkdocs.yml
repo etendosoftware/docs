@@ -441,6 +441,8 @@ nav:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
           - Dependency Manager: developer-guide/etendo-classic/bundles/platform/dependency-manager.md
+          - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
+          - Tomcat Dockerized Service: developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
