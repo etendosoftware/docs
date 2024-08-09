@@ -25,9 +25,10 @@ Additionally, the infrastructure could be extended, and allows other modules to 
 
 ## Requirements
 
-- [Docker](https://docs.docker.com/get-docker/){target="_blank"}
-- [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}
+This project depends on the following tools:
 
+- [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
+- [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 
 ## Using Containers Distributed in Modules
 

@@ -80,6 +80,9 @@ Execute the following command to apply the configuration changes:
     listen_addresses = 'localhost,172.17.0.1'
     ```
 
+    !!! note
+        The IP address `172.17.0.1` is the interface that connects the host with the Docker service. This is the default address used for this connection.
+
 2. Allow Access from the Docker Subnetwork
 
     Add the following line to the `/etc/postgresql/<your_pg_version>/main/pg_hba.conf` file:
@@ -87,7 +90,8 @@ Execute the following command to apply the configuration changes:
     ``` title="pg_hba.conf"
     host all all 172.0.0.0/8 scram-sha-256
     ```
-
+    !!! note
+        The subnet `172.0.0.0/8` is used to enable access from Docker Tomcat to the host. By default, Docker assigns a subnet within the range of `172.1.0.0/8` to `172.254.0.0/8`.
 3. Restart the PostgreSQL Service
 
     Finally, restart the PostgreSQL service by running the following command in the terminal:
