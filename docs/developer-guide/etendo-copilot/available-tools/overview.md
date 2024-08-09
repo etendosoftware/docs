@@ -3,6 +3,8 @@
 Here you can find a list of the all the available tools in the Copilot bundle.
 
 - [Attach File Tool](../available-tools/attach-file-tool.md)
+- [Codbar Tool](../available-tools/codbar-tool.md)
+- [Create Reference Tool](../available-tools/create-reference-tool.md)
 - [Database Query Tool](../available-tools/database-query-tool.md)
 - [DDL Tool](../available-tools/ddl-tool.md)
 - [File Copy Tool](../available-tools/file-copy-tool.md)

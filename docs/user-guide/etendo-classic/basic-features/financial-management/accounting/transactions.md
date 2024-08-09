@@ -27,6 +27,8 @@ This section describes the windows related to the accounting transactions that a
 
 ## Financial Type Configuration
 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Financial Type Configuration`
+
 ### Overview
 
 This feature allows entering in the system all the financings the company has. It is possible  to exploit the information through the bank pool report. 
@@ -214,6 +216,8 @@ The fields to be copied from the account or credit card are the equivalent ones 
 
 ## Simple G/L Journal
 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Simple G/L Journal`
+
 ### Overview
 
 In Etendo there is a GL Journal window that allows the user to manually enter GL journals in the system. This window has three tabs (Batch, Header and Lines) and in some cases this can be difficult for the user since it might be enough with just two levels (Header and lines). Another issue that this window has is that only accounting schemas can be selected, so when posting the GL journal there is only one entry in the fact\_Acct table.
@@ -332,6 +336,8 @@ In this way, a copy of the original record is generated, including a description
 This functionality enhances the efficiency of managing journal entries, making it easier to replicate and document transactions accurately.
 
 ## G/L Journal
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `G/L Journal`
 
 ### Overview
 
@@ -527,6 +533,8 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 
 ## End Year Close
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `End Year Close`
 
 ### Overview
 
@@ -735,6 +743,8 @@ Etendo creates below **closing** entries if the **Reverse Permanent Account Bala
 
 ## GL Posting by DB Tables
 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `GL Posting by DB Tables`
+
 ### Overview
 
 The G/L Posting by DB Table allows the user to massively post the transactions related to a given transactional table or to all of them.
@@ -758,6 +768,8 @@ This process can be launched whenever it is required:
 
 ## Budget
 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Budget`
+
 ### Overview
 
 Etendo creates and edits budgets to be used for informative purposes allowing the user to access the data about budget versus actual. 
@@ -778,11 +790,15 @@ The user is able to add budget lines. Each line may refer to a specified period,
 
 ## Create Budget Reports in Excel
 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Create Budget Reports in Excel`
+
 By using the necessary filters such as business partner, product, partner group, product category, etc, the user is able to generate budget reports in Excel to be used for specific purposes.  
 
 ![](../../../../../assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png)
 
 ## Not Posted Transaction Report
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Not Posted Transaction Report`
 
 ### Overview
 
@@ -814,13 +830,10 @@ Finally, it is important to remark that:
     -   if a document is not posted, it is not posted for any of the general ledgers for which it should be posted
     -   and if a document is posted, it is posted for all the general ledgers for which it should be posted.
 
-## Reset Accounting
-
-### Overview
-
-The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the **Accounting Server Process** or the **G/L Posting by DB Tables** process. The manual changes done for the accounting entries description will obviously be lost after running this process.
 
 ## VAT Regularization
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `VAT Regularization Process`
 
 !!!info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -879,3 +892,12 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 !!!info
     With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
+
+## Reset Accounting
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Reset Accounting`
+
+### Overview
+
+The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the **Accounting Server Process** or the **G/L Posting by DB Tables** process. The manual changes done for the accounting entries description will obviously be lost after running this process.
+
