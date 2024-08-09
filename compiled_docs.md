@@ -92,7 +92,10 @@ This section explains how to install a new Etendo environment. It includes:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 #### Requirements 
-In this section, you can read the [System Requirements](https://docs.etendo.software/latest/getting-started/requirements.md).
+This section outlines the [System Requirements](https://docs.etendo.software/latest/getting-started/requirements.md).
+
+!!!info
+    The [Docker Management](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module. If these containers are used, the **services must be launched**, and then follow with the installation guide.
 
 #### PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
@@ -43969,9 +43972,10 @@ Additionally, the infrastructure could be extended, and allows other modules to 
 
 #### Requirements
 
-- [Docker](https://docs.docker.com/get-docker/){target="_blank"}
-- [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}
+This project depends on the following tools:
 
+- [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
+- [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 
 #### Using Containers Distributed in Modules
 
@@ -44158,6 +44162,9 @@ Execute the following command to apply the configuration changes:
     listen_addresses = 'localhost,172.17.0.1'
     ```
 
+    !!! note
+        The IP address `172.17.0.1` is the interface that connects the host with the Docker service. This is the default address used for this connection.
+
 2. Allow Access from the Docker Subnetwork
 
     Add the following line to the `/etc/postgresql/<your_pg_version>/main/pg_hba.conf` file:
@@ -44165,7 +44172,8 @@ Execute the following command to apply the configuration changes:
     ``` title="pg_hba.conf"
     host all all 172.0.0.0/8 scram-sha-256
     ```
-
+    !!! note
+        The subnet `172.0.0.0/8` is used to enable access from Docker Tomcat to the host. By default, Docker assigns a subnet within the range of `172.1.0.0/8` to `172.254.0.0/8`.
 3. Restart the PostgreSQL Service
 
     Finally, restart the PostgreSQL service by running the following command in the terminal:
