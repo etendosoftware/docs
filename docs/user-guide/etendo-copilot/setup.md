@@ -206,14 +206,14 @@ In this window, the user can schedule Etendo Copilot background processes by sel
 !!!info
     For more information, visit [Process Request](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
 
-### Assistants Tab 
+### Assistant Tab 
 
 !!! Info
     This tab is only visible when an **Assistants Schedule** process is selected.
 
 In this tab, the process to be scheduled can be configured. 
 
-![](../../assets/user-guide/etendo-copilot/setup/process-request-copilot.png)
+![](../../assets/user-guide/etendo-copilot/setup/process-request-window.png)
 
 Fields to note:
 
@@ -221,3 +221,30 @@ Fields to note:
 - **Assistant**: Corresponding assistant for the process.
 - **Prompt**: Instruction for the process.
 - **Active**: Checkbox to select if this tool is active or not.
+
+## Conversations Window
+
+:material-menu: `Application`>`Service`>`Copilot`>`Conversations`
+
+In this window, the user can find and access all interactions had with Copilot. These records show specific information about these conversations, such as user, creation date and assistant.
+
+![](../../assets/user-guide/etendo-copilot/setup/conversations-window.png)
+
+Fields to note:
+
+- **User/Contact**: The user that interacted with Copilot
+- **ExternalID**: External provider conversation ID
+- **Creation Date**: The date of the conversation
+- **Visible**: Checkbox to mark to make the record visible
+- **Last Message**: Date of the last message of the conversation
+- **Assistant**: Assistant selected to interact
+
+### Messages Tab
+
+In this tab, the different messages included in each specific conversation are shown.
+
+Fields to note:
+
+- **Message**: Exact message used in the conversation
+- **Time**: Time of the message
+- **Creation Date**: Date of the message

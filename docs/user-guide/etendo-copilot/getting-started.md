@@ -8,18 +8,18 @@ tags:
 
 ![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
 
-# Etendo Copilot: Integrated Assistant
+# Etendo Copilot
 
 ## Overview
 
-Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the key features of Etendo Copilot.
+Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, or accessible via API, that provides an efficient way to interact with assistants and use tools developed to solve specific problems. It is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the main features of Etendo Copilot.
 
 !!! info
     To install Etendo copilot, you can read the [Copilot Instalation](../../developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
 
 ## What is Etendo Copilot?
 
-![Copilot Chat](../../assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
+![Copilot Chat](../../assets/user-guide/etendo-copilot/getting-started/copilot.png){align=right  width="300"}
 
 At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Assistant* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
@@ -28,13 +28,16 @@ At its core, Etendo Copilot is a groundbreaking initiative that redefines how de
 
 The Assistant serves you making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
 
+Each assistant has defined instructions, as well as the possibility to configure a knowledge base and a set of skills or tools.
+The assistant is able to make decisions based on a question, using the most appropriate knowledge base or tool set to answer a particular query.
+
+In turn, it is possible to configure assistant managers, able to delegate a specific query to other specialized assistants and coordinate between the different assistants in your team to achieve an assertive response.  This intelligent decision-making ensures that you receive the most accurate and efficient assistance. Assistants can be distributed in Etendo modules as datasets or created per environment.
+
 ## Tools
 
 Each tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of tools work in harmony to deliver unparalleled support.
 
 ##  Key Features
-
-![Copilot Chat2](../../assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
 
 
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
@@ -45,10 +48,47 @@ Each tool represents a separate independent project, designed to excel at specif
 
 - **Open AI Assistants**: Copilot is integrated with the Assistants technology developed by Open AI, allowing you to set up your assistants, trained with your own knowledge base, able to generate and interpret new code, and use the specific tools already distributed by Etendo or new ones.  
 
-## Copilot Chat
+- **LangGraph**: In this case, this option works as a manager of other assistants and allows to select team members. 
+
+- **Langchain Agent**: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.
+
+## Copilot Interface
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 ![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`, `LangGraph` and `Open AI Assistant` types.
+Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with [`Langchain Agent`, `LangGraph` and `Open AI Assistant` types](../../user-guide/etendo-copilot/setup.md#assistant-window).
+
+### Visualization Mode
+
+---
+
+<figure markdown>
+![](../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=200}
+<br><br>
+Copilot, by default, can be used as a pop-up window. This is comfortable to use as an integrated assistant available in any window you are using.
+</figure>
+
+---
+
+<figure markdown>
+![](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png){align=left width=600}
+<br><br>
+Select the fullscreen mode for a more comfortable use when having long conversations.
+</figure>
+
+---
+
+<figure markdown>
+![](../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200}
+<br><br>
+It can also be minimized. In this case, the logo will be shown in the lower-right section of the screen.
+</figure>
+
+---
+
+When asked something, Copilot informs the user about the assistant used when processing each message.
+
+!!!note
+    When closed and opened again, by default, Copilot will select the last assistant previously used.
