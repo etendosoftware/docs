@@ -34,7 +34,10 @@ So, before continuing with the process from the Financial Account window to get 
 	For more information about how to apply a dataset visit [How to Create a dataset](../../../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md). 
 
 !!! note
-    The dataset includes the configuration needed for the supported provider offered by  [Redsys](https://redsys.es/){target="_blank"}.
+    The dataset includes the configuration needed for the supported provider offered by [Redsys](https://redsys.es/){target="_blank"}.
+
+!!!info
+    For more information about how to integrate the bank entity with **Redsys provider** visit the [PSD2 Bank Integration Technical Documentation in the developer guide]().
 
 After applying the dataset, the loaded providers can be found in the **OAuth Provider window** in `application`> `Etendo RX`>`oauth-provider`. OAuth facilitates an authentication method through a security protocol for obtaining a token needed to give consent to the bank. This authentication will allow Etendo to get the necessary bank information to access the bank statements.
 
