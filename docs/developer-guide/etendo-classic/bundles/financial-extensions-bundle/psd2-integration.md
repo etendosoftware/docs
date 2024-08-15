@@ -15,7 +15,7 @@ Etendo is able to integrate with several banking entities using the PSD2 protoco
 The integration is carried out only with **banks that support Redsys**, thus guaranteeing secure and efficient communication for obtaining financial transactions, balance inquiries and movements compatible with the PSD2 protocol.
 
 !!!info
-        For more information about banks supported by Redsys visit [Banks supported by Redsys](https://redsys.es/psd2.html){target="_blank"}.
+    For more information about banks supported by Redsys visit [Banks supported by Redsys](https://redsys.es/psd2.html){target="_blank"}.
 
 
 ## Service Configuration in Etendo
@@ -49,9 +49,11 @@ Redsys acts as an **intermediary in payment processing**, offering payment gatew
 
 ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-3.png)
 
+- After adding the required information, the application will be created:
+
 ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-4.png)
 
-Enter the **Subscription** section and subscribe to the HUB of your choice.
+- Enter the **Subscription** section and subscribe to the HUB of your choice.
 
 ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-5.png)
 
@@ -65,9 +67,9 @@ The **Revised Payment Services Directive (PSD2)** is an European Union legislati
 
 Its main objectives are:
 
-  - Improving the security of electronic payments: it implements stricter authentication requirements to reduce fraud.
-	- Encouraging innovation and competition: allows third parties to access users' bank account information (with their consent), promoting the emergence of new financial services.
-	- Consumer protection: increases transparency and establishes new liability rules for unauthorized payments.
+- Improving the security of electronic payments: it implements stricter authentication requirements to reduce fraud.
+- Encouraging innovation and competition: allows third parties to access users' bank account information (with their consent), promoting the emergence of new financial services.
+- Consumer protection: increases transparency and establishes new liability rules for unauthorized payments.
 
 ### .p12 file utility for in a PSD2 integration with Redsys
 
@@ -98,22 +100,22 @@ To guarantee this, two types of certificates are required:
 **QWAC (Qualified Website Authentication Certificate)**: Used to authenticate the server and enable secure communication.
 
 !!!info
-        These certificates are issued by authorized trust service providers, through the [URL eIDAS Dashboard](https://esignature.ec.europa.eu/efda/tl-browser/#/screen/home){target="_blank"}, you can locate the authorized certifying entities for the issuance of the EIDAS certificate.
+    These certificates are issued by authorized trust service providers, through the [URL eIDAS Dashboard](https://esignature.ec.europa.eu/efda/tl-browser/#/screen/home){target="_blank"}, you can locate the authorized certifying entities for the issuance of the EIDAS certificate.
 
 !!!note
-        For both certificates, it is an **indispensable condition to be registered with the Bank of Spain**, which is the banking supervisor of these certificates. Contact the service provider for more information.
+    For both certificates, it is an **indispensable condition to be registered with the Bank of Spain**, which is the banking supervisor of these certificates. Contact the service provider for more information.
 
 ### .p12 file creation
 
 !!!note
-        The .p12 file will be used later as part of the integration setup. 
+    The .p12 file will be used later as part of the integration setup. 
 
 ### Test Sandbox Certificates
 
 The following is an example of how to generate the .p12 file using the server certificate(*1) and the private key(*2) provided by Redsys in its portal.
 
 !!!note
-        The server certificate and private key are referred to as (*1) and (*2) respectively in order to refer to them later.
+    The server certificate and private key are referred to as (*1) and (*2) respectively in order to refer to them later.
 
 
 ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-6.png)
@@ -129,7 +131,8 @@ As it can be seen in the Certificates section, the Role of the application must 
 
 2. Create the P12 file: Using the [KeyStore Explorer application](https://keystore-explorer.org/){target="_blank"}. This application provides an intuitive interface and facilitates the creation of the .p12 file.
 
-It is also possible to perform this procedure using the **OpenSSL tool**.
+!!!info
+    It is also possible to perform this procedure using the **OpenSSL tool**.
 
 These are the specific commands:
 
@@ -139,7 +142,7 @@ openssl pkcs12 -export -out api-testkeypar.p12 -inkey key.pem -in cert.cer -name
 ```
 
 !!!info
-        To protect the P12 file a password will be prompted. This password will be required each time the P12 file is used for authentication or digital signature.
+    To protect the P12 file a password will be prompted. This password will be required each time the P12 file is used for authentication or digital signature.
 
 ### OpenSSL command explained
 
@@ -148,8 +151,8 @@ openssl pkcs12 -export -out api-testkeypar.p12 -inkey key.pem -in cert.cer -name
 - **inkey `key.pem`**: Specifies the file containing the private key.
 - **in `cert.cer`**: Specifies the file containing the public certificate.
 - **name `api-test`**: Assigns the alias `api-test` to the certificate inside the PKCS#12 file.
-- **passout pass**:keystore_password: Specifies the keystore password. This sets the password to protect the PKCS#12 file.
-- **`passin pass:cert_password`**: Specifies the password for the private key, if the key is encrypted.
+- **passout pass**: *keystore_password*: Specifies the keystore password. This sets the password to protect the PKCS#12 file.
+- **passin pass:`cert_password`**: Specifies the password for the private key, if the key is encrypted.
 
 #### Productive certificates
 
@@ -159,12 +162,15 @@ Once the **QSealC** and **QWAC** certificates have been obtained, the .p12 file 
 
 Once the .p12 has been generated it is necessary to indicate the values of the parameters with which it has been generated as well as the path where it is located within the OAuth provider configuration window for each of the providers, as shown below.
 
+![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-8.png)
+
+
 The fields to be completed are:
 
-- Keystore Path: Path to .p12 file
-- Keystore Password: Password of the .p12 file
-- Certificate Alias: Alias of the certificate
-- Certificate Password: Password of the private key.
+- **Keystore Path**: Path to .p12 file
+- **Keystore Password**: Password of the .p12 file
+- **Certificate Alias**: Alias of the certificate
+- **Certificate Password**: Password of the private key.
 
 These parameters allow the integration to make use of the .p12 to secure communications and authenticate the identity of the transaction participants.
 
