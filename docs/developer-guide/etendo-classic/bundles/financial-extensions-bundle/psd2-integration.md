@@ -22,7 +22,7 @@ The integration is carried out only with **banks that support Redsys**, thus gua
 
 ### Configuration in the RX config window 
 
-Add to the RX config window a new record as shown below. This configuration indicates the **URL** where the PSD2 service is running.
+In the RX config window, add a new record as shown below. This configuration indicates the **URL** where the PSD2 service is running.
 
 ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-0.png)
 
@@ -119,6 +119,8 @@ The following is an example of how to generate the .p12 file using the server ce
 ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-6.png)
 
 As it can be seen in the Certificates section, the Role of the application must be configured, for that, select such application and press the **Get Certificate button**. This will provide the test certificates, both the server certificate(*1) and the private key(*2) .
+
+![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/tech-doc-psd2-integration-7.png)
 
 ### Generating the .p12 file
 
