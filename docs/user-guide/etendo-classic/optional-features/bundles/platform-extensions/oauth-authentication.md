@@ -22,7 +22,7 @@ OAuth facilitates an authentication method through a security protocol for obtai
 
 ## OAuth Provider
 
-In the OAuth Provider window in `application`> `oauth-provider`, set the preferred type provider by adding the user authentication URL in the **API OAuth URL field**. This URL can be found in the provider documentation API.  
+In the OAuth Provider window in :material-menu: `application`> `oauth-provider`, set the preferred type provider by adding the user authentication URL in the **API OAuth URL field**. This URL can be found in the provider documentation API.  
 
 The other fields will be completed with data referring to the corresponding provider.
 
