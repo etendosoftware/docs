@@ -21,7 +21,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
 - *Docker* to install it follow [The Official Installation Guide](https://docs.docker.com/get-docker/){target="_blank"}.
 
 
-### Instalation 
+### Installation 
 
 This module is included in the Copilot Extensions bundle
 
@@ -50,7 +50,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
     | **Environment Variable**   | **Options**  | **Info** |
     | -------------------------- | -------------| -------- |
     | COPILOT_PORT           | `5000`   | **Required** The copilot port can be defined by the user |
-    | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
+    | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
     | ETENDO_HOST            | `http://your.etendo.instance/etendo` | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. |
 
 

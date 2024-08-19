@@ -21,11 +21,11 @@ This tool allows asking to Etendo for tables available in the database and the c
 The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](../../../user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
 
 ## Configuration
-This tool can be configured in a Copilot App:
+This tool can be configured in an Assistant:
 
-1. Add **Database Query Generator tool** into the Copilot App configuration, that you want to use the tool. Go to Copilot App window, pick the App and add the tool to the App in the **Tools** tab.
+1. Add **Database Query Generator tool** into the Assistant configuration, that you want to use the tool. Go to Assistant window, pick the Assistant and add the tool to the App in the **Tools** tab.
 
-2. Re-Sync the Copilot App running **Sync OpenAI Assistant** process to get the tool available in the Copilot App.
+2. Re-Sync the Assistant running **Sync Assistant** process to get the tool available in the Assistant.
 
 3. Check that the role of the user has permissions to use Secure Web Services in the **Role** Window. ![role configuration](../../../assets/developer-guide/etendo-copilot/available-tools/database-query-tool-3.png)
 4. Check that the WebHook **DBQueryExec** is enabled and has the Role Access configured for the role.
