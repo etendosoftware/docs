@@ -5,9 +5,10 @@ tags:
     - Machine Learning
 ---
 
-# How to create Copilot tools
+# How to Create Copilot Tools
 
 ## Overview
+
 This article explains how to create a new tool for Copilot.
 
 ## Etendo Copilot
@@ -18,7 +19,7 @@ Etendo Copilot module allows the creation of tools that add functionality to it.
     The Langchain libraries are available by default in Copilot. You can use them in your tools. See [Langchain documentation](https://python.langchain.com/){target="_blank"} for more information.
 
 ### Requirements
-- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](../../developer-guide/etendo-copilot/installation.md){target="_blank"}.
+- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](../../../developer-guide/etendo-copilot/installation.md){target="_blank"}.
 
 ### Create a new tool
 For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
@@ -52,7 +53,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     *.gitignore*: Contains the files that will be ignored by git.
    
     *build.gradle*: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
-    [How to publish modules to GitHub repository](../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
+    [How to publish modules to GitHub repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
     
    
     *tools_deps.toml*: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
@@ -172,7 +173,7 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     !!! Warning Before Sync Tool Structure
         It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
 
-    ![how-to-create-copilot-tools.png](../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+    ![how-to-create-copilot-tools.png](../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
 
     After creating the record, we have to export the module to persist the changes in the database:
     ```bash title="Terminal"
@@ -180,7 +181,7 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     ```
     Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
 
-    ![how-to-create-copilot-tools-2.png](../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+    ![how-to-create-copilot-tools-2.png](../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
 
     !!! note "OpenAI Assistants tools"
         Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
