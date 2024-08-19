@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
     
     
       
@@ -3427,11 +3427,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-guide/etendo-copilot/setup/" class="md-nav__link">
+      <a href="../../../user-guide/etendo-copilot/setup-and-usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setup
+    Setup and Usage
   </span>
   
 
@@ -8854,7 +8854,7 @@ The content of the file will be as follows:</p>
 <li><em>Module</em>: The module where the tool is located. This field is a reference to the module that we have created in the first step, and where these configurations will be exported.</li>
 <li><em>JSON Info</em>: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. </li>
 </ul>
-<p>The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button <code>Sync Tool Structure</code> in the <code>Copilot Tool</code> window. This process will load the <em>Description</em> and the <em>JSON Info</em> fields of the tool. This data is obtained from the tool class.</p>
+<p>The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Assistant. To do so, we have to execute the button <code>Sync Tool Structure</code> in the <code>Skill/Tool</code> window. This process will load the <em>Description</em> and the <em>JSON Info</em> fields of the tool. This data is obtained from the tool class.</p>
 <div class="admonition warning before sync tool structure">
 <p class="admonition-title">Warning</p>
 <p>It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.</p>
@@ -8863,11 +8863,11 @@ The content of the file will be as follows:</p>
 <p>After creating the record, we have to export the module to persist the changes in the database:
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>export.database
 </span></code></pre></div>
-Once the <em>Copilot Tool</em> is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the <em>tools</em> tab of the <em>Copilot App</em> window, this record will allow us to activate or deactivate the tool.</p>
+Once the <em>Copilot Tool</em> is defined, this tool must be associated to the assistant(s), to do so, a record must be created in the <em>tools</em> tab of the <strong>Assistant</strong> window, this record will allow us to activate or deactivate the tool.</p>
 <p><a class="glightbox" href="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="how-to-create-copilot-tools-2.png" src="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">OpenAI Assistants tools</p>
-<p>Remember to excecute <code>Sync OpenAI Assistant</code> process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.</p>
+<p>Remember to execute <code>Sync Assistant</code> process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.</p>
 </div>
 </li>
 <li>
@@ -8972,7 +8972,7 @@ To test the developed Tool, you can ask Copilot to run it or, for example, to li
     
     
 
-      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

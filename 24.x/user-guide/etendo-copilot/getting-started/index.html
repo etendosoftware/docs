@@ -14,14 +14,14 @@
         <link rel="prev" href="../../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/">
       
       
-        <link rel="next" href="../setup/">
+        <link rel="next" href="../setup-and-usage/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
     
     
       
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#etendo-copilot-integrated-assistant" class="md-skip">
+        <a href="#etendo-copilot" class="md-skip">
           Skip to content
         </a>
       
@@ -3488,9 +3488,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent" class="md-nav__link">
+  <a href="#assistant" class="md-nav__link">
     <span class="md-ellipsis">
-      Agent
+      Assistant
     </span>
   </a>
   
@@ -3515,11 +3515,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copilot-chat" class="md-nav__link">
+  <a href="#copilot-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Copilot Chat
+      Copilot Interface
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Copilot Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3539,11 +3554,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../setup-and-usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setup
+    Setup and Usage
   </span>
   
 
@@ -8657,9 +8672,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent" class="md-nav__link">
+  <a href="#assistant" class="md-nav__link">
     <span class="md-ellipsis">
-      Agent
+      Assistant
     </span>
   </a>
   
@@ -8684,11 +8699,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copilot-chat" class="md-nav__link">
+  <a href="#copilot-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Copilot Chat
+      Copilot Interface
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Copilot Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8740,22 +8770,28 @@
 
 
 <p><a class="glightbox" href="../../../assets/getting-started/overview/cover-getting-started.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cover-getting-started.png" src="../../../assets/getting-started/overview/cover-getting-started.png" /></a></p>
-<h1 id="etendo-copilot-integrated-assistant">Etendo Copilot: Integrated Assistant</h1>
+<h1 id="etendo-copilot">Etendo Copilot</h1>
 <h2 id="overview">Overview</h2>
-<p>Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the key features of Etendo Copilot.</p>
+<p>Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, or accessible via API, that provides an efficient way to interact with assistants and use tools developed to solve specific problems. It is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the main features of Etendo Copilot.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To install Etendo copilot, you can read the <a href="../../../developer-guide/etendo-copilot/installation/">Copilot Instalation</a> guide in the developer's guide section.</p>
+<p>To install Etendo copilot, you can read the <a href="../../../developer-guide/etendo-copilot/installation/">Copilot Installation</a> guide in the developer's guide section.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember that, to use this functionality, it is necessary to configure an API Key. For this, you can use one of your own, or you can contact the Etendo support team to purchase one.</p>
 </div>
 <h2 id="what-is-etendo-copilot">What is Etendo Copilot?</h2>
-<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/copilot-chat.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Copilot Chat" src="../../../assets/user-guide/etendo-copilot/getting-started/copilot-chat.png" width="300" /></a></p>
-<p>At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the <em>Agent</em> which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as <em>Tools</em>. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.</p>
-<h2 id="agent">Agent</h2>
-<p>The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.</p>
+<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Copilot Chat" src="../../../assets/user-guide/etendo-copilot/getting-started/copilot.png" width="300" /></a></p>
+<p>At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the <em>Assistant</em> which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as <em>Tools</em>. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.</p>
+<h2 id="assistant">Assistant</h2>
+<p>The Assistant serves you making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.</p>
+<p>Each assistant has defined instructions, as well as the possibility to configure a knowledge base and a set of skills or tools.
+The assistant is able to make decisions based on a question, using the most appropriate knowledge base or tool set to answer a particular query.</p>
+<p>In turn, it is possible to configure assistant managers, able to delegate a specific query to other specialized assistants and coordinate between the different assistants in your team to achieve an assertive response.  This intelligent decision-making ensures that you receive the most accurate and efficient assistance. Assistants can be distributed in Etendo modules as datasets or created per environment.</p>
 <h2 id="tools">Tools</h2>
 <p>Each tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of tools work in harmony to deliver unparalleled support.</p>
 <h2 id="key-features">Key Features</h2>
-<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Copilot Chat2" src="../../../assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png" width="300" /></a></p>
 <ul>
 <li>
 <p><strong>Effortless Integration</strong>: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.</p>
@@ -8769,11 +8805,42 @@
 <li>
 <p><strong>Open AI Assistants</strong>: Copilot is integrated with the Assistants technology developed by Open AI, allowing you to set up your assistants, trained with your own knowledge base, able to generate and interpret new code, and use the specific tools already distributed by Etendo or new ones.  </p>
 </li>
+<li>
+<p><strong>LangGraph</strong>: In this case, this option works as a manager of other assistants and allows to select team members. </p>
+</li>
+<li>
+<p><strong>Langchain Agent</strong>: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.</p>
+</li>
 </ul>
-<h2 id="copilot-chat">Copilot Chat</h2>
+<h2 id="copilot-interface">Copilot Interface</h2>
 <p>In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.</p>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copilot Navbar" src="../../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png" /></a></p>
-<p>Here, you can select a Copilot App and engage in a conversation with it. Copilot facilitates communication with both <code>Langchain Agent</code> and <code>Open AI Assistant</code> types.</p>
+<p>Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with <a href="../../user-guide/etendo-copilot/setup.md#assistant-window"><code>Langchain Agent</code>, <code>LangGraph</code> and <code>Open AI Assistant</code> types</a>.</p>
+<h3 id="visualization-mode">Visualization Mode</h3>
+<hr />
+<figure>
+<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png" width="200" /></a>
+<br><br>
+Copilot, by default, can be used as a pop-up window. This is comfortable to use as an integrated assistant available in any window you are using.</p>
+</figure>
+<hr />
+<figure>
+<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png" /></a>
+<br><br>
+Select the fullscreen mode for a more comfortable use when having long conversations.</p>
+</figure>
+<hr />
+<figure>
+<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png" width="200" /></a>
+<br><br>
+It can also be minimized. In this case, the logo will be shown in the lower-right section of the screen.</p>
+</figure>
+<hr />
+<p>When asked something, Copilot informs the user about the assistants and tools used when processing each message.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When closed and opened again, by default, Copilot will select the last assistant previously used.</p>
+</div>
 
 
 
@@ -8869,7 +8936,7 @@
     
     
 
-      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
