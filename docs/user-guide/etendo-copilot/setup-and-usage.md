@@ -6,7 +6,7 @@ tags:
  - setup
 ---
 
-# Copilot Setup
+# Copilot Setup and Usage
 
 ## Initial Configuration
 
@@ -18,13 +18,13 @@ In order to use Copilot, the user must access the Etendo Classic under the role 
 
 In this case, Etendo Copilot has two alternatives:
 
-1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, Bastian dataset(?) is available, to answer your questions about Etendo documentation.
+1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, **Etendo Copilot** dataset is available, which includes Bastian assistant to answer your questions about Etendo documentation.
 
 
     ![](../../assets/user-guide/etendo-copilot/setup/dataset-installing.png)
 
     !!!info
-        To check the list of available assistants, visit [Default Copilot Apps](../../user-guide/etendo-copilot/bundles/overview.md#default-copilot-apps)(?)
+        To check the list of available assistants, visit [Default Assistants](../../user-guide/etendo-copilot/bundles/overview.md#default-assistants).
 
     Once the reference data is applied, it is necessary to go to the **Assistant Window**, select the corresponding Assistant and click [Sync Assistant](#sync-assistant-button).
 
@@ -52,7 +52,7 @@ The Assistant window allows you to define and configure assistants:
 
     **LangGraph**
 
-    This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format.
+    This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured.
 
 
 === "Open AI Assistant"
@@ -105,6 +105,8 @@ In this tab, you can define the files that will be used by the assistant as know
 !!!warning "File Limitation for Code Interpreter"
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
 
+!!!info
+    When configuring files for Langchain agent assistants, remember the supported formats are `.txt`, `.pdf` and `.md`.
 
 ![](../../assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
 
@@ -149,6 +151,9 @@ Fields to note:
 - **Member**: The user can select one or more assistants for the manager. 
 - **Description**:  Read-only field. It shows the description of the assistant, used by the manager to choose the appropriate assistant for each case.
 
+    !!! warning
+        Remember that it is not possible to select an assistant without a description.
+
 ## Knowledge Base File Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
@@ -168,7 +173,7 @@ In the Knowledge Base File window, you can define the files with which the assis
     You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
-- **File name**: Name of the remote file in case you want to modify it.
+- **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
 - **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
 - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
 
@@ -196,6 +201,9 @@ In this window, it is possible to configure access roles for each Assistant. Thi
 
 !!!info
     This configuration is also possible from the Role window.
+
+!!!note
+    In case of deleting an assistant, the related assistant access records are also deleted.
 
 ## Process Request Window
 

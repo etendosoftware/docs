@@ -233,7 +233,7 @@ nav:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot:
       - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
-      - Setup: user-guide/etendo-copilot/setup.md
+      - Setup and Usage: user-guide/etendo-copilot/setup-and-usage.md
       - Bundles:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md

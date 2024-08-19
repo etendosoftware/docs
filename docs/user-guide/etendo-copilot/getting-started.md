@@ -15,7 +15,10 @@ tags:
 Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, or accessible via API, that provides an efficient way to interact with assistants and use tools developed to solve specific problems. It is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the main features of Etendo Copilot.
 
 !!! info
-    To install Etendo copilot, you can read the [Copilot Instalation](../../developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
+    To install Etendo copilot, you can read the [Copilot Installation](../../developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
+
+!!! note
+    Remember that, to use this functionality, it is necessary to configure an API Key. For this, you can use one of your own, or you can contact the Etendo support team to purchase one.
 
 ## What is Etendo Copilot?
 
@@ -73,7 +76,7 @@ Copilot, by default, can be used as a pop-up window. This is comfortable to use 
 ---
 
 <figure markdown>
-![](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png){align=left width=600}
+![](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
 <br><br>
 Select the fullscreen mode for a more comfortable use when having long conversations.
 </figure>
@@ -88,7 +91,7 @@ It can also be minimized. In this case, the logo will be shown in the lower-righ
 
 ---
 
-When asked something, Copilot informs the user about the assistant used when processing each message.
+When asked something, Copilot informs the user about the assistants and tools used when processing each message.
 
 !!!note
     When closed and opened again, by default, Copilot will select the last assistant previously used.
