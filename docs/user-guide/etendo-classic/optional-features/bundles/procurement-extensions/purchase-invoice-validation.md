@@ -19,6 +19,8 @@ Purchase invoices in the system should have a unique supplier reference number f
 
 ## Preference
 
+:material-menu: `Application` > `General Setup` > `Application` > `Preference`
+
 A configurable system preference will be used to enable or disable the validation that prevents the duplication of purchase invoices. This allows the client to decide whether to use this functionality or not. The versatility of preferences allows modifying their visibility, determining whether the validation will be active for all users, roles, organizations, etc.
 
 From the Preference window, the user is able to create a new preference, choosing the corresponding property, which for this functionality will be Validate duplicated purchase invoices. In the Value field, it is necessary to add Y to enable the preference or N to disable it.

@@ -7,6 +7,8 @@ Material Requirement Planning (MRP) deals with all activities related to the pla
 
 ## Manufacturing Plan
 
+:material-menu: `Application` > `Material Requirement Planning` > `Transactions` > `Manufacturing Plan`
+
 ### Overview
 
 Create a comprehensive work requirement in order to request materials over a specified time period.
@@ -97,6 +99,8 @@ Once the documents are created automatically, the numbers of the documents appea
 
 ## Purchasing Plan
 
+:material-menu: `Application` > `Material Requirement Planning` > `Transactions` > `Purchasing Plan`
+
 ### Overview 
 
 Create a comprehensive and organized plan to request purchases over a specified time period.
@@ -183,6 +187,8 @@ Once the purchase order is created automatically, the number of the document app
 
 
 ## MRP Forecast
+
+:material-menu: `Application` > `Material Requirement Planning` > `Transactions` > `MRP Forecast`
 
 ### Overview
 

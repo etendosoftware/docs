@@ -1,8 +1,10 @@
 ---
-title: CRM Connector
+title: CRM Connector Configuration
 ---
 
-## CRM Connector Configuration
+:material-menu: `Application` > `General Setup` > `CRM Connector` > `CRM Connector Configuration`
+
+## Overview
 
 The concrete CRM connector must add a configuration in this window to enable it to connect to the external system and to define the properties and filters used by Etendo to map with the external system information.
 
