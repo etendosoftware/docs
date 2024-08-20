@@ -3,7 +3,7 @@ tags:
     - Bank transaction
     - Token
     - PSD2
-    - OAuth Authentication
+    - Bank Statements
     - Account ID
 ---
 
@@ -61,7 +61,6 @@ This token provided by the bank is a secure and temporary key used to authentica
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-9.png)
 
-
 In the bank pop-up window, log in to the configured provider by using the **bank’s user and password**. This process will generate the token, and Etendo will use it to get the information needed from the bank. 
 
 <figure markdown="span">
@@ -88,14 +87,14 @@ By giving authorization from the Get Consent button, it is mandatory to confirm 
 
 The following step is to synchronize the bank account registed in Etendo with the chosen provider. This process gets the internal provider account ID to associate it with the bank account used by Etendo. This allows the system to directly access the bank information to execute financial processes. 
 
-For this, go to the **Get Bank Account Identifiers** window in `General-Setup`> `Integrations-Configuration` >`PSD2`>`Get-Bank-Account-Identifiers` and select the bank provider to synchronize the accounts with. 
+For this, go to the **Get Bank Account Identifiers** window in `General Setup`> `Integrations Configuration` >`PSD2`>`Get Bank Account Identifiers` and select the bank provider to synchronize the accounts with. 
+
+!!! warning
+	Remember that in order to finally achieve the accounts synchronization, it is necessary to have the IBAN (International Bank Account Number) previously configured in the Financial Account since this number will allow the connection with the bank’s internal ID to automatically create and generate the bank statements. 
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-4.png)
 
-!!! warning
-	Remember that in order to finally achieve the accounts synchronization, it is necessary to have the IBAN (International Bank Account Number) since this number will allow the connection with the bank’s internal ID to automatically create and generate the bank statements. 
-
-Once the process is finished, the synchronization can be checked in the **Bank Integration PSD2** information section from the Financial Account window. The account ID obtained is the identifier to be used to request the bank statements. 
+Once the process is finished, the synchronization can be checked in the **Bank Integration PSD2** information section from the Financial Account window where the account is saved.  
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-5.png)
 
