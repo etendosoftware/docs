@@ -447,11 +447,11 @@ public class UndoOrderImpl implements UndoCloseOrderHook {
 
 ## PSD2 Integration
 
-:octicons-package-16: Javapackage: com.etendoerp.psd2.bank.integration
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
 
-:octicons-package-16: Javapackage: com.etendorx.psd2.bank.integration
+:octicons-package-16: Javapackage: `com.etendorx.psd2.bank.integration`
 
-The PSD2 (Payment Services Directive 2) security protocol and the payment service provider Redsys are used for the integration between business partners and banks. For this integration to properly work, it is crucial to understand certain key concepts and the role of specific components such as the .p12 file. This section provides an overview of PSD2, Redsys, and the role of a .p12 file in this integration.
+The PSD2 (Payment Services Directive 2) security protocol and the payment service provider Redsys are used for the integration between financial accounts and banks. For this integration to be successful, it is crucial to understand certain key concepts and the role of specific components such as the .p12 file. This section provides an overview of PSD2, Redsys, and the role of a .p12 file in this integration.
 
 !!!info
     For more information, visit [PSD2 Integration Developer Guide](../financial-extensions-bundle/psd2-integration.md).
