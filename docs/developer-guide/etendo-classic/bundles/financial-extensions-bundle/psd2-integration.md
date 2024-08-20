@@ -24,7 +24,7 @@ The integration is carried out only with **banks that support Redsys**, thus gua
 
 ## Dokerized Services
 
-To start the integration, first of all it is necessary to raise all the services related to this module, in particular the RX Service. RX is a service that exposes a reactive development platform and the PSD2 service, which is the one that is really interacting with Redsys. To do this, first edit the `gradel.properties` file adding configuration variables:
+To start the integration, first of all it is necessary to raise all the services related to this module, in particular the RX Service. RX is a service that exposes a reactive development platform and the PSD2 service, which is the one that is really interacting with Redsys. To do this, first edit the `gradel.properties` file by adding these configuration variables:
 
 - `docker_com.etendoerp.etendorx=true`
 - `docker_com.etendorx.psd2.bank.integration=true`
