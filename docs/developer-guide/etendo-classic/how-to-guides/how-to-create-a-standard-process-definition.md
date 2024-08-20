@@ -520,16 +520,16 @@ This section describes the Etendo **Upload File module** included in the Platfor
 
 The **File reference** enhances the Etendo Classic capabilities by enabling file uploads directly within process definitions. 
 
-This functionality, which can be used in processes as well as in windows, allows uploading files which can then be processed by the system, streamlining workflows and improving efficiency.
+This functionality, which can be used in processes as well as in windows, introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing which is then used by the system as specified in the process definition.
 
-#### New Reference
-
-This feature introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing, which is then used by the system as specified in the process definition.
+!!!info
+    The maximum file size users are allowed to upload are limited by default to 10MB. This is set in the preference `Maximum file upload size (MB)`. This file size check is performed both on the client's and on the server's side. 
+    For more information about preferences visit the [Preference section in the User Guide](../../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference).
 
 
 #### Example in Process Definition
 
-The proposed solution involves incorporating a **Process File Upload** Reference as a process parameter in process definitions.
+The proposed solution involves incorporating a **File Upload** Reference as a process parameter in process definitions.
 
 This reference has a User Interface Definition which calls the process, this can be seen in the **Process Definition tab**:
 
@@ -540,7 +540,7 @@ This reference has a User Interface Definition which calls the process, this can
 This definition calls a process `OBProcessFileUpload` that executes a JavaScript that has all the definitions, rules and configurations to make the reference work, and allows to select a file for later upload.
 
 !!!info
-    Any file can be selected because this module was thought as a base so that programmers can use it for their needs. 
+    Any file can be selected since this module was thought as a base so that programmers can use it for their needs. 
 
 This is an example of a `Process Definition` created, it is defined as follows:
 

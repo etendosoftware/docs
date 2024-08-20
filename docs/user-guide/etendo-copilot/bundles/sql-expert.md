@@ -49,9 +49,9 @@ After install the module:
     ./gradlew update.database smartbuild --info
     ```
 
-3. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Copilot App` window.
+3. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
 
-4. Run **Sync OpenAI Assistant** process.
+4. Run **Sync Assistant** process.
 
 5. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks.
 

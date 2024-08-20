@@ -233,7 +233,7 @@ nav:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot:
       - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
-      - Setup: user-guide/etendo-copilot/setup.md
+      - Setup and Usage: user-guide/etendo-copilot/setup-and-usage.md
       - Bundles:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
@@ -353,7 +353,7 @@ nav:
         - How To Create a Module: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
 #        - How to create a Multi Selector: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector.md
-#        - How to create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component.md
+        - How to create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component.md
 #        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
 #        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
@@ -441,6 +441,8 @@ nav:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
           - Dependency Manager: developer-guide/etendo-classic/bundles/platform/dependency-manager.md
+          - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
+          - Tomcat Dockerized Service: developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
@@ -469,6 +471,7 @@ nav:
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
+        - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
         - Create Reference Tool: developer-guide/etendo-copilot/available-tools/create-reference-tool.md
         - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
         - DDL Tool: developer-guide/etendo-copilot/available-tools/ddl-tool.md

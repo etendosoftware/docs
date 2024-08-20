@@ -41,11 +41,11 @@ Assistants can choose from these modes:
 
 ## Usage Example 
 
-In the section of Copilot App, it is possible to configure the assistant and the tool that it can use.
+In the section of Assistant, it is possible to configure the assistants and the tool that they can use.
 
 ![ddl-tool.png](../../../assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
 
-Also in Copilot App, it can insert a prompt where is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
+Also in Assistant, it can insert a prompt where it is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
 
 ![ddl-tool1.png](../../../assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
 
