@@ -5,28 +5,30 @@ title: Financial Management - Analysis Tools
 
 This section describes the windows related to financial reports in Etendo. These are:
 
-[:material-file-document-outline: Cashflow Forecast Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#cashflow-forecast-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Cashflow Forecast Report](#cashflow-forecast-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Receivables Aging Schedule](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#receivables-aging-schedule){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Receivables Aging Schedule](#receivables-aging-schedule){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payables Aging Schedule](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payables-aging-schedule){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payables Aging Schedule](#payables-aging-schedule){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payment Report](#payment-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Run](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-run){ .md-button .md-button--primary } <br>
-
-
+[:material-file-document-outline: Payment Run](#payment-run){ .md-button .md-button--primary } <br>
 
 
-## **Cashflow Forecast Report**
+## Cashflow Forecast Report
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Cashflow Forecast Report`
+
+### **Overview**
 
 The report displays the position of a financial account in a future date, taking into account items planned to collect or pay in the given financial account.
 
-## **Receivables Aging Schedule**
+## Receivables Aging Schedule
 
-### Introduction
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Receivables Aging Schedule`
+
+### Overview
 
 The report shows the past due receivables as of the date the user selects.
 
@@ -88,6 +90,7 @@ If the **Show Doubtful Debt** check is selected, two more fields are shown.
 Also, when Show Doubtful Debt is selected, the Total amount is the sum of all the debts that are not doubtful. Therefore, the Net is Total + Doubtful - Credits
 
 ![](../../../../../assets/drive/18axihCKiqxA8w_i5HX_UsGM6ZtE4G0U7.png)
+
 ### **Receivables Aging Schedule Details**
 
 It should display a table showing the following data: By clicking on the PDF or the XLS link, either a PDF or a spreadsheet file are generated.
@@ -114,9 +117,11 @@ Also, when Show Doubtful Debt is selected, the Total amount is the sum of all th
 
 ![](../../../../../assets/drive/1-9xrAmRtJQym6Hh1Enp8-6BpMW5Tu72Y.png)
 
-## **Payables Aging Schedule**
+## Payables Aging Schedule
 
-### Introduction
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Payables Aging Schedule`
+
+### Overview
 
 The report shows the past due payables as of the date the user selects.
 
@@ -190,8 +195,11 @@ Plus, there is a summary line for all the Business Partners.
 
 ![](../../../../../assets/drive/1E-2_-hP5TV-Ylx8JE-KPHdZ6sZQkdHHG.png)
 
-## **Payment Report**
-### **Introduction**
+## Payment Report
+
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Payment Report`
+
+### Overview
 
 The Payment Report displays Receivables and/or Payables information, which can be filtered by an extensive set of available filters.
 
@@ -249,8 +257,6 @@ The Payment Report is an Etendo dimensional report which contains below specific
     Note that if "Business Partner" for instance is selected as grouping criteria, it will be removed from the ordering criteria list, as grouping implies ordering.
 
 
-
-
 The Payment Report is launched by pressing the process button "**Search**". An example of the output of the report is shown in the image below:
 
 ![](../../../../../assets/drive/1c5purjJlxqlGJ5jZjeFLEW0IfBPMWBXX.png)
@@ -269,9 +275,11 @@ An invoice marked with an (\*) means that the invoice has been paid by using a c
 
 Several invoices marked with (\*\*) means that the invoices have been paid by using the same credit payment.
 
-## **Payment Run**
+## Payment Run
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Payment Run`
+
+### Overview
 
 The payment run window is a read-only window which shows relevant information of each payment run executed within an organization.
 
@@ -279,7 +287,7 @@ A payment run can contain only one payment or several payments grouped and execu
 
 It is possible to check the status and result of the payment run as well as the result and message of every single payment inside each payment run.
 
-### **Payment Run**
+### Payment Run
 
 The execution date and the execution status of each payment run is shown in this window among other relevant data such as the source of the execution.
 
@@ -308,13 +316,13 @@ There are three "Status" available:
 -   Executed, which means that the payment run has been executed. The automatic execution processes currently delivered by Etendo will all get an "Executed" status.
 -   and "Partially Executed" and "Pending" which are status that can be used by modules such as the Check Printing module to manage those cases where a payment was not successfully executed due to any problem occurring due to a connection failure.
 
-#### **Payments**
+#### Payments
 
 The payment tab lists the payments executed in a payment run.
 
 ![](../../../../../assets/drive/1porA4UfbmvSes9QKVmxrwr6b8zRav5vK.png)
 
-#### **Parameters**
+#### Parameters
 
 The parameters tab shows the value of the payment execution process parameter/s.
 
@@ -323,3 +331,5 @@ An Execution Process can have a set of parameters defined.
 For instance, the "Print Check simple process" execution process delivered by Etendo only requires the check number upon execution of the payment.
 
 ![](../../../../../assets/drive/14j20K8igu1aLPxaZLE1jDu_9jG-ydeaj.png)
+
+This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).

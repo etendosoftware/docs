@@ -2,7 +2,7 @@
 title: Platform Extensions Bundle | Technical Documentation
 ---
 
-:octicons-package-16: Javapackage: com.etendoerp.platform.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.platform.extensions`
 
 ## Overview
 
@@ -18,9 +18,9 @@ The Platform Extensions bundle includes the following modules:
 
 ## Print Document Web Service
 
-:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: com.smf.ws.printdocument
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 ### Technical Aspects
 
@@ -58,9 +58,9 @@ It is mandatory to insert the organization ID when you call the web service beca
 
 ## Number To Word (English)
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
 ### Technical Aspects
 
@@ -172,7 +172,7 @@ public class NumberToWord_es extends NumberToWord {
 
 ## Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 ### Technical Aspects
 
@@ -180,7 +180,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ## Report Cache Management
 
-:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
+:octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
 ### Technical Aspects
 
@@ -194,9 +194,9 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 ## Etendo Advanced Security
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
 
 ### Technical Aspects
 
@@ -267,4 +267,15 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 **Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events Developer Guide](/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+    For more information, visit the [Webhook Events Developer Guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
+
+## Upload Files
+
+:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
+
+**Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
+
+!!!info
+    For more information, visit [How to Create a Standard Process Definition Developer Guide](../../how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
+
+

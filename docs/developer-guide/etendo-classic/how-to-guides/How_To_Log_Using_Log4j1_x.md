@@ -23,7 +23,7 @@
 
 #  How To Log Using Log4j1.x
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 Starting from **PR19Q1** Openbravo uses  log4j2  for logging. If you're using
 this version or newer, please refer to  How_To_Log  .  
 ---|---  
@@ -61,8 +61,7 @@ To learn how to configure logs,  read this document  .
 
 ##  How to log
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_To_Log_Using_Log4j1_x-1.png){: .legacy-image-style} |  Standard output ` System.out ` , `
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Log_Using_Log4j1_x-1.png){: .legacy-image-style} |  Standard output ` System.out ` , `
 System.err ` or ` printStackTrace ` **SHOULD NEVER BE USED** .
 
 They write log in a different file ` catalina.out ` , which has several
@@ -228,7 +227,7 @@ thread when it occurred:
         // handle error here: just logging won't fix it
       }
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 Note the following code **will not** include any stack trace:
 
     
@@ -280,7 +279,7 @@ possible to change this behavior using overloaded constructors:
      
       throw new OBException("Something failed", false); // does not log anything
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 This feature is available starting from ** 3.0PR17Q4  ** .  
 ---|---  
   
@@ -310,4 +309,3 @@ Attribution-ShareAlike 2.5 Spain License  .
 Category  :  HowTo
 
 **
-

@@ -6,36 +6,38 @@ title: Production Management Setup
 
 This section describes the screens that are necessary to set up the components used in the production process in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Section](/user-guide/etendo-classic/basic-features/production-management/setup/#section){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Section](#section){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Center](/user-guide/etendo-classic/basic-features/production-management/setup/#work-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Work Center](#work-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Process Plan](/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Process Plan](#process-plan){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Activity](/user-guide/etendo-classic/basic-features/production-management/setup/#activity_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Activity](#activity_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Toolset](/user-guide/etendo-classic/basic-features/production-management/setup/#toolset_2){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Toolset](#toolset_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine Category](/user-guide/etendo-classic/basic-features/production-management/setup/#machine-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Machine Category](#machine-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine](/user-guide/etendo-classic/basic-features/production-management/setup/#machine_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Machine](#machine_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Manufacturing Cost Center](/user-guide/etendo-classic/basic-features/production-management/setup/#manufacturing-cost-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Manufacturing Cost Center](#manufacturing-cost-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Indirect Cost](/user-guide/etendo-classic/basic-features/production-management/setup/#indirect-cost_2){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Indirect Cost](#indirect-cost_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Periodic Quality Control](/user-guide/etendo-classic/basic-features/production-management/setup/#periodic-quality-control){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Periodic Quality Control](#periodic-quality-control){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Quality Control Point](/user-guide/etendo-classic/basic-features/production-management/setup/#quality-control-point){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Quality Control Point](#quality-control-point){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Incidence](/user-guide/etendo-classic/basic-features/production-management/setup/#work-incidence){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Work Incidence](#work-incidence){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Maintenance Task](/user-guide/etendo-classic/basic-features/production-management/setup/#maintenance-task){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Maintenance Task](#maintenance-task){ .md-button .md-button--primary } <br>
 
 
 ## Section
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Section`
+
+### Overview
 
 In this window, the user can edit the production area by dividing them into multiple sections.
 
@@ -47,15 +49,17 @@ Here, the user can create a production plant section to assign work centers to i
 
 ![](../../../../assets/drive/RPLgpPfChtqTHtSSZKE-p-j_Twgj_DyTnisFz2drbYBi0HUB_prEFVWw9nVDBaTr2IkghDI7f3CB3nzuZS8snebUJUGKnNaJ5GQovZccN1w12DNe1o49QYVl-UlqjkQnC4wNBAUAzJfDwGmDvaIc3X30IOfbOvr--kw_G7dgYmJRfahvxh1dwNlu2fBKMw.png)
 
-## **Work Center**
+## Work Center
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Work Center`
+
+### Overview
 
 In this window, the user can create and add machines to be used in a work center.
 
 The work center is a logical grouping of machines, processes or tool sets in a certain section of the production area.
 
-### **Work Center**
+### Work Center
 
 Here, the user can create work centers.
 
@@ -85,13 +89,15 @@ Here, the user can view the toolsets of a selected process.
 
 With the population of the activity information in the activity tab, all toolsets related to these activities are populated in this tab.
 
-## **Process Plan**
+## Process Plan
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Process Plan`
+
+### Overview
 
 Define the steps and processes to be completed for an intermediate or finished good, taking into account available resources.
 
-### **Process Plan**
+### Process Plan
 
 In this window, the user can create production process models.
 
@@ -218,7 +224,7 @@ The Copy From Attribute tab is used for products of the production type P+. The 
 
 In this tab, the user can define the employees that can perform a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](../../../../assets/drive/_TM91ctLLzY-kvMDwkeAXnsjXaTTWLmu6O6lpbdvHkVppxgcJxxTgczX8WTkoREEEM2rtbilAmnP77WAuzezDQkrZw7V94pweP9L1TFnXsc3xP6ljzT-Z6UIAAKqvh_Ga6ZrcViJNhB2SD0HE5bk2Z5WKOFqgl_YQ1epU93daoZFpzUbQTtG3CO7NaqdYA.png)
 
@@ -226,7 +232,7 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define machines that are used for a specific process. In the example, there is no machine defined.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](../../../../assets/drive/5YE-jABPzRHKUP12eBMB7MbOIqTUNgzHxd2ME1FqiNLuUzfTA9vwH-4oVqSBWT-6HSlsrp-m8V0Dq8ZwlhnCbCYnXdhljrOy2h4JGGkjAD7gobebyea6R2BhH-dusTBknb5gdSKNkithzk5BETzXNA_1bKqO8TWDH-YgtLpZXaQA4ztz09WrHJlTn_xCwQ.png)
 
@@ -234,19 +240,21 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define indirect costs related to a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](../../../../assets/drive/DN4ZfyHumPHB6J5C5N3CtmU6prJP2FSSwd2ppRQnHjdlP-yDPHMS439-Uz75x9_2rfEYJPxBClFSzJi0Oe6kC9pdP-Vlx1Az0paKbEJ9OrAiY7RFVgpTO1cNACgoMsHMrn_GfNMEYmxkjrnuEqcn64owZmB1ePyOd1YZ0PYEkcENwtiALXsjAoEls1z6Mw.png)
 
-## **Activity**
+## Activity
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Activity`
+
+### Overview
 
 In this window, the user can define activities (processes) to be performed as part of a process plan and their characteristics.
 
 An activity is a certain work that is executed during the production process. For example in the clothing industry, examples of activities for the production of shirts could be cutting of fabrics, dying of fabrics, sewing of the shirts.
 
-### **Activity**
+### Activity
 
 The user can create activities to be used in the production process.
 
@@ -262,15 +270,17 @@ In this tab, the user can add toolsets to be used for completion of a specified 
 
 -   **Utilization Coefficient**: the number of times the tool is used during the activity.
 
-## **Toolset**
+## Toolset
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Toolset`
+
+### Overview
 
 In this tab, the user can define tools and groups of tools to be used in the production process.
 
 Apart from machines that are used for production, there are also tools that are used and need to be set up. All tools that are used in production are included in the activity setup.
 
-### **Toolset Type**
+### Toolset Type
 
 Here, the user can create toolset types to group toolsets with similar characteristics.
 
@@ -278,7 +288,7 @@ Here, the user can create toolset types to group toolsets with similar character
 
 -   **Lifespan**: number of years that the tool can be used
 
-#### **Toolset**
+#### Toolset
 
 Here, the user can define structural trees to be used in the application.
 
@@ -288,21 +298,23 @@ Here, the user can define structural trees to be used in the application.
 -   **Discarded checkbox**: indication that the tool is no longer used. The field is entered manually and does not generate any transaction in the application.
 -   **Utilization**: when activities are entered, the associated toolsets are entered. This results in an automatic count of how many times the tools are used in production, based on validated work efforts.
 
-## **Machine Category**
+## Machine Category
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Machine Category`
+
+### Overview
 
 In this window, the user can create machine categories based on desired characteristics.
 
 A logical grouping of machines that can be used to categorize the different machines that are used during a production process.
 
-### **Machine Category**
+### Machine Category
 
 Here, the user can define machine categories to group machines with similar characteristics.
 
 ![](../../../../assets/drive/rEcxGOkgMa3wUSoersWWLvaHUb_M9Wl3U1PApaqZ9GEQl5uvhfyYvavszcsnAjbrHhGH2pNkOGyWpFbwpHgaSu_UwBl1X464sCzd73qwLr_FkUtz8sqp0AyLORzp2oC1Mnsjycv287kGjSEktGZUdEhbROO9BtSDeFsXT6ashkHOVk-jrDF75Y06gPlJMg.png)
 
-#### **Maintenance**
+#### Maintenance
 
 Here, the user can define maintenance categories needed for a specified machine category.
 
@@ -337,15 +349,17 @@ This tab is to define with which frequency and during which shift the maintenanc
 -   **Quarterly**: the Starting Day field appears to define when the first maintenance is scheduled
 -   **Weekly**: the Weekday field appears to define which day of the week the maintenance is schedule
 
-## **Machine**
+## Machine
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Machine`
+
+### Overview
 
 In this window, the user can create machines to be used in production.
 
 In this screen, all the different machines used in production are set up.
 
-### **Machine**
+### Machine
 
 Here, the user can add machines to be used in production processes.
 
@@ -406,9 +420,11 @@ This tab is to define with which frequency and during which shift the maintenanc
     -   **Quarterly**: the Starting Day field appears to define when the first maintenance is scheduled
     -   **Weekly**: the Weekday field appears to define which day of the week the maintenance is scheduled
 
-## **Manufacturing Cost Center**
+## Manufacturing Cost Center
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Manufacturing Cost Center`
+
+### **Overview**
 
 The user can create and edit cost centers related to production to sum up charges associated with a specific transaction.
 
@@ -472,15 +488,17 @@ Any indirect cost for the cost center is entered in this tab:
 
 ![](../../../../assets/drive/KtAOPYF3BSUihGoNd9Un4bVufHTBsyaTx3AugEPdWcwTUgTofzYBnlopAFnnMGeJMNj-fQpTtRMHQ0ni5HLSzqkd8l2C-jhiEUyyoqVvegwbKhez4ZUT_zT4bLmy-TZaVWBcQZMIBMWZx5dhr6choXCpAndJONkXcP4RPj8iWUU4IDq47_VfPhqBwcIBkQ.png)
 
-## **Indirect Cost**
+## Indirect Cost
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Indirect Cost`
+
+### Overview
 
 In this window, it is possible to create and edit indirect costs to be used in production.
 
 Indirect cost are cost related to produced products that are not directly related to a specific production run, but are included in the cost calculation of these produced products. Examples are electricity cost, cost of packaging material, marketing cost, etc.
 
-### **Indirect Cost**
+### Indirect Cost
 
 Here, the user can create a new indirect cost.
 
@@ -488,7 +506,7 @@ In the main screen, the name of the indirect cost is entered:
 
 ![](../../../../assets/drive/1D_53MJ6fnym8hHohasibeJStTVJvzYS3ADvUa95MnmK0PMffbdAopplXhMBdB4u3yLyEe4heRCy7fMqICbkCs4yxc2Ixxv_D3liJX0I3kPNZRAA8k8yVFjPJ1PYKgT0szrHe2jbmqKwspCVppzvdrZKjL6dJOVlVMz_PVLTGIlFFazVBtQ0A1TsK_Tkag.png)
 
-#### **Value**
+#### Value
 
 Here, the user can create and edit values for this indirect cost.
 
@@ -496,9 +514,11 @@ In this tab, the indirect cost for a certain time frame is entered in the Total 
 
 ![](../../../../assets/drive/3ZvwogqECAmP8Ybk5L7gowmaSD-jUsYYxA9Nhs96BO2hQkDDGtoMBKwc_OnUeO06o3wQtRgZRef19H_fgePUvPmluD_u3pC1SXSj8FnTZUJMd03-mn3AJgel0G2u4LNWX8OJx6aJpSZeLVId224jUsoT5C9ig5rJAfUXdWEnOOoj2dw4FtLCAaHtYLrwAg.png)
 
-## **Periodic Quality Control**
+## Periodic Quality Control
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Periodic Quality Control`
+
+### Overview
 
 In this window, it is possible to define checkpoints to be used for quality control of a produced product.
 
@@ -520,9 +540,11 @@ Here, the user can add quality tests to be taken for a specified checkpoint.
 
 -   **Waiting Period**: time (in days) that the execution of the quality control will take.
 
-## **Quality Control Point**
+## Quality Control Point
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Quality Control Point`
+
+### Overview
 
 In this window, it is possible to define quality control check points to be used for testing the product quality at any point in the production process.
 
@@ -530,7 +552,7 @@ Quality Control Point is a point or stage of manufacturing where it is essential
 
 For example, checking the temperature of oil every three hours. It is possible to set the frequency and list required tasks and accountable personnel.
 
-### **Check Point Set**
+### Check Point Set
 
 Here, it is possible to create check point sets and define tests frequencies.
 
@@ -561,19 +583,21 @@ The information in this tab is used for the automatic population of check point 
 
 ![](../../../../assets/drive/ewW9UA2U6qRvc28DBVo6wXaEzOFf6YrrXFawd_yTdFOCGxxeEb9TFeSFWoI6hiuoE3CYvRCYye4pzrh_PxzwlI2zOUNyAKLLatz8Lpm8wzuZZY70A-xvVfakn1dvBMh_hGmkCNGEP8vw70svo76qrT8T4H-R4xQjjbCIKbBpmaDuJeuIXZr0eDfMIUmgjg.png)
 
-## **Work Incidence**
+## Work Incidence
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Work Incidence`
+
+### Overview
 
 In this window, it is possible to define types of work incidences that may occur during production.
 
 Standard work incidences are set up for later reference in the work effort. A possible work incidence is that a machine component breaks and needs to be replaced or some other unplanned machine outage.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](transactions.md#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
  
-### **Work Incidence**
+### Work Incidence
 
 Here, the user can create work incidence types that may occur during production.
 
@@ -581,16 +605,18 @@ Here, the user can create work incidence types that may occur during production.
 
 -   **Work Incidence Downtime**: the total work incidence downtime. This information is not taken into account for any cost calculation, so it is up to the user to decide the unit of measure of the field (seconds, minutes, hours, etc.)
 
-## **Maintenance Task**
+## Maintenance Task
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Maintenance Task`
+
+### Overview
 
 In this window, it is possible to define a scheduled maintenance task to be completed during the production process.
 
 Maintenance tasks can be created to be executed to the machines in Production.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](transactions.md#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
 The maintenance process is as following:
 
@@ -600,11 +626,10 @@ The maintenance process is as following:
 -   If applicable, all consumptions of products used during the execution of the maintenance task is entered in the Internal Consumption screen.
 -   The execution of maintenance tasks is registered in the Maintenance Order screen. Once added in this screen, the maintenance task no longer appears on the Maintenance Plan.
 
-### **Maintenance Task**
+### Maintenance Task
 
 Here, the user can define general maintenance tasks to be used in production.
 
 All maintenance tasks that are scheduled for the machines in production are entered in this screen:
 
 ![](../../../../assets/drive/YtlJL911EsQf5c-i8qMbFGpGQQFQHr1qO_V-VuJ1MByU4_t0QH3qhOFPgsZWLSareLUEaU7DvfLB8wHCb_ftn4_eDL28TUcbiGExcqGb6fYropD0oB6PVqqrn5jtPdZ7uSeiCA3AS8FUbkiVADrH9Q29ErN4lAKd-cHGjIzocw0nku0vkHPF60nbyKKZPg.png)
-

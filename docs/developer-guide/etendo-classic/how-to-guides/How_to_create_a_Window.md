@@ -15,12 +15,11 @@ The objective of this section is to show how you can create a new window from sc
 
 !!!info
     This section builds on top of two previous sections which explain
-    [How to Create a Module](How_To_Create_and_Package_a_Module.md)  and [How to Create a Table](How_to_create_a_Table.md).
+    [How to Create a Module](../how-to-guides/How_To_Create_a_Module.md)  and [How to Create a Table](../how-to-guides/How_to_create_a_Table.md).
 
 ##  Module & Table
 
-As mentioned above, this tutorial is based on two previous tutorials
-and assumes that the following objectives have been already completed:
+As mentioned above, this tutorial is based on two previous tutorials and assumes that the following objectives have been already completed:
 
   * Creation of a new module
   * Creation + Registration in the AD of a new table
@@ -77,11 +76,6 @@ The *Create Fields* button can be used to create fields for the new tab based on
 Move to *Field* tab to see the created fields.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_3.png)  
-
-
-
-  
-  
   
 If required, changes to these fields could be made or new ones could be added manually. 
 
@@ -90,14 +84,11 @@ If required, changes to these fields could be made or new ones could be added ma
     that points to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
 
 
-
 Now, go back to *Tab* tab and create a new record that will represent the
 child tab of the Employee tab where salaries will be managed:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_4.png) 
 
-
-  
 Most importantly, make sure you select:
 
   * *Table* = `HT_Salary`
@@ -132,8 +123,6 @@ A menu item is required for the user to be able to call up the new window. Using
 
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_7.png)
-
-
   
 Main fields of this window are:
 
@@ -153,8 +142,6 @@ Save this record then click on _Tree_ icon ![](../../../assets/developer-guide/e
 
 Here you can drag and drop the new menu item to any of the
 other menu groups.
-
-  
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
 
@@ -176,6 +163,7 @@ Using the *F&B International Group Admin* role, select the link to the new windo
 !!!success
     You have now successfully created your own new window and seen how it came to life within Etendo. 
 
+---
 
 This work is a derivative of [How to create a window](http://wiki.openbravo.com/wiki/How_to_Create_a_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 

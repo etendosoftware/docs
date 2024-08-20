@@ -5,33 +5,35 @@ title: Reports - Accounting
 
 This section describes the windows related to accounting financial reports in Etendo. These are:
 
-[:material-file-document-outline: Accounting Transaction Details](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Transaction Details](#accounting-transaction-details){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure](#balance-sheet-and-pl-structure){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](#balance-sheet-and-pl-structure-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Trial Balance](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Trial Balance](#trial-balance){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Report](#general-ledger-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report Advanced](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Report Advanced](#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Journal Entries Report](#journal-entries-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report Advanced](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Journal Entries Report Advanced](#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Tax Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#create-tax-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Create Tax Report](#create-tax-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Customer Statement](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#customer-statement){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Customer Statement](#customer-statement){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Report Setup](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#tax-report-setup_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Report Setup](#tax-report-setup_1){ .md-button .md-button--primary } <br>
 
 
 
-## **Accounting Transaction Details**
+## Accounting Transaction Details
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Accounting Transaction Details`
+
+### Overview
 
 The accounting transaction details window is a detailed list of every ledger entry of a general ledger.
 
@@ -53,9 +55,11 @@ This report lists every transaction posted to the ledger by showing every accoun
 
 Column Filters allow the user to filter the information to be shown by any of the accounting dimensions.
 
-## **Balance Sheet and P&L Structure**
+## Balance Sheet and P&L Structure
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure`
+
+### Overview
 
 The Balance sheet and P&L structure report engine allows the user to launch the Balance Sheet and P&L which need to be previously configured.
 
@@ -94,21 +98,23 @@ Under the *"Primary Filters"* section, it is possible to specify:
     -   In the case of Balance Sheet report, a "Date To" value can be entered to get that the report shows account balance information up to that date to.
     -   In the case of P&L report a "Date To" and a "Date From" can be entered to make the report show accounting information within that period of time (a year, a quarter, a month, etc).
 
-#### **Balance Sheet Report Example**
+#### Balance Sheet Report Example
 
 !!! info
     Please note that the word "Provisional" (en\_US) \[or "Provisional" (es\_ES)\] is shown whenever at least one of the periods for which the report has been launched for it is not closed yet.
 
 ![](../../../../../assets/drive/1JYmJT5MghrfjqL3Y_qbNopzLK1GeXrFK.png)
 
-#### **P&L Report Example**
+#### P&L Report Example
  
 ![](../../../../../assets/drive/1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6.png)
 
-## **Balance Sheet and P&L Structure Advanced**
+## Balance Sheet and P&L Structure Advanced
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure Advanced`
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -150,9 +156,11 @@ Another difference to take into account is that, in this case, the buttons View,
 
 ![](../../../../../assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
 
-## **Trial Balance**
+## Trial Balance
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Trial Balance`
+
+### Overview
 
 The trial balance helps to check that the total amount of debits is equal to the total amount of credits.
 
@@ -229,9 +237,11 @@ This report can also be shown in:
 -   and in *excel format*:
 -   the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
 
-## **General Ledger Report**
+## General Ledger Report
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `General Ledger Report`
+
+### Overview
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
@@ -273,10 +283,12 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 
 ![](../../../../../assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png)
 
-## **General Ledger Report Advanced**
+## General Ledger Report Advanced
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `General Ledger Report Advanced`
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -302,9 +314,11 @@ Another difference to take into account is that, in this case, the buttons View,
 
 ![](../../../../../assets/drive/1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W.png)
 
-## **Journal Entries Report**
+## Journal Entries Report
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Journal Entries Report`
+
+### Overview
 
 The Journal Entries Report is a list of all the journal vouchers of an organization and general ledger shown in a chronological order.
 
@@ -346,10 +360,12 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 -   *PDF* format by using the "Print Record" action button of the Toolbar
 -   or *XML* format by using the "Export to Excel" action button of the Toolbar.
 
-## **Journal Entries Report Advanced**
+## Journal Entries Report Advanced
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Journal Entries Report Advanced`
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This **Journal Entries Advanced** report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -376,15 +392,17 @@ Another difference to take into account is that, in this case, the buttons View,
 
 ![](../../../../../assets/drive/1tcD3dKQCRkQ_EjE3KMUFyCpDUXyGmyLF.png)
 
-## **Create Tax Report**
+## Create Tax Report
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Create Tax Report`
+
+### Overview
 
 This Form allows the user to create different Tax Reports according to the user's specific needs.
 
 In order to explain the use of this process, it is necessary to understand the window Tax Report Setup.
 
-##### **Tax Report Setup**
+##### Tax Report Setup
 
 This window allows the user to create or modify different Tax Report for the different existing taxes. In the following lines, it will be explained how to create a new Tax Report:
 
@@ -403,7 +421,7 @@ The window has some parameters to indicate the Tax Report created:
 
 Once, the Tax Report has been set up, it will appear in the Create Tax Report form:
 
-##### **Create Tax Report**
+##### Create Tax Report
 
 This window allows printing Reports previously defined by the user. In order to print the Report, it is necessary to fill a few fields:
 
@@ -418,9 +436,11 @@ Once these fields have been introduced, it will be possible to print the Report 
 
 ![](../../../../../assets/drive/1hDOABUzDouOzwfy4lBICVjVpUzKlnsB0.png)
 
-## **Customer Statement**
+## Customer Statement
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Customer Statement`
+
+### Overview
 
 Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period.
 
@@ -434,7 +454,6 @@ Transactions aggregated from various sources like:
 !!! warning
     Note that *Completed* but not *posted* transactions are not taken into consideration.
 
-
 In case that a business partner is a customer as well as a vendor, the Customer Statement shows only customer related transactions and does not take into account vendor related transactions.
 
 The *Multicurrency* parameter of the report, in case of checked, will group records based on the currency records and display original currency amounts. If unchecked, it will not group records, and it will display ledger currency amounts.
@@ -447,7 +466,7 @@ The Customer Statement provides the following details:
 -   The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
     Note that negative amounts are highlighted by using brackets ().
 
-#### **Customer Statement Report**
+#### Customer Statement Report
 
 An example of the customer statement filter is shown in the image below:
 
@@ -462,15 +481,17 @@ An example of the Customer Statement output:
 
 ![](../../../../../assets/drive/1knnrLJDapnNKaokRPFgInW3mIQcJBHIo.png)
 
-## **Tax Report Setup**
+## Tax Report Setup
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Tax Report Setup`
+
+### Overview
 
 Etendo allows the user to create different Tax Reports according to the user’s specific needs.
 
 In order to explain the use of this process, it is necessary to understand the window Tax Report Setup.
 
-##### **Tax Report Setup**
+##### Tax Report Setup
 
 This window allows the user to create or modify different Tax Reports for the different existing taxes. In the following lines, it will be explained how to create a new Tax Report:
 

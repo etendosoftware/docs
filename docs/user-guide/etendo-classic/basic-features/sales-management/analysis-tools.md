@@ -6,24 +6,26 @@ title: Sales Reports
 
 This section describes the windows related to sales reports in Etendo. These are:
 
-[:material-file-document-outline: Sales Dimensional Report](/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#sales-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Sales Dimensional Report](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#sales-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipments Dimensional Report](/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#shipments-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Shipments Dimensional Report](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#shipments-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Discount Invoice Report](/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#discount-invoice-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Discount Invoice Report](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#discount-invoice-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Stock for Open Orders](/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#stock-for-open-orders){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Stock for Open Orders](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#stock-for-open-orders){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Orders Awaiting Invoice Report](/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#orders-awaiting-invoice-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Orders Awaiting Invoice Report](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#orders-awaiting-invoice-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Orders Awaiting Delivery Report](/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#orders-awaiting-delivery-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Orders Awaiting Delivery Report](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#orders-awaiting-delivery-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Sales Invoice Dimensional Report](/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#sales-invoice-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Sales Invoice Dimensional Report](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#sales-invoice-dimensional-report){ .md-button .md-button--primary } <br>
 
 
 ## Sales Dimensional Report
 
-### Introduction
+:material-menu: `Application` > `Sales Management` > `Analysis Tools` > `Sales Dimensional Report`
+
+### Overview
 
 This is a dimensional type of report that shows information mainly about the "Total Net Amount" of registered sales orders (Sales Orders in a status *Booked* or *Closed*) during a selected period of time.
 
@@ -42,8 +44,6 @@ Fields to note:
     In the majority of cases, filtering by the fields mentioned above gives the same results. They could differ if a customer has one main responsible person, but different sales team members can book orders. Or if a customer is moved from one sales representative to another. The new sales representatives might want to use the second filter to see the activities of all their customers (regardless of who closed the deal) while the old sales representatives might want to use the first filter to see the orders they closed, regardless of who manages the customer at present.
 
 
-
-
 ### Sample Report Output
 
 ![Sample Report Output](../../../../assets/drive/1ZYCoYa83A96xOFcOfd6-qIFTr81ymJ2S.png)
@@ -55,7 +55,9 @@ Information to note:
 
 ## Shipments Dimensional Report
 
-### Introduction
+:material-menu: `Application` > `Sales Management` > `Analysis Tools` > `Shipments Dimensional Report`
+
+### Overview
 
 This report shows information about goods shipped to the customers (Goods Shipments in a status Completed or Voided) during a selected period of time. It is a dimensional type of report.
 
@@ -78,7 +80,9 @@ Some information to note:
 
 ## Discount Invoice Report
 
-### Introduction
+:material-menu: `Application` > `Sales Management` > `Analysis Tools` > `Discount Invoice Report`
+
+### Overview
 
 This report shows information about registered sales invoices (Sales Invoices in a status Completed or Voided) during a selected period of time, grouping the information by Business Partner and Product.
 
@@ -117,18 +121,20 @@ In the image below, the same report is shown, but having checked the filter “S
 ![](../../../../assets/drive/1Z36B4O0Ih4xnuLhT_HYRHJfP0QlZDeiG.png)
 
 
-
 ## Stock for Open Orders
 
-### Introduction
+:material-menu: `Application` > `Sales Management` > `Analysis Tools` > `Stock for Open Orders`
+
+### Overview
 
 This section shows the lines of the pending orders with the actual stock of each product.
 
 
-
 ## Orders Awaiting Invoice Report
 
-### Introduction
+:material-menu: `Application` > `Sales Management` > `Analysis Tools` > `Orders Awaiting Invoice Report`
+
+### Overview
 
 **Orders Awaiting Invoice Report** shows the information about the Sales Orders that are not fully invoiced yet.
 
@@ -147,7 +153,6 @@ All monetary values (like **Amount**, **Price**, **Base**) in the report are dis
 !!! warning
     Please note that Conversion Rate to the report Currency should be specified for the report to work.
 
-
 ### Sample Report Output
 
 ![Sample Report Output](../../../../assets/drive/1OTwoN7NttxZipv10smwuOv6ET_2OtddS.png)
@@ -156,10 +161,11 @@ All monetary values (like **Amount**, **Price**, **Base**) in the report are dis
     Please note that the report gives information about sales orders and products included in it without reflecting the information of already delivered and invoiced quantities.
 
 
-
 ## Orders Awaiting Delivery Report
 
-### Introduction
+:material-menu: `Application` > `Sales Management` > `Analysis Tools` > `Orders Awaiting Delivery Report`
+
+### Overview
 
 **Orders Awaiting Delivery Report** shows the information about the Sales Orders that are awaiting (pending) to be delivered (shipped).
 
@@ -177,10 +183,11 @@ All filters refer to corresponding fields of the Sales Order.
 ![Sample Report Output](../../../../assets/drive/1Liay4G2dIvO513rwpadunx-v0ud0rs87.png)
 
 
-
 ## Sales Invoice Dimensional Report
 
-### Introduction
+:material-menu: `Application` > `Sales Management` > `Analysis Tools` > `Sales Invoice Dimensional Report`
+
+### Overview
 
 This is a dimensional type of report that shows information about registered sales invoices (Sales Invoices in a status *Completed* or *Voided*) during a selected period of time.
 

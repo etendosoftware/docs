@@ -1,7 +1,7 @@
 ---
 title: Financial Extensions Bundle | Technical Documentation
 ---
-:octicons-package-16: Javapackage: com.etendoerp.financial.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.financial.extensions`
 
 ## Overview
 
@@ -9,7 +9,7 @@ In this section, the user can find technical information about the Financial Ext
 
 ## Conversion Rate Downloader
 
-:octicons-package-16: Javapackage: com.smf.currency.conversionrate
+:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
 
 ### Technical Aspects
 
@@ -26,7 +26,7 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 
 ## Business Partner Settlement
 
-:octicons-package-16: Javapackage: org.openbravo.financial.bpsettlement
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 ### **Introduction**
 
@@ -306,7 +306,7 @@ Sets to null the `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` columns.
 
 ## Banking Pool
 
-:octicons-package-16: Javapackage: com.etendoerp.bankingpool
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
 
 ### Overview
 
@@ -397,9 +397,9 @@ There is no need to modify any of the 2 buttons, as they automatically execute t
 
 ## Advanced Financial Docs. Processing
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
 
 ### Undo Closed orders / Unvoid voided invoices hooks
 

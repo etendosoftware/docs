@@ -23,7 +23,7 @@ To launch the Edge Service, execute `./gradlew rx:rx` (or `./gradlew :rx` for in
 
 ### Configuration Guidelines
 
-Configuration adjustments can be made in the `edge.yaml` file. For further information on configuration settings, please refer to the [Config Server Documentation](/developer-guide/etendo-rx/concepts/config-server/) in the rxconfig directory.
+Configuration adjustments can be made in the `edge.yaml` file. For further information on configuration settings, please refer to the [Config Server Documentation](config-server.md) in the rxconfig directory.
 
 The following is a basic overview of the default edge configuration:
 

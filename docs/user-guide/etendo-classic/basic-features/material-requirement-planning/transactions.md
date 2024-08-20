@@ -7,6 +7,8 @@ Material Requirement Planning (MRP) deals with all activities related to the pla
 
 ## Manufacturing Plan
 
+:material-menu: `Application` > `Material Requirement Planning` > `Transactions` > `Manufacturing Plan`
+
 ### Overview
 
 Create a comprehensive work requirement in order to request materials over a specified time period.
@@ -39,7 +41,7 @@ Create and edit a manufacturing plan.
 -   Name: name of the manufacturing plan
 -   Time Horizon: the number of days that are being taken into account for the calculation of the manufacturing plan
 -   Safety Lead Time: number of days that are added to the offset for the calculation of the planned order date of the suggested work requirements and requisitions. For example, the manufacturing lead time is used to indicate how long it will take for a product between being produced and arriving in the warehouse, and the safety lead time is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   Planner: filter to select only products managed by a certain planner, as configured in the [Product](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab in the Master Data Management section.
+-   Planner: filter to select only products managed by a certain planner, as configured in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) tab in the Master Data Management section.
 -   Business Partner: filter to only select products ordered by a certain customer
 -   Business Partner Category: filter to only select business partners of a certain business partner category.
 -   Product: filter to select only a certain product
@@ -80,11 +82,11 @@ Depending on the product, different transaction types may appear in the lines. A
 ![](../../../../assets/drive/CybK3PMQnVZL8ddGSu6_bdNgiobsrqsoAozZxR5FPMmOdjckNdwlealsSm6vcAuBS3IaeDbIcClhX5-Ij3iD9PWJXOrdj7od_ZCbX3E7TusOUjlwnE063XfjJyu4rtb3czv-XBFhu1uRLomlQFYxNlo.png)
 
 !!! info
-    By clicking the Generate Work Requirements button, the work requirements are created automatically. The documents need to be processed please see the [Work Requirement](/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) section in the Production Management section for details.
+    By clicking the Generate Work Requirements button, the work requirements are created automatically. The documents need to be processed please see the [Work Requirement](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#work-requirement) section in the Production Management section for details.
 
 
 !!! info
-    By clicking the Generate Material Requisitions button, the requisitions are created in draft automatically. The documents need to be completed, please see the [Requisition](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition) section in the Procurement Management section for details.
+    By clicking the Generate Material Requisitions button, the requisitions are created in draft automatically. The documents need to be completed, please see the [Requisition](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) section in the Procurement Management section for details.
 
 
 The requisitions can be selected as input in the planning method of the Purchasing Plan to be included in the calculations of that plan, in order to calculate if Purchase Orders need to be created.
@@ -92,10 +94,12 @@ The requisitions can be selected as input in the planning method of the Purchasi
 Once the documents are created automatically, the numbers of the documents appear in the Work Requirement and the Requisition Line columns of the lines. The created purchase order is in draft status and needs to be booked. 
 
 !!! info
-    For more information please check the [_Purchase Order_](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) section.
+    For more information please check the [_Purchase Order_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) section.
 
 
 ## Purchasing Plan
+
+:material-menu: `Application` > `Material Requirement Planning` > `Transactions` > `Purchasing Plan`
 
 ### Overview 
 
@@ -129,7 +133,7 @@ Create and edit a purchase plan.
 -   Name: name of the purchasing plan
 -   Time Horizon: the number of days that are taking into account for the calculation of the purchasing plan
 -   Safety Lead Time: number of days that are added to the offset for the calculation of the planned order date of the suggested purchase order. For example, the purchasing lead time is used to indicate how long it will take for a product between being ordered and arriving in the warehouse, and the safety lead time is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   Planner: filter to select only products managed by a certain planner, as configured in the [Product](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab in the Master Data Management section.
+-   Planner: filter to select only products managed by a certain planner, as configured in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) tab in the Master Data Management section.
 -   Vendor: filter to select only products for a certain vendor as configured in the Purchasing tab of the product.
 -   Product: filter to select only a certain product
 -   Product Category: filter to select only products related to a certain product category
@@ -179,10 +183,12 @@ By clicking the Create Purchase Orders button, the purchase order is created, pr
 Once the purchase order is created automatically, the number of the document appears in the Order Line column of the line. The created purchase order is in draft status and needs to be booked. 
 
 !!! info
-    For more information, please check the [Purchase Order](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) section.
+    For more information, please check the [Purchase Order](../procurement-management/transactions.md#purchase-order) section.
 
 
 ## MRP Forecast
+
+:material-menu: `Application` > `Material Requirement Planning` > `Transactions` > `MRP Forecast`
 
 ### Overview
 

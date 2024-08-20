@@ -5,24 +5,26 @@ title: Financial Management Setup
 
 This section describes the windows that are necessary to configure the financial management transactions as regards receivables and payables in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Tax Register Type](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#tax-register-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Register Type](#tax-register-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payment Method](#payment-method){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Matching Algorithm](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#matching-algorithm){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Matching Algorithm](#matching-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Bank File Format](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#bank-file-format){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Bank File Format](#bank-file-format){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Execution Process](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#execution-process){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Execution Process](#execution-process){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Remittance Type](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#remittance-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Remittance Type](#remittance-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Doubtful Debt Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#doubtful-debt-method){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Doubtful Debt Method](#doubtful-debt-method){ .md-button .md-button--primary } <br>
 
 
-## **Tax Register Type**
+## Tax Register Type
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Tax Register Type`
+
+### Overview
 
 A tax register type is used to collect all the tax rates of a type to take into account while calculating the total tax amount of a given tax register type within a period of time.
 
@@ -33,7 +35,7 @@ In other words, the "Tax Payment" process helps to calculate the amount of taxes
 -   the "Sales" tax register types or the total tax amount that is charged by an organization and paid by its customers
 -   and the "Purchase" tax register types or the total tax amount that is paid by an organization to other businesses on the supplies that it receives.
 
-### **Header**
+### Header
 
 The tax register type window allows the user to create tax register types.
 
@@ -48,7 +50,7 @@ Besides, every tax register type needs to be linked to a G/L Item.
 
 The ledger accounts defined for that G/L Item will be the ones to use while posting the tax payment calculated as the difference between the "Sales" tax register type and the "Purchase" tax register type.
 
-### **Lines**
+### Lines
 
 The lines tab allows the user to associate tax rates to the tax register type.
 
@@ -71,9 +73,11 @@ Therefore, it is not only possible to configure the tax rates which will be take
 -   AP Credit Note
 -   Reversed Purchase Invoice
 
-## Payment method
+## Payment Method
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Payment Method`
+
+### Overview
 
 **Payment Methods** represent means of payment employed by your enterprise or by a business partner, such as:
 
@@ -96,7 +100,7 @@ It is possible to associate multiple **Payment Methods** to a single Financial A
 
 For instance, both checking and electronic payments may be associated with a single Financial Account as each payment method has its own configuration.
 
-#### **Payment Cycle**
+#### Payment Cycle
 
 To better understand the configuration of a **Payment Method**, it is necessary to understand the flow of events within the payment cycle:
 
@@ -156,7 +160,7 @@ Above payment stage can create an **accounting event** depending on the payment 
 
 -   If it is configured to account at this stage, Reconciliations can be accounted in the Reconciliation tab of the Financial Account window by using the process button "Post" or by running the accounting background process.
 
-#### **Payment Status**
+#### Payment Status
 
 To better understand the configuration of the payment method, it is also necessary to understand the **payment status** related to the process steps.
 
@@ -192,7 +196,7 @@ and the **Withdrawal** of the payment from the financial account changes the pay
 
 3\. The **Clearing** or reconciliation of the payments changes the payment status from either **"Deposited not Cleared"** or **"Withdrawn not Cleared"** to **"Payment Cleared"**
 
-#### **Payment Method**
+#### Payment Method
 
 The image below shows the Payment Method window. That is the window where payment methods are configured.
 
@@ -232,7 +236,7 @@ Payment Method configuration includes the features below:
 -   and finally, how the payment is going to be **accounted**.
 
 !!! info
-    To learn more, visit the section [Accounting Payment Workflow](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup#accounting-payment-workflow).
+    To learn more, visit the section [Accounting Payment Workflow](../../financial-management/receivables-and-payables/setup.md#accounting-payment-workflow).
 
 
 Payment Methods can be configured as explained below in detail:
@@ -362,9 +366,11 @@ For instance:
     If any account is left empty, it implies that the process button "Post" is shown as "Post: Disable for accounting" in the corresponding window.
 
 
-## **Matching Algorithm**
+## Matching Algorithm
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Matching Algorithm`
+
+### Overview
 
 Etendo allows the user to reconcile deposit and withdrawal transactions of a financial account in two ways:
 
@@ -375,7 +381,7 @@ Etendo allows the user to reconcile deposit and withdrawal transactions of a fin
 
 Etendo delivers out of the box the "**Standard**" matching algorithm, which can be found and configured in the **Matching Algorithm** window.
 
-#### **Matching Algorithm**
+#### Matching Algorithm
 
 The matching algorithm window lists and allows the user to configure the algorithm/s to use while matching up bank statement lines with financial account transactions.
 
@@ -389,9 +395,11 @@ As shown in the image above, the "**Standard**" matching algorithm has three che
     It is possible to select all the above checks at once or just some of them in order to configure how to get a strong match.
 
 
-## **Bank File Format**
+## Bank File Format
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Bank File Format`
+
+### Overview
 
 Etendo allows the user to import a bank statement file to an organization's financial account if a bank file format is configured for the organization.
 
@@ -407,7 +415,7 @@ Once a bank statement file is imported to an organization's financial account:
 -   the overall information such as the file name and the import date are saved in the Imported Bank Statements tab of the financial account
 -   and the content of the bank statement file is saved line by line in the corresponding Bank Statement Lines tab.
 
-#### **Bank File Format**
+#### Bank File Format
 
 The bank file format window lists the bank file format modules installed for an organization.
 
@@ -419,9 +427,11 @@ As shown in the image above, a bank file format can be applied to the organizati
 Exceptions can be added to a bank file import format, therefore they are not taken by the import process.
 It is possible to define the text to exclude while matching transactions and bank statement lines on a given financial account or in all of them.
 
-## **Execution Process**
+## Execution Process
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Execution Process`
+
+### Overview
 
 Some payment types require an additional activity to be executed upon completion of the payment.
 
@@ -432,7 +442,7 @@ Overall, the execution process is a definition of the **activity/ies** that the 
 -   **made/withdrawn from the financial account**
 -   or **received/deposited in the financial account**.
 
-#### **Process**
+#### Process
 
 The execution process window lists the available execution processes.
 
@@ -445,7 +455,7 @@ Etendo delivers by default execution processes described below:
 The payments that require a separate activity to be executed need to be configured to make them work, that implies the selection of the "**Automatic**" option in the field "**Execution Process**", therefore an execution process of the ones listed above can be selected while configuring the payment method.
 
 
-#### **Parameter**
+#### Parameter
 
 The parameter tab allows the user to configure the additional activity to execute upon completion of a payment. For instance, to record a check number.
 
@@ -463,6 +473,8 @@ Besides, the parameter types can also be a "**Constant**", therefore the "**Defa
     The value register for any of the above defined parameter's types is saved in the Parameters tab of the corresponding payment run.
 
 ## Remittance Type 
+
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Remittance Type`
 
 To configure the remittance payment method it is necessary to previously execute a dataset that has created this payment method and the execution process. 
 
@@ -501,7 +513,7 @@ To configure Non-Discount Remittances, define this payment method from the Payme
 ![](../../../../../assets/drive/1Y0pJr2nUKDJEYbp85_a75ifAKQ70IIqO.png)
 
 !!! info
-    To create a Non-Discount remittance go to the [Remittance window](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions#remittance). 
+    To create a Non-Discount remittance go to the [Remittance window](../../financial-management/receivables-and-payables/transactions.md#remittance). 
 
 ### Remit for Discount
 
@@ -514,16 +526,18 @@ To configure Remittances for Discount, define the type from the Remit for Discou
 ![](../../../../../assets/drive/12vjozrcXO3zaa1j9_e0P9xj3TD9kJ-FI.png)
 
 !!! info
-    To create a Remit for Discount remittance go to the [Remittance window](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions#remittance).
+    To create a Remit for Discount remittance go to the [Remittance window](../../financial-management/receivables-and-payables/transactions.md#remittance).
 
 
-## **Doubtful Debt Method**
+## Doubtful Debt Method
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Doubtful Debt Method`
+
+### Overview
 
 Through this window, it is possible to define a Doubtful Debt Method, which will be available to use as a template when creating a new Doubtful Debt Run.
 
-#### **Doubtful Debt Method**
+#### Doubtful Debt Method
 
 ![Doubtful Debt Method](../../../../../assets/drive/1aJifeptvA2B8lIiaFEBtvNIbXUcJpRxO.png)
 

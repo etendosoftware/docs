@@ -3,11 +3,11 @@ title: Spain SII
 ---
 ## Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii
+:octicons-package-16: Javapackage: `org.openbravo.module.sii`
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.sii.es_es`
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii.template
+:octicons-package-16: Javapackage: `org.openbravo.module.sii.template`
 
 ## **Introducción**
 
@@ -113,7 +113,7 @@ Todos los terceros, ya sean del tipo "Cliente" o "Proveedor/Acreedor", deben con
 Es muy importante indicar para cada tercero:
 
 - sus datos de contacto (Nombre Comercial, Nombre Fiscal (Razón Social) o Nombre/Apellidos
-- su "Clave NIF País" Residencia:
+- su "Clave NIF País" Residencia):
   - 1 - NIF
   - 2 - NOI
   - 3 - Pasaporte

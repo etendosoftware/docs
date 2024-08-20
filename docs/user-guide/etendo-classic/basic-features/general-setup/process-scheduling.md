@@ -6,7 +6,9 @@ Process Scheduling folder allows the user to schedule and monitor Etendo backgro
 
 ## Process Request
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Request`
+
+### Overview
 
 A background process is a system action requested by the user, who has to previously provide auxiliary parameter values to execute that action.
 
@@ -131,7 +133,7 @@ Process Request has been modified in order to be able to schedule a process grou
 
 The schedule of a process group will work exactly as the schedule of a single process. It is not possible to schedule a process group and a single process at the same time.
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](../../../../assets/drive/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv.png)
 
@@ -139,7 +141,7 @@ More information in [Process Group](/user-guide/etendo-classic/basic-features/ge
 
 Process monitor is a read-only tab that allows reviewing the status of processes executed by this request. 
 
-More information in [Process Monitor](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-monitor_1).
+More information in [Process Monitor](#process-monitor_1).
 
 ![](../../../../assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
 
@@ -147,13 +149,15 @@ More information in [Process Monitor](/user-guide/etendo-classic/basic-features/
 
 In case that the process executed by the process request is a process group, you will find here the information about the executions of the processes in the group for each process group execution. 
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
 ## Process Monitor
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Monitor`
+
+### Overview
 
 Process monitor feature allows reviewing the status of processes executed by a user as well as the ones scheduled in the process request window.
 
@@ -187,13 +191,15 @@ As shown in the image above, process monitor window provides the information bel
 
 In case the process executed is a process group, you will find here the information about the executions of the processes in the group. 
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
 ## Process Group
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Group`
+
+### Overview
 
 Create a Process Group to be able to schedule and execute a group of processes as a single unit from the Process Scheduler. The batch of processes will be executed in series.
 
@@ -259,9 +265,7 @@ Prevent executions of single processes and group processes will co-exist. Which 
 
 ### Process Group as Source Data
 
-!!! info
-    Only for developers
-
-Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
+!!! info "Only for developers"
+    Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
 
 ![](../../../../assets/drive/fSrbl6KIduQt_nL4aZ2wOWGWgcd8H03rnndIVD5YhTx0J1bkdD-m5K57TXKQOuPDm8QtsLi4V_egrxJvgdOWEsV7TPykZRBr_1McjEMny9HXf9kowbFRXFhqcZm9MRhJ0PvT4xoJ.png)

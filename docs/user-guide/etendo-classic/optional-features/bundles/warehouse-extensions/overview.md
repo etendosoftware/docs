@@ -14,20 +14,21 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ## Modules
 
+
 ### Stock History
 
-:octicons-package-16: Javapackage: com.etendoerp.stock.history
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
-It provides updated information about the daily history stock of the products. 
+This module provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [the Stock History user guide](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#stock-history) and [the Stock History developer guide](/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle#stock-history).
+    For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
 ### Reactivate Warehouse Documents
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents`
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents.template
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ghH3tBjoN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -36,10 +37,19 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 !!! info
     For more information, visit the user guide for:
 
-    - [Goods Movements](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-goods-movements)
-    - [Goods Receipts](/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-goods-receipts)
-    - [Goods Shipments](/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-goods-shipments)
-    - [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-physical-inventories)
+    - [Goods Movements](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
+    - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
+    - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
+    - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+
+### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
 
 ## Uninstall bundle
 
@@ -52,4 +62,3 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 ```
 
 2. After the query successfully finishes, delete the bundle by the way corresponding to the installation method (Sources/JARs)
-

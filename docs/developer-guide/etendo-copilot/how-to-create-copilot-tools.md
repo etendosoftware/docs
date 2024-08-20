@@ -1,10 +1,12 @@
 ---
-title: How to create Copilot tools
 tags:
     - Copilot
     - IA
     - Machine Learning
 ---
+
+# How to create Copilot tools
+
 ## Overview
 This article explains how to create a new tool for Copilot.
 
@@ -16,7 +18,7 @@ Etendo Copilot module allows the creation of tools that add functionality to it.
     The Langchain libraries are available by default in Copilot. You can use them in your tools. See [Langchain documentation](https://python.langchain.com/){target="_blank"} for more information.
 
 ### Requirements
-- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](/developer-guide/etendo-copilot/installation/){target="_blank"}.
+- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](../../developer-guide/etendo-copilot/installation.md){target="_blank"}.
 
 ### Create a new tool
 For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
@@ -50,47 +52,35 @@ For this example, we will create a tool that will allow us to make a ping to a h
     *.gitignore*: Contains the files that will be ignored by git.
    
     *build.gradle*: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
-    [How to publish modules to GitHub repository](/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/)
+    [How to publish modules to GitHub repository](../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
     
    
     *tools_deps.toml*: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
 
 
-2. Create the file `PingTool.py` in the `tools` folder. This file will contain the code of the tool. The code of the tool will be as follows, the comments explain the code:
+    
 
-    ```python title="PingTool.py"
-    import os
-    from copilot.core.tool_wrapper import ToolWrapper # Import the ToolWrapper class from the copilot.core.tool_wrapper module. This class is the one that must be extended to create a new tool.
-
-    class PingTool (ToolWrapper):
-        name = 'PingTool' # Name of the tool
-        description = ('''This tool receives a hostname and returns the ping result.''') # Description of the tool. This description tells Copilot what the tool does and based on this description it will decide if this tool will solve the user's request.
-
-        def run(self, host: str, *args, **kwargs): # The run method is the one that will be executed when the tool is executed. The inputs of the method are the inputs of the tool.
-            import requests # Import the necessary libraries to execute the tool. It is recommended to import the libraries inside the run method to avoid conflicts with other tools.
-            response = requests.get(host)
-            return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
-    ``` 
-    !!!Note 
-        The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
-
-3. In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
+2. Its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. 
+For the case of the PingTool, we will create a class called `PingToolInput` that will define the inputs of the tool. The class will be located in the `PingTool.py` file. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
+    
+    !!!Warning 
+        The SearchKey of the tool must be the same as the name of the class that extends the ToolWrapper class.
 
     ```python title="PingTool.py"
     import os
     from typing import Type, Dict
 
-    from pydantic import BaseModel, Field
+    from copilot.core.tool_input import ToolInput, ToolField
 
     from copilot.core.tool_wrapper import ToolWrapper  # Import the ToolWrapper class from the copilot.core.tool_wrapper module. This class is the one that must be extended to create a new tool.
 
 
-    class PingToolInput(BaseModel):
-        host: str = Field(
+    class PingToolInput(ToolInput):
+        host: str = ToolField(
             title="Host",
             description='''The host to ping.''',
         )
-        message_to_print: str = Field(
+        message_to_print: str = ToolField(
             default="default message!",  # Default value of the input, if there is no default value, the input is mandatory.
             title="Message to print",
             description=" Custom message to print before the ping result.",
@@ -103,8 +93,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
         # This description tells Copilot what the tool does and based on this description it will decide if this tool will solve the user's request.
         description = (
             '''This tool receives a hostname and returns the ping result.''')
-        args_schema: Type[
-            BaseModel] = PingToolInput  # The args_schema attribute must be a Pydantic model that defines the inputs of the tool.
+        args_schema: Type[ToolInput] = PingToolInput  # The args_schema attribute must be a Pydantic model that defines the inputs of the tool.
         
         #return_direct = True  # If return_direct is True, the tool will return the result directly, without execute any other tool. If return_direct is not defined, the tool output can be used as input of another tool. This is only available for tools in the Langchain agent. In the OpenAI agent, the return_direct attribute is taken into account, and the tool output can be used as input of another tool.
 
@@ -121,11 +110,12 @@ For this example, we will create a tool that will allow us to make a ping to a h
             return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
     ```
     !!! note "Enviroment variables"
-        Automatically, Copilot reads the gradle.properties file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the gradle.properties file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
+        Automatically, Copilot reads the `gradle.properties` file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the gradle.properties file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
          This allows us to use the environment variables in the tools. 
         
+    
 
-4. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows:
+3. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows:
 
     ``` toml
     [ToolName]
@@ -138,7 +128,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     [PingTool]
     requests = "*"
     ```
-    The name of the tool must be the same as the name of the class that extends the ToolWrapper class. In our case, the name of the tool is `PingTool` and the name of the class that extends the ToolWrapper class is also `PingTool`. During the load of copilot, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
+    The SearchKey of the tool must be the same as the name of the class that extends the ToolWrapper class. In our case, the SearchKey of the tool is `PingTool` and the name of the class that extends the ToolWrapper class is also `PingTool`. During the load of copilot, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
 
     The version of the dependency can be specified or not. If the version is not specified, the latest version will be installed. If the version is specified, the version specified will be installed. The version can be specified with the following operators:
     ``` toml
@@ -156,7 +146,8 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
 
     !!! warning "Different name of depedency while installing and importing"
-        If the name of the dependency is different from the name of the dependency that is imported in the tool, it is necessary to specify the name of the dependency that is imported in the tool. For example, if the dependency is installed with the name `pyscopg2-binary` but is imported with the name `psycopg2`, we can use a | to specify both names. The content of the file will be as follows:
+        If the name of the dependency is different from the name of the dependency that is imported in the tool, it is necessary to specify the name of the dependency that is imported in the tool. For example, if the dependency is installed with the name `pyscopg2-binary` but is imported with the name `psycopg2`, we can use a | to specify both names. If this clarification is not made, the tool will not be able to import the dependency to "test" if it is installed correctly, this will throw a warning, but the tool will be able to run correctly.
+        The content of the file will be as follows:
 
 
         ``` toml
@@ -167,7 +158,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
         "pyscopg2-binary|psycopg2" = "*"   # First name is the name of the dependency that is installed, second name is the name of the dependency that is imported. In the tool code, we will do import psycopg2
         ```
 
-5. Additionaly, open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
+4. Additionaly, open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
 
     - *Search key*: The tool search key. The same name as the tool class must be used, this field is mandatory to find the tool in the `Sync Tool Structure` process. 
     - *Name*: The name of the tool. It is the name that will be shown in the Copilot UI.
@@ -176,28 +167,27 @@ For this example, we will create a tool that will allow us to make a ping to a h
     - *JSON Info*: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. 
  
 
-    The last step is get the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is get from the tool class.
+    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Assistant. To do so, we have to execute the button `Sync Tool Structure` in the `Skill/Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is obtained from the tool class.
 
     !!! Warning Before Sync Tool Structure
-        Is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
+        It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
 
-    ![how-to-create-copilot-tools.png](../..//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+    ![how-to-create-copilot-tools.png](../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
 
     After creating the record, we have to export the module to persist the changes in the database:
     ```bash title="Terminal"
     ./gradlew export.database
     ```
-    Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
+    Once the *Copilot Tool* is defined, this tool must be associated to the assistant(s), to do so, a record must be created in the *tools* tab of the **Assistant** window, this record will allow us to activate or deactivate the tool.
 
-    ![how-to-create-copilot-tools-2.png](../..//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+    ![how-to-create-copilot-tools-2.png](../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
 
     !!! note "OpenAI Assistants tools"
-        Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
+        Remember to execute `Sync Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
-6. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
+5. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
 To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
 
     ``` bash title="Terminal"
     ./gradlew copilot.do -Pprompt="What tools do you have available?"
     ```
-

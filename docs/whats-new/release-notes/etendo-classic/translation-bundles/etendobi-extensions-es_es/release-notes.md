@@ -12,7 +12,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Etendo BI Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=9A01610D819C43F18BF44F1A91CBDC57){target="_blank"}
 
-:octicons-project-symlink-16: Original Bundle Release Notes: [Etendo BI Extensions Bundle](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/)
+:octicons-project-symlink-16: Original Bundle Release Notes: [Etendo BI Extensions Bundle](../../bundles/etendobi-extensions/release-notes.md)
 
 ## Overview
 

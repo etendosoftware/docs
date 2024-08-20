@@ -5,33 +5,37 @@ title: Warehouse Management Setup
 
 This section describes the steps that need to be performed to configure the warehouse management sections in Etendo. The corresponding windows are:
 
-[:material-file-document-outline:Process Price Difference Adjustment](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Process Price Difference Adjustment](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse and Storage Bins](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Warehouse and Storage Bins](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipping Company](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#shipping-company){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Shipping Company](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#shipping-company){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Freight Category](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#freight-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Freight Category](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#freight-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Rules](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-rules){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Costing Rules](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Algorithm](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-algorithm){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Costing Algorithm](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Landed Cost Type](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#landed-cost-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Landed Cost Type](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse Rules](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-rules){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Warehouse Rules](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Referenced Inventory Type](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#referenced-inventory-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Referenced Inventory Type](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#referenced-inventory-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:EAN 128 Type](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#ean-128-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:EAN 128 Type](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#ean-128-type){ .md-button .md-button--primary } <br>
 
 ## Process Price Difference Adjustment
+
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Process Price Difference Adjustment`
 
 Price difference adjustments can be performed "automatically" by scheduling the "Price Correction Background Process" or manually for a given product or set of products by running this process.
 
 ## Warehouse and Storage Bins
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Warehouse and Storage Bins`
+
+### Overview
 
 The user can create warehouses and organize them using storage bins.
 
@@ -67,7 +71,7 @@ Other fields to note:
 -   **Default:** when selected, this storage bin appears by default in documents.
 -   **Barcode:** There is no logic behind this field. It has been created in order to be used/implemented by other modules such as **Etendo Mobile Application.**
 -   **Inventory Status:** It is the current Inventory Status of the selected Storage Bin. It can be changed by clicking on *Change Status* button. 
-For more information, visit [Inventory Status](/developer-guide/etendo-classic/concepts/inventory-status).
+For more information, visit [Inventory Status](../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
 
 ### Product Transactions
 
@@ -100,6 +104,8 @@ It is automatically populated when a new warehouse is created as it is taken fro
 
 ## Shipping Company
 
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Shipping Company`
+
 The user can create shipping companies and define freight costs to be used in product logistics.
 
 Shippers to be used in other application transactions can also be created.
@@ -110,11 +116,15 @@ The user can define freights to be used for a specified shipper.
 
 ## Freight Category
 
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Freight Category`
+
 The user can define and create freight categories to be used by shippers.
 
 ## Costing Rules
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Costing Rules`
+
+### Overview
 
 A costing rule can be applied during cost calculation. Each costing rule requires a costing algorithm and a valid from date to properly calculate the cost of material's transactions. The "Warehouse" can be configured as a dimension to take into account while calculating costs.
 
@@ -228,7 +238,9 @@ The initialization tab is a read-only tab which allows to review the "Closing" /
 
 ## Costing Algorithm
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Costing Algorithm`
+
+### Overview
 
 A costing algorithm defines the method to use to calculate the cost of the transactions.
 
@@ -250,7 +262,9 @@ If no record is shown in this window please contact your "System Administrator" 
 
 ## Landed Cost Type
 
-### **Introduction**
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Landed Cost Type`
+
+### Overview
 
 Landed Cost Types window allows the user to define different types of Landed Costs that can be assigned to Goods Receipts and therefore allocated to the products included in the receipts.
 
@@ -258,7 +272,7 @@ Landed cost is the total cost of a landed shipment including purchase price, fre
 
 Etendo handles landed costs not as part of the "unit cost" of a product but as a part of its total cost.
 
-### **Header**
+### Header
 
 Landed Cost Types can be defined either as a "Product" or as an "Account" (G/L Item). Besides that a distribution algorithm can be defined to configure the way landed costs are going to be allocated to products.
 
@@ -293,7 +307,9 @@ A landed cost type can either be created as an "**Account**" or as a "**Product*
 
 ## Warehouse Rules
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Warehouse Rules`
+
+### Overview
 
 Warehouse rules window allows the user to review the warehouse rules available.
 
@@ -313,6 +329,8 @@ Etendo ships three different rules by default:
 
 ## Referenced Inventory Type
 
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Referenced Inventory Type`
+
 This section defines different types of containers or boxes, which include any kind of object that can contain goods.
 
 **Referenced Inventory Type** window fields
@@ -327,6 +345,8 @@ This section defines different types of containers or boxes, which include any k
 -   **Client** : Client for this installation.
 
 ## EAN 128 Type Window
+
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `EAN 128 Type`
 
 In this window you can add different types of barcodes. They store information about the product in this code, either: Date, Product, Physical Inventory Line, and when you scanned, you can obtain this information from the barcode.
 
@@ -425,5 +445,3 @@ For example we will see a record created here:
 These last 4 options show the Entity Field therefore by selecting one of these 4 options. 
 
 - **Entity Field**: In this selector you can choose the specific field to the entity field that it references.
-
-
