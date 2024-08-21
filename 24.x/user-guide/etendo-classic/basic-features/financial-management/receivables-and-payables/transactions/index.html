@@ -2500,6 +2500,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get-bank-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Bank Statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#match-statement" class="md-nav__link">
     <span class="md-ellipsis">
       Match Statement
@@ -3567,6 +3576,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/platform-extensions/oauth-authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3690,6 +3720,27 @@
   
   <span class="md-ellipsis">
     Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/financial-extensions/psd2-bank-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSD2 Bank Integration
   </span>
   
 
@@ -10334,6 +10385,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get-bank-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Bank Statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#match-statement" class="md-nav__link">
     <span class="md-ellipsis">
       Match Statement
@@ -11702,14 +11762,14 @@ This window allows to:</p>
 <p>The "<strong>Reconcile</strong>" process button reconciles the transactions marked as cleared, therefore the reconciliation is processed and its status changes to "Completed".</p>
 <p>Finally, the "<strong>Cancel</strong>" process button just closes the reconciliation window and removes the ending balance entered, if any.</p>
 <h5 id="import-statement"><strong>Import Statement</strong></h5>
-<p>The header process button "Import Statement" is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.</p>
+<p>The header process button <strong>Import Statement</strong> is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Etendo currently delivers the "Standard" matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".</p>
+<p>Etendo currently delivers the <strong>Standard</strong> matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed.</p>
+<p>Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed. </p>
 </div>
 <p>Etendo currently delivers below listed import bank file modules:</p>
 <ul>
@@ -11726,6 +11786,17 @@ This window allows to:</p>
 <li>select a <strong>bank statement file</strong></li>
 <li>and select the <strong>file format</strong> of the selected bank statement file to import.</li>
 </ul>
+<h5 id="get-bank-statement"><strong>Get Bank Statement</strong></h5>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
+</div>
+<p>Instead of manually import the bank statements, Etendo allows you to synchronize the bank accounts with the financial accounts in order to <strong>automatically download bank statements</strong>. </p>
+<p>This functionality facilitates a <strong>faster and safer integration</strong> between the financial accounts' and bank statements' information to accelerate the process of generating bank statements. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about bank integration to automatically import bank statements visit <a href="../../../../optional-features/bundles/financial-extensions/psd2-bank-integration/">PSD2 Bank Integration</a>.</p>
+</div>
 <h5 id="match-statement"><strong>Match Statement</strong></h5>
 <p>Once a bank statement file has been imported, the button "Match Statement" opens a new window where the imported bank statement lines and the existing financial transactions are displayed. By default, there is an implicit filter which hides the bank statement lines that are already matched.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Match Statement" src="../../../../../../assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png" /></a></p>
