@@ -219,5 +219,21 @@ This functionality is specifically useful for companies that have a month close,
 
 This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
 
+<<<<<<< HEAD
+    - [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
+    - [Payment Out](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
+    - [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
+
+### PSD2 Bank Integration
+
+:octicons-package-16: Javapackage: com.etendoerp.psd2.bank.integration
+
+
+This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
+
+!!!info
+        For more information, visit [PSD2 Bank Integration](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
+=======
 !!!info
     For more information, visit the [VAT Regularization User Guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+>>>>>>> develop
