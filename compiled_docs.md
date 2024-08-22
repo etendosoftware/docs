@@ -14048,13 +14048,14 @@ Finally, the "**Cancel**" process button just closes the reconciliation window a
 
 ####### **Import Statement**
 
-The header process button "Import Statement" is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.
+The header process button **Import Statement** is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.
 
 !!! info
-    Etendo currently delivers the "Standard" matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".
+    Etendo currently delivers the **Standard** matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".
 
 !!! info
-    Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed.
+    Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed. 
+
 
 Etendo currently delivers below listed import bank file modules:
 
@@ -14069,10 +14070,23 @@ The "Import Statement" process button opens the "Import Bank File" window.
 
 ![Import Statement](https://docs.etendo.software/latest/assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
 
+
 This window allows to:
 
 - select a **bank statement file**
 - and select the **file format** of the selected bank statement file to import.
+
+####### **Get Bank Statement**
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+Instead of manually import the bank statements, Etendo allows you to synchronize the bank accounts with the financial accounts in order to **automatically download bank statements**. 
+
+This functionality facilitates a **faster and safer integration** between the financial accounts' and bank statements' information to accelerate the process of generating bank statements. 
+
+!!! info
+    For more information about bank integration to automatically import bank statements visit [PSD2 Bank Integration](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md).
 
 ####### **Match Statement**
 
@@ -20092,6 +20106,40 @@ Besides, Etendo notifies the user with a message announcing the amount of **rema
     By default, the system activates this message when there are **seven days** left to change the password.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: OAuth Authentication
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Platform Extensions Bundle/OAuth Authentication
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauth-authentication
+## Article Content: 
+### OAuth Authentication
+
+#### Overview
+
+This section describes the OAuth Authentication module included in the Platform Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+
+
+OAuth Authentication process facilitates the **provider type configuration** which allows users to **securely authenticate and authorize access** to their information using their preferred provider.
+
+OAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resorces on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
+
+#### OAuth Provider
+
+In the OAuth Provider window in :material-menu: `application`> `oauth-provider`, set the preferred type provider by adding the user authentication URL in the **API OAuth URL field**. This URL can be found in the provider documentation API.  
+
+The other fields will be completed with data referring to the corresponding provider.
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauthprovider-1.png)
+
+
+
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Warehouse Extensions Bundle
 ## Article URL: 
@@ -20451,8 +20499,148 @@ This functionality is specifically useful for companies that have a month close,
 
 This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
 
+<<<<<<< HEAD
+    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
+    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
+    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
+
+##### PSD2 Bank Integration
+
+:octicons-package-16: Javapackage: com.etendoerp.psd2.bank.integration
+
+
+This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
+
+!!!info
+        For more information, visit [PSD2 Bank Integration](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
+=======
 !!!info
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+>>>>>>> develop
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: PSD2 Bank Integration
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/PSD2 Bank Integration
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration
+## Article Content: 
+### PSD2 Bank Integration
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+#### Overview
+
+This section describes an enhancement of the Financial Extensions Bundle in Etendo which uses the **PSD2 (Payment Services Directive 2) feature**. This functionality allows users to securely connect to their bank, synchronize their bank accounts with financial accounts in Etendo and **automatically download bank transactions** within specified date ranges. 
+
+This section serves as a guide for users to understand the functionality and usage of the PSD2 module.
+
+!!!info
+    To be able to include this functionality, the **Financial Extensions Bundle** must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+
+Before using the PSD2 bank integration, users must provide necessary credentials to **login on the bank page** to connect their bank accounts with Etendo. This will allow automating the process of updating financial records with bank account information in order to be able to download the bank transactions needed. 
+
+This bank integration will be done throught the **Redsys service provider** by following a series of mandatory steps which must be done by a technical staff.
+
+!!!info
+    For more information about how to integrate the bank entity with **Redsys provider** visit the [PSD2 Bank Integration Technical Documentation in the developer guide]().
+
+#### Connect to the Bank
+
+The following configuration steps are needed to directly connect the Etendo financial account with the user's bank provider. 
+
+##### Provider Configuration
+
+From the Financial Account window, the user will be able to get to download bank transactions, but before starting this process, it is necessary to **apply the dataset** that is included in this module.
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-8.png)
+
+!!! note
+    The dataset **Bank Integration PSD2** includes the configuration needed for the supported provider offered by [Redsys](https://redsys.es/){target="_blank"}.
+
+!!! info
+	For more information about how to apply a dataset visit the functional documentation about [Enterprise Module Management](https://docs.etendo.software/latest/basic-features/general-setup/enterprise-model.md#enterprise-module-management). 
+
+
+Once the dataset is applied, go to the Financial Account window in `Financial Management`> `Receivables and Payables` >`Transactions`>`Financial Account` to configure the accounts that will be integrated through PSD2 in order to set the bank provider with which the financial accounts will be syncronized with. 
+For this, go to the **Bank Integration PSD2** section and select the corresponding provider for the selected financial account. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-10.png)
+
+!!!note
+     Remember to repeat this procees for each bank account needed to be configured with PSD2 Integration. 
+
+
+##### Get Token
+
+The next step is to generate the token thought the **Get Token button**, which allows logging into the bank interface as Etendo will move towards token-based authentication. 
+This token provided by the bank is a secure and temporary key used to authenticate and authorize Etendo to access the bank account information. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-9.png)
+
+In the bank pop-up window, log in to the configured provider by using the **bank’s user and password**. This process will generate the token, and Etendo will use it to get the information needed from the bank. 
+
+<figure markdown="span">
+    ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-12.png)
+  <figcaption>This image is an example of a type of provider. </figcaption>
+</figure>
+
+!!!note
+    Consider that the token has a validity period, it will be only necessary to generate a new one if it has expired.  
+
+
+##### Get Consent
+
+Once the token is generated, it is necessary to **give consent** in order to allow Etendo to retreive the bank statement information. For this, a new button named **Get Consent** will show up, click on it to authorize Etendo to access all the bank information through the token generated. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-3.png) 
+
+By giving authorization from the Get Consent button, it is mandatory to confirm the authorisation in the following bank provider pop-up window. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-1.png)
+
+
+##### Account Synchronization
+
+The following step is to synchronize the bank account registed in Etendo with the chosen provider. This process gets the internal provider account ID to associate it with the bank account used by Etendo. This allows the system to directly access the bank information to execute financial processes. 
+
+For this, go to the **Get Bank Account Identifiers** window in `General Setup`> `Integrations Configuration` >`PSD2`>`Get Bank Account Identifiers` and select the bank provider to synchronize the accounts with. 
+
+!!! warning
+	Remember that in order to finally achieve the accounts synchronization, it is necessary to have the IBAN (International Bank Account Number) previously configured in the Financial Account since this number will allow the connection with the bank’s internal ID to automatically create and generate the bank statements. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-4.png)
+
+Once the process is finished, the synchronization can be checked in the **Bank Integration PSD2** information section from the Financial Account window where the account is saved.  
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-5.png)
+
+#### Get Bank Statements
+
+In the **PSD2 Bank Integration section of the header**, it is also possible to define the import date of the bank statements and the frequency run, e.i., how often the user wants a record to be created. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-6.png)
+
+- **Import from Date**: The user is able to set the specific date from which the bank information will be taken. In case no date is set, Etendo brings bank statement information from the last date when a bank statement was created (when a bank statement was imported). 
+
+- **Import to Date**: The user is able to set the specific date up to which the bank information will be taken. In case this field remains empty, Etendo brings the information to the current day's date.
+
+- **Statement Frequency**: 
+
+    - One per day: if there is already a statement created for that day,  Etendo uses the same statement and includes the information there.
+    - One per month: Etendo checks the last statement created within the given month and if there is one created, it enters the statement there. Otherwise, Etendo creates a new one. 
+    - One per run: Etendo creates a new statement.
+    - One per week: Etendo checks if the last statement created is within the given week.
+
+
+After defining the requirements for the bank statement creation, complete the process by clicking on the **Get Bank Statement button**. Etendo creates a header record, whose names are related to the dates, and the bank statements lines provide a transaction reference number. 
+
+Etendo processes the bank statements which are ready to be reconciled. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-7.png)
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Bulk Posting
@@ -50699,7 +50887,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.2){target="_blank"} | 02/08/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.0){target="_blank"} | 20/08/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.3.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.2){target="_blank"} | 02/08/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.1){target="_blank"} | 22/07/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.0){target="_blank"} | 19/07/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.2.3](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.3){target="_blank"} | 19/07/2024 | 23.4.0 | * | C | :white_check_mark: |
