@@ -25,31 +25,31 @@ Etendo solutions are released on a quarterly basis.
 
 ![new-etendo-lifecycle](../assets/whats-new/etendo-release-cycle/new-etendo-lifecycle.png)
 
-As shown in the image above, the duration of a release cycle is nine months. For instance, and in the case of Etendo Y1Q4 design and development activities started dated on July 1st and will finish at release dated on March 31st.
+As shown in the image above, the duration of a release cycle is nine months. For instance, and in the case of Etendo Y1Q4 development activities started dated on July and will finish at release dated on March.
 
 ## Release Phases
 
 The release process consists of the following phases: 
 
-- 3 month development cycles, when engineering team focus on **code development & review, testing and code integration**
-- 3 additional months for the engineering team to **test and fix the bugs found**, as well as to **create the user documentation and train** the support team.
-- 3 months for the **QA team to test and validate the release** according to what defined in the corresponding Test Plan. At the beginning of this phase, the release is published as QA Approved (QAA) for participants in the Etendo Early Adopters Program. After this process, there's a **maturation cycle to evolve from QAA to Confirmed Stable** (CS), published in the releases repository.
+- **3-month development cycle:** The engineering team focuses on code development, review, testing, and integration.
+- **3-month QA cycle:** The QA team tests and validates the release according to the Test Plan, creates user documentation, and trains the support team.
+- **3-month Etendo Early Adopters Program:** The release is initially published as QA Approved (QAA). This phase includes a maturation cycle to evolve the release from QA Approved (QAA) to Confirmed Stable (CS).
 
 ![etendo-release-cycle-phase.png](../assets/whats-new/etendo-release-cycle/etendo-release-cycle-phase.png)
 
-Etendo strongly recommends that only releases that have reached CS are used in production environments.
+!!! note
+    Etendo strongly recommends that only releases that have reached CS are used in production environments.
 
 In summary, Etendo will release Confirmed Stable (CS) releases in March, June, September, and December on a yearly basis.
 
 !!! info
-
     Etendo will give support to the current year and prior year releases.
 
 ### Early Adopters Testing (Innovators Program)
 
 As already mentioned, Etendo has established an innovators program based on a maturation cycle to evolve Etendo releases from QAA to Confirmed Stable, in collaboration with a set of Etendo end clients.
 
-These clients have access to the corresponding release in QAA status for them to use it and help Etendo to mature it.
+These clients install the releases in QAA status for them to use it and help Etendo to mature it.
 
 QAA releases have passed automated tests, all fixed issues have been individually verified and the QA team has completed a set of manual tests to identify further improvement.
 
