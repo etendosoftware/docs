@@ -936,7 +936,7 @@ Instead of manually import the bank statements, Etendo allows you to synchronize
 This functionality facilitates a **faster and safer integration** between the financial accounts' and bank statements' information to accelerate the process of generating bank statements. 
 
 !!! info
-    For more information about bank integration to automatically import bank statements visit [PSD2 Bank Integration](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md).
+    For more information about bank integration to automatically import bank statements visit [Bank Integration PSD2](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md).
 
 ##### **Match Statement**
 
