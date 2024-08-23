@@ -14,7 +14,8 @@ tags:
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | QAA |  | :white_check_mark: |
+| [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | QAA |  | :white_check_mark: |
+| [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | C |  | :white_check_mark: |
 | [24Q2.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.4){target="_blank"} | 02/08/2024 | 24.2.4 | C |  | :white_check_mark: |
 | [24Q2.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.3){target="_blank"} | 19/07/2024 | 24.2.3 | C |  | :white_check_mark: |
 | [24Q2.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.2){target="_blank"} | 12/07/2024 | 24.2.2 | C |  | :white_check_mark: |
