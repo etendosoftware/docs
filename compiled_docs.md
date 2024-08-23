@@ -49909,32 +49909,31 @@ Etendo solutions are released on a quarterly basis.
 
 ![new-etendo-lifecycle](https://docs.etendo.software/latest/assets/whats-new/etendo-release-cycle/new-etendo-lifecycle.png)
 
-As shown in the image above, the duration of a release cycle is seven months. For instance, and in the case of Etendo Y1Q4 design and development activities started dated on 1st June  and will finish at release dated on December 31st.
+As shown in the image above, the duration of a release cycle is nine months. For instance, and in the case of Etendo Y1Q4 development activities started dated on July and will finish at release dated on March.
 
 #### Release Phases
 
-The release process consists of the following phases
+The release process consists of the following phases: 
 
-- 3 month development cycles, when engineering team focus on **code development & review, testing and code integration**
-- 1 additional month for the engineering team to **test and fix the bugs found**, as well as to **create the user documentation and train** the support team.
-- 1 month for the **QA team to test and validate the release** according to what defined in the corresponding Test Plan. At the end of this phase, the release is published as QA Approved (QAA), in a snapshot repository only for participants in the Etendo Early Adopters Program.
-- 2 months **maturation cycle to evolve from QAA to Confirmed Stable** (CS), published in the releases Nexus repository.
+- **3-month development cycle:** The engineering team focuses on code development, review, testing, and integration.
+- **3-month QA cycle:** The QA team tests and validates the release according to the Test Plan, creates user documentation, and trains the support team.
+- **3-month Etendo Early Adopters Program:** The release is initially published as QA Approved (QAA). This phase includes a maturation cycle to evolve the release from QA Approved (QAA) to Confirmed Stable (CS).
 
 ![etendo-release-cycle-phase.png](https://docs.etendo.software/latest/assets/whats-new/etendo-release-cycle/etendo-release-cycle-phase.png)
 
-Etendo strongly recommends that only releases that have reached CS are used in production environments
+!!! note
+    Etendo strongly recommends that only releases that have reached CS are used in production environments.
 
-In summary, Etendo will release Confirmed Stable (CS) releases in March (i.e ET18Q1), June (i.e. ET18Q2), September (i.e. ET18Q3), and December (i.e. ET18Q4) on a yearly basis.
+In summary, Etendo will release Confirmed Stable (CS) releases in March, June, September, and December on a yearly basis.
 
 !!! info
-
     Etendo will give support to the current year and prior year releases.
 
 ##### Early Adopters Testing (Innovators Program)
 
 As already mentioned, Etendo has established an innovators program based on a maturation cycle to evolve Etendo releases from QAA to Confirmed Stable, in collaboration with a set of Etendo end clients.
 
-These clients have access to the corresponding release in QAA status for them to use it and help Etendo to mature it.
+These clients install the releases in QAA status for them to use it and help Etendo to mature it.
 
 QAA releases have passed automated tests, all fixed issues have been individually verified and the QA team has completed a set of manual tests to identify further improvement.
 
@@ -49944,7 +49943,7 @@ As part of the Innovators program, interested Partners will receive support in t
 
 ##### Emergency Releases
 
-Apart, when required there are out of schedule emergency releases which are used to for targeted fixing of very important bugs. These bugs may have been reported by our partners, members of the development team or simply bugs found by our automations that are periodically testing our products.
+When required, there are out of schedule emergency releases which are used for targeted fixing of very important bugs. These bugs may have been reported by our partners, members of the development team or simply bugs found by our automations that are periodically testing our products.
 
 Those releases can be identified by their version which is constructed as follows ETXXQY.Z, where :
 
@@ -50174,7 +50173,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | QAA |  | :white_check_mark: |
+| [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | QAA |  | :white_check_mark: |
+| [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | C |  | :white_check_mark: |
 | [24Q2.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.4){target="_blank"} | 02/08/2024 | 24.2.4 | C |  | :white_check_mark: |
 | [24Q2.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.3){target="_blank"} | 19/07/2024 | 24.2.3 | C |  | :white_check_mark: |
 | [24Q2.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.2){target="_blank"} | 12/07/2024 | 24.2.2 | C |  | :white_check_mark: |
@@ -50419,7 +50419,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.16.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.1){target="_blank"} | 19/07/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.17.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.0){target="_blank"} | 22/08/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.16.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.1){target="_blank"} | 19/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.16.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.0){target="_blank"} | 08/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.15.0){target="_blank"} | 28/06/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.14.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.2){target="_blank"} | 14/06/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
@@ -50612,7 +50613,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.6.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.1){target="_blank"} | 19/07/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.7.0){target="_blank"} | 23/08/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.1){target="_blank"} | 19/07/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 08/07/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.5.0){target="_blank"} | 23/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.4.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.3){target="_blank"} | 12/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
