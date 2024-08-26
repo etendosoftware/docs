@@ -14086,7 +14086,7 @@ Instead of manually import the bank statements, Etendo allows you to synchronize
 This functionality facilitates a **faster and safer integration** between the financial accounts' and bank statements' information to accelerate the process of generating bank statements. 
 
 !!! info
-    For more information about bank integration to automatically import bank statements visit [PSD2 Bank Integration](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md).
+    For more information about bank integration to automatically import bank statements visit [Bank Integration PSD2](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md).
 
 ####### **Match Statement**
 
@@ -20346,6 +20346,15 @@ The new Amortization report allows downloading excel reports about information o
 !!! info
     For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
 
+##### Bank Integration PSD2
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
+
+!!!info
+    For more information, visit [Bank Integration PSD2](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
+
 
 ##### Banking Pool
 
@@ -20461,7 +20470,7 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
     - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal_1)
     - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_1)
     - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal)
-    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)  
+    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)
 
 ##### Remittances
 
@@ -20497,39 +20506,30 @@ This functionality is specifically useful for companies that have a month close,
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/udarQ6h6EXQ?si=4CNi7Qgi2_yHdW5z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
+This functionality enables the user to adjust accounts, ensuring the VAT balance is accurate and correctly aligned.
 
-<<<<<<< HEAD
-    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
-    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
-    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
-
-##### PSD2 Bank Integration
-
-:octicons-package-16: Javapackage: com.etendoerp.psd2.bank.integration
-
-
-This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
-
-!!!info
-        For more information, visit [PSD2 Bank Integration](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
-=======
 !!!info
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
->>>>>>> develop
-
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: PSD2 Bank Integration
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/PSD2 Bank Integration
+# Article Title: Bank Integration PSD2
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Bank Integration PSD2
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration
 ## Article Content: 
-### PSD2 Bank Integration
+### Bank Integration PSD2
 
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
 
 #### Overview
+
+The **Revised Payment Services Directive (PSD2)** is an European Union legislation designed to regulate payment services and payment service providers in the EU and the European Economic Area (EEA). 
+
+Its main objectives are:
+
+- Improving the security of electronic payments: it implements stricter authentication requirements to reduce fraud.
+- Encouraging innovation and competition: allows Etendo to access users' bank account information (by giving consent), promoting the emergence of new financial services.
+- Consumer protection: increases transparency and establishes new liability rules for unauthorized payments.
 
 This section describes an enhancement of the Financial Extensions Bundle in Etendo which uses the **PSD2 (Payment Services Directive 2) feature**. This functionality allows users to securely connect to their bank, synchronize their bank accounts with financial accounts in Etendo and **automatically download bank transactions** within specified date ranges. 
 
@@ -20539,31 +20539,21 @@ This section serves as a guide for users to understand the functionality and usa
     To be able to include this functionality, the **Financial Extensions Bundle** must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 
-Before using the PSD2 bank integration, users must provide necessary credentials to **login on the bank page** to connect their bank accounts with Etendo. This will allow automating the process of updating financial records with bank account information in order to be able to download the bank transactions needed. 
+Before using the Bank Integration PSD2, users must provide necessary credentials to **login on the bank page** to connect their bank accounts with Etendo. This will allow automating the process of updating financial records with bank account information in order to be able to download the bank transactions needed. 
 
 This bank integration will be done throught the **Redsys service provider** by following a series of mandatory steps which must be done by a technical staff.
 
-!!!info
-    For more information about how to integrate the bank entity with **Redsys provider** visit the [PSD2 Bank Integration Technical Documentation in the developer guide]().
+!!!warning
+    Before continuing with this guide, ensure that a developer has configured the environment by following the instructions in the [PSD2 Bank Integration Technical Documentation](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration.md).
 
-#### Connect to the Bank
+#### Bank Account Setup
+:material-menu: `Financial Management`> `Receivables and Payables` >`Transactions`>`Financial Account`
 
 The following configuration steps are needed to directly connect the Etendo financial account with the user's bank provider. 
 
 ##### Provider Configuration
 
-From the Financial Account window, the user will be able to get to download bank transactions, but before starting this process, it is necessary to **apply the dataset** that is included in this module.
-
-![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-8.png)
-
-!!! note
-    The dataset **Bank Integration PSD2** includes the configuration needed for the supported provider offered by [Redsys](https://redsys.es/){target="_blank"}.
-
-!!! info
-	For more information about how to apply a dataset visit the functional documentation about [Enterprise Module Management](https://docs.etendo.software/latest/basic-features/general-setup/enterprise-model.md#enterprise-module-management). 
-
-
-Once the dataset is applied, go to the Financial Account window in `Financial Management`> `Receivables and Payables` >`Transactions`>`Financial Account` to configure the accounts that will be integrated through PSD2 in order to set the bank provider with which the financial accounts will be syncronized with. 
+From the `Financial Account` window, the user will be able to get to download bank transactions, configure the accounts that will be integrated through PSD2 in order to set the bank provider with which the financial accounts will be syncronized with. 
 For this, go to the **Bank Integration PSD2** section and select the corresponding provider for the selected financial account. 
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-10.png)
@@ -20572,7 +20562,7 @@ For this, go to the **Bank Integration PSD2** section and select the correspondi
      Remember to repeat this procees for each bank account needed to be configured with PSD2 Integration. 
 
 
-##### Get Token
+##### Get Token Button
 
 The next step is to generate the token thought the **Get Token button**, which allows logging into the bank interface as Etendo will move towards token-based authentication. 
 This token provided by the bank is a secure and temporary key used to authenticate and authorize Etendo to access the bank account information. 
@@ -20590,7 +20580,7 @@ In the bank pop-up window, log in to the configured provider by using the **bank
     Consider that the token has a validity period, it will be only necessary to generate a new one if it has expired.  
 
 
-##### Get Consent
+##### Get Consent Button
 
 Once the token is generated, it is necessary to **give consent** in order to allow Etendo to retreive the bank statement information. For this, a new button named **Get Consent** will show up, click on it to authorize Etendo to access all the bank information through the token generated. 
 
@@ -20601,11 +20591,13 @@ By giving authorization from the Get Consent button, it is mandatory to confirm 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-1.png)
 
 
-##### Account Synchronization
+##### Get Bank Account Identifiers Process
+
+:material-menu: `General Setup`> `Integrations Configuration` >`PSD2`>`Get Bank Account Identifiers`
 
 The following step is to synchronize the bank account registed in Etendo with the chosen provider. This process gets the internal provider account ID to associate it with the bank account used by Etendo. This allows the system to directly access the bank information to execute financial processes. 
 
-For this, go to the **Get Bank Account Identifiers** window in `General Setup`> `Integrations Configuration` >`PSD2`>`Get Bank Account Identifiers` and select the bank provider to synchronize the accounts with. 
+For this, go to the **Get Bank Account Identifiers** window and select the bank provider to synchronize the accounts with. 
 
 !!! warning
 	Remember that in order to finally achieve the accounts synchronization, it is necessary to have the IBAN (International Bank Account Number) previously configured in the Financial Account since this number will allow the connection with the bank’s internal ID to automatically create and generate the bank statements. 
@@ -20616,9 +20608,9 @@ Once the process is finished, the synchronization can be checked in the **Bank I
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-5.png)
 
-#### Get Bank Statements
+#### Get Bank Statements Button
 
-In the **PSD2 Bank Integration section of the header**, it is also possible to define the import date of the bank statements and the frequency run, e.i., how often the user wants a record to be created. 
+From the `Financial Account` window, in the **PSD2 Bank Integration** section of the header, it is also possible to define the **import date** of the bank statements and the **frequency run**, e.i., how often the user wants a record to be created. 
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-6.png)
 
@@ -20636,7 +20628,7 @@ In the **PSD2 Bank Integration section of the header**, it is also possible to d
 
 After defining the requirements for the bank statement creation, complete the process by clicking on the **Get Bank Statement button**. Etendo creates a header record, whose names are related to the dates, and the bank statements lines provide a transaction reference number. 
 
-Etendo processes the bank statements which are ready to be reconciled. 
+Etendo **processes the bank statements** which are ready to be reconciled. 
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-7.png)
 
@@ -44574,10 +44566,10 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 2. After the query successfully finishes, delete the module by the way corresponding to the installation method (Sources/JARs)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Financial Extensions Bundle
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Financial Extensions Bundle
+# Article Title: Overview
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Financial Extensions Bundle/Overview
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview
 ## Article Content: 
 #### Overview
 
@@ -45021,6 +45013,280 @@ public class UndoOrderImpl implements UndoCloseOrderHook {
 }
 ```
 
+#### PSD2 Integration
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+:octicons-package-16: Javapackage: `com.etendorx.psd2.bank.integration`
+
+The PSD2 (Payment Services Directive 2) security protocol and the payment service provider Redsys are used for the integration between financial accounts and banks. For this integration to be successful, it is crucial to understand certain key concepts and the role of specific components such as the .p12 file. This section provides an overview of PSD2, Redsys, and the role of a .p12 file in this integration.
+
+!!!info
+    For more information, visit [PSD2 Integration Developer Guide](https://docs.etendo.software/latest/financial-extensions-bundle/psd2-integration.md).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Bank Integration PSD2
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Financial Extensions Bundle/Bank Integration PSD2
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration
+## Article Content: 
+### Bank Integration PSD2 
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+#### Overview
+
+Etendo is able to integrate with several banking entities using the PSD2 (Payment Services Directive 2) protocol through the [Redsys](https://redsys.es/){target="_blank"} API, which acts as a service provider.
+The integration is carried out only with **banks that support Redsys**, thus guaranteeing secure and efficient communication for obtaining financial transactions, balance inquiries and movements compatible with the PSD2 protocol.
+
+!!!info
+    For more information about banks supported by Redsys visit [Banks supported by Redsys](https://redsys.es/psd2.html){target="_blank"}.
+
+!!!info
+    To be able to include this functionality, the **Financial Extensions Bundle** must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+!!!warning
+    It is important to note that before starting this configuration, the **QWAC** and **QSealC** certificates are required. Detailed instructions on how to obtain them can be found in the [Certificates](#certificates) section.
+
+
+#### Dokerized Services
+
+To begin the integration, it is essential to launch all the services related to this module. This includes **Etendo RX**, a service that provides a reactive development platform and implements a security layer using the standard **OAuth** authentication protocol required for synchronization. Additionally, the **PSD2 service**, which interacts with Redsys, needs to be started.
+
+Within the PSD2 module and its dependencies, the required infrastructure is distributed using **Etendo Docker Manager**. In this case, it is necessary to define the following configuration variables in the `gradle.properties` file to launch the services:
+
+```groovy title="gradle.properties"
+docker_com.etendoerp.etendorx=true
+docker_com.etendorx.psd2.bank.integration=true
+```
+
+!!!info
+    For more information about how to handle Etendo Dockerizations visit [Docker Management](https://docs.etendo.software/latest/platform/dependency-manager.md). 
+
+??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
+    It is also possible to run the dockerized [PostgreSQL service](https://docs.etendo.software/latest/platform/docker-management.md#postgres-database-service) and [Tomcat service](https://docs.etendo.software/latest/platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    docker_com.etendoerp.docker_db=true
+    ```
+
+Then, to effectively run the services is necessary to **execute the command** in the terminal: 
+
+```bash title="Terminal"
+./gradlew resourses.up
+```
+
+Here, all the services and their respective logs can be seen running using [LazyDocker tool](https://github.com/jesseduffield/lazydocker){target=_isblank}
+
+![Docker Services](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-9.png)
+
+#### Services Configuration
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+As `System Administrator` role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:
+
+- **Service Name**: The name of each service.
+- **Service URL**: The internal URL of the Docker service.
+- **Updatable Configs**: Check this checkbox.
+- **Public URL**: Configure the publicly accessible URL for the service.
+
+!!! info 
+    Below are configuration examples. Replicate them, only personalizing the **Public URL** fields.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-0.png)
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-13.png)
+
+##### Get User Token 
+:material-menu: `Application` > `General Setup` > `Security` > `User`
+
+It is necessary to obtain and configure a user token that will later be used by the **PSD2 service** to modify authentication records within Etendo when interacting with Redsys.
+
+1. As `Administrator` role, in the **User** window, select the user who has access to Banks and Banking Information, and this token will interact with the system under that user.
+    
+    !!! info
+        It is recommended to associate the service with the administrator user.
+
+    A new entry must be created in the **RX Service Access** tab, and the corresponding fields should be completed. 
+
+    - In the **RX Services** field, select **psd2** option.
+    - Define the **Default Role** and **Default Organization** fields based on the user's access level.
+
+    ![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-11.png)
+    !!!note
+        In this example, the **admin** user is used:
+        - **Default Role**: F&B Group Admin
+        - **Default Organization**: F&B International Group
+
+        This configuration provides the highest level of access but can be customized according to specific requirements.
+
+2. Next, to obtain the token, it is necessary to make a request from Postman or any REST client, using the following format:
+
+    **Request:**
+
+    - URL: `https://<PublicServerURL>/auth/api/authenticate`
+    - Method: `GET`  
+    - Body:
+
+    ```json title="Body"
+    {
+        "username":"admin",
+        "password":"admin",
+        "service":"Psd2",
+        "secret":"1234"
+    }
+    ```
+    !!! info 
+        Replace the credentials with those of the user configured in the previous step 
+
+    **Response:**
+
+    ```json
+    {
+        "token": "*********"
+    }
+    ```
+
+    ![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-12.png)
+
+3. Once the token is obtained, it is necessary to add it to the `gradle.properties` file in the `psd2.token` variable so that it can be used by the PSD2 service.
+
+    ```groovy title="gradle.properties"
+    psd2.token= ******
+    ```
+
+##### Configuration of the PSD2 HUB service in Redsys
+
+**Redsys** is a technology platform that provides payment services in Spain. It works with banks and other payment service providers to facilitate secure electronic transactions, including card payments and mobile payment solutions.
+
+Redsys acts as an **intermediary in payment processing**, offering payment gateway services and transaction security. So, it is necessary to create an account in Redsys in order to integrate the Etendo with the bank provider. 
+
+- To create an account in Redsys, login to the [Sandbox Registration Page](https://market.apis-i.redsys.es/psd2/xs2a/user/register){target="_blank"}.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-1.png)
+
+- Create a new service under the title `<Client Name>-API` by entering in the [Application Registration Section](https://market.apis-i.redsys.es/psd2/xs2a/application){target="_blank"}.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-2.png)
+
+- Choose a tittle to create the application: 
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-3.png)
+
+- After adding the required information, the application will be created:
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-4.png)
+
+- At the bottom of the same page the **Subscription** section is shown, click on **See Details** to subscribe to the HUB of your choice.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-5.png)
+
+
+#### Certificates
+
+When integrating **Etendo financial accounts with the bank** using the PSD2 security protocol and the Redsys payment service provider, understanding key components like the **.p12 file** is crucial. This document provides an overview of PSD2, Redsys, and the role of the .p12 file in this integration.
+
+##### Utility of the .p12 File in PSD2 Integration with Redsys
+
+A .p12 file (PKCS#12) is a **container file** that stores one or more X.509 certificates along with the associated private key. These files are essential for securing communications and authenticating the identity of the parties involved in a transaction.
+
+Functions of the .p12 file:
+
+- **Authentication**: Verifies the identity of the bank account user accessing account information or initiating payments.
+  
+- **Encryption**: Ensures the confidentiality of communications between Etendo, the bank, and Redsys, preventing unauthorized access to sensitive data.
+
+- **Integrity**: Uses digital signatures to ensure that messages have not been altered during transmission.
+
+To ensure security and compliance with PSD2 regulations, two types of certificates are required:
+
+- **QSealC (Qualified Electronic Seal Certificate)**: Digitally signs messages to guarantee their integrity and authenticity.
+
+- **QWAC (Qualified Website Authentication Certificate)**: Authenticates the server and secures communications.
+
+
+!!!info
+    These certificates are issued by authorized trust service providers, through the [URL eIDAS Dashboard](https://esignature.ec.europa.eu/efda/tl-browser/#/screen/home){target="_blank"}, you can locate the authorized certifying entities for the issuance of the EIDAS certificate.
+
+!!!note
+    In the case of obtaining these certificates in Spain, it is an **indispensable condition to be registered with the Bank of Spain**, the banking supervisor for these certificates. Contact a service provider for more information.
+
+
+#### Generating the .p12 file
+Once the **QSealC** and **QWAC** certificates have been obtained, the .p12 file must be generated, taking into account that the server certificate corresponds to the QWAC certificate and the private key corresponds to the QSealC certificate, copy into separate files, e.g. `cert.cer` and `key.pem` respectively.
+
+There are two ways of generating the .p12 file: 
+
+1.   Create the P12 file: Using the [KeyStore Explorer application](https://keystore-explorer.org/){target="_blank"}. This application provides an intuitive interface and facilitates the creation of the .p12 file.
+
+2. It is also possible to perform this procedure using the [OpenSSL tool](https://openssl.org/){target="_blank"}.
+
+    This is the specific example command:
+
+    ``` bash title="Terminal"
+    openssl pkcs12 -export -out keystore_tls.p12 -inkey key.pem -in cert.cer -name "keystore_tls" -passout pass:<keystore_password> -passin pass:<cert_password>
+    ```
+
+    !!!warning
+        To protect the P12 file a password will be prompted. This password will be required each time the P12 file is used for authentication or digital signature.
+
+    **OpenSSL command explained**
+
+    - **export**: Indicates that a PKCS#12 file is being created.
+    - **out `keystore_tls.p12`**: Specifies the name of the output PKCS#12 file.
+    - **inkey `key.pem`**: Specifies the file containing the private key.
+    - **in `cert.cer`**: Specifies the file containing the public certificate.
+    - **name `keystore_tls`**: Assigns the alias `keystore_tls` to the certificate inside the PKCS#12 file.
+    - **passout pass**: `keystore_password`: Specifies the keystore password. This sets the password to protect the PKCS#12 file.
+    - **passin pass:`cert_password`**: Specifies the password for the private key, if the key is encrypted.
+
+
+Once the `.p12` file is generated, it must be copied to the `/cert` folder in the root of the project to be used. For example, at `/opt/EtendoERP/cert/keystore_tls.p12`.
+
+
+#### Provider Configurations
+
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Enterprise Module Management`
+
+As `Administrator` role, apply the dataset **Bank Integration PSD2**, that includes the configuration needed for each supported provider offered by [Redsys](https://redsys.es/){target="_blank"}, 
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-15.png)
+
+!!! info
+    For more information about how to apply a dataset visit the functional documentation about [Enterprise Module Management](https://docs.etendo.software/latest/basic-features/general-setup/enterprise-model.md#enterprise-module-management). 
+
+Once the dataset is applied, all provider configurations will be added to the **Auth Provider** window.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-14.png)
+
+
+##### Key Store Configuration
+
+:material-menu: `Application` > `RX Service` > `oAuth Provider`
+
+In the **oAuth Provider** window, access each provider to be used and add the certificate configuration.
+
+The fields to be completed are:
+
+- **Keystore Path**: Path to the `.p12` file, e.g. `/cert/keystore_tls.p12`.
+- **Keystore Password**: Password of the `.p12` file.
+- **Certificate Alias**: Alias of the certificate. e.g. `keystore_tls`
+- **Certificate Password**: Password of the private key.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-8.png)
+
+These parameters allow the integration to make use of the .p12 to secure communications and authenticate the identity of the transaction participants.
+
+#### Restart Docker Services
+Once all the configuration is complete, it is necessary to relaunched the Docker services so that the certificate changes, token, and other configurations are applied.
+
+```bash title="Terminal"
+./gradlew resources.up
+```
+Afterward, you can continue with the setup in the [Bank Integration PSD2 User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md#setup).
 
 ==ARTICLE_END==
 ==ARTICLE_START==
