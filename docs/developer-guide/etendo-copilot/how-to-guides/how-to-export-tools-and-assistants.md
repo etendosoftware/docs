@@ -18,6 +18,8 @@ There are two main methods for exporting assistants: export it as a dataset wher
 
 ### Exporting Assistants as Datasets
 
+Assistants must be exported as a dataset, in case optional installation is required and with `Client/Organization` data access level. 
+
 1. Initial setup of the assistant:
     - Configure the assistant and tools in the environment where the development takes place.
     - Make sure to include all the necessary fields to be exported. Make sure to configure correctly the **Knowledge Base**, **Skills/Tools** and **Team Members** tabs, as well as the records in the **Knowledge Base File** window.
@@ -88,11 +90,13 @@ There are two main methods for exporting assistants: export it as a dataset wher
 
 ### Exporting Assistants as System Administrator
 
-1. Define Assistant with System Administrator Role
+When exporting assistants that need to be pre-configured in a module installation, they must be created with the System Administrator role. These assistants will be editable only by the System Administrator, but they can be executed either by the `System Administrator` or by users with `Client/Organization` data access levels.
 
-    - Log in with the **System Administrator** role.
-    - Configure the assistant and its tabs. Select the module (under development) in the **Module** field.
-    - Optionally, check the **System App** checkbox to restrict the use of the assistant to the administrator role only.
+1. Create Assistant with System Administrator Role:
+
+    - Log in as System Administrator.
+    - Configure the assistant and its tabs, ensuring to select the module (under development) in the **Module** field.
+    - If the assistant should be restricted to System Administrator use only, check the **System App** checkbox. Otherwise, leave it unchecked to allow execution across all data access levels.
 
     <figure markdown="span">
     ![](../../../assets/developer-guide/etendo-copilot/exportcopilot5.png)
