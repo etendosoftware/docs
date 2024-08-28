@@ -1,9 +1,15 @@
 ---
-title: Etendo Mobile
+
 tags:
     - Etendo Mobile
     - React-Native
+    - Subapp
 ---
+
+# Etendo Mobile
+
+![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
+
 ## Overview
 
 *Etendo Mobile* is a subapplication development platform that includes the possibility to log in to an *Etendo Classic* server and configure the available dynamic subapplications there according to role. 
@@ -17,8 +23,10 @@ On this page we will explain what are the requirements to create a subapplicatio
 ## Environment Setup
 
 ### Requirements
-- *Etendo*. If you don't have it, [install it here](../../developer-guide/etendo-rx/getting-started.md){target="_blank"}.
-- *Etendo Mobile*. If you don't have it, [install it here](../../user-guide/etendo-mobile/getting-started.md){target="_blank"}.
+
+- **Etendo Classic** For more information visit [Etendo Classic - Installation Guide](../../developer-guide/etendo-rx/getting-started.md).
+    - **Platform Extensions Bundle** For more information visit [Platform Bundle]()
+- **Etendo Mobile**. For more information visit [Etendo Mobile - Installation Guide](../../user-guide/etendo-mobile/getting-started.md).
 - *Yarn (recommended)*.  If you don't have it, you can install it via NPM:
 
 
