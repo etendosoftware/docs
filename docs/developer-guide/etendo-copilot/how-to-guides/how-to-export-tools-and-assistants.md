@@ -35,26 +35,26 @@ There are two main methods for exporting assistants: export it as a dataset wher
 
 3. Add Tables to the Dataset
 
-    For each window to be exported, create a record in the **Table** tab. Specify the corresponding table and add the appropriate **HQL/SQL Where** clause.
+    For each window or tab to be exported, create a record in the **Table** tab. Specify the corresponding table and add the appropriate **HQL/SQL Where** clause.
 
     - **Assistant:** Table `etcop_app` 
-    ```sql title="where clause"
+    ```sql title="Where Clause"
     id in ('<AssistantID>')
     ```
     - **Knowledge Base:** Table `etcop_app_source`
-    ```sql title="where clause"
+    ```sql title="Where Clause"
     etcopApp.id in ('<AssistantID>')
     ```
     - **Skills/Tools:** Table `etcop_app_tool`
-    ```sql title="where clause"
+    ```sql title="Where Clause"
     `copilotApp.id in ('<AssistantID>')
     ```
     - **Team Members:** Table `ETCOP_Team_Member`
-    ```sql title="where clause"
+    ```sql title="Where Clause"
     copilotApp.id in ('<AssistantID>')
     ```
     - **Knowledge Base File:** Table `etcop_file`
-    ```sql title="where clause"
+    ```sql title="Where Clause"
     id in ('<knowladgeBaseFileID>')
     ```
     
@@ -63,12 +63,15 @@ There are two main methods for exporting assistants: export it as a dataset wher
     <figcaption>Dataset window configuration example in the module Copilot Purchase Expert</figcaption>
     </figure>
 
-4. Export Data
-    - Execute the **Export Reference Data** process, which will create the `referencedata/` folder inside the selected module.
+4. Export Reference Data Button
+    - Execute the **Export Reference Data** process, which will create the `referencedata/` folder inside the selected module, with all the records that were exported according to the dataset configuration. 
+
+    !!!note
+        Verify that all the required records are generated in the `.XML` file.
 
 
 5. Include Reference Data in the Module
-    - Check the **Include Reference Data** checkbox in the module and add a description to the dataset.
+    - Check the **Include Reference Data** checkbox in the module definition and add a description to the dataset referring to the exported assistant.
 
     <figure markdown="span">
     ![](../../../assets/developer-guide/etendo-copilot/exportcopilot3.png)
@@ -88,7 +91,7 @@ There are two main methods for exporting assistants: export it as a dataset wher
 1. Define Assistant with System Administrator Role
 
     - Log in with the **System Administrator** role.
-    - Configure the assistant and its tabs. Select the module under development in the **Module** field.
+    - Configure the assistant and its tabs. Select the module (under development) in the **Module** field.
     - Optionally, check the **System App** checkbox to restrict the use of the assistant to the administrator role only.
 
     <figure markdown="span">
@@ -101,7 +104,7 @@ There are two main methods for exporting assistants: export it as a dataset wher
 
 ## Exporting Tools
 
-**Tool configuration**: When defining a tool, select the module (under development) in which it will be exported, and run `./gradlew export.database`
+**Tool configuration**: When defining a tool, select the module (under development) in the **Module** field, and run `./gradlew export.database` command to export the tool together with the module.
 
 <figure markdown="span">
 ![](../../../assets/developer-guide/etendo-copilot/exportcopilot6.png)
@@ -109,4 +112,4 @@ There are two main methods for exporting assistants: export it as a dataset wher
 </figure>
 
 !!!info
-    For more information, visit [How to create a Copilot Tool](../../../developer-guide/etendo-copilot/how-to-create-copilot-tools.md).
+    For more information, visit [How to create a Copilot Tool](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
