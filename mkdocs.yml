@@ -235,7 +235,7 @@ nav:
       - Bundles:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot:
-      - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
+      - ✨ Getting Started: user-guide/etendo-copilot/getting-started.md
       - Setup and Usage: user-guide/etendo-copilot/setup-and-usage.md
       - Bundles:
         - Copilot Extensions: 
@@ -247,7 +247,7 @@ nav:
   - Developer Guide:
     - Overview: developer-guide/overview.md
     - Etendo Classic: 
-      - Getting Started:
+      - ✨ Getting Started:
         - Installation :
           - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
@@ -314,7 +314,7 @@ nav:
 #        - User Interface Design Guidelines: developer-guide/etendo-classic/concepts/User_Interface_Design_Guidelines.md
 #        - Widgets: developer-guide/etendo-classic/concepts/Widgets.md
 #        - XML REST Web Services: developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md
-      - How to guides:
+      - How to Guides:
 #        - Categories: developer-guide/etendo-classic/how-to-guides/Categories.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/how-to-guides/Category_Developers_Guide.md
 #        - Category:HowTo: developer-guide/etendo-classic/how-to-guides/Category_HowTo.md
@@ -452,20 +452,20 @@ nav:
           - Bank Integration PSD2: developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
-      - Getting Started: developer-guide/etendo-rx/getting-started.md 
+      - ✨ Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
         - Config Server: developer-guide/etendo-rx/concepts/config-server.md
         - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
         - Projections, Repository and Search: developer-guide/etendo-rx/concepts/projections.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
-      - How to guides:
+      - How to Guides:
         - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
         - How to start RX as service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code.md
         - How to change date format: developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
         - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
-      - Copilot Installation: developer-guide/etendo-copilot/installation.md
+      - ✨ Getting Started: developer-guide/etendo-copilot/installation.md
       - Bundles: 
         - Copilot Extensions:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
@@ -490,9 +490,11 @@ nav:
         - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
         - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
-      - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
+      - How to Guides: 
+        - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
+        - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
     - Etendo Mobile:
-      - Getting Started: developer-guide/etendo-mobile/getting-started.md 
+      - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md 
       - Tutorials: 
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
         - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
