@@ -50417,6 +50417,63 @@ Article URL: https://etendo.software
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
 
+#### August 2024
+
+##### Copilot Extensions
+
+[:material-robot: **New Etendo Copilot Release Available!**](https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot.png)
+
+The newest version [1.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
+
+<div class="grid cards" markdown>
+
+-   **New Capabilities:**
+    
+    ---
+    - **Database Queries:** Use system database queries as knowledge bases to automate tasks under specific conditions.
+    -  **Copilot Stream:** Track in real-time which assistant or tool is working.
+    -  **Improved UX:** The chat now retains the last assistant used for seamless interaction.
+
+-   **Assistants Updates:**
+    
+    ---
+    -  **Langchain Assistants:** Now manage local knowledge bases, keeping your data secure.
+    -  **LangGraph Assistants:** Manage a team of assistants, delegating tasks efficiently. 
+     
+</div>
+
+These updates make Etendo Copilot more powerful, secure, and user-friendly, driving efficiency to new heights.
+
+
+##### Platform Extensions
+
+
+
+[:simple-docker: **Docker Management**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/docker.gif){align=right width=400}
+
+- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
+- This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
+- PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
+
+[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md)
+
+- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
+- With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
+
+
+
+##### Warehouse Extensions
+[:octicons-package-16: **Product Operations**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/product-operation.png)
+
+In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
+
+
 #### July 2024
 
 ##### Copilot Extensions
