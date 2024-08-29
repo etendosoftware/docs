@@ -1,16 +1,25 @@
 ---
-title: User interface
+tags: 
+ - Etendo Mobile
+ - Settings
+ - Sub-apps
+ - Etendo Classic
 ---
+
+# User Interface
+
 ## Etendo Mobile
 
 ### Settings Screen
-In this window, the following configurations are possible: modifying the language and/or, before log in, the server URL. 
+
+In the Setting screen window, the user is able to set the language to use in the app and/or, before logging in, the URL server. 
+
+!!!note
+    Remember that as soon as the app is downloaded, the server URL must be set. 
+
+In the **Add new Link** button, enter the URL and click Add new Link again. Then, the URL will be shown in the List of added URLs.
 
 ![](../../../assets/user-guide/etendo-mobile/user-interface/SettingsScreen.png){ width="300" }
-
-Once the app is downloaded, the first step will be setting up the Etendo server URL.
-
-For this, click the "Add new Link" button, enter the URL and click "Add new Link" again. Then, the URL will be shown in the “List of added URLs”.
 
 In here, required URLs can be added, edited or removed.
 
