@@ -1,47 +1,79 @@
 ## Overview
 
-This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
+This tutorial provides a step-by-step guide to creating a new sub-application within **Etendo Mobile**. By following these instructions, you will learn how to fully utilize the capabilities of **Etendo RX** and leverage the visual components available in the **Etendo UI Library** to build a functional sub-application.
+
+The tutorial will guide you through the creation of the *Product Subapp*, a simple application that enables the addition, deletion, and modification of products, as well as their visualization in a grid. Upon completion, you will have the skills to create and distribute sub-applications as modules, thereby extending the mobile functionality of Etendo.
+
 
 !!! info
-    Before starting this tutorial, visit the [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
+    Before beginning, ensure that your local environment meets all necessary requirements by reviewing the Etendo Mobile [Getting Started](../getting-started.md) section.
 
-## Setup
 
-----------
-### Create new Module
 
-Following the documentation about [how to create a new etendo classic module](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
+## Module Setup
 
-Below is a succinct representation of the required fields and expected values for the module configuration:
+### Create New Etendo Classic Module
 
-| Field                | Value                           |
-|----------------------|---------------------------------|
-| Java Package         | `com.etendoerp.subapp.product`  |
-| Name                 | `Product Subapplication`        |
-| Type                 | `Module`                        |
-| Description          | `Subapplication to manage products using Etendo RX` |
-| Version              | `1.0.0`                         |
-| In Development       | `true`                          |
-| Is RX                | `true`                          |
-| Is React             | `true`                          |
-| RX Java Package      | `com.etendoerx.subapp.product`  |
-| Translation Required | `true`                          |
-| License Type         | `Etendo Commercial License`     |
-| Commercial            | `true`                          |
+1. As a System Administrator role, open the `Application` > `Application Dictionary` > `Module` window and create a new module. This module will be used to develop and distribute the application.
 
-![modules-creation.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png)
+    <figure markdown="span">
+    ![modules-creation.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png)
+    <figcaption>Product Subapp module configuration example</figcaption>
+    </figure>
 
-!!! tip
-    - Notice that the name can be anything you want, but the type have to be setted as Module.
-    - The _description field_ is free and also _required_.
+    !!! tip
+        - Notice that the name can be anything you want, but the type have to be setted as Module.
+        - The _description field_ is free and also _required_.
+        - In this case, start from `1.0.0` module version and set the DB Prefix as `ETSAPPP`.
 
-### Dynamic app and role configuration
+2. After saving all the configuration, you have to export the changes. Open a terminal in the root of your Etendo Classic project and execute the following command:
+    
+    ``` bash title="Terminal"
+    ./gradlew export.database --info
+    ```
+
+    !!!success "Important"
+        The output must be a "BUILD SUCCESSFUL" message.
+
+3. A new module is created in the `/modules` folder, whith the following structure
+
+    ```
+    modules
+    └── com.etendoerp.subapp.product
+        └── src-db 
+    ```
+
+
+## Creating the Subapplication
+
+1. To create a subapplication based on a template and add it to the recently created module, execute the following Gradle command:
+
+    ``` bash title="Terminal"
+    ./gradlew subapp.create -Ppkg=com.etendoerp.test --info
+    ```
+
+    This command uses the subapp.create task to generate the subapplication within the specified package (com.etendoerp.test). The --info option provides additional details during the command execution, which is useful for debugging or confirming the process.
+
+    ![modules.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
+
+2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
+    
+    ``` bash title="Terminal"
+    yarn install 
+    ```
+3. Finally, to run in development mode run
+
+    ``` bash title="Terminal"
+    yarn dev 
+    ```
+
+### Dynamic App configuration
 
 As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#dynamic-app-window){target="_blank"}.
 
-#### Dynamic app
+#### Dynamic App
 
-The dynamic app in Etendo must contain the following form fields and corresponding values:
+The Dynamic App in Etendo must contain the following form fields and corresponding values:
 
 | Field               | Value                             |
 |---------------------|-----------------------------------|
@@ -55,7 +87,7 @@ The dynamic app in Etendo must contain the following form fields and correspondi
 
 ![dynamic-app-creation.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/dynamic-app-creation.png)
 
-#### Role configuration
+### Role configuration
 
 The next table reflect the settings to be configured for the role in relation to the dynamic app within the Etendo system.
 
