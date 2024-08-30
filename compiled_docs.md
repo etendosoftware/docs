@@ -50830,7 +50830,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.2){target="_blank"} | 30/08/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.8.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.1){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
