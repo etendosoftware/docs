@@ -486,7 +486,6 @@ nav:
         - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
       - How to guides:
-        - How to Create Tools that Interact with Etendo Classic: developer-guide/etendo-copilot/how-to-guides/how-to-create-tools-that-interact-with-etendo-classic.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
