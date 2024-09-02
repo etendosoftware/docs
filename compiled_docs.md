@@ -14048,13 +14048,14 @@ Finally, the "**Cancel**" process button just closes the reconciliation window a
 
 ####### **Import Statement**
 
-The header process button "Import Statement" is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.
+The header process button **Import Statement** is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.
 
 !!! info
-    Etendo currently delivers the "Standard" matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".
+    Etendo currently delivers the **Standard** matching algorithm. The behavior of the standard matching algorithm is explained in the next section "Match Statement".
 
 !!! info
-    Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed.
+    Etendo allows the user to import a bank statement if an Import Bank File Format module has been previously installed. 
+
 
 Etendo currently delivers below listed import bank file modules:
 
@@ -14069,10 +14070,23 @@ The "Import Statement" process button opens the "Import Bank File" window.
 
 ![Import Statement](https://docs.etendo.software/latest/assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
 
+
 This window allows to:
 
 - select a **bank statement file**
 - and select the **file format** of the selected bank statement file to import.
+
+####### **Get Bank Statement**
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+Instead of manually import the bank statements, Etendo allows you to synchronize the bank accounts with the financial accounts in order to **automatically download bank statements**. 
+
+This functionality facilitates a **faster and safer integration** between the financial accounts' and bank statements' information to accelerate the process of generating bank statements. 
+
+!!! info
+    For more information about bank integration to automatically import bank statements visit [Bank Integration PSD2](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md).
 
 ####### **Match Statement**
 
@@ -20092,6 +20106,40 @@ Besides, Etendo notifies the user with a message announcing the amount of **rema
     By default, the system activates this message when there are **seven days** left to change the password.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: OAuth Authentication
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Platform Extensions Bundle/OAuth Authentication
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauth-authentication
+## Article Content: 
+### OAuth Authentication
+
+#### Overview
+
+This section describes the OAuth Authentication module included in the Platform Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+
+
+OAuth Authentication process facilitates the **provider type configuration** which allows users to **securely authenticate and authorize access** to their information using their preferred provider.
+
+OAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resorces on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
+
+#### OAuth Provider
+
+In the OAuth Provider window in :material-menu: `application`> `oauth-provider`, set the preferred type provider by adding the user authentication URL in the **API OAuth URL field**. This URL can be found in the provider documentation API.  
+
+The other fields will be completed with data referring to the corresponding provider.
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauthprovider-1.png)
+
+
+
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Warehouse Extensions Bundle
 ## Article URL: 
@@ -20298,6 +20346,15 @@ The new Amortization report allows downloading excel reports about information o
 !!! info
     For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
 
+##### Bank Integration PSD2
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
+
+!!!info
+    For more information, visit [Bank Integration PSD2](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
+
 
 ##### Banking Pool
 
@@ -20413,7 +20470,7 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
     - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal_1)
     - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_1)
     - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal)
-    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)  
+    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)
 
 ##### Remittances
 
@@ -20449,10 +20506,133 @@ This functionality is specifically useful for companies that have a month close,
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/udarQ6h6EXQ?si=4CNi7Qgi2_yHdW5z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
+This functionality enables the user to adjust accounts, ensuring the VAT balance is accurate and correctly aligned.
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Bank Integration PSD2
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Bank Integration PSD2
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration
+## Article Content: 
+### Bank Integration PSD2
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+#### Overview
+
+The **Revised Payment Services Directive (PSD2)** is an European Union legislation designed to regulate payment services and payment service providers in the EU and the European Economic Area (EEA). 
+
+Its main objectives are:
+
+- Improving the security of electronic payments: it implements stricter authentication requirements to reduce fraud.
+- Encouraging innovation and competition: allows Etendo to access users' bank account information (by giving consent), promoting the emergence of new financial services.
+- Consumer protection: increases transparency and establishes new liability rules for unauthorized payments.
+
+This section describes an enhancement of the Financial Extensions Bundle in Etendo which uses the **PSD2 (Payment Services Directive 2) feature**. This functionality allows users to securely connect to their bank, synchronize their bank accounts with financial accounts in Etendo and **automatically download bank transactions** within specified date ranges. 
+
+This section serves as a guide for users to understand the functionality and usage of the PSD2 module.
+
+!!!info
+    To be able to include this functionality, the **Financial Extensions Bundle** must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+
+Before using the Bank Integration PSD2, users must provide necessary credentials to **login on the bank page** to connect their bank accounts with Etendo. This will allow automating the process of updating financial records with bank account information in order to be able to download the bank transactions needed. 
+
+This bank integration will be done throught the **Redsys service provider** by following a series of mandatory steps which must be done by a technical staff.
+
+!!!warning
+    Before continuing with this guide, ensure that a developer has configured the environment by following the instructions in the [PSD2 Bank Integration Technical Documentation](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration.md).
+
+#### Bank Account Setup
+:material-menu: `Financial Management`> `Receivables and Payables` >`Transactions`>`Financial Account`
+
+The following configuration steps are needed to directly connect the Etendo financial account with the user's bank provider. 
+
+##### Provider Configuration
+
+From the `Financial Account` window, the user will be able to get to download bank transactions, configure the accounts that will be integrated through PSD2 in order to set the bank provider with which the financial accounts will be syncronized with. 
+For this, go to the **Bank Integration PSD2** section and select the corresponding provider for the selected financial account. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-10.png)
+
+!!!note
+     Remember to repeat this procees for each bank account needed to be configured with PSD2 Integration. 
+
+
+##### Get Token Button
+
+The next step is to generate the token thought the **Get Token button**, which allows logging into the bank interface as Etendo will move towards token-based authentication. 
+This token provided by the bank is a secure and temporary key used to authenticate and authorize Etendo to access the bank account information. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-9.png)
+
+In the bank pop-up window, log in to the configured provider by using the **bank’s user and password**. This process will generate the token, and Etendo will use it to get the information needed from the bank. 
+
+<figure markdown="span">
+    ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-12.png)
+  <figcaption>This image is an example of a type of provider. </figcaption>
+</figure>
+
+!!!note
+    Consider that the token has a validity period, it will be only necessary to generate a new one if it has expired.  
+
+
+##### Get Consent Button
+
+Once the token is generated, it is necessary to **give consent** in order to allow Etendo to retreive the bank statement information. For this, a new button named **Get Consent** will show up, click on it to authorize Etendo to access all the bank information through the token generated. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-3.png) 
+
+By giving authorization from the Get Consent button, it is mandatory to confirm the authorisation in the following bank provider pop-up window. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-1.png)
+
+
+##### Get Bank Account Identifiers Process
+
+:material-menu: `General Setup`> `Integrations Configuration` >`PSD2`>`Get Bank Account Identifiers`
+
+The following step is to synchronize the bank account registed in Etendo with the chosen provider. This process gets the internal provider account ID to associate it with the bank account used by Etendo. This allows the system to directly access the bank information to execute financial processes. 
+
+For this, go to the **Get Bank Account Identifiers** window and select the bank provider to synchronize the accounts with. 
+
+!!! warning
+	Remember that in order to finally achieve the accounts synchronization, it is necessary to have the IBAN (International Bank Account Number) previously configured in the Financial Account since this number will allow the connection with the bank’s internal ID to automatically create and generate the bank statements. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-4.png)
+
+Once the process is finished, the synchronization can be checked in the **Bank Integration PSD2** information section from the Financial Account window where the account is saved.  
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-5.png)
+
+#### Get Bank Statements Button
+
+From the `Financial Account` window, in the **PSD2 Bank Integration** section of the header, it is also possible to define the **import date** of the bank statements and the **frequency run**, e.i., how often the user wants a record to be created. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-6.png)
+
+- **Import from Date**: The user is able to set the specific date from which the bank information will be taken. In case no date is set, Etendo brings bank statement information from the last date when a bank statement was created (when a bank statement was imported). 
+
+- **Import to Date**: The user is able to set the specific date up to which the bank information will be taken. In case this field remains empty, Etendo brings the information to the current day's date.
+
+- **Statement Frequency**: 
+
+    - One per day: if there is already a statement created for that day,  Etendo uses the same statement and includes the information there.
+    - One per month: Etendo checks the last statement created within the given month and if there is one created, it enters the statement there. Otherwise, Etendo creates a new one. 
+    - One per run: Etendo creates a new statement.
+    - One per week: Etendo checks if the last statement created is within the given week.
+
+
+After defining the requirements for the bank statement creation, complete the process by clicking on the **Get Bank Statement button**. Etendo creates a header record, whose names are related to the dates, and the bank statements lines provide a transaction reference number. 
+
+Etendo **processes the bank statements** which are ready to be reconciled. 
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-7.png)
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Bulk Posting
@@ -28035,38 +28215,44 @@ We will also notice that the Product's Stock has been updated in the indicated s
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Copilot/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Copilot/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started
 ## Article Content: 
-### Etendo Copilot: Integrated Assistant
+### Etendo Copilot
 
 #### Overview
 
-Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the key features of Etendo Copilot.
+Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, or accessible via API, that provides an efficient way to interact with assistants and use tools developed to solve specific problems. It is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the main features of Etendo Copilot.
 
 !!! info
-    To install Etendo copilot, you can read the [Copilot Instalation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
+    To install Etendo copilot, you can read the [Copilot Installation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
+
+!!! note
+    Remember that, to use this functionality, it is necessary to configure an API Key. For this, you can use one of your own, or you can contact the Etendo support team to purchase one.
 
 #### What is Etendo Copilot?
 
-![Copilot Chat](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
+![Copilot Chat](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot.png){align=right  width="300"}
 
-At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
+At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Assistant* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
 
-#### Agent
+#### Assistant
 
-The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
+The Assistant serves you making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
+
+Each assistant has defined instructions, as well as the possibility to configure a knowledge base and a set of skills or tools.
+The assistant is able to make decisions based on a question, using the most appropriate knowledge base or tool set to answer a particular query.
+
+In turn, it is possible to configure assistant managers, able to delegate a specific query to other specialized assistants and coordinate between the different assistants in your team to achieve an assertive response.  This intelligent decision-making ensures that you receive the most accurate and efficient assistance. Assistants can be distributed in Etendo modules as datasets or created per environment.
 
 #### Tools
 
 Each tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of tools work in harmony to deliver unparalleled support.
 
 ####  Key Features
-
-![Copilot Chat2](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
 
 
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
@@ -28077,21 +28263,58 @@ Each tool represents a separate independent project, designed to excel at specif
 
 - **Open AI Assistants**: Copilot is integrated with the Assistants technology developed by Open AI, allowing you to set up your assistants, trained with your own knowledge base, able to generate and interpret new code, and use the specific tools already distributed by Etendo or new ones.  
 
-#### Copilot Chat
+- **LangGraph**: In this case, this option works as a manager of other assistants and allows to select team members. 
+
+- **Langchain Agent**: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.
+
+#### Copilot Interface
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 ![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select a Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
+Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with [`Langchain Agent`, `LangGraph` and `Open AI Assistant` types](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md#assistant-window).
+
+##### Visualization Mode
+
+---
+
+<figure markdown>
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=200}
+<br><br>
+Copilot, by default, can be used as a pop-up window. This is comfortable to use as an integrated assistant available in any window you are using.
+</figure>
+
+---
+
+<figure markdown>
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
+<br><br>
+Select the fullscreen mode for a more comfortable use when having long conversations.
+</figure>
+
+---
+
+<figure markdown>
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200}
+<br><br>
+It can also be minimized. In this case, the logo will be shown in the lower-right section of the screen.
+</figure>
+
+---
+
+When asked something, Copilot informs the user about the assistants and tools used when processing each message.
+
+!!!note
+    When closed and opened again, by default, Copilot will select the last assistant previously used.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Setup
-## Article Path: /User Guide/Etendo Copilot/Setup
+# Article Title: Setup and Usage
+## Article Path: /User Guide/Etendo Copilot/Setup and Usage
 ## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-copilot/setup
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage
 ## Article Content: 
-### Copilot Setup
+### Copilot Setup and Usage
 
 #### Initial Configuration
 
@@ -28103,155 +28326,245 @@ In order to use Copilot, the user must access the Etendo Classic under the role 
 
 In this case, Etendo Copilot has two alternatives:
 
-1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, Bastian dataset is available, to answer your questions about Etendo documentation.
+1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, **Etendo Copilot** dataset is available, which includes Bastian assistant to answer your questions about Etendo documentation.
 
 
     ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/dataset-installing.png)
 
     !!!info
-        To check the list of available assistants, visit [Default Copilot Apps](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview.md#default-copilot-apps)
+        To check the list of available assistants, visit [Default Assistants](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview.md#default-assistants).
 
-    Once the reference data is applied, it is necessary to go to the **Copilot App Window**, select the corresponding Copilot App and click [Sync OpenAI Assistant](#sync-open-ai-assistant-button).
+    Once the reference data is applied, it is necessary to go to the **Assistant Window**, select the corresponding Assistant and click [Sync Assistant](#sync-assistant-button).
 
-2. *Create your own Copilot app*: Use the Copilot App window to set up a new assistant with all the specific necessary characteristics.
+2. *Create your own Assistant*: Use the Assistant window to set up a new assistant with all the specific necessary characteristics.
 
-#### Copilot App Window
+#### Assistant Window
 
-The Copilot App window `Application`>`Service`>`Copilot`>`Copilot App` allows you to define and configure applications:
+:material-menu: `Application` > `Service` > `Copilot` > `Assistant`
 
-<figure markdown>
-  ![Copilot App](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
-  <figcaption> Open AI assistant type example</figcaption>
-</figure>
+The Assistant window allows you to define and configure assistants:
 
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/assistant-window.png)
 
-- **Name**: Copilot app name
-- **Description**: Copilot app description
-- **App Type**: Langchain Agent or Open AI Assistant
+- **Name**: Assistant name
+- **Description**: Assistant description
+- **App Type**: Langchain Agent, Open AI Assistant or Langgraph
 
     **Open AI Assistant**
 
-    These applications leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.
+    These assistants leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.
 
     **Langchain Agent**
 
-    These applications can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc.
+    These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc. The difference between Langchain and Open AI is that Langchain can save the information locally and it is a multiprovider agent.
 
-In case of defining an **Open AI Assistant** type app, the following fields will be enabled: 
+    **LangGraph**
 
-- **Open AI Assistand ID**: Read-only field in which the ID of the assistant once created is displayed.
-- **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
-- **Open AI Model**: Dropdown with the Open AI models available.
-- **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
-- **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
+    This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured.
 
-##### Sync Open AI Assistant Button
 
-This process is only available when the application type is **Open AI Assistant** and takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of Open AI Models, and finally gets and uploads the files used as knowledge base.
+=== "Open AI Assistant"
 
-##### App Source Tab
+    In case of defining an **Open AI Assistant** type app, the following fields will be enabled: 
+
+    - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
+    - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
+    - **Model**: Dropdown with the Open AI models available. If none of the options are selected, the model defined by default for the Etendo Copilot module in the [preference](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#preference) window is to be used.
+    - **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
+    - **Open AI Assistant ID**: Read-only field in which the ID of the assistant once created is displayed.
+    - **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
+    - **Open AI Vectordb ID**: Read-only field in which the ID of the vector database is displayed.
+    - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
+
+=== "Langchain Agent"
+
+    In case of defining an **Langchain Agent** type app, the following fields will be enabled: 
+
+    - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish.
+    - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case. 
+    - **Provider**: Model provider information.
+    - **Model**: Dropdown with the models available according to the selected provider.
+    - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
+
+=== "LangGraph"
+
+    In case of defining an **LangGraph** type app, the following fields will be enabled: 
+
+    - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
+    - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
+    - **Graph Preview**: It shows the tree of assistants under a certain manager.
+    - **Provider**: Model provider information.
+    - **Model**: Dropdown with the models available according to the selected provider.
+    - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
+
+        !!!info
+            If this option is chosen, the **Refresh Preview** button is shown, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
+
+If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
+
+##### Sync Assistant Button
+
+This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
+
+##### Knowledge Tab
 
 In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
 
 !!!warning "File Limitation for Code Interpreter"
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
 
+!!!info
+    When configuring files for Langchain agent assistants, remember the supported formats are `.txt`, `.pdf` and `.md`.
 
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/app-source-tab.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
 
 !!!info
-    To load new files, you must do it from the [Copilot File window](#copilot-file-window).
+    To load new files, you must do it from the [Knowledge Base File](#knowledge-base-file).
 
 Fields to note:
 
-- **File**: The file selected as app source
+- **File**: The file selected as knowledge base.
 - **Behaviour**: The way in which the assistant will use the file. It has three available options:
-    - Add to the assistant as knowledge base: before using this option, it is necessary to synchronize the assistant with the [Sync OpenIA Assistant](#sync-open-ai-assistant-button). This behaviour is possible only with **Retrieval** checked.
+    - Add to the assistant as knowledge base: before using this option, it is necessary to synchronize the assistant with the [Sync Assistant](#sync-assistant-button). This behaviour is possible only with **Retrieval** checked.
     - Append the file content to the prompt: In this option, Etendo fails if the file is too large and exceeds the token limit allowed by the assistant. Then, this option is suitable for small files only. The file must be in text format.
     - Add content to each question: In this case, the same restrictions from the previous option apply. 
-- **Type**: read-only field showing the type of file selected in the [Copilot File window](#copilot-file-window).
-- **Active**: checkbox to activate the app source.
+- **Type**: read-only field showing the type of file selected in the [Knowledge Base File window](#knowledge-base-file-window).
+- **Active**: checkbox to activate the knowledge base file.
 - **Exclude from Code Interpreter**: Checkbox to exclude files from being processed by the Code Interpreter during synchronization. This checkbox is only editable if the assistant has the Code Interpreter option enabled.
 - **Exclude from Retrieval**: Checkbox to exclude files from being considered in the Retrieval process during synchronization.This checkbox is only editable if the assistant has the Retrieval option enabled.
 
-##### Tool Tab
+##### Skills and Tools Tab
 
 In this tab, you can define the tools to be used by the assistant.
 
-The user can select any of the options available in the field **Copilot Tool**, as many as necessary but one at the time.
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/skills-and-tools-tab.png)
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/tool-tab.png)
+Fields to note:
+
+- **Copilot Tool**: The user can select any of the options available in this field, as many as necessary but one at the time.
+- **Description**: Read-only field. It shows the description of the tool, used by the assistant to choose the appropriate tool for each case.
+
 
 !!!info
-    To enter new tools, you must do it from the [Copilot Tool window](#copilot-tool-window)
+    To enter new tools, you must do it from the [Skill/Tool window](#skilltool-window).
 
-#### Copilot File Window
+##### Team Members Tab
 
-In the Copilot File window `Application`>`Service`>`Copilot`>`Copilot File`, you can define the files with which the assistants can interact.
+In this tab, only present if the LangGraph App type is selected, the LangGraph's assistants are defined. Remember that LangGraph works as a manager of other assistants.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/copilot-file.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/team-members-tab.png)
+
+Fields to note:
+
+- **Member**: The user can select one or more assistants for the manager. 
+- **Description**:  Read-only field. It shows the description of the assistant, used by the manager to choose the appropriate assistant for each case.
+
+    !!! warning
+        Remember that it is not possible to select an assistant without a description.
+
+#### Knowledge Base File Window
+
+:material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
+
+In the Knowledge Base File window, you can define the files with which the assistants can interact.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-base-file-window.png)
 
 - **Name**: File Name.
 - **Description**: File description.
 - **Type**:
-    - *Attached File* 
+    - **Attached File** 
     This allows you to upload files directly into Copilot for later use during interactions with the assistants.
-    - *HQL Query*
-    This allows using an HQL query result as a file for app source.
-    - *Remote File* 
-    You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access documents and external resources.
+    - **HQL Query**
+    This allows using an HQL query result as a file for knowledge base file.
+    - **Remote File** 
+    You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
-- **File name**: Name of the remote file in case you want to modify it.
-- **URL**: Source file URL
+- **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
+- **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
+- **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
 
-#### Copilot Tool Window
+#### Skill/Tool Window
 
-Open `Application`>`Service`>`Copilot`>`Copilot Tool`. In this window , the user can find available tools to be used in Copilot assistants.
+:material-menu: `Application`>`Service`>`Copilot`>`Skill/Tool`
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/copilot-tool-window.png)
+In this window , the user can find available tools, distributed in the Copilot bundle, to be used in Copilot assistants.
 
-!!!info
-    In case you want to define new tools, visit [How to Create Copilot Tools](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools.md)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/skill-tool-window.png)
 
-#### Role Window
-
-In the Role window `Application`>`General Setup`>`Security`>`Role`, you can configure access roles for each Copilot App. This means you can control who has permission to interact with each application. This feature is useful for ensuring that users only have access to applications and functions relevant to their responsibilities.
-
-In the *Role* window, select a role and in the *Copilot App* tab add a new record for each Copilot App you want to give access to.
-
-![Copilot Role](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-role.png)
+Some tools require to communicate with Etendo through WebHooks. Their configuration can be found in the Webhooks tab.
 
 !!!info
-    For more information, visit [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security.md#role).
+    In case you want to define new tools, visit [How to Create Copilot Tools](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools.md).
 
-#### Webhook Window
-  Some tools require to communicate with Etendo through WebHooks, so it is necessary to configure the access for each role in the WebHook window.
-  For example, for the Database Query Tool, the WebHook "DBQueryExec" is used, to the Role that will use this tool in an assistant, it is necessary to configure the access to this WebHook.
-  ![WebHook](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
+
+#### Assistant Access Window
+
+:material-menu: `Application`>`Service`>`Copilot`>`Assistant Access`
+
+In this window, it is possible to configure access roles for each Assistant. This means you can control who has permission to interact with each assistant. This feature is useful for ensuring that users only have access to functions relevant to their responsibilities. This possibility depends on the role level you have.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/assistant-access-window.png)
+
+!!!info
+    This configuration is also possible from the Role window.
+
+!!!note
+    In case of deleting an assistant, the related assistant access records are also deleted.
+
 #### Process Request Window
 
-Open `Application`>`General Setup`>`Process Scheduling`>`Process Request`. In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
+:material-menu: `Application`>`General Setup`>`Process Scheduling`>`Process Request`
+
+In this window, the user can schedule Etendo Copilot background processes by selecting the Assistants Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
 
 !!!info
     For more information, visit [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
 
-##### Copilot App Tab
+##### Assistant Tab 
 
 !!! Info
-    This tab is only visible when a **Copilot Apps Schedule** process is selected.
+    This tab is only visible when an **Assistants Schedule** process is selected.
 
 In this tab, the process to be scheduled can be configured. 
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/process-request-copilot.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/process-request-window.png)
 
 Fields to note:
 
 - **Name**: Name description.
-- **Copilot App**: Corresponding assistant for the process.
+- **Assistant**: Corresponding assistant for the process.
 - **Prompt**: Instruction for the process.
 - **Active**: Checkbox to select if this tool is active or not.
+
+#### Conversations Window
+
+:material-menu: `Application`>`Service`>`Copilot`>`Conversations`
+
+In this window, the user can find and access all interactions had with Copilot. These records show specific information about these conversations, such as user, creation date and assistant.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/conversations-window.png)
+
+Fields to note:
+
+- **User/Contact**: The user that interacted with Copilot
+- **ExternalID**: External provider conversation ID
+- **Creation Date**: The date of the conversation
+- **Visible**: Checkbox to mark to make the record visible
+- **Last Message**: Date of the last message of the conversation
+- **Assistant**: Assistant selected to interact
+
+##### Messages Tab
+
+In this tab, the different messages included in each specific conversation are shown.
+
+Fields to note:
+
+- **Message**: Exact message used in the conversation
+- **Time**: Time of the message
+- **Creation Date**: Date of the message
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -28269,7 +28582,7 @@ Fields to note:
 
 The Copilot Extensions Bundle includes functionalities that help you streamline your daily tasks using artificial intelligence.
 
-#### Default Copilot Apps
+#### Default Assistants
 
 The apps described below belong to preconfigured reference data included in the corresponding modules.
 
@@ -28277,13 +28590,13 @@ The apps described below belong to preconfigured reference data included in the 
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
-    This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
+    This **Assistant** is able to answer questions with indexed information from the official Etendo documentation.
 
 - **Purchase Expert**
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
-    This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+    This assistant is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
 
     !!! info
         For more information, visit [Purchase Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
@@ -28292,7 +28605,7 @@ The apps described below belong to preconfigured reference data included in the 
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
-    This copilot app is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
+    This assistant is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
 
     !!! info
         For more information, visit [SQL Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md).
@@ -28384,7 +28697,7 @@ For this particular case, we have configured an assistant with the functional me
 
  - In the module `com.etendoerp.copilot.openapi.purchase` there is a dataset with the basic configuration of the **Copilot Purchase Expert**. It can be imported in the `Application`>`General Setup` > `Enterpice Model` > `Enterprise module management` window. 
  
- - After importing the configuration, it is necessary to configure the OpenAI model for the imported **Copilot App** and click [Sync OpenAI Assistant](https://docs.etendo.software/latest/setup.md#sync-open-ai-assistant-button) button to create the corresponding assistant.
+ - After importing the configuration, it is necessary to configure the OpenAI model for the imported **Assistant** and click [Sync Assistant](https://docs.etendo.software/latest/setup.md#sync-open-ai-assistant-button) button to create the corresponding assistant.
  
  - Finally, give access to the role and configure the permissions in [Role](https://docs.etendo.software/latest/setup.md#role-window) Window.
 
@@ -28456,9 +28769,9 @@ After install the module:
     ./gradlew update.database smartbuild --info
     ```
 
-3. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Copilot App` window.
+3. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
 
-4. Run **Sync OpenAI Assistant** process.
+4. Run **Sync Assistant** process.
 
 5. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks.
 
@@ -28565,7 +28878,7 @@ So, roll up your sleeves and ignite your creativity.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Install Etendo Development Environment
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Install Etendo Development Environment
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Install Etendo Development Environment
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment
 ## Article Content: 
@@ -28681,7 +28994,7 @@ To install Etendo in a development environment, follow the same steps as describ
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: IntelliJ Code Formatting
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/IntelliJ Code Formatting
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/IntelliJ Code Formatting
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting
 ## Article Content: 
@@ -28702,7 +29015,7 @@ This document covers how IntelliJ IDEA  is capable of importing code formatter s
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Use of Repositories in Etendo
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Use of Repositories in Etendo
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Use of Repositories in Etendo
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo
 ## Article Content: 
@@ -28787,7 +29100,7 @@ Your token will be immediately invalidated and will no longer work.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Install Modules
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Install Modules
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Install Modules
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo
 ## Article Content: 
@@ -28992,7 +29305,7 @@ Another option to force the installation of all the translation modules is to ad
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Install Translation Bundles
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Install Translation Bundles
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Install Translation Bundles
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo
 ## Article Content: 
@@ -29040,7 +29353,7 @@ For information on what bundle version is compatible with which translation bund
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: PostgreSQL Configuration
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/PostgreSQL Configuration
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/PostgreSQL Configuration
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration
 ## Article Content: 
@@ -29106,7 +29419,7 @@ Etendo Classic currently requires two PostgreSQL extensions to be available:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Migrating to Etendo (from Openbravo)
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Migration from Openbravo/Migrating to Etendo (from Openbravo)
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Migration from Openbravo/Migrating to Etendo (from Openbravo)
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo
 ## Article Content: 
@@ -29514,7 +29827,7 @@ To solve issues with taxes arising from these modules being migrated from Openbr
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Upgrading to Openbravo 21Q3.2
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Migration from Openbravo/Upgrading to Openbravo 21Q3.2
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Migration from Openbravo/Upgrading to Openbravo 21Q3.2
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2
 ## Article Content: 
@@ -29587,7 +29900,7 @@ This guide explains how to upgrade your current Openbravo environment to version
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Upgrade Etendo to Any Version
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Upgrade/Upgrade Etendo to Any Version
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Upgrade/Upgrade Etendo to Any Version
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version
 ## Article Content: 
@@ -29726,7 +30039,7 @@ To work with the plugin you need to specify in the root project from where the p
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Core format migration (JAR- Sources)
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Upgrade/Core format migration (JAR- Sources)
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Upgrade/Core format migration (JAR- Sources)
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration
 ## Article Content: 
@@ -29803,7 +30116,7 @@ To work with the plugin you need to specify in the root project from where the p
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Resolving Dependencies on GitHub
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Upgrade/Resolving Dependencies on GitHub
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Upgrade/Resolving Dependencies on GitHub
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github
 ## Article Content: 
@@ -33812,7 +34125,7 @@ This work is a derivative of [Tables](http://wiki.openbravo.com/wiki/Tables){tar
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add a Button to the Toolbar
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Button to the Toolbar
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Button to the Toolbar
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar
 ## Article Content: 
@@ -34229,7 +34542,7 @@ This work is a derivative of [How to add a button to the toolbar](https://wiki.o
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add a Field to a Window Tab
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Field to a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Field to a Window Tab
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab
 ## Article Content: 
@@ -34275,7 +34588,7 @@ This work is a derivative of [How to add a field to a window tab](http://wiki.op
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add a Rich Text Field and Column
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Rich Text Field and Column
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Rich Text Field and Column
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column
 ## Article Content: 
@@ -34346,7 +34659,7 @@ This work is a derivative of [How to add a rich text field and column](http://wi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add Columns to a Table
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add Columns to a Table
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add Columns to a Table
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table
 ## Article Content: 
@@ -34531,7 +34844,7 @@ This work is a derivative of [How to Add Columns to a Table](http://wiki.openbra
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Change an Existing Window
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Change an Existing Window
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Change an Existing Window
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window
 ## Article Content: 
@@ -34626,7 +34939,7 @@ This work is a derivative of [How to change an existing window](http://wiki.open
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Change the Size of a Column
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Change the Size of a Column
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Change the Size of a Column
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column
 ## Article Content: 
@@ -34671,7 +34984,7 @@ This work is a derivative of [How To Change The Size of a Column](https://wiki.o
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Copy and Paste Images in Etendo
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Copy and Paste Images in Etendo
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Copy and Paste Images in Etendo
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo
 ## Article Content: 
@@ -34710,7 +35023,7 @@ As seen in the image above, the “image” field was created, in which it is po
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Background Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Background Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Background Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process
 ## Article Content: 
@@ -34798,7 +35111,7 @@ This work is a derivative of [How to Create a Background Process](http://wiki.op
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Callout
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Callout
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Callout
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout
 ## Article Content: 
@@ -35046,7 +35359,7 @@ This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Callout that Extends from Another Callout
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Callout that Extends from Another Callout
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Callout that Extends from Another Callout
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout
 ## Article Content: 
@@ -35234,7 +35547,7 @@ This work is a derivative of [How to Create a Callout that Extends from Another 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Chart of Accounts Module
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Chart of Accounts Module
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Chart of Accounts Module
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module
 ## Article Content: 
@@ -35338,7 +35651,7 @@ This work is a derivative of [How to create a chart of accounts module](https://
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Clone Hook
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Clone Hook
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Clone Hook
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook
 ## Article Content: 
@@ -35417,7 +35730,7 @@ To create a Clone Hook, you only have to follow a few steps:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a Computed Column
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Computed Column
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Computed Column
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column
 ## Article Content: 
@@ -35542,7 +35855,7 @@ This work is a derivative of [How to Create a Computed Column](http://wiki.openb
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Dataset
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Dataset
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Dataset
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset
 ## Article Content: 
@@ -35952,7 +36265,7 @@ This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Page in Etendo Documentation
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Page in Etendo Documentation
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Page in Etendo Documentation
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation
 ## Article Content: 
@@ -36422,7 +36735,7 @@ This work is a derivative of [Documentation Style Guide](https://wiki.openbravo.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a HQL Based Table
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a HQL Based Table
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a HQL Based Table
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table
 ## Article Content: 
@@ -36590,7 +36903,7 @@ This work is a derivative of [How to create a HQL Based Table](http://wiki.openb
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How To Create a Module
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Create a Module
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How To Create a Module
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module
 ## Article Content: 
@@ -36771,7 +37084,7 @@ This work is a derivative of [How to Create and Package a Module](http://wiki.op
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Module that Adds an Accounting Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Module that Adds an Accounting Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Module that Adds an Accounting Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process
 ## Article Content: 
@@ -36838,7 +37151,7 @@ The dataset definition is ready, so the user just needs to export it to a file p
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a Navigation Bar Component
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Navigation Bar Component
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Navigation Bar Component
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component
 ## Article Content: 
@@ -37023,7 +37336,7 @@ This work is a derivative of [How to Create a Navigation Bar Component](http://w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Pick and Execute Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Pick and Execute Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Pick and Execute Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process
 ## Article Content: 
@@ -37316,7 +37629,7 @@ This work is a derivative of [How to create a Pick and Execute Process](http://w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Report
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Report
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Report
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
 ## Article Content: 
@@ -37588,7 +37901,7 @@ This work is a derivative of [How to create a Report](http://wiki.openbravo.com/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Standard Process Definition
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Standard Process Definition
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Standard Process Definition
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition
 ## Article Content: 
@@ -38241,7 +38554,7 @@ This work is a derivative of [How to Create a Standard Process Definition](http:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a Stored Procedure
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Stored Procedure
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Stored Procedure
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure
 ## Article Content: 
@@ -38438,7 +38751,7 @@ This work is a derivative of [How to Create a Stored Procedure](http://wiki.open
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Table
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Table
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Table
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-table
 ## Article Content: 
@@ -38593,7 +38906,7 @@ This work is a derivative of [How to Create a Table](http://wiki.openbravo.com/w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Window
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Window
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Window
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window
 ## Article Content: 
@@ -38760,7 +39073,7 @@ This work is a derivative of [How to create a window](http://wiki.openbravo.com/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Accounts Files
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Accounts Files
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Accounts Files
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files
 ## Article Content: 
@@ -38878,7 +39191,7 @@ This work is a derivative of [Creating Account Files](https://wiki.openbravo.com
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create an Alert
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create an Alert
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create an Alert
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert
 ## Article Content: 
@@ -39036,7 +39349,7 @@ This work is a derivative of [How to create an alert](http://wiki.openbravo.com/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create and Update Business Entities Using Web Services
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Business Entities Using Web Services
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create and Update Business Entities Using Web Services
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services
 ## Article Content: 
@@ -39131,7 +39444,7 @@ This work is a derivative of [How to Create and Update Business Entities using W
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create and Update Translation Modules
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Translation Modules
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create and Update Translation Modules
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules
 ## Article Content: 
@@ -39401,7 +39714,7 @@ Now, we know it is used in a callout, so it is just necessary to find in the App
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Build Validations and Module Scripts
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Build Validations and Module Scripts
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Build Validations and Module Scripts
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts
 ## Article Content: 
@@ -39749,7 +40062,7 @@ This work is a derivative of [How to Create Build Validations and Module Scripts
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Client Side Callout Onchange Function
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Client Side Callout Onchange Function
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Client Side Callout Onchange Function
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function
 ## Article Content: 
@@ -39945,7 +40258,7 @@ This work is a derivative of [How to create client side callout onchange functio
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jobs and Actions
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Jobs and Actions
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Jobs and Actions
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions
 ## Article Content: 
@@ -40188,7 +40501,7 @@ It is also possible to add validations and override the original methods.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Scan Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Scan Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Scan Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process
 ## Article Content: 
@@ -40262,7 +40575,7 @@ Optional:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jest Test Cases
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Test Cases/How to Create Jest Test Cases
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Test Cases/How to Create Jest Test Cases
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases
 ## Article Content: 
@@ -40344,7 +40657,7 @@ This work is a derivative of [How to Create Jest testcases](https://wiki.openbra
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create JUnit Test Cases
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Test Cases/How to Create JUnit Test Cases
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Test Cases/How to Create JUnit Test Cases
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases
 ## Article Content: 
@@ -40805,7 +41118,7 @@ This work is a derivative of [How to Create JUnit testcases](https://wiki.openbr
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Define a Table as a Tree
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Define a Table as a Tree
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Define a Table as a Tree
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree
 ## Article Content: 
@@ -40902,7 +41215,7 @@ This work is a derivative of [How to define a table as a tree](https://wiki.open
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to define Display Logic Evaluated at Server Level
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to define Display Logic Evaluated at Server Level
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to define Display Logic Evaluated at Server Level
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level
 ## Article Content: 
@@ -40938,7 +41251,7 @@ This work is a derivative of [How to define Display Logic Evaluated at Server Le
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Develop a DAL Background Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Develop a DAL Background Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Develop a DAL Background Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process
 ## Article Content: 
@@ -41144,7 +41457,7 @@ This work is a derivative of [How to develop a DAL background process](http://wi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to embed a Widget into a Window Tab
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to embed a Widget into a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to embed a Widget into a Window Tab
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab
 ## Article Content: 
@@ -41306,7 +41619,7 @@ This work is a derivative of [How to embed a widget into a window tab](http://wi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How To Exclude Database Physical Objects From Model
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Exclude Database Physical Objects From Model
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How To Exclude Database Physical Objects From Model
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model
 ## Article Content: 
@@ -41345,7 +41658,7 @@ This work is a derivative of [How to Exclude Database Physical Objects from Mode
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Export Sample Data
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Export Sample Data
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Export Sample Data
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data
 ## Article Content: 
@@ -41384,7 +41697,7 @@ This work is a derivative of [How to Export Sample Data](http://wiki.openbravo.c
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Implement a Business Event Handler
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Implement a Business Event Handler
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Implement a Business Event Handler
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler
 ## Article Content: 
@@ -41737,7 +42050,7 @@ This work is a derivative of [How to implement a business event handler](https:/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Publish Modules to a GitHub Repository
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Publish Modules to a GitHub Repository
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Publish Modules to a GitHub Repository
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository
 ## Article Content: 
@@ -41912,7 +42225,7 @@ Add to the **beans.xml**
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Run an Initial Client Setup Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Run an Initial Client Setup Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Run an Initial Client Setup Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process
 ## Article Content: 
@@ -42019,7 +42332,7 @@ This work is a derivative of [Initial Client Setup](https://wiki.openbravo.com/w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Advanced Sequences
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Advanced Sequences
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Advanced Sequences
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences
 ## Article Content: 
@@ -42292,7 +42605,7 @@ public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Property Fields
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Property Fields
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Property Fields
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields
 ## Article Content: 
@@ -42382,7 +42695,7 @@ This work is a derivative of [How to add a canvas field to a form or grid](http:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Secure Webservices
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Secure Webservices
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Webservices
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
@@ -44253,10 +44566,10 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 2. After the query successfully finishes, delete the module by the way corresponding to the installation method (Sources/JARs)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Financial Extensions Bundle
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Financial Extensions Bundle
+# Article Title: Overview
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Financial Extensions Bundle/Overview
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview
 ## Article Content: 
 #### Overview
 
@@ -44700,6 +45013,280 @@ public class UndoOrderImpl implements UndoCloseOrderHook {
 }
 ```
 
+#### PSD2 Integration
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+:octicons-package-16: Javapackage: `com.etendorx.psd2.bank.integration`
+
+The PSD2 (Payment Services Directive 2) security protocol and the payment service provider Redsys are used for the integration between financial accounts and banks. For this integration to be successful, it is crucial to understand certain key concepts and the role of specific components such as the .p12 file. This section provides an overview of PSD2, Redsys, and the role of a .p12 file in this integration.
+
+!!!info
+    For more information, visit [PSD2 Integration Developer Guide](https://docs.etendo.software/latest/financial-extensions-bundle/psd2-integration.md).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Bank Integration PSD2
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Financial Extensions Bundle/Bank Integration PSD2
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration
+## Article Content: 
+### Bank Integration PSD2 
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+#### Overview
+
+Etendo is able to integrate with several banking entities using the PSD2 (Payment Services Directive 2) protocol through the [Redsys](https://redsys.es/){target="_blank"} API, which acts as a service provider.
+The integration is carried out only with **banks that support Redsys**, thus guaranteeing secure and efficient communication for obtaining financial transactions, balance inquiries and movements compatible with the PSD2 protocol.
+
+!!!info
+    For more information about banks supported by Redsys visit [Banks supported by Redsys](https://redsys.es/psd2.html){target="_blank"}.
+
+!!!info
+    To be able to include this functionality, the **Financial Extensions Bundle** must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+!!!warning
+    It is important to note that before starting this configuration, the **QWAC** and **QSealC** certificates are required. Detailed instructions on how to obtain them can be found in the [Certificates](#certificates) section.
+
+
+#### Dokerized Services
+
+To begin the integration, it is essential to launch all the services related to this module. This includes **Etendo RX**, a service that provides a reactive development platform and implements a security layer using the standard **OAuth** authentication protocol required for synchronization. Additionally, the **PSD2 service**, which interacts with Redsys, needs to be started.
+
+Within the PSD2 module and its dependencies, the required infrastructure is distributed using **Etendo Docker Manager**. In this case, it is necessary to define the following configuration variables in the `gradle.properties` file to launch the services:
+
+```groovy title="gradle.properties"
+docker_com.etendoerp.etendorx=true
+docker_com.etendorx.psd2.bank.integration=true
+```
+
+!!!info
+    For more information about how to handle Etendo Dockerizations visit [Docker Management](https://docs.etendo.software/latest/platform/dependency-manager.md). 
+
+??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
+    It is also possible to run the dockerized [PostgreSQL service](https://docs.etendo.software/latest/platform/docker-management.md#postgres-database-service) and [Tomcat service](https://docs.etendo.software/latest/platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    docker_com.etendoerp.docker_db=true
+    ```
+
+Then, to effectively run the services is necessary to **execute the command** in the terminal: 
+
+```bash title="Terminal"
+./gradlew resourses.up
+```
+
+Here, all the services and their respective logs can be seen running using [LazyDocker tool](https://github.com/jesseduffield/lazydocker){target=_isblank}
+
+![Docker Services](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-9.png)
+
+#### Services Configuration
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+As `System Administrator` role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:
+
+- **Service Name**: The name of each service.
+- **Service URL**: The internal URL of the Docker service.
+- **Updatable Configs**: Check this checkbox.
+- **Public URL**: Configure the publicly accessible URL for the service.
+
+!!! info 
+    Below are configuration examples. Replicate them, only personalizing the **Public URL** fields.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-0.png)
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-13.png)
+
+##### Get User Token 
+:material-menu: `Application` > `General Setup` > `Security` > `User`
+
+It is necessary to obtain and configure a user token that will later be used by the **PSD2 service** to modify authentication records within Etendo when interacting with Redsys.
+
+1. As `Administrator` role, in the **User** window, select the user who has access to Banks and Banking Information, and this token will interact with the system under that user.
+    
+    !!! info
+        It is recommended to associate the service with the administrator user.
+
+    A new entry must be created in the **RX Service Access** tab, and the corresponding fields should be completed. 
+
+    - In the **RX Services** field, select **psd2** option.
+    - Define the **Default Role** and **Default Organization** fields based on the user's access level.
+
+    ![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-11.png)
+    !!!note
+        In this example, the **admin** user is used:
+        - **Default Role**: F&B Group Admin
+        - **Default Organization**: F&B International Group
+
+        This configuration provides the highest level of access but can be customized according to specific requirements.
+
+2. Next, to obtain the token, it is necessary to make a request from Postman or any REST client, using the following format:
+
+    **Request:**
+
+    - URL: `https://<PublicServerURL>/auth/api/authenticate`
+    - Method: `GET`  
+    - Body:
+
+    ```json title="Body"
+    {
+        "username":"admin",
+        "password":"admin",
+        "service":"Psd2",
+        "secret":"1234"
+    }
+    ```
+    !!! info 
+        Replace the credentials with those of the user configured in the previous step 
+
+    **Response:**
+
+    ```json
+    {
+        "token": "*********"
+    }
+    ```
+
+    ![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-12.png)
+
+3. Once the token is obtained, it is necessary to add it to the `gradle.properties` file in the `psd2.token` variable so that it can be used by the PSD2 service.
+
+    ```groovy title="gradle.properties"
+    psd2.token= ******
+    ```
+
+##### Configuration of the PSD2 HUB service in Redsys
+
+**Redsys** is a technology platform that provides payment services in Spain. It works with banks and other payment service providers to facilitate secure electronic transactions, including card payments and mobile payment solutions.
+
+Redsys acts as an **intermediary in payment processing**, offering payment gateway services and transaction security. So, it is necessary to create an account in Redsys in order to integrate the Etendo with the bank provider. 
+
+- To create an account in Redsys, login to the [Sandbox Registration Page](https://market.apis-i.redsys.es/psd2/xs2a/user/register){target="_blank"}.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-1.png)
+
+- Create a new service under the title `<Client Name>-API` by entering in the [Application Registration Section](https://market.apis-i.redsys.es/psd2/xs2a/application){target="_blank"}.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-2.png)
+
+- Choose a tittle to create the application: 
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-3.png)
+
+- After adding the required information, the application will be created:
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-4.png)
+
+- At the bottom of the same page the **Subscription** section is shown, click on **See Details** to subscribe to the HUB of your choice.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-5.png)
+
+
+#### Certificates
+
+When integrating **Etendo financial accounts with the bank** using the PSD2 security protocol and the Redsys payment service provider, understanding key components like the **.p12 file** is crucial. This document provides an overview of PSD2, Redsys, and the role of the .p12 file in this integration.
+
+##### Utility of the .p12 File in PSD2 Integration with Redsys
+
+A .p12 file (PKCS#12) is a **container file** that stores one or more X.509 certificates along with the associated private key. These files are essential for securing communications and authenticating the identity of the parties involved in a transaction.
+
+Functions of the .p12 file:
+
+- **Authentication**: Verifies the identity of the bank account user accessing account information or initiating payments.
+  
+- **Encryption**: Ensures the confidentiality of communications between Etendo, the bank, and Redsys, preventing unauthorized access to sensitive data.
+
+- **Integrity**: Uses digital signatures to ensure that messages have not been altered during transmission.
+
+To ensure security and compliance with PSD2 regulations, two types of certificates are required:
+
+- **QSealC (Qualified Electronic Seal Certificate)**: Digitally signs messages to guarantee their integrity and authenticity.
+
+- **QWAC (Qualified Website Authentication Certificate)**: Authenticates the server and secures communications.
+
+
+!!!info
+    These certificates are issued by authorized trust service providers, through the [URL eIDAS Dashboard](https://esignature.ec.europa.eu/efda/tl-browser/#/screen/home){target="_blank"}, you can locate the authorized certifying entities for the issuance of the EIDAS certificate.
+
+!!!note
+    In the case of obtaining these certificates in Spain, it is an **indispensable condition to be registered with the Bank of Spain**, the banking supervisor for these certificates. Contact a service provider for more information.
+
+
+#### Generating the .p12 file
+Once the **QSealC** and **QWAC** certificates have been obtained, the .p12 file must be generated, taking into account that the server certificate corresponds to the QWAC certificate and the private key corresponds to the QSealC certificate, copy into separate files, e.g. `cert.cer` and `key.pem` respectively.
+
+There are two ways of generating the .p12 file: 
+
+1.   Create the P12 file: Using the [KeyStore Explorer application](https://keystore-explorer.org/){target="_blank"}. This application provides an intuitive interface and facilitates the creation of the .p12 file.
+
+2. It is also possible to perform this procedure using the [OpenSSL tool](https://openssl.org/){target="_blank"}.
+
+    This is the specific example command:
+
+    ``` bash title="Terminal"
+    openssl pkcs12 -export -out keystore_tls.p12 -inkey key.pem -in cert.cer -name "keystore_tls" -passout pass:<keystore_password> -passin pass:<cert_password>
+    ```
+
+    !!!warning
+        To protect the P12 file a password will be prompted. This password will be required each time the P12 file is used for authentication or digital signature.
+
+    **OpenSSL command explained**
+
+    - **export**: Indicates that a PKCS#12 file is being created.
+    - **out `keystore_tls.p12`**: Specifies the name of the output PKCS#12 file.
+    - **inkey `key.pem`**: Specifies the file containing the private key.
+    - **in `cert.cer`**: Specifies the file containing the public certificate.
+    - **name `keystore_tls`**: Assigns the alias `keystore_tls` to the certificate inside the PKCS#12 file.
+    - **passout pass**: `keystore_password`: Specifies the keystore password. This sets the password to protect the PKCS#12 file.
+    - **passin pass:`cert_password`**: Specifies the password for the private key, if the key is encrypted.
+
+
+Once the `.p12` file is generated, it must be copied to the `/cert` folder in the root of the project to be used. For example, at `/opt/EtendoERP/cert/keystore_tls.p12`.
+
+
+#### Provider Configurations
+
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Enterprise Module Management`
+
+As `Administrator` role, apply the dataset **Bank Integration PSD2**, that includes the configuration needed for each supported provider offered by [Redsys](https://redsys.es/){target="_blank"}, 
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-15.png)
+
+!!! info
+    For more information about how to apply a dataset visit the functional documentation about [Enterprise Module Management](https://docs.etendo.software/latest/basic-features/general-setup/enterprise-model.md#enterprise-module-management). 
+
+Once the dataset is applied, all provider configurations will be added to the **Auth Provider** window.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-14.png)
+
+
+##### Key Store Configuration
+
+:material-menu: `Application` > `RX Service` > `oAuth Provider`
+
+In the **oAuth Provider** window, access each provider to be used and add the certificate configuration.
+
+The fields to be completed are:
+
+- **Keystore Path**: Path to the `.p12` file, e.g. `/cert/keystore_tls.p12`.
+- **Keystore Password**: Password of the `.p12` file.
+- **Certificate Alias**: Alias of the certificate. e.g. `keystore_tls`
+- **Certificate Password**: Password of the private key.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-8.png)
+
+These parameters allow the integration to make use of the .p12 to secure communications and authenticate the identity of the transaction participants.
+
+#### Restart Docker Services
+Once all the configuration is complete, it is necessary to relaunched the Docker services so that the certificate changes, token, and other configurations are applied.
+
+```bash title="Terminal"
+./gradlew resources.up
+```
+Afterward, you can continue with the setup in the [Bank Integration PSD2 User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md#setup).
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -44820,8 +45407,8 @@ On the other hand, this is the content of FULL\_Example.csv:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Getting Started
-## Article Path: /Developer Guide/Etendo RX/Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /Developer Guide/Etendo RX/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started
 ## Article Content: 
@@ -45796,7 +46383,7 @@ Open your browser and you can view the generated page with the following URL: [*
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Filter any request for Active or all Records
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to Filter any request for Active or all Records
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to Filter any request for Active or all Records
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive
 ## Article Content: 
@@ -45839,7 +46426,7 @@ Another way to get active rows is to remove the parameter `_noActiveFilter param
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to start RX as service
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to start RX as service
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to start RX as service
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code
 ## Article Content: 
@@ -45914,7 +46501,7 @@ This guide assumes a fundamental understanding of Java development environments,
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to change date format
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to change date format
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to change date format
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/how-to-change-date-format
 ## Article Content: 
@@ -45958,7 +46545,7 @@ In this example, the date format is set to `"yyyy-MM-dd"` and the time zone is s
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to give public access to RX with Apache2
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to give public access to RX with Apache2
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to give public access to RX with Apache2
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache
 ## Article Content: 
@@ -46024,8 +46611,8 @@ If your server is protected by a firewall, ensure that port 443 (HTTPS) is open 
 Your Etendo RX Edge Service is now accessible publicly with SSL security provided by Apache2. This setup ensures that the traffic between the clients and your Edge Service is encrypted and secure. Remember to keep your SSL certificates and Apache2 up to date for security and performance.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Copilot Installation
-## Article Path: /Developer Guide/Etendo Copilot/Copilot Installation
+# Article Title: ✨ Getting Started
+## Article Path: /Developer Guide/Etendo Copilot/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation
 ## Article Content: 
@@ -46042,7 +46629,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
 - *Docker* to install it follow [The Official Installation Guide](https://docs.docker.com/get-docker/){target="_blank"}.
 
 
-##### Instalation 
+##### Installation 
 
 This module is included in the Copilot Extensions bundle
 
@@ -46071,7 +46658,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
     | **Environment Variable**   | **Options**  | **Info** |
     | -------------------------- | -------------| -------- |
     | COPILOT_PORT           | `5000`   | **Required** The copilot port can be defined by the user |
-    | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
+    | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
     | ETENDO_HOST            | `http://your.etendo.instance/etendo` | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. |
 
 
@@ -46578,11 +47165,11 @@ This tool allows asking to Etendo for tables available in the database and the c
 The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
 
 #### Configuration
-This tool can be configured in a Copilot App:
+This tool can be configured in an Assistant:
 
-1. Add **Database Query Generator tool** into the Copilot App configuration, that you want to use the tool. Go to Copilot App window, pick the App and add the tool to the App in the **Tools** tab.
+1. Add **Database Query Generator tool** into the Assistant configuration, that you want to use the tool. Go to Assistant window, pick the Assistant and add the tool to the App in the **Tools** tab.
 
-2. Re-Sync the Copilot App running **Sync OpenAI Assistant** process to get the tool available in the Copilot App.
+2. Re-Sync the Assistant running **Sync Assistant** process to get the tool available in the Assistant.
 
 3. Check that the role of the user has permissions to use Secure Web Services in the **Role** Window. ![role configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-3.png)
 4. Check that the WebHook **DBQueryExec** is enabled and has the Role Access configured for the role.
@@ -46648,11 +47235,11 @@ Assistants can choose from these modes:
 
 #### Usage Example 
 
-In the section of Copilot App, it is possible to configure the assistant and the tool that it can use.
+In the section of Assistant, it is possible to configure the assistants and the tool that they can use.
 
 ![ddl-tool.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
 
-Also in Copilot App, it can insert a prompt where is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
+Also in Assistant, it can insert a prompt where it is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
 
 ![ddl-tool1.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
 
@@ -47023,7 +47610,7 @@ This way, we can create assistants for any API, as long as we have the OpenAPI S
 
 #### Overview
 
-The **Optical Character Recognition (OCR) Tool** is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Assistants to extract information from images or pdfs that are uploaded to the chat.
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -47751,9 +48338,9 @@ The Write File Tool will process these parameters, write *Hello World* to the fi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
-## Article Path: /Developer Guide/Etendo Copilot/How to Create Copilot Tools
+## Article Path: /Developer Guide/Etendo Copilot/How to Guides/How to Create Copilot Tools
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools
 ## Article Content: 
 ### How to create Copilot tools
 
@@ -47917,7 +48504,7 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     - *JSON Info*: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. 
  
 
-    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is obtained from the tool class.
+    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Assistant. To do so, we have to execute the button `Sync Tool Structure` in the `Skill/Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is obtained from the tool class.
 
     !!! Warning Before Sync Tool Structure
         It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
@@ -47928,12 +48515,12 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
     ```bash title="Terminal"
     ./gradlew export.database
     ```
-    Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
+    Once the *Copilot Tool* is defined, this tool must be associated to the assistant(s), to do so, a record must be created in the *tools* tab of the **Assistant** window, this record will allow us to activate or deactivate the tool.
 
     ![how-to-create-copilot-tools-2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
 
     !!! note "OpenAI Assistants tools"
-        Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
+        Remember to execute `Sync Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
 5. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
 To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
@@ -47943,8 +48530,126 @@ To test the developed Tool, you can ask Copilot to run it or, for example, to li
     ```
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Getting Started
-## Article Path: /Developer Guide/Etendo Mobile/Getting Started
+# Article Title: How to Export Tools and Assistants
+## Article Path: /Developer Guide/Etendo Copilot/How to Guides/How to Export Tools and Assistants
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants
+## Article Content: 
+### How to Export Tools and Assistants
+
+#### Overview
+
+When developing in Etendo Copilot, it is possible to export assistants and tools. This documentation details how to export them and how to make sure that, when installing the module, the configurations are ready to use, allowing a **plug and play** process.
+
+#### Exporting Assistants
+
+There are two main methods for exporting assistants: export it as a dataset where the configured assistant is exported within an Etendo Classic dataset or export as a System Administrator, where the assistant(s) defined with the System Administrator role are exported directly together with the module.
+
+##### Exporting Assistants as Datasets
+
+Assistants must be exported as a dataset, in case optional installation is required and with `Client/Organization` data access level. 
+
+1. Initial setup of the assistant:
+    - Configure the assistant and tools in the environment where the development takes place.
+    - Make sure to include all the necessary fields to be exported. Make sure to configure correctly the **Knowledge Base**, **Skills/Tools** and **Team Members** tabs, as well as the records in the **Knowledge Base File** window.
+
+    
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot1.png)
+  <figcaption>Assistant example with complete tabs.</figcaption>
+</figure>
+
+2. Create and Configure a Dataset:
+    - As System Administrator, go to the **Dataset** window and create a new record by selecting the module under development.
+    - Define the **Search Key** and **Name** of the dataset.
+    - Set the **Data Access Level** to **System/Organization** (recommended for user assistants).
+
+3. Add Tables to the Dataset
+
+    For each window or tab to be exported, create a record in the **Table** tab. Specify the corresponding table and add the appropriate **HQL/SQL Where** clause.
+
+    - **Assistant:** Table `etcop_app` 
+    ```sql title="Where Clause"
+    id in ('<AssistantID>')
+    ```
+    - **Knowledge Base:** Table `etcop_app_source`
+    ```sql title="Where Clause"
+    etcopApp.id in ('<AssistantID>')
+    ```
+    - **Skills/Tools:** Table `etcop_app_tool`
+    ```sql title="Where Clause"
+    `copilotApp.id in ('<AssistantID>')
+    ```
+    - **Team Members:** Table `ETCOP_Team_Member`
+    ```sql title="Where Clause"
+    copilotApp.id in ('<AssistantID>')
+    ```
+    - **Knowledge Base File:** Table `etcop_file`
+    ```sql title="Where Clause"
+    id in ('<knowladgeBaseFileID>')
+    ```
+    
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot2.png)
+    <figcaption>Dataset window configuration example in the module Copilot Purchase Expert</figcaption>
+    </figure>
+
+4. Export Reference Data Button
+    - Execute the **Export Reference Data** process, which will create the `referencedata/` folder inside the selected module, with all the records that were exported according to the dataset configuration. 
+
+    !!!note
+        Verify that all the required records are generated in the `.XML` file.
+
+
+5. Include Reference Data in the Module
+    - Check the **Include Reference Data** checkbox in the module definition and add a description to the dataset referring to the exported assistant.
+
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot3.png)
+    <figcaption>Configuration example in the module Copilot Purchase Expert</figcaption>
+    </figure>
+
+    - When the module is installed, the dataset will be available for application in the **Enterprise Module Management** window.
+
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot4.png)
+    <figcaption>Distributed datasets example</figcaption>
+    </figure>
+
+
+##### Exporting Assistants as System Administrator
+
+When exporting assistants that need to be pre-configured in a module installation, they must be created with the System Administrator role. These assistants will be editable only by the System Administrator, but they can be executed either by the `System Administrator` or by users with `Client/Organization` data access levels.
+
+1. Create Assistant with System Administrator Role:
+
+    - Log in as System Administrator.
+    - Configure the assistant and its tabs, ensuring to select the module (under development) in the **Module** field.
+    - If the assistant should be restricted to System Administrator use only, check the **System App** checkbox. Otherwise, leave it unchecked to allow execution across all data access levels.
+
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot5.png)
+    <figcaption>Exported assistant example and available only as System Administrator</figcaption>
+    </figure>
+
+2. **Export the Database**.
+    - Execute the command `./gradlew export.database` to export the assistant together with the module.
+
+#### Exporting Tools
+
+**Tool configuration**: When defining a tool, select the module (under development) in the **Module** field, and run `./gradlew export.database` command to export the tool together with the module.
+
+<figure markdown="span">
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot6.png)
+<figcaption>Tool configuration example</figcaption>
+</figure>
+
+!!!info
+    For more information, visit [How to create a Copilot Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ✨ Getting Started
+## Article Path: /Developer Guide/Etendo Mobile/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started
 ## Article Content: 
@@ -49588,32 +50293,31 @@ Etendo solutions are released on a quarterly basis.
 
 ![new-etendo-lifecycle](https://docs.etendo.software/latest/assets/whats-new/etendo-release-cycle/new-etendo-lifecycle.png)
 
-As shown in the image above, the duration of a release cycle is seven months. For instance, and in the case of Etendo Y1Q4 design and development activities started dated on 1st June  and will finish at release dated on December 31st.
+As shown in the image above, the duration of a release cycle is nine months. For instance, and in the case of Etendo Y1Q4 development activities started dated on July and will finish at release dated on March.
 
 #### Release Phases
 
-The release process consists of the following phases
+The release process consists of the following phases: 
 
-- 3 month development cycles, when engineering team focus on **code development & review, testing and code integration**
-- 1 additional month for the engineering team to **test and fix the bugs found**, as well as to **create the user documentation and train** the support team.
-- 1 month for the **QA team to test and validate the release** according to what defined in the corresponding Test Plan. At the end of this phase, the release is published as QA Approved (QAA), in a snapshot repository only for participants in the Etendo Early Adopters Program.
-- 2 months **maturation cycle to evolve from QAA to Confirmed Stable** (CS), published in the releases Nexus repository.
+- **3-month development cycle:** The engineering team focuses on code development, review, testing, and integration.
+- **3-month QA cycle:** The QA team tests and validates the release according to the Test Plan, creates user documentation, and trains the support team.
+- **3-month Etendo Early Adopters Program:** The release is initially published as QA Approved (QAA). This phase includes a maturation cycle to evolve the release from QA Approved (QAA) to Confirmed Stable (CS).
 
 ![etendo-release-cycle-phase.png](https://docs.etendo.software/latest/assets/whats-new/etendo-release-cycle/etendo-release-cycle-phase.png)
 
-Etendo strongly recommends that only releases that have reached CS are used in production environments
+!!! note
+    Etendo strongly recommends that only releases that have reached CS are used in production environments.
 
-In summary, Etendo will release Confirmed Stable (CS) releases in March (i.e ET18Q1), June (i.e. ET18Q2), September (i.e. ET18Q3), and December (i.e. ET18Q4) on a yearly basis.
+In summary, Etendo will release Confirmed Stable (CS) releases in March, June, September, and December on a yearly basis.
 
 !!! info
-
     Etendo will give support to the current year and prior year releases.
 
 ##### Early Adopters Testing (Innovators Program)
 
 As already mentioned, Etendo has established an innovators program based on a maturation cycle to evolve Etendo releases from QAA to Confirmed Stable, in collaboration with a set of Etendo end clients.
 
-These clients have access to the corresponding release in QAA status for them to use it and help Etendo to mature it.
+These clients install the releases in QAA status for them to use it and help Etendo to mature it.
 
 QAA releases have passed automated tests, all fixed issues have been individually verified and the QA team has completed a set of manual tests to identify further improvement.
 
@@ -49623,7 +50327,7 @@ As part of the Innovators program, interested Partners will receive support in t
 
 ##### Emergency Releases
 
-Apart, when required there are out of schedule emergency releases which are used to for targeted fixing of very important bugs. These bugs may have been reported by our partners, members of the development team or simply bugs found by our automations that are periodically testing our products.
+When required, there are out of schedule emergency releases which are used for targeted fixing of very important bugs. These bugs may have been reported by our partners, members of the development team or simply bugs found by our automations that are periodically testing our products.
 
 Those releases can be identified by their version which is constructed as follows ETXXQY.Z, where :
 
@@ -49712,6 +50416,63 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
+
+#### August 2024
+
+##### Copilot Extensions
+
+[:material-robot: **New Etendo Copilot Release Available!**](https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot.png)
+
+The newest version [1.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
+
+<div class="grid cards" markdown>
+
+-   **New Capabilities:**
+    
+    ---
+    - **Database Queries:** Use system database queries as knowledge bases to automate tasks under specific conditions.
+    -  **Copilot Stream:** Track in real-time which assistant or tool is working.
+    -  **Improved UX:** The chat now retains the last assistant used for seamless interaction.
+
+-   **Assistants Updates:**
+    
+    ---
+    -  **Langchain Assistants:** Now manage local knowledge bases, keeping your data secure.
+    -  **LangGraph Assistants:** Manage a team of assistants, delegating tasks efficiently. 
+     
+</div>
+
+These updates make Etendo Copilot more powerful, secure, and user-friendly, driving efficiency to new heights.
+
+
+##### Platform Extensions
+
+
+
+[:simple-docker: **Docker Management**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/docker.gif){align=right width=400}
+
+- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
+- This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
+- PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
+
+[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md)
+
+- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
+- With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
+
+
+
+##### Warehouse Extensions
+[:octicons-package-16: **Product Operations**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/product-operation.png)
+
+In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
+
 
 #### July 2024
 
@@ -49853,7 +50614,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | QAA |  | :white_check_mark: |
+| [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | QAA |  | :white_check_mark: |
+| [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | C |  | :white_check_mark: |
 | [24Q2.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.4){target="_blank"} | 02/08/2024 | 24.2.4 | C |  | :white_check_mark: |
 | [24Q2.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.3){target="_blank"} | 19/07/2024 | 24.2.3 | C |  | :white_check_mark: |
 | [24Q2.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.2){target="_blank"} | 12/07/2024 | 24.2.2 | C |  | :white_check_mark: |
@@ -49984,7 +50746,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.0.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.0){target="_blank"} | 16/08/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.0.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.1){target="_blank"} | 30/08/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.0.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.0){target="_blank"} | 16/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.19.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.19.0){target="_blank"} | 09/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.18.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.18.0){target="_blank"} | 02/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.17.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.17.1){target="_blank"} | 12/07/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
@@ -50067,7 +50830,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.2){target="_blank"} | 30/08/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.8.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.1){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -50098,7 +50862,9 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.16.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.1){target="_blank"} | 19/07/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.17.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.1){target="_blank"} | 30/08/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.17.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.0){target="_blank"} | 22/08/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
+| [1.16.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.1){target="_blank"} | 19/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.16.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.0){target="_blank"} | 08/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.15.0){target="_blank"} | 28/06/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.14.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.2){target="_blank"} | 14/06/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
@@ -50291,7 +51057,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.6.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.1){target="_blank"} | 19/07/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.7.0){target="_blank"} | 23/08/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.1){target="_blank"} | 19/07/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 08/07/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.5.0){target="_blank"} | 23/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.4.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.3){target="_blank"} | 12/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
@@ -50566,7 +51333,9 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.2){target="_blank"} | 02/08/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.1){target="_blank"} | 30/08/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.0){target="_blank"} | 20/08/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.3.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.2){target="_blank"} | 02/08/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.1){target="_blank"} | 22/07/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.0){target="_blank"} | 19/07/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.2.3](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.2.3){target="_blank"} | 19/07/2024 | 23.4.0 | * | C | :white_check_mark: |

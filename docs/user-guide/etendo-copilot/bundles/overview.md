@@ -16,7 +16,7 @@ tags:
 
 The Copilot Extensions Bundle includes functionalities that help you streamline your daily tasks using artificial intelligence.
 
-## Default Copilot Apps
+## Default Assistants
 
 The apps described below belong to preconfigured reference data included in the corresponding modules.
 
@@ -24,13 +24,13 @@ The apps described below belong to preconfigured reference data included in the 
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
-    This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
+    This **Assistant** is able to answer questions with indexed information from the official Etendo documentation.
 
 - **Purchase Expert**
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
-    This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+    This assistant is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
 
     !!! info
         For more information, visit [Purchase Expert user guide](../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
@@ -39,7 +39,7 @@ The apps described below belong to preconfigured reference data included in the 
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
-    This copilot app is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
+    This assistant is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
 
     !!! info
         For more information, visit [SQL Expert user guide](../../../user-guide/etendo-copilot/bundles/sql-expert.md).

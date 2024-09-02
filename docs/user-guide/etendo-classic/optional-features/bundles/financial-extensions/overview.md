@@ -66,6 +66,15 @@ The new Amortization report allows downloading excel reports about information o
 !!! info
     For more information, visit [the Asset Amortization Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
 
+### Bank Integration PSD2
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
+
+!!!info
+    For more information, visit [Bank Integration PSD2](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
+
 
 ### Banking Pool
 
@@ -181,7 +190,7 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
     - [Purchase Invoice](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal_1)
     - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_1)
     - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal)
-    - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)  
+    - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)
 
 ### Remittances
 
@@ -217,7 +226,7 @@ This functionality is specifically useful for companies that have a month close,
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/udarQ6h6EXQ?si=4CNi7Qgi2_yHdW5z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This functionality allows the user to adjust the accounts to ensure that the VAT balance is correctly balanced.
+This functionality enables the user to adjust accounts, ensuring the VAT balance is accurate and correctly aligned.
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
