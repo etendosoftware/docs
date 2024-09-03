@@ -35,7 +35,7 @@ Etendo Mobile is available in both Play and App Store:
 
 ## Initial Configuration
 
-In order to use the app, the user must access Etendo Classic in `Client>Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself. So, as the System Administrator role, generate a token by clicking on the **generate key** button, this token is usedto start the session in the app.
+In order to use the app, the user must access Etendo Classic in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself. So, as System Administrator role, generate a token by clicking on the **generate key** button, this token is used to start the session in the app.
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-0.png)
 
@@ -54,7 +54,7 @@ For this, the gear icon shown in the welcome window allows the user to enter the
 
 Once the server URL is configured, the user must log in entering **the user and the password** assigned by the system administrator.
 
-The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or the server URL is changed.
+The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or in case the server URL is changed.
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg)
 
@@ -63,4 +63,14 @@ The user will remain logged in, the system will require reentering the credentia
 
 ## Dynamic App Role Configuration
 
+Etendo Mobile allows the creation and configuration of mobile sub-applications. For this, [the Dynamic Apps module](../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) from Etendo Classic must be installed. After installing the Dynamic Apps module, the available sub-applications are distributed and can be configured in Etendo from the **Role window** in `General Setup> Security> Role`. 
 
+In this window, the user is able to configure the access to the sub-applications according to the role. As the sub-applications are distributed in modules of Etendo Classic, when configuring a new sub-application in a role, the drop-down list will appear with the available sub-applications of the modules installed.
+
+Fields to note:
+
+- **App:** In this drop-down menu, select the application to be assigned to the role.
+- **Version:** Assign the version of the application to be used in this role.
+- **Active:** Select if this application is active or not.
+
+![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)

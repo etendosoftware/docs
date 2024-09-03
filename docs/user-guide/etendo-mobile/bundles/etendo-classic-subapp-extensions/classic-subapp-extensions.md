@@ -6,7 +6,7 @@ title: Etendo Classic Subapp Extensions
 
 ## Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
+This bundle includes the Etendo Classic Mobile Sub-Application and its configurations in Etendo Classic. For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
 
 ## Etendo Classic Sub App
 
@@ -14,23 +14,23 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
 
 !!! info
 
-    - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
+    - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
+    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
     For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
 
 
-    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](../../../../user-guide/etendo-classic/basic-features/general-setup/security.md#dynamic-app).
+    - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](../../getting-started.md#dynamic-app-role-configuration) in the Role window.
 
-
-To add the windows to be shown in the subapp must be configured entering the Etendo Classic under the “administrator” role in `Role`>`Window Access` tab and checking the box “show in mobile” in the required windows.
+To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
 
 ![](../../../../assets/drive/WgAVMD7_UawKp1eedwjq260FyWU41AFdrcP_bK3sS3mm1aM6ZVT7oCnfTd8eiydWSDKpSRQf9eAspqn0PCCNK2sLLd9i_77-LObYTJmA3QbSXK5I4hKxhqT-9Ux788FRmZRdBaZQ.png)
 
 ### Welcome Window
 
+In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
+
 ![](../../../../assets/user-guide//etendo-mobile/user-interface/HomeSubApp.png){ width="300"}
 
-In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
 
 ### Navigation Menu
 
@@ -50,7 +50,7 @@ The access to these windows are represented by folder icons with their correspon
 
 Each window will show its content splitting the records in small boxes, which will contain a preview of main data of these records. That data is configured by default and a customization must be required in case the user wants to add more fields to eliminate some of them, considering that only a max of 5 fields can be displayed.
 
-The same field present in the preview, will be the criteria by which you can filter if you want to search for a record. (View Actions on records>Find a record.)
+The same field present in the preview, will be the criteria by which it is possible to filter if the user wants to search for a record.
 
 Considering as an example the Sales Invoice window, the preview of each record provides information regarding the document number and invoice date.
 
@@ -76,7 +76,7 @@ When entering any of the tabs, the view will be the same as in the parent window
 
 To navigate in different levels, the user can resort to the system buttons (Android) or the arrow in the upper left corner or gesture (both systems).
 
-In addition, the "path or breadcrumbs" of which records and tabs are being navigated can be displayed at the top of the screen.
+In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
 
 #### Actions button
 
@@ -108,7 +108,7 @@ When the Header is complete, data can be entered in the tabs. To do so, access t
 
 Each time a new record is created in the App, the same record will be created in the Etendo Classic as well.
 
-It is important to consider that the document will always remain in “Draft” status and can only be completed through the Etendo Classic.
+It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
 
 ### Delete a record
 
