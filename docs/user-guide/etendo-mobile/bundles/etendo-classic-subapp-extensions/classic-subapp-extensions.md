@@ -128,7 +128,7 @@ Each time a record is edited in the App, the same record will be edited in the E
 
 ### Search a record
 
-Records can be searched by inserting a value or keyword in the top "Search" bar. This search bar is located both in the main view of each window and in each tab.
+Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
 
 Each window will have certain filters available by field which will match those fields configured by default to be displayed in the preview of each record.
 
@@ -150,7 +150,7 @@ Allows to use the camera to scan codes in [Etendo Mobile](../../../../user-guide
 
  Now an example will be shown from the Etendo Mobile application:
 
- When you enter the Physical inventory window and select a record, you will see the "Actions" button.
+ When you enter the Physical inventory window and select a record, you will see the **Actions** button.
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 

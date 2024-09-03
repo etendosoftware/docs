@@ -48,4 +48,4 @@ In case the user has a picture, it will be shown both in this window and in the 
 ![alt text](../../../assets/user-guide/etendo-mobile/user-interface/user-interface-4.png)
 
 !!!note
-    The role can only be modified from the app, so each user will enter with their default role setup in Etendo Classic.
+    The role can only be modified from Etendo Classic, so each user will enter with their default role setup.

@@ -41,36 +41,43 @@ In order to use the app, the user must access Etendo Classic in `Client`>`Secure
 
 ## Server URL
 
+![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-1.jpg){ width="250" align="right" }
+
 Once the app is downloaded, the first step will be setting up the **Etendo server URL**.
 
 For this, the gear icon shown in the welcome window allows the user to enter the configuration window. In Settings, click the Add new Link button, enter the URL and click **Add new Link** again.
 
-![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-1.jpg)
 
 !!!info
     In the Add new link field, it is possible to add other URLs to connect the app from different servers. It is also possible to modify or remove URLs.
 
 ## Log In
+<br>
+
+![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="right" }
 
 Once the server URL is configured, the user must log in entering **the user and the password** assigned by the system administrator.
 
-The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or in case the server URL is changed.
+!!!info
+    The user will enter with their default **Role, Organization, Client and Warehouse** setup.
 
-![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg)
+!!!note
+    The user will remain logged in unless the session is ended through Log out option.  
 
 !!!info
-    Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the **demo try** button must be pressed so the user can enter the app without credential requirements.
+    Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the **Demo Try** button must be pressed so the user can enter the app without credential requirements.
 
 ## Dynamic App Role Configuration
 
-Etendo Mobile allows the creation and configuration of mobile sub-applications. For this, [the Dynamic Apps module](../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) from Etendo Classic must be installed. After installing the Dynamic Apps module, the available sub-applications are distributed and can be configured in Etendo from the **Role window** in `General Setup> Security> Role`. 
+Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Classic Subapp Extensions](../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
 
-In this window, the user is able to configure the access to the sub-applications according to the role. As the sub-applications are distributed in modules of Etendo Classic, when configuring a new sub-application in a role, the drop-down list will appear with the available sub-applications of the modules installed.
+Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
 
 Fields to note:
 
-- **App:** In this drop-down menu, select the application to be assigned to the role.
+- **App:** This dropdown displays the available applications based on the installed modules. Selecting an application grants access to that application for the role.
 - **Version:** Assign the version of the application to be used in this role.
 - **Active:** Select if this application is active or not.
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
+
