@@ -2515,21 +2515,6 @@ The fields to fill in are:
 - **Inherit From**: In this field, it should be selected the role whose permissions will be inherited. It defines the role that will be used to retrieve access to its permissions automatically.
 - **Sequence Number**: It defines the order in the application of the role inheritance, when having multiple records in the tab. The lower this value is, the earlier will be retrieved the permissions of the related template role. This means that if the same permission is accessed by two template roles selected to inherit from them, the permission related to the inheritance with higher sequence number will override the other one.
 
-##### Dynamic App
-
-!!! info
-
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
-
-In this tab, you can configure the dynamic applications that the selected role has access to.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/general-setup/security/DynamicAppRoleTab.png)
-
-Fields to note:
-
-- **App:** In this drop-down menu, you select the application that you want to assign to the role.
-- **Version:** Here we assign the version of the application we want to use in this role.
-- **Active:** To select if this application is active or not.
 
 #### Role Access
 
@@ -27913,50 +27898,80 @@ Above scenario would somehow mean an expense in Organization A and a revenue in 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started
 ## Article Content: 
+### Etendo Mobile
+
 #### Overview
 
-Etendo Mobile is a mobile app that provides access to the Etendo Classic in a fast and practical way via mobile devices.
+Etendo Mobile is a **mobile app** in which the user can access to sub-applications via mobile devices in a fast and practical way. By enabling seamless integration between Etendo Classic and mobile sub-applications, Etendo Mobile allows users to log in to Etendo Classic and configure **dynamic applications** tailored to specific user roles, enhancing productivity and efficiency.
+
+!!!info
+    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+
+
+Etendo Mobile is available in both Play and App Store:
 
 === ":simple-homeassistantcommunitystore: Play store"
 
-    The app it is available in Play Store and the download site can be accessed through [_Download the App here._](https://play.google.com/store/apps/details?id=com.smf.mobile.etendo_app_loader){target=_blank}
+    The app is available in Play Store and the download site can be accessed through [_Download the App here._](https://play.google.com/store/apps/details?id=com.smf.mobile.etendo_app_loader){target=_blank}
 
     ![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/EtendoPlayStore.png)
 
 === ":simple-appstore: App Store "
 
-    The app it is available in App Store and the download site can be accessed through [_Download the App here._](https://apps.apple.com/us/app/etendo/id6451114033){target=_blank}
+    The app is available in App Store and the download site can be accessed through [_Download the App here._](https://apps.apple.com/us/app/etendo/id6451114033){target=_blank}
 
     <a href="https://apps.apple.com/us/app/etendo/id6451114033" target="_blank"><img src="/assets/user-guide/etendo-mobile/user-interface/EtendoAppStore.png" alt="EtendoAppStore.png"></a>
     
 
 #### Initial Configuration
 
-To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration` clicking **generate key**..
+In order to use the app, the user must access Etendo Classic in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself. So, as System Administrator role, generate a token by clicking on the **generate key** button, this token is used to start the session in the app.
 
-![](https://docs.etendo.software/latest/assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-0.png)
 
 #### Server URL
 
-Once the app is downloaded, the first step will be setting up the Etendo server URL.
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-1.jpg){ width="250" align="right" }
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/AddNewUrlMobile.jpeg){ width="300" }
+Once the app is downloaded, the first step will be setting up the **Etendo server URL**.
 
-For this, click the "Add new Link" button in Settings, enter the URL and click "Add new Link" again. Then, the URL will be shown in the “List of added URLs”.
+For this, the gear icon shown in the welcome window allows the user to enter the configuration window. In Settings, click the Add new Link button, enter the URL and click **Add new Link** again.
 
-In here, required URLs can be added, modified or removed.
+
+!!!info
+    In the Add new link field, it is possible to add other URLs to connect the app from different servers. It is also possible to modify or remove URLs.
 
 #### Log In
+<br>
 
-Once the server URL is configured, the user must log in entering the user and the password assigned by the system administrator.
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="right" }
 
-The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or the server URL is changed.
+Once the server URL is configured, the user must log in entering **the user and the password** assigned by the system administrator.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/LoginScreen.png){ width="300" }
+!!!info
+    The user will enter with their default **Role, Organization, Client and Warehouse** setup.
 
-Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the “demo try” button must be pressed and the user can enter without credential requirements.
+!!!note
+    The user will remain logged in unless the session is ended through Log out option.  
 
-The gear icon shown in the welcome window allows the user to enter the configuration window. (See Settings window).
+!!!info
+    Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the **Demo Try** button must be pressed so the user can enter the app without credential requirements.
+
+#### Dynamic App Role Configuration
+
+Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Classic Subapp Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+
+Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
+
+Fields to note:
+
+- **App:** This dropdown displays the available applications based on the installed modules. Selecting an application grants access to that application for the role.
+- **Version:** Assign the version of the application to be used in this role.
+- **Active:** Select if this application is active or not.
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: User interface
@@ -27964,57 +27979,49 @@ The gear icon shown in the welcome window allows the user to enter the configura
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-mobile/user-interface/user-interface
 ## Article Content: 
+### User Interface
+
 #### Etendo Mobile
 
 ##### Settings Screen
-In this window, the following configurations are possible: modifying the language and/or, before log in, the server URL. 
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/SettingsScreen.png){ width="300" }
+In the Setting screen window, the user is able to set the **language** to use in the app.
 
-Once the app is downloaded, the first step will be setting up the Etendo server URL.
+!!!note
+    Remember that as soon as the app is downloaded, the server URL must be set. 
 
-For this, click the "Add new Link" button, enter the URL and click "Add new Link" again. Then, the URL will be shown in the “List of added URLs”.
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-0.png)
 
-In here, required URLs can be added, edited or removed.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/AddNewUrlMobile.jpeg){ width="300" }
-
-##### Login Screen
-
-Once the server URL is configured, the user must log in entering the user and the password assigned by the system administrator.
-
-The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or the server URL is changed.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/LoginScreen.png){ width="300" }
 
 ##### Home Screen
 
 After you have logged in, you will be redirected to Home.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/HomeScreen.png){ width="300" }
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-1.png)
 
-Here, by selecting the profile image, you can navigate to the Settings and Profile screens.
+Here, by selecting the profile image, it is possible to navigate to the **Settings** and **Profile** screens.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/HomeScreenOptionsProfile.png){ width="300" }
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-2.png)
 
-If the drawer is displayed, you can navigate to Home and also to the sub applications you have loaded 
+
+If the drawer is displayed, it is possible to navigate to Home and also to the sub applications previously loaded. 
 
 !!! note
+    To be able to include sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
 
-    In this case shown the subapplication when acces whit "Demo try". <br>
-    To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-3.png)
 
 ##### Profile Screen
-In this section, the user can see the information of the logged in person: Name, Role, Organization, Client and Warehouse.
 
-In case the user has a picture, it will be shown both in this window and in the top section of the navigation menu (See Navigation menu). For now, this will be modifiable from the back office only.
+In this section, the user can see the information of the logged in person: **Name, Role, Organization, Client and Warehouse**.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/ProfileScreen.png){ width="300" }
+In case the user has a picture, it will be shown both in this window and in the top section of the navigation menu in Etendo. 
 
-As regards the role, it can only be modified from the app, so each user will enter with their default role (setup in the Etendo Classic).
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-4.png)
+
+!!!note
+    The role can only be modified from Etendo Classic, so each user will enter with their default role setup.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Classic Subapp Extensions
@@ -28024,7 +28031,7 @@ As regards the role, it can only be modified from the app, so each user will ent
 ## Article Content: 
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+This bundle includes the Etendo Classic Mobile Sub-Application and its configurations in Etendo Classic. For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
 
 #### Etendo Classic Sub App
 
@@ -28032,23 +28039,23 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
 
 !!! info
 
-    - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
+    - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
+    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
     For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
 
 
-    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security.md#dynamic-app).
+    - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
 
-
-To add the windows to be shown in the subapp must be configured entering the Etendo Classic under the “administrator” role in `Role`>`Window Access` tab and checking the box “show in mobile” in the required windows.
+To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
 
 ![](https://docs.etendo.software/latest/assets/drive/WgAVMD7_UawKp1eedwjq260FyWU41AFdrcP_bK3sS3mm1aM6ZVT7oCnfTd8eiydWSDKpSRQf9eAspqn0PCCNK2sLLd9i_77-LObYTJmA3QbSXK5I4hKxhqT-9Ux788FRmZRdBaZQ.png)
 
 ##### Welcome Window
 
+In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
+
 ![](https://docs.etendo.software/latest/assets/user-guide//etendo-mobile/user-interface/HomeSubApp.png){ width="300"}
 
-In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
 
 ##### Navigation Menu
 
@@ -28068,7 +28075,7 @@ The access to these windows are represented by folder icons with their correspon
 
 Each window will show its content splitting the records in small boxes, which will contain a preview of main data of these records. That data is configured by default and a customization must be required in case the user wants to add more fields to eliminate some of them, considering that only a max of 5 fields can be displayed.
 
-The same field present in the preview, will be the criteria by which you can filter if you want to search for a record. (View Actions on records>Find a record.)
+The same field present in the preview, will be the criteria by which it is possible to filter if the user wants to search for a record.
 
 Considering as an example the Sales Invoice window, the preview of each record provides information regarding the document number and invoice date.
 
@@ -28094,7 +28101,7 @@ When entering any of the tabs, the view will be the same as in the parent window
 
 To navigate in different levels, the user can resort to the system buttons (Android) or the arrow in the upper left corner or gesture (both systems).
 
-In addition, the "path or breadcrumbs" of which records and tabs are being navigated can be displayed at the top of the screen.
+In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
 
 ###### Actions button
 
@@ -28126,7 +28133,7 @@ When the Header is complete, data can be entered in the tabs. To do so, access t
 
 Each time a new record is created in the App, the same record will be created in the Etendo Classic as well.
 
-It is important to consider that the document will always remain in “Draft” status and can only be completed through the Etendo Classic.
+It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
 
 ##### Delete a record
 
@@ -28146,7 +28153,7 @@ Each time a record is edited in the App, the same record will be edited in the E
 
 ##### Search a record
 
-Records can be searched by inserting a value or keyword in the top "Search" bar. This search bar is located both in the main view of each window and in each tab.
+Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
 
 Each window will have certain filters available by field which will match those fields configured by default to be displayed in the preview of each record.
 
@@ -28168,7 +28175,7 @@ Allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.so
 
  Now an example will be shown from the Etendo Mobile application:
 
- When you enter the Physical inventory window and select a record, you will see the "Actions" button.
+ When you enter the Physical inventory window and select a record, you will see the **Actions** button.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
