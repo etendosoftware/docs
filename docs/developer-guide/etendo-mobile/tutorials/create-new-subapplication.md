@@ -38,17 +38,6 @@ In the **Dynamic App** window, specify the paths and versions for each subapplic
 
 For the example we are following, the Dynamic App in Etendo must be configured with the following form fields and corresponding values:
 
-
-| Field               | Value                             |
-|---------------------|-----------------------------------|
-| Module              | `Product Subapp - 1.0.0`          |
-| Name                | `Product Subapp`                  |
-| Directory Location  | `/`                               |
-| Name                | `dev`                             |
-| File Name           | `dist.js`                         |
-| Active              | `true`                            |
-| Is Development      | `true`                            |
-
 ![](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/dynamic-app-creation.png)
 
 Fields to note:
@@ -63,27 +52,19 @@ The **Dynamic App Version** tab allows the application to be versioned, enabling
 
 Fields to note:
 
-- **Name**: Name of the application version Eg: dev or `1.0.0`.
+- **Name**: Name of the application version E.g. `dev` or `1.0.0`.
 - **File Name**: The bundle name of the compiled application, by default `dist.js`.
 - **Default**: This check defines that this version is productive.
 - **Is Development**: This check defines that this version is in development that can be deployed locally.
 - **Active**: To select if this application version is active or not.
 
-Finally, configure this application in the [Role Configuration](../../../user-guide/etendo-mobile/getting-started.md#initial-configuration) to be shown in the Etendo Mobile Application.
-
 
 ### Role configuration
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
 
-The next table reflect the settings to be configured for the role in relation to the dynamic app within the Etendo system.
+Logged in as the **Group Admin** role (which is the default role for accessing Etendo Mobile in our example), the settings are applied as specified below.
 
-| Field                 | Value                           |
-|-----------------------|---------------------------------|
-| Organization          | `*`       |
-| App                   | `Product Subapplication`        |
-| Version               | `1.0.0`                         |
-| Active                | `true`                          |
-
-![role-configuration.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/role-configuration.png)
+![role-configuration.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/role-configuration.png)
 
 !!! warning "Important"
     Keep this dynamic app as _active_.
@@ -140,8 +121,6 @@ Here, all the services and their respective logs can be seen running using [Dock
 
 ![Docker RX Services](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
 
-## Services Configuration
-
 ### RX Config window
 :material-menu: `Application` > `Etendo RX` > `RX Config`
 
@@ -171,45 +150,20 @@ Below are configuration examples. Replicate them. The **Public URL** field only 
   ``` bash title="Terminal"
   ./gradlew subapp.create -Ppkg=<javapackage> --info
   ```
-
   In the example we are working on, use the following command:
 
   ```bash title="Terminal"
   ./gradlew subapp.create -Ppkg=com.etendoerp.subapp.product --info
   ```
-
   This command uses the `subapp.create` task to generate the sub-application within the specified package. The --info option provides additional details during the command execution, which is useful for debugging or confirming the process.
-
-  ![modules.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules.png)
-
-2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
-    
-    ``` bash title="Terminal"
-    yarn install 
-    ```
-3. Finally, to run in development mode run
-
-    ``` bash title="Terminal"
-    yarn dev 
-    ```
-
-
-
-## Download the sub-application
-
-This tutorial is based in our example of a product sub-application, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
-
-!!! tip "Keep in mind"
-    All related to the main concepts of a sub-application are explained in the [concepts](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#concepts){target="_blank"} section in create new sub-application tutorial.
-    The following sections are focused on the product sub-application example.
-
-To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
+  
+  A new subapplication will be created within the module, with the following structure:
 
   ```
   modules
-  └── com.etendoerx.subapp.product
+  └── com.etendoerp.subapp.product
       ├── src-db 
-      └── subapp-product
+      └── subapp
           ├── .bundle
           ├── _tests_
           ├── android
@@ -218,9 +172,19 @@ To begin with we must have to download the [ latest version of the project](http
           ├── node_modules
           └── src
   ```
-  
-!!! warning "Important"
-    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}
+
+  ![modules.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules.png)
+
+2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
+
+  ``` bash title="Terminal"
+  yarn install 
+  ```
+3. Finally, to run in development mode run
+
+  ``` bash title="Terminal"
+  yarn dev 
+  ```
 
 ## Customizing and Programming a Sub-Application
 
