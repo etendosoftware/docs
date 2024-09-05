@@ -2515,21 +2515,6 @@ The fields to fill in are:
 - **Inherit From**: In this field, it should be selected the role whose permissions will be inherited. It defines the role that will be used to retrieve access to its permissions automatically.
 - **Sequence Number**: It defines the order in the application of the role inheritance, when having multiple records in the tab. The lower this value is, the earlier will be retrieved the permissions of the related template role. This means that if the same permission is accessed by two template roles selected to inherit from them, the permission related to the inheritance with higher sequence number will override the other one.
 
-##### Dynamic App
-
-!!! info
-
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
-
-In this tab, you can configure the dynamic applications that the selected role has access to.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/general-setup/security/DynamicAppRoleTab.png)
-
-Fields to note:
-
-- **App:** In this drop-down menu, you select the application that you want to assign to the role.
-- **Version:** Here we assign the version of the application we want to use in this role.
-- **Active:** To select if this application is active or not.
 
 #### Role Access
 
@@ -27913,50 +27898,80 @@ Above scenario would somehow mean an expense in Organization A and a revenue in 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started
 ## Article Content: 
+### Etendo Mobile
+
 #### Overview
 
-Etendo Mobile is a mobile app that provides access to the Etendo Classic in a fast and practical way via mobile devices.
+Etendo Mobile is a **mobile app** in which the user can access to sub-applications via mobile devices in a fast and practical way. By enabling seamless integration between Etendo Classic and mobile sub-applications, Etendo Mobile allows users to log in to Etendo Classic and configure **dynamic applications** tailored to specific user roles, enhancing productivity and efficiency.
+
+!!!info
+    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+
+
+Etendo Mobile is available in both Play and App Store:
 
 === ":simple-homeassistantcommunitystore: Play store"
 
-    The app it is available in Play Store and the download site can be accessed through [_Download the App here._](https://play.google.com/store/apps/details?id=com.smf.mobile.etendo_app_loader){target=_blank}
+    The app is available in Play Store and the download site can be accessed through [_Download the App here._](https://play.google.com/store/apps/details?id=com.smf.mobile.etendo_app_loader){target=_blank}
 
     ![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/EtendoPlayStore.png)
 
 === ":simple-appstore: App Store "
 
-    The app it is available in App Store and the download site can be accessed through [_Download the App here._](https://apps.apple.com/us/app/etendo/id6451114033){target=_blank}
+    The app is available in App Store and the download site can be accessed through [_Download the App here._](https://apps.apple.com/us/app/etendo/id6451114033){target=_blank}
 
     <a href="https://apps.apple.com/us/app/etendo/id6451114033" target="_blank"><img src="/assets/user-guide/etendo-mobile/user-interface/EtendoAppStore.png" alt="EtendoAppStore.png"></a>
     
 
 #### Initial Configuration
 
-To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration` clicking **generate key**..
+In order to use the app, the user must access Etendo Classic in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself. So, as System Administrator role, generate a token by clicking on the **generate key** button, this token is used to start the session in the app.
 
-![](https://docs.etendo.software/latest/assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-0.png)
 
 #### Server URL
 
-Once the app is downloaded, the first step will be setting up the Etendo server URL.
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-1.jpg){ width="250" align="right" }
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/AddNewUrlMobile.jpeg){ width="300" }
+Once the app is downloaded, the first step will be setting up the **Etendo server URL**.
 
-For this, click the "Add new Link" button in Settings, enter the URL and click "Add new Link" again. Then, the URL will be shown in the “List of added URLs”.
+For this, the gear icon shown in the welcome window allows the user to enter the configuration window. In Settings, click the Add new Link button, enter the URL and click **Add new Link** again.
 
-In here, required URLs can be added, modified or removed.
+
+!!!info
+    In the Add new link field, it is possible to add other URLs to connect the app from different servers. It is also possible to modify or remove URLs.
 
 #### Log In
+<br>
 
-Once the server URL is configured, the user must log in entering the user and the password assigned by the system administrator.
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="right" }
 
-The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or the server URL is changed.
+Once the server URL is configured, the user must log in entering **the user and the password** assigned by the system administrator.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/LoginScreen.png){ width="300" }
+!!!info
+    The user will enter with their default **Role, Organization, Client and Warehouse** setup.
 
-Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the “demo try” button must be pressed and the user can enter without credential requirements.
+!!!note
+    The user will remain logged in unless the session is ended through Log out option.  
 
-The gear icon shown in the welcome window allows the user to enter the configuration window. (See Settings window).
+!!!info
+    Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the **Demo Try** button must be pressed so the user can enter the app without credential requirements.
+
+#### Dynamic App Role Configuration
+
+Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Classic Subapp Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+
+Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
+
+Fields to note:
+
+- **App:** This dropdown displays the available applications based on the installed modules. Selecting an application grants access to that application for the role.
+- **Version:** Assign the version of the application to be used in this role.
+- **Active:** Select if this application is active or not.
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: User interface
@@ -27964,57 +27979,49 @@ The gear icon shown in the welcome window allows the user to enter the configura
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-mobile/user-interface/user-interface
 ## Article Content: 
+### User Interface
+
 #### Etendo Mobile
 
 ##### Settings Screen
-In this window, the following configurations are possible: modifying the language and/or, before log in, the server URL. 
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/SettingsScreen.png){ width="300" }
+In the Setting screen window, the user is able to set the **language** to use in the app.
 
-Once the app is downloaded, the first step will be setting up the Etendo server URL.
+!!!note
+    Remember that as soon as the app is downloaded, the server URL must be set. 
 
-For this, click the "Add new Link" button, enter the URL and click "Add new Link" again. Then, the URL will be shown in the “List of added URLs”.
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-0.png)
 
-In here, required URLs can be added, edited or removed.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/AddNewUrlMobile.jpeg){ width="300" }
-
-##### Login Screen
-
-Once the server URL is configured, the user must log in entering the user and the password assigned by the system administrator.
-
-The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or the server URL is changed.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/LoginScreen.png){ width="300" }
 
 ##### Home Screen
 
 After you have logged in, you will be redirected to Home.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/HomeScreen.png){ width="300" }
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-1.png)
 
-Here, by selecting the profile image, you can navigate to the Settings and Profile screens.
+Here, by selecting the profile image, it is possible to navigate to the **Settings** and **Profile** screens.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/HomeScreenOptionsProfile.png){ width="300" }
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-2.png)
 
-If the drawer is displayed, you can navigate to Home and also to the sub applications you have loaded 
+
+If the drawer is displayed, it is possible to navigate to Home and also to the sub applications previously loaded. 
 
 !!! note
+    To be able to include sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
 
-    In this case shown the subapplication when acces whit "Demo try". <br>
-    To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-3.png)
 
 ##### Profile Screen
-In this section, the user can see the information of the logged in person: Name, Role, Organization, Client and Warehouse.
 
-In case the user has a picture, it will be shown both in this window and in the top section of the navigation menu (See Navigation menu). For now, this will be modifiable from the back office only.
+In this section, the user can see the information of the logged in person: **Name, Role, Organization, Client and Warehouse**.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/ProfileScreen.png){ width="300" }
+In case the user has a picture, it will be shown both in this window and in the top section of the navigation menu in Etendo. 
 
-As regards the role, it can only be modified from the app, so each user will enter with their default role (setup in the Etendo Classic).
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-4.png)
+
+!!!note
+    The role can only be modified from Etendo Classic, so each user will enter with their default role setup.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Classic Subapp Extensions
@@ -28024,7 +28031,7 @@ As regards the role, it can only be modified from the app, so each user will ent
 ## Article Content: 
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+This bundle includes the Etendo Classic Mobile Sub-Application and its configurations in Etendo Classic. For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
 
 #### Etendo Classic Sub App
 
@@ -28032,23 +28039,23 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
 
 !!! info
 
-    - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
+    - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
+    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
     For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
 
 
-    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security.md#dynamic-app).
+    - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
 
-
-To add the windows to be shown in the subapp must be configured entering the Etendo Classic under the “administrator” role in `Role`>`Window Access` tab and checking the box “show in mobile” in the required windows.
+To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
 
 ![](https://docs.etendo.software/latest/assets/drive/WgAVMD7_UawKp1eedwjq260FyWU41AFdrcP_bK3sS3mm1aM6ZVT7oCnfTd8eiydWSDKpSRQf9eAspqn0PCCNK2sLLd9i_77-LObYTJmA3QbSXK5I4hKxhqT-9Ux788FRmZRdBaZQ.png)
 
 ##### Welcome Window
 
+In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
+
 ![](https://docs.etendo.software/latest/assets/user-guide//etendo-mobile/user-interface/HomeSubApp.png){ width="300"}
 
-In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
 
 ##### Navigation Menu
 
@@ -28068,7 +28075,7 @@ The access to these windows are represented by folder icons with their correspon
 
 Each window will show its content splitting the records in small boxes, which will contain a preview of main data of these records. That data is configured by default and a customization must be required in case the user wants to add more fields to eliminate some of them, considering that only a max of 5 fields can be displayed.
 
-The same field present in the preview, will be the criteria by which you can filter if you want to search for a record. (View Actions on records>Find a record.)
+The same field present in the preview, will be the criteria by which it is possible to filter if the user wants to search for a record.
 
 Considering as an example the Sales Invoice window, the preview of each record provides information regarding the document number and invoice date.
 
@@ -28094,7 +28101,7 @@ When entering any of the tabs, the view will be the same as in the parent window
 
 To navigate in different levels, the user can resort to the system buttons (Android) or the arrow in the upper left corner or gesture (both systems).
 
-In addition, the "path or breadcrumbs" of which records and tabs are being navigated can be displayed at the top of the screen.
+In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
 
 ###### Actions button
 
@@ -28126,7 +28133,7 @@ When the Header is complete, data can be entered in the tabs. To do so, access t
 
 Each time a new record is created in the App, the same record will be created in the Etendo Classic as well.
 
-It is important to consider that the document will always remain in “Draft” status and can only be completed through the Etendo Classic.
+It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
 
 ##### Delete a record
 
@@ -28146,7 +28153,7 @@ Each time a record is edited in the App, the same record will be edited in the E
 
 ##### Search a record
 
-Records can be searched by inserting a value or keyword in the top "Search" bar. This search bar is located both in the main view of each window and in each tab.
+Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
 
 Each window will have certain filters available by field which will match those fields configured by default to be displayed in the preview of each record.
 
@@ -28168,7 +28175,7 @@ Allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.so
 
  Now an example will be shown from the Etendo Mobile application:
 
- When you enter the Physical inventory window and select a record, you will see the "Actions" button.
+ When you enter the Physical inventory window and select a record, you will see the **Actions** button.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
@@ -28215,8 +28222,8 @@ We will also notice that the Product's Stock has been updated in the indicated s
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Copilot/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Copilot/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started
 ## Article Content: 
@@ -28878,7 +28885,7 @@ So, roll up your sleeves and ignite your creativity.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Install Etendo Development Environment
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Install Etendo Development Environment
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Install Etendo Development Environment
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment
 ## Article Content: 
@@ -28994,7 +29001,7 @@ To install Etendo in a development environment, follow the same steps as describ
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: IntelliJ Code Formatting
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/IntelliJ Code Formatting
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/IntelliJ Code Formatting
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting
 ## Article Content: 
@@ -29015,7 +29022,7 @@ This document covers how IntelliJ IDEA  is capable of importing code formatter s
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Use of Repositories in Etendo
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Use of Repositories in Etendo
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Use of Repositories in Etendo
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo
 ## Article Content: 
@@ -29100,7 +29107,7 @@ Your token will be immediately invalidated and will no longer work.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Install Modules
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Install Modules
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Install Modules
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo
 ## Article Content: 
@@ -29305,7 +29312,7 @@ Another option to force the installation of all the translation modules is to ad
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Install Translation Bundles
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/Install Translation Bundles
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Install Translation Bundles
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo
 ## Article Content: 
@@ -29353,7 +29360,7 @@ For information on what bundle version is compatible with which translation bund
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: PostgreSQL Configuration
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/PostgreSQL Configuration
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/PostgreSQL Configuration
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration
 ## Article Content: 
@@ -29419,7 +29426,7 @@ Etendo Classic currently requires two PostgreSQL extensions to be available:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Migrating to Etendo (from Openbravo)
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Migration from Openbravo/Migrating to Etendo (from Openbravo)
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Migration from Openbravo/Migrating to Etendo (from Openbravo)
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo
 ## Article Content: 
@@ -29827,7 +29834,7 @@ To solve issues with taxes arising from these modules being migrated from Openbr
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Upgrading to Openbravo 21Q3.2
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Migration from Openbravo/Upgrading to Openbravo 21Q3.2
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Migration from Openbravo/Upgrading to Openbravo 21Q3.2
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2
 ## Article Content: 
@@ -29900,7 +29907,7 @@ This guide explains how to upgrade your current Openbravo environment to version
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Upgrade Etendo to Any Version
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Upgrade/Upgrade Etendo to Any Version
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Upgrade/Upgrade Etendo to Any Version
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version
 ## Article Content: 
@@ -30039,7 +30046,7 @@ To work with the plugin you need to specify in the root project from where the p
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Core format migration (JAR- Sources)
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Upgrade/Core format migration (JAR- Sources)
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Upgrade/Core format migration (JAR- Sources)
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration
 ## Article Content: 
@@ -30116,7 +30123,7 @@ To work with the plugin you need to specify in the root project from where the p
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Resolving Dependencies on GitHub
-## Article Path: /Developer Guide/Etendo Classic/Getting Started/Upgrade/Resolving Dependencies on GitHub
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Upgrade/Resolving Dependencies on GitHub
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github
 ## Article Content: 
@@ -34125,7 +34132,7 @@ This work is a derivative of [Tables](http://wiki.openbravo.com/wiki/Tables){tar
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add a Button to the Toolbar
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Button to the Toolbar
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Button to the Toolbar
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar
 ## Article Content: 
@@ -34542,7 +34549,7 @@ This work is a derivative of [How to add a button to the toolbar](https://wiki.o
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add a Field to a Window Tab
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Field to a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Field to a Window Tab
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab
 ## Article Content: 
@@ -34588,7 +34595,7 @@ This work is a derivative of [How to add a field to a window tab](http://wiki.op
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add a Rich Text Field and Column
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Rich Text Field and Column
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Rich Text Field and Column
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column
 ## Article Content: 
@@ -34659,7 +34666,7 @@ This work is a derivative of [How to add a rich text field and column](http://wi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add Columns to a Table
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add Columns to a Table
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add Columns to a Table
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table
 ## Article Content: 
@@ -34844,7 +34851,7 @@ This work is a derivative of [How to Add Columns to a Table](http://wiki.openbra
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Change an Existing Window
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Change an Existing Window
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Change an Existing Window
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window
 ## Article Content: 
@@ -34939,7 +34946,7 @@ This work is a derivative of [How to change an existing window](http://wiki.open
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Change the Size of a Column
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Change the Size of a Column
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Change the Size of a Column
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column
 ## Article Content: 
@@ -34984,7 +34991,7 @@ This work is a derivative of [How To Change The Size of a Column](https://wiki.o
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Copy and Paste Images in Etendo
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Copy and Paste Images in Etendo
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Copy and Paste Images in Etendo
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo
 ## Article Content: 
@@ -35023,7 +35030,7 @@ As seen in the image above, the “image” field was created, in which it is po
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Background Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Background Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Background Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process
 ## Article Content: 
@@ -35111,7 +35118,7 @@ This work is a derivative of [How to Create a Background Process](http://wiki.op
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Callout
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Callout
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Callout
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout
 ## Article Content: 
@@ -35359,7 +35366,7 @@ This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Callout that Extends from Another Callout
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Callout that Extends from Another Callout
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Callout that Extends from Another Callout
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout
 ## Article Content: 
@@ -35547,7 +35554,7 @@ This work is a derivative of [How to Create a Callout that Extends from Another 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Chart of Accounts Module
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Chart of Accounts Module
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Chart of Accounts Module
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module
 ## Article Content: 
@@ -35651,7 +35658,7 @@ This work is a derivative of [How to create a chart of accounts module](https://
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Clone Hook
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Clone Hook
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Clone Hook
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook
 ## Article Content: 
@@ -35730,7 +35737,7 @@ To create a Clone Hook, you only have to follow a few steps:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a Computed Column
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Computed Column
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Computed Column
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column
 ## Article Content: 
@@ -35855,7 +35862,7 @@ This work is a derivative of [How to Create a Computed Column](http://wiki.openb
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Dataset
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Dataset
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Dataset
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset
 ## Article Content: 
@@ -36265,7 +36272,7 @@ This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Page in Etendo Documentation
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Page in Etendo Documentation
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Page in Etendo Documentation
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation
 ## Article Content: 
@@ -36735,7 +36742,7 @@ This work is a derivative of [Documentation Style Guide](https://wiki.openbravo.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a HQL Based Table
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a HQL Based Table
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a HQL Based Table
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table
 ## Article Content: 
@@ -36903,7 +36910,7 @@ This work is a derivative of [How to create a HQL Based Table](http://wiki.openb
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How To Create a Module
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Create a Module
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How To Create a Module
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module
 ## Article Content: 
@@ -37084,7 +37091,7 @@ This work is a derivative of [How to Create and Package a Module](http://wiki.op
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Module that Adds an Accounting Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Module that Adds an Accounting Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Module that Adds an Accounting Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process
 ## Article Content: 
@@ -37151,7 +37158,7 @@ The dataset definition is ready, so the user just needs to export it to a file p
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a Navigation Bar Component
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Navigation Bar Component
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Navigation Bar Component
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component
 ## Article Content: 
@@ -37336,7 +37343,7 @@ This work is a derivative of [How to Create a Navigation Bar Component](http://w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Pick and Execute Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Pick and Execute Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Pick and Execute Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process
 ## Article Content: 
@@ -37629,7 +37636,7 @@ This work is a derivative of [How to create a Pick and Execute Process](http://w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Report
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Report
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Report
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
 ## Article Content: 
@@ -37901,7 +37908,7 @@ This work is a derivative of [How to create a Report](http://wiki.openbravo.com/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Standard Process Definition
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Standard Process Definition
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Standard Process Definition
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition
 ## Article Content: 
@@ -38554,7 +38561,7 @@ This work is a derivative of [How to Create a Standard Process Definition](http:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a Stored Procedure
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Stored Procedure
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Stored Procedure
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure
 ## Article Content: 
@@ -38751,7 +38758,7 @@ This work is a derivative of [How to Create a Stored Procedure](http://wiki.open
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Table
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Table
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Table
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-table
 ## Article Content: 
@@ -38906,7 +38913,7 @@ This work is a derivative of [How to Create a Table](http://wiki.openbravo.com/w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Window
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Window
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Window
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window
 ## Article Content: 
@@ -39073,7 +39080,7 @@ This work is a derivative of [How to create a window](http://wiki.openbravo.com/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Accounts Files
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Accounts Files
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Accounts Files
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files
 ## Article Content: 
@@ -39191,7 +39198,7 @@ This work is a derivative of [Creating Account Files](https://wiki.openbravo.com
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create an Alert
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create an Alert
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create an Alert
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert
 ## Article Content: 
@@ -39349,7 +39356,7 @@ This work is a derivative of [How to create an alert](http://wiki.openbravo.com/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create and Update Business Entities Using Web Services
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Business Entities Using Web Services
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create and Update Business Entities Using Web Services
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services
 ## Article Content: 
@@ -39444,7 +39451,7 @@ This work is a derivative of [How to Create and Update Business Entities using W
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create and Update Translation Modules
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create and Update Translation Modules
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create and Update Translation Modules
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules
 ## Article Content: 
@@ -39714,7 +39721,7 @@ Now, we know it is used in a callout, so it is just necessary to find in the App
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Build Validations and Module Scripts
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Build Validations and Module Scripts
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Build Validations and Module Scripts
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts
 ## Article Content: 
@@ -40062,7 +40069,7 @@ This work is a derivative of [How to Create Build Validations and Module Scripts
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Client Side Callout Onchange Function
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Client Side Callout Onchange Function
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Client Side Callout Onchange Function
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function
 ## Article Content: 
@@ -40258,7 +40265,7 @@ This work is a derivative of [How to create client side callout onchange functio
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jobs and Actions
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Jobs and Actions
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Jobs and Actions
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions
 ## Article Content: 
@@ -40501,7 +40508,7 @@ It is also possible to add validations and override the original methods.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Scan Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Scan Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Scan Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process
 ## Article Content: 
@@ -40575,7 +40582,7 @@ Optional:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jest Test Cases
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Test Cases/How to Create Jest Test Cases
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Test Cases/How to Create Jest Test Cases
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases
 ## Article Content: 
@@ -40657,7 +40664,7 @@ This work is a derivative of [How to Create Jest testcases](https://wiki.openbra
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create JUnit Test Cases
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Test Cases/How to Create JUnit Test Cases
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Test Cases/How to Create JUnit Test Cases
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases
 ## Article Content: 
@@ -41118,7 +41125,7 @@ This work is a derivative of [How to Create JUnit testcases](https://wiki.openbr
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Define a Table as a Tree
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Define a Table as a Tree
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Define a Table as a Tree
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree
 ## Article Content: 
@@ -41215,7 +41222,7 @@ This work is a derivative of [How to define a table as a tree](https://wiki.open
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to define Display Logic Evaluated at Server Level
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to define Display Logic Evaluated at Server Level
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to define Display Logic Evaluated at Server Level
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level
 ## Article Content: 
@@ -41251,7 +41258,7 @@ This work is a derivative of [How to define Display Logic Evaluated at Server Le
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Develop a DAL Background Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Develop a DAL Background Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Develop a DAL Background Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process
 ## Article Content: 
@@ -41457,7 +41464,7 @@ This work is a derivative of [How to develop a DAL background process](http://wi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to embed a Widget into a Window Tab
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to embed a Widget into a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to embed a Widget into a Window Tab
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab
 ## Article Content: 
@@ -41619,7 +41626,7 @@ This work is a derivative of [How to embed a widget into a window tab](http://wi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How To Exclude Database Physical Objects From Model
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Exclude Database Physical Objects From Model
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How To Exclude Database Physical Objects From Model
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model
 ## Article Content: 
@@ -41658,7 +41665,7 @@ This work is a derivative of [How to Exclude Database Physical Objects from Mode
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Export Sample Data
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Export Sample Data
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Export Sample Data
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data
 ## Article Content: 
@@ -41697,7 +41704,7 @@ This work is a derivative of [How to Export Sample Data](http://wiki.openbravo.c
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Implement a Business Event Handler
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Implement a Business Event Handler
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Implement a Business Event Handler
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler
 ## Article Content: 
@@ -42050,7 +42057,7 @@ This work is a derivative of [How to implement a business event handler](https:/
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Publish Modules to a GitHub Repository
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Publish Modules to a GitHub Repository
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Publish Modules to a GitHub Repository
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository
 ## Article Content: 
@@ -42225,7 +42232,7 @@ Add to the **beans.xml**
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Run an Initial Client Setup Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Run an Initial Client Setup Process
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Run an Initial Client Setup Process
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process
 ## Article Content: 
@@ -42332,7 +42339,7 @@ This work is a derivative of [Initial Client Setup](https://wiki.openbravo.com/w
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Advanced Sequences
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Advanced Sequences
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Advanced Sequences
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences
 ## Article Content: 
@@ -42605,7 +42612,7 @@ public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Property Fields
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Property Fields
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Property Fields
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields
 ## Article Content: 
@@ -42695,7 +42702,7 @@ This work is a derivative of [How to add a canvas field to a form or grid](http:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Secure Webservices
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Secure Webservices
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Webservices
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
@@ -45407,8 +45414,8 @@ On the other hand, this is the content of FULL\_Example.csv:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Getting Started
-## Article Path: /Developer Guide/Etendo RX/Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /Developer Guide/Etendo RX/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started
 ## Article Content: 
@@ -46383,7 +46390,7 @@ Open your browser and you can view the generated page with the following URL: [*
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Filter any request for Active or all Records
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to Filter any request for Active or all Records
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to Filter any request for Active or all Records
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive
 ## Article Content: 
@@ -46426,7 +46433,7 @@ Another way to get active rows is to remove the parameter `_noActiveFilter param
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to start RX as service
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to start RX as service
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to start RX as service
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code
 ## Article Content: 
@@ -46501,7 +46508,7 @@ This guide assumes a fundamental understanding of Java development environments,
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to change date format
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to change date format
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to change date format
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/how-to-change-date-format
 ## Article Content: 
@@ -46545,7 +46552,7 @@ In this example, the date format is set to `"yyyy-MM-dd"` and the time zone is s
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to give public access to RX with Apache2
-## Article Path: /Developer Guide/Etendo RX/How to guides/How to give public access to RX with Apache2
+## Article Path: /Developer Guide/Etendo RX/How to Guides/How to give public access to RX with Apache2
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache
 ## Article Content: 
@@ -46611,8 +46618,8 @@ If your server is protected by a firewall, ensure that port 443 (HTTPS) is open 
 Your Etendo RX Edge Service is now accessible publicly with SSL security provided by Apache2. This setup ensures that the traffic between the clients and your Edge Service is encrypted and secure. Remember to keep your SSL certificates and Apache2 up to date for security and performance.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Copilot Installation
-## Article Path: /Developer Guide/Etendo Copilot/Copilot Installation
+# Article Title: ✨ Getting Started
+## Article Path: /Developer Guide/Etendo Copilot/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation
 ## Article Content: 
@@ -48338,13 +48345,14 @@ The Write File Tool will process these parameters, write *Hello World* to the fi
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
-## Article Path: /Developer Guide/Etendo Copilot/How to Create Copilot Tools
+## Article Path: /Developer Guide/Etendo Copilot/How to Guides/How to Create Copilot Tools
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools
 ## Article Content: 
-### How to create Copilot tools
+### How to Create Copilot Tools
 
 #### Overview
+
 This article explains how to create a new tool for Copilot.
 
 #### Etendo Copilot
@@ -48528,10 +48536,186 @@ To test the developed Tool, you can ask Copilot to run it or, for example, to li
     ``` bash title="Terminal"
     ./gradlew copilot.do -Pprompt="What tools do you have available?"
     ```
+
+#### Interacting with Etendo
+
+When creating tools that need to interact with Etendo Classic, the best approach is to use the Etendo Classic Event Webhooks API. This API facilitates authentication through an authentication token and triggers a Webhook, which can receive a dictionary with information as a parameter and perform various actions.
+
+##### Utilizing Etendo Classic Event Webhooks API
+
+The Etendo Classic Event Webhooks API is a standard feature in Etendo, and it allows for easier integration with tools through Copilot utilities. For example, if you need to trigger a WebHook named `UpdateOrderDescription` to update an order in Etendo Classic, receiving a document number and a description as parameters, you can do so by creating a specific tool.
+
+##### Example Tool: UpdateSOTool
+
+Here is an example of a tool that triggers the `UpdateOrderDescription` WebHook:
+
+```python
+
+from typing import Type, Dict
+
+from copilot.core.etendo_utils import call_webhook, get_etendo_token, get_etendo_host
+from copilot.core.tool_input import ToolInput, ToolField
+from copilot.core.tool_wrapper import ToolWrapper, ToolOutput, ToolOutputMessage
+
+class UpdateSOToolInput(ToolInput):
+   documentNo: str = ToolField(description="DocumentNo of the Sales Order")
+   description: str = ToolField(description="New description to set in the Sales Order")
+
+class UpdateSOTool(ToolWrapper):
+   name = "UpdateSOTool"
+   description = "Set description in a Sales Order by DocumentNo2"
+   args_schema: Type[ToolInput] = UpdateSOToolInput
+   return_direct: bool = False
+
+   def run(self, input_params: Dict = None, *args, **kwargs) -> ToolOutput:
+       documentNo = input_params['documentNo']
+       description = input_params['description']
+       token = get_etendo_token()
+       # Build the body of the request
+       body = {
+           "documentNo": documentNo,
+           "description": description
+       }
+       url = get_etendo_host()
+       response = call_webhook(url=url, webhook_name="UpdateOrderDescription", access_token=token, body_params=body)
+       return ToolOutputMessage(message=response)
+```
+
+##### Explanation of Tool Components
+
+The above tool leverages utilities provided by Copilot Core:
+
+- `get_etendo_token()`: This function returns the authentication token for Etendo Classic, allowing the tool to operate within the user's session. Copilot, acting as a "proxy," manages these sessions.
+
+- `get_etendo_host()`: This function returns the URL of the Etendo Classic instance, which is required to trigger the WebHook. This host URL is configured as `ETENDO_HOST` in the `gradle.properties` configuration file.
+
+- `call_webhook(url:String, webhook_name:String, access_token:String, body_params:Dict)`: This function triggers the WebHook, passing the Etendo Classic URL, the WebHook name, the authentication token, and the parameters needed by the WebHook.
+
+##### Conclusion: Simplified WebHook Integration
+
+By using these utilities, you can easily call Etendo Classic WebHooks, leaving only the logic of building the request body and the specific tool's logic itself. This approach streamlines the process of creating tools that interact with Etendo Classic.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Getting Started
-## Article Path: /Developer Guide/Etendo Mobile/Getting Started
+# Article Title: How to Export Tools and Assistants
+## Article Path: /Developer Guide/Etendo Copilot/How to Guides/How to Export Tools and Assistants
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants
+## Article Content: 
+### How to Export Tools and Assistants
+
+#### Overview
+
+When developing in Etendo Copilot, it is possible to export assistants and tools. This documentation details how to export them and how to make sure that, when installing the module, the configurations are ready to use, allowing a **plug and play** process.
+
+#### Exporting Assistants
+
+There are two main methods for exporting assistants: export it as a dataset where the configured assistant is exported within an Etendo Classic dataset or export as a System Administrator, where the assistant(s) defined with the System Administrator role are exported directly together with the module.
+
+##### Exporting Assistants as Datasets
+
+Assistants must be exported as a dataset, in case optional installation is required and with `Client/Organization` data access level. 
+
+1. Initial setup of the assistant:
+    - Configure the assistant and tools in the environment where the development takes place.
+    - Make sure to include all the necessary fields to be exported. Make sure to configure correctly the **Knowledge Base**, **Skills/Tools** and **Team Members** tabs, as well as the records in the **Knowledge Base File** window.
+
+    
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot1.png)
+  <figcaption>Assistant example with complete tabs.</figcaption>
+</figure>
+
+2. Create and Configure a Dataset:
+    - As System Administrator, go to the **Dataset** window and create a new record by selecting the module under development.
+    - Define the **Search Key** and **Name** of the dataset.
+    - Set the **Data Access Level** to **System/Organization** (recommended for user assistants).
+
+3. Add Tables to the Dataset
+
+    For each window or tab to be exported, create a record in the **Table** tab. Specify the corresponding table and add the appropriate **HQL/SQL Where** clause.
+
+    - **Assistant:** Table `etcop_app` 
+    ```sql title="Where Clause"
+    id in ('<AssistantID>')
+    ```
+    - **Knowledge Base:** Table `etcop_app_source`
+    ```sql title="Where Clause"
+    etcopApp.id in ('<AssistantID>')
+    ```
+    - **Skills/Tools:** Table `etcop_app_tool`
+    ```sql title="Where Clause"
+    `copilotApp.id in ('<AssistantID>')
+    ```
+    - **Team Members:** Table `ETCOP_Team_Member`
+    ```sql title="Where Clause"
+    copilotApp.id in ('<AssistantID>')
+    ```
+    - **Knowledge Base File:** Table `etcop_file`
+    ```sql title="Where Clause"
+    id in ('<knowladgeBaseFileID>')
+    ```
+    
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot2.png)
+    <figcaption>Dataset window configuration example in the module Copilot Purchase Expert</figcaption>
+    </figure>
+
+4. Export Reference Data Button
+    - Execute the **Export Reference Data** process, which will create the `referencedata/` folder inside the selected module, with all the records that were exported according to the dataset configuration. 
+
+    !!!note
+        Verify that all the required records are generated in the `.XML` file.
+
+
+5. Include Reference Data in the Module
+    - Check the **Include Reference Data** checkbox in the module definition and add a description to the dataset referring to the exported assistant.
+
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot3.png)
+    <figcaption>Configuration example in the module Copilot Purchase Expert</figcaption>
+    </figure>
+
+    - When the module is installed, the dataset will be available for application in the **Enterprise Module Management** window.
+
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot4.png)
+    <figcaption>Distributed datasets example</figcaption>
+    </figure>
+
+
+##### Exporting Assistants as System Administrator
+
+When exporting assistants that need to be pre-configured in a module installation, they must be created with the System Administrator role. These assistants will be editable only by the System Administrator, but they can be executed either by the `System Administrator` or by users with `Client/Organization` data access levels.
+
+1. Create Assistant with System Administrator Role:
+
+    - Log in as System Administrator.
+    - Configure the assistant and its tabs, ensuring to select the module (under development) in the **Module** field.
+    - If the assistant should be restricted to System Administrator use only, check the **System App** checkbox. Otherwise, leave it unchecked to allow execution across all data access levels.
+
+    <figure markdown="span">
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot5.png)
+    <figcaption>Exported assistant example and available only as System Administrator</figcaption>
+    </figure>
+
+2. **Export the Database**.
+    - Execute the command `./gradlew export.database` to export the assistant together with the module.
+
+#### Exporting Tools
+
+**Tool configuration**: When defining a tool, select the module (under development) in the **Module** field, and run `./gradlew export.database` command to export the tool together with the module.
+
+<figure markdown="span">
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/exportcopilot6.png)
+<figcaption>Tool configuration example</figcaption>
+</figure>
+
+!!!info
+    For more information, visit [How to create a Copilot Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ✨ Getting Started
+## Article Path: /Developer Guide/Etendo Mobile/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started
 ## Article Content: 
@@ -50299,6 +50483,63 @@ Article URL: https://etendo.software
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
 
+#### August 2024
+
+##### Copilot Extensions
+
+[:material-robot: **New Etendo Copilot Release Available!**](https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot.png)
+
+The newest version [1.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
+
+<div class="grid cards" markdown>
+
+-   **New Capabilities:**
+    
+    ---
+    - **Database Queries:** Use system database queries as knowledge bases to automate tasks under specific conditions.
+    -  **Copilot Stream:** Track in real-time which assistant or tool is working.
+    -  **Improved UX:** The chat now retains the last assistant used for seamless interaction.
+
+-   **Assistants Updates:**
+    
+    ---
+    -  **Langchain Assistants:** Now manage local knowledge bases, keeping your data secure.
+    -  **LangGraph Assistants:** Manage a team of assistants, delegating tasks efficiently. 
+     
+</div>
+
+These updates make Etendo Copilot more powerful, secure, and user-friendly, driving efficiency to new heights.
+
+
+##### Platform Extensions
+
+
+
+[:simple-docker: **Docker Management**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/docker.gif){align=right width=400}
+
+- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
+- This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
+- PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
+
+[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md)
+
+- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
+- With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
+
+
+
+##### Warehouse Extensions
+[:octicons-package-16: **Product Operations**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/product-operation.png)
+
+In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
+
+
 #### July 2024
 
 ##### Copilot Extensions
@@ -50571,7 +50812,10 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.0.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.0){target="_blank"} | 16/08/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.1.1){target="_blank"} | 04/09/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.1.0){target="_blank"} | 03/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [2.0.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.1){target="_blank"} | 30/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [2.0.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.0){target="_blank"} | 16/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.19.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.19.0){target="_blank"} | 09/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.18.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.18.0){target="_blank"} | 02/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.17.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.17.1){target="_blank"} | 12/07/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
@@ -50654,7 +50898,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.2){target="_blank"} | 30/08/2024 | 22.1.0 | 24.2.x | CS | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.8.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.1){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.8.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -50685,7 +50930,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.17.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.0){target="_blank"} | 22/08/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.17.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.1){target="_blank"} | 30/08/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.17.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.0){target="_blank"} | 22/08/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.16.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.1){target="_blank"} | 19/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.16.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.0){target="_blank"} | 08/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.15.0){target="_blank"} | 28/06/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
@@ -51155,7 +51401,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.4.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.0){target="_blank"} | 20/08/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.1){target="_blank"} | 30/08/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.0){target="_blank"} | 20/08/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.2){target="_blank"} | 02/08/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.1){target="_blank"} | 22/07/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.0){target="_blank"} | 19/07/2024 | 23.4.0 | * | C | :white_check_mark: |
