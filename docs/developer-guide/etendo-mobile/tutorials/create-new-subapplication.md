@@ -9,15 +9,16 @@ The tutorial will guide you through the creation of the *Product Subapp*, a simp
     Before beginning, ensure that your local environment meets all necessary requirements by reviewing the Etendo Mobile [Getting Started](../getting-started.md) section.
 
 
-
-## Module Setup
+## Module Setup 
 
 ### Create New Etendo Classic Module
 
-1. As a System Administrator role, open the `Application` > `Application Dictionary` > `Module` window and create a new module. This module will be used to develop and distribute the application.
+:material-menu: `Application` > `Application Dictionary` > `Module`
+
+1. As a System Administrator role, open the **Module** window and create a new register. This module will be used to develop and distribute the application.
 
     <figure markdown="span">
-    ![modules-creation.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png)
+    ![modules-creation.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/modules-creation.png)
     <figcaption>Product Subapp module configuration example</figcaption>
     </figure>
 
@@ -26,66 +27,50 @@ The tutorial will guide you through the creation of the *Product Subapp*, a simp
         - The _description field_ is free and also _required_.
         - In this case, start from `1.0.0` module version and set the DB Prefix as `ETSAPPP`.
 
-2. After saving all the configuration, you have to export the changes. Open a terminal in the root of your Etendo Classic project and execute the following command:
-    
-    ``` bash title="Terminal"
-    ./gradlew export.database --info
-    ```
-
-    !!!success "Important"
-        The output must be a "BUILD SUCCESSFUL" message.
-
-3. A new module is created in the `/modules` folder, whith the following structure
-
-    ```
-    modules
-    └── com.etendoerp.subapp.product
-        └── src-db 
-    ```
-
-
-## Creating the Subapplication
-
-1. To create a subapplication based on a template and add it to the recently created module, execute the following Gradle command:
-
-    ``` bash title="Terminal"
-    ./gradlew subapp.create -Ppkg=com.etendoerp.test --info
-    ```
-
-    This command uses the subapp.create task to generate the subapplication within the specified package (com.etendoerp.test). The --info option provides additional details during the command execution, which is useful for debugging or confirming the process.
-
-    ![modules.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
-
-2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
-    
-    ``` bash title="Terminal"
-    yarn install 
-    ```
-3. Finally, to run in development mode run
-
-    ``` bash title="Terminal"
-    yarn dev 
-    ```
 
 ### Dynamic App configuration
 
-As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#dynamic-app-window){target="_blank"}.
+:material-menu: `Application` > `General Setup` > `Application` > `Dynamic App`
 
-#### Dynamic App
+Configure and export dynamic applications in Etendo Classic, which are displayed dynamically in Etendo Mobile.
 
-The Dynamic App in Etendo must contain the following form fields and corresponding values:
+In the **Dynamic App** window, specify the paths and versions for each subapplication. These settings determine how subapplications are displayed when users log into Etendo Mobile.
+
+For the example we are following, the Dynamic App in Etendo must be configured with the following form fields and corresponding values:
+
 
 | Field               | Value                             |
 |---------------------|-----------------------------------|
-| Module              | `Product Subapplication - 1.0.0 - English (USA)` |
-| Name                | `Product Subapplication`          |
+| Module              | `Product Subapp - 1.0.0`          |
+| Name                | `Product Subapp`                  |
 | Directory Location  | `/`                               |
-| Name                | `1.0.0`                           |
-| File Name           | `productSubapp.js`                |
+| Name                | `dev`                             |
+| File Name           | `dist.js`                         |
 | Active              | `true`                            |
 | Is Development      | `true`                            |
 
-![dynamic-app-creation.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/dynamic-app-creation.png)
+![](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/dynamic-app-creation.png)
+
+Fields to note:
+
+- **Module**: The module that can export the window configuration, in the example **Product SubApp**.
+- **Name**: Name with the application will be shown.
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty, but in production, the path is `/<javapackage>/web/`.
+- **Active**: To select if this application is active or not.
+
+
+The **Dynamic App Version** tab allows the application to be versioned, enabling both development and production versions.
+
+Fields to note:
+
+- **Name**: Name of the application version Eg: dev or `1.0.0`.
+- **File Name**: The bundle name of the compiled application, by default `dist.js`.
+- **Default**: This check defines that this version is productive.
+- **Is Development**: This check defines that this version is in development that can be deployed locally.
+- **Active**: To select if this application version is active or not.
+
+Finally, configure this application in the [Role Configuration](../../../user-guide/etendo-mobile/getting-started.md#initial-configuration) to be shown in the Etendo Mobile Application.
+
 
 ### Role configuration
 
@@ -105,13 +90,118 @@ The next table reflect the settings to be configured for the role in relation to
 
 At this point you have _done_ with the etendo classic configuration.
 
-## Download the subapplication
+## Export the Module
 
-This tutorial is based in our example of a product subapplication, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
+1. After saving all the configuration, you have to export the changes. Open a terminal in the root of your **Etendo Classic** project and execute the following command:
+    
+    ``` bash title="Terminal"
+    ./gradlew export.database --info
+    ```
+
+    !!!success "Important"
+        The output must be a "BUILD SUCCESSFUL" message.
+
+3. A new module is created in the `/modules` folder, whith the following structure
+
+    ```
+    modules
+    └── com.etendoerp.subapp.product
+        └── src-db 
+    ```
+
+## Dokerized Services
+
+Before proceeding, it is necessary to start the **Etendo RX** services. These services provide a security layer (Auth Service) and a data access layer (Das Service), which are essential for consuming or writing data in Etendo. Additionally, by selecting the **isReact** checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.
+
+To launch all the services, it is necessary to define the following configuration variables in the `gradle.properties` file:
+
+```groovy title="gradle.properties"
+docker_com.etendoerp.etendorx=true
+```
+
+!!!info
+    For more information about how to handle Etendo Dockerizations visit [Docker Management](../../etendo-classic/bundles/platform/dependency-manager.md). 
+
+??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
+    It is also possible to run the dockerized [PostgreSQL service](../platform/docker-management.md#postgres-database-service) and [Tomcat service](../platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    docker_com.etendoerp.docker_db=true
+    ```
+
+Then, to effectively run the services is necessary to **execute the command** in the terminal: 
+
+```bash title="Terminal"
+./gradlew resourses.up
+```
+
+Here, all the services and their respective logs can be seen running using [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank} tool
+
+![Docker RX Services](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
+
+## Services Configuration
+
+### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, two records need to be created: one for the **RX Config** service, responsible for distributing the dynamic configurations of other available services, and another for the **Auth** service, which provides security utilities. The Auth service must be accessible by the sub-application to obtain the authentication token for requests.
+
+As `System Administrator` role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:
+
+- **Service Name**: The name of each service.
+- **Service URL**: The internal URL of the Docker service.
+- **Updatable Configs**: Check this checkbox.
+- **Public URL**: Configure the publicly accessible URL for the service.
+
+Below are configuration examples. Replicate them. The **Public URL** field only needs to be configured when the sub-application is set to production.
+
+![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
+
+![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png)
+
+!!!info 
+  If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`
+
+
+## Creating the Sub-application
+
+1. Now, create the sub-application based on a template published in NPM. Execute a Gradle command to automatically create the sub-application within the module under development.
+
+  ``` bash title="Terminal"
+  ./gradlew subapp.create -Ppkg=<javapackage> --info
+  ```
+
+  In the example we are working on, use the following command:
+
+  ```bash title="Terminal"
+  ./gradlew subapp.create -Ppkg=com.etendoerp.subapp.product --info
+  ```
+
+  This command uses the `subapp.create` task to generate the sub-application within the specified package. The --info option provides additional details during the command execution, which is useful for debugging or confirming the process.
+
+  ![modules.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules.png)
+
+2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
+    
+    ``` bash title="Terminal"
+    yarn install 
+    ```
+3. Finally, to run in development mode run
+
+    ``` bash title="Terminal"
+    yarn dev 
+    ```
+
+
+
+## Download the sub-application
+
+This tutorial is based in our example of a product sub-application, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
 
 !!! tip "Keep in mind"
-    All related to the main concepts of a subapplication are explained in the [concepts](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#concepts){target="_blank"} section in create new subapplication tutorial.
-    The following sections are focused on the product subapplication example.
+    All related to the main concepts of a sub-application are explained in the [concepts](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#concepts){target="_blank"} section in create new sub-application tutorial.
+    The following sections are focused on the product sub-application example.
 
 To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
 
@@ -134,7 +224,7 @@ To begin with we must have to download the [ latest version of the project](http
 
 ## Customizing and Programming a Sub-Application
 
-This section explains how to customize and program a subapplication. It uses as an example the [Product Subapplication](https://github.com/etendosoftware/subapp-product/releases/){target="_blank"} .
+This section explains how to customize and program a sub-application. It uses as an example the [Product sub-application](https://github.com/etendosoftware/subapp-product/releases/){target="_blank"} .
 
 ### Product subapp example
 
