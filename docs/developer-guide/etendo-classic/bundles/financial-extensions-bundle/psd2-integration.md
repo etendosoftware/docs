@@ -27,9 +27,12 @@ The integration is carried out only with **banks that support Redsys**, thus gua
     It is important to note that before starting this configuration, the **QWAC** and **QSealC** certificates are required. Detailed instructions on how to obtain them can be found in the [Certificates](#certificates) section.
 
 
-## Dokerized Services
+## Dockerized Services
 
 To begin the integration, it is essential to launch all the services related to this module. This includes **Etendo RX**, a service that provides a reactive development platform and implements a security layer using the standard **OAuth** authentication protocol required for synchronization. Additionally, the **PSD2 service**, which interacts with Redsys, needs to be started.
+
+!!!note
+    To set an environment to check this feature, follow the [Etendo RX Getting Started](../../../../developer-guide/etendo-rx/getting-started.md).
 
 Within the PSD2 module and its dependencies, the required infrastructure is distributed using **Etendo Docker Manager**. In this case, it is necessary to define the following configuration variables in the `gradle.properties` file to launch the services:
 
@@ -52,10 +55,10 @@ docker_com.etendorx.psd2.bank.integration=true
 Then, to effectively run the services is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
-./gradlew resourses.up
+./gradlew resources.up
 ```
 
-Here, all the services and their respective logs can be seen running using [LazyDocker tool](https://github.com/jesseduffield/lazydocker){target=_isblank}
+Here, all the services and their respective logs can be seen running using [LazyDocker tool](https://github.com/jesseduffield/lazydocker){target=_isblank}.
 
 ![Docker Services](../../../../assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-9.png)
 
@@ -96,6 +99,7 @@ It is necessary to obtain and configure a user token that will later be used by 
     ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-11.png)
     !!!note
         In this example, the **admin** user is used:
+
         - **Default Role**: F&B Group Admin
         - **Default Organization**: F&B International Group
 
@@ -118,7 +122,7 @@ It is necessary to obtain and configure a user token that will later be used by 
     }
     ```
     !!! info 
-        Replace the credentials with those of the user configured in the previous step 
+        Replace the credentials with those of the user configured in the previous step.
 
     **Response:**
 
