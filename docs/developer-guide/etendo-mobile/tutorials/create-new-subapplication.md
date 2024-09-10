@@ -1,3 +1,14 @@
+---
+
+tags:
+    - Etendo Mobile
+    - Etendo RX
+    - Dynamic App Configuration
+    - Subapp
+---
+
+# Create New Subapplication
+
 ## Overview
 
 This tutorial provides a step-by-step guide to creating a new sub-application within **Etendo Mobile**. By following these instructions, you will learn how to fully utilize the capabilities of **Etendo RX** and leverage the visual components available in the **Etendo UI Library** to build a functional sub-application.
@@ -23,7 +34,7 @@ The tutorial will guide you through the creation of the *Product Subapp*, a simp
     </figure>
 
     !!! tip
-        - Notice that the name can be anything you want, but the type have to be setted as Module.
+        - Notice that the name can be anything you want, but the type has to be setted as Module.
         - The _description field_ is free and also _required_.
         - In this case, start from `1.0.0` module version and set the DB Prefix as `ETSAPPP`.
 
@@ -55,7 +66,7 @@ Fields to note:
 - **Name**: Name of the application version E.g. `dev` or `1.0.0`.
 - **File Name**: The bundle name of the compiled application, by default `dist.js`.
 - **Default**: This check defines that this version is productive.
-- **Is Development**: This check defines that this version is in development that can be deployed locally.
+- **Is Development**: This check defines that this version is in development and can be deployed locally.
 - **Active**: To select if this application version is active or not.
 
 
@@ -82,7 +93,7 @@ At this point you have _done_ with the etendo classic configuration.
     !!!success "Important"
         The output must be a "BUILD SUCCESSFUL" message.
 
-3. A new module is created in the `/modules` folder, whith the following structure
+3. A new module is created in the `/modules` folder, with the following structure
 
     ```
     modules
@@ -133,14 +144,14 @@ As `System Administrator` role, in this window, it is necessary to add two entri
 - **Updatable Configs**: Check this checkbox.
 - **Public URL**: Configure the publicly accessible URL for the service.
 
-Below are configuration examples. Replicate them. The **Public URL** field only needs to be configured when the sub-application is set to production.
+See the configuration examples bellow. Replicate them. The **Public URL** field only needs to be configured when the sub-application is set to production.
 
 ![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
 
 ![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png)
 
 !!!info 
-  If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`
+    If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`.
 
 
 ## Creating the Sub-application
