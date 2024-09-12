@@ -80,7 +80,8 @@ Logged in as the **Group Admin** role (which is the default role for accessing E
 !!! warning "Important"
     Keep this dynamic app as _active_.
 
-At this point you have _done_ with the etendo classic configuration.
+!!!info
+    At this point, you have done with the Etendo Classic configuration.
 
 ## Export the Module
 
@@ -122,13 +123,13 @@ docker_com.etendoerp.etendorx=true
     docker_com.etendoerp.docker_db=true
     ```
 
-Then, to effectively run the services is necessary to **execute the command** in the terminal: 
+Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
 ./gradlew resourses.up
 ```
 
-Here, all the services and their respective logs can be seen running using [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank} tool
+Here, all the services and their respective logs can be seen running using [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank} tool.
 
 ![Docker RX Services](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
 
@@ -158,21 +159,22 @@ See the configuration examples bellow. Replicate them. The **Public URL** field 
 
 1. Now, create the sub-application based on a template published in NPM. Execute a Gradle command to automatically create the sub-application within the module under development.
 
-  ``` bash title="Terminal"
-  ./gradlew subapp.create -Ppkg=<javapackage> --info
-  ```
-  In the example we are working on, use the following command:
+    ``` bash title="Terminal"
+    ./gradlew subapp.create -Ppkg=<javapackage> --info
+    ```
+    In the example we are working on, use the following command:
 
-  ```bash title="Terminal"
-  ./gradlew subapp.create -Ppkg=com.etendoerp.subapp.product --info
-  ```
-  This command uses the `subapp.create` task to generate the sub-application within the specified package. The --info option provides additional details during the command execution, which is useful for debugging or confirming the process.
+      ```bash title="Terminal"
+    ./gradlew subapp.create -Ppkg=com.etendoerp.subapp.product --info
+        ```
+
+This command uses the `subapp.create` task to generate the sub-application within the specified package. The `--info` option provides additional details during the command execution, which is useful for debugging or confirming the process.
   
-  A new subapplication will be created within the module, with the following structure:
+A new subapplication will be created within the module, with the following structure:
 
-  ```
-  modules
-  └── com.etendoerp.subapp.product
+    ```
+    modules
+    └── com.etendoerp.subapp.product
       ├── src-db 
       └── subapp
           ├── .bundle
@@ -182,20 +184,25 @@ See the configuration examples bellow. Replicate them. The **Public URL** field 
           ├── lib
           ├── node_modules
           └── src
-  ```
 
-  ![modules.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules.png)
+    ```
+
+![modules.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules.png)
+
 
 2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
 
-  ``` bash title="Terminal"
-  yarn install 
-  ```
+    ``` bash title="Terminal"
+    yarn install 
+    ```
+
 3. Finally, to run in development mode run
 
-  ``` bash title="Terminal"
-  yarn dev 
-  ```
+
+    ``` bash title="Terminal"
+    yarn dev 
+    ```
+
 
 ## Customizing and Programming a Sub-Application
 
