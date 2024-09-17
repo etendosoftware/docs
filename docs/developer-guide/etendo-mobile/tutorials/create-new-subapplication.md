@@ -81,7 +81,7 @@ Logged in as the **Group Admin** role (which is the default role for accessing E
     Keep this dynamic app as _active_.
 
 !!!info
-    At this point, you have done with the Etendo Classic configuration.
+    At this point, you have done with the Product Subapplication configuration.
 
 ## Export the Module
 
@@ -145,7 +145,10 @@ As `System Administrator` role, in this window, it is necessary to add two entri
 - **Updatable Configs**: Check this checkbox.
 - **Public URL**: Configure the publicly accessible URL for the service.
 
-See the configuration examples bellow. Replicate them. The **Public URL** field only needs to be configured when the sub-application is set to production.
+See the configuration examples bellow and replicate them. 
+
+!!!info
+    The **Public URL** field only needs to be configured when the sub-application is set to production.
 
 ![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
 
