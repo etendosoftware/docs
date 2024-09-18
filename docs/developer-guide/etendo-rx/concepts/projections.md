@@ -1,10 +1,23 @@
-## Projection
+---
+tags:
+    - Etendo RX
+    - DAS service
+    - Projections
+    - Mappings
+    - Connector
+    - Search
+    - API
+---
+
+# Projections and Mappings
+
+## Overview
 
 When using Spring Data JPA to implement the persistence layer, the repository typically returns one or more instances of the root class. However, more often than not, we do not need all the properties of the returned objects.
 
-In such cases, we might want to retrieve data as objects of customized types. These types reflect partial views of the root class, containing only the necessary properties. This is where projections come in handy.
+In such cases, we might want to retrieve data as objects of customized types. These types reflect partial views of the root class, containing only the necessary properties. This is where projections are useful.
 
-Start by opening *Projections* windows and creating a new projection with the following properties:
+Start by opening *Projections* windows and creating a new projection with the following properties: ??
 
 | Field       | Value                                 |
 | ----------- | ------------------------------------- |
@@ -15,21 +28,67 @@ Start by opening *Projections* windows and creating a new projection with the fo
 
   ![new-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/new-projection.png)
 
-### Adding the projection to a table
+### Header
 
-As we create the projection, now we need to assign it to a table where we want to extract data.
-For this, open the *Tables and Columns* window and look for the *Order* table (as mentioned in the introduction, we want to consume orders).
+A **projection** is a set of specific fields from an entity or combine fields from multiple entities. Projections are useful when we need to retrieve only a subset of data, as it reduces the amount of data we need to retrieve from the database, leading to improved performance.
 
-### Adding a Projection
+To create a new projection in Etendo, it is necessary to complete the fields in the header of the **Projections and Mappings** window.
 
-Next, navigate to the *Projections* tab and add a new projection with the following value:
+![assign-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/assign-projection.png) TO UPDATE
++ Description
 
-| Field      | Value                                          |
-| ---------- | ---------------------------------------------- |
-| Projection |`rxtutorial - tutorial - 1.0.0 - English (USA)` |
+- Organization:
+- Name:
+- Module:
+- GRPC: a checkbox that indicates this option is used instead of APIrest. [gRPC](https://grpc.io/){target="\_blank"} is a modern open source high performance Remote Procedure Call (RPC) framework that can run in any environment.
+- Description:
+- Active:
 
 
-  ![assign-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
+### Projected Entities
+
+In this tab, the entities to be projected can be defined. They can have the Write type or the Read type.
+
+VA?
+
+Fields to note:
+
+- Organization:
+- Name: This fields is autocompleted according to the options selected in the Table and Mapping Type fields.
+- Table:
+- Identity:
+- Mapping Type:
+- Is Rest Endpoint: Checkbox
+- External_Name:
+- Active:
+
+#### Create Projection Fields
+
+With this button...
+
+#### Entity Field
+
+In this subtab, it...
+
+VA?
+
+Fields to note:
+
+- Module:
+- Organization:
+- Property:
+- Name:
+- Is Mandatory: Checkbox
+- Identifies Record Univocally: Checkbox
+
+Mapping Configuration
+
+- Field Mapping:
+- Jsonpath:
+- Constant Value:
+- Active: Checkbox
+
+#### Search
 
 ### Adding Entity Fields
 
@@ -102,5 +161,3 @@ To define the parameter, we need to create a new row on the *Search Parameter* t
 In our case, we will filter depending on the Document Type of the orders.
 
   ![new-search-parameter.png](../../../assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png)
-
-------------------------------------------------------------------
