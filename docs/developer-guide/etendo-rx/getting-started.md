@@ -6,8 +6,6 @@ title: Getting Started
 
 This guide will help you set up Etendo, including both the Etendo Classic functionalities and Etendo RX, our reactive platform capable of executing microservices with database interaction and asynchronous actions.
 
-Follow these steps for a smooth installation:
-
 ## Requirements
 
 1. Install Etendo Classic. For this, follow the [Etendo Classic installation guide](../../getting-started/installation.md).
@@ -16,16 +14,10 @@ Follow these steps for a smooth installation:
 
 ## Dockerized Services
 
-We need to add some variables to define which services will be dockerized. The options are Tomcat, the database and Etendo RX.
+In the platform bundle, you can find the Dockerized Services module, which provides the necessary architecture to distribute infrastructure. In this case, in this bundle, the module Etendo RX is also included and, to launch the Services distributed in it, a certain configuration is needed. In the `gradle.properties` file, add the following variable:
 
-- RX: `docker_com.etendoerp.etendorx=true`
-
-!!!warning
-    To be able to run this process, remember Docker must be installed.
-
-```groovy title="gradle.properties"
+``` groovy title="gradle.properties"
 docker_com.etendoerp.etendorx=true
-docker_com.etendorx.psd2.bank.integration=true
 ```
 
 !!!info
@@ -41,17 +33,15 @@ docker_com.etendorx.psd2.bank.integration=true
 
     If you want to debug Tomcat locally with IntelliJ, visit [Tomcat Dockerized Service](../../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md).
 
-Then, to effectively run the services is necessary to **execute the command** in the terminal: 
+Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
 ./gradlew resources.up
 ```
 
-Here, all the services and their respective logs can be seen running using [LazyDocker tool](https://github.com/jesseduffield/lazydocker){target=_isblank}.
+Here, all the services and their respective logs can be seen running using [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} for a simple and fast container management. 
 
-![Docker Services](../../../../assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-9.png)
-
-
+![Docker Services](../../assets/developer-guide/etendo-rx/getting-started/rx-services.png)
 
 By default, the following services should be up and running:
 
@@ -61,4 +51,4 @@ By default, the following services should be up and running:
 - Das
 
 !!! success
-    You have successfully set up the Etendo RX services. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md).
+    You have successfully set up the Etendo RX services. For more information, visit [Projections and Mappings](./concepts/projections.md) and [Creating a New Microservice](../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md) page in the developer guide section.
