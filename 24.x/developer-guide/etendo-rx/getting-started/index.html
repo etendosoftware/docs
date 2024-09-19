@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
     
     
       
@@ -6192,80 +6192,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-etendo" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Etendo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installing Etendo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
+      Requirements
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-configuration-variables" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#dockerized-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting Up Configuration Variables
+      Dockerized Services
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Setup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generating-configuration-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generating Configuration Files
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-etendo-classic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Etendo Classic
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compiling-etendo-rx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compiling Etendo RX
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-auth-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure auth project
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8858,80 +8798,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-etendo" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Etendo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installing Etendo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
+      Requirements
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-configuration-variables" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#dockerized-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting Up Configuration Variables
+      Dockerized Services
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Setup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generating-configuration-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generating Configuration Files
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-etendo-classic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Etendo Classic
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compiling-etendo-rx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compiling Etendo RX
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-auth-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure auth project
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8956,198 +8836,47 @@
   <h1>✨ Getting Started</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This guide will help you set up the Etendo Platform, including both the Etendo Classic functionalities and Etendo RX, our reactive platform capable of executing microservices with database interaction and asynchronous actions.</p>
-<p>Follow these steps for a smooth installation:</p>
-<h2 id="installing-etendo">Installing Etendo</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Ensure you have cloned the Etendo repository before proceeding:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/etendo.git
+<p>This guide will help you set up Etendo, including both the Etendo Classic functionalities and Etendo RX, our reactive platform capable of executing microservices with database interaction and asynchronous actions.</p>
+<h2 id="requirements">Requirements</h2>
+<ol>
+<li>
+<p>Install Etendo Classic. For this, follow the <a href="../../../getting-started/installation/">Etendo Classic installation guide</a>.</p>
+</li>
+<li>
+<p>Install the <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_blank">Platform Extensions Bundle</a>.</p>
+</li>
+</ol>
+<h2 id="dockerized-services">Dockerized Services</h2>
+<p>In the platform bundle, you can find the Dockerized Services module, which provides the necessary architecture to distribute infrastructure. In this case, in this bundle, the module Etendo RX is also included and, to launch the Services distributed in it, a certain configuration is needed. In the <code>gradle.properties</code> file, add the following variable:</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
-<h3 id="setting-up-configuration-variables">Setting Up Configuration Variables</h3>
-<p>To compile and deploy an Etendo instance, you need to set up the configuration variables. To do this, create a copy of the <code>gradle.properties.template</code> file located in the root and <code>src-rx</code> folders:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp<span class="w"> </span>gradle.properties.template<span class="w"> </span>gradle.properties
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cp<span class="w"> </span>src-rx/gradle.properties.template<span class="w"> </span>src-rx/gradle.properties
-</span></code></pre></div>
-<p>Now, you can edit both <code>gradle.properties</code> files updating the variables, or simply use their default values.</p>
-<ul>
-<li>gradle.properties</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The GitHub credentials are required.
-To configure GitHub credentials read the <a href="../../etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">Use of Repositories technical guide</a> in Etendo.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about how to handle Etendo Dockerizations, visit <a href="../../etendo-classic/bundles/platform/docker-management/">Docker Management</a>. </p>
 </div>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Description</th>
-<th>Default Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>githubUser githubToken</code></td>
-<td>GitHub repository credentials, for access to commercial modules</td>
-<td></td>
-</tr>
-<tr>
-<td><code>context.name</code></td>
-<td>Environment name</td>
-<td>etendo</td>
-</tr>
-<tr>
-<td><code>bbdd.sid</code></td>
-<td>Database name</td>
-<td>etendo</td>
-</tr>
-<tr>
-<td><code>bbdd.port</code></td>
-<td>Database port</td>
-<td>5432</td>
-</tr>
-<tr>
-<td><code>bbdd.systemUser</code></td>
-<td>Database system user</td>
-<td>postgres</td>
-</tr>
-<tr>
-<td><code>bbdd.systemPassword</code></td>
-<td>Database system password</td>
-<td>syspass</td>
-</tr>
-<tr>
-<td><code>bbdd.user</code></td>
-<td>Database user</td>
-<td>tad</td>
-</tr>
-<tr>
-<td><code>bbdd.password</code></td>
-<td>Database password</td>
-<td>tad</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>src-rx/gradle.properties</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Description</th>
-<th>Default Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bbdd.rdbms</code></td>
-<td>Database manager system</td>
-<td>POSTGRE</td>
-</tr>
-<tr>
-<td><code>bbdd.driver</code></td>
-<td>Environment name</td>
-<td>org.postgresql.Driver</td>
-</tr>
-<tr>
-<td><code>bbdd.url</code></td>
-<td>Database name</td>
-<td>jdbc:postgresql://localhost:5432</td>
-</tr>
-<tr>
-<td><code>bbdd.sid</code></td>
-<td>Database port</td>
-<td>etendo</td>
-</tr>
-<tr>
-<td><code>bbdd.systemUser</code></td>
-<td>Database system user</td>
-<td>postgres</td>
-</tr>
-<tr>
-<td><code>bbdd.systemPassword</code></td>
-<td>Database system password</td>
-<td>syspass</td>
-</tr>
-<tr>
-<td><code>bbdd.user</code></td>
-<td>Database user</td>
-<td>tad</td>
-</tr>
-<tr>
-<td><code>bbdd.password</code></td>
-<td>Database password</td>
-<td>tad</td>
-</tr>
-<tr>
-<td><code>bbdd.sessionConfig</code></td>
-<td>Database session preferences</td>
-<td>select update_dateFormat('DD-MM-YYYY')</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Variables appearing in both files must have identical values. To gain more insight into what's happening, run the Gradle tasks with the <code>--info</code> or <code>--debug</code> flag.</p>
-</div>
-<h3 id="database-setup">Database Setup</h3>
-<p>For this tutorial, we will create a new database named <code>etendo</code> on a PostgreSQL server accessible at port <code>5432</code>. If you prefer different settings, modify the values in the <code>gradle.properties</code> files accordingly.</p>
-<h3 id="generating-configuration-files">Generating Configuration Files</h3>
-<p>Now we need to generate the configuration files, for this, run:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>setup
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./gradlew<span class="w"> </span>rx:setup
+<details class="note">
+<summary>Tomcat and PostgresSQL Dockerized (Optional)</summary>
+<p>It is also possible to run the dockerized <a href="../platform/docker-management.md#postgres-database-service">PostgreSQL service</a> and <a href="../platform/tomcat-dockerized-service.md">Tomcat service</a>, <strong>optionally</strong> adding the <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_isblank">Platform Extensions Bundle</a> and the following configuration variables:</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">tomcat</span><span class="o">=</span><span class="kc">true</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">docker_db</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you change the default <code>bbdd.url</code> and/or <code>bbdd.sid</code>, you must update the <code>src-rx/rxconfig/das.yaml</code> file with the new values.</p>
-</div>
-<h3 id="installing-etendo-classic">Installing Etendo Classic</h3>
-<p>At this point, we have all the source code needed to create the arquitecture of Etendo.
-To do so, run the <code>install</code> task to create the initial database</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>install
+<p>If you want to debug Tomcat locally with IntelliJ, visit <a href="../../etendo-classic/bundles/platform/tomcat-dockerized-service/">Tomcat Dockerized Service</a>.</p>
+</details>
+<p>Then, to effectively run the services, it is necessary to <strong>execute the command</strong> in the terminal: </p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
-<p>After the database creation, compile the project and deploy Etendo Classic to Tomcat with the following command:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>smartbuild
-</span></code></pre></div>
-<p>This task deploys the <code>webContent</code> folder into the <code>tomcat/webapps</code> directory. Make sure to set <code>$CATALINA_HOME</code> to the correct path.</p>
-<p>Run Tomcat and navigate to <a href="http://localhost:8080/etendo"><strong>http://localhost:8080/etendo</strong></a> to access the Etendo Classic.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want to set up Tomcat locally with IntelliJ, follow the <a href="../../etendo-classic/getting-started/installation/install-etendo-development-environment/">Install Etendo Development Environment developer guide</a>.</p>
-</div>
-<h3 id="compiling-etendo-rx">Compiling Etendo RX</h3>
-<p>Execute the <code>rx:generate.entities</code> task to create the needed jars to start working with Etendo RX:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>rx:generate.entities
-</span></code></pre></div>
-<p>To launch the RX services, run:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>rx:rx
-</span></code></pre></div>
-<p>The first time you run the command above, you need to provide an access token for auth service, so now, we proceed to configure the auth project.</p>
-<h3 id="configure-auth-project">Configure auth project</h3>
-<p>After executing the rx:rx task, it starts setting up the services.
-It starts with the configuration service and when it starts to try with the auth service, it will fail because of the missing token.
-To extract the token check Auth log file in <code>src-rx/logs/auth.log</code></p>
-<p>You will find something similar to:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Populate the auth.yaml file with the following property:
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>token: eyJhbGciOiJSUzI1NiJ9... (truncated)
-</span></code></pre></div>
-<p>Copy the value of token line and replace the token value in the file <code>src-rx/rxconfig/auth.yaml</code></p>
-<p>Replace default empty token value with log content</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> token: eyJhbGciOiJSUzI1NiJ9... (truncated)
-</span></code></pre></div>
-<p>Now that you fill the token value, run rx:rx task again and all the microservices will be up and running.</p>
+<p>Here, all the services and their respective logs can be seen running using <a href="https://github.com/jesseduffield/lazydocker#installation" target="_blank">lazydocker</a> or <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> for a simple and fast container management. </p>
+<p><a class="glightbox" href="../../../assets/developer-guide/etendo-rx/getting-started/rx-services.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Docker Services" src="../../../assets/developer-guide/etendo-rx/getting-started/rx-services.png" /></a></p>
 <p>By default, the following services should be up and running:</p>
 <ul>
 <li>Config</li>
 <li>Auth</li>
 <li>Edge</li>
 <li>Das</li>
-<li>Async</li>
 </ul>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>You have successfully set up the Etendo Platform. Continue your learning journey by visiting our <a href="../tutorials/creating-a-new-microservice/">Creating a New Microservice section in the developer guide</a>.</p>
+<p>You have successfully set up the Etendo RX services. For more information, visit <a href="../concepts/projections/">Projections and Mappings</a> and <a href="../tutorials/creating-a-new-microservice/">Creating a New Microservice</a> page in the developer guide section.</p>
 </div>
 
 
@@ -9240,7 +8969,7 @@ To extract the token check Auth log file in <code>src-rx/logs/auth.log</code></p
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
 
