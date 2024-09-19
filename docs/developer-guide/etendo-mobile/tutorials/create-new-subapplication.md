@@ -83,7 +83,7 @@ Logged in as the **Group Admin** role (which is the default role for accessing E
 !!!info
     At this point, you have done with the Product Subapplication configuration.
 
-## Export the Module
+### Export the Module
 
 1. After saving all the configuration, you have to export the changes. Open a terminal in the root of your **Etendo Classic** project and execute the following command:
     
@@ -158,6 +158,109 @@ See the configuration examples bellow and replicate them.
     If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`.
 
 
+
+## Projections and Search
+
+This section covers the creation of projections, mappings, and searches, which enable the generation of a dynamic REST API in the RX DAS service. These configurations allow for reading, writing, and filtering data. Projections are applied to Etendo Classic tables, creating a subset of data that can be interacted with through the API.
+
+
+### Create a Projection
+:material-menu: `Application` > `Etendo RX` > `Projections and Mappings`
+
+1.  As a `System Administrator` role, it is required to create a projection that reflect partial views of the Product class and contain only the necessary properties.
+
+2. To do this we will go to the `Projections and Mappings` window and create a new projection, select the module under development `Product SubApplication - 1.0.0 - English (USA)`, where these configurations will be exported and in the name field we define `ProductSubApp`.
+
+3. Now, with the selected projection we add in the tab `Projected Entities` two projections, one for reading data, selecting the table `M_Product` and in the Mapping Type field we select `Etendo to external system` and another projection for writing data, selecting again the table `M_Product` and in the Mapping Type field `External system to Etendo`.  The other fields are auto-completed with respect to these values 
+
+<figure markdown="span">
+ 	![projection.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/projections-mappings.png)
+	<figcaption>Projection and Projected Entities configuration example</figcaption>
+</figure>
+
+### Creating Entity Fields
+
+Now, we define which fields we want to retrieve. To do this we start by selecting the data reading projection `PRODSUBAPP - Product - Read` and run the `Create Projection Fields` process, in the pop-up we will select the fields to project. In our example case: 
+
+- active
+- id
+- name
+- productCategory
+- searchkey
+- taxCategory
+- UOM
+- UPCEAN
+
+!!! note
+	While not all of these fields will be displayed in the application, as record editing is allowed, we are also selecting all the mandatory fields to create a product.
+
+<figure markdown="span">
+	![create-projection-fields.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/create-projection-fields.png)
+	<figcaption>Create Projection Fields proccess excecution example</figcaption>
+</figure>
+
+
+This is the M_Product - Write fields.
+
+=== "id"
+=== "name"
+=== "uPCEAN"
+=== "searchKey"
+=== "active"
+
+- active
+- id
+- name
+- productCategory
+- searchkey
+- taxCategory
+- UOM
+- UPCEAN
+
+
+  ![entity-fields-read.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/projected-entity-field-read.png)
+
+
+### Create a Search in Projected Data
+
+Now, when reading data, it is possible to create filters, for this we have to associate these filters to a table and it is possible to export this filter in the module under development. 
+To do this, we open the `Tables and Columns` window, in our example select the `M_Product` table, go to the `Repository` tab and create a new record with the development module.  Then we create a new record in the `Search` tab
+
+<figure markdown="span">
+    ![repository.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/repository.png)
+    <figcaption>Repository Creation Example</figcaption>
+</figure>
+
+### Create a New Search and Search Parameter
+
+Next we will define a search method to be used when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the  method name `getFilteredProducts` and the hql query filter 
+
+```
+SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc
+```
+This query filters active products by name or bar code. 
+
+As we can see in the query it receives the`:name` parameter of String type that we define in the `Search Parameter` tab.
+
+<figure markdown="span">
+    ![search-parameters.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/search-parameters.png)
+    <figcaption>Search and Search Parameter creation example</figcaption>
+</figure>
+
+
+
+### Restart the Etendo RX Service
+
+Restart the Das RX service to recognize the  projections and mappings.
+
+```bash title="Terminal"
+./gradlew rx.das.restart
+```
+
+Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.
+
+
+
 ## Creating the Sub-application
 
 1. Now, create the sub-application based on a template published in NPM. Execute a Gradle command to automatically create the sub-application within the module under development.
@@ -167,13 +270,11 @@ See the configuration examples bellow and replicate them.
     ```
     In the example we are working on, use the following command:
 
-      ```bash title="Terminal"
+    ```bash title="Terminal"
     ./gradlew subapp.create -Ppkg=com.etendoerp.subapp.product --info
-        ```
-
-This command uses the `subapp.create` task to generate the sub-application within the specified package. The `--info` option provides additional details during the command execution, which is useful for debugging or confirming the process.
-  
-A new subapplication will be created within the module, with the following structure:
+    ```
+    
+    A new subapplication will be created within the module, with the following structure:
 
     ```
     modules
@@ -187,13 +288,9 @@ A new subapplication will be created within the module, with the following struc
           ├── lib
           ├── node_modules
           └── src
-
     ```
 
-![modules.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules.png)
-
-
-2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
+2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the `package.json` the following command: 
 
     ``` bash title="Terminal"
     yarn install 
@@ -201,30 +298,96 @@ A new subapplication will be created within the module, with the following struc
 
 3. Finally, to run in development mode run
 
-
     ``` bash title="Terminal"
     yarn dev 
     ```
+    !!! note
+        By default, the application run in development mode on `localhost` at port `3000`. Additionally, changes in the `/src` directory are automatically scanned, enabling dynamic updates to the application during development. This ensures that any modifications are reflected in real-time without restarting the application.
 
+## Product Sub-application Example
 
-## Customizing and Programming a Sub-Application
-
-This section explains how to customize and program a sub-application. It uses as an example the [Product sub-application](https://github.com/etendosoftware/subapp-product/releases/){target="_blank"} .
-
-### Product subapp example
-
-This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}.
+This section covers an overview about the product sub-application example screens and principal parts of the subapplication.
 
 !!! info "Consideration"
-    This subapplication example was developed for both platforms (phone and tablet). 
-    When you create a new subapplication, you have to do the same. 
-    The provided [base subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}  is already configured for both platforms.
+    - The applications must be developed for both platforms (phone and tablet). 
+   
+### Home
+ 
+- This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
 
-#### Home
-  - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
-  - The route to this screen is `src/screens/home/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/home/index.tsx){target="_blank"}.
+**Phone View**
+<figure markdown>
+	![home-screen.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-screen.png){ width="300", align=left } 
+	![remove-product.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/remove-product.png){ width="300", align=right}
+</figure>
+**Tablet View**
+![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-screen-tablet.png)
 
-**Key Components:**
+
+- The route to this screen is `src/screens/home/index.tsx` and the content:
+
+``` javascript title="src/screens/home/index.tsx"
+import React from 'react';
+import TableList from '../../components/table/list';
+import { NavigationProp } from '@react-navigation/native';
+import { INavigationContainerProps } from '../../interfaces';
+import locale from '../../localization/locale';
+import useProduct from '../../lib/data_gen/useProduct';
+import { Product } from '../../lib/data_gen/product.types';
+
+interface TableListProps {
+navigation: NavigationProp<any>;
+route: any;
+navigationContainer: INavigationContainerProps;
+}
+
+const Home = (props: TableListProps) => {
+const { getFilteredProducts, updateProduct } = useProduct();
+return (
+	<TableList
+	deleteDataItem={async (item: Product) => {
+		item.active = false;
+		await updateProduct(item);
+	}}
+	{...props}
+	columns={[
+		{
+		key: 'id',
+		primary: true,
+		visible: false,
+		},
+		{
+		key: 'name',
+		label: locale.t('Table.products'),
+		visible: true,
+		width: '50%',
+		},
+		{
+		key: 'productCategoryName',
+		label: locale.t('Table.products'),
+		visible: true,
+		width: '30%',
+		},
+	]}
+	getData={getFilteredProducts}
+	labels={{
+		dataName: 'Product',
+		navbarTitle: locale.t('Home.welcome'),
+		containerTitle: locale.t('Home.productList'),
+		buttonNew: locale.t('Home.newProduct'),
+		searchPlaceholder: locale.t('Home.typeProduct'),
+		successfulDelete: locale.t('Success.deleteProduct'),
+		errorDelete: locale.t('Error.deleteProduct'),
+	}}
+	/>
+);
+};
+
+export default Home;
+
+```
+
+Key Components: ???
 
 1. **Navbar**: Positioned at the top, it displays the application's title and user's name, offering navigation controls.
 
@@ -239,598 +402,123 @@ This section covers an overview about the product subapplication example screens
 6. **Layout and Style**: The screen is designed to be responsive for both mobile and tablet formats, with a layout comprising the navbar, button, search bar, and table. Styles are defined in the `styles` object for consistency.
 
 
-    <figure markdown>
-      ![home-screen.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen.png){ width="300", align=left } 
-      ![remove-product.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/remove-product.png){ width="300", align=right}
-    </figure>
-    _Tablet version_
-    ![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen-tablet.png)
+### ProductDetail
 
-#### ProductDetail
-  - This screen will show the detail of a product. Also, it will allow us to edit the product.
-  - It's the same screen used to create a new product. there is a flag to know if the product is new or not (productItem).
-  - The route to this screen is `src/screens/productDetail/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/productDetail/index.tsx){target="_blank"}.
-    <figure markdown>
-      ![add-product.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/add-product.png){ width="300", align=left } 
-      ![edit-product.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/edit-product.png){ width="300", align=right}
-    </figure>
-    _Tablet version_
-    ![add-product-tablet.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/add-product-tablet.png)
+- This screen will show the detail of a product. Also, it will allow us to edit the product.
+- It's the same screen used to create a new product. there is a flag to know if the product is new or not (productItem).
+- The route to this screen is `src/screens/productDetail.txt` , and the content:
 
-# Projections, Repository and Search
-!!! info
-    In this section we will explain how to configure the projections, repository and search needed in this example. For more info visit Projections, Repository And Search official documentation. 
+``` javascript title="src/screens/productDetail.txt"
+import React, { useState } from 'react';
+import TableDetail from '../../components/table/detail';
+import { NavigationProp } from '@react-navigation/native';
+import locale from '../../localization/locale';
+import useProduct from '../../lib/data_gen/useProduct';
 
-## Create a projection
+interface TableDetailProps {
+  navigation: NavigationProp<any>;
+  route: any;
+}
 
-It is required to create projections that reflect partial views of the root class and contain only the necessary properties.
-To do this we will go to the `Projections` window and create a projection with the following properties:
+const ProductDetail = (props: TableDetailProps) => {
+  const { createProduct, updateProduct } = useProduct();
+  const [id, setId] = useState<string>('');
+  const [searchKey, setSearchKey] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  const [uPCEAN, setUPCEAN] = useState<string>('');
+  return (
+    <TableDetail
+      {...props}
+      createData={async () => {
+        await createProduct({ searchKey, name, uPCEAN });
+      }}
+      updateData={async () => {
+        await updateProduct({ id, searchKey, name, uPCEAN });
+      }}
+      fields={[
+        {
+          key: 'id',
+          visible: false,
+          setValue: setId,
+          getValue: id,
+          labels: {
+            title: '',
+            placeholder: '',
+          },
+        },
+        {
+          key: 'searchKey',
+          setValue: setSearchKey,
+          getValue: searchKey,
+          labels: {
+            title: locale.t('ProductDetail.searchKey'),
+            placeholder: locale.t('ProductDetail.searchKeyExample'),
+          },
+        },
+        {
+          key: 'name',
+          setValue: setName,
+          getValue: name,
+          labels: {
+            title: locale.t('ProductDetail.products'),
+            placeholder: locale.t('ProductDetail.nameExample'),
+          },
+        },
+        {
+          key: 'barcode',
+          setValue: setUPCEAN,
+          getValue: uPCEAN,
+          labels: {
+            title: locale.t('ProductDetail.barcode'),
+            placeholder: locale.t('ProductDetail.barcodePlaceholder'),
+          },
+        },
+      ]}
+      labels={{
+        editTitle: locale.t('ProductDetail.editProduct'),
+        newTitle: locale.t('ProductDetail.newProduct'),
+        errorTitle: locale.t('Error.product'),
+        successUpdateTitle: locale.t('Success.updateProduct'),
+        successCreateTitle: locale.t('Success.saveProduct'),
+        connectionError: locale.t('Error.connection'),
+        navbarTitle: locale.t('Home.welcome'),
+        cancel: locale.t('Common.cancel'),
+        save: locale.t('Common.save'),
+        successTitle: id
+          ? locale.t('Success.updateProduct')
+          : locale.t('Success.createProduct'),
+      }}
+    />
+  );
+};
 
+export default ProductDetail;
 
-  | Field       | Value                                               |
-  | ----------- | ----------------------------------------------------|
-  | Module      |`Subapp Product Module - 1.0.0 - English (USA)`      |
-  | Name        |`ProdSubApp`                                         |
-  | Description |`-`                                                  |
-
-
-  ![projection.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
-
-
-### Adding the projection and mapping
-
-Having created the projection, we now need to map it to a table from which we want to extract data. To do this, we open the Projections and Mappings window.
-
-Next, we add a new record with the following values:
-
-  | Field        | Value                                            |
-  | ----------   | -------------------------------------------------|
-  | Organization | `*`                                              |
-  | Module       | `Product Subapplication - 1.0.0 - English (USA)` |
-  | Name         | `prodsubapp`                                     |
-  | GRPC         | `false`                                          |
-  | description  | `-`                                              |
-  | active       | `false`                                          |
-
-
-  ![projection-mapping.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
-
-
-
-### Adding projected entities
-
-Now with the projection selected add in the Projected Entities tab the write and read projections of Product and Product_Category in which we can specify the required values from the M_Product table.
-
-=== "Product - Read"
+```
     
-    | Name                |  Property                   |
-    | ------------------- | ----------------------------|
-    | Organization        |`*`                          |
-    | Name                |`PRODSUBAPP - Product - Read`|
-    | Table               |`M_Product`                  |
-    | Identity            |`false`                      |
-    | Mapping Type        |`Etendo to external system`  |
-    | Is Rest Endopoint   |`true`                       |
-    | External_Name       |`Product`                    |
-    | Active              |`true`                       |
+### Navegation 
+
+In addition, it is necessary to add the navigation configuration in the app.tsx file, in the return statement.  This configuration provides the infrastructure to navigate between the different screens of the application.
+
+``` javascript title="App.tsx"
+<Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Home"
+        initialParams={{ dataUser }}>
+        {props => <Home {...props} navigationContainer={navigationContainer} />}
+      </Stack.Screen>
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="ProductDetail"
+        initialParams={{ dataUser }}>
+        {props => <ProductDetail {...props} />}
+      </Stack.Screen>
+</Stack.Navigator>
+```
+
+## Integrating Etendo RX with Etendo Sub-Application
 
-=== "Product - Write"
-  
-    | Name                |  Property                    |
-    | ------------------- | -----------------------------|
-    | Organization        |`*`                           |
-    | Name                |`PRODSUBAPP - Product - Write`|
-    | Table               |`M_Product`                   |
-    | Identity            |`false`                       |
-    | Mapping Type        |`External system to Etendo`   |
-    | Is Rest Endopoint   |`true`                        |
-    | External_Name       |`Product`                     |
-    | Active              |`true`                        |
-
-=== "Product_Category - Read"
-    
-    | Name                |  Property                              |
-    | ------------------- | ---------------------------------------|
-    | Organization        |`*`                                     |
-    | Name                |`PRODSUBAPP - M_Product_Category - Read`|
-    | Table               |`M_Product_Category`                    |
-    | Identity            |`false`                                 |
-    | Mapping Type        |`Etendo to external system`             |
-    | Is Rest Endopoint   |`true`                                  |
-    | External_Name       |`M_Product_Category`                    |
-    | Active              |`true`                                  |
-
-=== "Product_Category - Write"
-  
-    | Name                |  Property                               |
-    | ------------------- | ----------------------------------------|
-    | Organization        |`*`                                      |
-    | Name                |`PRODSUBAPP - M_Product_Category - Write`|
-    | Table               |`M_Product`                              |
-    | Identity            |`false`                                  |
-    | Mapping Type        |`External system to Etendo`              |
-    | Is Rest Endopoint   |`true`                                   |
-    | External_Name       |`Product`                                |
-    | Active              |`true`                                   |
-
-  ![projected-entities.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
-
-Now we define which fields we want to retrieve in the Entity Field tab by adding the following fields:
-
-This is the M_Product - Read fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "name"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`20`                                             |
-    | Property                     |`name`                                           |
-    | Name                         |`name`                                           |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "productCategory"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`30`                                             |
-    | Property                     |`productCategory`                                |
-    | Name                         |`productCategory`                                |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Entity Mapping`                                 |
-    | Related Projection Entity    |`PRODSUBAPP - M_Product_Category - Read`         | 
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "uPCEAN"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`40`                                             |
-    | Property                     |`uPCEAN`                                         |
-    | Name                         |`uPCEAN`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "active"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`50`                                             |
-    | Property                     |`active`                                         |
-    | Name                         |`active`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-This is the M_Product - Write fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "name"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`20`                                             |
-    | Property                     |`name`                                           |
-    | Name                         |`name`                                           |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "uPCEAN"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`30`                                             |
-    | Property                     |`uPCEAN`                                         |
-    | Name                         |`uPCEAN`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "searchKey"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`40`                                             |
-    | Property                     |`searchKey`                                      |
-    | Name                         |`searchKey`                                      |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Java Mapping`                                   |
-    | Java Mapping                 |`PRODSUBAPPProductValueWrite`                    |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "active"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`50`                                             |
-    | Property                     |`active`                                         |
-    | Name                         |`active`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-This is the M_Product_Category - Read fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "name"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`20`                                             |
-    | Property                     |`name`                                           |
-    | Name                         |`name`                                           |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-This is the M_Product_Category - Write fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-
-
-  ![entity-fields-read.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entity-field-read.png)
-
-
-## Create a New Repository
-
-Now to interact with a data warehouse we have to create a repository in the Tables and Columns window select the table `M_Product`, go to the `Repository` tab and create a new record with the following values:
-
-| Field       | Value                                             |
-| ----------- | --------------------------------------------------|
-| Module      |`Subapp Product Module - 1.0.0 - English (USA)`    |
-
-
-  ![repository.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/repository.png)
-
-## Create a New Search
-
-Next we will define a search method to be used later when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the following data:
-
-| Field       | Value                                                                                            |
-| ----------- | ------------------------------------------------------------------------------------------------ |
-| Method Name |`getFilteredProducts`                                                                             |
-|  Query      |`SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc`   |
-
-
-  ![search.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/search.png)
-
-### Creating a New Search Parameter
-
-  To define the parameter we defined in the previous query we need to create a new row in the Search Parameter tab and add the following record:
-
-| Field | Value         |
-| ----- | ------------- |
-| Line  |`10`           |
-| Name  |`name`         |
-| Type  |`String`       |
-
-
-  ![search-parameters.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
-
-
-## Setting up the Development Environment
-
-Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:
-
-1. **Create a Java Package:** 
-   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.   
-  
-2. **Generate Entities Using Etendo RX:**
-   Use Etendo RX to generate entities for your sub-application's data structure. Run the command `./gradlew rx:generate.entities` in the root of your Etendo environment. This generates essential directories and files like `lib`, `src-db`, and `src-gen` in your Java package.
-   
-    Run the following command in the root of your Etendo environment:
-
-    ```bash title="Terminal"
-    ./gradlew rx:generate.entities
-    ```
-
-    Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the `ProductValue.java` mapping java class. 
-    
-    ```
-    modules-rx
-    └── com.etendoerx.subapp.product
-        ├── build 
-        ├── lib
-        ├── src
-        │   └── main
-        │       └── java
-        │           └── com
-        │               └── etendorx
-        │                   └── subapp
-        |                       └── product
-        |                           └── javamap
-        |                               └── ProductValue.java
-        ├── src-gen
-        └── build.gradle
-    ```
-
-    ```java title="ProductValue.java"
-    package com.etendorx.subapp.product.javamap;
-
-    import com.etendorx.entities.jparepo.FinancialMgmtTaxCategoryRepository;
-    import com.etendorx.entities.jparepo.OrganizationRepository;
-    import com.etendorx.entities.jparepo.ProductCategoryRepository;
-    import com.etendorx.entities.jparepo.UOMRepository;
-    import com.etendorx.entities.mapper.lib.DTOWriteMapping;
-    import com.etendorx.entities.mappings.PRODSUBAPPM_ProductDTOWrite;
-    import org.apache.commons.lang3.StringUtils;
-    import org.openbravo.model.common.plm.Product;
-    import org.springframework.stereotype.Component;
-
-    @Component("PRODSUBAPPProductValueWrite")
-    public class ProductValue implements DTOWriteMapping<Product, PRODSUBAPPM_ProductDTOWrite> {
-
-      private final OrganizationRepository organizationRepository;
-      private final ProductCategoryRepository productCategoryRepository;
-      private final UOMRepository uomRepository;
-      private final FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository;
-
-      public ProductValue(OrganizationRepository organizationRepository,
-          ProductCategoryRepository productCategoryRepository,
-          FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository,
-          UOMRepository uomRepository) {
-        this.organizationRepository = organizationRepository;
-        this.productCategoryRepository = productCategoryRepository;
-        this.financialMgmtTaxCategoryRepository = financialMgmtTaxCategoryRepository;
-        this.uomRepository = uomRepository;
-      }
-
-      @Override
-      public void map(Product entity, PRODSUBAPPM_ProductDTOWrite dto) {
-        if (StringUtils.isEmpty(entity.getSearchKey())) {
-          entity.setSearchKey("TEST " + Math.random());
-        }
-        if (StringUtils.isEmpty(entity.getDescription())) {
-          entity.setDescription("default");
-        }
-        if (entity.getOrganization() == null) {
-          entity.setOrganization(
-              organizationRepository.findById("B843C30461EA4501935CB1D125C9C25A").orElse(null));
-        }
-        if (entity.getProductCategory() == null) {
-          entity.setProductCategory(
-              productCategoryRepository.findById("DC7F246D248B4C54BFC5744D5C27704F").orElse(null));
-        }
-        if (StringUtils.isEmpty(entity.getProductType())) {
-          entity.setProductType("I");
-        }
-        if (entity.getTaxCategory() == null) {
-          entity.setTaxCategory(
-              financialMgmtTaxCategoryRepository.findById("E020A69A1E784DC39BE57C41D6D5DB4E")
-                  .orElse(null));
-        }
-        if (entity.getUOM() == null) {
-          entity.setUOM(uomRepository.findById("100").orElse(null));
-        }
-      }
-    }
-
-    ```
-
-    ``` groovy title="build.gradle"
-    plugins {
-      id 'java'
-      id 'org.springframework.boot'
-      id 'io.spring.dependency-management'
-    }
-
-    group = 'com.etendorx.subapp'
-    version = "1.0.0"
-    sourceCompatibility = JavaVersion.VERSION_17
-
-    java {
-      sourceCompatibility = '17'
-    }
-
-    ext {
-        includeInDasDependencies = true
-    }
-
-    repositories {
-      mavenCentral()
-      maven {
-        url = "https://maven.pkg.github.com/etendosoftware/etendo_rx"
-        credentials {
-          username = "${githubUser}"
-          password = "${githubToken}"
-        }
-      }
-      maven {
-        url = "https://repo.futit.cloud/repository/etendo-snapshot-jars"
-        credentials {
-          username = "${nexusUser}"
-          password = "${nexusPassword}"
-        }
-      }
-    }
-
-    ext {
-      set('springCloudVersion', "2022.0.4")
-      includeInDasDependencies = true
-    }
-
-    dependencies {
-      implementation 'org.springframework.cloud:spring-cloud-starter-config'
-
-      compileOnly 'org.projectlombok:lombok:1.18.22'
-      annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
-      implementation project(path: ':com.etendorx.entities')
-      annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
-      implementation "com.etendorx:das_core:" + findProperty("rx.version")
-      implementation project(path: ':com.etendorx.entities')
-
-      implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-      testImplementation 'org.springframework.boot:spring-boot-starter-data-rest:2.5.10'
-      testImplementation 'org.springframework.boot:spring-boot-starter-test'
-      testImplementation 'org.testcontainers:postgresql:1.17.3'
-      testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
-      testImplementation ('com.etendorx:das') {
-        transitive = false
-        exclude group: 'com.etendorx.test.grpc'
-      }
-      testImplementation (':com.etendorx.utils:auth') {
-        exclude group: 'org.slf4j', module: '*'
-      }
-      implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
-    }
-
-    dependencyManagement {
-      imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-      }
-    }
-
-    tasks.named('test') {
-      useJUnitPlatform()
-    }
-
-    ```
-    Verify the completion of this process and the accurate creation of all essential files and directories.
-
-3. **Migrate the 'lib' Directory:**
-    Move the `lib` directory from `modules_rx/<RXJavapackage>/lib` to `modules/<javapakage>/<subapp-name>/lib`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
-
-    ```bash title="Terminal"
-    mv modules_rx/com.etendorx.subapp.product/lib/ modules/com.etendoerp.subapp.product/subapp-product/
-    ```
-
-    ```
-    modules
-    └── com.etendoerx.subapp.product
-        ├── src-db 
-        └── subapp-product
-            ├── .bundle
-            ├── _tests_
-            ├── android
-            ├── ios
-            ├── lib
-            ├── node_modules
-            └── src
-    ```
-
-    Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
-    
-
-    !!! warning "Important"
-        Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
-
-  4. In the `rxconfig/das.yaml` file you must declare the javapackage of the world you are developing with the following code:
-
-    ``` groovy title="das.yaml"
-    scan:
-	    basePackage: com.etendorx.subapp.product
-    ``` 
-  
-  5. **Restart the Etendo RX Service:**
-    After successfully migrating the `lib` directory, restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
-
-    ```bash title="Terminal"
-    ./gradlew rx:rx
-    ```
-
-    Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.
-
-# Integrating Etendo RX with Etendo Sub-Application
-
-This section details the integration of Etendo RX generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.
 
 ### Custom Hooks in React Native
 
@@ -934,6 +622,6 @@ While the example focused on listing products using a table, it's important to n
 
 Attached below is an example of **F&B International Group's products**, obtained through Etendo RX, demonstrating the efficiency between backend and frontend operations in a practical sub-application context.
 
-![generate-entities.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
+![generate-entities.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-subapp-product.png)
 
 In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.
