@@ -21,7 +21,7 @@ docker_com.etendoerp.etendorx=true
 ```
 
 !!!info
-    For more information about how to handle Etendo Dockerizations, visit [Docker Management](../platform/dependency-manager.md). 
+    For more information about how to handle Etendo Dockerizations, visit [Docker Management](../etendo-classic/bundles/platform/docker-management.md). 
 
 ??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
     It is also possible to run the dockerized [PostgreSQL service](../platform/docker-management.md#postgres-database-service) and [Tomcat service](../platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
