@@ -31,9 +31,6 @@ The integration is carried out only with **banks that support Redsys**, thus gua
 
 To begin the integration, it is essential to launch all the services related to this module. This includes **Etendo RX**, a service that provides a reactive development platform and implements a security layer using the standard **OAuth** authentication protocol required for synchronization. Additionally, the **PSD2 service**, which interacts with Redsys, needs to be started.
 
-!!!note
-    To set an environment to check this feature, follow the [Etendo RX Getting Started](../../../../developer-guide/etendo-rx/getting-started.md).
-
 Within the PSD2 module and its dependencies, the required infrastructure is distributed using **Etendo Docker Manager**. In this case, it is necessary to define the following configuration variables in the `gradle.properties` file to launch the services:
 
 ```groovy title="gradle.properties"
