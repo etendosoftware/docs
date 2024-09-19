@@ -11,13 +11,14 @@ title: Application
 
 ### Overview
 
-In this page, we will explain how to configure dynamic applications from Etendo classic, these are displayed dynamically according to the configuration in Etendo Mobile.
-In addition, it details how to configure access to sub applications and versions according to the role assigned to each user.
-In the Dynamic App window, located in General Setup/Application/Dynamic App, you can add the information that will make reference to it. In this window, you find the configuration of paths and versions of each subapplication.
+This page explains how to configure dynamic applications from Etendo classic. The applications are displayed dynamically according to the configuration in Etendo Mobile. In addition, this section provides details about how to configure access to sub applications and versions according to the role assigned to each user.
+
+In the Dynamic App window, the user can add information that will make reference to it. Also, it is possible to find the configuration of paths and versions of each subapplication.
+
 When logging into Etendo Mobile, the subapplications are displayed according to these settings.
 
 !!! info
-    For more information visit the [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) documentation.
+    For more information visit the [Etendo Mobile user guide](../../../../user-guide/etendo-mobile/getting-started.md).
 
 ### Header
 
