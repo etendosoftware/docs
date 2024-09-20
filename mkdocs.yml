@@ -494,7 +494,9 @@ nav:
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
     - Etendo Mobile:
-      - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md 
+      - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
+      - Concepts: 
+        - Sup-application Structure: developer-guide/etendo-mobile/concepts/subapp-structure.md
       - Tutorials: 
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
       #  - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md

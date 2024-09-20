@@ -29,13 +29,15 @@ The tutorial will guide you through the creation of the *Product Subapp*, a simp
 1. As a System Administrator role, open the **Module** window and create a new register. This module will be used to develop and distribute the application.
 
     <figure markdown="span">
-    ![modules-creation.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/modules-creation.png)
+    ![modules-creation.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules-creation.png)
     <figcaption>Product Subapp module configuration example</figcaption>
     </figure>
 
     !!! tip
         - Notice that the name can be anything you want, but the type has to be setted as Module.
         - The _description field_ is free and also _required_.
+        - The _Is Rx_ checkbox indicates that this module will include RX service configurations, the RX service Javapackage must be specified.
+        - The _Is React_  checkbox indicates that this module includes a sub-application and React Native code is generated.
         - In this case, start from `1.0.0` module version and set the DB Prefix as `ETSAPPP`.
 
 
@@ -53,35 +55,32 @@ For the example we are following, the Dynamic App in Etendo must be configured w
 
 Fields to note:
 
-- **Module**: The module that can export the window configuration, in the example **Product SubApp**.
-- **Name**: Name with the application will be shown.
-- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty, but in production, the path is `/<javapackage>/web/`.
-- **Active**: To select if this application is active or not.
+- **Module**: The module that can export the window configuration, in our example case, set  **Product SubApp**.
+- **Name**: Name with the application will be shown. In our example case, set `Product Subapp`
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our examplecase, set `/`
+- **Active**: To select if this application is active or not. In our example case, set `true`
 
 
 The **Dynamic App Version** tab allows the application to be versioned, enabling both development and production versions.
 
 Fields to note:
 
-- **Name**: Name of the application version E.g. `dev` or `1.0.0`.
+- **Name**: Name of the application version E.g. `dev` or `1.0.0`. In our example case set `dev`
 - **File Name**: The bundle name of the compiled application, by default `dist.js`.
-- **Default**: This check defines that this version is productive.
-- **Is Development**: This check defines that this version is in development and can be deployed locally.
-- **Active**: To select if this application version is active or not.
+- **Default**: This check defines that this version is productive. In our example case set `false`
+- **Is Development**: This check defines that this version is in development and can be deployed locally. In our example case, set in `true`
+- **Active**: To select if this application version is active or not. In our example case, set `true`
 
 
 ### Role configuration
 :material-menu: `Application` > `General Setup` > `Security` > `Role`
 
-Logged in as the **Group Admin** role (which is the default role for accessing Etendo Mobile in our example), the settings are applied as specified below.
+Logged in as the **Group Admin** role (which is the default role for accessing Etendo Mobile), the settings are applied as specified below.
 
-![role-configuration.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/role-configuration.png)
+![role-configuration.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/role-configuration.png)
 
 !!! warning "Important"
     Keep this dynamic app as _active_.
-
-!!!info
-    At this point, you have done with the Product Subapplication configuration.
 
 ### Export the Module
 
@@ -104,7 +103,7 @@ Logged in as the **Group Admin** role (which is the default role for accessing E
 
 ## Dokerized Services
 
-Before proceeding, it is necessary to start the **Etendo RX** services. These services provide a security layer (Auth Service) and a data access layer (Das Service), which are essential for consuming or writing data in Etendo. Additionally, by selecting the **isReact** checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.
+Before proceeding, it is necessary to start the **Etendo RX** services. These services provide a security layer (Auth Service), a data access layer (Das Service), which are essential for consuming or writing data in Etendo and Edge Service . Additionally, by selecting the **isReact** checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.
 
 To launch all the services, it is necessary to define the following configuration variables in the `gradle.properties` file:
 
@@ -285,7 +284,7 @@ Restart the Das RX service to recognize the  projections and mappings.
 
 ## Creating the Sub-application
 
-1. Now, create the sub-application based on a template published in NPM. Execute a Gradle command to automatically create the sub-application within the module under development.
+1. Now, create the sub-application based on a template published in NPM, [Etendo Subapp Data Template Typescript ](https://www.npmjs.com/package/etendo-subapp-data-template-typescript). Execute the Gradle command to automatically create the sub-application within the module under development.
 
     ``` bash title="Terminal"
     ./gradlew subapp.create -Ppkg=<javapackage> --info
@@ -310,15 +309,47 @@ Restart the Das RX service to recognize the  projections and mappings.
           ├── lib
           ├── node_modules
           └── src
+          └── App.tsx
     ```
 
-2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the `package.json` the following command: 
+2. Once the sub-application is created, the react-native code must be generated, with types and functions that interact with the RX DAS Service, for this we execute the command Gradle : 
+
+    !!! info
+        Make sure that the Etendo RX services are running and without errors before executing this command
+
+    ``` bash title="Terminal"
+    ./gradlew subapp.build -Ppkg=<javapackage> 
+    ```
+
+    In our example case 
+    ``` bash title="Terminal"
+    ./gradlew subapp.build -Ppkg=com.etendoerp.subapp.product --info
+    ```
+    As we can see, it will be generated in the `/subapp/src/libs/` folder the functions and types that will be used for reading and writing `GET` and `POST` data.
+
+    ```
+    modules
+    └── com.etendoerp.subapp.product
+      ├── src-db 
+      └── subapp
+          └── src
+            └── lib
+                └── base
+                    └── baseservice.ts
+                    └── baseservice.types.ts
+                └── data_gen
+                    └── product.types.ts
+                    └── productservice.ts
+                    └── useProduct.ts      
+    ```
+
+3. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the `package.json`,  following the command: 
 
     ``` bash title="Terminal"
     yarn install 
     ```
 
-3. Finally, to run in development mode run
+4. Then, to run the sub-application in development mode excecute: 
 
     ``` bash title="Terminal"
     yarn dev 
@@ -326,26 +357,23 @@ Restart the Das RX service to recognize the  projections and mappings.
     !!! note
         By default, the application run in development mode on `localhost` at port `3000`. Additionally, changes in the `/src` directory are automatically scanned, enabling dynamic updates to the application during development. This ensures that any modifications are reflected in real-time without restarting the application.
 
-4. falta el build
-
-## Product Sub-application Example
-
+## Product Subapp Example
 This section covers an overview about the product sub-application example screens and principal parts of the subapplication.
 
 !!! info "Consideration"
-    - The applications must be developed for both platforms (phone and tablet). 
+    The applications must be developed for both platforms phone and tablet. 
    
-### Home
+### Home Screen 
  
 - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
 
 **Phone View**
 <figure markdown>
-![home-screen.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-screen.png){ width="300", align=left } 
-![remove-product.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/remove-product.png){ width="300", align=right}
+![home-screen.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home.jpeg){ width="300", align=left } 
+![remove-product.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/delete-product.jpeg){ width="300", align=right}
 </figure>
 **Tablet View**
-![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-screen-tablet.png)
+![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home-tablet.png)
 
 
 - The route to this screen is `src/screens/home/index.tsx` and the content:
@@ -360,77 +388,61 @@ import useProduct from '../../lib/data_gen/useProduct';
 import { Product } from '../../lib/data_gen/product.types';
 
 interface TableListProps {
-navigation: NavigationProp<any>;
-route: any;
-navigationContainer: INavigationContainerProps;
+  navigation: NavigationProp<any>;
+  route: any;
+  navigationContainer: INavigationContainerProps;
 }
 
 const Home = (props: TableListProps) => {
-const { getFilteredProducts, updateProduct } = useProduct();
-return (
-	<TableList
-	deleteDataItem={async (item: Product) => {
-		item.active = false;
-		await updateProduct(item);
-	}}
-	{...props}
-	columns={[
-		{
-		key: 'id',
-		primary: true,
-		visible: false,
-		},
-		{
-		key: 'name',
-		label: locale.t('Table.products'),
-		visible: true,
-		width: '50%',
-		},
-		{
-		key: 'productCategoryName',
-		label: locale.t('Table.products'),
-		visible: true,
-		width: '30%',
-		},
-	]}
-	getData={getFilteredProducts}
-	labels={{
-		dataName: 'Product',
-		navbarTitle: locale.t('Home.welcome'),
-		containerTitle: locale.t('Home.productList'),
-		buttonNew: locale.t('Home.newProduct'),
-		searchPlaceholder: locale.t('Home.typeProduct'),
-		successfulDelete: locale.t('Success.deleteProduct'),
-		errorDelete: locale.t('Error.deleteProduct'),
-	}}
-	/>
-);
+  const { getFilteredProducts, updateProduct } = useProduct();
+  return (
+    <TableList
+      deleteDataItem={async (item: Product) => {
+        item.active = false;
+        await updateProduct(item);
+      }}
+      {...props}
+      columns={[
+        {
+          key: 'id',
+          primary: true,
+          visible: false,
+        },
+        {
+          key: 'name',
+          label: locale.t('Table.products'),
+          visible: true,
+          width: '50%',
+        },
+        {
+          key: 'uPCEAN',
+          label: locale.t('Table.barcode'),
+          visible: true,
+          width: '30%',
+        },
+      ]}
+      getData={getFilteredProducts}
+      labels={{
+        dataName: 'Product',
+        navbarTitle: locale.t('Home.welcome'),
+        containerTitle: locale.t('Home.productList'),
+        buttonNew: locale.t('Home.newProduct'),
+        searchPlaceholder: locale.t('Home.typeProduct'),
+        successfulDelete: locale.t('Success.deleteProduct'),
+        errorDelete: locale.t('Error.deleteProduct'),
+      }}
+    />
+  );
 };
 
 export default Home;
-
 ```
 
-Key Components: ???
-
-1. **Navbar**: Positioned at the top, it displays the application's title and user's name, offering navigation controls.
-
-2. **ButtonUI**: A customizable UI button from Etendo UI Library, used for actions like navigating to product details. It can be styled in terms of size, style, and includes icons.
-
-3. **SearchContainer**: Enables product search by name, allowing the product list to be updated based on the query using the component from Etendo UI Library.
-
-4. **TableUI**: Displays products in a table format, allowing interactions such as editing, deleting or viewing product details. Available in the tablet or web version.
-
-5. **Cards**: Used to display product details in a card format, providing a more detailed view of the product. Only available in the mobile version.
-
-6. **Layout and Style**: The screen is designed to be responsive for both mobile and tablet formats, with a layout comprising the navbar, button, search bar, and table. Styles are defined in the `styles` object for consistency.
-
-
-### ProductDetail
+### Product Detail
 
 - This screen will show the detail of a product. Also, it will allow us to edit the product.
-- It's the same screen used to create a new product. there is a flag to know if the product is new or not (productItem).
-- The route to this screen is `src/screens/productDetail.txt` , and the content:
+- It's the same screen used to create a new product, if the prop have not id.
+- The route to this screen is `src/screens/productDetail.txt`,  add the content:
 
 ``` javascript title="src/screens/productDetail.txt"
 import React, { useState } from 'react';
@@ -522,7 +534,7 @@ export default ProductDetail;
     
 ### Navegation 
 
-In addition, it is necessary to add the navigation configuration in the app.tsx file, in the return statement.  This configuration provides the infrastructure to navigate between the different screens of the application.
+In addition, it is necessary to add the navigation configuration in the `app.tsx` file, in the return statement.  This configuration provides the infrastructure to navigate between the different screens of the application.
 
 ``` javascript title="App.tsx"
 <Stack.Navigator initialRouteName="Home">
@@ -541,111 +553,25 @@ In addition, it is necessary to add the navigation configuration in the app.tsx 
 </Stack.Navigator>
 ```
 
-## Integrating Etendo RX with Etendo Sub-Application
+!!! info 
+    For more information, visit [Navegation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Sub-application Structure Page.
+
+!!! note 
+    For more information about the Language management and translations, visit [Languague ](../concepts/subapp-structure.md#language) concepts.
 
 
-### Custom Hooks in React Native
+### Visualizing the sub-applications
 
-Custom hooks are a fundamental aspect of React Native, offering a modular approach to managing logic in applications. These hooks allow for creating, updating, and deleting functionalities, and are instrumental in abstracting complex interactions with the backend, thereby enhancing code maintainability and readability.
+1. Open the [Etendo Mobile](../../../user-guide/etendo-mobile/getting-started.md) application on a mobile device. You can use either an emulator or a physical device.
+    
+2. In Etendo Mobile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment url should be `http://<local-network-ip>:8096/` and the context path by default `/etendo` 
 
-#### Overview of Custom Hooks
+    !!! info
+        To find out your IP address on the local network, you can run the command `ifconfig` in a Mac or Linux terminal or `ipconfig` in Windows CMD.
+  
+    ![ip-config](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/ip-config.png)
 
-Custom hooks, such as `useProduct`, exemplify the integration between frontend components and backend services.
+3. Login Etendo Mobile and you will see the list of subapps. Clicking on `Product Subapp` will access to development mode app.
+    ![app-home.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home.png)
 
-### Implementing Custom Hooks
-
-Here's an example of how custom hooks are utilized:
-
-```typescript title="useProduct.ts"
-import { useState, useEffect } from 'react';
-import { Product } from '../../lib/data_gen/product.types';
-import ProductService from '../../lib/data_gen/productservice';
-
-// Custom hook for managing products
-export const useProduct = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  // Fetching data
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await ProductService.BACK.getFilteredProducts(); 
-      setProducts(data);
-    };
-    fetchData();
-  }, []);
-
-  // Function to handle product update
-  const handleUpdateProduct = async (updatedProduct: Product) => {
-    await ProductService.BACK.updateProduct(updatedProduct);
-    // Optionally, update the products state to reflect the changes
-  };
-
-  // Function to get filtered products (if needed)
-  const getFilteredProducts = async (filterCriteria: any) => {
-    const filteredProducts = await ProductService.BACK.getFilteredProducts(filterCriteria);
-    setFilteredProducts(filtered);
-    return filteredProducts; // This line is optional, allowing the function to return the filtered products
-  };
-
-  return {
-    products,
-    handleUpdateProduct,
-    getFilteredProducts,
-  };
-};
-```
-
-## Implementing `useProduct` Hook in `Home` Component
-
-The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The `useProduct` custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
-
-### Example Usage
-
-Using the Table component from [Etendo UI Library](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}, the `Home` component lists the products, displaying a loading spinner while the data is being fetched. The `useProduct` hook is used to manage the data and loading state, ensuring that the component remains responsive and user-friendly.
-
-```typescript title="Home.tsx"
-import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
-import useProduct from '../../hooks/useProduct';
-import { Table } from 'etendo-ui-library';
-
-const Home = () => {
-  // data is the list of products, as a result of a RX consult in useProduct
-  // loading is a boolean that indicates if the data is being loaded
-  const { data, loading } = useProduct();
-  ...
-  return (
-    <View>
-    ...
-      <TableUI
-        columns={dataColumns}
-        data={data} // here is used to list the products
-        isLoading={loading} // here is used to show a loading spinner
-        onLoadMoreData={onLoadMoreData}
-        commentEmptyTable={locale.t('Table.textEmptyTable')}
-        textEmptyTable={locale.t('Table.commentEmptyTable')}
-        pageSize={PAGE_SIZE}
-      />
-      ...
-    </View>
-  );
-};
-
-export default Home;
-```
-
-Based on this, the `Home` component is presented as an efficient product data manager, highlighting the main actions of obtaining and visualizing products, presenting a sub-application design and allowing real-time updates and fluid interactions with the user.
-
-### Conclusion
-
-The integration of Etendo RX with Etendo Sub-Applications using custom hooks like `useProduct` enhances the development process and the user experience. It provides a seamless connection between backend services and a React Native frontend
-
-In the `Home.tsx` component, we observed the practical application of these hooks, which resulted in a dynamic, responsive, and user-friendly interface. This approach not only streamlines the development process but also ensures that the code remains maintainable and readable.
-
-While the example focused on listing products using a table, it's important to note that the distributed code includes additional functionalities. These include **editing**, **adding**, and **deleting** products, further demonstrating the versatility and comprehensive nature of the `useProduct` hook within the application.
-
-Attached below is an example of **F&B International Group's products**, obtained through Etendo RX, demonstrating the efficiency between backend and frontend operations in a practical sub-application context.
-
-![generate-entities.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-subapp-product.png)
-
-In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.
+4. Now you can view, filter, create, edit and delete products.
