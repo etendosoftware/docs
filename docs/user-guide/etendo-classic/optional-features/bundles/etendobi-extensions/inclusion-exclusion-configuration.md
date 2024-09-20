@@ -1,8 +1,10 @@
 ---
-title: Etendo BI Inclusion/Exclusion Configuration
 hide:
     - navigation
 ---
+
+# Etendo BI Inclusion/Exclusion Configuration
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.inclusion.exclusion` 
 
 ## Overview
 

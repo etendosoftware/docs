@@ -7,7 +7,6 @@ tags:
     - Etendo RX
 ---
 # Etendo RX
-
 :octicons-package-16: Javapackage: `com.etendoerp.etendorx` 
 
 ## Overview

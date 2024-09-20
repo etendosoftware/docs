@@ -8,7 +8,6 @@ tags:
 ---
 
 # Bank Integration PSD2
-
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
 
 ## Overview
