@@ -1,9 +1,7 @@
----
-title: Advanced Business Partner
----
+# Advanced Business Partner
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner` 
+
 ## Overview
-
-
 This section describes the Advanced Business Partner module included in the Etendo Essentials Extensions bundle.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -9,9 +9,9 @@ tags:
 ---
 
 # Bulk Posting
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting` 
 
 ## Overview
-
 This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
 
 !!! info
