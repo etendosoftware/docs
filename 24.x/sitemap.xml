@@ -33,15 +33,15 @@
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/overview/</loc>
-         <lastmod>2024-09-20</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
@@ -793,7 +793,7 @@
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
-         <loc>https://docs.etendo.software/24.x/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauth-authentication/</loc>
+         <loc>https://docs.etendo.software/24.x/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>

@@ -14,7 +14,7 @@
         <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../oauth-authentication/">
+        <link rel="next" href="../etendo-rx/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#etendo-advanced-security" class="md-skip">
           Skip to content
         </a>
       
@@ -2342,6 +2342,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -2372,6 +2374,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2395,14 +2399,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Password Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#password-history" class="md-nav__link">
     <span class="md-ellipsis">
       Password History
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2458,11 +2468,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../oauth-authentication/" class="md-nav__link">
+      <a href="../etendo-rx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    OAuth Authentication
+    Etendo RX
   </span>
   
 
@@ -6032,11 +6042,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Tomcat Dockerized Service
+    Dockerized Tomcat Service
   </span>
   
 
@@ -8820,6 +8830,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8843,14 +8855,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Password Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#password-history" class="md-nav__link">
     <span class="md-ellipsis">
       Password History
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8903,14 +8921,49 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Advanced Security</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Password</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">User Lockout</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Autolock Password</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Password History</span>
+    
+  
+</nav>
+
 
   
   
 
 
-  <h1>Etendo Advanced Security</h1>
-
-<h3 id="overview">Overview</h3>
+<h1 id="etendo-advanced-security">Etendo Advanced Security</h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.advanced.security</code> </p>
+<h2 id="overview">Overview</h2>
 <p>This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -8929,7 +8982,7 @@
 <p class="admonition-title">Info</p>
 <p>For more information about the module configuration visit the <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/overview/#etendo-advanced-security">Developer Guide</a>.</p>
 </div>
-<h3 id="password-security"><strong>Password Security</strong></h3>
+<h2 id="password-security">Password Security</h2>
 <p>This functionality is executed when the password is changed, either because the user needs to change it or because the system requires it. The process can be done from the <strong>Change Password</strong> field in the navigation bar and/or from the <strong>User</strong> window.</p>
 <p>From the <strong>Change Password</strong> process, Etendo will ask for the current password and the new one to make the change. After clicking on <strong>Apply,</strong> a series of checks will be verified to finally execute the corresponding changes.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/sQNqx26cwCGfPld7D47SHw_QnmdO5-zHlJ41yN28V3yKv95xq6PMGqHobkKuh8rQa11RNvI6bMpkWMk9k0H6P_n8DilZ0NfQ56yjBZYaP85WyQWXC7shoMt7zU6nxO-3-JMUXzwRJ2ASii0YDJpUN6s.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/sQNqx26cwCGfPld7D47SHw_QnmdO5-zHlJ41yN28V3yKv95xq6PMGqHobkKuh8rQa11RNvI6bMpkWMk9k0H6P_n8DilZ0NfQ56yjBZYaP85WyQWXC7shoMt7zU6nxO-3-JMUXzwRJ2ASii0YDJpUN6s.png" /></a></p>
@@ -8955,7 +9008,7 @@
 <p class="admonition-title">Info</p>
 <p>Etendo also allows entering the same password an indefinite number of times. In case the user wishes to maintain the same password, just keep the field <strong>Enable Password History</strong> from the System Info window <strong>unchecked</strong>. </p>
 </div>
-<h3 id="user-lockout">User Lockout</h3>
+<h2 id="user-lockout">User Lockout</h2>
 <p>Another feature of this module is the <strong>blocking</strong> of the user after N number of <strong>unsuccessful login attempts</strong>. When entering a wrong password, Etendo shows an error message indicating the number of attempts left.</p>
 <p>In this example, the system shows that there is one attempt left.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/C-pmD7RKuMzM6e1fSFHSwLWAusC2cL1U9gKlvxWxe7VRa64uuLwaQ7dm4Cmi_Z773XQsfFzfSPrdfMGDNdnNgKPuWobU4xTlxFtOirr34LPiLMT9bI3LONLsmydtloKyd48GYi_1hRnovcHduVsDwGE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/C-pmD7RKuMzM6e1fSFHSwLWAusC2cL1U9gKlvxWxe7VRa64uuLwaQ7dm4Cmi_Z773XQsfFzfSPrdfMGDNdnNgKPuWobU4xTlxFtOirr34LPiLMT9bI3LONLsmydtloKyd48GYi_1hRnovcHduVsDwGE.png" /></a></p>
@@ -8971,7 +9024,7 @@
 <p class="admonition-title">Warning</p>
 <p>It is important to note that once the new password has been entered, if the user enters again a wrong password, the system will automatically block the login at the first try. </p>
 </div>
-<h3 id="multiple-session-verification">Multiple Session Verification</h3>
+<h2 id="multiple-session-verification">Multiple Session Verification</h2>
 <p>Another functional innovation that facilitates this module is the ability to allow or block to have multiple sessions opened from another browser.</p>
 <p>From the <strong>User</strong> window, within the <strong>More Information</strong> field, it is possible to configure the check that allows having several sessions active at the same time. The check is called <strong>Allow multiple sessions</strong>.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/vcMT58GIgiB2QsZcR-bt5xyajWgf9isk7sxrFJuwkUW27BKnmLIjcb2YZIEJUB-YE-scGv_n3rZ1jTwKGKwLumx4KAIjSp0SsN1jK4saZNChsH8q2JRn5RS3Q6TkXVdVLa1r7C5wXTPmrfVkJyChjRA.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/vcMT58GIgiB2QsZcR-bt5xyajWgf9isk7sxrFJuwkUW27BKnmLIjcb2YZIEJUB-YE-scGv_n3rZ1jTwKGKwLumx4KAIjSp0SsN1jK4saZNChsH8q2JRn5RS3Q6TkXVdVLa1r7C5wXTPmrfVkJyChjRA.png" /></a></p>
@@ -8983,11 +9036,11 @@
 <p class="admonition-title">Info</p>
 <p>By default, Etendo with this module installed, only allows to have one session active. </p>
 </div>
-<h3 id="changing-password-after-login">Changing Password after Login</h3>
+<h2 id="changing-password-after-login">Changing Password after Login</h2>
 <p>After logging in for the <strong>first time</strong> with a user, Etendo asks to <strong>change the password</strong>. When trying to log in, the system mentions that the password has expired and that the user needs to change it to a new one to be able to log in.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/aJIN1JP1Oau9HSzi_O2NF-rcQBAdE58v59GVg5NoLiQvgTobqai4mOU07aw0D786KJfL0EBJ_rcaQ86-vf8FmZo3gKZnhLaE_yE3Ynzk46CQkhg0abwcMPLKPw2OjUlvFa75h5zkhSW4i97OviTl8mo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/aJIN1JP1Oau9HSzi_O2NF-rcQBAdE58v59GVg5NoLiQvgTobqai4mOU07aw0D786KJfL0EBJ_rcaQ86-vf8FmZo3gKZnhLaE_yE3Ynzk46CQkhg0abwcMPLKPw2OjUlvFa75h5zkhSW4i97OviTl8mo.png" /></a></p>
 <p>Once the change has been made, the user is redirected to the main interface of the application.</p>
-<h3 id="expiration-time-autolock-password">Expiration Time (Autolock Password)</h3>
+<h2 id="expiration-time-autolock-password">Expiration Time (Autolock Password)</h2>
 <p>As part of the security management, Etendo also allows the management of the days for the <strong>password expiration time</strong>.</p>
 <p>From the <strong>Preferences</strong> window, it is possible to adjust the period of time required for the user to be obliged to change the password. Do it by adding the desired amount of days for the password expiration in the <strong>Value</strong> field.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/4o5-tsn6u1mWXedVD-rp5GQNpc6RZ6cAroo-BrZc6xPUevOI0COBerM1NnEmySSSMLMBicOBI1Gidh-4D3QkOMPvJI72977qKSYFHtFJ0UtZnChiIcSYi0Nz3Uu_9H5k39FZ7ozJjeyUbxifnWGamz0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/4o5-tsn6u1mWXedVD-rp5GQNpc6RZ6cAroo-BrZc6xPUevOI0COBerM1NnEmySSSMLMBicOBI1Gidh-4D3QkOMPvJI72977qKSYFHtFJ0UtZnChiIcSYi0Nz3Uu_9H5k39FZ7ozJjeyUbxifnWGamz0.png" /></a></p>
