@@ -180,45 +180,65 @@ This section covers the creation of projections, mappings, and searches, which e
 
 ### Creating Entity Fields
 
-Now, we define which fields we want to retrieve. To do this we start by selecting the data reading projection `PRODSUBAPP - Product - Read` and run the `Create Projection Fields` process, in the pop-up we will select the fields to project. In our example case: 
+1. Now, we define which fields we want to retrieve. To do this we start by selecting the data reading projection `PRODSUBAPP - Product - Read` and run the `Create Projection Fields` process, in the pop-up we will select the fields to project. In our example case: 
 
-- active
-- id
-- name
-- productCategory
-- searchkey
-- taxCategory
-- UOM
-- UPCEAN
+    - active
+    - id
+    - name
+    - productCategory
+    - searchkey
+    - taxCategory
+    - UOM
+    - UPCEAN
 
-!!! note
-	While not all of these fields will be displayed in the application, as record editing is allowed, we are also selecting all the mandatory fields to create a product.
+    !!! note
+        While not all of these fields will be displayed in the application, as record editing is allowed, we are also selecting all the mandatory fields to create a product.
 
-<figure markdown="span">
-	![create-projection-fields.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/create-projection-fields.png)
-	<figcaption>Create Projection Fields proccess excecution example</figcaption>
-</figure>
-
-
-This is the M_Product - Write fields.
-
-=== "id"
-=== "name"
-=== "uPCEAN"
-=== "searchKey"
-=== "active"
-
-- active
-- id
-- name
-- productCategory
-- searchkey
-- taxCategory
-- UOM
-- UPCEAN
+    <figure markdown="span">
+    ![create-projection-fields.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/create-projection-fields.png)
+    <figcaption>Create read projection fields proccess excecution example</figcaption>
+    </figure>
 
 
-  ![entity-fields-read.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/projected-entity-field-read.png)
+2. Now we define which fields should be saved when creating or editing a record, in this case we select the write projection ` PRODSUBAPP - Product - Write` and run the process `Create Projection Fields` selecting the same fields as for the read one
+
+    - active
+    - id
+    - name
+    - productCategory
+    - searchkey
+    - taxCategory
+    - UOM
+    - UPCEAN
+
+
+    <figure markdown="span">
+    ![create-projection-fields.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/create-projection-fields.png)
+    <figcaption> Entity fields created example</figcaption>
+    </figure>
+
+3. In the case of the `productCategory`, `taxCategory` and `UOM` fields in the application they will not be editable, but they must be autocompleted with a default value, for this we can use constant mappings. If new Products are created, these default values will be used.
+
+    To do this, we go to the `application` > `Etendo RX` > `Constant Values` window and define constant IDs of default values. Here are some example IDs:
+
+    | Name       | Default Value                              |
+    | ---------------- | ------------------------------------ |
+    | `ProductCategory`|`DC7F246D248B4C54BFC5744D5C27704F`    |
+    | `taxCategory`    |`43A120C9377B4537B5D1976D9B1233D7`    |
+    | `uOM`            |`100`                                 |
+   
+    <figure markdown="span">
+    ![constant-values.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/constant-values.png) 
+    <figcaption>Constant values definition example</figcaption>
+    </figure>
+    
+
+4. Finally selecting the `PRODSUBAPP - Product - Write` write projection, edit the `productCategory`, `taxCategory` and `UOM` records, modify the `Field Mapping` field to `Constant Mapping`, delete the `Jsonpath` and select the corresponding value in the `Constant Value` drop-down list, defined in the previous step.
+
+    <figure markdown="span">
+    ![constant-values-definition](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/constant-values-definition.png)
+    <figcaption>Entity field tab, constant values definition example</figcaption>
+    </figure>
 
 
 ### Create a Search in Projected Data
@@ -233,7 +253,7 @@ To do this, we open the `Tables and Columns` window, in our example select the `
 
 ### Create a New Search and Search Parameter
 
-Next we will define a search method to be used when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the  method name `getFilteredProducts` and the hql query filter 
+Next, we will define a search method to be used when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the  method name `getFilteredProducts` and the hql query filter 
 
 ```
 SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc
@@ -257,8 +277,10 @@ Restart the Das RX service to recognize the  projections and mappings.
 ./gradlew rx.das.restart
 ```
 
-Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.
+!!! info 
+    By accessing [http://localhost:8092/swagger-ui/index.html](http://localhost:8092/swagger-ui/index.html), the RX DAS Service Swagger can be visualized. This interface allows for consultation of the endpoints generated based on the previously made configurations.
 
+    ![RX DAS Service Swagger](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/das-api.png)
 
 
 ## Creating the Sub-application
@@ -304,6 +326,8 @@ Executing this command will relaunch the Etendo RX service with the newly integr
     !!! note
         By default, the application run in development mode on `localhost` at port `3000`. Additionally, changes in the `/src` directory are automatically scanned, enabling dynamic updates to the application during development. This ensures that any modifications are reflected in real-time without restarting the application.
 
+4. falta el build
+
 ## Product Sub-application Example
 
 This section covers an overview about the product sub-application example screens and principal parts of the subapplication.
@@ -317,8 +341,8 @@ This section covers an overview about the product sub-application example screen
 
 **Phone View**
 <figure markdown>
-	![home-screen.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-screen.png){ width="300", align=left } 
-	![remove-product.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/remove-product.png){ width="300", align=right}
+![home-screen.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-screen.png){ width="300", align=left } 
+![remove-product.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/remove-product.png){ width="300", align=right}
 </figure>
 **Tablet View**
 ![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-example-subapplication/home-screen-tablet.png)
