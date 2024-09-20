@@ -3,12 +3,9 @@ tags:
   - Beta
   - Etendo Classic
   - platform extensions
-  - bundles
   - installation
   - modules instalation
-  - dependency
   - dependency manager
-  - dependencies management
 ---
 
 # Dependency Manager

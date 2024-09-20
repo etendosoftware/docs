@@ -195,7 +195,7 @@ nav:
           - Platform Extensions Bundle:
             - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
             - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
-            - OAuth Authentication: user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauth-authentication.md
+            - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
           - Warehouse Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
@@ -445,7 +445,7 @@ nav:
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
           - Dependency Manager: developer-guide/etendo-classic/bundles/platform/dependency-manager.md
           - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
-          - Tomcat Dockerized Service: developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md
+          - Dockerized Tomcat Service: developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
