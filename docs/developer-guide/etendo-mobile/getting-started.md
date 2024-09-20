@@ -25,12 +25,7 @@ On this page we will explain what are the requirements to create a subapplicatio
 
 - [Etendo Classic](../../developer-guide/etendo-rx/getting-started.md)
 - [Etendo Mobile](../../user-guide/etendo-mobile/getting-started.md) latest version available in PlayStore or Appstore.
-- [Etendo RX](../etendo-rx/getting-started.md) version `2.0.0` or higher.
-- [Dynamic App](../../user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app) 
-
-!!! info  
-    To include **Etendo RX** and **Dynamic App** modules, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
-
+- [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}.
 - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
 - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 - [Yarn](https://classic.yarnpkg.com/en/docs/install/){target="_blank"} version `1.22.0` or higher

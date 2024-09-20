@@ -47,7 +47,7 @@ The tutorial will guide you through the creation of the *Product Subapp*, a simp
 
 Configure and export dynamic applications in Etendo Classic, which are displayed dynamically in Etendo Mobile.
 
-In the **Dynamic App** window, specify the paths and versions for each subapplication. These settings determine how subapplications are displayed when users log into Etendo Mobile.
+In the **Dynamic App** window, specify the subapplication path and version. 
 
 For the example we are following, the Dynamic App in Etendo must be configured with the following form fields and corresponding values:
 
@@ -71,6 +71,8 @@ Fields to note:
 - **Is Development**: This check defines that this version is in development and can be deployed locally. In our example case, set in `true`
 - **Active**: To select if this application version is active or not. In our example case, set `true`
 
+!!! info
+    For more information visit [Dynamic App](../../etendo-classic/bundles/platform/dynamic-app.md) developer guide.
 
 ### Role configuration
 :material-menu: `Application` > `General Setup` > `Security` > `Role`
@@ -556,8 +558,11 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 !!! info 
     For more information, visit [Navegation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Sub-application Structure Page.
 
-!!! note 
-    For more information about the Language management and translations, visit [Languague ](../concepts/subapp-structure.md#language) concepts.
+!!! info 
+    For more information about the language management and translations, visit [Languague](../concepts/subapp-structure.md#language) concept.
+
+!!! info 
+    For more information about Subapplication Params, visit [Params from Etendo Mobile](../concepts/subapp-structure.md#params-from-etendo-mobile) concept
 
 
 ### Visualizing the sub-applications

@@ -65,9 +65,9 @@ export default locale;
 
 Between the functions of the `locale` handler, some of the most important are:
 
-- _t(key, params)_: this function receives a key (and other optional params) and returns the text translated to the language of the subapplication. This function is based on [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in `.json` files in `subapp/src/lang`. 
+- `t(key, params)`: this function receives a key (and other optional params) and returns the text translated to the language of the subapplication. This function is based on [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in `.json` files in `subapp/src/lang`. 
 
-- _setCurrentLanguage(input)_: gets a language as a param and sets this language as default in the subapplication.
+- `setCurrentLanguage(input)`: gets a language as a param and sets this language as default in the subapplication.
 
 The translation definition files can group the information, for example, in the English translations file `/subapp/src/lang/enUS.json` we can group the messages or labels by screens, components or as it is more optimal according to the development. For Example
 
@@ -125,4 +125,4 @@ Etendo UI Library is a library of UI components follow the style and design of E
 !!! info 
     For more information, visit [Etendo UI Library - Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
 
-![storybook.png](../../../assets/developer-guide/etendo-mobile/concepts/subapplication-structure/storybook.png)
+    ![storybook.png](../../../assets/developer-guide/etendo-mobile/concepts/subapplication-structure/storybook.png)
