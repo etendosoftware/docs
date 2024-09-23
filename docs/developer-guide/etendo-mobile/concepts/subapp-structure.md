@@ -1,25 +1,25 @@
-# Sub-Applications Structure in Etendo Mobile
+# Subapplications Structure in Etendo Mobile
 
 ## Overview
-This page provides a comprehensive guide to the structure of sub-applications in Etendo Mobile. It explains key concepts such as the `App.tsx` file, which serves as the main entry point for sub-applications, and details how parameters from Etendo Mobile are utilized for initialization. Additionally, the guide covers language management, navigation between screens using the navigation stack, and the use of the Etendo UI Library for consistent design and functionality across sub-apps. These elements form the foundation for developing dynamic and well-integrated sub-applications within Etendo Mobile.
+This page provides a comprehensive guide to the structure of subapplications in Etendo Mobile. It explains key concepts such as the `App.tsx` file, which serves as the main entry point for subapplications, and details how parameters from Etendo Mobile are utilized for initialization. Additionally, the guide covers language management, navigation between screens using the navigation stack, and the use of the Etendo UI Library for consistent design and functionality across subapps. These elements form the foundation for developing dynamic and well-integrated subapplications within Etendo Mobile.
 
 ## App File
-In `App.tsx` located in the root of the subapplication and it is the main file. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the subapplication and gets the params from Etendo Mobile.
+In `App.tsx`, it is the main file located in the root of the subapplication. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible for the initialization of the subapplication and gets the params from Etendo Mobile.
 
 
 ### Params from Etendo Mobile
 Etendo Mobile _sends_ params to the subapplication and all of them are ready to use, they are:
 
 !!! abstract "Params"
-    - _ _id_: id of the subapplication
-    - _url_: the environment url (setted in setting's Etendo Mobile)
+    - _ _id_: ID of the subapplication
+    - _url_: the environment URL(setted in setting's Etendo Mobile)
     - _contextPathUrl:  the environment context path (setted in setting's Etendo Mobile)
     - _navigationContainer_: an instance of the navigation container of Etendo Mobile
     - _token_: Token
     - _language_: Language
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
-    - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component boasts a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
+    - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component includes a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
 
 
 ### Language
@@ -32,7 +32,7 @@ The language is a string that serves as a representation of the user's selected 
 !!! tip
     All subapps must be developed in English _en-US_ and may include translations such as Spanish _es-ES_.  
 
-As you can see, we use `locale` to set the language of the subapplication. This `locale` is an instace of a custom handler of the language which is based in `i18n` and defined in the path `subapp/src/localization/locale.ts`.
+As you can see, we use `locale` to set the language of the subapplication. This `locale` is an instance of a custom handler of the language which is based in `i18n` and defined in the path `subapp/src/localization/locale.ts`.
 
 ``` typescript title="locale.ts"
 const locale: LocaleModule = {
@@ -52,7 +52,7 @@ export default locale;
 ```
 
 !!! info
-    - Translations folder: Translations are  organized in the folder `subapp/src/lang`
+    - Translations folder: Translations are organized in the folder `subapp/src/lang`
     - JSON files by language: Each translation file corresponds to a language and locale, following a structure that includes the language code and region. E.g:
 
     ```
@@ -69,7 +69,7 @@ Between the functions of the `locale` handler, some of the most important are:
 
 - `setCurrentLanguage(input)`: gets a language as a param and sets this language as default in the subapplication.
 
-The translation definition files can group the information, for example, in the English translations file `/subapp/src/lang/enUS.json` we can group the messages or labels by screens, components or as it is more optimal according to the development. For Example
+The translation definition files can group the information, for example, in the English translations file `/subapp/src/lang/enUS.json` we can group the messages or labels by screens, components or as it is optimal according to the development. For Example
 
 ``` json title="enUS.json"
 {
@@ -84,9 +84,7 @@ The translation definition files can group the information, for example, in the 
 
 ```
 
-Then to use it, use the local.t function, E.g:  `locale.t('ScreenOne.LabelOne')`
-
-
+Then to use it, use the `local.t` function, E.g:  `locale.t('ScreenOne.LabelOne')`
 
 ### Navigation Stack
 The navigation stack part of `App.tsx` that allows us to navigate between screens. It is a component provided by  `@react-navigation/stack` in a React Native application. Conceptually, a navigation stack manages the flow between different screens in the app, allowing users to navigate forward and backward between these screens.
@@ -120,7 +118,7 @@ The navigation stack part of `App.tsx` that allows us to navigate between screen
     ```
 
 ### Etendo UI Library
-Etendo UI Library is a library of UI components follow the style and design of Etendo, that should be used throughout the subapplication development. This library is based on _React Native Elements_ and it is available on [NPM - Etendo UI Library ](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your subapplications. In this library we can find components like:  Button, Input, Navbar, Cards, Icons, etc.
+Etendo UI Library is a library of UI components following the style and design of Etendo, that should be used throughout the subapplication development. This library is based on _React Native Elements_ and it is available on [NPM - Etendo UI Library ](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your subapplications. In this library, we can find components like:  Button, Input, Navbar, Cards, Icons, etc.
 
 !!! info 
     For more information, visit [Etendo UI Library - Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} place where you can see all the components of the library. Also, you can see the code of each component and how to use it.

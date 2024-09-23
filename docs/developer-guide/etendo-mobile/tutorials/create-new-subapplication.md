@@ -11,9 +11,9 @@ tags:
 
 ## Overview
 
-This tutorial provides a step-by-step guide to creating a new sub-application within **Etendo Mobile**. By following these instructions, you will learn how to fully utilize the capabilities of **Etendo RX** and leverage the visual components available in the **Etendo UI Library** to build a functional sub-application.
+This tutorial provides a step-by-step guide to creating a new subapplication within **Etendo Mobile**. By following these instructions, you will learn how to fully utilize the capabilities of **Etendo RX** and leverage the visual components available in the **Etendo UI Library** to build a functional subapplication.
 
-The tutorial will guide you through the creation of the *Product Subapp*, a simple application that enables the addition, deletion, and modification of products, as well as their visualization in a grid. Upon completion, you will have the skills to create and distribute sub-applications as modules, thereby extending the mobile functionality of Etendo.
+The tutorial will guide you through the creation of the *Product Subapp*, a simple application that enables the addition, deletion, and modification of products, as well as their visualization in a grid. Upon completion, you will have the skills to create and distribute subapplications as modules, thereby extending the mobile functionality of Etendo.
 
 
 !!! info
@@ -34,10 +34,10 @@ The tutorial will guide you through the creation of the *Product Subapp*, a simp
     </figure>
 
     !!! tip
-        - Notice that the name can be anything you want, but the type has to be setted as Module.
-        - The _description field_ is free and also _required_.
+        - Notice that the name can be anything you want, but the type has to be set as Module.
+        - The _description_ field is free and also _required_.
         - The _Is Rx_ checkbox indicates that this module will include RX service configurations, the RX service Javapackage must be specified.
-        - The _Is React_  checkbox indicates that this module includes a sub-application and React Native code is generated.
+        - The _Is React_ checkbox indicates that this module includes a subapplication and React Native code is generated.
         - In this case, start from `1.0.0` module version and set the DB Prefix as `ETSAPPP`.
 
 
@@ -55,9 +55,9 @@ For the example we are following, the Dynamic App in Etendo must be configured w
 
 Fields to note:
 
-- **Module**: The module that can export the window configuration, in our example case, set  **Product SubApp**.
+- **Module**: The module that can export the window configuration. In our example case, set `Product SubApp`.
 - **Name**: Name with the application will be shown. In our example case, set `Product Subapp`
-- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our examplecase, set `/`
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our example case, set `/`
 - **Active**: To select if this application is active or not. In our example case, set `true`
 
 
@@ -65,14 +65,14 @@ The **Dynamic App Version** tab allows the application to be versioned, enabling
 
 Fields to note:
 
-- **Name**: Name of the application version E.g. `dev` or `1.0.0`. In our example case set `dev`
+- **Name**: Name of the application version E.g. `dev` or `1.0.0`. In our example case, set `dev`
 - **File Name**: The bundle name of the compiled application, by default `dist.js`.
-- **Default**: This check defines that this version is productive. In our example case set `false`
+- **Default**: This check defines that this version is productive. In our example case, set `false`
 - **Is Development**: This check defines that this version is in development and can be deployed locally. In our example case, set in `true`
 - **Active**: To select if this application version is active or not. In our example case, set `true`
 
 !!! info
-    For more information visit [Dynamic App](../../etendo-classic/bundles/platform/dynamic-app.md) developer guide.
+    For more information visit the [Dynamic App](../../etendo-classic/bundles/platform/dynamic-app.md) developer guide.
 
 ### Role configuration
 :material-menu: `Application` > `General Setup` > `Security` > `Role`
@@ -103,7 +103,7 @@ Logged in as the **Group Admin** role (which is the default role for accessing E
         └── src-db 
     ```
 
-## Dokerized Services
+## Dockerized Services
 
 Before proceeding, it is necessary to start the **Etendo RX** services. These services provide a security layer (Auth Service), a data access layer (Das Service), which are essential for consuming or writing data in Etendo and Edge Service . Additionally, by selecting the **isReact** checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.
 
@@ -114,7 +114,7 @@ docker_com.etendoerp.etendorx=true
 ```
 
 !!!info
-    For more information about how to handle Etendo Dockerizations visit [Docker Management](../../etendo-classic/bundles/platform/dependency-manager.md). 
+    For more information about how to handle Etendo Dockerizations, visit [Docker Management](../../etendo-classic/bundles/platform/dependency-manager.md). 
 
 ??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
     It is also possible to run the dockerized [PostgreSQL service](../platform/docker-management.md#postgres-database-service) and [Tomcat service](../platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
@@ -137,7 +137,7 @@ Here, all the services and their respective logs can be seen running using [Dock
 ### RX Config window
 :material-menu: `Application` > `Etendo RX` > `RX Config`
 
-This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, two records need to be created: one for the **RX Config** service, responsible for distributing the dynamic configurations of other available services, and another for the **Auth** service, which provides security utilities. The Auth service must be accessible by the sub-application to obtain the authentication token for requests.
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, two records need to be created: one for the **RX Config** service, responsible for distributing the dynamic configurations of other available services, and another for the **Auth** service, which provides security utilities. The Auth service must be accessible by the subapplication to obtain the authentication token for requests.
 
 As `System Administrator` role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:
 
@@ -149,7 +149,7 @@ As `System Administrator` role, in this window, it is necessary to add two entri
 See the configuration examples bellow and replicate them. 
 
 !!!info
-    The **Public URL** field only needs to be configured when the sub-application is set to production.
+    The **Public URL** field only needs to be configured when the subapplication is set to production.
 
 ![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
 
@@ -157,7 +157,6 @@ See the configuration examples bellow and replicate them.
 
 !!!info 
     If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`.
-
 
 
 ## Projections and Search
@@ -170,9 +169,9 @@ This section covers the creation of projections, mappings, and searches, which e
 
 1.  As a `System Administrator` role, it is required to create a projection that reflect partial views of the Product class and contain only the necessary properties.
 
-2. To do this we will go to the `Projections and Mappings` window and create a new projection, select the module under development `Product SubApplication - 1.0.0 - English (USA)`, where these configurations will be exported and in the name field we define `ProductSubApp`.
+2. To do this, we will go to the `Projections and Mappings` window and create a new projection, select the module under development `Product SubApplication - 1.0.0 - English (USA)`, where these configurations will be exported and in the name field we define `ProductSubApp`.
 
-3. Now, with the selected projection we add in the tab `Projected Entities` two projections, one for reading data, selecting the table `M_Product` and in the Mapping Type field we select `Etendo to external system` and another projection for writing data, selecting again the table `M_Product` and in the Mapping Type field `External system to Etendo`.  The other fields are auto-completed with respect to these values 
+3. Now, with the selected projection we add in the tab `Projected Entities` two projections, one for reading data, selecting the table `M_Product` and in the Mapping Type field we select `Etendo to external system` and another projection for writing data, selecting again the table `M_Product` and in the Mapping Type field `External system to Etendo`.  The other fields are auto-completed with respect to these values.
 
 <figure markdown="span">
  	![projection.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/projections-mappings.png)
@@ -181,7 +180,7 @@ This section covers the creation of projections, mappings, and searches, which e
 
 ### Creating Entity Fields
 
-1. Now, we define which fields we want to retrieve. To do this we start by selecting the data reading projection `PRODSUBAPP - Product - Read` and run the `Create Projection Fields` process, in the pop-up we will select the fields to project. In our example case: 
+1. Now, we define which fields we want to retrieve. To do this, we start by selecting the data reading projection `PRODSUBAPP - Product - Read` and run the `Create Projection Fields` process, in the pop-up we will select the fields to project. In our example case: 
 
     - active
     - id
@@ -197,7 +196,7 @@ This section covers the creation of projections, mappings, and searches, which e
 
     <figure markdown="span">
     ![create-projection-fields.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/create-projection-fields.png)
-    <figcaption>Create read projection fields proccess excecution example</figcaption>
+    <figcaption>Create read projection fields process execution example</figcaption>
     </figure>
 
 
@@ -254,25 +253,23 @@ To do this, we open the `Tables and Columns` window, in our example select the `
 
 ### Create a New Search and Search Parameter
 
-Next, we will define a search method to be used when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the  method name `getFilteredProducts` and the hql query filter 
+Next, we will define a search method to be used when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the method name `getFilteredProducts` and the hql query filter. 
 
 ```
 SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc
 ```
 This query filters active products by name or bar code. 
 
-As we can see in the query it receives the`:name` parameter of String type that we define in the `Search Parameter` tab.
+As we can see in the query, it receives the`:name` parameter of String type that we define in the `Search Parameter` tab.
 
 <figure markdown="span">
     ![search-parameters.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/search-parameters.png)
     <figcaption>Search and Search Parameter creation example</figcaption>
 </figure>
 
-
-
 ### Restart the Etendo RX Service
 
-Restart the Das RX service to recognize the  projections and mappings.
+Restart the Das RX service to recognize the projections and mappings.
 
 ```bash title="Terminal"
 ./gradlew rx.das.restart
@@ -284,9 +281,9 @@ Restart the Das RX service to recognize the  projections and mappings.
     ![RX DAS Service Swagger](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/das-api.png)
 
 
-## Creating the Sub-application
+## Creating the Subapplication
 
-1. Now, create the sub-application based on a template published in NPM, [Etendo Subapp Data Template Typescript ](https://www.npmjs.com/package/etendo-subapp-data-template-typescript). Execute the Gradle command to automatically create the sub-application within the module under development.
+1. Now, create the subapplication based on a template published in NPM, [Etendo Subapp Data Template Typescript ](https://www.npmjs.com/package/etendo-subapp-data-template-typescript). Execute the Gradle command to automatically create the subapplication within the module under development.
 
     ``` bash title="Terminal"
     ./gradlew subapp.create -Ppkg=<javapackage> --info
@@ -314,10 +311,10 @@ Restart the Das RX service to recognize the  projections and mappings.
           └── App.tsx
     ```
 
-2. Once the sub-application is created, the react-native code must be generated, with types and functions that interact with the RX DAS Service, for this we execute the command Gradle : 
+2. Once the subapplication is created, the react-native code must be generated, with types and functions that interact with the RX DAS Service, for this we execute the command Gradle : 
 
     !!! info
-        Make sure that the Etendo RX services are running and without errors before executing this command
+        Make sure that the Etendo RX services are running and without errors before executing this command.
 
     ``` bash title="Terminal"
     ./gradlew subapp.build -Ppkg=<javapackage> 
@@ -345,13 +342,13 @@ Restart the Das RX service to recognize the  projections and mappings.
                     └── useProduct.ts      
     ```
 
-3. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the `package.json`,  following the command: 
+3. In a terminal on path `modules/<javapackage>/subapp`, install the depedencies declared in the `package.json`,  following the command: 
 
     ``` bash title="Terminal"
     yarn install 
     ```
 
-4. Then, to run the sub-application in development mode excecute: 
+4. Then, to run the subapplication in development mode execute: 
 
     ``` bash title="Terminal"
     yarn dev 
@@ -360,10 +357,10 @@ Restart the Das RX service to recognize the  projections and mappings.
         By default, the application run in development mode on `localhost` at port `3000`. Additionally, changes in the `/src` directory are automatically scanned, enabling dynamic updates to the application during development. This ensures that any modifications are reflected in real-time without restarting the application.
 
 ## Product Subapp Example
-This section covers an overview about the product sub-application example screens and principal parts of the subapplication.
+This section covers an overview about the product subapplication example screens and principal parts of the subapplication.
 
 !!! info "Consideration"
-    The applications must be developed for both platforms phone and tablet. 
+    The applications must be developed for both platforms: phone and tablet. 
    
 ### Home Screen 
  
@@ -443,7 +440,7 @@ export default Home;
 ### Product Detail
 
 - This screen will show the detail of a product. Also, it will allow us to edit the product.
-- It's the same screen used to create a new product, if the prop have not id.
+- It is the same screen used to create a new product, if the prop does not have ID.
 - The route to this screen is `src/screens/productDetail.txt`,  add the content:
 
 ``` javascript title="src/screens/productDetail.txt"
@@ -536,7 +533,7 @@ export default ProductDetail;
     
 ### Navegation 
 
-In addition, it is necessary to add the navigation configuration in the `app.tsx` file, in the return statement.  This configuration provides the infrastructure to navigate between the different screens of the application.
+In addition, it is necessary to add the navigation configuration in the `app.tsx` file, in the return statement. This configuration provides the infrastructure to navigate between the different screens of the application.
 
 ``` javascript title="App.tsx"
 <Stack.Navigator initialRouteName="Home">
@@ -556,20 +553,20 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 ```
 
 !!! info 
-    For more information, visit [Navegation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Sub-application Structure Page.
+    For more information, visit [Navegation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
 
 !!! info 
     For more information about the language management and translations, visit [Languague](../concepts/subapp-structure.md#language) concept.
 
 !!! info 
-    For more information about Subapplication Params, visit [Params from Etendo Mobile](../concepts/subapp-structure.md#params-from-etendo-mobile) concept
+    For more information about Subapplication Params, visit [Params from Etendo Mobile](../concepts/subapp-structure.md#params-from-etendo-mobile) concept.
 
 
-### Visualizing the sub-applications
+### Visualizing the subapplications
 
 1. Open the [Etendo Mobile](../../../user-guide/etendo-mobile/getting-started.md) application on a mobile device. You can use either an emulator or a physical device.
     
-2. In Etendo Mobile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment url should be `http://<local-network-ip>:8096/` and the context path by default `/etendo` 
+2. In Etendo Mobile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment URL should be `http://<local-network-ip>:8096/` and the context path by default `/etendo`.
 
     !!! info
         To find out your IP address on the local network, you can run the command `ifconfig` in a Mac or Linux terminal or `ipconfig` in Windows CMD.
