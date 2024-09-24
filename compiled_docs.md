@@ -50947,7 +50947,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.14.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.14.0){target="_blank"} | 11/09/2024 | 22.4.3 | 24.2.x | CS | :white_check_mark: |
+| [1.15.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.15.0){target="_blank"} | 24/09/2024 | 22.4.3 | 24.2.x | CS | :white_check_mark: |
+| [1.14.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.14.0){target="_blank"} | 11/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.13.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.13.0){target="_blank"} | 14/08/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.12.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.12.0){target="_blank"} | 28/06/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.11.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.1){target="_blank"} | 17/05/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
