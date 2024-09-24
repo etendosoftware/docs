@@ -283,7 +283,7 @@ Restart the Das RX service to recognize the projections and mappings.
 
 ## Creating the Subapplication
 
-1. Now, create the subapplication based on a template published in NPM, [Etendo Subapp Data Template Typescript ](https://www.npmjs.com/package/etendo-subapp-data-template-typescript). Execute the Gradle command to automatically create the subapplication within the module under development.
+1. Now, create the subapplication based on a template published in NPM, [Etendo Subapp Data Template Typescript ](https://www.npmjs.com/package/etendo-subapp-data-template-typescript){target="_blank"}. Execute the Gradle command to automatically create the subapplication within the module under development.
 
     ``` bash title="Terminal"
     ./gradlew subapp.create -Ppkg=<javapackage> --info
