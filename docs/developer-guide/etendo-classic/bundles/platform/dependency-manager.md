@@ -37,8 +37,11 @@ This window presents two buttons that can be used: **Add dependency** and **Upda
 
 ### Add Dependency 
 
-This button is used to add all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.
+This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.
 
+- **If a package bundle is selected**: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.
+
+- **If a non-bundle package is selected**: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.
 !!!note
     A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
 
@@ -46,8 +49,32 @@ This button is used to add all the dependecies part of a specific version of the
 
 Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
 
-!!!info
-    In case of executing the process with a bundle, all its dependencies will be added but not itself.
+### Rules for Adding Dependencies Based on Version
+
+#### 1. **If the dependency version is greater than the installed version**:
+
+- **No installed dependency (module) and no record in `Dependency Management`:**
+    - A new dependency is added in `Dependency Management`.
+
+- **No installed dependency (module), but a record in `Dependency Management` exists:**
+    - The existing record in `Dependency Management` is updated to reflect the latest version of the dependency.
+
+- **Dependency installed (module) and a record exists in `Dependency Management`:**
+    - In `Dependency Management` the dependency version is updated.
+
+- **Installed dependency (module) but no record in `Dependency Management` (local dependency):**
+    - A warning message is displayed: 
+        - **Message:** "The module ... is installed in the system, but there is no declared dependency record. Running this process will add the dependency, which may cause loss of functionality or loss of customizations in the module already installed."
+    - The local dependency is deleted, and a new record is added in `Dependency Management` with the correct version.
+
+#### 2. **If the dependency version is less than the installed version:**
+
+- An error message is shown:
+    - **Message:** "It is not possible to install the dependency ..., in ... version because it is already installed in a later version and could affect existing functionalities. If you want to install it anyway, you should downgrade this dependency to version ... from the Dependency Management window."
+- The process is disabled to prevent further actions, ensuring that no incompatible versions are installed.
+
+This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss.
+
 
 ### Update Packages
 
