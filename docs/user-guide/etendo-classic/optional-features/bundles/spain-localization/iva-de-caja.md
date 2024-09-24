@@ -1,29 +1,38 @@
 ---
+tags:
+- localización española
+- spain localization
+- cashvat
+- iva de caja
+- impuestos
 title: Impuestos IVA de Caja
 ---
 
 ## Introducción
 
-Este documento describe la funcionalidad del **IVA de Caja**, disponible en Etendo.
+Este documento describe la funcionalidad del **IVA de Caja**, disponible en Etendo Classic.
 
 El objetivo de esta funcionalidad es **reconocer contablemente el IVA y declararlo/liquidarlo** con la Agencia Tributaria correspondiente, al realizarse el **cobro/pago** de las factura de venta/compra.
 
 En el caso de **España** se puede concretar que:
-* este nuevo Régimen especial de carácter optativo, permite a los sujetos pasivos retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido hasta el momento del cobro a sus clientes aunque se retardará, igualmente, la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**); todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
-  * Por tanto, **el derecho a la deducción del IVA soportado** en el régimen especial del criterio de caja nace:
-    * **en el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos
-    * **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
-  * Igualmente, **el devengo del IVA en las operaciones** a las que sea de aplicación el régimen especial del criterio de caja se produce:
-    * **en el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos.
-    * **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
+- Este Régimen especial de carácter optativo, permite a los sujetos pasivos retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido hasta el momento del cobro a sus clientes.
+- Igualmente, se retardará la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**).
+- Todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
+- Por tanto, **el derecho a la deducción del IVA soportado** en el régimen especial del criterio de caja nace:
+  - **En el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos.
+  - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
+- Igualmente, **el devengo del IVA en las operaciones** a las que sea de aplicación el régimen especial del criterio de caja se produce:
+  - **En el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos.
+  - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
 
-Es por ello que el módulo de IVA de Caja **a partir de su versión 1.0.100** permite **liquidar de forma manual el IVA de Caja** de facturas no pagadas/cobradas total o parcialmente. Esta liquidación, en el caso de España, se registrará y contabilizará con fecha 31 de Diciembre de 2015. Ver sección: [Liquidación manual del IVA de Caja
+
+Es por ello que el módulo de IVA de Caja **a partir de su versión 1.0.100** permite **liquidar de forma manual el IVA de Caja** de facturas no pagadas/cobradas total o parcialmente. Esta liquidación, en el caso de España, se registrará y contabilizará con fecha 31 de Diciembre de 2024. Ver sección: [Liquidación manual del IVA de Caja
 ](#liquidación-manual-del-iva-de-caja)
 
 
 ## Descripción
 
-El IVA de Caja es un régimen especial de IVA al que las organizaciones ya se pueden acoger en países como España o Alemania, y recientemente México. En México, esta funcionalidad se denomina "Traslado de IVA".
+El IVA de Caja es un régimen especial de IVA al que las organizaciones ya se pueden acoger en países como España.
 
 Las organizaciones aplican el IVA al generar una factura de venta; de tal forma que este impuesto es pagado por el cliente pero es la organización que genera la factura que incluye el IVA, quien lo declara y por tanto lo liquida con la Agencia Tributaria correspondiente.
 
@@ -39,9 +48,7 @@ Este régimen puede ser una buena opción desde el punto de vista financiero per
 
 ### IVA de Caja en España
 
-Tal y como puede leerse en la página oficial de la [Agencia Tributaria](http://www.agenciatributaria.es/AEAT.internet/Inicio_es_ES/_Segmentos_/Empresas_y_profesionales/Empresarios_individuales_y_profesionales/IVA/Novedades_en_IVA/Ano_2013__Normas_publicadas/Regimen_especial_del_criterio_de_caja.shtml), con efectos desde el 1 de enero de 2014, el artículo 23 de la Ley 14/2013, de 27 de septiembre, de apoyo a los emprendedores introduce el Régimen especial del criterio de caja.
-
-Este nuevo Régimen especial de carácter optativo permite a las organizaciones, sujetos pasivos del IVA, retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido en sus ventas hasta el momento del cobro a sus clientes aunque se retardará, igualmente, la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**); todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
+Este Régimen especial de carácter optativo permite a las organizaciones, sujetos pasivos del IVA, retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido en sus ventas hasta el momento del cobro a sus clientes aunque se retardará, igualmente, la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**); todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
 
 Dicho esto, en España puede haber organizaciones como las que se indican a continuación:
 - **Organizaciones no acogidas a este régimen especial**:
@@ -69,7 +76,12 @@ El IVA de Caja es una funcionalidad oculta de manera predeterminada en Etendo.
 
 Para habilitarla, es necesario [instalar manualmente el módulo de IVA de Caja](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Datasets/#importing-reference-data-on-organization-level), que se encuentra bajo Licencia Pública de Etendo.
 
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/dataset-cashvat.png)
+
+*Recuerde que debe tener previamente instalado el dataset "Taxes: Configuration for Spain".*
+
 Una vez instalado, en la interfaz de Etendo se mostrarán las pestañas y los campos necesarios para trabajar con la funcionalidad de IVA de Caja.
+
 
 ## Configuración
 ### Dos procesos independientes: Compra y Venta
@@ -84,8 +96,8 @@ Toda esta configuración permite cubrir diferentes tipo de legislación en país
 
 Es importante remarcar que la configuración correcta para España, en el caso de una organización sujeta a este régimen especial de IVA, es seleccionar las dos casillas que se citan a continuación en la ventana "Organización":
 
-* **Cash VAT** ("IVA de Caja")
-* **Double Cash Criteria** ("Criterio de Caja Doble")
+- **Cash VAT** ("IVA de Caja")
+- **Double Cash Criteria** ("Criterio de Caja Doble")
 
 #### Proceso de Venta
 
@@ -198,7 +210,8 @@ En la cabecera de la ventana **"Factura (Proveedor)"**, sección **"Más Informa
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/purchase-inv.png)
 
 Este check se activa automáticamente:
- * cuando la "Organización" se ha configurado como acogida al régimen de IVA de Caja, * o bien cuando el "Tercero" se ha configurado como acogido al regimen de IVA de Caja
+ - cuando la "Organización" se ha configurado como acogida al régimen de IVA de Caja,
+  - o bien cuando el "Tercero" se ha configurado como acogido al regimen de IVA de Caja
 
 Este check se puede desactivar de forma manual para aquellos casos en los que la factura de compra incluya operaciones que se excluyen de este régimen especial, por ejemplo en los casos de "Importaciones" y "Adquisiciones Intracomunitarias".
 
@@ -251,14 +264,14 @@ Al contabilizar la factura de compra la cuota del impuesto por importe de 173.57
 ## Liquidación manual del IVA de Caja
 
 Tal y como ya se ha adelantado, en el caso de España **el derecho a la deducción del IVA soportado** en el régimen especial del criterio de caja nace:
-* **en el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos, tal y como ya se ha explicado dentro de la sección [Proceso de Compras](#proceso-de-compra)
-* **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
+- **en el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos, tal y como ya se ha explicado dentro de la sección [Proceso de Compras](#proceso-de-compra)
+- **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
 
 Igualmente, **el devengo del IVA en las operaciones** a las que sea de aplicación el régimen especial del criterio de caja se produce:
-* **en el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos, tal y como ya se ha explicado dentro de la sección [Proceso de Ventas](#proceso-de-ventas)
-* **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
+- **en el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos, tal y como ya se ha explicado dentro de la sección [Proceso de Ventas](#proceso-de-ventas)
+- **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
 
-Es decir, el IVA de Caja devengado/deducible de las facturas de venta/compra de fecha 2014 que no estén cobradas/pagadas totalmente, tendrá que liquidarse y declararse a Hacienda con fecha del 31 de Diciembre de 2015.
+Es decir, el IVA de Caja devengado/deducible de las facturas de venta/compra de fecha 2024 que no estén cobradas/pagadas totalmente, tendrá que liquidarse y declararse a Hacienda con fecha del 31 de Diciembre de 2024.
 
 ### Documento de Liquidación Manual
 
@@ -270,34 +283,34 @@ El módulo de gestión de IVA de Caja de Etendo (Cash VAT Management) incluye, a
 
 Esta nueva ventana permite a una organización acogida o destinataria de operaciones en régimen especial de criterio de caja:
 
-* introducir una **fecha desde/hasta** que filtre por la fecha de las facturas de IVA de Caja no pagadas/cobradas o parcialmente pagadas/cobradas (campos "Starting Date"/"Ending Date")
-* así como una **fecha de contabilización de la liquidación manual del IVA de Caja** (campo "Accounting Date").
+- introducir una **fecha desde/hasta** que filtre por la fecha de las facturas de IVA de Caja no pagadas/cobradas o parcialmente pagadas/cobradas (campos "Starting Date"/"Ending Date")
+- así como una **fecha de contabilización de la liquidación manual del IVA de Caja** (campo "Accounting Date").
 
 Al crearse el estado del documento ("Document Status") es borrador ("**Draft**").
 
 A continuación el botón de proceso **"Pick Lines & Complete"** permite obtener un listado de las facturas de IVA de Caja "completadas" y no necesariamente "contabilizadas" no pagadas/cobradas. Este listado de facturas incluye la siguiente información relevante:
-* **Numero de Factura**, columna "Document Nº"
-* **Tipo de documento**, columna "Document Type", que puede incluir facturas o facturas rectificativas o abonos tanto de compra como de venta.
-* **Fecha de Factura**, columna "Invoice Date"
-* **Tercero**, columna "Business Partner"
-* **Importe Total de la Factura**, columna "Grand Total Amount"
-* **Impuesto de IVA de Caja**, columna "Tax"
-* **Porcentaje no pagado de la factura**, columna "Percentage", que puede ser el 100% o menor.
-* **Cuota del impuesto**, columna "Tax Amount" 
-* **Base Imponible del impuesto**, columna "Taxable Amount".
+- **Numero de Factura**, columna "Document Nº"
+- **Tipo de documento**, columna "Document Type", que puede incluir facturas o facturas rectificativas o abonos tanto de compra como de venta.
+- **Fecha de Factura**, columna "Invoice Date"
+- **Tercero**, columna "Business Partner"
+- **Importe Total de la Factura**, columna "Grand Total Amount"
+- **Impuesto de IVA de Caja**, columna "Tax"
+- **Porcentaje no pagado de la factura**, columna "Percentage", que puede ser el 100% o menor.
+- **Cuota del impuesto**, columna "Tax Amount" 
+- **Base Imponible del impuesto**, columna "Taxable Amount".
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/transfer-cashvat-accounts.png)
 
-A continuación, el usuario puede seleccionar la factura o facturas para las que el IVA de Caja se tiene que liquidar de forma manual a 31 de Diciembre de 2015. En esta ventana:
-* el botón **"OK"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y mantener las facturas seleccionadas.
-* el botón **"Complete"** permite completar la selección y pasar el estado del documento "Manual Cash VAT Settlement" a "Completado". Cualquier cambio en la selección implicará la **"Reactivación"** del documento.
-* el botón **"Cancel"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y cancelar la selección.
+A continuación, el usuario puede seleccionar la factura o facturas para las que el IVA de Caja se tiene que liquidar de forma manual a 31 de Diciembre de 2024. En esta ventana:
+- el botón **"OK"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y mantener las facturas seleccionadas.
+- el botón **"Complete"** permite completar la selección y pasar el estado del documento "Manual Cash VAT Settlement" a "Completado". Cualquier cambio en la selección implicará la **"Reactivación"** del documento.
+- el botón **"Cancel"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y cancelar la selección.
 
 Una vez seleccionadas, las facturas se reflejan en la pestaña "Lines", y en la parte superior de la ventana se actualizan los campos siguientes, con la suma de cuotas y bases correspondientes:
-* **Cuota de IVA Devengado**, campo "Sales Tax Amount"
-* **Base Imponible Devengada**, campo "Sales Taxable Amount"
-* **Cuota del IVA Deducible**, campo "Purchase Tax Amount"
-* **Base Imponible Deducible**, campo "Purchase Taxable Amount"
+- **Cuota de IVA Devengado**, campo "Sales Tax Amount"
+- **Base Imponible Devengada**, campo "Sales Taxable Amount"
+- **Cuota del IVA Deducible**, campo "Purchase Tax Amount"
+- **Base Imponible Deducible**, campo "Purchase Taxable Amount"
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/process-manual-cashvat.png)
 
@@ -308,20 +321,20 @@ Este campo enlaza con la pestaña "Cash VAT" relacionada con el impuesto que cor
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/purchase-cashvat.png)
 
 Tal y como se puede apreciar en la imagen anterior, la liquidación manual del IVA de Caja, crea de forma automática un nuevo registro en la pestaña "Cash VAT", con la siguiente información:
-* **Fecha de pago** = vacío ya que la liquidación del IVA de Caja no se ha producido al pagarse la factura, sino como consecuencia de una liquidación manual.
-* **Porcentaje** = se mostrará el porcentaje de liquidación de IVA de Caja pendiente para el impuesto (de IVA de Caja).
-* **Impuestos** = cuota del impuesto liquidada
-* **Base Imponible** = base imponible del impuesto liquidada
-* **Pago** = vacío ya que la liquidación del IVA de Caja no se ha producido al pagarse la factura, sino como consecuencia de una liquidación manual.
-* **Liquidación Manual** ("Manual Settlement") = Sí
-* **Linea de la Liquidación** ("Manual Manual Cash VAT Settlement Line") = con información sobre el número de documento y línea de la Liquidación Manual del IVA de Caja
-* **Fecha de la liquidación** ("Manual Manual Cash VAT Settlement Date") = con la fecha contable de la liquidación manual.
+- **Fecha de pago** = vacío ya que la liquidación del IVA de Caja no se ha producido al pagarse la factura, sino como consecuencia de una liquidación manual.
+- **Porcentaje** = se mostrará el porcentaje de liquidación de IVA de Caja pendiente para el impuesto (de IVA de Caja).
+- **Impuestos** = cuota del impuesto liquidada
+- **Base Imponible** = base imponible del impuesto liquidada
+- **Pago** = vacío ya que la liquidación del IVA de Caja no se ha producido al pagarse la factura, sino como consecuencia de una liquidación manual.
+- **Liquidación Manual** ("Manual Settlement") = Sí
+- **Linea de la Liquidación** ("Manual Manual Cash VAT Settlement Line") = con información sobre el número de documento y línea de la Liquidación Manual del IVA de Caja
+- **Fecha de la liquidación** ("Manual Manual Cash VAT Settlement Date") = con la fecha contable de la liquidación manual.
 
 Como puede apreciarse en la imagen anterior, el **porcentaje total liquidado de IVA de Caja** para el impuesto es ahora de un **100%**. Por tanto, si se produjera un pago de la factura de compra, la contabilización de ese pago no generaría un traslado contable del IVA de Caja, ya que éste ya se ha producido.
 
 ### Traspaso contable del IVA de Caja
 
-Al contabilizar la liquidación manual a 31 de Diciembre de 2015 (botón "Post"), se producirá el traslado del IVA de Caja contabilizado en las cuentas transitorias de IVA a las cuentas finales, tanto para el IVA Devengado (Cuentas: 47700T a 477000), como para el IVA Soportado Deducible (Cuentas 47200T a 472000).
+Al contabilizar la liquidación manual a 31 de Diciembre de 2024 (botón "Post"), se producirá el traslado del IVA de Caja contabilizado en las cuentas transitorias de IVA a las cuentas finales, tanto para el IVA Devengado (Cuentas: 47700T a 477000), como para el IVA Soportado Deducible (Cuentas 47200T a 472000).
 
 Recuerde activar la tabla "OBCVAT_ManualSettlemen" en la ventana "Esquema contable", pestaña "Tablas a contabilizar".
 
@@ -329,4 +342,4 @@ Recuerde activar la tabla "OBCVAT_ManualSettlemen" en la ventana "Esquema contab
 
 ### Liquidación del IVA de Caja
 
-Es con esa fecha, 31 de Diciembre de 2015, cuando se puede liquidar/declarar ese IVA de Caja a las autoridades fiscales correspondientes. En el caso de España, este IVA de Caja se tendrá que incluir para su liquidación en el Modelo 303 del último periodo (Diciembre 2015/Último Trimestre 2015), así como en el Modelo 390 de 2015.
+En el ejemplo mencionado anteriormente, es con fecha, 31 de Diciembre de 2024, cuando se puede liquidar/declarar ese IVA de Caja a las autoridades fiscales correspondientes. En el caso de España, este IVA de Caja se tendrá que incluir para su liquidación en el Modelo 303 del último periodo (Diciembre 2024/Último Trimestre 2024), así como en el Modelo 390 de 2024.
