@@ -36,6 +36,15 @@ This module enables the Dockerization of Tomcat within Etendo Classic.
     For more information visit, [Dockerized Tomcat Service developer guide](../platform/dockerized-tomcat-service.md).
 
 
+## Dynamic App 
+
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
+
+Dynamic App allows you to create sub applications in Etendo Mobile.
+
+!!! info
+    For more information, visit the [Dynamic App developer guide](./dynamic-app.md)
+
 ## EAN 128
 
 ### Technical Aspects

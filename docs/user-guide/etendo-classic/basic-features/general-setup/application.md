@@ -2,51 +2,6 @@
 title: Application
 ---
 
-## Dynamic App
-
-:material-menu: `Application` > `General Setup` > `Application` > `Dynamic App`
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
-
-### Overview
-
-This page explains how to configure dynamic applications from Etendo classic. The applications are displayed dynamically according to the configuration in Etendo Mobile. In addition, this section provides details about how to configure access to sub applications and versions according to the role assigned to each user.
-
-In the Dynamic App window, the user can add information that will make reference to it. Also, it is possible to find the configuration of paths and versions of each subapplication.
-
-When logging into Etendo Mobile, the subapplications are displayed according to these settings.
-
-!!! info
-    For more information visit the [Etendo Mobile user guide](../../../../user-guide/etendo-mobile/getting-started.md).
-
-### Header
-
-![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/HeaderDynamicApp.png)
-
-Fields to note:
-
-- **Module**: The module that can export the window configuration.
-- **Name**: Name with the application will be shown.
-- **Directory Location**: The path where the bundle of the compiled application is located.
-- **Active**: To select if this application is active or not.
-
-### **Dynamic App Version Tab**
-
-![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/DynamicAppVersion.png)
-
-This window is in charge of being able to version your application and so you also have development versions as well as productive ones.
-
-Fields to note:
-
-- **Name**: Name of the application version.
-- **File Name**: The bundle name of the compiled application.
-- **Default**: This check defines that this version is productive.
-- **Active**: To select if this application version is active or not.
-- **Is Development**: This check defines that this version is in development that can be deployed locally.
-
-Finally, configure this application in the [Role Configuration](../general-setup/security.md#dynamic-app).
-
 ## Create Sequences
 
 :material-menu: `Application` > `General Setup` > `Application` > `Create Sequences`
