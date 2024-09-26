@@ -1,8 +1,11 @@
 ---
-title: Etendo BI Connector 
 hide:
     - navigation
 ---
+
+# Etendo BI Connector 
+:octicons-package-16: Javapackage: `com.etendoerp:integration.powerbi` 
+
 ## Overview
 
 !!! info

@@ -814,8 +814,8 @@ Whether you're looking to master the basics or explore advanced features, our gu
 </figure>
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Classic/Basic Features/General Setup/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/General Setup/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/getting-started
 ## Article Content: 
@@ -985,50 +985,6 @@ It shows all configuration related to the attachment method used to save attachm
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application
 ## Article Content: 
-#### Dynamic App
-
-:material-menu: `Application` > `General Setup` > `Application` > `Dynamic App`
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
-
-##### Overview
-
-In this page, we will explain how to configure dynamic applications from Etendo classic, these are displayed dynamically according to the configuration in Etendo Mobile.
-In addition, it details how to configure access to sub applications and versions according to the role assigned to each user.
-In the Dynamic App window, located in General Setup/Application/Dynamic App, you can add the information that will make reference to it. In this window, you find the configuration of paths and versions of each subapplication.
-When logging into Etendo Mobile, the subapplications are displayed according to these settings.
-
-!!! info
-    For more information visit the [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) documentation.
-
-##### Header
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/general-setup/application/HeaderDynamicApp.png)
-
-Fields to note:
-
-- **Module**: The module that can export the window configuration.
-- **Name**: Name with the application will be shown.
-- **Directory Location**: The path where the bundle of the compiled application is located.
-- **Active**: To select if this application is active or not.
-
-##### **Dynamic App Version Tab**
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/general-setup/application/DynamicAppVersion.png)
-
-This window is in charge of being able to version your application and so you also have development versions as well as productive ones.
-
-Fields to note:
-
-- **Name**: Name of the application version.
-- **File Name**: The bundle name of the compiled application.
-- **Default**: This check defines that this version is productive.
-- **Active**: To select if this application version is active or not.
-- **Is Development**: This check defines that this version is in development that can be deployed locally.
-
-Finally, configure this application in the [Role Configuration](https://docs.etendo.software/latest/general-setup/security.md#dynamic-app).
-
 #### Create Sequences
 
 :material-menu: `Application` > `General Setup` > `Application` > `Create Sequences`
@@ -5541,8 +5497,8 @@ In this tab, different Ranges can be created based on the amount of the related 
     - **Price List**: Price List from which the price of the service will be obtained.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Classic/Basic Features/Procurement Management/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Procurement Management/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started
 ## Article Content: 
@@ -7093,8 +7049,8 @@ Field to note:
 ![](https://docs.etendo.software/latest/assets/drive/1U3Fx3IPP0R9acd8XMPXhtBR5qQFoj2Am.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Classic/Basic Features/Warehouse Management/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Warehouse Management/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started
 ## Article Content: 
@@ -10284,8 +10240,8 @@ All maintenance tasks that are scheduled for the machines in production are ente
 ![](https://docs.etendo.software/latest/assets/drive/YtlJL911EsQf5c-i8qMbFGpGQQFQHr1qO_V-VuJ1MByU4_t0QH3qhOFPgsZWLSareLUEaU7DvfLB8wHCb_ftn4_eDL28TUcbiGExcqGb6fYropD0oB6PVqqrn5jtPdZ7uSeiCA3AS8FUbkiVADrH9Q29ErN4lAKd-cHGjIzocw0nku0vkHPF60nbyKKZPg.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Classic/Basic Features/Material Requirement Planning/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Material Requirement Planning/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started
 ## Article Content: 
@@ -10675,8 +10631,8 @@ Define the planner in charge of managing the purchase or production of specific 
 ![](https://docs.etendo.software/latest/assets/drive/2IK-YKaAHZYtnh4V1r_P9QgY4oU3-wDlu73TD8YZffxiibZ-JWkhjD_fCnJLzntBSgBhJSLbMx3IOsYOPFoDahYodIPGEq1P8LytGAg9aCEylB2iknxNfhnwCH8MgxgF1F6CYXVQxBPfF7KuArrucc4.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Classic/Basic Features/Sales Management/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Sales Management/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started
 ## Article Content: 
@@ -12702,8 +12658,8 @@ In this window, the user defines the reasons to reject quotations. These values 
 This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨Getting Started
-## Article Path: /User Guide/Etendo Classic/Basic Features/Financial Management/✨Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Financial Management/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started
 ## Article Content: 
@@ -19774,9 +19730,10 @@ The “Advanced Business Partner” module allows the user to have a general vie
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner
 ## Article Content: 
+### Advanced Business Partner
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner` 
+
 #### Overview
-
-
 This section describes the Advanced Business Partner module included in the Etendo Essentials Extensions bundle.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -19856,7 +19813,25 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 The user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc.
 
 !!! info
-    For more information, visit the [Dependency Manager Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager.md)
+    For more information, visit the [Dependency Manager developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager.md).
+
+##### Docker Management 
+
+:octicons-package-16: Javapackage: `com.etendoerp.docker`
+
+This module enables the use of Dockerized containers in Etendo Classic.
+
+!!!info
+    For more information visit, [Docker Management developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md). 
+
+##### Dockerized Tomcat Service
+
+:octicons-package-16: Javapackage: `com.etendoerp.tomcat`
+
+This module enables the Dockerization of Tomcat within Etendo Classic.
+
+!!!info
+    For more information visit, [Dockerized Tomcat Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md).
 
 ##### Dynamic App 
 
@@ -19865,7 +19840,7 @@ The user can have access to all the available dependencies to add, configure the
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
+    For more information, visit the [Dynamic App developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dynamic-app.md)
 
 ##### EAN 128
 
@@ -19898,6 +19873,11 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 ##### Etendo RX
 
 :octicons-package-16: Javapackage: `com.etendoerp.etendorx`
+
+This module guarantees an authentication method which allows users to securely authenticate and authorize access to their information using their preferred provider.
+
+!!!info
+    For more information, visit [Etendo RX user guide](https://docs.etendo.software/latest/platform-extensions/etendo-rx.md).
 
 ##### Javax XML SOAP API
 
@@ -19940,6 +19920,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 !!! info
     For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
+
 ##### Webhook Events
 
 :octicons-package-16: Javapackage: `com.etendoerp.webhookevents`
@@ -19947,12 +19928,8 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
+    For more information, visit the [Webhook Events developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
 
-
----
-
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Advanced Security
@@ -19960,8 +19937,10 @@ This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.o
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security
 ## Article Content: 
-##### Overview
+### Etendo Advanced Security
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security` 
 
+#### Overview
 This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.
 
 !!! info
@@ -19979,7 +19958,7 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 !!! info
     For more information about the module configuration visit the [Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
 
-##### **Password Security**
+#### Password Security
 
 This functionality is executed when the password is changed, either because the user needs to change it or because the system requires it. The process can be done from the **Change Password** field in the navigation bar and/or from the **User** window.
 
@@ -20021,7 +20000,7 @@ The following example shows the same error message when changing the password fr
 !!! info
     Etendo also allows entering the same password an indefinite number of times. In case the user wishes to maintain the same password, just keep the field **Enable Password History** from the System Info window **unchecked**. 
 
-##### User Lockout
+#### User Lockout
 
 Another feature of this module is the **blocking** of the user after N number of **unsuccessful login attempts**. When entering a wrong password, Etendo shows an error message indicating the number of attempts left.
 
@@ -20043,7 +20022,7 @@ To configure the number of unsuccessful login attempts, it is necessary to creat
 !!! warning
     It is important to note that once the new password has been entered, if the user enters again a wrong password, the system will automatically block the login at the first try. 
 
-##### Multiple Session Verification  
+#### Multiple Session Verification  
 
 Another functional innovation that facilitates this module is the ability to allow or block to have multiple sessions opened from another browser.
 
@@ -20062,7 +20041,7 @@ This way, when trying to log in, the system verifies that an active session alre
 !!! info
     By default, Etendo with this module installed, only allows to have one session active. 
 
-##### Changing Password after Login
+#### Changing Password after Login
 
 After logging in for the **first time** with a user, Etendo asks to **change the password**. When trying to log in, the system mentions that the password has expired and that the user needs to change it to a new one to be able to log in.
 
@@ -20070,7 +20049,7 @@ After logging in for the **first time** with a user, Etendo asks to **change the
 
 Once the change has been made, the user is redirected to the main interface of the application.
 
-##### Expiration Time (Autolock Password)
+#### Expiration Time (Autolock Password)
 
 As part of the security management, Etendo also allows the management of the days for the **password expiration time**.
 
@@ -20091,28 +20070,29 @@ Besides, Etendo notifies the user with a message announcing the amount of **rema
     By default, the system activates this message when there are **seven days** left to change the password.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: OAuth Authentication
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Platform Extensions Bundle/OAuth Authentication
+# Article Title: Etendo RX
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Platform Extensions Bundle/Etendo RX
 ## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauth-authentication
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx
 ## Article Content: 
-### OAuth Authentication
+### Etendo RX
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx` 
 
 #### Overview
 
-This section describes the OAuth Authentication module included in the Platform Extensions bundle.
+This section describes the oAuth Authentication module included in the Platform Extensions bundle.
 
 !!! info
     To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
 
 
-OAuth Authentication process facilitates the **provider type configuration** which allows users to **securely authenticate and authorize access** to their information using their preferred provider.
+oAuth Authentication process facilitates the **provider type configuration** which allows users to **securely authenticate and authorize access** to their information using their preferred provider.
 
-OAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resorces on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
+oAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resorces on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
 
-#### OAuth Provider
+#### oAuth Provider
 
-In the OAuth Provider window in :material-menu: `application`> `oauth-provider`, set the preferred type provider by adding the user authentication URL in the **API OAuth URL field**. This URL can be found in the provider documentation API.  
+In the oAuth Provider window in :material-menu: `Application`> `Etendo-RX`> `oAuth-Provider`, set the preferred type provider by adding the user authentication URL in the **API oAuth URL field**. This URL can be found in the provider documentation API.  
 
 The other fields will be completed with data referring to the corresponding provider.
 
@@ -20503,7 +20483,6 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration
 ## Article Content: 
 ### Bank Integration PSD2
-
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
 
 #### Overview
@@ -20626,9 +20605,9 @@ Etendo **processes the bank statements** which are ready to be reconciled.
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting
 ## Article Content: 
 ### Bulk Posting
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting` 
 
 #### Overview
-
 This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
 
 !!! info
@@ -26046,6 +26025,9 @@ A background process must be set which creates CSV files that will be uploaded t
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration
 ## Article Content: 
+### Etendo BI Inclusion/Exclusion Configuration
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.inclusion.exclusion` 
+
 #### Overview
 
 !!! info
@@ -26158,6 +26140,9 @@ Main categories for account configuration:
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector
 ## Article Content: 
+### Etendo BI Connector 
+:octicons-package-16: Javapackage: `com.etendoerp:integration.powerbi` 
+
 #### Overview
 
 !!! info
@@ -26430,8 +26415,10 @@ This module allows users to prevent the duplication of purchase invoices within 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation
 ## Article Content: 
-#### Overview
+### Purchase Invoice Validations
+:octicons-package-16: Javapackage: `com.etendoerp.purchase.invoice.validations` 
 
+#### Overview
 <iframe width="560" height="315" src="https://www.youtube.com/embed/V80-YymMjFg?si=lYvSX9UxojxZVzTG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This module allows users to prevent the duplication of purchase invoices within the system, following some established rules. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice. The activation of this validation will be determined by a configurable preference.
@@ -27893,8 +27880,8 @@ In the case of transfer of funds between financial accounts of different organiz
 Above scenario would somehow mean an expense in Organization A and a revenue in Organization B.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Getting Started
-## Article Path: /User Guide/Etendo Mobile/Getting Started
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Mobile/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started
 ## Article Content: 
@@ -43656,59 +43643,136 @@ A menu will be shown where you can choose multiple options to be performed.
 
 This bundle includes enhancements for platform functionalities in Etendo.
 
-The Platform Extensions bundle includes the following modules:
+#### Dependency Manager
 
-- **Print Document Web Service**: It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
-- **Multiple Business Partner Selector**: It provides a selector which allows selecting multiple business partners in one step.
-- **Number To Word** (English): It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
-- **Javax XML SOAP API**: This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
-- **Report Cache Management**: This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
 
-#### Print Document Web Service
+This module allows access to all the available dependencies to add and configure them, and to check information about versions, validations, among other information.
 
-:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
+!!!info
+    For more information visit, [Dependency Manager developer guide](https://docs.etendo.software/latest/platform/dependency-manager.md). 
 
-:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
+#### Docker Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.docker`
+
+This module enables the use of Dockerized containers in Etendo Classic.
+
+!!!info
+    For more information visit, [Docker Management developer guide](https://docs.etendo.software/latest/platform/docker-management.md).
+
+#### Dockerized Tomcat Service
+
+:octicons-package-16: Javapackage: `com.etendoerp.tomcat`
+
+This module enables the Dockerization of Tomcat within Etendo Classic. 
+
+!!!info
+    For more information visit, [Dockerized Tomcat Service developer guide](https://docs.etendo.software/latest/platform/dockerized-tomcat-service.md).
+
+
+#### Dynamic App 
+
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
+
+Dynamic App allows you to create sub applications in Etendo Mobile.
+
+!!! info
+    For more information, visit the [Dynamic App developer guide](./dynamic-app.md)
+
+#### EAN 128
 
 ##### Technical Aspects
 
-This module allows downloading a PDF from some transaction documents using a web service called printDocument. It returns a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
+It is a module for the transmission of information between the agents of the supply chain under the specifications of the Code 128 barcode. This, provide generic Utils for EAN128 Definition and parsing
 
-The supported documents are:
+Is a Java-based module for managing EAN-128 barcodes in an Etendo ERP context. Below is an overview of what each file appears to do:
 
-- Sales Quotation
-- Invoice
-- Shipment
-- Proforma Order
-- Proforma Quotation
+##### SelectorFieldPropertyDataSource.java
 
-To call the Web Service, the following URL is needed:
+**Purpose**: Implements a data source for a custom field selector.
+**Main Operations**: Verifies whether a user has the access right to fetch data from the datasource.
+Filters out Blob and OneToMany properties when getting entity properties.
 
+##### EAN128Utils.java
+
+**Purpose**: Utility class for handling EAN-128 data parsing and manipulation.
+
+**Main Operations**: Defines standard date formats and JSON keys.
+Parses incoming EAN128 Data JSON and extracts relevant information such as lot, serial number, expiration dates, etc.
+If Inventory Line quantity was parsed, it modifies the relevant BaseOBObject's quantity.
+Provides methods to edit OpenBravo base objects (BaseOBObject) based on the parsed EAN-128 data.
+
+##### EANType.java
+
+**Purpose**: Web Service to manage EAN-128 Types.
+
+**Main Operations**: Handles HTTP GET requests and retrieves EAN-128 type information.
+The information fetched depends on the warehouse specified in the request parameters.
+If a warehouse-specific EAN-128 type isn't available, it attempts to fetch the default one.
+Converts EAN-128 type to a JSON object and returns it as a response.
+
+**Key Libraries used**:
+
+- Etendo DAL for database interaction.
+- Apache Commons Lang for String manipulations.
+- JSON and Jettison for JSON parsing.
+
+##### SMFEANComponentProvider.java
+
+**Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
+
+#### Etendo Advanced Security
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
+
+##### Technical Aspects
+
+This module allows customizing several security features related to
+
+- Password Security
+- Password History
+- User Lockout
+- Multiple Session Verification
+- Changing Password after Login
+- Expiration Time (Autolock Password)
+
+To make this module work, authentication Java class must be configured in the `gradle.properties` file by adding the following line:
+
+```groovy title="gradle.properties"
+authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
 ```
-http://<client-url/etendo>/sws/com.etendoerp.printdocumentws.printDocument
-```
 
-It is necessary to configure Token authentication to use the web service.
+Then `./gradlew setup` must be executed.
 
-Values that can be used to call the Web Service are:
+!!! warning
+      It is mandatory to execute this step before installing the module. 
 
-- order
-- invoice
-- shipment
-- quotation
-- orderProforma
-- shipmentValued
-- quotationProforma
+#### Etendo Webhooks
 
-This is a RESTful Web Service that returns a .PDF file of the document using the template that is configured. The supported documents are Sales Quotation, Invoice, Shipment, Proforma Order, Proforma Quotation.
+**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
-It is mandatory to insert the organization ID when you call the web service because it filters by organization.
+!!! info
+    For more information, visit the [Etendo Webhooks developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
+
+#### Javax XML SOAP API
+
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+
+
+##### Technical Aspects
+
+This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 #### Number To Word (English)
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword`
+
+It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 ##### Technical Aspects
 
@@ -43818,104 +43882,61 @@ public class NumberToWord_es extends NumberToWord {
 }
 ```
 
-#### Javax XML SOAP API
+#### Print Document Web Service
 
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
+
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 ##### Technical Aspects
 
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+This module allows downloading a PDF from some transaction documents using a web service called printDocument. It returns a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
+
+The supported documents are:
+
+- Sales Quotation
+- Invoice
+- Shipment
+- Proforma Order
+- Proforma Quotation
+
+To call the Web Service, the following URL is needed:
+
+```
+http://<client-url/etendo>/sws/com.etendoerp.printdocumentws.printDocument
+```
+
+It is necessary to configure Token authentication to use the web service.
+
+Values that can be used to call the Web Service are:
+
+- order
+- invoice
+- shipment
+- quotation
+- orderProforma
+- shipmentValued
+- quotationProforma
+
+This is a RESTful Web Service that returns a .PDF file of the document using the template that is configured. The supported documents are Sales Quotation, Invoice, Shipment, Proforma Order, Proforma Quotation.
+
+It is mandatory to insert the organization ID when you call the web service because it filters by organization.
 
 #### Report Cache Management
 
 :octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
+This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
+
 ##### Technical Aspects
 
-This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server. It allows clearing the cache for compiled reports in Tomcat.
+This module allows clearing the cache for compiled reports in Tomcat.
 
 The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
 
 Then, in the "Clear report cache" window, click ’Done’:
 
 ![Clear Report Cache](https://docs.etendo.software/latest/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
-
-#### Etendo Advanced Security
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
-
-##### Technical Aspects
-
-This module allows customizing several security features related to
-
-- Password Security
-- Password History
-- User Lockout
-- Multiple Session Verification
-- Changing Password after Login
-- Expiration Time (Autolock Password)
-
-To make this module work, authentication Java class must be configured in the `gradle.properties` file by adding the following line:
-
-```groovy title="gradle.properties"
-authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
-```
-
-Then `./gradlew setup` must be executed.
-
-!!! warning
-      It is mandatory to execute this step before installing the module. 
-
-#### EAN 128
-
-##### Technical Aspects
-
-It is a module for the transmission of information between the agents of the supply chain under the specifications of the Code 128 barcode. This, provide generic Utils for EAN128 Definition and parsing
-
-Is a Java-based module for managing EAN-128 barcodes in an Etendo ERP context. Below is an overview of what each file appears to do:
-
-##### SelectorFieldPropertyDataSource.java
-
-**Purpose**: Implements a data source for a custom field selector.
-**Main Operations**: Verifies whether a user has the access right to fetch data from the datasource.
-Filters out Blob and OneToMany properties when getting entity properties.
-
-##### EAN128Utils.java
-
-**Purpose**: Utility class for handling EAN-128 data parsing and manipulation.
-
-**Main Operations**: Defines standard date formats and JSON keys.
-Parses incoming EAN128 Data JSON and extracts relevant information such as lot, serial number, expiration dates, etc.
-If Inventory Line quantity was parsed, it modifies the relevant BaseOBObject's quantity.
-Provides methods to edit OpenBravo base objects (BaseOBObject) based on the parsed EAN-128 data.
-
-##### EANType.java
-
-**Purpose**: Web Service to manage EAN-128 Types.
-
-**Main Operations**: Handles HTTP GET requests and retrieves EAN-128 type information.
-The information fetched depends on the warehouse specified in the request parameters.
-If a warehouse-specific EAN-128 type isn't available, it attempts to fetch the default one.
-Converts EAN-128 type to a JSON object and returns it as a response.
-
-**Key Libraries used**:
-
-- Etendo DAL for database interaction.
-- Apache Commons Lang for String manipulations.
-- JSON and Jettison for JSON parsing.
-
-##### SMFEANComponentProvider.java
-
-**Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
-
-#### Webhook Events
-
-**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
-
-!!! info
-    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
 
 #### Upload Files
 
@@ -43924,7 +43945,7 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 **Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
 
 !!!info
-    For more information, visit [How to Create a Standard Process Definition Developer Guide](https://docs.etendo.software/latest/how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
+    For more information, visit [How to Create a Standard Process Definition developer guide](https://docs.etendo.software/latest/how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
 
 
 
@@ -44288,7 +44309,7 @@ The `com.etendoerp.docker` module enables the use of Dockerized containers in Et
 Additionally, the infrastructure could be extended, and allows other modules to include in it their own specific containers.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 #### Requirements
 
@@ -44403,12 +44424,13 @@ In this module a Postgres database service is included, this allows to use the d
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Tomcat Dockerized Service
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Tomcat Dockerized Service
+# Article Title: Dockerized Tomcat Service
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Dockerized Tomcat Service
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service
 ## Article Content: 
 ### Dockerized Tomcat Service
+
 :octicons-package-16: Javapackage: `com.etendoerp.tomcat`
 
 #### Overview
@@ -44416,7 +44438,7 @@ In this module a Postgres database service is included, this allows to use the d
 The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 #### Configuration Variables
 
@@ -44502,6 +44524,44 @@ Execute the following command to apply the configuration changes:
     sudo systemctl restart postgresql
     ```
 
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Dynamic App
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Dynamic App
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dynamic-app
+## Article Content: 
+### Dynamic App 
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
+
+#### Overview
+This page explains how to configure and export dynamic applications in Etendo Classic, which are dynamically displayed in Etendo Mobile.
+
+##### Dynamic App window
+:material-menu: `Application` > `General Setup` > `Application` > `Dynamic App`
+
+As `System Administrator` role, in the **Dynamic App** window, specify the paths and versions for each subapplication. These settings determine how subapplications are displayed when users log into Etendo Mobile.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/dynamic-app-creation.png)
+
+Fields to note:
+
+- **Module**: The module that can export the window configuration.
+- **Name**: Name with the application will be shown.
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path must be empty `/`, but in production, the path is `/<javapackage>/web/`.
+- **Active**: To select if this application is active or not.
+
+##### Dynamic App Version Tab 
+Allows the application to be versioned, enabling both development and production versions.
+
+Fields to note:
+
+- **Name**: Name of the application version E.g. `dev` or `1.0.0`.
+- **File Name**: The bundle name of the compiled application, by default `dist.js`.
+- **Default**: This check defines that this version is productive.
+- **Is Development**: This check defines that this version is in development and can be deployed locally.
+- **Active**: To select if this application version is active or not.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -45056,7 +45116,7 @@ The integration is carried out only with **banks that support Redsys**, thus gua
     It is important to note that before starting this configuration, the **QWAC** and **QSealC** certificates are required. Detailed instructions on how to obtain them can be found in the [Certificates](#certificates) section.
 
 
-#### Dokerized Services
+#### Dockerized Services
 
 To begin the integration, it is essential to launch all the services related to this module. This includes **Etendo RX**, a service that provides a reactive development platform and implements a security layer using the standard **OAuth** authentication protocol required for synchronization. Additionally, the **PSD2 service**, which interacts with Redsys, needs to be started.
 
@@ -45081,10 +45141,10 @@ docker_com.etendorx.psd2.bank.integration=true
 Then, to effectively run the services is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
-./gradlew resourses.up
+./gradlew resources.up
 ```
 
-Here, all the services and their respective logs can be seen running using [LazyDocker tool](https://github.com/jesseduffield/lazydocker){target=_isblank}
+Here, all the services and their respective logs can be seen running using [LazyDocker tool](https://github.com/jesseduffield/lazydocker){target=_isblank}.
 
 ![Docker Services](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-9.png)
 
@@ -45125,6 +45185,7 @@ It is necessary to obtain and configure a user token that will later be used by 
     ![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/financial/psd2-integration/tech-doc-psd2-integration-11.png)
     !!!note
         In this example, the **admin** user is used:
+
         - **Default Role**: F&B Group Admin
         - **Default Organization**: F&B International Group
 
@@ -45147,7 +45208,7 @@ It is necessary to obtain and configure a user token that will later be used by 
     }
     ```
     !!! info 
-        Replace the credentials with those of the user configured in the previous step 
+        Replace the credentials with those of the user configured in the previous step.
 
     **Response:**
 
@@ -45421,142 +45482,44 @@ On the other hand, this is the content of FULL\_Example.csv:
 ## Article Content: 
 #### Overview
 
-This guide will help you set up the Etendo Platform, including both the Etendo Classic functionalities and Etendo RX, our reactive platform capable of executing microservices with database interaction and asynchronous actions.
+This guide will help you set up Etendo, including both the Etendo Classic functionalities and Etendo RX, our reactive platform capable of executing microservices with database interaction and asynchronous actions.
 
-Follow these steps for a smooth installation:
+#### Requirements
 
-#### Installing Etendo
+1. Install Etendo Classic. For this, follow the [Etendo Classic installation guide](https://docs.etendo.software/latest/getting-started/installation.md).
 
-##### Prerequisites
+2. Install the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
 
-Ensure you have cloned the Etendo repository before proceeding:
+#### Dockerized Services
 
-```bash
-git clone git@github.com:etendosoftware/etendo.git
+In the platform bundle, you can find the Dockerized Services module, which provides the necessary architecture to distribute infrastructure. In this case, in this bundle, the module Etendo RX is also included and, to launch the Services distributed in it, a certain configuration is needed. In the `gradle.properties` file, add the following variable:
+
+``` groovy title="gradle.properties"
+docker_com.etendoerp.etendorx=true
 ```
 
-##### Setting Up Configuration Variables
+!!!info
+    For more information about how to handle Etendo Dockerizations, visit [Docker Management](https://docs.etendo.software/latest/etendo-classic/bundles/platform/docker-management.md). 
 
-To compile and deploy an Etendo instance, you need to set up the configuration variables. To do this, create a copy of the `gradle.properties.template` file located in the root and `src-rx` folders:
+??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
+    It is also possible to run the dockerized [PostgreSQL service](https://docs.etendo.software/latest/platform/docker-management.md#postgres-database-service) and [Tomcat service](https://docs.etendo.software/latest/platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    docker_com.etendoerp.docker_db=true
+    ```
+
+    If you want to debug Tomcat locally with IntelliJ, visit [Tomcat Dockerized Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md).
+
+Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
-cp gradle.properties.template gradle.properties
-cp src-rx/gradle.properties.template src-rx/gradle.properties
+./gradlew resources.up
 ```
 
-Now, you can edit both `gradle.properties` files updating the variables, or simply use their default values.
+Here, all the services and their respective logs can be seen running using [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} for a simple and fast container management. 
 
-- gradle.properties
-
-!!! note
-    The GitHub credentials are required.
-    To configure GitHub credentials read the [Use of Repositories technical guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md) in Etendo.
-
-| Variable                | Description                                                      | Default Value      |
-| ----------------------- | ---------------------------------------------------------------- | ------------------ |
-| `githubUser githubToken`| GitHub repository credentials, for access to commercial modules  |                    |
-| `context.name`          | Environment name                                                 | etendo             |
-| `bbdd.sid`              | Database name                                                    | etendo             |
-| `bbdd.port`             | Database port                                                    | 5432               |
-| `bbdd.systemUser`       | Database system user                                             | postgres           |
-| `bbdd.systemPassword`   | Database system password                                         | syspass            |
-| `bbdd.user`             | Database user                                                    | tad                |
-| `bbdd.password`         | Database password                                                | tad                |
-
-- src-rx/gradle.properties
-
-| Variable      | Description                          | Default Value      |
-| ------------- | ------------------------------------ | ------------------ |
-| `bbdd.rdbms`| Database manager system  | POSTGRE |
-| `bbdd.driver`       | Environment name | org.postgresql.Driver |
-| `bbdd.url`    |  Database name | jdbc:postgresql://localhost:5432 |
-| `bbdd.sid`    |  Database port | etendo |
-| `bbdd.systemUser`    |  Database system user | postgres |
-| `bbdd.systemPassword`    |  Database system password | syspass |
-| `bbdd.user`    |  Database user | tad |
-| `bbdd.password`    |  Database password | tad |
-| `bbdd.sessionConfig	`    |  Database session preferences	 | select update_dateFormat('DD-MM-YYYY') |
-
-!!! warning
-    Variables appearing in both files must have identical values. To gain more insight into what's happening, run the Gradle tasks with the `--info` or `--debug` flag.
-
-
-##### Database Setup
-
-For this tutorial, we will create a new database named `etendo` on a PostgreSQL server accessible at port `5432`. If you prefer different settings, modify the values in the `gradle.properties` files accordingly.
-
-##### Generating Configuration Files
-
-Now we need to generate the configuration files, for this, run:
-
-```bash title="Terminal"
-./gradlew setup
-./gradlew rx:setup
-```
-
-!!!warning
-    If you change the default `bbdd.url` and/or `bbdd.sid`, you must update the `src-rx/rxconfig/das.yaml` file with the new values.
-
-##### Installing Etendo Classic
-
-At this point, we have all the source code needed to create the arquitecture of Etendo.
-To do so, run the `install` task to create the initial database
-
-``` bash title="Terminal"
-./gradlew install
-```
-
-After the database creation, compile the project and deploy Etendo Classic to Tomcat with the following command:
-
-``` bash title="Terminal"
-./gradlew smartbuild
-```
-
-This task deploys the `webContent` folder into the `tomcat/webapps` directory. Make sure to set `$CATALINA_HOME` to the correct path.
-
-Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo Classic.
-
-!!!note
-    If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md).
-
-##### Compiling Etendo RX
-
-Execute the `rx:generate.entities` task to create the needed jars to start working with Etendo RX:
-
-``` bash title="Terminal"
-./gradlew rx:generate.entities
-```
-
-To launch the RX services, run:
-
-``` bash title="Terminal"
-./gradlew rx:rx
-```
-
-The first time you run the command above, you need to provide an access token for auth service, so now, we proceed to configure the auth project.
-
-##### Configure auth project
-
-After executing the rx:rx task, it starts setting up the services.
-It starts with the configuration service and when it starts to try with the auth service, it will fail because of the missing token.
-To extract the token check Auth log file in `src-rx/logs/auth.log`
-
-You will find something similar to:
-
-```
-Populate the auth.yaml file with the following property:
-token: eyJhbGciOiJSUzI1NiJ9... (truncated)
-```
-
-Copy the value of token line and replace the token value in the file `src-rx/rxconfig/auth.yaml`
-
-Replace default empty token value with log content
-
-```
- token: eyJhbGciOiJSUzI1NiJ9... (truncated)
-```
-
-Now that you fill the token value, run rx:rx task again and all the microservices will be up and running.
+![Docker Services](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/getting-started/rx-services.png)
 
 By default, the following services should be up and running:
 
@@ -45564,10 +45527,9 @@ By default, the following services should be up and running:
 - Auth
 - Edge
 - Das
-- Async
 
 !!! success
-    You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md).
+    You have successfully set up the Etendo RX services. For more information, visit [Projections and Mappings](./concepts/projections.md) and [Creating a New Microservice](https://docs.etendo.software/latest/developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md) page in the developer guide section.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Config Server
@@ -48719,6 +48681,10 @@ When exporting assistants that need to be pre-configured in a module installatio
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started
 ## Article Content: 
+### Etendo Mobile
+
+![cover-getting-started.png](https://docs.etendo.software/latest/assets/getting-started/overview/cover-getting-started.png)
+
 #### Overview
 
 *Etendo Mobile* is a subapplication development platform that includes the possibility to log in to an *Etendo Classic* server and configure the available dynamic subapplications there according to role. 
@@ -48730,268 +48696,60 @@ A schematic of the infrastructure is shown here:
 On this page we will explain what are the requirements to create a subapplication and how to install all the necessary tools to develop a new subapplication.
 
 #### Environment Setup
-
 ##### Requirements
-- *Etendo*. If you don't have it, [install it here](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started.md){target="_blank"}.
-- *Etendo Mobile*. If you don't have it, [install it here](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md){target="_blank"}.
-- *Yarn (recommended)*.  If you don't have it, you can install it via NPM:
 
+- [Etendo Classic](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started.md)
+- [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) latest version available in PlayStore or Appstore.
+- [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}.
+- [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
+- [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/){target="_blank"} version `1.22.0` or higher
+- [NodeJS](https://nodejs.org/en/download/package-manager){target="_blank"} version `16.20` or higher.
+- [Java](https://www.oracle.com/ar/java/technologies/downloads/#jdk17){target="_blank"} JDK 17 
 
-    1. Install via npm.
-
-        ``` bash title="Terminal"
-        npm install --global yarn
-        ```
-
-    2. Check installation.
-
-        ``` bash title="Terminal"
-        yarn --version
-        ```
-
-- *Node*. If you don't have it, you can use NVM:
-
-    === ":simple-windows: Windows"
-
-        #### Steps to install NVM in Windows
-
-        1.  Download NVM.
-            In order to install the Node Version Manager tool in a Windows environment we must download [a zip file](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) containing the installation wizard.
-
-        2.  Install NVM.
-            Go to your Downloads folder in Windows, and unzip the nvm-setup.zip file and double click on the nvm-setup file.
-
-        3.  Installation wizard.
-            When the installation wizard opens, click the next button a couple of times and, at the end you will see an install button which you also have to click. After that, just wait for the progress bar to finish.
-
-
-        4.  Command line.
-            1Once installed, open the Windows command line. If you have any trouble finding the command line, type CMD in the Windows search bar in the lower left corner of your desktop.
-
-        5.  Install node version 8 or the version of your choice.
-            At the command line, type the command below. If you want to check which are the current node versions, you can go to nodejs.org and see them all. We recommend you to use the one recommended for most users.  
-
-            ``` bash title="Terminal"
-            nvm install 16.20
-            ``` 
-
-        6.  Verify the node versions installed.
-            Always check the versions of node that are installed. Sometimes our applications do not run because we are using outdated versions. This command will show you all the node versions you have installed on Windows.
-
-            ``` bash title="Terminal"
-            nvm list
-            ``` 
-
-        7.  Switch between different versions of node.
-            You can always use different versions of node and this command allows you to jump between all your installed versions.
-
-            ``` bash title="Terminal"
-            nvm use 16.20
-            ``` 
-    === ":simple-linux: Linux"
-
-        #### Steps to install NVM in Linux
-
-        1.  Updating the system: Before installing any package, it is a good idea to update the system.
-
-            ``` bash title="Terminal"
-            sudo apt update
-            sudo apt upgrade
-            ```
-        2.  Install dependencies: You will need curl to download the NVM installation script.
-
-            ``` bash title="Terminal"
-            sudo apt install curl
-            ```
-        3.  Install NVM: Run the following command to install NVM.
-
-
-            ``` bash title="Terminal"
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-            ```
-        4.  Close and open the terminal: For the changes to take effect.
-
-        5.  Verify the node versions installed.
-            Always check the versions of node that are installed. Sometimes our applications do not run because we are using outdated versions. This command will show you all the node versions you have installed on Windows.
-
-            ``` bash title="Terminal"
-            nvm list
-            ``` 
-        6.  Switch between different versions of node.
-            You can always use different versions of node and this command allows you to jump between all your installed versions.
-
-            ``` bash title="Terminal"
-            nvm use 16.20
-            ``` 
-        
-    === ":material-math-cos: MacOS"
-
-        #### Steps to install NVM in MacOS
-
-
-        1.  Open the Terminal: You can find it under "Applications" > "Utilities" or search for it with Spotlight (Cmd + Space and then type "Terminal").
-        
-        2.  Download and install NVM: Use curl to download and run the NVM installation script. Here we use version v0.38.0 as an example, but you can      replace it with the latest version available on NVM's GitHub page.
-
-            ``` bash title="Terminal"
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-            ```
-
-        3.  Add to your shell profile: After installing, the script will give you some instructions to add NVM to your shell profile (~/.bashrc, ~/.zshrc, etc.). If it doesn't do it automatically, add the following lines to your shell configuration file:
-
-            ``` bash title="Terminal"
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-            ```
-        4.  Close and open the Terminal: To apply the changes, close and reopen your terminal, or reload your shell profile with a command such as source ~/.bashrc or source ~/.zshrc, depending on which shell you are using.
-
-        5.  Verify the node versions installed.
-            Always check the versions of node that are installed. Sometimes our applications do not run because we are using outdated versions. This command will show you all the node versions you have installed on Windows.
-
-            ``` bash title="Terminal"
-            nvm list
-            ``` 
-        6.  Switch between different versions of node.
-            You can always use different versions of node and this command allows you to jump between all your installed versions.
-
-            ``` bash title="Terminal"
-            nvm use 16.20
-            ``` 
-Then continue with the [Create New Sub-appliction](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
+Then continue with the [Create New Subappliction](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Create New Subapplication
-## Article Path: /Developer Guide/Etendo Mobile/Tutorials/Create New Subapplication
+# Article Title: Sup-application Structure
+## Article Path: /Developer Guide/Etendo Mobile/Concepts/Sup-application Structure
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication
+ https://docs.etendo.software/latest/developer-guide/etendo-mobile/concepts/subapp-structure
 ## Article Content: 
+### Subapplications Structure in Etendo Mobile
+
 #### Overview
+This page provides a comprehensive guide to the structure of subapplications in Etendo Mobile. It explains key concepts such as the `App.tsx` file, which serves as the main entry point for subapplications, and details how parameters from Etendo Mobile are utilized for initialization. Additionally, the guide covers language management, navigation between screens using the navigation stack, and the use of the Etendo UI Library for consistent design and functionality across subapps. These elements form the foundation for developing dynamic and well-integrated subapplications within Etendo Mobile.
 
-This section provides a step-by-step guide on how to run a subapplication in development mode within the Etendo Mobile application. For this, you will need the Dummy project with predefined configurations like rollup, http server and settings with Etendo Classic to build a development subapplication and connect it to Etendo Mobile.
-
-!!! info
-    Before starting, this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information, check the [Getting Started in the Etendo Mobile section](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started.md){target="_blank"}.
-
-#### Create a new Etendo Classic module
-
-Once Logged in, go to the modules window, and create a new one as the image shows:
-
-| Variable                | Description                                                      | Example Value                          |
-| ----------------------- | ---------------------------------------------------------------- | ------------------                     |
-| `Java Package`          | Java Package                                                     | com.etendoerp.subapp.base              | 
-| `Name`                  | Module name                                                      | Subapp Base                            |
-| `Type`                  | Module type                                                      | Module                                 |
-| `Description`           | Description                                                      | An subapp example to develop into dynamic app |
-| `Version`               | Version name                                                     | 1.0.0                                   |
+#### App File
+In `App.tsx`, it is the main file located in the root of the subapplication. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible for the initialization of the subapplication and gets the params from Etendo Mobile.
 
 
-![create-module..png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/create-module.png)
-
-!!! Tip
-    - Notice that the name can be anything you want, but the type has to be setted as Module.
-    - The description field is free and also required.
-
-In this case, we start from 1.0.0 version and set the DB prefix as ETAPP.
-
-After saving all the configuration, you have to export it. Open a terminal in the root of your etendo classic and execute the following command:
-    ``` bash title="Terminal"
-    ./gradlew export.database
-    ```
-
-!!! success "Important"
-    The output must be a "BUILD SUCCESSFUL" message.
-
-
-#### Add the dummy application
-1. To start, you must download the latest version of the [Dummy subapplication zip](https://github.com/etendosoftware/subapp/releases){target="_blank"} file and unzip it inside the module just created in the `subapp` folder.
-    ![modules.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
-
-2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
-    ``` bash title="Terminal"
-    yarn install 
-    ```
-
-#### Dynamic app window
-In the `Dynamic App` window the dynamic applications are configured to use them from the Etendo Mobile application. To do this, a record is created in which the module to which it belongs, the name of the application and the location of the build of the subapplication is declared.
-
-After selecting this record in the `Dynamic App Version` tab, we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information, check the [Dynamic App](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app){target="_blank"}.
-
-| Variable                | Description                                                      | Example Value                          |
-| ----------------------- | ---------------------------------------------------------------- | ------------------                     |
-| `Module`                | Module name                                                      | Subapp Base - 1.0.0 - English (USA)    | 
-| `Name`                  | Subapplication Name                                             | Subapp Example                         |
-| `Dyrectory Location`    | Subapplication build location                                   | /                                      |
-| `Active`                | If active                                                        | true                                   |
-
-##### Dynamic app version
-
-| Variable                | Description                                                      | Example Value                          |
-| ----------------------- | ---------------------------------------------------------------- | ------------------                     |
-| `Name`                  | Version name                                                     | dev                                    | 
-| `File Name`             | Bundle name                                                      | subappexample.js                       |
-| `Active`                | If active                                                        | true                                   |
-| `Is Development`        | Is the development mode                                          | true                                   |
-
-![dynamicapp-versio.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/dynamicapp-version.png)
-
-Permissions must be given to the Admin role in order to view the application within the Etendo Mobile subapplication.
-From the `Role` window, look for the name Admin and in the `DYNAMIC APPS - Subapp` tab, add the example record Subapp Example with dev version.
-
-| Variable                | Description                                                      | Example Value                          |
-| ----------------------- | ---------------------------------------------------------------- | ------------------                     |
-| `Organization`          | Name of organization                                             | *                                      | 
-| `App`                   | Name of Subapplication                                          | Subapp Example                         |
-| `Version`               | Version number                                                   | dev                                    |
-| `Active`                | If active                                                        | true                                   |
-
-![role-dynamicapp.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png)
-
-#### Concepts
-
-In this section, we will explain the main parts and files of the subapplication that will be used.
-
-###### App.tsx
-  This file is located in the root of the subapplication and it is the main file. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the subapplication and gets the params from Etendo Mobile.
-
-![path-to-app-file.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png)
-
-###### Params from Etendo Mobile
+##### Params from Etendo Mobile
 Etendo Mobile _sends_ params to the subapplication and all of them are ready to use, they are:
 
 !!! abstract "Params"
-    - _ _id_: id of the subapplication
-    - _url_: the environment url (setted in setting's Etendo Mobile)
+    - _ _id_: ID of the subapplication
+    - _url_: the environment URL(setted in setting's Etendo Mobile)
+    - _contextPathUrl:  the environment context path (setted in setting's Etendo Mobile)
     - _navigationContainer_: an instance of the navigation container of Etendo Mobile
     - _token_: Token
     - _language_: Language
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
-    - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component boasts a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
+    - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component includes a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
 
-In this example, we will receive these params in App.tsx of the subapp:
 
-``` typescript title="App.tsx"
-  interface AppProps {
-    language: string;
-    dataUser: IData;
-    navigationContainer: INavigationContainerProps;
-  }
-
-  const App = ({language, navigationContainer, dataUser}: AppProps) => {
-
-```
-
-###### Language
-The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the _language parameter received as input_ to initialize the remaining aspects of the application in the "App.tsx" file.
+##### Language
+The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the _language_ parameter received as input to initialize the remaining aspects of the application in the `App.tsx` file.
 
 ``` typescript title="App.tsx"
   locale.init();
   locale.setCurrentLanguage(locale.formatLanguageUnderscore(language));
 ```
 !!! tip
-    All subapps have to have at least two languages: _en-US_ and _es-ES_.  
+    All subapps must be developed in English _en-US_ and may include translations such as Spanish _es-ES_.  
 
-As you can see, we use `locale` to set the language of the subapplication. This `locale` is an instace of a custom handler of the language which is based in `i18n` and defined in this path `subapp/src/localization/locale.ts`.
+As you can see, we use `locale` to set the language of the subapplication. This `locale` is an instance of a custom handler of the language which is based in `i18n` and defined in the path `subapp/src/localization/locale.ts`.
 
 ``` typescript title="locale.ts"
 const locale: LocaleModule = {
@@ -49010,286 +48768,380 @@ export default locale;
 
 ```
 
+!!! info
+    - Translations folder: Translations are organized in the folder `subapp/src/lang`
+    - JSON files by language: Each translation file corresponds to a language and locale, following a structure that includes the language code and region. E.g:
+
+    ```
+    └── subapp
+          └── src
+            └── lang
+                └── enEN.json
+                └── esES.json
+    ```
+
 Between the functions of the `locale` handler, some of the most important are:
 
-!!! info "Functions"
-    - _t(key, params)_: this function receives a key (and other optional params) and returns the text translated to the language of the subapplication. This function is based on [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in .json files in `subapp/src/lang`. 
-    - _setCurrentLanguage(input)_: gets a language as a param and sets this language as default in the subapplication.
+- `t(key, params)`: this function receives a key (and other optional params) and returns the text translated to the language of the subapplication. This function is based on [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in `.json` files in `subapp/src/lang`. 
 
+- `setCurrentLanguage(input)`: gets a language as a param and sets this language as default in the subapplication.
 
-###### Navigation Stack
-The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component provided by react-navigation. In this example, we will use only one screen called Home which is the main screen of the subapplication (initialRouteName in stack).
+The translation definition files can group the information, for example, in the English translations file `/subapp/src/lang/enUS.json` we can group the messages or labels by screens, components or as it is optimal according to the development. For Example
 
-``` typescript title="App.tsx"
-import React from 'react';
-import Home from './src/screens/home';
-import {createStackNavigator} from '@react-navigation/stack';
-import locale from './src/localization/locale';
-import {IData, INavigationContainerProps} from './src/interfaces';
-
-interface AppProps {
-  language: string;
-  dataUser: IData;
-  navigationContainer: INavigationContainerProps;
-}
-
-const App = ({language, navigationContainer, dataUser}: AppProps) => {
-  const Stack = createStackNavigator();
-
-  locale.init();
-  locale.setCurrentLanguage(locale.formatLanguageUnderscore(language));
-
-  return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="Home"
-        initialParams={{dataUser}}>
-        {props => <Home {...props} navigationContainer={navigationContainer} />}
-      </Stack.Screen>
-    </Stack.Navigator>
-  );
-};
-
-export {App};
-export default App;
-
-```
-
-###### Etendo UI
-Etendo UI is a _library of components_ that will be used throughout the example subapplication. This library is based on React Native Elements and it is available on [NPM](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your subapplications.
-  In this library we can find components like:  Button, Input, Navbar etc.
-
-![etendo-ui-library-npm.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
-
-For more information, visit [Etendo UI Library](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} 
-
-_Storybook_ is a place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
-
-![storybook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png)
-
-#### Development mode setup
-
-1. [Etendo RX](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started.md) should be running
-      ``` bash title="Terminal"
-      ./gradlew rx:rx
-      ```
-2. Etendo classic should be running.
-3. Open the [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) application on a mobile device. You can use either an emulator or a physical device.
-
-##### Rollup
-[Rollup](https://rollupjs.org/){target="_blank"} is a module packer for JavaScript that compiles small pieces of code into something bigger and more complex, this is already installed in the module.
-
-Inside the project, there is a file rollup.config.js where the path where the packaged file with .js extension will be generated is defined.
-
-It is necessary to modify this path adding the `javapackage` of the generated module.
-
-```groovy title="rollup.config.js"
-import typescript from '@rollup/plugin-typescript';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import json from '@rollup/plugin-json';
-
-const pkg = JSON.parse(
-  require('fs').readFileSync(
-    require('path').resolve('./package.json'),
-    'utf-8',
-  ),
-);
-
-const external = Object.keys(pkg.dependencies || {});
-
-export default {
-  input: './App.tsx',
-  output: [
-    {
-    //Change the javapackge in the path where the application build will be generated. 
-      file: '../web/<javapackage>/subappexample.js', 
-      format: 'cjs',
-      exports: 'auto',
-      strict: false,
-      sourcemap: 'inline',
-    },
-  ],
-  plugins: [peerDepsExternal(), json({compact: true}), typescript()],
-  external,
-};
-```
-
-In the package.json, you define the path where the local server will be raised with [Http-server](https://www.npmjs.com/package/http-server){target="_blank"} with the `yarn dev` command.
-This path must coincide with the path where the building of the application was generated. Also the local port to be exposed is defined here (in this case, port 3000).
-
-
-```groovy title="package.json"
-"scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint .",
-    "build": "rollup -c",
-    "dev": "http-server -p 3000 ../web/<javapackage>/subapp"
+``` json title="enUS.json"
+{
+  "ScreenOne": {
+    "LabelOne": "Label 1 Example",
+    "LabelTwo": "Label 2 Example",
   },
+  "ScreenTwo": {
+    "LabelOne": "Label 1 Example",
+    "LabelTwo": "Label 2 Example",
+  },
+
 ```
 
-In a terminal on path `modules/<javapackage>/subapp`, run the following commands to build the subapplication and deploy it to a local server.
-    ``` bash title="Terminal"
-    yarn build && yarn dev
+Then to use it, use the `local.t` function, E.g:  `locale.t('ScreenOne.LabelOne')`
+
+##### Navigation Stack
+The navigation stack part of `App.tsx` that allows us to navigate between screens. It is a component provided by  `@react-navigation/stack` in a React Native application. Conceptually, a navigation stack manages the flow between different screens in the app, allowing users to navigate forward and backward between these screens.
+
+**Key Concepts**
+
+1. **Navigation Stack Initialization**:  
+    The `createStackNavigator()` function from `@react-navigation/stack` is used to create a navigation stack. This stack manages a sequence of screens, and each screen is treated as a "route" within the stack.
+
+    ```typescript
+    const Stack = createStackNavigator();
     ```
 
-##### Etendo Mobile Setup
+2. **Screen Definitions:** Each screen in the app is defined using the `Stack.Screen` component. The `name` prop specifies the unique identifier of the screen, and the component associated with the screen is defined within the children or passed as a function using render props (`{props => <Component {...props} />}`).
     
-1. In Etendo Mobile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment url should be `http://<local-network-ip>:8096/` and the context path by default `/etendo` 
+    Example of screen definitions:
 
-!!! info
-    To find out your IP address on the local network, you can run the command `ifconfig` in a Mac or Linux terminal or `ipconfig` in Windows CMD.
-  
-![ip-config](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png)
-
-2. Login Etendo Mobile and you will see the list of subapps. Clicking on `Subapp Example` will download the building previously generated and exposed in the environment URL.
-    ![app-home.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png)
-3. Here is the subapplication.
-    ![sub-app.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png)
-
-
-#### Applying changes workflow
-1. Add any changes for example in `modules/<javapackage>/subapp/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`.
-
-    ```groovy title="index.tsx"
-    import React from 'react';
-    import {Text, View} from 'react-native';
-    import locale from '../../localization/locale';
-    import {styles} from './style';
-    import {Button, BackIcon} from 'etendo-ui-library';
-
-    interface NavigationContainerProps {
-    navigate: (screenName: string, params?: any) => void;
-    }
-
-    interface HomeProps {
-    navigationContainer: NavigationContainerProps;
-    }
-
-    const Home: React.FC<HomeProps> = ({navigationContainer}) => {
-    return (
-        <View style={styles.container}>
-        <Text style={styles.text}>{locale.t('Home.welcome')}</Text>
-        <Button
-            typeStyle={'secondary'} //Change this prop
-            text={locale.t('Home.back')}
-            iconLeft={<BackIcon />}
-            onPress={() => {
-            navigationContainer.navigate('Home');
-            }}
-        />
-        </View>
-    );
-    };
-
-    export default Home;
+    ``` typescript
+    <Stack.Screen
+    name="Home"
+    options={{ headerShown: false }}
+    initialParams={{ dataUser }}>
+    {props => <Home {...props} navigationContainer={navigationContainer} />}
+    </Stack.Screen>   
     ```
-2.  In a terminal on path `modules/<javapackage>/subapp`, run the following commands to build the subapplication and deploy it to a local server.
-    ``` bash title="Terminal"
-    yarn build && yarn dev
+
+3. **Initial Route:** The `initialRouteName` prop in `Stack.Navigator` specifies which screen will be loaded first when the app starts. In the following example case, the Home screen is defined as the initial route:
+
+    ```typescript
+    <Stack.Navigator initialRouteName="Home">
     ```
-3.  Exit and re-enter the subapplication to visualize the changes.(No need to log out).
-     ![app-test.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-new-subapplication/app-test.png)
+
+##### Etendo UI Library
+Etendo UI Library is a library of UI components following the style and design of Etendo, that should be used throughout the subapplication development. This library is based on _React Native Elements_ and it is available on [NPM - Etendo UI Library ](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your subapplications. In this library, we can find components like:  Button, Input, Navbar, Cards, Icons, etc.
+
+!!! info 
+    For more information, visit [Etendo UI Library - Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
+
+    ![storybook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/concepts/subapplication-structure/storybook.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Example Subapplication Using Etendo RX
-## Article Path: /Developer Guide/Etendo Mobile/Tutorials/Example Subapplication Using Etendo RX
+# Article Title: Create New Subapplication
+## Article Path: /Developer Guide/Etendo Mobile/Tutorials/Create New Subapplication
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx
+ https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication
 ## Article Content: 
+### Create New Subapplication
+
 #### Overview
 
-This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
+This tutorial provides a step-by-step guide to creating a new subapplication within **Etendo Mobile**. By following these instructions, you will learn how to fully utilize the capabilities of **Etendo RX** and leverage the visual components available in the **Etendo UI Library** to build a functional subapplication.
+
+The tutorial will guide you through the creation of the *Product Subapp*, a simple application that enables the addition, deletion, and modification of products, as well as their visualization in a grid. Upon completion, you will have the skills to create and distribute subapplications as modules, thereby extending the mobile functionality of Etendo.
+
 
 !!! info
-    Before starting this tutorial, visit the [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
+    Before beginning, ensure that your local environment meets all necessary requirements by reviewing the Etendo Mobile [Getting Started](https://docs.etendo.software/latest/getting-started.md) section.
 
-#### Setup
 
-----------
-##### Create new Module
+#### Module Setup 
 
-Following the documentation about [how to create a new etendo classic module](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
+##### Create New Etendo Classic Module
 
-Below is a succinct representation of the required fields and expected values for the module configuration:
+:material-menu: `Application` > `Application Dictionary` > `Module`
 
-| Field                | Value                           |
-|----------------------|---------------------------------|
-| Java Package         | `com.etendoerp.subapp.product`  |
-| Name                 | `Product Subapplication`        |
-| Type                 | `Module`                        |
-| Description          | `Subapplication to manage products using Etendo RX` |
-| Version              | `1.0.0`                         |
-| In Development       | `true`                          |
-| Is RX                | `true`                          |
-| Is React             | `true`                          |
-| RX Java Package      | `com.etendoerx.subapp.product`  |
-| Translation Required | `true`                          |
-| License Type         | `Etendo Commercial License`     |
-| Commercial            | `true`                          |
+1. As a System Administrator role, open the **Module** window and create a new register. This module will be used to develop and distribute the application.
 
-![modules-creation.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png)
+    <figure markdown="span">
+    ![modules-creation.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/modules-creation.png)
+    <figcaption>Product Subapp module configuration example</figcaption>
+    </figure>
 
-!!! tip
-    - Notice that the name can be anything you want, but the type have to be setted as Module.
-    - The _description field_ is free and also _required_.
+    !!! tip
+        - Notice that the name can be anything you want, but the type has to be set as Module.
+        - The _description_ field is free and also _required_.
+        - The _Is Rx_ checkbox indicates that this module will include RX service configurations, the RX service Javapackage must be specified.
+        - The _Is React_ checkbox indicates that this module includes a subapplication and React Native code is generated.
+        - In this case, start from `1.0.0` module version and set the DB Prefix as `ETSAPPP`.
 
-##### Dynamic app and role configuration
 
-As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#dynamic-app-window){target="_blank"}.
+##### Dynamic App configuration
 
-###### Dynamic app
+:material-menu: `Application` > `General Setup` > `Application` > `Dynamic App`
 
-The dynamic app in Etendo must contain the following form fields and corresponding values:
+Configure and export dynamic applications in Etendo Classic, which are displayed dynamically in Etendo Mobile.
 
-| Field               | Value                             |
-|---------------------|-----------------------------------|
-| Module              | `Product Subapplication - 1.0.0 - English (USA)` |
-| Name                | `Product Subapplication`          |
-| Directory Location  | `/`                               |
-| Name                | `1.0.0`                           |
-| File Name           | `productSubapp.js`                |
-| Active              | `true`                            |
-| Is Development      | `true`                            |
+In the **Dynamic App** window, specify the subapplication path and version. 
 
-![dynamic-app-creation.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/dynamic-app-creation.png)
+For the example we are following, the Dynamic App in Etendo must be configured with the following form fields and corresponding values:
 
-###### Role configuration
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/dynamic-app-creation.png)
 
-The next table reflect the settings to be configured for the role in relation to the dynamic app within the Etendo system.
+Fields to note:
 
-| Field                 | Value                           |
-|-----------------------|---------------------------------|
-| Organization          | `*`       |
-| App                   | `Product Subapplication`        |
-| Version               | `1.0.0`                         |
-| Active                | `true`                          |
+- **Module**: The module that can export the window configuration. In our example case, set `Product SubApp`.
+- **Name**: Name with the application will be shown. In our example case, set `Product Subapp`
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our example case, set `/`
+- **Active**: To select if this application is active or not. In our example case, set `true`
 
-![role-configuration.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/role-configuration.png)
+
+The **Dynamic App Version** tab allows the application to be versioned, enabling both development and production versions.
+
+Fields to note:
+
+- **Name**: Name of the application version E.g. `dev` or `1.0.0`. In our example case, set `dev`
+- **File Name**: The bundle name of the compiled application, by default `dist.js`.
+- **Default**: This check defines that this version is productive. In our example case, set `false`
+- **Is Development**: This check defines that this version is in development and can be deployed locally. In our example case, set in `true`
+- **Active**: To select if this application version is active or not. In our example case, set `true`
+
+!!! info
+    For more information visit the [Dynamic App](https://docs.etendo.software/latest/etendo-classic/bundles/platform/dynamic-app.md) developer guide.
+
+##### Role configuration
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
+
+Logged in as the **Group Admin** role (which is the default role for accessing Etendo Mobile), the settings are applied as specified below.
+
+![role-configuration.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/role-configuration.png)
 
 !!! warning "Important"
     Keep this dynamic app as _active_.
 
-At this point you have _done_ with the etendo classic configuration.
+##### Export the Module
 
-#### Download the subapplication
+1. After saving all the configuration, you have to export the changes. Open a terminal in the root of your **Etendo Classic** project and execute the following command:
+    
+    ``` bash title="Terminal"
+    ./gradlew export.database --info
+    ```
 
-This tutorial is based in our example of a product subapplication, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
+    !!!success "Important"
+        The output must be a "BUILD SUCCESSFUL" message.
 
-!!! tip "Keep in mind"
-    All related to the main concepts of a subapplication are explained in the [concepts](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#concepts){target="_blank"} section in create new subapplication tutorial.
-    The following sections are focused on the product subapplication example.
+3. A new module is created in the `/modules` folder, with the following structure
 
-To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
+    ```
+    modules
+    └── com.etendoerp.subapp.product
+        └── src-db 
+    ```
 
-  ```
-  modules
-  └── com.etendoerx.subapp.product
+#### Dockerized Services
+
+Before proceeding, it is necessary to start the **Etendo RX** services. These services provide a security layer (Auth Service), a data access layer (Das Service), which are essential for consuming or writing data in Etendo and Edge Service . Additionally, by selecting the **isReact** checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.
+
+To launch all the services, it is necessary to define the following configuration variables in the `gradle.properties` file:
+
+```groovy title="gradle.properties"
+docker_com.etendoerp.etendorx=true
+```
+
+!!!info
+    For more information about how to handle Etendo Dockerizations, visit [Docker Management](https://docs.etendo.software/latest/etendo-classic/bundles/platform/dependency-manager.md). 
+
+??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
+    It is also possible to run the dockerized [PostgreSQL service](https://docs.etendo.software/latest/platform/docker-management.md#postgres-database-service) and [Tomcat service](https://docs.etendo.software/latest/platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.tomcat=true
+    docker_com.etendoerp.docker_db=true
+    ```
+
+Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
+
+```bash title="Terminal"
+./gradlew resourses.up
+```
+
+Here, all the services and their respective logs can be seen running using [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank} tool.
+
+![Docker RX Services](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, two records need to be created: one for the **RX Config** service, responsible for distributing the dynamic configurations of other available services, and another for the **Auth** service, which provides security utilities. The Auth service must be accessible by the subapplication to obtain the authentication token for requests.
+
+As `System Administrator` role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:
+
+- **Service Name**: The name of each service.
+- **Service URL**: The internal URL of the Docker service.
+- **Updatable Configs**: Check this checkbox.
+- **Public URL**: Configure the publicly accessible URL for the service.
+
+See the configuration examples bellow and replicate them. 
+
+!!!info
+    The **Public URL** field only needs to be configured when the subapplication is set to production.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png)
+
+!!!info 
+    If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`.
+
+
+#### Projections and Search
+
+This section covers the creation of projections, mappings, and searches, which enable the generation of a dynamic REST API in the RX DAS service. These configurations allow for reading, writing, and filtering data. Projections are applied to Etendo Classic tables, creating a subset of data that can be interacted with through the API.
+
+
+##### Create a Projection
+:material-menu: `Application` > `Etendo RX` > `Projections and Mappings`
+
+1.  As a `System Administrator` role, it is required to create a projection that reflect partial views of the Product class and contain only the necessary properties.
+
+2. To do this, we will go to the `Projections and Mappings` window and create a new projection, select the module under development `Product SubApplication - 1.0.0 - English (USA)`, where these configurations will be exported and in the name field we define `ProductSubApp`.
+
+3. Now, with the selected projection we add in the tab `Projected Entities` two projections, one for reading data, selecting the table `M_Product` and in the Mapping Type field we select `Etendo to external system` and another projection for writing data, selecting again the table `M_Product` and in the Mapping Type field `External system to Etendo`.  The other fields are auto-completed with respect to these values.
+
+<figure markdown="span">
+ 	![projection.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/projections-mappings.png)
+	<figcaption>Projection and Projected Entities configuration example</figcaption>
+</figure>
+
+##### Creating Entity Fields
+
+1. Now, we define which fields we want to retrieve. To do this, we start by selecting the data reading projection `PRODSUBAPP - Product - Read` and run the `Create Projection Fields` process, in the pop-up we will select the fields to project. In our example case: 
+
+    - active
+    - id
+    - name
+    - productCategory
+    - searchkey
+    - taxCategory
+    - UOM
+    - UPCEAN
+
+    !!! note
+        While not all of these fields will be displayed in the application, as record editing is allowed, we are also selecting all the mandatory fields to create a product.
+
+    <figure markdown="span">
+    ![create-projection-fields.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/create-projection-fields.png)
+    <figcaption>Create read projection fields process execution example</figcaption>
+    </figure>
+
+
+2. Now we define which fields should be saved when creating or editing a record, in this case we select the write projection ` PRODSUBAPP - Product - Write` and run the process `Create Projection Fields` selecting the same fields as for the read one
+
+    - active
+    - id
+    - name
+    - productCategory
+    - searchkey
+    - taxCategory
+    - UOM
+    - UPCEAN
+
+
+    <figure markdown="span">
+    ![create-projection-fields.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/create-projection-fields.png)
+    <figcaption> Entity fields created example</figcaption>
+    </figure>
+
+3. In the case of the `productCategory`, `taxCategory` and `UOM` fields in the application they will not be editable, but they must be autocompleted with a default value, for this we can use constant mappings. If new Products are created, these default values will be used.
+
+    To do this, we go to the `application` > `Etendo RX` > `Constant Values` window and define constant IDs of default values. Here are some example IDs:
+
+    | Name       | Default Value                              |
+    | ---------------- | ------------------------------------ |
+    | `ProductCategory`|`DC7F246D248B4C54BFC5744D5C27704F`    |
+    | `taxCategory`    |`43A120C9377B4537B5D1976D9B1233D7`    |
+    | `uOM`            |`100`                                 |
+   
+    <figure markdown="span">
+    ![constant-values.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/constant-values.png) 
+    <figcaption>Constant values definition example</figcaption>
+    </figure>
+    
+
+4. Finally selecting the `PRODSUBAPP - Product - Write` write projection, edit the `productCategory`, `taxCategory` and `UOM` records, modify the `Field Mapping` field to `Constant Mapping`, delete the `Jsonpath` and select the corresponding value in the `Constant Value` drop-down list, defined in the previous step.
+
+    <figure markdown="span">
+    ![constant-values-definition](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/constant-values-definition.png)
+    <figcaption>Entity field tab, constant values definition example</figcaption>
+    </figure>
+
+
+##### Create a Search in Projected Data
+
+Now, when reading data, it is possible to create filters, for this we have to associate these filters to a table and it is possible to export this filter in the module under development. 
+To do this, we open the `Tables and Columns` window, in our example select the `M_Product` table, go to the `Repository` tab and create a new record with the development module.  Then we create a new record in the `Search` tab
+
+<figure markdown="span">
+    ![repository.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/repository.png)
+    <figcaption>Repository Creation Example</figcaption>
+</figure>
+
+##### Create a New Search and Search Parameter
+
+Next, we will define a search method to be used when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the method name `getFilteredProducts` and the hql query filter. 
+
+```
+SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc
+```
+This query filters active products by name or bar code. 
+
+As we can see in the query, it receives the`:name` parameter of String type that we define in the `Search Parameter` tab.
+
+<figure markdown="span">
+    ![search-parameters.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/search-parameters.png)
+    <figcaption>Search and Search Parameter creation example</figcaption>
+</figure>
+
+##### Restart the Etendo RX Service
+
+Restart the Das RX service to recognize the projections and mappings.
+
+```bash title="Terminal"
+./gradlew rx.das.restart
+```
+
+!!! info 
+    By accessing [http://localhost:8092/swagger-ui/index.html](http://localhost:8092/swagger-ui/index.html), the RX DAS Service Swagger can be visualized. This interface allows for consultation of the endpoints generated based on the previously made configurations.
+
+    ![RX DAS Service Swagger](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/das-api.png)
+
+
+#### Creating the Subapplication
+
+1. Now, create the subapplication based on a template published in NPM, [Etendo Subapp Data Template Typescript ](https://www.npmjs.com/package/etendo-subapp-data-template-typescript){target="_blank"}. Execute the Gradle command to automatically create the subapplication within the module under development.
+
+    ``` bash title="Terminal"
+    ./gradlew subapp.create -Ppkg=<javapackage> --info
+    ```
+    In the example we are working on, use the following command:
+
+    ```bash title="Terminal"
+    ./gradlew subapp.create -Ppkg=com.etendoerp.subapp.product --info
+    ```
+    
+    A new subapplication will be created within the module, with the following structure:
+
+    ```
+    modules
+    └── com.etendoerp.subapp.product
       ├── src-db 
-      └── subapp-product
+      └── subapp
           ├── .bundle
           ├── _tests_
           ├── android
@@ -49297,1002 +49149,275 @@ To begin with we must have to download the [ latest version of the project](http
           ├── lib
           ├── node_modules
           └── src
-  ```
-  
-!!! warning "Important"
-    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}
-
-#### Customizing and Programming a Sub-Application
-
-This section explains how to customize and program a subapplication. It uses as an example the [Product Subapplication](https://github.com/etendosoftware/subapp-product/releases/){target="_blank"} .
-
-##### Product subapp example
-
-This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}.
-
-!!! info "Consideration"
-    This subapplication example was developed for both platforms (phone and tablet). 
-    When you create a new subapplication, you have to do the same. 
-    The provided [base subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}  is already configured for both platforms.
-
-###### Home
-  - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
-  - The route to this screen is `src/screens/home/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/home/index.tsx){target="_blank"}.
-
-**Key Components:**
-
-1. **Navbar**: Positioned at the top, it displays the application's title and user's name, offering navigation controls.
-
-2. **ButtonUI**: A customizable UI button from Etendo UI Library, used for actions like navigating to product details. It can be styled in terms of size, style, and includes icons.
-
-3. **SearchContainer**: Enables product search by name, allowing the product list to be updated based on the query using the component from Etendo UI Library.
-
-4. **TableUI**: Displays products in a table format, allowing interactions such as editing, deleting or viewing product details. Available in the tablet or web version.
-
-5. **Cards**: Used to display product details in a card format, providing a more detailed view of the product. Only available in the mobile version.
-
-6. **Layout and Style**: The screen is designed to be responsive for both mobile and tablet formats, with a layout comprising the navbar, button, search bar, and table. Styles are defined in the `styles` object for consistency.
-
-
-    <figure markdown>
-      ![home-screen.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen.png){ width="300", align=left } 
-      ![remove-product.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/remove-product.png){ width="300", align=right}
-    </figure>
-    _Tablet version_
-    ![home-screen-tablet.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen-tablet.png)
-
-###### ProductDetail
-  - This screen will show the detail of a product. Also, it will allow us to edit the product.
-  - It's the same screen used to create a new product. there is a flag to know if the product is new or not (productItem).
-  - The route to this screen is `src/screens/productDetail/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/productDetail/index.tsx){target="_blank"}.
-    <figure markdown>
-      ![add-product.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product.png){ width="300", align=left } 
-      ![edit-product.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/edit-product.png){ width="300", align=right}
-    </figure>
-    _Tablet version_
-    ![add-product-tablet.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product-tablet.png)
-
-### Projections, Repository and Search
-!!! info
-    In this section we will explain how to configure the projections, repository and search needed in this example. For more info visit Projections, Repository And Search official documentation. 
-
-#### Create a projection
-
-It is required to create projections that reflect partial views of the root class and contain only the necessary properties.
-To do this we will go to the `Projections` window and create a projection with the following properties:
-
-
-  | Field       | Value                                               |
-  | ----------- | ----------------------------------------------------|
-  | Module      |`Subapp Product Module - 1.0.0 - English (USA)`      |
-  | Name        |`ProdSubApp`                                         |
-  | Description |`-`                                                  |
-
-
-  ![projection.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
-
-
-##### Adding the projection and mapping
-
-Having created the projection, we now need to map it to a table from which we want to extract data. To do this, we open the Projections and Mappings window.
-
-Next, we add a new record with the following values:
-
-  | Field        | Value                                            |
-  | ----------   | -------------------------------------------------|
-  | Organization | `*`                                              |
-  | Module       | `Product Subapplication - 1.0.0 - English (USA)` |
-  | Name         | `prodsubapp`                                     |
-  | GRPC         | `false`                                          |
-  | description  | `-`                                              |
-  | active       | `false`                                          |
-
-
-  ![projection-mapping.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
-
-
-
-##### Adding projected entities
-
-Now with the projection selected add in the Projected Entities tab the write and read projections of Product and Product_Category in which we can specify the required values from the M_Product table.
-
-=== "Product - Read"
-    
-    | Name                |  Property                   |
-    | ------------------- | ----------------------------|
-    | Organization        |`*`                          |
-    | Name                |`PRODSUBAPP - Product - Read`|
-    | Table               |`M_Product`                  |
-    | Identity            |`false`                      |
-    | Mapping Type        |`Etendo to external system`  |
-    | Is Rest Endopoint   |`true`                       |
-    | External_Name       |`Product`                    |
-    | Active              |`true`                       |
-
-=== "Product - Write"
-  
-    | Name                |  Property                    |
-    | ------------------- | -----------------------------|
-    | Organization        |`*`                           |
-    | Name                |`PRODSUBAPP - Product - Write`|
-    | Table               |`M_Product`                   |
-    | Identity            |`false`                       |
-    | Mapping Type        |`External system to Etendo`   |
-    | Is Rest Endopoint   |`true`                        |
-    | External_Name       |`Product`                     |
-    | Active              |`true`                        |
-
-=== "Product_Category - Read"
-    
-    | Name                |  Property                              |
-    | ------------------- | ---------------------------------------|
-    | Organization        |`*`                                     |
-    | Name                |`PRODSUBAPP - M_Product_Category - Read`|
-    | Table               |`M_Product_Category`                    |
-    | Identity            |`false`                                 |
-    | Mapping Type        |`Etendo to external system`             |
-    | Is Rest Endopoint   |`true`                                  |
-    | External_Name       |`M_Product_Category`                    |
-    | Active              |`true`                                  |
-
-=== "Product_Category - Write"
-  
-    | Name                |  Property                               |
-    | ------------------- | ----------------------------------------|
-    | Organization        |`*`                                      |
-    | Name                |`PRODSUBAPP - M_Product_Category - Write`|
-    | Table               |`M_Product`                              |
-    | Identity            |`false`                                  |
-    | Mapping Type        |`External system to Etendo`              |
-    | Is Rest Endopoint   |`true`                                   |
-    | External_Name       |`Product`                                |
-    | Active              |`true`                                   |
-
-  ![projected-entities.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
-
-Now we define which fields we want to retrieve in the Entity Field tab by adding the following fields:
-
-This is the M_Product - Read fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "name"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`20`                                             |
-    | Property                     |`name`                                           |
-    | Name                         |`name`                                           |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "productCategory"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`30`                                             |
-    | Property                     |`productCategory`                                |
-    | Name                         |`productCategory`                                |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Entity Mapping`                                 |
-    | Related Projection Entity    |`PRODSUBAPP - M_Product_Category - Read`         | 
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "uPCEAN"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`40`                                             |
-    | Property                     |`uPCEAN`                                         |
-    | Name                         |`uPCEAN`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "active"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`50`                                             |
-    | Property                     |`active`                                         |
-    | Name                         |`active`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-This is the M_Product - Write fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "name"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`20`                                             |
-    | Property                     |`name`                                           |
-    | Name                         |`name`                                           |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "uPCEAN"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`30`                                             |
-    | Property                     |`uPCEAN`                                         |
-    | Name                         |`uPCEAN`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "searchKey"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`40`                                             |
-    | Property                     |`searchKey`                                      |
-    | Name                         |`searchKey`                                      |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Java Mapping`                                   |
-    | Java Mapping                 |`PRODSUBAPPProductValueWrite`                    |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "active"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`50`                                             |
-    | Property                     |`active`                                         |
-    | Name                         |`active`                                         |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-This is the M_Product_Category - Read fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-=== "name"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`20`                                             |
-    | Property                     |`name`                                           |
-    | Name                         |`name`                                           |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-This is the M_Product_Category - Write fields.
-
-=== "id"
-
-    | Name                         |  Property                                       |
-    | -----------------------------| ------------------------------------------------|
-    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
-    | Organization                 |`*`                                              |
-    | Line                         |`10`                                             |
-    | Property                     |`id`                                             |
-    | Name                         |`id`                                             |
-    | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`true`                                           |
-    | Field Mapping                |`Direct mapping`                                 |
-    | Constant Value               |`-`                                              |
-    | Active                       |`true`                                           |
-
-
-
-  ![entity-fields-read.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entity-field-read.png)
-
-
-#### Create a New Repository
-
-Now to interact with a data warehouse we have to create a repository in the Tables and Columns window select the table `M_Product`, go to the `Repository` tab and create a new record with the following values:
-
-| Field       | Value                                             |
-| ----------- | --------------------------------------------------|
-| Module      |`Subapp Product Module - 1.0.0 - English (USA)`    |
-
-
-  ![repository.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/repository.png)
-
-#### Create a New Search
-
-Next we will define a search method to be used later when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the following data:
-
-| Field       | Value                                                                                            |
-| ----------- | ------------------------------------------------------------------------------------------------ |
-| Method Name |`getFilteredProducts`                                                                             |
-|  Query      |`SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc`   |
-
-
-  ![search.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/search.png)
-
-##### Creating a New Search Parameter
-
-  To define the parameter we defined in the previous query we need to create a new row in the Search Parameter tab and add the following record:
-
-| Field | Value         |
-| ----- | ------------- |
-| Line  |`10`           |
-| Name  |`name`         |
-| Type  |`String`       |
-
-
-  ![search-parameters.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
-
-
-#### Setting up the Development Environment
-
-Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:
-
-1. **Create a Java Package:** 
-   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.   
-  
-2. **Generate Entities Using Etendo RX:**
-   Use Etendo RX to generate entities for your sub-application's data structure. Run the command `./gradlew rx:generate.entities` in the root of your Etendo environment. This generates essential directories and files like `lib`, `src-db`, and `src-gen` in your Java package.
-   
-    Run the following command in the root of your Etendo environment:
-
-    ```bash title="Terminal"
-    ./gradlew rx:generate.entities
+          └── App.tsx
     ```
 
-    Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the `ProductValue.java` mapping java class. 
-    
-    ```
-    modules-rx
-    └── com.etendoerx.subapp.product
-        ├── build 
-        ├── lib
-        ├── src
-        │   └── main
-        │       └── java
-        │           └── com
-        │               └── etendorx
-        │                   └── subapp
-        |                       └── product
-        |                           └── javamap
-        |                               └── ProductValue.java
-        ├── src-gen
-        └── build.gradle
+2. Once the subapplication is created, the react-native code must be generated, with types and functions that interact with the RX DAS Service, for this we execute the command Gradle : 
+
+    !!! info
+        Make sure that the Etendo RX services are running and without errors before executing this command.
+
+    ``` bash title="Terminal"
+    ./gradlew subapp.build -Ppkg=<javapackage> 
     ```
 
-    ```java title="ProductValue.java"
-    package com.etendorx.subapp.product.javamap;
-
-    import com.etendorx.entities.jparepo.FinancialMgmtTaxCategoryRepository;
-    import com.etendorx.entities.jparepo.OrganizationRepository;
-    import com.etendorx.entities.jparepo.ProductCategoryRepository;
-    import com.etendorx.entities.jparepo.UOMRepository;
-    import com.etendorx.entities.mapper.lib.DTOWriteMapping;
-    import com.etendorx.entities.mappings.PRODSUBAPPM_ProductDTOWrite;
-    import org.apache.commons.lang3.StringUtils;
-    import org.openbravo.model.common.plm.Product;
-    import org.springframework.stereotype.Component;
-
-    @Component("PRODSUBAPPProductValueWrite")
-    public class ProductValue implements DTOWriteMapping<Product, PRODSUBAPPM_ProductDTOWrite> {
-
-      private final OrganizationRepository organizationRepository;
-      private final ProductCategoryRepository productCategoryRepository;
-      private final UOMRepository uomRepository;
-      private final FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository;
-
-      public ProductValue(OrganizationRepository organizationRepository,
-          ProductCategoryRepository productCategoryRepository,
-          FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository,
-          UOMRepository uomRepository) {
-        this.organizationRepository = organizationRepository;
-        this.productCategoryRepository = productCategoryRepository;
-        this.financialMgmtTaxCategoryRepository = financialMgmtTaxCategoryRepository;
-        this.uomRepository = uomRepository;
-      }
-
-      @Override
-      public void map(Product entity, PRODSUBAPPM_ProductDTOWrite dto) {
-        if (StringUtils.isEmpty(entity.getSearchKey())) {
-          entity.setSearchKey("TEST " + Math.random());
-        }
-        if (StringUtils.isEmpty(entity.getDescription())) {
-          entity.setDescription("default");
-        }
-        if (entity.getOrganization() == null) {
-          entity.setOrganization(
-              organizationRepository.findById("B843C30461EA4501935CB1D125C9C25A").orElse(null));
-        }
-        if (entity.getProductCategory() == null) {
-          entity.setProductCategory(
-              productCategoryRepository.findById("DC7F246D248B4C54BFC5744D5C27704F").orElse(null));
-        }
-        if (StringUtils.isEmpty(entity.getProductType())) {
-          entity.setProductType("I");
-        }
-        if (entity.getTaxCategory() == null) {
-          entity.setTaxCategory(
-              financialMgmtTaxCategoryRepository.findById("E020A69A1E784DC39BE57C41D6D5DB4E")
-                  .orElse(null));
-        }
-        if (entity.getUOM() == null) {
-          entity.setUOM(uomRepository.findById("100").orElse(null));
-        }
-      }
-    }
-
+    In our example case 
+    ``` bash title="Terminal"
+    ./gradlew subapp.build -Ppkg=com.etendoerp.subapp.product --info
     ```
-
-    ``` groovy title="build.gradle"
-    plugins {
-      id 'java'
-      id 'org.springframework.boot'
-      id 'io.spring.dependency-management'
-    }
-
-    group = 'com.etendorx.subapp'
-    version = "1.0.0"
-    sourceCompatibility = JavaVersion.VERSION_17
-
-    java {
-      sourceCompatibility = '17'
-    }
-
-    ext {
-        includeInDasDependencies = true
-    }
-
-    repositories {
-      mavenCentral()
-      maven {
-        url = "https://maven.pkg.github.com/etendosoftware/etendo_rx"
-        credentials {
-          username = "${githubUser}"
-          password = "${githubToken}"
-        }
-      }
-      maven {
-        url = "https://repo.futit.cloud/repository/etendo-snapshot-jars"
-        credentials {
-          username = "${nexusUser}"
-          password = "${nexusPassword}"
-        }
-      }
-    }
-
-    ext {
-      set('springCloudVersion', "2022.0.4")
-      includeInDasDependencies = true
-    }
-
-    dependencies {
-      implementation 'org.springframework.cloud:spring-cloud-starter-config'
-
-      compileOnly 'org.projectlombok:lombok:1.18.22'
-      annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
-      implementation project(path: ':com.etendorx.entities')
-      annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
-      implementation "com.etendorx:das_core:" + findProperty("rx.version")
-      implementation project(path: ':com.etendorx.entities')
-
-      implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-      testImplementation 'org.springframework.boot:spring-boot-starter-data-rest:2.5.10'
-      testImplementation 'org.springframework.boot:spring-boot-starter-test'
-      testImplementation 'org.testcontainers:postgresql:1.17.3'
-      testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
-      testImplementation ('com.etendorx:das') {
-        transitive = false
-        exclude group: 'com.etendorx.test.grpc'
-      }
-      testImplementation (':com.etendorx.utils:auth') {
-        exclude group: 'org.slf4j', module: '*'
-      }
-      implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
-    }
-
-    dependencyManagement {
-      imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-      }
-    }
-
-    tasks.named('test') {
-      useJUnitPlatform()
-    }
-
-    ```
-    Verify the completion of this process and the accurate creation of all essential files and directories.
-
-3. **Migrate the 'lib' Directory:**
-    Move the `lib` directory from `modules_rx/<RXJavapackage>/lib` to `modules/<javapakage>/<subapp-name>/lib`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
-
-    ```bash title="Terminal"
-    mv modules_rx/com.etendorx.subapp.product/lib/ modules/com.etendoerp.subapp.product/subapp-product/
-    ```
+    As we can see, it will be generated in the `/subapp/src/libs/` folder the functions and types that will be used for reading and writing `GET` and `POST` data.
 
     ```
     modules
-    └── com.etendoerx.subapp.product
-        ├── src-db 
-        └── subapp-product
-            ├── .bundle
-            ├── _tests_
-            ├── android
-            ├── ios
-            ├── lib
-            ├── node_modules
-            └── src
+    └── com.etendoerp.subapp.product
+      ├── src-db 
+      └── subapp
+          └── src
+            └── lib
+                └── base
+                    └── baseservice.ts
+                    └── baseservice.types.ts
+                └── data_gen
+                    └── product.types.ts
+                    └── productservice.ts
+                    └── useProduct.ts      
     ```
 
-    Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
-    
+3. In a terminal on path `modules/<javapackage>/subapp`, install the depedencies declared in the `package.json`,  following the command: 
 
-    !!! warning "Important"
-        Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
-
-  4. In the `rxconfig/das.yaml` file you must declare the javapackage of the world you are developing with the following code:
-
-    ``` groovy title="das.yaml"
-    scan:
-	    basePackage: com.etendorx.subapp.product
-    ``` 
-  
-  5. **Restart the Etendo RX Service:**
-    After successfully migrating the `lib` directory, restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
-
-    ```bash title="Terminal"
-    ./gradlew rx:rx
+    ``` bash title="Terminal"
+    yarn install 
     ```
 
-    Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.
+4. Then, to run the subapplication in development mode execute: 
 
-### Integrating Etendo RX with Etendo Sub-Application
+    ``` bash title="Terminal"
+    yarn dev 
+    ```
+    !!! note
+        By default, the application run in development mode on `localhost` at port `3000`. Additionally, changes in the `/src` directory are automatically scanned, enabling dynamic updates to the application during development. This ensures that any modifications are reflected in real-time without restarting the application.
 
-This section details the integration of Etendo RX generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.
+#### Product Subapp Example
+This section covers an overview about the product subapplication example screens and principal parts of the subapplication.
 
-##### Custom Hooks in React Native
+!!! info "Consideration"
+    The applications must be developed for both platforms: phone and tablet. 
+   
+##### Home Screen 
+ 
+- This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
 
-Custom hooks are a fundamental aspect of React Native, offering a modular approach to managing logic in applications. These hooks allow for creating, updating, and deleting functionalities, and are instrumental in abstracting complex interactions with the backend, thereby enhancing code maintainability and readability.
+**Phone View**
+<figure markdown>
+![home-screen.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home.jpeg){ width="300", align=left } 
+![remove-product.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/delete-product.jpeg){ width="300", align=right}
+</figure>
+**Tablet View**
+![home-screen-tablet.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home-tablet.png)
 
-###### Overview of Custom Hooks
 
-Custom hooks, such as `useProduct`, exemplify the integration between frontend components and backend services.
+- The route to this screen is `src/screens/home/index.tsx` and the content:
 
-##### Implementing Custom Hooks
-
-Here's an example of how custom hooks are utilized:
-
-```typescript title="useProduct.ts"
-import { useState, useEffect } from 'react';
+``` javascript title="src/screens/home/index.tsx"
+import React from 'react';
+import TableList from '../../components/table/list';
+import { NavigationProp } from '@react-navigation/native';
+import { INavigationContainerProps } from '../../interfaces';
+import locale from '../../localization/locale';
+import useProduct from '../../lib/data_gen/useProduct';
 import { Product } from '../../lib/data_gen/product.types';
-import ProductService from '../../lib/data_gen/productservice';
 
-// Custom hook for managing products
-export const useProduct = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+interface TableListProps {
+  navigation: NavigationProp<any>;
+  route: any;
+  navigationContainer: INavigationContainerProps;
+}
 
-  // Fetching data
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await ProductService.BACK.getFilteredProducts(); 
-      setProducts(data);
-    };
-    fetchData();
-  }, []);
-
-  // Function to handle product update
-  const handleUpdateProduct = async (updatedProduct: Product) => {
-    await ProductService.BACK.updateProduct(updatedProduct);
-    // Optionally, update the products state to reflect the changes
-  };
-
-  // Function to get filtered products (if needed)
-  const getFilteredProducts = async (filterCriteria: any) => {
-    const filteredProducts = await ProductService.BACK.getFilteredProducts(filterCriteria);
-    setFilteredProducts(filtered);
-    return filteredProducts; // This line is optional, allowing the function to return the filtered products
-  };
-
-  return {
-    products,
-    handleUpdateProduct,
-    getFilteredProducts,
-  };
-};
-```
-
-#### Implementing `useProduct` Hook in `Home` Component
-
-The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The `useProduct` custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
-
-##### Example Usage
-
-Using the Table component from [Etendo UI Library](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}, the `Home` component lists the products, displaying a loading spinner while the data is being fetched. The `useProduct` hook is used to manage the data and loading state, ensuring that the component remains responsive and user-friendly.
-
-```typescript title="Home.tsx"
-import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
-import useProduct from '../../hooks/useProduct';
-import { Table } from 'etendo-ui-library';
-
-const Home = () => {
-  // data is the list of products, as a result of a RX consult in useProduct
-  // loading is a boolean that indicates if the data is being loaded
-  const { data, loading } = useProduct();
-  ...
+const Home = (props: TableListProps) => {
+  const { getFilteredProducts, updateProduct } = useProduct();
   return (
-    <View>
-    ...
-      <TableUI
-        columns={dataColumns}
-        data={data} // here is used to list the products
-        isLoading={loading} // here is used to show a loading spinner
-        onLoadMoreData={onLoadMoreData}
-        commentEmptyTable={locale.t('Table.textEmptyTable')}
-        textEmptyTable={locale.t('Table.commentEmptyTable')}
-        pageSize={PAGE_SIZE}
-      />
-      ...
-    </View>
+    <TableList
+      deleteDataItem={async (item: Product) => {
+        item.active = false;
+        await updateProduct(item);
+      }}
+      {...props}
+      columns={[
+        {
+          key: 'id',
+          primary: true,
+          visible: false,
+        },
+        {
+          key: 'name',
+          label: locale.t('Table.products'),
+          visible: true,
+          width: '50%',
+        },
+        {
+          key: 'uPCEAN',
+          label: locale.t('Table.barcode'),
+          visible: true,
+          width: '30%',
+        },
+      ]}
+      getData={getFilteredProducts}
+      labels={{
+        dataName: 'Product',
+        navbarTitle: locale.t('Home.welcome'),
+        containerTitle: locale.t('Home.productList'),
+        buttonNew: locale.t('Home.newProduct'),
+        searchPlaceholder: locale.t('Home.typeProduct'),
+        successfulDelete: locale.t('Success.deleteProduct'),
+        errorDelete: locale.t('Error.deleteProduct'),
+      }}
+    />
   );
 };
 
 export default Home;
 ```
 
-Based on this, the `Home` component is presented as an efficient product data manager, highlighting the main actions of obtaining and visualizing products, presenting a sub-application design and allowing real-time updates and fluid interactions with the user.
+##### Product Detail
 
-##### Conclusion
+- This screen will show the detail of a product. Also, it will allow us to edit the product.
+- It is the same screen used to create a new product, if the prop does not have ID.
+- The route to this screen is `src/screens/productDetail.txt`,  add the content:
 
-The integration of Etendo RX with Etendo Sub-Applications using custom hooks like `useProduct` enhances the development process and the user experience. It provides a seamless connection between backend services and a React Native frontend
+``` javascript title="src/screens/productDetail.txt"
+import React, { useState } from 'react';
+import TableDetail from '../../components/table/detail';
+import { NavigationProp } from '@react-navigation/native';
+import locale from '../../localization/locale';
+import useProduct from '../../lib/data_gen/useProduct';
 
-In the `Home.tsx` component, we observed the practical application of these hooks, which resulted in a dynamic, responsive, and user-friendly interface. This approach not only streamlines the development process but also ensures that the code remains maintainable and readable.
+interface TableDetailProps {
+  navigation: NavigationProp<any>;
+  route: any;
+}
 
-While the example focused on listing products using a table, it's important to note that the distributed code includes additional functionalities. These include **editing**, **adding**, and **deleting** products, further demonstrating the versatility and comprehensive nature of the `useProduct` hook within the application.
-
-Attached below is an example of **F&B International Group's products**, obtained through Etendo RX, demonstrating the efficiency between backend and frontend operations in a practical sub-application context.
-
-![generate-entities.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
-
-In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Use PDF utilities
-## Article Path: /Developer Guide/Etendo Mobile/Tutorials/Use PDF utilities
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/use-pdf-utilities
-## Article Content: 
-#### Overview
-
-In this section teaches you how to use the PDF utilities (download and preview) in a Etendo subapp.
-
-!!! info
-    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started.md){target="_blank"} in the Etendo Mobile section.
-
-#### Setup
-
-----------
-##### Checking dependencies
-
-Before starting, make sure you have the following dependencies listed in package.json and installed:
-
-- [react-native-blob-util](https://github.com/RonRadtke/react-native-blob-util) version 0.19.4
-- [react-native-pdf](https://github.com/wonday/react-native-pdf) version 6.7.1
-- [react-native-share](https://github.com/react-native-share/react-native-share) version 10.0.2
-
-
-##### Hook creation
-
-In the hook folder of your subapp, create a new file called *usePDF.tsx* and paste the following code:
-
-```typescript
-import { useState } from 'react';
-import { Platform } from 'react-native';
-import ReactNativeBlobUtil from 'react-native-blob-util';
-import Share from 'react-native-share';
-
-// Simple verification to check if the device is Android
-const isAndroidDevice = (() => {
-  return Platform.OS === 'android';
-})();
-
-// Constants for the download
-const MIME_TYPE = 'application/pdf';
-const FILE_EXTENSION = 'pdf';
-
-const usePDF = () => {
-  // Loacal States
-  const [isLoading, setIsLoading] = useState(false);
-  const [isDownloadDone, setIsDownloadDone] = useState(false);
-  const [_pdf, setPdf] = useState<any>(null);
-  const [path, setPath] = useState('');
-
-  const downloadPDF = async ({
-    url,
-    method,
-    fileName,
-    optionsHeader,
-    description,
-    callback,
-  }: {
-    url: string;
-    method: Methods;
-    fileName: string;
-    optionsHeader: any;
-    description?: string;
-    callback?: (...params: any[]) => void;
-  }) => {
-    // Set the path of the file and start the loading
-    const dirs = ReactNativeBlobUtil.fs.dirs;
-    const pathFile = `${
-      isAndroidDevice ? dirs.LegacyDownloadDir : dirs.DocumentDir
-    }/${fileName}.${FILE_EXTENSION}`;
-    setPath(pathFile);
-    setIsLoading(true);
-    // Congfigurations for the download
-    const config = {
-      fileCache: true,
-      appendExt: FILE_EXTENSION,
-      path: pathFile,
-      addAndroidDownloads: {
-        mime: MIME_TYPE,
-        title: `${fileName}.${FILE_EXTENSION}`,
-        description: description || 'PDF File is dowmloaded.',
-        mediaScannable: true,
-        notification: true,
-      },
-    };
-
-    ReactNativeBlobUtil.config(config)
-      .fetch(method, url, optionsHeader)
-      .then(res => {
-        const filePath = res.path();
-        const fileOptions = {
-          path: filePath,
-          mime: MIME_TYPE,
-        };
-        if (isAndroidDevice) {
-          ReactNativeBlobUtil.fs.scanFile([fileOptions]);
-        } else {
-          let shareOptions = {
-            type: MIME_TYPE,
-            url: filePath,
-            saveToFiles: true,
-          };
-          return Share.open(shareOptions);
-        }
-      })
-      .then(_res => {
-        // If the file is saved, set the state to true
-        // and exceute the callback(if it exists)
-        setIsDownloadDone(true);
-        callback && callback();
-      })
-      .catch(err => {
-        console.log(err);
-      })
-      .finally(() => {
-        // Finally, set the loading to false
-        setIsLoading(false);
-      });
-  };
-
-  return { downloadPDF, isDownloadDone, isLoading, path, setPdf };
+const ProductDetail = (props: TableDetailProps) => {
+  const { createProduct, updateProduct } = useProduct();
+  const [id, setId] = useState<string>('');
+  const [searchKey, setSearchKey] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  const [uPCEAN, setUPCEAN] = useState<string>('');
+  return (
+    <TableDetail
+      {...props}
+      createData={async () => {
+        await createProduct({ searchKey, name, uPCEAN });
+      }}
+      updateData={async () => {
+        await updateProduct({ id, searchKey, name, uPCEAN });
+      }}
+      fields={[
+        {
+          key: 'id',
+          visible: false,
+          setValue: setId,
+          getValue: id,
+          labels: {
+            title: '',
+            placeholder: '',
+          },
+        },
+        {
+          key: 'searchKey',
+          setValue: setSearchKey,
+          getValue: searchKey,
+          labels: {
+            title: locale.t('ProductDetail.searchKey'),
+            placeholder: locale.t('ProductDetail.searchKeyExample'),
+          },
+        },
+        {
+          key: 'name',
+          setValue: setName,
+          getValue: name,
+          labels: {
+            title: locale.t('ProductDetail.products'),
+            placeholder: locale.t('ProductDetail.nameExample'),
+          },
+        },
+        {
+          key: 'barcode',
+          setValue: setUPCEAN,
+          getValue: uPCEAN,
+          labels: {
+            title: locale.t('ProductDetail.barcode'),
+            placeholder: locale.t('ProductDetail.barcodePlaceholder'),
+          },
+        },
+      ]}
+      labels={{
+        editTitle: locale.t('ProductDetail.editProduct'),
+        newTitle: locale.t('ProductDetail.newProduct'),
+        errorTitle: locale.t('Error.product'),
+        successUpdateTitle: locale.t('Success.updateProduct'),
+        successCreateTitle: locale.t('Success.saveProduct'),
+        connectionError: locale.t('Error.connection'),
+        navbarTitle: locale.t('Home.welcome'),
+        cancel: locale.t('Common.cancel'),
+        save: locale.t('Common.save'),
+        successTitle: id
+          ? locale.t('Success.updateProduct')
+          : locale.t('Success.createProduct'),
+      }}
+    />
+  );
 };
 
-export default usePDF;
-```
-###### Explanation
-There are some things to consider in this hook:
-
-- The hook handles only the downloading of the PDF file. To preview it, you'll need to utilize the *react-native-pdf* library, which will be explained in more detail beforehand.
-- The path of the file is set in the *LegacyDownloadDir* folder for Android devices and in the *DocumentDir* folder for iOS devices. This is because the *react-native-blob-util* library has a different way of handling the download for each platform. So the file easy to find in both platforms, but you can change it if you want. For more information, please check the [react-native-blob-util documentation](https://github.com/RonRadtke/react-native-blob-util)
-
-###### Functions and States exported
-!!! abstract "List"
-    - _ _downloadPDF_: is the function that handles the download of the PDF file. It receives an object with the following parameters:
-        - _url_: the url of the file
-        - _method_: the method of the request
-        - _fileName_: the name of the file (without the *.pdf* extension)
-        - _optionsHeader_: the options of the header
-        - _description_: the description of the file that will be displayed on Android devices during the downloading process (optional)
-        - _callback_: is a callback function that will be executed upon successful completion.(optional)
-    - _isDownloadDone_: is a boolean that indicates if the download is done
-    - _isLoading_: is a boolean that indicates if the download is in progress
-    - _path_: is the final path of the file
-    - _setPdf_: is a function that sets the PDF file (internal usage at rendering)
-
-
-#### Usage
-
-----------
-##### Calling the hook
-
-In the file where you want to use the hook, import it and call it:
-
-```typescript
-...
-import { Button, Layout } from 'etendo-ui-library';
-import usePDF from './hooks/usePDF';
-...
-```
-
-!!! info "Components used"
-    The components used in this example (*Button* and *Layout*) are from the [Etendo UI Library](https://www.npmjs.com/package/etendo-ui-library)
-
-
-##### Downloading the PDF
-
-To download the PDF file, you need to call the *downloadPDF* function and pass the parameters. In this example, we are using a button to trigger the download:
-
-```typescript
-...
-const { downloadPDF, isLoading, isDownloadDone, path, setPdf } = usePDF();
-
-return (
-  ...
-  <Layout
-    children={
-      <Button
-        typeStyle="terciary"
-        text="Download PDF"
-        width={200}
-        onPress={() =>
-          downloadPDF({
-            url: `https://your-url.com/your-pdf-file.pdf`,
-            method: 'GET',
-            fileName: 'fileNameOfPDF',
-            optionsHeader: {
-              'Content-Type': 'application/json',
-            },
-            description: 'File description',
-          })
-        }
-        loading={isLoading}
-      />
-    }
-  />
-);
+export default ProductDetail;
 
 ```
+    
+##### Navegation 
 
-This will be displayed as follows:
+In addition, it is necessary to add the navigation configuration in the `app.tsx` file, in the return statement. This configuration provides the infrastructure to navigate between the different screens of the application.
 
-<figure markdown>
-![main-screen.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/use-pdf-utilities/main-screen.png){ width="200", align=left style="border: 1px solid grey; border-radius: 8px;"}
-![loading-screen.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/use-pdf-utilities/loading-screen.png){ width="200", align=right style="border: 1px solid grey; border-radius: 8px;"}
-</figure>
-
-
-##### Previewing the PDF
-
-To preview the PDF file, you need to use the *react-native-pdf* library. Following the example above, you can use the *path* state to set the source of the PDF file and the *setPdf* function to set the PDF file:
-
-
-```typescript
-...
-<View style={styles.container}>
-  <Pdf
-    ref={pdf => {
-      setPdf(pdf);
-    }}
-    source={
-      isDownloadDone && {
-        uri: path,
-      }
-    }
-    style={styles.pdf}
-  />
-</View>
+``` javascript title="App.tsx"
+<Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Home"
+        initialParams={{ dataUser }}>
+        {props => <Home {...props} navigationContainer={navigationContainer} />}
+      </Stack.Screen>
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="ProductDetail"
+        initialParams={{ dataUser }}>
+        {props => <ProductDetail {...props} />}
+      </Stack.Screen>
+</Stack.Navigator>
 ```
 
-!!! info "Styles used"
-    The styles used in this example (*container* and *pdf*) are the following:
-    ```typescript
-      ...
-      const width = Dimensions.get('window').width;
-      const height = Dimensions.get('window').height;
-      const styles = StyleSheet.create({
-        container: {
-          flexDirection: 'row',
-          justifyContent: 'center',
-          height,
-          width,
-          alignItems: 'center',
-          marginTop: 25,
-          backgroundColor: 'red',
-        },
-        pdf: {
-          flex: 1,
-          width,
-          height,
-        },
-      });
-    ```
+!!! info 
+    For more information, visit [Navegation Stack](https://docs.etendo.software/latest/concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
 
-After save, the final result, you should see something like this:
+!!! info 
+    For more information about the language management and translations, visit [Languague](https://docs.etendo.software/latest/concepts/subapp-structure.md#language) concept.
 
-<figure markdown>
-  ![saving-file.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/use-pdf-utilities/saving-file.png){ width="200", align=left style="border: 1px solid grey; border-radius: 8px;"}
-  ![pdf-show.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/use-pdf-utilities/pdf-show.png){ width="200", align=right style="border: 1px solid grey; border-radius: 8px;"}
-</figure>
+!!! info 
+    For more information about Subapplication Params, visit [Params from Etendo Mobile](https://docs.etendo.software/latest/concepts/subapp-structure.md#params-from-etendo-mobile) concept.
+
+
+##### Visualizing the subapplications
+
+1. Open the [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) application on a mobile device. You can use either an emulator or a physical device.
+    
+2. In Etendo Mobile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment URL should be `http://<local-network-ip>:8096/` and the context path by default `/etendo`.
+
+    !!! info
+        To find out your IP address on the local network, you can run the command `ifconfig` in a Mac or Linux terminal or `ipconfig` in Windows CMD.
+  
+    ![ip-config](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/ip-config.png)
+
+3. Login Etendo Mobile and you will see the list of subapps. Clicking on `Product Subapp` will access to development mode app.
+    ![app-home.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home.png)
+
+4. Now you can view, filter, create, edit and delete products.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo UI Library
@@ -50680,7 +49805,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | QAA |  | :white_check_mark: |
+| [24Q2.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.7){target="_blank"} | 20/09/2024 | 24.2.7 | QAA |  | :white_check_mark: |
+| [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | C |  | :white_check_mark: |
 | [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | C |  | :white_check_mark: |
 | [24Q2.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.4){target="_blank"} | 02/08/2024 | 24.2.4 | C |  | :white_check_mark: |
 | [24Q2.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.3){target="_blank"} | 19/07/2024 | 24.2.3 | C |  | :white_check_mark: |
@@ -50812,7 +49938,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.0){target="_blank"} | 13/09/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.2.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.1){target="_blank"} | 20/09/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.0){target="_blank"} | 13/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.1.1){target="_blank"} | 04/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.1.0){target="_blank"} | 03/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.0.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.1){target="_blank"} | 30/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
@@ -50985,7 +50112,10 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.14.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.14.0){target="_blank"} | 11/09/2024 | 22.4.3 | 24.2.x | CS | :white_check_mark: |
+| [1.16.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.16.0){target="_blank"} | 25/09/2024 | 22.4.3 | 24.2.x | CS | :white_check_mark: |
+| [1.15.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.15.0){target="_blank"} | 24/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
+| [1.15.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.15.0){target="_blank"} | 24/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
+| [1.14.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.14.0){target="_blank"} | 11/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.13.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.13.0){target="_blank"} | 14/08/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.12.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.12.0){target="_blank"} | 28/06/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.11.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.1){target="_blank"} | 17/05/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
@@ -51404,7 +50534,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.4.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.1){target="_blank"} | 30/08/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.4.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.2){target="_blank"} | 20/09/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.1){target="_blank"} | 30/08/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.0){target="_blank"} | 20/08/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.2){target="_blank"} | 02/08/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.3.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.3.1){target="_blank"} | 22/07/2024 | 23.4.0 | * | C | :white_check_mark: |
