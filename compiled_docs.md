@@ -21396,15 +21396,19 @@ Este documento describe la funcionalidad del **IVA de Caja**, disponible en Eten
 El objetivo de esta funcionalidad es **reconocer contablemente el IVA y declararlo/liquidarlo** con la Agencia Tributaria correspondiente, al realizarse el **cobro/pago** de las factura de venta/compra.
 
 En el caso de **España** se puede concretar que:
+
 - Este Régimen especial de carácter optativo, permite a los sujetos pasivos retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido hasta el momento del cobro a sus clientes.
 - Igualmente, se retardará la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**).
 - Todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
 - Por tanto, **el derecho a la deducción del IVA soportado** en el régimen especial del criterio de caja nace:
-  - **En el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos.
-  - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
+
+    - **En el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos.
+    - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
+
 - Igualmente, **el devengo del IVA en las operaciones** a las que sea de aplicación el régimen especial del criterio de caja se produce:
-  - **En el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos.
-  - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
+
+    - **En el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos.
+    - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
 
 
 Es por ello que el módulo de IVA de Caja **a partir de su versión 1.0.100** permite **liquidar de forma manual el IVA de Caja** de facturas no pagadas/cobradas total o parcialmente. Esta liquidación, en el caso de España, se registrará y contabilizará con fecha 31 de Diciembre de 2024. Ver sección: [Liquidación manual del IVA de Caja
@@ -21422,6 +21426,7 @@ En el caso de las facturas de compra sucede lo mismo pero a la inversa; el impue
 Por tanto, una organización liquida con la Agencia Tributaria la diferencia entre el IVA que ha repercutido en sus ventas y el IVA que ha soportado en sus compras y que puede deducir.
 
 La particularidad de este régimen radica en el momento de declarar y por tanto liquidar este impuesto:
+
 - Cuando no se aplica este régimen, el IVA se puede declarar y liquidar con la Agencia Tributaria en el momento de emitir/recibir la factura de venta/compra, independientemente de si estas facturas se han cobrado/pagado o no.
 - Cuando sí se aplica este régimen, el IVA se puede declarar y liquidar con la Agencia Tributaria en el momento de cobrar/pagar la factura de venta/compra correspondiente.
 
@@ -21432,16 +21437,21 @@ Este régimen puede ser una buena opción desde el punto de vista financiero per
 Este Régimen especial de carácter optativo permite a las organizaciones, sujetos pasivos del IVA, retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido en sus ventas hasta el momento del cobro a sus clientes aunque se retardará, igualmente, la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**); todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
 
 Dicho esto, en España puede haber organizaciones como las que se indican a continuación:
+
 - **Organizaciones no acogidas a este régimen especial**:
-  - En este caso ni las facturas de compra ni las facturas de venta están sujetas a este régimen especial, por tanto el IVA se reconoce contablemente y se devenga/declara en el momento de emitir/recibir las facturas de venta/compra.
+
+    - En este caso ni las facturas de compra ni las facturas de venta están sujetas a este régimen especial, por tanto el IVA se reconoce contablemente y se devenga/declara en el momento de emitir/recibir las facturas de venta/compra.
 
 - **Organizaciones no suscritas a este régimen especial, pero destinatarias de operaciones sujetas a este régimen especial**:
-  - En este caso sólo las facturas de compra están sujetas a este régimen, pudiéndose reconocer contablemente y deducir el IVA soportado en dichas facturas sólo cuando se efectúa el pago al proveedor.
+
+    - En este caso sólo las facturas de compra están sujetas a este régimen, pudiéndose reconocer contablemente y deducir el IVA soportado en dichas facturas sólo cuando se efectúa el pago al proveedor.
 
 - **Organizaciones acogidas a este régimen especial**:
-  - En este caso tanto las facturas de compra recibidas como las de venta emitidas por la organización se acogen a este régimen pudiéndose reconocer contablemente y liquidar el IVA en el momento del pago/cobro de dichas facturas.
+
+    - En este caso tanto las facturas de compra recibidas como las de venta emitidas por la organización se acogen a este régimen pudiéndose reconocer contablemente y liquidar el IVA en el momento del pago/cobro de dichas facturas.
 
 Por otra parte, es importante señalar que hay ciertas operaciones que quedan excluidas de este régimen general. En el caso de España, las operaciones que se excluyen son:
+
 - Las acogidas a los regímenes especiales simplificado, de la agricultura, ganadería y pesca, del recargo de equivalencia, del oro de inversión, aplicable a los servicios prestados por vía electrónica y del grupo de entidades.
 - Las entregas de bienes exentas a las que se refieren los artículos 21, 22, 23, 24 y 25 de esta Ley (exportaciones y entregas intracomunitarias de bienes).
 - Las adquisiciones intracomunitarias de bienes.
@@ -21480,7 +21490,7 @@ Es importante remarcar que la configuración correcta para España, en el caso d
 - **Cash VAT** ("IVA de Caja")
 - **Double Cash Criteria** ("Criterio de Caja Doble")
 
-###### Proceso de Venta
+##### Proceso de Venta
 
 Con el fin de activar el IVA de Caja para el proceso de ventas, la organización debe configurarse como acogida a este régimen especial de IVA. Es importante recalcar que las organizaciones "hijas" de la organización configurada como IVA de Caja, heredarán esta configuración.
 
@@ -21488,17 +21498,20 @@ Con el fin de activar el IVA de Caja para el proceso de ventas, la organización
 
 Esta configuración se lleva a cabo seleccionado el check "Cash VAT (IVA de Caja)" en la ventana "Organización", pestaña "Información".
 
-###### Proceso de Compra
+##### Proceso de Compra
 
-1. **Organizaciones acogidas al régimen especial de IVA de Caja:**
-   - La deducción del IVA soportado en las facturas de compra se retrasa, en el caso de organizaciones acogidas a este régimen especial de IVA, hasta el momento en que se efectúa el pago a los proveedores. Este es el "Criterio de Caja Doble".
+1. Organizaciones acogidas al régimen especial de IVA de Caja:
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/org-info-crit.png)
+    La deducción del IVA soportado en las facturas de compra se retrasa, en el caso de organizaciones acogidas a este régimen especial de IVA, hasta el momento en que se efectúa el pago a los proveedores. Este es el "Criterio de Caja Doble".
 
-2. **Organizaciones no acogidas a este régimen especial pero destinatarias de operaciones sujetas al mismo:**
-   - En estos casos, no es necesario configurar a la organización como "acogida" al régimen especial de criterio de caja, simplemente es necesario configurar como acogidos al régimen a aquellos tercero o proveedores sujetos a este régimen especial de IVA. Esta configuración se puede hacer en la ventana "Terceros", pestaña "Proveedor/Acreedor".
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/org-info-crit.png)
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/bp.png)
+
+2. Organizaciones no acogidas a este régimen especial pero destinatarias de operaciones sujetas al mismo:
+
+    En estos casos, no es necesario configurar a la organización como "acogida" al régimen especial de criterio de caja, simplemente es necesario configurar como acogidos al régimen a aquellos tercero o proveedores sujetos a este régimen especial de IVA. Esta configuración se puede hacer en la ventana "Terceros", pestaña "Proveedor/Acreedor".
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/bp.png)
 
 ##### Configuración de los rangos de impuesto
 
@@ -21516,7 +21529,7 @@ El IVA contabilizado en las cuentas contables transitorias de IVA se traspasa a 
 
 Como excepción, si una factura tiene un pago por adelantado, la contabilización de este pago por adelantado no reflejará el traslado de IVA de las cuentas contables transitorias a las finales. Ver sección [Anticipos de Venta](#anticipos-de-venta) y [Anticipos de Compra](#anticipos-de-compra).
 
-###### Configuración de las cuentas contables de IVA transitorias
+##### Configuración de las cuentas contables de IVA transitorias
 
 Es posible definir las cuentas transitorias de IVA a utilizar por defecto para el "Esquema Contable" de la organización, en la pestaña "Valores por Defecto".
 
@@ -21538,7 +21551,7 @@ Cada vez que la factura se cobre de manera parcial o total, el sistema inserta a
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/taxes-cashvat.png)
 
-###### Contabilización de las facturas de venta
+##### Contabilización de las facturas de venta
 
 Cuando una factura de venta se contabiliza, el IVA es contabilizado en las cuentas transitorias de IVA, tal y como se muestra en la siguiente imagen
 
@@ -21566,13 +21579,14 @@ Como se ha adelantado en la sección anterior [Pedidos de Venta](#pedidos-de-ven
 Cuando se contabiliza el anticipo de un cliente, bien sea total o parcial, no se produce traslado contable alguno de IVA de Caja.
 
 Al completar la factura de venta correspondiente, desde el pedido de venta pagado parcialmente, se reflejan dos cosas:
+
 1. El importe prepagado **"Prepayment Amount"**, en la cabecera de la factura.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/sales-inv-from-order.png)
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/sales-inv-from-order.png)
 
 2. El **porcentaje de IVA de Caja liquidado** como final, en la pestaña "IVA de Caja" ("Cash VAT"). En este caso el importe del anticipo = 0.67 € divido entre el importe total de la factura = 1.67, nos daría un porcentaje del 40.12 %, esto es una cuota de 0.12 €
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/cashvat-sales-order.png)
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/cashvat-sales-order.png)
 
 Al contabilizar la factura de venta la cuota del impuesto por importe de 0.12 € se reflejará contablemente en una cuenta de IVA final (47700) y el resto de cuota pendiente de liquidar en la cuenta de IVA transitoria.
 
@@ -21591,8 +21605,9 @@ En la cabecera de la ventana **"Factura (Proveedor)"**, sección **"Más Informa
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/purchase-inv.png)
 
 Este check se activa automáticamente:
- - cuando la "Organización" se ha configurado como acogida al régimen de IVA de Caja,
-  - o bien cuando el "Tercero" se ha configurado como acogido al regimen de IVA de Caja
+
+- cuando la "Organización" se ha configurado como acogida al régimen de IVA de Caja,
+- o bien cuando el "Tercero" se ha configurado como acogido al regimen de IVA de Caja
 
 Este check se puede desactivar de forma manual para aquellos casos en los que la factura de compra incluya operaciones que se excluyen de este régimen especial, por ejemplo en los casos de "Importaciones" y "Adquisiciones Intracomunitarias".
 
@@ -21602,7 +21617,7 @@ Cada vez que la factura se pague de manera parcial o total, el sistema inserta a
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/tax-purchase-inv.png)
 
-###### Contabilización de las facturas de compra
+##### Contabilización de las facturas de compra
 
 Cuando una factura de compra se contabiliza, el IVA es contabilizado en las cuentas transitorias de IVA, tal y como se muestra en la siguiente imagen
 
@@ -21628,13 +21643,14 @@ Etendo permite anticipar pagos a proveedores permitiendo registrar pagos en los 
 Cuando se contabiliza el anticipo a un proveedor, bien sea total o parcial, no se produce traslado contable alguno de IVA de Caja.
 
 Al completar la factura de compra correspondiente, desde el pedido de compra pagado parcialmente, se reflejan dos cosas:
+
 1. El importe prepagado **"Prepayment Amount"**, en la cabecera de la factura.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/prepayment-purchase.png)
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/prepayment-purchase.png)
 
-2. El **porcentaje de IVA de Caja liquidado** como final, en la pestaña "IVA de Caja" ("Cash VAT"). Por ejemplo, un anticipo de €1000 en una factura de €4114 nos daría un porcentaje del 24.31 %.
+2. El **porcentaje de IVA de Caja liquidado** como final, en la pestaña "IVA de Caja" ("Cash VAT"). Por ejemplo, un anticipo de 1000 € en una factura de 4114 € nos daría un porcentaje del 24.31 %.
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/tax-purchase-inv-ord.png)
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/tax-purchase-inv-ord.png)
 
 Al contabilizar la factura de compra la cuota del impuesto por importe de 173.57 € se reflejará contablemente en una cuenta de IVA final (47200) y el resto de cuota pendiente de liquidar en la cuenta de IVA transitoria.
 
@@ -21645,10 +21661,12 @@ Al contabilizar la factura de compra la cuota del impuesto por importe de 173.57
 #### Liquidación manual del IVA de Caja
 
 Tal y como ya se ha adelantado, en el caso de España **el derecho a la deducción del IVA soportado** en el régimen especial del criterio de caja nace:
+
 - **en el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos, tal y como ya se ha explicado dentro de la sección [Proceso de Compras](#proceso-de-compra)
 - **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
 
 Igualmente, **el devengo del IVA en las operaciones** a las que sea de aplicación el régimen especial del criterio de caja se produce:
+
 - **en el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos, tal y como ya se ha explicado dentro de la sección [Proceso de Ventas](#proceso-de-ventas)
 - **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
 
@@ -21660,7 +21678,7 @@ El módulo de gestión de IVA de Caja de Etendo (Cash VAT Management) incluye, a
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/manual-cashvat-settlement.png)
 
-*Recuerde actualizar el juego de datos de este módulo, una vez instalado, en la venta "Gestión del módulo de Empresa".*
+*Recuerde actualizar el dataset de este módulo, una vez instalado, en la ventana "Gestión del módulo de Empresa".*
 
 Esta nueva ventana permite a una organización acogida o destinataria de operaciones en régimen especial de criterio de caja:
 
@@ -21670,6 +21688,7 @@ Esta nueva ventana permite a una organización acogida o destinataria de operaci
 Al crearse el estado del documento ("Document Status") es borrador ("**Draft**").
 
 A continuación el botón de proceso **"Pick Lines & Complete"** permite obtener un listado de las facturas de IVA de Caja "completadas" y no necesariamente "contabilizadas" no pagadas/cobradas. Este listado de facturas incluye la siguiente información relevante:
+
 - **Numero de Factura**, columna "Document Nº"
 - **Tipo de documento**, columna "Document Type", que puede incluir facturas o facturas rectificativas o abonos tanto de compra como de venta.
 - **Fecha de Factura**, columna "Invoice Date"
@@ -21683,11 +21702,13 @@ A continuación el botón de proceso **"Pick Lines & Complete"** permite obtener
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/transfer-cashvat-accounts.png)
 
 A continuación, el usuario puede seleccionar la factura o facturas para las que el IVA de Caja se tiene que liquidar de forma manual a 31 de Diciembre de 2024. En esta ventana:
+
 - el botón **"OK"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y mantener las facturas seleccionadas.
 - el botón **"Complete"** permite completar la selección y pasar el estado del documento "Manual Cash VAT Settlement" a "Completado". Cualquier cambio en la selección implicará la **"Reactivación"** del documento.
 - el botón **"Cancel"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y cancelar la selección.
 
 Una vez seleccionadas, las facturas se reflejan en la pestaña "Lines", y en la parte superior de la ventana se actualizan los campos siguientes, con la suma de cuotas y bases correspondientes:
+
 - **Cuota de IVA Devengado**, campo "Sales Tax Amount"
 - **Base Imponible Devengada**, campo "Sales Taxable Amount"
 - **Cuota del IVA Deducible**, campo "Purchase Tax Amount"
@@ -21702,6 +21723,7 @@ Este campo enlaza con la pestaña "Cash VAT" relacionada con el impuesto que cor
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/purchase-cashvat.png)
 
 Tal y como se puede apreciar en la imagen anterior, la liquidación manual del IVA de Caja, crea de forma automática un nuevo registro en la pestaña "Cash VAT", con la siguiente información:
+
 - **Fecha de pago** = vacío ya que la liquidación del IVA de Caja no se ha producido al pagarse la factura, sino como consecuencia de una liquidación manual.
 - **Porcentaje** = se mostrará el porcentaje de liquidación de IVA de Caja pendiente para el impuesto (de IVA de Caja).
 - **Impuestos** = cuota del impuesto liquidada
@@ -21717,7 +21739,7 @@ Como puede apreciarse en la imagen anterior, el **porcentaje total liquidado de 
 
 Al contabilizar la liquidación manual a 31 de Diciembre de 2024 (botón "Post"), se producirá el traslado del IVA de Caja contabilizado en las cuentas transitorias de IVA a las cuentas finales, tanto para el IVA Devengado (Cuentas: 47700T a 477000), como para el IVA Soportado Deducible (Cuentas 47200T a 472000).
 
-Recuerde activar la tabla "OBCVAT_ManualSettlemen" en la ventana "Esquema contable", pestaña "Tablas a contabilizar".
+Recuerde activar la tabla "OBCVAT_ManualSettlement" en la ventana "Esquema contable", pestaña "Tablas a contabilizar".
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/journal-entries-manual.cashvat.png)
 
@@ -50454,7 +50476,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.16.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.16.0){target="_blank"} | 25/09/2024 | 22.4.3 | 24.2.x | CS | :white_check_mark: |
+| [1.16.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.16.1){target="_blank"} | 26/09/2024 | 22.4.3 | 24.2.x | CS | :white_check_mark: |
+| [1.16.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.16.0){target="_blank"} | 25/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.15.0){target="_blank"} | 24/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.15.0){target="_blank"} | 24/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.14.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.14.0){target="_blank"} | 11/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
