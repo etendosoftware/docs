@@ -30,7 +30,7 @@ The **Create Reference Assistant** is a tool that creates a reference in the Ete
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is designed to speed up the process of creating windows, tabs, fields, system elements and menu entries.
+The **Dev Assistant** is designed to develop other assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
     For more information, visit: [Dev Assistant developer guide](../../etendo-copilot/bundles/dev-assistant.md).
