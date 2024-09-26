@@ -20660,6 +20660,3244 @@ It is necessary to run the **Days Back to Refresh Accounting** background proces
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Configuración de Impuestos para Libro de Facturas
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Configuración de Impuestos para Libro de Facturas
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.estaxes`
+
+#### **Introducción**
+
+Esta sección contiene información sobre la configuración de impuestos de los libros de facturas que forman parte del bundle de Localización española de Etendo.
+
+#### **Instalación**
+
+El usuario debe instalar este módulo y posteriormente aplicar el conjunto de datos o "Datos de Referencia" en la ruta de aplicación: Configuración General / Organización/ Gestión del Módulo de Empresa a la organización que corresponda.
+
+![](https://docs.etendo.software/latest/assets/drive/gGO4D4W1ZWtJV0sluU-2ESwmVQA8_vykqX_CABOqxU9WSAqeKQS42g46yOcZnVDpMG4qUHJO0XGnn1zvcHzKOVcgHMDFEXB3MwaBeyDOPZTwYEH1wdYWTPub9sLhcOcrko6PuYvIyNryJYZoi2dUxKIV9hFEXNlZ5DYtYyYTJ1663ViYtA-aKGEy9XXLYg.png)
+
+Una vez instalado y aplicado este módulo, se puede comprobar la configuración de los libros en la ruta de aplicación: Gestión financiera/ Contabilidad/ Configuración/ Configuración de Libros de Facturas, tal y como se muestra en la siguiente imagen:
+
+![](https://docs.etendo.software/latest/assets/drive/jKTQzqVFoz7dxq2qJS-Q2ECPksUf8UxYrLmeKDGG4NFGeQSxG96b-vbxqpaQb71UWuFBFscdPLSXXjD6dIqHoBB-3mCoOypQBeADb8AONAYOjD5Lu-MGfk1njsbQMJ2C3Cp-V18LcZpTZIpJTBZQ4X9b2dEEj-9nzmnM3FceUIHW3hdlgfFtLRx_S-4hYg.png)
+
+Es importante recalcar, que la configuración que se incluye en este dataset, relaciona tipos/rangos de impuesto con el tipo de documento estándar de Etendo (AP Invoice, AR Invoice, etc) a incluir en el correspondiente libro (facturas recibidas o facturas emitidas).
+
+Si se crean nuevos tipos de documento de factura de compra o venta, tendrá que incluirse de forma manual en la configuración de cada libro, relacionados con los impuestos de compra o venta correspondientes.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Impuestos para España
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Impuestos para España
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
+
+#### **Introducción**
+
+El módulo de impuestos para España es un conjunto de datos que contiene:
+
+-   "Categorías de Impuestos" para IVA, IGIC e IPSI
+-   "Categorías de Impuestos de Terceros"
+-   "Rangos de Impuestos"
+
+configurados con el objetivo de que los usuarios de Etendo puedan gestionar:
+
+-   el IVA Nacional
+-   el IVA Intracomunitario
+-   el IVA de Importación/Exportación
+-   las retenciones de IRPF, "Impuesto sobre la Renta de las Personas Físicas" más comúnmente utilizados en el España
+-   así como el IGIC, "Impuesto General Indirecto Canario" de aplicación en Canarias y el IPSI, "Impuesto sobre la Producción, los Servicios y la Importación" de aplicación en Ceuta y Melilla.
+
+Es importante tener en cuenta que en el caso del:
+
+-   **IVA Nacional**, los rangos de impuestos están asociados a España como país de origen y destino, España inlcuye "Península y Baleares".
+-   **IVA Intracomunitario**:
+    -   los rangos de impuestos de venta o entregas intracomunitarias exentas, están asociados a España como país de origen y países de la UE como país de destino.
+    -   los rangos de impuestos de compra o adquisiciones intracomunitarias, están asociados a países de la UE como país de origen y España como país de destino.
+-   **IVA de Importación/Exportación**:
+    -   los rangos de impuestos de venta o exportaciones exentas, están asociados a España como país de origen y terceros países como país de destino.
+    -   los rangos de impuestos de importaciones, están asociados a terceros países como país de origen y España como país de destino.
+-   **IGIC**, los rangos de impuestos están asociados a Canarias como región de origen/destino según aplique.
+-   **IPSI**, los rangos de impuestos están asociados a Ceuta y Melilla como región de origen/destino según aplique.
+
+Por tanto:
+
+-   Si su organización se localiza en Península y Baleares, sus productos/servicios tiene que estar asociados a las categorías de impuesto de IVA
+-   Si su organización se localiza en Canarias, Ceuta o Melilla, sus productos/servicios tienen que estar asociados a las categorías de impuesto de IGIC o IPSI
+
+Es importante recalcar que la configuración de impuestos para España, no incluye impuestos de "IVA Nacional" de otros países miembros de la UE como "IVA Nacional de Italia" o "Francia", para las ventas que excediendo el límite requerido deban liquidarse en el país de Europa que aplique.
+
+#### **Instalación del Módulo**
+
+Para la instalación del módulo de Impuestos para España, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+#### **Aplicación del Módulo**
+
+Es importante recalcar que una vez instalado el módulo de impuestos, los "Datos de referencia" que incluye deben aplicarse en la ruta de aplicación "Gestión del Módulo de Empresa".
+
+Los datos se pueden aplicar:
+
+-   a nivel de organización (\*) si se quiere conseguir que todas las organizaciones del cliente utilicen el mismo conjunto de datos o tipos impositivos
+-   o bien se pueden aplicar a una organización en concreto o a varias.
+
+#### **Impuestos para España**
+
+A continuación, se encuentran los impuestos disponibles en el conjunto de datos de este módulo.
+
+
+- Adquisiciones IVA 0%
+- Adquisiciones IVA 0+RE 0+0%
+- Adquisiciones IVA+RE 21+1.75%
+- Adquisiciones IVA+RE 5+0.62%
+- Adquisiciones intracomunitarias 5%
+- Entregas IVA 0%
+- Entregas IVA 0+RE 0+0%
+- Entregas IVA 5%
+- Entregas IVA+RE 21+1.75%
+- Entregas IVA+RE 5+0.62% 
+- Servicios prestados 0%
+- Prestación servicios nacional 5%
+- Servicios prestados nacional 5%
+- Adquisiciones IGIC 15%
+- Adquisiciones IGIC 7%
+- Adquisiciones IGIC Implícito 70% s15%
+- Adquisiciones IGIC Implícito 70% s7%
+- Arrendamientos en Canarias 7%
+- Arrendamientos en Canarias 7% -19%R (pagos)
+- Arrendamientos en Canarias 7% -21%R (pagos)
+- Entregas IGIC 15%
+- Entregas IGIC 7%
+- Prestación servicios en Canarias 15%
+- Prestación servicios en Canarias 7%
+- Prestación servicios en Canarias 7% -15%R
+- Prestación servicios en Canarias 7% -19%R
+- Prestación servicios en Canarias 7% -21%R
+- Servicios prestados en Canarias 15%
+- Servicios prestados en Canarias 7%
+- Adquisiciones IGIC 6.5%
+- Adquisiciones IGIC Implícito 70% s6.5%
+- Arrendamientos en Canarias 6.5%
+- Arrendamientos en Canarias 6.5% -19%R (pagos)
+- Arrendamientos en Canarias 6.5% -21%R (pagos)
+- Entregas IGIC 6.5%
+- Prestación servicios en Canarias 6.5%
+- Prestación servicios en Canarias 6.5% -15%R
+- Prestación servicios en Canarias 6.5% -19%R
+- Prestación servicios en Canarias 6.5% -21%R
+- Servicios prestados en Canarias 6.5%
+- Adquisiciones IGIC Implícito 70% s13.5%
+- Adquisiciones IGIC Implícito 70% s3%
+- Adquisiciones IGIC Implícito 70% s9.5%
+- Entregas IGIC Exentas
+- Entregas IGIC Tipo 0%
+- No declarable gastos de empleado
+- Adquisiciones REBU Exentas
+- Arrendamientos 0% - 19%R (cobros)
+- Arrendamientos 0% - 19%R (pagos)
+- Arrendamientos 21% -19%R (cobros)
+- Arrendamientos 21% -19%R (pagos)
+- Arrendamientos en Guipúzcoa 21% - 19%R (pagos)
+- Arrendamientos en Navarra 21% - 19%R (pagos)
+- Compensación REAGYP 10.5% -2%R (sobre BI) SR
+- Compensación REAGYP 12% -2%R (sobre BI) SR
+- Compensación REAGYP 12% -2%R (sobre bruto) SR
+- Intereses 0% -19%R
+- Prestación servicios agencias publicidad 21% -24%R
+- Prestación servicios en Canarias 0%
+- Prestación servicios en Canarias 0% -7%R
+- Prestación servicios nacional 0% -24%R
+- Prestación servicios nacional 21% -24%R
+- Prestación servicios no residente 0% -19%R
+- Servicios prestados nacional 21%-24%R
+- Arrendamientos 0% -19,5%R (cobros)
+- Arrendamientos 0% -19,5%R (pagos)
+- Arrendamientos 21% -19,5%R (cobros)
+- Arrendamientos 21% -19,5%R (pagos)
+- Prestación servicios Bienes Inversión 21% -15%R
+- Prestación servicios Bienes Inversión 21%-7%R
+- Prestación servicios en Canarias 0% -15%R
+- Prestación servicios en Ceuta/Melilla 0%-7.5%R
+- Prestación servicios en Ceuta/Melilla 4% -3,5%R
+- Prestación servicios en Ceuta/Melilla 4% -7,5%R
+- Prestación servicios nacional 0% -7%R
+- Prestación servicios nacional 10% -15%R
+- Prestación servicios nacional 10% -7%R
+- Prestación servicios nacional 21% -15%R
+- Prestación servicios nacional 21% -7%R
+- Prestación servicios profesionales nacional 0% -15%R
+- Servicios prestados nacional 21% -15%R
+- Servicios prestados nacional 21% -7%R
+- Entregas a Canarias, Ceuta y Melilla (%N=>0%) ISP
+- Entregas sin IVA por ISP
+- Entregas sin IVA por ISP con RE
+- Inversión Sujeto Pasivo Nacional 21%
+- Arrendamientos 0% -20%R (cobros)
+- Arrendamientos 0% -20%R (pagos)
+- Arrendamientos 21% -20%R (cobros)
+- Arrendamientos 21% -20%R (pagos)
+- Inversión Sujeto Pasivo no UE 21% -24%R
+- Inversión Sujeto Pasivo no UE 21% -7%R
+- Prestación servicios divulgación nacional 0% -15%R
+- Prestación servicios en Ceuta/Melilla 0% -9.5%R
+- Prestación servicios en Ceuta/Melilla 4% -9,5%R
+- Prestación servicios nacional 0% -19%R
+- Prestación servicios nacional 21% -19%R
+- Servicios prestados nacional 21% -19%R
+- Prestación servicios nacional 21% -15%R RDL
+- Exenciones relativas a regímenes aduaneros y fiscales
+- No declarable devoluciones de cliente
+- Adquisiciones IVA 10%
+- Adquisiciones IVA 10% -2%R
+- Adquisiciones IVA 21%
+- Adquisiciones IVA 4% -2%R
+- Adquisiciones IVA+RE 10+1.4% 
+- Adquisiciones IVA+RE 21+5.2%
+- Adquisiciones Intracomunitarias 21% ISP
+- Adquisiciones a Canarias,Ceuta y Melilla 10%
+- Adquisiciones a Canarias,Ceuta y Melilla 21%
+- Adquisiciones bienes inversión 10%
+- Adquisiciones intracomunitarias 10%
+- Adquisiciones intracomunitarias 21%
+- Adquisiciones intracomunitarias Bienes Inversión 21%
+- Adquisiciones intracomunitarias exentas
+- Adquisición B.Inmuebles 10%
+- Adquisición B.Inmuebles 21%
+- Adquisición Bienes Inversión 21%
+- Adquisición Bienes Inversión 21% -1%R
+- Arrendamiento 21% (cobros)
+- Arrendamiento 21% (pagos)
+- Arrendamientos 0% -21%R (cobros)
+- Arrendamientos 0% -21%R (pagos)
+- Arrendamientos 21% -21%R (cobros)
+- Arrendamientos 21% -21%R (pagos)
+- Arrendamientos 21% -24%R (pagos). No Residentes
+- Arrendamientos en Guipúzcoa 21%-10%R (pagos)
+- Arrendamientos en Navarra 21% -20%R (pagos)
+- Entregas Bienes Inversión 21%
+- Entregas IVA 10%
+- Entregas IVA 10% Revendedores
+- Entregas IVA 21%
+- Entregas IVA 21% ISP
+- Entregas IVA 21% Revendedores
+- Entregas IVA+RE 10+1.4% 
+- Entregas IVA+RE 21+5.2% 
+- Entregas IVA+RE 21+5.2% ISP
+- Entregas IVA+RE 21+5.2% IVA Normal ISP
+- Importaciones 10%
+- Importaciones 10%=0%
+- Importaciones 21%
+- Importaciones 21% ISP
+- Importaciones 21%=0%
+- Importaciones 21%=0% ISP
+- Importaciones Bienes Inversión 21%
+- Importaciones Bienes Inversión 21%=0%
+- Inversión Sujeto Pasivo UE 10%
+- Inversión Sujeto Pasivo UE 21%
+- Inversión Sujeto Pasivo UE exento
+- Inversión Sujeto Pasivo no UE 10%
+- Inversión Sujeto Pasivo no UE 21%
+- Inversión Sujeto Pasivo no UE 21% -24.75%R
+- Inversión Sujeto Pasivo no UE exento
+- Prestación servicios nacional 0% -21%R
+- Prestación servicios nacional 0% -9%R
+- Prestación servicios nacional 10% 
+- Prestación servicios nacional 10% -9%R
+- Prestación servicios nacional 21% 
+- Prestación servicios nacional 21% -1%R
+- Prestación servicios nacional 21% -21%R
+- Prestación servicios nacional 21% -9%R
+- Prestación servicios nacional 4% - 9%R
+- Servicios prestados nacional 10%
+- Servicios prestados nacional 21%
+- Servicios prestados nacional 21% -21%R
+- Servicios prestados nacional 21% -9%R
+- Transmisión B.Inmuebles 10%
+- Transmisión B.Inmuebles 21%
+- Adquisiciones IGIC 0%
+- Adquisiciones IGIC 13.5%
+- Adquisiciones IGIC 3%
+- Adquisiciones IGIC 9.5%
+- Adquisiciones IPSI 10%
+- Adquisiciones IPSI 4%
+- Entregas IGIC 13.5%
+- Entregas IGIC 3%
+- Entregas IGIC 9.5%
+- Entregas IPSI 10%
+- Entregas IPSI 4%
+- Prestación servicios en Canarias 13.5%
+- Prestación servicios en Canarias 3%
+- Prestación servicios en Canarias 3% -21%R
+- Prestación servicios en Canarias 9.5%
+- Prestación servicios en Ceuta/Melilla 0%
+- Prestación servicios en Ceuta/Melilla 10%
+- Prestación servicios en Ceuta/Melilla 4%
+- Prestación servicios en Ceuta/Melilla 4% -10,5%R
+- Prestación servicios en Ceuta/Melilla 4% -4,5%R
+- Prestación servicios exenta por suplido
+- Servicios prestados en Canarias 13.5%
+- Servicios prestados en Canarias 3%
+- Servicios prestados en Canarias 9.5%
+- Servicios prestados en Ceuta/Melilla 10%
+- Servicios prestados en Ceuta/Melilla 4%
+- Arrendamientos 18% -21%R (cobros)
+- Arrendamientos 18% -21%R (pagos)
+- Adquisiciones IVA 18%
+- Adquisiciones IVA 8%
+- Adquisiciones IVA+RE 18+4%
+- Adquisiciones IVA+RE 8+1% 
+- Adquisiciones a Canarias,Ceuta y Melilla 18%
+- Adquisiciones a Canarias,Ceuta y Melilla 8%
+- Adquisiciones intracomunitarias 18%
+- Adquisiciones intracomunitarias 8%
+- Adquisiciones intracomunitarias Bienes Inversión 18%
+- Adquisición B.Inmuebles 18%
+- Adquisición B.Inmuebles 8%
+- Adquisición Bienes Inversión 18%
+- Arrendamiento 18% (cobros)
+- Arrendamiento 18% (pagos)
+- Arrendamientos 18% -19%R (cobros)
+- Arrendamientos 18% -19%R (pagos)
+- Entregas Bienes Inversión 18%
+- Entregas IVA 18%
+- Entregas IVA 8%
+- Entregas IVA+RE 18+4% 
+- Entregas IVA+RE 8+1% 
+- Entregas intracomunitarias Bienes Inversión (%N=>0%)
+- Exportaciones Bienes Inversión (%N=>0%)
+- Importaciones 18%
+- Importaciones 18%=0%
+- Importaciones 8%
+- Importaciones 8%=0%
+- Importaciones Bienes Inversión 18%
+- Importaciones Bienes Inversión 18%=0%
+- Inversión Sujeto Pasivo UE 18%
+- Inversión Sujeto Pasivo UE 8%
+- Inversión Sujeto Pasivo no UE 18%
+- Inversión Sujeto Pasivo no UE 8%
+- Prestación servicios nacional 18% 
+- Prestación servicios nacional 18% -1%R
+- Prestación servicios nacional 18% -15%R
+- Prestación servicios nacional 18% -7%R
+- Prestación servicios nacional 8% 
+- Servicios prestados nacional 18%
+- Servicios prestados nacional 18% -15%R
+- Servicios prestados nacional 18% -7%R
+- Servicios prestados nacional 8%
+- Transmisión B.Inmuebles 18%
+- Transmisión B.Inmuebles 8%
+- Arrendamientos 16% -19%R (cobros)
+- Arrendamientos 16% -19%R (pagos)
+- Inversión Sujeto Pasivo no UE 16%
+- Prestación servicios en Canarias 5%
+- Adquisiciones intracomunitarias 7%
+- Adquisiciones a Canarias,Ceuta y Melilla 16%
+- Adquisiciones a Canarias,Ceuta y Melilla 4%
+- Adquisiciones a Canarias,Ceuta y Melilla 7%
+- Adquisiciones interiores exentas (art 22)
+- Adquisiciones no sujetas
+- Adquisición B.Inmuebles 16%
+- Adquisición B.Inmuebles 7%
+- Arrendamiento 16% (cobros)
+- Arrendamiento 16% (pagos)
+- Arrendamientos 16% -18%R (cobros)
+- Arrendamientos 16% -18%R (pagos)
+- Entregas a Canarias,Ceuta y Melilla (%N=>0%)
+- Entregas a Canarias,Ceuta y Melilla (%R=>0%)
+- Entregas a Canarias,Ceuta y Melilla (%SR=>0%)
+- Entregas no sujetas con dcho deducción
+- Importaciones 16%
+- Importaciones 16%=0%
+- Importaciones 4%
+- Importaciones 4%=0%
+- Importaciones 7%
+- Importaciones 7%=0%
+- Importaciones exentas
+- Inversión Sujeto Pasivo UE 16%
+- Inversión Sujeto Pasivo UE 7%
+- Inversión Sujeto Pasivo no UE 7% 
+- Prestación servicios interiores exentos (art 20)
+- Prestación servicios interiores exentos (art 22)
+- Prestación servicios nacional 16% 
+- Prestación servicios nacional 16% -15%R
+- Prestación servicios nacional 16% -7%R
+- Prestación servicios nacional 4%
+- Prestación servicios nacional 7%
+- Servicios prestados UE (%N=>0%)
+- Servicios prestados UE (%R=>0%)
+- Servicios prestados exentos sin derecho a deducción
+- Servicios prestados internacional (%N=>0%)
+- Servicios prestados internacional (%R=>0%)
+- Servicios prestados nacional 16%
+- Servicios prestados nacional 16% -15%R
+- Servicios prestados nacional 16% -7%R
+- Servicios prestados nacional 4%
+- Servicios prestados nacional 7%
+- Servicios prestados no sujetos con dcho deducción
+- Transmisión B.Inmuebles 16%
+- Transmisión B.Inmuebles 7%
+- Adquisiciones IVA 16%
+- Adquisiciones IVA 4%
+- Adquisiciones IVA 7% 
+- Adquisiciones IVA+RE 16+4%
+- Adquisiciones IVA+RE 4+0,5% 
+- Adquisiciones IVA+RE 7+1% 
+- Adquisiciones interiores exentas (art 20)
+- Adquisiciones intracomunitarias 16%
+- Adquisiciones intracomunitarias 4%
+- Entregas Exentas
+- Entregas IVA 16%
+- Entregas IVA 4%
+- Entregas IVA 4% Revendedores
+- Entregas IVA 7% 
+- Entregas IVA+RE 16+4% 
+- Entregas IVA+RE 4+0,5% 
+- Entregas IVA+RE 7+1% 
+- Entregas intracomunitarias (%N=>0%)
+- Entregas intracomunitarias (%N=>0%) ISP
+- Entregas intracomunitarias (%R=>0%)
+- Entregas intracomunitarias (%SR=>0%)
+- Exportaciones (%N=>0%)
+- Exportaciones (%N=>0%) ISP
+- Exportaciones (%R=>0%)
+- Exportaciones (%SR=>0%)
+- Prestación servicios no sujetas
+- Servicios a Canarias, Ceuta y Melilla (%N=>0%)
+- Servicios a Canarias, Ceuta y Melilla (%R=>0%)
+- Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
+- Servicios prestados exentos con derecho a deducción
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Intrastat
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Intrastat
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat
+## Article Content: 
+#### Javapackages
+
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat` <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.spain` <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.es.es`
+
+#### Introducción
+
+Esta sección describe el módulo disponible de Etendo para la generación y presentación del informe oficial de Intrastat.
+
+El informe Intrastat se debe presentar a las autoridades mensualmente, dentro de los 12 días posteriores al mes en el que se realizaron las transacciones.
+
+La declaración de Intrastat se debe enviar telemáticamente (a través Internet) en un fichero válido con un determinado formato específico de cada país.
+
+#### Descripción de los Módulos
+
+A continuación, se listan los diferentes **módulos** sobre los que se desarrolla la funcionalidad de Intrastat:
+
+-   **Intrastat.** Este módulo proporciona la infraestructura necesaria que permite la configuración, ejecución y generación del fichero de Intrastat. Si sólo instala este módulo, Etendo será capaz de reconocer todas las transacciones que formarán parte del fichero de Intrastat.
+
+Éste es un módulo del que dependen el resto de módulos de Intrastat, proporciona la funcionalidad genérica para los países de la Unión Europea. Sin embargo, tenga en cuenta que cada país de la UE tiene sus propias peculiaridades, y este módulo es incapaz de conocerlas y manejarlas él sólo. Por este motivo, es posible que necesite instalar además el módulo de Intrastat concreto para su país, que será el que proporcione las peculiaridades propias de su país.
+
+-   **Intrastat for Spain (Intrastat para España).** Este módulo complementa al módulo anterior y proporciona las características específicas para España, como por ejemplo:
+    -   Excluye las transacciones que tienen como origen o destino las Islas Canarias (como requiere la ley)
+    -   Genera un fichero de Intrastat con el formato oficial listo para ser enviado mensualmente a las Autoridades.
+-   **Intrastat – Spanish Translation (Intrastat - Traducción al español).** Añade la traducción al español (España) del módulo Intrastat.
+
+Además de los módulos anteriores, necesitará instalar las siguientes dependencias obligatorias:
+
+-   **Incoterms.** Añade la lista de Incoterms oficiales (Condiciones de Entrega) a su instalación de Etendo
+-   **European Union Countries.** Añade la lista de países miembros de la Unión Europea a su instalación de Etendo
+-   **Provincias de España.** Añade la lista de provincias españolas a su instalación de Etendo
+
+Todas estas dependencias se instalarán automáticamente al instalar los módulos de Intrastat, por lo que no tendrá que hacerse manualmente.
+
+#### **Instalación de los módulos**
+
+Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+!!! info
+    **Nota importante**: Las transacciones realizadas con anterioridad a la instalación del módulo *“Intrastat”* no se tendrán en cuenta a la hora de generar las declaraciones de Intrastat.
+
+
+Tenga en cuenta que, como es lógico, el sistema solo es capaz de reconocer las transacciones a incluir en el informe de Intrastat desde el momento que se instala y configura dicha funcionalidad en Etendo.
+
+##### **Aplicación de los Datasets (Conjuntos de datos)**
+
+Una vez instalado el módulo, se deberán aplicar los datasets incluidos a su instalación.
+
+Si está realizando la configuración inicial de Etendo, puede utilizar el proceso “Crear Organización” para aplicar estos datos.
+
+Si, por el contrario, está instalando estos módulos en un sistema en productivo, deberá aplicar los datasets desde la ventana Configuración General | Organización | Gestión del módulo de Empresa  |  Gestión del módulo de Empresa:
+
+![](https://docs.etendo.software/latest/assets/drive/9E8pdSDAB1cQjG039Rhp_c3Z-XDg2LC-1tnuokHzaQ6MVZ1TTuM5YTyX1q0-wYHGGRAH0OtCyMQ6uICIwQHcHfwz7sBTqVtvAKlc6SSyZGiCuCAJhZ8bsQt9m3qLT4Eiw3mR4XSTNY01hZtqqw9IwQKG9zaQzBnRd89An6VyGUsO7DNXkQl1Q19l9A.png)
+
+Seleccione los datos de referencia “Incoterms” e “Intrastat for Spain” y aplíquelos a su organización de nivel de agrupación o a su entidad legal dependiendo de su árbol de organizaciones.
+
+Si el proceso se ha ejecutado correctamente, el sistema debería mostrar la siguiente información:
+
+![](https://docs.etendo.software/latest/assets/drive/WFgwGX-k5cQwljyb0pvetphDd1B4qebt3L2mRNX9o2MhfjH5nTqVpG9O4TUCMwn6NJ1cK1bfQhtosDVfnjno3suZce-SgBk9JC9aZgaRntutQfEf7cc5GLPaBmCSu_L29LYfA3n-g6DMfo8M-NnfKSZnQ8TDR6o3VoM1Y9W75yEjs4v_2POlWyUEpA.png)
+
+#### **Interfaz de Usuario**
+
+El módulo “Intrastat” proporciona campos, ventanas y solapas necesarios para la configuración y generación de la declaración de Intrastat.
+
+A continuación se muestran unas capturas de pantalla de estos elementos junto a una breve descripción de cada uno de ellos.
+
+######## **Gestión de Datos Maestros | Producto  |  Producto  >>  Intrastat**
+
+![](https://docs.etendo.software/latest/assets/drive/G5Llm2flNrOzJt-k1_SvtgklRXnnQtgz0wyBL4ouCXVxOoe30GaKqSgN5KgrXlgH21xq0_T0EUyZlwpaGQgjhcLP8cpt1HqqiAK9EGzkjzgcObg1bTkeIMUdoTtcM7WbTd0oTcgVEi4iAQdWhJ76AyrmUSnh2bw8Zo0tU15gL3AYtIFQr1wMBybNXA.png)
+
+Las transacciones entre países de la UE que incluyan productos de tipo Artículo se deben registrar en la declaración de Intrastat. Cada uno de los productos tiene asociado un código de mercancía obligatorio y una masa neta en Kg (por unidad de facturación). Opcionalmente, y siempre dependiendo del producto, se puede configurar una unidad de medida suplementaria junto a su correspondiente conversión.
+
+En esta solapa, el usuario debe configurar los datos particulares de cada producto.
+
+######## **Gestión de Datos Maestros | Terceros  |  Terceros  >>  Cliente  >>  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  | Terceros  >>  Proveedor/Acreedor  >>  Adquisiciones de Intrastat**
+
+![](https://docs.etendo.software/latest/assets/drive/7azhjfSW95mKDO_Umt-b50nUiixohLlwZ1zx_oZKMbNAO7R79nOk7oMsT2Rq-iOC-rY16uPaSnyHXz5_5bwULKS1eSqn7bmhL85Um2Qs-f_RNafxL9RFYkcEXvV_l-7QVXpWVGjPDbIghA2hw-mXyPncKMBU1GIqXCrUt8KkoklL6WlVFouQKsXX8A.png)
+
+Cada tercero con el que trabaje, ya sea cliente o proveedor, tendrá su propia configuración para Intrastat por defecto. Por ejemplo, es posible que su proveedor siempre le envíe la mercancía mediante un medio de transporte determinado.
+
+Desde esta solapa el usuario tiene la oportunidad de configurar esos valores por defecto de cada tercero. El sistema siempre recuperará la información configurada aquí y la utilizará para generar la declaración de Intrastat.
+
+Sin embargo, es posible que en alguna transacción en particular, la modalidad de transporte varíe de la que tiene configurada por defecto en esta ventana. Si éste es el caso, el usuario siempre tiene la oportunidad de cambiar manualmente esta información a nivel de transacción o de declaración de Intrastat como veremos más adelante en este manual.
+
+######## **Gestión de Datos Maestros | Terceros  |  Terceros  >>  Cliente y Gestión de Datos Maestros | Terceros  |  Terceros  >>  Proveedor/Acreedor, campo Incoterms**
+
+![](https://docs.etendo.software/latest/assets/drive/FxL2ss3KNP9of-xib9m4PqSBvMrXhhFCKBFlFLq06LGNxkxNzb2A0R55NPFpGogVFQ6Zc9ztwL-EjSxQYPAZTkDgpbCN-Unh4iJGItzb1np0W0YBfO6_PiM-PSbp20vpW5T38UEp2vXdogNtyh-osvVMoIUHGJDlSf4HDqNXCsD2YbFUGULEr1gW0A.png)
+
+El campo Incoterms permite definir el Incoterm (Condición de Entrega) por defecto para el tercero. Es importante tener en cuenta que se pueden configurar dos Incoterms para el tercero, uno cuando el tercero es cliente y otro cuando es proveedor.
+
+!!! info
+    El campo "Incoterms" del Tercero, es un campo de Etendo que no se muestra por defecto, pero si se utiliza en los módulos de Intrastat. Recuerde mostrarlo si lo va a utilizar.
+
+
+######## **Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento**
+
+![](https://docs.etendo.software/latest/assets/drive/IoUclg9rhO_Gqhw_0FuLoJa54gQjUysOPDNlGgbwsbczidBrKgSlXDVgV06YLVDXTwMPbgeJ041zklsHvsDQKu0lhSTvKh3uI3TPmCeYv4qY466B-at_lMNxdR24jh40VhYtkBzLxGKGPkQIFVHGJSLZfwjDeImzQu1key6CJmHNBTfZEDth6QQCeg.png)
+
+Los campos *Tipo de Transacción* y *Regimén estadístico* van asociados al tipo de documento (facturas). En esta ventana puede definir los valores por defecto que, al igual que sucedía con los valores de Intrastat para Producto o Tercero, pueden ser sobrescritos para transacciones o declaraciones de Intrastat en concreto.
+
+######## **Configuración General | Organización | Organización | Organización, campo Calendario de Intrastat**
+
+![](https://docs.etendo.software/latest/assets/drive/mVJ1pyaJF0A0_AhDbNggeRZnZvxKq2pl9cs7i7n-0TuQfxS-sucLH8Dj83qvRSIDnttYFzgSMZK5LRnWS5n5Wp6liQUUZnaOeJfKjfHFFm7q5eFQ68kpmuLi_V-SI8N2d28S3lOfQfGwc6Rhq-U_RROZKyUL9fmjd9LM_xCuM2H3pzd__651wvaibg.png)
+
+El campo *Calendario de Intrastat* define el calendario de declaraciones de Intrastat. En España, el Intrastat se debe presentar mensualmente, por lo que el calendario de Intrastat seleccionado debe tener doce periodos que coincidan con los dos meses naturales de un año. Si su calendario fiscal cumple esas condiciones, puede usarlo también como calendario de Intrastat sin necesidad de crear uno nuevo.
+
+En este nuevo campo, sólo aparecerán los calendarios que estén marcados como *“Calendario de Intrastat”* en la configuración del calendario:
+
+![](https://docs.etendo.software/latest/assets/drive/bO3u93UFfmKU1W9mLFKYj-ZbmYv8cKLtPjLvC-yacQkkRXAfcnGz3HeIrfsjW08XXL8iBOP656gydvYIYVKSIthvyYK8IEsipoh7XADziIBF77qqffJlwOH11cgdPlb0tWT9wCtR11_P3CSWWbkOUracp5Ui3Ul0irS50FTaDLewU1rdVdJ1TEVmMg.png)
+
+######## **Configuración General | Organización | Organización  |  Organización  >>  Intrastat**
+
+![](https://docs.etendo.software/latest/assets/drive/C03LX7XPMO-rvqovv8Gtmu6l-HoRmUqQPf0Q321iltU61rfVQyiGCo1dsu6oQ_oFXHLbF0528kEHLoOx8qWAmbJx0NcgwVmw_Iy-lNzSCRXYB4jO9P0zcaOAU44PXqja7AgrdctRRSNeYtErmY50OYAT0RKfFXgrX6lTf20j5WzMnDQexGT1AqaK0g.png)
+
+En esta solapa se introduce la información de Intrastat relativa a la organización (sólo entidades legales).
+
+Cada año se debe introducir un registro en esta solapa para configurar los siguientes datos:
+
+-   *Formato de Fichero*: Cada país tiene su propio formato de Intrastat. En este campo seleccionamos el formato de fichero concreto que queremos que cree el sistema. En el caso de España, el módulo “Intrastat for Spain” es el encargado de generar el fichero con formato para España.
+-   *Ejercicio*: Año de la declaración
+-   *Declaración de Intrastat*: Adquisiciones o Entregas
+-   *Importe Límite*: Cada año las Autoridades suelen modificar el importe que delimita la obligatoriedad de presentar o no la declaración de Intrastat. En este campo el usuario debe indicar el importe límite de cada año.
+-   *Importe Acumulado del año*: Cada vez que se presente una declaración mensual, el sistema irá actualizando automáticamente el valor de este campo con el importe acumulado. Si el año anterior se generó la declaración de Intrastat fuera de Etendo, o desea empezar a generar la declaración una vez empezado el año, puede configurar aquí el importe que declaró en su momento.
+-   *Valores por Defecto (Incoterms, Tipo de transacción, Modalidad de transporte, Régimen estadístico, Valor estadístico)*: Como ha visto anteriormente, en las ventanas de *Tercero* o *Tipo de documento* se pueden definir todos estos valores. Sin embargo, definir la misma *Modalidad de transporte* (por ejemplo) para todos los terceros puede resultar un poco molesto. Así que, si lo desea, puede definir la configuración global de estos valores en esta solapa. De esta forma, si por ejemplo no especifica nada en la *Modalidad de Transporte* de un Tercero, el sistema utilizará por defecto la configurada en esta solapa. Podrá modificar manualmente esta configuración siempre que lo desee en cada transacción o declaración de Intrastat.
+
+######## **Solapa Intrastat en Línea de Pedido, Albarán y Factura (compra o venta)**
+
+![](https://docs.etendo.software/latest/assets/drive/MPXVxD2cgEZhT-sITSN4LLZJV59vTsxYwzj5fC8IKyIZuUjHq8BWShP7aSB5M5vue9kXWhNUL54W0Q7vNGkN1OJvPXInGUWRPOhsSix8csKzNIAYHwIxwxany7JR3xAeifSGeUfUOLCeOoxyR55QMrajFQjcsrPYt5AnOUALpnHeh82pH3O9mGbIKg.png)
+
+A nivel de línea de Pedido, Albarán y Factura, tanto de compra como de venta, se ha creado una nueva solapa que contiene toda la información de Intrastat relativa a esa transacción en concreto.
+
+Cada vez que se introduce una nueva línea de pedido, albarán o factura, el sistema comprueba si esa transacción se debe incluir en el informe de Intrastat (por ejemplo, si se trata de una compra/venta intracomunitaria) y, en caso afirmativo, genera un registro en la pestaña Intrastat con toda la información de Intrastat que se ha configurado por defecto. El usuario puede modificar manualmente cada uno de esos campos antes de completar el documento.
+
+La razón por la que se ha añadido una solapa de Intrastat tanto en las líneas de pedido como de albarán (teniendo en cuenta que estos documentos no se incluyen en el Intrastat, sino sólo las facturas contabilizadas) es que las facturas en Etendo pueden crearse desde los pedidos y/o los albaranes. Es por ello que si la información relativa a Intrastat se introduce en la línea de un pedido, esa información se trasladará a la correspondiente línea de factura si la factura se genera copiando del pedido.
+
+######## **Intrastat | Herramientas de análisis | Generador de Intrastat**
+
+![](https://docs.etendo.software/latest/assets/drive/XxYQ02-DL0rr3DGMZ_FUOn2gVmqY34Iko4NBU_Wr7JXNbchAgTSr_BaLU_6bf9giEwaUVf8c2b2pvk2dc2U6NwRsa7CX8uFXET_eiMgxybpB8swm-0wSw9ln1r_FcRFaFlYvumc30KMLbEhCxNLFPy7NfCiPVYvY41yrCbbhVWZ75HgRrxwNyEYkdg.png)
+
+Una vez finalizado el mes, se debe generar la declaración de Intrastat de ese mes. Desde esta ventana podremos hacerlo. Para ello seleccionamos la Organización (sólo entidades legales), Ejercicio, Periodo, Adquisiciones o Entregas y Tipo de declaración (Normal o Anulativa).
+
+El sistema generará automáticamente una cabecera de declaración junto a sus líneas, accesible desde Intrastat | Herramientas de análisis | Declaración de Intrastat.
+
+######## **Intrastat | Herramientas de análisis | Declaración de Intrastat**
+
+![](https://docs.etendo.software/latest/assets/drive/er07E5V7YGKLkaVl1A9lUzWMFj3FREeBMgFaqnjtq6fB2w7ek7q6ztujPw2KNRxtVq45PS7SU6MzaKmrNSdDnNXw6nkGRo0s_Y1aY0KKEyigXKHj9w8_RqGCSKo-Hj3AiqoUKo2sNu19GNJ6xTBoUMHzLYDpfMVL8JcyS1evqol-e3m-weEBCbbB5Q.png)
+
+Al generar una declaración de Intrastat, el sistema crea automáticamente una nueva cabecera (sólo lectura) junto con sus líneas. En este momento la declaración se encuentra en estado borrador, y se permiten modificaciones en las líneas de la declaración. Veamos un ejemplo de la información que contiene una línea:
+
+![](https://docs.etendo.software/latest/assets/drive/04R4qED5tjzLbOS_oOdZGSssalCSrO5HjgBFbLPHotJgoHxVqKwB7MzSAGUN9sqiJdzB78R9LBKGA0J8pTtaXgOGJBcI3BzfQoyEXdg3dwLXaDTNG7aqfe6JSU_KAgeVjCkHNZO5kvKhJ5DzooSFsIYSd-hZs3KfJMCSH54KXzVfiXilrW02m280dQ.png)
+
+El sistema ha recuperado toda la información de Intrastat desde las líneas de factura. Si ha configurado toda la información relativa al Tercero, Producto y tipo de documento, Etendo Classic habrá rellenado automáticamente todos estos valores en las líneas de la declaración.
+
+Si por el contrario le falta algún dato, si desea modificar alguno, o incluso si quiere añadir manualmente nuevas líneas o excluir alguna de ellas, puede hacerlo mientras la declaración esté en estado borrador.
+
+En la solapa de líneas de declaración de Intrastat, al margen de los campos relativos a la información de Intrastat, aparecen dos campos de especial importancia para el usuario: el campo *“Incluir”* y el campo *“Modificado Manualmente”:*
+
+-   *Incluir*: Por defecto, todas las líneas de la declaración de Intrastat se incluirán a la hora de generar el fichero de Intrastat. Sin embargo, si desmarca esta casilla, la línea en cuestión se excluirá de la declaración.
+-   *Modificado Manualmente*: Cada vez que se modifique un dato de una línea de declaración de Intrastat o añada manualmente una nueva línea, el sistema marcará automáticamente esta casilla.
+
+Mientras la declaración está en estado borrador, la declaración de Intrastat se puede relanzar todo lo necesario. Cuando se haga, el sistema volverá a recalcular de nuevo la declaración, conservando intactas todas las líneas que tengan marcado el campo de *Modificado Manualmente.*
+
+#### **Manual de Instrucciones**
+
+Una vez que conoce las ventanas más importantes que proporcionan la funcionalidad de Intrastat en Etendo, es hora de conocer el flujo de trabajo para usar correctamente dicha funcionalidad.
+
+##### **Configuración General**
+
+Toda la lógica detrás de la funcionalidad de Intrastat en Etendo se basa en la ubicación física de su organización y de sus terceros. Por ese motivo es fundamental que especifique la dirección completa de cada uno de ellos. Si la dirección es de España, deberá indicar también la Provincia en la que se ubica.
+
+###### **Configuración de Intrastat**
+
+Como habrá podido observar, la configuración para Intrastat se realiza principalmente en los siguientes lugares:
+
+-   **Configuración General | Organización | Organización**. Para cada entidad legal, deberá seleccionar un calendario válido para Intrastat (que tenga ejercicios con 12 periodos que coincidan con los meses naturales). Recuerde marcar la casilla “Calendario de Intrastat” cuando configure su calendario (*Gestión Financiera | Contabilidad | Configuración | Calendario anual y periodos*) para que éste aparezca en el campo de *Calendario de Intrastat* de la ventana de Organización.
+-   **Configuración General | Organización | Organización  |**  Organización  **\>>  Intrastat**. Recuerde que en esta solapa se configuran:
+-   Los importes y tipos de declaraciones que desea generar para cada entidad legal
+-   Los valores por defecto globales que se utilizarán en caso de que no se definan concretamente donde corresponda (*Tercero* o *Tipo de documento*)
+
+El sistema necesita saber cuánto se declaró el año anterior. Para proporcionar esta información, se debe crear un nuevo registro en esta solapa. Solamente a modo de ejemplo, en *2021* para la organización *España*, declaramos un Intrastat de *adquisiciones* por un importe de *0.00* Euros:
+
+![](https://docs.etendo.software/latest/assets/drive/9X5udGu8RP0DTGJquv2Li6dXdSXPxg03D1QBGQ6qnrs6VxCayvbcoqtu-IyOzhhT5L2lb7CWeHMST-gvve1CpWU8RyBTrUcgu-CIGup0h6kG9MrY0-DbIZ-LQIrMrLttuy0FAM3Ax2-CPquZMG8IOmqkZGLr6bl1mhCpSe2_IErNZTQfX5RfnIIrfg.png)
+
+!!! info
+    Nota: Si su calendario de Intrastat no tiene creado el año 2021, deberá crearlo (junto a sus respectivos periodos) antes de poder introducir este registro.
+
+
+Ahora repita ese proceso para el año presente. Si ya ha empezado el año y se han realizado transacciones intracomunitarias de bienes (presentando o no la declaración de Intrastat), deberá indicar el importe acumulado de este año. De esta forma, el sistema podrá saber si debe presentar la declaración de Intrastat o no a lo largo del presente año.
+
+También existe la opción de configurar los valores globales por defecto, lo que es especialmente útil si, por ejemplo, casi todos sus Terceros comparten el mismo Incoterm. Posteriormente, a nivel de tercero, se podrá especificar la configuración concreta para cada uno de ellos.
+
+![](https://docs.etendo.software/latest/assets/drive/oVnu7ahLXMceKTVmUBhewKFKYODlv-fRnLLXvLdTrg6rsJdYzXk9_nRSj9_6COfueYVEub-2ISJZV49Abl1WRLhdVqzJ5DCV5n0d3vMDePDlcYKGY6pUDeQSSSrpRz6k--F-438sLk7NF_QCydiwA2C2X6nWOSbZ5u0D0Zn7UyfdJsZm1IRoRMPjAQ.png)
+
+-   **Gestión de Datos Maestros | Producto  |**  Producto  **\>>  Intrastat** Como ya vió en el apartado Interface de Usuario, debe definir la información de Intrastat para los productos de tipo *Artículo.*
+-   **Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>  Cliente y Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>  Proveedor/Acreedor, campo Incoterms.** Como ya se vió en el apartado Interfaz de Usuario, se puede definir el Incoterm de cada Tercero.
+-   **Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>**  Cliente  **\>>  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>**  Proveedor/Acreedor  **\>>  Adquisiciones de Intrastat .** Como ya se vió en el apartado Interfaz de Usuario, se puede definir la información de Intrastat de cada Tercero.
+-   **Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento.** Como ya se vió en el apartado Interfaz de Usuario, puede definir el *Tipo de Transacción* y *Régimen estadístico* para sus documentos de tipo Factura.
+
+##### **Creación de transacciones**
+
+Una vez que nuestros datos están perfectamente configurados, es el momento de empezar a crear las transacciones que posteriormente se incluirán en la declaración de Intrastat.
+
+Como ya se ha visto en apartados anteriores, su instalación cuenta con una nueva solapa, llamada *“Intrastat”*, a nivel de línea de pedido, albarán y factura que contiene toda la información relativa al Intrastat. Si se han introducido todos los datos de configuración necesarios anteriormente, se utilizará esta información automáticamente para rellenar esa solapa. Si, por el contrario, no se ha configurado toda esta información, o desea modificar algún dato en concreto, podrá hacerlo de forma manual.
+
+Cada vez que se introduce una línea de pedido, albarán o factura, el sistema comprueba si se cumplen todas estas condiciones:
+
+1.  La organización y el tercero del documento se encuentran en países distintos de la Unión Europea
+2.  Todas las direcciones incluidas en la cabecera del documento, que están relacionadas con el tercero, están ubicadas en la UE. Si al menos una de las direcciones no pertenece a la UE, no se generará información de Intrastat
+3.  El producto incluido en la línea es un artículo
+4.  Si se ha instalado el módulo de *“Intrastat for Spain”*, el sistema también comprobará que tercero y organización no se encuentren ubicados en las Islas Canarias, ya que en este caso las transacciones se deben excluir del Intrastat.
+
+Si todas esas condiciones se cumplen, cada vez que inserte una línea de documento, el sistema creará automáticamente la información en la pestaña de Intrastat.
+
+El sistema recupera los valores por defecto que haya configurado a nivel de tercero, producto, tipo de documento y organización (este último si no encuentra los valores correspondientes anteriormente). Pero recuerde que, independientemente de los valores configurados, el usuario tiene la libertad de modificarlos para cada línea en concreto mientras el documento no se haya completado.
+
+###### **Creación de transacciones desde otras transacciones**
+
+En Etendo existe la posibilidad de crear albaranes desde pedidos; en este caso, el sistema recuperará la información de Intrastat introducida a nivel de pedido y la copiará al albarán.
+
+Imagine que ha creado un pedido y que ha cambiado el Incoterm por defecto. Cuando se cree un albarán desde ese pedido, el Incoterm que se incluirá en la línea de Intrastat del albarán será el que se haya redefinido en el pedido, y no el que estuviera configurado en el sistema por defecto.
+
+Lo mismo sucede para las facturas. En Etendo se pueden crear facturas desde albaranes o pedidos. En este caso, el sistema siempre intentará recuperar la información de Intrastat del albarán o del pedido. Si la factura se crea sin albarán o pedido asociado, Etendo recuperará la configuración del sistema para rellenar la solapa del Intrastat.
+
+##### **Generación de declaraciones de Intrastat**
+
+Una vez finalizado el mes natural, llega el momento de generar la declaración de Intrastat. Para hacerlo debemos ir a la ventana Intrastat | Herramientas de análisis | Generador de Intrastat. Seleccionaremos la entidad legal, año, periodo y tipo de declaración.
+
+![](https://docs.etendo.software/latest/assets/drive/-xOOy1tCY12Yc8KLtr_QEIiGwyUIQ8O9dXuGoMTnHHhDwYTKty5cP1dog-im2f-iHQoE-UEbMJcoseuQvPEnMqTTwZvEEwMyHin7jQyDByPcGvhswO9pAz2e07LqRCkFPWXTXlMJEwr09pCoiupjWHCQLHRcPRdjgZhysMOmd4ZvJbmmRELeLdO7gg.png)
+
+Actualmente, Etendo soporta dos tipos de declaraciones: *Normales* y *Anulativas*, estas últimas anulan las declaraciones normales procesadas en el periodo seleccionado y generan una nueva declaración normal.
+
+Tenga en cuenta que un mismo periodo sólo puede tener como máximo una declaración normal para adquisiciones y otra para entregas.
+
+Mientras la declaración normal para un periodo se encuentre en estado borrador, el usuario puede lanzar la generación de la declaración tantas veces como quiera. El sistema actualizará todas las líneas de la declaración, conservando todos los cambios manuales realizados por el usuario.
+
+Como veremos más adelante, cuando se procese una declaración ya no se podrá realizar más cambios sobre ella. Sin embargo, el usuario siempre puede anular la declaración procesada para volver a generar una nueva declaración normal para ese periodo.
+
+!!! info
+    **Nota importante:** Etendo recomienda cerrar el periodo contable antes de generar la declaración de Intrastat.
+
+
+###### **Revisión, Modificación y Procesado de la declaración de Intrastat**
+
+Una vez generada la declaración, podemos examinarla antes de procesarla. Para ello utilizaremos la ventana Intrastat | Herramientas de análisis | Declaración de Intrastat. La cabecera de la declaración se encuentra por defecto en estado borrador, con todos los campos de solo lectura.
+
+Si navegamos a las líneas, podemos comprobar los datos que se incluirán en la declaración. Mientras la declaración esté en borrador, podremos modificar datos de las líneas, incluir manualmente nuevas líneas (para transacciones al margen de Etendo), o excluir líneas (mediante el campo *Incluir*) que no queramos que aparezcan en el fichero de Intrastat.
+
+
+Cuando estemos seguros de que la declaración es correcta, navegaremos a la cabecera y pulsaremos el botón *“Procesar Declaración”.* Este proceso comprobará que todos los datos necesarios para generar el fichero de Intrastat están en el sistema y nos mostrará un error detallado en caso de que encuentre algún fallo. Ejemplo:
+
+![](https://docs.etendo.software/latest/assets/drive/YmqOUWlEagUpEcF7v1V8AbomnzuIy8PSzX0CHXiNQTThWHi821JdV-yVpHHydVZOZbxkF1ybQSff-K0KbKoaGSgYekcjm2ofbGreyprdx482TGdM8m4S-076wHnQt16isDz4Vn-gSMkN2Q5qEft7hRWTILjXA2NWVp2G7bVxcmzeCxVVxcfB7Bal7Q.png)
+
+Una vez procesada la declaración, el campo *“Importe Acumulado del año”* a nivel de organización se actualizará automáticamente, sumando el importe de esta declaración a lo acumulado en el año. Si posteriormente anula esta declaración, el sistema restará el importe de la declaración anulada al acumulado del año.
+
+##### **Generación del fichero de Intrastat**
+
+Al procesar la declaración, aparece automáticamente el botón de “Generar fichero”.
+
+![](https://docs.etendo.software/latest/assets/drive/qZnZAQ6qT2iKqwv_ZgjHxgD_ytT0UxvLoevWs3yIh-DMPFriliEcja2bxMfH3znnY9CkX0Dvzw80Z99vu-3jyD_vSjaqb8Hds-METiaoAqj7KWg5WzgJq2u8FJ5qg2yBrBTlM20qrC_8jDo03XDeametjvbJwchZo4gBISB7-1D6NEtn8k3cp4hVDA.png)
+
+Cuando lo pulsemos, el sistema comprobará si estamos obligados a presentar la declaración para este periodo o no. Para llevar a cabo esta operación, el sistema comprueba el importe declarado el año anterior y el acumulado de este año, por ese motivo es muy importante que configure correctamente estos valores en la ventana Intrastat a nivel de Organización.
+
+
+Si durante el año anterior superamos el límite de declaración de Intrastat, o lo hemos superado a lo largo del presente año, Etendo nos generará el fichero de Intrastat con el formato apropiado para ser enviado telemáticamente (a través de Internet) a las Autoridades. Ejemplo:
+
+FR;31;FOB;11;3;;85182190;CN;1;115;162;15,37;15,37
+
+DE;28;CIF;11;1;0811;85182190;US;1;2459;1982;4589,46;4589,46
+
+IT;12;FOB;11;3;;02012030;;1;800;;987,00;890,45
+!!! info
+    Si las líneas de la declaración sobre la que vamos a generar el fichero son superiores a 1000, generará un fichero zip con tantos txt como sean necesarios, ya que cada archivo podrá contener un máximo de 1000 líneas.
+
+!!! info
+    Este fichero se puede importar en el enlace web de la AEAT - Cumplimentación en Línea con Importación de Fichero. Para más información, consulte este [*enlace*](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/procedimiento-presentacion-declaraciones-intrastat.html){target="_blank"}.
+
+
+!!! info
+    Es importante recalcar que superado el umbral de presentación en caso de que en un periodo (mes) no se realicen transacciones de intercambio de bienes intracomunitarias, habrá que presentar la correspondiente declaración sin transacciones. 
+
+
+
+###### **Finalizar el año. Copia de configuración al siguiente año**
+
+Una vez que hemos generado todas las declaraciones del año, es momento de configurar el sistema para el próximo año. Lo único que debe hacer es ir a la configuración del presente año en Configuración General | Organización | Organización  |  Organización\]  >>  Intrastat y presionar el botón *“Copiar al año siguiente”.* En la ventana emergente aparecerá un campo numérico para que introduzca el nuevo importe límite del siguiente año.
+
+![](https://docs.etendo.software/latest/assets/drive/QeFYekMn3a3rRGcEFIkw2MgQ2UNf5EfrCuJM8iaLCP6WqeyL6-0HRqUgzimJiyEkn-vT6XRvDUsNkw2VhlJYRdoo5kgTPOdCa5r1EnNBj8k6CQ45xq-7R2LS4b0Yn8MwpQ2cgLoWrgeZYvCn9NhJNoIFNt6ZuzvNE82NJDn7JL4TtbIoU-OuQWHm4Q.png)
+
+El proceso comprobará que haya procesado todas las declaraciones del presente año y, en ese caso, creará un nuevo registro copiando toda la información de configuración del presente año junto al nuevo importe límite de declaración de Intrastat.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: IVA de Caja
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/IVA de Caja
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/iva-de-caja
+## Article Content: 
+#### Introducción
+
+Este documento describe la funcionalidad del **IVA de Caja**, disponible en Etendo Classic.
+
+El objetivo de esta funcionalidad es **reconocer contablemente el IVA y declararlo/liquidarlo** con la Agencia Tributaria correspondiente, al realizarse el **cobro/pago** de las factura de venta/compra.
+
+En el caso de **España** se puede concretar que:
+- Este Régimen especial de carácter optativo, permite a los sujetos pasivos retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido hasta el momento del cobro a sus clientes.
+- Igualmente, se retardará la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**).
+- Todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
+- Por tanto, **el derecho a la deducción del IVA soportado** en el régimen especial del criterio de caja nace:
+  - **En el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos.
+  - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
+- Igualmente, **el devengo del IVA en las operaciones** a las que sea de aplicación el régimen especial del criterio de caja se produce:
+  - **En el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos.
+  - **O el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
+
+
+Es por ello que el módulo de IVA de Caja **a partir de su versión 1.0.100** permite **liquidar de forma manual el IVA de Caja** de facturas no pagadas/cobradas total o parcialmente. Esta liquidación, en el caso de España, se registrará y contabilizará con fecha 31 de Diciembre de 2024. Ver sección: [Liquidación manual del IVA de Caja
+](#liquidación-manual-del-iva-de-caja)
+
+
+#### Descripción
+
+El IVA de Caja es un régimen especial de IVA al que las organizaciones ya se pueden acoger en países como España.
+
+Las organizaciones aplican el IVA al generar una factura de venta; de tal forma que este impuesto es pagado por el cliente pero es la organización que genera la factura que incluye el IVA, quien lo declara y por tanto lo liquida con la Agencia Tributaria correspondiente.
+
+En el caso de las facturas de compra sucede lo mismo pero a la inversa; el impuesto es pagado por la organización que adquiere los bienes/servicios pero es el proveedor quien lo declara y lo liquida con la Agencia Tributaria correspondiente.
+
+Por tanto, una organización liquida con la Agencia Tributaria la diferencia entre el IVA que ha repercutido en sus ventas y el IVA que ha soportado en sus compras y que puede deducir.
+
+La particularidad de este régimen radica en el momento de declarar y por tanto liquidar este impuesto:
+- Cuando no se aplica este régimen, el IVA se puede declarar y liquidar con la Agencia Tributaria en el momento de emitir/recibir la factura de venta/compra, independientemente de si estas facturas se han cobrado/pagado o no.
+- Cuando sí se aplica este régimen, el IVA se puede declarar y liquidar con la Agencia Tributaria en el momento de cobrar/pagar la factura de venta/compra correspondiente.
+
+Este régimen puede ser una buena opción desde el punto de vista financiero pero puede implicar un mayor esfuerzo en la gestión y presentación de los informes de impuestos oficiales. La gestión del IVA de Caja en Etendo trata de reducir esta complejidad.
+
+##### IVA de Caja en España
+
+Este Régimen especial de carácter optativo permite a las organizaciones, sujetos pasivos del IVA, retrasar el devengo y la consiguiente declaración e ingreso del IVA repercutido en sus ventas hasta el momento del cobro a sus clientes aunque se retardará, igualmente, la deducción del IVA soportado en sus adquisiciones hasta el momento en que efectúe el pago a sus proveedores (**criterio de caja doble**); todo ello con la fecha límite del 31 de diciembre del año inmediato posterior a aquel en que las operaciones se hayan efectuado.
+
+Dicho esto, en España puede haber organizaciones como las que se indican a continuación:
+- **Organizaciones no acogidas a este régimen especial**:
+  - En este caso ni las facturas de compra ni las facturas de venta están sujetas a este régimen especial, por tanto el IVA se reconoce contablemente y se devenga/declara en el momento de emitir/recibir las facturas de venta/compra.
+
+- **Organizaciones no suscritas a este régimen especial, pero destinatarias de operaciones sujetas a este régimen especial**:
+  - En este caso sólo las facturas de compra están sujetas a este régimen, pudiéndose reconocer contablemente y deducir el IVA soportado en dichas facturas sólo cuando se efectúa el pago al proveedor.
+
+- **Organizaciones acogidas a este régimen especial**:
+  - En este caso tanto las facturas de compra recibidas como las de venta emitidas por la organización se acogen a este régimen pudiéndose reconocer contablemente y liquidar el IVA en el momento del pago/cobro de dichas facturas.
+
+Por otra parte, es importante señalar que hay ciertas operaciones que quedan excluidas de este régimen general. En el caso de España, las operaciones que se excluyen son:
+- Las acogidas a los regímenes especiales simplificado, de la agricultura, ganadería y pesca, del recargo de equivalencia, del oro de inversión, aplicable a los servicios prestados por vía electrónica y del grupo de entidades.
+- Las entregas de bienes exentas a las que se refieren los artículos 21, 22, 23, 24 y 25 de esta Ley (exportaciones y entregas intracomunitarias de bienes).
+- Las adquisiciones intracomunitarias de bienes.
+- Aquellas en las que el sujeto pasivo del impuesto sea el empresario o profesional para quien se realiza la operación conforme artículo 84.Uno.2º, 3º y 4º (supuestos de inversión del sujeto pasivo).
+- Las importaciones y las operaciones asimiladas a importaciones.
+- Aquellas a las que se refieren los artículos 9.1º y 12 (autoconsumos de bienes y servicios).
+
+**Por lo tanto, si su organización está acogida a este régimen especial, no olvide desactivar la casilla "IVA de Caja" en las facturas de compra/venta que incluyen operaciones excluidas de este régimen especial.**
+
+#### Instalación
+
+El IVA de Caja es una funcionalidad oculta de manera predeterminada en Etendo.
+
+Para habilitarla, es necesario [instalar manualmente el módulo de IVA de Caja](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Datasets/#importing-reference-data-on-organization-level), que se encuentra bajo Licencia Pública de Etendo.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/dataset-cashvat.png)
+
+*Recuerde que debe tener previamente instalado el dataset "Taxes: Configuration for Spain".*
+
+Una vez instalado, en la interfaz de Etendo se mostrarán las pestañas y los campos necesarios para trabajar con la funcionalidad de IVA de Caja.
+
+
+#### Configuración
+##### Dos procesos independientes: Compra y Venta
+
+Por defecto, el IVA de Caja en Etendo aparece deshabilitado, es por ello que el usuario debe activarlo de forma manual.
+
+Con el objetivo de ser lo más genérico posible, el manejo del IVA de Caja se puede configurar en Etendo de forma independiente para cada una de las ventas y para cada una de las compras. Dicho de otro modo, una organización puede declarar cada compra o venta acogida a este régimen especial de IVA o no.
+
+Por otro lado, y en el caso del proceso de compra, los proveedores puede configurarse de forma individual como acogidos a este régimen de IVA o no.
+
+Toda esta configuración permite cubrir diferentes tipo de legislación en países como España, Alemania, México, etc.
+
+Es importante remarcar que la configuración correcta para España, en el caso de una organización sujeta a este régimen especial de IVA, es seleccionar las dos casillas que se citan a continuación en la ventana "Organización":
+
+- **Cash VAT** ("IVA de Caja")
+- **Double Cash Criteria** ("Criterio de Caja Doble")
+
+###### Proceso de Venta
+
+Con el fin de activar el IVA de Caja para el proceso de ventas, la organización debe configurarse como acogida a este régimen especial de IVA. Es importante recalcar que las organizaciones "hijas" de la organización configurada como IVA de Caja, heredarán esta configuración.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/org-info-cashvat.png)
+
+Esta configuración se lleva a cabo seleccionado el check "Cash VAT (IVA de Caja)" en la ventana "Organización", pestaña "Información".
+
+###### Proceso de Compra
+
+1. **Organizaciones acogidas al régimen especial de IVA de Caja:**
+   - La deducción del IVA soportado en las facturas de compra se retrasa, en el caso de organizaciones acogidas a este régimen especial de IVA, hasta el momento en que se efectúa el pago a los proveedores. Este es el "Criterio de Caja Doble".
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/org-info-crit.png)
+
+2. **Organizaciones no acogidas a este régimen especial pero destinatarias de operaciones sujetas al mismo:**
+   - En estos casos, no es necesario configurar a la organización como "acogida" al régimen especial de criterio de caja, simplemente es necesario configurar como acogidos al régimen a aquellos tercero o proveedores sujetos a este régimen especial de IVA. Esta configuración se puede hacer en la ventana "Terceros", pestaña "Proveedor/Acreedor".
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/bp.png)
+
+##### Configuración de los rangos de impuesto
+
+Los rangos de impuesto de IVA a utilizar en organizaciones acogidas a este régimen especial de IVA o destinatarias de este tipo de operaciones, deben configurarse como rangos de impuestos de "IVA de Caja", en la ventana "Rango de Impuestos" tal y como se muestra en la siguiente imagen.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/tax-rate.png)
+
+En el caso de España, Etendo facilita un dataset o conjunto de datos con los impuestos de IVA de Caja para España.
+
+Además, cuando una organización está acogida a este régimen especial de IVA o es destinataria de operaciones acogidas a este régimen, los importes de IVA (devengado/soportado) se contabilizan en cuentas contables transitorias de IVA, al contabilizarse las facturas de compra/venta. Estas cuentas transitorias de IVA se pueden configurar en la pestaña "Contabilidad".
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/accounting-taxes.png)
+
+El IVA contabilizado en las cuentas contables transitorias de IVA se traspasa a las cuentas finales de IVA, cuando las facturas se pagan/cobran de forma parcial o total.
+
+Como excepción, si una factura tiene un pago por adelantado, la contabilización de este pago por adelantado no reflejará el traslado de IVA de las cuentas contables transitorias a las finales. Ver sección [Anticipos de Venta](#anticipos-de-venta) y [Anticipos de Compra](#anticipos-de-compra).
+
+###### Configuración de las cuentas contables de IVA transitorias
+
+Es posible definir las cuentas transitorias de IVA a utilizar por defecto para el "Esquema Contable" de la organización, en la pestaña "Valores por Defecto".
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/default_conf.png)
+
+#### Proceso de Ventas
+
+##### Facturas de Venta
+
+En la cabecera de la ventana **"Factura (Cliente)"**, sección **"Más Información"** puedes encontrar el check **"Cash VAT"** (IVA de Caja). Si este check está seleccionado, la factura de venta está acogida a este régimen especial de IVA y, por tanto, todos los rangos de impuestos incluidos en la factura deben ser de IVA de Caja, con excepción de los rangos de impuestos exentos de IVA y las retenciones, de lo contrario el sistema no permitirá completar la factura.
+
+Este check se activa de forma automática cuando la organización se ha configurado como acogida al régimen de IVA de Caja, sin embargo se puede desactivar de forma manual para aquellos casos en los que la factura de venta incluya operaciones que se excluyen de este régimen especial, por ejemplo en los casos de "Exportaciones" y "Entregas Intracomunitarias Exentas".
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/sales_invoice.png)
+
+En las facturas de venta acogidas a este régimen aparecerá una nueva pestaña en la parte inferior de la factura, debajo de la pestaña "Impuestos", denominada "Cash VAT".
+
+Cada vez que la factura se cobre de manera parcial o total, el sistema inserta automáticamente una línea con el porcentaje del IVA cobrado en cada cobro. Esta información puede ser utilizada posteriormente para la generación de los informes de impuestos correspondientes.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/taxes-cashvat.png)
+
+###### Contabilización de las facturas de venta
+
+Cuando una factura de venta se contabiliza, el IVA es contabilizado en las cuentas transitorias de IVA, tal y como se muestra en la siguiente imagen
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/post_sales_invoice.png)
+
+Posteriormente, cuando se contabiliza el pago/la transacción/o la reconciliación (en función de la configuración de la Forma de Pago utilizado), el importe de IVA contabilizado en la cuenta transitoria de IVA se traslada automaticamente a la cuenta de IVA correspondiente, tal y como se muestra en la siguiente imagen:
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/post_payment_in.png)
+
+##### Pedidos de Venta
+
+Para revisar si un pedido u orden de venta está marcada como "IVA de Caja", nos dirigimos a la cabecera del pedido, sección "Más información".
+
+El comportamiento de los pedidos es similar al de las facturas, además las facturas creadas desde los pedidos acogidos a este régimen, heredarán esta configuración.
+
+Tenga en cuenta que cualquier proceso de facturación (incluso los creados especificamente para los usuarios finales de Etendo) mostrará en las facturas la configuración del IVA de Caja o no en función de la configuración de los pedidos, por tanto no será necesario adaptar ningún proceso de facturación que se use con anterioridad a la vigencia de este régimen especial de IVA.
+
+##### Anticipos de Venta
+
+Etendo permite anticipar cobros de clientes al permitir registrar cobros en los pedidos de venta.
+
+Como se ha adelantado en la sección anterior [Pedidos de Venta](#pedidos-de-venta), estos pedido pagados por anticipado, pueden estar sujetos a IVA de Caja.
+
+
+Cuando se contabiliza el anticipo de un cliente, bien sea total o parcial, no se produce traslado contable alguno de IVA de Caja.
+
+Al completar la factura de venta correspondiente, desde el pedido de venta pagado parcialmente, se reflejan dos cosas:
+1. El importe prepagado **"Prepayment Amount"**, en la cabecera de la factura.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/sales-inv-from-order.png)
+
+2. El **porcentaje de IVA de Caja liquidado** como final, en la pestaña "IVA de Caja" ("Cash VAT"). En este caso el importe del anticipo = 0.67 € divido entre el importe total de la factura = 1.67, nos daría un porcentaje del 40.12 %, esto es una cuota de 0.12 €
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/cashvat-sales-order.png)
+
+Al contabilizar la factura de venta la cuota del impuesto por importe de 0.12 € se reflejará contablemente en una cuenta de IVA final (47700) y el resto de cuota pendiente de liquidar en la cuenta de IVA transitoria.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/post-sales-inv-order.png)
+
+Si con posterioridad se paga la factura, la contabilización de dicho pago trasladará contablemente el IVA de Caja pendiente de liquidar a una cuenta final de IVA.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/post-payment.png)
+
+#### Proceso de Compras
+
+##### Facturas de Compra
+
+En la cabecera de la ventana **"Factura (Proveedor)"**, sección **"Más Información"**, puedes encontrar el check **"Cash VAT"** (IVA de Caja). Si este check está seleccionado la factura de compra está acogida a este régimen especial de IVA y, por tanto, todos los rangos de impuestos incluidos en la factura deben ser de IVA de Caja, con excepción de los rangos de impuestos exentos de IVA y las retenciones, de lo contrario el sistema no permitirá completar la factura.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/purchase-inv.png)
+
+Este check se activa automáticamente:
+ - cuando la "Organización" se ha configurado como acogida al régimen de IVA de Caja,
+  - o bien cuando el "Tercero" se ha configurado como acogido al regimen de IVA de Caja
+
+Este check se puede desactivar de forma manual para aquellos casos en los que la factura de compra incluya operaciones que se excluyen de este régimen especial, por ejemplo en los casos de "Importaciones" y "Adquisiciones Intracomunitarias".
+
+En las facturas de compra acogidas a este régimen aparecerá una nueva pestaña en la parte inferior de la factura, debajo de la pestaña "Impuestos", denominada "Cash VAT".
+
+Cada vez que la factura se pague de manera parcial o total, el sistema inserta automáticamente una línea con el porcentaje del IVA pagado en cada pago. Esta información puede ser utilizada posteriormente para la generación de los informes de impuestos correspondientes.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/tax-purchase-inv.png)
+
+###### Contabilización de las facturas de compra
+
+Cuando una factura de compra se contabiliza, el IVA es contabilizado en las cuentas transitorias de IVA, tal y como se muestra en la siguiente imagen
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/post-purchase-inv.png)
+
+Posteriormente, cuando se contabiliza el pago/la transacción/o la reconciliación (en función de la configuración de la Forma de Pago utilizado), el importe de IVA contabilizado en la cuenta transitoria de IVA se traslada automaticamente a la cuenta de IVA correspondiente, tal y como se muestra en la siguiente imagen:
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/post-payment-out.png)
+
+##### Pedidos de Compra
+
+Para revisar si un pedido u orden de compra está marcada como "IVA de Caja", nos dirigimos a la cabecera del pedido, sección "Más información".
+
+El comportamiento de los pedidos es similar al de las facturas, además las facturas creadas desde los pedidos acogidos a este régimen, heredaran esta configuración.
+
+Tenga en cuenta que cualquier proceso de facturación (incluso los creados especificamente para los usuarios finales de Etendo) mostrará en las facturas la configuración del IVA de Caja o no en función de la configuración de los pedidos, por tanto no será necesario adaptar ningún proceso de facturación que se use con anterioridad a la vigencia de este régimen especial de IVA.
+
+
+##### Anticipos de Compra
+
+Etendo permite anticipar pagos a proveedores permitiendo registrar pagos en los pedidos de compra. Estos pedidos pagados por anticipado pueden estar sujetos a IVA de Caja.
+
+Cuando se contabiliza el anticipo a un proveedor, bien sea total o parcial, no se produce traslado contable alguno de IVA de Caja.
+
+Al completar la factura de compra correspondiente, desde el pedido de compra pagado parcialmente, se reflejan dos cosas:
+1. El importe prepagado **"Prepayment Amount"**, en la cabecera de la factura.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/prepayment-purchase.png)
+
+2. El **porcentaje de IVA de Caja liquidado** como final, en la pestaña "IVA de Caja" ("Cash VAT"). Por ejemplo, un anticipo de €1000 en una factura de €4114 nos daría un porcentaje del 24.31 %.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/tax-purchase-inv-ord.png)
+
+Al contabilizar la factura de compra la cuota del impuesto por importe de 173.57 € se reflejará contablemente en una cuenta de IVA final (47200) y el resto de cuota pendiente de liquidar en la cuenta de IVA transitoria.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/post-purchase-inv-order.png)
+
+Al contabilizar la factura de compra la cuota del impuesto por importe de 173.57 € se reflejará contablemente en una cuenta de IVA final (47200) y el resto de cuota pendiente de liquidar en la cuenta de IVA transitoria.
+
+#### Liquidación manual del IVA de Caja
+
+Tal y como ya se ha adelantado, en el caso de España **el derecho a la deducción del IVA soportado** en el régimen especial del criterio de caja nace:
+- **en el momento del pago total o parcial** de las facturas de compra, por los importes efectivamente satisfechos, tal y como ya se ha explicado dentro de la sección [Proceso de Compras](#proceso-de-compra)
+- **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el pago no se ha producido.
+
+Igualmente, **el devengo del IVA en las operaciones** a las que sea de aplicación el régimen especial del criterio de caja se produce:
+- **en el momento del cobro total o parcial** de las facturas de venta, por los importes efectivamente percibidos, tal y como ya se ha explicado dentro de la sección [Proceso de Ventas](#proceso-de-ventas)
+- **o el 31 de diciembre del año inmediato posterior** a aquel en que se haya realizado la operación si el cobro no se ha producido.
+
+Es decir, el IVA de Caja devengado/deducible de las facturas de venta/compra de fecha 2024 que no estén cobradas/pagadas totalmente, tendrá que liquidarse y declararse a Hacienda con fecha del 31 de Diciembre de 2024.
+
+##### Documento de Liquidación Manual
+
+El módulo de gestión de IVA de Caja de Etendo (Cash VAT Management) incluye, a partir de su **versión 1.0.100**, un nuevo "Tipo de Documento" ("Document Type"), denominado "Manual Cash VAT Settlement", así como una nueva ventana denominada **"Manual Cash VAT Settlement"** ("Liquidación Manual del IVA de Caja").
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/manual-cashvat-settlement.png)
+
+*Recuerde actualizar el juego de datos de este módulo, una vez instalado, en la venta "Gestión del módulo de Empresa".*
+
+Esta nueva ventana permite a una organización acogida o destinataria de operaciones en régimen especial de criterio de caja:
+
+- introducir una **fecha desde/hasta** que filtre por la fecha de las facturas de IVA de Caja no pagadas/cobradas o parcialmente pagadas/cobradas (campos "Starting Date"/"Ending Date")
+- así como una **fecha de contabilización de la liquidación manual del IVA de Caja** (campo "Accounting Date").
+
+Al crearse el estado del documento ("Document Status") es borrador ("**Draft**").
+
+A continuación el botón de proceso **"Pick Lines & Complete"** permite obtener un listado de las facturas de IVA de Caja "completadas" y no necesariamente "contabilizadas" no pagadas/cobradas. Este listado de facturas incluye la siguiente información relevante:
+- **Numero de Factura**, columna "Document Nº"
+- **Tipo de documento**, columna "Document Type", que puede incluir facturas o facturas rectificativas o abonos tanto de compra como de venta.
+- **Fecha de Factura**, columna "Invoice Date"
+- **Tercero**, columna "Business Partner"
+- **Importe Total de la Factura**, columna "Grand Total Amount"
+- **Impuesto de IVA de Caja**, columna "Tax"
+- **Porcentaje no pagado de la factura**, columna "Percentage", que puede ser el 100% o menor.
+- **Cuota del impuesto**, columna "Tax Amount" 
+- **Base Imponible del impuesto**, columna "Taxable Amount".
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/transfer-cashvat-accounts.png)
+
+A continuación, el usuario puede seleccionar la factura o facturas para las que el IVA de Caja se tiene que liquidar de forma manual a 31 de Diciembre de 2024. En esta ventana:
+- el botón **"OK"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y mantener las facturas seleccionadas.
+- el botón **"Complete"** permite completar la selección y pasar el estado del documento "Manual Cash VAT Settlement" a "Completado". Cualquier cambio en la selección implicará la **"Reactivación"** del documento.
+- el botón **"Cancel"** permite cerrar la ventana de facturas de IVA de caja pendientes de liquidar y cancelar la selección.
+
+Una vez seleccionadas, las facturas se reflejan en la pestaña "Lines", y en la parte superior de la ventana se actualizan los campos siguientes, con la suma de cuotas y bases correspondientes:
+- **Cuota de IVA Devengado**, campo "Sales Tax Amount"
+- **Base Imponible Devengada**, campo "Sales Taxable Amount"
+- **Cuota del IVA Deducible**, campo "Purchase Tax Amount"
+- **Base Imponible Deducible**, campo "Purchase Taxable Amount"
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/process-manual-cashvat.png)
+
+Es importante recalcar el **último campo de la pestaña "Lines"**, denominado **"Invoice Tax Cash VAT"**,"**IVA de Caja del Impuesto**").
+
+Este campo enlaza con la pestaña "Cash VAT" relacionada con el impuesto que corresponda de la factura de compra, en este caso. Lo mismo aplicaría en el caso de una factura de venta. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/purchase-cashvat.png)
+
+Tal y como se puede apreciar en la imagen anterior, la liquidación manual del IVA de Caja, crea de forma automática un nuevo registro en la pestaña "Cash VAT", con la siguiente información:
+- **Fecha de pago** = vacío ya que la liquidación del IVA de Caja no se ha producido al pagarse la factura, sino como consecuencia de una liquidación manual.
+- **Porcentaje** = se mostrará el porcentaje de liquidación de IVA de Caja pendiente para el impuesto (de IVA de Caja).
+- **Impuestos** = cuota del impuesto liquidada
+- **Base Imponible** = base imponible del impuesto liquidada
+- **Pago** = vacío ya que la liquidación del IVA de Caja no se ha producido al pagarse la factura, sino como consecuencia de una liquidación manual.
+- **Liquidación Manual** ("Manual Settlement") = Sí
+- **Linea de la Liquidación** ("Manual Manual Cash VAT Settlement Line") = con información sobre el número de documento y línea de la Liquidación Manual del IVA de Caja
+- **Fecha de la liquidación** ("Manual Manual Cash VAT Settlement Date") = con la fecha contable de la liquidación manual.
+
+Como puede apreciarse en la imagen anterior, el **porcentaje total liquidado de IVA de Caja** para el impuesto es ahora de un **100%**. Por tanto, si se produjera un pago de la factura de compra, la contabilización de ese pago no generaría un traslado contable del IVA de Caja, ya que éste ya se ha producido.
+
+##### Traspaso contable del IVA de Caja
+
+Al contabilizar la liquidación manual a 31 de Diciembre de 2024 (botón "Post"), se producirá el traslado del IVA de Caja contabilizado en las cuentas transitorias de IVA a las cuentas finales, tanto para el IVA Devengado (Cuentas: 47700T a 477000), como para el IVA Soportado Deducible (Cuentas 47200T a 472000).
+
+Recuerde activar la tabla "OBCVAT_ManualSettlemen" en la ventana "Esquema contable", pestaña "Tablas a contabilizar".
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/journal-entries-manual.cashvat.png)
+
+##### Liquidación del IVA de Caja
+
+En el ejemplo mencionado anteriormente, es con fecha, 31 de Diciembre de 2024, cuando se puede liquidar/declarar ese IVA de Caja a las autoridades fiscales correspondientes. En el caso de España, este IVA de Caja se tendrá que incluir para su liquidación en el Modelo 303 del último periodo (Diciembre 2024/Último Trimestre 2024), así como en el Modelo 390 de 2024.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Libro de Facturas
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Libro de Facturas
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook`
+
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.es_es`
+
+#### **Introducción**
+
+Este módulo de funcionalidad española se denomina “Libros Registro de IVA” o “Libros Registro de Facturas emitidas/recibidas”.
+
+#### **Descripción del módulo**
+
+Este módulo de los libros registro de IVA permite a las empresas españolas generar los libros registro de IVA, tanto los libros de facturas recibidas (IVA soportado) como los libros de facturas emitidas (IVA repercutido). Las empresas españolas tienen que guardar registro de cada una de las facturas recibidas y emitidas con el fin de poder determinar el importe total de IVA a liquidar con la Hacienda Pública para un periodo de tiempo determinado, como diferencia entre el IVA repercutido y el IVA soportado deducible.
+
+El contenido de los libros de facturas se ajusta a los requerimientos de la Hacienda Pública española. Los libros de facturas contienen información sobre:
+
+-   Número de registro
+    -   este número será generado automáticamente por el sistema una vez que el correspondiente libro se marque como "Final"
+-   Número de factura emitida/recibida
+    -   este número tanto en el caso de facturas recibidas como emitidas se corresponde con el campo "Nº documento"
+    -   en el caso de las facturas recibidas dicho campo no debería llevar secuencia numérica asociada con el fin de que el usuario final pueda introducir el número de factura del proveedor.
+-   Fecha factura emitida/recibida o fecha de expedición/recepción de los bienes/servicio, en caso de ser diferentes
+-   Nombre y breve descripción del cliente/proveedor
+-   NIF del cliente/proveedor
+-   Base imponible
+-   Tipo impositivo de IVA
+-   Cuota de IVA repercutido/soportado
+-   Cuota de IVA soportado deducible
+-   Tipo impositivo de recargo de equivalencia
+-   Cuota de recargo de equivalencia
+-   Importe total de la factura
+
+!!! info
+    Los importes deben consignarse en Euros.
+
+
+El tipo de cambio que se utiliza en las transacciones que deban incluirse en los libros cuyos importes no sean en Euros, es el definido para un rango de fecha determinado en la ventana "Rangos de Conversión".
+
+Este módulo de funcionalidad incluye además las claves de libro correspondientes al modelo tributario español 340 de declaración informativa de operaciones incluidas en los libros registro
+
+-   “E”= en el caso del libro de facturas emitidas  
+      
+-   “R”= en el caso del libro de facturas recibidas  
+
+y también las claves de operación correspondientes al modelo tributario español 340 de declaración informativa de operaciones incluidas en los libros registro:
+
+-   “ “= en el caso de operación habitual de compra/venta  
+      
+     
+-   “C”= en el caso de factura de compra o venta con varios tipos impositivos  
+      
+     
+-   “D”= en el caso de factura de compra o venta rectificativa o nota de abono  
+      
+     
+-   “I”= en el caso de inversión de sujeto pasivo  
+      
+     
+-   “R” = en caso de facturas de arrendamiento de local de negocio (nueva clave para 2012)
+
+En los libros registro de IVA se consideran las siguientes operaciones de compra relacionadas con los tipos de documento de Etendo que se listan a continuación:
+
+-   Facturas de compra (Tipo de documento = “AP invoice” )
+-   Facturas de compra negativas (Tipo de documento = “AP invoice”) o abonos (Tipo de documento = "Reverse Purchase Invoice"). Ambos tipos implican una nota de abono en negativo.
+-   Notas de abono de compra (Tipo de documento = “AP CreditMemo”), lo cual implicaría una factura rectificativa o nota de abono en positivo. En este caso, hay que tener en cuenta que el libro de IVA de facturas recibidas marcará este tipo de operaciones como “D” con importes en positivo, aunque impliquen un IVA soportado negativo y, por tanto, menor IVA soportado/soportado deducible.
+
+En los libros registro de IVA se consideran las siguientes operaciones de venta relacionadas con los tipos de documento de Etendo que se listan a continuación:
+
+-   Facturas de venta (Tipo de documento = “AR invoice” )
+-   Facturas de venta negativas (Tipo de documento = “AR invoice”) o abonos (Tio de documento="Reverse Sales Invoice"). Ambos tipos implican una nota de abono en negativo.
+-   Notas de abono de venta (Tipo de documento = “AR CreditMemo”), lo cual implicaría una factura rectificativa o nota de abono en positivo. En este caso hay que tener en cuenta que el libro de IVA de facturas emitidas listará este tipo de operaciones en positivo, aunque impliquen un IVA repercutido negativo y, por tanto, menor IVA repercutido.
+
+No se consideran los libros registro de IVA del tipo:
+
+-   Libro registro de ciertas operaciones Intracomunitarias
+-   Libro registro de bienes de Inversión
+
+así como las:
+
+-   Operaciones de nota de abono de compra/venta negativas (Tipo de documento = “AP/AR CreditMemo”), lo cual implicaría una factura de compra/venta.
+
+#### **Instalación del módulo**
+
+Para la instalación del módulo “Libro de facturas”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+Este módulo de funcionalidad requiere el módulo de Impuestos para España de Etendo. Es importante tener en cuenta que a la hora de instalar el módulo del libro de facturas, los módulos dependientes se instalarán automáticamente.
+> 
+!!! info
+    **Nota importante**: Las transacciones realizadas con anterioridad a la instalación del módulo de libro registro de facturas aparecerán en el correspondiente libro de facturas pero sin la clave de operación. Hay que tener en cuenta que la clave de operación solamente es necesaria en el modelo tributario 340. Para generar la clave de operación, las transacciones deberán completarse de nuevo.
+
+#### **Interfaz de usuario**
+
+Tal y como se ha explicado en la sección “*Instalación del Módulo*”, los “Libros registro de IVA” requieren del módulo de impuestos para España mejorado que incluye 3 campos que permiten:
+
+1.- la identificación de los importes de **recargo de equivalencia** tanto en el libro de facturas recibidas como emitidas de forma separada a los importes de IVA, si bien hay que tener en cuenta que los rangos de impuestos de recargo de equivalencia tienen que ir referidos al régimen del cliente/proveedor como una categoría de impuestos del cliente/proveedor.
+
+2.- la identificación de las operaciones de **inversión de sujeto pasivo** para los casos de operaciones de servicios suministrados por parte de proveedores europeos/extranjeros a empresas españolas.
+
+3.- la selección del **tipo de libro** aplicable a cada impuesto, debido a que por la configuración actual de los tipos impositivos se darán casos de impuestos de tipo compra que se deben incluir en el libro de facturas emitidas como IVA repercutido/venta. Un ejemplo es el IVA Intracomunitario de compras. El IVA Intracomunitario de compras implica un apunte al debe (como IVA repercutido) y otro al haber (como IVA soportado).
+
+Estos 3 nuevos campos se encuentran en la ruta de aplicación “**Gestión Financiera / Contabilidad / Configuración / Rango impuesto”**.
+
+!!! info
+    **Nota importante:** En caso de que no se utilice el módulo de impuestos para España proporcionado por Etendo, el usuario debe tener en cuenta que necesita configurar de forma adecuada y manualmente los 3 parámetros básicos del libro de facturas explicados en esta sección. 
+
+Además este módulo cuenta con dos ventanas para la configuración de los libros registro de IVA y la generación de los mismos, tal y como se muestra a continuación:
+
+**Configuración de los libros de IVA**
+
+Ruta: Gestión Financiera / Contabilidad / Configuración / Configuración de Libro de Facturas
+
+![](https://docs.etendo.software/latest/assets/drive/GrG6D0PyhdbT_TLRpP-ucIUxQWXB195QfgnnOoCooFMRK3_UdE3CVkl5e-u4JKIm9XaZa5jlgs3MKgRXNtxUWKv5ZUSPy8jn96u3UzeFgFAM9xK1K3iQaadEg4m-4tJzEekLb2QEmIUReL3FFSu2T3GhAwhqXYbEUj2bWFTahFcOb_5QbJBoJUODVWN_CA.png)
+
+**Generación de los libros de IVA**
+
+Ruta: Gestión Financiera / Contabilidad / Herramientas de análisis/ Libro de facturas
+
+![](https://docs.etendo.software/latest/assets/drive/loPMP2zWkOWGQYfmN6LTMPKteM1c0FpDnobtXCpuevnoP_ymLRTTP17h6YhVPEbK0Jxvi_Er9fhCfcGHAmifvo__4Oa0B4iLGjknSLMFgaC8T1GUkaqyKv_b7axuA6vYViAQYr5AAnnCRI9cQes9jvV-QT48duPSsMzBwN9QADTKJZsyqGc7LmNQOZiFyw.png)
+
+#### **Casos de usuario**
+
+Esta funcionalidad permitirá a las empresas españolas llevar a cabo los escenarios que se explican a continuación una vez que las correspondientes facturas/abonos de compra y venta se han completado/contabilizado en Etendo para un determinado año/periodo, por ejemplo 2021/Enero/Febrero.
+
+##### **Configuración y creación de los libros**
+
+Es necesario crear y configurar los libros de facturas recibidas y emitidas, para ello deberá seguir los pasos que se detallan a continuación o bien instalar y aplicar a la entidad legal con contabilidad el módulo de configuración de los libros de facturas.
+
+El módulo de configuración de los libros:
+
+-   crea los libros tanto de facturas recibidas como emitidas
+-   y los configura añadiendo todos los impuestos por tipo de documento a tener en cuenta a la hora de generar los libros de facturas.
+
+Es importante recalcar que el usuario puede crear los libros de facturas para un determinado periodo de tiempo tantas veces como sea necesario con tan solo volver a presionar el botón de proceso “Crear” para el correspondiente Libro, de esta forma se incluirán en el libro nuevas facturas o abonos que no se tuvieron en cuenta al crear el libro.
+
+###### **Libro de Facturas Recibidas**
+
+####### **Configuración**
+
+Configuración del Libro de Facturas recibidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
+
+Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
+
+
+Campos a tener en cuenta:
+
+-   **Nombre** : Libro de Facturas Recibidas 2021
+-   **Descripción** : Libro de Facturas Recibidas 2021
+-   **Activo** : Sí
+-   **Tipo**: R – Recibidas
+-   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignarles un número de registro correlativo. El primer número asignado por defecto será el 1.
+
+![](https://docs.etendo.software/latest/assets/drive/IXk_LbHGPAuvnqJO0OgUVrfZ-SOpTuzA9Wdl-wKAtmqZyaLqjv5om5qoPtpYl-508VUqsTJWgPPhnbLlYh1P9-drRWRiE3ZgN58uiycr6MdIYXayaz1hfLWPS0lJYV4ktVApRw9gKP7nbn5ezHlyCPRoO9D1tqo5W1e2DednQyS0Krh4qpRfakqWFyT8PA.png)
+
+*Nota:* El usuario puede definir el **Número de Documento** que aparecerá en cada una de las líneas del libro, pudiendo ser: 
+-   El Nº Factura (campo "Nº documento" de la factura de compra)
+-   o el Nº Documento Proveedor (campo "Referencia del Proveedor" de la factura de compra) 
+
+En la pestaña "**Impuestos**" el usuario puede comprobar el listado de todos los impuestos por tipo de documento que se han incluido en la configuración del libro de facturas recibidas y que, por tanto, se tendrán en cuenta a la hora de crear el libro.
+
+####### **Creación**
+
+La **creación del libro de facturas recibidas** se debe llevar a cabo desde la ruta de aplicación Gestión Financiera – Contabilidad – Herramientas de Análisis – Libro de facturas. El usuario debe crear un nuevo registro e introducir la siguiente información para el correspondiente Cliente/Organización:
+
+-   **Nombre** : Libro de Facturas Recibidas Enero 2021
+-   **Descripción** : Libro de Facturas Recibidas Enero 2021
+-   **Activo** : Sí
+-   **Libro de Facturas** : el usuario debe seleccionar el libro de facturas ya configurado, por ejemplo "Libro de Facturas Recibidas 2021".
+-   **Ejercicio**: el usuario debe introducir el año (en el ejemplo, 2021)
+-   **Desde Periodo** : el usuario debe introducir el periodo para el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo enero 2021. El sistema incluirá las facturas con fecha desde el 1 de enero 2021.
+-   **Hasta Periodo** : el usuario debe introducir el periodo hasta el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo enero 2021. El sistema incluirá las facturas con fecha hasta el 31 de enero 2021.
+
+Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Líneas”.
+
+![](https://docs.etendo.software/latest/assets/drive/GvTXD6nqhWoDk09XBU4LNxXPn81wG8PznqfHtMS3lI4NuiNwNZc1ogkyhqki6kcJnPsjkefAdwu2hyX7kqcvtxqwwLZ5m7q_U_93v-tu-TYnHSsn3-yP0Umnd-GvwqcUgJ280R80kJtIO9aCko3KN7HnJlw8ePE7avYq3kvhTfXn8ZFZsO4YzsvruBWF.png)
+
+La información contenida en las líneas del libro es la que se muestra a continuación:
+
+![](https://docs.etendo.software/latest/assets/drive/qk68QXzdYHjO1yKVcIG-WHMqCFoX0pJN8oCzkZP5CSVgReXjk0C43dB4ucckSUhXzLwG09yagjJvl14pAbhdBM1G_c6Y_enkOgCxfnSEPdrRGK6zUVxoIaTaoP6TOw3ejSKC4OrdJ740nB8ev0mERhCCHkhoIuT8dkk6g6tqayPEbcAgnsDde48ZxtUv.png)
+
+###### **Libro de Facturas Emitidas**
+
+####### **Configuración**
+
+Configuración del Libro de Facturas emitidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
+
+Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
+
+Campos a tener en cuenta:
+
+-   **Nombre** : Libro de Facturas Emitidas 2021
+-   **Descripción** : Libro de Facturas Emitidas 2021
+-   **Activo** : Sí
+-   **Tipo**: E – Emitidas
+-   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignares un número de registro correlativo.
+
+![](https://docs.etendo.software/latest/assets/drive/U7zyB9bCxJ53qXJTCwT0NxvIDJ4gMZ3c5G9QLmsMWGRYYV1mKdK90kPhbtf9l8Ee7hhsNZApVcmY-2fnalHXgl8xf3BcPEDM3VNbqspYjkVZyysWBhR_QXGJA0-vnGn_20c8luy3ZIeqVbnyJ8pghgvC7dfkSuO9AmajeRFq-uqqHy8o9IoMQFu0azbj.png)
+
+En la pestaña "Impuestos" el usuario puede comprobar el listado de todos los impuestos por tipo de documento que se han incluido en la configuración del libro de facturas emitidas y que, por tanto, se tendrán en cuenta a la hora de crear el libro.
+
+####### **Creación**
+
+La creación del libro de facturas emitidas se debe llevar a cabo desde la ruta de aplicación Gestión Financiera – Contabilidad – Herramientas de Análisis – Libro de facturas. El usuario debe crear un nuevo registro e introducir la siguiente información para el correspondiente Cliente/Organización:
+
+-   **Nombre** : Libro de Facturas Emitidas Febrero 2021
+-   **Descripción** : Libro de Facturas Emitidas Febrero 2021
+-   **Activo** : Sí
+-   **Libro de Facturas** : el usuario debe seleccionar el libro de facturas emitidas ya configurado que quiere crear, por ejemplo "Libro de Facturas Emitidas 2021".
+-   **Ejercicio**: el usuario debe introducir el año (2021)
+-   **Desde Periodo** : el usuario debe introducir el periodo para el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo febrero 2012. El sistema incluirá las facturas con fecha desde 1 febrero 2012.
+-   **Hasta Periodo** : el usuario debe introducir el periodo hasta el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo febrero 2012. El sistema incluirá las facturas con fecha hasta el 28 de febrero de 2012.
+
+Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Lineas”.
+
+![](https://docs.etendo.software/latest/assets/drive/4PIfpdoRUi3Yr61UjSdmHK4-wjU2TnkBEFbFqev8C0CbUrrIxM5c_gpKnY8zz2RyzNa2TvRTXEmgQzB_-tXJKUc11kRLCv-pHzX00pJhI_NAIzDlmTRxWw3R4xXZI2A4Ns87C9tAa9P6icxTDkN8yyHo4SXbOXGJbx620JaN4BUNPYFsRzr_ZTwgIksZtg.png)
+
+La información contenida en las líneas del libro es la que se muestra a continuación:
+
+![](https://docs.etendo.software/latest/assets/drive/7fv5JlzALOzMrSXXDvFubccNZBrZwSJm1VSNpczqK4u03ULPED0uOMR_TbM-q3uEwc0W_J9fqUZAdHFvaWt8K9G3zTL0vXz-N7nXENJdFG7-PuBSMVa0PiF1uTWabKTHJToOaoiJX8y9A7KUN7bUEvUKPXZz0BkBg6daCzUA7tze8XfVeFtaVw_cisfZEw.png)
+
+##### **Inclusión manual de transacciones**
+
+El usuario puede añadir manualmente facturas/abonos tanto emitidos como recibidos que por cualquier motivo no estén registrados en Etendo, pero que deban ser incluidos en el libro correspondiente. Para ello el usuario deberá seguir los pasos que a continuación se detallan:
+
+En la ruta Gestión Financiera / Contabilidad / Herramientas de Análisis / Libro de Facturas / Cabecera >> Líneas, el usuario puede crear un nuevo /s registro/s e introducir facturas o abonos tanto emitidos como recibidos de sus proveedores, en el libro correspondiente, con tal solo presionar el botón de menú “Nuevo”.
+
+En ese caso, el usuario deberá introducir la información que se lista a continuación para cada nuevo registro creado manualmente:
+
+-   Nº de documento (obligatorio)
+-   Tercero (obligatorio)
+-   Clave de operación
+-   Base imponible (obligatorio)
+-   Tipo impositivo (obligatorio)
+-   Tipo de Recargo de equivalencia
+-   Fecha documento
+-   NIF del tercero (no editable, debe rellenarse al seleccionar el tercero)
+-   Cuota del impuesto (obligatorio)
+-   Cuota recargo de equivalencia (obligatorio). En caso de que no aplique el recargo de equivalencia se debe rellenar como 0,00
+-   Importe total de la factura (obligatorio)
+
+##### **No inclusión de transacciones**
+
+El usuario puede marcar manualmente facturas/abonos tanto emitidos como recibidos que por cualquier motivo no deban ser incluidos en el correspondiente libro y que estén registrados en Etendo, para ello el usuario deberá seguir los pasos que a continuación se detallan:
+
+En la ruta Gestión Financiera / Contabilidad / Herramientas de Análisis / Libro de Facturas / Cabecera >> Líneas, el usuario puede “desmarcar” cualquier transacción que esté marcada por la aplicación como “Incluida”, dichas transacciones no se incluirán al crear el correspondiente libro como Final (documento impreso en formato \*.pdf).
+
+##### **Libros de facturas marcados como "Final"**
+
+El usuario puede procesar los libros de facturas como “Finales”, una vez que se asegure de que las transacciones incluidas en el libro son las correctas, dicho proceso implicará la numeración correlativa de las facturas incluidas en dicho libro, siempre que el periodo o periodos a los que se refieren las facturas incluidas en el libro estén cerrados, al menos temporalmente.
+
+Desde “Gestión Financiera / Contabilidad / Transacciones – Abrir/Cerrar Periodos”, el usuario debe cerrar temporalmente aquellos periodos para los que no se van a introducir nuevas facturas ni transacciones y que, por tanto, pueden cerrarse.
+
+Una vez cerrados los periodos desde “Gestión Financiera / Herramientas de Análisis / Libro de Facturas”, el usuario puede "Crear y Marcar como Final" el correspondiente libro, con lo que el sistema dará opción a partir de ese momento tan solo de “Desprocesar”.
+
+El usuario puede imprimir el libro mediante el botón de la barra de herramientas “Imprimir”.
+
+El libro impreso (\*.pdf) de facturas recibidas incluye la siguiente información:
+
+-   Número registro
+-   Número factura
+-   Nº Doc / Ref. Prov - esta columna relaciona ambos números de documento, el número de Etendo y el número o referencia del proveedor.
+-   Fecha operación
+-   Tercero
+-   NIF
+-   Clave
+-   Base imponible
+-   Tipo impositivo
+-   Cuota impuesto
+-   Cuota deducible
+-   Importe factura
+-   Fecha de pago
+-   Cuenta Financiera
+-   Método de Pago
+-   Importe de Pago
+
+El libro impreso (\*.pdf) de facturas emitidas incluye la siguiente información:
+
+-   Número registro
+-   Número factura
+-   Fecha factura
+-   Fecha operación
+-   Tercero
+-   NIF
+-   Clave
+-   Base imponible
+-   Tipo impositivo
+-   Cuota del impuesto
+-   Recargo
+-   Cuota RE
+-   Importe factura
+-   Fecha de cobro
+-   Cuenta Financiera
+-   Método de Pago
+-   Importe de cobro
+
+En caso de error u omisión en los libros, el usuario deberá desprocesar el correspondiente libro, reabrir el periodo/periodos, añadir o modificar la/las facturas emitidas o recibidas y volver a empezar el proceso de creación y procesamiento como final del correspondiente libro, teniendo en cuenta el/los periodos de facturación debido a que la numeración de registro debe ser correlativa en función de las fechas de factura.
+
+Si el usuario tiene que introducir una factura de fecha de marzo y ya ha cerrado y generado como finales los libros de abril y mayo, deberá desprocesar los libros de mayo, abril y marzo; reabrir los periodos de mayo, abril y marzo; contabilizar la factura con fecha de marzo y finalmente, crear el libro de marzo para comprobar que la nueva factura se ha incluido en el libro de marzo, cerrar los periodos y crear y marcar como finales los libros de marzo, abril y mayo por ese orden.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Modelo 190
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 190
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat190.es`
+
+#### **Introducción**
+
+Esta sección explica el contenido y funcionamiento del módulo **"Modelo 190"**, incluído dentro del bundle de Localización Española para Etendo.
+
+**Descripción del Modelo**
+
+El módulo **Modelo 190** permite a las empresas cumplir con sus obligaciones fiscales relativas a la obligatoriedad de declarar las retenciones e ingresos a cuenta sobre rendimientos del trabajo y de actividades económicas, premios y determinadas ganancias patrimoniales e imputaciones de renta.
+
+La presentación del Modelo 190 por vía telemática deberá efectuarse en el plazo comprendido entre los días 1 y 31 de enero de cada año, en relación con las cantidades retenidas y los ingresos a cuenta efectuados correspondientes al año natural inmediato anterior.
+
+Con este módulo, el Modelo 190 se puede presentar a Hacienda como un fichero de texto válido, obtenido a través del "Generador de Declaraciones de Impuestos".
+
+#### **Contenido del fichero Modelo 190**
+
+El fichero generado por Etendo, que cumple con el formato requerido por la Agencia Tributaria, contiene:
+
+-   Una primera sección, llamada *registro tipo 1*, con información relativa a la empresa que presenta el informe, CIF, nombre de la empresa, persona de contacto y resumen de los detalles presentados.
+-   Una segunda sección, llamada *registros tipo 2*, con la información relativa a la retención e ingresos a cuenta practicada a la empresa agrupada por tercero y año.
+
+De esta forma, el informe puede contar con un único registro de tipo 1 y cero o varios registros de tipo 2.
+
+Si el usuario abre el fichero generado con un editor de texto plano, verá una sucesión de números y letras prácticamente ilegibles para el ser humano. Si desea comprobar el contenido del fichero e incluso modificarlo antes de ser enviado a la Agencia Tributaria, puede importar dicho fichero en la AEAT (Ver abajo).
+
+#### **Instalación y aplicación del módulo**
+
+##### **Instalación**
+
+Para su instalación del Modelo 190 de Etendo, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+##### **Aplicación del módulo**
+
+El módulo del Modelo AEAT 190 incluye el correspondiente "conjunto de datos" o "configuración" que relaciona los tipos/rangos de impuestos (retenciones, en este caso) para España con los parámetros del 190, por tanto:
+
+-   Una vez instalado el módulo, la "configuración del Modelo 190" debe aplicarse a la **Entidad legal con Contabilidad** que corresponda, en la ruta de aplicación: Configuración General || Organización || **Gestión del módulo de Empresa.**
+-   Importante, antes de aplicar esta configuración es importante haber aplicado previamente la configuración del módulo de impuestos, puesto que el Modelo 190 depende de éste.
+
+![](https://docs.etendo.software/latest/assets/drive/NPmuokqQMPVWHGO_5axvvqS3kqWJ7TUYhtrgII9Adx2R4lsxQxCOECCclQxInjaTso4hIHruR7f8UNtrSAMuTvupjpsmZW-osW83k_TFV3UE_QFFP8igDGJf6ctmSmSFP5WLMyHfV8lI19X_wgXEO24.png)
+
+Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
+
+-   se han creado un nuevo informe, el modelo 190 anual que se encuentra en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](https://docs.etendo.software/latest/assets/drive/0DGnsbvGSRglnOfedtcm1BRq0hExCnVLCnWNfG9twk0cA9ktqHih10dD1ufrzq3uGu1oafipUnxtCc7W08aw753gYX3AzuoAMZ6ZAyknSHIwLa9eAw-kajDMk6DOjGpTM5IOKb0pxrmcm5Dj31wI2ZM.png)
+
+-   los rangos de impuestos se han asociado al correspondiente Parámetro del informe 190, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/posición del fichero, tal y como se muestra en la siguiente imagen:  
+     
+
+![](https://docs.etendo.software/latest/assets/drive/jH29-HkAFNLN3w0RKpitrmjGJ918EMfwdfbMQmfE7qEeFhSAB-tRR9z-pNWDz34lm9xlhMN1ADfKDKwicm4h6282rQATMsMggwZUCfu4ZX6aBmki3PF1g8O_dzJVRa7i55QIMWkesDoXacrd4Rb9_RQ.png)
+
+-   y, por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 190, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](https://docs.etendo.software/latest/assets/drive/duCdxzeDZl6Ym8W_h-APG_n78tbJ09PZ9MLqx11_Q2x96V2K1-TrVAh5I-apRPNWffmsIybEKB06xmRie5bzRHyi9Ljf70g6ekwyusOk8ZR5lg9_7cllbMklo9vRjRB73JbKdW4q8XxdL9CwrMW3eZE.png)
+
+#### **¿Qué se incluye en el Modelo 190 generado por Etendo?**
+
+El informe generado por Etendo incluye únicamente las retenciones referentes a actividades económicas, puesto que es la información que el ERP maneja actualmente.
+
+El resto de información que se incluye en el Modelo 190, como retenciones e ingresos a cuenta por rendimientos del trabajo, determinadas ganancias patrimoniales o premios, no está registrada en el ERP y, por lo tanto, no se puede incluir en el informe.
+
+Sin embargo, si usted desea incluir esta información en su declaración, tan sólo debe importar el fichero generado por Etendo como se indica en [_Modelo 190_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/declaraciones-informativas-ayuda-tecnica/modelos-190-198/modelo-190-formulario.html){target="_blank"}.
+
+##### **Tipos de documentos y retenciones que se incluyen en el informe**
+
+El modelo 190 es un informe de retenciones, así que sólo se tendrán en cuenta facturas de compra con retenciones a terceros ubicados en España que estén contabilizadas y pagadas (parcialmente o completamente).
+
+Dentro de las facturas de compra, se soportan todo el rango disponible actualmente:
+
+-   Facturas de compra (AP Invoice)
+-   Facturas de abono de compra (AP Credit Memo)
+-   Facturas de compra negativas (AP Invoice negativas)
+-   Facturas de tipo "Reversal" (Reversed Purchase Invoice)
+
+##### **Retenciones asociadas a parámetros del informe**
+
+Las retenciones que vienen asociadas a los parámetros del modelo 190 son:
+
+-   Details-Withholding\_G\_01, Clave tributaria G - subclave 01:
+    -   Prestación servicios nacional 0% -15%R (-15%)
+    -   Prestación servicios nacional 16% -15%R (-15%)
+    -   Prestación servicios nacional 18% -15%R (-15%)
+-   Details-Withholding\_G\_03, Clave tributaria G - subclave 03:
+    -   Prestación servicios nacional 0% -7%R (-7%)
+    -   Prestación servicios nacional 16% -7%R (-7%)
+    -   Prestación servicios nacional 18% -7%R (-7%)
+-   Details-Withholding\_H\_04, Clave tributaria H - subclave 04:
+    -   Prestación servicios nacional 18% -1%R (-1%)
+
+##### **Retención proporcional al pago**
+
+La retención a incluir en el fichero del modelo 190 es proporcional a la percepción íntegra efectivamente satisfecha durante el ejercicio correspondiente:
+
+-   por ejemplo, si tenemos una factura contabilizada pero pagada en un 50% en 2011, el informe del 190 del 2011 incluirá la parte proporcional de la retención práctica en la factura, esto es, el 50%.
+
+Además, si durante un ejercicio se han satisfecho facturas correspondientes a ejercicios anteriores, el fichero del modelo 190 incluirá una línea por cada uno de los pagos efectuados durante dicho ejercicio, correspondientes a facturas devengadas en años anteriores, indicando, por tanto, el año de devengo.
+
+##### **Cantidades indebidas o excesivamente percibidas en ejercicios anteriores**
+
+El fichero del modelo 190 tiene en cuenta los datos relativos a cantidades reintegradas por sus perceptores en el ejercicio, como consecuencia de haber sido indebida o excesivamente percibidas en ejercicios anteriores, en estos supuestos:
+
+-   cada reintegro se relaciona bajo la misma clave y, en su caso, subclave de percepción bajo la cual se incluyeron en su día las cantidades indebidas o excesivamente satisfechas
+-   se refleja su importe en el campo "Percepción íntegra"
+-   el campo "Signo de la percepción íntegra" se cumplimenta con la letra "N" (importe negativo)
+-   y se consigna el valor (0) en el campo "Retenciones practicadas"
+-   finalmente, se hace constar en el campo "Ejercicio devengo" el año en el que se devengaron originariamente las percepciones reintegradas.
+
+!!! info
+    Cuando se hayan producido reintegros procedentes de una misma persona o entidad que correspondan a percepciones originariamente devengadas en varios ejercicios, su importe se desglosa en varios apuntes o registros, de forma que cada uno de ellos refleje exclusivamente reintegros de percepciones correspondientes a un mismo ejercicio.
+
+
+#### **Generación del modelo 190**
+
+Tal y como ya se ha explicado, el modelo 190, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: **Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos**
+
+Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo" y otros, puede introducir los parámetros de entrada propios del 190:
+
+![](https://docs.etendo.software/latest/assets/drive/Jbjc9g-xJ_iZ2B6_xDHfLV9umzxu0_R-HS5ss8jpczAYl654wdnKknjU_i6b8wqIRhiWQbeArp2hMAGaZTsj5_zoOHLAIEq-s8BhhTEbnFmoHYcfRaLoVcxI1TlCjyjuUQeXbM7ZN7AZAuBE9Z4YjXg.png)
+
+En este caso, se puede especificar el nombre del fichero (si no queremos el que el sistema da por defecto), y la información necesaria en caso de generar una declaración sustitutiva.
+
+#### **Importación del modelo 190 en AEAT**
+
+Una vez generado el fichero, el mismo tendrá que cargarse en la AEAT en la página correspondiente de [Agencia Tributaria](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI10.shtml){target="_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Modelo 303
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 303
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat303.es` <br>
+
+#### **Introducción**
+
+El presente manual de usuario explica el contenido y funcionamiento del nuevo módulo comercial de Etendo, **"Modelo AEAT303"**, compatible con Etendo 21.4 o versiones posteriores. Este módulo forma parte del bundle de Localización española, al igual que todas las dependencias relacionadas.
+
+#### **Descripción del Módulo**
+
+El módulo Modelo AEAT303 - Impuesto sobre el Valor Añadido - Autoliquidación, permite a las empresas cumplir con sus obligaciones fiscales de "Autoliquidación de IVA" como diferencia entre el IVA Devengado y el IVA Deducible, a través de la presentación del Modelo 303 como un fichero de texto válido conforme a los requerimientos establecidos por la Agencia Tributaria española (Orden EHA/3786/2008).
+
+La estructura válida del fichero se puede encontrar en el siguiente link de la AEAT: [](http://www.aeat.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Ayuda/Disenyos_de_registro/Ayudas/Trimestrales_Mensuales/303_2009.pdf)[_Modelo 303 - Fichero_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-303/presentacion-electronica-modelo-303-fichero.html){target="_blank"}.
+
+El fichero del modelo 303 contiene la siguiente información:
+
+-   **Información genérica**
+    -   NIF
+    -   Apellidos o Razón Social - Nombre
+    -   Ejercicio
+    -   Periodo
+-   **IVA devengado** (IVA repercutido en ventas), incluyendo:
+    -   IVA devengado conforme al régimen general - Base, Cuota y Tipo
+    -   IVA devengado conforme al régimen especial de recargo de equivalencia, especificado por tipo de IVA - Base, Cuota y Tipo
+    -   IVA devengado en las adquisiciones intracomunitarias de bienes- Base y Cuota
+-   **IVA Deducible** (IVA soportado en compras), incluyendo:
+    -   operaciones interiores de bienes y servicios - Base y Cuota
+    -   operaciones interiores de bienes de inversión - Base y Cuota
+    -   importaciones de bienes - Base y Cuota
+    -   importaciones de bienes de inversión - Base y Cuota
+    -   adquisiciones intracomunitarias de bienes - Base y Cuota
+    -   adquisiciones intracomunitarias de bienes de inversión - Base y Cuota
+    -   regularizaciones
+-   **Diferencia** - Resultado de la liquidación como diferencia del IVA devengado - IVA soportado deducible, incluyendo otras operaciones tales como:
+    -   entregas intracomunitarias de bienes - Base
+    -   exportaciones - Base
+    -   operaciones no sujetas o de inversión de sujeto pasivo - Base
+-   **Datos bancarios y otros.**
+
+Dicho fichero se genera en Etendo desde el Generador de declaraciones de impuestos que se encuentra en la ruta de aplicación: "Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos"
+
+El fichero se puede:
+
+1.  **pre-validar** en la pagina wed de la AEAT, en el siguiente link: [**_Formulario del 303 para su presentación (predeclaración)_**](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html){target="_blank"}.
+2.  y, posteriormente **presentar** en el siguiente link de la AEAT: [**_Presentación del Modelo_**_._](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html){target="_blank"}.
+
+La autoliquidación de IVA puede ser:
+
+-   "**A ingresar**" (casilla 48>0), en el caso de que el IVA Devengado > IVA deducible. El IVA a ingresar se reflejará en la casilla \[I\], posición 860.
+-   "**A compensar**" (casilla 48<0), en el caso de que el IVA Devengado < IVA deducible. El IVA a compensar se reflejará en la casilla \[49\], posición 804.
+-   "**A devolver**" (casilla 48<0 e inscripción en el Registro de devolución mensual), en el caso de que el IVA Devengado < IVA deducible. El IVA a devolver se reflejará en la casilla \[50\], posición 822.
+-   "**Cero**" o "**Sin actividad**" (casilla 48=0).
+
+#### **Presentación del Modelo 303**
+
+Los obligados a presentar el modelo 303 son:
+
+-   Los sujetos pasivos que realicen actividades a las que aplique el Régimen General del Impuesto (IVA) o cualquier otro de los regímenes del mismo, a excepción del Régimen especial de agricultura, ganadería y pesca, del Régimen de recargo de equivalencia y del Régimen Simplificado.
+
+La presentación del modelo 303 puede ser Mensual o Trimestral.
+
+La presentación será obligatoria por vía telemática (fichero de texto válido) para los sujetos pasivos que:
+
+-   tengan forma jurídica de sociedad anónima o sociedad de responsabilidad limitada
+-   y/o estén inscritos en el "Régimen de devolución mensual".
+
+##### **Novedades a partir del 1 de julio de 2010**
+
+**MODIFICACIÓN TIPOS IMPOSITIVOS IVA**
+
+La Ley 26/2009 de Presupuestos Generales del Estado para 2010, modificó los tipos general y reducido del Impuesto sobre el Valor Añadido con efectos a partir del 1 de julio, de forma que el tipo general pasa del 16% al 18% y el tipo reducido pasa del 7% al 8%, sin que se haya producido alteración alguna en relación con el tipo superreducido del 4% y con los tipos del recargo de equivalencia.
+
+**Cumplimentación de declaraciones**
+
+En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde julio de 2010 (correspondientes al mes 07 ó al 3T) , se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos (18%, 8%) junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de junio (7% ó 16%).
+
+En estos supuestos deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
+
+En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
+
+En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2010 o a los meses 01 a 06 de 2010 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos del 18% ó 8%.
+
+!!! info
+    Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
+
+
+##### **Novedades a partir del 1 de septiembre de 2012**
+
+**MODIFICACIÓN TIPOS IMPOSITIVOS IVA Y RECARGO DE EQUIVALENCIA**
+
+El Real Decreto Ley 20/2012 de medidas para garantizar la estabilidad presupuestaria y de fomento de la competitividad, modificó los tipos general y reducido del Impuesto sobre el Valor Añadido con efectos a partir del 1 de septiembre, de forma que el tipo general pasa del 18% al 21% y el tipo reducido pasa del 8% al 10%, sin que se haya producido alteración alguna en relación con el tipo superreducido del 4%. Igualmente, los tipos de recargo de equivalencia pasan del 4% al 5,2% y del 1% al 1,4%.
+
+**Cumplimentación de declaraciones**
+
+En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde septiembre de 2012 (correspondientes al mes 09 ó al 3T), se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de agosto.
+
+En estos supuestos, deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
+
+En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
+
+En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2012 o a los meses 01 a 08 de 2012 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos.
+
+!!! info
+    Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
+
+
+#### **Instalación y aplicación del módulo**
+
+##### **Instalación**
+
+!!! info
+    Para la instalación del módulo **“AEAT - Modelo 303”** visite [Marketpace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+
+##### **Aplicación del módulo**
+
+El módulo del Modelo 303 incluye unos datos de referencia que relaciona los tipos/rangos de impuestos para España con los parámetros del 303, por tanto:
+
+-   Una vez insalado el módulo, los datos de referencia deben aplicarse a la Entidad legal con Contabilidad que corresponda, en la ruta de aplicación: Configuración General || Organización || Gestión del módulo de Empresa.
+
+![](https://docs.etendo.software/latest/assets/drive/EhxTBUvs6RBHj5qryz08lOpzAmCekUOmboNjz-E3OUuIK92wRMMzhOul3GuQ1hHMAutQbKIBKSi4NRQ0lPVDxWALgH4Fzsmc47MYlVJZZAOHS5giW468E6SMHsBjt2vqa8pn93TEZUBvHqiUId8oegI.png)
+
+#### **Contenido del módulo**
+
+Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
+
+-   Se han creado dos nuevos informes, el modelo 303 mensual y el trimestral para la organización/es en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](https://docs.etendo.software/latest/assets/drive/MAZZa2VuPorWEk1BAyrZHON1lh2tNqdkQna7BJhsI0E5g4R9ML0BrK9Xvpicq7ZG4xqlzAMn_0JEJBOskqgZvemex1fqHA8u9dvn6XT1190PDLTHuuzsunhwnbZ9PeooUmrqd6oiKCt-fI-J7ONuNsU.png)
+
+-   La pestaña "Sección de Impuestos" contiene la definición de toda la información que se va a incluir en el modelo 303 y, por tanto, en el fichero del 303 que se generará desde la ventana "Generador de Declaraciones de Impuestos". De todas estas secciones cabe destacar las secciones "IVA Devengado", "IVA Deducible" y "Diferencia".  
+    Por ejemplo, la sección "IVA Devengado" incluye los parámetros siguientes en la pestaña "Parámetro de declaración":
+    -   IVA Devengado - Régimen Ordinario
+    -   IVA Devengado - Recargo de Equivalencia
+    -   IVA Devengado - Adquisiciones Intracomunitarias
+
+Estos parámetros se ligan a los tipos de impuestos en función de que las operaciones ligadas a ellos deban declararse, por ejemplo, como parte del IVA Devengado en Régimen Ordinario o bien como parte del IVA Devengado por Recargo de Equivalencia.
+
+![](https://docs.etendo.software/latest/assets/drive/zC4megIrlvdoyIVRkdw2ET8DrB6IV8rIcxQMRlZH4qJAHIO8TFlmif7eUuqb6NRoM6vvzm1mP5BLwsBOKFLQhDOLPbloFfYy6AVDe9p820rJKJem-Jy9UIlCzCafEWf15srFfJUOfrBR9fm5GSiUVsg.png)
+
+-   Por tanto, los rangos de impuestos se han asociado al correspondiente parámetro del 303, con el fin de que las transacciones completadas y contabilizadas ligadas a dichos impuestos, se tenga en cuenta en una u otra casilla/posición del fichero.  
+     
+
+![](https://docs.etendo.software/latest/assets/drive/Vxz9LkuESteDKaeIzQmhO9gu10wFqL8QU579ZxLacwnA5WlhWtA-wkXgQvBfe7ZJCX6ksbd4XfoRk4U7sKTbnAQAWBbTgFBYJau2aJstONlCeoFElqPArRuDIf_dGIaD50o6yGJkxowqixFQAJ18Beo.png)
+
+-   Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 303, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](https://docs.etendo.software/latest/assets/drive/612TP0yYxrPiuET6z7IkyF40fr5KGP6XC5cxCTbrK5eg6K1Im1xh_XYc3PzLVeMApJERGkm_9QHTuvuTl4slrb_t8TktOSrtNeisdNQcSpzodyq9c8wptIpFshledbtdup6U7-Kmw5FiEvBYOvfqsDI.png)
+
+#### **Configuración**
+
+##### **Configuración de impuestos / IVA**
+
+El usuario deberá navegar a la ruta de aplicación: "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado:
+
+-   primero el módulo de impuestos si no está aplicado previamente y a nivel (\*)
+-   y después el módulo del 303 a nivel Organización Legal con contabilidad
+
+##### **Configuración del modelo 303**
+
+La configuración del modelo 303 se instala por defecto y se puede comprobar en la ruta de aplicación: Gestión Financiera//Contabilidad//Configuración//Declaración de Impuestos.
+
+Tanto para el modelo 303 mensual como trimestral en la pestaña "Sección de declaración" se han creado 11 secciones, una por cada grupo de información a incluir a la hora de generar el fichero del Modelo 303:
+
+![](https://docs.etendo.software/latest/assets/drive/5e_DW0KWWXZ8E1fET-mk_Y2oq6YGls8fZL-zmAGlO8wzUqgFH0zKq0ir2QP6CK-SOWttp263yE5VKCjPLKuz5ubn63i8nzztWYzLioqT1Ar_RTn9zlNOCtG9T5CRG2wD0fzJpACMuAA7-vycnuQo390.png)
+
+-   **Fichero**
+    -   Esta sección contiene un parámetro de tipo "Entrada", para que el usuario pueda introducir el nombre del fichero 303 al generarlo.
+-   **Tipo de declaración**
+    -   Esta sección contiene a 8 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.
+        -   Compensación
+        -   Devolución
+        -   Ingreso
+        -   Resultado cero
+        -   Ingreso domiciliación bancaria
+        -   Ingreso cuenta corriente tributaria
+        -   Devolución cuenta corriente tributaria
+        -   Devolución por transferencia al extranjero
+-   **Sin Actividad**
+    -   Esta sección contiene 1 parámetro de tipo "Entrada" para que el usuario pueda marcar una liquidación de IVA como "Sin Actividad".
+-   **Constantes**
+    -   Esta sección incluye todos los valores constantes que requiere el 303, tales como:
+        -   Modelo = 303
+        -   Página = 01
+        -   Identificador de fin de registro = </T30301>
+-   **Identificación**
+    -   Esta sección incluye 4 parámetros de "Salida" que se corresponden con datos de identificación de la organización para la cual se genera el fichero y 1 parámetro de "Entrada" de tipo "checkbox" que es "Inscrito en el Registro de devolución mensual" que podría configurarse como constante.
+-   **IVA Devengado**
+    -   Esta sección incluye 3 parámetros de tipo "Salida", uno por cada tipo de IVA devengado.
+        -   "IVA Devengado - Régimen General" de IVA. Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen general, por ejemplo, las entregas de bienes y servicios dentro del territorio de aplicación del impuesto.
+        -   "IVA Devengado - Recargo de Equivalencia". Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen de recargo de equivalencia, por ejemplo, las entregas de bienes a minoristas dentro del territorio de aplicación del impuesto.
+        -   "IVA Devengado - Adquisiciones Intracomunitarias”. Este parámetro está ligado a los rangos de impuestos de adquisiciones intracomunitarias de bienes
+
+El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
+
+-   **IVA Deducible**
+    -   Esta sección incluye un total de 12 parámetros, 6 parámetros de tipo "Salida" y otros 6 de tipo "Entrada".  
+        Los parámetros de tipo "Salida" se corresponden con el tipo de IVA Deducible del que se puede sacar información de Etendo, por ejemplo "IVA Deducible por cuotas soportadas en operaciones interiores corrientes".  
+        Los parámetros de tipo "Entrada" se corresponden con tipos de IVA Deducible para los que no se puede sacar información de Etendo, por ejemplo "IVA Deducible por compensación Régimen Esp. A.G y P.(cuota)
+
+El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
+
+-   **Diferencia**
+    -   Esta sección incluye 4 parámetros de tipo "Entrada" para que el usuario pueda introducir la siguiente información a la hora de generar el fichero:
+        -   % Atribuible a la Administración del Estado %.  
+            Los sujetos pasivos que tributen conjuntamente en la Administración del Estado y en las Diputaciones del País Vasco o a la Comunidad Foral de Navarra, deben hacer constar el % del volumen de operaciones en territorio común y que, por tanto, deben tributar en la Administración del Estado; el resto de sujetos pasivos harán costar un 100%.  
+            Este dato podría configurarse como constante.
+        -   Cuotas a compensar de periodos anteriores. Los sujetos pasivos deben hacer constar, cuando sea aplicable, las cuotas positivas a compensar procedentes de periodos anteriores.
+        -   Resultado de la regularización anual. En la última liquidación del año se hará constar el resultado de la regularización anual por inversiones
+        -   A deducir (autoliquidación complementaria), exclusivamente en el caso de declaración complementaria se hará constar el resultado de la última declaración presentada por el mismo concepto, correspondiente al mismo ejercicio y periodo.
+    -   Y, además, 3 parámetros de salida correspondientes a operaciones no sujetas que originan derecho a deducción:
+        -   Entregas Intracomunitarias de bienes. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
+            -   Entregas intracomunitarias (%N=>0%)
+            -   Entregas intracomunitarias (%R=>0%)
+            -   Entregas intracomunitarias (%SR=>0%)
+            -   Entregas intracomunitarias Bienes Inversión (%N=>0%)
+        -   Exportaciones y Operaciones asimiladas. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
+            -   Entregas a Canarias,Ceuta y Melilla (%N=>0%)
+            -   Entregas a Canarias,Ceuta y Melilla (%SR=>0%)
+            -   Entregas a Canarias,Ceuta y Melilla (%R=>0%)
+            -   Exportaciones (%N=>0%)
+            -   Exportaciones (%R=>0%)
+            -   Exportaciones (%SR=>0%)
+            -   Exportaciones Bienes Inversión (%N=>0%)
+        -   Operaciones no sujetas o con inversión del sujeto pasivo. Este parámetro está ligado a losrangos de impuestos que se listan a continuación:
+            -   Servicios a Canarias, Ceuta y Melilla (%N=>0%)
+            -   Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
+            -   Servicios a Canarias, Ceuta y Melilla (%R=>0%)
+            -   Servicios prestados internacional (%N=>0%)
+            -   Servicios prestados internacional (%R=>0%)
+            -   Servicios prestados UE (%N=>0%)
+            -   Servicios prestados UE (%R=>0%)
+-   **Devolución**
+    -   Esta sección incluye un parámetro de tipo "Entrada" que es la cuenta bancaria a utilizar en caso de declaración a devolver. Este dato podría configurarse como constante.
+-   **Ingreso**
+    -   Esta sección incluye 5 parámetros de tipo "Entrada" relativos a declaraciones "A ingresar":
+        -   la cuenta bancaria a utilizar en caso de declaración a ingresar. Este dato podría configurarse como constante.
+        -   No consta
+        -   Efectivo
+        -   Adeudo en cuenta
+        -   Domiciliación
+-   **Complementaria**
+    -   Esta sección incluye 2 parámetros de tipo entrada:
+        -   Declaración complementaria, como un checkbox (si/no)
+        -   Nº Justificate, de la declaración anterior que se complementa.
+
+##### **Tipos de documento y fecha**
+
+A la hora de generar el fichero de texto válido para declarar el Modelo 303 de liquidación de IVA, se tiene en cuenta:
+
+-   El IVA (soportado) deducible registrado y contabilizado en las Facturas/Abonos de Compra, que el usuario puede registrar en la ruta de aplicación: Gestión de Compras || Transacciones || Factura (Proveedor), para los siguientes tipos de documento:
+    -   AP Invoice (Factura de compra)
+    -   AP Invoice negativa (Abono de compra)
+    -   AP Credit Memo (Abono de compra)
+-   El IVA devengado registrado y contabilizado en las Facturas/Abonos de Venta que el usuario puede emitir en la ruta de aplicación:    Gestión de Ventas || Transacciones || Factura (Cliente), para los siguientes tipos de documento:
+    -   AR Invoice (Factura de venta)
+    -   AR Invoice negativa (Abono de venta)
+    -   AR Credit Memo (Abono de venta)
+
+La actual versión del módulo no tiene en cuenta los tipos de documento de Etendo sin APRM que se enumeran a continuación, y que podrían estar ligados a un rango de impuesto, por considerarse que no se deberían utilizar para la contabilización de facturas que incluyan IVA:
+
+-   Extracto bancario
+-   Diario de Caja
+-   Liquidaciones y asientos manuales
+
+**La fecha que se tiene en cuenta** para la inclusión de las facturas de compra/venta en la declaración/fichero del 303 es la **fecha de contabilización**, lo cual que implica que:
+
+-   Las facturas de compra/venta con fecha de contabilización desde el 01 de junio del 2010 hasta 30 de junio del 2010, se incluirán en la declaración Mensual correspondiente al mes de junio del 2010; en caso de tipo de declaración mensual, a presentar antes del 20 de agosto del 2010.
+-   Las facturas de compra/venta con fecha de contabilización desde el 01 de abril del 2010 hasta el 30 de junio del 2010, se incluirán en la declaración trimestral correspondiente al segundo trimestre del año; en caso de tipo de declaración trimestral, a presentar antes del 20 de agosto del 2010.
+
+#### **Caso de Usuario**
+
+##### **IVA Devengado - escenarios**
+
+Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas puedan autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
+
+El fichero del 303 recoge desde la posición 72 a la 357, la base imponible, tipo y cuota del IVA devengado en las operaciones de venta bajo el régimen general, especificando por tipo de IVA (16%/18%, 7%/8% y 4%), régimen de recargo de equivalencia especificado por tipo de IVA (4%, 1% y 0,5%) así como la base y cuota del IVA devengado en las adquisiciones intracomunitarias.
+
+###### **IVA devengado - régimen general**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas tanto por la entrega de bienes como por la prestación de servicios dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
+
+Se tendrán en cuenta:
+
+1.  las facturas/abonos emitidas por la venta de productos o por la prestación de servicios, contabilizadas en la ruta de aplicación "Gestión de Ventas || Transacciones || Factura (Cliente)"
+2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente)", marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  las líneas de impuesto manualmente introducidas por el usuario en la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente) - Cabecera - Impuestos"
+
+El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes o la prestación del servicio lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
+
+Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super reducido
+-   IVA Normal Servicios
+-   IVA Reducido Servicios
+-   IVA Super Reducido Servicios
+-   IVA Normal B. Inmuebles
+-   IVA Reducido B. Inmuebles
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Régimen General".
+
+###### **IVA devengado - régimen de recargo de equivalencia**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas por la entrega de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares) a terceros minoristas que se encuentren en régimen de recargo de equivalencia.
+
+En estos casos, el emisor de la factura incluye, además del IVA, el tipo (%) de recargo correspondiente.
+
+Se tendrán en cuenta:
+
+1.  las facturas/abonos emitidas por la venta de productos, contabilizadas en la ruta de aplicación "Gestión de Ventas || Transacciones || Factura (Cliente)"
+2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente)", marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  las lineas de impuesto manualmente introducidas en el usuario en la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente) - Cabecera - Impuestos"
+
+El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes, lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
+
+Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Recargo de Equivalencia".
+
+###### **IVA devengado - Adquisiciones intracomunitarias**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
+
+Se tendrán en cuenta:
+
+1.  las facturas/abonos registradas en el sistema por la compra de productos, contabilizadas en la ruta de aplicación "Gestión de Compras || Transacciones || Factura (Proveedor)"
+2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: ""Gestión de Compras || Transacciones || Factura (Proveedor)", marcados como "Factura Financiera" a nivel de línea de factura de compra, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  las líneas de impuesto manualmente introducidas en el usuario en la ruta de aplicación: "Gestión de Compras || Transacciones || Factura (Proveedor) - Cabecera - Impuestos"
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Adquisiciones Intracomunitarias".
+
+Es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
+
+-   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
+-   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
+
+Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
+
+El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
+
+##### **IVA Deducible - escenarios**
+
+Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas pueda autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
+
+El fichero del 303 recoge desde la posición 357 a la 612, la base imponible y cuota, en la mayoría de los casos, del IVA soportado que es deducible en operaciones interiores, importaciones y adquisiciones intracomunitarias de bienes corrientes (bienes y servicios) y de bienes de inversión.
+
+###### **IVA deducible - cuotas soportadas en operaciones interiores corrientes**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes como por los servicios prestados a la Empresa dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+-   IVA Normal Servicios
+-   IVA Reducido Servicios
+-   IVA Super Reducido Servicios
+-   IVA Normal B. Inmuebles
+-   IVA Reducido B. Inmuebles
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes".
+
+###### **IVA deducible - operaciones interiores bienes de inversión**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes de inversión (se consideran bienes de inversión los bienes con un valor superior a 3.000,00 €) dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Operaciones interiores bienes de inversión".
+
+###### **IVA deducible - por cuotas devengadas en importaciones de bienes**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes".
+
+###### **IVA deducible - importaciones bienes de inversión**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Importaciones bienes de inversión".
+
+###### **IVA deducible - adquisiciones intracomunitarias de bienes**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes corrientes".
+
+Tal y como ya se ha mencionado, es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
+
+-   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
+-   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
+
+Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
+
+El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
+
+###### **IVA deducible - adquisiciones intracomunitarias de bienes de inversión**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes de inversión".
+
+##### **Diferencia - escenarios**
+
+El fichero del 303 recoge desde la posición 629 a la 804, los datos relativos a la diferencia entre el IVA Devengado y el Deducible, junto con otro tipo de información adicional necesaria para el cálculo del resultado final casilla \[48\]
+
+Desde Etendo, el usuario puede obtener la diferencia entre IVA Devengado y Deducible, así como parte de la información adicional necesaria para el cálculo del resultado final, el resto debe introducirse por parte del usuario como "parámetros de entrada" a la hora de generar el fichero.
+
+La información que el usuario puede obtener desde el sistema es las bases imponibles para un periodo determinado (mes/trimestre) respecto de las operaciones que a continuación se detallan:
+
+-   **Entregas intracomunitarias** - en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta a clientes no residentes en territorio de aplicación del impuesto pero residentes en la Unión Europea, emitidos y contabilizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
+    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Entregas Intracomunitarias".
+-   **Exportaciones y operaciones asimiladas** - lo mismo aplica a las exportaciones, en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta emitidas y contabilizas, a clientes extranjeros, emitidos y contablizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
+    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Exportaciones y Operaciones Asimiladas".
+-   **Operaciones no sujetas o con inversión del sujeto pasivo** que origina derecho a deducción - este caso aplica a facturas/abonos/facturas financieras de venta emitidos y contabilizados, por la prestación de servicios de la Empresa fuera del territorio de aplicación del impuesto, servicios exentos pero que originan derecho a deducción.  
+    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Operaciones no sujetas o con inversión del sujeto pasivo".
+
+El resto de datos deben ser introducidos manualmente por el usuario a la hora de generar el modelo 303 desde la ventana "Generador de declaraciones de impuestos", tal y como se muestra en la pantalla siguiente:
+
+![](https://docs.etendo.software/latest/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png)
+
+##### **Devoluciones - escenarios**
+
+###### **Devoluciones - Devolución/Devolución cuenta corriente tributaria**
+
+Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:
+
+- IBAN
+- Marca SEPA
+
+###### **Devoluciones - Devolución por transferencia al extranjero**
+
+Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios: 
+
+- Domiciliación/Devolución - IBAN (cuenta bancaria)
+- Devolución - Banco/Bank name
+- Devolución - Dirección del Banco/ Bank address
+- Devolución - Ciudad/City
+- Devolución - Código País/Country code
+- Devolución - Marca SEPA
+
+##### Configuración previa antes de generar el Informe
+
+###### **Actividades del I.A.E.**
+
+En el Modelo 303, para generar el informe mensual - último periodo, a partir de 2022, se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
+
+El módulo Epígrafes I.A.E., instalado como dependencia del 303, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 303 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
+
+![](https://docs.etendo.software/latest/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
+
+En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
+
+Para el modelo 303, los campos 'Epígrafe IAE' y 'Código' son obligatorios
+
+##### **Generación del modelo 303**
+
+Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos
+
+Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo":
+
+![](https://docs.etendo.software/latest/assets/drive/dNa0Xp7cP15EVu-NquNiO27FfKbbDTYXfLQ5Wm4I8LxL3ah4xw4_v3_PB6zShaBBNuFB1dwW9O15LSxabPohtRNc3xjWGMrgxQzdvqRagqs2C0A6Pwq3DJ5-FVhdBE-RMxe09uIGBEXM5YE7NQ3KRWg.png)
+
+se pueden introducir los parámetros de entrada, o datos que no pueden obtenerse de Etendo a través de botón de proceso "Parámetros de entrada".
+
+!!! info
+    Es importante recalcar que algunos de los parámetros de entrada que se introducen a continuación, como por ejemplo "Inscrito en el Registro Devolución Mensual", pueden configurarse como parámetros "Constantes" con el fin de no tener que introducirlos cada vez que se genera el fichero del 303.
+
+
+La forma de hacerlo es:
+
+-   buscar el parámetro de entrada del 303 en la ventana "Declaración de Impuestos", pestaña "Sección de declaración". Por ejemplo, el parámetro de entrada "Inscrito en el Registro de devolución mensual" que se encuentra en la Sección de declaración "Identificación"
+-   cambiar el parámetro de tipo "Entrada" a "Constante". En el campo "Constant Value" añadir "1", en caso de inscripción en el registro de devolución mensual, o bien añadir "2", en caso de que el sujeto pasivo no esté inscrito en el registro de devolución mensual.
+
+Es importante recalcar que si se produce una actualización de los datos de referencia de este módulo, los cambios de parámetros de entrada a constante se sobreescribirán, por lo que será necesario el volver a configurarlos.
+
+Las secciones de la nueva ventana que se muestra se corresponden con las secciones definidas para el Modelo 303:
+
+Secciones: "**Fichero**", "**Tipo de declaración**" y "**Sin actividad**":
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png)
+
+Secciones: "**IVA deducible**", **"Liquidación-resultado"** y **"Banco"**:
+
+![](https://docs.etendo.software/latest/assets/drive/TmR4r-g0sbW3iYqVXO4M4IvKdyIKxp9t7FxwjL1i2srAJVnSK7obME0S7xZnd6ZBOMGwzsfbYZJ3BTDwjwzwSbpLmbioI49r1hX4YpyFrXeUYauG-D8tNEiGXqROzpI6RWJlewDrm-lQspoLPFfMR9M.png)
+
+Secciones:  **"Complementaria", “Tributación por razón de territorio” y “Additional Information”**
+
+![](https://docs.etendo.software/latest/assets/drive/SZHf8tnfL96mKnbhdEg4Oev3PSB8moMCC7k5MqXfkkR5aY3E9FR_QjNwZ5xOFytKPdafxQv5QLaccO557RenGMZlkPMDoskLe9TXqfiVJ4s1Fi1wPM32-UMQMA7MFoExjgiZlbR9y1EhG_2uz3_Fd9E.png)
+
+Una vez que el fichero se ha generado, tendrá este aspecto:
+
+![Fichero.png](https://docs.etendo.software/latest/assets/drive/7TUbkV18JCkTIs6aoBVNgXYoCr6vvEfFk1_kWdHjMi8-VjOMmEIsWBEWeRgj8AJ8VsbXNifrzXOGd6u19snnZEyhWLrsUty88vVrYwvnAU3FRzuTZRvteHfLFXle7Ajk4deKF124p9-bySu6AweMwpk.png)
+
+##### **Pre-validación del modelo 303**
+
+El fichero generado en Etendo se puede pre-validar en el siguiente link de la AEAT:
+
+[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html){target="_blank"}.
+
+Una vez en dicho link el usuario podrá importar el fichero en la opción "Optativo: Importar datos de fichero", los datos obtenidos del fichero se mostrarán para su validación.
+
+Una vez validados los datos, el modelo 303 se puede presentar en el siguiente link, para lo cual se requiere un certificado válido: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml){target="_blank"}, para lo que se necesita certificado electrónico de identificación o DNI electrónico.
+
+#### **Anexo**
+
+Este anexo incluye el listado completo de los rangos de impuestos asociados a los parámetros del modelo 303 de las secciones "IVA Devengado" e "IVA Deducible" sólo para los tipos de IVA vigentes en la actualidad (2012):
+
+##### **IVA Devengado**
+
+###### **IVA Devengado - Régimen General**
+
+-   Arrendamiento 18% (cobros)
+-   Arrendamientos 18% -21%R (cobros) (+18%)
+-   Arrendamiento 21% (cobros)
+-   Arrendamientos 21% -21%R (cobros) (+21%)
+-   Entregas Bienes Inversión 18%
+-   Entregas Bienes Inversión 21%
+-   Entregas IVA 18%
+-   Entregas IVA 8%
+-   Entregas IVA 21%
+-   Entregas IVA 10%
+-   Entregas IVA 4%
+-   Entregas IVA+RE 18+4% (+18%)
+-   Entregas IVA+RE 8+1% (+8%)
+-   Entregas IVA+RE 21+5.2% (+21%)
+-   Entregas IVA+RE 10+1.4% (+10%)
+-   Entregas IVA+RE 4+0.5% (+4%)
+-   Inversión Sujeto Pasivo no UE 18% (-18%)
+-   Inversión Sujeto Pasivo no UE 8% (-8%)
+-   Inversión Sujeto Pasivo no UE 21% (-21%)
+-   Inversión Sujeto Pasivo no UE 10% (-10%)
+-   Inversión Sujeto Pasivo UE 18% (-18%)
+-   Inversión Sujeto Pasivo UE 8% (-8%)
+-   Inversión Sujeto Pasivo UE 21% (-21%)
+-   Inversión Sujeto Pasivo UE 10% (-10%)
+-   Servicios prestados nacional 18%
+-   Servicios prestados nacional 21%
+-   Servicios prestados nacional 18% -15%R (+18%)
+-   Servicios prestados nacional 18% -7%R (+18%)
+-   Servicios prestados nacional 21% -21%R (+21%)
+-   Servicios prestados nacional 21% -9%R (+21%)
+-   Servicios prestados nacional 8%
+-   Servicios prestados nacional 10%
+-   Servicios prestados nacional 4%
+-   Transmisión B.Inmuebles 18%
+-   Transmisión B.Inmuebles 8%
+-   Transmisión B.Inmuebles 21%
+-   Transmisión B.Inmuebles 10%
+
+###### **IVA Devengado - Recargo de equivalencia**
+
+-   Entregas IVA+RE 18+4% (+4%)
+-   Entregas IVA+RE 8+1% (+1%)
+-   Entregas IVA+RE 21+5.2% (+5.2%)
+-   Entregas IVA+RE 10+1.4% (+1.4%)
+-   Entregas IVA+RE 4+0.5% (+0.5%)
+
+###### **IVA Devengado - Adquisiciones Intracomunitarias**
+
+-   Adquisiciones intracomunitarias 18% (-18%)
+-   Adquisiciones intracomunitarias 8% (-8%)
+-   Adquisiciones intracomunitarias 21% (-21%)
+-   Adquisiciones intracomunitarias 10% (-10%)
+-   Adquisiciones intracomunitarias 4% (-4%)
+-   Adquisiciones intracomunitarias Bienes Inversión 18% (-18%)
+-   Adquisiciones intracomunitarias Bienes Inversión 21% (-21%)
+
+##### **IVA Deducible**
+
+###### **IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes**
+
+-   Adquisición B.Inmuebles 18%
+-   Adquisición B.Inmuebles 8%
+-   Adquisición B.Inmuebles 21%
+-   Adquisición B.Inmuebles 10%
+-   Adquisiciones IVA 18%
+-   Adquisiciones IVA 8%
+-   Adquisiciones IVA 21%
+-   Adquisiciones IVA 10%
+-   Adquisiciones IVA 4%
+-   Arrendamiento 18% (pagos)
+-   Arrendamiento 21% (pagos)
+-   Arrendamientos 18% -21%R (pagos) (+18%)
+-   Arrendamientos 21% -21%R (pagos) (+21%)
+-   Inversión Sujeto Pasivo no UE 18% (+18%)
+-   Inversión Sujeto Pasivo no UE 8% (+8%)
+-   Inversión Sujeto Pasivo no UE 21% (+21%)
+-   Inversión Sujeto Pasivo no UE 10% (+10%)
+-   Inversión Sujeto Pasivo UE 18% (+18%)
+-   Inversión Sujeto Pasivo UE 8% (+8%)
+-   Inversión Sujeto Pasivo UE 21% (+21%)
+-   Inversión Sujeto Pasivo UE 10% (+10%)
+-   Prestación servicios nacional 18%
+-   Prestación servicios nacional 21%
+-   Prestación servicios nacional 18% -15%R (+18%)
+-   Prestación servicios nacional 18% -1%R (18%)
+-   Prestación servicios nacional 18% -7%R (+18%)
+-   Prestación servicios nacional 21% -21%R (+21%)
+-   Prestación servicios nacional 21% -1%R (+21%)
+-   Prestación servicios nacional 21% -9%R (+21%)
+-   Prestación servicios nacional 8%
+-   Prestación servicios nacional 10%
+-   Prestación servicios nacional 4%
+
+###### **IVA Deducible - Operaciones interiores bienes de inversión**
+
+-   Adquisición Bienes Inversión18%
+-   Adquisición Bienes Inversión 21%
+
+###### **IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes**
+
+-   Adquisiciones a Canarias,Ceuta y Melilla 18%
+-   Adquisiciones a Canarias,Ceuta y Melilla 8%
+-   Adquisiciones a Canarias,Ceuta y Melilla 21%
+-   Adquisiciones a Canarias,Ceuta y Melilla 10%
+-   Adquisiciones a Canarias,Ceuta y Melilla 4%
+-   Importaciones 18%
+-   Importaciones 8%
+-   Importaciones 21%
+-   Importaciones 10%
+-   Importaciones 4%
+
+###### **IVA Deducible - Importaciones bienes de inversión**
+
+-   Importaciones Bienes Inversión 18%
+-   Importaciones Bienes Inversión 21%
+
+###### **IVA Deducible - En adquisiciones intracomunitarias de bienes de corrientes**
+
+-   Adquisiciones intracomunitarias 18% (+18%)
+-   Adquisiciones intracomunitarias 8% (+8%)
+-   Adquisiciones intracomunitarias 21% (+21%)
+-   Adquisiciones intracomunitarias 10% (+10%)
+-   Adquisiciones intracomunitarias 4% (+4%)
+
+###### **IVA Deducible - Adq. Intracomunitarias bienes de inversión**
+
+-   Adquisiciones intracomunitarias Bienes Inversión 18% (+18%)
+-   Adquisiciones intracomunitarias Bienes Inversión 21% (+21%)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Modelo 347
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 347
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347
+## Article Content: 
+#### **Introducción**
+
+Esta sección describe la generación de la declaración: “**Modelo AEAT 347 - Declaración Anual de Operaciones con Terceros**” como un fichero de texto ("\*.txt") válido conforme a los requerimientos de la Hacienda Pública española, es por ello que se publicará una nueva versión de este módulo cuando dichos requerimientos cambien.
+
+El fichero del 347 se genera desde el "**Generador de Declaraciones de Impuesto**" que se encuentra en la ruta de aplicación: "Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos".
+
+El Modelo/Declaración 347 es parte del módulo de Localización Española de Etendo.
+
+#### **Descripción del módulo**
+
+##### **Obligados a presentar la declaración**
+
+De acuerdo con la normativa de la Hacienda Española, están obligados a presentar el modelo 347:
+
+Todas aquellas personas físicas o jurídicas, de naturaleza pública o privada que desarrollen actividades empresariales o profesionales, siempre y cuando hayan realizado operaciones que, en su conjunto, respecto de otra persona o Entidad, cualquiera que sea su naturaleza o carácter, hayan superado la cifra de 3.005,06€ durante el año natural al que se refiere la declaración. Para el cálculo de la cifra de 3.005,06 € se computan de forma separada las entregas de bienes y servicios y las adquisiciones de los mismos.
+
+De acuerdo con la normativa, no están obligados a presentar el modelo 347:
+
+-   Quienes realicen en España actividades empresariales o profesionales sin tener en territorio español la sede de su actividad, un establecimiento permanente o su domicilio fiscal.
+-   Las personas físicas y entidades en atribución de rentas en el Impuesto sobre la Renta de las Personas Físicas, por las actividades que tributen en dicho impuesto por el método de estimación objetiva y, simultáneamente, en el Impuesto sobre el Valor Añadido por los regímenes especiales simplificado o de la agricultura, ganadería y pesca o del recargo de equivalencia, salvo por las operaciones por las que emitan factura.
+-   Los obligados tributarios que no hayan realizado operaciones que en su conjunto superen la cifra de 3.005,06€
+-   Los obligados tributarios que hayan realizado exclusivamente operaciones no declarables.
+-   Los obligados tributarios que deban informar sobre las operaciones incluidas en los libros registro de IVA (modelo 340) salvo que realicen operaciones que expresamente deban incluirse en el modelo 347.
+
+##### **Operaciones declarables**
+
+Las operaciones declarables y que, por tanto, se incluyen en el modelo 347 son las que se detallan a continuación:
+
+1.  Tanto las entregas de bienes y prestaciones de servicios realizadas por el declarante como sus adquisiciones de bienes y servicios incluyéndose, en ambos casos, tanto las operaciones típicas y habituales como las ocasionales e incluso las operaciones inmobiliarias. Debe tenerse en cuenta que dichas operaciones se incluirán estén o no sujetas al IVA y, en el primer caso, también las exentas de dicho impuesto.
+
+Además, se incluyen de forma específica y aparte:
+
+-   los Arrendamientos de locales de negocios
+-   los importes superiores a 6.000,00€ percibidos en metálico de cada una de las personas o entidades relacionadas en la declaración
+-   las cantidades que se perciban en contraprestación por transmisiones de bienes inmuebles que constituyan entregas sujetas a IVA
+-   y las prestaciones de servicios de/a no residentes (incluyendo Canarias, Baleares, Ceuta y Melilla) que no estén sujetos a retención.
+
+Los importes que se incluyen en el modelo 347 son los “importes totales” de la contraprestación en euros (€). En los supuestos de operaciones sujetas y no exentas de IVA se añaden, por tanto, a la base imponible, las cuotas del impuesto y recargos de equivalencia repercutidos. Los importes además se declaran netos de las devoluciones o descuentos y bonificaciones concedidos.
+
+Las operaciones que se incluyen en el modelo 347 son las realizadas por el declarante en el año natural a que se refiere la declaración y la fecha que se tiene en cuenta para su inclusión en el 347 es la fecha contable de la factura.
+
+Las operaciones que en ningún caso se incluirán en el 347 por ser no declarables son las que se detallan a continuación:
+
+-   aquellas que hayan supuesto entregas de bienes o prestaciones de servicios por las que los obligados tributarios no debieron expedir y entregar factura o documento equivalente
+-   aquellas operaciones realizadas al margen de la actividad empresarial o profesional
+-   aquellas efectuadas a título gratuito
+-   los arrendamientos de bienes exentos de IVA
+-   las importaciones y exportaciones de mercancías, así como las entregas y adquisiciones de bienes que supongan envíos entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla.
+-   Todas aquellas que se incluyan en otros modelos de la Administración Tributaria como por ejemplo aquellas cuya contraprestación haya sido objeto de retención o ingreso a cuenta; las operaciones intracomunitarias de bienes y servicios que se declaran en el modelo 349 o las operaciones incluidas en los libros registro que deben incluirse en el modelo 340.
+
+El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se describe a continuación y que deberían incluirse en el modelo 347, por ser relativas a Administraciones Públicas, Entidades aseguradoras y Colegios Profesionales:
+
+-   las subvenciones, auxilios o ayudas satisfechas por las entidades integradas en las distintas Administraciones Públicas
+-   las operaciones de seguros realizadas por las entidades aseguradoras
+-   las prestaciones de servicios realizadas por las agencias de viajes
+-   los cobros por cuenta de terceros de honorarios profesionales o de derechos derivados de la propiedad intelectual, industrial, de autor u otros por cuenta de sus socios, asociados o colegiados efectuados por sociedades, asociaciones, colegios profesionales u otras entidades que, entre sus funciones, realicen las del cobro
+-   las operaciones sujetas al impuesto sobre la producción, los servicios y la importación en las ciudades de Ceuta y Melilla.
+
+Además, no se incluye en el módulo de funcionalidad el supuesto de Declaración Complementaria para aquellos casos en que deban incluirse sólo las operaciones que, debiendo haber sido declaradas en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deberán ser incluidas por el usuario manualmente, a través de la página de la AEAT tal y como se explica en la sección de este documento "Declaración Complementaria".
+
+#### **Instalación del módulo**
+
+Para la instalación del módulo **“Modelo AEAT 347 - Declaración de operaciones con terceros”**” (Spain AEAT Modelo 347 for APR),el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+Es importante recalcar que el módulo del Modelo AEAT 347 incluye el correspondiente conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347, este conjunto de datos se debe aplicar a la Organización para la cual se necesita obtener el 347 tal y como se explica en el siguiente apartado.
+
+##### **Aplicación del Módulo**
+
+Una vez instalado el módulo del 347 por cualquiera de los procedimientos anteriores, el usuario debe aplicar el conjunto de datos o dataset del módulo 347 a la organización legal con contabilidad que corresponda, desde la ventana "Gestión del Módulo de Empresa".
+
+El módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo 347, y debe estar instalado previamente.
+
+!!! info
+    Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización (\*) o bien a la organización legal para la que se quiera obtener el 347.
+
+
+#### **Configuración del módulo**
+
+##### **Configuración del modelo 347**
+
+Una vez aplicado el conjunto de datos del Modelo 347, puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos que el modelo 347 del periodo correspondiente está creado como informe anual de impuestos.
+
+![](https://docs.etendo.software/latest/assets/drive/2u88N7Cgi-SP2bdf8o4omVD0u1Up3nn33id19ei0bDPUxydw-cF9LLBl-YAE_5CNlQR7_9-rgia_VhhUwgW6QTKQgrHCC1qu4jTyfflLyVH9uDdav7NQWS47_h1ntt7M7800npJGiAbWAqRnzHfhIQ.png)
+
+En la pestaña “Secciones de la declaración” se han creado 3 grupos para el modelo 347:
+
+-   Nombre del Fichero del 347. Esta sección contiene:
+    -   un parámetro de tipo “entrada” que se mostrará en el momento de generar el 347 con el fin de que el usuario introduzca manualmente el “Nombre del fichero txt del 347” que se va a generar.
+-   Identificación y Totales. Esta sección contiene:
+    -   2 parámetros de tipo “constante” que el sistema tendrá en cuenta a la hora de incluir las operaciones, ya que solo incluirá las que superen las cifras límite que se detallan a continuación:  
+          
+        -   Cifra límite de inclusión de operaciones con terceros = 3.005,06€
+        -   Cifra límite para cobros percibidos en efectivo = 6.000,00€
+    -   y 5 parámetros de tipo “entrada” que se mostrarán en el momento de generar el 347 con el fin de que el usuario los introduzca manualmente y que son:  
+          
+        -   Nombre y apellidos de la persona de contacto: Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el nombre de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Nº Teléfono de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el teléfono de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Declaración substitutiva (si/no)
+        -   Nº de la declaración a sustituir
+        -   NIF del representante legal
+-   **Operaciones con terceros**. Esta sección contiene:
+    -   5 parámetros de tipo “salida” ligados a la clave tributaria correspondiente, que asociados a los tipos impositivos del módulo de impuestos para España, incluirán las operaciones de compra/venta en el 347:
+        -   Adquisiciones de bienes - Clave A
+        -   Entregas de bienes - Clave B
+        -   Prestación de servicios - Clave A
+        -   Servicios prestados - Clave B
+        -   Transmisiones de inmuebles - Clave B
+
+En la ruta Gestión Financiera / Contabilidad / Configuración / AEAT347 Tipo de documento, el usuario puede especificar los tipos de documentos que el 347 debe tener en cuenta. El funcionamiento de esta pantalla de parametrización es que si no se especifica ningún tipo de documento, Etendo tendrá en cuenta todos los tipos de documentos de tipo factura que se pueden contabilizar.
+
+Si el usuario introduce algún tipo de documento, solo esos serán los que se tengan en cuenta.
+
+![](https://docs.etendo.software/latest/assets/drive/OkdImkuzASfTUs2ne-BnPzKROain8Y-Z59B-4m3DX8xAjhoK-wvSJEmH6P1OBX-eIC9AGQXKGViX6K-0zMZHeGnfVD3v-eKgTvojkYKe-vEXykDdGYstwWmsUW4vRRjUAreAq7ndNhtf8zVm3rwbug.png)
+
+##### **Configuración de impuestos**
+
+Este módulo de generación del modelo 347 se basa en el módulo de impuestos para España, ya que utiliza los rangos de impuesto que incluye dicho módulo. Además, incluye un juego de datos que liga los rangos de impuesto del módulo de impuestos para España con los parámetros del 347 que se listan a continuación, en función de la operación de que se trate:
+
+-   **Adquisiciones de bienes – Adquisición “A”**
+-   **Entregas de bienes – Entregas “B”**
+-   **Prestación de servicios– Adquisición “A”**
+-   **Servicios prestados– Entregas “B”**
+-   **Transmisiones de inmuebles – Entregas “B”**
+
+El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Rango impuesto - pestaña Parámetro de Impuesto que los “tipos impositivos/impuestos” que deben incluirse en el 347 se han asociado al correspondiente parámetro de impuesto del 347:
+
+-   Los tipos de IVA de compras/adquisiciones (nacional) incluyendo las adquisiciones de bienes inmuebles y bienes de inversión, se han asociado con el parámetro “Adquisiciones de bienes” que se corresponden con la clave de operación del 347 => “A”
+-   Los tipos de IVA de ventas/entregas (nacional) (incluyendo Recargo de Equivalencia) se han asociado con el parámetro “Entregas de bienes” que corresponden con la clave de operación del 347 => “B”
+-   Los tipos de IVA de “inversión del sujeto pasivo NO UE” (en los casos de prestación de servicios NO intracomunitarios) se han asociado con el parámetro “Prestación de servicios” que se corresponden con la clave de operación del 347 => “A”
+-   Los tipos de IVA de entregas de bienes inmuebles (nacional) se han asociado con el parámetro “Transmisiones de inmuebles” que se corresponden con la clave de operación del 347 => “B”; ya que tiene que declararse dos veces como operación de venta y consignarse a parte el importe de la transmisión del bien inmueble.
+-   Se han creado los tipos de IVA específicos para prestaciones de servicios (nacional e internacional), asociados a categorías de impuestos específicas para los servicios, que se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa declarante reciba o preste los servicios.
+-   Los tipos de IVA de servicios desde/a Canarias, Baleares, Ceuta y Melilla se han asociado bien con el parámetro “Prestaciones de servicios” clave de operación del 347 => “B” o bien con el parámetro “Operaciones de servicios (Adquisición) clave de operación del 347 => “A”, respectivamente, ya que sólo se incluyen en el 347 las operaciones de servicios y no las de bienes que supongan envíos de bienes entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla
+-   Y por último se han creado tipos de IVA específicos para alquileres (con y sin retenciones asociados a 2 tipos de BP tax category, respectivamente). Los tipos de IVA de alquiler sin retenciones se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa sea arrendatario o arrendador del local u oficina arrendado y sujeto a IVA.
+
+##### **Configuración de los locales de negocio**
+
+En el modelo 347 se deben incluir los arrendamientos de locales de negocios, es por ello que en la ruta de aplicación: Gestión de Datos Maestros / Producto se ha creado un nuevo parámetro “Local arrendado”.
+
+De ser así, el usuario debe introducir en el sistema la información que se detalla a continuación, ya que es necesario incluirla en el modelo 347:
+
+-   **Situación**. El usuario debe elegir entre una de las siguientes opciones:
+    -   Locales en el extranjero
+    -   Referencia catastral válida en País Vasco o en Navarra
+    -   Referencia catastral válida excepto en País Vasco o Navarra
+    -   Sin referencia catastral
+-   **Referencia catastral.** Campo de texto libre.
+-   **Tipo de vía.** El usuario debe elegir el tipo de vía de una lista normalizada según el INE español.
+-   **Nombre de la vía pública**. Campo de texto libre.
+-   **Tipo de numeración**. El usuario debe elegir el tipo de numeración de una lista normalizada.
+-   **Número**. Campo de texto libre.
+-   **Calificación del número**. Campo de texto libre.
+-   **Bloque**. Campo de texto libre.
+-   **Portal**. Campo de texto libre.
+-   **Escalera**. Campo de texto libre.
+-   **Planta o piso**. Campo de texto libre.
+-   **Puerta**. Campo de texto libre.
+-   **Complemento**. Datos complementarios del domicilio si los hubiera.
+-   **Localidad o Población**. Campo de texto libre.
+-   **Municipio**.
+-   **Código de municipio**. El usuario debe elegir el código del municipio de una lista normalizada según el INE español.
+-   **Código de provincia.** El usuario debe elegir el código de provincia de una lista de códigos de provincia de dos dígitos numéricos.
+-   **Código postal**. El usuario debe elegir el código postal.
+
+En el caso de "Locales en el extranjero" los datos a incluir son:
+
+-   **Tipo de vía.**
+-   **Nombre de la vía pública**.
+
+El 347 refleja este tipo de operaciones de forma separada tal y como se explica en el correspondiente caso de usuario.
+
+#### **Generación del modelo 347**
+
+El modelo 347 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos.
+
+![](https://docs.etendo.software/latest/assets/drive/I8vKXFszVIXPVZhyPNt7q1dl52OyNIGw-JWKniQBLnKUq21l25J9MbdniTdtPtnNIB1Q3aKoP3thNPaSWwmlwa3xdcBYC6jQWnQUxks9w9nH2cMZEKWtJMgTrWme0TlsVbG5dqhEh14CHBKAqglBiA.png)
+
+El usuario deberá introducir los siguientes datos para generar el modelo 347:
+
+-   **Organización** para la cual quiere generar el Modelo 347. El sistema mostrará el calendario asociado a la organización en un campo no editable.
+-   **Esquema contable**
+-   **Declaración**. El usuario debería seleccionar aquí el modelo 347 del periodo impositivo que corresponda.
+-   **Ejercicio**. El usuario puede introducir el año natural para el cual quiere generar el modelo 347
+-   **Periodo**. El valor “Anual” debería mostrarse por defecto.
+
+Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 347 en el botón de proceso “Parámetros de entrada”
+
+![](https://docs.etendo.software/latest/assets/drive/BTVvmrL7eUYl5NhX1-PKOO_Aa_50C1NZd8bWXZAiD4oQsYc32KxEQKKhjq1bzpwL084nWtTneQN0cn2Fd9zQVoUqkGtIrzR8LnkUklnypDnn9CSFjpknNIHs5c6lV8fV4nsqaxBlFplBnEuRQ2_8pA.png)
+
+y una vez introducidos los parámetros de entrada, como por ejemplo el "Nombre del Fichero" o la "Persona/Teléfono de contacto", el usuario puede generar el fichero del Modelo 347 a través del botón de proceso “Generar fichero”.
+
+Es entonces cuando se genera el fichero de texto ("\*.txt") del Modelo 347 conforme a los requerimientos de la AEAT, que puede presentarse directamente en la web de la AEAT.
+
+En el módulo [](http://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/sso/ForgeModuleDetail/Spain-AEAT-Modelo-347-For-APR)"Spain AEAT Modelo 347 for APR", se genera un fichero zip que contiene tres ficheros:
+
+-   el fichero "txt" ya mencionado de igual formato y, por tanto, igualmente válido para la presentación del Modelo 347 a partir de 2014
+-   un fichero denominado "Facturas.csv"
+-   y un fichero denominado "Metalico.csv"
+
+*Los dos ficheros adicionales de formato \*.csv sólo se generan si la declaración del 347 tiene contenido*.
+
+El fichero "Facturas.csv":
+
+-   contiene un listado con información del tipo "Tercero", "Fecha Contable", "Impuesto", "Base Imponible", "Cuota", "Total" etc, de todas las facturas susceptibles de incluirse en el fichero txt.
+
+El fichero "Metalico.csv":
+
+-   contiene un listado con información del tipo "Cuenta Financiera", "Identificación de Transacción", "Tercero", "Fecha Contable", "Importe" y "Ejercicio (de devengo)" de todos los cobros en efectivo susceptibles de incluirse en el fichero txt.
+
+#### **Casos de usuario**
+
+##### **Operaciones de compra y venta**
+
+Etendo permite la introducción y contabilización de facturas de compra y de venta, a través de la ventana correspondiente.
+
+El modelo 347 recogerá agrupando por "tercero" y "clave \[A (compras) o B (ventas)\]", las siguientes operaciones de compra/venta que superen la cifra de 3.005,06 euros:
+
+-   compra/venta de bienes/servicios (no sujetos a retención) dentro del territorio de aplicación del impuesto (IVA), España y Baleares
+-   compra/venta de servicios desde/hacia resto del mundo, incluyendo Canarias, Ceuta y Melilla.
+
+No se van a tener en cuenta:
+
+-   operaciones de compra/venta de bienes/servicios intracomunitarias, por reflejarse en otro modelo de hacienda, el Modelo 349, excepto las operaciones que no se incluyen en el Modelo 349.
+-   importaciones/exportaciones de bienes.
+
+###### **Operaciones de compra y venta acogidas a RECC**
+
+Etendo permite la introducción y contabilización de facturas de compra y de venta acogidas al RECC (Régimen Especial de Critero de Caja).
+
+Para ello:
+
+-   la "Organización" debe estar acogida a este Régimen
+-   o bien no acogida pero si alguno de los proveedores de los cuales recibe facturas de compra.
+
+Estas organizaciones deben tener aplicado el juego de datos del módulo "Spain AEAT Modelo 347 Cash VAT compatible.
+
+Este módulo incluye un juego de datos que relaciona los impuestos de IVA de Caja con los parámetros correspondientes del Modelo 347.
+
+Las transacciones de compra/venta se recogen en el Modelo 347 de forma anual conforme al criterio de devengo general de IVA y marcadas como "Operación de IVA de Caja". Además, se incluye la parte correspondiente anual devengada conforme al criterio de IVA de Caja en otro campo.
+
+**Transmisión de Inmuebles**
+
+Etendo permite la introducción y contabilización de transmisiones (ventas) de bienes inmuebles sujetas a IVA.
+
+Este tipo de operaciones se recogen de forma separada en el modelo 347.
+
+Es por ello que se ha creado en el módulo de impuestos para España:
+
+-   categorías de impuestos específicas para los B. Inmuebles (IVA Normal B.Inmuebles e IVA Reducido B.Inmuebles)
+-   rangos de impuestos (IVA) de compra/venta de Bienes Inmuebles
+
+y en el conjunto de datos del 347:
+
+-   un parámetro específico denominado "Transmisiones de Inmuebles" ligado a los impuestos de venta de bienes inmuebles.
+
+###### **Transmisión de Inmuebles sujetas a RECC**
+
+Este tipo de transacciones también se incluyen en el Modelo 347 de forma separada, en computo anual, y marcadas como "Operación IVA Caja".
+
+##### **Arrendamientos**
+
+Etendo permite la introducción y contabilización de facturas de compra y de venta que incluyan arrendamiento de locales de negocio sujetos a IVA.
+
+Solo en el caso de arrendamientos de locales de negocio por parte del propietario de dicho local, se deberá además incluir información adicional sobre dicho inmueble/local, en un registro de tipo Inmueble específico. Para ello, aquellos locales que se den de alta en el maestro de productos susceptibles de ser alquilados deberán configurarse como tales tras activar el nuevo parámetro "Local arrendado".
+
+Esto implica rellenar datos como los que se muestran en la siguiente imagen:
+
+![](https://docs.etendo.software/latest/assets/drive/dE833IZAyk5YYiQiYB9eDDk6wxK_0btiWm0ZxEGjetv8EO6eEVaFX1l49jftJWX3Kzpsjf7CYhV2xKGpTzoPPIHnWOtBreM6VjXKc9pppnC3uX0Da8TQSwz_CSSxFmBEVhREbwCzxTxCExDC9scqtRA.png)
+
+Este tipo de operaciones tienen que reportarse de forma separada en el 347 tal y como se muestra en la siguiente imagen:
+
+![Arrendamiento fichero.png](https://docs.etendo.software/latest/assets/drive/jbFjoMyVVnHbJWnBIr3G76slsiwl0sB1cuiVHPyZU3Fxi0xayrKTqa6KnmpwSN6pZAUm3FPIwxGY8b7sfijsMd2dXLmxmn4WI85_Pr8_F41aL7Y3GQUXNZYqaM4uvGleErZpzWqX3KiMv6ElEGHuxt8.png)
+
+La transacción de venta (B) con el cliente "Cliente Arrendamiento" por un importe anual de 30.310,50, incluye además el arrendamiento de un inmueble por un importe de 13.370.50.
+
+###### **Arrendamientos en RECC**
+
+Estas operaciones se reflejan de forma anual en el modelo 347,marcadas como tal, incluyéndose también la información referente al registro del inmueble arrendado por el declarado. 
+
+##### **Cobros en Efectivo**
+
+Etendo permite la introducción y contabilización de facturas de venta y sus correspondientes cobros en efectivo depositados y contabilizados en Etendo a través de cuentas financieras del tipo "Caja".
+
+  
+Se recomienda configurar el método de pago "Contado" asociado a la cuenta financiera "Caja" como se detalla a continuación:
+
+-   Permitido para Cobro
+-   Depósito automático en cuenta
+-   Cuenta de depósito = Cuenta contable para depósito.
+-   los cobros que para un tercero (cliente) y para un periodo, por ejemplo 2014, que lógicamente será el periodo/año para el cual generamos el 347, superen el umbral de 6.000,00 €
+    -   Dicho cobro puede referirse a operaciones incluidas en facturas de venta contabilizadas en 2014 o años anteriores.
+
+![Cobro Efectivo 2.png](https://docs.etendo.software/latest/assets/drive/rQsEfez1_-0gnYadOcq2Dp9ptPt-fpXnvDJr-dZQKfhGd4CbMhpIZl8--qafNSbneZvk0iTvjQdOyesMqfRe8UKT1l8bwOYiPd4PojgZsEHUXOjQ5o5TiOrFYFxOVfBKW4hIp9qC0W8mkxbVsM54wz4.png)
+
+![Cobro Efectivo 1.png](https://docs.etendo.software/latest/assets/drive/Lxv-BIcYyAGs73YiuQW3z8G7HaswKFky4KLo0tygiKNTTsVyOQuux39shCmeBOucaw5We-Pq56fRIDdRr4VeMlWN2ffdh1Pw-u931b7tv1Ejq87qM-waVMN6DMHFg4VKOpgsvPeTu6Qwfx0BT3Rf_3k.png)
+
+En el fichero ejemplo anterior se puede comprobar que:
+
+-   los cobros en efectivo tanto del "Cliente Efectivo" (por importe de 18.000,00) como del "Cliente Efectivo Varios" (por importe de 6.560,00) se especifican de forma separada en las posiciones (101-115). La diferencia entre estos cobros es:
+    -   para el "Cliente Efectivo Varios", la operación que generó el cobro en efectivo en el año 2014 se devengo y se declaró en el año 2013.  
+        Esa es la razón por la cual no aparece importe de operación alguno en las posiciones 83-98 y el año de devengo de la operación es 2013.
+    -   para el "Cliente efectivo B", la operación que generó el cobro en efectivo se devenga y se cobra en el año 2014, y forma parte del total de operaciones por importe de 81.675,00.
+
+Faltaría un último caso:
+
+El caso en el que un cobro/s del año en curso (2014), sea un cobro/s de transacciones devengadas en un periodo/año anterior y, por tanto, ya declaradas, y transacciones devengadas en el periodo/año en curso y, por tanto, no declaradas, tal y como se muestra en la siguiente imagen:
+
+![Efectivo C 1.png](https://docs.etendo.software/latest/assets/drive/UNvoZgjSZH4I3jP_aiFtWoh588bAF9cXNFgxPj9QwdIVRaSs2LQPqaO0OfaumKmjQOuONVkzQGnDksNIoLc7WsaMn_lM2LfMrDdYTlFaM7rQA2UzZu06m4Yujf8I4zN_3XE-sPOl7SnRi8i7pXJkujA.png)
+
+![Efectivo C 2.png](https://docs.etendo.software/latest/assets/drive/fUbrPtlbC-3LRPMGAoFSLSg5WJL9aJnB-ArVFC3JAq-ED3T3EyPf4rNPjlEEPdIhSqX31YFcp95zSSdXDdxNAwR0Jj6APn121ZA20w1dwxW571BuD2nXIjhchVDKE4BEHosSqTq9cd39qycG3KI9u5M.png)
+
+En la imagen anterior, se ha producido un cobro en el año 2014 por importe de 48.188,25; de los cuales 7.350,75 son por operaciones realizadas y declaradas en el año 2014 y el resto 40.837,50 por operaciones realizadas y declaradas en un ejercicio anterior (2013).
+
+###### **Cobros en Efectivo en RECC**
+
+Todo lo dicho en este apartado aplica igualmente a las operaciones de venta en IVA de Caja que se cobran en efectivo, salvo que en este caso no aplicaría un "Ejercicio" de devengo anterior a 2014, ya que el periodo de validez de este régimen comenzó el 1 de enero de 2014.
+
+Además del importe anual de las operaciones y el importe anual devengado en criterio de IVA de Caja, debe añadirse el importe percibido en metálico, junto con el ejercicio de devengo de dichas operaciones.
+
+##### **Presentación del modelo 347 en formato electrónico**
+
+La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
+
+La presentación telemática puede realizarse a través de la página web de la [Hacienda Pública española](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml){target="_blank"}.
+
+###### **Datos en los ficheros csv**
+
+Tal y como ya se ha mencionado, con módulo "Spain AEAT Modelo 347 for APR" se generan, además del fichero "txt" del Modelo 347, dos ficheros adicionales "\*.csv", un fichero denominado "Facturas.csv" y otro fichero denominado "Metalico.csv".
+
+El fichero csv "XXXFacturas.csv" incluye las siguientes columnas:
+
+-   "**Tipo de documento**".  
+    Estos son las facturas estándar (AP/AR Invoice, AP/AR Credit Memo..etc) de Etendo
+-   "**Número de documento**"  
+    O número de factura/abono.
+-   "**Tercero**"  
+    Cliente o proveedor.
+-   "**NIF/CIF**" del tercero.
+-   "**Fecha Factura**"
+-   "**Fecha Contable**"  
+    Fecha contable de la factura.
+-   "**Impuesto**"  
+    Impuestos del dataset de impuestos para España ligados al parámetro del Modelo 347 correspondiente.
+-   "**IVA de Caja**"  
+    Esta columna nos indica si la factura está o no sujeta a IVA de Caja.
+-   "**Cuota**"  
+    Cuota ligada al tipo de impuesto incluido en la factura
+-   "**Base Imponible**"  
+    Base imponible ligada al impuesto incluido en la factura.
+-   "**Total**"  
+    Suma de la base imponible y la cuota. Este valor es el que hay que tener en cuenta ya que el 347 incluye importes totales, incluído el IVA, al ser una declaración de operaciones con Terceros y no una liquidación de IVA.
+-   "**Tipo de Línea**"  
+    Dado que en el 347 se tiene que incluir de forma separada tanto los arrendamientos como las transmisiones de bienes inmuebles y operaciones de inversión del sujeto pasivo, por tanto, en este campo las opciones que hay son "vacío" para operaciones de compra/venta normales, "Arrendamientos", "Transmisión B. Inmuebles" e "Inversión Sujeto Pasivo".
+
+El fichero csv "XXXMetálico.csv" incluye las siguientes columnas:
+
+-   "**Cuenta Financiera**"  
+    Cuentas financieras de tipo "Caja" de Etendo.
+-   "**Línea de Transacción**"  
+    Número de línea de la transacción en la pestaña "**Transacción**" de la cuenta Financiera.
+-   "**Identificador de Transacción**"  
+    Identificador formado por la cuenta financiera, la divisa, el número de cobro, la fecha del cobro, el tercero y el importe del depósito/cobro.
+-   "**Tercero**"
+-   "**NIF/CIF**" del tercero.
+-   "**Fecha Contable**"  
+    Fecha contable del cobro.
+-   "**Ejercicio**"  
+    Ejercicio en el cual se devengó la operación o factura que se cobra. Este ejercicio puede ser 2014 o anterior para declaraciones del ejercicio 2014.
+-   "**Importe transacción**"  
+    Importe del cobro en metálico.
+
+Estos ficheros csv nos van a permitir saber por ejemplo:
+
+-   que tercero se debe incluir en la declaración y con qué importes por haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
+-   que tercero no se debe incluir en la declaración por no haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
+-   cuales son las facturas de compra cuya suma equivale al "Importe Anual/Trimestral de Operaciones" realizadas con un proveedor en concreto
+-   o bien cuales son los cobros en efectivo cuya suma equivale al "Importe percibido en metálico" de un cliente en concreto, incluido en la declaración.
+
+###### **Presentación de declaraciones sustitutivas**
+
+Es necesario presentar una declaración sustitutiva cuando dicha declaración tenga por objeto anular y sustituir completamente a otra declaración anterior para el mismo periodo ya enviada a Hacienda, en la cual se hubieran incluido datos inexactos o erróneos.
+
+Para ello, el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar la declaración 347 como fichero indicando:
+
+-   que la declaración es sustitutiva
+-   el número de la declaración original que se sustituye
+
+![](https://docs.etendo.software/latest/assets/drive/beimgAXSJ1DvjNuJHa1G2tIQaIYdpHt769PulMwVmx7Y7bT0NJvb08DTbx5rt5GTBVuWu7XxfJ5ZTGw7iyFufV-kRKiw2OCLzoNH17Ul6h3y5ajyc1CcVbAr-XqjfQKBAnUFcjLZ7g1n27uXFZtbX5c.png)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Modelo 349
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 349
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es` <br>
+
+#### **Introducción**
+
+Esta sección aplica al módulo “**Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”** incluído en el módulo de Localización Española de Etendo.
+
+##### **Descripción del módulo**
+
+El nuevo módulo de generación del Modelo 349 como un fichero “.txt” válido de acuerdo a los requisitos establecidos por la Hacienda Española (Orden HAC/360/2002 de 19 de febrero y modificada en última instancia por la Orden HAC/174/2020 de 28 de diciembre) permitirá a las empresas españolas cumplir con sus obligaciones fiscales de presentación de la declaración recapitulativa de las entregas y adquisiciones intracomunitarias de bienes que realicen.
+
+De acuerdo con el reglamento del IVA, están obligados a presentar el modelo 349, los sujetos pasivos del Impuesto que realicen cualquiera de las siguientes operaciones:
+
+-   Las entregas de bienes destinados a otro Estado miembro, entregas de bienes exentas del impuesto.
+-   Las adquisiciones intracomunitarias de bienes sujetas al impuesto.
+-   Las adquisiciones intracomunitarias de bienes y entregas subsiguientes exentas conocidas como “Operaciones Triangulares”
+
+El contenido de la declaración recapitulativa de operaciones Intracomunitarias es:
+
+-   Las operaciones citadas en el párrafo anterior, así como las rectificaciones a cualquiera de las operaciones anteriores ya incluidas en la correspondiente declaración recapitulativa.
+-   Los datos de identificación de los proveedores y adquirientes
+-   así como la base imponible en euros de las operaciones intracomunitarias de bienes declaradas.
+
+En general, la declaración recapitulativa deberá presentarse por cada mes natural durante los veinte primeros días naturales del mes inmediato siguiente, salvo la correspondiente al mes de julio, que podrá presentarse durante el mes de agosto y los veinte primeros días naturales del mes de septiembre y la correspondiente al último período del año, que deberá presentarse durante los 30 primeros días naturales del mes de enero.
+
+Cuando ni durante el trimestre de referencia ni en cada uno de los cuatro trimestres naturales anteriores el importe total de las entregas de bienes y prestaciones de servicios que deban consignarse en la declaración recapitulativa sea superior a 50.000 euros, excluido el Impuesto sobre el Valor Añadido, la declaración recapitulativa deberá presentarse durante los veinte primeros días naturales del mes inmediato siguiente al correspondiente período trimestral.
+
+Si al final de cualquiera de los meses que componen cada trimestre natural se superará el importe mencionado en el párrafo anterior, deberá presentarse una declaración recapitulativa para el mes o los meses transcurridos desde el comienzo de dicho trimestre natural durante los veinte primeros días naturales inmediatos siguientes.
+
+!!! info
+    Desde 2020 se suprime el período anual de declaración.
+
+Las operaciones se entenderán realizadas el día en que se expida la factura o documento equivalente que sirva de justificante de las mismas.
+
+Debido a que en el modelo 349 se deben diferenciar aquellas notas de abono que son rectificación a facturas incluidas en modelos del 349 ya enviados a Hacienda y las notas de abono que no lo son, ha sido necesario crear una funcionalidad que relaciona las notas de abono con las facturas que están siendo abonadas o rectificadas, tal y como se explica en este documento en la sección “Casos de usuario. Operaciones rectificativas del 349”
+
+!!! info
+    El módulo de generación del Modelo 349 no incluye las operaciones triangulares, puesto que dichas operaciones no se gestionan en Etendo. 
+
+Este módulo no tiene en cuenta las transacciones correspondientes al tipo de documento de Etendo “AP/AR credit memo” como facturas de abono, ya que dicho tipo de transacciones no reflejan devoluciones de mercancía, es por ello que el módulo 349 tendrá en cuenta los tipos de documento AP/AR invoice (como facturas de compra y venta) y los tipos de documento AP/AR invoice negativos (como notas de abono o facturas rectificativas).
+
+Además, no se incluye en el módulo de funcionalidad el supuesto de Declaración Complementaria para aquellos casos en que deban incluirse solo las operaciones que, debiendo haber sido declaradas en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deberán ser incluidas por el usuario manualmente, a través de la página de la AEAT tal y como se explica en la sección de este documento “Declaración Complementaria”.
+
+#### **Instalación del módulo**
+
+Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+Es importante recalcar que:
+
+-   El módulo del Modelo AEAT 349 incluye el correspondiente conjunto de datos que relaciona los tipos/rangos de impuestos con los parámetros del 349.
+-   Una vez instalado el módulo, éste se debe aplicar a la Organización para la cual se requiere obtener el modelo 349, tal y como se describe en el apartado siguiente.
+
+##### **Aplicación del Módulo**
+
+Una vez instalado el módulo del 349, el usuario debe aplicar el módulo del 349 a la organización legal con contabilidad que corresponda.
+
+Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización (\*) y, por tanto, a la organización legal para que se quiera obtener el 349, dicho módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo de declaración del 349, y debe estar instalado previamente.
+
+El usuario deberá navegar a "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado (primero el módulo de impuestos, si no está aplicado previamente, y después el módulo del 349).
+
+##### **Configuración del módulo para la organización con contabilidad**
+
+Una vez instalado el módulo del 349 por cualquiera de los procedimientos anteriores, el usuario debe aplicar el módulo del 349 a la organización legal con contabilidad que corresponda.
+
+Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización legal con contabilidad previamente, dicho módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo de declaración del 349, y debe estar instalado y aplicado a la organización previamente.
+
+El usuario deberá navegar a "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado (primero el módulo de impuestos si no está aplicado previamente y después el módulo del 349).
+
+#### **Configuración del módulo**
+
+##### **Configuración del modelo 349**
+
+Este módulo de generación del modelo 349 como un fichero de texto (“\*.txt”) válido conforme a los requerimientos de la Hacienda Pública Española, se basa en la funcionalidad del “Generador de declaraciones de impuestos”.
+
+El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos, que el modelo 349 está creado como informe anual, trimestral o mensual de impuestos, todos con la misma configuración:
+
+![](https://docs.etendo.software/latest/assets/drive/H0HWfOy7IdB5yLwjirTyqV4jjt9pCbVBTk0lZlXCnufLFyy1zAos1vJiKc0Wgsydgfs3H5RtRsFpPg7UcQXvX924p8_3Taq958X892bGQbJCsMqKjxmenrRR7j3NPFZTcbTE9oQgv9zdWwU9-ngWWh1cIdzW-78QmhNv6SBuuTAUSn_h_N9dotFwXQ.png)
+
+En la pestaña “Secciones de la declaración” se han creado 4 secciones:
+
+![](https://docs.etendo.software/latest/assets/drive/vgoWI1diiY_P5qHvQxVKR-bl45Z8XjklTv3NmDsdvGUs47FO_5rOG-1iHbXUXJvJgbMrIVFi4o6K2uExaU-quP9Dhj8z5E4T5bLhOaC-UfkPdriINML5ZQldERE6KkGqjl3A1-eqqIrcqJmCxujcgbe6loYARcfVDZWZVLggYf9-f7LUz3gdGa5IxQ.png)
+
+-   **Fichero** esta primera sección contiene un parámetro de tipo entrada para que el usuario pueda introducir el nombre del fichero del 349 como parámetro de entrada a la hora de generar el fichero.
+-   **Identificación y Totales** esta segunda sección tiene:
+    -   **4 parámetros de tipo “entrada”** que se mostrarán en el momento de generar el 349 con el fin de que el usuario los introduzca manualmente:
+        -   Persona de contacto: Apellidos y nombre de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el nombre de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Teléfono de contacto: Número de teléfono de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el teléfono de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Declaración sustitutiva (si/no)
+        -   Identificador declaración anterior: Número de la declaración a sustituir.
+    -   **3 parámetros de tipo “salida”** que el sistema recogerá de la base de datos:
+        -   Año
+        -   Nombre de la organización
+        -   NIF/CIF de la organización
+-   **Operaciones** esta tercera sección tiene 2 parámetros de tipo “salida” que asociados a los tipos impositivos correspondientes incluirán las operaciones en el 349:
+    -   Entregas intracomunitarias de bienes – Clave tributaria E
+    -   Adquisiciones intracomunitarias de bienes – Clave tributaria A
+-   **Constantes** esta cuarta sección tiene 11 parámetros de tipo “constante”:
+    -   Constante en caso de informe anual (0A)
+    -   Constante para el primer trimestre (1T)
+    -   Constante para el segundo trimestre (2T)
+    -   Constante para el tercer trimestre (3T)
+    -   Constante para el cuarto trimestre (4T)
+    -   Número de declaración del 349 (349 se reemplaza al remitir el fichero)
+    -   Tipo de declaración (349)
+    -   Línea tipo 1 (1)
+    -   Línea tipo 2 operaciones (2)
+    -   Línea tipo 2 correcciones (2)
+    -   Presentación (T)
+
+##### **Configuración de impuestos**
+
+Este nuevo módulo de generación del modelo 349 se basa en el módulo de impuestos para España y en uno específico para el 349.
+
+El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Rango impuesto - pestaña Parámetro de Impuesto que los “tipos impositivos/impuestos” que deben incluirse en el 349 se han asociado al correspondiente parámetro de impuesto del 349:
+
+-   Los tipos de IVA de adquisiciones intracomunitarias se han asociado con el parámetro “Adquisiciones intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “A”
+
+![](https://docs.etendo.software/latest/assets/drive/KfmRrt9yoEP7_JdY9pGj74eYjDSqeyfBKSdPOhVonW4dkyhp_ooo6fq_VvIR-JcZsvSLAqbAMCowQduY6t-bMNJ_XJCHhqpkFCqo9Fkddj0GPykc5YhEp8TZKoOmZTXyWLYNY2PgG-JTVAdV2I6h_gZLLB-n48YQGkJdC5M8_iKRF7lv0W6I93sY6w.png)
+
+-   Los tipos de IVA de entregas intracomunitarias se han asociado con el parámetro “Entregas intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “E”
+
+![](https://docs.etendo.software/latest/assets/drive/M9IdlZd-5bo-JKwXpqzeEiWsaa3ONYSfKXANXvyS8TFgbYrOUVg4LjLNidbkGB9lpDkSyNFJQeaV3JpBU_U6IFw2deN8Hi7v5zQhzvAuZNHfE4C2cXoxZu6orkao7wqoXLbdfN40AkRo2obRJexQcI_PQAlOY85AwyUL_-pfUnFrUBHBkhkiMN8Odg.png)
+
+#### **Generación del modelo 349**
+
+El modelo 349 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos. El usuario puede generar el modelo 349 para cualquier mes natural, trimestre natural o bien para el año que desea, tal y como se muestra en las pantallas siguientes:
+
+![](https://docs.etendo.software/latest/assets/drive/ajXlOv6TaSCfuNPH4ti4kb0oWm2V4BommSomzro0ZtwUi9P_MqK2QydL8RjnbP9dZ0jdU_iXnYr958xhg5mmGYK1msnKIQqnGKVrNVT6EqQYsqK4hGfKR7VV21YB2EvluSKzXnC4AWnPo2ZLENR5mSWIlsKMKbGdPJ2kZn8VilJkc7KVL20L9bW8pg.png)
+
+![](https://docs.etendo.software/latest/assets/drive/bexJeVp33GqVPTWs2j-Z5_3gP2ywX0ej3VPCpQBrbBBkogNFQZ02p_hkUr2y9GipS0Z8uZ8zIj_zFIli04pNqqzK4FGSbPFiFgPlYShPVMCcvSuBIGxAZhBT2gbMtxm2nV_omJ3BguAthe6i320j95im5TmxSCsnmech5ZFWUyUhhks4MFsTvxIVqw.png)
+
+![](https://docs.etendo.software/latest/assets/drive/lj6JxfJvSCO3n4p3kIK_SIXgIbUVY0Oqt4iJJMZPJGYy-JhM3rp6C96LMeAGmK5p33pacEBtCOb0Llmm1G4IoWG6KiEpvPY_IQjyDXZ2lf5uqZBt2_geN7M-aG-97lFUFC16BLcCK6XAB5hC-e18eBunH1RQfRX2_tOwNBJEFVgVwOkf5POwOFWRuw.png)
+
+En la ventana de generación de informes, el usuario deberá introducir los siguientes datos para generar el modelo 349:
+
+**Organización** para la cual quiere generar el Modelo 349. El sistema mostrará el calendario asociado a la organización en un campo no editable.
+
+**Esquema contable**
+
+**Declaración de impuestos**. El usuario debería seleccionar aquí el modelo 349 mensual, trimestral o anual.
+
+**Ejercicio**. El usuario puede seleccionar el año para el cual quiere obtener el 349.
+
+**Periodo**. Si el usuario ha seleccionado el modelo 349 mensual, podrá seleccionar aquí el período (por ejemplo, enero 22), si ha seleccionado el modelo 349 trimestral, podrá seleccionar aquí el período (por ejemplo, enero 22 – marzo 22) y si ha seleccionado el modelo 349 anual, este campo mostrará, como valor por defecto, “Anual”.
+
+Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 349 en el botón de proceso “Parámetros de entrada”
+
+![](https://docs.etendo.software/latest/assets/drive/5i9PO0yuY0M54bcqQ5wMi6y9VjSP18KJBqhgyUFL5pfn5NST30ZaM-zOyqWJZ4KfkX_0m7B_jNUUfhUKNDOI5iNYxD6xlx0b54ajbT0_26cnQGYRKIBLdzoDcCEiYz-08U-TOsJ9Q8vKm_XeSi7AChRNm-sSwhL8zmq99ULTHXlMTXTTXGuM1kZP.png)
+
+y una vez introducidos los parámetros de entrada, el usuario puede generar el 349 a través del botón de proceso “Generar fichero”.
+
+##### Navarra y Guipúzcoa
+
+Se incluyen 2 nuevos check que permiten generar el fichero con la parametrización correcta para poder realizar su presentación en Hacienda Navarra y Hacienda Guipúzcoa:
+
+![](https://docs.etendo.software/latest/assets/drive/yM3HJ5ASqiH4Qs-ZgFfKANQSIVTin-DqGq0zKSmvduihJS7WOddNRd448Wv5eni03bNiwWYjVCVtZU47t4sUIyIfF18hUY-JL-oA2B_0374_CXHpXvsPICoc0TtxcvEnrrJ_ZK6ezf1gUzdsvhxXdr8.png)
+
+Anteriormente, el fichero generado del modelo 349 sólo se podía presentar en AEAT. Con esta mejora, se permite la presentación tanto en Navarra como en Guipúzcoa en función del check que marquemos (si no se marca ninguno, el fichero se genera con la parametrización para la AEAT).
+
+#### **Casos de usuario**
+
+##### **Generación del modelo 349 como un fichero de texto válido**
+
+Esta funcionalidad permitirá a las empresas españolas generar el modelo 349 como un fichero de texto conforme a los requisitos establecidos por la normativa española, para un periodo determinado.
+
+Durante el año/trimestre/mes natural, el usuario registrará en Etendo las transacciones de compra y/o devolución con sus proveedores de la Unión Europea así como las transacciones de venta y/o devoluciones de ventas con sus clientes de la unión europea.
+
+Las transacciones de compra y venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y factura de compra =AP invoice) y de venta (albarán de venta y factura de venta =AR invoice), respectivamente.
+
+Las transacciones de devolución, tanto de compra como de venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y abono de compra =AP invoice Negativa) y de venta (albarán de venta y abono de venta=AR invoice Negativa).
+
+Además, deberá asegurarse de que todos los productos tienen la parametrización adecuada en relación con las categorías de impuestos que tienen asociadas (21%-10%-4%).
+
+Una vez que todas las operaciones se han registrado en el sistema, el usuario podrá generar el fichero del modelo 349 tal y como se explicó en la sección de este documento “Generación del Modelo 349”. El fichero txt del 349 tiene la siguiente estructura:
+
+![349 4T.png](https://docs.etendo.software/latest/assets/drive/4_Ps-YvMKdQKgeHJ_8HkhOwYAerhc8oX6OB58UG1NX5nSoSPBvgsR6vpY2MjmJk1pOhsFk4SmLv_ETEI4Fm4ZBDkWuxdFH4ZcDSJ83NIb3m9QNrqqWssPrfkpRjovNPC2MpEfj9CTun2h_BQgo0TNyAt5gyqhJFR6Qr5dt5T91F5tH-HCYkaJABLfw.png)
+
+##### **Tipo registro 1 – Registro de declarante:**
+
+|     |     |
+| --- | --- |
+| **Posiciones** | **Descripción** |
+| **1** | Tipo de Registro (constante = 1) |
+| **2-4** | Modelo Declaración (constante = 349) |
+| **5-8** | Ejercicio |
+| **9-17** | NIF del declarante |
+| **18-57** | Apellidos y nombre o razón social del declarante |
+| **58** | Blanco |
+| **59-107** | Persona con quién relacionarse: Teléfono / Apellidos y nombre |
+| **108-120** | Número identificativo de la declaración |
+| **121-122** | Declaración complementaria o substitutiva |
+| **123-135** | Número identificativo de la declaración anterior |
+| **136-137** | Periodo (predeterminado = 1T,2T,3T,4T,0A,01,02,03,04,05,06,07,08,09,10,11,12) |
+| **138-146** | Número total de operadores intracomunitarios |
+| **147-161** | Importe de las operaciones intracomunitarias |
+| **162-170** | Número total de operadores intracomunitarios con rectificaciones |
+| **171-185** | Importe de las rectificaciones |
+| **186** | Indicador cambio periodicidad en la obligación de declarar |
+| **187- 390** | Blancos |
+| **391 - 399** | NIF del representante legal |
+| **400 - 500** | Blancos |
+
+##### **Tipo de Registro 2 – Registro de operador intracomunitario**
+
+|     |     |
+| --- | --- |
+| **Posiciones** | **Descripción** |
+| **1** | Tipo de Registro (constante = 2) |
+| **2-4** | Modelo Declaración (constante = 349) |
+| **5-8** | Ejercicio |
+| **9-17** | NIF del declarante |
+| **18-75** | Blancos |
+| **76-92** | NIF del operador comunitario |
+| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
+| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
+| **134-146** | Base Imponible o Importe |
+| **147-178** | Blancos |
+| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
+| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
+| **236- 500** | Blancos |
+
+##### **Tipo de Registro 2 – Registro de rectificaciones**
+
+|     |     |
+| --- | --- |
+| **Posiciones** | **Descripción** |
+| **1** | Tipo de Registro (constante = 2) |
+| **2-4** | Modelo Declaración (constante = 349) |
+| **5-8** | Ejercicio |
+| **9-17** | NIF del declarante |
+| **18-75** | Blancos |
+| **76-92** | NIF del operador comunitario |
+| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
+| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
+| **134-146** | Blancos |
+| **147-178** | Rectificaciones   <br>  <br>\- 147-150 ejercicio (de la declaración que se corrige)   <br>\- 151-152 periodo (de la declaración que se corrige)   <br>\- 153-165 base imponible (para el tercero y el periodo) rectificada   <br>\- 166-178 base imponible (para el tercero y el periodo) declarada anteriormente |
+| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
+| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
+| **236- 500** | Blancos |
+
+##### **Operaciones rectificativas del 349**
+
+En el modelo/fichero del 349 hay que diferenciar de forma específica en el registro tipo 2 de "Rectificaciones aquellas notas de abono a facturas que ya fueron incluidas en una declaración 349 para un periodo anterior al corriente, por ejemplo:
+
+-   **Declaración 349 Mensual** = Una nota de abono de fecha agosto del 2022 que abona una factura de fecha julio del 2022 que ya fue incluída en la declaración del 349 del mes de julio del 2022. La nota de abono de fecha agosto debe incluirse en la declaración del mes de agosto como rectificativa a la declaración del mes de julio para el proveedor/cliente que aplique, indicando además el importe total (base imponible) de compra/venta que se incluyó en la declaración de julio para ese cliente/proveedor.
+-   **Declaración 349 Trimestral** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma trimestral, lo único que varía en este escenario es que en vez de tener en cuenta meses se tendrán en cuenta trimestres.
+-   **Declaración 349 Anual** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma anual, lo único que varía en este escenario es que en vez de tener en cuenta meses/trimestres se tendrán en cuenta el año natural.
+
+Y las que no y deben acumularse para el periodo, por ejemplo:
+
+-   **Declaración 349 Mensual** = Una nota de abono de fecha de agosto 2022 que abona una factura de fecha de agosto 2022 que todavía no ha sido incluida en la Declaración del 349 para el mes de agosto del 2022, se incluirá en la declaración de agosto como un menor valor del importe de compra/venta con el correspondiente proveedor/cliente.
+-   **Declaración 349 Trimestral o Anual** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma trimestral o Anual, lo único que varía en este escenario es que en vez de tener en cuenta meses se tendrán en cuenta trimestres o el año natural.
+
+Es por ello que se ha introducido en el sistema una funcionalidad que permite al usuario, a la hora de crear una nota de abono o devolución, indicar si dicha nota de abono/devolución es una “rectificativa del 349” o no, es decir, si rectifica a una factura (factura rectificada) de un año/mes/trimestre natural anterior y que, por tanto, ya se incluyó en una declaración del 349 anterior.
+
+Para introducir esta información, el usuario deberá navegar a Gestión de compras o Ventas / Transacciones / Factura (Proveedor) o Factura (Cliente), crear una nueva factura como:
+
+-   una AP/AR invoice negativa (devolución de mercancía al proveedor/cliente)
+-   una AP/AR credit Memo
+-   una Reversed Purchase/Sales Invoice
+-   o incluso la anulación total de una factura de compra/venta;
+
+e introducir los datos relativos al abono y devolución de mercancía y, en la pestaña “Factura Rectificativa”, crear un nuevo registro con el fin de:
+
+-   seleccionar la factura (original) que esta abonándose o rectificándose - esa selección ya vendŕa dada en caso de anulación total de una factura.
+-   y además seleccionar el nuevo campo “Rectificativa del 349”, con el fin de indicar además:
+    -   el Año de la factura original que se rectifica
+    -   el Periodo de la factura original y, por tanto, el periodo en el cual dicha factura original se incluyó en un 349
+    -   La base imponible del 349 de productos o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de productos (Clave A en compras, Clave E en ventas)
+    -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios (Clave I en compras, Clave S en ventas)
+
+![](https://docs.etendo.software/latest/assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
+
+Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostrar en Etendo las columnas que se detallan a continuación:
+
+-   Correctiva del 349
+-   Año
+-   Periodo
+-   Base Imponible del 349 Productos
+-   Business Partner
+-   Base Imponible del 349 Servicios
+
+!!! info
+    No todas las notas de abono o devoluciones de mercancía serán rectificativas del 349, sólo aquellas que así se configuren por el usuario. 
+
+En caso de que la nota de abono o devolución de mercancía y la factura original pertenezcan al mismo periodo, por ejemplo al 1er mes del año 2022 (Enero 2022, en caso de declaración del 349 mensual), al 1er periodo del año 2022 (Enero 2022 a Marzo 2022, en caso de declaración del 349 trimestral) o al mismo mes (Enero 2022, en el caso de declaración del 349 mensual), tan sólo será necesario relacionar ambos documentos en la nueva pestaña “Factura Rectificativa” sin tener que seleccionar el parámetro “Rectificativa del 349”.
+
+En este último escenario, el sistema, para un mismo proveedor o cliente y periodo, acumulará las facturas positivas y los abonos con el fin de generar el computo global del importe de las transacciones de compra/venta efectuadas con dicho proveedor/cliente (operador intracomunitario) que debe incluirse en la declaración del 349 para un periodo determinado.
+
+##### **Presentación del modelo 349 en formato electrónico**
+
+La presentación telemática del modelo 349 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
+
+La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde el enlace “Oficina virtual”-”Presentación de declaraciones” - “Todas las declaraciones” - “Modelo 349”
+
+!!! info
+    Existe una “Guía de presentación telemática” en la página web de Hacienda que nos explica cómo debe realizarse la presentación telemática de las declaraciones y que se puede descargar [*aquí*](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).
+
+
+##### **Presentación de declaraciones sustitutivas**
+
+Es necesario presentar una declaración sustitutiva cuando dicha declaración tenga por objeto anular y sustituir completamente a otra declaración anterior para el mismo periodo ya enviada a Hacienda, en la cual se hubieran incluido datos inexactos o erróneos.
+
+Para ello el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar una nueva declaración 349 como fichero indicando en este caso que la nueva declaración que se presenta es sustitutiva de una anterior, e indicando además el número de la declaración original a la que sustituye, tal y como se muestra en la siguiente pantalla:
+
+![](https://docs.etendo.software/latest/assets/drive/iSU9FGfN3pSTIsHPTAKpZsKZsCB7C0BhZa1RBDpzcJQ8uaOHAUmMPFuYQkhQbrQ2izd9kDfZ0TCiEHdGvHIE7iHOc-uDNoBEhDS5cF9x__Bf2rQgvz47h3U88ViVeZimkAUXctFTFhF9gZYbywo3Nb23iqRQ0Tfq03VSTqcEOcsQQnYJVi6MGxDajA.png)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Modelo 390
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 390
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat390.es`
+
+#### **Introducción**
+
+El presente manual de usuario explica el contenido y funcionamiento del módulo comercial de Etendo, “**Modelo 390**”. 
+
+#### **Descripción del Modelo** 
+
+El módulo **Modelo 390** permite a las empresas cumplir con sus obligaciones fiscales relativas a la obligatoriedad de declarar un resumen anual de la liquidación del IVA durante el ejercicio fiscal.
+
+Esta declaración se debe enviar a la AEAT como un fichero XML de acuerdo con la normativa vigente.
+
+El Modelo 390 se debe presentar cada año durante los primeros 30 días del mes de enero del año siguiente, junto con la autoliquidación del IVA Modelo 303 correspondiente al último periodo del año.
+
+La liquidación anual del IVA permite al usuario calcular el importe anual que debe pagar a, o ser devuelto por Hacienda como la diferencia entre el IVA devengado y el soportado deducible.
+
+Con este nuevo módulo comercial, el Modelo 390 se puede presentar a Hacienda como un fichero de texto válido, obtenido a través del "Generador de Declaraciones de Impuestos".
+
+#### **Contenido del fichero Modelo 390**
+
+El fichero generado por Etendo, que cumple con el formato requerido por la Agencia Tributaria, contiene una estructura en formato XML con las siguientes secciones:
+
+-   Sujeto Pasivo y devengo
+-   Datos Estadísticos
+    -   Actividad
+    -   Clave
+    -   Epígrafe
+-   Datos del Representante
+    -   Personas Físicas
+    -   Personas Jurídicas
+-   Operaciones realizadas en régimen general (IVA Devengado)
+-   Operaciones realizadas en régimen general (IVA Deducible)
+-   Resultado liquidación anual
+-   Tributación por razón de territorio
+-   Resultado de las liquidaciones
+    -   Periodos que no tributan en Régimen especial del grupo de entidades
+-   Volumen de operaciones
+    -   Operaciones en Régimen General
+    -   Operaciones en RECC
+    -   Entregas Intracomunitarias Exentas
+    -   Operaciones exentas sin derecho a deducción
+    -   Exportaciones y otras operaciones exentas con derecho a deducción
+    -   Operaciones no sujetas por reglas de localización o con inversión del sujeto pasivo
+    -   Entregas de bienes inmuebles y operaciones financieras no habituales
+    -   Entregas de bienes de inversión
+-   Operaciones específicas - Operaciones realizadas en el ejercicio
+    -   Adquisiciones interiores exentas
+    -   Adquisiciones intracomunitarias exentas
+    -   Servicios localizados en el territorio de aplicación del impuesto por inversión del sujeto pasivo
+    -   Entregas de bienes y prestación de servicios en RECC, criterio devengo art 75 LIVA
+    -   Adquisiciones de bienes y servicios en RECC, criterio devengo art 75 LIVA
+
+Al contrario de otros modelos tributarios, este fichero XML no se puede importar en ningún software de la AEAT para su previsualización y edición.
+
+Sin embargo, debido a su estructura XML, este fichero se puede abrir directamente con cualquier editor de texto plano y su contenido es fácilmente entendible.
+
+A continuación se muestra como ejemplo un fragmento de dicho fichero:
+
+![](https://docs.etendo.software/latest/assets/drive/3QJUPmIRRgydZM5-NvNgNFFdnM3pL6nmrrOkKyK9954vq1uCkiyLLrpxXy6BYWDfqGCWGU-syZWT6e4-ELClbkW_zjf3sssmTsohd-XoHntzYFwUzQiw5aqWybMwI6NLu1zTGp7b_Kz_h4xexbEYQdvwGquwY_AUWxwg_7dXC0byB3bmWGfcgfGke70i5w.png)
+
+Para facilitar el estudio y la comprensión de las cifras obtenidas y, debido al gran número de transacciones y tipos de impuestos que pueden incluirse en este modelo, el módulo del Modelo 390 de Etendo genera un fichero .csv que puede abrirse con cualquier software de Hoja de Cálculo. 
+
+Este fichero .csv lista todas las transacciones incluidas en el fichero XML, el impuesto relacionado, el importe de base imponible y cuota junto a la casilla del Modelo 390 oficial en la que se ha incluido dicha transacción.
+
+#### **Instalación y configuración del módulo**
+
+##### **Instalación**
+
+El soporte para el Modelo 390 en Etendo se distribuye en un único módulo. Este módulo tiene un gran número de dependencias, que serán instaladas automáticamente al instalar el 390. Entre estas dependencias destacan:
+
+-   Taxes: configuration for Spain (Impuestos para España)
+-   Tax Report Launcher
+-   Provincias de España
+-   Epígrafes del I.A.E.
+-   Legal Representative of the Organization (representante legal de la organización)
+
+Para su instalación el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible del paquete profesional de Etendo Classic para España
+-   o la instalación del módulo(s) de forma separada.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+Adicionalmente, el Modelo 390 se distribuye en otro módulo compatible con el "Régimen Especial de Criterio de Caja" (RECC). Este módulo sólo contiene el juego de datos que relaciona los impuestos de IVA de Caja con los parámetros de declaración del Modelo 390 correspondientes. Si su organización está sujeta a este régimen o es destinataria de operaciones sujetas a este régimen, deberá instalar además este módulo.
+
+##### **Aplicación del módulo**
+
+Los módulos del Modelo AEAT 390 incluye un "conjunto de datos" o "configuración" que relaciona los tipos/rangos de impuestos para España, incluidos los de IVA de Caja, con los parámetros de declaración del 390.
+
+Es por ello que, una vez instalado el módulo, la "configuración del Modelo 390" debe aplicarse a la Entidad legal con Contabilidad que corresponda, en la ruta de aplicación:
+
+Configuración General | Organización | Gestión del módulo de Empresa.
+
+![](https://docs.etendo.software/latest/assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
+
+!!! info
+    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
+
+
+Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
+
+1\. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
+
+![](https://docs.etendo.software/latest/assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
+
+De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2021.
+
+2\. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
+
+![](https://docs.etendo.software/latest/assets/drive/xl0hUWgK97dvKk9LYorJ4vXXpltQStE57Zd_QmJ7BMlmTgWxmNBDiWnjz8FznBhE39VtlzT8WOd5sVjWVsnzgDa3mRuXsc-IU0e8M9O2CDxE6f1Zs9tSjwMZsJPIXGhgy_hzwe4Rlpszp9GHu0Wd4WocXCEHmOoukjpUTjGKM2Hy2kQzd3Wz9Q_dYJMhJQ.png)
+
+En la imagen del ejemplo se muestra como las bases imponibles/cuotas ligadas al rango de impuesto "Entregas IVA 21%" se reflejarán en las casillas correspondientes del 390 relacionadas con:
+
+-   IVA devengado - Operaciones en Régimen General
+-   IVA devengado - Modificación de bases y cuotas (en el caso de abonos o facturas rectificativas)
+-   IVA devengado - Total Bases y Cuotas IVA
+-   Volumen de operaciones - Operaciones en Régimen General
+
+3\. Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación del modelo 390 del período fiscal que corresponda, desde la ruta de aplicación:
+
+Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos.
+
+##### **Tipos de documentos soportados por el módulo**
+
+El informe se genera teniendo en cuenta la información disponible en las facturas de compra y venta contabilizadas que incluyan alguno de los impuestos declarados en la configuración del informe.
+
+Más concretamente, los tipos de factura soportados son:
+
+-   Facturas de venta tipo AR Invoice positivas
+-   Facturas de venta tipo AR Invoice negativas
+-   Facturas de venta de tipo Reversal negativas
+-   Abonos de venta (Credit Memo) positivos
+-   Facturas de compra tipo AR Invoice positivas
+-   Facturas de compra tipo AR Invoice negativas
+-   Facturas de compra de tipo Reversal negativas
+-   Abonos de compra (Credit Memo) positivos
+
+##### Configuración previa antes de generar el informe
+
+###### **Impuestos**
+
+!!! info
+    No es necesario realizar ninguna configuración adicional si tiene aplicado y utiliza el Módulo de Impuestos para España y el Módulo de Impuestos para España de IVA de Caja. 
+
+Es por ello que se recomienda utilizar estos módulos de impuestos para España.
+
+Las transacciones relacionadas con impuestos creados manualmente sólo se incluirán en el Modelo 390 si se relacionan correctamente con el/los parámetros del 390 que corresponda:
+
+-   si, por ejemplo, se crea un nuevo tipo de IVA de compras nacionales de bienes al 21%, dicho impuesto debería estar relacionado con los parámetros:  
+    "Modelo 390 v 2021 - Declaración Anual de IVA - IVA Deducible - Operaciones Interiores Corrientes - IVA Deducible en operaciones interiores de bienes y servicios corrientes."  
+    "Modelo 390 v 2021 - Declaración Anual de IVA - IVA Deducible - Rectificación de deducciones."
+
+Recuerde que Etendo en la actualidad no contempla que un rango de impuesto de compras pueda definirse como parcialmente deducible.
+
+Configuraciones del tipo:
+
+-   Impuesto padre "Adquisiciones IVA 21% (no 100% deducible)"
+    -   Impuesto hijo "Adquisiciones IVA 21% (50% deducible)" con un índice 10.50, marcado como "Impuesto Deducible".
+    -   Impuesto hijo "Adquisiciones IVA 21% (50% no deducible)" con un índice 10.50, marcado como "Impuesto No deducible"
+
+no permitirán la generación del Modelo 390 ya que el índice 10.50% no es un índice o tipo que reconozca el fichero del 390.
+
+Estos impuestos no deberán estar ligados a parámetros del 390 y sus importes (base y cuota) deberán reflejarse en el programa "IVA 2021" o el que corresponda de forma manual.
+
+###### **Actividades del I.A.E.**
+
+En el Modelo 390 se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
+
+El módulo Epígrafes I.A.E., instalado como dependencia del 390, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 390 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
+
+![](https://docs.etendo.software/latest/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
+
+En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
+
+###### **Representante Legal de la Organización**
+
+Si su organización tiene uno o varios representantes legales debe declararlos en la solapa correspondiente de la ventana Organización, que está disponible al instalar el módulo Legal Representative of the Organization (representante legal de la organización).
+
+![](https://docs.etendo.software/latest/assets/drive/yXySL0UNxH9GjB2DhIDbmoLdXxISY9aj4zmmZbU-1Y2usima7UM_5a7yLx09zNDmAgbtkf_SSCNZPcb2urJ_3ePFmHFQnqtaVN4QDfNI2dRxwgdtOuMWhOx_gnpMfrN6STY5jh9ZswHTceH1gUWu-mnwenFo-yKbOn0DMs-0_eGv1QK2lsOEkuDf9vppNQ.png)
+
+##### **Generación del modelo 390**
+
+Tal y como ya se ha explicado, el modelo 390, se genera como un fichero XML válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos | Generador de declaraciones de impuestos
+
+Una vez que el usuario ha introducido los datos genéricos, tales como la "organización", el "ejercicio" y "periodo", así como la "Declaración de Impuestos'', puede introducir los parámetros de entrada propios del Modelo 390 para posteriormente generar el fichero.
+
+La ventana de "parámetros de entrada" del 390 se muestra en la siguiente imagen:
+
+![](https://docs.etendo.software/latest/assets/drive/8E1H3y4j_5fmJ2K87L8xc2v10m8UvRU-ub-M3flFlZbORFRpy9LDEs80TBAteUllGVPdzAJ6dCOeiVtQkk5506tixB29SWgte_QF8PKQPl7Kq_UKT8BWu8snG4dOTY_X6bKiaEol3NwlDrO6uvf-GGVmylSiX-3cejwlHi577Y1eKobtQFLwJBq1haz17A.png)
+
+Los parámetros de entrada tienen que ver con datos que no pueden extraerse directamente desde Etendo. Datos como:
+
+-   check para indicar si se está "**Inscrito en el registro de devolución mensual**"
+-   campo de texto para introducir un **Nombre del fichero** del 390
+-   check para indicar si "**Ha sido declarado en concurso de acreedores en el ejercicio**"
+-   check para indicar si "**las autoliquidaciones del último periodo de liquidación del ejercicio corresponden a declaraciones concursales**"
+-   check para indicar si se trata de una "**Declaración Sustitutiva**"
+-   check para indicar si se trata de una "**Declaración sustitutiva por rectificación de cuotas**"
+-   campo de texto para introducir el "**Número identificativo de la declaración anterior**" que se sustituye o rectifica
+-   campo de texto para introducir si aplica la cuota a "**compensar del ejercicio anterior**" 
+-   campos de texto para introducir los "**% de tributación por razón de territorio**", en los casos en que no hay una tributación al 100% al territorio común.
+    -   Si se introduce un valor aquí (p.ej 50% territorio común, 50% Navarra) el resultado de la liquidación anual se borra y pasa a la casilla Resultado de la liquidación anual atribuible a territorio común.
+-   campo de texto para introducir la cuota a **Compensar atribuible a territorio común** 
+-   campos de texto para introducir los **resultados a ingresar en las autoliquidaciones de IVA del ejercicio**, si aplica.
+-   campos de texto para introducir el **total de devoluciones mensuales/trimestrales de IVA** (Modelo 303 en los casos de inscripción en el registro de devolución mensual
+-   campo de texto para introducir el **Resultado de la autoliquidación del último período a compensar**
+-   campo de texto para introducir "las cuotas pendientes de compensación al término del ejercicio" 
+
+
+
+
+###### **Transformación de parámetros de entrada en constantes**
+
+Como se puede observar, el número de parámetros de entrada es muy elevado. Para evitar tener que introducir todos estos datos cada vez que se genera el informe, el módulo del 390 permite definir como constantes cada uno de los parámetros de entrada. Para ello sólo tiene que encontrar el parámetro de entrada en la definición del informe (ventana Declaración de impuestos), cambiarle el tipo de parámetro a constante y definir el valor de dicha constante.
+
+Por ejemplo, en nuestra organización el porcentaje de tributación en Territorio Común es el 50% por lo que cambiamos ese parámetro a tipo constante con un valor de 50
+
+![](https://docs.etendo.software/latest/assets/drive/oPL91YrGG3zCsXi6j_4OtAmkDz1BaSshkNuh7EHEaKaA0GRfAULiEa-FMJ9FAIvUYC0bmbd1opqeGAbrOyYqaqa1DuTCQEsBwYKu_1KYlCgVmXMg7MC1GIHOjh4m6DpDIQPYe7-l1rzoLdb6b_O58kAj31JExjZ7q4SUVrl_-2rNyDH59cMTDK7wJKkBdg.png)
+
+A partir de ahora, cada vez que generemos el informe de nuevo no será necesario introducir este parámetro, ya que ni siquiera aparecerá de nuevo en la ventana de parámetros de entrada del 390.
+
+#### **Resultado del Modelo 390**
+
+Una vez que el proceso de generación del informe ha finalizado, el sistema nos devolverá un fichero comprimido ZIP. Si lo descomprimimos, en su interior encontraremos dos ficheros:
+
+##### **Fichero XML**
+
+Este fichero XML es compatible con el formato oficial publicado en el BOE para el modelo 390 listo para ser enviado a la AEAT. Este fichero se puede abrir con cualquier editor de texto plano para examinar o editar su contenido
+
+![](https://docs.etendo.software/latest/assets/drive/EUtcF7232b2XmCvVtzha9eEJfC7WDVPvbaKUX_WHEWEgiDANwi84Wd7cEUbO_NegLTIbeX80wxazDMZo4HlUKhCBOJqxBmM_KzHycha0gqHfpCaW4VjQaAZy_MYjcVCNb2cq_YfXnO_tBliBrdhmD-hN-4qUQjAjz5yzUJGD23C10KUBdY9ZVWR4q0On4g.png)
+
+##### **Fichero CSV**
+
+Un fichero CSV con la lista de facturas e importes que se han utilizado para generar el informe. Este archivo se puede importar en cualquier software de Hoja de Cálculo. 
+
+A la hora de importar el fichero es importante que defina los siguientes filtros:
+
+-   Juego de caracteres: **UTF-8**
+-   Separador: **punto y coma**, es decir **;**
+-   Delimitador de texto: **comilla doble**, es decir **“**
+
+![Aeat390 import.png](https://docs.etendo.software/latest/assets/drive/Fc1f4L1omag1JBtJviufoH3pfPYmhHhmEJQERSVywOgU-cFo61aeNpvBArNzHKqy8DZ3VYBrSGj2X61-lKXWeTMjuj3_2yzAH31aWmLXYUl3B7yu3XXn44ckoTvoIjc87sdMmULxPgqrgTNEr1bJ953euAb0AXns7Byum7nttim66d8Foevat49TzZB-1g.png)
+
+Este es el aspecto del fichero una vez importado como hoja de cálculo:
+
+![390 FicheroCSV.png](https://docs.etendo.software/latest/assets/drive/Gu3UCsXhF30LRTvr-afGt4BYargy1tzXgHIqBJgj6zBW-wYVgdriORZwzLc0tOxdOn_nNmnf43GaZj4MmVQY5YC6oyYYXlBnMm4zAVDOqYx6pVXDpIbCitc6K2NqxuKyfdrmsc2_7-fatxQprZvMwurwj-7bGWzwEmF7CYEvIRbNONDMupNEC-LPk60JMQ.png)
+
+La hoja nos muestra las facturas que se han tenido en cuenta para generar el 390, el impuesto (porcentaje, cuota y base imponible en Euros) de cada factura y el grupo de casillas correspondientes del 390 en las que se ha incluido dicho importe.
+
+La columna *Casilla 390* representa la casilla o grupo de casillas en las que se ha incluido dicho importe. Esas casillas se corresponden con nodos del fichero XML generado desde Etendo.
+
+Por ejemplo, en la fila número 2 del ejemplo anterior vemos que esa transacción se incluye en el grupo de casillas *01 02 03 04 05 06*, que se corresponden con los siguientes nodos del fichero XML:
+
+<RegGeneral>
+
+<BaseImponibleyCuota>
+
+<RegOrdinario>
+
+<Tipo4>
+
+Si buscamos estas casillas en el modelo 390 oficial, veremos que corresponden al Régimen ordinario del IVA devengado, por lo que esta transacción en concreto deberá reflejarse en las casillas *01* y *02* (IVA Devengado - Régimen Ordinario *4%*)
+
+![390 RegimenOrdinario.png](https://docs.etendo.software/latest/assets/drive/MIkgy9VbltH8VQNF1UrsspqDDWjP3Y8swgINiFHl8IuTC7lKcmgofIqY_C6uW6laaZPMi5AgeymL10lbz8YeiOdBPd9xInFqOWCxo64IzsRtA2gVw8Y6AW7FPzlj-eg8s1QkHIWOg2DPaJh0_73wOqcdmYbnyITCZK3hJsLZMmaVieULukdFPGrfgFonyw.png)
+
+!!! warning
+    *Es importante tener en cuenta que las casillas correspondientes a subtotales de los grupos de IVA deducible (por ejemplo casillas 48 y 49) no se incluyen en el fichero CSV pero sí se incluyen en el archivo XML que contiene el informe oficial. Estas casillas se autogeneran como el sumatorio de las bases imponibles y cuotas de las casillas correspondientes de su grupo (por ejemplo casillas 190 a 606) que sí se incluyen en el CSV. Esta es una limitación del fichero CSV que no afecta en absoluto al informe oficial generado.*
+
+
+###### **Ventajas**
+
+El tener todos los datos en la hoja de cálculo nos permite examinar la información con detalle. Por ejemplo:
+
+-   se puede definir un filtro automático en la primera fila que nos permita filtrar por cualquiera de las columnas. De esta forma responderemos a preguntas del estilo: ¿la factura 1000013 en qué casillas del 390 se ha incluido? ¿Qué facturas se han incluido en un determinado grupo de casillas del 390?, etc.
+-   también se puede realizar sumatorios sobre las columnas de cuota y base imponible para asegurarnos de que el importe incluido en el 390 es el correcto.
+-   Otra ventaja de tener la información tan detallada es que nos puede servir para rellenar manualmente el modelo 390 en el programa de ayuda “IVA 2016”. Esto puede ser útil en caso de que queramos añadir información adicional no disponible en nuestra instancia de Etendo.
+
+#### **Presentación telemática del Modelo 390**
+
+Una vez que ha comprobado que las cifras incluidas en el Modelo 390 generado por Etendo son correctas, puede presentar el fichero XML en el siguiente enlace [_Presentación Modelo 390_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-390/modelo-390-presentacion-mediante-fichero.html){target="_blank"} para lo cual se requiere un certificado válido.
+
+
+Se mostrarán los siguientes datos:
+
+-   Total de cuotas de IVA y RE (IVA Devengado) 
+-   Suma de deducciones (IVA Deducible) 
+-   Resultado Régimen General (Resultado Anual) 
+-   Resultado de la liquidación, como resultado de la suma de:
+    -   resultados Régimen General y Simplificado 
+    -   menos la compensación de cuotas ejercicio anterior 
+-   Resultado de la liquidación anual atribuible a territorio común 
+-   Total volumen de operaciones 
+
+Es importante recordar que el resultado de la liquidación anual del 390 tiene que coincidir con los resultados de las liquidaciones periódicas del Modelo 303.
+
+Los resultados de las liquidaciones periódicas del Modelo 303 se pueden introducir al lanzar el Modelo 390 desde Etendo, como "Parámetros de Entrada":
+
+-   "Total resultados a ingresar en las autoliquidaciones de IVA del ejercicio"
+-   o bien, "Total devoluciones mensuales de IVA"
+-   o bien, "Resultado de la autoliquidación el último período a compensar".
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Overview
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Overview
 ## Article URL: 
@@ -23081,2902 +26319,6 @@ Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado s
 
 ![](https://docs.etendo.software/latest/assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
 
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Modelo 303
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 303
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303
-## Article Content: 
-#### Javapackages 
-
-:octicons-package-16: Javapackage: `org.openbravo.module.aeat303.es` <br>
-
-#### **Introducción**
-
-El presente manual de usuario explica el contenido y funcionamiento del nuevo módulo comercial de Etendo, **"Modelo AEAT303"**, compatible con Etendo 21.4 o versiones posteriores. Este módulo forma parte del bundle de Localización española, al igual que todas las dependencias relacionadas.
-
-#### **Descripción del Módulo**
-
-El módulo Modelo AEAT303 - Impuesto sobre el Valor Añadido - Autoliquidación, permite a las empresas cumplir con sus obligaciones fiscales de "Autoliquidación de IVA" como diferencia entre el IVA Devengado y el IVA Deducible, a través de la presentación del Modelo 303 como un fichero de texto válido conforme a los requerimientos establecidos por la Agencia Tributaria española (Orden EHA/3786/2008).
-
-La estructura válida del fichero se puede encontrar en el siguiente link de la AEAT: [](http://www.aeat.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Ayuda/Disenyos_de_registro/Ayudas/Trimestrales_Mensuales/303_2009.pdf)[_Modelo 303 - Fichero_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-303/presentacion-electronica-modelo-303-fichero.html){target="_blank"}.
-
-El fichero del modelo 303 contiene la siguiente información:
-
--   **Información genérica**
-    -   NIF
-    -   Apellidos o Razón Social - Nombre
-    -   Ejercicio
-    -   Periodo
--   **IVA devengado** (IVA repercutido en ventas), incluyendo:
-    -   IVA devengado conforme al régimen general - Base, Cuota y Tipo
-    -   IVA devengado conforme al régimen especial de recargo de equivalencia, especificado por tipo de IVA - Base, Cuota y Tipo
-    -   IVA devengado en las adquisiciones intracomunitarias de bienes- Base y Cuota
--   **IVA Deducible** (IVA soportado en compras), incluyendo:
-    -   operaciones interiores de bienes y servicios - Base y Cuota
-    -   operaciones interiores de bienes de inversión - Base y Cuota
-    -   importaciones de bienes - Base y Cuota
-    -   importaciones de bienes de inversión - Base y Cuota
-    -   adquisiciones intracomunitarias de bienes - Base y Cuota
-    -   adquisiciones intracomunitarias de bienes de inversión - Base y Cuota
-    -   regularizaciones
--   **Diferencia** - Resultado de la liquidación como diferencia del IVA devengado - IVA soportado deducible, incluyendo otras operaciones tales como:
-    -   entregas intracomunitarias de bienes - Base
-    -   exportaciones - Base
-    -   operaciones no sujetas o de inversión de sujeto pasivo - Base
--   **Datos bancarios y otros.**
-
-Dicho fichero se genera en Etendo desde el Generador de declaraciones de impuestos que se encuentra en la ruta de aplicación: "Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos"
-
-El fichero se puede:
-
-1.  **pre-validar** en la pagina wed de la AEAT, en el siguiente link: [**_Formulario del 303 para su presentación (predeclaración)_**](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html){target="_blank"}.
-2.  y, posteriormente **presentar** en el siguiente link de la AEAT: [**_Presentación del Modelo_**_._](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html){target="_blank"}.
-
-La autoliquidación de IVA puede ser:
-
--   "**A ingresar**" (casilla 48>0), en el caso de que el IVA Devengado > IVA deducible. El IVA a ingresar se reflejará en la casilla \[I\], posición 860.
--   "**A compensar**" (casilla 48<0), en el caso de que el IVA Devengado < IVA deducible. El IVA a compensar se reflejará en la casilla \[49\], posición 804.
--   "**A devolver**" (casilla 48<0 e inscripción en el Registro de devolución mensual), en el caso de que el IVA Devengado < IVA deducible. El IVA a devolver se reflejará en la casilla \[50\], posición 822.
--   "**Cero**" o "**Sin actividad**" (casilla 48=0).
-
-#### **Presentación del Modelo 303**
-
-Los obligados a presentar el modelo 303 son:
-
--   Los sujetos pasivos que realicen actividades a las que aplique el Régimen General del Impuesto (IVA) o cualquier otro de los regímenes del mismo, a excepción del Régimen especial de agricultura, ganadería y pesca, del Régimen de recargo de equivalencia y del Régimen Simplificado.
-
-La presentación del modelo 303 puede ser Mensual o Trimestral.
-
-La presentación será obligatoria por vía telemática (fichero de texto válido) para los sujetos pasivos que:
-
--   tengan forma jurídica de sociedad anónima o sociedad de responsabilidad limitada
--   y/o estén inscritos en el "Régimen de devolución mensual".
-
-##### **Novedades a partir del 1 de julio de 2010**
-
-**MODIFICACIÓN TIPOS IMPOSITIVOS IVA**
-
-La Ley 26/2009 de Presupuestos Generales del Estado para 2010, modificó los tipos general y reducido del Impuesto sobre el Valor Añadido con efectos a partir del 1 de julio, de forma que el tipo general pasa del 16% al 18% y el tipo reducido pasa del 7% al 8%, sin que se haya producido alteración alguna en relación con el tipo superreducido del 4% y con los tipos del recargo de equivalencia.
-
-**Cumplimentación de declaraciones**
-
-En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde julio de 2010 (correspondientes al mes 07 ó al 3T) , se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos (18%, 8%) junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de junio (7% ó 16%).
-
-En estos supuestos deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
-
-En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
-
-En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2010 o a los meses 01 a 06 de 2010 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos del 18% ó 8%.
-
-!!! info
-    Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
-
-
-##### **Novedades a partir del 1 de septiembre de 2012**
-
-**MODIFICACIÓN TIPOS IMPOSITIVOS IVA Y RECARGO DE EQUIVALENCIA**
-
-El Real Decreto Ley 20/2012 de medidas para garantizar la estabilidad presupuestaria y de fomento de la competitividad, modificó los tipos general y reducido del Impuesto sobre el Valor Añadido con efectos a partir del 1 de septiembre, de forma que el tipo general pasa del 18% al 21% y el tipo reducido pasa del 8% al 10%, sin que se haya producido alteración alguna en relación con el tipo superreducido del 4%. Igualmente, los tipos de recargo de equivalencia pasan del 4% al 5,2% y del 1% al 1,4%.
-
-**Cumplimentación de declaraciones**
-
-En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde septiembre de 2012 (correspondientes al mes 09 ó al 3T), se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de agosto.
-
-En estos supuestos, deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
-
-En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
-
-En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2012 o a los meses 01 a 08 de 2012 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos.
-
-!!! info
-    Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
-
-
-#### **Instalación y aplicación del módulo**
-
-##### **Instalación**
-
-!!! info
-    Para la instalación del módulo **“AEAT - Modelo 303”** visite [Marketpace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-
-
-##### **Aplicación del módulo**
-
-El módulo del Modelo 303 incluye unos datos de referencia que relaciona los tipos/rangos de impuestos para España con los parámetros del 303, por tanto:
-
--   Una vez insalado el módulo, los datos de referencia deben aplicarse a la Entidad legal con Contabilidad que corresponda, en la ruta de aplicación: Configuración General || Organización || Gestión del módulo de Empresa.
-
-![](https://docs.etendo.software/latest/assets/drive/EhxTBUvs6RBHj5qryz08lOpzAmCekUOmboNjz-E3OUuIK92wRMMzhOul3GuQ1hHMAutQbKIBKSi4NRQ0lPVDxWALgH4Fzsmc47MYlVJZZAOHS5giW468E6SMHsBjt2vqa8pn93TEZUBvHqiUId8oegI.png)
-
-#### **Contenido del módulo**
-
-Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
-
--   Se han creado dos nuevos informes, el modelo 303 mensual y el trimestral para la organización/es en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
-     
-
-![](https://docs.etendo.software/latest/assets/drive/MAZZa2VuPorWEk1BAyrZHON1lh2tNqdkQna7BJhsI0E5g4R9ML0BrK9Xvpicq7ZG4xqlzAMn_0JEJBOskqgZvemex1fqHA8u9dvn6XT1190PDLTHuuzsunhwnbZ9PeooUmrqd6oiKCt-fI-J7ONuNsU.png)
-
--   La pestaña "Sección de Impuestos" contiene la definición de toda la información que se va a incluir en el modelo 303 y, por tanto, en el fichero del 303 que se generará desde la ventana "Generador de Declaraciones de Impuestos". De todas estas secciones cabe destacar las secciones "IVA Devengado", "IVA Deducible" y "Diferencia".  
-    Por ejemplo, la sección "IVA Devengado" incluye los parámetros siguientes en la pestaña "Parámetro de declaración":
-    -   IVA Devengado - Régimen Ordinario
-    -   IVA Devengado - Recargo de Equivalencia
-    -   IVA Devengado - Adquisiciones Intracomunitarias
-
-Estos parámetros se ligan a los tipos de impuestos en función de que las operaciones ligadas a ellos deban declararse, por ejemplo, como parte del IVA Devengado en Régimen Ordinario o bien como parte del IVA Devengado por Recargo de Equivalencia.
-
-![](https://docs.etendo.software/latest/assets/drive/zC4megIrlvdoyIVRkdw2ET8DrB6IV8rIcxQMRlZH4qJAHIO8TFlmif7eUuqb6NRoM6vvzm1mP5BLwsBOKFLQhDOLPbloFfYy6AVDe9p820rJKJem-Jy9UIlCzCafEWf15srFfJUOfrBR9fm5GSiUVsg.png)
-
--   Por tanto, los rangos de impuestos se han asociado al correspondiente parámetro del 303, con el fin de que las transacciones completadas y contabilizadas ligadas a dichos impuestos, se tenga en cuenta en una u otra casilla/posición del fichero.  
-     
-
-![](https://docs.etendo.software/latest/assets/drive/Vxz9LkuESteDKaeIzQmhO9gu10wFqL8QU579ZxLacwnA5WlhWtA-wkXgQvBfe7ZJCX6ksbd4XfoRk4U7sKTbnAQAWBbTgFBYJau2aJstONlCeoFElqPArRuDIf_dGIaD50o6yGJkxowqixFQAJ18Beo.png)
-
--   Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 303, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
-     
-
-![](https://docs.etendo.software/latest/assets/drive/612TP0yYxrPiuET6z7IkyF40fr5KGP6XC5cxCTbrK5eg6K1Im1xh_XYc3PzLVeMApJERGkm_9QHTuvuTl4slrb_t8TktOSrtNeisdNQcSpzodyq9c8wptIpFshledbtdup6U7-Kmw5FiEvBYOvfqsDI.png)
-
-#### **Configuración**
-
-##### **Configuración de impuestos / IVA**
-
-El usuario deberá navegar a la ruta de aplicación: "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado:
-
--   primero el módulo de impuestos si no está aplicado previamente y a nivel (\*)
--   y después el módulo del 303 a nivel Organización Legal con contabilidad
-
-##### **Configuración del modelo 303**
-
-La configuración del modelo 303 se instala por defecto y se puede comprobar en la ruta de aplicación: Gestión Financiera//Contabilidad//Configuración//Declaración de Impuestos.
-
-Tanto para el modelo 303 mensual como trimestral en la pestaña "Sección de declaración" se han creado 11 secciones, una por cada grupo de información a incluir a la hora de generar el fichero del Modelo 303:
-
-![](https://docs.etendo.software/latest/assets/drive/5e_DW0KWWXZ8E1fET-mk_Y2oq6YGls8fZL-zmAGlO8wzUqgFH0zKq0ir2QP6CK-SOWttp263yE5VKCjPLKuz5ubn63i8nzztWYzLioqT1Ar_RTn9zlNOCtG9T5CRG2wD0fzJpACMuAA7-vycnuQo390.png)
-
--   **Fichero**
-    -   Esta sección contiene un parámetro de tipo "Entrada", para que el usuario pueda introducir el nombre del fichero 303 al generarlo.
--   **Tipo de declaración**
-    -   Esta sección contiene a 8 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.
-        -   Compensación
-        -   Devolución
-        -   Ingreso
-        -   Resultado cero
-        -   Ingreso domiciliación bancaria
-        -   Ingreso cuenta corriente tributaria
-        -   Devolución cuenta corriente tributaria
-        -   Devolución por transferencia al extranjero
--   **Sin Actividad**
-    -   Esta sección contiene 1 parámetro de tipo "Entrada" para que el usuario pueda marcar una liquidación de IVA como "Sin Actividad".
--   **Constantes**
-    -   Esta sección incluye todos los valores constantes que requiere el 303, tales como:
-        -   Modelo = 303
-        -   Página = 01
-        -   Identificador de fin de registro = </T30301>
--   **Identificación**
-    -   Esta sección incluye 4 parámetros de "Salida" que se corresponden con datos de identificación de la organización para la cual se genera el fichero y 1 parámetro de "Entrada" de tipo "checkbox" que es "Inscrito en el Registro de devolución mensual" que podría configurarse como constante.
--   **IVA Devengado**
-    -   Esta sección incluye 3 parámetros de tipo "Salida", uno por cada tipo de IVA devengado.
-        -   "IVA Devengado - Régimen General" de IVA. Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen general, por ejemplo, las entregas de bienes y servicios dentro del territorio de aplicación del impuesto.
-        -   "IVA Devengado - Recargo de Equivalencia". Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen de recargo de equivalencia, por ejemplo, las entregas de bienes a minoristas dentro del territorio de aplicación del impuesto.
-        -   "IVA Devengado - Adquisiciones Intracomunitarias”. Este parámetro está ligado a los rangos de impuestos de adquisiciones intracomunitarias de bienes
-
-El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
-
--   **IVA Deducible**
-    -   Esta sección incluye un total de 12 parámetros, 6 parámetros de tipo "Salida" y otros 6 de tipo "Entrada".  
-        Los parámetros de tipo "Salida" se corresponden con el tipo de IVA Deducible del que se puede sacar información de Etendo, por ejemplo "IVA Deducible por cuotas soportadas en operaciones interiores corrientes".  
-        Los parámetros de tipo "Entrada" se corresponden con tipos de IVA Deducible para los que no se puede sacar información de Etendo, por ejemplo "IVA Deducible por compensación Régimen Esp. A.G y P.(cuota)
-
-El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
-
--   **Diferencia**
-    -   Esta sección incluye 4 parámetros de tipo "Entrada" para que el usuario pueda introducir la siguiente información a la hora de generar el fichero:
-        -   % Atribuible a la Administración del Estado %.  
-            Los sujetos pasivos que tributen conjuntamente en la Administración del Estado y en las Diputaciones del País Vasco o a la Comunidad Foral de Navarra, deben hacer constar el % del volumen de operaciones en territorio común y que, por tanto, deben tributar en la Administración del Estado; el resto de sujetos pasivos harán costar un 100%.  
-            Este dato podría configurarse como constante.
-        -   Cuotas a compensar de periodos anteriores. Los sujetos pasivos deben hacer constar, cuando sea aplicable, las cuotas positivas a compensar procedentes de periodos anteriores.
-        -   Resultado de la regularización anual. En la última liquidación del año se hará constar el resultado de la regularización anual por inversiones
-        -   A deducir (autoliquidación complementaria), exclusivamente en el caso de declaración complementaria se hará constar el resultado de la última declaración presentada por el mismo concepto, correspondiente al mismo ejercicio y periodo.
-    -   Y, además, 3 parámetros de salida correspondientes a operaciones no sujetas que originan derecho a deducción:
-        -   Entregas Intracomunitarias de bienes. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
-            -   Entregas intracomunitarias (%N=>0%)
-            -   Entregas intracomunitarias (%R=>0%)
-            -   Entregas intracomunitarias (%SR=>0%)
-            -   Entregas intracomunitarias Bienes Inversión (%N=>0%)
-        -   Exportaciones y Operaciones asimiladas. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
-            -   Entregas a Canarias,Ceuta y Melilla (%N=>0%)
-            -   Entregas a Canarias,Ceuta y Melilla (%SR=>0%)
-            -   Entregas a Canarias,Ceuta y Melilla (%R=>0%)
-            -   Exportaciones (%N=>0%)
-            -   Exportaciones (%R=>0%)
-            -   Exportaciones (%SR=>0%)
-            -   Exportaciones Bienes Inversión (%N=>0%)
-        -   Operaciones no sujetas o con inversión del sujeto pasivo. Este parámetro está ligado a losrangos de impuestos que se listan a continuación:
-            -   Servicios a Canarias, Ceuta y Melilla (%N=>0%)
-            -   Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
-            -   Servicios a Canarias, Ceuta y Melilla (%R=>0%)
-            -   Servicios prestados internacional (%N=>0%)
-            -   Servicios prestados internacional (%R=>0%)
-            -   Servicios prestados UE (%N=>0%)
-            -   Servicios prestados UE (%R=>0%)
--   **Devolución**
-    -   Esta sección incluye un parámetro de tipo "Entrada" que es la cuenta bancaria a utilizar en caso de declaración a devolver. Este dato podría configurarse como constante.
--   **Ingreso**
-    -   Esta sección incluye 5 parámetros de tipo "Entrada" relativos a declaraciones "A ingresar":
-        -   la cuenta bancaria a utilizar en caso de declaración a ingresar. Este dato podría configurarse como constante.
-        -   No consta
-        -   Efectivo
-        -   Adeudo en cuenta
-        -   Domiciliación
--   **Complementaria**
-    -   Esta sección incluye 2 parámetros de tipo entrada:
-        -   Declaración complementaria, como un checkbox (si/no)
-        -   Nº Justificate, de la declaración anterior que se complementa.
-
-##### **Tipos de documento y fecha**
-
-A la hora de generar el fichero de texto válido para declarar el Modelo 303 de liquidación de IVA, se tiene en cuenta:
-
--   El IVA (soportado) deducible registrado y contabilizado en las Facturas/Abonos de Compra, que el usuario puede registrar en la ruta de aplicación: Gestión de Compras || Transacciones || Factura (Proveedor), para los siguientes tipos de documento:
-    -   AP Invoice (Factura de compra)
-    -   AP Invoice negativa (Abono de compra)
-    -   AP Credit Memo (Abono de compra)
--   El IVA devengado registrado y contabilizado en las Facturas/Abonos de Venta que el usuario puede emitir en la ruta de aplicación:    Gestión de Ventas || Transacciones || Factura (Cliente), para los siguientes tipos de documento:
-    -   AR Invoice (Factura de venta)
-    -   AR Invoice negativa (Abono de venta)
-    -   AR Credit Memo (Abono de venta)
-
-La actual versión del módulo no tiene en cuenta los tipos de documento de Etendo sin APRM que se enumeran a continuación, y que podrían estar ligados a un rango de impuesto, por considerarse que no se deberían utilizar para la contabilización de facturas que incluyan IVA:
-
--   Extracto bancario
--   Diario de Caja
--   Liquidaciones y asientos manuales
-
-**La fecha que se tiene en cuenta** para la inclusión de las facturas de compra/venta en la declaración/fichero del 303 es la **fecha de contabilización**, lo cual que implica que:
-
--   Las facturas de compra/venta con fecha de contabilización desde el 01 de junio del 2010 hasta 30 de junio del 2010, se incluirán en la declaración Mensual correspondiente al mes de junio del 2010; en caso de tipo de declaración mensual, a presentar antes del 20 de agosto del 2010.
--   Las facturas de compra/venta con fecha de contabilización desde el 01 de abril del 2010 hasta el 30 de junio del 2010, se incluirán en la declaración trimestral correspondiente al segundo trimestre del año; en caso de tipo de declaración trimestral, a presentar antes del 20 de agosto del 2010.
-
-#### **Caso de Usuario**
-
-##### **IVA Devengado - escenarios**
-
-Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas puedan autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
-
-El fichero del 303 recoge desde la posición 72 a la 357, la base imponible, tipo y cuota del IVA devengado en las operaciones de venta bajo el régimen general, especificando por tipo de IVA (16%/18%, 7%/8% y 4%), régimen de recargo de equivalencia especificado por tipo de IVA (4%, 1% y 0,5%) así como la base y cuota del IVA devengado en las adquisiciones intracomunitarias.
-
-###### **IVA devengado - régimen general**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas tanto por la entrega de bienes como por la prestación de servicios dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
-
-Se tendrán en cuenta:
-
-1.  las facturas/abonos emitidas por la venta de productos o por la prestación de servicios, contabilizadas en la ruta de aplicación "Gestión de Ventas || Transacciones || Factura (Cliente)"
-2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente)", marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
-3.  las líneas de impuesto manualmente introducidas por el usuario en la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente) - Cabecera - Impuestos"
-
-El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes o la prestación del servicio lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
-
-Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
-
--   IVA Normal
--   IVA Reducido
--   IVA Super reducido
--   IVA Normal Servicios
--   IVA Reducido Servicios
--   IVA Super Reducido Servicios
--   IVA Normal B. Inmuebles
--   IVA Reducido B. Inmuebles
--   IVA Normal Bienes Inversión
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Régimen General".
-
-###### **IVA devengado - régimen de recargo de equivalencia**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas por la entrega de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares) a terceros minoristas que se encuentren en régimen de recargo de equivalencia.
-
-En estos casos, el emisor de la factura incluye, además del IVA, el tipo (%) de recargo correspondiente.
-
-Se tendrán en cuenta:
-
-1.  las facturas/abonos emitidas por la venta de productos, contabilizadas en la ruta de aplicación "Gestión de Ventas || Transacciones || Factura (Cliente)"
-2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente)", marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
-3.  las lineas de impuesto manualmente introducidas en el usuario en la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente) - Cabecera - Impuestos"
-
-El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes, lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
-
-Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
-
--   IVA Normal
--   IVA Reducido
--   IVA Super reducido
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Recargo de Equivalencia".
-
-###### **IVA devengado - Adquisiciones intracomunitarias**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
-
-Se tendrán en cuenta:
-
-1.  las facturas/abonos registradas en el sistema por la compra de productos, contabilizadas en la ruta de aplicación "Gestión de Compras || Transacciones || Factura (Proveedor)"
-2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: ""Gestión de Compras || Transacciones || Factura (Proveedor)", marcados como "Factura Financiera" a nivel de línea de factura de compra, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
-3.  las líneas de impuesto manualmente introducidas en el usuario en la ruta de aplicación: "Gestión de Compras || Transacciones || Factura (Proveedor) - Cabecera - Impuestos"
-
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
-
--   IVA Normal
--   IVA Reducido
--   IVA Super Reducido
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Adquisiciones Intracomunitarias".
-
-Es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
-
--   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
--   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
-
-Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
-
-El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
-
-##### **IVA Deducible - escenarios**
-
-Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas pueda autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
-
-El fichero del 303 recoge desde la posición 357 a la 612, la base imponible y cuota, en la mayoría de los casos, del IVA soportado que es deducible en operaciones interiores, importaciones y adquisiciones intracomunitarias de bienes corrientes (bienes y servicios) y de bienes de inversión.
-
-###### **IVA deducible - cuotas soportadas en operaciones interiores corrientes**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes como por los servicios prestados a la Empresa dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
-
-Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
-
--   IVA Normal
--   IVA Reducido
--   IVA Super Reducido
--   IVA Normal Servicios
--   IVA Reducido Servicios
--   IVA Super Reducido Servicios
--   IVA Normal B. Inmuebles
--   IVA Reducido B. Inmuebles
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes".
-
-###### **IVA deducible - operaciones interiores bienes de inversión**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes de inversión (se consideran bienes de inversión los bienes con un valor superior a 3.000,00 €) dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
-
-Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
-
--   IVA Normal Bienes Inversión
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Operaciones interiores bienes de inversión".
-
-###### **IVA deducible - por cuotas devengadas en importaciones de bienes**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
-
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
-
--   IVA Normal
--   IVA Reducido
--   IVA Super Reducido
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes".
-
-###### **IVA deducible - importaciones bienes de inversión**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
-
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
-
--   IVA Normal Bienes Inversión
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Importaciones bienes de inversión".
-
-###### **IVA deducible - adquisiciones intracomunitarias de bienes**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
-
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
-
--   IVA Normal
--   IVA Reducido
--   IVA Super Reducido
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes corrientes".
-
-Tal y como ya se ha mencionado, es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
-
--   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
--   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
-
-Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
-
-El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
-
-###### **IVA deducible - adquisiciones intracomunitarias de bienes de inversión**
-
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
-
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
-
--   IVA Normal Bienes Inversión
-
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes de inversión".
-
-##### **Diferencia - escenarios**
-
-El fichero del 303 recoge desde la posición 629 a la 804, los datos relativos a la diferencia entre el IVA Devengado y el Deducible, junto con otro tipo de información adicional necesaria para el cálculo del resultado final casilla \[48\]
-
-Desde Etendo, el usuario puede obtener la diferencia entre IVA Devengado y Deducible, así como parte de la información adicional necesaria para el cálculo del resultado final, el resto debe introducirse por parte del usuario como "parámetros de entrada" a la hora de generar el fichero.
-
-La información que el usuario puede obtener desde el sistema es las bases imponibles para un periodo determinado (mes/trimestre) respecto de las operaciones que a continuación se detallan:
-
--   **Entregas intracomunitarias** - en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta a clientes no residentes en territorio de aplicación del impuesto pero residentes en la Unión Europea, emitidos y contabilizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
-    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Entregas Intracomunitarias".
--   **Exportaciones y operaciones asimiladas** - lo mismo aplica a las exportaciones, en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta emitidas y contabilizas, a clientes extranjeros, emitidos y contablizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
-    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Exportaciones y Operaciones Asimiladas".
--   **Operaciones no sujetas o con inversión del sujeto pasivo** que origina derecho a deducción - este caso aplica a facturas/abonos/facturas financieras de venta emitidos y contabilizados, por la prestación de servicios de la Empresa fuera del territorio de aplicación del impuesto, servicios exentos pero que originan derecho a deducción.  
-    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Operaciones no sujetas o con inversión del sujeto pasivo".
-
-El resto de datos deben ser introducidos manualmente por el usuario a la hora de generar el modelo 303 desde la ventana "Generador de declaraciones de impuestos", tal y como se muestra en la pantalla siguiente:
-
-![](https://docs.etendo.software/latest/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png)
-
-##### **Devoluciones - escenarios**
-
-###### **Devoluciones - Devolución/Devolución cuenta corriente tributaria**
-
-Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:
-
-- IBAN
-- Marca SEPA
-
-###### **Devoluciones - Devolución por transferencia al extranjero**
-
-Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios: 
-
-- Domiciliación/Devolución - IBAN (cuenta bancaria)
-- Devolución - Banco/Bank name
-- Devolución - Dirección del Banco/ Bank address
-- Devolución - Ciudad/City
-- Devolución - Código País/Country code
-- Devolución - Marca SEPA
-
-##### Configuración previa antes de generar el Informe
-
-###### **Actividades del I.A.E.**
-
-En el Modelo 303, para generar el informe mensual - último periodo, a partir de 2022, se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
-
-El módulo Epígrafes I.A.E., instalado como dependencia del 303, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 303 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
-
-![](https://docs.etendo.software/latest/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
-
-En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
-
-Para el modelo 303, los campos 'Epígrafe IAE' y 'Código' son obligatorios
-
-##### **Generación del modelo 303**
-
-Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos
-
-Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo":
-
-![](https://docs.etendo.software/latest/assets/drive/dNa0Xp7cP15EVu-NquNiO27FfKbbDTYXfLQ5Wm4I8LxL3ah4xw4_v3_PB6zShaBBNuFB1dwW9O15LSxabPohtRNc3xjWGMrgxQzdvqRagqs2C0A6Pwq3DJ5-FVhdBE-RMxe09uIGBEXM5YE7NQ3KRWg.png)
-
-se pueden introducir los parámetros de entrada, o datos que no pueden obtenerse de Etendo a través de botón de proceso "Parámetros de entrada".
-
-!!! info
-    Es importante recalcar que algunos de los parámetros de entrada que se introducen a continuación, como por ejemplo "Inscrito en el Registro Devolución Mensual", pueden configurarse como parámetros "Constantes" con el fin de no tener que introducirlos cada vez que se genera el fichero del 303.
-
-
-La forma de hacerlo es:
-
--   buscar el parámetro de entrada del 303 en la ventana "Declaración de Impuestos", pestaña "Sección de declaración". Por ejemplo, el parámetro de entrada "Inscrito en el Registro de devolución mensual" que se encuentra en la Sección de declaración "Identificación"
--   cambiar el parámetro de tipo "Entrada" a "Constante". En el campo "Constant Value" añadir "1", en caso de inscripción en el registro de devolución mensual, o bien añadir "2", en caso de que el sujeto pasivo no esté inscrito en el registro de devolución mensual.
-
-Es importante recalcar que si se produce una actualización de los datos de referencia de este módulo, los cambios de parámetros de entrada a constante se sobreescribirán, por lo que será necesario el volver a configurarlos.
-
-Las secciones de la nueva ventana que se muestra se corresponden con las secciones definidas para el Modelo 303:
-
-Secciones: "**Fichero**", "**Tipo de declaración**" y "**Sin actividad**":
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png)
-
-Secciones: "**IVA deducible**", **"Liquidación-resultado"** y **"Banco"**:
-
-![](https://docs.etendo.software/latest/assets/drive/TmR4r-g0sbW3iYqVXO4M4IvKdyIKxp9t7FxwjL1i2srAJVnSK7obME0S7xZnd6ZBOMGwzsfbYZJ3BTDwjwzwSbpLmbioI49r1hX4YpyFrXeUYauG-D8tNEiGXqROzpI6RWJlewDrm-lQspoLPFfMR9M.png)
-
-Secciones:  **"Complementaria", “Tributación por razón de territorio” y “Additional Information”**
-
-![](https://docs.etendo.software/latest/assets/drive/SZHf8tnfL96mKnbhdEg4Oev3PSB8moMCC7k5MqXfkkR5aY3E9FR_QjNwZ5xOFytKPdafxQv5QLaccO557RenGMZlkPMDoskLe9TXqfiVJ4s1Fi1wPM32-UMQMA7MFoExjgiZlbR9y1EhG_2uz3_Fd9E.png)
-
-Una vez que el fichero se ha generado, tendrá este aspecto:
-
-![Fichero.png](https://docs.etendo.software/latest/assets/drive/7TUbkV18JCkTIs6aoBVNgXYoCr6vvEfFk1_kWdHjMi8-VjOMmEIsWBEWeRgj8AJ8VsbXNifrzXOGd6u19snnZEyhWLrsUty88vVrYwvnAU3FRzuTZRvteHfLFXle7Ajk4deKF124p9-bySu6AweMwpk.png)
-
-##### **Pre-validación del modelo 303**
-
-El fichero generado en Etendo se puede pre-validar en el siguiente link de la AEAT:
-
-[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html){target="_blank"}.
-
-Una vez en dicho link el usuario podrá importar el fichero en la opción "Optativo: Importar datos de fichero", los datos obtenidos del fichero se mostrarán para su validación.
-
-Una vez validados los datos, el modelo 303 se puede presentar en el siguiente link, para lo cual se requiere un certificado válido: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml){target="_blank"}, para lo que se necesita certificado electrónico de identificación o DNI electrónico.
-
-#### **Anexo**
-
-Este anexo incluye el listado completo de los rangos de impuestos asociados a los parámetros del modelo 303 de las secciones "IVA Devengado" e "IVA Deducible" sólo para los tipos de IVA vigentes en la actualidad (2012):
-
-##### **IVA Devengado**
-
-###### **IVA Devengado - Régimen General**
-
--   Arrendamiento 18% (cobros)
--   Arrendamientos 18% -21%R (cobros) (+18%)
--   Arrendamiento 21% (cobros)
--   Arrendamientos 21% -21%R (cobros) (+21%)
--   Entregas Bienes Inversión 18%
--   Entregas Bienes Inversión 21%
--   Entregas IVA 18%
--   Entregas IVA 8%
--   Entregas IVA 21%
--   Entregas IVA 10%
--   Entregas IVA 4%
--   Entregas IVA+RE 18+4% (+18%)
--   Entregas IVA+RE 8+1% (+8%)
--   Entregas IVA+RE 21+5.2% (+21%)
--   Entregas IVA+RE 10+1.4% (+10%)
--   Entregas IVA+RE 4+0.5% (+4%)
--   Inversión Sujeto Pasivo no UE 18% (-18%)
--   Inversión Sujeto Pasivo no UE 8% (-8%)
--   Inversión Sujeto Pasivo no UE 21% (-21%)
--   Inversión Sujeto Pasivo no UE 10% (-10%)
--   Inversión Sujeto Pasivo UE 18% (-18%)
--   Inversión Sujeto Pasivo UE 8% (-8%)
--   Inversión Sujeto Pasivo UE 21% (-21%)
--   Inversión Sujeto Pasivo UE 10% (-10%)
--   Servicios prestados nacional 18%
--   Servicios prestados nacional 21%
--   Servicios prestados nacional 18% -15%R (+18%)
--   Servicios prestados nacional 18% -7%R (+18%)
--   Servicios prestados nacional 21% -21%R (+21%)
--   Servicios prestados nacional 21% -9%R (+21%)
--   Servicios prestados nacional 8%
--   Servicios prestados nacional 10%
--   Servicios prestados nacional 4%
--   Transmisión B.Inmuebles 18%
--   Transmisión B.Inmuebles 8%
--   Transmisión B.Inmuebles 21%
--   Transmisión B.Inmuebles 10%
-
-###### **IVA Devengado - Recargo de equivalencia**
-
--   Entregas IVA+RE 18+4% (+4%)
--   Entregas IVA+RE 8+1% (+1%)
--   Entregas IVA+RE 21+5.2% (+5.2%)
--   Entregas IVA+RE 10+1.4% (+1.4%)
--   Entregas IVA+RE 4+0.5% (+0.5%)
-
-###### **IVA Devengado - Adquisiciones Intracomunitarias**
-
--   Adquisiciones intracomunitarias 18% (-18%)
--   Adquisiciones intracomunitarias 8% (-8%)
--   Adquisiciones intracomunitarias 21% (-21%)
--   Adquisiciones intracomunitarias 10% (-10%)
--   Adquisiciones intracomunitarias 4% (-4%)
--   Adquisiciones intracomunitarias Bienes Inversión 18% (-18%)
--   Adquisiciones intracomunitarias Bienes Inversión 21% (-21%)
-
-##### **IVA Deducible**
-
-###### **IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes**
-
--   Adquisición B.Inmuebles 18%
--   Adquisición B.Inmuebles 8%
--   Adquisición B.Inmuebles 21%
--   Adquisición B.Inmuebles 10%
--   Adquisiciones IVA 18%
--   Adquisiciones IVA 8%
--   Adquisiciones IVA 21%
--   Adquisiciones IVA 10%
--   Adquisiciones IVA 4%
--   Arrendamiento 18% (pagos)
--   Arrendamiento 21% (pagos)
--   Arrendamientos 18% -21%R (pagos) (+18%)
--   Arrendamientos 21% -21%R (pagos) (+21%)
--   Inversión Sujeto Pasivo no UE 18% (+18%)
--   Inversión Sujeto Pasivo no UE 8% (+8%)
--   Inversión Sujeto Pasivo no UE 21% (+21%)
--   Inversión Sujeto Pasivo no UE 10% (+10%)
--   Inversión Sujeto Pasivo UE 18% (+18%)
--   Inversión Sujeto Pasivo UE 8% (+8%)
--   Inversión Sujeto Pasivo UE 21% (+21%)
--   Inversión Sujeto Pasivo UE 10% (+10%)
--   Prestación servicios nacional 18%
--   Prestación servicios nacional 21%
--   Prestación servicios nacional 18% -15%R (+18%)
--   Prestación servicios nacional 18% -1%R (18%)
--   Prestación servicios nacional 18% -7%R (+18%)
--   Prestación servicios nacional 21% -21%R (+21%)
--   Prestación servicios nacional 21% -1%R (+21%)
--   Prestación servicios nacional 21% -9%R (+21%)
--   Prestación servicios nacional 8%
--   Prestación servicios nacional 10%
--   Prestación servicios nacional 4%
-
-###### **IVA Deducible - Operaciones interiores bienes de inversión**
-
--   Adquisición Bienes Inversión18%
--   Adquisición Bienes Inversión 21%
-
-###### **IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes**
-
--   Adquisiciones a Canarias,Ceuta y Melilla 18%
--   Adquisiciones a Canarias,Ceuta y Melilla 8%
--   Adquisiciones a Canarias,Ceuta y Melilla 21%
--   Adquisiciones a Canarias,Ceuta y Melilla 10%
--   Adquisiciones a Canarias,Ceuta y Melilla 4%
--   Importaciones 18%
--   Importaciones 8%
--   Importaciones 21%
--   Importaciones 10%
--   Importaciones 4%
-
-###### **IVA Deducible - Importaciones bienes de inversión**
-
--   Importaciones Bienes Inversión 18%
--   Importaciones Bienes Inversión 21%
-
-###### **IVA Deducible - En adquisiciones intracomunitarias de bienes de corrientes**
-
--   Adquisiciones intracomunitarias 18% (+18%)
--   Adquisiciones intracomunitarias 8% (+8%)
--   Adquisiciones intracomunitarias 21% (+21%)
--   Adquisiciones intracomunitarias 10% (+10%)
--   Adquisiciones intracomunitarias 4% (+4%)
-
-###### **IVA Deducible - Adq. Intracomunitarias bienes de inversión**
-
--   Adquisiciones intracomunitarias Bienes Inversión 18% (+18%)
--   Adquisiciones intracomunitarias Bienes Inversión 21% (+21%)
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Modelo 190
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 190
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190
-## Article Content: 
-#### Javapackages 
-
-:octicons-package-16: Javapackage: `org.openbravo.module.aeat190.es`
-
-#### **Introducción**
-
-Esta sección explica el contenido y funcionamiento del módulo **"Modelo 190"**, incluído dentro del bundle de Localización Española para Etendo.
-
-**Descripción del Modelo**
-
-El módulo **Modelo 190** permite a las empresas cumplir con sus obligaciones fiscales relativas a la obligatoriedad de declarar las retenciones e ingresos a cuenta sobre rendimientos del trabajo y de actividades económicas, premios y determinadas ganancias patrimoniales e imputaciones de renta.
-
-La presentación del Modelo 190 por vía telemática deberá efectuarse en el plazo comprendido entre los días 1 y 31 de enero de cada año, en relación con las cantidades retenidas y los ingresos a cuenta efectuados correspondientes al año natural inmediato anterior.
-
-Con este módulo, el Modelo 190 se puede presentar a Hacienda como un fichero de texto válido, obtenido a través del "Generador de Declaraciones de Impuestos".
-
-#### **Contenido del fichero Modelo 190**
-
-El fichero generado por Etendo, que cumple con el formato requerido por la Agencia Tributaria, contiene:
-
--   Una primera sección, llamada *registro tipo 1*, con información relativa a la empresa que presenta el informe, CIF, nombre de la empresa, persona de contacto y resumen de los detalles presentados.
--   Una segunda sección, llamada *registros tipo 2*, con la información relativa a la retención e ingresos a cuenta practicada a la empresa agrupada por tercero y año.
-
-De esta forma, el informe puede contar con un único registro de tipo 1 y cero o varios registros de tipo 2.
-
-Si el usuario abre el fichero generado con un editor de texto plano, verá una sucesión de números y letras prácticamente ilegibles para el ser humano. Si desea comprobar el contenido del fichero e incluso modificarlo antes de ser enviado a la Agencia Tributaria, puede importar dicho fichero en la AEAT (Ver abajo).
-
-#### **Instalación y aplicación del módulo**
-
-##### **Instalación**
-
-Para su instalación del Modelo 190 de Etendo, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
--   Instalación de la última versión disponible de Etendo 
--   o la instalación del módulo de Localización Española.
-
-!!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-
-##### **Aplicación del módulo**
-
-El módulo del Modelo AEAT 190 incluye el correspondiente "conjunto de datos" o "configuración" que relaciona los tipos/rangos de impuestos (retenciones, en este caso) para España con los parámetros del 190, por tanto:
-
--   Una vez instalado el módulo, la "configuración del Modelo 190" debe aplicarse a la **Entidad legal con Contabilidad** que corresponda, en la ruta de aplicación: Configuración General || Organización || **Gestión del módulo de Empresa.**
--   Importante, antes de aplicar esta configuración es importante haber aplicado previamente la configuración del módulo de impuestos, puesto que el Modelo 190 depende de éste.
-
-![](https://docs.etendo.software/latest/assets/drive/NPmuokqQMPVWHGO_5axvvqS3kqWJ7TUYhtrgII9Adx2R4lsxQxCOECCclQxInjaTso4hIHruR7f8UNtrSAMuTvupjpsmZW-osW83k_TFV3UE_QFFP8igDGJf6ctmSmSFP5WLMyHfV8lI19X_wgXEO24.png)
-
-Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
-
--   se han creado un nuevo informe, el modelo 190 anual que se encuentra en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
-     
-
-![](https://docs.etendo.software/latest/assets/drive/0DGnsbvGSRglnOfedtcm1BRq0hExCnVLCnWNfG9twk0cA9ktqHih10dD1ufrzq3uGu1oafipUnxtCc7W08aw753gYX3AzuoAMZ6ZAyknSHIwLa9eAw-kajDMk6DOjGpTM5IOKb0pxrmcm5Dj31wI2ZM.png)
-
--   los rangos de impuestos se han asociado al correspondiente Parámetro del informe 190, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/posición del fichero, tal y como se muestra en la siguiente imagen:  
-     
-
-![](https://docs.etendo.software/latest/assets/drive/jH29-HkAFNLN3w0RKpitrmjGJ918EMfwdfbMQmfE7qEeFhSAB-tRR9z-pNWDz34lm9xlhMN1ADfKDKwicm4h6282rQATMsMggwZUCfu4ZX6aBmki3PF1g8O_dzJVRa7i55QIMWkesDoXacrd4Rb9_RQ.png)
-
--   y, por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 190, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
-     
-
-![](https://docs.etendo.software/latest/assets/drive/duCdxzeDZl6Ym8W_h-APG_n78tbJ09PZ9MLqx11_Q2x96V2K1-TrVAh5I-apRPNWffmsIybEKB06xmRie5bzRHyi9Ljf70g6ekwyusOk8ZR5lg9_7cllbMklo9vRjRB73JbKdW4q8XxdL9CwrMW3eZE.png)
-
-#### **¿Qué se incluye en el Modelo 190 generado por Etendo?**
-
-El informe generado por Etendo incluye únicamente las retenciones referentes a actividades económicas, puesto que es la información que el ERP maneja actualmente.
-
-El resto de información que se incluye en el Modelo 190, como retenciones e ingresos a cuenta por rendimientos del trabajo, determinadas ganancias patrimoniales o premios, no está registrada en el ERP y, por lo tanto, no se puede incluir en el informe.
-
-Sin embargo, si usted desea incluir esta información en su declaración, tan sólo debe importar el fichero generado por Etendo como se indica en [_Modelo 190_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/declaraciones-informativas-ayuda-tecnica/modelos-190-198/modelo-190-formulario.html){target="_blank"}.
-
-##### **Tipos de documentos y retenciones que se incluyen en el informe**
-
-El modelo 190 es un informe de retenciones, así que sólo se tendrán en cuenta facturas de compra con retenciones a terceros ubicados en España que estén contabilizadas y pagadas (parcialmente o completamente).
-
-Dentro de las facturas de compra, se soportan todo el rango disponible actualmente:
-
--   Facturas de compra (AP Invoice)
--   Facturas de abono de compra (AP Credit Memo)
--   Facturas de compra negativas (AP Invoice negativas)
--   Facturas de tipo "Reversal" (Reversed Purchase Invoice)
-
-##### **Retenciones asociadas a parámetros del informe**
-
-Las retenciones que vienen asociadas a los parámetros del modelo 190 son:
-
--   Details-Withholding\_G\_01, Clave tributaria G - subclave 01:
-    -   Prestación servicios nacional 0% -15%R (-15%)
-    -   Prestación servicios nacional 16% -15%R (-15%)
-    -   Prestación servicios nacional 18% -15%R (-15%)
--   Details-Withholding\_G\_03, Clave tributaria G - subclave 03:
-    -   Prestación servicios nacional 0% -7%R (-7%)
-    -   Prestación servicios nacional 16% -7%R (-7%)
-    -   Prestación servicios nacional 18% -7%R (-7%)
--   Details-Withholding\_H\_04, Clave tributaria H - subclave 04:
-    -   Prestación servicios nacional 18% -1%R (-1%)
-
-##### **Retención proporcional al pago**
-
-La retención a incluir en el fichero del modelo 190 es proporcional a la percepción íntegra efectivamente satisfecha durante el ejercicio correspondiente:
-
--   por ejemplo, si tenemos una factura contabilizada pero pagada en un 50% en 2011, el informe del 190 del 2011 incluirá la parte proporcional de la retención práctica en la factura, esto es, el 50%.
-
-Además, si durante un ejercicio se han satisfecho facturas correspondientes a ejercicios anteriores, el fichero del modelo 190 incluirá una línea por cada uno de los pagos efectuados durante dicho ejercicio, correspondientes a facturas devengadas en años anteriores, indicando, por tanto, el año de devengo.
-
-##### **Cantidades indebidas o excesivamente percibidas en ejercicios anteriores**
-
-El fichero del modelo 190 tiene en cuenta los datos relativos a cantidades reintegradas por sus perceptores en el ejercicio, como consecuencia de haber sido indebida o excesivamente percibidas en ejercicios anteriores, en estos supuestos:
-
--   cada reintegro se relaciona bajo la misma clave y, en su caso, subclave de percepción bajo la cual se incluyeron en su día las cantidades indebidas o excesivamente satisfechas
--   se refleja su importe en el campo "Percepción íntegra"
--   el campo "Signo de la percepción íntegra" se cumplimenta con la letra "N" (importe negativo)
--   y se consigna el valor (0) en el campo "Retenciones practicadas"
--   finalmente, se hace constar en el campo "Ejercicio devengo" el año en el que se devengaron originariamente las percepciones reintegradas.
-
-!!! info
-    Cuando se hayan producido reintegros procedentes de una misma persona o entidad que correspondan a percepciones originariamente devengadas en varios ejercicios, su importe se desglosa en varios apuntes o registros, de forma que cada uno de ellos refleje exclusivamente reintegros de percepciones correspondientes a un mismo ejercicio.
-
-
-#### **Generación del modelo 190**
-
-Tal y como ya se ha explicado, el modelo 190, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: **Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos**
-
-Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo" y otros, puede introducir los parámetros de entrada propios del 190:
-
-![](https://docs.etendo.software/latest/assets/drive/Jbjc9g-xJ_iZ2B6_xDHfLV9umzxu0_R-HS5ss8jpczAYl654wdnKknjU_i6b8wqIRhiWQbeArp2hMAGaZTsj5_zoOHLAIEq-s8BhhTEbnFmoHYcfRaLoVcxI1TlCjyjuUQeXbM7ZN7AZAuBE9Z4YjXg.png)
-
-En este caso, se puede especificar el nombre del fichero (si no queremos el que el sistema da por defecto), y la información necesaria en caso de generar una declaración sustitutiva.
-
-#### **Importación del modelo 190 en AEAT**
-
-Una vez generado el fichero, el mismo tendrá que cargarse en la AEAT en la página correspondiente de [Agencia Tributaria](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI10.shtml){target="_blank"}.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Modelo 347
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 347
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347
-## Article Content: 
-#### **Introducción**
-
-Esta sección describe la generación de la declaración: “**Modelo AEAT 347 - Declaración Anual de Operaciones con Terceros**” como un fichero de texto ("\*.txt") válido conforme a los requerimientos de la Hacienda Pública española, es por ello que se publicará una nueva versión de este módulo cuando dichos requerimientos cambien.
-
-El fichero del 347 se genera desde el "**Generador de Declaraciones de Impuesto**" que se encuentra en la ruta de aplicación: "Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos".
-
-El Modelo/Declaración 347 es parte del módulo de Localización Española de Etendo.
-
-#### **Descripción del módulo**
-
-##### **Obligados a presentar la declaración**
-
-De acuerdo con la normativa de la Hacienda Española, están obligados a presentar el modelo 347:
-
-Todas aquellas personas físicas o jurídicas, de naturaleza pública o privada que desarrollen actividades empresariales o profesionales, siempre y cuando hayan realizado operaciones que, en su conjunto, respecto de otra persona o Entidad, cualquiera que sea su naturaleza o carácter, hayan superado la cifra de 3.005,06€ durante el año natural al que se refiere la declaración. Para el cálculo de la cifra de 3.005,06 € se computan de forma separada las entregas de bienes y servicios y las adquisiciones de los mismos.
-
-De acuerdo con la normativa, no están obligados a presentar el modelo 347:
-
--   Quienes realicen en España actividades empresariales o profesionales sin tener en territorio español la sede de su actividad, un establecimiento permanente o su domicilio fiscal.
--   Las personas físicas y entidades en atribución de rentas en el Impuesto sobre la Renta de las Personas Físicas, por las actividades que tributen en dicho impuesto por el método de estimación objetiva y, simultáneamente, en el Impuesto sobre el Valor Añadido por los regímenes especiales simplificado o de la agricultura, ganadería y pesca o del recargo de equivalencia, salvo por las operaciones por las que emitan factura.
--   Los obligados tributarios que no hayan realizado operaciones que en su conjunto superen la cifra de 3.005,06€
--   Los obligados tributarios que hayan realizado exclusivamente operaciones no declarables.
--   Los obligados tributarios que deban informar sobre las operaciones incluidas en los libros registro de IVA (modelo 340) salvo que realicen operaciones que expresamente deban incluirse en el modelo 347.
-
-##### **Operaciones declarables**
-
-Las operaciones declarables y que, por tanto, se incluyen en el modelo 347 son las que se detallan a continuación:
-
-1.  Tanto las entregas de bienes y prestaciones de servicios realizadas por el declarante como sus adquisiciones de bienes y servicios incluyéndose, en ambos casos, tanto las operaciones típicas y habituales como las ocasionales e incluso las operaciones inmobiliarias. Debe tenerse en cuenta que dichas operaciones se incluirán estén o no sujetas al IVA y, en el primer caso, también las exentas de dicho impuesto.
-
-Además, se incluyen de forma específica y aparte:
-
--   los Arrendamientos de locales de negocios
--   los importes superiores a 6.000,00€ percibidos en metálico de cada una de las personas o entidades relacionadas en la declaración
--   las cantidades que se perciban en contraprestación por transmisiones de bienes inmuebles que constituyan entregas sujetas a IVA
--   y las prestaciones de servicios de/a no residentes (incluyendo Canarias, Baleares, Ceuta y Melilla) que no estén sujetos a retención.
-
-Los importes que se incluyen en el modelo 347 son los “importes totales” de la contraprestación en euros (€). En los supuestos de operaciones sujetas y no exentas de IVA se añaden, por tanto, a la base imponible, las cuotas del impuesto y recargos de equivalencia repercutidos. Los importes además se declaran netos de las devoluciones o descuentos y bonificaciones concedidos.
-
-Las operaciones que se incluyen en el modelo 347 son las realizadas por el declarante en el año natural a que se refiere la declaración y la fecha que se tiene en cuenta para su inclusión en el 347 es la fecha contable de la factura.
-
-Las operaciones que en ningún caso se incluirán en el 347 por ser no declarables son las que se detallan a continuación:
-
--   aquellas que hayan supuesto entregas de bienes o prestaciones de servicios por las que los obligados tributarios no debieron expedir y entregar factura o documento equivalente
--   aquellas operaciones realizadas al margen de la actividad empresarial o profesional
--   aquellas efectuadas a título gratuito
--   los arrendamientos de bienes exentos de IVA
--   las importaciones y exportaciones de mercancías, así como las entregas y adquisiciones de bienes que supongan envíos entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla.
--   Todas aquellas que se incluyan en otros modelos de la Administración Tributaria como por ejemplo aquellas cuya contraprestación haya sido objeto de retención o ingreso a cuenta; las operaciones intracomunitarias de bienes y servicios que se declaran en el modelo 349 o las operaciones incluidas en los libros registro que deben incluirse en el modelo 340.
-
-El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se describe a continuación y que deberían incluirse en el modelo 347, por ser relativas a Administraciones Públicas, Entidades aseguradoras y Colegios Profesionales:
-
--   las subvenciones, auxilios o ayudas satisfechas por las entidades integradas en las distintas Administraciones Públicas
--   las operaciones de seguros realizadas por las entidades aseguradoras
--   las prestaciones de servicios realizadas por las agencias de viajes
--   los cobros por cuenta de terceros de honorarios profesionales o de derechos derivados de la propiedad intelectual, industrial, de autor u otros por cuenta de sus socios, asociados o colegiados efectuados por sociedades, asociaciones, colegios profesionales u otras entidades que, entre sus funciones, realicen las del cobro
--   las operaciones sujetas al impuesto sobre la producción, los servicios y la importación en las ciudades de Ceuta y Melilla.
-
-Además, no se incluye en el módulo de funcionalidad el supuesto de Declaración Complementaria para aquellos casos en que deban incluirse sólo las operaciones que, debiendo haber sido declaradas en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deberán ser incluidas por el usuario manualmente, a través de la página de la AEAT tal y como se explica en la sección de este documento "Declaración Complementaria".
-
-#### **Instalación del módulo**
-
-Para la instalación del módulo **“Modelo AEAT 347 - Declaración de operaciones con terceros”**” (Spain AEAT Modelo 347 for APR),el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
--   Instalación de la última versión disponible de Etendo 
--   o la instalación del módulo de Localización Española.
-
-!!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-
-Es importante recalcar que el módulo del Modelo AEAT 347 incluye el correspondiente conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347, este conjunto de datos se debe aplicar a la Organización para la cual se necesita obtener el 347 tal y como se explica en el siguiente apartado.
-
-##### **Aplicación del Módulo**
-
-Una vez instalado el módulo del 347 por cualquiera de los procedimientos anteriores, el usuario debe aplicar el conjunto de datos o dataset del módulo 347 a la organización legal con contabilidad que corresponda, desde la ventana "Gestión del Módulo de Empresa".
-
-El módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo 347, y debe estar instalado previamente.
-
-!!! info
-    Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización (\*) o bien a la organización legal para la que se quiera obtener el 347.
-
-
-#### **Configuración del módulo**
-
-##### **Configuración del modelo 347**
-
-Una vez aplicado el conjunto de datos del Modelo 347, puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos que el modelo 347 del periodo correspondiente está creado como informe anual de impuestos.
-
-![](https://docs.etendo.software/latest/assets/drive/2u88N7Cgi-SP2bdf8o4omVD0u1Up3nn33id19ei0bDPUxydw-cF9LLBl-YAE_5CNlQR7_9-rgia_VhhUwgW6QTKQgrHCC1qu4jTyfflLyVH9uDdav7NQWS47_h1ntt7M7800npJGiAbWAqRnzHfhIQ.png)
-
-En la pestaña “Secciones de la declaración” se han creado 3 grupos para el modelo 347:
-
--   Nombre del Fichero del 347. Esta sección contiene:
-    -   un parámetro de tipo “entrada” que se mostrará en el momento de generar el 347 con el fin de que el usuario introduzca manualmente el “Nombre del fichero txt del 347” que se va a generar.
--   Identificación y Totales. Esta sección contiene:
-    -   2 parámetros de tipo “constante” que el sistema tendrá en cuenta a la hora de incluir las operaciones, ya que solo incluirá las que superen las cifras límite que se detallan a continuación:  
-          
-        -   Cifra límite de inclusión de operaciones con terceros = 3.005,06€
-        -   Cifra límite para cobros percibidos en efectivo = 6.000,00€
-    -   y 5 parámetros de tipo “entrada” que se mostrarán en el momento de generar el 347 con el fin de que el usuario los introduzca manualmente y que son:  
-          
-        -   Nombre y apellidos de la persona de contacto: Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el nombre de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
-        -   Nº Teléfono de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el teléfono de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
-        -   Declaración substitutiva (si/no)
-        -   Nº de la declaración a sustituir
-        -   NIF del representante legal
--   **Operaciones con terceros**. Esta sección contiene:
-    -   5 parámetros de tipo “salida” ligados a la clave tributaria correspondiente, que asociados a los tipos impositivos del módulo de impuestos para España, incluirán las operaciones de compra/venta en el 347:
-        -   Adquisiciones de bienes - Clave A
-        -   Entregas de bienes - Clave B
-        -   Prestación de servicios - Clave A
-        -   Servicios prestados - Clave B
-        -   Transmisiones de inmuebles - Clave B
-
-En la ruta Gestión Financiera / Contabilidad / Configuración / AEAT347 Tipo de documento, el usuario puede especificar los tipos de documentos que el 347 debe tener en cuenta. El funcionamiento de esta pantalla de parametrización es que si no se especifica ningún tipo de documento, Etendo tendrá en cuenta todos los tipos de documentos de tipo factura que se pueden contabilizar.
-
-Si el usuario introduce algún tipo de documento, solo esos serán los que se tengan en cuenta.
-
-![](https://docs.etendo.software/latest/assets/drive/OkdImkuzASfTUs2ne-BnPzKROain8Y-Z59B-4m3DX8xAjhoK-wvSJEmH6P1OBX-eIC9AGQXKGViX6K-0zMZHeGnfVD3v-eKgTvojkYKe-vEXykDdGYstwWmsUW4vRRjUAreAq7ndNhtf8zVm3rwbug.png)
-
-##### **Configuración de impuestos**
-
-Este módulo de generación del modelo 347 se basa en el módulo de impuestos para España, ya que utiliza los rangos de impuesto que incluye dicho módulo. Además, incluye un juego de datos que liga los rangos de impuesto del módulo de impuestos para España con los parámetros del 347 que se listan a continuación, en función de la operación de que se trate:
-
--   **Adquisiciones de bienes – Adquisición “A”**
--   **Entregas de bienes – Entregas “B”**
--   **Prestación de servicios– Adquisición “A”**
--   **Servicios prestados– Entregas “B”**
--   **Transmisiones de inmuebles – Entregas “B”**
-
-El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Rango impuesto - pestaña Parámetro de Impuesto que los “tipos impositivos/impuestos” que deben incluirse en el 347 se han asociado al correspondiente parámetro de impuesto del 347:
-
--   Los tipos de IVA de compras/adquisiciones (nacional) incluyendo las adquisiciones de bienes inmuebles y bienes de inversión, se han asociado con el parámetro “Adquisiciones de bienes” que se corresponden con la clave de operación del 347 => “A”
--   Los tipos de IVA de ventas/entregas (nacional) (incluyendo Recargo de Equivalencia) se han asociado con el parámetro “Entregas de bienes” que corresponden con la clave de operación del 347 => “B”
--   Los tipos de IVA de “inversión del sujeto pasivo NO UE” (en los casos de prestación de servicios NO intracomunitarios) se han asociado con el parámetro “Prestación de servicios” que se corresponden con la clave de operación del 347 => “A”
--   Los tipos de IVA de entregas de bienes inmuebles (nacional) se han asociado con el parámetro “Transmisiones de inmuebles” que se corresponden con la clave de operación del 347 => “B”; ya que tiene que declararse dos veces como operación de venta y consignarse a parte el importe de la transmisión del bien inmueble.
--   Se han creado los tipos de IVA específicos para prestaciones de servicios (nacional e internacional), asociados a categorías de impuestos específicas para los servicios, que se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa declarante reciba o preste los servicios.
--   Los tipos de IVA de servicios desde/a Canarias, Baleares, Ceuta y Melilla se han asociado bien con el parámetro “Prestaciones de servicios” clave de operación del 347 => “B” o bien con el parámetro “Operaciones de servicios (Adquisición) clave de operación del 347 => “A”, respectivamente, ya que sólo se incluyen en el 347 las operaciones de servicios y no las de bienes que supongan envíos de bienes entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla
--   Y por último se han creado tipos de IVA específicos para alquileres (con y sin retenciones asociados a 2 tipos de BP tax category, respectivamente). Los tipos de IVA de alquiler sin retenciones se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa sea arrendatario o arrendador del local u oficina arrendado y sujeto a IVA.
-
-##### **Configuración de los locales de negocio**
-
-En el modelo 347 se deben incluir los arrendamientos de locales de negocios, es por ello que en la ruta de aplicación: Gestión de Datos Maestros / Producto se ha creado un nuevo parámetro “Local arrendado”.
-
-De ser así, el usuario debe introducir en el sistema la información que se detalla a continuación, ya que es necesario incluirla en el modelo 347:
-
--   **Situación**. El usuario debe elegir entre una de las siguientes opciones:
-    -   Locales en el extranjero
-    -   Referencia catastral válida en País Vasco o en Navarra
-    -   Referencia catastral válida excepto en País Vasco o Navarra
-    -   Sin referencia catastral
--   **Referencia catastral.** Campo de texto libre.
--   **Tipo de vía.** El usuario debe elegir el tipo de vía de una lista normalizada según el INE español.
--   **Nombre de la vía pública**. Campo de texto libre.
--   **Tipo de numeración**. El usuario debe elegir el tipo de numeración de una lista normalizada.
--   **Número**. Campo de texto libre.
--   **Calificación del número**. Campo de texto libre.
--   **Bloque**. Campo de texto libre.
--   **Portal**. Campo de texto libre.
--   **Escalera**. Campo de texto libre.
--   **Planta o piso**. Campo de texto libre.
--   **Puerta**. Campo de texto libre.
--   **Complemento**. Datos complementarios del domicilio si los hubiera.
--   **Localidad o Población**. Campo de texto libre.
--   **Municipio**.
--   **Código de municipio**. El usuario debe elegir el código del municipio de una lista normalizada según el INE español.
--   **Código de provincia.** El usuario debe elegir el código de provincia de una lista de códigos de provincia de dos dígitos numéricos.
--   **Código postal**. El usuario debe elegir el código postal.
-
-En el caso de "Locales en el extranjero" los datos a incluir son:
-
--   **Tipo de vía.**
--   **Nombre de la vía pública**.
-
-El 347 refleja este tipo de operaciones de forma separada tal y como se explica en el correspondiente caso de usuario.
-
-#### **Generación del modelo 347**
-
-El modelo 347 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos.
-
-![](https://docs.etendo.software/latest/assets/drive/I8vKXFszVIXPVZhyPNt7q1dl52OyNIGw-JWKniQBLnKUq21l25J9MbdniTdtPtnNIB1Q3aKoP3thNPaSWwmlwa3xdcBYC6jQWnQUxks9w9nH2cMZEKWtJMgTrWme0TlsVbG5dqhEh14CHBKAqglBiA.png)
-
-El usuario deberá introducir los siguientes datos para generar el modelo 347:
-
--   **Organización** para la cual quiere generar el Modelo 347. El sistema mostrará el calendario asociado a la organización en un campo no editable.
--   **Esquema contable**
--   **Declaración**. El usuario debería seleccionar aquí el modelo 347 del periodo impositivo que corresponda.
--   **Ejercicio**. El usuario puede introducir el año natural para el cual quiere generar el modelo 347
--   **Periodo**. El valor “Anual” debería mostrarse por defecto.
-
-Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 347 en el botón de proceso “Parámetros de entrada”
-
-![](https://docs.etendo.software/latest/assets/drive/BTVvmrL7eUYl5NhX1-PKOO_Aa_50C1NZd8bWXZAiD4oQsYc32KxEQKKhjq1bzpwL084nWtTneQN0cn2Fd9zQVoUqkGtIrzR8LnkUklnypDnn9CSFjpknNIHs5c6lV8fV4nsqaxBlFplBnEuRQ2_8pA.png)
-
-y una vez introducidos los parámetros de entrada, como por ejemplo el "Nombre del Fichero" o la "Persona/Teléfono de contacto", el usuario puede generar el fichero del Modelo 347 a través del botón de proceso “Generar fichero”.
-
-Es entonces cuando se genera el fichero de texto ("\*.txt") del Modelo 347 conforme a los requerimientos de la AEAT, que puede presentarse directamente en la web de la AEAT.
-
-En el módulo [](http://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/sso/ForgeModuleDetail/Spain-AEAT-Modelo-347-For-APR)"Spain AEAT Modelo 347 for APR", se genera un fichero zip que contiene tres ficheros:
-
--   el fichero "txt" ya mencionado de igual formato y, por tanto, igualmente válido para la presentación del Modelo 347 a partir de 2014
--   un fichero denominado "Facturas.csv"
--   y un fichero denominado "Metalico.csv"
-
-*Los dos ficheros adicionales de formato \*.csv sólo se generan si la declaración del 347 tiene contenido*.
-
-El fichero "Facturas.csv":
-
--   contiene un listado con información del tipo "Tercero", "Fecha Contable", "Impuesto", "Base Imponible", "Cuota", "Total" etc, de todas las facturas susceptibles de incluirse en el fichero txt.
-
-El fichero "Metalico.csv":
-
--   contiene un listado con información del tipo "Cuenta Financiera", "Identificación de Transacción", "Tercero", "Fecha Contable", "Importe" y "Ejercicio (de devengo)" de todos los cobros en efectivo susceptibles de incluirse en el fichero txt.
-
-#### **Casos de usuario**
-
-##### **Operaciones de compra y venta**
-
-Etendo permite la introducción y contabilización de facturas de compra y de venta, a través de la ventana correspondiente.
-
-El modelo 347 recogerá agrupando por "tercero" y "clave \[A (compras) o B (ventas)\]", las siguientes operaciones de compra/venta que superen la cifra de 3.005,06 euros:
-
--   compra/venta de bienes/servicios (no sujetos a retención) dentro del territorio de aplicación del impuesto (IVA), España y Baleares
--   compra/venta de servicios desde/hacia resto del mundo, incluyendo Canarias, Ceuta y Melilla.
-
-No se van a tener en cuenta:
-
--   operaciones de compra/venta de bienes/servicios intracomunitarias, por reflejarse en otro modelo de hacienda, el Modelo 349, excepto las operaciones que no se incluyen en el Modelo 349.
--   importaciones/exportaciones de bienes.
-
-###### **Operaciones de compra y venta acogidas a RECC**
-
-Etendo permite la introducción y contabilización de facturas de compra y de venta acogidas al RECC (Régimen Especial de Critero de Caja).
-
-Para ello:
-
--   la "Organización" debe estar acogida a este Régimen
--   o bien no acogida pero si alguno de los proveedores de los cuales recibe facturas de compra.
-
-Estas organizaciones deben tener aplicado el juego de datos del módulo "Spain AEAT Modelo 347 Cash VAT compatible.
-
-Este módulo incluye un juego de datos que relaciona los impuestos de IVA de Caja con los parámetros correspondientes del Modelo 347.
-
-Las transacciones de compra/venta se recogen en el Modelo 347 de forma anual conforme al criterio de devengo general de IVA y marcadas como "Operación de IVA de Caja". Además, se incluye la parte correspondiente anual devengada conforme al criterio de IVA de Caja en otro campo.
-
-**Transmisión de Inmuebles**
-
-Etendo permite la introducción y contabilización de transmisiones (ventas) de bienes inmuebles sujetas a IVA.
-
-Este tipo de operaciones se recogen de forma separada en el modelo 347.
-
-Es por ello que se ha creado en el módulo de impuestos para España:
-
--   categorías de impuestos específicas para los B. Inmuebles (IVA Normal B.Inmuebles e IVA Reducido B.Inmuebles)
--   rangos de impuestos (IVA) de compra/venta de Bienes Inmuebles
-
-y en el conjunto de datos del 347:
-
--   un parámetro específico denominado "Transmisiones de Inmuebles" ligado a los impuestos de venta de bienes inmuebles.
-
-###### **Transmisión de Inmuebles sujetas a RECC**
-
-Este tipo de transacciones también se incluyen en el Modelo 347 de forma separada, en computo anual, y marcadas como "Operación IVA Caja".
-
-##### **Arrendamientos**
-
-Etendo permite la introducción y contabilización de facturas de compra y de venta que incluyan arrendamiento de locales de negocio sujetos a IVA.
-
-Solo en el caso de arrendamientos de locales de negocio por parte del propietario de dicho local, se deberá además incluir información adicional sobre dicho inmueble/local, en un registro de tipo Inmueble específico. Para ello, aquellos locales que se den de alta en el maestro de productos susceptibles de ser alquilados deberán configurarse como tales tras activar el nuevo parámetro "Local arrendado".
-
-Esto implica rellenar datos como los que se muestran en la siguiente imagen:
-
-![](https://docs.etendo.software/latest/assets/drive/dE833IZAyk5YYiQiYB9eDDk6wxK_0btiWm0ZxEGjetv8EO6eEVaFX1l49jftJWX3Kzpsjf7CYhV2xKGpTzoPPIHnWOtBreM6VjXKc9pppnC3uX0Da8TQSwz_CSSxFmBEVhREbwCzxTxCExDC9scqtRA.png)
-
-Este tipo de operaciones tienen que reportarse de forma separada en el 347 tal y como se muestra en la siguiente imagen:
-
-![Arrendamiento fichero.png](https://docs.etendo.software/latest/assets/drive/jbFjoMyVVnHbJWnBIr3G76slsiwl0sB1cuiVHPyZU3Fxi0xayrKTqa6KnmpwSN6pZAUm3FPIwxGY8b7sfijsMd2dXLmxmn4WI85_Pr8_F41aL7Y3GQUXNZYqaM4uvGleErZpzWqX3KiMv6ElEGHuxt8.png)
-
-La transacción de venta (B) con el cliente "Cliente Arrendamiento" por un importe anual de 30.310,50, incluye además el arrendamiento de un inmueble por un importe de 13.370.50.
-
-###### **Arrendamientos en RECC**
-
-Estas operaciones se reflejan de forma anual en el modelo 347,marcadas como tal, incluyéndose también la información referente al registro del inmueble arrendado por el declarado. 
-
-##### **Cobros en Efectivo**
-
-Etendo permite la introducción y contabilización de facturas de venta y sus correspondientes cobros en efectivo depositados y contabilizados en Etendo a través de cuentas financieras del tipo "Caja".
-
-  
-Se recomienda configurar el método de pago "Contado" asociado a la cuenta financiera "Caja" como se detalla a continuación:
-
--   Permitido para Cobro
--   Depósito automático en cuenta
--   Cuenta de depósito = Cuenta contable para depósito.
--   los cobros que para un tercero (cliente) y para un periodo, por ejemplo 2014, que lógicamente será el periodo/año para el cual generamos el 347, superen el umbral de 6.000,00 €
-    -   Dicho cobro puede referirse a operaciones incluidas en facturas de venta contabilizadas en 2014 o años anteriores.
-
-![Cobro Efectivo 2.png](https://docs.etendo.software/latest/assets/drive/rQsEfez1_-0gnYadOcq2Dp9ptPt-fpXnvDJr-dZQKfhGd4CbMhpIZl8--qafNSbneZvk0iTvjQdOyesMqfRe8UKT1l8bwOYiPd4PojgZsEHUXOjQ5o5TiOrFYFxOVfBKW4hIp9qC0W8mkxbVsM54wz4.png)
-
-![Cobro Efectivo 1.png](https://docs.etendo.software/latest/assets/drive/Lxv-BIcYyAGs73YiuQW3z8G7HaswKFky4KLo0tygiKNTTsVyOQuux39shCmeBOucaw5We-Pq56fRIDdRr4VeMlWN2ffdh1Pw-u931b7tv1Ejq87qM-waVMN6DMHFg4VKOpgsvPeTu6Qwfx0BT3Rf_3k.png)
-
-En el fichero ejemplo anterior se puede comprobar que:
-
--   los cobros en efectivo tanto del "Cliente Efectivo" (por importe de 18.000,00) como del "Cliente Efectivo Varios" (por importe de 6.560,00) se especifican de forma separada en las posiciones (101-115). La diferencia entre estos cobros es:
-    -   para el "Cliente Efectivo Varios", la operación que generó el cobro en efectivo en el año 2014 se devengo y se declaró en el año 2013.  
-        Esa es la razón por la cual no aparece importe de operación alguno en las posiciones 83-98 y el año de devengo de la operación es 2013.
-    -   para el "Cliente efectivo B", la operación que generó el cobro en efectivo se devenga y se cobra en el año 2014, y forma parte del total de operaciones por importe de 81.675,00.
-
-Faltaría un último caso:
-
-El caso en el que un cobro/s del año en curso (2014), sea un cobro/s de transacciones devengadas en un periodo/año anterior y, por tanto, ya declaradas, y transacciones devengadas en el periodo/año en curso y, por tanto, no declaradas, tal y como se muestra en la siguiente imagen:
-
-![Efectivo C 1.png](https://docs.etendo.software/latest/assets/drive/UNvoZgjSZH4I3jP_aiFtWoh588bAF9cXNFgxPj9QwdIVRaSs2LQPqaO0OfaumKmjQOuONVkzQGnDksNIoLc7WsaMn_lM2LfMrDdYTlFaM7rQA2UzZu06m4Yujf8I4zN_3XE-sPOl7SnRi8i7pXJkujA.png)
-
-![Efectivo C 2.png](https://docs.etendo.software/latest/assets/drive/fUbrPtlbC-3LRPMGAoFSLSg5WJL9aJnB-ArVFC3JAq-ED3T3EyPf4rNPjlEEPdIhSqX31YFcp95zSSdXDdxNAwR0Jj6APn121ZA20w1dwxW571BuD2nXIjhchVDKE4BEHosSqTq9cd39qycG3KI9u5M.png)
-
-En la imagen anterior, se ha producido un cobro en el año 2014 por importe de 48.188,25; de los cuales 7.350,75 son por operaciones realizadas y declaradas en el año 2014 y el resto 40.837,50 por operaciones realizadas y declaradas en un ejercicio anterior (2013).
-
-###### **Cobros en Efectivo en RECC**
-
-Todo lo dicho en este apartado aplica igualmente a las operaciones de venta en IVA de Caja que se cobran en efectivo, salvo que en este caso no aplicaría un "Ejercicio" de devengo anterior a 2014, ya que el periodo de validez de este régimen comenzó el 1 de enero de 2014.
-
-Además del importe anual de las operaciones y el importe anual devengado en criterio de IVA de Caja, debe añadirse el importe percibido en metálico, junto con el ejercicio de devengo de dichas operaciones.
-
-##### **Presentación del modelo 347 en formato electrónico**
-
-La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
-
-La presentación telemática puede realizarse a través de la página web de la [Hacienda Pública española](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml){target="_blank"}.
-
-###### **Datos en los ficheros csv**
-
-Tal y como ya se ha mencionado, con módulo "Spain AEAT Modelo 347 for APR" se generan, además del fichero "txt" del Modelo 347, dos ficheros adicionales "\*.csv", un fichero denominado "Facturas.csv" y otro fichero denominado "Metalico.csv".
-
-El fichero csv "XXXFacturas.csv" incluye las siguientes columnas:
-
--   "**Tipo de documento**".  
-    Estos son las facturas estándar (AP/AR Invoice, AP/AR Credit Memo..etc) de Etendo
--   "**Número de documento**"  
-    O número de factura/abono.
--   "**Tercero**"  
-    Cliente o proveedor.
--   "**NIF/CIF**" del tercero.
--   "**Fecha Factura**"
--   "**Fecha Contable**"  
-    Fecha contable de la factura.
--   "**Impuesto**"  
-    Impuestos del dataset de impuestos para España ligados al parámetro del Modelo 347 correspondiente.
--   "**IVA de Caja**"  
-    Esta columna nos indica si la factura está o no sujeta a IVA de Caja.
--   "**Cuota**"  
-    Cuota ligada al tipo de impuesto incluido en la factura
--   "**Base Imponible**"  
-    Base imponible ligada al impuesto incluido en la factura.
--   "**Total**"  
-    Suma de la base imponible y la cuota. Este valor es el que hay que tener en cuenta ya que el 347 incluye importes totales, incluído el IVA, al ser una declaración de operaciones con Terceros y no una liquidación de IVA.
--   "**Tipo de Línea**"  
-    Dado que en el 347 se tiene que incluir de forma separada tanto los arrendamientos como las transmisiones de bienes inmuebles y operaciones de inversión del sujeto pasivo, por tanto, en este campo las opciones que hay son "vacío" para operaciones de compra/venta normales, "Arrendamientos", "Transmisión B. Inmuebles" e "Inversión Sujeto Pasivo".
-
-El fichero csv "XXXMetálico.csv" incluye las siguientes columnas:
-
--   "**Cuenta Financiera**"  
-    Cuentas financieras de tipo "Caja" de Etendo.
--   "**Línea de Transacción**"  
-    Número de línea de la transacción en la pestaña "**Transacción**" de la cuenta Financiera.
--   "**Identificador de Transacción**"  
-    Identificador formado por la cuenta financiera, la divisa, el número de cobro, la fecha del cobro, el tercero y el importe del depósito/cobro.
--   "**Tercero**"
--   "**NIF/CIF**" del tercero.
--   "**Fecha Contable**"  
-    Fecha contable del cobro.
--   "**Ejercicio**"  
-    Ejercicio en el cual se devengó la operación o factura que se cobra. Este ejercicio puede ser 2014 o anterior para declaraciones del ejercicio 2014.
--   "**Importe transacción**"  
-    Importe del cobro en metálico.
-
-Estos ficheros csv nos van a permitir saber por ejemplo:
-
--   que tercero se debe incluir en la declaración y con qué importes por haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
--   que tercero no se debe incluir en la declaración por no haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
--   cuales son las facturas de compra cuya suma equivale al "Importe Anual/Trimestral de Operaciones" realizadas con un proveedor en concreto
--   o bien cuales son los cobros en efectivo cuya suma equivale al "Importe percibido en metálico" de un cliente en concreto, incluido en la declaración.
-
-###### **Presentación de declaraciones sustitutivas**
-
-Es necesario presentar una declaración sustitutiva cuando dicha declaración tenga por objeto anular y sustituir completamente a otra declaración anterior para el mismo periodo ya enviada a Hacienda, en la cual se hubieran incluido datos inexactos o erróneos.
-
-Para ello, el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar la declaración 347 como fichero indicando:
-
--   que la declaración es sustitutiva
--   el número de la declaración original que se sustituye
-
-![](https://docs.etendo.software/latest/assets/drive/beimgAXSJ1DvjNuJHa1G2tIQaIYdpHt769PulMwVmx7Y7bT0NJvb08DTbx5rt5GTBVuWu7XxfJ5ZTGw7iyFufV-kRKiw2OCLzoNH17Ul6h3y5ajyc1CcVbAr-XqjfQKBAnUFcjLZ7g1n27uXFZtbX5c.png)
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Modelo 349
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 349
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349
-## Article Content: 
-#### Javapackages 
-
-:octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es` <br>
-
-#### **Introducción**
-
-Esta sección aplica al módulo “**Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”** incluído en el módulo de Localización Española de Etendo.
-
-##### **Descripción del módulo**
-
-El nuevo módulo de generación del Modelo 349 como un fichero “.txt” válido de acuerdo a los requisitos establecidos por la Hacienda Española (Orden HAC/360/2002 de 19 de febrero y modificada en última instancia por la Orden HAC/174/2020 de 28 de diciembre) permitirá a las empresas españolas cumplir con sus obligaciones fiscales de presentación de la declaración recapitulativa de las entregas y adquisiciones intracomunitarias de bienes que realicen.
-
-De acuerdo con el reglamento del IVA, están obligados a presentar el modelo 349, los sujetos pasivos del Impuesto que realicen cualquiera de las siguientes operaciones:
-
--   Las entregas de bienes destinados a otro Estado miembro, entregas de bienes exentas del impuesto.
--   Las adquisiciones intracomunitarias de bienes sujetas al impuesto.
--   Las adquisiciones intracomunitarias de bienes y entregas subsiguientes exentas conocidas como “Operaciones Triangulares”
-
-El contenido de la declaración recapitulativa de operaciones Intracomunitarias es:
-
--   Las operaciones citadas en el párrafo anterior, así como las rectificaciones a cualquiera de las operaciones anteriores ya incluidas en la correspondiente declaración recapitulativa.
--   Los datos de identificación de los proveedores y adquirientes
--   así como la base imponible en euros de las operaciones intracomunitarias de bienes declaradas.
-
-En general, la declaración recapitulativa deberá presentarse por cada mes natural durante los veinte primeros días naturales del mes inmediato siguiente, salvo la correspondiente al mes de julio, que podrá presentarse durante el mes de agosto y los veinte primeros días naturales del mes de septiembre y la correspondiente al último período del año, que deberá presentarse durante los 30 primeros días naturales del mes de enero.
-
-Cuando ni durante el trimestre de referencia ni en cada uno de los cuatro trimestres naturales anteriores el importe total de las entregas de bienes y prestaciones de servicios que deban consignarse en la declaración recapitulativa sea superior a 50.000 euros, excluido el Impuesto sobre el Valor Añadido, la declaración recapitulativa deberá presentarse durante los veinte primeros días naturales del mes inmediato siguiente al correspondiente período trimestral.
-
-Si al final de cualquiera de los meses que componen cada trimestre natural se superará el importe mencionado en el párrafo anterior, deberá presentarse una declaración recapitulativa para el mes o los meses transcurridos desde el comienzo de dicho trimestre natural durante los veinte primeros días naturales inmediatos siguientes.
-
-!!! info
-    Desde 2020 se suprime el período anual de declaración.
-
-Las operaciones se entenderán realizadas el día en que se expida la factura o documento equivalente que sirva de justificante de las mismas.
-
-Debido a que en el modelo 349 se deben diferenciar aquellas notas de abono que son rectificación a facturas incluidas en modelos del 349 ya enviados a Hacienda y las notas de abono que no lo son, ha sido necesario crear una funcionalidad que relaciona las notas de abono con las facturas que están siendo abonadas o rectificadas, tal y como se explica en este documento en la sección “Casos de usuario. Operaciones rectificativas del 349”
-
-!!! info
-    El módulo de generación del Modelo 349 no incluye las operaciones triangulares, puesto que dichas operaciones no se gestionan en Etendo. 
-
-Este módulo no tiene en cuenta las transacciones correspondientes al tipo de documento de Etendo “AP/AR credit memo” como facturas de abono, ya que dicho tipo de transacciones no reflejan devoluciones de mercancía, es por ello que el módulo 349 tendrá en cuenta los tipos de documento AP/AR invoice (como facturas de compra y venta) y los tipos de documento AP/AR invoice negativos (como notas de abono o facturas rectificativas).
-
-Además, no se incluye en el módulo de funcionalidad el supuesto de Declaración Complementaria para aquellos casos en que deban incluirse solo las operaciones que, debiendo haber sido declaradas en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deberán ser incluidas por el usuario manualmente, a través de la página de la AEAT tal y como se explica en la sección de este documento “Declaración Complementaria”.
-
-#### **Instalación del módulo**
-
-Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
--   Instalación de la última versión disponible de Etendo
--   o la instalación del módulo de Localización Española.
-
-!!! info
-    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-Es importante recalcar que:
-
--   El módulo del Modelo AEAT 349 incluye el correspondiente conjunto de datos que relaciona los tipos/rangos de impuestos con los parámetros del 349.
--   Una vez instalado el módulo, éste se debe aplicar a la Organización para la cual se requiere obtener el modelo 349, tal y como se describe en el apartado siguiente.
-
-##### **Aplicación del Módulo**
-
-Una vez instalado el módulo del 349, el usuario debe aplicar el módulo del 349 a la organización legal con contabilidad que corresponda.
-
-Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización (\*) y, por tanto, a la organización legal para que se quiera obtener el 349, dicho módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo de declaración del 349, y debe estar instalado previamente.
-
-El usuario deberá navegar a "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado (primero el módulo de impuestos, si no está aplicado previamente, y después el módulo del 349).
-
-##### **Configuración del módulo para la organización con contabilidad**
-
-Una vez instalado el módulo del 349 por cualquiera de los procedimientos anteriores, el usuario debe aplicar el módulo del 349 a la organización legal con contabilidad que corresponda.
-
-Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización legal con contabilidad previamente, dicho módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo de declaración del 349, y debe estar instalado y aplicado a la organización previamente.
-
-El usuario deberá navegar a "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado (primero el módulo de impuestos si no está aplicado previamente y después el módulo del 349).
-
-#### **Configuración del módulo**
-
-##### **Configuración del modelo 349**
-
-Este módulo de generación del modelo 349 como un fichero de texto (“\*.txt”) válido conforme a los requerimientos de la Hacienda Pública Española, se basa en la funcionalidad del “Generador de declaraciones de impuestos”.
-
-El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos, que el modelo 349 está creado como informe anual, trimestral o mensual de impuestos, todos con la misma configuración:
-
-![](https://docs.etendo.software/latest/assets/drive/H0HWfOy7IdB5yLwjirTyqV4jjt9pCbVBTk0lZlXCnufLFyy1zAos1vJiKc0Wgsydgfs3H5RtRsFpPg7UcQXvX924p8_3Taq958X892bGQbJCsMqKjxmenrRR7j3NPFZTcbTE9oQgv9zdWwU9-ngWWh1cIdzW-78QmhNv6SBuuTAUSn_h_N9dotFwXQ.png)
-
-En la pestaña “Secciones de la declaración” se han creado 4 secciones:
-
-![](https://docs.etendo.software/latest/assets/drive/vgoWI1diiY_P5qHvQxVKR-bl45Z8XjklTv3NmDsdvGUs47FO_5rOG-1iHbXUXJvJgbMrIVFi4o6K2uExaU-quP9Dhj8z5E4T5bLhOaC-UfkPdriINML5ZQldERE6KkGqjl3A1-eqqIrcqJmCxujcgbe6loYARcfVDZWZVLggYf9-f7LUz3gdGa5IxQ.png)
-
--   **Fichero** esta primera sección contiene un parámetro de tipo entrada para que el usuario pueda introducir el nombre del fichero del 349 como parámetro de entrada a la hora de generar el fichero.
--   **Identificación y Totales** esta segunda sección tiene:
-    -   **4 parámetros de tipo “entrada”** que se mostrarán en el momento de generar el 349 con el fin de que el usuario los introduzca manualmente:
-        -   Persona de contacto: Apellidos y nombre de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el nombre de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
-        -   Teléfono de contacto: Número de teléfono de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el teléfono de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
-        -   Declaración sustitutiva (si/no)
-        -   Identificador declaración anterior: Número de la declaración a sustituir.
-    -   **3 parámetros de tipo “salida”** que el sistema recogerá de la base de datos:
-        -   Año
-        -   Nombre de la organización
-        -   NIF/CIF de la organización
--   **Operaciones** esta tercera sección tiene 2 parámetros de tipo “salida” que asociados a los tipos impositivos correspondientes incluirán las operaciones en el 349:
-    -   Entregas intracomunitarias de bienes – Clave tributaria E
-    -   Adquisiciones intracomunitarias de bienes – Clave tributaria A
--   **Constantes** esta cuarta sección tiene 11 parámetros de tipo “constante”:
-    -   Constante en caso de informe anual (0A)
-    -   Constante para el primer trimestre (1T)
-    -   Constante para el segundo trimestre (2T)
-    -   Constante para el tercer trimestre (3T)
-    -   Constante para el cuarto trimestre (4T)
-    -   Número de declaración del 349 (349 se reemplaza al remitir el fichero)
-    -   Tipo de declaración (349)
-    -   Línea tipo 1 (1)
-    -   Línea tipo 2 operaciones (2)
-    -   Línea tipo 2 correcciones (2)
-    -   Presentación (T)
-
-##### **Configuración de impuestos**
-
-Este nuevo módulo de generación del modelo 349 se basa en el módulo de impuestos para España y en uno específico para el 349.
-
-El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Rango impuesto - pestaña Parámetro de Impuesto que los “tipos impositivos/impuestos” que deben incluirse en el 349 se han asociado al correspondiente parámetro de impuesto del 349:
-
--   Los tipos de IVA de adquisiciones intracomunitarias se han asociado con el parámetro “Adquisiciones intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “A”
-
-![](https://docs.etendo.software/latest/assets/drive/KfmRrt9yoEP7_JdY9pGj74eYjDSqeyfBKSdPOhVonW4dkyhp_ooo6fq_VvIR-JcZsvSLAqbAMCowQduY6t-bMNJ_XJCHhqpkFCqo9Fkddj0GPykc5YhEp8TZKoOmZTXyWLYNY2PgG-JTVAdV2I6h_gZLLB-n48YQGkJdC5M8_iKRF7lv0W6I93sY6w.png)
-
--   Los tipos de IVA de entregas intracomunitarias se han asociado con el parámetro “Entregas intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “E”
-
-![](https://docs.etendo.software/latest/assets/drive/M9IdlZd-5bo-JKwXpqzeEiWsaa3ONYSfKXANXvyS8TFgbYrOUVg4LjLNidbkGB9lpDkSyNFJQeaV3JpBU_U6IFw2deN8Hi7v5zQhzvAuZNHfE4C2cXoxZu6orkao7wqoXLbdfN40AkRo2obRJexQcI_PQAlOY85AwyUL_-pfUnFrUBHBkhkiMN8Odg.png)
-
-#### **Generación del modelo 349**
-
-El modelo 349 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos. El usuario puede generar el modelo 349 para cualquier mes natural, trimestre natural o bien para el año que desea, tal y como se muestra en las pantallas siguientes:
-
-![](https://docs.etendo.software/latest/assets/drive/ajXlOv6TaSCfuNPH4ti4kb0oWm2V4BommSomzro0ZtwUi9P_MqK2QydL8RjnbP9dZ0jdU_iXnYr958xhg5mmGYK1msnKIQqnGKVrNVT6EqQYsqK4hGfKR7VV21YB2EvluSKzXnC4AWnPo2ZLENR5mSWIlsKMKbGdPJ2kZn8VilJkc7KVL20L9bW8pg.png)
-
-![](https://docs.etendo.software/latest/assets/drive/bexJeVp33GqVPTWs2j-Z5_3gP2ywX0ej3VPCpQBrbBBkogNFQZ02p_hkUr2y9GipS0Z8uZ8zIj_zFIli04pNqqzK4FGSbPFiFgPlYShPVMCcvSuBIGxAZhBT2gbMtxm2nV_omJ3BguAthe6i320j95im5TmxSCsnmech5ZFWUyUhhks4MFsTvxIVqw.png)
-
-![](https://docs.etendo.software/latest/assets/drive/lj6JxfJvSCO3n4p3kIK_SIXgIbUVY0Oqt4iJJMZPJGYy-JhM3rp6C96LMeAGmK5p33pacEBtCOb0Llmm1G4IoWG6KiEpvPY_IQjyDXZ2lf5uqZBt2_geN7M-aG-97lFUFC16BLcCK6XAB5hC-e18eBunH1RQfRX2_tOwNBJEFVgVwOkf5POwOFWRuw.png)
-
-En la ventana de generación de informes, el usuario deberá introducir los siguientes datos para generar el modelo 349:
-
-**Organización** para la cual quiere generar el Modelo 349. El sistema mostrará el calendario asociado a la organización en un campo no editable.
-
-**Esquema contable**
-
-**Declaración de impuestos**. El usuario debería seleccionar aquí el modelo 349 mensual, trimestral o anual.
-
-**Ejercicio**. El usuario puede seleccionar el año para el cual quiere obtener el 349.
-
-**Periodo**. Si el usuario ha seleccionado el modelo 349 mensual, podrá seleccionar aquí el período (por ejemplo, enero 22), si ha seleccionado el modelo 349 trimestral, podrá seleccionar aquí el período (por ejemplo, enero 22 – marzo 22) y si ha seleccionado el modelo 349 anual, este campo mostrará, como valor por defecto, “Anual”.
-
-Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 349 en el botón de proceso “Parámetros de entrada”
-
-![](https://docs.etendo.software/latest/assets/drive/5i9PO0yuY0M54bcqQ5wMi6y9VjSP18KJBqhgyUFL5pfn5NST30ZaM-zOyqWJZ4KfkX_0m7B_jNUUfhUKNDOI5iNYxD6xlx0b54ajbT0_26cnQGYRKIBLdzoDcCEiYz-08U-TOsJ9Q8vKm_XeSi7AChRNm-sSwhL8zmq99ULTHXlMTXTTXGuM1kZP.png)
-
-y una vez introducidos los parámetros de entrada, el usuario puede generar el 349 a través del botón de proceso “Generar fichero”.
-
-##### Navarra y Guipúzcoa
-
-Se incluyen 2 nuevos check que permiten generar el fichero con la parametrización correcta para poder realizar su presentación en Hacienda Navarra y Hacienda Guipúzcoa:
-
-![](https://docs.etendo.software/latest/assets/drive/yM3HJ5ASqiH4Qs-ZgFfKANQSIVTin-DqGq0zKSmvduihJS7WOddNRd448Wv5eni03bNiwWYjVCVtZU47t4sUIyIfF18hUY-JL-oA2B_0374_CXHpXvsPICoc0TtxcvEnrrJ_ZK6ezf1gUzdsvhxXdr8.png)
-
-Anteriormente, el fichero generado del modelo 349 sólo se podía presentar en AEAT. Con esta mejora, se permite la presentación tanto en Navarra como en Guipúzcoa en función del check que marquemos (si no se marca ninguno, el fichero se genera con la parametrización para la AEAT).
-
-#### **Casos de usuario**
-
-##### **Generación del modelo 349 como un fichero de texto válido**
-
-Esta funcionalidad permitirá a las empresas españolas generar el modelo 349 como un fichero de texto conforme a los requisitos establecidos por la normativa española, para un periodo determinado.
-
-Durante el año/trimestre/mes natural, el usuario registrará en Etendo las transacciones de compra y/o devolución con sus proveedores de la Unión Europea así como las transacciones de venta y/o devoluciones de ventas con sus clientes de la unión europea.
-
-Las transacciones de compra y venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y factura de compra =AP invoice) y de venta (albarán de venta y factura de venta =AR invoice), respectivamente.
-
-Las transacciones de devolución, tanto de compra como de venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y abono de compra =AP invoice Negativa) y de venta (albarán de venta y abono de venta=AR invoice Negativa).
-
-Además, deberá asegurarse de que todos los productos tienen la parametrización adecuada en relación con las categorías de impuestos que tienen asociadas (21%-10%-4%).
-
-Una vez que todas las operaciones se han registrado en el sistema, el usuario podrá generar el fichero del modelo 349 tal y como se explicó en la sección de este documento “Generación del Modelo 349”. El fichero txt del 349 tiene la siguiente estructura:
-
-![349 4T.png](https://docs.etendo.software/latest/assets/drive/4_Ps-YvMKdQKgeHJ_8HkhOwYAerhc8oX6OB58UG1NX5nSoSPBvgsR6vpY2MjmJk1pOhsFk4SmLv_ETEI4Fm4ZBDkWuxdFH4ZcDSJ83NIb3m9QNrqqWssPrfkpRjovNPC2MpEfj9CTun2h_BQgo0TNyAt5gyqhJFR6Qr5dt5T91F5tH-HCYkaJABLfw.png)
-
-##### **Tipo registro 1 – Registro de declarante:**
-
-|     |     |
-| --- | --- |
-| **Posiciones** | **Descripción** |
-| **1** | Tipo de Registro (constante = 1) |
-| **2-4** | Modelo Declaración (constante = 349) |
-| **5-8** | Ejercicio |
-| **9-17** | NIF del declarante |
-| **18-57** | Apellidos y nombre o razón social del declarante |
-| **58** | Blanco |
-| **59-107** | Persona con quién relacionarse: Teléfono / Apellidos y nombre |
-| **108-120** | Número identificativo de la declaración |
-| **121-122** | Declaración complementaria o substitutiva |
-| **123-135** | Número identificativo de la declaración anterior |
-| **136-137** | Periodo (predeterminado = 1T,2T,3T,4T,0A,01,02,03,04,05,06,07,08,09,10,11,12) |
-| **138-146** | Número total de operadores intracomunitarios |
-| **147-161** | Importe de las operaciones intracomunitarias |
-| **162-170** | Número total de operadores intracomunitarios con rectificaciones |
-| **171-185** | Importe de las rectificaciones |
-| **186** | Indicador cambio periodicidad en la obligación de declarar |
-| **187- 390** | Blancos |
-| **391 - 399** | NIF del representante legal |
-| **400 - 500** | Blancos |
-
-##### **Tipo de Registro 2 – Registro de operador intracomunitario**
-
-|     |     |
-| --- | --- |
-| **Posiciones** | **Descripción** |
-| **1** | Tipo de Registro (constante = 2) |
-| **2-4** | Modelo Declaración (constante = 349) |
-| **5-8** | Ejercicio |
-| **9-17** | NIF del declarante |
-| **18-75** | Blancos |
-| **76-92** | NIF del operador comunitario |
-| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
-| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
-| **134-146** | Base Imponible o Importe |
-| **147-178** | Blancos |
-| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
-| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
-| **236- 500** | Blancos |
-
-##### **Tipo de Registro 2 – Registro de rectificaciones**
-
-|     |     |
-| --- | --- |
-| **Posiciones** | **Descripción** |
-| **1** | Tipo de Registro (constante = 2) |
-| **2-4** | Modelo Declaración (constante = 349) |
-| **5-8** | Ejercicio |
-| **9-17** | NIF del declarante |
-| **18-75** | Blancos |
-| **76-92** | NIF del operador comunitario |
-| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
-| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
-| **134-146** | Blancos |
-| **147-178** | Rectificaciones   <br>  <br>\- 147-150 ejercicio (de la declaración que se corrige)   <br>\- 151-152 periodo (de la declaración que se corrige)   <br>\- 153-165 base imponible (para el tercero y el periodo) rectificada   <br>\- 166-178 base imponible (para el tercero y el periodo) declarada anteriormente |
-| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
-| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
-| **236- 500** | Blancos |
-
-##### **Operaciones rectificativas del 349**
-
-En el modelo/fichero del 349 hay que diferenciar de forma específica en el registro tipo 2 de "Rectificaciones aquellas notas de abono a facturas que ya fueron incluidas en una declaración 349 para un periodo anterior al corriente, por ejemplo:
-
--   **Declaración 349 Mensual** = Una nota de abono de fecha agosto del 2022 que abona una factura de fecha julio del 2022 que ya fue incluída en la declaración del 349 del mes de julio del 2022. La nota de abono de fecha agosto debe incluirse en la declaración del mes de agosto como rectificativa a la declaración del mes de julio para el proveedor/cliente que aplique, indicando además el importe total (base imponible) de compra/venta que se incluyó en la declaración de julio para ese cliente/proveedor.
--   **Declaración 349 Trimestral** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma trimestral, lo único que varía en este escenario es que en vez de tener en cuenta meses se tendrán en cuenta trimestres.
--   **Declaración 349 Anual** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma anual, lo único que varía en este escenario es que en vez de tener en cuenta meses/trimestres se tendrán en cuenta el año natural.
-
-Y las que no y deben acumularse para el periodo, por ejemplo:
-
--   **Declaración 349 Mensual** = Una nota de abono de fecha de agosto 2022 que abona una factura de fecha de agosto 2022 que todavía no ha sido incluida en la Declaración del 349 para el mes de agosto del 2022, se incluirá en la declaración de agosto como un menor valor del importe de compra/venta con el correspondiente proveedor/cliente.
--   **Declaración 349 Trimestral o Anual** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma trimestral o Anual, lo único que varía en este escenario es que en vez de tener en cuenta meses se tendrán en cuenta trimestres o el año natural.
-
-Es por ello que se ha introducido en el sistema una funcionalidad que permite al usuario, a la hora de crear una nota de abono o devolución, indicar si dicha nota de abono/devolución es una “rectificativa del 349” o no, es decir, si rectifica a una factura (factura rectificada) de un año/mes/trimestre natural anterior y que, por tanto, ya se incluyó en una declaración del 349 anterior.
-
-Para introducir esta información, el usuario deberá navegar a Gestión de compras o Ventas / Transacciones / Factura (Proveedor) o Factura (Cliente), crear una nueva factura como:
-
--   una AP/AR invoice negativa (devolución de mercancía al proveedor/cliente)
--   una AP/AR credit Memo
--   una Reversed Purchase/Sales Invoice
--   o incluso la anulación total de una factura de compra/venta;
-
-e introducir los datos relativos al abono y devolución de mercancía y, en la pestaña “Factura Rectificativa”, crear un nuevo registro con el fin de:
-
--   seleccionar la factura (original) que esta abonándose o rectificándose - esa selección ya vendŕa dada en caso de anulación total de una factura.
--   y además seleccionar el nuevo campo “Rectificativa del 349”, con el fin de indicar además:
-    -   el Año de la factura original que se rectifica
-    -   el Periodo de la factura original y, por tanto, el periodo en el cual dicha factura original se incluyó en un 349
-    -   La base imponible del 349 de productos o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de productos (Clave A en compras, Clave E en ventas)
-    -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios (Clave I en compras, Clave S en ventas)
-
-![](https://docs.etendo.software/latest/assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
-
-Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostrar en Etendo las columnas que se detallan a continuación:
-
--   Correctiva del 349
--   Año
--   Periodo
--   Base Imponible del 349 Productos
--   Business Partner
--   Base Imponible del 349 Servicios
-
-!!! info
-    No todas las notas de abono o devoluciones de mercancía serán rectificativas del 349, sólo aquellas que así se configuren por el usuario. 
-
-En caso de que la nota de abono o devolución de mercancía y la factura original pertenezcan al mismo periodo, por ejemplo al 1er mes del año 2022 (Enero 2022, en caso de declaración del 349 mensual), al 1er periodo del año 2022 (Enero 2022 a Marzo 2022, en caso de declaración del 349 trimestral) o al mismo mes (Enero 2022, en el caso de declaración del 349 mensual), tan sólo será necesario relacionar ambos documentos en la nueva pestaña “Factura Rectificativa” sin tener que seleccionar el parámetro “Rectificativa del 349”.
-
-En este último escenario, el sistema, para un mismo proveedor o cliente y periodo, acumulará las facturas positivas y los abonos con el fin de generar el computo global del importe de las transacciones de compra/venta efectuadas con dicho proveedor/cliente (operador intracomunitario) que debe incluirse en la declaración del 349 para un periodo determinado.
-
-##### **Presentación del modelo 349 en formato electrónico**
-
-La presentación telemática del modelo 349 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
-
-La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde el enlace “Oficina virtual”-”Presentación de declaraciones” - “Todas las declaraciones” - “Modelo 349”
-
-!!! info
-    Existe una “Guía de presentación telemática” en la página web de Hacienda que nos explica cómo debe realizarse la presentación telemática de las declaraciones y que se puede descargar [*aquí*](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).
-
-
-##### **Presentación de declaraciones sustitutivas**
-
-Es necesario presentar una declaración sustitutiva cuando dicha declaración tenga por objeto anular y sustituir completamente a otra declaración anterior para el mismo periodo ya enviada a Hacienda, en la cual se hubieran incluido datos inexactos o erróneos.
-
-Para ello el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar una nueva declaración 349 como fichero indicando en este caso que la nueva declaración que se presenta es sustitutiva de una anterior, e indicando además el número de la declaración original a la que sustituye, tal y como se muestra en la siguiente pantalla:
-
-![](https://docs.etendo.software/latest/assets/drive/iSU9FGfN3pSTIsHPTAKpZsKZsCB7C0BhZa1RBDpzcJQ8uaOHAUmMPFuYQkhQbrQ2izd9kDfZ0TCiEHdGvHIE7iHOc-uDNoBEhDS5cF9x__Bf2rQgvz47h3U88ViVeZimkAUXctFTFhF9gZYbywo3Nb23iqRQ0Tfq03VSTqcEOcsQQnYJVi6MGxDajA.png)
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Impuestos para España
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Impuestos para España
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa
-## Article Content: 
-#### Javapackages 
-
-:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
-
-#### **Introducción**
-
-El módulo de impuestos para España es un conjunto de datos que contiene:
-
--   "Categorías de Impuestos" para IVA, IGIC e IPSI
--   "Categorías de Impuestos de Terceros"
--   "Rangos de Impuestos"
-
-configurados con el objetivo de que los usuarios de Etendo puedan gestionar:
-
--   el IVA Nacional
--   el IVA Intracomunitario
--   el IVA de Importación/Exportación
--   las retenciones de IRPF, "Impuesto sobre la Renta de las Personas Físicas" más comúnmente utilizados en el España
--   así como el IGIC, "Impuesto General Indirecto Canario" de aplicación en Canarias y el IPSI, "Impuesto sobre la Producción, los Servicios y la Importación" de aplicación en Ceuta y Melilla.
-
-Es importante tener en cuenta que en el caso del:
-
--   **IVA Nacional**, los rangos de impuestos están asociados a España como país de origen y destino, España inlcuye "Península y Baleares".
--   **IVA Intracomunitario**:
-    -   los rangos de impuestos de venta o entregas intracomunitarias exentas, están asociados a España como país de origen y países de la UE como país de destino.
-    -   los rangos de impuestos de compra o adquisiciones intracomunitarias, están asociados a países de la UE como país de origen y España como país de destino.
--   **IVA de Importación/Exportación**:
-    -   los rangos de impuestos de venta o exportaciones exentas, están asociados a España como país de origen y terceros países como país de destino.
-    -   los rangos de impuestos de importaciones, están asociados a terceros países como país de origen y España como país de destino.
--   **IGIC**, los rangos de impuestos están asociados a Canarias como región de origen/destino según aplique.
--   **IPSI**, los rangos de impuestos están asociados a Ceuta y Melilla como región de origen/destino según aplique.
-
-Por tanto:
-
--   Si su organización se localiza en Península y Baleares, sus productos/servicios tiene que estar asociados a las categorías de impuesto de IVA
--   Si su organización se localiza en Canarias, Ceuta o Melilla, sus productos/servicios tienen que estar asociados a las categorías de impuesto de IGIC o IPSI
-
-Es importante recalcar que la configuración de impuestos para España, no incluye impuestos de "IVA Nacional" de otros países miembros de la UE como "IVA Nacional de Italia" o "Francia", para las ventas que excediendo el límite requerido deban liquidarse en el país de Europa que aplique.
-
-#### **Instalación del Módulo**
-
-Para la instalación del módulo de Impuestos para España, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
--   Instalación de la última versión disponible de Etendo 
--   o la instalación del módulo de Localización Española.
-
-!!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-
-#### **Aplicación del Módulo**
-
-Es importante recalcar que una vez instalado el módulo de impuestos, los "Datos de referencia" que incluye deben aplicarse en la ruta de aplicación "Gestión del Módulo de Empresa".
-
-Los datos se pueden aplicar:
-
--   a nivel de organización (\*) si se quiere conseguir que todas las organizaciones del cliente utilicen el mismo conjunto de datos o tipos impositivos
--   o bien se pueden aplicar a una organización en concreto o a varias.
-
-#### **Impuestos para España**
-
-A continuación, se encuentran los impuestos disponibles en el conjunto de datos de este módulo.
-
-
-- Adquisiciones IVA 0%
-- Adquisiciones IVA 0+RE 0+0%
-- Adquisiciones IVA+RE 21+1.75%
-- Adquisiciones IVA+RE 5+0.62%
-- Adquisiciones intracomunitarias 5%
-- Entregas IVA 0%
-- Entregas IVA 0+RE 0+0%
-- Entregas IVA 5%
-- Entregas IVA+RE 21+1.75%
-- Entregas IVA+RE 5+0.62% 
-- Servicios prestados 0%
-- Prestación servicios nacional 5%
-- Servicios prestados nacional 5%
-- Adquisiciones IGIC 15%
-- Adquisiciones IGIC 7%
-- Adquisiciones IGIC Implícito 70% s15%
-- Adquisiciones IGIC Implícito 70% s7%
-- Arrendamientos en Canarias 7%
-- Arrendamientos en Canarias 7% -19%R (pagos)
-- Arrendamientos en Canarias 7% -21%R (pagos)
-- Entregas IGIC 15%
-- Entregas IGIC 7%
-- Prestación servicios en Canarias 15%
-- Prestación servicios en Canarias 7%
-- Prestación servicios en Canarias 7% -15%R
-- Prestación servicios en Canarias 7% -19%R
-- Prestación servicios en Canarias 7% -21%R
-- Servicios prestados en Canarias 15%
-- Servicios prestados en Canarias 7%
-- Adquisiciones IGIC 6.5%
-- Adquisiciones IGIC Implícito 70% s6.5%
-- Arrendamientos en Canarias 6.5%
-- Arrendamientos en Canarias 6.5% -19%R (pagos)
-- Arrendamientos en Canarias 6.5% -21%R (pagos)
-- Entregas IGIC 6.5%
-- Prestación servicios en Canarias 6.5%
-- Prestación servicios en Canarias 6.5% -15%R
-- Prestación servicios en Canarias 6.5% -19%R
-- Prestación servicios en Canarias 6.5% -21%R
-- Servicios prestados en Canarias 6.5%
-- Adquisiciones IGIC Implícito 70% s13.5%
-- Adquisiciones IGIC Implícito 70% s3%
-- Adquisiciones IGIC Implícito 70% s9.5%
-- Entregas IGIC Exentas
-- Entregas IGIC Tipo 0%
-- No declarable gastos de empleado
-- Adquisiciones REBU Exentas
-- Arrendamientos 0% - 19%R (cobros)
-- Arrendamientos 0% - 19%R (pagos)
-- Arrendamientos 21% -19%R (cobros)
-- Arrendamientos 21% -19%R (pagos)
-- Arrendamientos en Guipúzcoa 21% - 19%R (pagos)
-- Arrendamientos en Navarra 21% - 19%R (pagos)
-- Compensación REAGYP 10.5% -2%R (sobre BI) SR
-- Compensación REAGYP 12% -2%R (sobre BI) SR
-- Compensación REAGYP 12% -2%R (sobre bruto) SR
-- Intereses 0% -19%R
-- Prestación servicios agencias publicidad 21% -24%R
-- Prestación servicios en Canarias 0%
-- Prestación servicios en Canarias 0% -7%R
-- Prestación servicios nacional 0% -24%R
-- Prestación servicios nacional 21% -24%R
-- Prestación servicios no residente 0% -19%R
-- Servicios prestados nacional 21%-24%R
-- Arrendamientos 0% -19,5%R (cobros)
-- Arrendamientos 0% -19,5%R (pagos)
-- Arrendamientos 21% -19,5%R (cobros)
-- Arrendamientos 21% -19,5%R (pagos)
-- Prestación servicios Bienes Inversión 21% -15%R
-- Prestación servicios Bienes Inversión 21%-7%R
-- Prestación servicios en Canarias 0% -15%R
-- Prestación servicios en Ceuta/Melilla 0%-7.5%R
-- Prestación servicios en Ceuta/Melilla 4% -3,5%R
-- Prestación servicios en Ceuta/Melilla 4% -7,5%R
-- Prestación servicios nacional 0% -7%R
-- Prestación servicios nacional 10% -15%R
-- Prestación servicios nacional 10% -7%R
-- Prestación servicios nacional 21% -15%R
-- Prestación servicios nacional 21% -7%R
-- Prestación servicios profesionales nacional 0% -15%R
-- Servicios prestados nacional 21% -15%R
-- Servicios prestados nacional 21% -7%R
-- Entregas a Canarias, Ceuta y Melilla (%N=>0%) ISP
-- Entregas sin IVA por ISP
-- Entregas sin IVA por ISP con RE
-- Inversión Sujeto Pasivo Nacional 21%
-- Arrendamientos 0% -20%R (cobros)
-- Arrendamientos 0% -20%R (pagos)
-- Arrendamientos 21% -20%R (cobros)
-- Arrendamientos 21% -20%R (pagos)
-- Inversión Sujeto Pasivo no UE 21% -24%R
-- Inversión Sujeto Pasivo no UE 21% -7%R
-- Prestación servicios divulgación nacional 0% -15%R
-- Prestación servicios en Ceuta/Melilla 0% -9.5%R
-- Prestación servicios en Ceuta/Melilla 4% -9,5%R
-- Prestación servicios nacional 0% -19%R
-- Prestación servicios nacional 21% -19%R
-- Servicios prestados nacional 21% -19%R
-- Prestación servicios nacional 21% -15%R RDL
-- Exenciones relativas a regímenes aduaneros y fiscales
-- No declarable devoluciones de cliente
-- Adquisiciones IVA 10%
-- Adquisiciones IVA 10% -2%R
-- Adquisiciones IVA 21%
-- Adquisiciones IVA 4% -2%R
-- Adquisiciones IVA+RE 10+1.4% 
-- Adquisiciones IVA+RE 21+5.2%
-- Adquisiciones Intracomunitarias 21% ISP
-- Adquisiciones a Canarias,Ceuta y Melilla 10%
-- Adquisiciones a Canarias,Ceuta y Melilla 21%
-- Adquisiciones bienes inversión 10%
-- Adquisiciones intracomunitarias 10%
-- Adquisiciones intracomunitarias 21%
-- Adquisiciones intracomunitarias Bienes Inversión 21%
-- Adquisiciones intracomunitarias exentas
-- Adquisición B.Inmuebles 10%
-- Adquisición B.Inmuebles 21%
-- Adquisición Bienes Inversión 21%
-- Adquisición Bienes Inversión 21% -1%R
-- Arrendamiento 21% (cobros)
-- Arrendamiento 21% (pagos)
-- Arrendamientos 0% -21%R (cobros)
-- Arrendamientos 0% -21%R (pagos)
-- Arrendamientos 21% -21%R (cobros)
-- Arrendamientos 21% -21%R (pagos)
-- Arrendamientos 21% -24%R (pagos). No Residentes
-- Arrendamientos en Guipúzcoa 21%-10%R (pagos)
-- Arrendamientos en Navarra 21% -20%R (pagos)
-- Entregas Bienes Inversión 21%
-- Entregas IVA 10%
-- Entregas IVA 10% Revendedores
-- Entregas IVA 21%
-- Entregas IVA 21% ISP
-- Entregas IVA 21% Revendedores
-- Entregas IVA+RE 10+1.4% 
-- Entregas IVA+RE 21+5.2% 
-- Entregas IVA+RE 21+5.2% ISP
-- Entregas IVA+RE 21+5.2% IVA Normal ISP
-- Importaciones 10%
-- Importaciones 10%=0%
-- Importaciones 21%
-- Importaciones 21% ISP
-- Importaciones 21%=0%
-- Importaciones 21%=0% ISP
-- Importaciones Bienes Inversión 21%
-- Importaciones Bienes Inversión 21%=0%
-- Inversión Sujeto Pasivo UE 10%
-- Inversión Sujeto Pasivo UE 21%
-- Inversión Sujeto Pasivo UE exento
-- Inversión Sujeto Pasivo no UE 10%
-- Inversión Sujeto Pasivo no UE 21%
-- Inversión Sujeto Pasivo no UE 21% -24.75%R
-- Inversión Sujeto Pasivo no UE exento
-- Prestación servicios nacional 0% -21%R
-- Prestación servicios nacional 0% -9%R
-- Prestación servicios nacional 10% 
-- Prestación servicios nacional 10% -9%R
-- Prestación servicios nacional 21% 
-- Prestación servicios nacional 21% -1%R
-- Prestación servicios nacional 21% -21%R
-- Prestación servicios nacional 21% -9%R
-- Prestación servicios nacional 4% - 9%R
-- Servicios prestados nacional 10%
-- Servicios prestados nacional 21%
-- Servicios prestados nacional 21% -21%R
-- Servicios prestados nacional 21% -9%R
-- Transmisión B.Inmuebles 10%
-- Transmisión B.Inmuebles 21%
-- Adquisiciones IGIC 0%
-- Adquisiciones IGIC 13.5%
-- Adquisiciones IGIC 3%
-- Adquisiciones IGIC 9.5%
-- Adquisiciones IPSI 10%
-- Adquisiciones IPSI 4%
-- Entregas IGIC 13.5%
-- Entregas IGIC 3%
-- Entregas IGIC 9.5%
-- Entregas IPSI 10%
-- Entregas IPSI 4%
-- Prestación servicios en Canarias 13.5%
-- Prestación servicios en Canarias 3%
-- Prestación servicios en Canarias 3% -21%R
-- Prestación servicios en Canarias 9.5%
-- Prestación servicios en Ceuta/Melilla 0%
-- Prestación servicios en Ceuta/Melilla 10%
-- Prestación servicios en Ceuta/Melilla 4%
-- Prestación servicios en Ceuta/Melilla 4% -10,5%R
-- Prestación servicios en Ceuta/Melilla 4% -4,5%R
-- Prestación servicios exenta por suplido
-- Servicios prestados en Canarias 13.5%
-- Servicios prestados en Canarias 3%
-- Servicios prestados en Canarias 9.5%
-- Servicios prestados en Ceuta/Melilla 10%
-- Servicios prestados en Ceuta/Melilla 4%
-- Arrendamientos 18% -21%R (cobros)
-- Arrendamientos 18% -21%R (pagos)
-- Adquisiciones IVA 18%
-- Adquisiciones IVA 8%
-- Adquisiciones IVA+RE 18+4%
-- Adquisiciones IVA+RE 8+1% 
-- Adquisiciones a Canarias,Ceuta y Melilla 18%
-- Adquisiciones a Canarias,Ceuta y Melilla 8%
-- Adquisiciones intracomunitarias 18%
-- Adquisiciones intracomunitarias 8%
-- Adquisiciones intracomunitarias Bienes Inversión 18%
-- Adquisición B.Inmuebles 18%
-- Adquisición B.Inmuebles 8%
-- Adquisición Bienes Inversión 18%
-- Arrendamiento 18% (cobros)
-- Arrendamiento 18% (pagos)
-- Arrendamientos 18% -19%R (cobros)
-- Arrendamientos 18% -19%R (pagos)
-- Entregas Bienes Inversión 18%
-- Entregas IVA 18%
-- Entregas IVA 8%
-- Entregas IVA+RE 18+4% 
-- Entregas IVA+RE 8+1% 
-- Entregas intracomunitarias Bienes Inversión (%N=>0%)
-- Exportaciones Bienes Inversión (%N=>0%)
-- Importaciones 18%
-- Importaciones 18%=0%
-- Importaciones 8%
-- Importaciones 8%=0%
-- Importaciones Bienes Inversión 18%
-- Importaciones Bienes Inversión 18%=0%
-- Inversión Sujeto Pasivo UE 18%
-- Inversión Sujeto Pasivo UE 8%
-- Inversión Sujeto Pasivo no UE 18%
-- Inversión Sujeto Pasivo no UE 8%
-- Prestación servicios nacional 18% 
-- Prestación servicios nacional 18% -1%R
-- Prestación servicios nacional 18% -15%R
-- Prestación servicios nacional 18% -7%R
-- Prestación servicios nacional 8% 
-- Servicios prestados nacional 18%
-- Servicios prestados nacional 18% -15%R
-- Servicios prestados nacional 18% -7%R
-- Servicios prestados nacional 8%
-- Transmisión B.Inmuebles 18%
-- Transmisión B.Inmuebles 8%
-- Arrendamientos 16% -19%R (cobros)
-- Arrendamientos 16% -19%R (pagos)
-- Inversión Sujeto Pasivo no UE 16%
-- Prestación servicios en Canarias 5%
-- Adquisiciones intracomunitarias 7%
-- Adquisiciones a Canarias,Ceuta y Melilla 16%
-- Adquisiciones a Canarias,Ceuta y Melilla 4%
-- Adquisiciones a Canarias,Ceuta y Melilla 7%
-- Adquisiciones interiores exentas (art 22)
-- Adquisiciones no sujetas
-- Adquisición B.Inmuebles 16%
-- Adquisición B.Inmuebles 7%
-- Arrendamiento 16% (cobros)
-- Arrendamiento 16% (pagos)
-- Arrendamientos 16% -18%R (cobros)
-- Arrendamientos 16% -18%R (pagos)
-- Entregas a Canarias,Ceuta y Melilla (%N=>0%)
-- Entregas a Canarias,Ceuta y Melilla (%R=>0%)
-- Entregas a Canarias,Ceuta y Melilla (%SR=>0%)
-- Entregas no sujetas con dcho deducción
-- Importaciones 16%
-- Importaciones 16%=0%
-- Importaciones 4%
-- Importaciones 4%=0%
-- Importaciones 7%
-- Importaciones 7%=0%
-- Importaciones exentas
-- Inversión Sujeto Pasivo UE 16%
-- Inversión Sujeto Pasivo UE 7%
-- Inversión Sujeto Pasivo no UE 7% 
-- Prestación servicios interiores exentos (art 20)
-- Prestación servicios interiores exentos (art 22)
-- Prestación servicios nacional 16% 
-- Prestación servicios nacional 16% -15%R
-- Prestación servicios nacional 16% -7%R
-- Prestación servicios nacional 4%
-- Prestación servicios nacional 7%
-- Servicios prestados UE (%N=>0%)
-- Servicios prestados UE (%R=>0%)
-- Servicios prestados exentos sin derecho a deducción
-- Servicios prestados internacional (%N=>0%)
-- Servicios prestados internacional (%R=>0%)
-- Servicios prestados nacional 16%
-- Servicios prestados nacional 16% -15%R
-- Servicios prestados nacional 16% -7%R
-- Servicios prestados nacional 4%
-- Servicios prestados nacional 7%
-- Servicios prestados no sujetos con dcho deducción
-- Transmisión B.Inmuebles 16%
-- Transmisión B.Inmuebles 7%
-- Adquisiciones IVA 16%
-- Adquisiciones IVA 4%
-- Adquisiciones IVA 7% 
-- Adquisiciones IVA+RE 16+4%
-- Adquisiciones IVA+RE 4+0,5% 
-- Adquisiciones IVA+RE 7+1% 
-- Adquisiciones interiores exentas (art 20)
-- Adquisiciones intracomunitarias 16%
-- Adquisiciones intracomunitarias 4%
-- Entregas Exentas
-- Entregas IVA 16%
-- Entregas IVA 4%
-- Entregas IVA 4% Revendedores
-- Entregas IVA 7% 
-- Entregas IVA+RE 16+4% 
-- Entregas IVA+RE 4+0,5% 
-- Entregas IVA+RE 7+1% 
-- Entregas intracomunitarias (%N=>0%)
-- Entregas intracomunitarias (%N=>0%) ISP
-- Entregas intracomunitarias (%R=>0%)
-- Entregas intracomunitarias (%SR=>0%)
-- Exportaciones (%N=>0%)
-- Exportaciones (%N=>0%) ISP
-- Exportaciones (%R=>0%)
-- Exportaciones (%SR=>0%)
-- Prestación servicios no sujetas
-- Servicios a Canarias, Ceuta y Melilla (%N=>0%)
-- Servicios a Canarias, Ceuta y Melilla (%R=>0%)
-- Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
-- Servicios prestados exentos con derecho a deducción
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Intrastat
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Intrastat
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat
-## Article Content: 
-#### Javapackages
-
-:octicons-package-16: Javapackage: `org.openbravo.module.intrastat` <br>
-:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.spain` <br>
-:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.es.es`
-
-#### Introducción
-
-Esta sección describe el módulo disponible de Etendo para la generación y presentación del informe oficial de Intrastat.
-
-El informe Intrastat se debe presentar a las autoridades mensualmente, dentro de los 12 días posteriores al mes en el que se realizaron las transacciones.
-
-La declaración de Intrastat se debe enviar telemáticamente (a través Internet) en un fichero válido con un determinado formato específico de cada país.
-
-#### Descripción de los Módulos
-
-A continuación, se listan los diferentes **módulos** sobre los que se desarrolla la funcionalidad de Intrastat:
-
--   **Intrastat.** Este módulo proporciona la infraestructura necesaria que permite la configuración, ejecución y generación del fichero de Intrastat. Si sólo instala este módulo, Etendo será capaz de reconocer todas las transacciones que formarán parte del fichero de Intrastat.
-
-Éste es un módulo del que dependen el resto de módulos de Intrastat, proporciona la funcionalidad genérica para los países de la Unión Europea. Sin embargo, tenga en cuenta que cada país de la UE tiene sus propias peculiaridades, y este módulo es incapaz de conocerlas y manejarlas él sólo. Por este motivo, es posible que necesite instalar además el módulo de Intrastat concreto para su país, que será el que proporcione las peculiaridades propias de su país.
-
--   **Intrastat for Spain (Intrastat para España).** Este módulo complementa al módulo anterior y proporciona las características específicas para España, como por ejemplo:
-    -   Excluye las transacciones que tienen como origen o destino las Islas Canarias (como requiere la ley)
-    -   Genera un fichero de Intrastat con el formato oficial listo para ser enviado mensualmente a las Autoridades.
--   **Intrastat – Spanish Translation (Intrastat - Traducción al español).** Añade la traducción al español (España) del módulo Intrastat.
-
-Además de los módulos anteriores, necesitará instalar las siguientes dependencias obligatorias:
-
--   **Incoterms.** Añade la lista de Incoterms oficiales (Condiciones de Entrega) a su instalación de Etendo
--   **European Union Countries.** Añade la lista de países miembros de la Unión Europea a su instalación de Etendo
--   **Provincias de España.** Añade la lista de provincias españolas a su instalación de Etendo
-
-Todas estas dependencias se instalarán automáticamente al instalar los módulos de Intrastat, por lo que no tendrá que hacerse manualmente.
-
-#### **Instalación de los módulos**
-
-Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
--   Instalación de la última versión disponible de Etendo
--   o la instalación del módulo de Localización Española.
-
-!!! info
-    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-
-!!! info
-    **Nota importante**: Las transacciones realizadas con anterioridad a la instalación del módulo *“Intrastat”* no se tendrán en cuenta a la hora de generar las declaraciones de Intrastat.
-
-
-Tenga en cuenta que, como es lógico, el sistema solo es capaz de reconocer las transacciones a incluir en el informe de Intrastat desde el momento que se instala y configura dicha funcionalidad en Etendo.
-
-##### **Aplicación de los Datasets (Conjuntos de datos)**
-
-Una vez instalado el módulo, se deberán aplicar los datasets incluidos a su instalación.
-
-Si está realizando la configuración inicial de Etendo, puede utilizar el proceso “Crear Organización” para aplicar estos datos.
-
-Si, por el contrario, está instalando estos módulos en un sistema en productivo, deberá aplicar los datasets desde la ventana Configuración General | Organización | Gestión del módulo de Empresa  |  Gestión del módulo de Empresa:
-
-![](https://docs.etendo.software/latest/assets/drive/9E8pdSDAB1cQjG039Rhp_c3Z-XDg2LC-1tnuokHzaQ6MVZ1TTuM5YTyX1q0-wYHGGRAH0OtCyMQ6uICIwQHcHfwz7sBTqVtvAKlc6SSyZGiCuCAJhZ8bsQt9m3qLT4Eiw3mR4XSTNY01hZtqqw9IwQKG9zaQzBnRd89An6VyGUsO7DNXkQl1Q19l9A.png)
-
-Seleccione los datos de referencia “Incoterms” e “Intrastat for Spain” y aplíquelos a su organización de nivel de agrupación o a su entidad legal dependiendo de su árbol de organizaciones.
-
-Si el proceso se ha ejecutado correctamente, el sistema debería mostrar la siguiente información:
-
-![](https://docs.etendo.software/latest/assets/drive/WFgwGX-k5cQwljyb0pvetphDd1B4qebt3L2mRNX9o2MhfjH5nTqVpG9O4TUCMwn6NJ1cK1bfQhtosDVfnjno3suZce-SgBk9JC9aZgaRntutQfEf7cc5GLPaBmCSu_L29LYfA3n-g6DMfo8M-NnfKSZnQ8TDR6o3VoM1Y9W75yEjs4v_2POlWyUEpA.png)
-
-#### **Interfaz de Usuario**
-
-El módulo “Intrastat” proporciona campos, ventanas y solapas necesarios para la configuración y generación de la declaración de Intrastat.
-
-A continuación se muestran unas capturas de pantalla de estos elementos junto a una breve descripción de cada uno de ellos.
-
-######## **Gestión de Datos Maestros | Producto  |  Producto  >>  Intrastat**
-
-![](https://docs.etendo.software/latest/assets/drive/G5Llm2flNrOzJt-k1_SvtgklRXnnQtgz0wyBL4ouCXVxOoe30GaKqSgN5KgrXlgH21xq0_T0EUyZlwpaGQgjhcLP8cpt1HqqiAK9EGzkjzgcObg1bTkeIMUdoTtcM7WbTd0oTcgVEi4iAQdWhJ76AyrmUSnh2bw8Zo0tU15gL3AYtIFQr1wMBybNXA.png)
-
-Las transacciones entre países de la UE que incluyan productos de tipo Artículo se deben registrar en la declaración de Intrastat. Cada uno de los productos tiene asociado un código de mercancía obligatorio y una masa neta en Kg (por unidad de facturación). Opcionalmente, y siempre dependiendo del producto, se puede configurar una unidad de medida suplementaria junto a su correspondiente conversión.
-
-En esta solapa, el usuario debe configurar los datos particulares de cada producto.
-
-######## **Gestión de Datos Maestros | Terceros  |  Terceros  >>  Cliente  >>  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  | Terceros  >>  Proveedor/Acreedor  >>  Adquisiciones de Intrastat**
-
-![](https://docs.etendo.software/latest/assets/drive/7azhjfSW95mKDO_Umt-b50nUiixohLlwZ1zx_oZKMbNAO7R79nOk7oMsT2Rq-iOC-rY16uPaSnyHXz5_5bwULKS1eSqn7bmhL85Um2Qs-f_RNafxL9RFYkcEXvV_l-7QVXpWVGjPDbIghA2hw-mXyPncKMBU1GIqXCrUt8KkoklL6WlVFouQKsXX8A.png)
-
-Cada tercero con el que trabaje, ya sea cliente o proveedor, tendrá su propia configuración para Intrastat por defecto. Por ejemplo, es posible que su proveedor siempre le envíe la mercancía mediante un medio de transporte determinado.
-
-Desde esta solapa el usuario tiene la oportunidad de configurar esos valores por defecto de cada tercero. El sistema siempre recuperará la información configurada aquí y la utilizará para generar la declaración de Intrastat.
-
-Sin embargo, es posible que en alguna transacción en particular, la modalidad de transporte varíe de la que tiene configurada por defecto en esta ventana. Si éste es el caso, el usuario siempre tiene la oportunidad de cambiar manualmente esta información a nivel de transacción o de declaración de Intrastat como veremos más adelante en este manual.
-
-######## **Gestión de Datos Maestros | Terceros  |  Terceros  >>  Cliente y Gestión de Datos Maestros | Terceros  |  Terceros  >>  Proveedor/Acreedor, campo Incoterms**
-
-![](https://docs.etendo.software/latest/assets/drive/FxL2ss3KNP9of-xib9m4PqSBvMrXhhFCKBFlFLq06LGNxkxNzb2A0R55NPFpGogVFQ6Zc9ztwL-EjSxQYPAZTkDgpbCN-Unh4iJGItzb1np0W0YBfO6_PiM-PSbp20vpW5T38UEp2vXdogNtyh-osvVMoIUHGJDlSf4HDqNXCsD2YbFUGULEr1gW0A.png)
-
-El campo Incoterms permite definir el Incoterm (Condición de Entrega) por defecto para el tercero. Es importante tener en cuenta que se pueden configurar dos Incoterms para el tercero, uno cuando el tercero es cliente y otro cuando es proveedor.
-
-!!! info
-    El campo "Incoterms" del Tercero, es un campo de Etendo que no se muestra por defecto, pero si se utiliza en los módulos de Intrastat. Recuerde mostrarlo si lo va a utilizar.
-
-
-######## **Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento**
-
-![](https://docs.etendo.software/latest/assets/drive/IoUclg9rhO_Gqhw_0FuLoJa54gQjUysOPDNlGgbwsbczidBrKgSlXDVgV06YLVDXTwMPbgeJ041zklsHvsDQKu0lhSTvKh3uI3TPmCeYv4qY466B-at_lMNxdR24jh40VhYtkBzLxGKGPkQIFVHGJSLZfwjDeImzQu1key6CJmHNBTfZEDth6QQCeg.png)
-
-Los campos *Tipo de Transacción* y *Regimén estadístico* van asociados al tipo de documento (facturas). En esta ventana puede definir los valores por defecto que, al igual que sucedía con los valores de Intrastat para Producto o Tercero, pueden ser sobrescritos para transacciones o declaraciones de Intrastat en concreto.
-
-######## **Configuración General | Organización | Organización | Organización, campo Calendario de Intrastat**
-
-![](https://docs.etendo.software/latest/assets/drive/mVJ1pyaJF0A0_AhDbNggeRZnZvxKq2pl9cs7i7n-0TuQfxS-sucLH8Dj83qvRSIDnttYFzgSMZK5LRnWS5n5Wp6liQUUZnaOeJfKjfHFFm7q5eFQ68kpmuLi_V-SI8N2d28S3lOfQfGwc6Rhq-U_RROZKyUL9fmjd9LM_xCuM2H3pzd__651wvaibg.png)
-
-El campo *Calendario de Intrastat* define el calendario de declaraciones de Intrastat. En España, el Intrastat se debe presentar mensualmente, por lo que el calendario de Intrastat seleccionado debe tener doce periodos que coincidan con los dos meses naturales de un año. Si su calendario fiscal cumple esas condiciones, puede usarlo también como calendario de Intrastat sin necesidad de crear uno nuevo.
-
-En este nuevo campo, sólo aparecerán los calendarios que estén marcados como *“Calendario de Intrastat”* en la configuración del calendario:
-
-![](https://docs.etendo.software/latest/assets/drive/bO3u93UFfmKU1W9mLFKYj-ZbmYv8cKLtPjLvC-yacQkkRXAfcnGz3HeIrfsjW08XXL8iBOP656gydvYIYVKSIthvyYK8IEsipoh7XADziIBF77qqffJlwOH11cgdPlb0tWT9wCtR11_P3CSWWbkOUracp5Ui3Ul0irS50FTaDLewU1rdVdJ1TEVmMg.png)
-
-######## **Configuración General | Organización | Organización  |  Organización  >>  Intrastat**
-
-![](https://docs.etendo.software/latest/assets/drive/C03LX7XPMO-rvqovv8Gtmu6l-HoRmUqQPf0Q321iltU61rfVQyiGCo1dsu6oQ_oFXHLbF0528kEHLoOx8qWAmbJx0NcgwVmw_Iy-lNzSCRXYB4jO9P0zcaOAU44PXqja7AgrdctRRSNeYtErmY50OYAT0RKfFXgrX6lTf20j5WzMnDQexGT1AqaK0g.png)
-
-En esta solapa se introduce la información de Intrastat relativa a la organización (sólo entidades legales).
-
-Cada año se debe introducir un registro en esta solapa para configurar los siguientes datos:
-
--   *Formato de Fichero*: Cada país tiene su propio formato de Intrastat. En este campo seleccionamos el formato de fichero concreto que queremos que cree el sistema. En el caso de España, el módulo “Intrastat for Spain” es el encargado de generar el fichero con formato para España.
--   *Ejercicio*: Año de la declaración
--   *Declaración de Intrastat*: Adquisiciones o Entregas
--   *Importe Límite*: Cada año las Autoridades suelen modificar el importe que delimita la obligatoriedad de presentar o no la declaración de Intrastat. En este campo el usuario debe indicar el importe límite de cada año.
--   *Importe Acumulado del año*: Cada vez que se presente una declaración mensual, el sistema irá actualizando automáticamente el valor de este campo con el importe acumulado. Si el año anterior se generó la declaración de Intrastat fuera de Etendo, o desea empezar a generar la declaración una vez empezado el año, puede configurar aquí el importe que declaró en su momento.
--   *Valores por Defecto (Incoterms, Tipo de transacción, Modalidad de transporte, Régimen estadístico, Valor estadístico)*: Como ha visto anteriormente, en las ventanas de *Tercero* o *Tipo de documento* se pueden definir todos estos valores. Sin embargo, definir la misma *Modalidad de transporte* (por ejemplo) para todos los terceros puede resultar un poco molesto. Así que, si lo desea, puede definir la configuración global de estos valores en esta solapa. De esta forma, si por ejemplo no especifica nada en la *Modalidad de Transporte* de un Tercero, el sistema utilizará por defecto la configurada en esta solapa. Podrá modificar manualmente esta configuración siempre que lo desee en cada transacción o declaración de Intrastat.
-
-######## **Solapa Intrastat en Línea de Pedido, Albarán y Factura (compra o venta)**
-
-![](https://docs.etendo.software/latest/assets/drive/MPXVxD2cgEZhT-sITSN4LLZJV59vTsxYwzj5fC8IKyIZuUjHq8BWShP7aSB5M5vue9kXWhNUL54W0Q7vNGkN1OJvPXInGUWRPOhsSix8csKzNIAYHwIxwxany7JR3xAeifSGeUfUOLCeOoxyR55QMrajFQjcsrPYt5AnOUALpnHeh82pH3O9mGbIKg.png)
-
-A nivel de línea de Pedido, Albarán y Factura, tanto de compra como de venta, se ha creado una nueva solapa que contiene toda la información de Intrastat relativa a esa transacción en concreto.
-
-Cada vez que se introduce una nueva línea de pedido, albarán o factura, el sistema comprueba si esa transacción se debe incluir en el informe de Intrastat (por ejemplo, si se trata de una compra/venta intracomunitaria) y, en caso afirmativo, genera un registro en la pestaña Intrastat con toda la información de Intrastat que se ha configurado por defecto. El usuario puede modificar manualmente cada uno de esos campos antes de completar el documento.
-
-La razón por la que se ha añadido una solapa de Intrastat tanto en las líneas de pedido como de albarán (teniendo en cuenta que estos documentos no se incluyen en el Intrastat, sino sólo las facturas contabilizadas) es que las facturas en Etendo pueden crearse desde los pedidos y/o los albaranes. Es por ello que si la información relativa a Intrastat se introduce en la línea de un pedido, esa información se trasladará a la correspondiente línea de factura si la factura se genera copiando del pedido.
-
-######## **Intrastat | Herramientas de análisis | Generador de Intrastat**
-
-![](https://docs.etendo.software/latest/assets/drive/XxYQ02-DL0rr3DGMZ_FUOn2gVmqY34Iko4NBU_Wr7JXNbchAgTSr_BaLU_6bf9giEwaUVf8c2b2pvk2dc2U6NwRsa7CX8uFXET_eiMgxybpB8swm-0wSw9ln1r_FcRFaFlYvumc30KMLbEhCxNLFPy7NfCiPVYvY41yrCbbhVWZ75HgRrxwNyEYkdg.png)
-
-Una vez finalizado el mes, se debe generar la declaración de Intrastat de ese mes. Desde esta ventana podremos hacerlo. Para ello seleccionamos la Organización (sólo entidades legales), Ejercicio, Periodo, Adquisiciones o Entregas y Tipo de declaración (Normal o Anulativa).
-
-El sistema generará automáticamente una cabecera de declaración junto a sus líneas, accesible desde Intrastat | Herramientas de análisis | Declaración de Intrastat.
-
-######## **Intrastat | Herramientas de análisis | Declaración de Intrastat**
-
-![](https://docs.etendo.software/latest/assets/drive/er07E5V7YGKLkaVl1A9lUzWMFj3FREeBMgFaqnjtq6fB2w7ek7q6ztujPw2KNRxtVq45PS7SU6MzaKmrNSdDnNXw6nkGRo0s_Y1aY0KKEyigXKHj9w8_RqGCSKo-Hj3AiqoUKo2sNu19GNJ6xTBoUMHzLYDpfMVL8JcyS1evqol-e3m-weEBCbbB5Q.png)
-
-Al generar una declaración de Intrastat, el sistema crea automáticamente una nueva cabecera (sólo lectura) junto con sus líneas. En este momento la declaración se encuentra en estado borrador, y se permiten modificaciones en las líneas de la declaración. Veamos un ejemplo de la información que contiene una línea:
-
-![](https://docs.etendo.software/latest/assets/drive/04R4qED5tjzLbOS_oOdZGSssalCSrO5HjgBFbLPHotJgoHxVqKwB7MzSAGUN9sqiJdzB78R9LBKGA0J8pTtaXgOGJBcI3BzfQoyEXdg3dwLXaDTNG7aqfe6JSU_KAgeVjCkHNZO5kvKhJ5DzooSFsIYSd-hZs3KfJMCSH54KXzVfiXilrW02m280dQ.png)
-
-El sistema ha recuperado toda la información de Intrastat desde las líneas de factura. Si ha configurado toda la información relativa al Tercero, Producto y tipo de documento, Etendo Classic habrá rellenado automáticamente todos estos valores en las líneas de la declaración.
-
-Si por el contrario le falta algún dato, si desea modificar alguno, o incluso si quiere añadir manualmente nuevas líneas o excluir alguna de ellas, puede hacerlo mientras la declaración esté en estado borrador.
-
-En la solapa de líneas de declaración de Intrastat, al margen de los campos relativos a la información de Intrastat, aparecen dos campos de especial importancia para el usuario: el campo *“Incluir”* y el campo *“Modificado Manualmente”:*
-
--   *Incluir*: Por defecto, todas las líneas de la declaración de Intrastat se incluirán a la hora de generar el fichero de Intrastat. Sin embargo, si desmarca esta casilla, la línea en cuestión se excluirá de la declaración.
--   *Modificado Manualmente*: Cada vez que se modifique un dato de una línea de declaración de Intrastat o añada manualmente una nueva línea, el sistema marcará automáticamente esta casilla.
-
-Mientras la declaración está en estado borrador, la declaración de Intrastat se puede relanzar todo lo necesario. Cuando se haga, el sistema volverá a recalcular de nuevo la declaración, conservando intactas todas las líneas que tengan marcado el campo de *Modificado Manualmente.*
-
-#### **Manual de Instrucciones**
-
-Una vez que conoce las ventanas más importantes que proporcionan la funcionalidad de Intrastat en Etendo, es hora de conocer el flujo de trabajo para usar correctamente dicha funcionalidad.
-
-##### **Configuración General**
-
-Toda la lógica detrás de la funcionalidad de Intrastat en Etendo se basa en la ubicación física de su organización y de sus terceros. Por ese motivo es fundamental que especifique la dirección completa de cada uno de ellos. Si la dirección es de España, deberá indicar también la Provincia en la que se ubica.
-
-###### **Configuración de Intrastat**
-
-Como habrá podido observar, la configuración para Intrastat se realiza principalmente en los siguientes lugares:
-
--   **Configuración General | Organización | Organización**. Para cada entidad legal, deberá seleccionar un calendario válido para Intrastat (que tenga ejercicios con 12 periodos que coincidan con los meses naturales). Recuerde marcar la casilla “Calendario de Intrastat” cuando configure su calendario (*Gestión Financiera | Contabilidad | Configuración | Calendario anual y periodos*) para que éste aparezca en el campo de *Calendario de Intrastat* de la ventana de Organización.
--   **Configuración General | Organización | Organización  |**  Organización  **\>>  Intrastat**. Recuerde que en esta solapa se configuran:
--   Los importes y tipos de declaraciones que desea generar para cada entidad legal
--   Los valores por defecto globales que se utilizarán en caso de que no se definan concretamente donde corresponda (*Tercero* o *Tipo de documento*)
-
-El sistema necesita saber cuánto se declaró el año anterior. Para proporcionar esta información, se debe crear un nuevo registro en esta solapa. Solamente a modo de ejemplo, en *2021* para la organización *España*, declaramos un Intrastat de *adquisiciones* por un importe de *0.00* Euros:
-
-![](https://docs.etendo.software/latest/assets/drive/9X5udGu8RP0DTGJquv2Li6dXdSXPxg03D1QBGQ6qnrs6VxCayvbcoqtu-IyOzhhT5L2lb7CWeHMST-gvve1CpWU8RyBTrUcgu-CIGup0h6kG9MrY0-DbIZ-LQIrMrLttuy0FAM3Ax2-CPquZMG8IOmqkZGLr6bl1mhCpSe2_IErNZTQfX5RfnIIrfg.png)
-
-!!! info
-    Nota: Si su calendario de Intrastat no tiene creado el año 2021, deberá crearlo (junto a sus respectivos periodos) antes de poder introducir este registro.
-
-
-Ahora repita ese proceso para el año presente. Si ya ha empezado el año y se han realizado transacciones intracomunitarias de bienes (presentando o no la declaración de Intrastat), deberá indicar el importe acumulado de este año. De esta forma, el sistema podrá saber si debe presentar la declaración de Intrastat o no a lo largo del presente año.
-
-También existe la opción de configurar los valores globales por defecto, lo que es especialmente útil si, por ejemplo, casi todos sus Terceros comparten el mismo Incoterm. Posteriormente, a nivel de tercero, se podrá especificar la configuración concreta para cada uno de ellos.
-
-![](https://docs.etendo.software/latest/assets/drive/oVnu7ahLXMceKTVmUBhewKFKYODlv-fRnLLXvLdTrg6rsJdYzXk9_nRSj9_6COfueYVEub-2ISJZV49Abl1WRLhdVqzJ5DCV5n0d3vMDePDlcYKGY6pUDeQSSSrpRz6k--F-438sLk7NF_QCydiwA2C2X6nWOSbZ5u0D0Zn7UyfdJsZm1IRoRMPjAQ.png)
-
--   **Gestión de Datos Maestros | Producto  |**  Producto  **\>>  Intrastat** Como ya vió en el apartado Interface de Usuario, debe definir la información de Intrastat para los productos de tipo *Artículo.*
--   **Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>  Cliente y Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>  Proveedor/Acreedor, campo Incoterms.** Como ya se vió en el apartado Interfaz de Usuario, se puede definir el Incoterm de cada Tercero.
--   **Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>**  Cliente  **\>>  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>**  Proveedor/Acreedor  **\>>  Adquisiciones de Intrastat .** Como ya se vió en el apartado Interfaz de Usuario, se puede definir la información de Intrastat de cada Tercero.
--   **Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento.** Como ya se vió en el apartado Interfaz de Usuario, puede definir el *Tipo de Transacción* y *Régimen estadístico* para sus documentos de tipo Factura.
-
-##### **Creación de transacciones**
-
-Una vez que nuestros datos están perfectamente configurados, es el momento de empezar a crear las transacciones que posteriormente se incluirán en la declaración de Intrastat.
-
-Como ya se ha visto en apartados anteriores, su instalación cuenta con una nueva solapa, llamada *“Intrastat”*, a nivel de línea de pedido, albarán y factura que contiene toda la información relativa al Intrastat. Si se han introducido todos los datos de configuración necesarios anteriormente, se utilizará esta información automáticamente para rellenar esa solapa. Si, por el contrario, no se ha configurado toda esta información, o desea modificar algún dato en concreto, podrá hacerlo de forma manual.
-
-Cada vez que se introduce una línea de pedido, albarán o factura, el sistema comprueba si se cumplen todas estas condiciones:
-
-1.  La organización y el tercero del documento se encuentran en países distintos de la Unión Europea
-2.  Todas las direcciones incluidas en la cabecera del documento, que están relacionadas con el tercero, están ubicadas en la UE. Si al menos una de las direcciones no pertenece a la UE, no se generará información de Intrastat
-3.  El producto incluido en la línea es un artículo
-4.  Si se ha instalado el módulo de *“Intrastat for Spain”*, el sistema también comprobará que tercero y organización no se encuentren ubicados en las Islas Canarias, ya que en este caso las transacciones se deben excluir del Intrastat.
-
-Si todas esas condiciones se cumplen, cada vez que inserte una línea de documento, el sistema creará automáticamente la información en la pestaña de Intrastat.
-
-El sistema recupera los valores por defecto que haya configurado a nivel de tercero, producto, tipo de documento y organización (este último si no encuentra los valores correspondientes anteriormente). Pero recuerde que, independientemente de los valores configurados, el usuario tiene la libertad de modificarlos para cada línea en concreto mientras el documento no se haya completado.
-
-###### **Creación de transacciones desde otras transacciones**
-
-En Etendo existe la posibilidad de crear albaranes desde pedidos; en este caso, el sistema recuperará la información de Intrastat introducida a nivel de pedido y la copiará al albarán.
-
-Imagine que ha creado un pedido y que ha cambiado el Incoterm por defecto. Cuando se cree un albarán desde ese pedido, el Incoterm que se incluirá en la línea de Intrastat del albarán será el que se haya redefinido en el pedido, y no el que estuviera configurado en el sistema por defecto.
-
-Lo mismo sucede para las facturas. En Etendo se pueden crear facturas desde albaranes o pedidos. En este caso, el sistema siempre intentará recuperar la información de Intrastat del albarán o del pedido. Si la factura se crea sin albarán o pedido asociado, Etendo recuperará la configuración del sistema para rellenar la solapa del Intrastat.
-
-##### **Generación de declaraciones de Intrastat**
-
-Una vez finalizado el mes natural, llega el momento de generar la declaración de Intrastat. Para hacerlo debemos ir a la ventana Intrastat | Herramientas de análisis | Generador de Intrastat. Seleccionaremos la entidad legal, año, periodo y tipo de declaración.
-
-![](https://docs.etendo.software/latest/assets/drive/-xOOy1tCY12Yc8KLtr_QEIiGwyUIQ8O9dXuGoMTnHHhDwYTKty5cP1dog-im2f-iHQoE-UEbMJcoseuQvPEnMqTTwZvEEwMyHin7jQyDByPcGvhswO9pAz2e07LqRCkFPWXTXlMJEwr09pCoiupjWHCQLHRcPRdjgZhysMOmd4ZvJbmmRELeLdO7gg.png)
-
-Actualmente, Etendo soporta dos tipos de declaraciones: *Normales* y *Anulativas*, estas últimas anulan las declaraciones normales procesadas en el periodo seleccionado y generan una nueva declaración normal.
-
-Tenga en cuenta que un mismo periodo sólo puede tener como máximo una declaración normal para adquisiciones y otra para entregas.
-
-Mientras la declaración normal para un periodo se encuentre en estado borrador, el usuario puede lanzar la generación de la declaración tantas veces como quiera. El sistema actualizará todas las líneas de la declaración, conservando todos los cambios manuales realizados por el usuario.
-
-Como veremos más adelante, cuando se procese una declaración ya no se podrá realizar más cambios sobre ella. Sin embargo, el usuario siempre puede anular la declaración procesada para volver a generar una nueva declaración normal para ese periodo.
-
-!!! info
-    **Nota importante:** Etendo recomienda cerrar el periodo contable antes de generar la declaración de Intrastat.
-
-
-###### **Revisión, Modificación y Procesado de la declaración de Intrastat**
-
-Una vez generada la declaración, podemos examinarla antes de procesarla. Para ello utilizaremos la ventana Intrastat | Herramientas de análisis | Declaración de Intrastat. La cabecera de la declaración se encuentra por defecto en estado borrador, con todos los campos de solo lectura.
-
-Si navegamos a las líneas, podemos comprobar los datos que se incluirán en la declaración. Mientras la declaración esté en borrador, podremos modificar datos de las líneas, incluir manualmente nuevas líneas (para transacciones al margen de Etendo), o excluir líneas (mediante el campo *Incluir*) que no queramos que aparezcan en el fichero de Intrastat.
-
-
-Cuando estemos seguros de que la declaración es correcta, navegaremos a la cabecera y pulsaremos el botón *“Procesar Declaración”.* Este proceso comprobará que todos los datos necesarios para generar el fichero de Intrastat están en el sistema y nos mostrará un error detallado en caso de que encuentre algún fallo. Ejemplo:
-
-![](https://docs.etendo.software/latest/assets/drive/YmqOUWlEagUpEcF7v1V8AbomnzuIy8PSzX0CHXiNQTThWHi821JdV-yVpHHydVZOZbxkF1ybQSff-K0KbKoaGSgYekcjm2ofbGreyprdx482TGdM8m4S-076wHnQt16isDz4Vn-gSMkN2Q5qEft7hRWTILjXA2NWVp2G7bVxcmzeCxVVxcfB7Bal7Q.png)
-
-Una vez procesada la declaración, el campo *“Importe Acumulado del año”* a nivel de organización se actualizará automáticamente, sumando el importe de esta declaración a lo acumulado en el año. Si posteriormente anula esta declaración, el sistema restará el importe de la declaración anulada al acumulado del año.
-
-##### **Generación del fichero de Intrastat**
-
-Al procesar la declaración, aparece automáticamente el botón de “Generar fichero”.
-
-![](https://docs.etendo.software/latest/assets/drive/qZnZAQ6qT2iKqwv_ZgjHxgD_ytT0UxvLoevWs3yIh-DMPFriliEcja2bxMfH3znnY9CkX0Dvzw80Z99vu-3jyD_vSjaqb8Hds-METiaoAqj7KWg5WzgJq2u8FJ5qg2yBrBTlM20qrC_8jDo03XDeametjvbJwchZo4gBISB7-1D6NEtn8k3cp4hVDA.png)
-
-Cuando lo pulsemos, el sistema comprobará si estamos obligados a presentar la declaración para este periodo o no. Para llevar a cabo esta operación, el sistema comprueba el importe declarado el año anterior y el acumulado de este año, por ese motivo es muy importante que configure correctamente estos valores en la ventana Intrastat a nivel de Organización.
-
-
-Si durante el año anterior superamos el límite de declaración de Intrastat, o lo hemos superado a lo largo del presente año, Etendo nos generará el fichero de Intrastat con el formato apropiado para ser enviado telemáticamente (a través de Internet) a las Autoridades. Ejemplo:
-
-FR;31;FOB;11;3;;85182190;CN;1;115;162;15,37;15,37
-
-DE;28;CIF;11;1;0811;85182190;US;1;2459;1982;4589,46;4589,46
-
-IT;12;FOB;11;3;;02012030;;1;800;;987,00;890,45
-!!! info
-    Si las líneas de la declaración sobre la que vamos a generar el fichero son superiores a 1000, generará un fichero zip con tantos txt como sean necesarios, ya que cada archivo podrá contener un máximo de 1000 líneas.
-
-!!! info
-    Este fichero se puede importar en el enlace web de la AEAT - Cumplimentación en Línea con Importación de Fichero. Para más información, consulte este [*enlace*](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/procedimiento-presentacion-declaraciones-intrastat.html){target="_blank"}.
-
-
-!!! info
-    Es importante recalcar que superado el umbral de presentación en caso de que en un periodo (mes) no se realicen transacciones de intercambio de bienes intracomunitarias, habrá que presentar la correspondiente declaración sin transacciones. 
-
-
-
-###### **Finalizar el año. Copia de configuración al siguiente año**
-
-Una vez que hemos generado todas las declaraciones del año, es momento de configurar el sistema para el próximo año. Lo único que debe hacer es ir a la configuración del presente año en Configuración General | Organización | Organización  |  Organización\]  >>  Intrastat y presionar el botón *“Copiar al año siguiente”.* En la ventana emergente aparecerá un campo numérico para que introduzca el nuevo importe límite del siguiente año.
-
-![](https://docs.etendo.software/latest/assets/drive/QeFYekMn3a3rRGcEFIkw2MgQ2UNf5EfrCuJM8iaLCP6WqeyL6-0HRqUgzimJiyEkn-vT6XRvDUsNkw2VhlJYRdoo5kgTPOdCa5r1EnNBj8k6CQ45xq-7R2LS4b0Yn8MwpQ2cgLoWrgeZYvCn9NhJNoIFNt6ZuzvNE82NJDn7JL4TtbIoU-OuQWHm4Q.png)
-
-El proceso comprobará que haya procesado todas las declaraciones del presente año y, en ese caso, creará un nuevo registro copiando toda la información de configuración del presente año junto al nuevo importe límite de declaración de Intrastat.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Modelo 390
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Modelo 390
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390
-## Article Content: 
-#### Javapackages 
-
-:octicons-package-16: Javapackage: `org.openbravo.module.aeat390.es`
-
-#### **Introducción**
-
-El presente manual de usuario explica el contenido y funcionamiento del módulo comercial de Etendo, “**Modelo 390**”. 
-
-#### **Descripción del Modelo** 
-
-El módulo **Modelo 390** permite a las empresas cumplir con sus obligaciones fiscales relativas a la obligatoriedad de declarar un resumen anual de la liquidación del IVA durante el ejercicio fiscal.
-
-Esta declaración se debe enviar a la AEAT como un fichero XML de acuerdo con la normativa vigente.
-
-El Modelo 390 se debe presentar cada año durante los primeros 30 días del mes de enero del año siguiente, junto con la autoliquidación del IVA Modelo 303 correspondiente al último periodo del año.
-
-La liquidación anual del IVA permite al usuario calcular el importe anual que debe pagar a, o ser devuelto por Hacienda como la diferencia entre el IVA devengado y el soportado deducible.
-
-Con este nuevo módulo comercial, el Modelo 390 se puede presentar a Hacienda como un fichero de texto válido, obtenido a través del "Generador de Declaraciones de Impuestos".
-
-#### **Contenido del fichero Modelo 390**
-
-El fichero generado por Etendo, que cumple con el formato requerido por la Agencia Tributaria, contiene una estructura en formato XML con las siguientes secciones:
-
--   Sujeto Pasivo y devengo
--   Datos Estadísticos
-    -   Actividad
-    -   Clave
-    -   Epígrafe
--   Datos del Representante
-    -   Personas Físicas
-    -   Personas Jurídicas
--   Operaciones realizadas en régimen general (IVA Devengado)
--   Operaciones realizadas en régimen general (IVA Deducible)
--   Resultado liquidación anual
--   Tributación por razón de territorio
--   Resultado de las liquidaciones
-    -   Periodos que no tributan en Régimen especial del grupo de entidades
--   Volumen de operaciones
-    -   Operaciones en Régimen General
-    -   Operaciones en RECC
-    -   Entregas Intracomunitarias Exentas
-    -   Operaciones exentas sin derecho a deducción
-    -   Exportaciones y otras operaciones exentas con derecho a deducción
-    -   Operaciones no sujetas por reglas de localización o con inversión del sujeto pasivo
-    -   Entregas de bienes inmuebles y operaciones financieras no habituales
-    -   Entregas de bienes de inversión
--   Operaciones específicas - Operaciones realizadas en el ejercicio
-    -   Adquisiciones interiores exentas
-    -   Adquisiciones intracomunitarias exentas
-    -   Servicios localizados en el territorio de aplicación del impuesto por inversión del sujeto pasivo
-    -   Entregas de bienes y prestación de servicios en RECC, criterio devengo art 75 LIVA
-    -   Adquisiciones de bienes y servicios en RECC, criterio devengo art 75 LIVA
-
-Al contrario de otros modelos tributarios, este fichero XML no se puede importar en ningún software de la AEAT para su previsualización y edición.
-
-Sin embargo, debido a su estructura XML, este fichero se puede abrir directamente con cualquier editor de texto plano y su contenido es fácilmente entendible.
-
-A continuación se muestra como ejemplo un fragmento de dicho fichero:
-
-![](https://docs.etendo.software/latest/assets/drive/3QJUPmIRRgydZM5-NvNgNFFdnM3pL6nmrrOkKyK9954vq1uCkiyLLrpxXy6BYWDfqGCWGU-syZWT6e4-ELClbkW_zjf3sssmTsohd-XoHntzYFwUzQiw5aqWybMwI6NLu1zTGp7b_Kz_h4xexbEYQdvwGquwY_AUWxwg_7dXC0byB3bmWGfcgfGke70i5w.png)
-
-Para facilitar el estudio y la comprensión de las cifras obtenidas y, debido al gran número de transacciones y tipos de impuestos que pueden incluirse en este modelo, el módulo del Modelo 390 de Etendo genera un fichero .csv que puede abrirse con cualquier software de Hoja de Cálculo. 
-
-Este fichero .csv lista todas las transacciones incluidas en el fichero XML, el impuesto relacionado, el importe de base imponible y cuota junto a la casilla del Modelo 390 oficial en la que se ha incluido dicha transacción.
-
-#### **Instalación y configuración del módulo**
-
-##### **Instalación**
-
-El soporte para el Modelo 390 en Etendo se distribuye en un único módulo. Este módulo tiene un gran número de dependencias, que serán instaladas automáticamente al instalar el 390. Entre estas dependencias destacan:
-
--   Taxes: configuration for Spain (Impuestos para España)
--   Tax Report Launcher
--   Provincias de España
--   Epígrafes del I.A.E.
--   Legal Representative of the Organization (representante legal de la organización)
-
-Para su instalación el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
--   Instalación de la última versión disponible del paquete profesional de Etendo Classic para España
--   o la instalación del módulo(s) de forma separada.
-
-!!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-
-Adicionalmente, el Modelo 390 se distribuye en otro módulo compatible con el "Régimen Especial de Criterio de Caja" (RECC). Este módulo sólo contiene el juego de datos que relaciona los impuestos de IVA de Caja con los parámetros de declaración del Modelo 390 correspondientes. Si su organización está sujeta a este régimen o es destinataria de operaciones sujetas a este régimen, deberá instalar además este módulo.
-
-##### **Aplicación del módulo**
-
-Los módulos del Modelo AEAT 390 incluye un "conjunto de datos" o "configuración" que relaciona los tipos/rangos de impuestos para España, incluidos los de IVA de Caja, con los parámetros de declaración del 390.
-
-Es por ello que, una vez instalado el módulo, la "configuración del Modelo 390" debe aplicarse a la Entidad legal con Contabilidad que corresponda, en la ruta de aplicación:
-
-Configuración General | Organización | Gestión del módulo de Empresa.
-
-![](https://docs.etendo.software/latest/assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
-
-!!! info
-    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
-
-
-Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
-
-1\. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
-
-![](https://docs.etendo.software/latest/assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
-
-De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2021.
-
-2\. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
-
-![](https://docs.etendo.software/latest/assets/drive/xl0hUWgK97dvKk9LYorJ4vXXpltQStE57Zd_QmJ7BMlmTgWxmNBDiWnjz8FznBhE39VtlzT8WOd5sVjWVsnzgDa3mRuXsc-IU0e8M9O2CDxE6f1Zs9tSjwMZsJPIXGhgy_hzwe4Rlpszp9GHu0Wd4WocXCEHmOoukjpUTjGKM2Hy2kQzd3Wz9Q_dYJMhJQ.png)
-
-En la imagen del ejemplo se muestra como las bases imponibles/cuotas ligadas al rango de impuesto "Entregas IVA 21%" se reflejarán en las casillas correspondientes del 390 relacionadas con:
-
--   IVA devengado - Operaciones en Régimen General
--   IVA devengado - Modificación de bases y cuotas (en el caso de abonos o facturas rectificativas)
--   IVA devengado - Total Bases y Cuotas IVA
--   Volumen de operaciones - Operaciones en Régimen General
-
-3\. Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación del modelo 390 del período fiscal que corresponda, desde la ruta de aplicación:
-
-Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos.
-
-##### **Tipos de documentos soportados por el módulo**
-
-El informe se genera teniendo en cuenta la información disponible en las facturas de compra y venta contabilizadas que incluyan alguno de los impuestos declarados en la configuración del informe.
-
-Más concretamente, los tipos de factura soportados son:
-
--   Facturas de venta tipo AR Invoice positivas
--   Facturas de venta tipo AR Invoice negativas
--   Facturas de venta de tipo Reversal negativas
--   Abonos de venta (Credit Memo) positivos
--   Facturas de compra tipo AR Invoice positivas
--   Facturas de compra tipo AR Invoice negativas
--   Facturas de compra de tipo Reversal negativas
--   Abonos de compra (Credit Memo) positivos
-
-##### Configuración previa antes de generar el informe
-
-###### **Impuestos**
-
-!!! info
-    No es necesario realizar ninguna configuración adicional si tiene aplicado y utiliza el Módulo de Impuestos para España y el Módulo de Impuestos para España de IVA de Caja. 
-
-Es por ello que se recomienda utilizar estos módulos de impuestos para España.
-
-Las transacciones relacionadas con impuestos creados manualmente sólo se incluirán en el Modelo 390 si se relacionan correctamente con el/los parámetros del 390 que corresponda:
-
--   si, por ejemplo, se crea un nuevo tipo de IVA de compras nacionales de bienes al 21%, dicho impuesto debería estar relacionado con los parámetros:  
-    "Modelo 390 v 2021 - Declaración Anual de IVA - IVA Deducible - Operaciones Interiores Corrientes - IVA Deducible en operaciones interiores de bienes y servicios corrientes."  
-    "Modelo 390 v 2021 - Declaración Anual de IVA - IVA Deducible - Rectificación de deducciones."
-
-Recuerde que Etendo en la actualidad no contempla que un rango de impuesto de compras pueda definirse como parcialmente deducible.
-
-Configuraciones del tipo:
-
--   Impuesto padre "Adquisiciones IVA 21% (no 100% deducible)"
-    -   Impuesto hijo "Adquisiciones IVA 21% (50% deducible)" con un índice 10.50, marcado como "Impuesto Deducible".
-    -   Impuesto hijo "Adquisiciones IVA 21% (50% no deducible)" con un índice 10.50, marcado como "Impuesto No deducible"
-
-no permitirán la generación del Modelo 390 ya que el índice 10.50% no es un índice o tipo que reconozca el fichero del 390.
-
-Estos impuestos no deberán estar ligados a parámetros del 390 y sus importes (base y cuota) deberán reflejarse en el programa "IVA 2021" o el que corresponda de forma manual.
-
-###### **Actividades del I.A.E.**
-
-En el Modelo 390 se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
-
-El módulo Epígrafes I.A.E., instalado como dependencia del 390, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 390 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
-
-![](https://docs.etendo.software/latest/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
-
-En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
-
-###### **Representante Legal de la Organización**
-
-Si su organización tiene uno o varios representantes legales debe declararlos en la solapa correspondiente de la ventana Organización, que está disponible al instalar el módulo Legal Representative of the Organization (representante legal de la organización).
-
-![](https://docs.etendo.software/latest/assets/drive/yXySL0UNxH9GjB2DhIDbmoLdXxISY9aj4zmmZbU-1Y2usima7UM_5a7yLx09zNDmAgbtkf_SSCNZPcb2urJ_3ePFmHFQnqtaVN4QDfNI2dRxwgdtOuMWhOx_gnpMfrN6STY5jh9ZswHTceH1gUWu-mnwenFo-yKbOn0DMs-0_eGv1QK2lsOEkuDf9vppNQ.png)
-
-##### **Generación del modelo 390**
-
-Tal y como ya se ha explicado, el modelo 390, se genera como un fichero XML válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos | Generador de declaraciones de impuestos
-
-Una vez que el usuario ha introducido los datos genéricos, tales como la "organización", el "ejercicio" y "periodo", así como la "Declaración de Impuestos'', puede introducir los parámetros de entrada propios del Modelo 390 para posteriormente generar el fichero.
-
-La ventana de "parámetros de entrada" del 390 se muestra en la siguiente imagen:
-
-![](https://docs.etendo.software/latest/assets/drive/8E1H3y4j_5fmJ2K87L8xc2v10m8UvRU-ub-M3flFlZbORFRpy9LDEs80TBAteUllGVPdzAJ6dCOeiVtQkk5506tixB29SWgte_QF8PKQPl7Kq_UKT8BWu8snG4dOTY_X6bKiaEol3NwlDrO6uvf-GGVmylSiX-3cejwlHi577Y1eKobtQFLwJBq1haz17A.png)
-
-Los parámetros de entrada tienen que ver con datos que no pueden extraerse directamente desde Etendo. Datos como:
-
--   check para indicar si se está "**Inscrito en el registro de devolución mensual**"
--   campo de texto para introducir un **Nombre del fichero** del 390
--   check para indicar si "**Ha sido declarado en concurso de acreedores en el ejercicio**"
--   check para indicar si "**las autoliquidaciones del último periodo de liquidación del ejercicio corresponden a declaraciones concursales**"
--   check para indicar si se trata de una "**Declaración Sustitutiva**"
--   check para indicar si se trata de una "**Declaración sustitutiva por rectificación de cuotas**"
--   campo de texto para introducir el "**Número identificativo de la declaración anterior**" que se sustituye o rectifica
--   campo de texto para introducir si aplica la cuota a "**compensar del ejercicio anterior**" 
--   campos de texto para introducir los "**% de tributación por razón de territorio**", en los casos en que no hay una tributación al 100% al territorio común.
-    -   Si se introduce un valor aquí (p.ej 50% territorio común, 50% Navarra) el resultado de la liquidación anual se borra y pasa a la casilla Resultado de la liquidación anual atribuible a territorio común.
--   campo de texto para introducir la cuota a **Compensar atribuible a territorio común** 
--   campos de texto para introducir los **resultados a ingresar en las autoliquidaciones de IVA del ejercicio**, si aplica.
--   campos de texto para introducir el **total de devoluciones mensuales/trimestrales de IVA** (Modelo 303 en los casos de inscripción en el registro de devolución mensual
--   campo de texto para introducir el **Resultado de la autoliquidación del último período a compensar**
--   campo de texto para introducir "las cuotas pendientes de compensación al término del ejercicio" 
-
-
-
-
-###### **Transformación de parámetros de entrada en constantes**
-
-Como se puede observar, el número de parámetros de entrada es muy elevado. Para evitar tener que introducir todos estos datos cada vez que se genera el informe, el módulo del 390 permite definir como constantes cada uno de los parámetros de entrada. Para ello sólo tiene que encontrar el parámetro de entrada en la definición del informe (ventana Declaración de impuestos), cambiarle el tipo de parámetro a constante y definir el valor de dicha constante.
-
-Por ejemplo, en nuestra organización el porcentaje de tributación en Territorio Común es el 50% por lo que cambiamos ese parámetro a tipo constante con un valor de 50
-
-![](https://docs.etendo.software/latest/assets/drive/oPL91YrGG3zCsXi6j_4OtAmkDz1BaSshkNuh7EHEaKaA0GRfAULiEa-FMJ9FAIvUYC0bmbd1opqeGAbrOyYqaqa1DuTCQEsBwYKu_1KYlCgVmXMg7MC1GIHOjh4m6DpDIQPYe7-l1rzoLdb6b_O58kAj31JExjZ7q4SUVrl_-2rNyDH59cMTDK7wJKkBdg.png)
-
-A partir de ahora, cada vez que generemos el informe de nuevo no será necesario introducir este parámetro, ya que ni siquiera aparecerá de nuevo en la ventana de parámetros de entrada del 390.
-
-#### **Resultado del Modelo 390**
-
-Una vez que el proceso de generación del informe ha finalizado, el sistema nos devolverá un fichero comprimido ZIP. Si lo descomprimimos, en su interior encontraremos dos ficheros:
-
-##### **Fichero XML**
-
-Este fichero XML es compatible con el formato oficial publicado en el BOE para el modelo 390 listo para ser enviado a la AEAT. Este fichero se puede abrir con cualquier editor de texto plano para examinar o editar su contenido
-
-![](https://docs.etendo.software/latest/assets/drive/EUtcF7232b2XmCvVtzha9eEJfC7WDVPvbaKUX_WHEWEgiDANwi84Wd7cEUbO_NegLTIbeX80wxazDMZo4HlUKhCBOJqxBmM_KzHycha0gqHfpCaW4VjQaAZy_MYjcVCNb2cq_YfXnO_tBliBrdhmD-hN-4qUQjAjz5yzUJGD23C10KUBdY9ZVWR4q0On4g.png)
-
-##### **Fichero CSV**
-
-Un fichero CSV con la lista de facturas e importes que se han utilizado para generar el informe. Este archivo se puede importar en cualquier software de Hoja de Cálculo. 
-
-A la hora de importar el fichero es importante que defina los siguientes filtros:
-
--   Juego de caracteres: **UTF-8**
--   Separador: **punto y coma**, es decir **;**
--   Delimitador de texto: **comilla doble**, es decir **“**
-
-![Aeat390 import.png](https://docs.etendo.software/latest/assets/drive/Fc1f4L1omag1JBtJviufoH3pfPYmhHhmEJQERSVywOgU-cFo61aeNpvBArNzHKqy8DZ3VYBrSGj2X61-lKXWeTMjuj3_2yzAH31aWmLXYUl3B7yu3XXn44ckoTvoIjc87sdMmULxPgqrgTNEr1bJ953euAb0AXns7Byum7nttim66d8Foevat49TzZB-1g.png)
-
-Este es el aspecto del fichero una vez importado como hoja de cálculo:
-
-![390 FicheroCSV.png](https://docs.etendo.software/latest/assets/drive/Gu3UCsXhF30LRTvr-afGt4BYargy1tzXgHIqBJgj6zBW-wYVgdriORZwzLc0tOxdOn_nNmnf43GaZj4MmVQY5YC6oyYYXlBnMm4zAVDOqYx6pVXDpIbCitc6K2NqxuKyfdrmsc2_7-fatxQprZvMwurwj-7bGWzwEmF7CYEvIRbNONDMupNEC-LPk60JMQ.png)
-
-La hoja nos muestra las facturas que se han tenido en cuenta para generar el 390, el impuesto (porcentaje, cuota y base imponible en Euros) de cada factura y el grupo de casillas correspondientes del 390 en las que se ha incluido dicho importe.
-
-La columna *Casilla 390* representa la casilla o grupo de casillas en las que se ha incluido dicho importe. Esas casillas se corresponden con nodos del fichero XML generado desde Etendo.
-
-Por ejemplo, en la fila número 2 del ejemplo anterior vemos que esa transacción se incluye en el grupo de casillas *01 02 03 04 05 06*, que se corresponden con los siguientes nodos del fichero XML:
-
-<RegGeneral>
-
-<BaseImponibleyCuota>
-
-<RegOrdinario>
-
-<Tipo4>
-
-Si buscamos estas casillas en el modelo 390 oficial, veremos que corresponden al Régimen ordinario del IVA devengado, por lo que esta transacción en concreto deberá reflejarse en las casillas *01* y *02* (IVA Devengado - Régimen Ordinario *4%*)
-
-![390 RegimenOrdinario.png](https://docs.etendo.software/latest/assets/drive/MIkgy9VbltH8VQNF1UrsspqDDWjP3Y8swgINiFHl8IuTC7lKcmgofIqY_C6uW6laaZPMi5AgeymL10lbz8YeiOdBPd9xInFqOWCxo64IzsRtA2gVw8Y6AW7FPzlj-eg8s1QkHIWOg2DPaJh0_73wOqcdmYbnyITCZK3hJsLZMmaVieULukdFPGrfgFonyw.png)
-
-!!! warning
-    *Es importante tener en cuenta que las casillas correspondientes a subtotales de los grupos de IVA deducible (por ejemplo casillas 48 y 49) no se incluyen en el fichero CSV pero sí se incluyen en el archivo XML que contiene el informe oficial. Estas casillas se autogeneran como el sumatorio de las bases imponibles y cuotas de las casillas correspondientes de su grupo (por ejemplo casillas 190 a 606) que sí se incluyen en el CSV. Esta es una limitación del fichero CSV que no afecta en absoluto al informe oficial generado.*
-
-
-###### **Ventajas**
-
-El tener todos los datos en la hoja de cálculo nos permite examinar la información con detalle. Por ejemplo:
-
--   se puede definir un filtro automático en la primera fila que nos permita filtrar por cualquiera de las columnas. De esta forma responderemos a preguntas del estilo: ¿la factura 1000013 en qué casillas del 390 se ha incluido? ¿Qué facturas se han incluido en un determinado grupo de casillas del 390?, etc.
--   también se puede realizar sumatorios sobre las columnas de cuota y base imponible para asegurarnos de que el importe incluido en el 390 es el correcto.
--   Otra ventaja de tener la información tan detallada es que nos puede servir para rellenar manualmente el modelo 390 en el programa de ayuda “IVA 2016”. Esto puede ser útil en caso de que queramos añadir información adicional no disponible en nuestra instancia de Etendo.
-
-#### **Presentación telemática del Modelo 390**
-
-Una vez que ha comprobado que las cifras incluidas en el Modelo 390 generado por Etendo son correctas, puede presentar el fichero XML en el siguiente enlace [_Presentación Modelo 390_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-390/modelo-390-presentacion-mediante-fichero.html){target="_blank"} para lo cual se requiere un certificado válido.
-
-
-Se mostrarán los siguientes datos:
-
--   Total de cuotas de IVA y RE (IVA Devengado) 
--   Suma de deducciones (IVA Deducible) 
--   Resultado Régimen General (Resultado Anual) 
--   Resultado de la liquidación, como resultado de la suma de:
-    -   resultados Régimen General y Simplificado 
-    -   menos la compensación de cuotas ejercicio anterior 
--   Resultado de la liquidación anual atribuible a territorio común 
--   Total volumen de operaciones 
-
-Es importante recordar que el resultado de la liquidación anual del 390 tiene que coincidir con los resultados de las liquidaciones periódicas del Modelo 303.
-
-Los resultados de las liquidaciones periódicas del Modelo 303 se pueden introducir al lanzar el Modelo 390 desde Etendo, como "Parámetros de Entrada":
-
--   "Total resultados a ingresar en las autoliquidaciones de IVA del ejercicio"
--   o bien, "Total devoluciones mensuales de IVA"
--   o bien, "Resultado de la autoliquidación el último período a compensar".
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Libro de Facturas
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Libro de Facturas
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas
-## Article Content: 
-#### Javapackages 
-
-:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook`
-
-:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.es_es`
-
-#### **Introducción**
-
-Este módulo de funcionalidad española se denomina “Libros Registro de IVA” o “Libros Registro de Facturas emitidas/recibidas”.
-
-#### **Descripción del módulo**
-
-Este módulo de los libros registro de IVA permite a las empresas españolas generar los libros registro de IVA, tanto los libros de facturas recibidas (IVA soportado) como los libros de facturas emitidas (IVA repercutido). Las empresas españolas tienen que guardar registro de cada una de las facturas recibidas y emitidas con el fin de poder determinar el importe total de IVA a liquidar con la Hacienda Pública para un periodo de tiempo determinado, como diferencia entre el IVA repercutido y el IVA soportado deducible.
-
-El contenido de los libros de facturas se ajusta a los requerimientos de la Hacienda Pública española. Los libros de facturas contienen información sobre:
-
--   Número de registro
-    -   este número será generado automáticamente por el sistema una vez que el correspondiente libro se marque como "Final"
--   Número de factura emitida/recibida
-    -   este número tanto en el caso de facturas recibidas como emitidas se corresponde con el campo "Nº documento"
-    -   en el caso de las facturas recibidas dicho campo no debería llevar secuencia numérica asociada con el fin de que el usuario final pueda introducir el número de factura del proveedor.
--   Fecha factura emitida/recibida o fecha de expedición/recepción de los bienes/servicio, en caso de ser diferentes
--   Nombre y breve descripción del cliente/proveedor
--   NIF del cliente/proveedor
--   Base imponible
--   Tipo impositivo de IVA
--   Cuota de IVA repercutido/soportado
--   Cuota de IVA soportado deducible
--   Tipo impositivo de recargo de equivalencia
--   Cuota de recargo de equivalencia
--   Importe total de la factura
-
-!!! info
-    Los importes deben consignarse en Euros.
-
-
-El tipo de cambio que se utiliza en las transacciones que deban incluirse en los libros cuyos importes no sean en Euros, es el definido para un rango de fecha determinado en la ventana "Rangos de Conversión".
-
-Este módulo de funcionalidad incluye además las claves de libro correspondientes al modelo tributario español 340 de declaración informativa de operaciones incluidas en los libros registro
-
--   “E”= en el caso del libro de facturas emitidas  
-      
--   “R”= en el caso del libro de facturas recibidas  
-
-y también las claves de operación correspondientes al modelo tributario español 340 de declaración informativa de operaciones incluidas en los libros registro:
-
--   “ “= en el caso de operación habitual de compra/venta  
-      
-     
--   “C”= en el caso de factura de compra o venta con varios tipos impositivos  
-      
-     
--   “D”= en el caso de factura de compra o venta rectificativa o nota de abono  
-      
-     
--   “I”= en el caso de inversión de sujeto pasivo  
-      
-     
--   “R” = en caso de facturas de arrendamiento de local de negocio (nueva clave para 2012)
-
-En los libros registro de IVA se consideran las siguientes operaciones de compra relacionadas con los tipos de documento de Etendo que se listan a continuación:
-
--   Facturas de compra (Tipo de documento = “AP invoice” )
--   Facturas de compra negativas (Tipo de documento = “AP invoice”) o abonos (Tipo de documento = "Reverse Purchase Invoice"). Ambos tipos implican una nota de abono en negativo.
--   Notas de abono de compra (Tipo de documento = “AP CreditMemo”), lo cual implicaría una factura rectificativa o nota de abono en positivo. En este caso, hay que tener en cuenta que el libro de IVA de facturas recibidas marcará este tipo de operaciones como “D” con importes en positivo, aunque impliquen un IVA soportado negativo y, por tanto, menor IVA soportado/soportado deducible.
-
-En los libros registro de IVA se consideran las siguientes operaciones de venta relacionadas con los tipos de documento de Etendo que se listan a continuación:
-
--   Facturas de venta (Tipo de documento = “AR invoice” )
--   Facturas de venta negativas (Tipo de documento = “AR invoice”) o abonos (Tio de documento="Reverse Sales Invoice"). Ambos tipos implican una nota de abono en negativo.
--   Notas de abono de venta (Tipo de documento = “AR CreditMemo”), lo cual implicaría una factura rectificativa o nota de abono en positivo. En este caso hay que tener en cuenta que el libro de IVA de facturas emitidas listará este tipo de operaciones en positivo, aunque impliquen un IVA repercutido negativo y, por tanto, menor IVA repercutido.
-
-No se consideran los libros registro de IVA del tipo:
-
--   Libro registro de ciertas operaciones Intracomunitarias
--   Libro registro de bienes de Inversión
-
-así como las:
-
--   Operaciones de nota de abono de compra/venta negativas (Tipo de documento = “AP/AR CreditMemo”), lo cual implicaría una factura de compra/venta.
-
-#### **Instalación del módulo**
-
-Para la instalación del módulo “Libro de facturas”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
--   Instalación de la última versión disponible de Etendo 
--   o la instalación del módulo de Localización Española.
-
-!!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
-
-
-Este módulo de funcionalidad requiere el módulo de Impuestos para España de Etendo. Es importante tener en cuenta que a la hora de instalar el módulo del libro de facturas, los módulos dependientes se instalarán automáticamente.
-> 
-!!! info
-    **Nota importante**: Las transacciones realizadas con anterioridad a la instalación del módulo de libro registro de facturas aparecerán en el correspondiente libro de facturas pero sin la clave de operación. Hay que tener en cuenta que la clave de operación solamente es necesaria en el modelo tributario 340. Para generar la clave de operación, las transacciones deberán completarse de nuevo.
-
-#### **Interfaz de usuario**
-
-Tal y como se ha explicado en la sección “*Instalación del Módulo*”, los “Libros registro de IVA” requieren del módulo de impuestos para España mejorado que incluye 3 campos que permiten:
-
-1.- la identificación de los importes de **recargo de equivalencia** tanto en el libro de facturas recibidas como emitidas de forma separada a los importes de IVA, si bien hay que tener en cuenta que los rangos de impuestos de recargo de equivalencia tienen que ir referidos al régimen del cliente/proveedor como una categoría de impuestos del cliente/proveedor.
-
-2.- la identificación de las operaciones de **inversión de sujeto pasivo** para los casos de operaciones de servicios suministrados por parte de proveedores europeos/extranjeros a empresas españolas.
-
-3.- la selección del **tipo de libro** aplicable a cada impuesto, debido a que por la configuración actual de los tipos impositivos se darán casos de impuestos de tipo compra que se deben incluir en el libro de facturas emitidas como IVA repercutido/venta. Un ejemplo es el IVA Intracomunitario de compras. El IVA Intracomunitario de compras implica un apunte al debe (como IVA repercutido) y otro al haber (como IVA soportado).
-
-Estos 3 nuevos campos se encuentran en la ruta de aplicación “**Gestión Financiera / Contabilidad / Configuración / Rango impuesto”**.
-
-!!! info
-    **Nota importante:** En caso de que no se utilice el módulo de impuestos para España proporcionado por Etendo, el usuario debe tener en cuenta que necesita configurar de forma adecuada y manualmente los 3 parámetros básicos del libro de facturas explicados en esta sección. 
-
-Además este módulo cuenta con dos ventanas para la configuración de los libros registro de IVA y la generación de los mismos, tal y como se muestra a continuación:
-
-**Configuración de los libros de IVA**
-
-Ruta: Gestión Financiera / Contabilidad / Configuración / Configuración de Libro de Facturas
-
-![](https://docs.etendo.software/latest/assets/drive/GrG6D0PyhdbT_TLRpP-ucIUxQWXB195QfgnnOoCooFMRK3_UdE3CVkl5e-u4JKIm9XaZa5jlgs3MKgRXNtxUWKv5ZUSPy8jn96u3UzeFgFAM9xK1K3iQaadEg4m-4tJzEekLb2QEmIUReL3FFSu2T3GhAwhqXYbEUj2bWFTahFcOb_5QbJBoJUODVWN_CA.png)
-
-**Generación de los libros de IVA**
-
-Ruta: Gestión Financiera / Contabilidad / Herramientas de análisis/ Libro de facturas
-
-![](https://docs.etendo.software/latest/assets/drive/loPMP2zWkOWGQYfmN6LTMPKteM1c0FpDnobtXCpuevnoP_ymLRTTP17h6YhVPEbK0Jxvi_Er9fhCfcGHAmifvo__4Oa0B4iLGjknSLMFgaC8T1GUkaqyKv_b7axuA6vYViAQYr5AAnnCRI9cQes9jvV-QT48duPSsMzBwN9QADTKJZsyqGc7LmNQOZiFyw.png)
-
-#### **Casos de usuario**
-
-Esta funcionalidad permitirá a las empresas españolas llevar a cabo los escenarios que se explican a continuación una vez que las correspondientes facturas/abonos de compra y venta se han completado/contabilizado en Etendo para un determinado año/periodo, por ejemplo 2021/Enero/Febrero.
-
-##### **Configuración y creación de los libros**
-
-Es necesario crear y configurar los libros de facturas recibidas y emitidas, para ello deberá seguir los pasos que se detallan a continuación o bien instalar y aplicar a la entidad legal con contabilidad el módulo de configuración de los libros de facturas.
-
-El módulo de configuración de los libros:
-
--   crea los libros tanto de facturas recibidas como emitidas
--   y los configura añadiendo todos los impuestos por tipo de documento a tener en cuenta a la hora de generar los libros de facturas.
-
-Es importante recalcar que el usuario puede crear los libros de facturas para un determinado periodo de tiempo tantas veces como sea necesario con tan solo volver a presionar el botón de proceso “Crear” para el correspondiente Libro, de esta forma se incluirán en el libro nuevas facturas o abonos que no se tuvieron en cuenta al crear el libro.
-
-###### **Libro de Facturas Recibidas**
-
-####### **Configuración**
-
-Configuración del Libro de Facturas recibidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
-
-Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
-
-
-Campos a tener en cuenta:
-
--   **Nombre** : Libro de Facturas Recibidas 2021
--   **Descripción** : Libro de Facturas Recibidas 2021
--   **Activo** : Sí
--   **Tipo**: R – Recibidas
--   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignarles un número de registro correlativo. El primer número asignado por defecto será el 1.
-
-![](https://docs.etendo.software/latest/assets/drive/IXk_LbHGPAuvnqJO0OgUVrfZ-SOpTuzA9Wdl-wKAtmqZyaLqjv5om5qoPtpYl-508VUqsTJWgPPhnbLlYh1P9-drRWRiE3ZgN58uiycr6MdIYXayaz1hfLWPS0lJYV4ktVApRw9gKP7nbn5ezHlyCPRoO9D1tqo5W1e2DednQyS0Krh4qpRfakqWFyT8PA.png)
-
-*Nota:* El usuario puede definir el **Número de Documento** que aparecerá en cada una de las líneas del libro, pudiendo ser: 
--   El Nº Factura (campo "Nº documento" de la factura de compra)
--   o el Nº Documento Proveedor (campo "Referencia del Proveedor" de la factura de compra) 
-
-En la pestaña "**Impuestos**" el usuario puede comprobar el listado de todos los impuestos por tipo de documento que se han incluido en la configuración del libro de facturas recibidas y que, por tanto, se tendrán en cuenta a la hora de crear el libro.
-
-####### **Creación**
-
-La **creación del libro de facturas recibidas** se debe llevar a cabo desde la ruta de aplicación Gestión Financiera – Contabilidad – Herramientas de Análisis – Libro de facturas. El usuario debe crear un nuevo registro e introducir la siguiente información para el correspondiente Cliente/Organización:
-
--   **Nombre** : Libro de Facturas Recibidas Enero 2021
--   **Descripción** : Libro de Facturas Recibidas Enero 2021
--   **Activo** : Sí
--   **Libro de Facturas** : el usuario debe seleccionar el libro de facturas ya configurado, por ejemplo "Libro de Facturas Recibidas 2021".
--   **Ejercicio**: el usuario debe introducir el año (en el ejemplo, 2021)
--   **Desde Periodo** : el usuario debe introducir el periodo para el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo enero 2021. El sistema incluirá las facturas con fecha desde el 1 de enero 2021.
--   **Hasta Periodo** : el usuario debe introducir el periodo hasta el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo enero 2021. El sistema incluirá las facturas con fecha hasta el 31 de enero 2021.
-
-Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Líneas”.
-
-![](https://docs.etendo.software/latest/assets/drive/GvTXD6nqhWoDk09XBU4LNxXPn81wG8PznqfHtMS3lI4NuiNwNZc1ogkyhqki6kcJnPsjkefAdwu2hyX7kqcvtxqwwLZ5m7q_U_93v-tu-TYnHSsn3-yP0Umnd-GvwqcUgJ280R80kJtIO9aCko3KN7HnJlw8ePE7avYq3kvhTfXn8ZFZsO4YzsvruBWF.png)
-
-La información contenida en las líneas del libro es la que se muestra a continuación:
-
-![](https://docs.etendo.software/latest/assets/drive/qk68QXzdYHjO1yKVcIG-WHMqCFoX0pJN8oCzkZP5CSVgReXjk0C43dB4ucckSUhXzLwG09yagjJvl14pAbhdBM1G_c6Y_enkOgCxfnSEPdrRGK6zUVxoIaTaoP6TOw3ejSKC4OrdJ740nB8ev0mERhCCHkhoIuT8dkk6g6tqayPEbcAgnsDde48ZxtUv.png)
-
-###### **Libro de Facturas Emitidas**
-
-####### **Configuración**
-
-Configuración del Libro de Facturas emitidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
-
-Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
-
-Campos a tener en cuenta:
-
--   **Nombre** : Libro de Facturas Emitidas 2021
--   **Descripción** : Libro de Facturas Emitidas 2021
--   **Activo** : Sí
--   **Tipo**: E – Emitidas
--   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignares un número de registro correlativo.
-
-![](https://docs.etendo.software/latest/assets/drive/U7zyB9bCxJ53qXJTCwT0NxvIDJ4gMZ3c5G9QLmsMWGRYYV1mKdK90kPhbtf9l8Ee7hhsNZApVcmY-2fnalHXgl8xf3BcPEDM3VNbqspYjkVZyysWBhR_QXGJA0-vnGn_20c8luy3ZIeqVbnyJ8pghgvC7dfkSuO9AmajeRFq-uqqHy8o9IoMQFu0azbj.png)
-
-En la pestaña "Impuestos" el usuario puede comprobar el listado de todos los impuestos por tipo de documento que se han incluido en la configuración del libro de facturas emitidas y que, por tanto, se tendrán en cuenta a la hora de crear el libro.
-
-####### **Creación**
-
-La creación del libro de facturas emitidas se debe llevar a cabo desde la ruta de aplicación Gestión Financiera – Contabilidad – Herramientas de Análisis – Libro de facturas. El usuario debe crear un nuevo registro e introducir la siguiente información para el correspondiente Cliente/Organización:
-
--   **Nombre** : Libro de Facturas Emitidas Febrero 2021
--   **Descripción** : Libro de Facturas Emitidas Febrero 2021
--   **Activo** : Sí
--   **Libro de Facturas** : el usuario debe seleccionar el libro de facturas emitidas ya configurado que quiere crear, por ejemplo "Libro de Facturas Emitidas 2021".
--   **Ejercicio**: el usuario debe introducir el año (2021)
--   **Desde Periodo** : el usuario debe introducir el periodo para el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo febrero 2012. El sistema incluirá las facturas con fecha desde 1 febrero 2012.
--   **Hasta Periodo** : el usuario debe introducir el periodo hasta el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo febrero 2012. El sistema incluirá las facturas con fecha hasta el 28 de febrero de 2012.
-
-Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Lineas”.
-
-![](https://docs.etendo.software/latest/assets/drive/4PIfpdoRUi3Yr61UjSdmHK4-wjU2TnkBEFbFqev8C0CbUrrIxM5c_gpKnY8zz2RyzNa2TvRTXEmgQzB_-tXJKUc11kRLCv-pHzX00pJhI_NAIzDlmTRxWw3R4xXZI2A4Ns87C9tAa9P6icxTDkN8yyHo4SXbOXGJbx620JaN4BUNPYFsRzr_ZTwgIksZtg.png)
-
-La información contenida en las líneas del libro es la que se muestra a continuación:
-
-![](https://docs.etendo.software/latest/assets/drive/7fv5JlzALOzMrSXXDvFubccNZBrZwSJm1VSNpczqK4u03ULPED0uOMR_TbM-q3uEwc0W_J9fqUZAdHFvaWt8K9G3zTL0vXz-N7nXENJdFG7-PuBSMVa0PiF1uTWabKTHJToOaoiJX8y9A7KUN7bUEvUKPXZz0BkBg6daCzUA7tze8XfVeFtaVw_cisfZEw.png)
-
-##### **Inclusión manual de transacciones**
-
-El usuario puede añadir manualmente facturas/abonos tanto emitidos como recibidos que por cualquier motivo no estén registrados en Etendo, pero que deban ser incluidos en el libro correspondiente. Para ello el usuario deberá seguir los pasos que a continuación se detallan:
-
-En la ruta Gestión Financiera / Contabilidad / Herramientas de Análisis / Libro de Facturas / Cabecera >> Líneas, el usuario puede crear un nuevo /s registro/s e introducir facturas o abonos tanto emitidos como recibidos de sus proveedores, en el libro correspondiente, con tal solo presionar el botón de menú “Nuevo”.
-
-En ese caso, el usuario deberá introducir la información que se lista a continuación para cada nuevo registro creado manualmente:
-
--   Nº de documento (obligatorio)
--   Tercero (obligatorio)
--   Clave de operación
--   Base imponible (obligatorio)
--   Tipo impositivo (obligatorio)
--   Tipo de Recargo de equivalencia
--   Fecha documento
--   NIF del tercero (no editable, debe rellenarse al seleccionar el tercero)
--   Cuota del impuesto (obligatorio)
--   Cuota recargo de equivalencia (obligatorio). En caso de que no aplique el recargo de equivalencia se debe rellenar como 0,00
--   Importe total de la factura (obligatorio)
-
-##### **No inclusión de transacciones**
-
-El usuario puede marcar manualmente facturas/abonos tanto emitidos como recibidos que por cualquier motivo no deban ser incluidos en el correspondiente libro y que estén registrados en Etendo, para ello el usuario deberá seguir los pasos que a continuación se detallan:
-
-En la ruta Gestión Financiera / Contabilidad / Herramientas de Análisis / Libro de Facturas / Cabecera >> Líneas, el usuario puede “desmarcar” cualquier transacción que esté marcada por la aplicación como “Incluida”, dichas transacciones no se incluirán al crear el correspondiente libro como Final (documento impreso en formato \*.pdf).
-
-##### **Libros de facturas marcados como "Final"**
-
-El usuario puede procesar los libros de facturas como “Finales”, una vez que se asegure de que las transacciones incluidas en el libro son las correctas, dicho proceso implicará la numeración correlativa de las facturas incluidas en dicho libro, siempre que el periodo o periodos a los que se refieren las facturas incluidas en el libro estén cerrados, al menos temporalmente.
-
-Desde “Gestión Financiera / Contabilidad / Transacciones – Abrir/Cerrar Periodos”, el usuario debe cerrar temporalmente aquellos periodos para los que no se van a introducir nuevas facturas ni transacciones y que, por tanto, pueden cerrarse.
-
-Una vez cerrados los periodos desde “Gestión Financiera / Herramientas de Análisis / Libro de Facturas”, el usuario puede "Crear y Marcar como Final" el correspondiente libro, con lo que el sistema dará opción a partir de ese momento tan solo de “Desprocesar”.
-
-El usuario puede imprimir el libro mediante el botón de la barra de herramientas “Imprimir”.
-
-El libro impreso (\*.pdf) de facturas recibidas incluye la siguiente información:
-
--   Número registro
--   Número factura
--   Nº Doc / Ref. Prov - esta columna relaciona ambos números de documento, el número de Etendo y el número o referencia del proveedor.
--   Fecha operación
--   Tercero
--   NIF
--   Clave
--   Base imponible
--   Tipo impositivo
--   Cuota impuesto
--   Cuota deducible
--   Importe factura
--   Fecha de pago
--   Cuenta Financiera
--   Método de Pago
--   Importe de Pago
-
-El libro impreso (\*.pdf) de facturas emitidas incluye la siguiente información:
-
--   Número registro
--   Número factura
--   Fecha factura
--   Fecha operación
--   Tercero
--   NIF
--   Clave
--   Base imponible
--   Tipo impositivo
--   Cuota del impuesto
--   Recargo
--   Cuota RE
--   Importe factura
--   Fecha de cobro
--   Cuenta Financiera
--   Método de Pago
--   Importe de cobro
-
-En caso de error u omisión en los libros, el usuario deberá desprocesar el correspondiente libro, reabrir el periodo/periodos, añadir o modificar la/las facturas emitidas o recibidas y volver a empezar el proceso de creación y procesamiento como final del correspondiente libro, teniendo en cuenta el/los periodos de facturación debido a que la numeración de registro debe ser correlativa en función de las fechas de factura.
-
-Si el usuario tiene que introducir una factura de fecha de marzo y ya ha cerrado y generado como finales los libros de abril y mayo, deberá desprocesar los libros de mayo, abril y marzo; reabrir los periodos de mayo, abril y marzo; contabilizar la factura con fecha de marzo y finalmente, crear el libro de marzo para comprobar que la nueva factura se ha incluido en el libro de marzo, cerrar los periodos y crear y marcar como finales los libros de marzo, abril y mayo por ese orden.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Configuración de Impuestos para Libro de Facturas
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Configuración de Impuestos para Libro de Facturas
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas
-## Article Content: 
-#### Javapackages 
-
-:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.estaxes`
-
-#### **Introducción**
-
-Esta sección contiene información sobre la configuración de impuestos de los libros de facturas que forman parte del bundle de Localización española de Etendo.
-
-#### **Instalación**
-
-El usuario debe instalar este módulo y posteriormente aplicar el conjunto de datos o "Datos de Referencia" en la ruta de aplicación: Configuración General / Organización/ Gestión del Módulo de Empresa a la organización que corresponda.
-
-![](https://docs.etendo.software/latest/assets/drive/gGO4D4W1ZWtJV0sluU-2ESwmVQA8_vykqX_CABOqxU9WSAqeKQS42g46yOcZnVDpMG4qUHJO0XGnn1zvcHzKOVcgHMDFEXB3MwaBeyDOPZTwYEH1wdYWTPub9sLhcOcrko6PuYvIyNryJYZoi2dUxKIV9hFEXNlZ5DYtYyYTJ1663ViYtA-aKGEy9XXLYg.png)
-
-Una vez instalado y aplicado este módulo, se puede comprobar la configuración de los libros en la ruta de aplicación: Gestión financiera/ Contabilidad/ Configuración/ Configuración de Libros de Facturas, tal y como se muestra en la siguiente imagen:
-
-![](https://docs.etendo.software/latest/assets/drive/jKTQzqVFoz7dxq2qJS-Q2ECPksUf8UxYrLmeKDGG4NFGeQSxG96b-vbxqpaQb71UWuFBFscdPLSXXjD6dIqHoBB-3mCoOypQBeADb8AONAYOjD5Lu-MGfk1njsbQMJ2C3Cp-V18LcZpTZIpJTBZQ4X9b2dEEj-9nzmnM3FceUIHW3hdlgfFtLRx_S-4hYg.png)
-
-Es importante recalcar, que la configuración que se incluye en este dataset, relaciona tipos/rangos de impuesto con el tipo de documento estándar de Etendo (AP Invoice, AR Invoice, etc) a incluir en el correspondiente libro (facturas recibidas o facturas emitidas).
-
-Si se crean nuevos tipos de documento de factura de compra o venta, tendrá que incluirse de forma manual en la configuración de cada libro, relacionados con los impuestos de compra o venta correspondientes.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
