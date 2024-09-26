@@ -63,7 +63,7 @@ Once the process is done, the **Dependency Management** window is opened and all
     - In `Dependency Management` the dependency version is updated.
 
 - **Installed dependency (module) but no record in `Dependency Management` (local dependency):**
-    - A warning message is displayed: 
+    - A error message is displayed: 
         - **Message:** "The module ... is installed in the system, but there is no declared dependency record. Running this process will add the dependency, which may cause loss of functionality or loss of customizations in the module already installed."
     - The local dependency is deleted, and a new record is added in `Dependency Management` with the correct version.
 
@@ -74,7 +74,6 @@ Once the process is done, the **Dependency Management** window is opened and all
 - The process is disabled to prevent further actions, ensuring that no incompatible versions are installed.
 
 This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss.
-
 
 ### Update Packages
 
@@ -130,10 +129,21 @@ This button is used to change the format of the module.  This process needs to b
 
 - In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
 
-
 ### Delete Packages
 
-In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+This button is used to delete packages/dependencies.
+
+- **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager7.png)
+
+- **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager8.png)
+
+
+!!!note
+    A warning notification is displayed to inform the user of the steps to remove it.
 
 ## Add Local Dependencies 
 
