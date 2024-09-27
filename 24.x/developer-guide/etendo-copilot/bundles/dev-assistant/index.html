@@ -6841,24 +6841,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#5-reviewing-the-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Reviewing the results
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-export-the-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Export the changes
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -9027,24 +9009,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#5-reviewing-the-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Reviewing the results
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-export-the-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Export the changes
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -9172,17 +9136,23 @@ Window and Tabs: Pets Health window and the associated Pets Health Header and Vi
 Foreign Key: Foreign key between PetsHealth and VisitsRegistration has been added.    Please proceed with the compilation and restart Etendo to ensure all changes take effect.    If there's anything else you'd like to address or if you need further modifications, please let me know!"</em></p>
 <h3 id="4-compile">4. Compile</h3>
 <p>With the task complete, it is necessary recompile with a smartbuild and restart Tomcat</p>
-<p><div class="language-text highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew smartbuild --info
-</span></code></pre></div>
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dev-assistant2.png" src="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png" /></a></p>
-<h3 id="5-reviewing-the-results">5. Reviewing the results</h3>
-<p>Window in the System,the window can be viewed with the user role.
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dev-assistant3.png" src="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png" /></a>
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dev-assistant4.png" src="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png" /></a></p>
-<h3 id="6-export-the-changes">6. Export the changes</h3>
-<p>Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.</p>
-<div class="language-text highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew export.database --info
-</span></code></pre></div>
+<p>```title="Terminal"
+./gradlew smartbuild --info
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>![dev-assistant2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>### 5. Reviewing the results
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Window in the System,the window can be viewed with the user role.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>![dev-assistant3.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>![dev-assistant4.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>### 6. Export the changes
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>```title=&quot;Terminal&quot;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>./gradlew export.database --info
+</span></code></pre></div></p>
 
 
 
