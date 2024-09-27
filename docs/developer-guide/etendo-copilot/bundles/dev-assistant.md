@@ -22,7 +22,7 @@ The **Dev Assistant section** provides an overview of the tools, functionality, 
 
 ## Assistants
 
-### Event Code Expert 
+### Etendo Code Expert 
 
 **Etendo Code Expert** is an assistant designed to read previously indexed files and provide answers related to their content. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
 
@@ -36,25 +36,77 @@ With this assistant it is possible to:
 
 #### Usage Example 
 
-##### 1. Setup
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
 
-To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
+2. Open Copilot and select Etendo Code Expert
 
-##### 2. Open Copilot and select Etendo Code Expert
+    ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert1.png)
 
-![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert1.png)
+3. Ask the assistant for what you need to create.
 
-##### 3. Ask the assistant for what you need to create.
-
-![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
+    ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
 ### Event Handler Creator
 
+This assistant is capable of creating Event Handlers in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
+
 #### Tools
+
+- [Read File Tool](../available-tools/read-file-tool.md)
+  
+- [Write File Tool](../available-tools/write-file-tool.md)
 
 #### Functionality
 
+**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the wizard requires the following parameters:
+  
+- **Java package**: The package where the file will be saved.
+- **File name**: The name of the file to create.
+- **Entity**: The entity to observe.
+- **Description**: A description of the functionality to be implemented by the event handler.
+
 #### Usage Example
+
+### Reference Creator
+
+The Reference Creator assistant that **creates references** in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+
+It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
+
+#### Tools
+
+- [Create Reference Tool](../available-tools/create-reference-tool.md): This tool allows to create references on Etendo and on the database using queries generated with the parameters given in the tool. 
+
+#### Functionality
+
+The **Reference Creator** assistant is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
+
+Let's see an example about how the user can interact with the assistant and create the needed references in Etendo.
+
+#### Usage Example 
+
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+
+2. Open Copilot and select Reference Creator Assistant
+
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
+
+3. Ask the assistant which reference type you need to create
+
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references1.png)
+
+4. The Create References Tool will process these parameters, verify the access token, build the request body and call the Etendo webhook to create the reference.
+
+    In the Reference window, Etendo shows all the fields with the corresponding information generated and in the List Reference tab, it is possible to see the new list reference created. 
+
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-2.png)
+
+
+5. Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+
+    ```title="Terminal"
+    ./gradlew export.database --info
+    ```
 
 ### Tables, Windows and Tabs Creator
 
@@ -70,9 +122,8 @@ It is possible to give an input with all the necessary information, or the assis
 
 
 #### Tools
-The Tables, Windows and Tabs Creator is composed of the following components:
 
-- [**DDL Tool**](../../etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+- [**DDL Tool**](../../etendo-copilot/available-tools/ddl-tool.md): This tool allows to registering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
 
 - Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
@@ -98,44 +149,28 @@ The Tables, Windows and Tabs Creator is composed of the following components:
 
 #### Usage Example 
 
-##### 1. Setup
-To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
-##### 2. Open Copilot, and select Tables, Windows and Tabs Creator 
-![dev-assistant.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant-1.png)
+2. Open Copilot, and select Tables, Windows and Tabs Creator 
+    ![dev-assistant.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant-1.png)
 
-##### 3. Ask the assistant for what you need to create.
-![dev-assistant.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
-
-**User**: *"You can create the Pets Health window, you have to include the fields, pet name, patient start date and description. You can also add a Visits Registration tab, associated to the Pets Health window, where you have to add the fields, date and description. Remember to add the corresponding foreign key.  All this export it in the module with copdev prefix."*
-
-**Copilot**: *"The following steps have already been completed: 
-Tables: PetsHealth and VisitsRegistration have been registered in the system and created in the database. 
-Columns: The necessary columns have been added and registered. 
-Terminology: Terminology has been synchronized. 
-Window and Tabs: Pets Health window and the associated Pets Health Header and Visits Registration tabs have been registered. 
-Foreign Key: Foreign key between PetsHealth and VisitsRegistration has been added.    Please proceed with the compilation and restart Etendo to ensure all changes take effect.    If there's anything else you'd like to address or if you need further modifications, please let me know!"*
+3. Ask the assistant for what you need to create.
+    ![dev-assistant.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant5.png)
 
 
-##### 4. Compile
-    
-With the task complete, it is necessary recompile with a smartbuild and restart Tomcat
+4. With the task complete, it is necessary recompile with a smartbuild and restart Tomcat
 
-```title="Terminal"
-./gradlew smartbuild --info
-```
-![dev-assistant2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
+    ```title="Terminal"
+    ./gradlew smartbuild --info
+    ```
+    ![dev-assistant2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
 
-##### 5. Reviewing the results
-    
-Window in the System, the window can be viewed with the user role.
-![dev-assistant3.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
-![dev-assistant4.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
+5. Window in the System, the window can be viewed with the user role.
+    ![dev-assistant3.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
+    ![dev-assistant4.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
 
-##### 6. Export the changes
-    
-Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
+6. Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
 
-```title="Terminal"
-./gradlew export.database --info
-```
+    ```title="Terminal"
+    ./gradlew export.database --info
+    ```

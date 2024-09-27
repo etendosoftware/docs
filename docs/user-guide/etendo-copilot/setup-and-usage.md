@@ -106,11 +106,7 @@ In this tab, you can define the files that will be used by the assistant as know
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
 
 !!!info
-    When configuring files for Langchain agent assistants, remember the supported formats are `.txt`, `.pdf` and `.md`.
-
-
-!!!info
-    It is also possible to add `.zip` files in the Langchain agent assistant. Bare in mind that these are the only formats that the assistant will read in the `.zip` files: `.txt`, `.pdf`, `.md`, `.py`, `.java` and `.js`.
+    When configuring files for Langchain agent assistants, remember the supported formats are `.zip`, `.txt`, `.pdf` and `.md`. For `.zip` files, note that these are the only formats that the wizard will read: `.txt`, `.pdf`, `.md`, `.py`, `.java` and `.js`.
 
 ![](../../assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
 
@@ -153,6 +149,10 @@ In this tab, only present if the LangGraph App type is selected, the LangGraph's
 Fields to note:
 
 - **Member**: The user can select one or more assistants for the manager. 
+
+    !!! warning
+        Remember that you can only select assistants to which you have defined access in the [Assistant Access window](#assistant-access-window).
+
 - **Description**:  Read-only field. It shows the description of the assistant, used by the manager to choose the appropriate assistant for each case.
 
     !!! warning
@@ -187,14 +187,16 @@ In the Knowledge Base File window, you can define the files with which the assis
 
 The **File Path Tab** appears when **Code Index** is selected as the file type. 
 
+![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
+
 **Path File**: Specify the path where the code files you need the assistant to read are located. 
 
 !!!info
     It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. 
-    Besides, [Wildcards](https://www.lenovo.com/us/en/glossary/what-is-a-wildcard/?orgRef=https%253A%252F%252Fwww.google.com%252F){target="_blank"} like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+    Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
 
 !!!note
-    This assistant is configured for Etendo instances in source mode. If you have an instance in JAR mode, it is necessary to modify the file paths in the knowledge file. For this, in the Path File tab, add the following to the path: `@source.path@/build/Etendo/` before `modules`.
+    If Etendo Classic is a JAR instance, the source code is located in the following path:: `@source.path@/build/etendo/`.
 
 
 ## Skill/Tool Window
