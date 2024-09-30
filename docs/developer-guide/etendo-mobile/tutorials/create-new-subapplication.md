@@ -127,7 +127,7 @@ docker_com.etendoerp.etendorx=true
 Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
-./gradlew resourses.up
+./gradlew resources.up
 ```
 
 Here, all the services and their respective logs can be seen running using [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank} tool.
@@ -169,7 +169,7 @@ This section covers the creation of projections, mappings, and searches, which e
 
 1.  As a `System Administrator` role, it is required to create a projection that reflect partial views of the Product class and contain only the necessary properties.
 
-2. To do this, we will go to the `Projections and Mappings` window and create a new projection, select the module under development `Product SubApplication - 1.0.0 - English (USA)`, where these configurations will be exported and in the name field we define `ProductSubApp`.
+2. To do this, we will go to the `Projections and Mappings` window and create a new projection, select the module under development `Product SubApplication - 1.0.0 - English (USA)`, where these configurations will be exported and in the name field we define `ProdSubApp`.
 
 3. Now, with the selected projection we add in the tab `Projected Entities` two projections, one for reading data, selecting the table `M_Product` and in the Mapping Type field we select `Etendo to external system` and another projection for writing data, selecting again the table `M_Product` and in the Mapping Type field `External system to Etendo`.  The other fields are auto-completed with respect to these values.
 
@@ -311,50 +311,6 @@ Restart the Das RX service to recognize the projections and mappings.
           └── App.tsx
     ```
 
-2. Once the subapplication is created, the react-native code must be generated, with types and functions that interact with the RX DAS Service, for this we execute the command Gradle : 
-
-    !!! info
-        Make sure that the Etendo RX services are running and without errors before executing this command.
-
-    ``` bash title="Terminal"
-    ./gradlew subapp.build -Ppkg=<javapackage> 
-    ```
-
-    In our example case 
-    ``` bash title="Terminal"
-    ./gradlew subapp.build -Ppkg=com.etendoerp.subapp.product --info
-    ```
-    As we can see, it will be generated in the `/subapp/src/libs/` folder the functions and types that will be used for reading and writing `GET` and `POST` data.
-
-    ```
-    modules
-    └── com.etendoerp.subapp.product
-      ├── src-db 
-      └── subapp
-          └── src
-            └── lib
-                └── base
-                    └── baseservice.ts
-                    └── baseservice.types.ts
-                └── data_gen
-                    └── product.types.ts
-                    └── productservice.ts
-                    └── useProduct.ts      
-    ```
-
-3. In a terminal on path `modules/<javapackage>/subapp`, install the depedencies declared in the `package.json`,  following the command: 
-
-    ``` bash title="Terminal"
-    yarn install 
-    ```
-
-4. Then, to run the subapplication in development mode execute: 
-
-    ``` bash title="Terminal"
-    yarn dev 
-    ```
-    !!! note
-        By default, the application run in development mode on `localhost` at port `3000`. Additionally, changes in the `/src` directory are automatically scanned, enabling dynamic updates to the application during development. This ensures that any modifications are reflected in real-time without restarting the application.
 
 ## Product Subapp Example
 This section covers an overview about the product subapplication example screens and principal parts of the subapplication.
@@ -368,11 +324,11 @@ This section covers an overview about the product subapplication example screens
 
 **Phone View**
 <figure markdown>
-![home-screen.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home.jpeg){ width="300", align=left } 
-![remove-product.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/delete-product.jpeg){ width="300", align=right}
+![home-screen.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home.jpg){ width="300", align=left } 
+![remove-product.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/delete-product.jpg){ width="300", align=right}
 </figure>
 **Tablet View**
-![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home-tablet.png)
+![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/home-tablet.jpg)
 
 
 - The route to this screen is `src/screens/home/index.tsx` and the content:
@@ -439,11 +395,13 @@ export default Home;
 
 ### Product Detail
 
+![product detail](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/product-detail.jpg){ width="300"}
+
 - This screen will show the detail of a product. Also, it will allow us to edit the product.
 - It is the same screen used to create a new product, if the prop does not have ID.
-- The route to this screen is `src/screens/productDetail.txt`,  add the content:
+- The route to this screen is `src/screens/productDetail/index.tsx`,  add the content:
 
-``` javascript title="src/screens/productDetail.txt"
+``` javascript title="src/screens/productDetail/index.tsx"
 import React, { useState } from 'react';
 import TableDetail from '../../components/table/detail';
 import { NavigationProp } from '@react-navigation/native';
@@ -560,6 +518,52 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 
 !!! info 
     For more information about Subapplication Params, visit [Params from Etendo Mobile](../concepts/subapp-structure.md#params-from-etendo-mobile) concept.
+
+### Running the Sub-application
+1. Once the subapplication is created, the react-native code must be generated, with types and functions that interact with the RX DAS Service, for this we execute the command Gradle : 
+
+    !!! info
+        Make sure that the Etendo RX services are running and without errors before executing this command.
+
+    ``` bash title="Terminal"
+    ./gradlew subapp.build -Ppkg=<javapackage> 
+    ```
+
+    In our example case 
+    ``` bash title="Terminal"
+    ./gradlew subapp.build -Ppkg=com.etendoerp.subapp.product --info
+    ```
+    As we can see, it will be generated in the `/subapp/src/libs/` folder the functions and types that will be used for reading and writing `GET` and `POST` data.
+
+    ```
+    modules
+    └── com.etendoerp.subapp.product
+      ├── src-db 
+      └── subapp
+          └── src
+            └── lib
+                └── base
+                    └── baseservice.ts
+                    └── baseservice.types.ts
+                └── data_gen
+                    └── product.types.ts
+                    └── productservice.ts
+                    └── useProduct.ts      
+    ```
+
+2. In a terminal on path `modules/<javapackage>/subapp`, install the depedencies declared in the `package.json`,  following the command: 
+
+    ``` bash title="Terminal"
+    yarn install 
+    ```
+
+3. Then, to run the subapplication in development mode execute: 
+
+    ``` bash title="Terminal"
+    yarn dev 
+    ```
+    !!! note
+        By default, the application run in development mode on `localhost` at port `3000`. Additionally, changes in the `/src` directory are automatically scanned, enabling dynamic updates to the application during development. This ensures that any modifications are reflected in real-time without restarting the application.
 
 
 ### Visualizing the subapplications
