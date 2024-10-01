@@ -49976,6 +49976,32 @@ Article URL: https://etendo.software
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
 
+#### September 2024
+
+##### Etendo Classic
+
+:octicons-rocket-24: **New Etendo Classic Release Available!**
+
+Version [24.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
+
+##### Copilot Extensions
+
+:material-robot: **New Etendo Copilot Release Available!**
+
+New Copilot Extensions bundle version [1.5.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+
+<div class="grid cards" markdown>
+- **New Feature Update: Zip File Support for LangChain Assistants**
+    
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/LangChain.png)
+
+    We are excited to announce a new functionality in LangChain assistants: the ability to upload .zip files directly into the knowledge base! These .zip files can contain a variety of file formats, including .txt, .pdf, .md, .py, .java, and .js.
+    This enhancement allows developers to train assistants with example source code.
+    Boost your assistant’s capabilities with this powerful new feature!
+
+</div>
+
 #### August 2024
 
 ##### Copilot Extensions
