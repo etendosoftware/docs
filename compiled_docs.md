@@ -50459,7 +50459,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.17.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.2){target="_blank"} | 13/09/2024 | 23.1.4 | 24.2.x | CS | :white_check_mark: |
+| [1.18.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.18.0){target="_blank"} | 01/10/2024 | 23.1.4 | 24.3.x | CS | :white_check_mark: |
+| [1.17.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.2){target="_blank"} | 13/09/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.17.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.1){target="_blank"} | 30/08/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.17.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.17.0){target="_blank"} | 22/08/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
 | [1.16.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.16.1){target="_blank"} | 19/07/2024 | 23.1.4 | 24.2.x | C | :white_check_mark: |
