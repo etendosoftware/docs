@@ -20,7 +20,25 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 The user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc.
 
 !!! info
-    For more information, visit the [Dependency Manager Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/dependency-manager.md)
+    For more information, visit the [Dependency Manager developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/dependency-manager.md).
+
+### Docker Management 
+
+:octicons-package-16: Javapackage: `com.etendoerp.docker`
+
+This module enables the use of Dockerized containers in Etendo Classic.
+
+!!!info
+    For more information visit, [Docker Management developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/docker-management.md). 
+
+### Dockerized Tomcat Service
+
+:octicons-package-16: Javapackage: `com.etendoerp.tomcat`
+
+This module enables the Dockerization of Tomcat within Etendo Classic.
+
+!!!info
+    For more information visit, [Dockerized Tomcat Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md).
 
 ### Dynamic App 
 
@@ -29,7 +47,7 @@ The user can have access to all the available dependencies to add, configure the
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-    For more information, visit the [Dynamic App user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
+    For more information, visit the [Dynamic App developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/dynamic-app.md)
 
 ### EAN 128
 
@@ -62,6 +80,11 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 ### Etendo RX
 
 :octicons-package-16: Javapackage: `com.etendoerp.etendorx`
+
+This module guarantees an authentication method which allows users to securely authenticate and authorize access to their information using their preferred provider.
+
+!!!info
+    For more information, visit [Etendo RX user guide](../platform-extensions/etendo-rx.md).
 
 ### Javax XML SOAP API
 
@@ -104,6 +127,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 !!! info
     For more information, visit [Clear Report Cache user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
+
 ### Webhook Events
 
 :octicons-package-16: Javapackage: `com.etendoerp.webhookevents`
@@ -111,9 +135,4 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
-
-
----
-
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+    For more information, visit the [Webhook Events developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
