@@ -106,7 +106,7 @@ In this tab, you can define the files that will be used by the assistant as know
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
 
 !!!info
-    When configuring files for Langchain agent assistants, remember the supported formats are `.txt`, `.pdf` and `.md`.
+    When configuring files for Langchain agent assistants, remember the supported formats are `.zip`, `.txt`, `.pdf` and `.md`. For `.zip` files, note that these are the only formats that the wizard will read: `.txt`, `.pdf`, `.md`, `.py`, `.java` and `.js`.
 
 ![](../../assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
 
@@ -149,6 +149,10 @@ In this tab, only present if the LangGraph App type is selected, the LangGraph's
 Fields to note:
 
 - **Member**: The user can select one or more assistants for the manager. 
+
+    !!! warning
+        Remember that you can only select assistants to which you have defined access in the [Assistant Access window](#assistant-access-window).
+
 - **Description**:  Read-only field. It shows the description of the assistant, used by the manager to choose the appropriate assistant for each case.
 
     !!! warning
@@ -171,11 +175,29 @@ In the Knowledge Base File window, you can define the files with which the assis
     This allows using an HQL query result as a file for knowledge base file.
     - **Remote File** 
     You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
+    - **Code Index** 
+    This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
 - **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
 - **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
 - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+
+### File Path Tab 
+
+The **File Path Tab** appears when **Code Index** is selected as the file type. 
+
+![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
+
+**Path File**: Specify the path where the code files you need the assistant to read are located. 
+
+!!!info
+    It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. 
+    Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+
+!!!note
+    If Etendo Classic is a JAR instance, the source code is located in the following path:: `@source.path@/build/etendo/`.
+
 
 ## Skill/Tool Window
 
