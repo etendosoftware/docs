@@ -471,7 +471,6 @@ nav:
       - Bundles: 
         - Copilot Extensions:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
-          - Create References: developer-guide/etendo-copilot/bundles/create-references.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
