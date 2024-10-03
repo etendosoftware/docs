@@ -3629,6 +3629,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Knowledge Base File Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-path-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Path Tab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -6873,27 +6888,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer-guide/etendo-copilot/bundles/create-references/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Create References
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../developer-guide/etendo-copilot/bundles/dev-assistant/" class="md-nav__link">
         
   
@@ -9053,6 +9047,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Knowledge Base File Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-path-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Path Tab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -9260,7 +9269,7 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When configuring files for Langchain agent assistants, remember the supported formats are <code>.txt</code>, <code>.pdf</code> and <code>.md</code>.</p>
+<p>When configuring files for Langchain agent assistants, remember the supported formats are <code>.zip</code>, <code>.txt</code>, <code>.pdf</code> and <code>.md</code>. For <code>.zip</code> files, note that these are the only formats that the wizard will read: <code>.txt</code>, <code>.pdf</code>, <code>.md</code>, <code>.py</code>, <code>.java</code> and <code>.js</code>.</p>
 </div>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/setup/knowledge-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/knowledge-tab.png" /></a></p>
 <div class="admonition info">
@@ -9298,7 +9307,13 @@
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/setup/team-members-tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/team-members-tab.png" /></a></p>
 <p>Fields to note:</p>
 <ul>
-<li><strong>Member</strong>: The user can select one or more assistants for the manager. </li>
+<li>
+<p><strong>Member</strong>: The user can select one or more assistants for the manager. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember that you can only select assistants to which you have defined access in the <a href="#assistant-access-window">Assistant Access window</a>.</p>
+</div>
+</li>
 <li>
 <p><strong>Description</strong>:  Read-only field. It shows the description of the assistant, used by the manager to choose the appropriate assistant for each case.</p>
 <div class="admonition warning">
@@ -9321,6 +9336,8 @@ This allows you to upload files directly into Copilot for later use during inter
 This allows using an HQL query result as a file for knowledge base file.</li>
 <li><strong>Remote File</strong> 
 You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.</li>
+<li><strong>Code Index</strong> 
+This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.</li>
 </ul>
 </li>
 <li><strong>Open AI File ID</strong>: Read-only field showing the Open AI ID of the file once it is created.</li>
@@ -9329,6 +9346,19 @@ You can provide a public URL from which Copilot will retrieve the file when need
 <li><strong>URL</strong>: Source file URL. Only shown if the <strong>Remote file</strong> option is chosen in the Type field.</li>
 <li><strong>HQL</strong>: Only shown if the <strong>HQL Query</strong> option is chosen in the Type field.</li>
 </ul>
+<h3 id="file-path-tab">File Path Tab</h3>
+<p>The <strong>File Path Tab</strong> appears when <strong>Code Index</strong> is selected as the file type. </p>
+<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png" /></a></p>
+<p><strong>Path File</strong>: Specify the path where the code files you need the assistant to read are located. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>It is also possible to use other variables such as <code>@source.path@:</code> so that the system automatically replaces it with the path where EtendoERP is installed. 
+Besides, wildcards like <code>*</code> can be used to access all files of the same type in a directory (e.g., <code>test/*.java</code> will access all Java files in the <code>test</code> folder), and this one <code>**</code>, to include subdirectories (e.g., <code>test/**/*.java</code> will access all Java files within <code>test</code> and its subdirectories).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If Etendo Classic is a JAR instance, the source code is located in the following path:: <code>@source.path@/build/etendo/</code>.</p>
+</div>
 <h2 id="skilltool-window">Skill/Tool Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code>&gt;<code>Service</code>&gt;<code>Copilot</code>&gt;<code>Skill/Tool</code></p>
 <p>In this window , the user can find available tools, distributed in the Copilot bundle, to be used in Copilot assistants.</p>
