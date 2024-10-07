@@ -46,6 +46,8 @@ With this assistant it is possible to:
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
+---
+
 ### Event Handler Creator
 
 This assistant is capable of creating Event Handlers in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
@@ -76,6 +78,8 @@ This assistant is capable of creating Event Handlers in Etendo Classic. You only
 3. Then this is the result given by the assistant.
 
     ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH2.png)
+
+---
 
 ### Background Process Creator
 
@@ -113,6 +117,8 @@ Background Process Creator generate Background Processes in Java using indexed e
 
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png)
 
+---
+
 ### Webhook Creator
 
 **Webhook Creator** is an assistant designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.
@@ -147,6 +153,8 @@ This assistant simplifies webhook creation by automatically generating the neces
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH2.png)
 
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
+
+---
 
 ### Reference Creator
 
@@ -188,6 +196,8 @@ Let's see an example about how the user can interact with the assistant and crea
     ```title="Terminal"
     ./gradlew export.database --info
     ```
+
+---
 
 ### Tables, Windows and Tabs Creator
 
@@ -255,12 +265,6 @@ It is possible to give an input with all the necessary information, or the assis
 ```title="Terminal"
 ./gradlew export.database --info
 ```
-
----
-
-## Assistants
-
-The Dev Assistant is not just a single tool; it is a complete ecosystem of interconnected assistants working together seamlessly. Each assistant specializes in a specific area of development, enabling you to tackle complex tasks with speed and precision. Think of it as a team of experts, each enhancing your workflow, removing obstacles, and ensuring that every step you take is more agile and efficient. Whether generating queries, managing files, or orchestrating complex configurations, the Dev Assistant and its suite of complementary tools have your back, making development not only faster but also more intuitive and enjoyable.
 
 ---
 
