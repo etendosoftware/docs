@@ -367,12 +367,9 @@ Depending on the request, the Jasper Assistant will return:
 **User**: *"I want to register a report in Etendo."*
 
 **Jasper Assistant**: *"Please provide the following details: Report name, module prefix, search key, parameters, and report path."*
-
-![RegistrateReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport.png)
-
 Once the report is created the assistant will respond:
 
-![RegistrateReport2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport2.png)
+![RegistrateReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport.png)
 
 After running the smartbuild we will be able to see the process of the created report:
 
