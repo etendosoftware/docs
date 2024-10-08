@@ -3,7 +3,7 @@ tags:
     - Beta
     - Copilot
     - IA
-    - Windows, tabs and fields
+    - Tools
     - Creator
     - Assistants
 ---
@@ -20,10 +20,7 @@ The **Dev Assistant section** provides an overview of the tools, functionality, 
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 !!!warning
-    The Tables, windows and tabs assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
-
-    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
-
+        Consider that the assistants are currently in their beta testing phase. 
 
 Access to the information of each of the Assistants:
 
@@ -89,7 +86,7 @@ The **Button Process Creator** simplifies the process of creating and registerin
 
 #### Tools
 
-- [ApiCallTool](../available-tools/)
+- [ApiCallTool](../available-tools/openapi-tool.md) 
     
 - [ReadFileTool](../available-tools/read-file-tool.md)
 
@@ -220,9 +217,9 @@ The **Jasper Assistant** is designed to facilitate the creation, editing, and re
 
 #### Tools
 
-- [DBQueryGeneratorTool](../available-tools/)
+- [DBQueryGeneratorTool](../available-tools/database-query-tool.md)
 
-- [JasperTool](../available-tools/)
+- **JasperTool**
 
 - [OCRTool](../available-tools/ocr-tool.md)
 
@@ -232,7 +229,7 @@ The **Jasper Assistant** is designed to facilitate the creation, editing, and re
 
 #### Functionality
 
-##### Report Creation
+**Report Creation**
 
 The Jasper Assistant requests the following parameters to create a report:
 
@@ -246,7 +243,7 @@ The Jasper Assistant requests the following parameters to create a report:
 - **Image or logo in the report**: Specification of images or logos to include.
 - **Data distribution**: Structure of how the data will be organized in the report.
 
-##### Report Registration
+**Report Registration**
 
 Once the report is created, it can be registered in the system. The assistant requests the following arguments:
 
@@ -258,7 +255,7 @@ Once the report is created, it can be registered in the system. The assistant re
 - **Report path**: Path where the report is stored.
 - **Parameters**: List of registered parameters that can be used when executing the report.
 
-##### Report Editing
+**Report Editing**
 
 The assistant also allows editing existing reports. Available actions include:
 
@@ -310,19 +307,15 @@ Etendo Classic allows you to create modules that provide additional functionalit
 
 #### Tools
 
-- [ApiCallTool](../available-tools/)
+- [ApiCallTool](../available-tools/openapi-tool.md)
 
 #### Functionality
 
 The Module Creator streamlines the process of building independent modules that enhance Etendo Classic with new functionalities, such as additional reports or content packs like translations or charts of accounts. By using the **CreateModuleWebHook**, the tool automates several critical steps. It begins by validating essential details like the module's Java package, name, description, version, and database prefix, ensuring everything is properly formatted and complete. After validation, it assigns the necessary database prefix, registers the module within the system, and allows for optional inclusion of dependencies. 
 
-##### Steps to Create a Module
-
 To start creating your module in Etendo, follow the steps below.
 
-###### 1. Gather Required Information
-
-Before you can create your module, you need to provide the following information:
+- Provide the following information:
 
 - **Javapackage**: The Java package of the module (e.g., `com.etendoerp.copilot.prueba`).
 - **Module Name**: A name for your module (e.g., `Test Module`).
@@ -336,18 +329,14 @@ Before you can create your module, you need to provide the following information
     - `Mozilla Public License 1.1`
     - `Etendo Commercial License`
 
-###### 2. Call the `CreateModuleWebHook`
-
-The `CreateModuleWebHook` simplifies the creation process by automating various steps. This webhook will:
+- Call the `CreateModuleWebHook`. The `CreateModuleWebHook` simplifies the creation process by automating various steps. This webhook will:
 
 - Validate all the parameters (such as module name, version, and license).
 - Assign the database prefix.
 - Register the module.
 - Optionally, add module dependencies.
 
-###### 3. Webhook Call Example
-
-When invoking the webhook, the **body parameters** should follow this structure:
+- When invoking the webhook, the **body parameters** should follow this structure:
 
 ```json
 body_params = {
@@ -362,7 +351,8 @@ body_params = {
 }
 ```
 
-**Note**: The database prefix must always be in uppercase.
+!!!note
+        The database prefix must always be in uppercase.
 
 #### Usage Example
 
@@ -444,6 +434,11 @@ The **Reference Creator** assistant is designed to facilitate the creation of re
 ---
 
 ### Tables, Windows and Tabs Creator
+
+!!!warning
+    The Tables, windows and tabs assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
+
+    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
 
 The **Tables, Windows and Tabs Creator** is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  as well as tables and columns in the database.
 It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
