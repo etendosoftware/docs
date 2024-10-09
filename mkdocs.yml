@@ -456,9 +456,10 @@ nav:
     - Etendo RX:
       - ✨ Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
-        - Config Server: developer-guide/etendo-rx/concepts/config-server.md
-        - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
+        - Config Service: developer-guide/etendo-rx/concepts/config-service.md
+        - Edge Service: developer-guide/etendo-rx/concepts/edge-service.md
         - Projections and Mappings: developer-guide/etendo-rx/concepts/projections.md
+        - Integrations Configuration: developer-guide/etendo-rx/concepts/integrations-configuration.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to Guides:

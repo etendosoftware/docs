@@ -48,7 +48,7 @@ When referring to an entity to project, this entity is related to a specific tab
 
 Fields to note:
 
-- Organization: The corresponding organization of the entity
+- Organization: The corresponding organization of the entity.
 - Name: This field is autocompleted according to the options selected in the Table and Mapping Type fields, adding _Read_ or _Write_ accordingly.
 - Table: It is the identifier that connects the Etendo entity to project with the database table, responsible to store the entity information.
 - Mapping Type: In this case, there are two options: Etendo to external system and External system to Etendo. In the case of the Read type, the option to select is Etendo to external system. In the case of the Write type, the option to select is External system to Etendo.
