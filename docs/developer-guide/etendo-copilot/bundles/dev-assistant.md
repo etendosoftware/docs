@@ -174,7 +174,7 @@ This assistant is useful for avoiding the need to manually review all files. Als
 
 2.  Then, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. After that, go to the **Assistant Access** window and give access to the role.  
 
-3. Start using the assistant. Open Copilot and select Etendo Code Expert
+3. Start using the assistant. Open Copilot and select Etendo Code Expert.
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert1.png)
 
@@ -400,7 +400,7 @@ You can confirm that the module has been created by navigating to the `Module` w
 
 ### Reference Creator
 
-The **Reference Creator** that creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+The **Reference Creator** creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
 It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
 
@@ -410,7 +410,7 @@ It is particularly useful in the development process, enabling system administra
 
 #### Functionality
 
-The **Reference Creator** assistant is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
+The **Reference Creator** is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
 
 #### Usage Example 
 
