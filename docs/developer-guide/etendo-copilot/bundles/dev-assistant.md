@@ -22,7 +22,7 @@ The **Dev Assistant section** provides an overview of the tools, functionality, 
 !!!warning
         Consider that the assistants are currently in their beta testing phase. 
 
-Access to the information of each of the Assistants:
+Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Background process creator](../bundles/dev-assistant.md#background-process-creator){ .md-button .md-button--primary } <br>
 
@@ -94,7 +94,9 @@ The **Button Process Creator** simplifies the process of creating and registerin
 
 #### Functionality
 
-The **Button Process Creation Assistant** automates the creation of a button and the registration of a process in Etendo Classic through a webhook call. The Button Process Creator simplifies and automates the process of **creating a button** and registering it for a specific action. Through a webhook call, the tool ensures the correct setup by validating necessary parameters like the module prefix, Java package, and process name, making sure the search key is correctly formed. It then generates a Java class for the button, which extends BaseProcessActionHandler, and registers this button in the desired window, tab, and table within the Etendo system. Additionally, it defines and registers the process by creating a process definition and associating it with any required parameters, including attributes like database name, length, and reference, ensuring seamless integration and functionality within the system. 
+The **Button Process Creation Assistant** automates the creation of a button and the registration of a process in Etendo Classic through a webhook call. Through a webhook call, the tool ensures the correct setup by validating necessary parameters like the module prefix, Java package, and process name, making sure the search key is correctly formed. It then generates a Java class for the button, which extends `BaseProcessActionHandler`, and registers this button in the desired window, tab, and table within the Etendo system. 
+
+Additionally, it defines and registers the process by creating a process definition and associating it with any required parameters, including attributes like database name, length, and reference, ensuring integration and functionality within the system. 
 
 When creating a button or registering a process, the assistant will request the following information:
 
@@ -144,7 +146,7 @@ The process and the button will be automatically registered, and the user will b
 
 ![ButtonProcess.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess.png)
 
-At this point we will have the Java class of the button created along with the registered process.
+At this point, we will have the Java class of the button created along with the registered process.
 
 ![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
@@ -165,11 +167,19 @@ With this assistant it is possible to ask **code development questions** and bas
 
 1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
 
-2. Open Copilot and select Etendo Code Expert
+2. Define the files with which the assistants can interact. For this, go to the **Knowledge Base File** window in `Application`>`Service`>`Copilot`>`Knowledge Base File` and select Code Index as type in the **Type** field. This type allows assistants to access and consult indexed code files. Then, in the **File Path Tab**, specify the path where the code files you need the assistant to read are located. 
+
+    ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert3.png)
+
+    !!!note
+        In this example using the path shown in the image, we will obtain all the files with Java extension from the Etendo core source code.
+
+
+3. Start using the assistant. Open Copilot and select Etendo Code Expert
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert1.png)
 
-3. Ask the assistant for what you need to create.
+4. Ask the assistant for what you need to create.
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
@@ -311,7 +321,7 @@ Etendo Classic allows you to create modules that provide additional functionalit
 
 #### Functionality
 
-The Module Creator streamlines the process of building independent modules that enhance Etendo Classic with new functionalities, such as additional reports or content packs like translations or charts of accounts. By using the **CreateModuleWebHook**, the tool automates several critical steps. It begins by validating essential details like the module's Java package, name, description, version, and database prefix, ensuring everything is properly formatted and complete. After validation, it assigns the necessary database prefix, registers the module within the system, and allows for optional inclusion of dependencies. 
+The Module Creator streamlines the process of building independent modules that enhance Etendo Classic with new functionalities, such as additional reports or content packs like translations or charts of accounts. By using the `CreateModuleWebHook`, the tool automates several critical steps. It begins by validating essential details like the module's Java package, name, description, version, and database prefix, ensuring everything is properly formatted and complete. After validation, it assigns the necessary database prefix, registers the module within the system, and allows for optional inclusion of dependencies. 
 
 To start creating your module in Etendo, follow the steps below.
 
@@ -394,7 +404,7 @@ You can confirm that the module has been created by navigating to the `Module` w
 
 ### Reference Creator
 
-The Reference Creator assistant that **creates references** in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+The **Reference Creator assistant** that creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
 It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
 
@@ -447,7 +457,7 @@ It is possible to give an input with all the necessary information, or the assis
 
 - [**DDL Tool**](../../etendo-copilot/available-tools/ddl-tool.md): This tool allows to registering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
 
-- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+- **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
 
 #### Functionality
