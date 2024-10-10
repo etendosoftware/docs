@@ -20,7 +20,7 @@ The **Dev Assistant section** provides an overview of the tools, functionality, 
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 !!!warning
-        Consider that the assistants are currently in their beta testing phase. 
+    Consider that the assistants are currently in their beta testing phase. 
 
 Access to the information for each of the Assistants:
 
@@ -78,7 +78,7 @@ Background Process Creator generates Background Processes in Java using indexed 
 
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png)
 
----
+
 
 ### Button Process Creator
 
@@ -151,29 +151,28 @@ At this point, we will have the Java class of the button created along with the 
 ![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
 
----
-
 ### Etendo Code Expert 
 
-**Etendo Code Expert** is an assistant designed to read previously indexed files and provide answers related to their content. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
-
-This assistant is useful for avoiding the need to manually review all files. There is no need to load the files directly into the system since it will have Etendo Classic code preconfigured. Also more files can be configured if neccesary.
+**Etendo Code Expert** is an assistant designed to read indexed files and provide answers related to their content. 
 
 #### Functionality
 
-With this assistant it is possible to ask **code development questions** and based on Etendo code previously indexed, the assistant will give possible code suggestions or solutions. 
+With this assistant it is possible to ask **code development questions** and based on Etendo code indexed, the assistant will give possible code suggestions or solutions. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
+
+This assistant is useful for avoiding the need to manually review all files. Also, multiple files can be configured if neccesary.
+
 
 #### Usage Example 
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. This assistant do not include the path configured to the indexed files. To do that, go to the **Knowledge Base File** window in `Application`>`Service`>`Copilot`>`Knowledge Base File` and select the `EtendoJAvaSourceCode` file and, in the **File Path Tab**, specify the path where the code files you need the assistant to read are located. 
+		
+	<figure markdown="span">
+		![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert3.png)
+		<figcaption>In this example using the path shown in the image, we will obtain all the files with Java extension from the Etendo core source code</figcaption>
+	</figure>
 
-2. Define the files with which the assistants can interact. For this, go to the **Knowledge Base File** window in `Application`>`Service`>`Copilot`>`Knowledge Base File` and select Code Index as type in the **Type** field. This type allows assistants to access and consult indexed code files. Then, in the **File Path Tab**, specify the path where the code files you need the assistant to read are located. 
 
-    ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert3.png)
-
-    !!!note
-        In this example using the path shown in the image, we will obtain all the files with Java extension from the Etendo core source code.
-
+2.  Then, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. After that, go to the **Assistant Access** window and give access to the role.  
 
 3. Start using the assistant. Open Copilot and select Etendo Code Expert
 
@@ -183,7 +182,6 @@ With this assistant it is possible to ask **code development questions** and bas
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
----
 
 ### Event Handler Creator
 
@@ -216,7 +214,6 @@ This assistant is capable of creating **Event Handlers** in Etendo Classic. You 
 
     ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH2.png)
 
----
 
 ### Jasper Report Creator
 
@@ -310,7 +307,7 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 ![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
 
----
+
 ### Module Creator
 
 Etendo Classic allows you to create modules that provide additional functionality that can be deployed independently. These modules can range from additional reports to content packs (translations, chart of accounts, etc.).
@@ -362,7 +359,7 @@ body_params = {
 ```
 
 !!!note
-        The database prefix must always be in uppercase.
+    The database prefix must always be in uppercase.
 
 #### Usage Example
 
@@ -394,17 +391,16 @@ Once the webhook has been called, it will automatically:
 You can confirm that the module has been created by navigating to the `Module` window in Etendo.
 
 !!!note
-        If your module depends on other modules (besides the Core module), you need to manually add these dependencies in the `Dependency` tab of the module window.
+    If your module depends on other modules (besides the Core module), you need to manually add these dependencies in the `Dependency` tab of the module window.
 
 
 !!!info
-        For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
+    For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
 
----
 
 ### Reference Creator
 
-The **Reference Creator assistant** that creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+The **Reference Creator** that creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
 It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
 
@@ -420,7 +416,7 @@ The **Reference Creator** assistant is designed to facilitate the creation of re
 
 1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
-2. Open Copilot and select Reference Creator Assistant
+2. Open Copilot and select Reference Creator
 
     ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
 
@@ -441,7 +437,6 @@ The **Reference Creator** assistant is designed to facilitate the creation of re
     ./gradlew export.database --info
     ```
 
----
 
 ### Tables, Windows and Tabs Creator
 
@@ -507,7 +502,6 @@ It is possible to give an input with all the necessary information, or the assis
 ./gradlew export.database --info
 ```
 
----
 
 ### Webhook Creator
 
@@ -533,10 +527,9 @@ This assistant simplifies webhook creation by automatically generating the neces
 
 1.  To use thisassistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Webhook Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
 
-    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH1.png)
-
-
 2. Open Copilot and select Webhook Creator, then ask to the assistant what you need to create.
+
+	![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH1.png)
 
 3. Then, this is the result given by the assistant.
 
@@ -544,4 +537,4 @@ This assistant simplifies webhook creation by automatically generating the neces
 
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
 
----
+
