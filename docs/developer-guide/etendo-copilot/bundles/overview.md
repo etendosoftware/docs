@@ -24,4 +24,4 @@ The Copilot Extensions Bundle includes functionalities for developers to help th
 The **Dev Assistant** is designed to develop other assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
-    For more information, visit: [Dev Assistant developer guide](../../etendo-copilot/bundles/dev-assistant.md).
+    For more information, visit [Dev Assistant developer guide](../../etendo-copilot/bundles/dev-assistant.md).
