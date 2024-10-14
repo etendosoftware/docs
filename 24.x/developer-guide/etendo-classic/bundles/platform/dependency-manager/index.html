@@ -5975,6 +5975,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Add Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-version-handling-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Version Handling Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -8947,6 +8962,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Add Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-version-handling-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Version Handling Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -9085,9 +9115,10 @@
 <h1 id="dependency-manager">Dependency Manager</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.dependencymanager</code></p>
 <h2 id="overview">Overview</h2>
-<p>With this development, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.</p>
+<p>With this module, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.</p>
 <h2 id="module-management">Module Management</h2>
-<p>In the <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Module Management</code> window, the user can see all the modules to be added and select the corresponding version in the <strong>versions</strong> tab. Once one of the versions is selected, the dependencies of such version can be found in the <strong>dependencies</strong> subtab.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Module Management</code></p>
+<p>Logged as System Administrator role, in the <code>Module Management</code> window, the user can see all the modules to be added and select the corresponding version in the <strong>versions</strong> tab. Once one of the versions is selected, the dependencies of such version can be found in the <strong>dependencies</strong> subtab.</p>
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -9103,21 +9134,44 @@
 </ul>
 <p>This window presents two buttons that can be used: <strong>Add dependency</strong> and <strong>Update Packages</strong>.</p>
 <h3 id="add-dependency">Add Dependency</h3>
-<p>This button is used to add all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.</p>
+<p>This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.</p>
+<ul>
+<li>
+<p><strong>If a package bundle is selected</strong>: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.</p>
+</li>
+<li>
+<p><strong>If a non-bundle package is selected</strong>: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.</p>
+</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.</p>
 </div>
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png" /></a></p>
 <p>Once the process is done, the <strong>Dependency Management</strong> window is opened and all the installed dependencies are shown.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>In case of executing the process with a bundle, all its dependencies will be added but not itself.</p>
-</div>
+<h4 id="dependency-version-handling-rules">Dependency Version Handling Rules</h4>
+<ol>
+<li>
+<p><strong>If the dependency version is greater than the installed version:</strong>:</p>
+<ul>
+<li>No installed module and no record in <code>Dependency Management</code>window: New dependency record added. </li>
+<li>No installed module but record exists in <code>Dependency Management</code>window: Update the existing record version.</li>
+<li>Installed module and the dependency record exists in <code>Dependency Management</code>window: Update the existing record version.</li>
+<li>Installed module but no dependency record exists in <code>Dependency Management</code>window: The local dependency is deleted, and a new record is added in <code>Dependency Management</code>. </li>
+</ul>
+</li>
+<li>
+<p><strong>If the dependency version is less than the installed version:</strong></p>
+<ul>
+<li>Display error and disable the process, preventing installation of an older version to avoid compatibility issues. This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss. In case you need to install the dependency version anyway, you must downgrade the version from the <code>Dependency Management</code> window with the <a href="#change-version">change version</a> button.  </li>
+</ul>
+</li>
+</ol>
 <h3 id="update-packages">Update Packages</h3>
 <p>This button is used to execute the Update Packages process which updates the list of available packages with the latest information.</p>
 <h2 id="dependency-management">Dependency Management</h2>
-<p>In the <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Dependency Management</code> window, the user can find all the dependencies installed in the previous step.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Dependency Management</code></p>
+<p>Logged as System Administrator role, in the <code>Dependency Management</code> window, the user can find all the dependencies installed in the previous step.</p>
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png" /></a></p>
 <p>Fields to note:</p>
 <ul>
@@ -9168,16 +9222,32 @@
 </li>
 </ul>
 <h3 id="delete-packages">Delete Packages</h3>
-<p>In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both <code>Source</code> and <code>Local</code> dependencies must be manually removed from the <code>/modules</code> folder prior to compilation.</p>
+<p>This button is used to delete packages/dependencies.</p>
+<ul>
+<li>
+<p><strong>If a format is Jar</strong>: In case you need to remove a dependency to actually complete the action, the environment must be compiled.</p>
+<p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager7.png" /></a></p>
+</li>
+<li>
+<p><strong>If a format is Local or Souce</strong>: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both <code>Source</code> and <code>Local</code> dependencies must be manually removed from the <code>/modules</code> folder prior to compilation.</p>
+<p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager8.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A warning notification is displayed to inform the user of the steps to remove it.</p>
+</div>
+</li>
+</ul>
 <h2 id="add-local-dependencies">Add Local Dependencies</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Add Local dependencies</code></p>
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png" /></a></p>
-<p>This process, in <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Add Local dependencies</code>, also part of the Etendo Dependencies Management, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the <code>local</code> format.</p>
+<p>This process, in <code>Add Local dependencies</code> window, also part of the <strong>Dependencies Management</strong>, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the <code>local</code> format.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The main objective of this process is to add the dependencies in <code>local</code> format, so that in case of being distributed as an Etendo module it can be easily migrated to <code>Sources</code> or <code>Jar</code> format. </p>
 </div>
 <h2 id="update-packages-information">Update Packages Information</h2>
-<p>Since the information about packages is updated frequently, the user can execute this process, in <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Update Packages Information</code> to update the list of packages with the latest information.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Etendo Dependencies Management</code> &gt; <code>Update Packages Information</code></p>
+<p>Since the information about packages is daily updated, the user can execute manually the process from <code>Update Packages Information</code> window to update the list of packages with the latest information.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The same process can be executed from the <strong>Module Management</strong> window, selecting one record and clicking the <strong>Update packages</strong> button.</p>
