@@ -47,7 +47,7 @@ This module enables the Dockerization of Tomcat within Etendo Classic.
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-    For more information, visit the [Dynamic App user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app).
+    For more information, visit the [Dynamic App developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/dynamic-app.md)
 
 ### EAN 128
 

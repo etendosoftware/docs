@@ -138,7 +138,7 @@ nav:
     - Etendo Classic:
       - Basic Features:
         - General Setup: 
-          -  ✨Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
           - Clear Report Cache: user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md
           - Attachments Configuration: user-guide/etendo-classic/basic-features/general-setup/attachments-configuration.md
           - Application: user-guide/etendo-classic/basic-features/general-setup/application.md
@@ -154,11 +154,11 @@ nav:
           - Product Setup: user-guide/etendo-classic/basic-features/master-data-management/product-setup.md
           - Pricing: user-guide/etendo-classic/basic-features/master-data-management/pricing.md
         - Procurement Management:
-          -  ✨Getting Started: user-guide/etendo-classic/basic-features/procurement-management/getting-started.md 
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/procurement-management/getting-started.md 
           - Transactions: user-guide/etendo-classic/basic-features/procurement-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md
         - Warehouse Management:
-          -  ✨Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
           - Transactions: user-guide/etendo-classic/basic-features/warehouse-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md
           - Setup: user-guide/etendo-classic/basic-features/warehouse-management/setup.md
@@ -167,17 +167,17 @@ nav:
           - Transactions:   user-guide/etendo-classic/basic-features/production-management/transactions.md
           - Setup: user-guide/etendo-classic/basic-features/production-management/setup.md
         - Material Requirement Planning: 
-          -  ✨Getting Started: user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md
           - Transactions: user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md
           - Setup: user-guide/etendo-classic/basic-features/material-requirement-planning/setup.md
         - Sales Management: 
-          -  ✨Getting Started: user-guide/etendo-classic/basic-features/sales-management/getting-started.md
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/sales-management/getting-started.md
           - Transactions: user-guide/etendo-classic/basic-features/sales-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md
           - Setup: user-guide/etendo-classic/basic-features/sales-management/setup.md 
         # - Project & Service Management: user-guide/etendo-classic/basic-features/project-and-services-management/index.md
         - Financial Management: 
-          -  ✨Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
           - Receivables and Payables:
             - Transactions: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md
             - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md
@@ -204,17 +204,18 @@ nav:
             - Bank Integration PSD2: user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
-            - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
-            - Modelo 303: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md
-            - Modelo 190: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md
-            - Modelo 347: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
-            - Modelo 349: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
+            - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
             - Impuestos para España: user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
             - Intrastat: user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
-            - Modelo 390: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
+            - IVA de Caja: user-guide/etendo-classic/optional-features/bundles/spain-localization/iva-de-caja.md
             - Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md
-            - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
+            - Modelo 190: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md
+            - Modelo 303: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md
+            - Modelo 347: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
+            - Modelo 349: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
+            - Modelo 390: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
+            - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
+            - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
           - Etendo BI Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
@@ -230,7 +231,7 @@ nav:
           - How to manage prepaid invoices in receivables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md
           - How to transfer funds between financial accounts: user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts.md
     - Etendo Mobile: 
-      - Getting Started: user-guide/etendo-mobile/getting-started.md
+      - ✨ Getting Started: user-guide/etendo-mobile/getting-started.md
       - User interface: user-guide/etendo-mobile/user-interface/user-interface.md
       - Bundles:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
@@ -446,6 +447,7 @@ nav:
           - Dependency Manager: developer-guide/etendo-classic/bundles/platform/dependency-manager.md
           - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
           - Dockerized Tomcat Service: developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md
+          - Dynamic App: developer-guide/etendo-classic/bundles/platform/dynamic-app.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
@@ -456,7 +458,7 @@ nav:
       - Concepts: 
         - Config Server: developer-guide/etendo-rx/concepts/config-server.md
         - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
-        - Projections, Repository and Search: developer-guide/etendo-rx/concepts/projections.md
+        - Projections and Mappings: developer-guide/etendo-rx/concepts/projections.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to Guides:
@@ -469,7 +471,6 @@ nav:
       - Bundles: 
         - Copilot Extensions:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
-          - Create References: developer-guide/etendo-copilot/bundles/create-references.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
@@ -494,11 +495,12 @@ nav:
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
     - Etendo Mobile:
-      - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md 
+      - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
+      - Concepts: 
+        - Sup-application Structure: developer-guide/etendo-mobile/concepts/subapp-structure.md
       - Tutorials: 
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
-        - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
-        - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md
+      #  - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md
       - Etendo UI Library: "https://main--65785998e8389d9993e8ec4c.chromatic.com"
   - What's New:
     - Overview: whats-new/overview.md
