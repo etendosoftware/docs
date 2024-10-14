@@ -196,7 +196,7 @@ The **File Path Tab** appears when **Code Index** is selected as the file type.
     Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
 
 !!!note
-    If Etendo Classic is a JAR instance, the source code is located in the following path:: `@source.path@/build/etendo/`.
+    If Etendo Classic is a JAR instance, the source code is located in the following path: `@source.path@/build/etendo/`.
 
 
 ## Skill/Tool Window
