@@ -23,6 +23,12 @@ This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Co
 
 ## Etendo Classic Sub App
 
+### Overview
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view and edit data. Also by using features like the **Scanning Helpers**, users can speed up inventory management by scanning products during physical inventory, making the process faster and more accurate.
+
 ### Initial Configuration
 
 To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
@@ -142,28 +148,13 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](../../../../assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-## Etendo Copilot SubApp
-
-### Overview 
-
-The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
-
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
-
-With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
-
-![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp1.jpg){ width="300" }
-
-![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp2.png)
-
-
-## Mobile App Scanning Helpers
+### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
 The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) App.
 
-### Usage Examples
+#### Usage Examples
 
  The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
@@ -212,4 +203,26 @@ And here, the quantities will be observed before the process:
 It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
+
+
+## Etendo Copilot SubApp
+
+:octicons-package-16: Javapackage: com.etendoerp.subapp.copilot
+
+### Overview 
+
+The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
+
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+
+With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
+
+**Copilot SubApp mobile mode**
+
+![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp1.jpg){ width="300" }
+
+**Copilot SubApp tablet mode**
+
+![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp2.png)
+
 
