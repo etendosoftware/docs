@@ -14,11 +14,12 @@ tags:
 
 ## Overview
 
-With this development, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
+With this module, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
 
 ## Module Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Module Management`
 
-In the `Application` > `Etendo Dependencies Management` > `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
+Logged as System Administrator role, in the `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
 
 ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
 
@@ -37,8 +38,11 @@ This window presents two buttons that can be used: **Add dependency** and **Upda
 
 ### Add Dependency 
 
-This button is used to add all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.
+This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.
 
+- **If a package bundle is selected**: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.
+
+- **If a non-bundle package is selected**: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.
 !!!note
     A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
 
@@ -46,16 +50,29 @@ This button is used to add all the dependecies part of a specific version of the
 
 Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
 
-!!!info
-    In case of executing the process with a bundle, all its dependencies will be added but not itself.
+#### Dependency Version Handling Rules
+
+1. **If the dependency version is greater than the installed version:**:
+
+    - No installed module and no record in `Dependency Management`window: New dependency record added. 
+    - No installed module but record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module and the dependency record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module but no dependency record exists in `Dependency Management`window: The local dependency is deleted, and a new record is added in `Dependency Management`. 
+
+    
+
+2. **If the dependency version is less than the installed version:**
+
+    - Display error and disable the process, preventing installation of an older version to avoid compatibility issues. This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss. In case you need to install the dependency version anyway, you must downgrade the version from the `Dependency Management` window with the [change version](#change-version) button.  
 
 ### Update Packages
 
 This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
 
 ## Dependency Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Dependency Management`
 
-In the `Application` > `Etendo Dependencies Management` > `Dependency Management` window, the user can find all the dependencies installed in the previous step.
+Logged as System Administrator role, in the `Dependency Management` window, the user can find all the dependencies installed in the previous step.
 
 ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
 
@@ -103,23 +120,35 @@ This button is used to change the format of the module.  This process needs to b
 
 - In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
 
-
 ### Delete Packages
 
-In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+This button is used to delete packages/dependencies.
+
+- **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
+
+    ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager7.png)
+
+- **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
+    ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager8.png)
+
+    !!!note
+        A warning notification is displayed to inform the user of the steps to remove it.
 
 ## Add Local Dependencies 
+:material-menu: `Application` > `Etendo Dependencies Management` > `Add Local dependencies`
 
 ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
 
-This process, in `Application` > `Etendo Dependencies Management` > `Add Local dependencies`, also part of the Etendo Dependencies Management, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
+This process, in `Add Local dependencies` window, also part of the **Dependencies Management**, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
 
 !!! note
     The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
 
 ## Update Packages Information
+:material-menu: `Application` > `Etendo Dependencies Management` > `Update Packages Information`
 
-Since the information about packages is updated frequently, the user can execute this process, in `Application` > `Etendo Dependencies Management` > `Update Packages Information` to update the list of packages with the latest information.
+Since the information about packages is daily updated, the user can execute manually the process from `Update Packages Information` window to update the list of packages with the latest information.
 
 !!!info
     The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
