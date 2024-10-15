@@ -18,7 +18,7 @@ This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Co
 
 
 !!!info
-        For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
+    For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
 
 
 ## Etendo Classic Sub App
@@ -27,7 +27,7 @@ This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Co
 
 The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
 
-The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view and edit data. Also by using features like the **Scanning Helpers**, users can speed up inventory management by scanning products during physical inventory, making the process faster and more accurate.
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
 
 ### Initial Configuration
 
@@ -207,7 +207,7 @@ It will also be noticed that the Product's Stock has been updated in the indicat
 
 ## Etendo Copilot SubApp
 
-:octicons-package-16: Javapackage: com.etendoerp.subapp.copilot
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
 
 ### Overview 
 
