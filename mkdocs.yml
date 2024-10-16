@@ -204,6 +204,7 @@ nav:
             - Bank Integration PSD2: user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
+            - Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/batuz.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
             - Impuestos para España: user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
             - Intrastat: user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
