@@ -6,20 +6,30 @@ title: Etendo Classic Subapp Extensions
 
 ## Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and its configurations in Etendo Classic. For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
-
-## Etendo Classic Sub App
-
-### Initial Configuration
+This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
 
 !!! info
 
     - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
+    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
+
+    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](../../getting-started.md#dynamic-app-role-configuration) in the Role window.
 
 
-    - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](../../getting-started.md#dynamic-app-role-configuration) in the Role window.
+!!!info
+    For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
+
+
+## Etendo Classic Sub App
+
+### Overview
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+### Initial Configuration
 
 To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
 
@@ -62,7 +72,7 @@ The fields will be displayed one below the other. Those with this symbol  “(\
 
 ![](../../../../assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){ width="300" }
 
-#### Folders button 
+**Folders button** 
 
 By selecting the Folders button, the user can access the different tabs of the window with information about the records being browsed.
 
@@ -78,17 +88,17 @@ To navigate in different levels, the user can resort to the system buttons (Andr
 
 In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
 
-#### Actions button
+**Actions button**
 
 Through this button, the user can access the list of available processes corresponding to the window being browsed and execute them.
 
-#### Attachments button 
+**Attachments button** 
 
 Through this button, the user can attach files.
 
-## Manage Records
+### Manage Records
 
-### Create a record
+**Create a record**
 
 To create a new record, the user must click the icon with the symbol “+” and complete the desired fields. Those with the symbol (\*) are mandatory.
 
@@ -110,7 +120,7 @@ Each time a new record is created in the App, the same record will be created in
 
 It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
 
-### Delete a record
+**Delete a record**
 
 To delete a record, press it and drag it to the left or hold it, select all the desired records and then the delete icon.
 
@@ -118,7 +128,7 @@ Each time a record is deleted in the App, the same record will be deleted in the
 
 ![](../../../../assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ width="300" }
 
-### Edit a record
+**Edit a record**
 
 To edit a record, select the record and then the field to be edited.
 
@@ -126,7 +136,7 @@ Once the changes have been made, press the save icon.
 
 Each time a record is edited in the App, the same record will be edited in the Etendo Classic as well.
 
-### Search a record
+**Search a record**
 
 Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
 
@@ -138,27 +148,27 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](../../../../assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-## Mobile App Scanning Helpers
+### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
-Allows to use the camera to scan codes in [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) App
+The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) App.
 
-### Usage Examples
+#### Usage Examples
 
- The module has by default the Inventory Scan process, which is responsible for scanning from a mobile this code, and thus change values of the Physical Inventory lines.
+ The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
- Now an example will be shown from the Etendo Mobile application:
+ Now, an example will be shown from the Etendo Mobile application:
 
- When you enter the Physical inventory window and select a record, you will see the **Actions** button.
+ When entering the Physical inventory window and select a record, it will be possible to see the **Actions** button.
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
-In this button, you can see the process it incorporates, called Inventory Scan.
+In this button, it is possible to see the process it incorporates, called Inventory Scan.
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/ActionsInventoryScan.png)
 
- When you press this action it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
+ When pressing this action, it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
  
  ![](../../../../assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
 
@@ -170,19 +180,19 @@ When the arrow to continue is selected, the code of the storage bin in which the
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductBarcode.jpg) 
 
- Finally, enter the amount you want to add of that product, press Done and Save.
+ Finally, enter the amount needed to add of that product, press Done and Save.
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
 
- In the meantime, on Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
+ In the meantime, in Etendo Classic a line will be added in the **Scan** tab of the physical inventory line, about the scan and the amount that has been set.
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
 
-In the physical inventory header, by selecting a scan line, you can run the Process Inventory Count. This takes care of adding to the stock the quantity that has been set on the scanned product.
+In the physical inventory header, by selecting a scan line, the Process Inventory Count can be run. This takes care of adding to the stock the quantity that has been set on the scanned product.
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/Process.png) 
 
-And here we will observe the quantities before the process:
+And here, the quantities will be observed before the process:
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/QuantityBefore.png) 
 
@@ -190,7 +200,29 @@ And here we will observe the quantities before the process:
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/QuantityAfter.png) 
 
-We will also notice that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
+It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
+
+
+## Etendo Copilot SubApp
+
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
+
+### Overview 
+
+The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
+
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+
+With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
+
+**Copilot SubApp mobile mode**
+
+![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp1.jpg){ width="300" }
+
+**Copilot SubApp tablet mode**
+
+![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp2.png)
+
 
