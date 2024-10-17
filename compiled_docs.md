@@ -28382,20 +28382,30 @@ In case the user has a picture, it will be shown both in this window and in the 
 ## Article Content: 
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and its configurations in Etendo Classic. For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
-
-#### Etendo Classic Sub App
-
-##### Initial Configuration
+This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
 
 !!! info
 
     - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
+    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
+
+    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
 
 
-    - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
+!!!info
+    For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+
+
+#### Etendo Classic Sub App
+
+##### Overview
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+##### Initial Configuration
 
 To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
 
@@ -28438,7 +28448,7 @@ The fields will be displayed one below the other. Those with this symbol  “(\
 
 ![](https://docs.etendo.software/latest/assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){ width="300" }
 
-###### Folders button 
+**Folders button** 
 
 By selecting the Folders button, the user can access the different tabs of the window with information about the records being browsed.
 
@@ -28454,17 +28464,17 @@ To navigate in different levels, the user can resort to the system buttons (Andr
 
 In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
 
-###### Actions button
+**Actions button**
 
 Through this button, the user can access the list of available processes corresponding to the window being browsed and execute them.
 
-###### Attachments button 
+**Attachments button** 
 
 Through this button, the user can attach files.
 
-#### Manage Records
+##### Manage Records
 
-##### Create a record
+**Create a record**
 
 To create a new record, the user must click the icon with the symbol “+” and complete the desired fields. Those with the symbol (\*) are mandatory.
 
@@ -28486,7 +28496,7 @@ Each time a new record is created in the App, the same record will be created in
 
 It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
 
-##### Delete a record
+**Delete a record**
 
 To delete a record, press it and drag it to the left or hold it, select all the desired records and then the delete icon.
 
@@ -28494,7 +28504,7 @@ Each time a record is deleted in the App, the same record will be deleted in the
 
 ![](https://docs.etendo.software/latest/assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ width="300" }
 
-##### Edit a record
+**Edit a record**
 
 To edit a record, select the record and then the field to be edited.
 
@@ -28502,7 +28512,7 @@ Once the changes have been made, press the save icon.
 
 Each time a record is edited in the App, the same record will be edited in the Etendo Classic as well.
 
-##### Search a record
+**Search a record**
 
 Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
 
@@ -28514,27 +28524,27 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](https://docs.etendo.software/latest/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-#### Mobile App Scanning Helpers
+##### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
-Allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App
+The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App.
 
-##### Usage Examples
+###### Usage Examples
 
- The module has by default the Inventory Scan process, which is responsible for scanning from a mobile this code, and thus change values of the Physical Inventory lines.
+ The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
- Now an example will be shown from the Etendo Mobile application:
+ Now, an example will be shown from the Etendo Mobile application:
 
- When you enter the Physical inventory window and select a record, you will see the **Actions** button.
+ When entering the Physical inventory window and select a record, it will be possible to see the **Actions** button.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
-In this button, you can see the process it incorporates, called Inventory Scan.
+In this button, it is possible to see the process it incorporates, called Inventory Scan.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ActionsInventoryScan.png)
 
- When you press this action it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
+ When pressing this action, it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
  
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
 
@@ -28546,19 +28556,19 @@ When the arrow to continue is selected, the code of the storage bin in which the
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductBarcode.jpg) 
 
- Finally, enter the amount you want to add of that product, press Done and Save.
+ Finally, enter the amount needed to add of that product, press Done and Save.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
 
- In the meantime, on Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
+ In the meantime, in Etendo Classic a line will be added in the **Scan** tab of the physical inventory line, about the scan and the amount that has been set.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
 
-In the physical inventory header, by selecting a scan line, you can run the Process Inventory Count. This takes care of adding to the stock the quantity that has been set on the scanned product.
+In the physical inventory header, by selecting a scan line, the Process Inventory Count can be run. This takes care of adding to the stock the quantity that has been set on the scanned product.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/Process.png) 
 
-And here we will observe the quantities before the process:
+And here, the quantities will be observed before the process:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityBefore.png) 
 
@@ -28566,9 +28576,31 @@ And here we will observe the quantities before the process:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityAfter.png) 
 
-We will also notice that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
+It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
+
+
+#### Etendo Copilot SubApp
+
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
+
+##### Overview 
+
+The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
+
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+
+With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
+
+**Copilot SubApp mobile mode**
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp1.jpg){ width="300" }
+
+**Copilot SubApp tablet mode**
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp2.png)
+
 
 
 ==ARTICLE_END==
@@ -28862,7 +28894,7 @@ The **File Path Tab** appears when **Code Index** is selected as the file type.
     Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
 
 !!!note
-    If Etendo Classic is a JAR instance, the source code is located in the following path:: `@source.path@/build/etendo/`.
+    If Etendo Classic is a JAR instance, the source code is located in the following path: `@source.path@/build/etendo/`.
 
 
 #### Skill/Tool Window
@@ -29805,6 +29837,184 @@ Etendo Classic currently requires two PostgreSQL extensions to be available:
 !!! note
     After modifying the file restart postgresql service
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Dependency Manager
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Dependency Manager
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/dependency-manager
+## Article Content: 
+### Dependency Manager
+
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
+
+#### Overview
+
+With this module, the user can access from the Etendo Classic interface all Etendo packages published in Etendo Software repositories. 
+
+In addition, from the Module Management window you can query packages, available versions, dependencies and install new packages. 
+
+Then, from the Dependency Management window you can update, remove and change the format of already installed modules. 
+
+#### Installation 
+
+To install this package that will allow you to manage other packages directly from the Etendo Classic interface you must add in the `build.gradle` file the following dependency:
+
+
+``` groovy title="gradle.properties"
+dependencies {
+// Add your dependency here
+    implementation('com.etendoerp:dependencymanager:1.1.0')
+}
+```
+Then, to install the module run the command gradle : 
+
+``` bash title="Terminal"
+./gradlew update.database smartbuild
+```
+
+!!! info 
+    For more information visit [Install Modules](./install-modules-in-etendo.md#2-search-for-dependencies) guide. 
+
+#### Module Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Module Management`
+
+Logged as System Administrator role, in the `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager1.png)
+
+!!!info
+    The fields in this window are read-only.
+
+Fields to note:
+
+- **Active**: Checkbox to select if this module is active or not.
+- **Group**: the identifier of the artifact.
+- **Artifact**: the unit of deployment fetched and used.
+- **Installed Version**: the version of the module if it is installed.
+- **Is bundle**: Field to filter if this module is a bundle or not.
+
+This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
+
+##### Add Dependency 
+
+This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.
+
+- **If a package bundle is selected**: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.
+
+- **If a non-bundle package is selected**: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager2.png)
+
+Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
+
+###### Dependency Version Handling Rules
+
+1. **If the dependency version is greater than the installed version:**:
+
+    - No installed module and no record in `Dependency Management`window: New dependency record added. 
+    - No installed module but record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module and the dependency record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module but no dependency record exists in `Dependency Management`window: The local dependency is deleted, and a new record is added in `Dependency Management`. 
+
+    
+
+2. **If the dependency version is less than the installed version:**
+
+    - Display error and disable the process, preventing installation of an older version to avoid compatibility issues. This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss. In case you need to install the dependency version anyway, you must downgrade the version from the `Dependency Management` window with the [change version](#change-version) button.  
+
+##### Update Packages
+
+This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
+
+#### Dependency Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Dependency Management`
+
+Logged as System Administrator role, in the `Dependency Management` window, the user can find all the dependencies installed in the previous step.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager3.png)
+
+Fields to note:
+
+- **Active**: Checkbox to select if this dependency is active or not
+- **Group**: The identifier of the artifact.
+- **Artifact**: The unit of deployment fetched and used.
+- **Version**: Version of the module
+- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
+    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
+    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
+    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
+- **Installation Status**: It describes the dependency current status.
+    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
+    - Installed: Used once the dependency is already installed.
+- **Version Status**: It describes the dependency version status.
+    - Untracked: Only for external dependencies.
+    - Update Available: In case there are new available versions.
+    - Updated: The latest available version is installed.
+- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
+
+This window presents to buttons that can be used: **Change Version** and **Change Format**.
+
+##### Change Version 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager4.png)
+
+This button is used to update or downgrade versions. 
+
+When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
+
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before executing the process.
+
+##### Change Format 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager6.png)
+
+This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
+
+- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
+
+- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
+
+- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
+
+##### Delete Packages
+
+This button is used to delete packages/dependencies.
+
+- **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager7.png)
+
+- **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager8.png)
+
+    !!!note
+        A warning notification is displayed to inform the user of the steps to remove it.
+
+#### Add Local Dependencies 
+:material-menu: `Application` > `Etendo Dependencies Management` > `Add Local dependencies`
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager5.png)
+
+This process, in `Add Local dependencies` window, also part of the **Dependencies Management**, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
+
+!!! note
+    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
+
+#### Update Packages Information
+:material-menu: `Application` > `Etendo Dependencies Management` > `Update Packages Information`
+
+Since the information about packages is daily updated, the user can execute manually the process from `Update Packages Information` window to update the list of packages with the latest information.
+
+!!!info
+    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
+
+!!!note
+    Each time the server is restarted, the update process is executed automatically.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Migrating to Etendo (from Openbravo)
@@ -44558,131 +44768,6 @@ public class AdAlertWebhookService extends BaseWebhookService {
     If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Dependency Manager
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Dependency Manager
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager
-## Article Content: 
-### Dependency Manager
-
-:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
-
-#### Overview
-
-With this development, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
-
-#### Module Management
-
-In the `Application` > `Etendo Dependencies Management` > `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
-
-!!!info
-    The fields in this window are read-only.
-
-Fields to note:
-
-- **Active**: Checkbox to select if this module is active or not.
-- **Group**: the identifier of the artifact.
-- **Artifact**: the unit of deployment fetched and used.
-- **Installed Version**: the version of the module if it is installed.
-- **Is bundle**: Field to filter if this module is a bundle or not.
-
-This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
-
-##### Add Dependency 
-
-This button is used to add all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.
-
-!!!note
-    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
-
-Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
-
-!!!info
-    In case of executing the process with a bundle, all its dependencies will be added but not itself.
-
-##### Update Packages
-
-This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
-
-#### Dependency Management
-
-In the `Application` > `Etendo Dependencies Management` > `Dependency Management` window, the user can find all the dependencies installed in the previous step.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
-
-Fields to note:
-
-- **Active**: Checkbox to select if this dependency is active or not
-- **Group**: The identifier of the artifact.
-- **Artifact**: The unit of deployment fetched and used.
-- **Version**: Version of the module
-- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
-    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
-    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
-    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
-- **Installation Status**: It describes the dependency current status.
-    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
-    - Installed: Used once the dependency is already installed.
-- **Version Status**: It describes the dependency version status.
-    - Untracked: Only for external dependencies.
-    - Update Available: In case there are new available versions.
-    - Updated: The latest available version is installed.
-- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
-
-This window presents to buttons that can be used: **Change Version** and **Change Format**.
-
-##### Change Version 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager4.png)
-
-This button is used to update or downgrade versions. 
-
-When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
-
-!!!note
-    A warning notification is shown to inform the user about versions compatibility before executing the process.
-
-##### Change Format 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager6.png)
-
-This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
-
-- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
-
-- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
-
-- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
-
-
-##### Delete Packages
-
-In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
-
-#### Add Local Dependencies 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
-
-This process, in `Application` > `Etendo Dependencies Management` > `Add Local dependencies`, also part of the Etendo Dependencies Management, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
-
-!!! note
-    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
-
-#### Update Packages Information
-
-Since the information about packages is updated frequently, the user can execute this process, in `Application` > `Etendo Dependencies Management` > `Update Packages Information` to update the list of packages with the latest information.
-
-!!!info
-    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
-
-!!!note
-    Each time the server is restarted, the update process is executed automatically.
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: Docker Management
 ## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Docker Management
 ## Article URL: 
@@ -47185,7 +47270,7 @@ The Copilot Extensions Bundle includes functionalities for developers to help th
 The **Dev Assistant** is designed to develop other assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
-    For more information, visit: [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles/dev-assistant.md).
+    For more information, visit [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles/dev-assistant.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Dev Assistant
@@ -47204,38 +47289,173 @@ The **Dev Assistant section** provides an overview of the tools, functionality, 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
+!!!warning
+    Consider that the assistants are currently in their beta testing phase. 
 
-#### Assistants
+Access to the information for each of the Assistants:
 
-##### Etendo Code Expert 
+[:material-file-document-outline: Background process creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#background-process-creator){ .md-button .md-button--primary } <br>
 
-**Etendo Code Expert** is an assistant designed to read previously indexed files and provide answers related to their content. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
+[:material-file-document-outline: Button process creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
 
-This assistant is useful for avoiding the need to manually review all files. There is no need to load the files directly into the system since it will have Etendo Classic code preconfigured. Also more files can be configured if neccesary.
+[:material-file-document-outline: Etendo Code Expert](https://docs.etendo.software/latest/bundles/dev-assistant.md#etendo-code-expert){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Event Handler creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Jasper report creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Module creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Reference creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#reference-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Tables, windows and tabs](https://docs.etendo.software/latest/bundles/dev-assistant.md#tables-windows-and-tabs-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Webhook creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#webhook-creator){ .md-button .md-button--primary } <br>
+
+##### Background Process Creator
+
+**Background Process Creator** is an assistant specialized in the automatic creation of Background Processes in Java. The assistant reads previously indexed code and uses examples of classes extending `DalBaseProcess` to build new Background Processes.
+
+###### Tools
+
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
+
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+  
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
 ###### Functionality
 
-With this assistant it is possible to: 
+Background Process Creator generates Background Processes in Java using indexed examples of classes that extend `DalBaseProcess`. To configure the assistant properly, you need to provide the following parameters:
 
-- Ask code development questions and based on Etendo code previously indexed, the assistant will give possible code suggestions or solutions. 
+- **Java package**: The Java package where the new process will be saved. It should follow the format `java.package.of.the.module`.
+- **Name**: The name of the Java file to be created.
+- **Search Key**: A key that will be used to locate the process in other windows when necessary.
+- **Code description**: The purpose and logic that the Background Process should fulfill.
+
+###### Usage Example
+
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Background Process Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+
+    ![background.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG1.png)
+
+
+2. Open Copilot and select Background Process Creator, then ask to the assistant what you need to create.
+
+3. Then, this is the result given by the assistant.
+
+    ![background.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png)
+
+    ![background.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png)
+
+
+
+##### Button Process Creator
+
+The **Button Process Creator** simplifies the process of creating and registering buttons and process definitions in Etendo Classic. By automating the workflow through webhooks, it removes the need for manual configuration, ensuring that your processes and buttons are set up correctly and efficiently.
+
+###### Tools
+
+- [ApiCallTool](https://docs.etendo.software/latest/available-tools/openapi-tool.md) 
+    
+- [ReadFileTool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+
+- [WriteFileTool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+
+###### Functionality
+
+The **Button Process Creation Assistant** automates the creation of a button and the registration of a process in Etendo Classic through a webhook call. Through a webhook call, the tool ensures the correct setup by validating necessary parameters like the module prefix, Java package, and process name, making sure the search key is correctly formed. It then generates a Java class for the button, which extends `BaseProcessActionHandler`, and registers this button in the desired window, tab, and table within the Etendo system. 
+
+Additionally, it defines and registers the process by creating a process definition and associating it with any required parameters, including attributes like database name, length, and reference, ensuring integration and functionality within the system. 
+
+When creating a button or registering a process, the assistant will request the following information:
+
+- **Java Package**: The Java package of the module where the button's class will be created (e.g., `com.etendoerp.module`).
+- **Module Prefix**: A prefix for the module (e.g., `COPDEV`).
+- **Window**: The window in Etendo where the button will appear.
+- **Tab**: The specific tab within the window where the button will be located.
+- **Table**: The table associated with the process.
+- **Process Name**: The name of the process to be created.
+- **Search Key**: A unique search key for the process that includes the module prefix (e.g., `COPDEV_ActualizarDescripciónPedido`).
+- **Parameters**: Optional parameters for the process, including:
+    - **BD_NAME**: The database column name.
+    - **NAME**: The name of the parameter.
+    - **LENGTH**: The length of the parameter field.
+    - **SEQNO**: The sequence number of the parameter.
+    - **REFERENCE**: A reference for the parameter (if it's linked to another field or table).
+- **Help Comment**: An optional help comment for the process.
+- **Description**: An optional description for the process.
+
+The webhook call used to register the process in Etendo will require the following body parameters:
+
+```json
+body_params = {
+    "Prefix": "COPDEV",
+    "SearchKey": "COPDEV_ActualizarDescripciónPedido",
+    "ProcessName": "ActualizarDescripciónPedidos",
+    "HelpComment": "This process updates the description of associated orders.",
+    "Description": "A process to update the description of the associated sales orders based on a text input.",
+    "Parameters": [
+        {
+            "BD_NAME": "text_parameter",
+            "NAME": "Description Text",
+            "LENGTH": 255,
+            "SEQNO": 10,
+            "REFERENCE": "Text"
+        }
+    ],
+    "JavaPackage": "com.etendoerp.copilot.devassistant"
+}
+```
+
+This call registers the process in the system and attaches the necessary parameters.
 
 ###### Usage Example 
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
+The process and the button will be automatically registered, and the user will be notified.
 
-2. Open Copilot and select Etendo Code Expert
+![ButtonProcess.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess.png)
+
+At this point, we will have the Java class of the button created along with the registered process.
+
+![ButtonProcess2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
+
+
+##### Etendo Code Expert 
+
+**Etendo Code Expert** is an assistant designed to read indexed files and provide answers related to their content. 
+
+###### Functionality
+
+With this assistant it is possible to ask **code development questions** and based on Etendo code indexed, the assistant will give possible code suggestions or solutions. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
+
+This assistant is useful for avoiding the need to manually review all files. Also, multiple files can be configured if neccesary.
+
+
+###### Usage Example 
+
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. This assistant do not include the path configured to the indexed files. To do that, go to the **Knowledge Base File** window in `Application`>`Service`>`Copilot`>`Knowledge Base File` and select the `EtendoJAvaSourceCode` file and, in the **File Path Tab**, specify the path where the code files you need the assistant to read are located. 
+		
+	<figure markdown="span">
+		![code-expert.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert3.png)
+		<figcaption>In this example using the path shown in the image, we will obtain all the files with Java extension from the Etendo core source code</figcaption>
+	</figure>
+
+
+2.  Then, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. After that, go to the **Assistant Access** window and give access to the role.  
+
+3. Start using the assistant. Open Copilot and select Etendo Code Expert.
 
     ![code-expert.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert1.png)
 
-3. Ask the assistant for what you need to create.
+4. Ask the assistant for what you need to create.
 
     ![code-expert.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
----
 
 ##### Event Handler Creator
 
-This assistant is capable of creating Event Handlers in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
+This assistant is capable of creating **Event Handlers** in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
 
 ###### Tools
 
@@ -47260,108 +47480,213 @@ This assistant is capable of creating Event Handlers in Etendo Classic. You only
 
     ![eventhandler.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH1.png)
 
-3. Then this is the result given by the assistant.
+3. Then, this is the result given by the assistant.
 
     ![eventhandler.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH2.png)
 
----
 
-##### Background Process Creator
+##### Jasper Report Creator
 
-**Background Process Creator** is an assistant specialized in the automatic creation of Background Processes in Java. The assistant reads previously indexed code and uses examples of classes extending `DalBaseProcess` to build new Background Processes.
+The **Jasper Assistant** is designed to facilitate the creation, editing, and registration of reports within the Etendo platform. Using JasperReports, it allows developers to define the structure of the report, apply styles, manage parameters, and register the reports in the system to use in different modules.
 
-###### Tools
-
-- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
-
-- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
-  
-- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
-
-###### Functionality.
-
-Background Process Creator generate Background Processes in Java using indexed examples of classes that extend `DalBaseProcess`. To configure the assistant properly, you need to provide the following parameters:
-
-- **Java package**: The Java package where the new process will be saved. It should follow the format `java.package.of.the.module`.
-- **Name**: The name of the Java file to be created.
-- **Search Key**: A key that will be used to locate the process in other windows when necessary.
-- **Code description**: The purpose and logic that the Background Process should fulfill.
-
-###### Usage Example
-
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Background Process Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
-
-    ![background.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG1.png)
-
-
-2. Open Copilot and select Background Process Creator, then ask to the assistant what you need to create.
-
-3. Then this is the result given by the assistant.
-
-    ![background.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png)
-
-    ![background.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png)
-
----
-
-##### Webhook Creator
-
-**Webhook Creator** is an assistant designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.
+!!!info
+    This assistant simplifies the process by verifying that all fields used in a report are correctly defined in the database, thus avoiding common errors such as **Field not found**. It also supports integrating logos, applying styles, and performing data grouping to ensure that the reports meet business requirements.
 
 ###### Tools
 
-- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
+- [DBQueryGeneratorTool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
 
-- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
-  
-- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+- **JasperTool**
+
+- [OCRTool](https://docs.etendo.software/latest/available-tools/ocr-tool.md)
+
+- [ReadFileTool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+
+- [WriteFileTool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
 ###### Functionality
 
-This assistant simplifies webhook creation by automatically generating the necessary Java files and registering them in the Etendo ERP system, taking examples of indexing code readeing the classes extends of `BaseWebhookService`. It is necessary give some useful information:
+**Report Creation**
 
-- **Module Package**: The Java package where the new process will be saved. It should follow the format `java.package.of.the.module`.
-- **Webhook Name**: The name of the Java file to be created.
-- **Parameters**: The parameters will be added to the webhook for the use.
+The Jasper Assistant requests the following parameters to create a report:
+
+- **Report storage path**: The location in the file system where the report file will be saved.
+- **Report name**: The name that will be assigned to the report.
+- **Report encoding language**: The language in which the report will be encoded (default is UTF-8).
+- **Report parameters**: A list of parameters that the report will accept.
+- **SQL query**: The SQL query that will provide data to the report.
+- **Report styles**: Definition of the visual styles applied to the report.
+- **Data grouping**: Configuration of data grouping within the report.
+- **Image or logo in the report**: Specification of images or logos to include.
+- **Data distribution**: Structure of how the data will be organized in the report.
+
+**Report Registration**
+
+Once the report is created, it can be registered in the system. The assistant requests the following arguments:
+
+- **Report name**: Name that will be used to register the report in the system.
+- **Module prefix**: Prefix that identifies the module where the report will be registered.
+- **Search key**: Unique key to identify the report in the system.
+- **Help comments**: Additional information to help understand the purpose of the report.
+- **Description**: Detailed description of the report.
+- **Report path**: Path where the report is stored.
+- **Parameters**: List of registered parameters that can be used when executing the report.
+
+**Report Editing**
+
+The assistant also allows editing existing reports. Available actions include:
+
+- **Parameter Modification**: Allows editing any already registered report parameter.
+- **SQL Query Update**: Modification of the SQL query used by the report.
+- **Change of Styles and Groupings**: Update of visual styles and data grouping configuration.
 
 ###### Usage Example
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Webhook Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Jasper Report Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
 
-    ![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH1.png)
+2. Open Copilot and select Jasper Report Creator
+
+3. Depending on the request, the Jasper Assistant will return:
+
+**Report Creation**
+
+![CreateReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/CreateReport.png)
 
 
-2. Open Copilot and select Webhook Creator, then ask to the assistant what you need to create.
+**Report Registration**
 
-3. Then this is the result given by the assistant.
+![RegistrateReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport.png)
 
-    ![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH2.png)
+After running the smartbuild we will be able to see the process of the created report:
 
-    ![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
+![RegistrateReport3.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport3.png)
 
----
+As you can see in the image, it also adds the parameters and even in the **Report Definition** tab, it defines the PDF Template of the report and in the **Menu**, it creates the Process definition that we have defined in the previous step.
+
+![RegistrateReport4.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport4.png)
+
+![RegistrateReport5.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport5.png)
+
+
+Finally, we can observe the created report and set the chosen parameter to see the printed version.
+
+![RegistrateReport6.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport6.png)
+
+
+**Report Editing**
+
+![EditReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
+
+
+##### Module Creator
+
+Etendo Classic allows you to create modules that provide additional functionality that can be deployed independently. These modules can range from additional reports to content packs (translations, chart of accounts, etc.).
+
+###### Tools
+
+- [ApiCallTool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
+
+###### Functionality
+
+The Module Creator streamlines the process of building independent modules that enhance Etendo Classic with new functionalities, such as additional reports or content packs like translations or charts of accounts. By using the `CreateModuleWebHook`, the tool automates several critical steps. It begins by validating essential details like the module's Java package, name, description, version, and database prefix, ensuring everything is properly formatted and complete. After validation, it assigns the necessary database prefix, registers the module within the system, and allows for optional inclusion of dependencies. 
+
+To start creating your module in Etendo, follow the steps below.
+
+- Provide the following information:
+
+- **Javapackage**: The Java package of the module (e.g., `com.etendoerp.copilot.prueba`).
+- **Module Name**: A name for your module (e.g., `Test Module`).
+- **Description**: A brief description of the module's functionality.
+- **Help/Comment**: Additional help text or comments regarding the module (optional).
+- **Version**: The version of the module (e.g., `1.0.0`).
+- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `FJTS`).
+- **License**: The license type for the module. Options are:
+    - `Apache License 2.0`
+    - `Openbravo Public License`
+    - `Mozilla Public License 1.1`
+    - `Etendo Commercial License`
+
+- Call the `CreateModuleWebHook`. The `CreateModuleWebHook` simplifies the creation process by automating various steps. This webhook will:
+
+- Validate all the parameters (such as module name, version, and license).
+- Assign the database prefix.
+- Register the module.
+- Optionally, add module dependencies.
+
+- When invoking the webhook, the **body parameters** should follow this structure:
+
+```json
+body_params = {
+  "Javapackage": "com.etendoerp.copilot.test",
+  "SearchKey": "testmodule",
+  "ModuleName": "Test Module",
+  "HelpComment": "This is a test module created for demonstration purposes.",
+  "Description": "This module adds test functionality to Etendo Classic.",
+  "Version": "1.0.0",
+  "Prefix": "FJTS",
+  "ModuleLicense": "Etendo Commercial License"
+}
+```
+
+!!!note
+    The database prefix must always be in uppercase.
+
+###### Usage Example
+
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Module Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+
+2. Open Copilot and select Module Creator, then ask to the assistant what you need to create.
+
+![ModuleCreation.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation.png)
+
+If we go to the **Module** window we can find the created record.
+
+![ModuleCreation2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation2.png)
+
+The module will also have the dependency, in this case **Core** with the prefix and data package mentioned by the user.
+
+![ModuleCreation3.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation3.png)
+
+![ModuleCreation4.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation4.png)
+
+![ModuleCreation5.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation5.png)
+
+Once the webhook has been called, it will automatically:
+
+- Register the module in Etendo.
+- Assign the **Java package** and **database prefix**.
+- Handle the specified **license**.
+- Set up basic **module dependencies**.
+
+You can confirm that the module has been created by navigating to the `Module` window in Etendo.
+
+!!!note
+    If your module depends on other modules (besides the Core module), you need to manually add these dependencies in the `Dependency` tab of the module window.
+
+
+!!!info
+    For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
+
 
 ##### Reference Creator
 
-The Reference Creator assistant that **creates references** in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
+The **Reference Creator** creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
 It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
 
 ###### Tools
 
-- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md): This tool allows to create references on Etendo and on the database using queries generated with the parameters given in the tool. 
+- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md)
 
 ###### Functionality
 
-The **Reference Creator** assistant is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
-
-Let's see an example about how the user can interact with the assistant and create the needed references in Etendo.
+The **Reference Creator** is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
 
 ###### Usage Example 
 
 1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
-2. Open Copilot and select Reference Creator Assistant
+2. Open Copilot and select Reference Creator
 
     ![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
 
@@ -47382,26 +47707,22 @@ Let's see an example about how the user can interact with the assistant and crea
     ./gradlew export.database --info
     ```
 
----
 
 ##### Tables, Windows and Tabs Creator
 
-The **Tables, Windows and Tabs Creator** is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  as well as tables and columns in the database.
-It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
-
 !!!warning
-    This Assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
+    The Tables, windows and tabs assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
 
     For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
 
-    Thank you for your understanding as we continue to improve the functionality and reliability of this assistant.
-
+The **Tables, Windows and Tabs Creator** is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  as well as tables and columns in the database.
+It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
 
 ###### Tools
 
 - [**DDL Tool**](https://docs.etendo.software/latest/etendo-copilot/available-tools/ddl-tool.md): This tool allows to registering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
 
-- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+- **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
 
 ###### Functionality
@@ -47451,419 +47772,42 @@ It is possible to give an input with all the necessary information, or the assis
 ./gradlew export.database --info
 ```
 
----
 
-##### Jasper Report Creator
+##### Webhook Creator
 
-###### Overview
+**Webhook Creator** is an assistant designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.
 
-The **Jasper Assistant** is designed to facilitate the creation, editing, and registration of reports within the Etendo platform. Using JasperReports, it allows developers to define the structure of the report, apply styles, manage parameters, and register the reports in the system for use in different modules.
+###### Tools
 
-!!!info
-    This assistant simplifies the process by verifying that all fields used in a report are correctly defined in the database, thus avoiding common errors such as 'Field not found'. It also supports integrating logos, applying styles, and performing data grouping to ensure that the reports meet business requirements.
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
-###### Purpose
-
-The **Jasper Assistant** is useful for generating custom reports within Etendo. It allows developers and system administrators to create detailed reports by applying a wide range of styles and configurations and registering these reports in the Etendo database so they are available in different modules and functionalities of the platform.
-
-###### Components
-
-The Jasper Assistant is composed of the following tools:
-
-- **DBQueryGeneratorTool**:
-    - `SHOW_TABLES` mode: Returns the database tables with their name and description.
-    - `SHOW_COLUMNS` mode: Returns the columns of a table with their name and description. This mode requires the `p_data` parameter with the table name.
-    - `EXECUTE_QUERY` mode: Executes the SQL query provided by the user. This mode requires the `p_data` parameter with the query.
-
-- **JasperTool**:
-    - Allows creating, editing, or registering reports in Etendo based on the provided data.
-
-- **OCRTool**:
-    - Returns a JSON object with information from a local file (image or PDF). This tool can extract the JRXML from an already created report or edit a report using an image.
-
-- **ReadFileTool**:
-    - Reads JRXML files from the path provided by the user.
-
-- **WriteFileTool**:
-    - Saves reports to the specified path or rewrites files with the requested modifications.
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+  
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
 ###### Functionality
 
-####### Report Creation
+This assistant simplifies webhook creation by automatically generating the necessary Java files and registering them in the Etendo ERP system, taking examples of indexing code readeing the classes extends of `BaseWebhookService`. It is necessary give some useful information:
 
-The Jasper Assistant requests the following parameters to create a report:
-
-- **Report storage path**: The location in the file system where the report file will be saved.
-- **Report name**: The name that will be assigned to the report.
-- **Report encoding language**: The language in which the report will be encoded (default is UTF-8).
-- **Report parameters**: A list of parameters that the report will accept.
-- **SQL query**: The SQL query that will provide data to the report.
-- **Report styles**: Definition of the visual styles applied to the report.
-- **Data grouping**: Configuration of data grouping within the report.
-- **Image or logo in the report**: Specification of images or logos to include.
-- **Data distribution**: Structure of how the data will be organized in the report.
-
-####### Report Registration
-
-Once the report is created, it can be registered in the system. The assistant requests the following arguments:
-
-- **Report name**: Name that will be used to register the report in the system.
-- **Module prefix**: Prefix that identifies the module where the report will be registered.
-- **Search key**: Unique key to identify the report in the system.
-- **Help comments**: Additional information to help understand the purpose of the report.
-- **Description**: Detailed description of the report.
-- **Report path**: Path where the report is stored.
-- **Parameters**: List of registered parameters that can be used when executing the report.
-
-####### Report Editing
-
-The assistant also allows editing existing reports. Available actions include:
-
-- **Parameter Modification**: Allows editing any already registered report parameter.
-- **SQL Query Update**: Modification of the SQL query used by the report.
-- **Change of Styles and Groupings**: Update of visual styles and data grouping configuration.
-
-###### Output
-
-Depending on the request, the Jasper Assistant will return:
-
-- A created report, saved in the path indicated by the user.
-- The edition of a specific report, with the changes applied as requested.
-- The registration of a report in Etendo, ready to be used in the system.
-
-###### Utility
-
-- **Automation**: Facilitates automated creation and registration of reports in Etendo, reducing manual intervention.
-- **Consistency**: Ensures that reports are created and registered uniformly and following best practices.
-- **Flexibility**: Allows the creation of highly customized reports to meet specific needs.
-- **Error Handling**: Provides clear feedback on any issues encountered during the creation or registration of the report.
+- **Module Package**: The Java package where the new process will be saved. It should follow the format `java.package.of.the.module`.
+- **Webhook Name**: The name of the Java file to be created.
+- **Parameters**: The parameters will be added to the webhook for the use.
 
 ###### Usage Example
 
-####### 1. Report Creation
-**User**: *"Create a sales report with the fields: customer name, sales date, and total amount. Group the data by customer name and include a summary of total sales. Add the company logo to the report header and export the report to the 'salmod' module."*
+1.  To use thisassistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Webhook Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
 
-**Jasper Assistant**: *"The sales report has been created with the specified fields and grouped by customer name. The company logo has been added to the report header. The report has been registered in the system under the 'salmod' module. Please compile and restart Etendo to ensure the changes take effect. If you need further modifications, please let me know."*
+2. Open Copilot and select Webhook Creator, then ask to the assistant what you need to create.
 
-![CreateReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/CreateReport.png)
+	![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH1.png)
 
+3. Then, this is the result given by the assistant.
 
-####### 2. Report Registration
-**User**: *"I want to register a report in Etendo."*
+    ![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH2.png)
 
-**Jasper Assistant**: *"Please provide the following details: Report name, module prefix, search key, parameters, and report path."*
+    ![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
 
-![RegistrateReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport.png)
 
-Once the report is created the assistant will respond:
-
-![RegistrateReport2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport2.png)
-
-After running the smartbuild we will be able to see the process of the created report:
-
-![RegistrateReport3.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport3.png)
-
-As you can see in the image, it also adds the parameters and even in the "Report Definition" tab it defines the PDF Template of the report and in the "Menu" it creates the Process definition that we defined in the previous step.
-
-![RegistrateReport4.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport4.png)
-
-![RegistrateReport5.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport5.png)
-
-
-Finally, we can observe the created report and set the chosen parameter to see the printed version.
-
-![RegistrateReport6.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/RegistrateReport6.png)
-
-####### 3. Report Editing
-**User**: *"I want to update the sales report by changing the style and adding a new field 'discount'."*
-
-**Jasper Assistant**: *"The sales report has been updated with the new style and the 'discount' field has been added."*
-
-![EditReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
-
-###### Conclusion
-
-The **Jasper Assistant** is an essential tool for managing reports on the Etendo platform. By automating and simplifying the process of creating, editing, and registering reports, it allows developers and system administrators to optimize the workflow related to generating custom reports and integrating them into Etendo modules.
-
----
-
-##### Module Creator
-
-
-###### How to Create a Module in Etendo Classic
-
-Etendo Classic allows you to create modules that provide additional functionality that can be deployed independently. These modules can range from additional reports to content packs (translations, chart of accounts, etc.). In this guide, we will walk through the process of creating a module using the **CreateModuleWebHook**.
-
-####### Steps to Create a Module
-
-To start creating your module in Etendo, follow the steps below.
-
-######## 1. Gather Required Information
-
-Before you can create your module, you need to provide the following information:
-
-- **Javapackage**: The Java package of the module (e.g., `com.etendoerp.copilot.prueba`).
-- **Module Name**: A name for your module (e.g., `Test Module`).
-- **Description**: A brief description of the module's functionality.
-- **Help/Comment**: Additional help text or comments regarding the module (optional).
-- **Version**: The version of the module (e.g., `1.0.0`).
-- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `FJTS`).
-- **License**: The license type for the module. Options are:
-    - `Apache License 2.0`
-    - `Openbravo Public License`
-    - `Mozilla Public License 1.1`
-    - `Etendo Commercial License`
-
-######## 2. Call the `CreateModuleWebHook`
-
-The `CreateModuleWebHook` simplifies the creation process by automating various steps. This webhook will:
-
-- Validate all the parameters (such as module name, version, and license).
-- Assign the database prefix.
-- Register the module.
-- Optionally, add module dependencies.
-
-######## 3. Webhook Call Example
-
-When invoking the webhook, the **body parameters** should follow this structure:
-
-```json
-body_params = {
-  "Javapackage": "com.etendoerp.copilot.test",
-  "SearchKey": "testmodule",
-  "ModuleName": "Test Module",
-  "HelpComment": "This is a test module created for demonstration purposes.",
-  "Description": "This module adds test functionality to Etendo Classic.",
-  "Version": "1.0.0",
-  "Prefix": "FJTS",
-  "ModuleLicense": "Etendo Commercial License"
-}
-```
-
-**Note**: The database prefix must always be in uppercase.
-
-######## 4. Example Interaction with the Assistant
-
-Here is an example interaction with the module creation assistant:
-
-**User Input:**
-```
-I need to create a new module in Etendo. The data is as follows:
-- Javapackage: com.etendoerp.copilot.test
-- Module Name: Test Module
-- Description: Infer the description
-- Help/Comment: Infer the help/comment
-- Version: 1.0.0
-- DBprefix: FJTS
-- License: Etendo Commercial License
-```
-
-**Assistant Response:**
-```
-To create your module in Etendo, I have inferred the following:
-
-- Description: "This module adds test functionality to Etendo Classic."
-- Help/Comment: "This is a test module created for demonstration purposes."
-
-Your module has been created successfully, and it only depends on the Core module. If it depends on other modules, you should add them yourself.
-```
-
-![ModuleCreation.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation.png)
-
-If we go to the "Module" window we can find the created record.
-
-![ModuleCreation2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation2.png)
-
-The module will also have the dependency, in this case "Core" with the prefix and data package mentioned by the user.
-
-![ModuleCreation3.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation3.png)
-
-![ModuleCreation4.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation4.png)
-
-![ModuleCreation5.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation5.png)
-
-######## Components
-
-The Module Creator Assistant is composed of the following tools:
-
-- **ApiCallTool**:
-    - This tool executes a call to an API and returns the response.
-
-######## 6. Validation and Registration
-
-Once the webhook has been called, it will automatically:
-
-- Register the module in Etendo.
-- Assign the **Java package** and **database prefix**.
-- Handle the specified **license**.
-- Set up basic **module dependencies**.
-
-You can confirm that the module has been created by navigating to the `Module` window in Etendo.
-
-####### Additional Information
-
-######## Managing Dependencies
-
-If your module depends on other modules (besides the Core module), you need to manually add these dependencies in the `Dependency` tab of the module window.
-
-######## Editing the Module
-
-You can further edit the module properties, such as changing descriptions or adding more complex logic, through the Etendo development environment.
-
-######## License Handling
-
-The license you choose will determine how the module is handled legally. Ensure you select the appropriate license based on your module's distribution needs.
-
-####### Conclusion
-
-The **CreateModuleWebHook** greatly simplifies the process of creating and registering modules in Etendo. By providing the necessary parameters, you can quickly deploy your functionality without extensive manual setup.
-
-For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
-
----
-
-##### Button Process Creator
-
-
-###### Button Process Creation Assistant for Etendo Classic
-
-This assistant simplifies the process of creating and registering buttons and process definitions in **Etendo Classic**. By automating the workflow through webhooks, it removes the need for manual configuration, ensuring that your processes and buttons are set up correctly and efficiently.
-
-####### Functionality Overview
-
-The **Button Process Creation Assistant** automates the creation of a button and the registration of a process in **Etendo Classic** through a webhook call. Here's what it does:
-
-1. **Validation of Parameters**:
-    - Ensures that all required fields (such as module prefix, Java package, process name, etc.) are provided.
-    - Validates that the search key is properly formed (e.g., including the module prefix).
-
-2. **Process Button Creation**:
-    - Creates a Java class for a process button that extends `BaseProcessActionHandler`.
-    - Registers the button in the specified window, tab, and table of the Etendo system.
-
-3. **Process Definition Creation**:
-    - Registers the process in the system by creating a process definition.
-    - Associates the process with parameters, if needed.
-
-4. **Parameter Registration**:
-    - Automatically registers any necessary parameters for the process with attributes such as database name, name, length, sequence number, and reference.
-
-5. **Webhook Automation**:
-    - The entire process is executed via a webhook, ensuring seamless and automated integration into Etendo Classic.
-
-####### Required Data for Button and Process Creation
-
-When creating a button or registering a process, the assistant will request the following information:
-
-- **Java Package**: The Java package of the module where the button's class will be created (e.g., `com.etendoerp.module`).
-- **Module Prefix**: A prefix for the module (e.g., `COPDEV`).
-- **Window**: The window in Etendo where the button will appear.
-- **Tab**: The specific tab within the window where the button will be located.
-- **Table**: The table associated with the process.
-- **Process Name**: The name of the process to be created.
-- **Search Key**: A unique search key for the process that includes the module prefix (e.g., `COPDEV_ActualizarDescripciónPedido`).
-- **Parameters**: Optional parameters for the process, including:
-    - **BD_NAME**: The database column name.
-    - **NAME**: The name of the parameter.
-    - **LENGTH**: The length of the parameter field.
-    - **SEQNO**: The sequence number of the parameter.
-    - **REFERENCE**: A reference for the parameter (if it's linked to another field or table).
-- **Help Comment**: An optional help comment for the process.
-- **Description**: An optional description for the process.
-
-####### Webhook Call for Process Definition
-
-The webhook call used to register the process in Etendo will require the following body parameters:
-
-```json
-body_params = {
-    "Prefix": "COPDEV",
-    "SearchKey": "COPDEV_ActualizarDescripciónPedido",
-    "ProcessName": "ActualizarDescripciónPedidos",
-    "HelpComment": "This process updates the description of associated orders.",
-    "Description": "A process to update the description of the associated sales orders based on a text input.",
-    "Parameters": [
-        {
-            "BD_NAME": "text_parameter",
-            "NAME": "Description Text",
-            "LENGTH": 255,
-            "SEQNO": 10,
-            "REFERENCE": "Text"
-        }
-    ],
-    "JavaPackage": "com.etendoerp.copilot.devassistant"
-}
-```
-
-This call registers the process in the system and attaches the necessary parameters.
-
-####### Example Usage
-
-Here's an example of how the assistant is used to create and register a process in Etendo:
-
-######## User Request:
-```
-I want to create a button for a process in the "Sales Invoice" window. The button will allow users to update the description of associated sales orders with a text input. Here are the details:
-
-- Java package: com.etendoerp.copilot.devassistant
-- Module prefix: COPDEV
-- Window: Sales Invoice
-- Tab: Header
-- Table: C_invoices
-- Process name: UpdateOrderDescriptions
-- Search key: COPDEV_UpdateOrderDescriptions
-
-Please infer the necessary parameters.
-```
-
-######## Assistant Response:
-
-The assistant will infer that the process needs a text parameter and will generate the following response:
-
-```
-To create your button and register the process, I have inferred the following:
-
-Process Name: UpdateOrderDescriptions
-Search Key: COPDEV_UpdateOrderDescriptions
-Parameters:
-- BD_NAME: "description_text"
-- NAME: "Order Description"
-- LENGTH: 255
-- SEQNO: 10
-- REFERENCE: Text
-
-Your process definition has been saved successfully.
-```
-
-The process and the button will be automatically registered, and the user will be notified.
-
-![ButtonProcess.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess.png)
-
-At this point we will have the Java class of the button created along with the registered process.
-
-![ButtonProcess2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
-
-
-####### Components
-
-The Button Process Assistant is composed of the following tools:
-
-- **ApiCallTool**:
-    - This tool executes a call to an API and returns the response.
-
-- **ReadFileTool**:
-    - Reads JRXML files from the path provided by the user.
-
-- **WriteFileTool**:
-    - Saves reports to the specified path or rewrites files with the requested modifications.
-
-####### Conclusion
-
-The **Button Process Creation Assistant** greatly simplifies the task of creating buttons and registering process definitions in Etendo. By automating this workflow through webhooks, you can focus on core development tasks, trusting that the setup and configuration are handled quickly and accurately.
-
-For further customization and development, refer to the official Etendo documentation and API specifications.
-
----
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -50823,7 +50767,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.0){target="_blank"} | 30/09/2024 | 24.3.0 | QAA | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso){target="_blank"} | :white_check_mark: |
+| [24Q3.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.1){target="_blank"} | 10/10/2024 | 24.3.1 | QAA |  | :white_check_mark: |
+| [24Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.0){target="_blank"} | 30/09/2024 | 24.3.0 | C | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso){target="_blank"} | :white_check_mark: |
 | [24Q2.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.8){target="_blank"} | 27/09/2024 | 24.2.8 | CS |  | :white_check_mark: |
 | [24Q2.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.7){target="_blank"} | 20/09/2024 | 24.2.7 | C |  | :white_check_mark: |
 | [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | C |  | :white_check_mark: |
@@ -50959,7 +50904,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.3.0){target="_blank"} | 27/09/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.4.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | CS | :white_check_mark: |
+| [2.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.3.0){target="_blank"} | 27/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.2.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.1){target="_blank"} | 20/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.0){target="_blank"} | 13/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.1.1){target="_blank"} | 04/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
@@ -51572,7 +51518,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.5.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.5.1){target="_blank"} | 01/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.6.0){target="_blank"} | 07/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.5.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.5.1){target="_blank"} | 01/10/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.5.0){target="_blank"} | 27/09/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.4.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.2){target="_blank"} | 20/09/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.4.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.4.1){target="_blank"} | 30/08/2024 | 23.4.0 | * | C | :white_check_mark: |
