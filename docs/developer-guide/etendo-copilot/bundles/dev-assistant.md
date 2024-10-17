@@ -60,7 +60,7 @@ This assistant is capable of creating Event Handlers in Etendo Classic. You only
 
 #### Functionality
 
-**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the wizard requires the following parameters:
+**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the assistant requires the following parameters:
   
 - **Java package**: The package where the file will be saved.
 - **File name**: The name of the file to create.

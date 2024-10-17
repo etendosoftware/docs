@@ -21,7 +21,11 @@ The Copilot Extensions Bundle includes functionalities for developers to help th
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** module includes assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_DFDU31P2Ns?si=yckhyb6mVIJt5R0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The **Dev Assistant** module includes various development assistants that will facilitate developers the processes of creating buttons, windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
     For more information, visit: [Dev Assistant developer guide](../../etendo-copilot/bundles/dev-assistant.md).
+
+
