@@ -29861,12 +29861,25 @@ Then, from the Dependency Management window you can update, remove and change th
 To install this package that will allow you to manage other packages directly from the Etendo Classic interface you must add in the `build.gradle` file the following dependency:
 
 
-``` groovy title="gradle.properties"
+``` groovy title="build.gradle"
 dependencies {
 // Add your dependency here
     implementation('com.etendoerp:dependencymanager:1.1.0')
 }
 ```
+!!! warning
+    You must make sure to use Gradle plugin version `1.4.0` or higher, check the plugins section also in the `build.gradle` file.
+
+    ``` groovy title="build.gradle"
+    plugins {
+    id 'java'
+    id 'war'
+    id 'groovy'
+    id 'maven-publish'
+    id 'com.etendoerp.gradleplugin' version '1.4.0'
+    }
+    ```
+
 Then, to install the module run the command gradle : 
 
 ``` bash title="Terminal"
