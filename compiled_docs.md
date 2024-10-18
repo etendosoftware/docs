@@ -47256,7 +47256,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
     ./gradlew copilot.stop
     ```
 
-6. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Assistant Configuration Guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md){target="_blank"}.
+6. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Copilot Setup and Usage](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md){target="_blank"}.
 
 
 ==ARTICLE_END==
