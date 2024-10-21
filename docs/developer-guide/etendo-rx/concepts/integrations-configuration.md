@@ -15,10 +15,10 @@ tags:
 In this section, the different windows included in the [Etendo connector](#connector) configuration are explained. In this configuration, the windows [Entity Mapping](#entity-mapping) and [External ID Mappings](#external-id-mappings) are also used.
 
 !!! info
-    For more information about Etendo RX services, visit [Etendo RX Getting Started](../getting-started.md)
+    For more information about Etendo RX services, visit [Etendo RX Getting Started](../getting-started.md).
 
 
-### Connector
+## Connector
 
 :material-menu: `Application` > `Etendo RX` > `Integrations Configuration` > `Connector`
 
@@ -27,13 +27,12 @@ A connector is a mechanism or intermediary component that enables communication 
 In the Connector window, you can define one connector for each external system with which Etendo will be synchronized.
 
 By default, the Etendo standard connector has 5 layers 
-- Communication layer: With services such as Debezium, Kafka and DAS. These are in charge of CHECK VIDEO?
+
+- Communication layer: This is an interface to communicate with different protocols. It uses services such as Debezium, Kafka and DAS. 
 - Model layer: For each object required to synchronize, it is necessary to define a converter. For this, the Projection and mappings window is used to generate the REST API, which models data in Etendo.
 - Synchronization layer: This layer is functional, but must be extendable and overridable to allow a new integration that has other logic. it gives Unidirectional and Bidirectional synchronization functionality
-- ...
--
-
-LAYERS
+- Logic layer: This layer allows defining the logic in the different steps of sync.
+- Specific connector: It is the specific step to implement and decide which specialization is applied in each layer.
 
 VA
 
@@ -44,7 +43,7 @@ Fields to note:
 - Module: It indicates the module the element forms part of. This is the module in which the configuration is exported.
 - Active: A check to indicate whether this connector is available or disabled.
 
-#### Instance Connector Tab
+### Instance Connector Tab
 
 In this tab, the user can define the instances to use the connector. The same connector can have multiple instances. For example, Etendo could be connected with two different instances of an external system, and take different information from each instance at the same time.
 
@@ -60,10 +59,10 @@ Fields to note:
 - Password: The necessary password to log in the external system. This field is only available if the option Basic Auth is selected in the Authorization Type field.
 - oAuth Token: The necessary token to log in the external system. This field is only available if the option X Token is selected in the Authorization Type field.
 - Active: A check to indicate whether this instance connector is available or disabled.
-- Etendo to External Endpoint:
-- External to Etendo Endpoint:
+- Etendo to External Endpoint: ?
+- External to Etendo Endpoint: ?
 
-#### Instance Connector Mapping Subtab
+### Instance Connector Mapping Subtab
 
 In this subtab, it is possible to define entities to map for each connected instance.
 
@@ -72,10 +71,10 @@ VA
 Fields to note:
 
 - Entity Mapping: A dropdown list with the available [entities mappings](#entity-mapping) in the currect instance connector. 
-- Filter: It is possible to filter the records to synchronize using [JAXB](to complete) language. This is an advanced feature to be used to synchronize records following a specific logic.
+- Filter: It is possible to filter the records to synchronize using [JAXB](https://en.wikipedia.org/wiki/Jakarta_XML_Binding){target="_blank"} language. This is an advanced feature to be used to synchronize records following a specific logic.
 - Active: A check to indicate whether this mapping is available or disabled.
 
-### Entity Mapping
+## Entity Mapping
 
 :material-menu: `Application` > `Etendo RX` > `Integrations Configuration` > `Entity Mapping`
 
@@ -103,24 +102,28 @@ Fields to note:
 
 JSONpath? (Mentioned in the video, Mati's doing it, minute 38)
 
-#### Post Process Action
+JSONPath expressions can be configured by the user to retrieve specific data and assign it to a field in the Writing DTO. This feature enhances the system's polymorphism by allowing data to be interpreted and assigned at any level within the JSON structure. (Check if this info is OK)
 
+### Post Process Action
+
+In this tab, create a new record by selecting the desired process created in Process Definition in the On process definition property.
+
+Fields?
 ...???
 
-### External ID Mappings
+## External ID Mappings
 
 :material-menu: `Application` > `Etendo RX` > `Integrations Configuration` > `External ID Mappings`
 
-Definition of External ID Mappings
+This is a read-only window. Here, the External and internal ID Mappings are saved. Each time an entity is synchronized...
 
 VA
 
 Fields to note:
 
 - Organization: The corresponding organization of the ?.
-- Instance Connector:
-- Record ID:
-- External ID:
-- Table:
+- Instance Connector: Read-only field.
+- Record ID: Read-only field. 
+- External ID: Read-only field.
+- Table: Read-only field. Corresponding mapping table.
 - Active: A check to indicate whether this record is available or disabled.
-
