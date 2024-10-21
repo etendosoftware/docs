@@ -46,9 +46,11 @@ This section describes the windows that are necessary to configure the accountin
 [:material-file-document-outline: Balance Sheet and P/L Structure Setup](#balance-sheet-and-pl-structure-setup){ .md-button .md-button--primary } <br>
 
 
-## **Open/Close Period Control**
+## Open/Close Period Control
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Open/Close Period Control`
+
+### Overview
 
 Open/Close Period Control feature manages the periods of an organization. This feature applies to organizations for which the "Period Control" feature is enabled.
 
@@ -205,11 +207,13 @@ Notice that:
 
 ## Financial Type
 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Financial Type`
+
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 
-### Introduction
+### Overview
 
 In this window, the user can configure the different options to use in the Financial Type Configuration window.
 
@@ -228,9 +232,11 @@ The information imported from the Financial Type window is shown.
 ![](../../../../../assets/drive/1Xyc0F9xpyGMqp2Aq_MArXwdIGjdtgpw0.png)
 
 
-## **Period Control Log**
+## Period Control Log
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Period Control Log`
+
+### Overview
 
 This window shows the log for period control.
 
@@ -252,9 +258,11 @@ As shown in the image above, the main fields in this Window are:
 -   Period Action. The action that has taken place. It can be Open Period, Close Period or Permanently Close Period.
 -   Document Category. If the Period Action has been done only for Document Type, it will be shown here. This means that the Period Action has affected only the shown Document Type for that Period, not all the other Document Types, which remains in the same status as before.
 
-## **Account Tree**
+## Account Tree
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Account Tree`
+
+### Overview
 
 An account tree is the way Etendo captures the chart of accounts of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger.
 
@@ -291,7 +299,7 @@ Additionally, a CSV file can be imported while running the Initial Client Setup 
 
 Finally, a chart of accounts can also be created manually, regardless it is recommended to start from a sample chart of accounts like the generic one and evolve it for the company’s needs rather than starting from scratch.
 
-#### **Element**
+#### Element
 
 The account tree window allows the user to review and maintain the chart of accounts imported through a chart of accounts module, as well as to create new ones from scratch.
 
@@ -303,7 +311,7 @@ As a side note, this is not the preferred method but to install it at organizati
 
 If a *Chart of Accounts* module is installed and then selected at *organization* level through the Initial Organization Setup process, the chart of accounts automatically created is linked to the organization being created.
 
-#### **Element Value**
+#### Element Value
 
 Element value tab lists every chart of account elements from the chart of accounts headings to the subaccounts.
 
@@ -385,7 +393,7 @@ Additionally, there are other advanced fields which also help to configure more 
 -   **"Element Shown"** defines if an account tree element is going to be shown in the financial reports or not. This one can be used for elements used to execute calculations which do not need to be shown in a report.
 -   **"Title Node"** defines if an account tree element is going to be shown in the financial reports just as a "Title" without including its balance. This option works for heading account tree elements which balance is not 100% accurate for whatever kind of reason as there is another element which gets the correct balance value by using operations or customized elements between a set of given elements.
 
-#### **Customized Elements**
+#### Customized Elements
 
 The customized elements tab allows the user to get an account tree element as a combination of a given list of existing elements.
 
@@ -401,11 +409,11 @@ as shown in the image below.
 
 ![](../../../../../assets/drive/1fwBuS2sV-ufKxTap5X_O02nkVrMJOD_i.png)
 
-#### **Translation**
+#### Translation
 
 Account elements can be translated to any language required.
 
-#### **Account Tree creation**
+#### Account Tree creation
 
 A chart of accounts creation from scratch implies to create each chart of accounts element one by one:
 
@@ -448,7 +456,7 @@ The next thing to do in this tab is to create one element value per each financi
 -   Balance Sheet nodes are "Assets", "Liabilities" and "Owner's Equity"
 -   Profit and Loss nodes are "Revenue" and "Cost of Goods Sold" among others
 
-##### **Balance Sheet Elements**
+##### Balance Sheet Elements
 
 Let us focus first on explaining the creation of the nodes/elements of a **Balance Sheet** financial statement.
 
@@ -754,9 +762,11 @@ Once created, the accounts below (subaccounts) can be created and move underneat
 
 ![](../../../../../assets/drive/1a2sIjZMYnytbKtZw8g42pCYzy9EfSb2M.png)
 
-## **General Ledger Configuration** {#glconfig}
+## General Ledger Configuration
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `General Ledger Configuration`
+
+### Overview
 
 The general ledger configuration indicates the way that the organization's financial transactions are going to be posted to the ledger.
 
@@ -782,7 +792,7 @@ Additionally, a general ledger configuration can also be created manually, but o
 
 Finally, it is important to remark that the organization's general ledger configuration and the organization's account tree (or chart of accounts) are linked to each other because "Account" is a mandatory dimension of the general ledger configuration.
 
-#### **General Ledger Configuration**
+#### General Ledger Configuration
 
 The General Ledger Configuration window allows the user to review and maintain defaulted general ledger configurations and to create new ones if needed.
 
@@ -850,7 +860,7 @@ It is possible to uncheck any of the checkboxes listed above. For instance, an o
 
 Finally, it is important to remark that the "**Central Maintenance**" checkbox is not selected by default for the general ledgers created by default, as the corresponding accounting CSV files or reference data imported have their own configuration through the "Account Sign".
 
-#### **Dimension**
+#### Dimension
 
 Dimension tab allows the user to configure the organization's general ledger dimensions or to add additional accounting dimensions not centrally maintained in the client.
 
@@ -890,7 +900,7 @@ Moreover:
     -   The **Account** dimension always appears in the Lines tab of a G/L Journal, however it does not appear in the Lines tab of a purchase invoice as that data is automatically taken from the accounts (subaccounts) setup for the product, for the business partner and for the taxes, if any.
 -   Some dimensions appear either in the header and/or in the lines of the documents. That defaulted configuration can be changed only in the clients which centrally maintain the accounting dimensions and for the centrally maintained dimensions.
 
-#### **Active Tables**
+#### Active Tables
 
 Active Tables tab allows the user to define which tables and therefore transactions are going to be posted to the ledger and which ones not.
 
@@ -928,11 +938,11 @@ There is a flag named "**Disable for Background**" next to each table above, whi
 
 In other words, it is possible to configure that the transactions related to a given "Table", for instance the "Invoice" table, are not taken by that process, therefore, they will not be automatically posted.
 
-#### **Documents**
+#### Documents
 
 Documents tab allows the user to define which document types of a table allow negative posting and if they use a different accounting process than the default one based on a given accounting template.
 
-#### **General Accounts**
+#### General Accounts
 
 General accounts tab allows the user to define the accounts to be used in balancing entries and in the end-year closing process.
 
@@ -1091,15 +1101,17 @@ Finally, navigate to the Defaults tab to configure the default accounts which ne
     As every time that a transaction of any type is posted to the ledger, it is posted to the two general ledgers configured for the Organization.
 
 
-## **Fiscal Calendar**
+## Fiscal Calendar
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Fiscal Calendar`
+
+### Overview
 
 "Legal entities with accounting" organization types must have a fiscal calendar assigned, while the rest of organization types can inherit it from its parent.
 
 A calendar contains years and the periods of each year required to get an accurate organization's accounting practice.
 
-#### **Calendar**
+#### Calendar
 
 The fiscal calendar window allows the user to create and maintain the organization's fiscal calendar.
 
@@ -1117,7 +1129,7 @@ Etendo automatically proposes the organization as \* while creating a fiscal cal
 -   Accepting this default means that this calendar will be maintained at the client level and will therefore be available to all another organizations created within this client.
 -   Changing this default to other organization means that this calendar will only be available to that organization.
 
-#### **Year**
+#### Year
 
 Year tab allows the user to create as many fiscal years as required within a fiscal calendar.
 
@@ -1163,13 +1175,15 @@ The period tab lists all the periods of a year.
 
 ![](../../../../../assets/drive/1He-55aAYDSVEVm8vWy9_ER_h0k2qSIK5.png)
 
-## **Account Combination**
+## Account Combination
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Account Combination`
+
+### Overview
 
 An account combination is an Organization's General Ledger account.
 
-#### **Combination**
+#### Combination
 
 The Account Combination window allows the user to review the Organization's General Ledger accounts.
 
@@ -1185,9 +1199,11 @@ The account combination window shows the data below:
 -   the *Organization*
 -   and the *Account*
 
-## **Accounting Process**
+## Accounting Process
 
-### **Introduction** 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Accounting Process`
+
+### Overview 
 
 In this window, the user can configure necessary accounting processes.
 
@@ -1196,9 +1212,11 @@ In this window, the user can configure necessary accounting processes.
 !!!info
     For more information, visit the developer guide on [How to Create a Module that Adds an Accounting Process](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md).
   
-## **G/L Item**
+## G/L Item
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `G/L Item`
+
+### Overview
 
 A G/L item is an account item to be used for direct account posting.
 
@@ -1208,7 +1226,7 @@ Direct account posting refers to:
 -   creating and posting financial invoices such as Purchase Financial invoices, same applies to sales.
 -   or creating and posting G/L item payments in a GL Journal.
 
-#### **G/L Item**
+#### G/L Item
 
 G/L Item window allows the user to create as many account items as required for an organization and general ledger.
 
@@ -1221,7 +1239,7 @@ As shown in the image above, a G/L item or accounting item can be created by ent
 -   the flag *"Enable in Financial Invoices"* define if the item can be used as an account while creating and posting financial sales and purchase invoices, if that is the case:
     -   a *Tax Category* will have to be selected to get that purchase or sales taxes are properly calculated.
 
-#### **Accounting**
+#### Accounting
 
 Account items are directly related to the debit and credit accounts to be used while posting them.
 
@@ -1229,7 +1247,9 @@ Account items are directly related to the debit and credit accounts to be used w
 
 As shown in the image above, the accounting tab allows the user to enter debit and credit accounts for the G/L item. It is possible to enter a debit and a credit account for each organization's general ledger configuration.
 
-## **G/L Category**
+## G/L Category
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `G/L Category`
 
 In this window, the user can define G/L Categories to be used in the General Ledger.
 
@@ -1252,11 +1272,11 @@ Once the needed information is complete, the categories are defined as in the fo
 
 ![](../../../../../assets/drive/1Im9vUdoxlQDR3jvfk8F9Qsbd8brcpWty.png)
 
+## Document Type
 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Document Type`
 
-## **Document Type**
-
-### **Introduction**
+### Overview
 
 Each document type in Etendo refers to a business transaction such as purchase orders, shipments or sales invoices, among others.
 
@@ -1305,7 +1325,7 @@ The complete list of standard document types is the following:
 
 It is also important to remark that *new document types could be added to the list above*, if that is the case an updated version of the "Reference Data" containing the new document types will be provided by Etendo. That newly created "Reference Data" will have to be applied to the corresponding Organization in the Enterprise Module Management.
 
-#### **Document Definition**
+#### Document Definition
 
 Document type window allows the user to configure how each document type is going to behave in terms of accounting and sequencing among others.
 
@@ -1409,7 +1429,9 @@ Document types can be translated to any language required.
 
 ## Document Sequence
 
-### Introduction
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Document Sequence`
+
+### Overview
 
 Every document in Etendo can be numbered and therefore linked to a document sequence.
 
@@ -1511,9 +1533,11 @@ Sequence masking always uses numeric key to parse the input. Therefore, the mask
 | yy-MM-dd/### | 1   | 21-08-31/01 |
 | y-#### | 25  | 2021-025 |
 
-## **Tax Category**
+## Tax Category
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Tax Category`
+
+### Overview
 
 A tax category allows the user to group and manage similar product or services tax rates.
 
@@ -1529,7 +1553,7 @@ Tax categories allow the user to group similar tax rates by having into account 
 -   there are other variables which can reduce up to just "one" the correct tax rate to use while entering a product and a business partner in an invoice.  
     Those variables are related to the business partner tax category as well as the way each tax rate is configured.
 
-#### **Tax Category**
+#### Tax Category
 
 It is possible to create as many tax categories as required to be later on linked to the corresponding tax rates and products.
 
@@ -1546,13 +1570,15 @@ Once created, the tax categories must be assigned to the corresponding products 
 
 If the tax category is flagged as *As per BOM*, it indicates that products with this category will use the products included in its Bill of Materials list to calculate proportionally the taxes. In this case, only one Tax\_Rate has to be configured for this tax category flagged as *Summary level*.
 
-#### **Translation**
+#### Translation
 
 Tax categories can be translated to any language required.
 
-## **Business Partner Tax Category**
+## Business Partner Tax Category
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Business Partner Tax Category`
+
+### Overview
 
 A business partner tax category allows the user to group and manage similar business partners tax rates.
 
@@ -1578,7 +1604,7 @@ Those variables are related to the tax category as well as the way each tax rate
 
 The end-user could need to select a particular tax rate under a given business scenario that is not the common one.
 
-#### **Business Partner Tax Category**
+#### Business Partner Tax Category
 
 It is possible to create as many business partners categories as required to be later on linked to the corresponding tax rates and business partners, if applicable.
 
@@ -1587,19 +1613,21 @@ Once created, the business partner tax categories must be linked to the correspo
 -   the Customer tab of the Business Partner window.
 -   and/or the Vendor/Creditor tab of the Business Partner window.
 
-## **Tax Rate**
+## Tax Rate
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Tax Rate`
+
+### Overview
 
 Each tax rate in Etendo is a combination of different variables such as the tax category, the rate and the business partner tax category among others. If all those variables are properly set up, the correct tax rate is automatically filled in every business transaction.
 
 It is possible to create *tax rates* which are a *combination* of more than one tax rate. That scenario can apply to a business partner who is subject to VAT and Income tax at the same time while renting an office to a third party out of its "normal" business activities.
 
-#### **Applying Taxes**
+#### Applying Taxes
 
 Taxes are applied to orders and invoices. In this process, there are two steps: associate the desired tax to the line and process the document that will apply the tax and calculate the actual amount.
 
-#### **Obtaining Default Tax**
+#### Obtaining Default Tax
 
 When in a document line (order or invoice) a product is selected, a default tax is associated to this line. Keep in mind that we can select the tax we want for this line. The selection of the default tax is achieved by the C\_GetTax DB stored procedure. The rules followed by this procedure are as follows:
 
@@ -1615,7 +1643,7 @@ When creating a new invoice, it is possible to write down taxes manually and che
 
 Not recalculating taxes is useful for invoices that include tax lines without a product. For example, it can be used for imported products: these products usually have an invoice that is tax-exempt and another invoice that is created by the custom broker without any product, but a tax amount for the imported products.
 
-#### **Calculating actual amount**
+#### Calculating actual amount
 
 When these documents are processed (c\_order\_post and c\_invoice\_post), the actual taxes and amounts are calculated from the selected taxes (unless they are defined as “no recalculate” for invoices) following these steps:
 
@@ -1625,7 +1653,7 @@ A new line is created in C\_OrderTax or C\_InvoiceTax tables for every different
 
 For taxes defined as summary, a new line is inserted for each of its children and the amount is calculated taking into account whether or not the children are cascade.
 
-#### **Tax**
+#### Tax
 
 Tax rate window allows the user to create as many tax rates as required.
 
@@ -1788,29 +1816,33 @@ In other words, a negative withholding posting means a negative debit posting wh
 | Tax Credit |     | Withholding Amount | One per withholding line |
 | Vendor Liability |     | Total Gross Amount | (Line Net Amount+Tax Amount-Withholding Amount) |
 
-## **Cost Center**
+## Cost Center
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Cost Center`
+
+### Overview
 
 Cost Center is an accounting dimension which can be used while posting documents to the ledger.
 
 ![](../../../../../assets/drive/1vk6c1L49EaXAtzd0A121Tq55wJZfq1Fu.png)
 
-#### **Cost Center**
+#### Cost Center
 
 The Cost Center window allows the user to create organization's cost centers. It is used as a master of the cost centers of an organization.
 
 A cost center can be created by just entering the name and the description of the organization's cost center. If a cost center is created for the (\*) organization that cost center will then be available to all the organizations of the client. A cost center can be created as summary which helps to get a tree structure of cost centers.
 
-## **ABC Activity**
+## ABC Activity
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `ABC Activity`
+
+### Overview
 
 Activity based costing (ABC) is a special costing model that identifies activities in an organization for which managing cost is required.
 
 "*Activity*" is one of the dimensions which can be set up for a given general ledger configuration.
 
-#### **Activity**
+#### Activity
 
 ABC Activity window allows the user to create as many activities as required per each organization.
 
@@ -1820,7 +1852,9 @@ As shown in the screen above, it is possible to define summary activities which 
 
 ## Accounting Templates 
 
-### Introduction 
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Accounting Templates`
+
+### Overview 
  
 Accounting templates in Etendo overwrite default accounting behavior. Each template is related to a specific table.
 
@@ -1838,7 +1872,7 @@ The Java class that implements the generation of the new accounting entries is d
 This Accounting Template will be later on associated with the Active Tables or a Document. So in this step it is important to define as many Java classes as Active Tables or Document to override their accounting behavior.
 For example, we can define an unique java class for overriding the accounting behavior of all the invoices (sales invoices, purchase invoices, purchase/sales credit memo, etc.), or alternatively define a class for overriding only the accounting entries for Purchase Invoices (AP Invoice) and keep the default behavior to the rest of the invoices.
 
-#### Dataset definition
+#### Dataset Definition
 
 Dataset definition is a key step in this process. A wrong dataset definition can waste all previous work, so it is important to follow all these considerations:
 
@@ -1885,9 +1919,11 @@ A new layer will be included between the document, and the logic that posts that
     Application is not affected by these developments, because all changes to the way the documents are posted are transparent to the user. Only a new window is necessary, that is configured automatically for the user when updating.
 
 
-## **Balance Sheet and P/L Structure Setup**
+## Balance Sheet and P/L Structure Setup
 
-### **Introduction**
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Balance Sheet and P/L Structure Setup`
+
+### Overview
 
 Balance Sheet and P&L structure setup allows the user to configure the two main financial reports which are the Balance Sheet and the P&L.
 
@@ -1902,7 +1938,7 @@ Moreover, and as already described, an Account Tree or chart of accounts can be 
 -   in the case of manually created account trees:
     -   it is key to take into account that financial reports structure relies on the account tree structure.
 
-#### **Setup**
+#### Setup
 
 Each new record in the Balance Sheet and P&L structure setup window is a report.
 
@@ -1924,13 +1960,13 @@ The fields to fill in this window are:
 -   finally the **Balanced** flag which must be activated whenever the report need to be launched just for "Legal with Accounting" organization types as that is the enterprise level where accounting balance is ensured.  
     This flag needs to be checked as active for the Balance Sheet report.
 
-#### **Grouping Category**
+#### Grouping Category
 
 Grouping category tab allows the user to define categories which groups report node/s. Each grouping category implies a page break in the report showing the defined report node/s.
 
 ![](../../../../../assets/drive/1SWF7a1R4E3wI7Qx_nxPBzfoHqn9aneBF.png)
 
-#### **Node**
+#### Node
 
 A node defines the information shown in the report.
 
@@ -1943,7 +1979,7 @@ A report node is defined by:
     -   The account elements selected here are usually "*Heading*" element level types,  
         therefore the calculated balance of the node will take into account and will show the balance of all the account elements of other types which are underneath it.
 
-#### **Balance Sheet Structure Setup Example**
+#### Balance Sheet Structure Setup Example
 
 One example of a Balance Sheet structure can be:
 
@@ -1956,7 +1992,7 @@ One example of a Balance Sheet structure can be:
 
 Above nodes must be an Account Tree element properly configured.
 
-#### **P&L Setup Example**
+#### P&L Setup Example
 
 An example for a Profit and Loss report would be:
 
@@ -1967,56 +2003,3 @@ An example for a Profit and Loss report would be:
         -   Node: Profit and Loss linked to the "Heading" Account Tree element which collects all the "Expenses" and "Revenue" account tree elements.
 
 Above node must be an Account Tree element properly configured.
-
-## Bulk Posting
-
-### **Introduction**
-
-This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
-
-!!! warning
-    Before using this functionality, remember that this module's background process can affect the performance of the system.
-
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
-
-This functionality is available in the following windows:
-
-- [Amortization](../../financial-management/assets/overview.md#bulk-posting)
-- [Goods Movements](../../warehouse-management/transactions.md#bulk-posting_1)
-- [Financial Account](../../financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
-- [Matched Invoices](../../procurement-management/transactions.md#bulk-posting_2)
-- [Cost Adjustment](../../warehouse-management/transactions.md#bulk-posting_3)
-- [Bill of Materials Production](../../warehouse-management/transactions.md#bulk-posting_2)
-- [Internal Consumption](../../production-management/transactions.md#bulk-posting_1)
-- [Doubtful Debt](../../financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
-- [Landed Cost](../../procurement-management/transactions.md#bulk-posting_4)
-- [G/L Journal](../../financial-management/accounting/transactions.md#bulk-posting_1)
-- [Simple G/L Journal](../../financial-management/accounting/transactions.md#bulk-posting)
-- [Work Effort](../../production-management/transactions.md#bulk-posting)
-- [Goods Receipt](../../procurement-management/transactions.md#bulk-posting)
-- [Goods Shipment](../../sales-management/transactions.md#bulk-posting)
-- [Return Material Receipt](../../sales-management/transactions.md#bulk-posting_1)
-- [Return to Vendor Shipment](../../procurement-management/transactions.md#bulk-posting_3)
-- [Sales Invoice](../../sales-management/transactions.md#bulk-posting_2)
-- [Purchase Invoice](../../procurement-management/transactions.md#bulk-posting_1)
-- [Payment In](../../financial-management/receivables-and-payables/transactions.md#bulk-posting_1)
-- [Payment Out](../../financial-management/receivables-and-payables/transactions.md#bulk-posting)
-- [Physical Inventory](../../warehouse-management/transactions.md#bulk-posting)
-
-
-#### Accounting Status
-
-All the records existing previously to the installation of this new functionality have a default “pending refresh” value in the column Accounting Status. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
-
-##### Preference Configuration
-
-To configure the preference, go to the “Preference” window and create a new record with the property “Days Back to Refresh Accounting” and the default value “90”. If necessary, it is possible to create another preference by entering a new value and checking the “selected” box.
-
-##### Background Process
-
-It is necessary to run the “Refresh Accounting Status” background process to update the accounting status column.
-
-![](../../../../../assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)

@@ -6,7 +6,9 @@ Enterprise Model folder allows the user to create and model the Organizations wh
 
 ## Initial Organization Setup
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Initial Organization Setup`
+
+### Overview
 
 An Organization is an enterprise of a Client. A client can have at least one or even more than one organization as the way of configuring different types of enterprise models.
 
@@ -176,7 +178,9 @@ The basic variables to take into account while creating an organization of the t
 
 ## Enterprise Module Management
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Enterprise Module Management`
+
+### Overview
 
 Datasets allow the user to define reference data such as master data or configuration data for modules or even for Etendo core.
 
@@ -188,9 +192,11 @@ Reference data can be imported or applied to organizations in the "Enterprise Mo
 - If a reference data is applied at a parent organization, all the organizations which belong to it will have access to that data.
 - If a reference data is only applied to an organization which does not have any organization underneath in the tree, only that organization will have access to that data.
 
-## Organization type
+## Organization Type
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Organization Type`
+
+### Overview
 
 An organization can be a Legal Entity, a Business Unit or neither of both. You can also select if transactions are allowed or not for this organization type.
 
@@ -235,7 +241,9 @@ Additionally, an organization type can be configured as:
 
 ## Organization
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Organization`
+
+### Overview
 
 An organization is an enterprise of a Client. Each client must have at least one organization created by running the Initial Organization Setup process. The process of creating an organization ends after setting it as "Ready".
 
@@ -408,7 +416,7 @@ It is possible to define the priority of each organization's warehouse/s therefo
 
 ## Intercompany
 
-### Introduction
+### Overview
 
 This section describes the Intercompany module included in the Etendo Financial Extensions bundle.
 

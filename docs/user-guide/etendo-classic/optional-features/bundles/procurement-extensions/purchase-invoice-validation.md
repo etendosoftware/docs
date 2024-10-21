@@ -1,6 +1,8 @@
 
-## Overview
+# Purchase Invoice Validations
+:octicons-package-16: Javapackage: `com.etendoerp.purchase.invoice.validations` 
 
+## Overview
 <iframe width="560" height="315" src="https://www.youtube.com/embed/V80-YymMjFg?si=lYvSX9UxojxZVzTG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This module allows users to prevent the duplication of purchase invoices within the system, following some established rules. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice. The activation of this validation will be determined by a configurable preference.
@@ -18,6 +20,8 @@ Etendo will consider a purchase invoice duplicated if another purchase invoice w
 Purchase invoices in the system should have a unique supplier reference number for each business partner. This means that if two purchase invoices, for the same business partner, have the same reference number, they are considered duplicates.
 
 ## Preference
+
+:material-menu: `Application` > `General Setup` > `Application` > `Preference`
 
 A configurable system preference will be used to enable or disable the validation that prevents the duplication of purchase invoices. This allows the client to decide whether to use this functionality or not. The versatility of preferences allows modifying their visibility, determining whether the validation will be active for all users, roles, organizations, etc.
 

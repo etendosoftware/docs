@@ -6,8 +6,9 @@ title: Sales Management
 
 Sales Management deals with all activities related to the customer sales process and corresponding reporting.
 
+## Sales Quotation
 
-## **Sales Quotation**
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Quotation`
 
 A Quotation is not a sales order document type but a different document type named "Quotation" linked to a specific document sequence.
 
@@ -219,6 +220,8 @@ This process allows the user to adjust the price of one or more budget lines, ei
 ![](../../../../assets/drive/1AI28ZDh33qlFigapI41CdMpg6Eeb3bGN.png)
 
 ## Sales Order
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Order`
 
 A sales order is a document that specifies products and/or services ordered by a specific business partner (customer), as well as the price and terms and conditions.  
 
@@ -537,6 +540,8 @@ In case the user has to create orders or invoices among two or more organization
 
 ## Goods Shipment
 
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Goods Shipment`
+
 In this section, you can create and manage goods shipments to your customers. A Goods Shipment is a document registering the specifics of items sent to a customer.
 
 This window allows the user to browse information about all Goods Shipments registered in the system and manually create new shipment documents. It is useful if execution of some scenario is required that is not supported by automatic shipments generation process (for example, partial shipment of the order or grouping of several orders and / or invoices in one shipment). For automatic creation use Create Shipments from Orders.
@@ -639,14 +644,16 @@ Once the shipment is successfully reactivated, the state of the document changes
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Return from Customer
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Return from Customer`
 
 ### **Header**
 
@@ -758,6 +765,8 @@ The user can edit taxes applied to the order.
 
 ## Return Material Receipt
 
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Return Material Receipt`
+
 In this window, the user receives the material that has been returned from the customer.
 
 ### **Header**
@@ -831,14 +840,16 @@ Accounting information related to the return material receipt.
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Create Shipments from Orders
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Create Shipments from Orders`
 
 Create Shipments from Orders allows the user to see Sales Orders pending to be shipped and automatically generate Goods Shipments based on them.
 
@@ -864,6 +875,8 @@ Fields to note:
 Select the order(s) you want to ship and click the Process button to generate the underlying Goods Shipment document(s). Process execution message displays sales order number(s) and corresponding shipment number(s) that was just created.
 
 ## Sales Invoice
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Invoice`
 
 Sales Invoice is an itemized statement of goods or services provided to a business partner. It indicates the quantity and price of each product delivered.
 
@@ -1252,12 +1265,12 @@ In case the user has to create orders or invoices among two or more organization
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ### Advanced Rappels
 
@@ -1274,6 +1287,8 @@ These sales invoices have a negative amount that represents the discount of the 
     For more information, visit [Advanced Rappels](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#advanced-rappels).
 
 ## Create Invoices from Orders
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Create Invoices from Orders`
 
 Create Invoices from Orders allows the user to see the Sales Orders pending to be invoiced and it automatically generates the corresponding Sales Invoices based on them.
 
@@ -1313,7 +1328,9 @@ Fields to note:
 
 Select the order(s) you want to invoice and click the **Process** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
 
-## Generate invoices
+## Generate Invoices
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Generate Invoices`
 
 Generate Invoices executes automatic bulk generation of Sales Invoices for all Sales Orders pending to be invoiced that belong to the selected Organization or, if the Include Child Organizations checkbox is checked, to the selected Organization and its children. The Invoices generated are going to be created against the selected Organization.
 
@@ -1351,6 +1368,8 @@ An important field to note is **Invoice Date**. If specified, this date is trans
 When the process is finished, a message is shown with the total number of created invoices and their document numbers.
 
 ## Commission Payment
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Commission Payment`
 
 In this section, the user can create commissions and create corresponding invoices.
 

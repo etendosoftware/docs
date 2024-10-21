@@ -8,59 +8,136 @@ title: Platform Extensions Bundle | Technical Documentation
 
 This bundle includes enhancements for platform functionalities in Etendo.
 
-The Platform Extensions bundle includes the following modules:
+## Dependency Manager
 
-- **Print Document Web Service**: It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
-- **Multiple Business Partner Selector**: It provides a selector which allows selecting multiple business partners in one step.
-- **Number To Word** (English): It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
-- **Javax XML SOAP API**: This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
-- **Report Cache Management**: This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
 
-## Print Document Web Service
+This module allows access to all the available dependencies to add and configure them, and to check information about versions, validations, among other information.
 
-:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
+!!!info
+    For more information visit, [Dependency Manager developer guide](../platform/dependency-manager.md). 
 
-:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
+## Docker Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.docker`
+
+This module enables the use of Dockerized containers in Etendo Classic.
+
+!!!info
+    For more information visit, [Docker Management developer guide](../platform/docker-management.md).
+
+## Dockerized Tomcat Service
+
+:octicons-package-16: Javapackage: `com.etendoerp.tomcat`
+
+This module enables the Dockerization of Tomcat within Etendo Classic. 
+
+!!!info
+    For more information visit, [Dockerized Tomcat Service developer guide](../platform/dockerized-tomcat-service.md).
+
+
+## Dynamic App 
+
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
+
+Dynamic App allows you to create sub applications in Etendo Mobile.
+
+!!! info
+    For more information, visit the [Dynamic App developer guide](./dynamic-app.md)
+
+## EAN 128
 
 ### Technical Aspects
 
-This module allows downloading a PDF from some transaction documents using a web service called printDocument. It returns a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
+It is a module for the transmission of information between the agents of the supply chain under the specifications of the Code 128 barcode. This, provide generic Utils for EAN128 Definition and parsing
 
-The supported documents are:
+Is a Java-based module for managing EAN-128 barcodes in an Etendo ERP context. Below is an overview of what each file appears to do:
 
-- Sales Quotation
-- Invoice
-- Shipment
-- Proforma Order
-- Proforma Quotation
+### SelectorFieldPropertyDataSource.java
 
-To call the Web Service, the following URL is needed:
+**Purpose**: Implements a data source for a custom field selector.
+**Main Operations**: Verifies whether a user has the access right to fetch data from the datasource.
+Filters out Blob and OneToMany properties when getting entity properties.
 
+### EAN128Utils.java
+
+**Purpose**: Utility class for handling EAN-128 data parsing and manipulation.
+
+**Main Operations**: Defines standard date formats and JSON keys.
+Parses incoming EAN128 Data JSON and extracts relevant information such as lot, serial number, expiration dates, etc.
+If Inventory Line quantity was parsed, it modifies the relevant BaseOBObject's quantity.
+Provides methods to edit OpenBravo base objects (BaseOBObject) based on the parsed EAN-128 data.
+
+### EANType.java
+
+**Purpose**: Web Service to manage EAN-128 Types.
+
+**Main Operations**: Handles HTTP GET requests and retrieves EAN-128 type information.
+The information fetched depends on the warehouse specified in the request parameters.
+If a warehouse-specific EAN-128 type isn't available, it attempts to fetch the default one.
+Converts EAN-128 type to a JSON object and returns it as a response.
+
+**Key Libraries used**:
+
+- Etendo DAL for database interaction.
+- Apache Commons Lang for String manipulations.
+- JSON and Jettison for JSON parsing.
+
+### SMFEANComponentProvider.java
+
+**Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
+
+## Etendo Advanced Security
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
+
+### Technical Aspects
+
+This module allows customizing several security features related to
+
+- Password Security
+- Password History
+- User Lockout
+- Multiple Session Verification
+- Changing Password after Login
+- Expiration Time (Autolock Password)
+
+To make this module work, authentication Java class must be configured in the `gradle.properties` file by adding the following line:
+
+```groovy title="gradle.properties"
+authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
 ```
-http://<client-url/etendo>/sws/com.etendoerp.printdocumentws.printDocument
-```
 
-It is necessary to configure Token authentication to use the web service.
+Then `./gradlew setup` must be executed.
 
-Values that can be used to call the Web Service are:
+!!! warning
+      It is mandatory to execute this step before installing the module. 
 
-- order
-- invoice
-- shipment
-- quotation
-- orderProforma
-- shipmentValued
-- quotationProforma
+## Etendo Webhooks
 
-This is a RESTful Web Service that returns a .PDF file of the document using the template that is configured. The supported documents are Sales Quotation, Invoice, Shipment, Proforma Order, Proforma Quotation.
+**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
-It is mandatory to insert the organization ID when you call the web service because it filters by organization.
+!!! info
+    For more information, visit the [Etendo Webhooks developer guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
+
+## Javax XML SOAP API
+
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+
+
+### Technical Aspects
+
+This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 ## Number To Word (English)
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword`
+
+It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 ### Technical Aspects
 
@@ -170,21 +247,55 @@ public class NumberToWord_es extends NumberToWord {
 }
 ```
 
-## Javax XML SOAP API
+## Print Document Web Service
 
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
+
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 ### Technical Aspects
 
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+This module allows downloading a PDF from some transaction documents using a web service called printDocument. It returns a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
+
+The supported documents are:
+
+- Sales Quotation
+- Invoice
+- Shipment
+- Proforma Order
+- Proforma Quotation
+
+To call the Web Service, the following URL is needed:
+
+```
+http://<client-url/etendo>/sws/com.etendoerp.printdocumentws.printDocument
+```
+
+It is necessary to configure Token authentication to use the web service.
+
+Values that can be used to call the Web Service are:
+
+- order
+- invoice
+- shipment
+- quotation
+- orderProforma
+- shipmentValued
+- quotationProforma
+
+This is a RESTful Web Service that returns a .PDF file of the document using the template that is configured. The supported documents are Sales Quotation, Invoice, Shipment, Proforma Order, Proforma Quotation.
+
+It is mandatory to insert the organization ID when you call the web service because it filters by organization.
 
 ## Report Cache Management
 
 :octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
+This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
+
 ### Technical Aspects
 
-This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server. It allows clearing the cache for compiled reports in Tomcat.
+This module allows clearing the cache for compiled reports in Tomcat.
 
 The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
 
@@ -192,79 +303,13 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 ![Clear Report Cache](../../../../assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
-## Etendo Advanced Security
+## Upload Files
 
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
+:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
 
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
+**Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
 
-### Technical Aspects
+!!!info
+    For more information, visit [How to Create a Standard Process Definition developer guide](../../how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
 
-This module allows customizing several security features related to
 
-- Password Security
-- Password History
-- User Lockout
-- Multiple Session Verification
-- Changing Password after Login
-- Expiration Time (Autolock Password)
-
-To make this module work, authentication Java class must be configured in the `gradle.properties` file by adding the following line:
-
-```groovy title="gradle.properties"
-authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
-```
-
-Then `./gradlew setup` must be executed.
-
-!!! warning
-      It is mandatory to execute this step before installing the module. 
-
-## EAN 128
-
-### Technical Aspects
-
-It is a module for the transmission of information between the agents of the supply chain under the specifications of the Code 128 barcode. This, provide generic Utils for EAN128 Definition and parsing
-
-Is a Java-based module for managing EAN-128 barcodes in an Etendo ERP context. Below is an overview of what each file appears to do:
-
-### SelectorFieldPropertyDataSource.java
-
-**Purpose**: Implements a data source for a custom field selector.
-**Main Operations**: Verifies whether a user has the access right to fetch data from the datasource.
-Filters out Blob and OneToMany properties when getting entity properties.
-
-### EAN128Utils.java
-
-**Purpose**: Utility class for handling EAN-128 data parsing and manipulation.
-
-**Main Operations**: Defines standard date formats and JSON keys.
-Parses incoming EAN128 Data JSON and extracts relevant information such as lot, serial number, expiration dates, etc.
-If Inventory Line quantity was parsed, it modifies the relevant BaseOBObject's quantity.
-Provides methods to edit OpenBravo base objects (BaseOBObject) based on the parsed EAN-128 data.
-
-### EANType.java
-
-**Purpose**: Web Service to manage EAN-128 Types.
-
-**Main Operations**: Handles HTTP GET requests and retrieves EAN-128 type information.
-The information fetched depends on the warehouse specified in the request parameters.
-If a warehouse-specific EAN-128 type isn't available, it attempts to fetch the default one.
-Converts EAN-128 type to a JSON object and returns it as a response.
-
-**Key Libraries used**:
-
-- Etendo DAL for database interaction.
-- Apache Commons Lang for String manipulations.
-- JSON and Jettison for JSON parsing.
-
-### SMFEANComponentProvider.java
-
-**Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
-
-## Webhook Events
-
-**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
-
-!!! info
-    For more information, visit the [Webhook Events Developer Guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)

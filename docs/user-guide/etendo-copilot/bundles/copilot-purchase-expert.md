@@ -22,7 +22,7 @@ By using certain tools and a prompt that gives the Assistant appropriate context
 
 For this particular case, we have configured an assistant with the functional methodology of creating purchase orders, and we have equipped it with 3 tools:
 
-- **OCR Tool**: This tool is capable of reading images and PDF and returning a JSON object with the extracted information
+- [**OCR Tool**](../../../developer-guide/etendo-copilot/available-tools/ocr-tool.md): This tool is capable of reading images and PDF and returning a JSON object with the extracted information.
 
 - **Etendo API Tool**: This tool explains to the assistant how to interact with the Etendo API, and what are the available endpoints and their descriptions.
 
@@ -33,7 +33,7 @@ For this particular case, we have configured an assistant with the functional me
 
  - In the module `com.etendoerp.copilot.openapi.purchase` there is a dataset with the basic configuration of the **Copilot Purchase Expert**. It can be imported in the `Application`>`General Setup` > `Enterpice Model` > `Enterprise module management` window. 
  
- - After importing the configuration, it is necessary to configure the OpenAI model for the imported **Copilot App** and click [Sync OpenAI Assistant](../setup.md#sync-open-ai-assistant-button) button to create the corresponding assistant.
+ - After importing the configuration, it is necessary to configure the OpenAI model for the imported **Assistant** and click [Sync Assistant](../setup.md#sync-open-ai-assistant-button) button to create the corresponding assistant.
  
  - Finally, give access to the role and configure the permissions in [Role](../setup.md#role-window) Window.
 

@@ -14,7 +14,16 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.17.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.17.0){target="_blank"} | 28/06/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.2.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.1){target="_blank"} | 20/09/2024 | 23.2.0 | 24.2.x | CS | :white_check_mark: |
+| [2.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.0){target="_blank"} | 13/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [2.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.1.1){target="_blank"} | 04/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [2.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.1.0){target="_blank"} | 03/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [2.0.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.1){target="_blank"} | 30/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [2.0.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.0.0){target="_blank"} | 16/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [1.19.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.19.0){target="_blank"} | 09/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [1.18.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.18.0){target="_blank"} | 02/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [1.17.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.17.1){target="_blank"} | 12/07/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
+| [1.17.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.17.0){target="_blank"} | 28/06/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.16.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.1){target="_blank"} | 14/06/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.16.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.0){target="_blank"} | 20/05/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.15.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.15.0){target="_blank"} | 08/05/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |

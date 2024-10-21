@@ -6,7 +6,9 @@ Security folder allows creating and configuring basic security entities such as 
 
 ## User
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Security` > `User`
+
+### Overview
 
 A user is an entity which can log into Etendo whenever it has a password and at least one role assigned to it.
 
@@ -45,7 +47,9 @@ There can be a user having a given role set up as "Role Administrator", that use
 
 ## Role
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
+
+### Overview
 
 The aim of a role is to group user/s depending on what parts of Etendo they are allowed to access to and therefore to work in.
 
@@ -288,23 +292,10 @@ The fields to fill in are:
 - **Inherit From**: In this field, it should be selected the role whose permissions will be inherited. It defines the role that will be used to retrieve access to its permissions automatically.
 - **Sequence Number**: It defines the order in the application of the role inheritance, when having multiple records in the tab. The lower this value is, the earlier will be retrieved the permissions of the related template role. This means that if the same permission is accessed by two template roles selected to inherit from them, the permission related to the inheritance with higher sequence number will override the other one.
 
-### Dynamic App
-
-!!! info
-
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
-
-In this tab, you can configure the dynamic applications that the selected role has access to.
-
-![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/DynamicAppRoleTab.png)
-
-Fields to note:
-
-- **App:** In this drop-down menu, you select the application that you want to assign to the role.
-- **Version:** Here we assign the version of the application we want to use in this role.
-- **Active:** To select if this application is active or not.
 
 ## Role Access
+
+:material-menu: `Application` > `General Setup` > `Security` > `Role Access`
 
 This window defines access to DB /database tables and columns for selected roles.  
 Edit a role to give or withhold the necessary access to tables and columns tables.
@@ -317,7 +308,9 @@ Create or edit access to DB tables for a selected role. The user can give access
 
 ## Audit Trail
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Security` > `Audit Trail`
+
+### Overview
 
 Audit Trail allows the user to monitor every data change done in any table or entity through the user interface.
 

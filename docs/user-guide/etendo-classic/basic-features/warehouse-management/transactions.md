@@ -8,6 +8,8 @@ Warehouse Management deals with all activities related to the warehouse actions 
 
 ## Physical Inventory
 
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Physical Inventory`
+
 **Physical Inventory** window allows the user to execute goods count process in Etendo.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xqE_UnYO6cM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -114,14 +116,16 @@ Once the Inventory is successfully reactivated, the state of the document change
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Goods Movement
+
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Goods Movement`
 
 Goods Movement window allows the user to make internal inventory movements among warehouses and storage bins.
 
@@ -208,16 +212,18 @@ Once the movement is successfully reactivated, the state of the document changes
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Bill of Materials Production
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Bill of Materials Production`
+
+### Overview
 
 Create and run production processes using the previously defined bills of materials.
 
@@ -238,7 +244,7 @@ Add bills of materials to be produced in a specified production plan.
 
 In this section, the product is selected and the number that is executed. Also, the storage bin in which the result of the Production will be stored must be selected.
 
-As indicated in the introduction, the product that is selected needs to be set up correctly first:
+As indicated in the Overview, the product that is selected needs to be set up correctly first:
 
 - the bill of materials checkbox is selected
 - the bill of materials tab is filled out with the information of the components that are combined plus the quantity for each component
@@ -264,16 +270,18 @@ There is a check named **Force Use Of Warehouse Of Selected Storage Bin.** When 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Goods Transaction
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Goods Transaction`
+
+### Overview
 
 Goods Transaction window provides a read-only view with extensive filtering capabilities that shows all inventory transactions.
 
@@ -283,7 +291,9 @@ All real warehouse movements can be seen in this window: incoming, outgoing, mov
 
 ## Stock Reservation
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Stock Reservation`
+
+### Overview
 
 In this window, it is possible to review and manage existing Reservations.
 
@@ -418,7 +428,9 @@ It is allowed to move an item that is reserved from its current storage bin to a
 
 ## Inventory Amount Update
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Inventory Amount Update`
+
+### Overview
 
 Inventory Amount Update window allows the user to change either current inventory amount or current unit cost of products in stock at a given reference date.
 
@@ -515,7 +527,9 @@ Opening inventory posting creates following accounting entries:
 
 ## Cost Adjustment
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Cost Adjustment`
+
+### Overview
 
 Cost Adjustment window allows the user to review product transaction's cost adjustments caused by changes in purchase prices, landed cost allocation or manual/negative cost corrections.
 
@@ -963,16 +977,18 @@ Product's cost gets decreased.
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Referenced Inventory
 
-### Introduction
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Referenced Inventory`
+
+### Overview
 
 In this window, it is possible to define the containers or boxes, which includes any kind of object that can contain goods.
 
@@ -1051,3 +1067,7 @@ This kind of transactions are actually Goods Movements created on the fly when c
 Shows any unbox transaction executed in the past for this referenced inventory.
 
 This kind of transactions are actually Goods Movements created on the fly when confirming the unboxing, where the user can browse to at any time to see the details.
+
+---
+
+This work is a derivative of ["Warehouse Management"](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

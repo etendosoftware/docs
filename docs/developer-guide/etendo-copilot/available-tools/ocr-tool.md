@@ -2,7 +2,6 @@
 tags:
     - Copilot
     - IA
-    - Machine Learning
     - OCR
     - Image Recognition
 ---
@@ -13,59 +12,192 @@ tags:
 
 ## Overview
 
-The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Assistants to extract information from images or pdfs that are uploaded to the chat.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 ## Functionality
 
+This tool automates the process of **text extraction from image-based files or PDFs**. This can be particularly useful for tasks such as document digitization, data extraction, and content analysis. 
 
-1. Add Copilot OCR Tool dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot.ocrtool:1.0.0')
-    ```
+Using this tool consists of the following actions:
 
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+- Receiving Parameters:
 
-4. Do an `update.database smartbuild` to compile the environment of Etendo Classic.
+    - The tool receives an input object that contains two keys:
 
-    ``` bash title="Terminal"
-    ./gradlew update.database smartbuild --info
-    ``` 
+        - **path**: The path of the image or PDF file to be processed.
+        - **question**: A contextual question specifying the information to be extracted from the image. This is mandatory for precise results.
 
-4. After that, configure the tool in a Copilot App, in order to do that, go to **Copilot App** and pick the **OCR Tool** option in the **Tool** tab.
+- Obtaining the File:
 
-5. Update you application:
-    - If its an OpenAI Assistant, click in the **Sync OpenAI Assistant** button.
-    - If its a Langchain App, restart copilot with the following commands:
-    ``` bash title="Terminal"
-    ./gradlew copilot.stop
-    ./gradlew copilot.start
-    ```
+    - The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (JPEG, JPG, PNG, WEBP, GIF, PDF).
 
-5. Now your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
+- PDF Conversion:
 
-## Examples
+    - If the input file is a PDF, it is converted to an image format (JPEG) using the **pypdfium2** library. Each page of the PDF is rendered as a separate image.
 
-!!! info 
-    It is important to clarify that this is a first version subject to improvements. Maybe the tool is not able to recognize all the images or pdfs that are presented to it.
-    In general, the Tool returns the information in JSON format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
+- Image Conversion:
+
+    - Other image formats are processed directly or converted to JPEG if necessary.
+
+- Image Processing:
+
+    - The image is processed using a Vision model powered by GPT. This model interprets the text within the image and extracts the relevant information based on the provided **question**.
+
+- Returning the Result:
+
+    - The tool returns a JSON object containing the extracted information from the image or PDF.
+
+## Usage Example
+
     
 ### Requesting text recognition from an image/pdf
 
-After the configuration, you can upload an image or pdf to the chat and the tool will recognize the text:
-    
-1. Open Copilot button and open a chat with the OpenAI Assistant.
-2. Upload an image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
-3. The tool will recognize the text and return it in the chat.
 
+Suppose you have an image at `/home/user/invoice.png` and you want to extract text related to an invoice information:
 
-We attach an image of an invoice
+The following is an example image of an invoice:
 
 ![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
 
-and Copilot will return the recognized(and interpreted) text in the chat.
 
-![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
+- Use the tool as follows:
+
+    - Input:
+
+        ```
+        {"path": "/home/user/invoice.png", "question": "Give me the content of this invoice"}
+
+        ```
+
+    - Output:
+
+        ``` Json title="Output Json"
+        {
+            "company": {
+                "name": "F&B España, S.A.",
+                "tax_id": "B-1579173",
+                "address": "Pg. de Gracia, 123 2-1ª",
+                "city": "08009 - Barcelona (BARCELONA)"
+            },
+            "invoice": {
+                "title": "This is a Sales invoice",
+                "number": "1000000",
+                "currency": "EUR",
+                "date": "15-02-2011"
+            },
+            "customer": {
+                "name": "Restaurantes Luna Llena, S.A.",
+                "contact": "Ana Cortes",
+                "phone": "092765188",
+                "address": "Pl. Mayor, 78",
+                "postal_code": "76764"
+            },
+            "items": [
+                {
+                "reference": "ES0024",
+                "product_name": "Agua sin Gas 1L",
+                "uom": "Unit",
+                "quantity": 25000,
+                "price": 1.13,
+                "total": 28250.00
+                },
+                {
+                "reference": "ES0021",
+                "product_name": "Bebida Energética 0,5L",
+                "uom": "Unit",
+                "quantity": 45000,
+                "price": 1.49,
+                "total": 67050.00
+                },
+                {
+                "reference": "ES1000",
+                "product_name": "Cerveza Ale 0,5L",
+                "uom": "Unit",
+                "quantity": 33000,
+                "price": 2.48,
+                "total": 81840.00
+                },
+                {
+                "reference": "ES1002",
+                "product_name": "Cerveza Lager 0,5L",
+                "uom": "Unit",
+                "quantity": 45000,
+                "price": 2.64,
+                "total": 118800.00
+                },
+                {
+                "reference": "ES0030",
+                "product_name": "Cola de Cereza 0,5L",
+                "uom": "Unit",
+                "quantity": 40000,
+                "price": 0.83,
+                "total": 33200.00
+                },
+                {
+                "reference": "ES0032",
+                "product_name": "Limonada 0,5L",
+                "uom": "Unit",
+                "quantity": 40000,
+                "price": 0.83,
+                "total": 33200.00
+                },
+                {
+                "reference": "ES0023",
+                "product_name": "Vino Blanco 0,75L",
+                "uom": "Unit",
+                "quantity": 36000,
+                "price": 3.05,
+                "total": 109800.00
+                },
+                {
+                "reference": "ES0025",
+                "product_name": "Vino Rosado 0,75L",
+                "uom": "Unit",
+                "quantity": 36000,
+                "price": 5.83,
+                "total": 209880.00
+                },
+                {
+                "reference": "ES1004",
+                "product_name": "Vino Tinto 0,75L",
+                "uom": "Unit",
+                "quantity": 36000,
+                "price": 5.07,
+                "total": 182520.00
+                },
+                {
+                "reference": "ES0037",
+                "product_name": "Zumo de Naranja 0,5L",
+                "uom": "Unit",
+                "quantity": 45000,
+                "price": 1.13,
+                "total": 50850.00
+                },
+                {
+                "reference": "ES1014",
+                "product_name": "Zumo de Piña 0,5L",
+                "uom": "Unit",
+                "quantity": 33000,
+                "price": 1.13,
+                "total": 37390.00
+                }
+            ],
+            "payment_terms": "30 days",
+            "totals": {
+                "subtotal": 927640.00,
+                "tax": {
+                "rate": "IVA 18%",
+                "amount": 166975.20
+                },
+                "total": 1094615.20
+            }
+        }
+        ```
 
 ### Result Chaining
 
-Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
+!!!note
+    Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 

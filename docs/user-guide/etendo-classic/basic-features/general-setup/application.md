@@ -4,6 +4,8 @@ title: Application
 
 ## Create Sequences
 
+:material-menu: `Application` > `General Setup` > `Application` > `Create Sequences`
+
 In this window, the Create Sequences process is executed.
 
 When selecting the organization and executing the process, Etendo creates the sequences for the type of fields "Transactional Sequence" or "Non transactional Sequence".
@@ -26,6 +28,8 @@ After that, in the `Financial Management`>`Accounting`>`Setup`>`Document Sequenc
 
 ## Conversion Rate Download Rule
 
+:material-menu: `Application` > `General Setup` > `Application` > `Conversion Rate Download Rule`
+
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
@@ -41,51 +45,11 @@ Fields to note:
 - **To Currency**: Target currency
 - **Tolerance**: The maximum difference allowed between the new conversion rate and the previous one. This is used to insert or not the new downloaded rate.
 
-## Dynamic App
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
-
-### Overview
-
-In this page, we will explain how to configure dynamic applications from Etendo classic, these are displayed dynamically according to the configuration in Etendo Mobile.
-In addition, it details how to configure access to sub applications and versions according to the role assigned to each user.
-In the Dynamic App window, located in General Setup/Application/Dynamic App, you can add the information that will make reference to it. In this window, you find the configuration of paths and versions of each subapplication.
-When logging into Etendo Mobile, the subapplications are displayed according to these settings.
-
-!!! info
-    For more information visit the [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) documentation.
-
-### Header
-
-![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/HeaderDynamicApp.png)
-
-Fields to note:
-
-- **Module**: The module that can export the window configuration.
-- **Name**: Name with the application will be shown.
-- **Directory Location**: The path where the bundle of the compiled application is located.
-- **Active**: To select if this application is active or not.
-
-### **Dynamic App Version Tab**
-
-![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/DynamicAppVersion.png)
-
-This window is in charge of being able to version your application and so you also have development versions as well as productive ones.
-
-Fields to note:
-
-- **Name**: Name of the application version.
-- **File Name**: The bundle name of the compiled application.
-- **Default**: This check defines that this version is productive.
-- **Active**: To select if this application version is active or not.
-- **Is Development**: This check defines that this version is in development that can be deployed locally.
-
-Finally, configure this application in the [Role Configuration](../general-setup/security.md#dynamic-app).
-
 ## Currency
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Application` > `Currency`
+
+### Overview
 
 Currencies and conversion rates are basic settings in Etendo.
 
@@ -143,7 +107,9 @@ Currencies can be translated to any language if required.
 
 ## Conversion Rates
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Application` > `Conversion Rates`
+
+### Overview
 
 Conversion rate also called currency exchange rate is the rate at which one currency may be converted into another one.
 
@@ -165,7 +131,9 @@ For instance, USD exchange rate to EUR should have a _Multiple rate by_ = 0.68 s
 
 ## Country and Region
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Application` > `Country and Region`
+
+### Overview
 
 Countries and regions are basic settings to share within Etendo.
 
@@ -209,7 +177,9 @@ Regions tab allows the user to visualize and/or to create and maintain the regio
 
 ## Preference
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Application` > `Preference`
+
+### Overview
 
 A preference is a type of session value which can either be an attribute or a property.
 
@@ -383,6 +353,8 @@ Conflicts can be manually resolved by checking and modifying the preference.
 
 ## Session Preferences
 
+:material-menu: `Application` > `General Setup` > `Application` > `Session Preferences`
+
 Session preferences allow showing or hiding accounting tabs or translation tabs for a given user, role, client and organization.
 
 ![](../../../../assets/drive/VAr7jhdNC8mm1JlSp-Jq-dBswsbSAMKpcuq_Tg6_Z3yKcxRbc3N8IgLn-gimlxHoPzGvtOl0i3k7wPCdqKKG8zO1xgcS5xvh-sC1T0yO2qeanxvBMqt-P8TUPDo9n-ASz4p2LjaL.png)
@@ -431,6 +403,8 @@ Finally, the **Save Preferences** button allows saving the changes.
 
 ## Number to Word Converter
 
+:material-menu: `Application` > `General Setup` > `Application` > `Number to Word Converter`
+
 !!! info
     To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
@@ -450,7 +424,9 @@ The "javaclass" field is required but empty by default unless another module suc
 
 ## Window Personalization
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Application` > `Window Personalization`
+
+### Overview
 
 Etendo allows the customization of grid and form views. Customize windows and form views are stored once saved in the Window Personalization window. Etendo windows can be shown in _Form View_ and in _Grid View_, both ways can be customized as required.
 
@@ -464,7 +440,9 @@ Once a form has been customized, saved and listed in the _"Window Personalizatio
 
 ## Alert
 
-### Introduction
+:material-menu: `Application` > `General Setup` > `Application` > `Alert`
+
+### Overview
 
 Alerts are notifications which inform about events happening whenever an alert rule has been properly defined to monitor those events.
 

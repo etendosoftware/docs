@@ -1,9 +1,9 @@
 ---
 tags: 
-    - copilot
-    - ai
-    - tools
-    - assistants
+    - Copilot
+    - AI
+    - Tools
+    - Assistants
 ---
 
 # Copilot Extensions
@@ -16,7 +16,7 @@ tags:
 
 The Copilot Extensions Bundle includes functionalities that help you streamline your daily tasks using artificial intelligence.
 
-## Default Copilot Apps
+## Default Assistants
 
 The apps described below belong to preconfigured reference data included in the corresponding modules.
 
@@ -24,13 +24,13 @@ The apps described below belong to preconfigured reference data included in the 
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
-    This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
+    This **Assistant** is able to answer questions with indexed information from the official Etendo documentation.
 
 - **Purchase Expert**
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
-    This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+    This assistant is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
 
     !!! info
         For more information, visit [Purchase Expert user guide](../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
@@ -39,41 +39,12 @@ The apps described below belong to preconfigured reference data included in the 
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
-    This copilot app is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
+    This assistant is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
 
     !!! info
         For more information, visit [SQL Expert user guide](../../../user-guide/etendo-copilot/bundles/sql-expert.md).
 
 ## Modules
-
-### Etendo Copilot
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot`
-
-Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
-
-!!! info
-    For more information, visit [Etendo Copilot user guide](../../../user-guide/etendo-copilot/setup.md).
-
-### XML Translation Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
-
-!!! info
-    For more information, visit [XML Translation Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
-
-### Database Query Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
-
-!!! info
-    For more information, visit [Database Query Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/database-query-tool.md).
 
 ### Copilot OCR Tool
 
@@ -101,4 +72,31 @@ This module includes an assistant capable of performing operations related to th
 !!! info
     For more information, visit [Copilot Purchase Expert user guide](../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
 
+### Database Query Tool
 
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
+
+This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
+
+!!! info
+    For more information, visit [Database Query Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/database-query-tool.md).
+
+### Etendo Copilot
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot`
+
+Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
+
+!!! info
+    For more information, visit [Etendo Copilot user guide](../../../user-guide/etendo-copilot/setup.md).
+
+### XML Translation Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
+
+!!! info
+    For more information, visit [XML Translation Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
