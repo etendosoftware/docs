@@ -204,6 +204,7 @@ nav:
             - Bank Integration PSD2: user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
             - Impuestos para España: user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
             - Intrastat: user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
@@ -214,9 +215,8 @@ nav:
             - Modelo 347: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
             - Modelo 349: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
             - Modelo 390: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
-            - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
-            - TicketBai: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai.md
+            - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
           - Etendo BI Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
