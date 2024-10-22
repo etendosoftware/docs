@@ -9,7 +9,7 @@ tags:
   
 ##  Overview
 
-  This section discusses how to implement client-side functions (JavaScript) that are executed before or after an event is fired in a standard window of the User Interface.
+  This section discusses how to implement client-side functions that are executed before or after an event is fired in a standard window of the User Interface.
   
 ##  Example Module
 
@@ -20,24 +20,6 @@ tags:
 ##  Defining Client Event Handler Actions
 
   A **Client Event Handler is a component that allows developers to respond to specific events in Etendo**, such as the creation, update or deletion of entities. These handlers are essential for implementing custom business logic that executes when certain changes occur in the database.
-
-### Step 1: Creating an Action
-
-  * Navigate to the **Process Definition** window.
-  * Create a new record and define the **UI pattern** as **Action**.
-  * Mark the process as **Multi Record**.
-
-!!!info
-    Check the box to indicate that the process is **Multi Record** (if it is necessary to handle multiple registrations at the same time).
-
-![createjobs1.png](https://docs.etendo.software/latest/assets/legacy/technicaldocumentation/platform/createjobs1.png)
-
-### Step 2: Create a Button to Execute the Action
-
-  * Create Column: Add a column in the corresponding table.
-  * Create Field: Create a field in the window where you want the button to appear.
-  * Set the field to execute the action.
-  * Implementing the Java Class for Action.
 
 ##  Defining the Event Handler Class
   In this step, the key methods needed to handle event actions will be implemented:
@@ -53,16 +35,22 @@ tags:
 ## Examples
 
 ### `getObservedEntities()`
-In the following code, getObservedEntities returns the entities to be observed.
+This section defines the entities that will be observed by the Event Handler. In this case, the Greeting entity is observed.
 ```java 
-@Override
-protected Entity[] getObservedEntities() {
-  return entities;
+class GreetingEventHandler extends EntityPersistenceEventObserver {
+  private static Entity[] entities = {
+      ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
+  private static final Logger logger = LogManager.getLogger();
+
+  @Override
+  protected Entity[] getObservedEntities() {
+    return entities;
+  }
 }
 ```   
 
 ### `onUpdate()`
-The following method listens for update events and adds a dot to the title if it is not present.
+This method intercepts record updates in the Greeting entity. It validates that thetitle of the entity ends with a dot (“.”) and adds it if necessary.
 ```java
 public void onUpdate(@Observes EntityUpdateEvent event) {
   if (!isValidEvent(event)) {
@@ -79,7 +67,7 @@ public void onUpdate(@Observes EntityUpdateEvent event) {
 }
 ```
 ### `onSave()`
-In the following code, onSave adjusts the title and adds a translation when a new greeting is created.
+In this method, the creation of a new record in the Greeting entity is intercepted. A validation similar to that of the update event is performed, adding a dot to the title if it does not have one. In addition, a translation record (GreetingTrl) is created for the greeting in a specific language (in this example, the language with ID 171, which is Dutch, is used).
 ```java 
 public void onSave(@Observes EntityNewEvent event) {
   if (!isValidEvent(event)) {
@@ -119,6 +107,13 @@ public void onDelete(@Observes EntityDeleteEvent event) {
   logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
 }
 ```
+
+!!!note
+    This Event Handler shows how to intercept creation, update and deletion events in an entity. It allows you to perform automatic validations and actions, such as adding a dot at the end of a title or creating an associated translation automatically when creating a new greeting.
+  
+
+!!!info
+    This example can be adjusted for other entities or events according to the requirements of your implementation.
 
 ---
 
