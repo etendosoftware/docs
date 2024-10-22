@@ -17,20 +17,13 @@ tags:
 
 The Copilot Extensions Bundle includes functionalities for developers to help them streamline daily tasks using AI.
 
-## Create References
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
-
-The **Create Reference Assistant** is a tool that creates a reference in the Etendo Application Dictionary. 
-
-!!!info
-    For more information, visit: [Create Reference Assistant developer guide](../../etendo-copilot/bundles/create-references.md).
-
 ## Dev Assistant
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is designed to speed up the process of creating windows, tabs, fields, system elements and menu entries.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The **Dev Assistant** module includes various development assistants that will facilitate developers the processes of creating buttons, windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
-    For more information, visit: [Dev Assistant developer guide](../../etendo-copilot/bundles/dev-assistant.md).
+    For more information, visit [Dev Assistant developer guide](../../etendo-copilot/bundles/dev-assistant.md).

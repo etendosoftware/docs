@@ -81,6 +81,15 @@ This tool allows the user to connect to an SQL Database and generate and/or exec
 !!! info
     For more information, visit [Database Query Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/database-query-tool.md).
 
+### Dev Assistant
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
+
+The **Dev Assistant**  module includes assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
+
+!!!info
+    For more information, visit [Dev Assistant developer guide](../../../developer-guide/etendo-copilot/bundles/dev-assistant.md).
+
 ### Etendo Copilot
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot`
