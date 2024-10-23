@@ -20680,7 +20680,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - [Tax Report: Modelo 390 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md)
 - [Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md)
 - [Configuración de Impuestos para Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
-- [TicketBai y Batuz](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai.md)
+- [TicketBai y Batuz](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md)
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -21088,7 +21088,7 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 Este módulo permite cumplir con las normativas fiscales del País Vasco, automatizando el proceso de emisión, firma electrónica y envío de facturas a la hacienda foral de Gipuzkoa y Bizkaia. A través de este sistema, se garantiza la trazabilidad y autenticidad de las facturas, permitiendo su envío en tiempo real y asegurando el cumplimiento fiscal.
 
 !!! info
-    Para más información, visite la [Guía de usuario TicketBai y Batuz](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai.md).
+    Para más información, visite la [Guía de usuario TicketBai y Batuz](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Configuración de Impuestos para Libro de Facturas
