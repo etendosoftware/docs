@@ -28382,20 +28382,30 @@ In case the user has a picture, it will be shown both in this window and in the 
 ## Article Content: 
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and its configurations in Etendo Classic. For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
-
-#### Etendo Classic Sub App
-
-##### Initial Configuration
+This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
 
 !!! info
 
     - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
+    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
+
+    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
 
 
-    - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
+!!!info
+    For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+
+
+#### Etendo Classic Sub App
+
+##### Overview
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+##### Initial Configuration
 
 To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
 
@@ -28438,7 +28448,7 @@ The fields will be displayed one below the other. Those with this symbol  “(\
 
 ![](https://docs.etendo.software/latest/assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){ width="300" }
 
-###### Folders button 
+**Folders button** 
 
 By selecting the Folders button, the user can access the different tabs of the window with information about the records being browsed.
 
@@ -28454,17 +28464,17 @@ To navigate in different levels, the user can resort to the system buttons (Andr
 
 In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
 
-###### Actions button
+**Actions button**
 
 Through this button, the user can access the list of available processes corresponding to the window being browsed and execute them.
 
-###### Attachments button 
+**Attachments button** 
 
 Through this button, the user can attach files.
 
-#### Manage Records
+##### Manage Records
 
-##### Create a record
+**Create a record**
 
 To create a new record, the user must click the icon with the symbol “+” and complete the desired fields. Those with the symbol (\*) are mandatory.
 
@@ -28486,7 +28496,7 @@ Each time a new record is created in the App, the same record will be created in
 
 It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
 
-##### Delete a record
+**Delete a record**
 
 To delete a record, press it and drag it to the left or hold it, select all the desired records and then the delete icon.
 
@@ -28494,7 +28504,7 @@ Each time a record is deleted in the App, the same record will be deleted in the
 
 ![](https://docs.etendo.software/latest/assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ width="300" }
 
-##### Edit a record
+**Edit a record**
 
 To edit a record, select the record and then the field to be edited.
 
@@ -28502,7 +28512,7 @@ Once the changes have been made, press the save icon.
 
 Each time a record is edited in the App, the same record will be edited in the Etendo Classic as well.
 
-##### Search a record
+**Search a record**
 
 Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
 
@@ -28514,27 +28524,27 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](https://docs.etendo.software/latest/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-#### Mobile App Scanning Helpers
+##### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
-Allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App
+The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App.
 
-##### Usage Examples
+###### Usage Examples
 
- The module has by default the Inventory Scan process, which is responsible for scanning from a mobile this code, and thus change values of the Physical Inventory lines.
+ The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
- Now an example will be shown from the Etendo Mobile application:
+ Now, an example will be shown from the Etendo Mobile application:
 
- When you enter the Physical inventory window and select a record, you will see the **Actions** button.
+ When entering the Physical inventory window and select a record, it will be possible to see the **Actions** button.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
-In this button, you can see the process it incorporates, called Inventory Scan.
+In this button, it is possible to see the process it incorporates, called Inventory Scan.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ActionsInventoryScan.png)
 
- When you press this action it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
+ When pressing this action, it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
  
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
 
@@ -28546,19 +28556,19 @@ When the arrow to continue is selected, the code of the storage bin in which the
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductBarcode.jpg) 
 
- Finally, enter the amount you want to add of that product, press Done and Save.
+ Finally, enter the amount needed to add of that product, press Done and Save.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
 
- In the meantime, on Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
+ In the meantime, in Etendo Classic a line will be added in the **Scan** tab of the physical inventory line, about the scan and the amount that has been set.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
 
-In the physical inventory header, by selecting a scan line, you can run the Process Inventory Count. This takes care of adding to the stock the quantity that has been set on the scanned product.
+In the physical inventory header, by selecting a scan line, the Process Inventory Count can be run. This takes care of adding to the stock the quantity that has been set on the scanned product.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/Process.png) 
 
-And here we will observe the quantities before the process:
+And here, the quantities will be observed before the process:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityBefore.png) 
 
@@ -28566,9 +28576,31 @@ And here we will observe the quantities before the process:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityAfter.png) 
 
-We will also notice that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
+It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
+
+
+#### Etendo Copilot SubApp
+
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
+
+##### Overview 
+
+The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
+
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+
+With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
+
+**Copilot SubApp mobile mode**
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp1.jpg){ width="300" }
+
+**Copilot SubApp tablet mode**
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp2.png)
+
 
 
 ==ARTICLE_END==
@@ -29027,14 +29059,14 @@ This tool allows the user to connect to an SQL Database and generate and/or exec
 !!! info
     For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
 
-#### Dev Assistant
+##### Dev Assistant
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is designed to develop other assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
+The **Dev Assistant**  module includes assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
-    For more information, visit: [Dev Assistant developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md).
+    For more information, visit [Dev Assistant developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md).
 
 ##### Etendo Copilot
 
@@ -29805,6 +29837,197 @@ Etendo Classic currently requires two PostgreSQL extensions to be available:
 !!! note
     After modifying the file restart postgresql service
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Dependency Manager
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Dependency Manager
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/dependency-manager
+## Article Content: 
+### Dependency Manager
+
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
+
+#### Overview
+
+With this module, the user can access from the Etendo Classic interface all Etendo packages published in Etendo Software repositories. 
+
+In addition, from the Module Management window you can query packages, available versions, dependencies and install new packages. 
+
+Then, from the Dependency Management window you can update, remove and change the format of already installed modules. 
+
+#### Installation 
+
+To install this package that will allow you to manage other packages directly from the Etendo Classic interface you must add in the `build.gradle` file the following dependency:
+
+
+``` groovy title="build.gradle"
+dependencies {
+// Add your dependency here
+    implementation('com.etendoerp:dependencymanager:1.1.0')
+}
+```
+!!! warning
+    You must make sure to use Gradle plugin version `1.4.0` or higher, check the plugins section also in the `build.gradle` file.
+
+    ``` groovy title="build.gradle"
+    plugins {
+    id 'java'
+    id 'war'
+    id 'groovy'
+    id 'maven-publish'
+    id 'com.etendoerp.gradleplugin' version '1.4.0'
+    }
+    ```
+
+Then, to install the module run the command gradle : 
+
+``` bash title="Terminal"
+./gradlew update.database smartbuild
+```
+
+!!! info 
+    For more information visit [Install Modules](./install-modules-in-etendo.md#2-search-for-dependencies) guide. 
+
+#### Module Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Module Management`
+
+Logged as System Administrator role, in the `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager1.png)
+
+!!!info
+    The fields in this window are read-only.
+
+Fields to note:
+
+- **Active**: Checkbox to select if this module is active or not.
+- **Group**: the identifier of the artifact.
+- **Artifact**: the unit of deployment fetched and used.
+- **Installed Version**: the version of the module if it is installed.
+- **Is bundle**: Field to filter if this module is a bundle or not.
+
+This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
+
+##### Add Dependency 
+
+This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.
+
+- **If a package bundle is selected**: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.
+
+- **If a non-bundle package is selected**: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager2.png)
+
+Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
+
+###### Dependency Version Handling Rules
+
+1. **If the dependency version is greater than the installed version:**:
+
+    - No installed module and no record in `Dependency Management`window: New dependency record added. 
+    - No installed module but record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module and the dependency record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module but no dependency record exists in `Dependency Management`window: The local dependency is deleted, and a new record is added in `Dependency Management`. 
+
+    
+
+2. **If the dependency version is less than the installed version:**
+
+    - Display error and disable the process, preventing installation of an older version to avoid compatibility issues. This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss. In case you need to install the dependency version anyway, you must downgrade the version from the `Dependency Management` window with the [change version](#change-version) button.  
+
+##### Update Packages
+
+This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
+
+#### Dependency Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Dependency Management`
+
+Logged as System Administrator role, in the `Dependency Management` window, the user can find all the dependencies installed in the previous step.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager3.png)
+
+Fields to note:
+
+- **Active**: Checkbox to select if this dependency is active or not
+- **Group**: The identifier of the artifact.
+- **Artifact**: The unit of deployment fetched and used.
+- **Version**: Version of the module
+- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
+    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
+    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
+    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
+- **Installation Status**: It describes the dependency current status.
+    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
+    - Installed: Used once the dependency is already installed.
+- **Version Status**: It describes the dependency version status.
+    - Untracked: Only for external dependencies.
+    - Update Available: In case there are new available versions.
+    - Updated: The latest available version is installed.
+- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
+
+This window presents to buttons that can be used: **Change Version** and **Change Format**.
+
+##### Change Version 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager4.png)
+
+This button is used to update or downgrade versions. 
+
+When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
+
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before executing the process.
+
+##### Change Format 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager6.png)
+
+This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
+
+- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
+
+- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
+
+- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
+
+##### Delete Packages
+
+This button is used to delete packages/dependencies.
+
+- **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager7.png)
+
+- **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager8.png)
+
+    !!!note
+        A warning notification is displayed to inform the user of the steps to remove it.
+
+#### Add Local Dependencies 
+:material-menu: `Application` > `Etendo Dependencies Management` > `Add Local dependencies`
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager5.png)
+
+This process, in `Add Local dependencies` window, also part of the **Dependencies Management**, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
+
+!!! note
+    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
+
+#### Update Packages Information
+:material-menu: `Application` > `Etendo Dependencies Management` > `Update Packages Information`
+
+Since the information about packages is daily updated, the user can execute manually the process from `Update Packages Information` window to update the list of packages with the latest information.
+
+!!!info
+    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
+
+!!!note
+    Each time the server is restarted, the update process is executed automatically.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Migrating to Etendo (from Openbravo)
@@ -44558,160 +44781,6 @@ public class AdAlertWebhookService extends BaseWebhookService {
     If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Dependency Manager
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Dependency Manager
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager
-## Article Content: 
-### Dependency Manager
-
-:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
-
-#### Overview
-
-With this module, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
-
-#### Module Management
-:material-menu: `Application` > `Etendo Dependencies Management` > `Module Management`
-
-Logged as System Administrator role, in the `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
-
-!!!info
-    The fields in this window are read-only.
-
-Fields to note:
-
-- **Active**: Checkbox to select if this module is active or not.
-- **Group**: the identifier of the artifact.
-- **Artifact**: the unit of deployment fetched and used.
-- **Installed Version**: the version of the module if it is installed.
-- **Is bundle**: Field to filter if this module is a bundle or not.
-
-This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
-
-##### Add Dependency 
-
-This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.
-
-- **If a package bundle is selected**: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.
-
-- **If a non-bundle package is selected**: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.
-!!!note
-    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
-
-Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
-
-###### Dependency Version Handling Rules
-
-1. **If the dependency version is greater than the installed version:**:
-
-    - No installed module and no record in `Dependency Management`window: New dependency record added. 
-    - No installed module but record exists in `Dependency Management`window: Update the existing record version.
-    - Installed module and the dependency record exists in `Dependency Management`window: Update the existing record version.
-    - Installed module but no dependency record exists in `Dependency Management`window: The local dependency is deleted, and a new record is added in `Dependency Management`. 
-
-    
-
-2. **If the dependency version is less than the installed version:**
-
-    - Display error and disable the process, preventing installation of an older version to avoid compatibility issues. This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss. In case you need to install the dependency version anyway, you must downgrade the version from the `Dependency Management` window with the [change version](#change-version) button.  
-
-##### Update Packages
-
-This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
-
-#### Dependency Management
-:material-menu: `Application` > `Etendo Dependencies Management` > `Dependency Management`
-
-Logged as System Administrator role, in the `Dependency Management` window, the user can find all the dependencies installed in the previous step.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
-
-Fields to note:
-
-- **Active**: Checkbox to select if this dependency is active or not
-- **Group**: The identifier of the artifact.
-- **Artifact**: The unit of deployment fetched and used.
-- **Version**: Version of the module
-- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
-    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
-    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
-    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
-- **Installation Status**: It describes the dependency current status.
-    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
-    - Installed: Used once the dependency is already installed.
-- **Version Status**: It describes the dependency version status.
-    - Untracked: Only for external dependencies.
-    - Update Available: In case there are new available versions.
-    - Updated: The latest available version is installed.
-- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
-
-This window presents to buttons that can be used: **Change Version** and **Change Format**.
-
-##### Change Version 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager4.png)
-
-This button is used to update or downgrade versions. 
-
-When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
-
-!!!note
-    A warning notification is shown to inform the user about versions compatibility before executing the process.
-
-##### Change Format 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager6.png)
-
-This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
-
-- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
-
-- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
-
-- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
-
-##### Delete Packages
-
-This button is used to delete packages/dependencies.
-
-- **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
-
-    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager7.png)
-
-- **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
-
-    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager8.png)
-
-    !!!note
-        A warning notification is displayed to inform the user of the steps to remove it.
-
-#### Add Local Dependencies 
-:material-menu: `Application` > `Etendo Dependencies Management` > `Add Local dependencies`
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
-
-This process, in `Add Local dependencies` window, also part of the **Dependencies Management**, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
-
-!!! note
-    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
-
-#### Update Packages Information
-:material-menu: `Application` > `Etendo Dependencies Management` > `Update Packages Information`
-
-Since the information about packages is daily updated, the user can execute manually the process from `Update Packages Information` window to update the list of packages with the latest information.
-
-!!!info
-    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
-
-!!!note
-    Each time the server is restarted, the update process is executed automatically.
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: Docker Management
 ## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Docker Management
 ## Article URL: 
@@ -47187,7 +47256,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
     ./gradlew copilot.stop
     ```
 
-6. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Assistant Configuration Guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md){target="_blank"}.
+6. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Copilot Setup and Usage](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md){target="_blank"}.
 
 
 ==ARTICLE_END==
@@ -47211,10 +47280,13 @@ The Copilot Extensions Bundle includes functionalities for developers to help th
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is designed to develop other assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The **Dev Assistant** module includes various development assistants that will facilitate developers the processes of creating buttons, windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
     For more information, visit [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles/dev-assistant.md).
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Dev Assistant
@@ -47228,7 +47300,9 @@ The **Dev Assistant** is designed to develop other assistants to facilitate proc
 
 #### Overview
 
-The **Dev Assistant section** provides an overview of the tools, functionality, and usage examples for various development assistants available in Etendo. Dev Assistant streamlines workflow management for developers by offering **specialized assistants** that simplify tasks such as creating buttons, windows, tabs and tables, Event Handlers, Jasper Reports, background processes, and more. These assistants are designed to enhance productivity and reduce complexity, making it easier for developers to efficiently build and manage different components within the Etendo platform.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This page provides an overview of the tools, functionality, and usage examples for various development assistants available in Etendo. Dev Assistant streamlines workflow management for developers by offering **specialized assistants** that simplify tasks such as creating buttons, windows, tabs and tables, Event Handlers, Jasper Reports, background processes, and more. These assistants are designed to enhance productivity and reduce complexity, making it easier for developers to efficiently build and manage different components within the Etendo platform.
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -47409,7 +47483,7 @@ This assistant is capable of creating **Event Handlers** in Etendo Classic. You 
 
 ###### Functionality
 
-**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the wizard requires the following parameters:
+**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the assistant requires the following parameters:
   
 - **Java package**: The package where the file will be saved.
 - **File name**: The name of the file to create.
@@ -50793,7 +50867,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | CS |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.4.0){target="_blank"} | 18/10/2024 | CS |
+| [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | C |
 | [1.3.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.2){target="_blank"} | 04/01/2024 | C |
 | [1.3.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.1){target="_blank"} | 15/12/2023 | C |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.0){target="_blank"} | 12/12/2023 | C |
@@ -51462,6 +51537,9 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.0){target="_blank"} | 18/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.6.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.6.2){target="_blank"} | 17/10/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.6.1){target="_blank"} | 11/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.6.0){target="_blank"} | 07/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
 | [1.5.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.5.1){target="_blank"} | 01/10/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.5.0){target="_blank"} | 27/09/2024 | 23.4.0 | * | C | :white_check_mark: |
