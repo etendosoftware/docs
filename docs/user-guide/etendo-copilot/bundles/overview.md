@@ -44,6 +44,26 @@ The apps described below belong to preconfigured reference data included in the 
     !!! info
         For more information, visit [SQL Expert user guide](../../../user-guide/etendo-copilot/bundles/sql-expert.md).
 
+## Etendo Copilot SubApp
+
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
+
+### Overview 
+
+The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
+
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+
+With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
+
+**Copilot SubApp mobile mode**
+
+![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/etendo-copilot-subapp1.jpg){ width="300" }
+
+**Copilot SubApp tablet mode**
+
+![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/etendo-copilot-subapp2.png)
+
 ## Modules
 
 ### Copilot OCR Tool
@@ -109,3 +129,4 @@ This tool allows the user to translate the content of an XML file from one langu
 
 !!! info
     For more information, visit [XML Translation Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
+
