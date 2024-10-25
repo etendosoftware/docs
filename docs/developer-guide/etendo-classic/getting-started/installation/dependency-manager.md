@@ -2,10 +2,9 @@
 tags:
   - Beta
   - Etendo Classic
-  - platform extensions
-  - installation
-  - modules instalation
-  - dependency manager
+  - Install
+  - Modules Instalation
+  - Dependency Manager
 ---
 
 # Dependency Manager
@@ -14,14 +13,51 @@ tags:
 
 ## Overview
 
-With this module, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
+With this module, the user can access from the Etendo Classic interface all Etendo packages published in Etendo Software repositories. 
+
+In addition, from the Module Management window you can query packages, available versions, dependencies and install new packages. 
+
+Then, from the Dependency Management window you can update, remove and change the format of already installed modules. 
+
+## Installation 
+
+To install this package that will allow you to manage other packages directly from the Etendo Classic interface you must add in the `build.gradle` file the following dependency:
+
+
+``` groovy title="build.gradle"
+dependencies {
+// Add your dependency here
+    implementation('com.etendoerp:dependencymanager:1.1.0')
+}
+```
+!!! warning
+    You must make sure to use Gradle plugin version `1.4.0` or higher, check the plugins section also in the `build.gradle` file.
+
+    ``` groovy title="build.gradle"
+    plugins {
+    id 'java'
+    id 'war'
+    id 'groovy'
+    id 'maven-publish'
+    id 'com.etendoerp.gradleplugin' version '1.4.0'
+    }
+    ```
+
+Then, to install the module run the command gradle : 
+
+``` bash title="Terminal"
+./gradlew update.database smartbuild
+```
+
+!!! info 
+    For more information visit [Install Modules](./install-modules-in-etendo.md#2-search-for-dependencies) guide. 
 
 ## Module Management
 :material-menu: `Application` > `Etendo Dependencies Management` > `Module Management`
 
 Logged as System Administrator role, in the `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
+![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager1.png)
 
 !!!info
     The fields in this window are read-only.
@@ -46,7 +82,7 @@ This button allows you to add the dependencies associated with a specific versio
 !!!note
     A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
+![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager2.png)
 
 Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
 
@@ -74,7 +110,7 @@ This button is used to execute the Update Packages process which updates the lis
 
 Logged as System Administrator role, in the `Dependency Management` window, the user can find all the dependencies installed in the previous step.
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
+![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager3.png)
 
 Fields to note:
 
@@ -99,7 +135,7 @@ This window presents to buttons that can be used: **Change Version** and **Chang
 
 ### Change Version 
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager4.png)
+![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager4.png)
 
 This button is used to update or downgrade versions. 
 
@@ -110,7 +146,7 @@ When the version of a module is modified, its related dependencies could be modi
 
 ### Change Format 
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager6.png)
+![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager6.png)
 
 This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
 
@@ -126,11 +162,11 @@ This button is used to delete packages/dependencies.
 
 - **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
 
-    ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager7.png)
+    ![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager7.png)
 
 - **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
 
-    ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager8.png)
+    ![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager8.png)
 
     !!!note
         A warning notification is displayed to inform the user of the steps to remove it.
@@ -138,7 +174,7 @@ This button is used to delete packages/dependencies.
 ## Add Local Dependencies 
 :material-menu: `Application` > `Etendo Dependencies Management` > `Add Local dependencies`
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
+![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager5.png)
 
 This process, in `Add Local dependencies` window, also part of the **Dependencies Management**, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
 

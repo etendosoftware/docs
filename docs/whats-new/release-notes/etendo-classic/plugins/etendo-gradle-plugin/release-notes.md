@@ -11,7 +11,8 @@ tags:
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | CS |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.4.0){target="_blank"} | 18/10/2024 | CS |
+| [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | C |
 | [1.3.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.2){target="_blank"} | 04/01/2024 | C |
 | [1.3.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.1){target="_blank"} | 15/12/2023 | C |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.0){target="_blank"} | 12/12/2023 | C |

@@ -204,6 +204,7 @@ nav:
             - Bank Integration PSD2: user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
             - Impuestos para España: user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
             - Intrastat: user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
@@ -214,8 +215,8 @@ nav:
             - Modelo 347: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
             - Modelo 349: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
             - Modelo 390: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
-            - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
+            - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
           - Etendo BI Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
@@ -256,6 +257,7 @@ nav:
           - Install Modules: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
           - Install Translation Bundles: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
           - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
+          - Dependency Manager: developer-guide/etendo-classic/getting-started/installation/dependency-manager.md 
         - Migration from Openbravo:
           - Migrating to Etendo (from Openbravo): developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo.md
           - Upgrading to Openbravo 21Q3.2: developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2.md
@@ -381,7 +383,7 @@ nav:
         - How to Create and Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
         - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
-#        - How to create client event handler actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
+        - How to Create Client Event Handler Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
         - How to Create Client Side Callout Onchange Function: developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function.md
         - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
 #        - How to Create new attachment method: developer-guide/etendo-classic/how-to-guides/How_to_Create_new_attachment_method.md
@@ -444,7 +446,6 @@ nav:
         - Platform Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
-          - Dependency Manager: developer-guide/etendo-classic/bundles/platform/dependency-manager.md
           - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
           - Dockerized Tomcat Service: developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md
           - Dynamic App: developer-guide/etendo-classic/bundles/platform/dynamic-app.md

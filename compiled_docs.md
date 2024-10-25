@@ -20660,6 +20660,437 @@ It is necessary to run the **Days Back to Refresh Accounting** background proces
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Overview
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/overview
+## Article Content: 
+#### Descripción
+El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo Classic a los requerimientos legales y/o fiscales españoles.
+
+#### Módulos
+
+- [Spain SII](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md)
+- [Tax Report: Modelo 303 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md)
+- [Withholding Report: Modelo 190 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md)
+- [Spain AEAT Modelo 347 for APR](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md)
+- [Modelo 349](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md)
+- [Impuestos para España](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md)
+- [Intrastat](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md)
+- [Tax Report: Modelo 390 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md)
+- [Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md)
+- [Configuración de Impuestos para Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
+- [TicketBai y Batuz](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md)
+- Incoterms
+- European Union Countries
+- Provincias de España
+- Legal Representative of the Organization
+- I.A.E. Epigraphs (Epígrafes del I.A.E.)
+- CIF and NIF validator
+- Validador de número de cuenta financiera
+- Check Printing
+- Tipo de Número de Identificación de Tercero
+- Professional Localization pack Spain (España) Datasets
+- Multidimensional Tax Report
+- Cuaderno 43
+- 3 digits ISO country codes
+- Métodos de Pago
+- Tax Report Launcher
+- Spanish Tax Module Improvements
+- Nueva versión del módulo de Impuestos de España
+- Condiciones de pago
+- Chart of accounts: PGC 2007 General
+- Chart of accounts: PGC 2007 PYMEs
+- Professional Localization pack Spain (España)
+- Localization pack Spain (España)
+- Traducción al español del módulo 'Default Jobs'
+- JSON Datasource Translation: Spanish Spain (es_ES)
+- Workspace & Widgets Translation: Spanish Spain (es_ES)
+- User Interface Selector Translation: Spanish Spain (es_ES)
+- Traducción al Español del módulo Payment Report
+- Number To Word
+- User Interface Client Kernel Translation Spanish Spain(esES)
+- Translation: Spanish-Spain (es_ES) español-España
+- Openbravo Multi Business Partner Selector
+- Orders Awaiting Delivery Spanish (Spain) Translation
+- Smartclient Translation: Spanish Spain (es_ES)
+- Query/List Widget Translation Spanish Spain (es_ES)
+- Widgets Collection Translation Spanish Spain (es_ES)
+- Advanced Payables and Receivables - Spanish Translation
+- User Interface Application Translation Spanish Spain (es_ES)
+- Alerts: Accounting
+- SOAP with Attachments API for Java Implementation
+- Payment Method Type
+- Javax XML SOAP API
+- HTML Widget Translation Spanish Spain (es_ES)
+- OpenID Service Integration Translation Spanish Spain
+- Integration with Google APIs Translation Spanish Spain
+- Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
+
+#### Incoterms
+
+:octicons-package-16: Javapackage: `org.openbravo.module.incoterms`
+
+Este módulo añade el listado de Incoterms a Etendo Classic.
+
+Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
+
+#### European Union Countries
+
+:octicons-package-16: Javapackage: `org.openbravo.module.eucountries`
+
+Este módulo identifica qué países pertenecen a la Unión Europea.
+
+#### Provincias de España
+
+:octicons-package-16: Javapackage: `org.openbravo.spain.regions`
+
+Este módulo añade el listado de provincias españolas a Etendo Classic.
+
+#### Legal Representative of the Organization
+
+:octicons-package-16: Javapackage: `org.openbravo.module.organization.representative.es`
+
+Este módulo añade a la ventana de la Organización una pestaña que permite configurar el Representante Legal de la Organización. Pueden declararse uno o varios Representantes.
+
+La pestaña “Representante Legal” que se añade a la ventana de Organización permite configurar el Representante Legal de la organización, dato que es obligatorio para el Modelo 390.
+
+#### I.A.E. Epigraphs (Epígrafes del I.A.E.)
+
+:octicons-package-16: Javapackage: `org.openbravo.module.epigrafes.iae.es`
+
+Este módulo agrega en la ventana de Organización una pestaña titulada “Actividades del IAE”, donde se pueden indicar todas las actividades en las que la empresa ha estado trabajando. Es posible seleccionar los Epígrafes del Impuesto sobre Actividades Económicas (IAE) que estén asociados a la Organización.
+
+El tipo de información agregada por este módulo se requiere en determinados modelos tributarios oficiales, por ejemplo en el Modelo 390.
+
+En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea incluir un epígrafe que pertenezca a cualquier otra clave, se debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa “Actividades del IAE” de la ventana de Organización.
+
+#### CIF and NIF validator
+
+:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator`
+
+:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator.es_es`
+
+Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.
+
+El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
+
+#### Validador de número de cuenta financiera
+
+:octicons-package-16: Javapackage: `org.openbravo.module.finactvalidator.es`
+
+Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
+
+#### Check Printing
+
+:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting`
+
+:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting.es_es`
+
+Este módulo permite la impresión de cheques desde Etendo. Además, provee un sistema para buscar datos históricos y poder volver a imprimir un cheque en caso de error.
+
+Este módulo incluye el dataset "Check Printing Infraestructure" que crea un formato de impresión llamado "Standard Format", un método de pago denominado “Check" y un proceso de ejecución llamado "Check Printing".
+
+##### Ejecutar pago
+
+Después de crear un pago, permanecerá en “Awaiting Execution”. Se necesita un paso adicional para ejecutarlo y proveer el primer número para la secuencia de los cheques, esto puede hacerse a través del formulario de “Payment Execution”.
+
+Para seleccionar los pagos que serán impresos, tras hacer click en “Process” aparece un pop up que requiere un número para el cheque. Este número es opcional.
+El sistema creará automáticamente las entradas en la ventana “Check Printing” en estado “Not Printed”. Además, el sistema asociará automáticamente el tipo de documento “Check” y el número de secuencia.
+
+##### Imprimir cheques
+
+Se genera una nueva ventana para imprimir cheques. Esta puede encontrarse en _Gestión Financiera > Gestión de cobros y pagos > Transacciones > Impresión de cheques_. La información de esta ventana será automáticamente completada cuando se ejecuten transacciones payment out que están usando el método de pago “Check”.
+
+La ventana aplica un primer filtro para mostrar solamente los cheques que están en estado “Not printed”. Ese filtro puede ser removido para mostrar todos los cheques, incluidos los que están en estado “Printed”.
+
+Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón “Imprimir”.
+
+#### Tipo de Número de Identificación de Tercero
+
+:octicons-package-16: Javapackage: `org.openbravo.module.bptaxidkey`
+
+Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
+
+#### Professional Localization pack Spain (España) Datasets
+
+:octicons-package-16: Javapackage: `org.openbravo.proflocalization.spain.dataset`
+
+Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
+
+#### Multidimensional Tax Report
+
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30`
+
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30.es_es`
+
+Este módulo genera un informe que permite al usuario obtener un listado de aquellas transacciones registradas en el sistema que tienen implicaciones fiscales.
+
+El módulo permite obtener los datos necesarios para cumplimentar modelos de la AEAT que no se generan como un fichero válido desde Etendo. Por ejemplo, el Modelo 115 (Trimestral) de Retenciones e ingresos a cuenta sobre rentas procedentes del arrendamiento de inmuebles urbanos.
+
+La información obtenida mediante este módulo es útil para que las empresas puedan completar manualmente y enviar los informes requeridos por las autoridades. Se le brinda al usuario final información fiscal relevante, que luego puede ser clasificada según las necesidades.
+
+#### Cuaderno 43
+
+:octicons-package-16: Javapackage: `org.openbravo.module.cuaderno43.es`
+
+Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
+
+#### 3 digits ISO country codes
+
+:octicons-package-16: Javapackage: `org.openbravo.module.countryisocode`
+
+Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
+
+#### Métodos de Pago
+
+:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentmethods`
+
+Este módulo contiene las formas de pago más utilizadas en España, las cuales pueden ser utilizadas en el módulo de gestión avanzada de cobros y pagos. Incluye Recibo domiciliado, Recibo, Letra Aceptada, Crédito Documentario, Contrato Adjudicación, etc.
+
+El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las empresas, por ejemplo contado o tarjeta de crédito. Etendo define un flujo de pagos basado en la configuración de Métodos de Pago.
+
+#### Tax Report Launcher
+
+:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher`
+
+:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher.es`
+
+Este módulo consiste en un launcher de impuestos que permite la definición de informes y de sus parámetros, e incluye la clase java asociada que contiene la lógica de negocios que será aplicada.
+
+Este módulo permite crear y enviar formularios de informe de impuestos desde Etendo. Es posible ingresar los datos requeridos en un formulario en particular y generar un fichero que luego puede ser enviado a las autoridades.
+Los impuestos para una localización determinada se instalan con módulos que extienden de este.
+
+##### Configuración de declaraciones de impuestos
+
+Para habilitar el uso del launcher de declaraciones de impuestos, se deben descargar e instalar los siguientes módulos:
+
+- Tax Report Launcher
+- Módulos individuales de informes para los informes de impuestos que se quieren utilizar.
+- Módulos de códigos de transacción y de clave tributaria.
+
+Cuando estos módulos están instalados, es necesario asociar los rangos de impuestos con los parámetros de las declaraciones de impuestos.
+
+###### Códigos de transacción
+
+Los códigos de transacción representan transacciones en las que se paga IVA. Por ejemplo, una compra de bienes. Hay dos códigos de transacción predeterminados en Etendo: E para transacciones de venta y A para transacciones de compra. Los códigos de transacción están en un módulo que se puede descargar y aplicar.
+
+###### Claves y subclaves de impuestos
+
+El sistema fiscal español designa un conjunto específico de letras para cada tipo de ingreso (por ejemplo, la P representa la renta de una propiedad alquilada). Las claves y subclaves de impuestos están en un módulo que se puede descargar y aplicar.
+
+###### Asociar un rango de impuestos con un parámetro de impuestos
+
+- Se realiza a partir de la ruta _Gestión Financiera > Contabilidad > Configuración > Rango Impuesto._
+- En la vista de cuadrícula, se selecciona la tasa de impuestos que se desea asociar con un parámetro de impuestos.
+- Se selecciona la pestaña “Parámetro de declaración”.
+- En la lista de Parámetros del informe de impuestos, se debe seleccionar el parámetro que se desea asociar con la tasa de impuestos.
+- Clic en “Guardar”.
+
+###### Usar el Generador de Declaraciones de Impuestos para generar un informe
+
+- Ruta: _Gestión Financiera > Contabilidad > Herramientas de análisis > Generador de declaraciones de impuestos_.
+- Seleccionar de la lista de “Declaración de impuestos” cuál es el informe requerido.
+- Seleccionar la organización para la cual se quiere generar el informe de impuestos. Para ello, la organización debe ser del tipo entidad legal con contabilidad.
+- Seleccionar el esquema contable que se desea utilizar para el informe de impuestos. Se puede seleccionar el esquema de contabilidad propio de la organización o un esquema de contabilidad de una organización padre.
+- Seleccionar un calendario. El sistema establece de forma predeterminada el calendario de la organización, pero se puede seleccionar cualquier otro. Esto es especialmente útil cuando el calendario de la organización no se basa en años naturales (de enero a diciembre), pero el informe requiere períodos y años naturales.
+- En la lista “Año”, se debe seleccionar el año fiscal para el que se desea crear el informe.
+- En la lista “Período”, se debe seleccionar el período para el que se desea crear el informe. Por ejemplo, si el informe se ha configurado para enviarse al final de cada trimestre, se puede seleccionar el trimestre correcto de la lista.
+- Al hacer clic en “Parámetros de entrada”, aparece una ventana que muestra campos a completar con información necesaria para el informe. Los campos que aparecen dependen de la configuración del informe fiscal y deben ser completados.
+- En el campo “Nombre de archivo” se asigna al informe un nombre de archivo.
+- Click en “Generar archivo electrónico”.
+- Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción “Guardar”, se debe especificar una ubicación de archivo.
+
+
+#### Spanish Tax Module Improvements
+
+:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es`
+
+:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es_es`
+
+Este módulo añade campos en la ventana de “Rango de impuestos” para mejorar la configuración y administración de los impuestos de España. Los campos añadidos son: Tipo de libro, Inversión de sujeto pasivo, Recargo de equivalencia e Impuesto intracomunitario.
+
+- Tipo de Libro (“Tax Book Type”): El usuario puede configurar si un rango de impuesto debe ser reportado en la compra (recibido) o en la venta (enviado) del Libro de Facturas.
+- Inversión de Sujeto Pasivo ("Reverse Charge"): El usuario puede seleccionar este check para indicar que un rango de impuesto es una tasa de impuesto de cargo inverso
+- Recargo de equivalencia ("Equivalent Charge"): El usuario puede seleccionar este check para indicar que un rango de impuesto es un recargo de equivalencia.
+- Impuesto Intracomunitario ("Intra Community Tax"): El usuario puede seleccionar este check para indicar que un rango de impuesto es intracomunitario.
+
+#### Nueva versión del módulo de Impuestos de España
+
+Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
+
+#### Condiciones de pago
+
+:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentterms`
+
+Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
+
+#### Chart of accounts: PGC 2007 General
+
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts`
+
+Este módulo añade el Plan de Cuentas General (Modelo Normal) conforme a los requerimientos vigentes en España.
+
+Etendo puede configurarse para realizar la contabilidad en base a distintos esquemas contables.
+
+El cuadro de cuentas define las cuentas contables y la estructura del balance de situación y de la cuenta de resultados. La estructura de la cuenta de resultados es de una sola columna. El cuadro de cuentas definido permite utilizar las cuentas contables y obtener la información del balance y la cuenta de resultados.
+
+El Plan de Cuentas General tiene la siguiente estructura:
+
+- Marco Conceptual de la Contabilidad
+- Normas de registro y valoración
+- Cuentas anuales
+- Cuadro de cuentas
+- Definiciones y relaciones contables
+
+El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una empresa cumple alguna de estas condiciones:
+
+- El total de las partidas del activo de la empresa supera los dos millones ochocientos cincuenta mil euros.
+- El importe neto de la cifra anual de negocios supera los cinco millones setecientos mil euros.
+- El número medio de trabajadores empleados durante el ejercicio es superior a cincuenta.
+- La empresa ha emitido valores admitidos a negociación en mercados regulados o sistemas multilaterales de negociación, de cualquier Estado miembro de la Unión Europea.
+- Forma parte de un grupo de sociedades que formule o debiera haber formulado cuentas anuales consolidadas.
+- La moneda funcional es distinta del euro.
+- Se trata de una entidad financiera que capta fondos del público, asumiendo obligaciones respecto a los mismos.
+
+#### Chart of accounts: PGC 2007 PYMEs
+
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts.pymes`
+
+Este módulo añade el Plan de Cuentas PYMES conforme a los requerimientos vigentes en España.
+
+Etendo puede configurarse para realizar la contabilidad en base a distintos esquemas contables.
+
+El cuadro de cuentas define las cuentas contables y la estructura del balance de situación y de la cuenta de resultados. La estructura de la cuenta de resultados es de una sola columna. El cuadro de cuentas definido permite utilizar las cuentas contables y obtener la información del balance y la cuenta de resultados.
+
+El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y medianas empresas en España. Tiene la siguiente estructura:
+
+- Marco Conceptual de la Contabilidad
+- Normas de registro y valoración
+- Cuentas anuales
+- Cuadro de cuentas
+- Definiciones y relaciones contables
+
+#### Professional Localization pack Spain (España)
+
+Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.
+
+#### Localization pack Spain (España)
+
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain30`
+
+Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
+
+#### Traducción al español del módulo 'Default Jobs'
+
+:octicons-package-16: Javapackage: `com.smf.jobs.defaults.es_es`
+
+#### JSON Datasource Translation: Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.service.datasource.es_es`
+
+#### Workspace & Widgets Translation: Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.client.myob.es_es`
+
+#### User Interface Selector Translation: Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.userinterface.selector.es_es`
+
+#### Traducción al Español del módulo Payment Report
+
+:octicons-package-16: Javapackage: `org.openbravo.financial.paymentreport.es_es`
+
+#### Number To Word
+
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
+
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_es`
+
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword.es_es`
+
+#### User Interface Client Kernel Translation Spanish Spain(esES)
+
+:octicons-package-16: Javapackage: `org.openbravo.client.kernel.es_es`
+
+#### Translation: Spanish-Spain (es_ES) español-España
+
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.translation.esES`
+
+#### Openbravo Multi Business Partner Selector
+
+:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector`
+
+:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector.es_es`
+
+#### Orders Awaiting Delivery Spanish (Spain) Translation
+
+:octicons-package-16: Javapackage: `org.openbravo.reports.ordersawaitingdelivery.es_es`
+
+#### Smartclient Translation: Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.userinterface.smartclient.es_es`
+
+#### Query/List Widget Translation Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.client.querylist.es_es`
+
+#### Widgets Collection Translation Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.client.widgets.es_es`
+
+#### Advanced Payables and Receivables - Spanish Translation
+
+:octicons-package-16: Javapackage: `org.openbravo.advpaymentmngt.es_es`
+
+#### User Interface Application Translation Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.client.application.es_es`
+
+#### Alerts: Accounting
+
+:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30`
+
+:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30.es_es`
+
+#### SOAP with Attachments API for Java Implementation
+
+:octicons-package-16: Javapackage: `org.openbravo.util.saaj.impl`
+
+#### Payment Method Type
+
+:octicons-package-16: Javapackage: `org.openbravo.module.paymentmethod.type`
+
+#### Javax XML SOAP API
+
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+
+#### HTML Widget Translation Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.client.htmlwidget.es_es`
+
+#### OpenID Service Integration Translation Spanish Spain
+
+:octicons-package-16: Javapackage: `org.openbravo.service.integration.openid.es_es`
+
+#### Integration with Google APIs Translation Spanish Spain
+
+:octicons-package-16: Javapackage: `org.openbravo.service.integration.google.es_es`
+
+#### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
+
+:octicons-package-16: Javapackage: `org.openbravo.v3.translation.pack.es_es`
+
+#### TicketBai y Batuz
+
+:octicons-package-16: Javapackage: `com.smf.ticketbai`
+
+Este módulo permite cumplir con las normativas fiscales del País Vasco, automatizando el proceso de emisión, firma electrónica y envío de facturas a la hacienda foral de Gipuzkoa y Bizkaia. A través de este sistema, se garantiza la trazabilidad y autenticidad de las facturas, permitiendo su envío en tiempo real y asegurando el cumplimiento fiscal.
+
+!!! info
+    Para más información, visite la [Guía de usuario TicketBai y Batuz](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md).
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Configuración de Impuestos para Libro de Facturas
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Configuración de Impuestos para Libro de Facturas
 ## Article URL: 
@@ -23920,428 +24351,6 @@ Los resultados de las liquidaciones periódicas del Modelo 303 se pueden introdu
 -   o bien, "Resultado de la autoliquidación el último período a compensar".
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Overview
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/Overview
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/overview
-## Article Content: 
-#### Descripción
-El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo Classic a los requerimientos legales y/o fiscales españoles.
-
-#### Módulos
-
-- [Spain SII](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md)
-- [Tax Report: Modelo 303 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md)
-- [Withholding Report: Modelo 190 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md)
-- [Spain AEAT Modelo 347 for APR](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md)
-- [Modelo 349](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md)
-- [Impuestos para España](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md)
-- [Intrastat](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md)
-- [Tax Report: Modelo 390 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md)
-- [Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md)
-- [Configuración de Impuestos para Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
-- Incoterms
-- European Union Countries
-- Provincias de España
-- Legal Representative of the Organization
-- I.A.E. Epigraphs (Epígrafes del I.A.E.)
-- CIF and NIF validator
-- Validador de número de cuenta financiera
-- Check Printing
-- Tipo de Número de Identificación de Tercero
-- Professional Localization pack Spain (España) Datasets
-- Multidimensional Tax Report
-- Cuaderno 43
-- 3 digits ISO country codes
-- Métodos de Pago
-- Tax Report Launcher
-- Spanish Tax Module Improvements
-- Nueva versión del módulo de Impuestos de España
-- Condiciones de pago
-- Chart of accounts: PGC 2007 General
-- Chart of accounts: PGC 2007 PYMEs
-- Professional Localization pack Spain (España)
-- Localization pack Spain (España)
-- Traducción al español del módulo 'Default Jobs'
-- JSON Datasource Translation: Spanish Spain (es_ES)
-- Workspace & Widgets Translation: Spanish Spain (es_ES)
-- User Interface Selector Translation: Spanish Spain (es_ES)
-- Traducción al Español del módulo Payment Report
-- Number To Word
-- User Interface Client Kernel Translation Spanish Spain(esES)
-- Translation: Spanish-Spain (es_ES) español-España
-- Openbravo Multi Business Partner Selector
-- Orders Awaiting Delivery Spanish (Spain) Translation
-- Smartclient Translation: Spanish Spain (es_ES)
-- Query/List Widget Translation Spanish Spain (es_ES)
-- Widgets Collection Translation Spanish Spain (es_ES)
-- Advanced Payables and Receivables - Spanish Translation
-- User Interface Application Translation Spanish Spain (es_ES)
-- Alerts: Accounting
-- SOAP with Attachments API for Java Implementation
-- Payment Method Type
-- Javax XML SOAP API
-- HTML Widget Translation Spanish Spain (es_ES)
-- OpenID Service Integration Translation Spanish Spain
-- Integration with Google APIs Translation Spanish Spain
-- Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
-
-#### Incoterms
-
-:octicons-package-16: Javapackage: `org.openbravo.module.incoterms`
-
-Este módulo añade el listado de Incoterms a Etendo Classic.
-
-Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
-
-#### European Union Countries
-
-:octicons-package-16: Javapackage: `org.openbravo.module.eucountries`
-
-Este módulo identifica qué países pertenecen a la Unión Europea.
-
-#### Provincias de España
-
-:octicons-package-16: Javapackage: `org.openbravo.spain.regions`
-
-Este módulo añade el listado de provincias españolas a Etendo Classic.
-
-#### Legal Representative of the Organization
-
-:octicons-package-16: Javapackage: `org.openbravo.module.organization.representative.es`
-
-Este módulo añade a la ventana de la Organización una pestaña que permite configurar el Representante Legal de la Organización. Pueden declararse uno o varios Representantes.
-
-La pestaña “Representante Legal” que se añade a la ventana de Organización permite configurar el Representante Legal de la organización, dato que es obligatorio para el Modelo 390.
-
-#### I.A.E. Epigraphs (Epígrafes del I.A.E.)
-
-:octicons-package-16: Javapackage: `org.openbravo.module.epigrafes.iae.es`
-
-Este módulo agrega en la ventana de Organización una pestaña titulada “Actividades del IAE”, donde se pueden indicar todas las actividades en las que la empresa ha estado trabajando. Es posible seleccionar los Epígrafes del Impuesto sobre Actividades Económicas (IAE) que estén asociados a la Organización.
-
-El tipo de información agregada por este módulo se requiere en determinados modelos tributarios oficiales, por ejemplo en el Modelo 390.
-
-En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea incluir un epígrafe que pertenezca a cualquier otra clave, se debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa “Actividades del IAE” de la ventana de Organización.
-
-#### CIF and NIF validator
-
-:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator`
-
-:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator.es_es`
-
-Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.
-
-El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
-
-#### Validador de número de cuenta financiera
-
-:octicons-package-16: Javapackage: `org.openbravo.module.finactvalidator.es`
-
-Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
-
-#### Check Printing
-
-:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting`
-
-:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting.es_es`
-
-Este módulo permite la impresión de cheques desde Etendo. Además, provee un sistema para buscar datos históricos y poder volver a imprimir un cheque en caso de error.
-
-Este módulo incluye el dataset "Check Printing Infraestructure" que crea un formato de impresión llamado "Standard Format", un método de pago denominado “Check" y un proceso de ejecución llamado "Check Printing".
-
-##### Ejecutar pago
-
-Después de crear un pago, permanecerá en “Awaiting Execution”. Se necesita un paso adicional para ejecutarlo y proveer el primer número para la secuencia de los cheques, esto puede hacerse a través del formulario de “Payment Execution”.
-
-Para seleccionar los pagos que serán impresos, tras hacer click en “Process” aparece un pop up que requiere un número para el cheque. Este número es opcional.
-El sistema creará automáticamente las entradas en la ventana “Check Printing” en estado “Not Printed”. Además, el sistema asociará automáticamente el tipo de documento “Check” y el número de secuencia.
-
-##### Imprimir cheques
-
-Se genera una nueva ventana para imprimir cheques. Esta puede encontrarse en _Gestión Financiera > Gestión de cobros y pagos > Transacciones > Impresión de cheques_. La información de esta ventana será automáticamente completada cuando se ejecuten transacciones payment out que están usando el método de pago “Check”.
-
-La ventana aplica un primer filtro para mostrar solamente los cheques que están en estado “Not printed”. Ese filtro puede ser removido para mostrar todos los cheques, incluidos los que están en estado “Printed”.
-
-Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón “Imprimir”.
-
-#### Tipo de Número de Identificación de Tercero
-
-:octicons-package-16: Javapackage: `org.openbravo.module.bptaxidkey`
-
-Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
-
-#### Professional Localization pack Spain (España) Datasets
-
-:octicons-package-16: Javapackage: `org.openbravo.proflocalization.spain.dataset`
-
-Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
-
-#### Multidimensional Tax Report
-
-:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30`
-
-:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30.es_es`
-
-Este módulo genera un informe que permite al usuario obtener un listado de aquellas transacciones registradas en el sistema que tienen implicaciones fiscales.
-
-El módulo permite obtener los datos necesarios para cumplimentar modelos de la AEAT que no se generan como un fichero válido desde Etendo. Por ejemplo, el Modelo 115 (Trimestral) de Retenciones e ingresos a cuenta sobre rentas procedentes del arrendamiento de inmuebles urbanos.
-
-La información obtenida mediante este módulo es útil para que las empresas puedan completar manualmente y enviar los informes requeridos por las autoridades. Se le brinda al usuario final información fiscal relevante, que luego puede ser clasificada según las necesidades.
-
-#### Cuaderno 43
-
-:octicons-package-16: Javapackage: `org.openbravo.module.cuaderno43.es`
-
-Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
-
-#### 3 digits ISO country codes
-
-:octicons-package-16: Javapackage: `org.openbravo.module.countryisocode`
-
-Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
-
-#### Métodos de Pago
-
-:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentmethods`
-
-Este módulo contiene las formas de pago más utilizadas en España, las cuales pueden ser utilizadas en el módulo de gestión avanzada de cobros y pagos. Incluye Recibo domiciliado, Recibo, Letra Aceptada, Crédito Documentario, Contrato Adjudicación, etc.
-
-El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las empresas, por ejemplo contado o tarjeta de crédito. Etendo define un flujo de pagos basado en la configuración de Métodos de Pago.
-
-#### Tax Report Launcher
-
-:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher`
-
-:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher.es`
-
-Este módulo consiste en un launcher de impuestos que permite la definición de informes y de sus parámetros, e incluye la clase java asociada que contiene la lógica de negocios que será aplicada.
-
-Este módulo permite crear y enviar formularios de informe de impuestos desde Etendo. Es posible ingresar los datos requeridos en un formulario en particular y generar un fichero que luego puede ser enviado a las autoridades.
-Los impuestos para una localización determinada se instalan con módulos que extienden de este.
-
-##### Configuración de declaraciones de impuestos
-
-Para habilitar el uso del launcher de declaraciones de impuestos, se deben descargar e instalar los siguientes módulos:
-
-- Tax Report Launcher
-- Módulos individuales de informes para los informes de impuestos que se quieren utilizar.
-- Módulos de códigos de transacción y de clave tributaria.
-
-Cuando estos módulos están instalados, es necesario asociar los rangos de impuestos con los parámetros de las declaraciones de impuestos.
-
-###### Códigos de transacción
-
-Los códigos de transacción representan transacciones en las que se paga IVA. Por ejemplo, una compra de bienes. Hay dos códigos de transacción predeterminados en Etendo: E para transacciones de venta y A para transacciones de compra. Los códigos de transacción están en un módulo que se puede descargar y aplicar.
-
-###### Claves y subclaves de impuestos
-
-El sistema fiscal español designa un conjunto específico de letras para cada tipo de ingreso (por ejemplo, la P representa la renta de una propiedad alquilada). Las claves y subclaves de impuestos están en un módulo que se puede descargar y aplicar.
-
-###### Asociar un rango de impuestos con un parámetro de impuestos
-
-- Se realiza a partir de la ruta _Gestión Financiera > Contabilidad > Configuración > Rango Impuesto._
-- En la vista de cuadrícula, se selecciona la tasa de impuestos que se desea asociar con un parámetro de impuestos.
-- Se selecciona la pestaña “Parámetro de declaración”.
-- En la lista de Parámetros del informe de impuestos, se debe seleccionar el parámetro que se desea asociar con la tasa de impuestos.
-- Clic en “Guardar”.
-
-###### Usar el Generador de Declaraciones de Impuestos para generar un informe
-
-- Ruta: _Gestión Financiera > Contabilidad > Herramientas de análisis > Generador de declaraciones de impuestos_.
-- Seleccionar de la lista de “Declaración de impuestos” cuál es el informe requerido.
-- Seleccionar la organización para la cual se quiere generar el informe de impuestos. Para ello, la organización debe ser del tipo entidad legal con contabilidad.
-- Seleccionar el esquema contable que se desea utilizar para el informe de impuestos. Se puede seleccionar el esquema de contabilidad propio de la organización o un esquema de contabilidad de una organización padre.
-- Seleccionar un calendario. El sistema establece de forma predeterminada el calendario de la organización, pero se puede seleccionar cualquier otro. Esto es especialmente útil cuando el calendario de la organización no se basa en años naturales (de enero a diciembre), pero el informe requiere períodos y años naturales.
-- En la lista “Año”, se debe seleccionar el año fiscal para el que se desea crear el informe.
-- En la lista “Período”, se debe seleccionar el período para el que se desea crear el informe. Por ejemplo, si el informe se ha configurado para enviarse al final de cada trimestre, se puede seleccionar el trimestre correcto de la lista.
-- Al hacer clic en “Parámetros de entrada”, aparece una ventana que muestra campos a completar con información necesaria para el informe. Los campos que aparecen dependen de la configuración del informe fiscal y deben ser completados.
-- En el campo “Nombre de archivo” se asigna al informe un nombre de archivo.
-- Click en “Generar archivo electrónico”.
-- Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción “Guardar”, se debe especificar una ubicación de archivo.
-
-
-#### Spanish Tax Module Improvements
-
-:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es`
-
-:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es_es`
-
-Este módulo añade campos en la ventana de “Rango de impuestos” para mejorar la configuración y administración de los impuestos de España. Los campos añadidos son: Tipo de libro, Inversión de sujeto pasivo, Recargo de equivalencia e Impuesto intracomunitario.
-
-- Tipo de Libro (“Tax Book Type”): El usuario puede configurar si un rango de impuesto debe ser reportado en la compra (recibido) o en la venta (enviado) del Libro de Facturas.
-- Inversión de Sujeto Pasivo ("Reverse Charge"): El usuario puede seleccionar este check para indicar que un rango de impuesto es una tasa de impuesto de cargo inverso
-- Recargo de equivalencia ("Equivalent Charge"): El usuario puede seleccionar este check para indicar que un rango de impuesto es un recargo de equivalencia.
-- Impuesto Intracomunitario ("Intra Community Tax"): El usuario puede seleccionar este check para indicar que un rango de impuesto es intracomunitario.
-
-#### Nueva versión del módulo de Impuestos de España
-
-Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
-
-#### Condiciones de pago
-
-:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentterms`
-
-Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
-
-#### Chart of accounts: PGC 2007 General
-
-:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts`
-
-Este módulo añade el Plan de Cuentas General (Modelo Normal) conforme a los requerimientos vigentes en España.
-
-Etendo puede configurarse para realizar la contabilidad en base a distintos esquemas contables.
-
-El cuadro de cuentas define las cuentas contables y la estructura del balance de situación y de la cuenta de resultados. La estructura de la cuenta de resultados es de una sola columna. El cuadro de cuentas definido permite utilizar las cuentas contables y obtener la información del balance y la cuenta de resultados.
-
-El Plan de Cuentas General tiene la siguiente estructura:
-
-- Marco Conceptual de la Contabilidad
-- Normas de registro y valoración
-- Cuentas anuales
-- Cuadro de cuentas
-- Definiciones y relaciones contables
-
-El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una empresa cumple alguna de estas condiciones:
-
-- El total de las partidas del activo de la empresa supera los dos millones ochocientos cincuenta mil euros.
-- El importe neto de la cifra anual de negocios supera los cinco millones setecientos mil euros.
-- El número medio de trabajadores empleados durante el ejercicio es superior a cincuenta.
-- La empresa ha emitido valores admitidos a negociación en mercados regulados o sistemas multilaterales de negociación, de cualquier Estado miembro de la Unión Europea.
-- Forma parte de un grupo de sociedades que formule o debiera haber formulado cuentas anuales consolidadas.
-- La moneda funcional es distinta del euro.
-- Se trata de una entidad financiera que capta fondos del público, asumiendo obligaciones respecto a los mismos.
-
-#### Chart of accounts: PGC 2007 PYMEs
-
-:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts.pymes`
-
-Este módulo añade el Plan de Cuentas PYMES conforme a los requerimientos vigentes en España.
-
-Etendo puede configurarse para realizar la contabilidad en base a distintos esquemas contables.
-
-El cuadro de cuentas define las cuentas contables y la estructura del balance de situación y de la cuenta de resultados. La estructura de la cuenta de resultados es de una sola columna. El cuadro de cuentas definido permite utilizar las cuentas contables y obtener la información del balance y la cuenta de resultados.
-
-El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y medianas empresas en España. Tiene la siguiente estructura:
-
-- Marco Conceptual de la Contabilidad
-- Normas de registro y valoración
-- Cuentas anuales
-- Cuadro de cuentas
-- Definiciones y relaciones contables
-
-#### Professional Localization pack Spain (España)
-
-Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.
-
-#### Localization pack Spain (España)
-
-:octicons-package-16: Javapackage: `org.openbravo.localization.spain30`
-
-Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
-
-#### Traducción al español del módulo 'Default Jobs'
-
-:octicons-package-16: Javapackage: `com.smf.jobs.defaults.es_es`
-
-#### JSON Datasource Translation: Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.service.datasource.es_es`
-
-#### Workspace & Widgets Translation: Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.client.myob.es_es`
-
-#### User Interface Selector Translation: Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.userinterface.selector.es_es`
-
-#### Traducción al Español del módulo Payment Report
-
-:octicons-package-16: Javapackage: `org.openbravo.financial.paymentreport.es_es`
-
-#### Number To Word
-
-:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
-
-:octicons-package-16: Javapackage: `org.openbravo.numbertoword_es`
-
-:octicons-package-16: Javapackage: `org.openbravo.numbertoword.es_es`
-
-#### User Interface Client Kernel Translation Spanish Spain(esES)
-
-:octicons-package-16: Javapackage: `org.openbravo.client.kernel.es_es`
-
-#### Translation: Spanish-Spain (es_ES) español-España
-
-:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.translation.esES`
-
-#### Openbravo Multi Business Partner Selector
-
-:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector`
-
-:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector.es_es`
-
-#### Orders Awaiting Delivery Spanish (Spain) Translation
-
-:octicons-package-16: Javapackage: `org.openbravo.reports.ordersawaitingdelivery.es_es`
-
-#### Smartclient Translation: Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.userinterface.smartclient.es_es`
-
-#### Query/List Widget Translation Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.client.querylist.es_es`
-
-#### Widgets Collection Translation Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.client.widgets.es_es`
-
-#### Advanced Payables and Receivables - Spanish Translation
-
-:octicons-package-16: Javapackage: `org.openbravo.advpaymentmngt.es_es`
-
-#### User Interface Application Translation Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.client.application.es_es`
-
-#### Alerts: Accounting
-
-:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30`
-
-:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30.es_es`
-
-#### SOAP with Attachments API for Java Implementation
-
-:octicons-package-16: Javapackage: `org.openbravo.util.saaj.impl`
-
-#### Payment Method Type
-
-:octicons-package-16: Javapackage: `org.openbravo.module.paymentmethod.type`
-
-#### Javax XML SOAP API
-
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
-
-#### HTML Widget Translation Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.client.htmlwidget.es_es`
-
-#### OpenID Service Integration Translation Spanish Spain
-
-:octicons-package-16: Javapackage: `org.openbravo.service.integration.openid.es_es`
-
-#### Integration with Google APIs Translation Spanish Spain
-
-:octicons-package-16: Javapackage: `org.openbravo.service.integration.google.es_es`
-
-#### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
-
-:octicons-package-16: Javapackage: `org.openbravo.v3.translation.pack.es_es`
-
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: SII para IVA
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/SII para IVA
 ## Article URL: 
@@ -26341,6 +26350,228 @@ Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado s
 
 ![](https://docs.etendo.software/latest/assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: TicketBai y Batuz
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Spanish Localization Bundle/TicketBai y Batuz
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz
+## Article Content: 
+#### Javapackages 
+
+:octicons-package-16: Javapackage: `com.smf.ticketbai`
+
+#### Introducción
+
+Las funcionalidades de **TicketBai** y **Batuz** en Etendo ofrecen una solución integral para el cumplimiento de las normativas fiscales en el País Vasco, orientado a garantizar la **transparencia**, **reducir el fraude fiscal**, y **asegurar la correcta emisión de facturas** electrónicas certificadas.
+
+**TicketBai** es obligatorio para las empresas y profesionales que **operen en Gipuzkoa y estén sujetos al IVA o IAE**, mientras que **Batuz** se centra específicamente en **Bizkaia**, incluyendo además del sistema TicketBai, el Libro Registro de Operaciones Económicas (LROE).
+
+A través de este módulo, Etendo facilita la **automatización de procesos** clave como la **emisión**, **validación** y **envío en tiempo real** de facturas a las haciendas forales. El sistema garantiza la trazabilidad de las transacciones mediante la firma electrónica de las facturas y la transmisión telemática a las autoridades fiscales.
+
+#### Descripción del Módulo
+
+El módulo permite:
+
+- Enviar **automáticamente** los archivos XML con las facturas a las haciendas forales (Gipuzkoa o Bizkaia).
+- Recibir los XML de respuesta con la confirmación del envío de las facturas.
+
+La implementación cubre:
+
+1. **Cumplimiento** de las normativas fiscales tanto para TicketBai como para Batuz.
+2. **Automatización** del envío de facturas emitidas a la administración tributaria.
+3. **Gestión de procesos** como el registro de facturas en TBAI y el registro de facturas de compra en Batuz.
+4. **Historial** de todas las facturas enviadas a las administraciones tributarias.
+#### Contenido del Módulo
+
+
+Al instalar este módulo, el usuario podrá comprobar que:
+
+1. Se crearán nuevas ventanas:
+
+    - **Configuración TBAI**, donde se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a **TicketBai/Batuz**, incluyendo los destinos **Gipuzkoa** y **Bizkaia**.
+
+    - **TBAI Facturas Enviadas**, donde se podrá revisar el historial completo de todas las facturas enviadas tanto a **TicketBai** como a **Batuz**.
+
+2. Se crean **nuevos campos y pestañas** relativos a TicketBai/Batuz en la ventana de **Factura (Cliente)** y **Factura (Proveedor)**, para añadir la información requerida por estos sistemas para el registro de las facturas.
+
+3. Se añade un botón en las ventanas de **Factura (Cliente)** y **Factura (Proveedor)**, con el fin de registrar las facturas de manera electrónica:
+
+    - **En Factura (Cliente)** para Registrar factura en **TicketBai**.
+    - En **Factura (Proveedor)** para Registrar factura en **Batuz**.
+
+4. Se generan nuevos procesos en la ventana **Procesamiento de Peticiones**, denominados:
+
+    - **Registrar facturas en TicketBai**, configurables para cada Organización o "Entidad Legal", permitiendo el alta masiva de facturas en TicketBai con la cadencia de envío configurada.
+
+    - **Registrar facturas en Batuz**, para registrar facturas de compra en Batuz, también configurables para cada Organización o "Entidad Legal", permitiendo el alta masiva con la cadencia de envío configurada.
+
+#### Configuración
+
+##### Dataset
+
+Una vez instalado el módulo, será necesario aplicar el dataset proporcionado para completar la integración de TicketBai/Batuz. Para ello, siga los siguientes pasos:
+
+1.  Acceda a la ventana "**Gestión del módulo de Empresa**".
+
+2.  En esta ventana, seleccione el dato de referencia "**TicketBai Integration**".
+
+3.  Aplique este dataset a la organización *****
+
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/dataset.png)
+
+A continuación, si el proceso se ha ejecutado correctamente, el sistema mostrará una pantalla similar a la siguiente:
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/successful_dataset.png)
+
+Este dataset proveerá los datos necesarios para gestionar el envío de facturas a Gipuzkoa y Bizkaia.
+
+##### Configuración TBAI
+
+La ventana de Configuración TBAI le permitirá ajustar los parámetros necesarios para comenzar a enviar facturas a través de TicketBai o Batuz. A continuación, se describen los campos principales a configurar:
+
+- **Organización**: Seleccione la organización o entidad legal que será responsable del envío de los registros de facturas.
+
+- **Destino**: Elija el destino Gipuzkoa o Bizkaia previamente creado por el dataset.
+
+- **Fecha Acogido TBAI**: Especifique la fecha en la que la organización se acoge al sistema TBAI.
+
+- **Entorno de producción**: Seleccione esta opción si los registros de facturas deben ser enviados al entorno productivo. Si está realizando pruebas, desmarque esta opción para usar un entorno de test.
+
+- **Descripción de Facturas**: Indique el texto que se incluirá en el campo **DescripcionFactura** del XML enviado.
+
+- **Utilizar descripción también para nombre de producto**: Si está activado, se usará el valor de DescripcionFactura en el campo **DescripcionDetalle** del XML de la factura.
+
+- **Auto enviar facturas al completarse**: Active esta opción si desea que las facturas se envíen automáticamente cuando alcancen el estado de "Completado".
+
+- **Ruta de Reporte Jasper**: Especifique la ubicación de la plantilla Jasper que se utilizará para imprimir el reporte de la factura.
+
+- **Validar factura anterior**: Active esta opción para que el sistema verifique si la factura anterior fue enviada correctamente antes de enviar la actual. Si no fue enviada, se mostrará una advertencia y se cancelará el envío.
+
+- **NIF**: Ingrese el NIF del emisor de la factura.
+
+- **Nombre y Apellido del Emisor de Certificado**: Información requerida para el certificado que se adjunta en la configuración.
+
+- **Contraseña del certificado**: Introduzca la contraseña del certificado adjunto.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_conf.png)
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_config_bizkaia.png)
+
+*No olvide adjuntar el certificado necesario.*
+
+##### Rango de impuesto
+
+Al configurar los impuestos en el sistema, es importante completar correctamente los campos relacionados con los **regímenes de IVA** y las **causas de exención o no sujeción**. Estas configuraciones se realizan desde la ventana **Rango de Impuesto**. A continuación, se detallan los campos que deben ser completados según cada caso:
+
+1. **Clave de Régimen Especial de IVA**
+    Este campo debe completarse cuando se aplique un régimen especial de IVA. Esto permitirá que el sistema identifique el régimen aplicable en las facturas enviadas.
+
+    *Condición de visualización: Se muestra si no aplica exención y no sujeción.*
+
+2. **Causa de No Sujeción**
+    Este campo debe completarse en aquellos casos donde el impuesto no esté sujeto a IVA. Este campo es necesario para facturas que no están sujetas a impuestos por alguna razón específica.
+
+    *Condición de visualización: Se muestra cuando no está sujeta a impuestos*.
+
+3. **Causa de Exención**
+    En los casos donde la factura esté exenta de IVA, se deberá seleccionar la causa de exención. Este campo es obligatorio cuando la factura está exenta de impuestos y debe justificar dicha exención al enviar los datos.
+
+    *Condición de visualización: Se muestra cuando la factura está exenta de impuestos*.
+
+
+##### TBAI Facturas enviadas
+
+En la ventana de **TBAI Facturas Enviadas**, es posible visualizar todas las facturas que han sido enviadas desde la organización en la que está trabajando. Esta herramienta permite llevar un control detallado de los **envíos realizados**, facilitando la **gestión** y el **seguimiento** de las facturas que se han transmitido a través del sistema TicketBai o Batuz.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/sent-invoice.png)
+
+
+##### Secuencia de encadenamiento para TBAI 
+
+Antes de realizar el primer envío de facturas, es esencial configurar correctamente el tipo de documento de las facturas que se enviarán.
+
+1. Acceder a la ventana "**Tipo de Documento**": En este registro encontrará un campo denominado "**Secuencia de Encadenamiento para TBAI**". Este campo es clave para llevar un control preciso de las facturas que ya han sido enviadas o que se ha intentado enviar.
+
+2.  Crear una nueva Secuencia de Encadenamiento para TBAI:
+
+    - Ingrese un nombre apropiado en el campo "**Name**".
+    - Active la opción **Auto Numbering**. No es necesario modificar los campos adicionales que aparecerán tras activar esta opción.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_sequence.png)
+
+
+#### Proceso de Envío de Factura
+
+=== "TicketBai"
+    1. Creación de Factura de Venta
+        
+        Para iniciar el proceso, cree una factura de venta utilizando una organización que tenga configurada la opción de TicketBai. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema.
+
+    2.  Registro de Factura en TicketBai
+
+        Una vez completada la factura, se habilitará un botón titulado "**Registrar Factura en TBAI**". Al presionar este botón, se iniciará el proceso de envío de la factura a la plataforma TicketBai.
+        ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/register_invoice.png)
+
+    3.  Resultado del Proceso
+
+        - Si el envío es exitoso, el sistema mostrará un mensaje de confirmación indicando que la factura ha sido registrada correctamente en TicketBai.
+        - En caso de error, se mostrará un mensaje con una descripción detallada del fallo, permitiendo identificar y resolver el problema.
+
+        ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/successfully_sent.png)
+
+
+    ### Detalle del Envío a TicketBai
+
+    Además del botón para registrar la factura, existe una solapa denominada "**TicketBai**" dentro de la factura. Esta sección muestra información relevante sobre el proceso de envío de la factura a la plataforma TicketBai, incluyendo:
+
+    -   **Estado del Envío**: Indica si la factura ha sido recibida exitosamente por la plataforma.
+    -   **Descripción**: Proporciona información adicional sobre el estado del envío. En caso de error, esta descripción incluirá detalles específicos que ayudarán a identificar el problema.
+
+    En la misma pestaña, se encuentra un apartado de **Adjuntos** donde se almacena la respuesta que TicketBai devuelve. Este archivo es generado en formato XML y contiene los detalles técnicos sobre el resultado del proceso de envío.
+
+    ### Envío Automático 
+
+    Dentro de la ventana "**Procesamiento de Peticiones**" se ha creado un proceso "**Registrar facturas en TBAI**", que puede configurarse para cada organización o entidad legal.
+
+    Tal y como sucede con otros procesos de Etendo, éstos podrán configurarse para ser ejecutados de forma inmediata, planificada o programada con una cierta frecuencia, donde permitirán el alta masiva de facturas en Ticketbai con la cadencia de envío configurada.
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/process_request.png)
+
+=== "Batuz"
+
+    1. Creación de Factura de Compra
+        
+        Para iniciar el proceso, cree una factura de compra utilizando una organización que tenga configurada el destino Bizkaia. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema.
+
+    2.  Registro de Factura en Batuz
+
+        Una vez completada la factura, se habilitará un botón titulado "**Registrar Factura en Batuz**". Al presionar este botón, se iniciará el proceso de envío de la factura a Batuz.
+        ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/register_invoice_batuz.png)
+
+    3.  Resultado del Proceso
+
+        - Si el envío es exitoso, el sistema mostrará un mensaje de confirmación indicando que la factura ha sido registrada correctamente en Batuz.
+        - En caso de error, se mostrará un mensaje con una descripción detallada del fallo, permitiendo identificar y resolver el problema.
+
+        ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/successfully_sent_batuz.png)
+
+
+    ### Detalle del Envío a Batuz
+
+    Además del botón para registrar la factura, existe una solapa denominada "**Batuz**" dentro de la factura. Esta sección muestra información relevante sobre el proceso de envío de la factura a Batuz, incluyendo:
+
+    -   **Estado del Envío**: Indica si la factura ha sido recibida exitosamente por la plataforma.
+    -   **Descripción**: Proporciona información adicional sobre el estado del envío. En caso de error, esta descripción incluirá detalles específicos que ayudarán a identificar el problema.
+
+    En la misma pestaña, se encuentra un apartado de **Adjuntos** donde se almacena la respuesta que Batuz devuelve. Este archivo es generado en formato XML y contiene los detalles técnicos sobre el resultado del proceso de envío.
+
+    ### Envío Automático 
+
+    Dentro de la ventana "**Procesamiento de Peticiones**" se ha creado un proceso "**Registrar facturas de compra a Batuz**", que puede configurarse para cada organización o entidad legal.
+
+    Tal y como sucede con otros procesos de Etendo, estos podrán configurarse para ser ejecutados de forma inmediata, planificada o programada con una cierta frecuencia, donde permitirán el alta masiva de facturas en Batuz con la cadencia de envío configurada.
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/process_request_batuz.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -28382,20 +28613,30 @@ In case the user has a picture, it will be shown both in this window and in the 
 ## Article Content: 
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and its configurations in Etendo Classic. For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
-
-#### Etendo Classic Sub App
-
-##### Initial Configuration
+This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
 
 !!! info
 
     - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
+    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
+
+    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
 
 
-    - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
+!!!info
+    For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+
+
+#### Etendo Classic Sub App
+
+##### Overview
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+##### Initial Configuration
 
 To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
 
@@ -28438,7 +28679,7 @@ The fields will be displayed one below the other. Those with this symbol  “(\
 
 ![](https://docs.etendo.software/latest/assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){ width="300" }
 
-###### Folders button 
+**Folders button** 
 
 By selecting the Folders button, the user can access the different tabs of the window with information about the records being browsed.
 
@@ -28454,17 +28695,17 @@ To navigate in different levels, the user can resort to the system buttons (Andr
 
 In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
 
-###### Actions button
+**Actions button**
 
 Through this button, the user can access the list of available processes corresponding to the window being browsed and execute them.
 
-###### Attachments button 
+**Attachments button** 
 
 Through this button, the user can attach files.
 
-#### Manage Records
+##### Manage Records
 
-##### Create a record
+**Create a record**
 
 To create a new record, the user must click the icon with the symbol “+” and complete the desired fields. Those with the symbol (\*) are mandatory.
 
@@ -28486,7 +28727,7 @@ Each time a new record is created in the App, the same record will be created in
 
 It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
 
-##### Delete a record
+**Delete a record**
 
 To delete a record, press it and drag it to the left or hold it, select all the desired records and then the delete icon.
 
@@ -28494,7 +28735,7 @@ Each time a record is deleted in the App, the same record will be deleted in the
 
 ![](https://docs.etendo.software/latest/assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ width="300" }
 
-##### Edit a record
+**Edit a record**
 
 To edit a record, select the record and then the field to be edited.
 
@@ -28502,7 +28743,7 @@ Once the changes have been made, press the save icon.
 
 Each time a record is edited in the App, the same record will be edited in the Etendo Classic as well.
 
-##### Search a record
+**Search a record**
 
 Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
 
@@ -28514,27 +28755,27 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](https://docs.etendo.software/latest/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-#### Mobile App Scanning Helpers
+##### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
-Allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App
+The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App.
 
-##### Usage Examples
+###### Usage Examples
 
- The module has by default the Inventory Scan process, which is responsible for scanning from a mobile this code, and thus change values of the Physical Inventory lines.
+ The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
- Now an example will be shown from the Etendo Mobile application:
+ Now, an example will be shown from the Etendo Mobile application:
 
- When you enter the Physical inventory window and select a record, you will see the **Actions** button.
+ When entering the Physical inventory window and select a record, it will be possible to see the **Actions** button.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
-In this button, you can see the process it incorporates, called Inventory Scan.
+In this button, it is possible to see the process it incorporates, called Inventory Scan.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ActionsInventoryScan.png)
 
- When you press this action it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
+ When pressing this action, it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
  
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
 
@@ -28546,19 +28787,19 @@ When the arrow to continue is selected, the code of the storage bin in which the
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductBarcode.jpg) 
 
- Finally, enter the amount you want to add of that product, press Done and Save.
+ Finally, enter the amount needed to add of that product, press Done and Save.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
 
- In the meantime, on Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
+ In the meantime, in Etendo Classic a line will be added in the **Scan** tab of the physical inventory line, about the scan and the amount that has been set.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
 
-In the physical inventory header, by selecting a scan line, you can run the Process Inventory Count. This takes care of adding to the stock the quantity that has been set on the scanned product.
+In the physical inventory header, by selecting a scan line, the Process Inventory Count can be run. This takes care of adding to the stock the quantity that has been set on the scanned product.
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/Process.png) 
 
-And here we will observe the quantities before the process:
+And here, the quantities will be observed before the process:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityBefore.png) 
 
@@ -28566,9 +28807,31 @@ And here we will observe the quantities before the process:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/QuantityAfter.png) 
 
-We will also notice that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
+It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
+
+
+#### Etendo Copilot SubApp
+
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
+
+##### Overview 
+
+The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
+
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+
+With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
+
+**Copilot SubApp mobile mode**
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp1.jpg){ width="300" }
+
+**Copilot SubApp tablet mode**
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp2.png)
+
 
 
 ==ARTICLE_END==
@@ -29027,14 +29290,14 @@ This tool allows the user to connect to an SQL Database and generate and/or exec
 !!! info
     For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
 
-#### Dev Assistant
+##### Dev Assistant
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is designed to develop other assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
+The **Dev Assistant**  module includes assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
-    For more information, visit: [Dev Assistant developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md).
+    For more information, visit [Dev Assistant developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md).
 
 ##### Etendo Copilot
 
@@ -29805,6 +30068,197 @@ Etendo Classic currently requires two PostgreSQL extensions to be available:
 !!! note
     After modifying the file restart postgresql service
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Dependency Manager
+## Article Path: /Developer Guide/Etendo Classic/✨ Getting Started/Installation/Dependency Manager
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/dependency-manager
+## Article Content: 
+### Dependency Manager
+
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
+
+#### Overview
+
+With this module, the user can access from the Etendo Classic interface all Etendo packages published in Etendo Software repositories. 
+
+In addition, from the Module Management window you can query packages, available versions, dependencies and install new packages. 
+
+Then, from the Dependency Management window you can update, remove and change the format of already installed modules. 
+
+#### Installation 
+
+To install this package that will allow you to manage other packages directly from the Etendo Classic interface you must add in the `build.gradle` file the following dependency:
+
+
+``` groovy title="build.gradle"
+dependencies {
+// Add your dependency here
+    implementation('com.etendoerp:dependencymanager:1.1.0')
+}
+```
+!!! warning
+    You must make sure to use Gradle plugin version `1.4.0` or higher, check the plugins section also in the `build.gradle` file.
+
+    ``` groovy title="build.gradle"
+    plugins {
+    id 'java'
+    id 'war'
+    id 'groovy'
+    id 'maven-publish'
+    id 'com.etendoerp.gradleplugin' version '1.4.0'
+    }
+    ```
+
+Then, to install the module run the command gradle : 
+
+``` bash title="Terminal"
+./gradlew update.database smartbuild
+```
+
+!!! info 
+    For more information visit [Install Modules](./install-modules-in-etendo.md#2-search-for-dependencies) guide. 
+
+#### Module Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Module Management`
+
+Logged as System Administrator role, in the `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager1.png)
+
+!!!info
+    The fields in this window are read-only.
+
+Fields to note:
+
+- **Active**: Checkbox to select if this module is active or not.
+- **Group**: the identifier of the artifact.
+- **Artifact**: the unit of deployment fetched and used.
+- **Installed Version**: the version of the module if it is installed.
+- **Is bundle**: Field to filter if this module is a bundle or not.
+
+This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
+
+##### Add Dependency 
+
+This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.
+
+- **If a package bundle is selected**: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.
+
+- **If a non-bundle package is selected**: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager2.png)
+
+Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
+
+###### Dependency Version Handling Rules
+
+1. **If the dependency version is greater than the installed version:**:
+
+    - No installed module and no record in `Dependency Management`window: New dependency record added. 
+    - No installed module but record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module and the dependency record exists in `Dependency Management`window: Update the existing record version.
+    - Installed module but no dependency record exists in `Dependency Management`window: The local dependency is deleted, and a new record is added in `Dependency Management`. 
+
+    
+
+2. **If the dependency version is less than the installed version:**
+
+    - Display error and disable the process, preventing installation of an older version to avoid compatibility issues. This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss. In case you need to install the dependency version anyway, you must downgrade the version from the `Dependency Management` window with the [change version](#change-version) button.  
+
+##### Update Packages
+
+This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
+
+#### Dependency Management
+:material-menu: `Application` > `Etendo Dependencies Management` > `Dependency Management`
+
+Logged as System Administrator role, in the `Dependency Management` window, the user can find all the dependencies installed in the previous step.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager3.png)
+
+Fields to note:
+
+- **Active**: Checkbox to select if this dependency is active or not
+- **Group**: The identifier of the artifact.
+- **Artifact**: The unit of deployment fetched and used.
+- **Version**: Version of the module
+- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
+    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
+    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
+    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
+- **Installation Status**: It describes the dependency current status.
+    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
+    - Installed: Used once the dependency is already installed.
+- **Version Status**: It describes the dependency version status.
+    - Untracked: Only for external dependencies.
+    - Update Available: In case there are new available versions.
+    - Updated: The latest available version is installed.
+- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
+
+This window presents to buttons that can be used: **Change Version** and **Change Format**.
+
+##### Change Version 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager4.png)
+
+This button is used to update or downgrade versions. 
+
+When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
+
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before executing the process.
+
+##### Change Format 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager6.png)
+
+This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
+
+- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
+
+- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
+
+- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
+
+##### Delete Packages
+
+This button is used to delete packages/dependencies.
+
+- **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager7.png)
+
+- **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager8.png)
+
+    !!!note
+        A warning notification is displayed to inform the user of the steps to remove it.
+
+#### Add Local Dependencies 
+:material-menu: `Application` > `Etendo Dependencies Management` > `Add Local dependencies`
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager5.png)
+
+This process, in `Add Local dependencies` window, also part of the **Dependencies Management**, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
+
+!!! note
+    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
+
+#### Update Packages Information
+:material-menu: `Application` > `Etendo Dependencies Management` > `Update Packages Information`
+
+Since the information about packages is daily updated, the user can execute manually the process from `Update Packages Information` window to update the list of packages with the latest information.
+
+!!!info
+    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
+
+!!!note
+    Each time the server is restarted, the update process is executed automatically.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Migrating to Etendo (from Openbravo)
@@ -40450,6 +40904,126 @@ protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
 This work is a derivative of [How to Create Build Validations and Module Scripts](http://wiki.openbravo.com/wiki/How_to_create_build_validations_and_module_scripts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create Client Event Handler Actions
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Client Event Handler Actions
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions
+## Article Content: 
+###  How to Create Client Event Handler Actions
+  
+####  Overview
+
+  This section discusses how to implement client-side functions that are executed before or after an event is fired in a standard window of the User Interface.
+  
+####  Example Module
+
+  This is supported by an example module which shows examples of the code shown and discussed.
+
+  The code of this module can be downloaded from [this repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java).
+
+####  Defining Client Event Handler Actions
+
+  A **Client Event Handler is a component that allows developers to respond to specific events in Etendo**, such as the creation, update or deletion of entities. These handlers are essential for implementing custom business logic that executes when certain changes occur in the database.
+
+####  Defining the Event Handler Class
+  In this step, the key methods needed to handle event actions will be implemented:
+
+  * `Method getObservedEntities()` : This method defines the entities that will be observed by the Event Handler. This information is essential for the event handler to know what kind of entities it should react to.
+
+  * `Method onUpdate()` : It is executed when a watched entity is updated.
+
+  * `Method onSave()` : It is executed when a new entity is created.
+
+  * `Method onDelete()` : It is executed when an observed entity is eliminated.
+
+#### Examples
+
+##### `getObservedEntities()`
+This section defines the entities that will be observed by the Event Handler. In this case, the Greeting entity is observed.
+```java 
+class GreetingEventHandler extends EntityPersistenceEventObserver {
+  private static Entity[] entities = {
+      ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
+  private static final Logger logger = LogManager.getLogger();
+
+  @Override
+  protected Entity[] getObservedEntities() {
+    return entities;
+  }
+}
+```   
+
+##### `onUpdate()`
+This method intercepts record updates in the Greeting entity. It validates that thetitle of the entity ends with a dot (“.”) and adds it if necessary.
+```java
+public void onUpdate(@Observes EntityUpdateEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  final Greeting greeting = (Greeting) event.getTargetInstance();
+  final String title = greeting.getTitle();
+  if (title != null && !title.endsWith(".")) {
+    final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+    event.setCurrentState(greetingTitleProperty, title + ".");
+  }
+  logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
+}
+```
+##### `onSave()`
+In this method, the creation of a new record in the Greeting entity is intercepted. A validation similar to that of the update event is performed, adding a dot to the title if it does not have one. In addition, a translation record (GreetingTrl) is created for the greeting in a specific language (in this example, the language with ID 171, which is Dutch, is used).
+```java 
+public void onSave(@Observes EntityNewEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+  final Greeting greeting = (Greeting) event.getTargetInstance();
+  final String title = greeting.getTitle();
+  if (title != null && !title.endsWith(".")) {
+    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+    event.setCurrentState(greetingTitleProperty, title + ".");
+  }
+
+  final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
+  greetingTrl.setGreeting(greeting);
+  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+  greetingTrl.setName(greeting.getName());
+  greetingTrl.setTitle(greeting.getTitle());
+  greetingTrl.setTranslation(false);
+
+  final Property greetingTrlProperty = greetingEntity.getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
+  @SuppressWarnings("unchecked")
+  final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
+  greetingTrls.add(greetingTrl);
+
+  logger.info("Greeting {} is being created", event.getTargetInstance().getId());
+}
+``` 
+
+##### `onDelete()`
+The following method is executed when a greeting is deleted and records the deletion in the log.
+```java 
+public void onDelete(@Observes EntityDeleteEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
+}
+```
+
+!!!note
+    This Event Handler shows how to intercept creation, update and deletion events in an entity. It allows you to perform automatic validations and actions, such as adding a dot at the end of a title or creating an associated translation automatically when creating a new greeting.
+  
+
+!!!info
+    This example can be adjusted for other entities or events according to the requirements of your implementation.
+
+---
+
+This work is a derivative of [How to Create Client Event Handler Actions](http://wiki.openbravo.com/wiki/How_to_create_client_event_handler_actions){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Create Client Side Callout Onchange Function
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Client Side Callout Onchange Function
 ## Article URL: 
@@ -44558,160 +45132,6 @@ public class AdAlertWebhookService extends BaseWebhookService {
     If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Dependency Manager
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Dependency Manager
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager
-## Article Content: 
-### Dependency Manager
-
-:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
-
-#### Overview
-
-With this module, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
-
-#### Module Management
-:material-menu: `Application` > `Etendo Dependencies Management` > `Module Management`
-
-Logged as System Administrator role, in the `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
-
-!!!info
-    The fields in this window are read-only.
-
-Fields to note:
-
-- **Active**: Checkbox to select if this module is active or not.
-- **Group**: the identifier of the artifact.
-- **Artifact**: the unit of deployment fetched and used.
-- **Installed Version**: the version of the module if it is installed.
-- **Is bundle**: Field to filter if this module is a bundle or not.
-
-This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
-
-##### Add Dependency 
-
-This button allows you to add the dependencies associated with a specific version of the selected module. When clicked, a pop-up window will display all the dependencies and modules that will be installed.
-
-- **If a package bundle is selected**: you will have the option to add all the modules within the bundle or select only the ones you need. Below, a new read-only grid will appear, showing the dependencies of the selected modules. This grid is for informational purposes, allowing you to see which dependencies will be added.
-
-- **If a non-bundle package is selected**: the grid will be read-only, displaying only the necessary dependencies for the module to work correctly. If no dependencies are displayed, it means that the module has no additional dependencies.
-!!!note
-    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
-
-Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
-
-###### Dependency Version Handling Rules
-
-1. **If the dependency version is greater than the installed version:**:
-
-    - No installed module and no record in `Dependency Management`window: New dependency record added. 
-    - No installed module but record exists in `Dependency Management`window: Update the existing record version.
-    - Installed module and the dependency record exists in `Dependency Management`window: Update the existing record version.
-    - Installed module but no dependency record exists in `Dependency Management`window: The local dependency is deleted, and a new record is added in `Dependency Management`. 
-
-    
-
-2. **If the dependency version is less than the installed version:**
-
-    - Display error and disable the process, preventing installation of an older version to avoid compatibility issues. This approach ensures that dependencies are handled properly, maintaining compatibility and minimizing the risk of functionality loss. In case you need to install the dependency version anyway, you must downgrade the version from the `Dependency Management` window with the [change version](#change-version) button.  
-
-##### Update Packages
-
-This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
-
-#### Dependency Management
-:material-menu: `Application` > `Etendo Dependencies Management` > `Dependency Management`
-
-Logged as System Administrator role, in the `Dependency Management` window, the user can find all the dependencies installed in the previous step.
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
-
-Fields to note:
-
-- **Active**: Checkbox to select if this dependency is active or not
-- **Group**: The identifier of the artifact.
-- **Artifact**: The unit of deployment fetched and used.
-- **Version**: Version of the module
-- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
-    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
-    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
-    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
-- **Installation Status**: It describes the dependency current status.
-    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
-    - Installed: Used once the dependency is already installed.
-- **Version Status**: It describes the dependency version status.
-    - Untracked: Only for external dependencies.
-    - Update Available: In case there are new available versions.
-    - Updated: The latest available version is installed.
-- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
-
-This window presents to buttons that can be used: **Change Version** and **Change Format**.
-
-##### Change Version 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager4.png)
-
-This button is used to update or downgrade versions. 
-
-When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
-
-!!!note
-    A warning notification is shown to inform the user about versions compatibility before executing the process.
-
-##### Change Format 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager6.png)
-
-This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
-
-- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
-
-- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
-
-- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
-
-##### Delete Packages
-
-This button is used to delete packages/dependencies.
-
-- **If a format is Jar**: In case you need to remove a dependency to actually complete the action, the environment must be compiled.
-
-    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager7.png)
-
-- **If a format is Local or Souce**: In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
-
-    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager8.png)
-
-    !!!note
-        A warning notification is displayed to inform the user of the steps to remove it.
-
-#### Add Local Dependencies 
-:material-menu: `Application` > `Etendo Dependencies Management` > `Add Local dependencies`
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
-
-This process, in `Add Local dependencies` window, also part of the **Dependencies Management**, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
-
-!!! note
-    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
-
-#### Update Packages Information
-:material-menu: `Application` > `Etendo Dependencies Management` > `Update Packages Information`
-
-Since the information about packages is daily updated, the user can execute manually the process from `Update Packages Information` window to update the list of packages with the latest information.
-
-!!!info
-    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
-
-!!!note
-    Each time the server is restarted, the update process is executed automatically.
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: Docker Management
 ## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Docker Management
 ## Article URL: 
@@ -47187,7 +47607,7 @@ In addition, you can install only the module containing the **Etendo Copilot** b
     ./gradlew copilot.stop
     ```
 
-6. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Assistant Configuration Guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md){target="_blank"}.
+6. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Copilot Setup and Usage](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md){target="_blank"}.
 
 
 ==ARTICLE_END==
@@ -47211,10 +47631,13 @@ The Copilot Extensions Bundle includes functionalities for developers to help th
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is designed to develop other assistants to facilitate processes of creating windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The **Dev Assistant** module includes various development assistants that will facilitate developers the processes of creating buttons, windows, tabs, fields, background processes, Event Handlers, Jasper reports and much more.
 
 !!!info
     For more information, visit [Dev Assistant developer guide](https://docs.etendo.software/latest/etendo-copilot/bundles/dev-assistant.md).
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Dev Assistant
@@ -47228,7 +47651,9 @@ The **Dev Assistant** is designed to develop other assistants to facilitate proc
 
 #### Overview
 
-The **Dev Assistant section** provides an overview of the tools, functionality, and usage examples for various development assistants available in Etendo. Dev Assistant streamlines workflow management for developers by offering **specialized assistants** that simplify tasks such as creating buttons, windows, tabs and tables, Event Handlers, Jasper Reports, background processes, and more. These assistants are designed to enhance productivity and reduce complexity, making it easier for developers to efficiently build and manage different components within the Etendo platform.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This page provides an overview of the tools, functionality, and usage examples for various development assistants available in Etendo. Dev Assistant streamlines workflow management for developers by offering **specialized assistants** that simplify tasks such as creating buttons, windows, tabs and tables, Event Handlers, Jasper Reports, background processes, and more. These assistants are designed to enhance productivity and reduce complexity, making it easier for developers to efficiently build and manage different components within the Etendo platform.
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -47409,7 +47834,7 @@ This assistant is capable of creating **Event Handlers** in Etendo Classic. You 
 
 ###### Functionality
 
-**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the wizard requires the following parameters:
+**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the assistant requires the following parameters:
   
 - **Java package**: The package where the file will be saved.
 - **File name**: The name of the file to create.
@@ -50793,7 +51218,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | CS |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.4.0){target="_blank"} | 18/10/2024 | CS |
+| [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | C |
 | [1.3.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.2){target="_blank"} | 04/01/2024 | C |
 | [1.3.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.1){target="_blank"} | 15/12/2023 | C |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.0){target="_blank"} | 12/12/2023 | C |
@@ -51029,7 +51455,9 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.18.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.18.0){target="_blank"} | 01/10/2024 | 22.4.3 | 24.3.x | CS | :white_check_mark: |
+| [1.20.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.20.0){target="_blank"} | 24/10/2024 | 22.4.3 | 24.3.x | CS | :white_check_mark: |
+| [1.19.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.19.0){target="_blank"} | 23/10/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
+| [1.18.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.18.0){target="_blank"} | 01/10/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.17.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.17.0){target="_blank"} | 30/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.16.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.16.1){target="_blank"} | 26/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
 | [1.16.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.16.0){target="_blank"} | 25/09/2024 | 22.4.3 | 24.2.x | C | :white_check_mark: |
@@ -51462,6 +51890,10 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.0){target="_blank"} | 18/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.0){target="_blank"} | 18/10/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.6.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.6.2){target="_blank"} | 17/10/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.6.1){target="_blank"} | 11/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.6.0){target="_blank"} | 07/10/2024 | 23.4.0 | * | CS | :white_check_mark: |
 | [1.5.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.5.1){target="_blank"} | 01/10/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.5.0){target="_blank"} | 27/09/2024 | 23.4.0 | * | C | :white_check_mark: |
