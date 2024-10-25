@@ -205,24 +205,7 @@ It will also be noticed that the Product's Stock has been updated in the indicat
  ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
 
 
-## Etendo Copilot SubApp
 
-:octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
 
-### Overview 
-
-The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
-
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
-
-With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
-
-**Copilot SubApp mobile mode**
-
-![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp1.jpg){ width="300" }
-
-**Copilot SubApp tablet mode**
-
-![alt text](../../../../assets/user-guide/etendo-mobile/classic-subapp-extensions/etendo-copilot-subapp2.png)
 
 
