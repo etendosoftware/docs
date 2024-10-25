@@ -4169,9 +4169,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete-packages" class="md-nav__link">
+  <a href="#delete-dependency" class="md-nav__link">
     <span class="md-ellipsis">
-      Delete Packages
+      Delete Dependency
     </span>
   </a>
   
@@ -9082,9 +9082,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete-packages" class="md-nav__link">
+  <a href="#delete-dependency" class="md-nav__link">
     <span class="md-ellipsis">
-      Delete Packages
+      Delete Dependency
     </span>
   </a>
   
@@ -9229,6 +9229,10 @@
 <p class="admonition-title">Note</p>
 <p>A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.</p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Consider that by default, all dependencies are added in Source format.</p>
+</div>
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager2.png" /></a></p>
 <p>Once the process is done, the <strong>Dependency Management</strong> window is opened and all the installed dependencies are shown.</p>
 <h4 id="dependency-version-handling-rules">Dependency Version Handling Rules</h4>
@@ -9257,7 +9261,7 @@
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager3.png" /></a></p>
 <p>Fields to note:</p>
 <ul>
-<li><strong>Active</strong>: Checkbox to select if this dependency is active or not</li>
+<li><strong>Active</strong>: Checkbox to select if this dependency is active or not.</li>
 <li><strong>Group</strong>: The identifier of the artifact.</li>
 <li><strong>Artifact</strong>: The unit of deployment fetched and used.</li>
 <li><strong>Version</strong>: Version of the module</li>
@@ -9272,15 +9276,16 @@
 <li>Installed: Used once the dependency is already installed.</li>
 </ul>
 </li>
+<li><strong>Module</strong>: A reference that appears to the module when it is installed.</li>
 <li><strong>Version Status</strong>: It describes the dependency version status.<ul>
-<li>Untracked: Only for external dependencies.</li>
+<li>Untracked: Only for external and local dependencies.</li>
 <li>Update Available: In case there are new available versions.</li>
 <li>Updated: The latest available version is installed.</li>
 </ul>
 </li>
 <li><strong>External Dependency</strong> (Only available for <code>JAR</code> dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.</li>
 </ul>
-<p>This window presents to buttons that can be used: <strong>Change Version</strong> and <strong>Change Format</strong>.</p>
+<p>This window presents buttons that can be used: <strong>Change Version</strong>, <strong>Change Format</strong> and <strong>Delete Dependency</strong>. </p>
 <h3 id="change-version">Change Version</h3>
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/getting-started/instalation/dependency-manager/dependencymanager4.png" /></a></p>
 <p>This button is used to update or downgrade versions. </p>
@@ -9303,8 +9308,8 @@
 <p>In case the module is originally in <code>JAR</code> format, the only option in the <strong>Change format</strong> popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.</p>
 </li>
 </ul>
-<h3 id="delete-packages">Delete Packages</h3>
-<p>This button is used to delete packages/dependencies.</p>
+<h3 id="delete-dependency">Delete Dependency</h3>
+<p>This button is used to delete dependencies.</p>
 <ul>
 <li>
 <p><strong>If a format is Jar</strong>: In case you need to remove a dependency to actually complete the action, the environment must be compiled.</p>
