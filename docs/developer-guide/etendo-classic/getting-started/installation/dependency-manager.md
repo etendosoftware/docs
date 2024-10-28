@@ -13,6 +13,8 @@ tags:
 
 ## Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/du8EYoSsZ68?si=HDmwg-JxPg7gJ2sT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 With this module, the user can access from the Etendo Classic interface all Etendo packages published in Etendo Software repositories. 
 
 In addition, from the Module Management window you can query packages, available versions, dependencies and install new packages. 
