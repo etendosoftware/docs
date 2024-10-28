@@ -29,7 +29,7 @@ To install this package that will allow you to manage other packages directly fr
 ``` groovy title="build.gradle"
 dependencies {
 // Add your dependency here
-    implementation('com.etendoerp:dependencymanager:1.1.0')
+    implementation('com.etendoerp:dependencymanager:latest.release')
 }
 ```
 !!! warning
