@@ -5,13 +5,19 @@ title: Grid and Forms
 
 Etendo allows the customization of grid and form views. Customized windows and form views are stored once saved in the Window Personalization window.
 
-### Grid view
+### Grid View
 
 ![Grid view example](../../assets/drive/1Fc2LfvRYeixaOCFt6qKl-GG4ycr0tyhR.png)
 
-### Form view
+### Form View
 
 ![Form view example](../../assets/drive/1BFjhtuYG6q5bsfwuSCVt_c4qmaj46vdY.png)
+
+### Show Table and Form (?)
+
+With this button ![](../../assets/getting-started/user-interface/grid-and-forms/tandf.png) in the toolbar, the user can have both grid and form view and use them more efficiently.
+
+![](../../assets/getting-started/user-interface/grid-and-forms/tableandform.png)
 
 ## Grid View
 
@@ -63,7 +69,7 @@ The right click can be used to find more options about any section of the grid v
 
 ![Right click options](../../assets/drive/1QNBKfBUaLNkhLHC6Y7G8GYcOReRcHMzZ.png)
 
-### Massive record cloning 
+### Massive Record Cloning (?)
 
 Etendo allows the user to massively clone records. This process engine facilitates the user to select an input entity, create criteria to get results, run actions for the input or define output which can be later used as input for other actions. 
 These actions can be done via the Copy Record button from grid view, allowing the execution of cloning processes of all the entities for different workflows. 
@@ -84,17 +90,18 @@ The entities which can be cloned are Orders and Invoices.
 The document actions displayed when selecting more than one document will be all the ones available based on the statuses of the selected records, depending on the type of document being selected.
 
 
-### **Save View**
+### Save View
 
 Save View stores grid and form settings, column filters and even the entire layout of the screen, for example, the position of the splitter bar between the header and lines. With this option, the user can rearrange the grid, adapt it to their task and save this view to open it at another time. The user can access saved views through a pull down menu that sits underneath the Save View button in the toolbar.
 
-![Save view option](../../assets/drive/1pimqAzN4KUwC_QxVD_rrIbS1VQwtL4WH.png)
+![](../../assets/getting-started/user-interface/grid-and-forms/saveview.png)
 
 A saved view can be set as default and can be deleted. The active view is indicated by a little arrow in front of the view name.
 
-As an administrator, you are able to save predefined views on different levels (client, org, role) which are made available to users. As a regular user, you can only edit/save views on your own levels and not change views entered by an administrator.
+!!!info
+    As an administrator, you are able to save predefined views on different levels (client, org, role) which are made available to users. As a regular user, you can only edit/save views on your own levels and not change views entered by an administrator.
 
-### Keyboard shortcuts
+### Keyboard Shortcuts
 
 |     |     |
 | --- | --- |
@@ -121,6 +128,12 @@ In this view, each field title can be followed by two different icons:
 | ![Arrow icon](../../assets/drive/1sK4lTD4FNi3-WZDkGzPpE3Px7brhZZWd.png) | By clicking here, the user can open a new tab with more specific information. 
 | ![Asterisk icon](../../assets/drive/15aZZ-UGcGfakPeYAImHnx4gRwRp2fmP6.png) | This shows the field is required to be complete. The field has a yellow background. 
 
+### Form Personalization
+
+This button in the toolbar ![](../../assets/getting-started/user-interface/grid-and-forms/logo.png) allows the user to customize forms to include necessary fields and features that suit their needs best.
+
+![](../../assets/getting-started/user-interface/grid-and-forms/formpersonalization.png)
+
 ### User Messages
 
 User Messages are displayed at the top of the view and their function is to inform or warn the user about an exception, error or other situation in the application that needs the user's attention. There are four different types of user messages.
@@ -143,7 +156,7 @@ User Messages are displayed at the top of the view and their function is to info
 
 ### Status Bar
 
-The status bar conveys the editing status of the document (New, Editing or Saved) together with a user-defined set of read-only attributes. These allow the user to get an overview of the document without having to scan the remainder of the form. The status bar is only visible in form view.
+The Status Bar conveys the editing status of the document (New, Editing or Saved) together with a user-defined set of read-only attributes. These allow the user to get an overview of the document without having to scan the remainder of the form. The status bar is only visible in form view.
 
 ![Status bar](../../assets/drive/1d5GpX_oOyNMvqvy94JBtOeg4FJnWSZZI.png)
 
@@ -162,7 +175,7 @@ On the right side of the status bar, the following buttons are available:
 | ![Restore size](../../assets/drive/1fiogmu4e5r1nP5g0Aa7L8dFfZG2xcvzF.png) | Restore form to previous size 
 | ![Close form](../../assets/drive/1KU3xBqPUVQKl43Je-S9ij3Vr031G2LCf.png) | Close form (save and return to grid.png) |
 
-### Keyboard shortcuts
+### Keyboard Shortcuts
 
 |     |     |
 | --- | --- |
@@ -181,6 +194,7 @@ On the right side of the status bar, the following buttons are available:
 | Ctrl + d | New record in form view |
 
 ### Grid summary function update on selection 
+
 Via the set summary function through the right click button, it is possible to keep on updating the number of selected records in the grid. This function allows the user to dynamically get summary functions of a subset of records in the filtered window. 
   
 ## Tabs
