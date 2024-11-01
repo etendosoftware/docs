@@ -12,6 +12,42 @@ tags:
 
 #
 
+## October 2024
+
+### Copilot Extensions
+
+:material-robot: **Boost Your Development Workflow with the New Dev Assistant!**
+
+The Dev Assistant module streamlines and accelerates your development workflow in Etendo Classic. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
+
+This assistants are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
+
+
+Copilot in Mobile
+
+:material-robot: **Try Copilot on Your Mobile Devices and Tablets!**
+
+The new Etendo Copilot sub-application enables you to interact with AI-powered assistants from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
+
+
+
+
+
+
+
+
+
+### Dependency Management
+
+:octicons-package-16: **New Module: Dependency Management**
+
+![](../../assets/whats-new/etendo-news/devassistant.png)
+
+
+The latest Dependency Management module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
+
+
+
 ## September 2024
 
 ### Etendo Classic
