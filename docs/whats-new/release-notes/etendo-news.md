@@ -12,6 +12,38 @@ tags:
 
 #
 
+## October 2024
+
+### Copilot Extensions
+
+:material-robot: **New Etendo Copilot Release Available!**
+
+New Copilot Extensions bundle version [1.7.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+
+<div class="grid cards" markdown>
+-  **Boost Your Development Workflow with the New Dev Assistant!**
+
+    ---
+    The [Dev Assistant](../../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo Classic. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
+
+    This assistants are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
+</div>
+
+<div class="grid cards" markdown>
+-  **Copilot in Mobile: Try Copilot on Your Mobile Devices and Tablets!**
+
+    ---
+    The new [Etendo Copilot sub-application](../../user-guide/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) enables you to interact with AI-powered assistants from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
+
+</div>
+
+### Dependency Manager
+:octicons-package-16: **Managing Etendo modules and dependencies has never been so easy**
+![](../../assets/whats-new/etendo-news/devassistant.png)
+
+The [Dependency Manager](../../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
+
+
 ## September 2024
 
 ### Etendo Classic
