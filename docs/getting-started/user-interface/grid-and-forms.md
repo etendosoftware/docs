@@ -13,9 +13,9 @@ Etendo allows the customization of grid and form views. Customized windows and f
 
 ![Form view example](../../assets/drive/1BFjhtuYG6q5bsfwuSCVt_c4qmaj46vdY.png)
 
-### Show Table and Form (?)
+### Show Table and Form
 
-With this button ![](../../assets/getting-started/user-interface/grid-and-forms/tandf.png) in the toolbar, the user can have both grid and form view and use them more efficiently.
+With this button ![](../../assets/getting-started/user-interface/grid-and-forms/tandf.png) in the toolbar, the user can have both grid and form view of the same record and use them more efficiently.
 
 ![](../../assets/getting-started/user-interface/grid-and-forms/tableandform.png)
 
@@ -69,25 +69,14 @@ The right click can be used to find more options about any section of the grid v
 
 ![Right click options](../../assets/drive/1QNBKfBUaLNkhLHC6Y7G8GYcOReRcHMzZ.png)
 
-### Massive Record Cloning (?)
+### Bulk Processing
 
-Etendo allows the user to massively clone records. This process engine facilitates the user to select an input entity, create criteria to get results, run actions for the input or define output which can be later used as input for other actions. 
-These actions can be done via the Copy Record button from grid view, allowing the execution of cloning processes of all the entities for different workflows. 
+Etendo allows the user to massively process records. This process engine enables the user to select an input entity, create criteria to get results, run actions for the input or define output which can be later used as input for other actions. 
 
-![Massive record clonning](../../assets/drive/1cxymAJf1J5vVwn2_Xv4iLubePoOUKlw-.png)
-
-Massive cloned records are shown in grid view and can then be identified according to the creation date.
-
-!!! info
-    When a single record is cloned, it is shown in form view. If multiple records are cloned, they are shown in grid view.
-
-
-!!! warning
-    Massive cloned records will be created as drafts.                                          
-
-
-The entities which can be cloned are Orders and Invoices.
-The document actions displayed when selecting more than one document will be all the ones available based on the statuses of the selected records, depending on the type of document being selected.
+![](../../assets/getting-started/user-interface/grid-and-forms/bulkposting.gif)
+                                    
+!!!info
+    The document actions displayed when selecting more than one document will be all the ones available based on the statuses of the selected records, depending on the type of document being selected.
 
 
 ### Save View
