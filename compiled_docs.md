@@ -46339,8 +46339,11 @@ This guide will help you set up Etendo, including both the Etendo Classic functi
 #### Requirements
 
 1. Install Etendo Classic. For this, follow the [Etendo Classic installation guide](https://docs.etendo.software/latest/getting-started/installation.md).
-
 2. Install the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
+3. This project depends on the following tools:
+    - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
+    - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
+
 
 #### Dockerized Services
 
