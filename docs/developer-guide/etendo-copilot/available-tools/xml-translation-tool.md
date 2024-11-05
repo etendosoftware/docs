@@ -24,23 +24,10 @@ This tool translates the content of an XML file from one language to another, as
 1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
     implementation('com.etendoerp:copilot.xmltranslationtool:1.1.1')
-    ```
-2. In `gradle.properties` file you can add some environment variables. If they are not set, the default values will be used.
 
+2. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
 
-    ```groovy title="gradle.properties"
-    OPENAI_MODEL=gpt-4
-    BUSINESS_TOPIC=ERP
-    ```
-
-    | **Environment Variable**   | **Options**                                | **Default**| **Info**                                                                                             |
-    | ---------------------- | ---------------------------------------------- |----------| ---------------------------------------------------------------------------------------------------- |
-    | OPENAI_MODE            | `gpt-4`, `gpt-3.5-turbo-16k` , `gpt-3.5-turbo` |`gpt-3.5-turbo` | Among others that have the same number of requests per minute                                        |
-    | BUSINESS_TOPIC         | `ERP` , `Human Resorces`, `Finance`, `Other`  | `ERP` | This parameter indicates the category to which the translations will be focused.                     |
-  
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
-
-4. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
+3. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
 
     ```xml
     <compiereTrl baseLanguage="en_US" language="es_ES" table="AD_ELEMENT" version="">
@@ -48,7 +35,7 @@ This tool translates the content of an XML file from one language to another, as
 
     The tool will know that the language to be translated will be Spanish.
 
-5. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
+4. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
 
 ## How to use the XML translation tool shown in an example
 

@@ -92,6 +92,9 @@ The Assistant window allows you to define and configure assistants:
         !!!info
             If this option is chosen, the **Refresh Preview** button is shown, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
+!!!info
+    The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
+    These variables will be replaced with the values defined in the properties.
 If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
 
 ### Sync Assistant Button
