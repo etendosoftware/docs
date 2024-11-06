@@ -14,8 +14,6 @@ tags:
 
 This tool translates the content of an XML file from one language to another, as specified within the XML.  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=E5JPpLafZG04-tJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 

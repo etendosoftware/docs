@@ -38,6 +38,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Module creator](../bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Module Translation Creator](../bundles/dev-assistant.md#module-translation-creator){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Reference creator](../bundles/dev-assistant.md#reference-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Tables, windows and tabs](../bundles/dev-assistant.md#tables-windows-and-tabs-creator){ .md-button .md-button--primary } <br>
@@ -404,7 +406,7 @@ You can confirm that the module has been created by navigating to the `Module` w
 
 #### Tools
 
-- [XML Translation Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool/)
+- [XML Translation Tool](../available-tools/xml-translation-tool.md)
 
 #### Functionality
 
@@ -433,7 +435,7 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ![](../../../assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
 
 
-4. The previous step will generate XML files for all modules in the attachments/lang/es_ES folder. Locate the module you want to translate and copy the files to the translation module in the modules/<JAVAPACKAGE.OF.THE.MODULE>/referencedata/translation/es_ES folder.
+4. The previous step will generate XML files for all modules in the `attachments/lang/es_ES` folder. Locate the module you want to translate and copy the files to the translation module in the `modules/<JAVAPACKAGE.OF.THE.MODULE>/referencedata/translation/es_ES` folder.
 ![](../../../assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
 
 
