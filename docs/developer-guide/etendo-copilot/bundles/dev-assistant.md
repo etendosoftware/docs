@@ -38,6 +38,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Module creator](../bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Module Translation Creator](../bundles/dev-assistant.md#module-translation-creator){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Reference creator](../bundles/dev-assistant.md#reference-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Tables, windows and tabs](../bundles/dev-assistant.md#tables-windows-and-tabs-creator){ .md-button .md-button--primary } <br>
@@ -398,6 +400,58 @@ You can confirm that the module has been created by navigating to the `Module` w
 
 !!!info
     For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
+
+
+### Module Translation Creator
+
+#### Tools
+
+- [XML Translation Tool](../available-tools/xml-translation-tool.md)
+
+#### Functionality
+
+The Module Translation Creator automatically translates the content of a module.
+
+Before using the assistant, the user will need to have a translation module already created with the XML files to translate.
+!!!note
+    For more info check [How to Create and Update Translation Modules](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}.
+
+Then, provide the path to the translation module to the assistant (e.g., `/modules/com.etendoerp.mymodule.es_ES`) and it will automatically translate all the files to the desired language.
+
+#### Usage Example
+1. Create a new module in the `Module` window
+    - Check the flag "Is translation module".
+    - Select the module languague (e.g., `Spanish (Spain)`). 
+    - It should depend on the module you want to translate.
+
+
+2. If it's the first time the language is configured:
+    - In the `Language` window, look for the language selected and mark the "System Language" checkbox.
+    - Execute the button `Verify Languages``.
+![](../../../assets/drive/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw.png)
+
+
+3. Then, go to the "Import/Export Language" window, select the language and execute the Export process (this may take some time to finish).
+![](../../../assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
+
+
+4. The previous step will generate XML files for all modules in the `attachments/lang/es_ES` folder. Locate the module you want to translate and copy the files to the translation module in the `modules/<JAVAPACKAGE.OF.THE.MODULE>/referencedata/translation/es_ES` folder.
+![](../../../assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
+
+
+5. Now, to use this assistant it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Module Translation Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+
+
+6. Open Copilot and select Module Translation Creator, then ask to the assistant to translate the files in your module (e.g., `/modules/<JAVAPACKAGE.OF.YOUR.MODULE>`).
+![alt text](../../../assets/developer-guide/etendo-copilot/ModuleTranslation_1.png)
+
+
+7. To apply the changes, execute these commands:
+
+``` bash title="Terminal"
+./gradlew install.translation -Dmodule=javapackage
+./gradlew smartbuild -Dlocal=no
+```
 
 
 ### Reference Creator
