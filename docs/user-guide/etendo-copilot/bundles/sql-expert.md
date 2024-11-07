@@ -53,7 +53,7 @@ After install the module:
 
 4. Run **Sync Assistant** process.
 
-5. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks.
+5. Restart Docker image using `./gradlew resources.down` and `./gradlew resources.up` tasks.
 
     !!! note 
         If you have problems with shutting down the container, you can use the `docker ps` command to see the container id and then use `docker stop <container_id>` to stop it manually.

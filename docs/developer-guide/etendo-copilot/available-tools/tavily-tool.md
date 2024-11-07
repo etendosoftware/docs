@@ -34,7 +34,7 @@ The **TavilySearchTool** is a custom tool designed to perform searches using the
 5. Restart Copilot service
 
     ``` bash title="terminal"
-    ./gradlew copilot.stop copilot.start
+    ./gradlew resources.down resources.up
     ```
 
 
