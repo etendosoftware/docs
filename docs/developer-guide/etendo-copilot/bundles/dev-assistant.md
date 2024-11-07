@@ -153,6 +153,76 @@ At this point, we will have the Java class of the button created along with the 
 ![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
 
+### Code Run
+
+**Code Run** is an assistant designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
+
+#### **Functionality**
+
+Code Run enables users to execute Python scripts and commands dynamically, even if dependencies or configurations are missing. Key features include:
+
+1. Dynamic Code Execution:
+
+    - Allows running Python code snippets.
+
+    - Example: `print('Hello, World!')`.
+
+
+2. Natural Language Requests:
+
+    - Users can provide tasks in plain language (e.g., "Ping Google"), and the assistant translates them into executable Python or Bash commands.
+
+
+3. Automatic Dependency Management:
+
+    - Identifies and installs missing libraries when a task requires them.
+
+    - Example: `!pip install numpy`.
+
+
+4. Error Handling:
+
+    - Provides meaningful error messages for invalid commands or missing inputs.
+
+
+5. Flexible Task Management:
+
+    - Supports file operations and multi-step workflows combining Python and Bash.
+
+
+#### **Usage Example**
+
+1. Log in to the system as the **System Administrator** role and configure the assistant in the **Assistant** window. Synchronize it and grant access to the role in the **Assistant Access** window.
+
+2. Open Copilot and select Code Run. Then, ask the assistant what you need to execute.
+
+3. Example interaction and result:
+
+    **Input:**
+
+    - "Make a ping to Google."
+
+
+    **Execution:**
+
+    - Translates to:
+
+      ```python
+      import os
+      os.system('ping -c 4 google.com')
+      ```
+
+    **Result:**
+
+    - Displays the ping output:
+
+      ```
+      PING google.com (142.250.182.110): 56 data bytes
+      64 bytes from 142.250.182.110: icmp_seq=0 ttl=115 time=12.3 ms
+      ...
+      ```
+
+
 ### Etendo Code Expert 
 
 **Etendo Code Expert** is an assistant designed to read indexed files and provide answers related to their content. 
