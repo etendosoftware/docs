@@ -58,13 +58,13 @@ Using this tool consists of the following actions:
 
 ## Usage Example
 
-If you have XML files located at /modules/com.etendoerp.webhookevents.es_ES that need translation, you would use the tool as follows:
+If you have XML files located at `/modules/com.etendoerp.webhookevents.es_es` that need translation, you would use the tool as follows:
 
 - **Input**:
 
 ```
 {
-  "relative_path": "/modules/com.etendoerp.webhookevents.es_ES"
+  "relative_path": "/modules/com.etendoerp.webhookevents.es_es"
 }
 ```
 
@@ -73,8 +73,8 @@ If you have XML files located at /modules/com.etendoerp.webhookevents.es_ES that
 ```
 {
   "translated_files_paths": [
-    "Successfully translated file /modules/com.etendoerp.webhookevents.es_ES/AD_REF_LIST_TRL_es_ES.xml",
-    "Successfully translated file /modules/com.etendoerp.webhookevents.es_ES/AD_ELEMENT_TRL_es_ES.xml"
+    "Successfully translated file /modules/com.etendoerp.webhookevents.es_es/AD_REF_LIST_TRL_es_ES.xml",
+    "Successfully translated file /modules/com.etendoerp.webhookevents.es_es/AD_ELEMENT_TRL_es_ES.xml"
   ]
 }
 ```

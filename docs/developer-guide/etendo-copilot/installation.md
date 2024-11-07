@@ -57,7 +57,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
     | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
     | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
 
-     !!! info
+    !!! info
         The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo`. Its recommended to access to the Docker Container shell and check the network configuration to get the correct IP address.
    
 
@@ -99,7 +99,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
 === "Copilot & Tomcat Dockerized"
 
     The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
-    Follow this guide to learn how to configure it: docs/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md
+    Follow the [Dockerized Tomcat Service](../etendo-classic/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
 
     When using both services in docker, the enviorement variables should look like this:
 
@@ -126,21 +126,21 @@ The simplest configuration we are going to follow as an example is to mount Copi
     We recommend usign PyCharm to run copilot locally. Download and install here [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/){target="_blank"}
 
     1. Open PyCharm, search for the copilot module and open it.
-    ![](../../../assets/developer-guide/etendo-copilot/Copilot_Local_1.png)
+    ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_1.png)
 
 
-    2. Open the Run.py file, then add a new interpreter.
-    ![](../../../assets/developer-guide/etendo-copilot/Copilot_Local_2.png)
-    ![](../../../assets/developer-guide/etendo-copilot/Copilot_Local_3.png)
+    2. Open the `Run.py` file, then add a new interpreter.
+    ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_2.png)
+    ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_3.png)
 
 
-    3. Add a new configuration file and select python
-    ![](../../../assets/developer-guide/etendo-copilot/Copilot_Local_4.png)
-    ![](../../../assets/developer-guide/etendo-copilot/Copilot_Local_5.png)
+    3. Add a new configuration file and select Python
+    ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_4.png)
+    ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_5.png)
 
 
-    4. Select the interpreter created before, in the script field select the Run.py file and .env field select the gradle.properties
-    ![](../../../assets/developer-guide/etendo-copilot/Copilot_Local_6.png)
+    4. Select the interpreter created before, in the script field select the `run.py` file and .env field select the `gradle.properties`
+    ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_6.png)
     
     
     5. Once done, open the PyCharm terminal and execute the following commands:
@@ -149,17 +149,18 @@ The simplest configuration we are going to follow as an example is to mount Copi
     poetry install
     ```
 
-    6. Execute Run.py from PyCharm
-
+    6. Execute `Run.py` from PyCharm
+    
+### Developer Environment Variables
 
 In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
     
-    | **Environment Variable**    | **Options**  | **Default**  | **Info** |
-    | ----------------------------| -------------| -------------| -------- |
-    | CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | **Optional** The name of the file that contains the configuration of the enabled tools. |
-    | DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | **Optional** The name of the file that contains the configuration of the dependencies of the tools. |
-    | COPILOT_PULL_IMAGE | `Boolean` | `true` | **Optional** If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
-    | COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
-    | COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
-    | COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
+| **Environment Variable**    | **Options**  | **Default**  | **Info** |
+| ----------------------------| -------------| -------------| -------- |
+| CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | **Optional** The name of the file that contains the configuration of the enabled tools. |
+| DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | **Optional** The name of the file that contains the configuration of the dependencies of the tools. |
+| COPILOT_PULL_IMAGE | `Boolean` | `true` | **Optional** If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
+| COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
+| COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
+| COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
 
