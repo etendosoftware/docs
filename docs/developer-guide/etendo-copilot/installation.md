@@ -118,8 +118,10 @@ The simplest configuration we are going to follow as an example is to mount Copi
 === "Copilot locally (for developing copilot only)"
 
     Requirements:
-        - Python 3.10 or 3.11 [Python](https://www.python.org/downloads/){target="_blank"}
-        - Poetry [Poetry]("https://pypi.org/project/poetry/){target="_blank"}
+    
+    - [Python](https://www.python.org/downloads/){target="_blank"} 3.10 or 3.11
+    
+    - [Poetry]("https://pypi.org/project/poetry/){target="_blank"}
 
     We recommend usign PyCharm to run copilot locally. Download and install here [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/){target="_blank"}
 
