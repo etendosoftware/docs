@@ -141,7 +141,7 @@ class PetStoreAPITool(ToolWrapper):
 ```
 This is a simple example, but it can be expanded to filter the information, to provide more details, etc. In the previous code, the functions read_raw_api_spec, get_general_info and get_specific_info are not defined, but they should be implemented to read the OpenAPI Spec file and return the information requested. 
 
-- Sync the tool information in the "Copilot Tool" tab of Etendo Classic. Remember that is necessary to restart the Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks. Ensure that the tool is loaded by Copilot.
+- Sync the tool information in the "Copilot Tool" tab of Etendo Classic. Remember that is necessary to restart the Docker image using `./gradlew resources.down` and `./gradlew resources.up` tasks. Ensure that the tool is loaded by Copilot.
 ![Sync tool info](../../../assets/developer-guide/etendo-copilot/available-tools/openapi-how-to.png)
 
 - Configure the Tool created in the App, together with the APICallTool, which is a tool included in the module (```com.etendoerp.copilot.openai```) and is generic for any simple API.

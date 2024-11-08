@@ -12,65 +12,69 @@ tags:
 
 ## Overview
 
-This tool translates the content of an XML file from one language to another, as specified within the XML.  
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=E5JPpLafZG04-tJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+The XMLTranslationTool directly translates XML files’ content based on the specified language attribute within the XML, allowing for effective and accurate localization across different languages. 
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 ## Functionality
 
-1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot.xmltranslationtool:1.1.1')
-    ```
-2. In `gradle.properties` file you can add some environment variables. If they are not set, the default values will be used.
+The XMLTranslationTool allows assistants to translate the content of XML files from one language to another, as specified within the XML itself. This is particularly useful in scenarios where localized versions of XML content are required for different regions or languages.
 
+This tool is ideal for automated workflows that need to handle XML translations efficiently, enabling seamless adaptation of content for various languages. By directly translating XML content based on specified language attributes, it ensures accurate localization of text without manually editing individual files.
 
-    ```groovy title="gradle.properties"
-    OPENAI_MODEL=gpt-4
-    BUSINESS_TOPIC=ERP
-    ```
+Using this tool consists of the following actions:
 
-    | **Environment Variable**   | **Options**                                | **Default**| **Info**                                                                                             |
-    | ---------------------- | ---------------------------------------------- |----------| ---------------------------------------------------------------------------------------------------- |
-    | OPENAI_MODE            | `gpt-4`, `gpt-3.5-turbo-16k` , `gpt-3.5-turbo` |`gpt-3.5-turbo` | Among others that have the same number of requests per minute                                        |
-    | BUSINESS_TOPIC         | `ERP` , `Human Resorces`, `Finance`, `Other`  | `ERP` | This parameter indicates the category to which the translations will be focused.                     |
-  
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+- **Receiving Parameters** 
+    The tool receives an input object that contains the following key:
 
-4. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
+    - relative_path 
 
-    ```xml
-    <compiereTrl baseLanguage="en_US" language="es_ES" table="AD_ELEMENT" version="">
-    ```
+        (str): The relative path to the XML files directory where translation is required.
 
-    The tool will know that the language to be translated will be Spanish.
+- **Processing**
 
-5. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
+    1. Validation: The tool first verifies if the provided relative_path points to an existing directory. If the directory does not exist, it returns an error message indicating the issue.
 
-## How to use the XML translation tool shown in an example
+    2. Path Calculation: It calculates the absolute path of the XML directory based on the relative path provided.
 
-First of all, we start from the module `com.etendoerp.bankingpool` originally in English and we can see the Financial Type Configuration window:
+    3. XML File Iteration: For each XML file in the directory:
 
-![](../../../assets/developer-guide/etendo-copilot/getting-started/banking-pool-en.png)
+        - Skip Condition: If a file is already translated, it skips the translation process.
 
-1. Generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
-  
-    After having created the translation module in the modules folder, we will find `com.etendoerp.bankingpool.es_es`
+        - Translation Process:
+            
+            - The tool uses OpenAI's API to translate each XML file's text content according to the target language specified within the XML's attributes.
 
-2.  To execute translation tool, in a new terminal, run:
-    ``` bash title="Terminal"
-    ./gradlew copilot.translate -Parg=com.etendoerp.bankingpool.es_es
-    ```
+            - Each unlocalized element is marked as "translated" after processing.
 
-3. In the folder ```modules/com.etendoerp.bankingpool.es_es``` you will find the automatic translations.
+            - If all files are already translated, a message indicating this is returned.
 
-4. To apply the translation, compile the enviroment
-    ``` bash title="Terminal"
-    ./gradlew update.database smartbuild --info
-    ```
+    4. Collecting Results: Paths to the successfully translated XML files are collected in a list, which is returned as the final output.
 
-5. Now we can see the *Financial Type Configuration* windows with their respective fields translated into Spanish.
-    ![](../../../assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
+- **Returning the Result**
+
+    Once the translation process is completed, the tool returns a list of file paths, each pointing to a successfully translated XML file.
+
+## Usage Example
+
+If you have XML files located at `/modules/com.etendoerp.webhookevents.es_es` that need translation, you would use the tool as follows:
+
+- **Input**:
+
+```
+{
+  "relative_path": "/modules/com.etendoerp.webhookevents.es_es"
+}
+```
+
+- **Output**:
+
+```
+{
+  "translated_files_paths": [
+    "Successfully translated file /modules/com.etendoerp.webhookevents.es_es/AD_REF_LIST_TRL_es_ES.xml",
+    "Successfully translated file /modules/com.etendoerp.webhookevents.es_es/AD_ELEMENT_TRL_es_ES.xml"
+  ]
+}
+```

@@ -697,30 +697,3 @@ Finally, restart Tomcat to apply the changes and ensure the updated `.css` files
     !!!danger "Danger Process"
         This task execute the same legacy process that you can run in the application like as System Administrator role. It is a very sensitive task you must be very careful because this can lead to crashes in the system if used incorrectly.
         <br>**A backup previous to executing the task is recommended.**
-
-## Copilot
-
-- Running the Copilot docker image locally.
-    
-    ``` bash title="Terminal"
-    ./gradlew copilot.start
-                                          
-    ```
-
-- Stop the Copilot docker image.
-    
-    ``` bash title="Terminal"
-    ./gradlew copilot.stop
-                                            
-    ```
-
-- Execute Copilot translation Tool with Gradle.
-
-    ``` bash title="Terminal"
-    ./gradlew copilot.translate
-                                            
-    ```
-
-    | Command line parameter                  | Description                                                 |                       
-    |  -------------------                   | ------------------------------------                         |
-    | `-Parg=<package name>`                 | **Required** Module Javapackage to be translated             |

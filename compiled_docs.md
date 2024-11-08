@@ -29007,6 +29007,9 @@ The Assistant window allows you to define and configure assistants:
         !!!info
             If this option is chosen, the **Refresh Preview** button is shown, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
+!!!info
+    The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
+    These variables will be replaced with the values defined in the properties.
 If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
 
 ##### Sync Assistant Button
@@ -29426,7 +29429,7 @@ After install the module:
 
 4. Run **Sync Assistant** process.
 
-5. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks.
+5. Restart Docker image using `./gradlew resources.down` and `./gradlew resources.up` tasks.
 
     !!! note 
         If you have problems with shutting down the container, you can use the `docker ps` command to see the container id and then use `docker stop <container_id>` to stop it manually.
@@ -44380,33 +44383,6 @@ Finally, restart Tomcat to apply the changes and ensure the updated `.css` files
         This task execute the same legacy process that you can run in the application like as System Administrator role. It is a very sensitive task you must be very careful because this can lead to crashes in the system if used incorrectly.
         <br>**A backup previous to executing the task is recommended.**
 
-#### Copilot
-
-- Running the Copilot docker image locally.
-    
-    ``` bash title="Terminal"
-    ./gradlew copilot.start
-                                          
-    ```
-
-- Stop the Copilot docker image.
-    
-    ``` bash title="Terminal"
-    ./gradlew copilot.stop
-                                            
-    ```
-
-- Execute Copilot translation Tool with Gradle.
-
-    ``` bash title="Terminal"
-    ./gradlew copilot.translate
-                                            
-    ```
-
-    | Command line parameter                  | Description                                                 |                       
-    |  -------------------                   | ------------------------------------                         |
-    | `-Parg=<package name>`                 | **Required** Module Javapackage to be translated             |
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Backup and Restore Plugin
@@ -47538,87 +47514,156 @@ Your Etendo RX Edge Service is now accessible publicly with SSL security provide
 
 This guide provides detailed instructions on how to get started with Etendo Copilot, an API that allows interaction with a bot capable of selecting the appropriate tools to respond to user queries. It includes the necessary requirements, instructions for adding dependencies, environment variable configurations, and steps to run Copilot on an Etendo Classic project. Additionally, it covers optional configurations to customize Copilot's behavior and provides links to detailed installation guides for required software.
 
-#### Etendo Copilot
-:octicons-package-16: Javapackage: `com.etendoerp.copilot`
+#### Requirements
 
-##### Requirements
-- *Etendo Classic*. If you do not have it, you can install it using the [Etendo Installation Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md){target="_blank"}.
-- *Python* version ^3.10, to install it follow [The Official Installation Guide](https://www.python.org/downloads/){target="_blank"}.
-- *Docker* to install it follow [The Official Installation Guide](https://docs.docker.com/get-docker/){target="_blank"}.
+1. Install Etendo Classic. For this, follow the [Etendo Installation Guide](https://docs.etendo.software/latest/getting-started/installation.md){target="_blank"}.
+2. This project depends on the following tools:
+    - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
+    - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
+    - [Python 3](https://www.python.org/downloads/){target="_blank"} version `3.10`or higher.
 
+!!!info
+    The [Docker Management](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
 
-##### Installation 
-
-This module is included in the Copilot Extensions bundle
+#### Installation 
+Etendo Copilot is distributed within the Copilot Extensions bundle, which in addition to including the Copilot Core functionality and infrastructure, includes default assistants and tools that can be used directly or compose their use in new wizards.  
 
 !!! info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 
-In addition, you can install only the module containing the **Etendo Copilot** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot`.
+#### Running Etendo Copilot
 
-!!! warning "Ensure you have 1.3.2 plugin version or greater:"        
-    ```groovy title="build.gradle"
-    id 'com.etendoerp.gradleplugin' version '1.3.2'
-    ```
-
-##### Run Etendo Copilot
+The simplest configuration we are going to follow as an example is to mount Copilot Dockerized and Tomcat running as a local service. Other configurations are detailed in the section, [Advanced Configurations](#advanced-configurations).
 
 1. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
 
 
     ```groovy title="gradle.properties"
-    COPILOT_PORT=5000
     OPENAI_API_KEY= ****
-    ETENDO_HOST=http://your.etendo.instance/etendo
+    ETENDO_HOST=https://<Etendo URL>/<Context Path>
+    ETENDO_HOST_DOCKER=http://host.docker.internal:<Tomcat Port>/<Context Path>
+    COPILOT_HOST=<Copilot URL>
+    COPILOT_PORT=<Copilot Port>
+
+    docker_com.etendoerp.copilot=true
     ```
 
-    | **Environment Variable**   | **Options**  | **Info** |
+    | **Environment Variable**   | **Default**  | **Info** |
     | -------------------------- | -------------| -------- |
-    | COPILOT_PORT           | `5000`   | **Required** The copilot port can be defined by the user |
     | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
-    | ETENDO_HOST            | `http://your.etendo.instance/etendo` | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. |
-    | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
+    | ETENDO_HOST            |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
+    | ETENDO_HOST_DOCKER     |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
+    | COPILOT_HOST           | `localhost` | **Required** The copilot host can be defined by the user. By default use `localhost` |
+    | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
+    | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
+
     !!! info
         The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo`. Its recommended to access to the Docker Container shell and check the network configuration to get the correct IP address.
-2. In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
-    
-    | **Environment Variable**    | **Options**  | **Default**  | **Info** |
-    | ----------------------------| -------------| -------------| -------- |
-    | SYSTEM_PROMPT  | `String` | `"You are a very powerful assistant with a set of tools, which you will try to use for the requests made to you."` | The prompt that will be used to make the request to the agent and that will condition the response and behavior of the copilot.|
-    | CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | The name of the file that contains the configuration of the enabled tools. |
-    | DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | The name of the file that contains the configuration of the dependencies of the tools. |
-    | COPILOT_IMAGE_TAG | `String` | `master` | The tag of the copilot docker image that will be used. |
-    | COPILOT_PULL_IMAGE | `Boolean` | `true` | If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
-    | COPILOT_DOCKER_CONTAINER_NAME | `String` | `etendo-default` | The name of the docker container that will be created to run the copilot docker image. |
+   
 
-3.  Once the Copilot dependency was added and the variables configurated, in the terminal execute:
-    
+2.  Once the Copilot Extensions Bundle dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:
+
     ``` bash title="Terminal"
     ./gradlew setup
     ``` 
-    To apply changes 
+    And then recomplile the environment: 
 
     ``` bash title="Terminal"
     ./gradlew update.database compile.complete smartbuild --info
     ```
-    To complile the environment 
-
-4. To download and run the latest copilot Docker image, execute:
+    
+3. To download and run the latest copilot Docker image, execute:
 
     ``` bash title="Terminal"
-    ./gradlew copilot.start
+    ./gradlew resources.up
     ```
-
-    !!! info 
-        In the terminal Etendo Copilot will be running, and you can see the corresponding log, in case you want to return to the terminal you can exit with Ctrl + C, although the docker container will continue running. We recommend using [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} for a simple and fast container management. 
 
     To stop the Copilot container you can run: 
     ``` bash title="Terminal"
-    ./gradlew copilot.stop
+    ./gradlew resources.stop
     ```
 
-6. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Copilot Setup and Usage](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md){target="_blank"}.
+    Everytime a new tool is added or the enviorement variables change, it's necessary to delete and create the Copilot container again. Execute the following command to delete the container: 
+    ``` bash title="Terminal"
+    ./gradlew resources.down
+    ```
+
+    !!! warning 
+        Be aware that resources.stop and resources.down will also affect other services configured in the etendo container
+
+4. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Copilot Setup and Usage](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md){target="_blank"} guide.
+
+
+#### Advanced Configurations 
+
+=== "Copilot & Tomcat Dockerized"
+
+    The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
+    Follow the [Dockerized Tomcat Service](https://docs.etendo.software/latest/etendo-classic/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
+
+    When using both services in docker, the enviorement variables should look like this:
+
+    ```groovy title="gradle.properties"
+    OPENAI_API_KEY= ****
+    ETENDO_HOST=http://tomcat:<Docker Tomcat Port>/<Context Path>
+    ETENDO_HOST_DOCKER=http://host.docker.internal:<Docker Tomcat Port>/<Context Path>
+    COPILOT_HOST=copilot
+    COPILOT_PORT=<Docker Copilot Port>
+
+    docker_com.etendoerp.copilot=true
+    docker_com.etendoerp.tomcat=true
+    docker_com.etendoerp.tomcat_port=<Docker Tomcat Port>
+    ```
+
+=== "Copilot locally (for developing copilot only)"
+
+    Requirements:
+    
+    - [Python](https://www.python.org/downloads/){target="_blank"} 3.10 or 3.11
+    
+    - [Poetry]("https://pypi.org/project/poetry/){target="_blank"}
+
+    We recommend usign PyCharm to run copilot locally. Download and install here [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/){target="_blank"}
+
+    1. Open PyCharm, search for the copilot module and open it.
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_1.png)
+
+
+    2. Open the `Run.py` file, then add a new interpreter.
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_2.png)
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_3.png)
+
+
+    3. Add a new configuration file and select Python
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_4.png)
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_5.png)
+
+
+    4. Select the interpreter created before, in the script field select the `run.py` file and .env field select the `gradle.properties`
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_6.png)
+    
+    
+    5. Once done, open the PyCharm terminal and execute the following commands:
+    ``` bash title="terminal"
+    source venv/bin/activate
+    poetry install
+    ```
+
+    6. Execute `Run.py` from PyCharm
+    
+##### Developer Environment Variables
+
+In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
+    
+| **Environment Variable**    | **Options**  | **Default**  | **Info** |
+| ----------------------------| -------------| -------------| -------- |
+| CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | **Optional** The name of the file that contains the configuration of the enabled tools. |
+| DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | **Optional** The name of the file that contains the configuration of the dependencies of the tools. |
+| COPILOT_PULL_IMAGE | `Boolean` | `true` | **Optional** If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
+| COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
+| COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
+| COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
 
 
 ==ARTICLE_END==
@@ -47685,6 +47730,8 @@ Access to the information for each of the Assistants:
 [:material-file-document-outline: Jasper report creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Module creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Module Translation Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-translation-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Reference creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#reference-creator){ .md-button .md-button--primary } <br>
 
@@ -48046,6 +48093,58 @@ You can confirm that the module has been created by navigating to the `Module` w
 
 !!!info
     For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
+
+
+##### Module Translation Creator
+
+###### Tools
+
+- [XML Translation Tool](https://docs.etendo.software/latest/available-tools/xml-translation-tool.md)
+
+###### Functionality
+
+The Module Translation Creator automatically translates the content of a module.
+
+Before using the assistant, the user will need to have a translation module already created with the XML files to translate.
+!!!note
+    For more info check [How to Create and Update Translation Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}.
+
+Then, provide the path to the translation module to the assistant (e.g., `/modules/com.etendoerp.mymodule.es_ES`) and it will automatically translate all the files to the desired language.
+
+###### Usage Example
+1. Create a new module in the `Module` window
+    - Check the flag "Is translation module".
+    - Select the module languague (e.g., `Spanish (Spain)`). 
+    - It should depend on the module you want to translate.
+
+
+2. If it's the first time the language is configured:
+    - In the `Language` window, look for the language selected and mark the "System Language" checkbox.
+    - Execute the button `Verify Languages``.
+![](https://docs.etendo.software/latest/assets/drive/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw.png)
+
+
+3. Then, go to the "Import/Export Language" window, select the language and execute the Export process (this may take some time to finish).
+![](https://docs.etendo.software/latest/assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
+
+
+4. The previous step will generate XML files for all modules in the `attachments/lang/es_ES` folder. Locate the module you want to translate and copy the files to the translation module in the `modules/<JAVAPACKAGE.OF.THE.MODULE>/referencedata/translation/es_ES` folder.
+![](https://docs.etendo.software/latest/assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
+
+
+5. Now, to use this assistant it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Module Translation Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+
+
+6. Open Copilot and select Module Translation Creator, then ask to the assistant to translate the files in your module (e.g., `/modules/<JAVAPACKAGE.OF.YOUR.MODULE>`).
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/ModuleTranslation_1.png)
+
+
+7. To apply the changes, execute these commands:
+
+``` bash title="Terminal"
+./gradlew install.translation -Dmodule=javapackage
+./gradlew smartbuild -Dlocal=no
+```
 
 
 ##### Reference Creator
@@ -48869,7 +48968,7 @@ class PetStoreAPITool(ToolWrapper):
 ```
 This is a simple example, but it can be expanded to filter the information, to provide more details, etc. In the previous code, the functions read_raw_api_spec, get_general_info and get_specific_info are not defined, but they should be implemented to read the OpenAPI Spec file and return the information requested. 
 
-- Sync the tool information in the "Copilot Tool" tab of Etendo Classic. Remember that is necessary to restart the Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks. Ensure that the tool is loaded by Copilot.
+- Sync the tool information in the "Copilot Tool" tab of Etendo Classic. Remember that is necessary to restart the Docker image using `./gradlew resources.down` and `./gradlew resources.up` tasks. Ensure that the tool is loaded by Copilot.
 ![Sync tool info](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/openapi-how-to.png)
 
 - Configure the Tool created in the App, together with the APICallTool, which is a tool included in the module (```com.etendoerp.copilot.openai```) and is generic for any simple API.
@@ -49409,7 +49508,7 @@ The **TavilySearchTool** is a custom tool designed to perform searches using the
 5. Restart Copilot service
 
     ``` bash title="terminal"
-    ./gradlew copilot.stop copilot.start
+    ./gradlew resources.down resources.up
     ```
 
 
@@ -49616,6 +49715,85 @@ Imagine we want to write *Hello World* in the file `/tmp/test.txt`, overwriting 
 - lineno: 1
 
 The Write File Tool will process these parameters, write *Hello World* to the first line of the `/tmp/test.txt` file and return a message indicating that the operation completed successfully and whether a backup was created.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: XML Translation Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/XML Translation Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool
+## Article Content: 
+###  XML Translation Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
+
+#### Overview
+
+The XMLTranslationTool directly translates XML files’ content based on the specified language attribute within the XML, allowing for effective and accurate localization across different languages. 
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+The XMLTranslationTool allows assistants to translate the content of XML files from one language to another, as specified within the XML itself. This is particularly useful in scenarios where localized versions of XML content are required for different regions or languages.
+
+This tool is ideal for automated workflows that need to handle XML translations efficiently, enabling seamless adaptation of content for various languages. By directly translating XML content based on specified language attributes, it ensures accurate localization of text without manually editing individual files.
+
+Using this tool consists of the following actions:
+
+- **Receiving Parameters** 
+    The tool receives an input object that contains the following key:
+
+    - relative_path 
+
+        (str): The relative path to the XML files directory where translation is required.
+
+- **Processing**
+
+    1. Validation: The tool first verifies if the provided relative_path points to an existing directory. If the directory does not exist, it returns an error message indicating the issue.
+
+    2. Path Calculation: It calculates the absolute path of the XML directory based on the relative path provided.
+
+    3. XML File Iteration: For each XML file in the directory:
+
+        - Skip Condition: If a file is already translated, it skips the translation process.
+
+        - Translation Process:
+            
+            - The tool uses OpenAI's API to translate each XML file's text content according to the target language specified within the XML's attributes.
+
+            - Each unlocalized element is marked as "translated" after processing.
+
+            - If all files are already translated, a message indicating this is returned.
+
+    4. Collecting Results: Paths to the successfully translated XML files are collected in a list, which is returned as the final output.
+
+- **Returning the Result**
+
+    Once the translation process is completed, the tool returns a list of file paths, each pointing to a successfully translated XML file.
+
+#### Usage Example
+
+If you have XML files located at `/modules/com.etendoerp.webhookevents.es_es` that need translation, you would use the tool as follows:
+
+- **Input**:
+
+```
+{
+  "relative_path": "/modules/com.etendoerp.webhookevents.es_es"
+}
+```
+
+- **Output**:
+
+```
+{
+  "translated_files_paths": [
+    "Successfully translated file /modules/com.etendoerp.webhookevents.es_es/AD_REF_LIST_TRL_es_ES.xml",
+    "Successfully translated file /modules/com.etendoerp.webhookevents.es_es/AD_ELEMENT_TRL_es_ES.xml"
+  ]
+}
+```
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
@@ -51319,7 +51497,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.4.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | CS | :white_check_mark: |
+| [2.5.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.5.0){target="_blank"} | 08/11/2024 | 23.2.0 | 24.3.x | CS | :white_check_mark: |
+| [2.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.4.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [2.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.3.0){target="_blank"} | 27/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.2.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.1){target="_blank"} | 20/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [2.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.2.0){target="_blank"} | 13/09/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
