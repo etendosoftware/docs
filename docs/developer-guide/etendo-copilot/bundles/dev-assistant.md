@@ -30,6 +30,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Button process creator](../bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Code Run](../bundles/dev-assistant.md#code-run){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Etendo Code Expert](../bundles/dev-assistant.md#etendo-code-expert){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Event Handler creator](../bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
@@ -159,7 +161,11 @@ At this point, we will have the Java class of the button created along with the 
 
 **Code Run** is an assistant designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
 
-#### **Functionality**
+#### Tools
+
+- [Docker Tool](../available-tools/docker-tool.md)
+
+#### Functionality
 
 Code Run enables users to execute Python scripts and commands dynamically, even if dependencies or configurations are missing. Key features include:
 
@@ -192,7 +198,7 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
     - Supports file operations and multi-step workflows combining Python and Bash.
 
 
-#### **Usage Example**
+#### Usage Example
 
 1. Log in to the system as the **System Administrator** role and configure the assistant in the **Assistant** window. Synchronize it and grant access to the role in the **Assistant Access** window.
 
