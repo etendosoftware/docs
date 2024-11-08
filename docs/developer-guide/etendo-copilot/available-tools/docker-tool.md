@@ -44,7 +44,10 @@ This tool facilitates **code execution in isolated Docker environments**, suppor
 4. **Container Cleanup**:
     - Containers are automatically deleted after 1 hour of inactivity.
 
-### Example Input
+
+## Usage example
+
+- **Example Input**
 
 ```json
 {
@@ -54,7 +57,7 @@ This tool facilitates **code execution in isolated Docker environments**, suppor
 }
 ```
 
-### Example Output
+- **Example Output**
 
 ```json
 {
@@ -64,25 +67,3 @@ This tool facilitates **code execution in isolated Docker environments**, suppor
 
 !!!info
     This tool uses the official **Python 3.10-slim** Docker image for execution and can execute both Python and Bash commands.
-
-## Usage Example: Make a Ping to Google
-
-To demonstrate the **DockerTool**, let's run a `ping` command to check connectivity to Google.
-
-1. **Input**:
-
-    ```json
-    {
-        "executor": "bash",
-        "code": "ping -c 4 google.com",
-        "files_to_copy": []
-    }
-    ```
-
-2. **Output**:
-
-    ```json
-    {
-        "message": "PING google.com (172.217.12.206): 56 data bytes\n64 bytes from 172.217.12.206: icmp_seq=0 ttl=115 time=12.5 ms\n64 bytes from 172.217.12.206: icmp_seq=1 ttl=115 time=12.3 ms\n64 bytes from 172.217.12.206: icmp_seq=2 ttl=115 time=12.4 ms\n64 bytes from 172.217.12.206: icmp_seq=3 ttl=115 time=12.6 ms\n\n--- google.com ping statistics ---\n4 packets transmitted, 4 packets received, 0.0% packet loss\nround-trip min/avg/max/stddev = 12.3/12.5/12.6/0.1 ms"
-    }
-    ```
