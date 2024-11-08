@@ -202,34 +202,37 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
 
 1. Log in to the system as the **System Administrator** role and configure the assistant in the **Assistant** window. Synchronize it and grant access to the role in the **Assistant Access** window.
 
-2. Open Copilot and select Code Run. Then, ask the assistant what you need to execute.
+2. Open Copilot and select **Code Run**. Then, ask the assistant what you need to execute.
 
 3. Example interaction and result:
 
+    ![code-run-example.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/Code-Run-Example.png)
+
     **Input:**
 
-    - "Make a ping to Google."
-
+    - "Create a Python program that calculates the sum of the numbers between 1 and 100."
 
     **Execution:**
 
-    - Translates to:
+    - The assistant processes the request and executes the following Python code:
 
       ```python
-      import os
-      os.system('ping -c 4 google.com')
+      def calculate_sum(start, end):
+          return sum(range(start, end + 1))
+
+      # Calculate the sum of numbers between 1 and 100
+      result = calculate_sum(1, 100)
+      print(f'The sum of numbers between 1 and 100 is: {result}')
       ```
 
     **Result:**
 
-    - Displays the ping output:
+    - The assistant outputs the result of the program:
 
       ```
-      PING google.com (142.250.182.110): 56 data bytes
-      64 bytes from 142.250.182.110: icmp_seq=0 ttl=115 time=12.3 ms
-      ...
+      The sum of numbers between 1 and 100 is: 5050
       ```
-
+      
 
 ### Etendo Code Expert 
 
