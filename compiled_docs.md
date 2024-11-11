@@ -47566,14 +47566,20 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
     ``` bash title="Terminal"
     ./gradlew setup
-    ``` 
+    ```
+
+    Then, the copilot container needs to be created:
+    ``` bash title="Terminal"
+    ./gradlew resources.up
+    ```
+
     And then recomplile the environment: 
 
     ``` bash title="Terminal"
     ./gradlew update.database compile.complete smartbuild --info
     ```
     
-3. To download and run the latest copilot Docker image, execute:
+3. To start the copilot Docker image, execute:
 
     ``` bash title="Terminal"
     ./gradlew resources.up
@@ -47723,6 +47729,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Button process creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Code Run](https://docs.etendo.software/latest/bundles/dev-assistant.md#code-run){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Etendo Code Expert](https://docs.etendo.software/latest/bundles/dev-assistant.md#etendo-code-expert){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Event Handler creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
@@ -47847,6 +47855,83 @@ At this point, we will have the Java class of the button created along with the 
 
 ![ButtonProcess2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
+
+##### Code Run
+
+**Code Run** is an assistant designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
+
+###### Tools
+
+- [Docker Tool](https://docs.etendo.software/latest/available-tools/docker-tool.md)
+
+###### Functionality
+
+Code Run enables users to execute Python scripts and commands dynamically, even if dependencies or configurations are missing. Key features include:
+
+1. Dynamic Code Execution:
+
+    - Allows running Python code snippets.
+
+    - Example: `print('Hello, World!')`.
+
+
+2. Natural Language Requests:
+
+    - Users can provide tasks in plain language (e.g., "Ping Google"), and the assistant translates them into executable Python or Bash commands.
+
+
+3. Automatic Dependency Management:
+
+    - Identifies and installs missing libraries when a task requires them.
+
+    - Example: `!pip install numpy`.
+
+
+4. Error Handling:
+
+    - Provides meaningful error messages for invalid commands or missing inputs.
+
+
+5. Flexible Task Management:
+
+    - Supports file operations and multi-step workflows combining Python and Bash.
+
+
+###### Usage Example
+
+1. Log in to the system as the **System Administrator** role and configure the assistant in the **Assistant** window. Synchronize it and grant access to the role in the **Assistant Access** window.
+
+2. Open Copilot and select **Code Run**. Then, ask the assistant what you need to execute.
+
+3. Example interaction and result:
+
+    ![code-run-example.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/Code-Run-Example.png)
+
+    **Input:**
+
+    - "Create a Python program that calculates the sum of the numbers between 1 and 100."
+
+    **Execution:**
+
+    - The assistant processes the request and executes the following Python code:
+
+      ```python
+      def calculate_sum(start, end):
+          return sum(range(start, end + 1))
+
+      # Calculate the sum of numbers between 1 and 100
+      result = calculate_sum(1, 100)
+      print(f'The sum of numbers between 1 and 100 is: {result}')
+      ```
+
+    **Result:**
+
+    - The assistant outputs the result of the program:
+
+      ```
+      The sum of numbers between 1 and 100 is: 5050
+      ```
+      
 
 ##### Etendo Code Expert 
 
@@ -48304,6 +48389,7 @@ Here you can find a list of the all the available tools in the Copilot bundle.
 - [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md)
 - [Database Query Tool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
 - [DDL Tool](https://docs.etendo.software/latest/available-tools/ddl-tool.md)
+- [Docker Tool](https://docs.etendo.software/latest/available-tools/docker-tool.md)
 - [File Copy Tool](https://docs.etendo.software/latest/available-tools/file-copy-tool.md)
 - [File Downloader Tool](https://docs.etendo.software/latest/available-tools/file-downloader-tool.md)
 - [OpenAPI Interaction with Copilot](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
@@ -48702,6 +48788,74 @@ Prompt Example:
 *Step 9: Execute the process to check if the elements have the description and help comment complete.*
 
 *Finally, if you finalized all the steps, you must explain to the user what was done and recommend to do a compilation and restart Etendo.*
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Docker Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Docker Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/docker-tool
+## Article Content: 
+### Docker Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **DockerTool** is a tool that manages Docker containers to execute Python or Bash code. It allows users to run isolated commands, copy files into containers, and clean up containers automatically after a period of inactivity.
+
+!!!info
+    To include this functionality, the Copilot Extensions Bundle must be installed. For instructions, visit the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For details about versions, core compatibility, and new features, check [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool facilitates **code execution in isolated Docker environments**, supporting workflows for development, automation, and system tasks. The primary functionalities include:
+
+##### Parameters
+
+- **Executor**: The type of executor for the code (`python` or `bash`).
+- **Code**: The code to be executed inside the container.
+- **Files to Copy**: An optional list of file paths to copy into the container for execution.
+
+##### Execution Workflow
+
+1. **Container Creation**:
+    - A Docker container is created if it doesn't already exist.
+    - Containers are named using the format `tempenv-copilot-{conversation_id}` for traceability.
+
+2. **File Transfer**:
+    - Files specified in the `Files to Copy` parameter are uploaded to the container at the specified paths.
+
+3. **Command Execution**:
+    - The tool runs the specified Python or Bash code.
+    - The output is captured and returned to the user.
+
+4. **Container Cleanup**:
+    - Containers are automatically deleted after 1 hour of inactivity.
+
+
+#### Usage example
+
+- **Example Input**
+
+```json
+{
+    "executor": "bash",
+    "code": "ping -c 4 google.com",
+    "files_to_copy": []
+}
+```
+
+- **Example Output**
+
+```json
+{
+    "message": "PING google.com (172.217.12.206): 56 data bytes\n64 bytes from 172.217.12.206: icmp_seq=0 ttl=115 time=12.5 ms\n64 bytes from 172.217.12.206: icmp_seq=1 ttl=115 time=12.3 ms\n64 bytes from 172.217.12.206: icmp_seq=2 ttl=115 time=12.4 ms\n64 bytes from 172.217.12.206: icmp_seq=3 ttl=115 time=12.6 ms\n\n--- google.com ping statistics ---\n4 packets transmitted, 4 packets received, 0.0% packet loss\nround-trip min/avg/max/stddev = 12.3/12.5/12.6/0.1 ms"
+}
+```
+
+!!!info
+    This tool uses the official **Python 3.10-slim** Docker image for execution and can execute both Python and Bash commands.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: File Copy Tool
