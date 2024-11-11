@@ -65,14 +65,20 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
     ``` bash title="Terminal"
     ./gradlew setup
-    ``` 
+    ```
+
+    Then, the copilot container needs to be created:
+    ``` bash title="Terminal"
+    ./gradlew resources.up
+    ```
+
     And then recomplile the environment: 
 
     ``` bash title="Terminal"
     ./gradlew update.database compile.complete smartbuild --info
     ```
     
-3. To download and run the latest copilot Docker image, execute:
+3. To start the copilot Docker image, execute:
 
     ``` bash title="Terminal"
     ./gradlew resources.up

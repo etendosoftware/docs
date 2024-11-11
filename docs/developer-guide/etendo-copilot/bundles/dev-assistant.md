@@ -30,6 +30,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Button process creator](../bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Code Run](../bundles/dev-assistant.md#code-run){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Etendo Code Expert](../bundles/dev-assistant.md#etendo-code-expert){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Event Handler creator](../bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
@@ -154,6 +156,83 @@ At this point, we will have the Java class of the button created along with the 
 
 ![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
+
+### Code Run
+
+**Code Run** is an assistant designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
+
+#### Tools
+
+- [Docker Tool](../available-tools/docker-tool.md)
+
+#### Functionality
+
+Code Run enables users to execute Python scripts and commands dynamically, even if dependencies or configurations are missing. Key features include:
+
+1. Dynamic Code Execution:
+
+    - Allows running Python code snippets.
+
+    - Example: `print('Hello, World!')`.
+
+
+2. Natural Language Requests:
+
+    - Users can provide tasks in plain language (e.g., "Ping Google"), and the assistant translates them into executable Python or Bash commands.
+
+
+3. Automatic Dependency Management:
+
+    - Identifies and installs missing libraries when a task requires them.
+
+    - Example: `!pip install numpy`.
+
+
+4. Error Handling:
+
+    - Provides meaningful error messages for invalid commands or missing inputs.
+
+
+5. Flexible Task Management:
+
+    - Supports file operations and multi-step workflows combining Python and Bash.
+
+
+#### Usage Example
+
+1. Log in to the system as the **System Administrator** role and configure the assistant in the **Assistant** window. Synchronize it and grant access to the role in the **Assistant Access** window.
+
+2. Open Copilot and select **Code Run**. Then, ask the assistant what you need to execute.
+
+3. Example interaction and result:
+
+    ![code-run-example.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/Code-Run-Example.png)
+
+    **Input:**
+
+    - "Create a Python program that calculates the sum of the numbers between 1 and 100."
+
+    **Execution:**
+
+    - The assistant processes the request and executes the following Python code:
+
+      ```python
+      def calculate_sum(start, end):
+          return sum(range(start, end + 1))
+
+      # Calculate the sum of numbers between 1 and 100
+      result = calculate_sum(1, 100)
+      print(f'The sum of numbers between 1 and 100 is: {result}')
+      ```
+
+    **Result:**
+
+    - The assistant outputs the result of the program:
+
+      ```
+      The sum of numbers between 1 and 100 is: 5050
+      ```
+      
 
 ### Etendo Code Expert 
 

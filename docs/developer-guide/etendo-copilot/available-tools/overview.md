@@ -7,6 +7,7 @@ Here you can find a list of the all the available tools in the Copilot bundle.
 - [Create Reference Tool](../available-tools/create-reference-tool.md)
 - [Database Query Tool](../available-tools/database-query-tool.md)
 - [DDL Tool](../available-tools/ddl-tool.md)
+- [Docker Tool](../available-tools/docker-tool.md)
 - [File Copy Tool](../available-tools/file-copy-tool.md)
 - [File Downloader Tool](../available-tools/file-downloader-tool.md)
 - [OpenAPI Interaction with Copilot](../available-tools/openapi-tool.md)
