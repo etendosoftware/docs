@@ -51511,7 +51511,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q3.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.2){target="_blank"} | 02/11/2024 | 24.3.2 | QAA |  | :white_check_mark: |
+| [24Q3.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.3){target="_blank"} | 12/11/2024 | 24.3.3 | QAA |  | :white_check_mark: |
+| [24Q3.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.2){target="_blank"} | 02/11/2024 | 24.3.2 | C |  | :white_check_mark: |
 | [24Q3.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.1){target="_blank"} | 10/10/2024 | 24.3.1 | C |  | :white_check_mark: |
 | [24Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.0){target="_blank"} | 30/09/2024 | 24.3.0 | C | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso){target="_blank"} | :white_check_mark: |
 | [24Q2.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.8){target="_blank"} | 27/09/2024 | 24.2.8 | CS |  | :white_check_mark: |
