@@ -135,38 +135,16 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         bbdd.user=tad
         bbdd.password=tad
 
-        org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+        org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
-    4. Change the build.gradle file, deleting core version section and uncomment the core dependency in the dependencies section 
-    The following code is an example, you must modify your current file
-        
-        ``` groovy
-        plugins {
-            id 'java'
-            id 'war'
-            id 'groovy'
-            id 'maven-publish'
-            id 'com.etendoerp.gradleplugin' version 'latest.release'
-        }
-
-        // Delete this section
-        // etendo {
-        //    coreVersion = "[<version>,<version>)"
-        // }
-
-        dependencies {
-            /*
-            To use Etendo in JAR format delete the Etendo section and uncomment the following line.
-            Then when executing any gradle command the core will be dynamically downloaded as a dep>
-            Set up the credentials in gradle.properties file
-            */
+    4. Change the `build.gradle` file, uncomment the core dependency in the dependencies section:
             
-            implementation('com.etendoerp.platform:etendo-core:<version>')
-        
-            //Add other dependencies bellow
-
-        }
         ```
+        implementation('com.etendoerp.platform:etendo-core:<version>')
+        ```
+
+        !!! info
+            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
 
     5. Modify the `gradle.properties` file with your environment variables, if it is necessary:
         
@@ -238,37 +216,20 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         bbdd.user=tad
         bbdd.password=tad
 
-        org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encod>
+        org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
 
-    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`. The following code is an example, you must modify your current file
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`.
         
-        ``` groovy
-        plugins {
-            id 'java'
-            id 'war'
-            id 'groovy'
-            id 'maven-publish'
-            id 'com.etendoerp.gradleplugin' version 'latest.release'
-        }
-        
+        ```groovy
         etendo {
             coreVersion = "<version>"
         }
+        ```
 
-        dependencies {
-            /*
-            To use Etendo in JAR format delete the Etendo section and uncomment the following line.
-            Then when executing any gradle command the core will be dynamically downloaded as a dep>
-            Set up the credentials in gradle.properties file
-           
-            implementation('com.etendoerp.platform:etendo-core:<version>')
-             */
-        
-            //Add other dependencies bellow
+        !!! info
+            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
 
-        }
-        ```    
     5.  Expand Etendo Base
 
         ```
@@ -30105,7 +30066,7 @@ dependencies {
 }
 ```
 !!! warning
-    You must make sure to use Gradle plugin version `1.4.0` or higher, check the plugins section also in the `build.gradle` file.
+    You must make sure to use Gradle plugin version `1.5.1` or higher, check the plugins section also in the `build.gradle` file.
 
     ``` groovy title="build.gradle"
     plugins {
@@ -30113,7 +30074,7 @@ dependencies {
     id 'war'
     id 'groovy'
     id 'maven-publish'
-    id 'com.etendoerp.gradleplugin' version '1.4.0'
+    id 'com.etendoerp.gradleplugin' version '1.5.1'
     }
     ```
 
