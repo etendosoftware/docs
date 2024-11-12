@@ -33,7 +33,7 @@ dependencies {
 }
 ```
 !!! warning
-    You must make sure to use Gradle plugin version `1.4.0` or higher, check the plugins section also in the `build.gradle` file.
+    You must make sure to use Gradle plugin version `1.5.1` or higher, check the plugins section also in the `build.gradle` file.
 
     ``` groovy title="build.gradle"
     plugins {
@@ -41,7 +41,7 @@ dependencies {
     id 'war'
     id 'groovy'
     id 'maven-publish'
-    id 'com.etendoerp.gradleplugin' version '1.4.0'
+    id 'com.etendoerp.gradleplugin' version '1.5.1'
     }
     ```
 
