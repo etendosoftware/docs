@@ -105,7 +105,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
 === "Copilot & Tomcat Dockerized"
 
     The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
-    Follow the [Dockerized Tomcat Service](../etendo-classic/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
+    Follow the [Dockerized Tomcat Service](../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
 
     When using both services in docker, the enviorement variables should look like this:
 
@@ -127,7 +127,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
     
     - [Python](https://www.python.org/downloads/){target="_blank"} 3.10 or 3.11
     
-    - [Poetry]("https://pypi.org/project/poetry/){target="_blank"}
+    - [Poetry](https://pypi.org/project/poetry/){target="_blank"}
 
     We recommend usign PyCharm to run copilot locally. Download and install here [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/){target="_blank"}
 
