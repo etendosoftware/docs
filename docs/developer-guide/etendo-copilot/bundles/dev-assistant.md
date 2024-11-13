@@ -415,8 +415,6 @@ The assistant performs the following tasks:
 - **Message Type Validation**: Confirms the message type is either `"I"` (Informative) or `"E"` (Error).
 - **Registers the AD_Message**: Saves the message in the system, linking it to the specified module.
 
-#### Required Inputs
-
 When creating a message, the assistant will request the following information:
 
 - **Module Java Package**: The Java package of the module where the message will be created (e.g., `com.etendoerp.module`).
@@ -426,7 +424,7 @@ When creating a message, the assistant will request the following information:
   - `"E"` for error messages.
 - **Message Text**: The content of the message.
 
-#### Usage Notes
+Notes:
 
 - **Module In Development**: The module must be set to development mode to allow the assistant to create it.
 
@@ -441,7 +439,7 @@ When creating a message, the assistant will request the following information:
   String formattedMessage = String.format(OBMessageUtils.messageBD("PREFIX_InvalidValue"), value);
   ```
 
-#### Example Workflow
+#### Usage Example
 
 1. Provide the required inputs:
     - Module Java Package: `com.etendoerp.module`
@@ -449,10 +447,14 @@ When creating a message, the assistant will request the following information:
     - Message Type: `E`
     - Message Text: `"The input provided is not valid."`
 
+    ![MessageCreator_1.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_1.png)
+
 2. The assistant validates and sends the request to the webhook.
 
 3. Upon successful creation, the system will confirm:
     - Message created with the key: `MODPREFIX_InvalidInput`.
+
+    ![MessageCreator_2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_2.png)
 
 4. The message is ready for use in Java:
     ```java
