@@ -38,6 +38,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Jasper report creator](../bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Message Creator](../bundles/dev-assistant.md#message-creator){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Module creator](../bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Module Translation Creator](../bundles/dev-assistant.md#module-translation-creator){ .md-button .md-button--primary } <br>
@@ -389,6 +391,73 @@ Finally, we can observe the created report and set the chosen parameter to see t
 **Report Editing**
 
 ![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
+
+
+### Message Creator
+
+The **Message Creator** streamlines the process of creating and registering AD_Messages in Etendo Classic. By utilizing a webhook, it ensures efficient and error-free message creation while adhering to naming conventions and best practices. 
+
+#### Tools
+
+- [ApiCallTool](../available-tools/openapi-tool.md)
+
+#### Functionality
+
+The **Message Creator** facilitates the creation of AD_Messages by interacting with Etendo Classic via a webhook. It validates the input parameters, enforces the proper format for search keys, and registers the message with the appropriate module. This assistant supports both parametric and non-parametric messages and ensures messages are immediately usable in Java code. 
+
+The assistant performs the following tasks:
+
+- **Validates Input Parameters**: Ensures required fields like module Java package, search key, message type, and message text are correctly provided.
+- **Search Key Format Enforcement**: Confirms that search keys follow the required format: `PREFIX_DescriptiveName`, where:
+  - `PREFIX` is the module's prefix in uppercase.
+  - `DescriptiveName` is in CamelCase.
+  - The total length does not exceed 32 characters.
+- **Message Type Validation**: Confirms the message type is either `"I"` (Informative) or `"E"` (Error).
+- **Registers the AD_Message**: Saves the message in the system, linking it to the specified module.
+
+#### Required Inputs
+
+When creating a message, the assistant will request the following information:
+
+- **Module Java Package**: The Java package of the module where the message will be created (e.g., `com.etendoerp.module`).
+- **Search Key**: A unique identifier for the message following the `PREFIX_DescriptiveName` format.
+- **Message Type**: The type of the message:
+  - `"I"` for informative messages.
+  - `"E"` for error messages.
+- **Message Text**: The content of the message.
+
+#### Usage Notes
+
+- **Module In Development**: The module must be set to development mode to allow the assistant to create it.
+
+- **Java Usability**: After creation, the AD_Message can be used in Java with:  
+  `OBMessageUtils.messageBD("MESSAGE_SEARCH_KEY")`.
+
+- **Parametric Messages**: If the message requires parameters, `%s` can be added to the text, and the assistant will provide a code snippet to use `String.format`.  
+  Example:  
+  **Message Text**: `"The value %s is invalid."`  
+  **Java Usage**:  
+  ```java
+  String formattedMessage = String.format(OBMessageUtils.messageBD("PREFIX_InvalidValue"), value);
+  ```
+
+#### Example Workflow
+
+1. Provide the required inputs:
+    - Module Java Package: `com.etendoerp.module`
+    - Search Key: `MODPREFIX_InvalidInput`
+    - Message Type: `E`
+    - Message Text: `"The input provided is not valid."`
+
+2. The assistant validates and sends the request to the webhook.
+
+3. Upon successful creation, the system will confirm:
+    - Message created with the key: `MODPREFIX_InvalidInput`.
+
+4. The message is ready for use in Java:
+    ```java
+    OBMessageUtils.messageBD("MODPREFIX_InvalidInput");
+    ```
 
 
 ### Module Creator

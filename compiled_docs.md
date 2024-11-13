@@ -47698,6 +47698,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Jasper report creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Message Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#message-creator){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Module creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Module Translation Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-translation-creator){ .md-button .md-button--primary } <br>
