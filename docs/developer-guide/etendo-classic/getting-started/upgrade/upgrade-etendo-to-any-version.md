@@ -102,7 +102,7 @@ To work with the plugin you need to specify in the root project from where the p
         // latest.release will download the most recent stable version
         // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
         etendo {
-        coreVersion = "latest.release"
+            coreVersion = "latest.release"
         }
         ```
 
