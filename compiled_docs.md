@@ -29541,14 +29541,14 @@ To install Etendo in a development environment, follow the same steps as describ
 
     5. Start the Tomcat 
 
-        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
-        
+        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png)
+
         !!! success
-                 Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
+            Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
 
         !!! tip "Default credentials"
-                User: admin  
-                Password: admin
+            User: admin  
+            Password: admin
 
 
 
@@ -29578,14 +29578,14 @@ To install Etendo in a development environment, follow the same steps as describ
 
     4. Start the Tomcat
 
-        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
-        
+        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png)
+
         !!! success
-                 Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
+            Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
 
         !!! tip "Default credentials"
-                User: admin  
-                Password: admin
+            User: admin  
+            Password: admin
 
 
 
@@ -30819,7 +30819,7 @@ To work with the plugin you need to specify in the root project from where the p
         // latest.release will download the most recent stable version
         // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
         etendo {
-        coreVersion = "latest.release"
+            coreVersion = "latest.release"
         }
         ```
 
@@ -43634,17 +43634,18 @@ This work is a derivative of [How to add a canvas field to a form or grid](http:
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
+### How to Use Secure Web Services
+
 #### Overview
 
-This module allows calling any standard Etendo web service in the same way as calling the "/ws" endpoint, but using token authentication.
+This module allows calling any standard Etendo web service in the same way as calling the `/ws` endpoint, but using token authentication.
 
 This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
 Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
 
-
 !!! info
-    For more information, follow this information in [Secure Webservices](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+    For more information, follow this information in [Secure Web Services](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
