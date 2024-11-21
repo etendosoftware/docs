@@ -1267,8 +1267,8 @@ Once the process is finished, the sales invoice status turns to Complete.
 
 !!! warning "Important"
     
-        - In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
-        - Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
+    - In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
+    - Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
 
 
 !!! info
