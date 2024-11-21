@@ -1,9 +1,10 @@
 ---
 tags:
 - bulk completion
-- accounting
-- setup
-- financial
+- complete
+- book
+- close
+- essentials
 - extensions
 - bundle
 ---
@@ -14,10 +15,10 @@ tags:
 
 ## Overview
 
-This section describes the Bulk Completion module included in the Etendo Financial Extensions bundle.
+This section describes the Bulk Completion module included in the Etendo Essentials Extensions bundle.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
+    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
 !!! warning
     Before using this functionality, remember that processing multiple records at the same time can affect system performance, especially when handling a large volume of data.
