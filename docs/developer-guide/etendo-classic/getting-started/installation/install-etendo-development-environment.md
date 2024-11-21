@@ -43,14 +43,14 @@ To install Etendo in a development environment, follow the same steps as describ
 
     5. Start the Tomcat 
 
-        ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
-        
+        ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png)
+
         !!! success
-                 Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
+            Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
 
         !!! tip "Default credentials"
-                User: admin  
-                Password: admin
+            User: admin  
+            Password: admin
 
 
 
@@ -80,14 +80,14 @@ To install Etendo in a development environment, follow the same steps as describ
 
     4. Start the Tomcat
 
-        ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
-        
+        ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png)
+
         !!! success
-                 Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
+            Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
 
         !!! tip "Default credentials"
-                User: admin  
-                Password: admin
+            User: admin  
+            Password: admin
 
 
 

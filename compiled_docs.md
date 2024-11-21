@@ -29541,14 +29541,14 @@ To install Etendo in a development environment, follow the same steps as describ
 
     5. Start the Tomcat 
 
-        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
-        
+        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png)
+
         !!! success
-                 Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
+            Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
 
         !!! tip "Default credentials"
-                User: admin  
-                Password: admin
+            User: admin  
+            Password: admin
 
 
 
@@ -29578,14 +29578,14 @@ To install Etendo in a development environment, follow the same steps as describ
 
     4. Start the Tomcat
 
-        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
-        
+        ![edit-configurations.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png)
+
         !!! success
-                 Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
+            Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
 
         !!! tip "Default credentials"
-                User: admin  
-                Password: admin
+            User: admin  
+            Password: admin
 
 
 
@@ -30819,7 +30819,7 @@ To work with the plugin you need to specify in the root project from where the p
         // latest.release will download the most recent stable version
         // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
         etendo {
-        coreVersion = "latest.release"
+            coreVersion = "latest.release"
         }
         ```
 
@@ -43634,17 +43634,18 @@ This work is a derivative of [How to add a canvas field to a form or grid](http:
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
+### How to Use Secure Web Services
+
 #### Overview
 
-This module allows calling any standard Etendo web service in the same way as calling the "/ws" endpoint, but using token authentication.
+This module allows calling any standard Etendo web service in the same way as calling the `/ws` endpoint, but using token authentication.
 
 This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
 Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
 
-
 !!! info
-    For more information, follow this information in [Secure Webservices](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+    For more information, follow this information in [Secure Web Services](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -47567,7 +47568,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
 === "Copilot & Tomcat Dockerized"
 
     The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
-    Follow the [Dockerized Tomcat Service](https://docs.etendo.software/latest/etendo-classic/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
+    Follow the [Dockerized Tomcat Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
 
     When using both services in docker, the enviorement variables should look like this:
 
@@ -47589,7 +47590,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
     
     - [Python](https://www.python.org/downloads/){target="_blank"} 3.10 or 3.11
     
-    - [Poetry]("https://pypi.org/project/poetry/){target="_blank"}
+    - [Poetry](https://pypi.org/project/poetry/){target="_blank"}
 
     We recommend usign PyCharm to run copilot locally. Download and install here [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/){target="_blank"}
 
@@ -47697,6 +47698,8 @@ Access to the information for each of the Assistants:
 [:material-file-document-outline: Event Handler creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Jasper report creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Message Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#message-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Module creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
 
@@ -48049,6 +48052,75 @@ Finally, we can observe the created report and set the chosen parameter to see t
 **Report Editing**
 
 ![EditReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
+
+
+##### Message Creator
+
+The **Message Creator** streamlines the process of creating and registering AD_Messages in Etendo Classic. By utilizing a webhook, it ensures efficient and error-free message creation while adhering to naming conventions and best practices. 
+
+###### Tools
+
+- [ApiCallTool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
+
+###### Functionality
+
+The **Message Creator** facilitates the creation of AD_Messages by interacting with Etendo Classic via a webhook. It validates the input parameters, enforces the proper format for search keys, and registers the message with the appropriate module. This assistant supports both parametric and non-parametric messages and ensures messages are immediately usable in Java code. 
+
+The assistant performs the following tasks:
+
+- **Validates Input Parameters**: Ensures required fields like module Java package, search key, message type, and message text are correctly provided.
+- **Search Key Format Enforcement**: Confirms that search keys follow the required format: `PREFIX_DescriptiveName`, where:
+  - `PREFIX` is the module's prefix in uppercase.
+  - `DescriptiveName` is in CamelCase.
+  - The total length does not exceed 32 characters.
+- **Message Type Validation**: Confirms the message type is either `"I"` (Informative) or `"E"` (Error).
+- **Registers the AD_Message**: Saves the message in the system, linking it to the specified module.
+
+When creating a message, the assistant will request the following information:
+
+- **Module Java Package**: The Java package of the module where the message will be created (e.g., `com.etendoerp.module`).
+- **Search Key**: A unique identifier for the message following the `PREFIX_DescriptiveName` format.
+- **Message Type**: The type of the message:
+  - `"I"` for informative messages.
+  - `"E"` for error messages.
+- **Message Text**: The content of the message.
+
+Notes:
+
+- **Module In Development**: The module must be set to development mode to allow the assistant to create it.
+
+- **Java Usability**: After creation, the AD_Message can be used in Java with:  
+  `OBMessageUtils.messageBD("MESSAGE_SEARCH_KEY")`.
+
+- **Parametric Messages**: If the message requires parameters, `%s` can be added to the text, and the assistant will provide a code snippet to use `String.format`.  
+  Example:  
+  **Message Text**: `"The value %s is invalid."`  
+  **Java Usage**:  
+  ```java
+  String formattedMessage = String.format(OBMessageUtils.messageBD("PREFIX_InvalidValue"), value);
+  ```
+
+###### Usage Example
+
+1. Provide the required inputs:
+    - Module Java Package: `com.etendoerp.module`
+    - Search Key: `MODPREFIX_InvalidInput`
+    - Message Type: `E`
+    - Message Text: `"The input provided is not valid."`
+
+    ![MessageCreator_1.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_1.png)
+
+2. The assistant validates and sends the request to the webhook.
+
+3. Upon successful creation, the system will confirm:
+    - Message created with the key: `MODPREFIX_InvalidInput`.
+
+    ![MessageCreator_2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_2.png)
+
+4. The message is ready for use in Java:
+    ```java
+    OBMessageUtils.messageBD("MODPREFIX_InvalidInput");
+    ```
 
 
 ##### Module Creator
@@ -51799,7 +51871,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.21.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.0){target="_blank"} | 06/11/2024 | 22.4.3 | 24.3.x | CS | :white_check_mark: |
+| [1.21.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.1){target="_blank"} | 14/11/2024 | 22.4.3 | 24.3.x | CS | :white_check_mark: |
+| [1.21.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.0){target="_blank"} | 06/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.20.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.20.1){target="_blank"} | 01/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.20.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.20.0){target="_blank"} | 24/10/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.19.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.19.0){target="_blank"} | 23/10/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
@@ -52236,7 +52309,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.0){target="_blank"} | 08/11/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.8.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.1){target="_blank"} | 15/11/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.0){target="_blank"} | 08/11/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.7.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.2){target="_blank"} | 29/10/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.7.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.1){target="_blank"} | 25/10/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.0){target="_blank"} | 18/10/2024 | 23.4.0 | * | C | :white_check_mark: |
