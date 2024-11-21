@@ -192,6 +192,7 @@ nav:
           - Essentials Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
             - Advanced Business Partner: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md
+            - Bulk Completion: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md
           - Platform Extensions Bundle:
             - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
             - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md

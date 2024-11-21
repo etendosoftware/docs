@@ -219,6 +219,16 @@ This process allows the user to adjust the price of one or more budget lines, ei
 
 ![](../../../../assets/drive/1AI28ZDh33qlFigapI41CdMpg6Eeb3bGN.png)
 
+### Bulk Completion
+
+!!! info
+    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
+
 ## Sales Order
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Order`
@@ -538,6 +548,16 @@ In case the user has to create orders or invoices among two or more organization
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
+### Bulk Completion
+
+!!! info
+    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
+
 ## Goods Shipment
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Goods Shipment`
@@ -651,6 +671,16 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
+### Bulk Completion
+
+!!! info
+    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
+
 ## Return from Customer
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Return from Customer`
@@ -762,6 +792,16 @@ It shows the discount applied to the original invoice of the returned product.
 #### **Tax**
 
 The user can edit taxes applied to the order.
+
+### Bulk Completion
+
+!!! info
+    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
 ## Return Material Receipt
 
@@ -1102,6 +1142,8 @@ If that is the case, a new section is shown in the "Add Payment" window, that is
 
 "Credit to Use" section shows all credit payments created for a given customer (if more than one), therefore it is possible to select one or more, and even change the credit amount to be used for the payment, in the field "Payment Amount".
 
+![](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/newcredittouse.png)
+
 Once the payment is processed, a new payment is created in the Payment In window. That payment states at the very top the "Used Credit" amount.
 
 ##### **Payments in multiple currencies**
@@ -1225,8 +1267,8 @@ Once the process is finished, the sales invoice status turns to Complete.
 
 !!! warning "Important"
     
-        - In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
-        - Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
+    - In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
+    - Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
 
 
 !!! info
@@ -1285,6 +1327,16 @@ These sales invoices have a negative amount that represents the discount of the 
 
 !!! info
     For more information, visit [Advanced Rappels](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#advanced-rappels).
+
+### Bulk Completion
+
+!!! info
+    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
 ## Create Invoices from Orders
 
