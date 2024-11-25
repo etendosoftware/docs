@@ -581,3 +581,271 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
     ![app-home.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home.png)
 
 4. Now you can view, filter, create, edit and delete products.
+
+## Documents Manager Subapp Example
+
+In this section, we will create a new subapplication called **Documents Manager Subapp**. This subapplication will handle the reception of external files in the Etendo Mobile app.
+
+!!! warning "Important"
+    Ensure that the **Is Receive Files** checkbox is set to `true` in the **Dynamic App** window. This is crucial for the subapplication to appear as an option when sharing external files.
+
+### Receiving Shared Files from Etendo Mobile
+
+The Documents Manager Subapp receives the shared files as parameters from the Etendo Mobile application (the container app). Below is the `App.tsx` file demonstrating how the subapplication receives the `sharedFiles` parameter:
+
+```javascript title="App.tsx"
+import React, { useEffect } from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import locale from './src/localization/locale';
+import { IData, IFile, INavigationContainerProps } from './src/interfaces';
+import Home from './src/screens/home';
+
+interface AppProps {
+  language: string;
+  dataUser: IData;
+  navigationContainer: INavigationContainerProps;
+  sharedFiles: IFile[];
+}
+
+const Stack = createStackNavigator();
+
+const App: React.FC<AppProps> = ({
+  language,
+  navigationContainer,
+  dataUser,
+  sharedFiles,
+}) => {
+  useEffect(() => {
+    locale.init();
+  }, []);
+
+  useEffect(() => {
+    locale.setCurrentLanguage(locale.formatLanguageUnderscore(language));
+  }, [language]);
+
+  return (
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen name="Home" options={{ headerShown: false }}>
+        {props => (
+          <Home
+            {...props}
+            navigationContainer={navigationContainer}
+            dataUser={dataUser}
+            sharedFiles={sharedFiles}
+          />
+        )}
+      </Stack.Screen>
+    </Stack.Navigator>
+  );
+};
+
+export default App;
+```
+
+### Home Screen
+
+- This is the main screen of the Documents Manager Subapp. It handles the reception of external files and displays them accordingly.
+
+- The route to this screen is `src/screens/home/index.tsx`, and the content:
+
+```javascript title="src/screens/home/index.tsx"
+import React, { useEffect, useState, useCallback } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import Pdf from 'react-native-pdf';
+import Sound from 'react-native-sound';
+import RNFS from 'react-native-fs';
+
+import { styles } from '../../styles/styles';
+import { HomeProps, IFile } from '../../interfaces';
+
+const Home: React.FC<HomeProps> = ({ navigationContainer, sharedFiles }) => {
+  const [audioPlayer, setAudioPlayer] = useState<Sound | null>(null);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [textContent, setTextContent] = useState<string>('');
+
+  useEffect(() => {
+    let sound: Sound | null = null;
+
+    const readTextFile = async (filePath: string) => {
+      try {
+        const content = await RNFS.readFile(filePath, 'utf8');
+        setTextContent(content);
+      } catch (error) {
+        console.error('Error reading text file:', error);
+      }
+    };
+
+    if (sharedFiles && sharedFiles.length > 0) {
+      sharedFiles.forEach(file => {
+        if (file.fileMimeType.startsWith('text/')) {
+          readTextFile(file.filePath);
+        } else if (file.fileMimeType.startsWith('audio/')) {
+          sound = new Sound(file.filePath, '', error => {
+            if (error) {
+              console.error('Error loading sound:', error);
+            }
+          });
+          setAudioPlayer(sound);
+        }
+      });
+    }
+
+    return () => {
+      if (sound) {
+        sound.release();
+      }
+    };
+  }, [sharedFiles]);
+
+  const toggleAudioPlayback = useCallback(() => {
+    if (audioPlayer) {
+      if (isPlaying) {
+        audioPlayer.pause();
+        setIsPlaying(false);
+      } else {
+        audioPlayer.play(success => {
+          if (!success) {
+            console.error('Error in playback');
+          }
+          setIsPlaying(false);
+        });
+        setIsPlaying(true);
+      }
+    }
+  }, [audioPlayer, isPlaying]);
+
+  const renderFileContent = (file: IFile) => {
+    switch (true) {
+      case file.fileMimeType === 'application/pdf':
+        return (
+          <Pdf
+            source={{ uri: file.filePath }}
+            style={styles.pdf}
+            onError={error => {
+              console.error(error);
+            }}
+          />
+        );
+      case file.fileMimeType.startsWith('image/'):
+        return (
+          <Image
+            source={{ uri: file.filePath }}
+            style={styles.image}
+            resizeMode="contain"
+          />
+        );
+      case file.fileMimeType.startsWith('audio/'):
+        return (
+          <View style={styles.audioContainer}>
+            <TouchableOpacity
+              style={styles.audioButton}
+              onPress={toggleAudioPlayback}
+            >
+              <Text style={styles.audioButtonText}>
+                {isPlaying ? 'Pause Audio' : 'Play Audio'}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        );
+      case file.fileMimeType.startsWith('text/'):
+        return (
+          <ScrollView style={styles.textContainer}>
+            <Text style={styles.textContent}>{textContent}</Text>
+          </ScrollView>
+        );
+      default:
+        return (
+          <View style={styles.unsupportedContainer}>
+            <Text style={styles.unsupportedText}>
+              File type not directly supported.
+            </Text>
+          </View>
+        );
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      {sharedFiles && sharedFiles.length > 0 ? (
+        sharedFiles.map((file, index) => (
+          <View key={index} style={styles.fileContainer}>
+            <Text style={styles.fileName}>{file.fileName}</Text>
+            {renderFileContent(file)}
+          </View>
+        ))
+      ) : (
+        <View style={styles.noFileContainer}>
+          <Text style={styles.noFileText}>There are no shared files.</Text>
+        </View>
+      )}
+    </View>
+  );
+};
+
+export default Home;
+```
+
+### Running the Subapplication
+
+1. Build the React Native code:
+
+    ```bash title="Terminal"
+    ./gradlew subapp.build -Ppkg=com.etendoerp.subapp.docsmanager --info
+    ```
+
+    !!! info
+        Ensure that the Etendo RX services are running without errors before executing this command.
+
+2. Install dependencies:
+
+    ```bash title="Terminal"
+    yarn install
+    ```
+
+3. Then, to run the subapplication in development mode execute:
+
+    ```bash title="Terminal"
+    yarn dev
+    ```
+
+### Visualizing the Subapplications
+
+1. Open the Etendo Mobile application on a mobile device or emulator.
+
+2. Set up the Edge service URL as previously described.
+
+3. Log in to Etendo Mobile, and you will see the **Documents Manager Subapp** in the list of subapps.
+
+    !!! warning "Important"
+        Ensure that the **Is Receive Files** checkbox is set to `true` in the **Dynamic App** window. This is crucial for the subapplication to appear as an option when sharing external files.
+
+    <figure markdown="span">
+    ![app-home-docsmanager.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home-docsmanager.png)
+    <figcaption>Etendo Mobile with Documents Manager Subapp</figcaption>
+    </figure>
+
+4. Share a file from another application to Etendo Mobile. The **Documents Manager Subapp** will handle the received file and display its content accordingly.
+
+    **Screenshots of the subapplication handling different file types:**
+
+    - **Image File:**
+
+      ![image-file.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/image-file.png)
+
+    - **PDF File:**
+
+      ![pdf-file.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/pdf-file.png)
+
+    - **Audio File:**
+
+      ![audio-file.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/audio-file.png)
+
+    - **Text File:**
+
+      ![text-file.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/text-file.png)
