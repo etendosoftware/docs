@@ -29139,6 +29139,8 @@ Fields to note:
 - **Active**: checkbox to activate the knowledge base file.
 - **Exclude from Code Interpreter**: Checkbox to exclude files from being processed by the Code Interpreter during synchronization. This checkbox is only editable if the assistant has the Code Interpreter option enabled.
 - **Exclude from Retrieval**: Checkbox to exclude files from being considered in the Retrieval process during synchronization.This checkbox is only editable if the assistant has the Retrieval option enabled.
+- **OpenAI File ID** Read-only field with Open AI file ID, if applicable.
+- **Alias** In case you select behaviour,  `Append the file content to the prompt`, by default it adds the file content to the end of the prompt, the alias can be used to replace the file content inside the prompt, using the wildcard @<alias>@, with the alias you define in this field. 
 
 ##### Skills and Tools Tab
 
@@ -29191,7 +29193,7 @@ In the Knowledge Base File window, you can define the files with which the assis
     - **Remote File** 
     You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
     - **Code Index** 
-    This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
+    Only available as System Administrator, as access to the source code is required.This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
 - **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
@@ -29199,6 +29201,9 @@ In the Knowledge Base File window, you can define the files with which the assis
 - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
 
 ##### File Path Tab 
+
+!!! warning 
+    Only available as System Administrator, as access to the source code is required.
 
 The **File Path Tab** appears when **Code Index** is selected as the file type. 
 
@@ -47762,11 +47767,14 @@ In addition, there are other **optional** variables to configure certain aspects
     
 | **Environment Variable**    | **Options**  | **Default**  | **Info** |
 | ----------------------------| -------------| -------------| -------- |
+| COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
+| COPILOT_MAX_ITERATIONS | `Integer` | `100` | **Optional** Maximum number of interactions of agents. |
+| COPILOT_EXECUTION_TIMEOUT | `Integer` | `0` | **Optional** Defines a timeout in the execution of an agent in seconds, by default 0 represents unlimited time. |
+| COPILOT_STREAM_DEBUG | `Boolean` | `false` | **Optional** Enable debug mode in the copilot pop-up, to see the log while the response is being generated. |
 | CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | **Optional** The name of the file that contains the configuration of the enabled tools. |
 | DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | **Optional** The name of the file that contains the configuration of the dependencies of the tools. |
 | COPILOT_PULL_IMAGE | `Boolean` | `true` | **Optional** If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
 | COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
-| COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
 | COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
 
 
@@ -51424,6 +51432,23 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
+
+#### November 2024
+
+##### Copilot Extensions
+
+:material-robot: **New Etendo Copilot Release Available!**
+
+New Copilot Extensions bundle version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) 
+
+<div class="grid cards" markdown>
+-  **Improve your Python Tools development with the Code Run assistant**
+
+    ---
+    The [Code Run](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) assistant combined with the [Docker Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
+
+    Equipped with advanced capabilities, the assistant prioritizes Python for troubleshooting, manages library installations dynamically, integrates Bash commands for flexible operations and handles file processing with precision. Whether you are troubleshooting, automating tasks or testing scripts, this tool ensures efficiency and security. Transform your development workflow with this powerful addition to Etendo.
+</div>
 
 #### October 2024
 
