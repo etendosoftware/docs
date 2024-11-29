@@ -127,6 +127,8 @@ Fields to note:
 - **Active**: checkbox to activate the knowledge base file.
 - **Exclude from Code Interpreter**: Checkbox to exclude files from being processed by the Code Interpreter during synchronization. This checkbox is only editable if the assistant has the Code Interpreter option enabled.
 - **Exclude from Retrieval**: Checkbox to exclude files from being considered in the Retrieval process during synchronization.This checkbox is only editable if the assistant has the Retrieval option enabled.
+- **OpenAI File ID** Read-only field with Open AI file ID, if applicable.
+- **Alias** In case you select behaviour,  `Append the file content to the prompt`, by default it adds the file content to the end of the prompt, the alias can be used to replace the file content inside the prompt, using the wildcard @<alias>@, with the alias you define in this field. 
 
 ### Skills and Tools Tab
 
@@ -179,7 +181,7 @@ In the Knowledge Base File window, you can define the files with which the assis
     - **Remote File** 
     You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
     - **Code Index** 
-    This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
+    Only available as System Administrator, as access to the source code is required.This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
 - **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
@@ -187,6 +189,9 @@ In the Knowledge Base File window, you can define the files with which the assis
 - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
 
 ### File Path Tab 
+
+!!! warning 
+    Only available as System Administrator, as access to the source code is required.
 
 The **File Path Tab** appears when **Code Index** is selected as the file type. 
 
