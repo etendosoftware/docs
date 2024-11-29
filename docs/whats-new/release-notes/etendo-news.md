@@ -12,6 +12,23 @@ tags:
 
 #
 
+## November 2024
+
+### Copilot Extensions
+
+:material-robot: **New Etendo Copilot Release Available!**
+
+New Copilot Extensions bundle version [1.8.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) 
+
+<div class="grid cards" markdown>
+-  **Improve your Python Tools development with the Code Run assistant**
+
+    ---
+    The [Code Run](../../developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) assistant combined with the [Docker Tool](../../developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
+
+    Equipped with advanced capabilities, the assistant prioritizes Python for troubleshooting, manages library installations dynamically, integrates Bash commands for flexible operations and handles file processing with precision. Whether you are troubleshooting, automating tasks or testing scripts, this tool ensures efficiency and security. Transform your development workflow with this powerful addition to Etendo.
+</div>
+
 ## October 2024
 
 ### Copilot Extensions

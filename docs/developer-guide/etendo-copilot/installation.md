@@ -163,10 +163,13 @@ In addition, there are other **optional** variables to configure certain aspects
     
 | **Environment Variable**    | **Options**  | **Default**  | **Info** |
 | ----------------------------| -------------| -------------| -------- |
+| COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
+| COPILOT_MAX_ITERATIONS | `Integer` | `100` | **Optional** Maximum number of interactions of agents. |
+| COPILOT_EXECUTION_TIMEOUT | `Integer` | `0` | **Optional** Defines a timeout in the execution of an agent in seconds, by default 0 represents unlimited time. |
+| COPILOT_STREAM_DEBUG | `Boolean` | `false` | **Optional** Enable debug mode in the copilot pop-up, to see the log while the response is being generated. |
 | CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | **Optional** The name of the file that contains the configuration of the enabled tools. |
 | DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | **Optional** The name of the file that contains the configuration of the dependencies of the tools. |
 | COPILOT_PULL_IMAGE | `Boolean` | `true` | **Optional** If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
 | COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
-| COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
 | COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
 
