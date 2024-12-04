@@ -37912,7 +37912,7 @@ The first step in the development process is to create a new module. From the Ap
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png)
 
-Note the following important fields: (for more details see the  AD_Module table description):
+Note the following important fields: (for more details see the `AD_Module` table description):
 
   * The format of the Version field is three numbers separated by two dots. 
   * The Java Package is a unique identifier of your module and has to match the Java package naming rules as described in the  Java Naming Conventions  (names and package names). Be careful when setting this value as you are not allowed to change it once your module is registered in the central repository. If your module includes Java files, they have to be packaged within your module's Java package or in its sub-packages. Examples of Java packages for a module are _org.etendo.howtos_ , _com.etendoerp.examples.helloworld_ , _com.yourcompany.yourPackage_ , _org.yourfoundation.yourPackage.yourSubpackage_ , etc. 
@@ -37938,7 +37938,7 @@ We will define the module using the following three tabs of the `Application Dic
   * DB Prefix
   * Data Package
 
-Dependency: Etendo Classic core functionality is in itself a module, called _Core_. All modules have a dependency on User Interface Application and in turn, it has a dependency on Etendo core. In the Dependency window, specify that the module is dependent on User Interface Application. (see also the  AD_Module_Dependency description):
+Dependency: Etendo Classic core functionality is in itself a module, called _Core_. All modules have a dependency on User Interface Application and in turn, it has a dependency on Etendo core. In the Dependency window, specify that the module is dependent on User Interface Application. (see also the  `AD_Module_Dependency` description):
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png)
 
@@ -37952,7 +37952,7 @@ DB Prefix: at least one db prefix is required when a module also contains databa
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png)
 
 !!!info
-    For more information, see the  AD_Module_Dbprefix  table description.
+    For more information, see the `AD_Module_Dbprefix` table description.
 
   
 Data Package: Tables are linked to a module through the Data Package. The generated business object for the new table will use the Java Package defined in the  Data Package. If new tables are to be added to the module, a data package must be specified as illustrated in the image below.
