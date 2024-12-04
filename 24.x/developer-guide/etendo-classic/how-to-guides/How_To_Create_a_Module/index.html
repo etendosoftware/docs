@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
     
     
       
@@ -9158,7 +9158,7 @@ additional reports, additional windows, connectors, content packs (translations,
 <h2 id="creating-a-module">Creating a Module</h2>
 <p>The first step in the development process is to create a new module. From the Application menu, select <code>Application Dictionary</code> &gt; <code>Module</code>.</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png" /></a></p>
-<p>Note the following important fields: (for more details see the  AD_Module table description):</p>
+<p>Note the following important fields: (for more details see the <code>AD_Module</code> table description):</p>
 <ul>
 <li>The format of the Version field is three numbers separated by two dots. </li>
 <li>The Java Package is a unique identifier of your module and has to match the Java package naming rules as described in the  Java Naming Conventions  (names and package names). Be careful when setting this value as you are not allowed to change it once your module is registered in the central repository. If your module includes Java files, they have to be packaged within your module's Java package or in its sub-packages. Examples of Java packages for a module are <em>org.etendo.howtos</em> , <em>com.etendoerp.examples.helloworld</em> , <em>com.yourcompany.yourPackage</em> , <em>org.yourfoundation.yourPackage.yourSubpackage</em> , etc. </li>
@@ -9183,7 +9183,7 @@ We will define the module using the following three tabs of the <code>Applicatio
 <li>DB Prefix</li>
 <li>Data Package</li>
 </ul>
-<p>Dependency: Etendo Classic core functionality is in itself a module, called <em>Core</em>. All modules have a dependency on User Interface Application and in turn, it has a dependency on Etendo core. In the Dependency window, specify that the module is dependent on User Interface Application. (see also the  AD_Module_Dependency description):</p>
+<p>Dependency: Etendo Classic core functionality is in itself a module, called <em>Core</em>. All modules have a dependency on User Interface Application and in turn, it has a dependency on Etendo core. In the Dependency window, specify that the module is dependent on User Interface Application. (see also the  <code>AD_Module_Dependency</code> description):</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png" /></a></p>
 <p>DB Prefix: at least one db prefix is required when a module also contains database artifacts (table, column, constraints, etc.). Etendo Classic determines the module of a database artifact by checking to see if its name starts with one of the defined db_prefixes. If database artifacts will be added to the module, at least one DB prefix must be specified.</p>
 <div class="admonition important">
@@ -9193,7 +9193,7 @@ We will define the module using the following three tabs of the <code>Applicatio
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, see the  AD_Module_Dbprefix  table description.</p>
+<p>For more information, see the <code>AD_Module_Dbprefix</code> table description.</p>
 </div>
 <p>Data Package: Tables are linked to a module through the Data Package. The generated business object for the new table will use the Java Package defined in the  Data Package. If new tables are to be added to the module, a data package must be specified as illustrated in the image below.</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png" /></a></p>
