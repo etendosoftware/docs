@@ -41749,6 +41749,9 @@ All new developments must belong to a module that is not the _core_ module.
 
 ####  Preparing development environment
 
+!!! info
+    Make sure that in the root `build.gradle` you have the line `apply from: 'tests.gradle'`. In case it is not there, add it and reload Gradle from your IntelliJ.
+
 First of all you need to create a src-test directory in your module package directory in Etendo ERP.
 
 ``` 
@@ -41759,9 +41762,6 @@ modules
             └── com.etendoerp.example
                 └── EtendoTest.java
 ```
-
-!!! info
-    In the file `tests.gradle` you need comment the line: `test.dependsOn('ant.compile.test')` for running the tests locally.
 
 Now, you are ready to work with test cases.
 
@@ -42053,11 +42053,10 @@ public void testHasItems() {
 Etendo has a number of ant tasks which run the test cases:
 
   * `./gradlew test`: This suite contains all the test cases.
-  * `./gradlew test --tests "module-name.\*"`: This suite contains all the test cases of a particular module. (e.g. `./gradlew test --tests "com.etendoerp.example.\*"`)
+  * `./gradlew test --tests "module-name.*"`: This suite contains all the test cases of a particular module. (e.g. `./gradlew test --tests "com.etendoerp.example.*"`)
 
-All the test cases are based on the Small Bazaar default data.
-
-When adding new test classes to Etendo ERP the developer has to always add the test class to the AllAntTaskTests test suite and if it is side effect free and quick to the AllQuickAntTaskTests and if it is side effect free but takes a bit more time to the AntTaskTests test suite.
+!!! info
+    If tests have been implemented or modified for [etendo_core](https://github.com/etendosoftware/etendo_core.git), make sure that the class is included in the `StandaloneTestSuite` or `WebserviceTestSuite`.
 
 #####  The Result
 
