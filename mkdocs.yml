@@ -22,6 +22,7 @@ theme:
     - search.suggest
     - search.share
     - search.highlight
+    - search.no_results
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -45,7 +46,7 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
-exclude_docs: |
+exclude_docs: 
   .*
 
 
@@ -79,6 +80,13 @@ plugins:
       separator: '[\s\.\-]+'
       lang:
         - en
+      prebuild_index: true 
+      exact_phrase: true
+      index_all_content: true  
+      pipeline:            
+        - stopWordFilter   
+        - stemmer       
+         
   - tags
   - glightbox
   - rss:
