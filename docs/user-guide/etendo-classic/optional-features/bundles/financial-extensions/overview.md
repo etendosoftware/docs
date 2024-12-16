@@ -66,6 +66,15 @@ The new Amortization report allows downloading excel reports about information o
 !!! info
     For more information, visit [the Asset Amortization Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
 
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance`
+
+This functionality allows the user to automatically process and protest remittances.
+
+!!! info
+    For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+
 ### Bank Integration PSD2
 
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
@@ -230,3 +239,4 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+
