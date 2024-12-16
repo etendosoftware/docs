@@ -14828,7 +14828,7 @@ Some relevant fields to note are:
 
 ##### Overview
 
-In the remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.
+In the Remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.
 
 A remittance is a group of payments (in/out) or orders/invoices which can be remitted to the bank for its payment. The bank will then manage either the collection of the money from the customers or the payment to the vendors/suppliers.
 
@@ -14861,7 +14861,7 @@ To be able to use this functionality, it is necessary to configure some aspects 
 ![Remittance window](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance-window.png)
 
 
-As shown in the image above, it is necessary to fill in the fields in the window and 3 different buttons appear so as to continue with the process.
+As shown in the image above, it is necessary to fill in the fields in the window and different buttons appear so as to continue with the process.
 
 
 ###### Buttons
@@ -14874,11 +14874,25 @@ Using this button, the user is able to select a payment to be included in the re
 
 Using this button, the user processes the payments and groups lines according to the options shown in its corresponding pop-up window. 
 
+!!! info
+    If the Automated Remittance module in the Financial Extensions Bundle is installed, this process includes the date setting and the settlement of the remittance.  For more information, visit [the Automated Remittance user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+   
+
 **Select Invoices and Orders**
 
 In the Remittance window, the *select invoices and orders* button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.
 
 ![filter.png](https://docs.etendo.software/latest/assets/legacy/filter.png)
+
+**Protest Remittance**
+
+!!!info
+    This button is only available if the Automated Remittance module in the Financial Extensions Bundle is installed. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of future remittances.
+
+!!! info
+    For more information, visit [the Automated Remittance user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
 
 ##### Types of Remittances
 
@@ -20411,6 +20425,15 @@ The new Amortization report allows downloading excel reports about information o
 !!! info
     For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
 
+##### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance`
+
+This functionality allows the user to automatically process and protest remittances.
+
+!!! info
+    For more information, visit [the Automated Remittance user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+
 ##### Bank Integration PSD2
 
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
@@ -20575,6 +20598,8 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Bank Integration PSD2
@@ -20758,6 +20783,75 @@ To configure the preference, go to the **Preference** window and create a new re
 It is necessary to run the **Days Back to Refresh Accounting** background process to update the accounting status column.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Automated Remittance
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
+## Article Content: 
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+
+#### Overview
+
+This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+
+This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
+
+!!!important
+    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
+
+#### Setup
+
+To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
+
+For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
+
+#### Automated Remittance Process
+
+This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
+
+
+1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
+
+    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
+
+2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
+
+3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
+
+!!!note
+    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
+
+#### Automated Remittance Protest
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
+
+1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
+
+2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
+
+3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
