@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -3783,6 +3783,27 @@
   
   <span class="md-ellipsis">
     Bulk Posting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/financial-extensions/automated-remittance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automated Remittance
   </span>
   
 
@@ -12794,7 +12815,7 @@ both payments, therefore the net effect on the GL item balance is null. In other
 <p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
 <h3 id="overview_10">Overview</h3>
-<p>In the remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.</p>
+<p>In the Remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.</p>
 <p>A remittance is a group of payments (in/out) or orders/invoices which can be remitted to the bank for its payment. The bank will then manage either the collection of the money from the customers or the payment to the vendors/suppliers.</p>
 <h3 id="configuration_1">Configuration</h3>
 <p>To be able to use this functionality, it is necessary to configure some aspects first.</p>
@@ -12825,15 +12846,29 @@ both payments, therefore the net effect on the GL item balance is null. In other
 </ul>
 <h3 id="remittance-window">Remittance window</h3>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance-window.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remittance window" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance-window.png" /></a></p>
-<p>As shown in the image above, it is necessary to fill in the fields in the window and 3 different buttons appear so as to continue with the process.</p>
+<p>As shown in the image above, it is necessary to fill in the fields in the window and different buttons appear so as to continue with the process.</p>
 <h4 id="buttons">Buttons</h4>
 <p><strong>Select Payments</strong></p>
 <p>Using this button, the user is able to select a payment to be included in the remittance.</p>
 <p><strong>Process</strong></p>
 <p>Using this button, the user processes the payments and groups lines according to the options shown in its corresponding pop-up window. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If the Automated Remittance module in the Financial Extensions Bundle is installed, this process includes the date setting and the settlement of the remittance.  For more information, visit <a href="../../../../optional-features/bundles/financial-extensions/automated-remittance/">the Automated Remittance user guide</a>.</p>
+</div>
 <p><strong>Select Invoices and Orders</strong></p>
 <p>In the Remittance window, the <em>select invoices and orders</em> button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.</p>
 <p><a class="glightbox" href="../../../../../../assets/legacy/filter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="filter.png" src="../../../../../../assets/legacy/filter.png" /></a></p>
+<p><strong>Protest Remittance</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This button is only available if the Automated Remittance module in the Financial Extensions Bundle is installed. To install it, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+</div>
+<p>The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of future remittances.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="../../../../optional-features/bundles/financial-extensions/automated-remittance/">the Automated Remittance user guide</a>.</p>
+</div>
 <h3 id="types-of-remittances">Types of Remittances</h3>
 <p>There are two types of remittances:</p>
 <p><strong>Non-Discount Remittances:</strong> orders/invoices and purchases and/or payments (in/out) are grouped in a remittance that is sent to the bank to be managed.</p>
@@ -13363,7 +13398,7 @@ The returned remittance lines will appear in the returned tab.</p>
     
     
 
-      <script src="../../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
