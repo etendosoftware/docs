@@ -483,6 +483,7 @@ To start creating your module in Etendo, follow the steps below.
 - **Description**: A brief description of the module's functionality.
 - **Help/Comment**: Additional help text or comments regarding the module (optional).
 - **Version**: The version of the module (e.g., `1.0.0`).
+- **Type**: The type of the module. Option are "M" for standard module, "T" for template module.
 - **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `FJTS`).
 - **License**: The license type for the module. Options are:
     - `Apache License 2.0`
@@ -508,6 +509,7 @@ body_params = {
   "Description": "This module adds test functionality to Etendo Classic.",
   "Version": "1.0.0",
   "Prefix": "FJTS",
+  "Type": "M",
   "ModuleLicense": "Etendo Commercial License"
 }
 ```
@@ -742,5 +744,67 @@ This assistant simplifies webhook creation by automatically generating the neces
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH2.png)
 
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
+
+
+### Refactor Assistant
+
+An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
+
+### Unique Java Test Assistant
+#### Description
+This assistant is designed to generate tests for a sigle Java File or a Etendo Module. In the case of a given Module, the assistant will check for file without tests and generate for them. The assistant expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. The assistant will also generate the test methods for each method in the Java.
+This assistant has a Knowledge Base with the Java classes of Etendo Classic.
+#### Tools Used
+- [Print Directory Tool](../available-tools/print-directory-tool.md)
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+
+!!!warning Disclaimer
+    The test generators provided by this tool are designed to deliver an initial batch of test cases efficiently, based on the parameters provided. However, it is important to note that the generated tests serve as a starting point and may require additional work to:
+
+    - Fix potential errors in the generated test cases.
+    - Improve test coverage.
+    - Adapt them to the specific scenarios of your project or environment.
+
+    We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
+
+### Java Test Generator
+This assistant generates tests for a single Java file or an Etendo Module. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
+This assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+#### Tools Used
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+- [Test Run Tool](../available-tools/test-run-tool.md)
+
+!!!info
+    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+### Java Test Checker
+This assistant receiving a Etendo Module, will check for Java files, determining which ones have tests and which ones do not. The assistant will generate a report with the results and will suggest the user to generate tests for the files without them.
+#### Tools Used
+- [Print Directory Tool](../available-tools/print-directory-tool.md)
+
+!!!info
+    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+### Java Test Executor
+
+This assistant is designed to execute tests for a Java Package, can be used to executa:
+- All tests
+- Tests for a module
+- Tests for a single Java file
+This depends on the user input. The assistant will execute the tests and provide feedback to the user.
+#### Tools Used
+- [Test Run Tool](../available-tools/test-run-tool.md)
+
+!!! note
+    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+### Java Test Supervisor
+A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
+#### Team Members
+- [Java Test Generator](#java-test-generator)
+- [Java Test Checker](#java-test-checker)
+- [Java Test Executor](#java-test-executor)
 
 
