@@ -29293,6 +29293,7 @@ In the Knowledge Base File window, you can define the files with which the assis
 - **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
 - **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
 - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+- **Skip Splitting**: Checking this box allows you to tell Copilot not to split the file into parts when indexing it. This is necessary when the entire contents of the file are needed when reading the file, while maintaining the context of the entire file.
 
 ##### File Path Tab 
 

@@ -61,7 +61,7 @@ In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you 
 
 ![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with [`Langchain Agent`, `LangGraph` and `Open AI Assistant` types](../../user-guide/etendo-copilot/setup.md#assistant-window).
+Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with [`Langchain Agent`, `Multi-Model Assistant`, `LangGraph` and `Open AI Assistant` types](../../user-guide/etendo-copilot/setup.md#assistant-window).
 
 ### Visualization Mode
 

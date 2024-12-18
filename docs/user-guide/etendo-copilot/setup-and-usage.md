@@ -50,6 +50,9 @@ The Assistant window allows you to define and configure assistants:
 
     These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc. The difference between Langchain and Open AI is that Langchain can save the information locally and it is a multiprovider agent.
 
+    **Multi-Model Assistant**
+    This type of assistant extends the “Langchain” type with the particularity that it can be used with models from various vendors such as “Anthropic” and “Gemini”, in addition to the existing “OpenAI” models. In the future, Langchain assistants will be replaced by this type of multi-model agents.
+
     **LangGraph**
 
     This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured.
@@ -68,13 +71,12 @@ The Assistant window allows you to define and configure assistants:
     - **Open AI Vectordb ID**: Read-only field in which the ID of the vector database is displayed.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
-=== "Langchain Agent"
+=== "Langchain Agent" or "Multi-Model Assistant"
 
     In case of defining an **Langchain Agent** type app, the following fields will be enabled: 
 
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish.
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case. 
-    - **Provider**: Model provider information.
     - **Model**: Dropdown with the models available according to the selected provider.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
@@ -85,7 +87,6 @@ The Assistant window allows you to define and configure assistants:
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
     - **Graph Preview**: It shows the tree of assistants under a certain manager.
-    - **Provider**: Model provider information.
     - **Model**: Dropdown with the models available according to the selected provider.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
@@ -96,6 +97,9 @@ The Assistant window allows you to define and configure assistants:
     The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
     These variables will be replaced with the values defined in the properties.
 If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
+
+### Check hosts
+This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
 
 ### Sync Assistant Button
 
@@ -182,11 +186,16 @@ In the Knowledge Base File window, you can define the files with which the assis
     You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
     - **Code Index** 
     Only available as System Administrator, as access to the source code is required.This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
+    - **Text**
+    This allows you to write the content of the file directly in the text area. This option is useful for small texts that must be versioned in the system.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
 - **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
 - **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
 - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+- **Text**: Text content of the file. Only shown if the **Text** option is chosen in the Type field.
+- **Skip Splitting**: Checking this box allows you to tell Copilot not to split the file into parts when indexing it. This is necessary when the entire contents of the file are needed when reading the file, while maintaining the context of the entire file.
+
 
 ### File Path Tab 
 
@@ -286,3 +295,28 @@ Fields to note:
 - **Message**: Exact message used in the conversation
 - **Time**: Time of the message
 - **Creation Date**: Date of the message
+
+
+## AI Models Window
+In this window, the user can find and add AI models to be used by the assistants.
+
+Fields to note:
+**Code**: The code name of the model. It must be in lowercase.
+**Name**: The human-readable name of the model.
+**Provider**: The provider of the model. It must be in lowercase.
+**Max Tokens**: The maximum number of tokens that can be generated by the model. This is a field required in some models, that can be used to limit or expand the model's capabilities, depending of the nature of the model.
+
+### Examples
+**GPT-4**:
+- **Code**: gpt-4
+- **Name**: GPT-4
+- **Provider**: openai
+- **Max Tokens**: Not needed
+
+**Anthropic Claude 3.5 Haiku**:
+- **Code**: claude-3-5-haiku-latest
+- **Name**: Claude 3.5 Haiku
+- **Provider**: anthropic
+- **Max Tokens**: 8000
+
+Automatically, the window will be populated with the models available in OpenAI, but models from other vendors will have to be entered manually. In future versions, the synchronization will be done with a list provided by Etendo, which will contain models from several providers.

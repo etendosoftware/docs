@@ -483,6 +483,7 @@ To start creating your module in Etendo, follow the steps below.
 - **Description**: A brief description of the module's functionality.
 - **Help/Comment**: Additional help text or comments regarding the module (optional).
 - **Version**: The version of the module (e.g., `1.0.0`).
+- **Type**: The type of the module. Option are "M" for standard module, "T" for template module.
 - **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `FJTS`).
 - **License**: The license type for the module. Options are:
     - `Apache License 2.0`
@@ -508,6 +509,7 @@ body_params = {
   "Description": "This module adds test functionality to Etendo Classic.",
   "Version": "1.0.0",
   "Prefix": "FJTS",
+  "Type": "M",
   "ModuleLicense": "Etendo Commercial License"
 }
 ```
@@ -744,3 +746,6 @@ This assistant simplifies webhook creation by automatically generating the neces
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
 
 
+### Refactor Assistant
+
+An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
