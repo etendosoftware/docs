@@ -759,6 +759,15 @@ This assistant has a Knowledge Base with the Java classes of Etendo Classic.
 - [Read File Tool](../available-tools/read-file-tool.md)
 - [Write File Tool](../available-tools/write-file-tool.md)
 
+!!!warning Disclaimer
+    The test generators provided by this tool are designed to deliver an initial batch of test cases efficiently, based on the parameters provided. However, it is important to note that the generated tests serve as a starting point and may require additional work to:
+
+    - Fix potential errors in the generated test cases.
+    - Improve test coverage.
+    - Adapt them to the specific scenarios of your project or environment.
+
+    We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
+
 ### Java Test Generator
 This assistant generates tests for a single Java file or an Etendo Module. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
 This assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
