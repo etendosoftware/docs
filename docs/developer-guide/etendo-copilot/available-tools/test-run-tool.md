@@ -1,9 +1,11 @@
 ---
 tags:
   - Copilot
-  - IA
+  - AI
   - Tool
   - Test
+  - Run Test
+  - Test Excecution
   - Gradle
 ---
 
@@ -13,38 +15,42 @@ tags:
 
 ## Overview
 
-La **Test Run Tool** está diseñada para ejecutar pruebas Java usando Gradle, proporcionando una forma eficiente de ejecutar pruebas en proyectos Java dentro de un entorno específico.
+The **Test Run Tool** is designed to execute Java tests using Gradle, providing an efficient way to run tests in Java projects within a specific environment.
 
 !!!info
-    Para incluir esta funcionalidad, el Copilot Extensions Bundle debe estar instalado. Para más información, sigue las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para información sobre versiones disponibles, compatibilidad con el núcleo y nuevas características, visita [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+    To include this functionality, the Copilot Extensions Bundle must be installed. For more information, follow the instructions in the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For information about available versions, core compatibility, and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 ## Functionality
 
-Esta herramienta es especialmente útil para ejecutar y validar el conjunto de pruebas de Java. Puede ser utilizada en varias situaciones, como por ejemplo:
+This tool is especially useful for running and validating Java test suites. It can be used in various scenarios, such as:
 
-- Ejecutar pruebas concretas o grupos de pruebas para asegurarse de que las funcionalidades están correctamente implementadas.
-- Integrar pruebas automáticas en el flujo de trabajo de desarrollo.
+- Running specific tests or groups of tests to ensure functionalities are correctly implemented.
+- Integrating automated tests into the development workflow.
 
-Este proceso consiste en las siguientes acciones:
+The process consists of the following actions:
 
-- **Receiving Parameters**
+**Receiving Parameters**
 
-    La herramienta recibe los siguientes parámetros de entrada:
-    - `test_targets`: Uno o más tests o paquetes que se desean ejecutar.
-    - `working_directory`: El directorio donde se encuentra el script `gradlew`.
+The tool receives the following input parameters:
 
-- **Running Tests**
-    - Se construye y ejecuta un comando Gradle con los tests especificados.
-    - La ejecución se lleva a cabo en el directorio de trabajo especificado.
+- `test_targets`: One or more tests or packages to execute.
+- `working_directory`: The directory where the `gradlew` script is located.
 
-- **Returning the Result**
-    Devuelve un resumen de la ejecución de tests junto con los detalles de las pruebas pasadas y fallidas.
+**Running Tests**
+
+- A Gradle command is constructed and executed with the specified tests.
+- The execution is performed in the specified working directory.
+
+**Returning the Result**
+
+Returns a summary of the test execution along with details of passed and failed tests.
 
 ## Usage Example
 
-Si desea ejecutar pruebas específicas en el directorio `/path/to/erp`, el formato de entrada y salida sería el siguiente:
+If you want to run specific tests in the `/path/to/erp` directory, the input and output format would be as follows:
 
 - **Input**
+
 ```json
 {
   "test_targets": ["com.etendoerp.webhookevents.WebhookSetupTest"],
@@ -53,6 +59,7 @@ Si desea ejecutar pruebas específicas en el directorio `/path/to/erp`, el forma
 ```
 
 - **Output**
+
 ```json
 {
   "summary": "Some tests failed. Review the details below.",

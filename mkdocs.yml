@@ -493,6 +493,7 @@ nav:
         - Send Email Tool: developer-guide/etendo-copilot/available-tools/send-email-tool.md
         - Tavily Tool: developer-guide/etendo-copilot/available-tools/tavily-tool.md
         - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
+        - Test Run Tool: developer-guide/etendo-copilot/available-tools/test-run-tool.md
         - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md

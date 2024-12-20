@@ -54,6 +54,7 @@ Each tool represents a separate independent project, designed to excel at specif
 - **LangGraph**: In this case, this option works as a manager of other assistants and allows to select team members. 
 
 - **Langchain Agent**: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.
+- **Multi-Model Assistant** This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
 
 ## Copilot Interface
 
@@ -61,7 +62,7 @@ In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you 
 
 ![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with [`Langchain Agent`, `Multi-Model Assistant`, `LangGraph` and `Open AI Assistant` types](../../user-guide/etendo-copilot/setup.md#assistant-window).
+Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`, `Multi-Model Assistant`, `LangGraph` and `Open AI Assistant` types, for more information visit [Assistant Windows](../etendo-copilot/setup-and-usage.md#assistant-window) documentation.
 
 ### Visualization Mode
 
