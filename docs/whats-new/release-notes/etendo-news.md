@@ -11,6 +11,17 @@ tags:
 ![](../../assets/whats-new/etendo-news/etendo-news-0.png)
 
 #
+## December 2024
+
+### Etendo Classic
+:octicons-rocket-24: **New Etendo Classic Release Available!**
+
+Version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
+- The document completion process allows the use of Credit Payment as a payment method again. 
+From now on, the completion is again one record at a time and is added to the [Bulk Completion](../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+
+
 
 ## November 2024
 
