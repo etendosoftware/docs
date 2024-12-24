@@ -331,6 +331,14 @@ If the Remittance module is installed, in this tab, the user can find a “defau
 !!! warning
     Only one bank account can be selected as default for each business partner.
 
+#### **Advanced Bank Account Management**
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. In the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
+
+
 ### **Location/Address**
 
 Business partner locations and full address details can be set up in this tab.
@@ -355,6 +363,13 @@ Etendo allows the user to define any type of business partner address, by fillin
 - the **Fax** number
 - **Ship to Address** checkbox - the user should flag this one if the address being set up must be used for Goods Receipts/Shipments related transactions.
 - **Invoice to Address** checkbox - the user should flag this one if the address being setup must be used for sales or purchase invoices transactions.
+
+### **Advanced Bank Account Management**
+
+The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
+
+!!! warning
+    The default account will always be used when generating a new document unless an account is set up in a specific location. 
 
 ### **Contact**
 
