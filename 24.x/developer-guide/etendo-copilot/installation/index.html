@@ -5764,7 +5764,7 @@
         
   
   <span class="md-ellipsis">
-    How to Use Secure Webservices
+    How to Use Secure Web Services
   </span>
   
 
@@ -9143,6 +9143,10 @@
 <ol>
 <li>
 <p>In <code>gradle.properties</code> file is necessary to add some environment variables as a mandatory requirement</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>From Etendo Classic version <a href="../../../whats-new/release-notes/etendo-classic/release-notes/">24.4.0</a> onwards the variables <code>ETENDO_HOST</code>, <code>COPILOT_HOST</code> and <code>ETENDO_HOST_DOCKER</code> are optional, in case they are defined they will overwrite the automatically generated variables.</p>
+</div>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">https:</span><span class="c1">//&lt;Etendo URL&gt;/&lt;Context Path&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">ETENDO_HOST_DOCKER</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:&lt;Tomcat Port&gt;/&lt;Context Path&gt;</span>
@@ -9168,17 +9172,17 @@
 <tr>
 <td>ETENDO_HOST</td>
 <td></td>
-<td><strong>Required</strong> The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo</td>
+<td><strong>Optional</strong> The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo</td>
 </tr>
 <tr>
 <td>ETENDO_HOST_DOCKER</td>
 <td></td>
-<td><strong>Required</strong> The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain.</td>
+<td><strong>Optional</strong> The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain.</td>
 </tr>
 <tr>
 <td>COPILOT_HOST</td>
 <td><code>localhost</code></td>
-<td><strong>Required</strong> The copilot host can be defined by the user. By default use <code>localhost</code></td>
+<td><strong>Optional</strong> The copilot host can be defined by the user. By default use <code>localhost</code></td>
 </tr>
 <tr>
 <td>COPILOT_PORT</td>
