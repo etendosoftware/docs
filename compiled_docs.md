@@ -43835,8 +43835,8 @@ Some things to note when creating these type of windows:
 This work is a derivative of [How to add a canvas field to a form or grid](http://wiki.openbravo.com/wiki/How_to_use_property_fields){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to Use Secure Webservices
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Webservices
+# Article Title: How to Use Secure Web Services
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Web Services
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
@@ -43848,10 +43848,30 @@ This module allows calling any standard Etendo web service in the same way as ca
 
 This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
-Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+Besides the authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+
+#### Setup 
+
+!!! Info 
+    By default, the ES256 encryption algorithm is used, it is possible to change it by setting a new preference with the `Encryption Algorithm` property and set its value to `HS256`.
+
+##### Initial configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+It is necessary to configure the encryption key and the expiration time for the authentication tokens in the Client window with the System Administrator role.
+
+If the expiration time is equal to "0" the tokens do not expire.
+
+Generate a random key with the "Generate key" button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+#### Secure Web Services Swagger
 
 !!! info
-    For more information, follow this information in [Secure Web Services](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+    For more information, visit [Secure Web Services Swagger](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -47706,6 +47726,8 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
 1. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
 
+    !!!info
+        From Etendo Classic version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) onwards the variables `ETENDO_HOST`, `COPILOT_HOST` and `ETENDO_HOST_DOCKER` are optional, in case they are defined they will overwrite the automatically generated variables.
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
@@ -47720,9 +47742,9 @@ The simplest configuration we are going to follow as an example is to mount Copi
     | **Environment Variable**   | **Default**  | **Info** |
     | -------------------------- | -------------| -------- |
     | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
-    | ETENDO_HOST            |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
-    | ETENDO_HOST_DOCKER     |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
-    | COPILOT_HOST           | `localhost` | **Required** The copilot host can be defined by the user. By default use `localhost` |
+    | ETENDO_HOST            |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
+    | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
+    | COPILOT_HOST           | `localhost` | **Optional** The copilot host can be defined by the user. By default use `localhost` |
     | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
     | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
 
@@ -51497,6 +51519,17 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
+#### December 2024
+
+##### Etendo Classic
+:octicons-rocket-24: **New Etendo Classic Release Available!**
+
+Version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
+- The document completion process allows the use of Credit Payment as a payment method again. 
+From now on, the completion is again one record at a time and is added to the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+
+
 
 #### November 2024
 
@@ -52314,6 +52347,7 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
 | [24.2.0](#2420) | 28/06/2024 | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso) |
 | [24.1.4](#2414) | 03/05/2024 | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso) |
@@ -52323,6 +52357,9 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 | [23.2.0](#2320) | 27/06/2023 | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) |
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
+
+#### 24.4.0
+New ISO with Etendo Classsic version 24.4.0
 
 #### 24.3.0
 New ISO with Etendo Classsic version 24.3.0
@@ -52604,9 +52641,9 @@ Step into a world of exploration using either Postgres or Oracle as database man
 
 This page holds live testing instances. These live builds are updated and reset once per day at 03:30 UTC.
 
-[ :simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
+[ :simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
 
-[:simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+[:simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 ??? warning "Oracle"
     If you need to test on Oracle, please feel free to [contact us](https://docs.etendo.software/latest/help-and-support/overview.md).
