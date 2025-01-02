@@ -29,10 +29,9 @@ This module allows setting a non deductible tax's amount to a specified financia
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
 This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
- 
 
 !!! info
-    This functionality is available in the following windows, for more information visit:
+    This functionality is available in the following windows:
 
     - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
     - [Sales invoice]()
@@ -41,6 +40,8 @@ This module enhances the bank account management enabling greater customization 
     - [Purchase order]()
     - [Payment In]()
     - [Payment Out]()
+
+    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
 
 
 ### Advanced Business Partner Settlement
