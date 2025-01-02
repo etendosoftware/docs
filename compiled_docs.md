@@ -7474,7 +7474,12 @@ A sales order can be reserved when the document is booked and pending to be deli
 
 - Manual: No reservation is generated automatically. So when the order is booked the reservations needs to be done manually selecting the storage bin, attribute, etc.
 
-- Automatic: The reservation is automatically created and processed, reserving the available stock
+- Automatic: The reservation is automatically created and processed, reserving the available stock.  This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
+
+- Automatic - Only default warehouse: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
+
+    !!!info
+        This last option is only available if the [Automated Warehouse Reservation](https://docs.etendo.software/latest/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module is installed, part of the Warehouse Extensions Bundle. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
 For more information, visit [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
 
@@ -11226,7 +11231,13 @@ Fields to be noted:
 
 - **Stock Reservation**: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:
     -  _Manual_: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
-    -  _Automatic_: The reservation is automatically created and processed, reserving the available stock.
+    -  _Automatic_: The reservation is automatically created and processed, reserving the available stock. This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
+    -  _Automatic - Only default warehouse_: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
+
+        !!!info
+            This last option is only available if the [Automated Warehouse Reservation](https://docs.etendo.software/latest/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module is installed, part of the Warehouse Extensions Bundle. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
+
+
 - **Reservation Status**: Defines whether the line is _Fully Reserved_ or _Partially Reserved_ or _Not Reserved_.
 
 **Manage Reservation: Pick and Execute**
@@ -20233,6 +20244,14 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 #### Modules
 
+##### Automated Warehouse Reservation
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.warehouse.reservation`
+
+This module adds the option Automatic - Only Default Warehouse to the Stock Reservation field of the lines tab in the Sales Order window. This is used to limit the reservation only to the warehouse specified in the header of the order.
+
+!!! info
+    For more information, visit [Sales Order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#stock-reservation).
 
 ##### Stock History
 
