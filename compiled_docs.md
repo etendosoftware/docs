@@ -14828,7 +14828,7 @@ Some relevant fields to note are:
 
 ##### Overview
 
-In the remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.
+In the Remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.
 
 A remittance is a group of payments (in/out) or orders/invoices which can be remitted to the bank for its payment. The bank will then manage either the collection of the money from the customers or the payment to the vendors/suppliers.
 
@@ -14861,7 +14861,7 @@ To be able to use this functionality, it is necessary to configure some aspects 
 ![Remittance window](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance-window.png)
 
 
-As shown in the image above, it is necessary to fill in the fields in the window and 3 different buttons appear so as to continue with the process.
+As shown in the image above, it is necessary to fill in the fields in the window and different buttons appear so as to continue with the process.
 
 
 ###### Buttons
@@ -14874,11 +14874,25 @@ Using this button, the user is able to select a payment to be included in the re
 
 Using this button, the user processes the payments and groups lines according to the options shown in its corresponding pop-up window. 
 
+!!! info
+    If the Automated Remittance module in the Financial Extensions Bundle is installed, this process includes the date setting and the settlement of the remittance.  For more information, visit [the Automated Remittance user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+   
+
 **Select Invoices and Orders**
 
 In the Remittance window, the *select invoices and orders* button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.
 
 ![filter.png](https://docs.etendo.software/latest/assets/legacy/filter.png)
+
+**Protest Remittance**
+
+!!!info
+    This button is only available if the Automated Remittance module in the Financial Extensions Bundle is installed. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of future remittances.
+
+!!! info
+    For more information, visit [the Automated Remittance user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
 
 ##### Types of Remittances
 
@@ -20411,6 +20425,15 @@ The new Amortization report allows downloading excel reports about information o
 !!! info
     For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
 
+##### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance`
+
+This functionality allows the user to automatically process and protest remittances.
+
+!!! info
+    For more information, visit [the Automated Remittance user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+
 ##### Bank Integration PSD2
 
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
@@ -20575,6 +20598,8 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Bank Integration PSD2
@@ -20758,6 +20783,75 @@ To configure the preference, go to the **Preference** window and create a new re
 It is necessary to run the **Days Back to Refresh Accounting** background process to update the accounting status column.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Automated Remittance
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
+## Article Content: 
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+
+#### Overview
+
+This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+
+This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
+
+!!!important
+    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
+
+#### Setup
+
+To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
+
+For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
+
+#### Automated Remittance Process
+
+This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
+
+
+1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
+
+    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
+
+2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
+
+3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
+
+!!!note
+    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
+
+#### Automated Remittance Protest
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
+
+1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
+
+2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
+
+3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -40420,29 +40514,29 @@ Logged as System Administrator role, the user selects the `Application Dictionar
 
 Translation modules are a special kind of modules. They have to be marked as Is translation module in the Module window, and they must define the translation language in the Module Language field.
 
-No other contents than translations are allowed in translation modules. A translation module can only contain the translation for one module. For example, in the screenshot below, we are creating a Spanish (Spain) translation module for the User Interface Application module whose declared language is English (USA).
+No other contents than translations are allowed in translation modules. A translation module can only contain the translation for one module. For example, in the screenshot below, we are creating a *Spanish (Spain)* translation module for the User Interface Application module whose declared language is English (USA).
 
-![](https://docs.etendo.software/latest/assets/drive/CtkzvhgZ6P-3CfvWJOpFEFQmavTCdDgvHb-dgpff8eiS6ab2Q-xYCfu7dEEup23zzJoDBO9AOuRkaKAclIivm5hLm7tFQcFBzrlTZ9uCmh2S5pwNNfWaPmRZ0K1XZbBxPc2u4kRAuWUbJ-rVQqu7d4ZFha1zjfctWomyJJYFVIWUhLPJduoUkXSAJezRvg.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-0.png)
 
-Apart from checking the Is translation module and setting the Module Language, we need to add a dependency to the module and version we are translating. In the example, our User Interface Application Translation Spanish (Spain) module in version 1.0.0 depends on the User Interface Application module version 2.1.0.
+Apart from checking the Is translation module and setting the Module Language, we need to add a dependency to the module and version we are translating. In the example, our *User Interface Application Translation Spanish (Spain)* module in version 1.0.0 depends on the *User Interface Application* module version 2.1.0.
 
-###### Prepare strings to be translated
+##### Prepare strings to be translated
 
-Logged with the System Administrator role, select the `General Setup`> `Application` > `Language` window from the Application menu. Find the language in which the user wants to create the translation module and check the System Language checkbox field. This checkbox allows this language to be selected in the user interface (Change role popup) in the next login.
+Logged with the *System Administrator* role, select the `General Setup`> `Application` > `Language` window from the Application menu. Find the language in which the user wants to create the translation module and check the System Language checkbox field. This checkbox allows this language to be selected in the user interface (Change role popup) in the next login.
 
-![](https://docs.etendo.software/latest/assets/drive/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-1.png)
 
-![](https://docs.etendo.software/latest/assets/drive/b_z9FlTUbCN9229SKAFfDPzs_hB4GRuihgGt1ZED4MNW8uigSTXkrL-GN0el5b26miw1BkMhN2uP1LkrYy7WE3WbPzv7y6cTz2LvIo3wZvB-0QjI4CrQYKJGmnKXi86Oign_ZU57xuG25WOlTqxffODO9ifIwWZUMk5F8xw23HhtNIitj2SSLqpjIYUyZg.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-2.png)
 
-###### Verify Languages
+##### Verify Languages
 
 Each time it is necessary to create a translation for a new language, it is necessary to prepare the strings to be translated. There is an automatic process, called Verify Languages (available as well in the Language window), in which the ERP creates the necessary copies of the original strings of all the modules available in the system from their base languages to the corresponding translation language.
 
-For example, in the case of creating a Spanish (Spain) translation for the core's module, whose base language is English (USA), the system will copy all the original English strings to the Spanish translation. The same is extended to the rest of the modules installed in the system with their respective base languages.
+For example, in the case of creating a *Spanish (Spain)* translation for the core's module, whose base language is *English (USA)*, the system will copy all the original English strings to the Spanish translation. The same is extended to the rest of the modules installed in the system with their respective base languages.
 
 Using the Verify Languages button, the application will display the number of records created. If this number is equal to 0, it means that something was wrong, and the probable cause is that we have forgotten to check the System Language field.
 
-![](https://docs.etendo.software/latest/assets/drive/pfFxzG5EictaUwrbWNoTN8fk8Q1ZbAgNIQUaDkQeMDmsz70PHHz4aoRTpNmKi4I5lpBNvMMefPcy4RlK8v0NwL86TMT5PNGUVdfPUUM6A0JHtEdsfb-7paUPw9U6V8kUHRh52KPj3OTkNsUr5maGOaf1GbIBAJPKW-n0mmjVS9rhZyKez5SOUJwc5kMJPA.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-3.png)
 
 ##### Export the translation
 
@@ -40450,55 +40544,49 @@ Exporting the translation is an automatic process available in the `General Setu
 
 With the System Administrator role, select the language in which the user wants to export translation files. Export Reduced Version flag can be set to Yes to have a reduced translation version. This would exclude all translation candidates that are linked directly or indirectly to the Menu having translation strategy as "Exclude From Reduced Translation". The user could set this flag as No to have a full translation version by pressing the Export button. The process takes several seconds to export all the XML files.
 
-![](https://docs.etendo.software/latest/assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-4.png)
 
-Inside the attachments folder of Etendo, a new directory called lang is found, and inside it, a new one with the lowercase two-letter ISO-639 language code and the uppercase two-letter ISO-3166 country code separated by an underscore character ('\_'). Example: */home/EtendoERP/attachments/lang/es\_ES*
+Inside the attachments folder of Etendo, a new directory called lang is found, and inside it, a new one with the lowercase two-letter language code and the uppercase two-letter country code separated by an underscore character ('\_'). Example: `/home/EtendoERP/attachments/lang/es_ES`
 
-![](https://docs.etendo.software/latest/assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-5.png)
 
 Inside this directory, the user can find the translation files for all the available modules into the instance. The core's translation files are stored directly into the root directory, the rest of the modules have their own folder named as their java packages. So, the user only needs to find the folder of the *original module* to be translated (*not the translation module*) and get its XML files.
 
-#### Translate the module
+##### Translate the module
 
-The translation of the module can be directly done inside the exported XML files, which is a convenient method for modules with few strings to be translated, or using the openbravo2po tool which is the recommended way for modules with a lot of strings, like Core.
+Module translation can be done by manually modifying the exported XML files, which is a convenient method for modules with few strings to translate, or by using the Etendo Copilot wizard, [Module Translation Creator](https://docs.etendo.software/latest/etendo-copilot/bundles/dev-assistant.md#module-translation-creator).
 
-##### Translate directly into the XML files
+###### Translate directly into the XML files
 
-If this method is chosen, it is only necessary to open each XML file that is inside the module's directory to be translated and edit it. It is very important to open these files with a text editor (like Vim, Emacs, gEdit, notepad...), never using a word processor (like LibreOffice Writer or Microsoft Word) because they can break the XML structure.
+If this method is chosen, it is only necessary to open each XML file that is inside the module's directory to be translated and edit it. It is very important to open these files with a text editor.
 
 The text to be changed for making a translation is the content of each value tag. It is not necessary to edit any attribute because they will be automatically updated when importing and exporting the files into the ERP in a next step.
 
-![LocGuide HowTo Translate 60.jpg](https://docs.etendo.software/latest/assets/drive/Wukx4MrqiK__V6x76g8BWjV-jwCE7vo6cCfVQJxjpayM55k2Os3jLDRD73BTSGayf-lm9z7L1t91z2-ArGWAIaAPUymF9LMZXpd4NZGM-tx4WwhJxm5zwCq5lcJQZhSj_cId6j8risovTfDVq7H3EXAgMCEyV0vdCTtfQiBTBUVq8gQ_R4cPLF5w5dSCuw.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-6.png)
 
-##### Import and Export the translation
+##### Import and Export the translations
 
 After the translation is completed, or even in the middle of a translation process, it is a good practice to import the XML files into the ERP to review the translation in context.
 
 Finally, once the translation is OK, it is necessary export it again. Doing so, it is ensured the XML files have the final structure, with all the attributes properly set.
 
-Moreover, if we are working with a Source Code Management (highly recommended), the process of importing/exporting the XML files will help us a lot when updating translations. The diff will show us only the translation differences between the old version and the new one, but not changes in the structure of the XML file.
-
-For importing/exporting the translation, the user can go to the General Setup || Application || Import/Export Translations window, as we previously saw in the Export the Translation section above.
-
 !!! info
     All the XML files to be imported must be inside their correspondent module's folder of your *attachments* directory, overwriting the original XML files exported at the beginning of this process.
 
+Now, at the `Import/Export Translations` window, we can select the language used for the translations and press the Import button. Then, the process is completed and the Export button is pressed, that will export the XML files again.
 
-Now, at the Import/Export Translations window, we can select the language used for the translations and press the Import button. Then, the process is completed and the Export button is pressed, that will export the XML files again.
-
-![](https://docs.etendo.software/latest/assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-4.png)
 
 !!! info
-    Note: During this process, it is highly recommended to keep a backup of your translated XML files.
+    During this process, it is highly recommended to keep a backup of your translated XML files.
 
+##### Specific information if you are translating Core
 
-###### Specific information if you are translating Core
+###### buildstructure.xml file
 
-####### buildstructure.xml file
+Etendo's Core provides an additional file called `buildStructure.xml`. This file contains the information related to the names of the different stages through which the Etendo build process passes, and the error and warning messages that can be shown during a rebuild. It is also necessary to translate this file.
 
-Etendo's Core provides an additional file called buildStructure.xml. This file contains the information related to the names of the different stages through which the Etendo build process passes, and the error and warning messages that can be shown during a rebuild. It is also necessary to translate this file, however it is not compatible with the openbravo2po software, so it will be necessary to manually edit it using a text editor (not a word processor).
-
-The structure of this file is a bit different compared to the standard Etendo XML translation files, but it is also very easy to understand. You just need to translate the content of all the attributes that start with “translated”, like *translatedName*, *translatedErrorMessage*, etc. This is an example of the buildstructure.xml file translated into Spanish.
+The structure of this file is a bit different compared to the standard Etendo XML translation files, but it is also very easy to understand. You just need to translate the content of all the attributes that start with “translated”, like *translatedName*, *translatedErrorMessage*, etc. This is an example of the `buildstructure.xml` file translated into Spanish.
 
 ```xml title="buildstructure.xml"
 <?xml version='1.0' ?>
@@ -40519,41 +40607,41 @@ The structure of this file is a bit different compared to the standard Etendo XM
 </BuildTranslation>
 ```
 
-####### Masterdata dataset
+###### Masterdata dataset
 
-All the XML files exported through the Import/Export window and the buildstructure.xml represents all the available user interface strings in the ERP. If we translate all these files, we will have a fully translated application. However, the ERP includes some other strings not related to the UI that can be also translated. Inside this group, called Masterdata, we include: country names, currencies, units of measure and month names. All this data is not exported into the XML files, however this does not mean we cannot translate it.
+All the XML files exported through the *Import/Export Translation* window and the buildstructure.xml represents all the available user interface strings in the ERP. If we translate all these files, we will have a fully translated application. However, the ERP includes some other strings not related to the UI that can be also translated. Inside this group, called Masterdata, we include: country names, currencies, units of measure and month names. All this data is not exported into the XML files, however this does not mean we cannot translate it.
 
 The way for translating masterdata is creating a system level dataset that only contains the translated strings for countries, currencies, units of measure and months.
 
-As System Administrator, we create a new record inside the Dataset window for our core's translation module. It is important to define this dataset at System only level to ensure it will be automatically applied when we install the module.
+As *System Administrator*, we create a new record inside the Dataset window for our core's translation module. It is important to define this dataset at System only level to ensure it will be automatically applied when we install the module.
 
-As you can see in the screenshot, the tables to be included are: AD\_Month\_Trl C\_Country\_Trl, C\_Currency\_Trl and C\_UOM\_Trl. All of them have a filter clause that uses the language column, in the example *es\_ES*.
+As you can see in the screenshot, the tables to be included are: `AD_Month_Trl C_Country_Trl`, `C_Currency_Trl` and `C_UOM_Trl`. All of them have a filter clause that uses the language column, in the example `es_ES`.
 
-![](https://docs.etendo.software/latest/assets/drive/dpVQBy2nbhtVzgjPkJHYMp9RqvqPUHmanSDKiUQqs8E6s9I_0jSSVqJuxrV0AouN4apDtKfCXAgJHrKZw0du8SOdwVuz8vDhLR6JMPTM3aLZ-GaRMuALWoFzwgNzcr5VvFjC_uBTAEpXbnU4dBdn4UJuSbcrwDn0dOjleEeWRSZ3WzaQbDbdnrOa6rElNQ.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-7.png)
 
 Now, our Core's translation module has a dataset, so we must remember to check the Has reference data flag into the module's definition.
 
-![](https://docs.etendo.software/latest/assets/drive/K9BHCsQMKGLJzldVabm22RyRHSEBxmwnwfjiHgZgnvAdRTfFJ-lKjcfTgzWJR7v3OJzeDd471vIF36MDEZOEm3GorJ2eA9AYu9Pkp1wYvhGn4znmMpOSH5rhYy7RBpfYpAysuVcwA32cE2EtSMSSHa4Zy-eZ8A6bua82BpGLX5HPfbRL1Scf5X9tcYpLdg.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-8.png)
 
 The dataset definition is ready, but it is pending the translation itself. To translate this dataset, we have two possibilities:
 
 -   In the ERP, as System Administrator, we can go to the Country Region and City, Currency, Unit of Measure and Month windows and translate the corresponding record inside the Translation tab (recommended method).  
     When finished, export the dataset using the Export Reference Data button at the Dataset window.  
-     
 
-![](https://docs.etendo.software/latest/assets/drive/HLdK6MJvPef1PUIKKflkO9lzH6J-784wcxFKviH6LfXpVqU53EwcH6_FYjuxvsmxhkSkjaeCcvb0sEdspbU4ifUoR4eWpIOsgulGUkWfgaK3OE5Wvwp7wMxEIsBkLNIgzov73EqdOKp4hUB3py8LgVnVg05mfOAyqfYVPo4ZZHfhNEH7-d9yxukFGjtT5A.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-9.png)
 
 -   Export the dataset with the untranslated strings and edit the XML file using a text editor. The dataset XML file will be stored inside the referencedata/standard directory of your translation module.
+ 
 
-###### **Translation bundle**
+##### Translation bundle
 
 As you probably know, Etendo is a distribution of modules, including Core. That means that to have a fully translated application, you must translate all the modules that are part of the distribution. 
 
-It is a good idea to create a translation bundle that covers all the modules. Later on, it is a possible to include this bundle into our Localization Bundle.
+It is a good idea to create a translation bundle that covers all the modules.
 
-###### **Publishing the translation module**
+###### Publishing the translation module
 
-The process of publishing a translation module is similar to the standard publishing process with just one important consideration: we need to copy the translated XML files to the corresponding module's referencedata/translation folder within your module folder.
+The process of publishing a translation module is similar to the standard publishing process with just one important consideration: we need to copy the translated XML files to the corresponding module's `referencedata/translation` folder within your module folder.
 
 The summarized process is:
 
@@ -40613,7 +40701,7 @@ The structure of the translation module's directory should be:
 
 4. Finally, remember to publish the module. For more information, see [Publish Modules to a GitHub Repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
-#### Updating Translation Modules
+###### Updating Translation Modules
 
 These are the first considerations for updating a translation module:
 
@@ -40633,40 +40721,18 @@ The main steps for updating a translation module are almost the same as when cre
 
 This section tries to provide a set of useful translation tips and tricks. Take into account that some of these tricks may require development knowledge.
 
-If you are translating directly into the XML files, you can also have a *manual* translation memory using the Grep tool. grep command can search for matching strings (or regular expressions) into a set of files.
-
-The following example finds all the occurrences of the string “*Exempt Amount*” in all .xml files in the directory
-
-```plaintext
-openbravo@por0828:~/XML_files$ fgrep -i "Exempt Amount" *.xml 
-AD_ELEMENT_TRL_es_ES.xml:    <value column="Name" isTrl="Y" original="Exempt Amount">Importe exento</value> 
-AD_TEXTINTERFACES_TRL_es_ES.xml:    <value column="Text" isTrl="Y" original="Exempt Amount">Importe exento</value>
-```
-
 ###### Finding the context
 
 Making a good translation requires knowing the exact context where the string we are translating appears. Unfortunately, the context in the XML file is not clear at all, and sometimes it is necessary to dive into the application to get the exact context. Here you have a list of tips for finding it:
 
--   The first obvious thing you must take into account is the file you are translating. *AD\_MENU\_TRL* represents the Application menu entries, *AD\_MESSAGE\_TRL* has all the messages, *AD\_PROCESS\_TRL* is in charge of the process and reports, *AD\_PROCESS\_PARA\_TRL* is the process parameters, etc.
--   If you are translating using PO files you can find information related to the string you are translating at the comments section. As you can see in the previous screenshot, the PoEdit comment window displays the name, description and help for the string we are currently translating.
+-   The first obvious thing you must take into account is the file you are translating. `AD_MENU_TRL` represents the Application menu entries, `AD_MESSAGE_TRL` has all the messages, `AD_PROCESS_TRL` is in charge of the process and reports, `AD_PROCESS_PARA_TRL` is the process parameters, etc.
 -   The Etendo Linked Items feature can give you all the places where a record is used. In the screenshot below, you can get the places where the element with the name “General Ledger Currency Credit” is used. In this case, linked items show that the element is only used in one column, so the user can navigate to this column and later on navigate to the related field, that will show the window where it is used.  
      
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-10.png)
 
-    ![](https://docs.etendo.software/latest/assets/drive/1DK-ejWJiBE-zImQ63c16VjUdAdhx-ZIBVBGxXm5JKB22NAbD-nm7jSzkoCCF4TzP4fHk5VPocE5FQWTN7zD1aImaEdSeTRQRzdVDqdrtYDVtALenqfZ2bK7pb4yix5eiXb3OEcF-l9cOBDKPOu-b62NvbY6fsI5CnDACzo6-rPbjkjtMVkhIaUWYs7IgA.png)
+---
 
--   All the records have an ID. In the XML file, this ID is shown as an attribute of the row element. In the PO files, it is stored as a comment that can be easily displayed in your PO editor comments window. If we search this ID in the database, it can provide us with important information.  
-    For example, it is necessary to get more information about the message "*Business Partner has no location defined*." with the ID "*04EEC6B52A7B4C2CACA1F767217FAFB7*". If the following SQL query is run in the database, it will provide the search key of this message:
-
-    ![LocGuide HowTo Translate 160.png](https://docs.etendo.software/latest/assets/drive/p3Z0NoO7_TKH85eYyv34Pss34S7_6S0AqlQyVNhIR2aoZAa_xX6sV-YpAuMlNktH1HPX2tGmPxbHLGMxRS2tOmPqQ7zWTmjdxsUBoOkR9h3PR108pZHKNX6t5_YC9O4csifF9qgtmMIPU52dBWIWyP_IlR9c_zkgm2wXf078eiPFgMPgJSLJNXzdPKoUOQ.png)
-
-With this information, the grep command can be used to find the places in the module's source code where the message is used:
-
-```plaintext
-$ fgrep -r NoBPLocation src* 
-src/org/openbravo/erpCommon/ad_callouts/SE_Order_BPartner.java:      message.append(Utility.messageBD(this, "NoBPLocation", vars.getLanguage())); 
-```
-
-Now, we know it is used in a callout, so it is just necessary to find in the Application Dictionary the places where this callout is used, using the Linked Items feature mentioned before.
+This work is a derivative of [How to Create and Update Translation Modules](https://wiki.openbravo.com/wiki/How_to_Create_and_Update_Translation_Modules){target="\_blank"} by [Openbravo Wiki](https://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Build Validations and Module Scripts
@@ -43769,8 +43835,8 @@ Some things to note when creating these type of windows:
 This work is a derivative of [How to add a canvas field to a form or grid](http://wiki.openbravo.com/wiki/How_to_use_property_fields){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to Use Secure Webservices
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Webservices
+# Article Title: How to Use Secure Web Services
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Web Services
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
@@ -43782,10 +43848,30 @@ This module allows calling any standard Etendo web service in the same way as ca
 
 This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
-Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+Besides the authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+
+#### Setup 
+
+!!! Info 
+    By default, the ES256 encryption algorithm is used, it is possible to change it by setting a new preference with the `Encryption Algorithm` property and set its value to `HS256`.
+
+##### Initial configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+It is necessary to configure the encryption key and the expiration time for the authentication tokens in the Client window with the System Administrator role.
+
+If the expiration time is equal to "0" the tokens do not expire.
+
+Generate a random key with the "Generate key" button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+#### Secure Web Services Swagger
 
 !!! info
-    For more information, follow this information in [Secure Web Services](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+    For more information, visit [Secure Web Services Swagger](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -47640,6 +47726,8 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
 1. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
 
+    !!!info
+        From Etendo Classic version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) onwards the variables `ETENDO_HOST`, `COPILOT_HOST` and `ETENDO_HOST_DOCKER` are optional, in case they are defined they will overwrite the automatically generated variables.
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
@@ -47654,9 +47742,9 @@ The simplest configuration we are going to follow as an example is to mount Copi
     | **Environment Variable**   | **Default**  | **Info** |
     | -------------------------- | -------------| -------- |
     | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
-    | ETENDO_HOST            |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
-    | ETENDO_HOST_DOCKER     |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
-    | COPILOT_HOST           | `localhost` | **Required** The copilot host can be defined by the user. By default use `localhost` |
+    | ETENDO_HOST            |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
+    | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
+    | COPILOT_HOST           | `localhost` | **Optional** The copilot host can be defined by the user. By default use `localhost` |
     | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
     | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
 
@@ -51431,6 +51519,17 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
 ## Article Content: 
+#### December 2024
+
+##### Etendo Classic
+:octicons-rocket-24: **New Etendo Classic Release Available!**
+
+Version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
+- The document completion process allows the use of Credit Payment as a payment method again. 
+From now on, the completion is again one record at a time and is added to the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+
+
 
 #### November 2024
 
@@ -51704,13 +51803,15 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q3.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.5){target="_blank"} | 06/12/2024 | 24.3.5 | QAA |  | :white_check_mark: |
+| [24Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.0){target="_blank"} | 19/12/2024 | 24.4.0 | QAA | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso){target="_blank"} | :white_check_mark: |
+| [24Q3.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.6){target="_blank"} | 13/12/2024 | 24.3.6 | CS |  | :white_check_mark: |
+| [24Q3.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.5){target="_blank"} | 06/12/2024 | 24.3.5 | C |  | :white_check_mark: |
 | [24Q3.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.4){target="_blank"} | 29/11/2024 | 24.3.4 | C |  | :white_check_mark: |
 | [24Q3.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.3){target="_blank"} | 12/11/2024 | 24.3.3 | C |  | :white_check_mark: |
 | [24Q3.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.2){target="_blank"} | 02/11/2024 | 24.3.2 | C |  | :white_check_mark: |
 | [24Q3.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.1){target="_blank"} | 10/10/2024 | 24.3.1 | C |  | :white_check_mark: |
 | [24Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.0){target="_blank"} | 30/09/2024 | 24.3.0 | C | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso){target="_blank"} | :white_check_mark: |
-| [24Q2.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.8){target="_blank"} | 27/09/2024 | 24.2.8 | CS |  | :white_check_mark: |
+| [24Q2.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.8){target="_blank"} | 27/09/2024 | 24.2.8 | C |  | :white_check_mark: |
 | [24Q2.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.7){target="_blank"} | 20/09/2024 | 24.2.7 | C |  | :white_check_mark: |
 | [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | C |  | :white_check_mark: |
 | [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | C |  | :white_check_mark: |
@@ -51830,7 +51931,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.6.1](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.7.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.6.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.5.0){target="_blank"} | 28/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -51899,7 +52001,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.9.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.9.0){target="_blank"} | 01/10/2024 | 21.4.0 | 24.3.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.9.0){target="_blank"} | 01/10/2024 | 21.4.0 | 24.3.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.8.0){target="_blank"} | 02/08/2024 | 21.4.0 | 24.2.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.7.0){target="_blank"} | 29/06/2024 | 21.4.0 | 24.2.x | C | :white_check_mark: |
 | [1.6.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.1){target="_blank"} | 17/05/2024 | 21.4.0 | 24.1.x | C | :white_check_mark: |
@@ -51924,7 +52027,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.8.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.9.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.8.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.7.0){target="_blank"} | 28/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.6.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
@@ -51944,7 +52048,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.10.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.10.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.11.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.11.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.10.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.9.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.2){target="_blank"} | 30/08/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
@@ -51977,7 +52082,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.20.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.20.0){target="_blank"} | 06/12/2024 | 23.1.4 | 24.3.x | CS | :white_check_mark: |
+| [1.21.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.0){target="_blank"} | 21/12/2024 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.20.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.20.0){target="_blank"} | 06/12/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
 | [1.19.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.19.0){target="_blank"} | 12/11/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
 | [1.18.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.18.1){target="_blank"} | 04/10/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
 | [1.18.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.18.0){target="_blank"} | 01/10/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
@@ -52035,7 +52141,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.21.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.1){target="_blank"} | 14/11/2024 | 22.4.3 | 24.3.x | CS | :white_check_mark: |
+| [1.22.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.22.0){target="_blank"} | 20/12/2024 | 22.4.3 | 24.4.x | CS | :white_check_mark: |
+| [1.21.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.1){target="_blank"} | 14/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.21.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.0){target="_blank"} | 06/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.20.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.20.1){target="_blank"} | 01/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.20.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.20.0){target="_blank"} | 24/10/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
@@ -52086,7 +52193,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.3.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.4.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.3.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.2.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.1.2](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.2){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.1.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.1){target="_blank"} | 31/05/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -52103,7 +52211,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.6.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.7.0){target="_blank"} | 20/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.6.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.5.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.4.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.1){target="_blank"} | 10/05/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -52238,6 +52347,7 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
 | [24.2.0](#2420) | 28/06/2024 | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso) |
 | [24.1.4](#2414) | 03/05/2024 | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso) |
@@ -52247,6 +52357,9 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 | [23.2.0](#2320) | 27/06/2023 | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) |
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
+
+#### 24.4.0
+New ISO with Etendo Classsic version 24.4.0
 
 #### 24.3.0
 New ISO with Etendo Classsic version 24.3.0
@@ -52454,7 +52567,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | CS | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.8.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.6.0){target="_blank"} | 02/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.5.0){target="_blank"} | 29/06/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
@@ -52473,7 +52587,9 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.1){target="_blank"} | 15/11/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.0){target="_blank"} | 20/12/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.8.4](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.4){target="_blank"} | 13/12/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.8.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.1){target="_blank"} | 15/11/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.0){target="_blank"} | 08/11/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.7.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.2){target="_blank"} | 29/10/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.7.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.1){target="_blank"} | 25/10/2024 | 23.4.0 | * | C | :white_check_mark: |
@@ -52525,9 +52641,9 @@ Step into a world of exploration using either Postgres or Oracle as database man
 
 This page holds live testing instances. These live builds are updated and reset once per day at 03:30 UTC.
 
-[ :simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
+[ :simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
 
-[:simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+[:simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 ??? warning "Oracle"
     If you need to test on Oracle, please feel free to [contact us](https://docs.etendo.software/latest/help-and-support/overview.md).
