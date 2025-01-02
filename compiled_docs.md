@@ -51554,9 +51554,48 @@ Article URL: https://etendo.software
 
 Version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
-- The document completion process allows the use of Credit Payment as a payment method again. 
-From now on, the completion is again one record at a time and is added to the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+<div class="grid cards" markdown>
+- **The document completion process allows the use of Credit Payment as a payment method again.** 
 
+    From now on, the completion is again one record at a time and is added to the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+</div>
+
+##### Essentials Extensions
+
+:octicons-package-16: **Managing documents has never been so fast and easy**
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/bulk-completion.png)
+In version [1.7.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+
+##### Warehouse Extensions
+:octicons-package-16: **More accurate automatic stock reservation**
+
+In version [1.10.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Automated remittances: Simplify remittance management by automating the settlement and protest process.**
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/automated-remittances.png)
+
+    In version [1.21.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
+
+    The Protest Remittance button has also been added, making it possible to return receipts in collection remittances from a single place.
+
+- :octicons-package-16: **Bank account and payment management allows for more automation**
+
+    In version [1.21.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the Advanced Bank Account Management module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
+    The possibility to select the bank account when adding payments and even edit payment plans with the Modify Payment button has also been added.
+</div>
+
+##### Copilot Extensions 
+
+:material-robot: **Copilot allows the use of multiple AI models from different suppliers.**
+
+In version [1.9.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
+In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
 
 
 #### November 2024
