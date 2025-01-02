@@ -11124,12 +11124,23 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>Sales Order lines can be reserved when the sales order is booked and is pending to deliver.</p>
 <p>Fields to be noted:</p>
 <ul>
-<li><strong>Stock Reservation</strong>: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:<ul>
+<li>
+<p><strong>Stock Reservation</strong>: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:</p>
+<ul>
 <li><em>Manual</em>: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation</li>
-<li><em>Automatic</em>: The reservation is automatically created and processed, reserving the available stock.</li>
+<li><em>Automatic</em>: The reservation is automatically created and processed, reserving the available stock. This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.</li>
+<li>
+<p><em>Automatic - Only default warehouse</em>: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This last option is only available if the <a href="../../../optional-features/bundles/warehouse-extensions/overview/#automated-warehouse-reservation">Automated Warehouse Reservation</a> module is installed, part of the Warehouse Extensions Bundle. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95" target="_blank">Warehouse Extensions Bundle</a>.</p>
+</div>
+</li>
 </ul>
 </li>
-<li><strong>Reservation Status</strong>: Defines whether the line is <em>Fully Reserved</em> or <em>Partially Reserved</em> or <em>Not Reserved</em>.</li>
+<li>
+<p><strong>Reservation Status</strong>: Defines whether the line is <em>Fully Reserved</em> or <em>Partially Reserved</em> or <em>Not Reserved</em>.</p>
+</li>
 </ul>
 <p><strong>Manage Reservation: Pick and Execute</strong></p>
 <p>Using the <em>Manage Reservation</em> button is possible to open a <em>Pick and Execute</em> window to create and modify reservation for the Sales Order Line. The grid shows all the available stock that can be delivered and the pending to receive purchase orders.</p>
