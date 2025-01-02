@@ -13,6 +13,7 @@ tags:
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [24.4.0](#2440) | 19/12/2024 | [24.4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24.4.0.iso){target="_blank"} |
 |  [24.4.0](#2440) | 19/12/2024 | [24.4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24.4.0.iso){target="_blank"} |
 | [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
@@ -24,6 +25,9 @@ tags:
 | [23.2.0](#2320) | 27/06/2023 | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) |
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
+
+## 24.4.0
+New ISO with Etendo Classsic version 24.4.0
 
 ## 24.4.0
 New ISO with Etendo Classsic version 24.4.0
