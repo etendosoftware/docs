@@ -15,6 +15,7 @@ tags:
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.9.0){target="_blank"} | 01/10/2024 | 21.4.0 | 24.3.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.8.0){target="_blank"} | 02/08/2024 | 21.4.0 | 24.2.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.7.0){target="_blank"} | 29/06/2024 | 21.4.0 | 24.2.x | C | :white_check_mark: |
