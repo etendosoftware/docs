@@ -151,12 +151,18 @@ See the configuration examples bellow and replicate them.
 !!!info
     The **Public URL** field only needs to be configured when the subapplication is set to production.
 
+```
+ config http://localhost:8888
+ auth http://localhost:8094
+ edge http://localhost:8096
+```
+
 ![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
 
 ![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png)
 
 !!!info 
-    If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`.
+    If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888`, `http://edge:8096` and `http://auth:8094`.
 
 
 ## Projections and Search
@@ -489,7 +495,7 @@ export default ProductDetail;
 
 ```
     
-### Navegation 
+### Navigation 
 
 In addition, it is necessary to add the navigation configuration in the `app.tsx` file, in the return statement. This configuration provides the infrastructure to navigate between the different screens of the application.
 
@@ -511,7 +517,7 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 ```
 
 !!! info 
-    For more information, visit [Navegation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
+    For more information, visit [Navigation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
 
 !!! info 
     For more information about the language management and translations, visit [Languague](../concepts/subapp-structure.md#language) concept.
@@ -581,3 +587,44 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
     ![app-home.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home.png)
 
 4. Now you can view, filter, create, edit and delete products.
+
+## Debug Log
+
+This section explains how to log data in a sub-application using the `logger` utility function. To log any information, call the `logger` function with a key and a value:
+
+```javascript
+logger('key', 'value');
+
+```
+
+**Importing the Logger Function** 
+To use the logger in any file, import it as follows:
+
+``` javascript
+import logger from '../../utils/log'; // Path must be related to relative file location
+
+```
+
+!!!info "Automatic String Conversion"
+    Objects passed to the `logger` function will be automatically converted to strings using the `JSON.stringify` function. This ensures compatibility with the logging mechanism.
+
+**Example Usage**
+Below is an example of how to use the logger function, including handling errors:
+
+``` javascript
+try {
+  // Your code here
+} catch (err) {
+  logger('handleSave Error', err));
+  setLoading(false);
+  showAlert(labels.connectionError, 'error');
+}
+```
+In this example:
+
+- The error object `err` is automatically converted to a `String` using `JSON.stringify` and logged.
+- A loading state is updated.
+- An alert is shown using `showAlert` component to inform the user of a connection error.
+
+By integrating this logging utility, developers can track application behavior and debug more effectively.
+
