@@ -187,6 +187,11 @@ nav:
             - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md
             - Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md
           - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/overview.md
+        - Project and Service Management:
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/project-and-service-management/getting-started.md
+          - Transactions: user-guide/etendo-classic/basic-features/project-and-service-management/transactions.md
+          - Analysis Tools: user-guide/etendo-classic/basic-features/project-and-service-management/analysis-tools.md
+          - Setup: user-guide/etendo-classic/basic-features/project-and-service-management/setup.md
       - Optional Features:
         - Bundles:
           - Essentials Extensions Bundle: 
