@@ -24,53 +24,61 @@ This functionality enhances the bank account management enabling greater customi
 This functionality is available in the following windows: 
 
 - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management)
-- [Sales invoice]()
-- [Purchase Invoice]()
-- [Sales order]()
-- [Purchase order]()
-- [Payment In]()
-- [Payment Out]()
+- [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account_1)
+- [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account_1)
+- [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account)
+- [Purchase order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account)
+- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account_1)
+- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account)
 
 ## Business Partner - Bank Account
 
-This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, in the Advanced Bank Account Management field it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
+This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, in the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png)
 
 ## Business Partner - Location/Address 
 
 The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partner window to associate specific bank accounts to the different locations.  
 
-The default account will always be used when generating a new document unless an account is set up in a specific location. 
+!!!info
+    The default account will always be used when generating a new document unless an account is set up in a specific location. 
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png)
 
 ## Sales/Purchase Order
 
-A Bank Account field has also been added to the Purchase and Sales Order windows. 
+A Bank Account field has also been added to the Purchase and Sales Order windows, in the Advanced Bank Account Management section of the header. 
 
 This field is automatically filled based on the selected address. If a specific account is associated with the address, that account is used; if no account is configured, the default account is selected. In cases where neither option is configured, the field remains blank. Payment plans generated from these Purchase and Sales Orders now include the bank account information, inheriting it from the corresponding order.
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba3.png)
 
 ## Sales/Purchase Invoice
 
 Similarly, a Bank Account field has been added to the Purchase and Sales Invoice windows, which functions in the same manner as in orders. The field is auto-filled based on the selected address, using a specific account if associated, falling back to the default account if none is specified, or remaining blank otherwise. Payment plans created from these invoices inherit the bank account information from the invoices themselves. Additionally, invoices created from Purchase and Sales Orders inherit the bank account information from the respective orders.
 
-VA?
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba4.png)
 
-The Payment Plan in Sales Invoice and Purchase Invoice windows now displays the associated bank account information. 
+The Payment Plan in Sales Invoice and Purchase Invoice windows now displays the associated bank account information in the Payment Plan tab. 
 
-VA?
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba5.png)
 
 ### Add Payment button
 
-Furthermore, the Add Payment button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account.
+Furthermore, the Add Payment button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Sales Invoice and Purchase invoice windows.
 
-VA?
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba6.png)
 
-### Modify Payment button
 
-A Modify Payment button is found in both the Purchase and Sales Invoice windows. This feature enables users to specify a bank account for a payment plan and even create multiple payment plans for a single invoice, each associated with a different bank account.
+### Modify Payment Plan button
 
-VA?
+A Modify Payment Plan button is found at Payment Plan tab level in both the Purchase and Sales Invoice windows. This feature enables users to specify a bank account for a payment plan and even create multiple payment plans for a single invoice, each associated with a different bank account.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
+
+## Add Details button
+
+As in the case of the Add Payment button, the Add Details button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Payment In and Payment Out windows.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba8.png)
