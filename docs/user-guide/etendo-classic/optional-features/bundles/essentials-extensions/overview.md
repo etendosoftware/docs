@@ -23,4 +23,13 @@ This bundle includes fundamental modules that affect most areas in Etendo.
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [the Advanced Business Partner module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md).
+    For more information, visit [Advanced Business Partner - User guide](../essentials-extensions/advanced-business-partner.md).
+
+### Bulk Completion
+
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.completion` 
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [Bulk Completion - User guide](../essentials-extensions/bulk-completion.md)

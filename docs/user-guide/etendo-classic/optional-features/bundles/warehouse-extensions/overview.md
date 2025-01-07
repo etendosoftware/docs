@@ -14,6 +14,14 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ## Modules
 
+### Automated Warehouse Reservation
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.warehouse.reservation`
+
+This module adds the option Automatic - Only Default Warehouse to the Stock Reservation field of the lines tab in the Sales Order window. This is used to limit the reservation only to the warehouse specified in the header of the order.
+
+!!! info
+    For more information, visit [Sales Order](../../../basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
 
 ### Stock History
 
