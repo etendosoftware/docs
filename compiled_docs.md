@@ -3244,6 +3244,14 @@ If the Remittance module is installed, in this tab, the user can find a “defau
 !!! warning
     Only one bank account can be selected as default for each business partner.
 
+###### **Advanced Bank Account Management**
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. In the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
+
+
 ##### **Location/Address**
 
 Business partner locations and full address details can be set up in this tab.
@@ -3268,6 +3276,16 @@ Etendo allows the user to define any type of business partner address, by fillin
 - the **Fax** number
 - **Ship to Address** checkbox - the user should flag this one if the address being set up must be used for Goods Receipts/Shipments related transactions.
 - **Invoice to Address** checkbox - the user should flag this one if the address being setup must be used for sales or purchase invoices transactions.
+
+###### **Advanced Bank Account Management**
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
+
+!!! warning
+    The default account will always be used when generating a new document unless an account is set up in a specific location. 
 
 ##### **Contact**
 
@@ -5861,6 +5879,17 @@ The Remittance module provides the header of the Purchase Order with a new field
 
 This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
 
+###### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new section to the header of the Purchase Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+
+
 ##### **Lines**
 
 Once the purchase order header has been properly filled in and saved, each purchase order line can be created in this tab.
@@ -6261,6 +6290,16 @@ This field defines the corresponding bank account for transactions. Each busines
 
 ???+ note
     When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
+  
+###### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new section to the header of the Purchase Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
 
 ##### **Lines**
 
@@ -11198,6 +11237,16 @@ The Remittance module provides the header of the Sales Order with a new field: �
 
 This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
 
+###### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new section to the header of the Sales Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 ##### Lines
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
@@ -11804,6 +11853,17 @@ This field defines the corresponding bank account for transactions. Each busines
 !!! note
     **Important**:
     When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
+
+###### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new section to the header of the Sales Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 
 ##### **Lines**
 
@@ -13444,6 +13504,16 @@ The settlement record is registered in the **Business Partner Settlement** windo
 
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+  
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module includes the Bank account column to the Add details pop-up window to be able to filter possible payments by bank account.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Payment Proposal
 
@@ -13844,6 +13914,16 @@ The settlement record is registered in the **Business Partner Settlement** windo
 
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module includes the Bank account column to the Add details pop-up window to be able to filter possible payments by bank account.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Financial Account
 
@@ -20409,6 +20489,28 @@ This module allows setting a non deductible tax's amount to a specified financia
 !!! info
     For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
+##### Advanced Bank Account Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+
+!!! info
+    This functionality is available in the following windows:
+
+    - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
+    - [Sales invoice]()
+    - [Purchase Invoice]()
+    - [Sales order]()
+    - [Purchase order]()
+    - [Payment In]()
+    - [Payment Out]()
+
+    For more information, visit the [Advanced Bank Account Management](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+
+
 ##### Advanced Business Partner Settlement
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
@@ -20628,6 +20730,107 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
 
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Advanced Bank Account Management
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Advanced Bank Account Management
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management
+## Article Content: 
+### Advanced Bank Account Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+#### Overview
+This section describes the Advanced Bank Account Management module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+This functionality enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+
+This functionality is available in the following windows: 
+
+- [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management)
+- [Sales invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account_1)
+- [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account_1)
+- [Sales order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account)
+- [Purchase order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account)
+- [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account_1)
+- [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account)
+
+#### Business Partner - Bank Account
+:material-menu: `Application` > `Master Data Management` > `Business Partner`
+
+This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, in the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png)
+
+#### Business Partner - Location/Address
+:material-menu: `Application` > `Master Data Management` > `Business Partner` 
+
+The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partner window to associate specific bank accounts to the different locations.  
+
+!!!info
+    The default account will always be used when generating a new document unless an account is set up in a specific location. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png)
+
+#### Sales/Purchase Order windows
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Order`
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Order`
+
+A Bank Account field has also been added to the Purchase and Sales Order windows, in the Advanced Bank Account Management section of the header. 
+
+This field is automatically filled based on the selected address. If a specific account is associated with the address, that account is used; if no account is configured, the default account is selected. In cases where neither option is configured, the field remains blank. Payment plans generated from these Purchase and Sales Orders now include the bank account information.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba3.png)
+
+###### Add Payment button
+
+Furthermore, the Add Payment button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Sales Invoice and Purchase invoice windows.
+
+
+#### Sales/Purchase Invoice windows
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Invoice`
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Invoice`
+
+Similarly, a Bank Account field has been added to the Purchase and Sales Invoice windows, which functions in the same manner as in orders. The field is auto-filled based on the selected address, using a specific account if associated, falling back to the default account if none is specified, or remaining blank otherwise. 
+The payment plan inherits the bank account information from the header
+Additionally, invoices created from Purchase and Sales Orders inherit the bank account information from the respective orders.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba4.png)
+
+The Payment Plan in Sales Invoice and Purchase Invoice windows now displays the associated bank account information in the Payment Plan tab. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba5.png)
+
+###### Add Payment button
+
+Furthermore, the Add Payment button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Sales Invoice and Purchase invoice windows.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba6.png)
+
+
+###### Modify Payment Plan button
+
+A Modify Payment Plan button is found at Payment Plan tab level in both the Purchase and Sales Invoice windows. This function allows users to modify payment plans already created, adding or deleting payments, and even specifying the bank account for each payment plan record.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
+
+#### Payment In /Payment Out windows
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Payment In / Payment Out` 
+##### Add Details button
+
+
+As in the case of the Add Payment button, the Add Details button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Payment In and Payment Out windows.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba8.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Bank Integration PSD2
