@@ -30,6 +30,8 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Button Process Creator](../bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Client/Organization Initializer](../bundles/dev-assistant.md#clientorganization-initializer){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Code Run](../bundles/dev-assistant.md#code-run){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Etendo Code Expert](../bundles/dev-assistant.md#etendo-code-expert){ .md-button .md-button--primary } <br>
@@ -170,6 +172,37 @@ At this point, we will have the Java class of the button created along with the 
 
 ![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
+### Client/Organization Initializer
+Client and Organization Initializer is an assistant designed to facilitate the creation of clients and organizations within the Etendo system. The assistant adapts to the user’s role, allowing only permitted actions based on their current privileges (System Administrator or Client Admin).
+
+#### Tools
+
+	•	Client Initial Setup Tool: Used to initialize new clients in the Etendo system.
+	•	Organization Initial Setup Tool: Used to create new organizations under an existing client.
+
+#### Functionality
+
+The assistant guides users in initializing clients and organizations while ensuring correct role and organization context. It provides the following features:
+	•	Client Initialization:
+	•	Role required: System Administrator.
+	•	Prompts for details such as client name, code, and admin user credentials.
+	•	After successful creation, instructs the user to log in with the new Admin credentials, configure assistant access, and proceed with organization setup.
+	•	Organization Initialization:
+	•	Role required: Client Admin.
+	•	Prompts for details such as organization name and code.
+	•	After successful creation, instructs the user to log in with the organization’s Admin credentials and continue configuration.
+
+#### Usage Example
+1. Log in as the System Administrator role and configure the assistant in the Assistant window. Synchronize it and grant access to the role in the Assistant Access window.
+
+##### Client Initialization:
+- Log in as System Administrator and provide the necessary details (Client Name, Client Code).
+- Once the client is created, log in with the Admin credentials of the new client and configure access to the assistant to proceed with organization initialization.
+##### Organization Initialization:
+- Log in as Client Admin and provide the required organization details (Organization Name, Organization Code).
+- After successful creation, log in with the organization’s Admin credentials to finalize the configuration.
+
+This assistant ensures that all initialization tasks are performed efficiently and in compliance with the user’s role.
 
 ### Code Run
 
@@ -404,15 +437,22 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 ![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
 
-### Java Test Checker
+### Java Test Supervisor
+A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
+### Functionality 
+This assistant receives an Etendo Module and will check for Java files, determining which ones have tests and which ones do not. 
+- The assistant will generate a report with the results and will suggest the user to generate tests for the files without them. 
+- The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+#### Team Members
+##### Java Test Checker
 This assistant receiving a Etendo Module, will check for Java files, determining which ones have tests and which ones do not. The assistant will generate a report with the results and will suggest the user to generate tests for the files without them.
-#### Tools Used
+###### Tools
 - [Print Directory Tool](../available-tools/print-directory-tool.md)
 
 !!!info
     This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
 
-### Java Test Executor
+##### Java Test Executor
 
 This assistant is designed to execute tests for a Java Package, can be used to executa:
 
@@ -421,16 +461,16 @@ This assistant is designed to execute tests for a Java Package, can be used to e
 - Tests for a single Java file
 
 This depends on the user input. The assistant will execute the tests and provide feedback to the user.
-#### Tools Used
+###### Tools
 - [Test Run Tool](../available-tools/test-run-tool.md)
 
 !!! note
     This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
 
-### Java Test Generator
-This assistant generates tests for a single Java file or an Etendo Module. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
+##### Java Test Generator
+This assistant generates tests for a single Java file. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
 This assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
-#### Tools Used
+###### Tools
 - [Read File Tool](../available-tools/read-file-tool.md)
 - [Write File Tool](../available-tools/write-file-tool.md)
 - [Test Run Tool](../available-tools/test-run-tool.md)
@@ -438,12 +478,40 @@ This assistant will generate the tests and execute them, checking for errors and
 !!!info
     This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
 
-### Java Test Supervisor
-A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
-#### Team Members
-- [Java Test Generator](#java-test-generator)
-- [Java Test Checker](#java-test-checker)
-- [Java Test Executor](#java-test-executor) 
+#### Usage Example
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Java Test Supervisor and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+2. Open Copilot and select Java Test Supervisor, then ask to the assistant what you need to create. A suggested input could be ```Generate tests for the module com.etendoerp.module```.
+3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+
+### Unique Java Test Assistant
+#### Description
+This assistant is designed to generate tests for a single Java File or an Etendo Module. 
+#### Functionality
+- This assistant receives a Java File Path or a Module Path, but its main functionality is to generate tests for a single Java File. 
+- In the case of a given Module, the assistant will check for file without tests and generate for them.
+- The assistant expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. 
+- The assistant will also generate the test methods for each method in the Java.
+- This assistant has a Knowledge Base with the Java classes of Etendo Classic.
+#### Tools
+- [Print Directory Tool](../available-tools/print-directory-tool.md)
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+
+!!!warning Disclaimer
+    The test generators provided by this tool are designed to deliver an initial batch of test cases efficiently, based on the parameters provided. However, it is important to note that the generated tests serve as a starting point and may require additional work to:
+
+    - Fix potential errors in the generated test cases.
+    - Improve test coverage.
+    - Adapt them to the specific scenarios of your project or environment.
+
+    We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
+#### Usage Example
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Java Test Generator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+2. Open Copilot and select Unique Java Test Assistant, then ask to the assistant what you need to create. A suggested input could be ```Generate tests for the Java file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java```.
+3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+
 
 ### Message Creator
 
@@ -659,6 +727,20 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ### Refactor Assistant
 
 An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
+#### Functionality
+- The refactor assistant receives a file path.
+- The assistant will read the file.
+- The assistant may ask to it knowledge base for suggestions.
+- The assistant will write the file with the changes, overwriting the original file.
+- The assistant will read the file again to verify the changes.
+#### Tools
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+#### Usage Example
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Refactor Assistant and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+2. Open Copilot and select Refactor Assistant, then ask to the assistant what you need to refactor. For example, a suggested input could be `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
+3. The assistant will read the file, analyze it, and suggest changes.
+4. The assistant will write the file with the changes, overwriting the original file.
 
 ### Reference Creator
 
@@ -764,23 +846,6 @@ It is possible to give an input with all the necessary information, or the assis
 ./gradlew export.database --info
 ```
 
-### Unique Java Test Assistant
-#### Description
-This assistant is designed to generate tests for a single Java File or an Etendo Module. In the case of a given Module, the assistant will check for file without tests and generate for them. The assistant expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. The assistant will also generate the test methods for each method in the Java.
-This assistant has a Knowledge Base with the Java classes of Etendo Classic.
-#### Tools Used
-- [Print Directory Tool](../available-tools/print-directory-tool.md)
-- [Read File Tool](../available-tools/read-file-tool.md)
-- [Write File Tool](../available-tools/write-file-tool.md)
-
-!!!warning Disclaimer
-    The test generators provided by this tool are designed to deliver an initial batch of test cases efficiently, based on the parameters provided. However, it is important to note that the generated tests serve as a starting point and may require additional work to:
-
-    - Fix potential errors in the generated test cases.
-    - Improve test coverage.
-    - Adapt them to the specific scenarios of your project or environment.
-
-    We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
 
 
 ### Webhook Creator
