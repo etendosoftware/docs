@@ -24,13 +24,13 @@ IMAGE TO EDIT (ASK ALE)
 
 The following is entered in the application for the project and service management module:
 
-- **Project Dimension**: in order to be able to select projects on orders and invoices, the project dimension is created as a new record with type Project in the Dimension tab of the General Ledger Configuration window.
+- **Project Dimension**: in order to be able to select projects on orders and invoices, the project [dimension](../financial-management/accounting/setup.md#general-ledger-configuration#dimension) is created as a new record with type Project in the Dimension tab of the General Ledger Configuration window.
 
-- **Product**:
+- [**Product**](../master-data-management/master-data.md#product):
     - Product type Service and Expense Type: for the expense sheet products with product type Service (for time) and product type Expense Type (for expenses) are set up.
-    - Product type Item: the standard procure to pay process is used for the purchase or products related to the project.
+    - Product type Item: the standard [procure to pay](../procurement-management/getting-started.md#procure-to-pay-business-flow) process is used for the purchase or products related to the project.
 
-- **Business Partner**:
+- [**Business Partner**](../master-data-management/master-data.md#business-partner):
     - Customer: the third party for whom the project is executed is set up as a customer.
     - Vendor: the third party that supplies products related to the project is set up as a vendor.
     - Employee:
@@ -77,9 +77,13 @@ The key project and service management concepts mentioned in this chapter are:
 
 Project and Service Management interacts with the following modules:
 
-- Procurement Management:
+- [Procurement Management](../procurement-management/getting-started.md):
     - materials related to the project are ordered using the Procure to Pay process
     - purchase invoices are generated for expenses paid to employees and for good ordered from vendors
-- Sales Management: sales orders and sales invoices are generated for the customer for whom the project is executed.
-- Warehouse Management: materials ordered for the project may be received into stock.
-- Financial Management: the information of the created sales and purchase invoices is send to accounts payables and receivables.
+- [Sales Management](../sales-management/getting-started.md): sales orders and sales invoices are generated for the customer for whom the project is executed.
+- [Warehouse Management](../warehouse-management/getting-started.md): materials ordered for the project may be received into stock.
+- [Financial Management](../financial-management/getting-started.md): the information of the created sales and purchase invoices is send to accounts payables and receivables.
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
