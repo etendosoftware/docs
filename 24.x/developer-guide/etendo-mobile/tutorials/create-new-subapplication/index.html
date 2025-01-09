@@ -7688,9 +7688,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#client-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#rx-config-window" class="md-nav__link">
     <span class="md-ellipsis">
       RX Config window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-rx-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute RX services
     </span>
   </a>
   
@@ -7799,9 +7817,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#navegation" class="md-nav__link">
+  <a href="#navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Navegation
+      Navigation
     </span>
   </a>
   
@@ -7827,6 +7845,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Log
+    </span>
+  </a>
   
 </li>
       
@@ -9248,9 +9275,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#client-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#rx-config-window" class="md-nav__link">
     <span class="md-ellipsis">
       RX Config window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-rx-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute RX services
     </span>
   </a>
   
@@ -9359,9 +9404,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#navegation" class="md-nav__link">
+  <a href="#navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Navegation
+      Navigation
     </span>
   </a>
   
@@ -9387,6 +9432,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Log
+    </span>
+  </a>
   
 </li>
       
@@ -9521,9 +9575,44 @@
 </li>
 </ol>
 <h2 id="dockerized-services">Dockerized Services</h2>
+<p>Before starting the dockerized services, there are some configurations that need to be done in Etendo Classic</p>
+<h3 id="client-setup">Client Setup</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
+<p>It is necessary to configure the encryption token for the authentication in the  Client window with the System Administrator role.
+If the expiration time is equal to "0" the tokens do not expire.</p>
+<p>Generate a random key with the "Generate key" button.</p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png" /></a></p>
+<h3 id="rx-config-window">RX Config window</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Etendo RX</code> &gt; <code>RX Config</code></p>
+<p>This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, some records need to be created.
+As <code>System Administrator</code> role, in this window, it is necessary to add the entries, one for each service to be used. The following fields should be included:</p>
+<ul>
+<li><strong>Service Name</strong>: The name of each service.</li>
+<li><strong>Service URL</strong>: The internal URL of the Docker service.</li>
+<li><strong>Updatable Configs</strong>: Check this checkbox.</li>
+<li><strong>Public URL</strong>: Configure the publicly accessible URL for the service.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The <strong>Public URL</strong> field only needs to be configured when the sub-application is set to production.</p>
+</div>
+<p>See the configuration examples bellow and replicate them. </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>application   
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>auth        http://localhost:8094
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>config      http://localhost:8888
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>das         http://localhost:8092  
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>edge        http://localhost:8096
+</span></code></pre></div>
+<p>Also in the case of <strong>edge</strong> and <strong>auth</strong> services it is necessary to add the <code>das.url</code> Parameter Key with the Parameter Value <code>http://das:8092</code>.</p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If using Dockerized Tomcat, the URLs within the container's network are <code>http://auth:8094</code>, <code>http://config:8888</code>, <code>http://das:8092</code>  and <code>http://edge:8096</code>.</p>
+</div>
+<h3 id="execute-rx-services">Execute RX services</h3>
 <p>Before proceeding, it is necessary to start the <strong>Etendo RX</strong> services. These services provide a security layer (Auth Service), a data access layer (Das Service), which are essential for consuming or writing data in Etendo and Edge Service . Additionally, by selecting the <strong>isReact</strong> checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.</p>
 <p>To launch all the services, it is necessary to define the following configuration variables in the <code>gradle.properties</code> file:</p>
-<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">=</span><span class="kc">true</span>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -9532,36 +9621,15 @@
 <details class="note">
 <summary>Tomcat and PostgresSQL Dockerized (Optional)</summary>
 <p>It is also possible to run the dockerized <a href="../platform/docker-management.md#postgres-database-service">PostgreSQL service</a> and <a href="../platform/tomcat-dockerized-service.md">Tomcat service</a>, <strong>optionally</strong> adding the <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_isblank">Platform Extensions Bundle</a> and the following configuration variables:</p>
-<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">tomcat</span><span class="o">=</span><span class="kc">true</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">docker_db</span><span class="o">=</span><span class="kc">true</span>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">tomcat</span><span class="o">=</span><span class="kc">true</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">docker_db</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
 </details>
 <p>Then, to effectively run the services, it is necessary to <strong>execute the command</strong> in the terminal: </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>resources.up
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
 <p>Here, all the services and their respective logs can be seen running using <a href="https://www.docker.com/products/docker-desktop/" target="_isblank">Docker Desktop</a> tool.</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Docker RX Services" src="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png" /></a></p>
-<h3 id="rx-config-window">RX Config window</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Etendo RX</code> &gt; <code>RX Config</code></p>
-<p>This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, two records need to be created: one for the <strong>RX Config</strong> service, responsible for distributing the dynamic configurations of other available services, and another for the <strong>Auth</strong> service, which provides security utilities. The Auth service must be accessible by the subapplication to obtain the authentication token for requests.</p>
-<p>As <code>System Administrator</code> role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:</p>
-<ul>
-<li><strong>Service Name</strong>: The name of each service.</li>
-<li><strong>Service URL</strong>: The internal URL of the Docker service.</li>
-<li><strong>Updatable Configs</strong>: Check this checkbox.</li>
-<li><strong>Public URL</strong>: Configure the publicly accessible URL for the service.</li>
-</ul>
-<p>See the configuration examples bellow and replicate them. </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The <strong>Public URL</strong> field only needs to be configured when the subapplication is set to production.</p>
-</div>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png" /></a></p>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png" /></a></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If using Dockerized Tomcat, the URLs within the container's network are <code>http://config:8888</code> and <code>http://auth:8096</code>.</p>
-</div>
 <h2 id="projections-and-search">Projections and Search</h2>
 <p>This section covers the creation of projections, mappings, and searches, which enable the generation of a dynamic REST API in the RX DAS service. These configurations allow for reading, writing, and filtering data. Projections are applied to Etendo Classic tables, creating a subset of data that can be interacted with through the API.</p>
 <h3 id="create-a-projection">Create a Projection</h3>
@@ -9668,7 +9736,7 @@ To do this, we open the <code>Tables and Columns</code> window, in our example s
 </figure>
 <h3 id="create-a-new-search-and-search-parameter">Create a New Search and Search Parameter</h3>
 <p>Next, we will define a search method to be used when we want to consume the products. To create this new filter/search method, in the Repository tab of the <code>M_Product</code> table, create a new record with the method name <code>getFilteredProducts</code> and the hql query filter. </p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower(&#39;%&#39; || :name || &#39;%&#39;) OR lower(e.uPCEAN) LIKE lower(&#39;%&#39; || :name || &#39;%&#39;)) order by e.updated desc
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower(&#39;%&#39; || :name || &#39;%&#39;) OR lower(e.uPCEAN) LIKE lower(&#39;%&#39; || :name || &#39;%&#39;)) order by e.updated desc
 </span></code></pre></div>
 This query filters active products by name or bar code. </p>
 <p>As we can see in the query, it receives the<code>:name</code> parameter of String type that we define in the <code>Search Parameter</code> tab.</p>
@@ -9678,7 +9746,7 @@ This query filters active products by name or bar code. </p>
 </figure>
 <h3 id="restart-the-etendo-rx-service">Restart the Etendo RX Service</h3>
 <p>Restart the Das RX service to recognize the projections and mappings.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>rx.das.restart
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>rx.das.restart
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -9689,24 +9757,24 @@ This query filters active products by name or bar code. </p>
 <ol>
 <li>
 <p>Now, create the subapplication based on a template published in NPM, <a href="https://www.npmjs.com/package/etendo-subapp-data-template-typescript" target="_blank">Etendo Subapp Data Template Typescript </a>. Execute the Gradle command to automatically create the subapplication within the module under development.</p>
-<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>subapp.create<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;<span class="w"> </span>--info
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>subapp.create<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;<span class="w"> </span>--info
 </span></code></pre></div>
 In the example we are working on, use the following command:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>subapp.create<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.subapp.product<span class="w"> </span>--info
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./gradlew<span class="w"> </span>subapp.create<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.subapp.product<span class="w"> </span>--info
 </span></code></pre></div>
 <p>A new subapplication will be created within the module, with the following structure:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>modules
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>└── com.etendoerp.subapp.product
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  ├── src-db 
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  └── subapp
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>      ├── .bundle
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>      ├── _tests_
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>      ├── android
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>      ├── ios
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>      ├── lib
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>      ├── node_modules
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>      └── src
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>      └── App.tsx
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>modules
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>└── com.etendoerp.subapp.product
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  ├── src-db 
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  └── subapp
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>      ├── .bundle
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>      ├── _tests_
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>      ├── android
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>      ├── ios
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>      ├── lib
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>      ├── node_modules
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>      └── src
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>      └── App.tsx
 </span></code></pre></div>
 </li>
 </ol>
@@ -9730,63 +9798,63 @@ In the example we are working on, use the following command:</p>
 <ul>
 <li>The route to this screen is <code>src/screens/home/index.tsx</code> and the content:</li>
 </ul>
-<div class="language-javascript highlight"><span class="filename">src/screens/home/index.tsx</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">TableList</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../components/table/list&#39;</span><span class="p">;</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@react-navigation/native&#39;</span><span class="p">;</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">INavigationContainerProps</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../interfaces&#39;</span><span class="p">;</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">locale</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../localization/locale&#39;</span><span class="p">;</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">import</span><span class="w"> </span><span class="nx">useProduct</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/useProduct&#39;</span><span class="p">;</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Product</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/product.types&#39;</span><span class="p">;</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">TableListProps</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span><span class="nx">navigation</span><span class="o">:</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">;</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="nx">route</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">;</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="nx">navigationContainer</span><span class="o">:</span><span class="w"> </span><span class="nx">INavigationContainerProps</span><span class="p">;</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="nx">TableListProps</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">getFilteredProducts</span><span class="p">,</span><span class="w"> </span><span class="nx">updateProduct</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useProduct</span><span class="p">();</span>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">TableList</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">      </span><span class="nx">deleteDataItem</span><span class="o">=</span><span class="p">{</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="nx">Product</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">active</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">updateProduct</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">      </span><span class="p">}}</span>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">      </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">      </span><span class="nx">columns</span><span class="o">=</span><span class="p">{[</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">,</span>
-</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">          </span><span class="nx">primary</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
-</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">          </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Table.products&#39;</span><span class="p">),</span>
-</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">          </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;50%&#39;</span><span class="p">,</span>
-</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;uPCEAN&#39;</span><span class="p">,</span>
-</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="w">          </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Table.barcode&#39;</span><span class="p">),</span>
-</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="w">          </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;30%&#39;</span><span class="p">,</span>
-</span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="w">      </span><span class="p">]}</span>
-</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a><span class="w">      </span><span class="nx">getData</span><span class="o">=</span><span class="p">{</span><span class="nx">getFilteredProducts</span><span class="p">}</span>
-</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="w">      </span><span class="nx">labels</span><span class="o">=</span><span class="p">{{</span>
-</span><span id="__span-10-45"><a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="w">        </span><span class="nx">dataName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Product&#39;</span><span class="p">,</span>
-</span><span id="__span-10-46"><a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a><span class="w">        </span><span class="nx">navbarTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.welcome&#39;</span><span class="p">),</span>
-</span><span id="__span-10-47"><a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a><span class="w">        </span><span class="nx">containerTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.productList&#39;</span><span class="p">),</span>
-</span><span id="__span-10-48"><a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a><span class="w">        </span><span class="nx">buttonNew</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.newProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-10-49"><a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a><span class="w">        </span><span class="nx">searchPlaceholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.typeProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-10-50"><a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a><span class="w">        </span><span class="nx">successfulDelete</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.deleteProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-10-51"><a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a><span class="w">        </span><span class="nx">errorDelete</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Error.deleteProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-10-52"><a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="w">      </span><span class="p">}}</span>
-</span><span id="__span-10-53"><a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a><span class="w">    </span><span class="o">/&gt;</span>
-</span><span id="__span-10-54"><a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a><span class="w">  </span><span class="p">);</span>
-</span><span id="__span-10-55"><a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a><span class="p">};</span>
-</span><span id="__span-10-56"><a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a>
-</span><span id="__span-10-57"><a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Home</span><span class="p">;</span>
+<div class="language-javascript highlight"><span class="filename">src/screens/home/index.tsx</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">TableList</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../components/table/list&#39;</span><span class="p">;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@react-navigation/native&#39;</span><span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">INavigationContainerProps</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../interfaces&#39;</span><span class="p">;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">locale</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../localization/locale&#39;</span><span class="p">;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">import</span><span class="w"> </span><span class="nx">useProduct</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/useProduct&#39;</span><span class="p">;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Product</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/product.types&#39;</span><span class="p">;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">TableListProps</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="nx">navigation</span><span class="o">:</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span><span class="nx">route</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">;</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">  </span><span class="nx">navigationContainer</span><span class="o">:</span><span class="w"> </span><span class="nx">INavigationContainerProps</span><span class="p">;</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">}</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="nx">TableListProps</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">getFilteredProducts</span><span class="p">,</span><span class="w"> </span><span class="nx">updateProduct</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useProduct</span><span class="p">();</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">TableList</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">      </span><span class="nx">deleteDataItem</span><span class="o">=</span><span class="p">{</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="nx">Product</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">active</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">updateProduct</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">      </span><span class="p">}}</span>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">      </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">      </span><span class="nx">columns</span><span class="o">=</span><span class="p">{[</span>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">,</span>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">          </span><span class="nx">primary</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
+</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="w">          </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Table.products&#39;</span><span class="p">),</span>
+</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="w">          </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;50%&#39;</span><span class="p">,</span>
+</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;uPCEAN&#39;</span><span class="p">,</span>
+</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">          </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Table.barcode&#39;</span><span class="p">),</span>
+</span><span id="__span-11-39"><a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-11-40"><a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="w">          </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;30%&#39;</span><span class="p">,</span>
+</span><span id="__span-11-41"><a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-11-42"><a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="w">      </span><span class="p">]}</span>
+</span><span id="__span-11-43"><a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a><span class="w">      </span><span class="nx">getData</span><span class="o">=</span><span class="p">{</span><span class="nx">getFilteredProducts</span><span class="p">}</span>
+</span><span id="__span-11-44"><a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a><span class="w">      </span><span class="nx">labels</span><span class="o">=</span><span class="p">{{</span>
+</span><span id="__span-11-45"><a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a><span class="w">        </span><span class="nx">dataName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Product&#39;</span><span class="p">,</span>
+</span><span id="__span-11-46"><a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a><span class="w">        </span><span class="nx">navbarTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.welcome&#39;</span><span class="p">),</span>
+</span><span id="__span-11-47"><a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a><span class="w">        </span><span class="nx">containerTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.productList&#39;</span><span class="p">),</span>
+</span><span id="__span-11-48"><a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a><span class="w">        </span><span class="nx">buttonNew</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.newProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-11-49"><a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a><span class="w">        </span><span class="nx">searchPlaceholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.typeProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-11-50"><a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a><span class="w">        </span><span class="nx">successfulDelete</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.deleteProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-11-51"><a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a><span class="w">        </span><span class="nx">errorDelete</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Error.deleteProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-11-52"><a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a><span class="w">      </span><span class="p">}}</span>
+</span><span id="__span-11-53"><a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a><span class="w">    </span><span class="o">/&gt;</span>
+</span><span id="__span-11-54"><a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-11-55"><a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a><span class="p">};</span>
+</span><span id="__span-11-56"><a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a>
+</span><span id="__span-11-57"><a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Home</span><span class="p">;</span>
 </span></code></pre></div>
 <h3 id="product-detail">Product Detail</h3>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/product-detail.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="product detail" src="../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/product-detail.jpg" width="300" /></a></p>
@@ -9795,111 +9863,111 @@ In the example we are working on, use the following command:</p>
 <li>It is the same screen used to create a new product, if the prop does not have ID.</li>
 <li>The route to this screen is <code>src/screens/productDetail/index.tsx</code>,  add the content:</li>
 </ul>
-<div class="language-javascript highlight"><span class="filename">src/screens/productDetail/index.tsx</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">TableDetail</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../components/table/detail&#39;</span><span class="p">;</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@react-navigation/native&#39;</span><span class="p">;</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">locale</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../localization/locale&#39;</span><span class="p">;</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">useProduct</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/useProduct&#39;</span><span class="p">;</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">TableDetailProps</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="nx">navigation</span><span class="o">:</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">;</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="nx">route</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">;</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">}</span>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
-</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ProductDetail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="nx">TableDetailProps</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createProduct</span><span class="p">,</span><span class="w"> </span><span class="nx">updateProduct</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useProduct</span><span class="p">();</span>
-</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">setId</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">searchKey</span><span class="p">,</span><span class="w"> </span><span class="nx">setSearchKey</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">setName</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">uPCEAN</span><span class="p">,</span><span class="w"> </span><span class="nx">setUPCEAN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">TableDetail</span>
-</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">      </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span>
-</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">      </span><span class="nx">createData</span><span class="o">=</span><span class="p">{</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">createProduct</span><span class="p">({</span><span class="w"> </span><span class="nx">searchKey</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">uPCEAN</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">      </span><span class="p">}}</span>
-</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">      </span><span class="nx">updateData</span><span class="o">=</span><span class="p">{</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">updateProduct</span><span class="p">({</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">searchKey</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">uPCEAN</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">      </span><span class="p">}}</span>
-</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">      </span><span class="nx">fields</span><span class="o">=</span><span class="p">{[</span>
-</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">,</span>
-</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setId</span><span class="p">,</span>
-</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span>
-</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
-</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
-</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="w">          </span><span class="p">},</span>
-</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-11-39"><a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;searchKey&#39;</span><span class="p">,</span>
-</span><span id="__span-11-40"><a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setSearchKey</span><span class="p">,</span>
-</span><span id="__span-11-41"><a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">searchKey</span><span class="p">,</span>
-</span><span id="__span-11-42"><a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-43"><a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.searchKey&#39;</span><span class="p">),</span>
-</span><span id="__span-11-44"><a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.searchKeyExample&#39;</span><span class="p">),</span>
-</span><span id="__span-11-45"><a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a><span class="w">          </span><span class="p">},</span>
-</span><span id="__span-11-46"><a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-11-47"><a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-11-48"><a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
-</span><span id="__span-11-49"><a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setName</span><span class="p">,</span>
-</span><span id="__span-11-50"><a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span>
-</span><span id="__span-11-51"><a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-52"><a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.products&#39;</span><span class="p">),</span>
-</span><span id="__span-11-53"><a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.nameExample&#39;</span><span class="p">),</span>
-</span><span id="__span-11-54"><a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a><span class="w">          </span><span class="p">},</span>
-</span><span id="__span-11-55"><a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-11-56"><a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-11-57"><a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;barcode&#39;</span><span class="p">,</span>
-</span><span id="__span-11-58"><a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setUPCEAN</span><span class="p">,</span>
-</span><span id="__span-11-59"><a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">uPCEAN</span><span class="p">,</span>
-</span><span id="__span-11-60"><a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-61"><a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.barcode&#39;</span><span class="p">),</span>
-</span><span id="__span-11-62"><a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.barcodePlaceholder&#39;</span><span class="p">),</span>
-</span><span id="__span-11-63"><a id="__codelineno-11-63" name="__codelineno-11-63" href="#__codelineno-11-63"></a><span class="w">          </span><span class="p">},</span>
-</span><span id="__span-11-64"><a id="__codelineno-11-64" name="__codelineno-11-64" href="#__codelineno-11-64"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-11-65"><a id="__codelineno-11-65" name="__codelineno-11-65" href="#__codelineno-11-65"></a><span class="w">      </span><span class="p">]}</span>
-</span><span id="__span-11-66"><a id="__codelineno-11-66" name="__codelineno-11-66" href="#__codelineno-11-66"></a><span class="w">      </span><span class="nx">labels</span><span class="o">=</span><span class="p">{{</span>
-</span><span id="__span-11-67"><a id="__codelineno-11-67" name="__codelineno-11-67" href="#__codelineno-11-67"></a><span class="w">        </span><span class="nx">editTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.editProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-11-68"><a id="__codelineno-11-68" name="__codelineno-11-68" href="#__codelineno-11-68"></a><span class="w">        </span><span class="nx">newTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.newProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-11-69"><a id="__codelineno-11-69" name="__codelineno-11-69" href="#__codelineno-11-69"></a><span class="w">        </span><span class="nx">errorTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Error.product&#39;</span><span class="p">),</span>
-</span><span id="__span-11-70"><a id="__codelineno-11-70" name="__codelineno-11-70" href="#__codelineno-11-70"></a><span class="w">        </span><span class="nx">successUpdateTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.updateProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-11-71"><a id="__codelineno-11-71" name="__codelineno-11-71" href="#__codelineno-11-71"></a><span class="w">        </span><span class="nx">successCreateTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.saveProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-11-72"><a id="__codelineno-11-72" name="__codelineno-11-72" href="#__codelineno-11-72"></a><span class="w">        </span><span class="nx">connectionError</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Error.connection&#39;</span><span class="p">),</span>
-</span><span id="__span-11-73"><a id="__codelineno-11-73" name="__codelineno-11-73" href="#__codelineno-11-73"></a><span class="w">        </span><span class="nx">navbarTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.welcome&#39;</span><span class="p">),</span>
-</span><span id="__span-11-74"><a id="__codelineno-11-74" name="__codelineno-11-74" href="#__codelineno-11-74"></a><span class="w">        </span><span class="nx">cancel</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Common.cancel&#39;</span><span class="p">),</span>
-</span><span id="__span-11-75"><a id="__codelineno-11-75" name="__codelineno-11-75" href="#__codelineno-11-75"></a><span class="w">        </span><span class="nx">save</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Common.save&#39;</span><span class="p">),</span>
-</span><span id="__span-11-76"><a id="__codelineno-11-76" name="__codelineno-11-76" href="#__codelineno-11-76"></a><span class="w">        </span><span class="nx">successTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">id</span>
-</span><span id="__span-11-77"><a id="__codelineno-11-77" name="__codelineno-11-77" href="#__codelineno-11-77"></a><span class="w">          </span><span class="o">?</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.updateProduct&#39;</span><span class="p">)</span>
-</span><span id="__span-11-78"><a id="__codelineno-11-78" name="__codelineno-11-78" href="#__codelineno-11-78"></a><span class="w">          </span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.createProduct&#39;</span><span class="p">),</span>
-</span><span id="__span-11-79"><a id="__codelineno-11-79" name="__codelineno-11-79" href="#__codelineno-11-79"></a><span class="w">      </span><span class="p">}}</span>
-</span><span id="__span-11-80"><a id="__codelineno-11-80" name="__codelineno-11-80" href="#__codelineno-11-80"></a><span class="w">    </span><span class="o">/&gt;</span>
-</span><span id="__span-11-81"><a id="__codelineno-11-81" name="__codelineno-11-81" href="#__codelineno-11-81"></a><span class="w">  </span><span class="p">);</span>
-</span><span id="__span-11-82"><a id="__codelineno-11-82" name="__codelineno-11-82" href="#__codelineno-11-82"></a><span class="p">};</span>
-</span><span id="__span-11-83"><a id="__codelineno-11-83" name="__codelineno-11-83" href="#__codelineno-11-83"></a>
-</span><span id="__span-11-84"><a id="__codelineno-11-84" name="__codelineno-11-84" href="#__codelineno-11-84"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">ProductDetail</span><span class="p">;</span>
+<div class="language-javascript highlight"><span class="filename">src/screens/productDetail/index.tsx</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">TableDetail</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../components/table/detail&#39;</span><span class="p">;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@react-navigation/native&#39;</span><span class="p">;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">locale</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../localization/locale&#39;</span><span class="p">;</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">useProduct</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/useProduct&#39;</span><span class="p">;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">TableDetailProps</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="nx">navigation</span><span class="o">:</span><span class="w"> </span><span class="nx">NavigationProp</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="nx">route</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">;</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">}</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ProductDetail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="nx">TableDetailProps</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createProduct</span><span class="p">,</span><span class="w"> </span><span class="nx">updateProduct</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useProduct</span><span class="p">();</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">setId</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">searchKey</span><span class="p">,</span><span class="w"> </span><span class="nx">setSearchKey</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">setName</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">uPCEAN</span><span class="p">,</span><span class="w"> </span><span class="nx">setUPCEAN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">TableDetail</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">      </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">      </span><span class="nx">createData</span><span class="o">=</span><span class="p">{</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">createProduct</span><span class="p">({</span><span class="w"> </span><span class="nx">searchKey</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">uPCEAN</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">      </span><span class="p">}}</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">      </span><span class="nx">updateData</span><span class="o">=</span><span class="p">{</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">updateProduct</span><span class="p">({</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">searchKey</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">uPCEAN</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">      </span><span class="p">}}</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">      </span><span class="nx">fields</span><span class="o">=</span><span class="p">{[</span>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">,</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">          </span><span class="nx">visible</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setId</span><span class="p">,</span>
+</span><span id="__span-12-32"><a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span>
+</span><span id="__span-12-33"><a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-34"><a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-12-35"><a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-12-36"><a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-12-37"><a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-12-38"><a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-12-39"><a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;searchKey&#39;</span><span class="p">,</span>
+</span><span id="__span-12-40"><a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setSearchKey</span><span class="p">,</span>
+</span><span id="__span-12-41"><a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">searchKey</span><span class="p">,</span>
+</span><span id="__span-12-42"><a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-43"><a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.searchKey&#39;</span><span class="p">),</span>
+</span><span id="__span-12-44"><a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.searchKeyExample&#39;</span><span class="p">),</span>
+</span><span id="__span-12-45"><a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-12-46"><a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-12-47"><a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-12-48"><a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
+</span><span id="__span-12-49"><a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setName</span><span class="p">,</span>
+</span><span id="__span-12-50"><a id="__codelineno-12-50" name="__codelineno-12-50" href="#__codelineno-12-50"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span>
+</span><span id="__span-12-51"><a id="__codelineno-12-51" name="__codelineno-12-51" href="#__codelineno-12-51"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-52"><a id="__codelineno-12-52" name="__codelineno-12-52" href="#__codelineno-12-52"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.products&#39;</span><span class="p">),</span>
+</span><span id="__span-12-53"><a id="__codelineno-12-53" name="__codelineno-12-53" href="#__codelineno-12-53"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.nameExample&#39;</span><span class="p">),</span>
+</span><span id="__span-12-54"><a id="__codelineno-12-54" name="__codelineno-12-54" href="#__codelineno-12-54"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-12-55"><a id="__codelineno-12-55" name="__codelineno-12-55" href="#__codelineno-12-55"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-12-56"><a id="__codelineno-12-56" name="__codelineno-12-56" href="#__codelineno-12-56"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-12-57"><a id="__codelineno-12-57" name="__codelineno-12-57" href="#__codelineno-12-57"></a><span class="w">          </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;barcode&#39;</span><span class="p">,</span>
+</span><span id="__span-12-58"><a id="__codelineno-12-58" name="__codelineno-12-58" href="#__codelineno-12-58"></a><span class="w">          </span><span class="nx">setValue</span><span class="o">:</span><span class="w"> </span><span class="nx">setUPCEAN</span><span class="p">,</span>
+</span><span id="__span-12-59"><a id="__codelineno-12-59" name="__codelineno-12-59" href="#__codelineno-12-59"></a><span class="w">          </span><span class="nx">getValue</span><span class="o">:</span><span class="w"> </span><span class="nx">uPCEAN</span><span class="p">,</span>
+</span><span id="__span-12-60"><a id="__codelineno-12-60" name="__codelineno-12-60" href="#__codelineno-12-60"></a><span class="w">          </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-61"><a id="__codelineno-12-61" name="__codelineno-12-61" href="#__codelineno-12-61"></a><span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.barcode&#39;</span><span class="p">),</span>
+</span><span id="__span-12-62"><a id="__codelineno-12-62" name="__codelineno-12-62" href="#__codelineno-12-62"></a><span class="w">            </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.barcodePlaceholder&#39;</span><span class="p">),</span>
+</span><span id="__span-12-63"><a id="__codelineno-12-63" name="__codelineno-12-63" href="#__codelineno-12-63"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-12-64"><a id="__codelineno-12-64" name="__codelineno-12-64" href="#__codelineno-12-64"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-12-65"><a id="__codelineno-12-65" name="__codelineno-12-65" href="#__codelineno-12-65"></a><span class="w">      </span><span class="p">]}</span>
+</span><span id="__span-12-66"><a id="__codelineno-12-66" name="__codelineno-12-66" href="#__codelineno-12-66"></a><span class="w">      </span><span class="nx">labels</span><span class="o">=</span><span class="p">{{</span>
+</span><span id="__span-12-67"><a id="__codelineno-12-67" name="__codelineno-12-67" href="#__codelineno-12-67"></a><span class="w">        </span><span class="nx">editTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.editProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-12-68"><a id="__codelineno-12-68" name="__codelineno-12-68" href="#__codelineno-12-68"></a><span class="w">        </span><span class="nx">newTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;ProductDetail.newProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-12-69"><a id="__codelineno-12-69" name="__codelineno-12-69" href="#__codelineno-12-69"></a><span class="w">        </span><span class="nx">errorTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Error.product&#39;</span><span class="p">),</span>
+</span><span id="__span-12-70"><a id="__codelineno-12-70" name="__codelineno-12-70" href="#__codelineno-12-70"></a><span class="w">        </span><span class="nx">successUpdateTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.updateProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-12-71"><a id="__codelineno-12-71" name="__codelineno-12-71" href="#__codelineno-12-71"></a><span class="w">        </span><span class="nx">successCreateTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.saveProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-12-72"><a id="__codelineno-12-72" name="__codelineno-12-72" href="#__codelineno-12-72"></a><span class="w">        </span><span class="nx">connectionError</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Error.connection&#39;</span><span class="p">),</span>
+</span><span id="__span-12-73"><a id="__codelineno-12-73" name="__codelineno-12-73" href="#__codelineno-12-73"></a><span class="w">        </span><span class="nx">navbarTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Home.welcome&#39;</span><span class="p">),</span>
+</span><span id="__span-12-74"><a id="__codelineno-12-74" name="__codelineno-12-74" href="#__codelineno-12-74"></a><span class="w">        </span><span class="nx">cancel</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Common.cancel&#39;</span><span class="p">),</span>
+</span><span id="__span-12-75"><a id="__codelineno-12-75" name="__codelineno-12-75" href="#__codelineno-12-75"></a><span class="w">        </span><span class="nx">save</span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Common.save&#39;</span><span class="p">),</span>
+</span><span id="__span-12-76"><a id="__codelineno-12-76" name="__codelineno-12-76" href="#__codelineno-12-76"></a><span class="w">        </span><span class="nx">successTitle</span><span class="o">:</span><span class="w"> </span><span class="nx">id</span>
+</span><span id="__span-12-77"><a id="__codelineno-12-77" name="__codelineno-12-77" href="#__codelineno-12-77"></a><span class="w">          </span><span class="o">?</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.updateProduct&#39;</span><span class="p">)</span>
+</span><span id="__span-12-78"><a id="__codelineno-12-78" name="__codelineno-12-78" href="#__codelineno-12-78"></a><span class="w">          </span><span class="o">:</span><span class="w"> </span><span class="nx">locale</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Success.createProduct&#39;</span><span class="p">),</span>
+</span><span id="__span-12-79"><a id="__codelineno-12-79" name="__codelineno-12-79" href="#__codelineno-12-79"></a><span class="w">      </span><span class="p">}}</span>
+</span><span id="__span-12-80"><a id="__codelineno-12-80" name="__codelineno-12-80" href="#__codelineno-12-80"></a><span class="w">    </span><span class="o">/&gt;</span>
+</span><span id="__span-12-81"><a id="__codelineno-12-81" name="__codelineno-12-81" href="#__codelineno-12-81"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-12-82"><a id="__codelineno-12-82" name="__codelineno-12-82" href="#__codelineno-12-82"></a><span class="p">};</span>
+</span><span id="__span-12-83"><a id="__codelineno-12-83" name="__codelineno-12-83" href="#__codelineno-12-83"></a>
+</span><span id="__span-12-84"><a id="__codelineno-12-84" name="__codelineno-12-84" href="#__codelineno-12-84"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">ProductDetail</span><span class="p">;</span>
 </span></code></pre></div>
-<h3 id="navegation">Navegation</h3>
+<h3 id="navigation">Navigation</h3>
 <p>In addition, it is necessary to add the navigation configuration in the <code>app.tsx</code> file, in the return statement. This configuration provides the infrastructure to navigate between the different screens of the application.</p>
-<div class="language-javascript highlight"><span class="filename">App.tsx</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&lt;</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">Navigator</span><span class="w"> </span><span class="nx">initialRouteName</span><span class="o">=</span><span class="s2">&quot;Home&quot;</span><span class="o">&gt;</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">Screen</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="nx">options</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">headerShown</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}}</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;Home&quot;</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="nx">initialParams</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">dataUser</span><span class="w"> </span><span class="p">}}</span><span class="o">&gt;</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="p">{</span><span class="nx">props</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Home</span><span class="w"> </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span><span class="w"> </span><span class="nx">navigationContainer</span><span class="o">=</span><span class="p">{</span><span class="nx">navigationContainer</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/Stack.Screen&gt;</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">Screen</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="nx">options</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">headerShown</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}}</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">        </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;ProductDetail&quot;</span>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="nx">initialParams</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">dataUser</span><span class="w"> </span><span class="p">}}</span><span class="o">&gt;</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">        </span><span class="p">{</span><span class="nx">props</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">ProductDetail</span><span class="w"> </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/Stack.Screen&gt;</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="o">&lt;</span><span class="err">/Stack.Navigator&gt;</span>
+<div class="language-javascript highlight"><span class="filename">App.tsx</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&lt;</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">Navigator</span><span class="w"> </span><span class="nx">initialRouteName</span><span class="o">=</span><span class="s2">&quot;Home&quot;</span><span class="o">&gt;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">Screen</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="nx">options</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">headerShown</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}}</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;Home&quot;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="nx">initialParams</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">dataUser</span><span class="w"> </span><span class="p">}}</span><span class="o">&gt;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="p">{</span><span class="nx">props</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Home</span><span class="w"> </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span><span class="w"> </span><span class="nx">navigationContainer</span><span class="o">=</span><span class="p">{</span><span class="nx">navigationContainer</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/Stack.Screen&gt;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">Stack</span><span class="p">.</span><span class="nx">Screen</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="nx">options</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">headerShown</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}}</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;ProductDetail&quot;</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">        </span><span class="nx">initialParams</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">dataUser</span><span class="w"> </span><span class="p">}}</span><span class="o">&gt;</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">        </span><span class="p">{</span><span class="nx">props</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">ProductDetail</span><span class="w"> </span><span class="p">{...</span><span class="nx">props</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/Stack.Screen&gt;</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="o">&lt;</span><span class="err">/Stack.Navigator&gt;</span>
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="../../concepts/subapp-structure/#navigation-stack">Navegation Stack</a> concept in Subapplication Structure Page.</p>
+<p>For more information, visit <a href="../../concepts/subapp-structure/#navigation-stack">Navigation Stack</a> concept in Subapplication Structure Page.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -9917,35 +9985,35 @@ In the example we are working on, use the following command:</p>
 <p class="admonition-title">Info</p>
 <p>Make sure that the Etendo RX services are running and without errors before executing this command.</p>
 </div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./gradlew<span class="w"> </span>subapp.build<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./gradlew<span class="w"> </span>subapp.build<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;<span class="w"> </span>
 </span></code></pre></div>
 <p>In our example case 
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./gradlew<span class="w"> </span>subapp.build<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.subapp.product<span class="w"> </span>--info
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>./gradlew<span class="w"> </span>subapp.build<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.subapp.product<span class="w"> </span>--info
 </span></code></pre></div>
 As we can see, it will be generated in the <code>/subapp/src/libs/</code> folder the functions and types that will be used for reading and writing <code>GET</code> and <code>POST</code> data.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>modules
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>└── com.etendoerp.subapp.product
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  ├── src-db 
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  └── subapp
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>      └── src
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        └── lib
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>            └── base
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>                └── baseservice.ts
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>                └── baseservice.types.ts
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>            └── data_gen
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>                └── product.types.ts
-</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>                └── productservice.ts
-</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>                └── useProduct.ts      
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>modules
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>└── com.etendoerp.subapp.product
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  ├── src-db 
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  └── subapp
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>      └── src
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>        └── lib
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>            └── base
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>                └── baseservice.ts
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>                └── baseservice.types.ts
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>            └── data_gen
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>                └── product.types.ts
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>                └── productservice.ts
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>                └── useProduct.ts      
 </span></code></pre></div>
 </li>
 <li>
 <p>In a terminal on path <code>modules/&lt;javapackage&gt;/subapp</code>, install the depedencies declared in the <code>package.json</code>,  following the command: </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>yarn<span class="w"> </span>install<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>yarn<span class="w"> </span>install<span class="w"> </span>
 </span></code></pre></div>
 </li>
 <li>
 <p>Then, to run the subapplication in development mode execute: </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>yarn<span class="w"> </span>dev<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>yarn<span class="w"> </span>dev<span class="w"> </span>
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -9974,6 +10042,33 @@ As we can see, it will be generated in the <code>/subapp/src/libs/</code> folder
 <p>Now you can view, filter, create, edit and delete products.</p>
 </li>
 </ol>
+<h2 id="debug-log">Debug Log</h2>
+<p>This section explains how to log data in a sub-application using the <code>logger</code> utility function. To log any information, call the <code>logger</code> function with a key and a value:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">logger</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="p">);</span>
+</span></code></pre></div>
+<p><strong>Importing the Logger Function</strong> 
+To use the logger in any file, import it as follows:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">logger</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../utils/log&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// The path to the file is relative </span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Automatic String Conversion</p>
+<p>Objects passed to the <code>logger</code> function will be automatically converted to strings using the <code>JSON.stringify</code> function. This ensures compatibility with the logging mechanism.</p>
+</div>
+<p><strong>Example Usage</strong>
+Below is an example of how to use the logger function, including handling errors:</p>
+<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="c1">// Your code here</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">  </span><span class="nx">logger</span><span class="p">(</span><span class="s1">&#39;Handle Error&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">));</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">  </span><span class="nx">showAlert</span><span class="p">(</span><span class="nx">labels</span><span class="p">.</span><span class="nx">connectionError</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="p">}</span>
+</span></code></pre></div>
+In this example:</p>
+<ul>
+<li>The error object <code>err</code> is automatically converted to a <code>String</code> using <code>JSON.stringify</code> and logged.</li>
+<li>An alert is shown using <code>showAlert</code> component to inform the user of a connection error.</li>
+</ul>
+<p>By integrating this logging utility, developers can track application behavior and debug more effectively.</p>
 
 
 
