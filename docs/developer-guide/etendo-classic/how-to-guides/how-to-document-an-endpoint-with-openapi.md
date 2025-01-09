@@ -1,6 +1,9 @@
 ---
 tags:
-  - Etendo Infrastructure
+  - Infrastructure
+  - OpenAPI
+  - Swagger
+
 title: How to Document an Endpoint with OpenAPI
 ---
 
@@ -10,7 +13,6 @@ title: How to Document an Endpoint with OpenAPI
 
 This documentation details the steps to document API endpoints using the OpenAPI specification. By leveraging Swagger, developers can ensure their APIs are well-documented, standardized, and easy to integrate.
 
----
 
 ## Define a New OpenAPIDefaultRequest
 
@@ -57,7 +59,6 @@ public class ImageUploadOpenAPI extends OpenAPIDefaultRequest {
 
 This class specifies a POST endpoint for uploading images. It defines the endpoint path, request body schema, and required properties.
 
----
 
 ## Define an OpenAPI Request & Flow
 
@@ -73,7 +74,6 @@ To appear in the Swagger documentation, the request should be part of an OpenAPI
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_document_an_endpoint_with_OpenAPI-1.png)
 
----
 
 ## Check Swagger
 
@@ -85,7 +85,6 @@ http://localhost:8080/etendo/web/com.etendoerp.openapi/#/
 
 Verify that the new endpoint appears under the defined tag and displays the correct request and response schemas.
 
----
 
 ## Key Components of OpenAPI Integration
 
@@ -113,10 +112,3 @@ This interface ensures consistent API endpoint behavior by defining methods such
 - `void add(OpenAPI openAPI)`
 
 For example, the `ImageUploadOpenAPI` class implements these methods to validate tags and add endpoint definitions to the OpenAPI object.
-
----
-
-## Summary
-
-By following these steps, developers can create and document API endpoints in a structured and standardized way. Utilizing `OpenAPIDefaultRequest` ensures compatibility with OpenAPI standards and provides a clear interface for API integration.
-
