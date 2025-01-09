@@ -55,5 +55,5 @@ New ISO with Etendo Classsic version 23.2.0
 ## 23.1.0
 New ISO with Etendo Classsic version 23.1.0
 
-## 22.4.5 ✨
-First ISO version with Etendo Classsic version 23.4.0
+## 22.4.5
+First ISO version with Etendo Classsic version 22.4.5 :sparkles:
