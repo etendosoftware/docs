@@ -13,6 +13,8 @@ title: How to Document an Endpoint with OpenAPI
 
 This documentation details the steps to document API endpoints using the OpenAPI specification. By leveraging Swagger, developers can ensure their APIs are well-documented, standardized, and easy to integrate.
 
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 ## Define a New OpenAPIDefaultRequest
 
@@ -62,7 +64,7 @@ This class specifies a POST endpoint for uploading images. It defines the endpoi
 
 ## Define an OpenAPI Request & Flow
 
-OpenAPI Requests are defined in the window `OpenAPI Request`.
+An OpenAPI Request record represents a single API endpoint in your application. OpenAPI Requests are defined in the window `OpenAPI Request`.
 
 1. **Type**: Set the type to "Default".
 2. **Description**: Add the endpoint description.
@@ -70,10 +72,17 @@ OpenAPI Requests are defined in the window `OpenAPI Request`.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_document_an_endpoint_with_OpenAPI-0.png)
 
-To appear in the Swagger documentation, the request should be part of an OpenAPI Flow. Open the window OpenAPI Flow, then add a new record. Afterward, link the request in the child tab of the flow.
+An **OpenAPI Flow** groups related API endpoints under a single category or "flow." These flows make it easier to organize and navigate the API documentation.
+
+Each OpenAPI Flow record can:
+
+- Define a flow name and description.
+- Include one or more OpenAPI Requests through the `Endpoints` tab.
+- Specify which HTTP methods (GET, GET by ID, POST, PUT) the endpoints support using the `Endpoints` tab fields. When these fields are checked, they generate the corresponding endpoint methods documentation.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_document_an_endpoint_with_OpenAPI-1.png)
 
+To ensure an OpenAPI Request appears in Swagger documentation, it must be linked to an OpenAPI Flow. This ensures logical grouping and visibility.
 
 ## Check Swagger
 

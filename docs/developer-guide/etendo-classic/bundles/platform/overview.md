@@ -247,6 +247,15 @@ public class NumberToWord_es extends NumberToWord {
 }
 ```
 
+## OpenAPI
+
+:octicons-package-16: Javapackage: `com.etendoerp.openapi`
+
+**Purpose**: This module module serves as an integration layer for documenting and exposing APIs within the Etendo ERP ecosystem. It enables developers to define, organize, and document API endpoints using the OpenAPI specification, ensuring compatibility with tools like Swagger for visualization and testing.
+
+!!!info
+    For more information, visit [How to Document an Endpoint with OpenAPI guide](../../how-to-guides/how-to-document-an-endpoint-with-openapi.md). 
+
 ## Print Document Web Service
 
 :octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
