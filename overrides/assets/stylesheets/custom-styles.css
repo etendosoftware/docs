@@ -1,3 +1,6 @@
+.md-search-result__meta {
+  display: none;
+}
 
 #section-filter {
  
@@ -25,5 +28,5 @@
 }
 
 #section-filter:focus {
-  outline: none; /* Elimina el borde predeterminado del navegador */
+  outline: none;
 }

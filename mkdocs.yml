@@ -84,15 +84,15 @@ plugins:
   - search:
       indexing: full
       prebuild_index: true
-      separator: '[\s\.\-]+'
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang:
         - en
-      prebuild_index: true 
       exact_phrase: true
       index_all_content: true  
-      pipeline:            
-        - stopWordFilter   
-        - stemmer       
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer    
          
   - tags
   - glightbox
