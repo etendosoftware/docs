@@ -1,5 +1,12 @@
 ---
 title: Install Modules in Etendo
+search:
+  boost: 2
+tags:
+    - Install
+    - Install Modules
+    - Modules
+    - Dependencies
 ---
 
 ## Overview

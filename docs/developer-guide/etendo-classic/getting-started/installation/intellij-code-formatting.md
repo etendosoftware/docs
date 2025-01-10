@@ -1,5 +1,12 @@
 ---
 title: Code Formatting Style in IntelliJ
+section: "developer-guide"
+tags:
+    - IntelliJ
+    - Formatting
+    - Code Formatting
+search:
+  boost: 1.5
 ---
 ## Overview
 

@@ -6,7 +6,7 @@ site_url: https://docs.etendo.software
 theme:
   name: material
   logo: assets/logo.png
-  #custom_dir: overrides/
+  custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
   font:
@@ -46,9 +46,14 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
-exclude_docs: 
+  - assets/stylesheets/custom-styles.css
+
+
+exclude_docs:
   .*
 
+extra_javascript:
+  - assets/javascripts/custom-search.js
 
 markdown_extensions:
   - abbr
@@ -77,6 +82,8 @@ markdown_extensions:
 
 plugins:
   - search:
+      indexing: full
+      prebuild_index: true
       separator: '[\s\.\-]+'
       lang:
         - en
