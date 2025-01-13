@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files/">
+        <link rel="canonical" href="https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module/">
       
       
-        <link rel="prev" href="../How_to_create_a_Window/">
+        <link rel="prev" href="../how-to-create-a-callout-that-extends-from-another-callout/">
       
       
-        <link rel="next" href="../How_to_create_an_Alert/">
+        <link rel="next" href="../how-to-create-a-clone-hook/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>How to Create Accounts Files - Etendo Documentation</title>
+        <title>How to Create a Chart of Accounts Module - Etendo Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-create-accounts-files" class="md-skip">
+        <a href="#how-to-create-a-chart-of-accounts-module" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Create Accounts Files
+              How to Create a Chart of Accounts Module
             
           </span>
         </div>
@@ -4957,10 +4957,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../How-to-Create-a-Chart-of-Accounts-Module/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How to Create a Chart of Accounts Module
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4969,6 +4989,88 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-csv-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the CSV file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-the-csv-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the CSV file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-chart-of-accounts-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Chart of Accounts module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating the Chart of Accounts module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishing-the-chart-of-accounts-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing the Chart of Accounts Module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translating-a-chart-of-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translating a Chart of Accounts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5272,30 +5374,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    How to Create Accounts Files
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../how-to-create-accounts-files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5304,91 +5386,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#which-accounts-must-be-defined" class="md-nav__link">
-    <span class="md-ellipsis">
-      Which accounts must be defined?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accounts-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accounts hierarchy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-accounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default accounts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exporting-the-chart-of-accounts-to-the-csv-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exporting the Chart of Accounts to the CSV file
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chart-of-accounts-in-etendo-classic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chart of accounts in Etendo Classic
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5722,11 +5719,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-document-an-endpoint-with-openapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Document an Endpoint with OpenAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-embed-a-widget-into-a-window-tab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    How to embed a Widget into a Window Tab
+    How to Embed a Widget into a Window Tab
   </span>
   
 
@@ -5827,7 +5845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../How_to_run_an_initial_client_setup_process/" class="md-nav__link">
+      <a href="../how-to-run-an-initial-client-setup-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9037,54 +9055,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-structure" class="md-nav__link">
+  <a href="#creating-the-csv-file" class="md-nav__link">
     <span class="md-ellipsis">
-      File Structure
+      Creating the CSV file
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#which-accounts-must-be-defined" class="md-nav__link">
+  <a href="#testing-the-csv-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Which accounts must be defined?
+      Testing the CSV file
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#accounts-hierarchy" class="md-nav__link">
+  <a href="#creating-the-chart-of-accounts-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Accounts hierarchy
+      Creating the Chart of Accounts module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating the Chart of Accounts module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishing-the-chart-of-accounts-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing the Chart of Accounts Module
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#default-accounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default accounts
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exporting-the-chart-of-accounts-to-the-csv-file" class="md-nav__link">
+  <a href="#translating-a-chart-of-accounts" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting the Chart of Accounts to the CSV file
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chart-of-accounts-in-etendo-classic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chart of accounts in Etendo Classic
+      Translating a Chart of Accounts
     </span>
   </a>
   
@@ -9109,37 +9124,31 @@
     
     
     
-      <span class="md-tag">Etendo classic</span>
+      <span class="md-tag">Etendo Classic</span>
     
   
     
     
     
-      <span class="md-tag">create accounts files</span>
+      <span class="md-tag">Localization</span>
     
   
     
     
     
-      <span class="md-tag">account tree</span>
+      <span class="md-tag">Chart of Accounts</span>
     
   
     
     
     
-      <span class="md-tag">chart of accounts</span>
+      <span class="md-tag">Modules</span>
     
   
     
     
     
-      <span class="md-tag">csv</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">file structure</span>
+      <span class="md-tag">Module Creation</span>
     
   
 </nav>
@@ -9149,353 +9158,110 @@
   
 
 
-<h1 id="how-to-create-accounts-files">How to Create Accounts Files</h1>
+<h1 id="how-to-create-a-chart-of-accounts-module">How to Create a Chart of Accounts Module</h1>
 <h2 id="overview">Overview</h2>
-<p>Etendo supports importing the Chart of Accounts through a <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a> (comma-separated values) file with a concrete structure. This CSV file is afterward included into a module that can be distributed and installed from <a href="https://marketplace.etendo.cloud/#/" target="_blank">Etendo marketplace</a>.</p>
-<p>To create the CSV file, it is recommended to use any spreadsheet sofware that supports exporting to CSV, like <a href="https://www.libreoffice.org/" target="_blank">LibreOffice Calc</a>.</p>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/CSVfile.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/CSVfile.png" /></a></p>
-<h2 id="file-structure">File Structure</h2>
-<p>The file is a plain text file, with commas (,) as field separator, that defines all the accounts. To ensure that your chart of accounts is imported correctly, the file must be encoded using <a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank">UTF-8</a> charset.</p>
-<p>For creating your own CSV file, you can either download the <a href="../../../../assets/developer-guide/etendo-classic/how-to-guides/COA.csv">Spanish Chart of Accounts CSV file</a> and use it as a template to adapt it to your needs, or you can create the entire file from scratch.</p>
-<p>Each field of the file comprises one line.</p>
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Description</th>
-<th>Mandatory</th>
-<th>Length and type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Search key</td>
-<td>This is the unique identifier that defines the account.</td>
-<td>Yes</td>
-<td>Up to 20 alphanumeric characters</td>
-</tr>
-<tr>
-<td>Name</td>
-<td>The name of the account</td>
-<td>Yes</td>
-<td>Up to 60 characters</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>Brief description for the account</td>
-<td>No</td>
-<td>Up to 255 characters</td>
-</tr>
-<tr>
-<td>Account Type</td>
-<td>Defines the type of the account. Defines the type of the account. It can contain any text, but only the first character is used. This first character must be one of the following:  <ul><li>A:Asset</li><li>L:Liability</li><li>O:Owner's equity</li><li>E:Expense </li><li>R:Revenue</li><li>M:Memo</li></ul></td>
-<td>Yes</td>
-<td>Any length but only the first character is used.</td>
-</tr>
-<tr>
-<td>Account Sign</td>
-<td>Defines the sign of the account in the reports. An account has got two columns: debit and credit. Amounts are added to one of the columns in each entry. At the end of the day, one account will have got two amounts: debit and credit amounts. The sign of the whole account (due to debit and credit movements) can be established following one of the next rules: <ul><li>N: Natural (Sign is always positive) </li><li>D: Debit (Sign is positive if debit amount is higher than credit one; negative in other case)</li><li>C: Credit (Sign is positive if credit amount is higher than debit one; negative in other case)</li><li>E: Empty</li></ul></td>
-<td>Yes</td>
-<td>Any length but only the first character is used.</td>
-</tr>
-<tr>
-<td>Document Controlled</td>
-<td>If this is a default account used in the general ledger configuration type "Yes". Otherwise, type "No". The fields with this field set to Yes are processed during the Initial Client Setup process</td>
-<td>Yes</td>
-<td>Must be Yes, No or Empty</td>
-</tr>
-<tr>
-<td>Account Summary</td>
-<td>This field is defines the account as a summary account.</td>
-<td>Yes</td>
-<td>Must be Yes, No or Empty</td>
-</tr>
-<tr>
-<td>Default Account</td>
-<td>See below for details.</td>
-<td>Yes</td>
-<td>See below the set of valid values</td>
-</tr>
-<tr>
-<td>Parent_Value</td>
-<td>Defines the account's parent account. The parent is ignored during the Initial Client Setup process.</td>
-<td>No</td>
-<td>Must be the search key of a valid summary account</td>
-</tr>
-<tr>
-<td>Element Level</td>
-<td>Defines the level of the account.  The last level that correspond with Account Summary = N, must be S (Subaccount). Any other level can be added to the existing ones. As they are defined in the dictionary as a reference list, you can edit this list and modify the values shown for this field, setting all the new values you need. The only thing that must be noted is that the lowest level must be 'S' Subaccount, as accounting reports uses this value.Following levels are defined by default in the Etendo Classic:<ul><li>C: Account</li><li>D: Breakdown</li><li>E: Heading</li><li>S: Subaccount</li></ul></td>
-<td>No</td>
-<td>Unlimited but only the first letter is used.</td>
-</tr>
-<tr>
-<td>Operands</td>
-<td>If the account is the product of a calculation between other accounts, you can define the operands here. For example, if the value of account A is the result of adding the value of accounts B and C, the value of the operand column in the chart of accounts would be B+C. This feature works only if referred operands are already inserted before, otherwise system can not find them when trying to insert them.</td>
-<td>No</td>
-<td>Unlimited</td>
-</tr>
-<tr>
-<td>Show Value Condition</td>
-<td>User can, optionally, set here the value for "Show Value Condition" field of the Element Value tab.</td>
-<td>No</td>
-<td>Positive, Negative, Algebraic (default value if empty cell)</td>
-</tr>
-<tr>
-<td>Title Node</td>
-<td>User can, optionally, activate here the flag "Title Node" of the element value tab.</td>
-<td>No</td>
-<td>Yes, No (default value if empty cell)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="which-accounts-must-be-defined">Which accounts must be defined?</h2>
-<p>How you define your accounts file depends primarily on whether there are official rules in your country. For example, in countries like France or Spain there are standard charts of accounts and general accounting reports. In this case you must define a chart of accounts with the structure of the general accounting reports that include all the accounts. Other countries such as the USA have no defined plan, so you must define a general plan that suits your enterprise. The structure of the file must include the Balance Sheet (with Assets, Liabilities and Owner’s Equity) and a Profit and Loss report (with Expenses and Revenues).</p>
-<h2 id="accounts-hierarchy">Accounts hierarchy</h2>
-<p>The general accounting report has a hierarchical structure. The Balance Sheet has two sides, following the equation Assets = Liabilities + Owner’s equity. The Asset side of the balance sheet is composed of different types of assets: Current Assets and Long Term Assets, and each one can have different sub-accounts.</p>
-<p>The levels of this hierarchy can differ from one account tree to another; the only requirement is that the last level, where the accounting is done, must start with the letter S (from Sub-account).</p>
-<p>The <em>Parent_Value</em> column of the accounts file creates the hierarchical relationship between accounts. This column specifies which account is the parent of the account.</p>
-<h2 id="default-accounts">Default accounts</h2>
-<p>Etendo Classic makes most account entries automatically. To enable automatic account entries, it is necessary to define the default accounts. With this information, Etendo Classic builds the accounting entry with the account number defined in the chart of accounts.</p>
-<p>The mandatory default accounts are defined in the chart of accounts file with a constant that must be written literally in the <em>Default Account</em> column. The following table has an explanation of these accounts.</p>
-<table>
-<thead>
-<tr>
-<th>Default</th>
-<th>Type</th>
-<th>Description</th>
-<th>Example of name of the account</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A_ACCUMDEPRECIATION_ACCT</td>
-<td>Asset</td>
-<td>Account used by the amortization process to show the depreciation of an asset</td>
-<td>Accumulated Depreciation</td>
-</tr>
-<tr>
-<td>A_DEPRECIATION_ACCT</td>
-<td>Expense</td>
-<td>Account used by the amortization process to define the lost of value caused by the depreciation of an asset</td>
-<td>Depreciation Expense</td>
-</tr>
-<tr>
-<td>B_ASSET_ACCT</td>
-<td>Asset</td>
-<td>The account used for the movements of a bank account</td>
-<td>Bank Account</td>
-</tr>
-<tr>
-<td>B_EXPENSE_ACCT</td>
-<td>Expense</td>
-<td>Charges made by the bank</td>
-<td>Bank charge</td>
-</tr>
-<tr>
-<td>B_INTRANSIT_ACCT</td>
-<td>Asset</td>
-<td>Account used for the period between the settlement and the bank statement registration</td>
-<td>Bank in transit</td>
-</tr>
-<tr>
-<td>B_REVALUATIONGAIN_ACCT</td>
-<td>Revenue</td>
-<td>Account for the revenues due to gain for revaluations of foreign money</td>
-<td>Bank revaluation gain</td>
-</tr>
-<tr>
-<td>B_REVALUATIONLOSS_ACCT</td>
-<td>Expense</td>
-<td>Account for the expenses due to loss for revaluations of foreign money</td>
-<td>Bank revaluation loss</td>
-</tr>
-<tr>
-<td>C_RECEIVABLE_ACCT</td>
-<td>Asset</td>
-<td>Account for the payments to be received from an invoice. They are created in the invoice process and canceled when the payment is made or canceled.</td>
-<td>Accounts receivable</td>
-</tr>
-<tr>
-<td>C_PREPAYMENT_ACCT</td>
-<td>Asset</td>
-<td>The Customer Prepayment account indicates the account to be used for recording prepayments from a customer. Any payment against an order or any payment generating credit is considered as a prepayment.</td>
-<td>Customer Prepayment</td>
-</tr>
-<tr>
-<td>CB_ASSET_ACCT</td>
-<td>Asset</td>
-<td>Account for the petty cash used by the company</td>
-<td>Petty Cash</td>
-</tr>
-<tr>
-<td>CB_CASHTRANSFER_ACCT</td>
-<td>Asset</td>
-<td>Account used for the money transferred from or to petty cash</td>
-<td>Petty Cash In-Transfer</td>
-</tr>
-<tr>
-<td>CB_DIFFERENCES_ACCT</td>
-<td>Expense</td>
-<td>Accounts for differences in petty cash</td>
-<td>Petty Cash differences</td>
-</tr>
-<tr>
-<td>CURRENCYBALANCING_ACCT</td>
-<td>Expense</td>
-<td>Account used for currency balancing (rounding)</td>
-<td>Currency balancing</td>
-</tr>
-<tr>
-<td>DEFAULT_ACCT</td>
-<td>Expense</td>
-<td>Account used when there is not a defined account for other default</td>
-<td>Default account</td>
-</tr>
-<tr>
-<td>INCOMESUMMARY_ACCT</td>
-<td>Owner's Equity</td>
-<td>Account used to calculate the income for the period. Also it is used to show the income in the balance sheet before the closing process</td>
-<td>Income summary</td>
-</tr>
-<tr>
-<td>NOTINVOICEDRECEIPTS_ACCT</td>
-<td>Liability</td>
-<td>Account used for the receipts that haven't been invoiced yet. It is used only if the company is configured to account shipments</td>
-<td>Not invoiced receipts</td>
-</tr>
-<tr>
-<td>P_ASSET_ACCT</td>
-<td>Asset</td>
-<td>Account used for fixed assets</td>
-<td>Product asset</td>
-</tr>
-<tr>
-<td>P_COGS_ACCT</td>
-<td>Expense</td>
-<td>Account for the cost of the good sold. It is used in the shipment of the product</td>
-<td>Cost of goods sold</td>
-</tr>
-<tr>
-<td>P_COGS_RETURN_ACCT</td>
-<td>Expense</td>
-<td>Account for the cost of the good return. It is used in the shipment of a return of a product</td>
-<td>Cost of goods returned</td>
-</tr>
-<tr>
-<td>P_EXPENSE_ACCT</td>
-<td>Expense</td>
-<td>Account used for the expenses from purchase invoices</td>
-<td>Service costs</td>
-</tr>
-<tr>
-<td>P_INVOICEPRICEVARIANCE_ACCT</td>
-<td>Expense</td>
-<td>Invoice price variance</td>
-<td>Invoice price variance</td>
-</tr>
-<tr>
-<td>P_REVENUE_ACCT</td>
-<td>Revenue</td>
-<td>Account used for the revenues from sale invoices</td>
-<td>Sales</td>
-</tr>
-<tr>
-<td>P_REVENUE_RETURN_ACCT</td>
-<td>Revenue</td>
-<td>Account used for the returns from sale invoices</td>
-<td>Returns</td>
-</tr>
-<tr>
-<td>RETAINEDEARNING_ACCT</td>
-<td>Owner's Equity</td>
-<td>Account used for profits and losses of previous periods. It receives the value of income summary if it is defined</td>
-<td>Retained earnings</td>
-</tr>
-<tr>
-<td>SUSPENSEBALANCING_ACCT</td>
-<td>Memo</td>
-<td>Account used in the accounting process if the accounting entry is not balanced and it is defined to produce an accounting entry</td>
-<td>Suspense Balancing</td>
-</tr>
-<tr>
-<td>SUSPENSEERROR_ACCT</td>
-<td>Memo</td>
-<td>Account used when the accounting process produces an error and it is defined to produce an accounting entry</td>
-<td>Suspense Error</td>
-</tr>
-<tr>
-<td>T_CREDIT_ACCT</td>
-<td>Asset</td>
-<td>Tax that is due to the company</td>
-<td>Tax Receivables</td>
-</tr>
-<tr>
-<td>T_CREDIT_TRANS_ACCT</td>
-<td>Asset</td>
-<td>Transitory Account for the Cash VAT that is not yet paid to the company</td>
-<td>Tax Transitory Receivables</td>
-</tr>
-<tr>
-<td>T_DUE_ACCT</td>
-<td>Liability</td>
-<td>Tax owed by the company</td>
-<td>Tax Due</td>
-</tr>
-<tr>
-<td>T_DUE_TRANS_ACCT</td>
-<td>Liability</td>
-<td>Transitory Account for the Cash VAT that is not yet collected by the company</td>
-<td>Tax Transitory Due</td>
-</tr>
-<tr>
-<td>V_LIABILITY_ACCT</td>
-<td>Liability</td>
-<td>Account for the payments due for an invoice. They are created in the invoice process and cancelled when the payment is made or cancelled</td>
-<td>Accounts payable</td>
-</tr>
-<tr>
-<td>V_PREPAYMENT_ACCT</td>
-<td>Liability</td>
-<td>The Vendor Prepayment Account indicates the account used to record prepayments from a vendor. Any payment against an order or any payment generating credit is considered as a prepayment.</td>
-<td>Vendor Prepayment</td>
-</tr>
-<tr>
-<td>W_DIFFERENCES_ACCT</td>
-<td>Expense</td>
-<td>Gains or losses due to differences in the inventory</td>
-<td>Inventory loss</td>
-</tr>
-<tr>
-<td>W_INVENTORY_ACCT</td>
-<td>Asset</td>
-<td>Account used for recording the value of your inventory</td>
-<td>Inventory Asset Account</td>
-</tr>
-<tr>
-<td>WRITEOFF_ACCT</td>
-<td>Expense</td>
-<td>Account used for irrecoverable amounts</td>
-<td>Bad debts</td>
-</tr>
-</tbody>
-</table>
-<h2 id="exporting-the-chart-of-accounts-to-the-csv-file">Exporting the Chart of Accounts to the CSV file</h2>
-<p>Once we have entered all the accounts into our spreadsheet, it is time to export it to a CSV file. When exporting, the software will allow you to configure the concrete CSV format to use. It is important to ensure the following values are entered:</p>
-<ul>
-<li>Character set: <em>UTF-8</em></li>
-<li>Field delimiter: , (comma)</li>
-<li>Text delimiter: " (double quote)</li>
-</ul>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/CSVfile_Export.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/CSVfile_Export.png" /></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you afterward want to edit this CSV file in your spreadsheet software, remember to use this configuration when opening it.</p>
+<p>The chart of accounts (also called account tree) is a list of the accounts available to post entries which can be structured in a way to get meaningful financial reports such as Balance Sheet and P&amp;L.</p>
+<p>In some countries, it is required to have a specific chart of accounts to be used in the statutory books; in some other countries this legal requirement does not exist and a “sample” chart of accounts should be enough. Finally it should also be possible for a country to have more than one official chart of accounts, depending for example on the organization's size or main activity.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A Chart of Accounts Module for Etendo can only contain one chart of accounts. So, if you are working in a localization project for a country where several chart of accounts can be used, you must create independent modules including each chart of accounts CSV file. It will be up to the user to install and apply the chart of accounts module that fits particular needs.</p>
 </div>
-<h2 id="chart-of-accounts-in-etendo-classic">Chart of accounts in Etendo Classic</h2>
-<p>After the <a href="../How_to_run_an_initial_client_setup_process/">Initial client setup process</a>, the user can find the corresponding Chart of accounts in the <em>Account Tree</em> window of Etendo Classic.</p>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/chartofaccountsics.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/chartofaccountsics.png" /></a></p>
+<h2 id="creating-the-csv-file">Creating the CSV file</h2>
+<p>The first step for creating a chart of accounts module is to write the CSV file with the list of accounts we want to include. All the information can be found in <a href="../how-to-create-accounts-files/">How to Create Accounts Files</a>.</p>
+<h2 id="testing-the-csv-file">Testing the CSV file</h2>
+<p>Before creating the Chart of Accounts module, we should first check that the CSV file has no structural or logical errors. This can be easily done in two steps:</p>
+<ol>
+<li>
+<p>The first one is using a testing spreadsheet provided by Etendo that will detect any structural error, like missing search keys, wrong values in Element Level, Parent_Value or Show Value Condition columns, etc.</p>
+</li>
+<li>
+<p>The second check can be directly executed through the ERP. It just consists on importing our CSV file when running the Initial Client Setup process.
+Finally, there is also recommended to create some accounting entries for every transactional document and ensure the accounting report information is OK.</p>
+</li>
+</ol>
+<h2 id="creating-the-chart-of-accounts-module">Creating the Chart of Accounts module</h2>
+<p>The remaining step is clearly the easiest one, which is just including the CSV file into our Chart of Accounts module.</p>
+<p>A Chart of Accounts module is like any other module, but it has just the following considerations:</p>
+<ul>
+<li>
+<p>The CSV file must be included into the <code>referencedata/accounts/</code> directory of our module.</p>
+</li>
+<li>
+<p>The file must be renamed to <code>COA.csv</code>. So the directory structure for our module should look like:</p>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> &lt;module java package name&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   ├── referencedata 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   │   └── accounts 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   │       └── COA.csv 
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   └── src-db 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>       └──  database 
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>           └── sourcedata 
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>             ├── AD_DATASET.xml 
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>             ├── AD_MENU.xml 
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>             ├── AD_MODULE_DBPREFIX.xml 
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>             ├── AD_MODULE_DEPENDENCY.xml 
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>             ├── AD_MODULE.xml 
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>             ├── AD_PACKAGE.xml 
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>             ├── AD_PROCESS_PARA.xml 
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>             ├── AD_PROCESS.xml 
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>             └── AD_TREENODE.xml            
+</span></code></pre></div>
+<ul>
+<li>
+<p>When defining the module inside the Application Dictionary, the only important considerations we must have are:</p>
+<ul>
+<li>
+<p>Set the module type to <em>Module</em></p>
+</li>
+<li>
+<p>Set the <em>Has Chart of Account</em> checkbox</p>
+</li>
+<li>
+<p>Remember to add the <em>dependency to Core</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="publishing-the-chart-of-accounts-module">Publishing the Chart of Accounts Module</h3>
+<p>The way to package a chart of accounts module is similar to the <a href="../how-to-publish-modules-to-github-repository/">how to publish modules to github repository</a> process.</p>
+<p>The summarized process is:</p>
+<ul>
+<li>
+<p>Create the module's definition in the Application Dictionary. You should follow the <a href="../../concepts/naming-guidelines-for-modules/">Naming guidelines for modules</a>. Remember to register the module in case you want to publish it in the Forge.</p>
+</li>
+<li>
+<p>Set the <em>Has Chart of Account</em> checkbox and add a <em>dependency to Core</em>.</p>
+</li>
+<li>
+<p>Export the database to create the file structure</p>
+</li>
+</ul>
+<div class="language-text highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  ./gradlew export.database
+</span></code></pre></div>
+<ul>
+<li>
+<p>Save the <code>COA.csv</code> file inside the module's <code>referencedata/accounts/</code> directory. You should manually create this directory structure if necessary.</p>
+</li>
+<li>
+<p>Publish the chart of accounts module</p>
+</li>
+</ul>
+<div class="language-text highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  ./gradlew publishVersion -Ppkg=&lt;module javapackage&gt;
+</span></code></pre></div>
+<h2 id="translating-a-chart-of-accounts">Translating a Chart of Accounts</h2>
+<p>In some countries it can be useful to have the same chart of accounts translated into several languages. Unfortunatelly Etendo does not support yet the translation of chart of accounts.</p>
+<p>If you are in this situation, you have two possible workarounds:</p>
+<ul>
+<li>
+<p>Create several chart of accounts modules for different languages. The structure of the chart of accounts file will be exactly the same, just changing the account names and descriptions for each language. This solution is perfect for companies that want to work in just one language, although there are several official languages in the country. In this case the administrator must decide at the beginning of the ERP implementation, the language to use for the chart of accounts and he will not be able to change it in the future.</p>
+</li>
+<li>
+<p>The other possibility is to create just one chart of accounts module and, once applied in an instance, manually translate the elements value inside the Account Tree window. The drawback of this method is that the translation can't be distributed to other instances and the process of translating must be repeated manually, or by the implementation of a script that automatically translates the elements based on the Element Value search key.</p>
+</li>
+</ul>
 <hr />
-<p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Creating_Accounts_Files" target="_blank">Creating Account Files</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/How_to_create_a_Chart_of_Accounts_Module" target="_blank">How to create a chart of accounts module</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
