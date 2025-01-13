@@ -40,28 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
         sectionFilter.addEventListener("change", function () {
             applyFilter();
         });
-
-
-        if (searchInput) {
-            searchInput.addEventListener('input', function() {
-                const query = searchInput.value.trim().toLowerCase();
-  
-                const results = window.search(query).sort((a, b) => {
-                    // Priorizar coincidencias exactas
-                    const aExactMatch = a.title.toLowerCase() === query || a.text.toLowerCase().includes(query);
-                    const bExactMatch = b.title.toLowerCase() === query || b.text.toLowerCase().includes(query);
-  
-                    if (aExactMatch && !bExactMatch) return -1;
-                    if (!aExactMatch && bExactMatch) return 1;
-  
-                    // Mantener el orden por relevancia
-                    return b.rank - a.rank;
-                });
-  
-                // Mostrar resultados ordenados
-                displaySearchResults(results);
-            });
-        }
-
+        
     }
 });
