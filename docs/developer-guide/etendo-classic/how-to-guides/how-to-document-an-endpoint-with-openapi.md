@@ -70,7 +70,8 @@ An OpenAPI Request record represents a single API endpoint in your application. 
 2. **Description**: Add the endpoint description.
 3. **Java Class**: Specify the Java class created that extends the `OpenAPIDefaultRequest` class.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_document_an_endpoint_with_OpenAPI-0.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-0.png)
+
 
 An **OpenAPI Flow** groups related API endpoints under a single category or "flow." These flows make it easier to organize and navigate the API documentation.
 
@@ -80,7 +81,7 @@ Each OpenAPI Flow record can:
 - Include one or more OpenAPI Requests through the `Endpoints` tab.
 - Specify which HTTP methods (GET, GET by ID, POST, PUT) the endpoints support using the `Endpoints` tab fields. When these fields are checked, they generate the corresponding endpoint methods documentation.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_document_an_endpoint_with_OpenAPI-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-1.png)
 
 To ensure an OpenAPI Request appears in Swagger documentation, it must be linked to an OpenAPI Flow. This ensures logical grouping and visibility.
 

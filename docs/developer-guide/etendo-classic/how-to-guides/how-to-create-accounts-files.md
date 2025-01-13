@@ -112,7 +112,7 @@ Once we have entered all the accounts into our spreadsheet, it is time to export
 
 ## Chart of accounts in Etendo Classic
 
-After the [Initial client setup process](How_to_run_an_initial_client_setup_process.md), the user can find the corresponding Chart of accounts in the *Account Tree* window of Etendo Classic.
+After the [Initial client setup process](how-to-run-an-initial-client-setup-process.md), the user can find the corresponding Chart of accounts in the *Account Tree* window of Etendo Classic.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/chartofaccountsics.png)
 

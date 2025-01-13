@@ -274,7 +274,7 @@ For instance, the Spanish Localization Bundle includes
 -   the PYMES Spanish CoA.
 -   and the Abreviado Spanish CoA.
 
-After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) and the Initial Organization setup.
+After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the Initial Organization setup.
 
 On the other hand, some countries such as the USA do not require that specific level of detail.
 

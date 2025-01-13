@@ -92,7 +92,7 @@ This action creates:
 - a General Ledger configuration which is automatically linked to the Organization being created
 - and an Account Tree or Chart of Accounts which is also linked to the Organization being created
 
-This step does not create a Fiscal Calendar as the [Initial Client Setup](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
+This step does not create a Fiscal Calendar as the [Initial Client Setup](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
 
 !!! note
     This step does not imply to manage accounting within an organization, but just to include an accounting file or an accounting reference data in an organization.
