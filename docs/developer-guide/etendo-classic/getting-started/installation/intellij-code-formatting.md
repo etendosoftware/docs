@@ -1,6 +1,5 @@
 ---
 title: Code Formatting Style in IntelliJ
-section: "developer-guide"
 tags:
     - IntelliJ
     - Formatting
