@@ -8,15 +8,6 @@ title: Platform Extensions Bundle | Technical Documentation
 
 This bundle includes enhancements for platform functionalities in Etendo.
 
-## Dependency Manager
-
-:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
-
-This module allows access to all the available dependencies to add and configure them, and to check information about versions, validations, among other information.
-
-!!!info
-    For more information visit, [Dependency Manager developer guide](../platform/dependency-manager.md). 
-
 ## Docker Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.docker`
@@ -117,7 +108,7 @@ Then `./gradlew setup` must be executed.
 
 ## Etendo Webhooks
 
-**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
+It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
     For more information, visit the [Etendo Webhooks developer guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
@@ -251,10 +242,10 @@ public class NumberToWord_es extends NumberToWord {
 
 :octicons-package-16: Javapackage: `com.etendoerp.openapi`
 
-**Purpose**: This module module serves as an integration layer for documenting and exposing APIs within the Etendo ERP ecosystem. It enables developers to define, organize, and document API endpoints using the OpenAPI specification, ensuring compatibility with tools like Swagger for visualization and testing.
+This module module serves as an integration layer for documenting and exposing APIs within the Etendo ecosystem. It enables developers to define, organize, and document API endpoints using the OpenAPI specification, ensuring compatibility with tools like Swagger for visualization and testing.
 
 !!!info
-    For more information, visit [How to Document an Endpoint with OpenAPI guide](../../how-to-guides/how-to-document-an-endpoint-with-openapi.md). 
+    For more information, visit [How to Document an Endpoint with OpenAPI](../../how-to-guides/how-to-document-an-endpoint-with-openapi.md). 
 
 ## Print Document Web Service
 
@@ -316,7 +307,7 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 :octicons-package-16: Javapackage: `com.etendoerp.upload.file`
 
-**Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
+This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
 
 !!!info
     For more information, visit [How to Create a Standard Process Definition developer guide](../../how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
