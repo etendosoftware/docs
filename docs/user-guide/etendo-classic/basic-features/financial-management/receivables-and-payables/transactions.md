@@ -286,6 +286,16 @@ The settlement record is registered in the **Business Partner Settlement** windo
 
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+  
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module includes the Bank account column to the Add details pop-up window to be able to filter possible payments by bank account.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 ## Payment Proposal
 
@@ -686,6 +696,16 @@ The settlement record is registered in the **Business Partner Settlement** windo
 
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module includes the Bank account column to the Add details pop-up window to be able to filter possible payments by bank account.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 ## Financial Account
 
@@ -1681,7 +1701,7 @@ Some relevant fields to note are:
 
 ### Overview
 
-In the remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.
+In the Remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.
 
 A remittance is a group of payments (in/out) or orders/invoices which can be remitted to the bank for its payment. The bank will then manage either the collection of the money from the customers or the payment to the vendors/suppliers.
 
@@ -1714,7 +1734,7 @@ To be able to use this functionality, it is necessary to configure some aspects 
 ![Remittance window](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance-window.png)
 
 
-As shown in the image above, it is necessary to fill in the fields in the window and 3 different buttons appear so as to continue with the process.
+As shown in the image above, it is necessary to fill in the fields in the window and different buttons appear so as to continue with the process.
 
 
 #### Buttons
@@ -1727,11 +1747,25 @@ Using this button, the user is able to select a payment to be included in the re
 
 Using this button, the user processes the payments and groups lines according to the options shown in its corresponding pop-up window. 
 
+!!! info
+    If the Automated Remittance module in the Financial Extensions Bundle is installed, this process includes the date setting and the settlement of the remittance.  For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+   
+
 **Select Invoices and Orders**
 
 In the Remittance window, the *select invoices and orders* button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.
 
 ![filter.png](../../../../../assets/legacy/filter.png)
+
+**Protest Remittance**
+
+!!!info
+    This button is only available if the Automated Remittance module in the Financial Extensions Bundle is installed. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of future remittances.
+
+!!! info
+    For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
 
 ### Types of Remittances
 

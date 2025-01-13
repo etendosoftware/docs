@@ -29,7 +29,7 @@ organization using the `Enterprise Module Management` window. They contain
 Organization level information.
 
 Client/Organization-level datasets work like Organization-level datasets, but
-can also be applied on [Initial Client Setup](../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) when creating a new client. They
+can also be applied on [Initial Client Setup](../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) when creating a new client. They
 contain Organization/Client level information.
 
 ##  Main Concepts
@@ -167,7 +167,7 @@ Select the organization and the module from which to import the reference data i
 
 
 !!!note
-    If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) utility to create a new client.
+    If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) utility to create a new client.
 
 ---
   

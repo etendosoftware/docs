@@ -3,7 +3,7 @@ title: Install Etendo Development Environment
 search:
   boost: 2
 tags: 
-    - Intall
+    - Install
     - Development
     - Develop
     - Install Etendo

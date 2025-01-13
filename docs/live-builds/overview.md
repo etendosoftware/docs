@@ -3,6 +3,8 @@ tags:
   - Live Builds
   - Postgres
   - Oracle
+  - Livebuild
+  - Liebuilds
 hide:
     - navigation
     - toc
@@ -19,9 +21,9 @@ Step into a world of exploration using either Postgres or Oracle as database man
 
 This page holds live testing instances. These live builds are updated and reset once per day at 03:30 UTC.
 
-[ :simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
+[ :simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
 
-[:simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+[:simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 ??? warning "Oracle"
     If you need to test on Oracle, please feel free to [contact us](../help-and-support/overview.md).
