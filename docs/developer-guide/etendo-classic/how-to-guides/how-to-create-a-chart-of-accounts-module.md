@@ -20,7 +20,7 @@ In some countries, it is required to have a specific chart of accounts to be use
 
 ## Creating the CSV file
 
-The first step for creating a chart of accounts module is to write the CSV file with the list of accounts we want to include. All the information can be found in [How to Create Accounts Files](How-to-Create-Accounts-Files.md).
+The first step for creating a chart of accounts module is to write the CSV file with the list of accounts we want to include. All the information can be found in [How to Create Accounts Files](how-to-create-accounts-files.md).
 
 ## Testing the CSV file
 
