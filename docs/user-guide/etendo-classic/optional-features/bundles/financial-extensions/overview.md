@@ -22,6 +22,28 @@ This module allows setting a non deductible tax's amount to a specified financia
 !!! info
     For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
+### Advanced Bank Account Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+
+!!! info
+    This functionality is available in the following windows:
+
+    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
+    - [Sales invoice]()
+    - [Purchase Invoice]()
+    - [Sales order]()
+    - [Purchase order]()
+    - [Payment In]()
+    - [Payment Out]()
+
+    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+
+
 ### Advanced Business Partner Settlement
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
@@ -65,6 +87,15 @@ The new Amortization report allows downloading excel reports about information o
 
 !!! info
     For more information, visit [the Asset Amortization Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
+
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance`
+
+This functionality allows the user to automatically process and protest remittances.
+
+!!! info
+    For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
 
 ### Bank Integration PSD2
 
@@ -230,3 +261,4 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
 
 !!!info
     For more information, visit the [VAT Regularization User Guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
+
