@@ -516,6 +516,7 @@ nav:
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
         - Overview: developer-guide/etendo-copilot/available-tools/overview.md
+        - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
         - Create Reference Tool: developer-guide/etendo-copilot/available-tools/create-reference-tool.md
