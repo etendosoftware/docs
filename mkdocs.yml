@@ -532,11 +532,13 @@ nav:
         - Send Email Tool: developer-guide/etendo-copilot/available-tools/send-email-tool.md
         - Tavily Tool: developer-guide/etendo-copilot/available-tools/tavily-tool.md
         - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
+        - Test Run Tool: developer-guide/etendo-copilot/available-tools/test-run-tool.md
         - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides: 
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
+        - How to execute Copilot through the console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
     - Etendo Mobile:
       - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
