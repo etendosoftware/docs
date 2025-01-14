@@ -6,7 +6,7 @@ site_url: https://docs.etendo.software
 theme:
   name: material
   logo: assets/logo.png
-  custom_dir: overrides/
+  custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
   font:
@@ -22,6 +22,7 @@ theme:
     - search.suggest
     - search.share
     - search.highlight
+    - search.no_results
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -45,9 +46,14 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
-exclude_docs: |
+  - assets/stylesheets/custom-styles.css
+
+
+exclude_docs:
   .*
 
+extra_javascript:
+  - assets/javascripts/custom-search.js
 
 markdown_extensions:
   - abbr
@@ -76,9 +82,18 @@ markdown_extensions:
 
 plugins:
   - search:
-      separator: '[\s\.\-]+'
+      indexing: full
+      prebuild_index: true
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang:
         - en
+      exact_phrase: true
+      index_all_content: true  
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer    
+         
   - tags
   - glightbox
   - rss:
@@ -120,8 +135,30 @@ extra:
   analytics:
     provider: google
     property: G-VB6Z77ZMPT
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: -1
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
-copyright: Copyright &copy; 2021 - 2024 Etendo Software
+  consent:
+    title: We value your privacy
+    description: >- 
+      We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from. By clicking "Accept", you consent to our use of cookies. <a href="https://etendo.software/en/cookie-policy-2/" target="_blank">Cookie Policy</a>
+    actions:
+      - accept
+      - manage 
+    
+copyright: Copyright &copy; 2021 - 2025 Etendo Software
 
 nav:
   - Home : index.md
@@ -347,7 +384,7 @@ nav:
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process.md
         - How to Create a Callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout.md
         - How to Create a Callout that Extends from Another Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout.md
-        - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module.md 
+        - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md 
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
         - How to create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
 #        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
@@ -379,7 +416,7 @@ nav:
 #        - How To Create a Trigger: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Trigger.md
 #        - How to create a Trigger: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger.md
         - How to Create a Window: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window.md
-        - How to Create Accounts Files: developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files.md
+        - How to Create Accounts Files: developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files.md
         - How to Create an Alert: developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert.md
 #        - How to Create an External Connection Pool: developer-guide/etendo-classic/how-to-guides/How_to_Create_an_External_Connection_Pool.md
 #        - How To Create An Import Process With Images: developer-guide/etendo-classic/how-to-guides/How_To_Create_An_Import_Process_With_Images.md
@@ -403,7 +440,8 @@ nav:
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
 #        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1.md
 #        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
-        - How to embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab.md
+        - How to Document an Endpoint with OpenAPI: developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md
+        - How to Embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab.md
 #        - How To Enable Customization Of The Login Page: developer-guide/etendo-classic/how-to-guides/How_To_Enable_Customization_Of_The_Login_Page.md
         - How To Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
@@ -424,7 +462,7 @@ nav:
         - How to Publish Modules to a GitHub Repository: developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md
 #        - How to Restrict the Movements of Nodes in a Tree: developer-guide/etendo-classic/how-to-guides/How_to_Restrict_the_Movements_of_Nodes_in_a_Tree.md
 #        - How to retrieve parents node by level in a tree: developer-guide/etendo-classic/how-to-guides/How_to_retrieve_parents_node_by_level_in_a_tree.md
-        - How to Run an Initial Client Setup Process: developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md
+        - How to Run an Initial Client Setup Process: developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md
 #        - How to sell a module: developer-guide/etendo-classic/how-to-guides/How_to_sell_a_module.md
 #        - How to send emails on events: developer-guide/etendo-classic/how-to-guides/How_to_send_emails_on_events.md
 #        - How to setup Eclipse IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Eclipse_IDE.md

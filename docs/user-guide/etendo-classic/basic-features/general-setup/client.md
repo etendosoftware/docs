@@ -16,7 +16,7 @@ Normally, it is enough creating just one Client which hosts multiple organizatio
 - besides, each organization can also manage its own master data and have its own transactional data
 - finally, a Client cannot share any master data with another Client.
 
-Clients are created by running the [Initial Client setup process](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) available for the "System Administrator" role.
+Clients are created by running the [Initial Client setup process](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) available for the "System Administrator" role.
 
 Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.
 

@@ -809,7 +809,7 @@ The language is automatically available once the localization bundle has been su
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](https://docs.etendo.software/latest/general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or the [Initial Organization setup](https://docs.etendo.software/latest/general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
 
 ###### Initial Client Setup
 
@@ -820,7 +820,7 @@ Above means that certain configurations such as users, customers, vendors and ot
 !!! info
     Each client can host at least one or even more than one organization that can be used to model your enterprise.
 
-The [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) is the process which creates a Client in Etendo. A Client cannot be created manually.
+The [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) is the process which creates a Client in Etendo. A Client cannot be created manually.
 
 This process besides creating a Client allows selecting the reference data included in the bundle/s already installed.
 All that data, if applied to the Client, will be shared by all the organizations which belong to the Client.
@@ -1469,7 +1469,7 @@ Normally, it is enough creating just one Client which hosts multiple organizatio
 - besides, each organization can also manage its own master data and have its own transactional data
 - finally, a Client cannot share any master data with another Client.
 
-Clients are created by running the [Initial Client setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) available for the "System Administrator" role.
+Clients are created by running the [Initial Client setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) available for the "System Administrator" role.
 
 Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.
 
@@ -1727,7 +1727,7 @@ This action creates:
 - a General Ledger configuration which is automatically linked to the Organization being created
 - and an Account Tree or Chart of Accounts which is also linked to the Organization being created
 
-This step does not create a Fiscal Calendar as the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
+This step does not create a Fiscal Calendar as the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
 
 !!! note
     This step does not imply to manage accounting within an organization, but just to include an accounting file or an accounting reference data in an organization.
@@ -2206,7 +2206,7 @@ The admin user has several roles assigned:
 - the _F&B International Group Admin Role_ demo data (this one is also assigned to it by default)
     - this role enables admin users to have "F&B demo data" Client admin rights.
 - and besides:
-    - every time a new "Client" is created by running the [Initial Client Setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md), Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
+    - every time a new "Client" is created by running the [Initial Client Setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md), Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
       - the client admin role enables "Client Admin" user to have admin access rights to that Client and all the organization/s of that client once signed in.
       - the newly created client admin role is also assigned to the admin user by default, therefore it will be possible for the admin user to access the newly created Client.
 
@@ -17913,7 +17913,7 @@ For instance, the Spanish Localization Bundle includes
 -   the PYMES Spanish CoA.
 -   and the Abreviado Spanish CoA.
 
-After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) and the Initial Organization setup.
+After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the Initial Organization setup.
 
 On the other hand, some countries such as the USA do not require that specific level of detail.
 
@@ -33678,7 +33678,7 @@ organization using the `Enterprise Module Management` window. They contain
 Organization level information.
 
 Client/Organization-level datasets work like Organization-level datasets, but
-can also be applied on [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) when creating a new client. They
+can also be applied on [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) when creating a new client. They
 contain Organization/Client level information.
 
 ####  Main Concepts
@@ -33816,7 +33816,7 @@ Select the organization and the module from which to import the reference data i
 
 
 !!!note
-    If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) utility to create a new client.
+    If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) utility to create a new client.
 
 ---
   
@@ -36831,7 +36831,7 @@ This work is a derivative of [How to Create a Callout that Extends from Another 
 # Article Title: How to Create a Chart of Accounts Module
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Chart of Accounts Module
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module
 ## Article Content: 
 ### How to Create a Chart of Accounts Module
 
@@ -36846,7 +36846,7 @@ In some countries, it is required to have a specific chart of accounts to be use
 
 #### Creating the CSV file
 
-The first step for creating a chart of accounts module is to write the CSV file with the list of accounts we want to include. All the information can be found in [How to Create Accounts Files](How-to-Create-Accounts-Files.md).
+The first step for creating a chart of accounts module is to write the CSV file with the list of accounts we want to include. All the information can be found in [How to Create Accounts Files](how-to-create-accounts-files.md).
 
 #### Testing the CSV file
 
@@ -40357,7 +40357,7 @@ This work is a derivative of [How to create a window](http://wiki.openbravo.com/
 # Article Title: How to Create Accounts Files
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Accounts Files
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files
 ## Article Content: 
 ### How to Create Accounts Files
 
@@ -40463,7 +40463,7 @@ Once we have entered all the accounts into our spreadsheet, it is time to export
 
 #### Chart of accounts in Etendo Classic
 
-After the [Initial client setup process](How_to_run_an_initial_client_setup_process.md), the user can find the corresponding Chart of accounts in the *Account Tree* window of Etendo Classic.
+After the [Initial client setup process](how-to-run-an-initial-client-setup-process.md), the user can find the corresponding Chart of accounts in the *Account Tree* window of Etendo Classic.
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/chartofaccountsics.png)
 
@@ -42829,8 +42829,130 @@ This work is a derivative of [How to develop a DAL background process](http://wi
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to embed a Widget into a Window Tab
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to embed a Widget into a Window Tab
+# Article Title: How to Document an Endpoint with OpenAPI
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Document an Endpoint with OpenAPI
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi
+## Article Content: 
+### How to Document an Endpoint with OpenAPI
+
+#### Overview
+
+This documentation details the steps to document API endpoints using the OpenAPI specification. By leveraging Swagger, developers can ensure their APIs are well-documented, standardized, and easy to integrate.
+
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+
+#### Define a New OpenAPIDefaultRequest
+
+To define a new `OpenAPIDefaultRequest`, you need to extend the abstract class `OpenAPIDefaultRequest`.
+
+Here is an example:
+
+```java
+package com.etendoerp.etendorx.openapi;
+
+public class ImageUploadOpenAPI extends OpenAPIDefaultRequest {
+  public static final String ETENDO_ID_PATTERN = "^[0-9a-fA-F]{1,32}$";
+
+  @Override
+  protected Class<?>[] getClasses() {
+    return new Class<?>[]{ com.etendoerp.etendorx.services.ImageUploadServlet.class };
+  }
+
+  @Override
+  protected String getEndpointPath() {
+    return "/sws/com.etendoerp.etendorx.imageUpload/";
+  }
+
+  @Override
+  Operation getPOSTEndpoint() {
+    Operation endpoint = new Operation();
+    endpoint.setSummary("Upload an image to EtendoERP");
+    endpoint.setDescription("Upload an image to EtendoERP, it can use a configuration associated with a Column ID to automatically resize the image.");
+
+    Schema reqSchema = new Schema()
+        .addProperty("filename", new StringSchema().description("The name of the file").example("image.jpg"))
+        .addProperty("columnId", new StringSchema().description("The column ID where the size and resize configuration is stored").pattern(ETENDO_ID_PATTERN))
+        .addProperty("base64Image", new StringSchema().description("The base64 encoded image"));
+    reqSchema.required(List.of("filename", "base64Image"));
+
+    RequestBody requestBody = new RequestBody().content(new Content()
+        .addMediaType("application/json", new MediaType().schema(reqSchema)));
+    endpoint.requestBody(requestBody);
+
+    return endpoint;
+  }
+}
+```
+
+This class specifies a POST endpoint for uploading images. It defines the endpoint path, request body schema, and required properties.
+
+
+#### Define an OpenAPI Request & Flow
+
+An OpenAPI Request record represents a single API endpoint in your application. OpenAPI Requests are defined in the window `OpenAPI Request`.
+
+1. **Type**: Set the type to "Default".
+2. **Description**: Add the endpoint description.
+3. **Java Class**: Specify the Java class created that extends the `OpenAPIDefaultRequest` class.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-0.png)
+
+
+An **OpenAPI Flow** groups related API endpoints under a single category or "flow." These flows make it easier to organize and navigate the API documentation.
+
+Each OpenAPI Flow record can:
+
+- Define a flow name and description.
+- Include one or more OpenAPI Requests through the `Endpoints` tab.
+- Specify which HTTP methods (GET, GET by ID, POST, PUT) the endpoints support using the `Endpoints` tab fields. When these fields are checked, they generate the corresponding endpoint methods documentation.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-1.png)
+
+To ensure an OpenAPI Request appears in Swagger documentation, it must be linked to an OpenAPI Flow. This ensures logical grouping and visibility.
+
+#### Check Swagger
+
+The new endpoint documentation should now be visible at the Swagger UI URL. The URL might vary depending on your deployment but typically follows the format:
+
+```
+http://localhost:8080/etendo/web/com.etendoerp.openapi/#/
+```
+
+Verify that the new endpoint appears under the defined tag and displays the correct request and response schemas.
+
+
+#### Key Components of OpenAPI Integration
+
+##### OpenAPIDefaultRequest
+
+The `OpenAPIDefaultRequest` abstract class provides the base functionality for adding default API endpoints to Swagger documentation. It:
+
+- Retrieves related tags and flows.
+- Adds definitions to the OpenAPI object.
+- Supports GET, POST, and PUT operations.
+
+##### Example of an OpenAPI Endpoint Implementation
+
+The `ImageUploadOpenAPI` class demonstrates:
+
+- **Endpoint Path**: `/sws/com.etendoerp.etendorx.imageUpload/`
+- **POST Operation**: Defines required properties (`filename`, `base64Image`) and validates input.
+- **Java Class Association**: Links to `ImageUploadServlet` for handling requests.
+
+##### OpenAPIEndpoint Interface
+
+This interface ensures consistent API endpoint behavior by defining methods such as:
+
+- `boolean isValid(String tag)`
+- `void add(OpenAPI openAPI)`
+
+For example, the `ImageUploadOpenAPI` class implements these methods to validate tags and add endpoint definitions to the OpenAPI object.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Embed a Widget into a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Embed a Widget into a Window Tab
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab
 ## Article Content: 
@@ -43600,7 +43722,7 @@ Add to the **beans.xml**
 # Article Title: How to Run an Initial Client Setup Process
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Run an Initial Client Setup Process
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process
 ## Article Content: 
 ###  How to Run an Initial Client Setup Process
 
@@ -43659,7 +43781,7 @@ Etendo also allows choosing the accounting `CSV` file with the corresponding cha
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
 
 !!!info
-    For more information, read [How to Create Accounts Files](How-to-Create-Accounts-Files.md) 
+    For more information, read [How to Create Accounts Files](how-to-create-accounts-files.md) 
 
 #### Module configuration
 
@@ -45016,15 +45138,6 @@ A menu will be shown where you can choose multiple options to be performed.
 
 This bundle includes enhancements for platform functionalities in Etendo.
 
-#### Dependency Manager
-
-:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
-
-This module allows access to all the available dependencies to add and configure them, and to check information about versions, validations, among other information.
-
-!!!info
-    For more information visit, [Dependency Manager developer guide](https://docs.etendo.software/latest/platform/dependency-manager.md). 
-
 #### Docker Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.docker`
@@ -45125,7 +45238,7 @@ Then `./gradlew setup` must be executed.
 
 #### Etendo Webhooks
 
-**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
+It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
     For more information, visit the [Etendo Webhooks developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
@@ -45255,6 +45368,15 @@ public class NumberToWord_es extends NumberToWord {
 }
 ```
 
+#### OpenAPI
+
+:octicons-package-16: Javapackage: `com.etendoerp.openapi`
+
+This module module serves as an integration layer for documenting and exposing APIs within the Etendo ecosystem. It enables developers to define, organize, and document API endpoints using the OpenAPI specification, ensuring compatibility with tools like Swagger for visualization and testing.
+
+!!!info
+    For more information, visit [How to Document an Endpoint with OpenAPI](https://docs.etendo.software/latest/how-to-guides/how-to-document-an-endpoint-with-openapi.md). 
+
 #### Print Document Web Service
 
 :octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
@@ -45315,7 +45437,7 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 :octicons-package-16: Javapackage: `com.etendoerp.upload.file`
 
-**Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
+This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
 
 !!!info
     For more information, visit [How to Create a Standard Process Definition developer guide](https://docs.etendo.software/latest/how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
@@ -52926,7 +53048,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.9.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.0){target="_blank"} | 20/12/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.1){target="_blank"} | 10/01/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.0){target="_blank"} | 20/12/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.4](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.4){target="_blank"} | 13/12/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.1){target="_blank"} | 15/11/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.0){target="_blank"} | 08/11/2024 | 23.4.0 | * | C | :white_check_mark: |
