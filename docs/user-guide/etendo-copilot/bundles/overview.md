@@ -116,8 +116,6 @@ The **Dev Assistant** is designed to develop other assistants to facilitate proc
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
 
 !!! info
