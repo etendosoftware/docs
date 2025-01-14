@@ -6,7 +6,7 @@ site_url: https://docs.etendo.software
 theme:
   name: material
   logo: assets/logo.png
-  custom_dir: overrides/
+  custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
   font:
@@ -22,6 +22,7 @@ theme:
     - search.suggest
     - search.share
     - search.highlight
+    - search.no_results
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -45,9 +46,14 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
-exclude_docs: |
+  - assets/stylesheets/custom-styles.css
+
+
+exclude_docs:
   .*
 
+extra_javascript:
+  - assets/javascripts/custom-search.js
 
 markdown_extensions:
   - abbr
@@ -76,9 +82,18 @@ markdown_extensions:
 
 plugins:
   - search:
-      separator: '[\s\.\-]+'
+      indexing: full
+      prebuild_index: true
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang:
         - en
+      exact_phrase: true
+      index_all_content: true  
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer    
+         
   - tags
   - glightbox
   - rss:
@@ -120,8 +135,30 @@ extra:
   analytics:
     provider: google
     property: G-VB6Z77ZMPT
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: -1
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
-copyright: Copyright &copy; 2021 - 2024 Etendo Software
+  consent:
+    title: We value your privacy
+    description: >- 
+      We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from. By clicking "Accept", you consent to our use of cookies. <a href="https://etendo.software/en/cookie-policy-2/" target="_blank">Cookie Policy</a>
+    actions:
+      - accept
+      - manage 
+    
+copyright: Copyright &copy; 2021 - 2025 Etendo Software
 
 nav:
   - Home : index.md
