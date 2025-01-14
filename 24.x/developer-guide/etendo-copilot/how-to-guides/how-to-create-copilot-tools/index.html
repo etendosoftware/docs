@@ -14,7 +14,7 @@
         <link rel="prev" href="../../available-tools/xml-translation-tool/">
       
       
-        <link rel="next" href="../how-to-export-tools-and-assistants/">
+        <link rel="next" href="../how-to-execute-copilot-through-console/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
@@ -7249,6 +7249,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../available-tools/test-run-tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test Run Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../available-tools/uncompress-tool/" class="md-nav__link">
         
   
@@ -7506,6 +7527,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-execute-copilot-through-console/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to execute Copilot through the console
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -9286,10 +9328,10 @@ For the case of the PingTool, we will create a class called <code>PingToolInput<
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
 </span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
 </span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="k">class</span><span class="w"> </span><span class="nc">PingTool</span><span class="p">(</span><span class="n">ToolWrapper</span><span class="p">):</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;PingTool&#39;</span>  <span class="c1"># Name of the tool</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;PingTool&#39;</span>  <span class="c1"># Name of the tool</span>
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="c1"># Description of the tool.</span>
 </span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="c1"># This description tells Copilot what the tool does and based on this description it will decide if this tool will solve the user&#39;s request.</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">description</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">(</span>
 </span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;This tool receives a hostname and returns the ping result.&#39;&#39;&#39;</span><span class="p">)</span>
 </span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    <span class="n">args_schema</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">ToolInput</span><span class="p">]</span> <span class="o">=</span> <span class="n">PingToolInput</span>  <span class="c1"># The args_schema attribute must be a Pydantic model that defines the inputs of the tool.</span>
 </span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
@@ -9374,9 +9416,7 @@ Once the <em>Copilot Tool</em> is defined, this tool must be associated to the a
 </li>
 <li>
 <p>Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
-To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;What tools do you have available?&quot;</span>
-</span></code></pre></div>
+To test the developed Tool, you can ask to an assistant that has the tool associated. The assistant will execute the tool and return the result.</p>
 </li>
 </ol>
 <h2 id="interacting-with-etendo">Interacting with Etendo</h2>
@@ -9385,34 +9425,34 @@ To test the developed Tool, you can ask Copilot to run it or, for example, to li
 <p>The Etendo Classic Event Webhooks API is a standard feature in Etendo, and it allows for easier integration with tools through Copilot utilities. For example, if you need to trigger a WebHook named <code>UpdateOrderDescription</code> to update an order in Etendo Classic, receiving a document number and a description as parameters, you can do so by creating a specific tool.</p>
 <h3 id="example-tool-updatesotool">Example Tool: UpdateSOTool</h3>
 <p>Here is an example of a tool that triggers the <code>UpdateOrderDescription</code> WebHook:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Dict</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.etendo_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">call_webhook</span><span class="p">,</span> <span class="n">get_etendo_token</span><span class="p">,</span> <span class="n">get_etendo_host</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.tool_input</span><span class="w"> </span><span class="kn">import</span> <span class="n">ToolInput</span><span class="p">,</span> <span class="n">ToolField</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.tool_wrapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">ToolWrapper</span><span class="p">,</span> <span class="n">ToolOutput</span><span class="p">,</span> <span class="n">ToolOutputMessage</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">UpdateSOToolInput</span><span class="p">(</span><span class="n">ToolInput</span><span class="p">):</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>   <span class="n">documentNo</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ToolField</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;DocumentNo of the Sales Order&quot;</span><span class="p">)</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>   <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ToolField</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;New description to set in the Sales Order&quot;</span><span class="p">)</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="k">class</span><span class="w"> </span><span class="nc">UpdateSOTool</span><span class="p">(</span><span class="n">ToolWrapper</span><span class="p">):</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>   <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;UpdateSOTool&quot;</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>   <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Set description in a Sales Order by DocumentNo2&quot;</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>   <span class="n">args_schema</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">ToolInput</span><span class="p">]</span> <span class="o">=</span> <span class="n">UpdateSOToolInput</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>   <span class="n">return_direct</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>   <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_params</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ToolOutput</span><span class="p">:</span>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>       <span class="n">documentNo</span> <span class="o">=</span> <span class="n">input_params</span><span class="p">[</span><span class="s1">&#39;documentNo&#39;</span><span class="p">]</span>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>       <span class="n">description</span> <span class="o">=</span> <span class="n">input_params</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>       <span class="n">token</span> <span class="o">=</span> <span class="n">get_etendo_token</span><span class="p">()</span>
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>       <span class="c1"># Build the body of the request</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>       <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>           <span class="s2">&quot;documentNo&quot;</span><span class="p">:</span> <span class="n">documentNo</span><span class="p">,</span>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>           <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">description</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>       <span class="p">}</span>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>       <span class="n">url</span> <span class="o">=</span> <span class="n">get_etendo_host</span><span class="p">()</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>       <span class="n">response</span> <span class="o">=</span> <span class="n">call_webhook</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">webhook_name</span><span class="o">=</span><span class="s2">&quot;UpdateOrderDescription&quot;</span><span class="p">,</span> <span class="n">access_token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">body_params</span><span class="o">=</span><span class="n">body</span><span class="p">)</span>
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>       <span class="k">return</span> <span class="n">ToolOutputMessage</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">response</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Dict</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.etendo_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">call_webhook</span><span class="p">,</span> <span class="n">get_etendo_token</span><span class="p">,</span> <span class="n">get_etendo_host</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.tool_input</span><span class="w"> </span><span class="kn">import</span> <span class="n">ToolInput</span><span class="p">,</span> <span class="n">ToolField</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.tool_wrapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">ToolWrapper</span><span class="p">,</span> <span class="n">ToolOutput</span><span class="p">,</span> <span class="n">ToolOutputMessage</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">UpdateSOToolInput</span><span class="p">(</span><span class="n">ToolInput</span><span class="p">):</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>   <span class="n">documentNo</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ToolField</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;DocumentNo of the Sales Order&quot;</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>   <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ToolField</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;New description to set in the Sales Order&quot;</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="k">class</span><span class="w"> </span><span class="nc">UpdateSOTool</span><span class="p">(</span><span class="n">ToolWrapper</span><span class="p">):</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>   <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;UpdateSOTool&quot;</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>   <span class="n">description</span><span class="p">:</span> <span class="nb">str</span>  <span class="o">=</span> <span class="s2">&quot;Set description in a Sales Order by DocumentNo2&quot;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>   <span class="n">args_schema</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">ToolInput</span><span class="p">]</span> <span class="o">=</span> <span class="n">UpdateSOToolInput</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>   <span class="n">return_direct</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>   <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_params</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ToolOutput</span><span class="p">:</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>       <span class="n">documentNo</span> <span class="o">=</span> <span class="n">input_params</span><span class="p">[</span><span class="s1">&#39;documentNo&#39;</span><span class="p">]</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>       <span class="n">description</span> <span class="o">=</span> <span class="n">input_params</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>       <span class="n">token</span> <span class="o">=</span> <span class="n">get_etendo_token</span><span class="p">()</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>       <span class="c1"># Build the body of the request</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>       <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>           <span class="s2">&quot;documentNo&quot;</span><span class="p">:</span> <span class="n">documentNo</span><span class="p">,</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>           <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">description</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>       <span class="p">}</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>       <span class="n">url</span> <span class="o">=</span> <span class="n">get_etendo_host</span><span class="p">()</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>       <span class="n">response</span> <span class="o">=</span> <span class="n">call_webhook</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">webhook_name</span><span class="o">=</span><span class="s2">&quot;UpdateOrderDescription&quot;</span><span class="p">,</span> <span class="n">access_token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">body_params</span><span class="o">=</span><span class="n">body</span><span class="p">)</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>       <span class="k">return</span> <span class="n">ToolOutputMessage</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">response</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="explanation-of-tool-components">Explanation of Tool Components</h3>
 <p>The above tool leverages utilities provided by Copilot Core:</p>

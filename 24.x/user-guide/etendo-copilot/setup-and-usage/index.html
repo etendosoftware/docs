@@ -3668,6 +3668,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#check-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check hosts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sync-assistant-button" class="md-nav__link">
     <span class="md-ellipsis">
       Sync Assistant Button
@@ -3788,6 +3797,30 @@
   <a href="#messages-tab" class="md-nav__link">
     <span class="md-ellipsis">
       Messages Tab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-models-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Models Window
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Models Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
     </span>
   </a>
   
@@ -7450,6 +7483,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../developer-guide/etendo-copilot/available-tools/test-run-tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test Run Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../developer-guide/etendo-copilot/available-tools/uncompress-tool/" class="md-nav__link">
         
   
@@ -7566,6 +7620,27 @@
   
   <span class="md-ellipsis">
     How to Create Copilot Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to execute Copilot through the console
   </span>
   
 
@@ -9170,6 +9245,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#check-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check hosts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sync-assistant-button" class="md-nav__link">
     <span class="md-ellipsis">
       Sync Assistant Button
@@ -9300,6 +9384,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ai-models-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Models Window
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Models Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9375,23 +9483,25 @@
 <li><strong>Name</strong>: Assistant name</li>
 <li><strong>Description</strong>: Assistant description</li>
 <li>
-<p><strong>App Type</strong>: Langchain Agent, Open AI Assistant or Langgraph</p>
+<p><strong>App Type</strong>:</p>
 <p><strong>Open AI Assistant</strong></p>
 <p>These assistants leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.</p>
 <p><strong>Langchain Agent</strong></p>
 <p>These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc. The difference between Langchain and Open AI is that Langchain can save the information locally and it is a multiprovider agent.</p>
+<p><strong>Multi-Model Assistant</strong>
+This type of assistant extends the “Langchain” type with the particularity that it can be used with models from various vendors such as “Anthropic” and “Gemini”, in addition to the existing “OpenAI” models. In the future, Langchain assistants will be replaced by this type of multi-model agents.</p>
 <p><strong>LangGraph</strong></p>
 <p>This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured.</p>
 </li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Open AI Assistant</label><label for="__tabbed_1_2">Langchain Agent</label><label for="__tabbed_1_3">LangGraph</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Open AI Assistant</label><label for="__tabbed_1_2">Langchain Agent or Multi-Model Assistant</label><label for="__tabbed_1_3">LangGraph</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>In case of defining an <strong>Open AI Assistant</strong> type app, the following fields will be enabled: </p>
 <ul>
 <li><strong>Prompt</strong>: Specific instructions of the assistant. These instructions can be written in English or Spanish. </li>
 <li><strong>Description</strong>: The description of the assistant so that the manager can choose the appropriate assistant for each case.</li>
-<li><strong>Model</strong>: Dropdown with the Open AI models available. If none of the options are selected, the model defined by default for the Etendo Copilot module in the <a href="../../etendo-classic/basic-features/general-setup/application/#preference">preference</a> window is to be used.</li>
+<li><strong>Model</strong>: Dropdown with the Open AI models available from the <a href="#ai-models-window">AI Models</a> window. If none of the options are selected, the model defined by default for the <code>Copilot Default Model for OpenAI Provider</code> <a href="../../etendo-classic/basic-features/general-setup/application/#preference">preference</a> window is to be used.</li>
 <li><strong>Retrieval</strong>: If this checkbox is selected, the assistant can retrieve information from the app source. </li>
 <li><strong>Open AI Assistant ID</strong>: Read-only field in which the ID of the assistant once created is displayed.</li>
 <li><strong>Code interpreter</strong>: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.</li>
@@ -9404,8 +9514,7 @@
 <ul>
 <li><strong>Prompt</strong>: Specific instructions of the assistant. These instructions can be written in English or Spanish.</li>
 <li><strong>Description</strong>: The description of the assistant so that the manager can choose the appropriate assistant for each case. </li>
-<li><strong>Provider</strong>: Model provider information.</li>
-<li><strong>Model</strong>: Dropdown with the models available according to the selected provider.</li>
+<li><strong>Model</strong>: Dropdown with the models available,from the <a href="#ai-models-window">AI Models</a> window.</li>
 <li><strong>Temperature</strong>: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.</li>
 </ul>
 </div>
@@ -9415,8 +9524,7 @@
 <li><strong>Prompt</strong>: Specific instructions of the assistant. These instructions can be written in English or Spanish. </li>
 <li><strong>Description</strong>: The description of the assistant so that the manager can choose the appropriate assistant for each case.</li>
 <li><strong>Graph Preview</strong>: It shows the tree of assistants under a certain manager.</li>
-<li><strong>Provider</strong>: Model provider information.</li>
-<li><strong>Model</strong>: Dropdown with the models available according to the selected provider.</li>
+<li><strong>Model</strong>: Dropdown with the models available, from the <a href="#ai-models-window">AI Models</a> window.</li>
 <li>
 <p><strong>Temperature</strong>: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.</p>
 <div class="admonition info">
@@ -9434,6 +9542,8 @@
 These variables will be replaced with the values defined in the properties.</p>
 </div>
 <p>If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are <a href="#knowledge-tab">Knowledge</a> and <a href="#skills-and-tools-tab">Skill and Tools</a>. If the LangGraph option is chosen, the <a href="#team-members-tab">Team Members tab</a> is shown.</p>
+<h3 id="check-hosts">Check hosts</h3>
+<p>This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.</p>
 <h3 id="sync-assistant-button">Sync Assistant Button</h3>
 <p>This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.</p>
 <h3 id="knowledge-tab">Knowledge Tab</h3>
@@ -9515,6 +9625,8 @@ This allows using an HQL query result as a file for knowledge base file.</li>
 You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.</li>
 <li><strong>Code Index</strong> 
 Only available as System Administrator, as access to the source code is required.This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.</li>
+<li><strong>Text</strong>
+This allows you to write the content of the file directly in the text area. This option is useful for small texts that must be versioned in the system.</li>
 </ul>
 </li>
 <li><strong>Open AI File ID</strong>: Read-only field showing the Open AI ID of the file once it is created.</li>
@@ -9522,6 +9634,8 @@ Only available as System Administrator, as access to the source code is required
 <li><strong>File name</strong>: Name of the remote file in case you want to modify it. This name must include the file format. For example, <code>example.pdf</code>.</li>
 <li><strong>URL</strong>: Source file URL. Only shown if the <strong>Remote file</strong> option is chosen in the Type field.</li>
 <li><strong>HQL</strong>: Only shown if the <strong>HQL Query</strong> option is chosen in the Type field.</li>
+<li><strong>Text</strong>: Text content of the file. Only shown if the <strong>Text</strong> option is chosen in the Type field.</li>
+<li><strong>Skip Splitting</strong>: Checking this box allows you to tell Copilot not to split the file into parts when indexing it. This is necessary when the entire contents of the file are needed when reading the file, while maintaining the context of the entire file.</li>
 </ul>
 <h3 id="file-path-tab">File Path Tab</h3>
 <div class="admonition warning">
@@ -9602,6 +9716,39 @@ Besides, wildcards like <code>*</code> can be used to access all files of the sa
 <li><strong>Message</strong>: Exact message used in the conversation</li>
 <li><strong>Time</strong>: Time of the message</li>
 <li><strong>Creation Date</strong>: Date of the message</li>
+</ul>
+<h2 id="ai-models-window">AI Models Window</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code>&gt;<code>Service</code>&gt;<code>Copilot</code>&gt;<code>AI Models</code></p>
+<p>In this window, the user can find and add AI models to be used by the assistants, Available in the drop-down list of models</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Automatically, the window will be populated with the OpenAI models available, after the first assistant synchronization.</li>
+<li>Models from other vendors must be entered manually. </li>
+</ul>
+</div>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Code</strong>: The code name of the model. It must be in lowercase.</li>
+<li><strong>Name</strong>: The human-readable name of the model.</li>
+<li><strong>Provider</strong>: The provider of the model. It must be in lowercase.</li>
+<li><strong>Max Tokens</strong>: The maximum number of tokens that can be generated by the model. This is a field required in some models, that can be used to limit or expand the model's capabilities, depending of the nature of the model.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/setup/ai-models-windows.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/ai-models-windows.png" /></a></p>
+<p><strong>GPT-4</strong>:</p>
+<ul>
+<li><strong>Code</strong>: gpt-4</li>
+<li><strong>Name</strong>: GPT-4</li>
+<li><strong>Provider</strong>: openai</li>
+<li><strong>Max Tokens</strong>: Not needed</li>
+</ul>
+<p><strong>Anthropic Claude 3.5 Haiku</strong>:</p>
+<ul>
+<li><strong>Code</strong>: claude-3-5-haiku-latest</li>
+<li><strong>Name</strong>: Claude 3.5 Haiku</li>
+<li><strong>Provider</strong>: anthropic</li>
+<li><strong>Max Tokens</strong>: 8000</li>
 </ul>
 
 
