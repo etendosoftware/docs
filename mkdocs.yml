@@ -134,7 +134,7 @@ extra:
       name: Instagram
   analytics:
     provider: google
-    property: G-VB6Z77ZMPT
+    property: G-SWRHWLY31K
     feedback:
       title: Was this page helpful?
       ratings:
