@@ -3,6 +3,8 @@ tags:
     - Copilot
     - IA
     - Audio Recognition
+    - Audio
+    - Transcription
 ---
 
 # Audio Tool
@@ -25,50 +27,46 @@ Using this tool consists of the following actions:
 - Receiving Parameters:
 
     - The tool receives an input object that contains the path of the audio file to be processed.
-        - **path**: The path of the image or PDF file to be processed.
+    - **path**: The path of the audio file to be processed.
        
 - Obtaining the File:
 
-    - The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (this tool uses the [Whisper model of OpenAI ](https://platform.openai.com/docs/guides/speech-to-text).
+    - The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (this tool uses the [Whisper model of OpenAI ](https://platform.openai.com/docs/guides/speech-to-text)).
 
 
 - Returning the Result:
 
     - The tool returns a JSON object containing the extracted text from the audio file.
-        - **message**: The extracted text from the audio file.
+    - **message**: The extracted text from the audio file.
 
 ## Usage Example
 
-    
 ### Requesting text recognition from an audio file
 
+Suppose you have an audio at `/home/user/request.mp3` and you want to extract text related to an invoice information: 
 
-Suppose you have an image at `/home/user/request.mp3` and you want to extract text related to an invoice information: 
-
+**Audio Content**
+``` txt
+Can you create a new invoice for the customer John Doe with the following items: 2 Product A, 1 Product B and 3 Product C
 ```
-Can you create a new invoice for the customer 'John Doe' with the following items: 2x 'Product A', 1x 'Product B' and 3x 'Product C'.
-```
-
-
 
 - Use the tool as follows:
 
     - Input:
 
         ```
-        {"path": "/home/user/request.mp3"}
-
+        {
+            "path": "/home/user/request.mp3"
+        }
         ```
 
     - Output:
 
         ``` Json title="Output Json"
         {
-            "message": "Can you create a new invoice for the customer 'John Doe' with the following items: 2x 'Product A', 1x 'Product B' and 3x 'Product C'."
+            "message": "Can you create a new invoice for the customer John Doe with the following items: 2 Product A, 1 Product B and 3 Product C"
         }
         ```
 
-### Result Chaining
-
 !!!note
-    Remember that the result of the tool can be used in other tools, for example, you can use the result of the Audio Tool as input for an agent that uses the extracted text to create an invoice or 
+    Remember that the result of the tool can be used in other tools, for example, you can use the result of the Audio Tool as input for an agent that uses the extracted text to create an invoice.
