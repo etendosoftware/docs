@@ -276,7 +276,9 @@ nav:
       - ✨ Getting Started: user-guide/etendo-mobile/getting-started.md
       - User interface: user-guide/etendo-mobile/user-interface/user-interface.md
       - Bundles:
-        - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
+        - Mobile Extensions: 
+          - Overview: user-guide/etendo-mobile/bundles/mobile-extensions/overview.md
+          - Etendo Classic Subapp: user-guide/etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp.md
     - Etendo Copilot:
       - ✨ Getting Started: user-guide/etendo-copilot/getting-started.md
       - Setup and Usage: user-guide/etendo-copilot/setup-and-usage.md
@@ -584,7 +586,7 @@ nav:
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:
         - Bundles:
-          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md
+          - Etendo Mobile Extensions: whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md
       - Etendo Copilot:
         - Bundles:
           - Etendo Copilot Extensions: whats-new/release-notes/etendo-copilot/bundles/release-notes.md
