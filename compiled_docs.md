@@ -28966,7 +28966,7 @@ Once the server URL is configured, the user must log in entering **the user and 
 
 #### Dynamic App Role Configuration
 
-Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Classic Subapp Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Mobile Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/mobile-extensions/mobile-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
 
 Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
 
@@ -29014,8 +29014,8 @@ Here, by selecting the profile image, it is possible to navigate to the **Settin
 If the drawer is displayed, it is possible to navigate to Home and also to the sub applications previously loaded. 
 
 !!! note
-    To be able to include sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
+    To be able to include sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions Bundle - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-3.png)
 
@@ -29031,35 +29031,63 @@ In case the user has a picture, it will be shown both in this window and in the 
     The role can only be modified from Etendo Classic, so each user will enter with their default role setup.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo Classic Subapp Extensions
-## Article Path: /User Guide/Etendo Mobile/Bundles/Etendo Classic Subapp Extensions
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Mobile/Bundles/Mobile Extensions/Overview
 ## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions
+ https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/overview
 ## Article Content: 
+### Mobile Extensions
+
+:octicons-package-16: Javapackage: `com.etendoerp.mobile.extensions`
+
+:material-store: Etendo Marketplace:  [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}
+
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
+This bundle includes mobile sub-applications.
 
 !!! info
+    - To be able to include the sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md). <br>
 
-    - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
-
-    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
-
-
-!!!info
-    For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+    - Once the bundle is installed in Etendo Classic, the dynamic apps will be configured and the apps will be available. Acces must be given to each role from the [Dynamic Apps tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window. <br>
+    
+    - For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md). 
 
 
-#### Etendo Classic Sub App
+#### Modules
 
-##### Overview
+##### Etendo Classic Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way **to view data**. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+!!! info
+    For more information, visit [Etendo Classic Subapp - User Guide](./etendo-classic-subapp.md).
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Classic Subapp
+## Article Path: /User Guide/Etendo Mobile/Bundles/Mobile Extensions/Etendo Classic Subapp
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp
+## Article Content: 
+### Etendo Classic Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
+
+
+#### Overview 
 
 The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
 
 The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+!!! info
+    - To be able to include the sub-application, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
+
 
 ##### Initial Configuration
 
@@ -29180,13 +29208,15 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](https://docs.etendo.software/latest/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-##### Mobile App Scanning Helpers
+#### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
+##### Overview
+
 The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App.
 
-###### Usage Examples
+##### Usage Examples
 
  The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
@@ -29235,12 +29265,6 @@ And here, the quantities will be observed before the process:
 It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
-
-
-
-
-
-
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -53357,10 +53381,10 @@ This page displays the known issues reported by the support team.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo Classic Subapp Extensions
-## Article Path: /What's New/Release Notes/Etendo Mobile/Bundles/Etendo Classic Subapp Extensions
+# Article Title: Etendo Mobile Extensions
+## Article Path: /What's New/Release Notes/Etendo Mobile/Bundles/Etendo Mobile Extensions
 ## Article URL: 
- https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes
 ## Article Content: 
 #### Overview
 
