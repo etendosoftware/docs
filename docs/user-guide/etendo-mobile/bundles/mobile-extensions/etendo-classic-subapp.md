@@ -1,29 +1,6 @@
----
-title: Etendo Classic Subapp Extensions
----
-:octicons-package-16: Javapackage: `com.etendoerp.classic.subapp.extensions`
+### Etendo Classic Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
 
-
-## Overview
-
-This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
-
-!!! info
-
-    - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
-
-    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](../../getting-started.md#dynamic-app-role-configuration) in the Role window.
-
-
-!!!info
-    For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
-
-
-## Etendo Classic Sub App
-
-### Overview
 
 The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
 
@@ -148,13 +125,15 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](../../../../assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-### Mobile App Scanning Helpers
+## Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
+### Overview
+
 The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) App.
 
-#### Usage Examples
+### Usage Examples
 
  The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
@@ -203,9 +182,3 @@ And here, the quantities will be observed before the process:
 It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
-
-
-
-
-
-

@@ -1,4 +1,5 @@
 ---
+title: Copilot Extensions
 tags: 
     - Copilot
     - AI
