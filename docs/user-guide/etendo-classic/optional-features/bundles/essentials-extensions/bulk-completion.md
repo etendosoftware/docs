@@ -1,12 +1,9 @@
 ---
 tags:
-- bulk completion
-- complete
-- book
-- close
-- essentials
-- extensions
-- bundle
+    - Bulk Completion
+    - Complete
+    - Book
+    - Close
 ---
 
 # Bulk Completion

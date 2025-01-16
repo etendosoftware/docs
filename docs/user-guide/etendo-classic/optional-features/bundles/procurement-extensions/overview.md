@@ -1,5 +1,10 @@
 ---
 title: Procurement Extensions Bundle
+tags:
+    - Procurement
+    - Etendo Extensions
+    - Purchase Invoice
+    - Anti-duplication
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.procurement.extensions`
 

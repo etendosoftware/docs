@@ -1,12 +1,12 @@
 ---
 tags:
-- localización española
-- ticketbai
-- tbai
-- batuz
-- bizkaia
-- factura
-- gipuzkoa
+- Localización Española
+- Ticketbai
+- Tbai
+- Batuz
+- Bizkaia
+- Factura
+- Gipuzkoa
 title: TicketBai y Batuz
 ---
 

@@ -1,5 +1,10 @@
 ---
 title: Etendo BI Bundle
+tags:
+    - Etendo BI
+    - Power BI Integration
+    - Data Configuration
+    - BI Modules
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.etendobi.extensions`

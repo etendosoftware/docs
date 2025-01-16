@@ -1,10 +1,10 @@
 ---
 title: Mobile Extensions
 tags: 
-    - Bundle
-    - Mobile
-    - Sub-application
-    - Etendo Mobile
+    - Mobile Extensions
+    - Sub-applications
+    - Dynamic Apps
+    - Inventory Management
 ---
 
 # Mobile Extensions

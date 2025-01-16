@@ -1,3 +1,12 @@
+---
+tags:
+ - Etendo Classic
+ - Mobile Extension
+ - Record Management
+ - Inventory Scanning
+ - User Navigation
+---
+
 # Etendo Classic Subapp
 :octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
 
@@ -9,7 +18,7 @@ The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering 
 The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
 
 !!! info
-    - To be able to include the sub-application, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    - To be able to include the sub-application, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="_blank"}. <br>
     For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 

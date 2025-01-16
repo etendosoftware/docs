@@ -1,10 +1,8 @@
 ---
 tags:
-- advanced
-- bank account
-- financial
-- extensions
-- bundle
+    - Bank Account
+    - Financial
+    - Modify Payment Plan 
 ---
 
 # Advanced Bank Account Management

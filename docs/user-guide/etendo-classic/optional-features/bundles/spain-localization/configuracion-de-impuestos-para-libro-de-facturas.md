@@ -1,5 +1,8 @@
 ---
-title: Configuración de impuestos para libro de facturas
+title: Configuración de Impuestos para Libro de Facturas
+tags:
+    - Configuración de Impuestos
+    - Localización en España
 ---
 ## Javapackages 
 

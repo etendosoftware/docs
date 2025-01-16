@@ -1,5 +1,9 @@
 ---
 title: Intrastat
+tags:
+    - Intrastat
+    - Localizacion Española
+    - Declaracion de Impuestos
 ---
 
 ## Javapackages

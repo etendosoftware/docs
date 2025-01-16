@@ -1,5 +1,10 @@
 ---
 title: Client
+tags:
+    - Etendo Client Setup
+    - Master Data Management
+    - Accounting Dimensions
+    - Email Configuration
 ---
 
 :material-menu: `Application` > `General Setup` > `Client` > `Client`

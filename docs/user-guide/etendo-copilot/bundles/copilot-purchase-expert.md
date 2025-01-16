@@ -1,12 +1,10 @@
 ---
 tags:
     - Copilot
-    - IA
-    - OpenAPI
-    - Swagger
-    - API
-    - Purchase
-    - Assistant
+    - OpenAPI Integration
+    - Purchase Orders
+    - OCR Tool
+    - Etendo Assistant
 ---
 
 # Copilot Purchase Expert

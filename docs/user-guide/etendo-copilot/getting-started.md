@@ -1,9 +1,11 @@
 ---
 tags: 
- - copilot
- - bastian
- - ai
- - ai tools
+ - Etendo Copilot
+ - AI Integration
+ - Assistants
+ - Intelligent Tools
+ - Agents
+ - User Guide
 ---
 
 ![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)

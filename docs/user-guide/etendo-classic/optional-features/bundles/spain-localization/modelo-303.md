@@ -1,5 +1,8 @@
 ---
 title: Modelo 303
+tags:
+    - Modelo 303
+    - Localizacion Española
 ---
 
 ## Javapackages 
