@@ -28966,7 +28966,7 @@ Once the server URL is configured, the user must log in entering **the user and 
 
 #### Dynamic App Role Configuration
 
-Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Classic Subapp Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Mobile Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/mobile-extensions/mobile-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
 
 Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
 
@@ -29014,8 +29014,8 @@ Here, by selecting the profile image, it is possible to navigate to the **Settin
 If the drawer is displayed, it is possible to navigate to Home and also to the sub applications previously loaded. 
 
 !!! note
-    To be able to include sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
+    To be able to include sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions Bundle - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-3.png)
 
@@ -29031,35 +29031,63 @@ In case the user has a picture, it will be shown both in this window and in the 
     The role can only be modified from Etendo Classic, so each user will enter with their default role setup.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo Classic Subapp Extensions
-## Article Path: /User Guide/Etendo Mobile/Bundles/Etendo Classic Subapp Extensions
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Mobile/Bundles/Mobile Extensions/Overview
 ## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions
+ https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/overview
 ## Article Content: 
+### Mobile Extensions
+
+:octicons-package-16: Javapackage: `com.etendoerp.mobile.extensions`
+
+:material-store: Etendo Marketplace:  [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}
+
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
+This bundle includes mobile sub-applications.
 
 !!! info
+    - To be able to include the sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md). <br>
 
-    - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
-
-    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
-
-
-!!!info
-    For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+    - Once the bundle is installed in Etendo Classic, the dynamic apps will be configured and the apps will be available. Acces must be given to each role from the [Dynamic Apps tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window. <br>
+    
+    - For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md). 
 
 
-#### Etendo Classic Sub App
+#### Modules
 
-##### Overview
+##### Etendo Classic Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way **to view data**. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+!!! info
+    For more information, visit [Etendo Classic Subapp - User Guide](./etendo-classic-subapp.md).
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Classic Subapp
+## Article Path: /User Guide/Etendo Mobile/Bundles/Mobile Extensions/Etendo Classic Subapp
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp
+## Article Content: 
+### Etendo Classic Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
+
+
+#### Overview 
 
 The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
 
 The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+!!! info
+    - To be able to include the sub-application, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
+
 
 ##### Initial Configuration
 
@@ -29180,13 +29208,15 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](https://docs.etendo.software/latest/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-##### Mobile App Scanning Helpers
+#### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
+##### Overview
+
 The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App.
 
-###### Usage Examples
+##### Usage Examples
 
  The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
@@ -29235,12 +29265,6 @@ And here, the quantities will be observed before the process:
 It will also be noticed that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
-
-
-
-
-
-
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -49163,6 +49187,7 @@ This assistant simplifies webhook creation by automatically generating the neces
 Here you can find a list of the all the available tools in the Copilot bundle.
 
 - [Attach File Tool](https://docs.etendo.software/latest/available-tools/attach-file-tool.md)
+- [Audio Tool](https://docs.etendo.software/latest/available-tools/audio-tool.md)
 - [Codbar Tool](https://docs.etendo.software/latest/available-tools/codbar-tool.md)
 - [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md)
 - [Database Query Tool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
@@ -49178,8 +49203,10 @@ Here you can find a list of the all the available tools in the Copilot bundle.
 - [Send Email Tool](https://docs.etendo.software/latest/available-tools/send-email-tool.md)
 - [Tavily Tool](https://docs.etendo.software/latest/available-tools/tavily-tool.md)
 - [Template Tool](https://docs.etendo.software/latest/available-tools/template-tool.md)
+- [Test Run Tool](https://docs.etendo.software/latest/available-tools/test-run-tool.md)
 - [Uncompress Tool](https://docs.etendo.software/latest/available-tools/uncompress-tool.md)
 - [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+- [XML Translation Tool](https://docs.etendo.software/latest/available-tools/xml-translation-tool.md)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Attach File Tool
@@ -49255,6 +49282,76 @@ Imagine there is a file at `/home/user/document.pdf`, and it is necessary to upl
     "result": { "message", "Attachment created successfully"}
     }
     ```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Audio Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Audio Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/audio-tool
+## Article Content: 
+### Audio Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The Audio Tool is a tool that recognizes text from audio files. It can be used in Assistants to extract information from audio files, such as transcribing interviews, meetings, or podcasts. The tool accepts an audio file path as input and returns the text extracted from the audio.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool automates the process of **text extraction from audio files**. This can be particularly useful for tasks such as transcribing conversation or speech from audio recordings. The tool uses a speech-to-text model to convert the audio content into text.
+
+Using this tool consists of the following actions:
+
+- Receiving Parameters:
+
+    - The tool receives an input object that contains the path of the audio file to be processed.
+    - **path**: The path of the audio file to be processed.
+       
+- Obtaining the File:
+
+    - The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (this tool uses the [Whisper model of OpenAI ](https://platform.openai.com/docs/guides/speech-to-text)).
+
+
+- Returning the Result:
+
+    - The tool returns a JSON object containing the extracted text from the audio file.
+    - **message**: The extracted text from the audio file.
+
+#### Usage Example
+
+##### Requesting text recognition from an audio file
+
+Suppose you have an audio at `/home/user/request.mp3` and you want to extract text related to an invoice information: 
+
+**Audio Content**
+``` txt
+Can you create a new invoice for the customer John Doe with the following items: 2 Product A, 1 Product B and 3 Product C
+```
+
+- Use the tool as follows:
+
+    - Input:
+
+        ```
+        {
+            "path": "/home/user/request.mp3"
+        }
+        ```
+
+    - Output:
+
+        ``` Json title="Output Json"
+        {
+            "message": "Can you create a new invoice for the customer John Doe with the following items: 2 Product A, 1 Product B and 3 Product C"
+        }
+        ```
+
+!!!note
+    Remember that the result of the tool can be used in other tools, for example, you can use the result of the Audio Tool as input for an agent that uses the extracted text to create an invoice.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Codbar Tool
@@ -53284,16 +53381,17 @@ This page displays the known issues reported by the support team.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo Classic Subapp Extensions
-## Article Path: /What's New/Release Notes/Etendo Mobile/Bundles/Etendo Classic Subapp Extensions
+# Article Title: Etendo Mobile Extensions
+## Article Path: /What's New/Release Notes/Etendo Mobile/Bundles/Etendo Mobile Extensions
 ## Article URL: 
- https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes
 ## Article Content: 
 #### Overview
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.8.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.9.0){target="_blank"} | 15/01/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.8.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.6.0){target="_blank"} | 02/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.5.0){target="_blank"} | 29/06/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
