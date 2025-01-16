@@ -1,11 +1,11 @@
 ---
+Title: Support Service
 tags:
     - Etendo Support
     - Help Center
     - Technical Support
     - User Assistance
     - Contact Information
-Title: Support Service
 ---
 
 ## Help Center

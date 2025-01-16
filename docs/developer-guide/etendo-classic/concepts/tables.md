@@ -1,5 +1,5 @@
 ---
-title: tables
+title: Tables
 tags:
   - Tables
   - Database

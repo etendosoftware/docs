@@ -61,7 +61,7 @@ Currencies and conversion rates are basic settings in Etendo.
 Currencies used worldwide are automatically created and listed in the currency window once Etendo installation is completed.
 
 !!! info
-    All these currencies are linked to the system organization (*)_, that means that those currencies will be shared by all the organizations in the system.
+    All these currencies are linked to the system organization (\*), that means that those currencies will be shared by all the organizations in the system.
 
 ### Currency
 
@@ -119,7 +119,7 @@ Currencies can be translated to any language if required.
 Conversion rate also called currency exchange rate is the rate at which one currency may be converted into another one.
 
 !!! info
-    Conversion rates can only be created at system organization level (*), which implies they are available for all the organizations within the client.
+    Conversion rates can only be created at system organization level (\*), which implies they are available for all the organizations within the client.
 
 ### Conversion Rate
 
@@ -145,7 +145,7 @@ Countries and regions are basic settings to share within Etendo.
 Countries and their corresponding regions are automatically created and listed in this window once Etendo installation is completed.
 
 !!! info
-    All these countries and regions are linked to the system organization (*), that means that those countries and regions will be shared by all the organizations in the system.
+    All these countries and regions are linked to the system organization (\*), that means that those countries and regions will be shared by all the organizations in the system.
 
 ### Country
 
@@ -204,7 +204,7 @@ For instance, there is an existing _Property_ named "_Implements an alternative 
 
 - Above preference means that if the Advanced Payables and Receivables Management module is installed, it will use an alternative invoice process button, besides every user logging in Etendo will get that feature working regardless of its role, user and the client or the organization it is working on.
 
-For instance, there is an _Attribute_ named _"Autosave"_ which is currently assigned to the system with a value ="Y". This attribute is visible and therefore applicable to System client and to (*)_ organization for any user, role and window.
+For instance, there is an _Attribute_ named _"Autosave"_ which is currently assigned to the system with a value ="Y". This attribute is visible and therefore applicable to System client and to (\*) organization for any user, role and window.
 
 - The preference above means that every user logging in Etendo will get that feature working regardless of its role and user and the client or the organization it is working on.
 
@@ -268,8 +268,8 @@ As shown in the image above there is one field named "_Property List_" which is 
     - If set to Value = 'Y' the Direct Print mode is enabled.
     - If set to Value = 'N' or Undefined, the standard print mode is used.
   - **Allow Where Parameter**
-    - If set to Value = 'Y', it allows getting the "_where" parameter from manual datasources. A warning will be shown if the "_where" parameter is sent.
-    - If set to Value = 'N' or Undefined, it will not allow getting the "_where" parameter from manual datasources. An exception will be thrown if the "_where" parameter is sent.
+    - If set to Value = 'Y', it allows getting the "\_where" parameter from manual datasources. A warning will be shown if the "\_where" parameter is sent.
+    - If set to Value = 'N' or Undefined, it will not allow getting the "\_where" parameter from manual datasources. An exception will be thrown if the "\_where" parameter is sent.
   - **Allow Unsecured Datasource Request**
     - If set to Value = 'Y', it allows doing unsecured datasource request. A warning will be shown if the current role does not have access.
     - If set to Value = 'N' or Undefined, it will not allow doing unsecured datasource request. It is required to have a role with enough access permissions. An OBSecurityException is thrown if current role does not have access.
@@ -312,7 +312,7 @@ For instance, if user level is empty, any user will be able to see that preferen
 Available levels are:
 
 - _Client_ - if this level is set to empty or to System, the preference will be visible from any client used to log in.
-- _Organization_ - if this level is set to empty or to (*), the preference will be visible from any organization used to log in.
+- _Organization_ - if this level is set to empty or to (\*), the preference will be visible from any organization used to log in.
 - _User_ - if this level is set to a given user, only that user will be able to see that preference once logged in.
 - _Role_ - if this level is set to a given role, only that role will be able to see that preference.
 - _Window_ - if this level is set to a given window, only that window will be able to see that preference.

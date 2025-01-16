@@ -35,7 +35,7 @@ Here, by selecting the profile image, it is possible to navigate to the **Settin
 If the drawer is displayed, it is possible to navigate to Home and also to the sub applications previously loaded. 
 
 !!! note
-    To be able to include sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="_blank"}. <br>
+    To be able to include sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
     For more information about the versions available, core compatibility and new features visit [Mobile Extensions Bundle - Release Notes](../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 ![alt text](../../../assets/user-guide/etendo-mobile/user-interface/user-interface-3.png)
