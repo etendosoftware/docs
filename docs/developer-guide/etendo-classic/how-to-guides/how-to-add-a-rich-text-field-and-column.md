@@ -1,16 +1,16 @@
 ---
-tags: 
-  - rich text field
-  - column
-  - database
-  - user interface Design
 title: How to Add a Rich Text Field and Column
+tags:
+  - How to
+  - Rich Text Field
+  - Column
+  - Database
+  - Reference
 ---
 
-#  How to Add a Rich Text Field and Column
- 
+# How to Add a Rich Text Field and Column
   
-##  Overview
+## Overview
 
 This How-to section explains how to add a rich text field and column to the Etendo Classic.
 
