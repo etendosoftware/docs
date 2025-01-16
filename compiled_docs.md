@@ -27000,7 +27000,7 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Bundle/Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Extensions Bundle/Overview
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview
 ## Article Content: 
@@ -27033,7 +27033,7 @@ This module allows the user to create base queries and customize them when neede
 A background process must be set which creates CSV files that will be uploaded to a server.  
 
 !!! info
-    For more information, visit the [Etendo BI Connector Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md) and the [Etendo BI Connector Module developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle.md#etendo-bi-connector).
+    For more information, visit the [Etendo BI Connector Module developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-extensions.md#etendo-bi-connector).
 
 ##### Base Queries for Etendo BI 
 
@@ -27041,7 +27041,7 @@ A background process must be set which creates CSV files that will be uploaded t
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo BI Inclusion/Exclusion Module Configuration
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Bundle/Etendo BI Inclusion/Exclusion Module Configuration
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Extensions Bundle/Etendo BI Inclusion/Exclusion Module Configuration
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration
 ## Article Content: 
@@ -27155,257 +27155,8 @@ Main categories for account configuration:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo BI Connector Module
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Bundle/Etendo BI Connector Module
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector
-## Article Content: 
-### Etendo BI Connector 
-:octicons-package-16: Javapackage: `com.etendoerp:integration.powerbi` 
-
-#### Overview
-
-!!! info
-    To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/?#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}.
-
-In Etendo, it is possible to create base queries and to customize them when needed. This will provide information which can be used by Power BI.
-
-For this process, a background setting is required in order to create CSV files that will be uploaded to a server. The files will use information from the pre-established base queries and their customazation in case there are any. 
-
-The following documentation is about the steps to consider when configuring this funtionality to create the CSV files, since it is necessary to execute the process in Etendo from different windows:
-
-#### Etendo BI Connector Module Configuration
-
-
-First, make the proper configurations from the **Webhooks window**. This will later allow BI Logs to be sent to the **BI Logs Monitor window**.
-
-##### Webhooks window
-From the webhooks window, it is necessary to create a new record and complete the required fields as follows: 
-
-• **Module**: Base Queries for EtendoBI 
-
-• **Name**: EtendoBI Logger
-
-• **Description**: Fill EtendoBI Log window
-
-• **Event Class**: Java
-
-• **Java\_Class**: com.etendoerp.integration.powerbi.processes.FillLogWindow
-
-!!! info
-    It is highly recommended to have just one Webhook for this module to work properly, as its functionality will not vary. That’s why, it is better to use the organization \* in order to cover all child organizations.
-
-
-In the **Params tab**, four records must be created under the names:
-
-• **description**
-
-**• logtype**
-
-**• organization**
-
-**• rule**
-
-
-![](https://docs.etendo.software/latest/assets/drive/1J07aRNJeYl5QsU0z6Q95m2lT-hAp6FrC.png)
-
-
-!!! info
-    For more information about Webhooks, visit Webhooks Events.
-
-##### User API Token window 
-
-Then, make the proper configurations from the **User API Token window**. Here, it is necessary to grant access to a **user role**, so a token in this window needs to be created.
-
-![](https://docs.etendo.software/latest/assets/drive/Bl15uB38OKLSH0-MZwACXtCP4Jzz7uvYLqwRMJVv_Fc5n9aknGQN7SoMEDwGvo-nZ56ShJxB3gJ6xT_4CGpVNMdlph3rSUB1z6J7tpYmVBF5T7xHqo9VBdNrR8OGLrzR4nJU0ob85tLZcdINBrPF2Ek.png)
-
-Then, go back to the **Webhooks window**, and create a record in the **Access tab** in order to add the previously generated token. 
-
-![](https://docs.etendo.software/latest/assets/drive/901aflhvMb72shBzBttOe-B3AyBS5CPEWWJhojALTB79N_ODpPAo9ZUeRazDPmgmB9ukpw8b2OpPKUzQZOJ_jui58NOVewSkgQ2Mj78vXTJ1zkvsza7Z9qWGsWAFWqHAVnagb_7PrGeNr3IkQYyMF9o.png)
-
-
-!!! success 
-    This way the Webhook is configured. Now, it is necessary to configure the EtendoBI Connector module.
-
-
-##### Etendo BI Connector Module Window
-
-In the **BI Connection window**, It is necessary to create a record to specify the path to the CSVs creation script and the Webhook to use. If the **EtendoBI bundle** is installed and the script path was not changed, the user should use the default value of ‘repository path’ field. Otherwise, the corresponding path should be specified. 
-
-!!! info
-    It is important to note that the **'Repository path'** will search for the corresponding path INSIDE the WebContent folder of the project. 
-
-
-
-![](https://docs.etendo.software/latest/assets/drive/1ayeGDCTnguR7Bio_pBs2KBxYfcwn1rwv.png)
-
-
-In the **Data Destination** tab, the file name of the script needs to be specified. 
-
-![](https://docs.etendo.software/latest/assets/drive/KWkJfoJfr0eGo-zdI470rUUEMpGo9Hc2ABpO5qpPUUQ-4kH2-aswwkYHGLJpVVl7Hie77xW16UfNcqD-fyP4wO6_DqNLYkA1H9CfI2T1XWYsnZmt64yLcTA_326PqQmRkDpMUz7C69Js6vGrSGKmH_A.png)
-
-Finally, in the **Execution variables** tab, some records must be created being the ‘Variable’ field:
-
-- **ip**: ip of the server where the files will be uploaded **(mandatory)**
-
--   **client**: the name of our client **(mandatory)**
--   **user**: the user used to connect to the server. **(mandatory)**
-
-- **application_url**: url of our application. e.g. "https://my-domain.cloud/etendo" **(mandatory)**
-
-- **port**: port of the server where the user is  connecting to **(default: 22)** 
-
-- **path**: path of the server where the files will be sent **(default: /)**
-
-- **private-key-path**: path of the private key used for the connection to the server
-
-- **bbdd\_user**: username of a read only user to access the database
-
-- **bbdd\_password**: password of the read only user
-
-- **csv_separator**: delimiter to use in the final csv files (default: |)
-
-**“private-key-path”** is the path of the private key used for the connection to the server. If this variable is not specified, the script will try to connect without specifying a private key.
-In the **“bbdd\_user” and “bbdd\_password” variables**, enter the **username** and **password** of a user with read-only permissions to the database. If either of these two variables is not found, the process will use the credentials of the database superuser.
-
-!!! info
-    However, it is **highly recommended** to use a user with read only permissions as it is a great security measure.
-
-
-As an example, let’s use the following values:
-
-![](https://docs.etendo.software/latest/assets/drive/YFy5yV9lx64qO3638txrEGkKRxBY0fZqu7ep6YSJ7Ef8E0SsPZ1tywDDifwDL8JeJ-vO8GU3ViTdF6MkHH32PG55y9a7y7AyCTfD0tCMSV0WU1P8GvXWn7LPq083UDuD-zq2M0A6NwZgAqH8KJJ-eR8.png)
-
-!!! info
-    It is important to respect the specified names for the “Variable” field.
-
-
-Also, it is important to note that the script is going to create a folder named as the value of the **“Client” variable**, and it will contain folders for each organization that executes the background process. Therefore, if there are **two BI Connections** with the same **“Client” value**, the last execution of the process will overwrite the folder.  
-  
- 
-
-For example, let's say there is  Organization A, which has Organizations B and C as its child organizations. If the user needs to have the same configuration for both, we can create a BI Connection using Organization A and set up two background processes that run the "EtendoBI Process," one for Organization B and the other for Organization C.
-
-When the script is executed, a folder will be created with the value of the "Client" variable in the BI Connection window as its name. Within that folder, subfolders will be created for each organization (in this case, A\_logs and A\_output for Organization A, and B\_logs and B\_output for Organization B).
-
-##### Enterprise Module Management window
-
-To load the Etendo base queries, go to the **Enterprise Module Management window**, and select Base Queries for EtendoBI and then click the **OK button**.
-
-![](https://docs.etendo.software/latest/assets/drive/gjw0zq66nVJjH1vlMJ_u7gHGlpIpB4L13owW4LNmd7XsB6kz1YjIS_9DEQI_4mNtovBk8xjus3gMwqGvNhGMTHPs-CgWOmdkkEEYXSO6Rr8_D2dkHg9BD1VTBP1wrf_uP9nHVGE6I3p_LM6sReNwAQA.png)
-
-##### BI Query window 
-
-After that, Etendo base queries should be successfully loaded in the **BI Query window**.
-
-![](https://docs.etendo.software/latest/assets/drive/zED4oSr1NOEXkhP-gZkR3br6-vi_piTylQGfK-QFfkscUWKIOEqAaIX_KU1y8D15iXh1aPwJUtyTJnM0mnS3Jyd2O6njJTmL1PJlMPlNoNfv4f7s9hva8Kmpmoo7rHcTdBOfKZMz67kHhq3VdsiAs90.png)
-
-There are several points to consider when handling queries in this module.
-
-• **Primary Key Requirement**: Every base query must have its primary key as the first column. This is crucial  since in the script it is assumed that the first column is the identifier. 
-
-!!! warning
-    A failure to adhere to this can result in incorrect output, duplicated records, and an immense number of rows.
-
-
-
-• **Client column on base query**: Every base query must include ad\_client\_id column, with the alias “ClientID”
-
-• **Organization column on base query**: Every base query must include ad\_org\_id column, with the alias “OrgID”
-
-• **Custom Query Customization**: The customization of the query must also include the primary key (which is the same as the base query since customization is performed on the same table) with the SAME ALIAS as the base query. 
-
-!!! warning
-    Failing to respect this can lead to improper mapping between the results of the base query and its customization, resulting in incorrect output.
-
-
-
-Let’s see an example of a correct base query and customization.
-
-![](https://docs.etendo.software/latest/assets/drive/1UIyNY8fo3FhcRDzjs_OPjcJYvFIc5oHZ.png)
-
-
-
-In this case, as a base query there are three columns. In its customization, there is a new column “name”. 
-
-!!! info
-    Note that there are three mandatory columns in the base query, with the correct alias for column **ad\_client\_id and ad\_org\_id**. It is important to make sure that **“ClientID”** and **“OrgID”** aliases are being set WITHOUT double quotes. Also, **there should not be** more than one space between the “as” keyword. 
-
-… ad_client_id as “ClientID”, …    **INCORRECT**
-… ad_client_id as ClientID, …       **CORRECT**
-
-
-
-
-In the customization query, despite the requirement to have the primary key with the same alias as the base query, it is not necessary for it to be the first column. In this case, if instead of having:
-
-- SELECT m\_warehouse\_id as WarehouseID, name as "Warehouse Name" FROM m\_warehouse
-
-We have:
-
-- SELECT name as "Warehouse Name", m\_warehouse\_id as WarehouseID FROM m\_warehouse
-
-The result will be exactly the same.
-
-The script executes the base query, and then merges the customization, using both primary keys for mapping the rows.
-
-If a base query has a **customization**, the script creates **three different CSVs**.
-
-- A CSV file that contains the **result of the base query**. This CSV file has the prefix “EBI\_” if it is an Etendo base query. If it is a client base query, it has the **first three letters** of the value of the “Client” variable that was set earlier as a prefix.
-
-- A CSV file with the prefix “BASE\_”, which contains the **columns from the base query**, but if the customization overrides any of these values, they will be overwritten with the values from the customization. In this case, the “BASE\_” CSV file will be the same as the base query since the **customization does not override** any values from the base query columns.
-
-- A CSV file with the prefix “FULL\_”, which includes b**oth the columns from the base query and any additional columns added in the customization**. In the given example, the “FULL\_” CSV file will contain the additional column “Warehouse Name”. 
-
-Later, at the end of the configuration,  this example query will be executed to analyze the **generated CSV files**.
-
-!!! info
-    It is important to note that there should be only one customization per base query. It should also be made clear that it is not possible to add constraints to the customization to remove rows from the base query. Instead, the customization allows adding or overwriting columns in the original query, using the primary key to map the records.
-
-
-Base queries must all contain the **ad\_client\_id** and **ad\_org\_id columns**, with alias **“ClientID”** and **“OrgID”** (case insensitive). 
-!!! warning
-    If a query does not have these columns with their alias, it will produce an error and be ignored.
-
-##### Process Request window
-
-Once the query configuration is done, go to the **Process Request window**, create a new record, select the **“EtendoBI Process”** from the process field and schedule it.
-
-![](https://docs.etendo.software/latest/assets/drive/5ud_n--k9OgupQZYlbOPy2MAQQfzmCyAETSNt5gOV5ZIYhH0Yq7RsCnDx9bkgsQCF9XBvVILtwMui-iNVXDHIeC1P04UfVxjomlQahtvx4ws-LelIg6XLvvxkeRzZc6iQcEZrdipa_2ylO87WoWwlU0.png)
-
-The scope of the data collection performed by the queries is based on the **organization** that configured the **background process**. In other words, all the obtained data is  filtered by the **client** and the **organization** that configured the **background process**, and **NOT** by the organization used in the **BI Connection window**. If the organization does not have a configuration in the **BI Connection**, Etendo will search for the **configuration** in one of its **parent organizations**, but the data scope will remain the same (itself and its child organizations).
-
-!!! info
-    If the organization that configured the background process does not have a BI Connection and there is no BI Connection found for its parent organizations either, the **process will not be executed**. 
-
-
-The process will never search for a BI Connection in the child organizations of the one which was set on the background process.
-
-
-![](https://docs.etendo.software/latest/assets/drive/AK3H85SVLjjFxSk-2mMbDlcGyBK1gMAWsi-bATJTtsVIV8VJPj3QuxscOqkcZphInHViVUfSCJLj9jEB0LyDX73D5qIsMtn4A9Z5o4IrQ5tC2mzfSnpvfB2X5qJyb-Cwz7Uvgl3DWa75iXgQIDGEgBk.png)
-
-In the **Process Monitor** tab, the status of **“Success”** is shown in the new record that appears when the process is executed. It is good to know that this process executes our python script, so if there were no issues up until the execution of the python script, it will return to success status regardless of whether the python script fails.
-
-##### BI Logs Monitor window 
-
-The execution process can be checked in the **BI Logs Monitor** window.
-
-
-
-
-![](https://docs.etendo.software/latest/assets/drive/ldN9QIT1oj9bKdnQhcBW8x70touvdAarz4qdtHI37RpnDEjY7jV77RkGSmYb7fvwIQqwB-T8uKtbGdg31b7PuSvwisFQPYCCRFQuDQxXW3kggv8UZRWFnh7dXR3hhN7ntv30Hxzk63m5Vieci2tUmQY.png)
-
-In this example image, the information about the script execution can be seen.
-
-If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
-
-!!! info
-    To do that, visit the [Etendo BI Bundle developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle.md). 
-
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: Overview
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions Bundle/Overview
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview
 ## Article Content: 
@@ -27431,7 +27182,7 @@ This module allows users to prevent the duplication of purchase invoices within 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Purchase Invoice Validation
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Purchase Invoice Validation
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions Bundle/Purchase Invoice Validation
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation
 ## Article Content: 
@@ -46798,18 +46549,26 @@ Afterward, you can continue with the setup in the [Bank Integration PSD2 User Gu
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo BI Bundle
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Etendo BI Bundle
+# Article Title: Etendo BI Extensions Bundle
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Etendo BI Extensions Bundle
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-extensions
 ## Article Content: 
 #### Overview
 
-In this section, the user can find technical information about the Etendo BI Bundle.
+In this section, the user can find technical information about the Etendo BI Extensions Bundle.
 
 #### Etendo BI Connector
 
-##### Technical Aspects
+:octicons-package-16: Javapackage: `com.etendoerp.integration.powerbi`
+
+In Etendo, it is possible to create base queries and to customize them when needed. This will provide information which can be used by Power BI.
+
+For this process, a background setting is required in order to create CSV files that will be uploaded to a server. The files will use information from the pre-established base queries and their customazation in case there are any. 
+
+The following documentation is about the steps to consider when configuring this funtionality to create the CSV files.
+
+##### Requirements
 
 To ensure proper functioning of the script, follow the steps below:
 
@@ -46821,7 +46580,6 @@ To ensure proper functioning of the script, follow the steps below:
     ``` bash title="Terminal"
     sudo apt install rsync
     ```
-
 
 2. Make sure you have at least python3.7 or above installed on your system. You can verify the installation by running
 
@@ -46864,7 +46622,7 @@ To ensure proper functioning of the script, follow the steps below:
 5. The following libraries need to be installed using pip3 for them to work: psycopg2, pandas and requests. You can install them by running:
 
     ``` bash title="Terminal"
-    pip3 install psycopg2-binary
+    sudo apt install python3-psycopg2
     ```
 
     ``` bash title="Terminal"
@@ -46875,7 +46633,239 @@ To ensure proper functioning of the script, follow the steps below:
     pip3 install requests
     ```
 
-##### Etendo BI Connector
+##### Etendo BI Connector Module Configuration
+
+First, make the proper configurations from the **Webhooks window**. This will later allow BI Logs to be sent to the **BI Logs Monitor window**.
+
+###### Webhooks window
+
+:material-menu: `Application` > `General Setup` > `WebHook Events` > `Webhooks`
+
+From the Webhooks window, it is necessary to create a new record and complete the required fields as follows:
+
+- **Module**: Base Queries for EtendoBI 
+
+- **Name**: EtendoBI Logger
+
+- **Description**: Fill EtendoBI Log window
+
+- **Event Class**: Java
+
+- **Java\_Class**: `com.etendoerp.integration.powerbi.processes.FillLogWindow`
+
+!!! info
+    It is highly recommended to have just one Webhook for this module to work properly, as its functionality will not vary. That’s why, it is better to use the organization \* in order to cover all child organizations.
+
+
+In the **Params tab**, four records must be created under the names:
+
+- **client**
+   
+- **description**
+
+- **logtype**
+
+- **organization**
+
+- **rule**
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-0.png)
+
+
+!!! info
+    For more information about Webhooks, visit [Webhooks Events](https://docs.etendo.software/latest/bundles/platform/etendo-webhooks.md).
+
+###### User API Token window 
+
+:material-menu: `Application` > `General Setup` > `WebHook Events` > `User API Token`
+
+Then, make the proper configurations from the **User API Token window**. Here, it is necessary to grant access to a **user role**, so a token in this window needs to be created.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-1.png)
+
+Then, go back to the **Webhooks window**, and create a record in the **Access tab** in order to add the previously generated token. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-2.png)
+
+
+!!! success 
+    This way the Webhook is configured. Now, it is necessary to configure the EtendoBI Connector module.
+
+
+###### BI Connection Window
+
+:material-menu: `Application` > `Master Data Management` > `Analysis` > `BI Connection`
+
+In the **BI Connection window**, It is necessary to create a record to specify the path to the CSVs creation script and the Webhook to use. If the **EtendoBI bundle** is installed and the script path was not changed, the user should use the default value of ‘repository path’ field. Otherwise, the corresponding path should be specified. 
+
+!!! info
+    It is important to note that the **Repository path** will search for the corresponding path INSIDE the WebContent folder of the project. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-3.png)
+
+
+In the **Data Destination** tab, the file name of the script needs to be specified. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-4.png)
+
+Finally, in the **Execution variables** tab, some records must be created being the ‘Variable’ field:
+
+- **ip**: ip of the server where the files will be uploaded **(mandatory)**
+
+- **client**: the name of our client **(mandatory)**
+
+- **user**: the user used to connect to the server. **(mandatory)**
+
+- **application_url**: url of our application. e.g. "https://my-domain.cloud/etendo" **(mandatory)**
+
+- **port**: port of the server where the user is  connecting to **(default: 22)** 
+
+- **path**: path of the server where the files will be sent **(default: /)**
+
+- **private-key-path**: path of the private key used for the connection to the server
+
+- **bbdd\_user**: username of a read only user to access the database
+
+- **bbdd\_password**: password of the read only user
+
+- **csv_separator**: delimiter to use in the final csv files **(default: |)**
+
+**private-key-path** is the path of the private key used for the connection to the server. If this variable is not specified, the script will try to connect without specifying a private key.
+In the **bbdd\_user** and **bbdd\_password** variables, enter the **username** and **password** of a user with read-only permissions to the database. If either of these two variables is not found, the process will use the credentials of the database superuser.
+
+!!! info
+    However, it is **highly recommended** to use a user with read only permissions as it is a great security measure.
+
+
+As an example, let’s use the following values:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-5.png)
+
+!!! info
+    It is important to respect the specified names for the “Variable” field.
+
+
+Also, it is important to note that the script is going to create a folder named as the value of the **“Client” variable**, and it will contain folders for each organization that executes the background process. Therefore, if there are **two BI Connections** with the same **“Client” value**, the last execution of the process will overwrite the folder.  
+  
+ 
+
+For example, let's say there is  Organization A, which has Organizations B and C as its child organizations. If the user needs to have the same configuration for both, we can create a BI Connection using Organization A and set up two background processes that run the "EtendoBI Process," one for Organization B and the other for Organization C.
+
+When the script is executed, a folder will be created with the value of the "Client" variable in the BI Connection window as its name. Within that folder, subfolders will be created for each organization (in this case, A\_logs and A\_output for Organization A, and B\_logs and B\_output for Organization B).
+
+###### Enterprise Module Management window
+
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Enterprise Module Management`
+
+To load the Etendo base queries, go to the **Enterprise Module Management window**, and select Base Queries for EtendoBI and then click the **OK button**.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-6.png)
+
+###### BI Query window 
+
+:material-menu: `Application` > `Master Data Management` > `Analysis` > `BI Query`
+
+After that, Etendo base queries should be successfully loaded in the **BI Query window**.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-7.png)
+
+There are several points to consider when handling queries in this module.
+
+- **Primary Key Requirement**: Every base query must have its primary key as the first column. This is crucial  since in the script it is assumed that the first column is the identifier. 
+
+!!! warning
+    A failure to adhere to this can result in incorrect output, duplicated records, and an immense number of rows.
+
+- **Client column on base query**: Every base query must include `ad_client_id` column, with the alias “ClientID”
+
+- **Organization column on base query**: Every base query must include `ad_org_id` column, with the alias “OrgID”
+
+- **Custom Query Customization**: The customization of the query must also include the primary key (which is the same as the base query since customization is performed on the same table) with the SAME ALIAS as the base query. 
+
+!!! warning
+    Failing to respect this can lead to improper mapping between the results of the base query and its customization, resulting in incorrect output.
+
+Let’s see an example of a correct base query and customization.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-8.png)
+
+In this case, as a base query there are three columns. In its customization, there is a new column “name”. 
+
+!!! info
+    Note that there are three mandatory columns in the base query, with the correct alias for column `ad_client_id` and `ad_org_id`. It is important to make sure that **“ClientID”** and **“OrgID”** aliases are being set WITHOUT double quotes. Also, **there should not be** more than one space between the “as” keyword. 
+
+    ``` sql
+        … ad_client_id as “ClientID”, …    -- INCORRECT
+        … ad_client_id as ClientID, …      -- CORRECT
+    ```
+
+In the customization query, despite the requirement to have the primary key with the same alias as the base query, it is not necessary for it to be the first column. In this case, if instead of having:
+
+``` sql
+SELECT m_warehouse_id as WarehouseID, name as "Warehouse Name" FROM m_warehouse
+```
+
+We have:
+
+``` sql
+SELECT name as "Warehouse Name", m_warehouse_id as WarehouseID FROM m_warehouse
+```
+
+The result will be exactly the same.
+
+The script executes the base query, and then merges the customization, using both primary keys for mapping the rows.
+
+If a base query has a **customization**, the script creates **three different CSVs**.
+
+- A CSV file that contains the **result of the base query**. This CSV file has the prefix `EBI_` if it is an Etendo base query. If it is a client base query, it has the **first three letters** of the value of the “Client” variable that was set earlier as a prefix.
+
+- A CSV file with the prefix `BASE_`, which contains the **columns from the base query**, but if the customization overrides any of these values, they will be overwritten with the values from the customization. In this case, the `BASE_` CSV file will be the same as the base query since the **customization does not override** any values from the base query columns.
+
+- A CSV file with the prefix `FULL_`, which includes b**oth the columns from the base query and any additional columns added in the customization**. In the given example, the `FULL_` CSV file will contain the additional column “Warehouse Name”. 
+
+Later, at the end of the configuration,  this example query will be executed to analyze the **generated CSV files**.
+
+!!! info
+    It is important to note that there should be only one customization per base query. It should also be made clear that it is not possible to add constraints to the customization to remove rows from the base query. Instead, the customization allows adding or overwriting columns in the original query, using the primary key to map the records.
+
+
+Base queries must all contain the `ad_client_id` and `ad_org_id` columns, with alias **“ClientID”** and **“OrgID”** (case insensitive). 
+!!! warning
+    If a query does not have these columns with their alias, it will produce an error and be ignored.
+
+###### Process Request window
+
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Request`
+
+Once the query configuration is done, go to the **Process Request window**, create a new record, select the **EtendoBI Process** from the process field and schedule it.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-9.png)
+
+The scope of the data collection performed by the queries is based on the **organization** that configured the **background process**. In other words, all the obtained data is  filtered by the **client** and the **organization** that configured the **background process**, and **NOT** by the organization used in the **BI Connection window**. If the organization does not have a configuration in the **BI Connection**, Etendo will search for the **configuration** in one of its **parent organizations**, but the data scope will remain the same (itself and its child organizations).
+
+!!! info
+    If the organization that configured the background process does not have a BI Connection and there is no BI Connection found for its parent organizations either, the **process will not be executed**. 
+
+
+The process will never search for a BI Connection in the child organizations of the one which was set on the background process.
+
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-10.png)
+
+In the **Process Monitor** tab, the status of **Success** is shown in the new record that appears when the process is executed. It is good to know that this process executes our python script, so if there were no issues up until the execution of the python script, it will return to success status regardless of whether the python script fails.
+
+###### BI Logs Monitor window 
+
+:material-menu: `Application` > `Master Data Management` > `Analysis` > `BI Logs Monitor`
+
+The execution process can be checked in the **BI Logs Monitor** window.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-11.png)
+
+In this example image, the information about the script execution can be seen.
+
+If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
+
 
 After the execution of the process, two new directories should be created in the filesystem. One will contain the logs files, one for the rsync execution that will contain information about the file upload to the server; another file called syncScript.log.{datetime}, that will contain information about the script execution (most of this information can be seen in the Logs Monitor window, but if for any reason the window cannot receive this information, it should be able to be seen using this .log file).
 
@@ -46898,17 +46888,16 @@ The output directory, will contain all the CSVs that should have been uploaded t
     Remember that the main folder is created using the prefix of the “Client” variable that is set on BI Connection window. If two connections have the same value for “Client” variable, these directories will be overwritten.
 
 
-This is the content of Ete\_Example.csv and BASE\_Example.csv files: 
+This is the content of `Ete_Example.csv` and `BASE_Example.csv` files: 
 
 !!! info
     Remember that since any column is not being overridden, these files are the same. 
 
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-12.png)
 
-![](https://docs.etendo.software/latest/assets/drive/Y4E0AENgxCWmVoMCapDwvyeO4C0sALvcF7SFWvbxeT5GPcThHq0EgmN1avZxkVhNjWqYYa8phTQ_cnA-RBn1P8-DmePbVoOoN9qTb1uk1kAFG9ccvM2nCxVcHBRpom4t_4SlZkJYdzZX9JtTyEY5Qlg.png)
+On the other hand, this is the content of `FULL_Example.csv`:
 
-On the other hand, this is the content of FULL\_Example.csv:
-
-![](https://docs.etendo.software/latest/assets/drive/BAPACrYCcoprIrjoMndmxL7d7u1GFOS32ZZMCBXS3S6DsRdZpDRPgRblzPKMTlM2b1QTFLf2mgy7w4LaI_bFnNc9-AwGsl78PIlqpD4o0YkTsXO-qp6h9fFR392DYJRqvZfvefs-hLLbGE04vvU8OoU.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-13.png)
 
 !!! warning
     Make sure to have the corresponding permissions to connect to Files, since an incorrect configuration can lead to an error.
@@ -53025,8 +53014,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | 22.1.0 | 24.1.0 | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo BI Bundle
-## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Etendo BI Bundle
+# Article Title: Etendo BI Extensions Bundle
+## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Etendo BI Extensions Bundle
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes
 ## Article Content: 
@@ -53147,8 +53136,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | [1.0.0, latest] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo BI Bundle ES
-## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Etendo BI Bundle ES
+# Article Title: Etendo BI Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Etendo BI Extensions Bundle ES
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes
 ## Article Content: 
