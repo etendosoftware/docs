@@ -1,7 +1,15 @@
 ---
 hide:
     - toc
+
+tags:
+    - Etendo Classic
+    - Quick Setup
+    - Prerequisites
+    - Installation
+    - User Interface
 ---
+
 ![cover-getting-started.png](../assets/getting-started/overview/cover-getting-started.png)
 
 #

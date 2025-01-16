@@ -1,7 +1,15 @@
 ---
 hide: 
     - toc
+
+tags:
+    - Etendo Updates
+    - Release Notes
+    - Enhancements
+    - New Features
+    - Roadmap
 ---
+
 ![cover-whats-new.png](../assets/whats-new/overview/cover-whats-new.png)
 # 
 ## Welcome to our Release Notes Documentation
@@ -17,7 +25,6 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 <br><br>
 ### In this section you can learn about Etendo's life cycle, when updates are released and valuable information to keep you up to date with our news.
 </figure>
-
 
 ---
 

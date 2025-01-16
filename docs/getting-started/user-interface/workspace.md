@@ -1,5 +1,12 @@
 ---
 title: Workspace
+
+tags:
+    - User Login
+    - Etendo Workspace
+    - Navigation Bar
+    - User Alerts
+    - User Profile
 ---
 
 ## Login 
