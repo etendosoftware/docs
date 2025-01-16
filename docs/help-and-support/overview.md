@@ -1,4 +1,10 @@
 ---
+tags:
+    - Help and Support
+    - Etendo
+    - Bug Reporting
+    - User Assistance
+    - Support Portal
 hide:
     - toc
 ---
