@@ -1,27 +1,27 @@
 ---
-title: Tables
-tags: 
-  - Database Tables
+title: tables
+tags:
+  - Tables
+  - Database
   - Common Columns
   - Primary Key
-  - Client/Organization
   - Naming Conventions
 ---
-#  Tables
+# Tables
 
   
-##  Overview
+## Overview
 
 Physical database tables are the basis  Application Dictionary Data Model  is
 built on. This document discusses the particularities all tables in Etendo
 ERP must have.
 
-##  Common Columns
+## Common Columns
 
 All tables in Etendo must have some common columns. All these columns
 must be defined as not nullable.
 
-###  Primary Key
+### Primary Key
 
 All tables in Etendo have a single column primary key. This column will
 be automatically populated with a generated  UUID  therefore the type for this
@@ -33,7 +33,7 @@ primary key column for *HT Salary* table would be *HT Salary ID*.
 This column must be also set as primary key in database, it is not enough with
 defining it as ID in Application Dictionary.
 
-###  Client/Organization
+### Client/Organization
 
 As Etendo ERP is a [multi client and multi organization](Multi_Client_and_Multi_Org.md) application, all
 data belongs to a client and an organization, so all tables must have these
@@ -46,7 +46,7 @@ These columns are a foreign key to *AD Client*  and  *AD Org*  tables. So, their
 types must also be *VARCHAR2(32)* , and there must be a foreign key to these
 tables.
 
-###  Audit Information
+### Audit Information
 
 Finally, there are some columns that store information about whether a record
 is active and when and who created and last modified it. This information is
@@ -58,12 +58,12 @@ maintained in the following columns:
   * _Upated_ : It contains the last date and time when the record was modified (or created if no modification was performed later). Its type is _DATE_ . 
   * _UpdatedBy_ : Indicates the last user that updated the record. It is a foreign key to  *AD User*  so its type is _VARCHAR2(32)_ . 
 
-##  Naming conventions
+## Naming conventions
 
 When creating new tables it is necessary to pay special attention to the names
 given to tables and columns, particularly regarding modularity.
 
-###  Tables
+### Tables
 
 The only element to take into consideration is the module's  DB Prefix  . The
 table's name must start with this DB prefix followed by underscore character
@@ -100,9 +100,9 @@ OBUISEL  |  User Interface Selector
 OBUISC  |  Smartclient  
 FINPR  |  Orders Awaiting Delivery  
   
-###  Columns
+### Columns
 
-####  Modularity
+#### Modularity
 
 In case the column belongs to the same module than its table no special rule
 must be followed for its name. But if the column is going to be added to a
@@ -121,12 +121,12 @@ plus* the *DB Prefix* of the module the column belongs to. For instance,
   
 This restriction also applies for naming constraints, triggers and functions.
 
-####  Primary Key Column
+#### Primary Key Column
 
 !!!info
     Naming for primary key column is explained in [Primary Key](#primary-key) section of this document.
 
-####  Foreign Key Columns
+#### Foreign Key Columns
 
 It is a best practice to name, if possible, foreign key columns in the same
 manner than the primary key column of the table they link to. The reason for
@@ -140,7 +140,7 @@ same table or when adding columns in a different module than the table's one.
 Following this naming rule allows to define standard references as *TableDir*
 when the column is defined in Application Dictionary.
 
-####  Naming of Columns and the Data Access Layer
+#### Naming of Columns and the Data Access Layer
 
 In Etendo, Java classes are generated from the tables definition. A DAL
 entity is generated from every table defined in the Application Dictionary.
@@ -156,7 +156,7 @@ which collide with Java keywords* , such as *class* , *if* , *int* , ...
 !!!info
     Here you can find a list of the [Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html){target="\_blank"}.
 
-##  Supported Column Data types
+## Supported Column Data types
 
 `DBSourceManager`, the utility that Etendo uses to manage database related
 operations, supports a subset of the datatypes that Oracle and PostgreSQL

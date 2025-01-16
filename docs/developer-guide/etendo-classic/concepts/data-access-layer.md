@@ -1,17 +1,14 @@
 ---
+title: Data Access Layer
 tags: 
   - Data Access Layer
-  - Etendo
-  - Etendo Classic
   - Business Logic
   - Hibernate
-  - Database
   - Business Object
-  - Development
-  - Architecture
+  - Development Architecture
 ---
 
-#  Data Access Layer
+# Data Access Layer
   
 ##  Overview
 

@@ -1,5 +1,11 @@
 ---
 title: Procurement Management
+
+tags:
+    - Procurement Process
+    - Purchase Requisitions
+    - Goods Receipts
+    - Purchase Orders
 ---
 
 ## Overview

@@ -1,15 +1,16 @@
 ---
+title: Datasets
 tags: 
-  - dataset
-  - where clause
-  - DatasetTable
-  - reference data
-  - business objects
+  - Dataset
+  - Where Clause
+  - Dataset Table
+  - Reference Data
+  - Business Objects
 ---
 
-#  Datasets
+# Datasets
   
-##  Overview
+## Overview
 
 The Dataset concept allows you to define sets of data from different tables and export this data in one step. Datasets are especially useful for managing reference data for a module, for example tax rates or default data in new
 tables added by a module. The reference data is published, distributed and
@@ -32,9 +33,9 @@ Client/Organization-level datasets work like Organization-level datasets, but
 can also be applied on [Initial Client Setup](../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) when creating a new client. They
 contain Organization/Client level information.
 
-##  Main Concepts
+## Main Concepts
 
-###  Dataset
+### Dataset
 
 A Dataset is a grouping of different tables (entities) which are exported
 together. Datasets are defined through the `Dataset` menu in the Application
