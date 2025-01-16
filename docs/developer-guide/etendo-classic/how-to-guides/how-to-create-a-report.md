@@ -1,10 +1,10 @@
 ---
+title: How to Create a Report
 tags: 
-  - Etendo classic
-  - create a report
-  - reports
+  - How to
+  - Reports
   - Jaspersoft Studio
-  - classpath
+  - Classpath
 ---
 #  How to Create a Report
   

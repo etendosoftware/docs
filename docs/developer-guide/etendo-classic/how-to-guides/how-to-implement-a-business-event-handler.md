@@ -1,11 +1,10 @@
 ---
+title: How to Implement a Business Event Handler
 tags:
-  - HowTo
-  - Etendo Classic
+  - How to
   - Event Handler
   - Business Logic
   - Event Method
-title: How to Implement a Business Event Handler
 ---
  
 # How to Implement a Business Event Handler
