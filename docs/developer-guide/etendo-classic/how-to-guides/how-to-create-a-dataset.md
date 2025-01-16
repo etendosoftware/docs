@@ -1,15 +1,14 @@
 ---
-tags: 
-  - dataset
-  - Data Access Level
-  - module
-  - Reference Data
-  - regions
 title: How to Create a Dataset
+tags:
+    - How to
+    - Dataset
+    - Data Access Level
+    - Module Dataset
+    - Reference Data
 ---
 
 # How to Create a Dataset
-
   
 ##  Overview
 
@@ -17,8 +16,6 @@ This how-to will focus on creating a dataset in Etendo Classic and also will giv
 
 ###  Introduction to Dataset Concept
 
-
-  
 First of all we need to understand the dataset concept, which allows to export
 the sets of data from different tables in one step. This is especially useful
 to manage and distribute the module along with _reference data_ , for instance
@@ -28,13 +25,10 @@ A dataset is defined by its Dataset Tables and Dataset Columns. This detailed
 configuration leads to which tables to be exported, and which columns of each
 table are executed and exported.
 
-  
 There are some important things to note:
 
   * A Dataset belongs to a module, so modules can add Datasets and define their own Datasets. 
-  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set. 
-
-  
+  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set.   
   
 ###  Reference Data
 
@@ -57,52 +51,44 @@ applying the module.
 There are mainly three tables referred to as data structure to define datasets. They
 are:
 
-1\. *DataSet* with the following columns: _Value, Name, Description, Module
+1. 
+    * DataSet with the following columns: _Value, Name, Description, Module
 and DataAccessLevel_
+    * Data sets have a name and a description to describe the content of the data set. 
+    * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
+    * A data set is owned by a module in the same way that all Application Dictionary components. 
 
-  * Data sets have a name and a description to describe the content of the data set. 
-  * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
-  * A data set is owned by a module in the same way that all Application Dictionary components. 
+    ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
-
-    
-
-!!!note
+    !!!note
     If the export allowed column is flagged, then an **Export Reference Data** button is displayed. 
     
 
-2\. *DataSet_Table* with the following columns: _DataSet, Table,
-fullBusinessObject, includeAllColumns, excludeAuditInfo and whereClause (HQL
-expression)_
+2. 
+    * DataSet_Table* with the following columns: _DataSet, Table, fullBusinessObject, includeAllColumns, excludeAuditInfo and whereClause (HQLexpression)_
+    * A data set can have one or many tables from the ones registered in the `AD_Table`. For each of them developers can decide to include only records in that table or export the full business object using the check `fullBusinessObject`. 
+    * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the `includeAllColumns` check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
+    * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
+    * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the `excludeAuditInfo` column. 
 
-  * A data set can have one or many tables from the ones registered in the `AD_Table`. For each of them developers can decide to include only records in that table or export the full business object using the check `fullBusinessObject`. 
-  * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the `includeAllColumns` check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
-  * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
-  * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the `excludeAuditInfo` column. 
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
+    ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
     
-!!!note 
-    If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
-    For example if the Dataset Table is defined for the ` C_Order ` table and this field is flagged then also the related ` C_OrderLines ` are exported. 
-    
-
+    !!!note 
+        If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
+        For example if the Dataset Table is defined for the ` C_Order ` table and this field is flagged then also the related ` C_OrderLines ` are exported. 
   
-!!!info
-    A full business object is a record including all its one-to-many relationships
-    as defined in the AD through the isParent attribute of a column. An example of
-    a full business object is a product with its vendors, prices, etc. A complete
-    description of business objects is provided in the DAL project.
+    !!!info
+        A full business object is a record including all its one-to-many relationships
+        as defined in the AD through the isParent attribute of a column. An example of
+        a full business object is a product with its vendors, prices, etc. A complete
+        description of business objects is provided in the DAL project.
 
-  
-  
-3\. *Dataset_column* with the following columns: *DataSet_Table, Column, isExcluded and conditionClause(Java expression)*.
+3. 
+    * Dataset_column* with the following columns: *DataSet_Table, Column, isExcluded and conditionClause(Java expression).
+    * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
+    * They can exclude columns using the `isExcluded` check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
 
-  * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
-  * They can exclude columns using the `isExcluded` check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
+    ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
 
 ###  Data Access Level
 

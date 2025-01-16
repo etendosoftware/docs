@@ -364,34 +364,32 @@ nav:
 #        - Category:Developers Guide: developer-guide/etendo-classic/how-to-guides/Category_Developers_Guide.md
 #        - Category:HowTo: developer-guide/etendo-classic/how-to-guides/Category_HowTo.md
 #        - Client Side Development and API: developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API.md
-#        - Data Access Layer: developer-guide/etendo-classic/how-to-guides/Data_Access_Layer.md
-#        - Data Access Layer: developer-guide/etendo-classic/how-to-guides/Data_Access_Layer.md
 #        - How Price Including Taxes are Calculated: developer-guide/etendo-classic/how-to-guides/How_Price_Including_Taxes_are_Calculated.md
         - How to Add a Button to the Toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
-#        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
+        - How to Add a Canvas Field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid.md
 #        - How to add a Constraint: developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint.md
         - How to Add a Field to a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md
 #        - How to add a masked text field: developer-guide/etendo-classic/how-to-guides/How_to_add_a_masked_text_field.md
-        - How to Add a Rich Text Field and Column: developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column.md
+        - How to Add a Rich Text Field and Column: developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column.md
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
 #        - How to automatically populate search keys: developer-guide/etendo-classic/how-to-guides/How_to_automatically_populate_search_keys.md
 #        - How to call a stored procedure from the DAL: developer-guide/etendo-classic/how-to-guides/How_to_call_a_stored_procedure_from_the_DAL.md
 #        - How To Call An Openbravo Webservice From Java: developer-guide/etendo-classic/how-to-guides/How_To_Call_An_Openbravo_Webservice_From_Java.md
 #        - How to change an existing Report: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Report.md
-        - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window.md
+        - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
 #        - How to Change Fonts in Openbravo Reports: developer-guide/etendo-classic/how-to-guides/How_to_Change_Fonts_in_Openbravo_Reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
 #        - How To Configure Log: developer-guide/etendo-classic/how-to-guides/How_To_Configure_Log.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
-        - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process.md
-        - How to Create a Callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout.md
+        - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md
+        - How to Create a Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout.md
         - How to Create a Callout that Extends from Another Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout.md
         - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md 
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
-        - How to create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
+        - How to Create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
 #        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
 #        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
-        - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md
+        - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
         - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md

@@ -1,11 +1,10 @@
 ---
-tags: 
-  - callout creation
-  - simple callout
-  - DAL
-  - Etendo Infrastructure
-  - Etendo ERP
-  - FIC
+title: How to Create a Callout
+tags:
+    - How to
+    - Callout Creation
+    - Simple Callout
+    - DAL
 ---
 
 # How to Create a Callout

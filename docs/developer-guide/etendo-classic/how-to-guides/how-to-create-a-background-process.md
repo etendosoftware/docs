@@ -1,13 +1,12 @@
 ---
-tags: 
-  - background process
-  - process scheduling
-  - RunLater
-  - unschedule
-  - Etendo Infrastructure
 title: How to Create a Background Process
+tags:
+	- How to
+	- Background Process
+	- Process Scheduling
+	- Run Later
+	- Unschedule
 ---
-
   
 #  How to Create a Background Process
 

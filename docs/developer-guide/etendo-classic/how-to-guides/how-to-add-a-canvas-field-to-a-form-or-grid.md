@@ -1,6 +1,7 @@
 ---
+title: How to add a canvas field to a Form or Grid
 tags:
-  - Etendo
+  - How to
   - Canvas Field
   - Form Customization
   - Grid Customization
