@@ -1,6 +1,14 @@
 ---
 title: Upgrading to Openbravo 21Q3.2
+tags: 
+    - Upgrade
+    - Openbravo
+    - Target Version
+    - 21Q3.2
 ---
+
+#Upgrading to Openbravo 21Q3.2
+
 ## Overview
 
 This guide explains how to upgrade your current Openbravo environment to version 21Q3.2. This involves two main steps:

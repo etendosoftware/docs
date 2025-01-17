@@ -1,11 +1,10 @@
 ---
-tags: 
-  - alert creation
-  - system administrator
-  - alert recipients
-  - notification system
-  - user roles and permissions
 title: How to Create an Alert
+tags: 
+  - How to
+  - Alert Creation
+  - alert Recipients
+  - System Notification
 ---
 
 #  How to Create an Alert

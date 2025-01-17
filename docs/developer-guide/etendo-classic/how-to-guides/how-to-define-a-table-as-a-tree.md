@@ -1,5 +1,6 @@
 ---
 tags:
+  - How to
   - Etendo classic
   - Table
   - Tree

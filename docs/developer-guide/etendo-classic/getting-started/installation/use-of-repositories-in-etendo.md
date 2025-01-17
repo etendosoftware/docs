@@ -1,6 +1,12 @@
 ---
 title: Use of Repositories in Etendo
+tags:
+    - Repositories
+    - Packages
+    - Access Token
 ---
+
+# Use of Repositories in Etendo
 
 ## Overview
 

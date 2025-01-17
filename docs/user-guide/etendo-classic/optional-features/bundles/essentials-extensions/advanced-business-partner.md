@@ -1,3 +1,11 @@
+---
+tags:
+    - Advanced Business Partner
+    - Essentials Extensions
+    - Business Partner
+    - Sequence
+---
+
 # Advanced Business Partner
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner` 
 

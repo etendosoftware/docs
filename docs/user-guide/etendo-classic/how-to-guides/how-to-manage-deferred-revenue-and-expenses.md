@@ -1,3 +1,12 @@
+---
+tags:
+    - How to
+    - Deferred Revenue
+    - Expense Management
+    - Accounting Processes
+    - Invoice Handling
+---
+
 ## Introduction
 
 In most situations, a company would want to recognize revenues as soon as an invoice is completed. For example, when a food and beverage distributor sells beverages, the revenue for the transaction is recognized as soon as the goods leave the warehouse. In Etendo, in this situation, revenue is generated as part of the accounting of the sales invoice corresponding to the transaction.

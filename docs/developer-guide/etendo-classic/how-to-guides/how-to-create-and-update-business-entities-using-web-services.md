@@ -1,6 +1,6 @@
 ---
 tags:
-  - Web Services
+  - How to
   - Business Entities
   - Update
   - Etendo Classic

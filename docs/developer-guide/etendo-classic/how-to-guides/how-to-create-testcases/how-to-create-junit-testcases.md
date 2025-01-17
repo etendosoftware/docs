@@ -1,9 +1,10 @@
 ---
+title: How to Create JUnit Test Cases
 tags:
+  - How to
   - JUnit
   - Test
   - Test Cases
-title: How to Create JUnit Test Cases
 ---
 
 # How to Create JUnit Test Cases

@@ -1,11 +1,12 @@
 ---
 tags: 
-  - Etendo classic
-  - add columns
-  - table
-  - configuring columns
-  - application dictionary
+  - How to
+  - Add Columns
+  - Table
+  - Configuring Columns
+  - Application Dictionary
 ---
+
 #  How to Add Columns to a Table 
 
 ##  Overview

@@ -1,5 +1,12 @@
 ---
 title: Requirements
+
+tags:
+    - Etendo Requirements
+    - Web Browsers
+    - Network Connectivity
+    - Java Platform
+    - Software Stack
 ---
 ## Overview
 

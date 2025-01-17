@@ -1,5 +1,9 @@
 ---
 title: How to Create Jobs and Actions
+tags:
+    - How to
+    - Jobs
+    - Actions
 ---
 
 ## Overview

@@ -1,11 +1,10 @@
 ---
 title: Copilot Installation
 tags:
-    - Etendo Copilot
-    - Copilot Core
+    - Copilot
+    - Install
     - IA
     - Infrastructure
-    - Chat
     - Assistants
 ---
 

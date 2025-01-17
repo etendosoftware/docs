@@ -1,9 +1,10 @@
 ---
 tags:
     - Copilot
-    - IA
-    - Translation tool
-    - XML
+    - Translation Tool
+    - Module Translation
+    - Language
+    - Localization
 ---
 
 #  XML Translation Tool

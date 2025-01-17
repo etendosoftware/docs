@@ -1,10 +1,13 @@
 ---
 tags:
   - Live Builds
+  - Livebuilds
+  - Etendo Classic
+  - Real-time Testing
   - Postgres
   - Oracle
-  - Livebuild
-  - Liebuilds
+  - Environments
+
 hide:
     - navigation
     - toc

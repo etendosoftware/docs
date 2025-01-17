@@ -1,5 +1,12 @@
 ---
 title: Grid and Forms
+
+tags:
+    - Grid View
+    - Form View
+    - Data Filtering
+    - User Customization
+    - Keyboard Shortcuts
 ---
 ## Grid and Form View
 

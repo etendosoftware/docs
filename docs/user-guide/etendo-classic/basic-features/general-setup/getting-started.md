@@ -1,10 +1,9 @@
 ---
 tags: 
- - getting started
- - installations
- - client
- - organization
- - setup
+ - Getting Started
+ - Installations
+ - Client Setup
+ - Organization Setup
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)

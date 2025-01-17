@@ -1,10 +1,10 @@
 ---
 tags: 
- - getting started
- - material requirement planning
- - process plan
- - product
- - requirement
+    - Getting Started
+    - Material Requirement Planning
+    - Process Plan
+    - Product
+    - Requirement
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
@@ -26,8 +26,6 @@ The Material Requirement Planning consists of two plans:
 **Planning Methods** are entered to define what supply components are taken into account with the calculations of these plans.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png)
-
-
 
 ### **Configuration**
 

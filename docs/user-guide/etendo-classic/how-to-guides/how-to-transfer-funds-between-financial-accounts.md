@@ -1,3 +1,12 @@
+---
+tags:
+    - How to
+    - Fund Transfers
+    - Financial Accounts
+    - Bank Transactions
+    - Cash Management
+---
+
 ## Overview
 
 There are many situations in which a company needs to transfer funds to modify or adjust bank and/or cash accounts balance:

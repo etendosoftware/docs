@@ -1,5 +1,12 @@
 ---
 title: Installation
+
+tags:
+    - Etendo Installation
+    - Installation Guide
+    - Docker Management
+    - PostgreSQL Setup
+    - Etendo Environment
 ---
 ## Overview
 This section explains how to install a new Etendo environment. It includes:

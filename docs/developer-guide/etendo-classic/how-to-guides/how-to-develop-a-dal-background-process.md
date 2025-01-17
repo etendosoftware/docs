@@ -1,10 +1,12 @@
 ---
 title: How to Develop a DAL Background Process
 tags:
-  - Background process
-  - Java development
-  - Data Access Layer (DAL)
-  - Database operations
+  - How to
+  - Background Process
+  - Java Development
+  - Data Access Layer
+  - DAL
+  - Database Operations
   - Process Scheduling
 ---
 

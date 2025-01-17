@@ -1,15 +1,15 @@
 ---
-tags: 
-  - Application Dictionary (AD)
-  - UI Customization
-  - Physical Inventory
-  - Module Development
 title: How to Change an Existing Window
+tags: 
+    - How to
+    - Application Dictionary
+    - UI Customization
+    - Physical Inventory
+    - Module Development
 ---
 
 #  How to Change an Existing Window
 
-  
 ##  Overview
 
 Application elements ([windows, tabs and fields](../../../developer-guide/etendo-classic/concepts/Modularity_Concepts.md#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.

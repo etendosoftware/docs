@@ -1,5 +1,9 @@
 ---
 title: How to Create Scan Process
+tags:
+    - How to
+    - Scan Process
+    - Process Definition
 ---
 
 ## Overview

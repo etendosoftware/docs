@@ -1,10 +1,11 @@
 ---
 tags:
-    - Copilot
-    - IA
+    - Etendo Copilot
+    - Email Automation
+    - SMTP
+    - Resend API
+    - Notifications
     - Tool
-    - Send
-    - Email
 ---
 
 # Send Email Tool

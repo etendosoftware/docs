@@ -1,9 +1,12 @@
 ---
 tags:
+    - How to
+    - Export Assistant
+    - Distribute Assistant
     - Copilot
-    - IA
-    - Tools
     - Datasets
+    - Export Tool
+    - Distribute Tool
 ---
 
 # How to Export Tools and Assistants

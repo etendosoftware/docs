@@ -1,10 +1,10 @@
 ---
-tags: 
-- Toolbar
-- Button
-- JavaScript
-- Data Access Layer
-- Implementation
+tags:
+  - How to 
+  - Toolbar
+  - Button
+  - JavaScript
+  - Data Access Layer
 ---
 
 # How to Add a Button to the Toolbar

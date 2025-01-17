@@ -1,9 +1,10 @@
 ---
 tags:
     - Copilot
-    - IA
     - OCR
     - Image Recognition
+    - Optical Character Recognition
+    - Tool
 ---
 
 # Optical Character Recognition (OCR) Tool

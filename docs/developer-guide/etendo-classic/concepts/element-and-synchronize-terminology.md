@@ -1,16 +1,17 @@
----  
-tags: 
-  - application dictionary
-  - element
-  - field labels
-  - translation
-  - purchase
-  - sales
+---
+title: Element and Synchronize Terminology  
+tags:
+  - Concepts
+  - Application Dictionary
+  - Element
+  - Field Labels
+  - Translation
+  - Synchronize Terminology
 ---
 
 # Element and Synchronize Terminology
 
-##  Element
+## Element
 
 Elements  define the text in the label to be displayed for each field in the
 application as well as its related help. Each column in the Application
@@ -22,14 +23,14 @@ For example, `C_BPartner_ID` is the name for a number of columns in the applicat
 well as the help for all of them is the same; instead of maintaining that
 information redundantly in each column all these columns use the same element.
 
-###  Element maintenance
+### Element maintenance
 
 Elements can be edited in `Application Dictionary` > `Setup ` >`Element` 
 window (as *System Administrator*); but, usually, elements are not directly
 created using this window but by the *Synchronize terminology* . Once the
 element is created, this window is used to edit its contents.
 
-###  Synchronize Terminology
+### Synchronize Terminology
 
 It is the process that creates the elements for the columns that do not
 already have an associated one and copies the information in the elements to
@@ -60,7 +61,7 @@ fields that represent the columns for those elements.
     Note that once the element is created the changes in the column fields will also be overwritten in this process.  
 
   
-####  In detail
+#### In detail
 
 Here are all the steps the *Synchronize Terminology* process executes.
 
@@ -94,7 +95,7 @@ module. This is done by setting the field for `AD_Language` column in
 *Module* tab as not centrally maintained and writing directly in the field the
 name and help.
 
-###  Translations
+### Translations
 
 As elements are used to define text to be displayed in UI, they can be
 translated to different languages. 
@@ -105,7 +106,7 @@ The text in the element must be written in the language its module defines, and 
     The standard way to translate is by creating a new module with no additional
     functionality but just translations for the module.
 
-###  Purchase entries
+### Purchase entries
 
 If you observe the fields in the `Application Dictionary` > `Setup` >`Element` 
 you will notice there are standard fields (name, help...) and similar ones

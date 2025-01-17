@@ -1,10 +1,10 @@
 ---
-tags: 
-  - accounting schema
-  - setup process
-  - client
-  - organization
-  - System Administrator
+tags:
+    - How to
+    - Accounting Schema
+    - Client Setup
+    - Organization Setup
+    - System Administrator
 ---
 
 #  How to Run an Initial Client Setup Process

@@ -1,10 +1,11 @@
 ---
 title: Copilot Extensions
 tags: 
-    - Copilot
-    - AI
-    - Tools
-    - Assistants
+    - Copilot Extensions
+    - AI Tools
+    - Assistant Features
+    - Etendo Modules
+    - Integration Guide
 ---
 
 # Copilot Extensions
@@ -121,4 +122,3 @@ This tool allows the user to translate the content of an XML file from one langu
 
 !!! info
     For more information, visit [XML Translation Tool](../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool.md) developer guide.
-

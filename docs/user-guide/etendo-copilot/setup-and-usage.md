@@ -1,9 +1,10 @@
 ---
 tags: 
- - copilot
- - ai
- - ai tools
- - setup
+ - Etendo Copilot
+ - Configuration Guide
+ - Assistant Management
+ - AI Tools Setup
+ - User Instructions
 ---
 
 # Copilot Setup and Usage
@@ -331,6 +332,5 @@ Fields to note:
 - **Name**: Claude 3.5 Haiku
 - **Provider**: anthropic
 - **Max Tokens**: 8000
-
 
 

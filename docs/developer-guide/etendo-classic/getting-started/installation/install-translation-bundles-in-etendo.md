@@ -1,6 +1,11 @@
 ---
 title: Install Translation Bundles in Etendo
+tags:
+    - Install Translations
+    - Translations
 ---
+
+# Install Translation Bundles in Etendo
 
 ## Overview
 This page will explain how to install translation bundles, as their process is different from that of the other bundles. 

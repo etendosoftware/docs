@@ -1,12 +1,12 @@
 ---
+title: How to Add a Field to a Window Tab
 tags:
-  - Etendo
+  - How to
   - Etendo Classic
   - Customization
   - UI Design
   - Application Dictionary
   - Modules
-title: How to Add a Field to a Window Tab
 ---
 
 # How to Add a Field to a Window Tab

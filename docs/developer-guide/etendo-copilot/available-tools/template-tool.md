@@ -1,9 +1,10 @@
 ---
 tags:
-    - Copilot
-    - IA
+    - Etendo Copilot
+    - Python Tool Template
+    - Development Standardization
+    - Rapid Prototyping
     - Tool
-    - Template
 ---
 
 # Template Tool

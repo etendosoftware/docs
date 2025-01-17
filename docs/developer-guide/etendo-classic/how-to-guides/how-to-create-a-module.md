@@ -1,13 +1,13 @@
 ---
+title: How to Create a Module
 tags: 
-  - Etendo Classic
+  - How to
   - Modularity
   - Create a module
-  - Package a module
   - Module
 ---
 
-#  How To Create a Module
+#  How to Create a Module
 
 ##  Overview
 

@@ -1,14 +1,11 @@
 ---
 tags:
+  - Concepts
   - Standard Windows
   - Application Dictionary
   - Windows
   - Tabs
   - Fields
-  - Java
-  - XSQL
-  - HTML
-  - XML
 ---
 
 # Standard Windows

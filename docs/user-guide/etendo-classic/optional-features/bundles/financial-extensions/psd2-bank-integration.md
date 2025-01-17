@@ -1,10 +1,9 @@
 ---
 tags: 
-    - Bank transaction
+    - Bank Transaction
     - Token
     - PSD2
     - Bank Statements
-    - Account ID
 ---
 
 # Bank Integration PSD2

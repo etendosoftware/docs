@@ -1,9 +1,10 @@
 ---
 tags:
+    - How to
     - Copilot
-    - IA
-    - Machine Learning
     - Console
+    - Execute Copilot
+    - Terminal
 ---
 
 # How to execute Copilot through the console

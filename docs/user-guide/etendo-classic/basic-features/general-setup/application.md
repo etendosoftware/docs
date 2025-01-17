@@ -1,5 +1,10 @@
 ---
 title: Application
+tags:
+    - Application Management
+    - Sequences Setup
+    - Currency Exchange
+    - Alerts in Etendo
 ---
 
 ## Create Sequences

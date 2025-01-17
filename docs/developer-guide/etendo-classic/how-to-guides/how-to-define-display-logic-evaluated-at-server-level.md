@@ -1,5 +1,6 @@
 ---
 tags:
+  - How to
   - Etendo classic
   - Display logic
   - Fields

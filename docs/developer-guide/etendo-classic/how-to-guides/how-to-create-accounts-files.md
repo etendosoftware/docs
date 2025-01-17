@@ -1,11 +1,11 @@
 ---
-tags: 
+tags:
+  - How to
   - Etendo classic
-  - create accounts files
-  - account tree
-  - chart of accounts
-  - csv
-  - file structure
+  - Create Accounts File
+  - Account Tree
+  - Chart of Accounts
+  - CSV
 ---
 
 # How to Create Accounts Files

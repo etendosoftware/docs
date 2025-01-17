@@ -1,14 +1,15 @@
 ---
-tags: 
+title: Processes
+tags:
+  - Concepts
   - SQL Processes
   - Java Processes
   - Execution Methods
   - Process Scheduling
-  - Parameters
 ---
-#  Processes
+# Processes
   
-##  Overview
+## Overview
 
 A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes _SQL Processes_ and _Java Processes_.
 
@@ -18,7 +19,7 @@ Once a process is defined it can be added to the menu to be called directly from
 
 Background processes can be set as _Prevent Concurrent Executions_ . Before a process with this attribute is about to be executed, it is checked there are no other instances of the same process in execution at the same time, in this case another execution is aborted.
 
-###  Parameters
+### Parameters
 
 When a process (SQL or Java) or a Jasper Report is set as _Standard_, a pop-up message is automatically generated and displayed when invoking it, this message looks like this:
 
@@ -51,12 +52,12 @@ Let's overview some of the most important fields in this tab:
   * *Reference* , *Reference Search Key* and *Validation*: These three fields work exactly like the same ones when defining references for columns. 
   * *Range* : If it is checked, the pop-up will display two parameters in order to define a range, the first parameter will be named as specified in _DB Column name_ field and the second one will have the same name with a _TO_ suffix. 
 
-###  Defining Processes
+### Defining Processes
 
 Processes can be of two different types: _SQL Processes_ and _Java
 Processes_ . SQL processes are implemented in the SQL language and are executed by the database engine. Java proceses are implemented in the Java language and are executed by the application server.
 
-####  SQL Processes
+#### SQL Processes
 
 _SQL Processes_ are implemented by database stored procedures. 
 
@@ -77,7 +78,7 @@ In case the process requires any parameter, it is possible to define them.
 !!!info
     To learn more about how to do it read [Parameters](#parameters).
 
-####  Java Processes
+#### Java Processes
 
 Java processes are implemented by java classes. 
 
@@ -96,7 +97,7 @@ It is also necessary to indicate the Java class that is going to implement the p
 !!!info
     If the process requires parameters they can be defined in the *Parameter* tab as explained in the [Parameters](#parameters) section of this document.
 
-###  Executing processes
+### Executing processes
 
 !!!note
     It is required to define the process compilation in order to be able to
@@ -106,19 +107,19 @@ It is also necessary to indicate the Java class that is going to implement the p
   
 Processes can be executed from the user interface from a menu or with a button. It can also be scheduled to be executed in the background without any user interaction.
 
-####  Executing a process from a menu option
+#### Executing a process from a menu option
 
 To execute a process from a menu option, you need to define a new menu option that executes the process. Menus are defined in `General Setup > Application > Menu`. In the *Action* field the *Process* entry must be selected, then in the *Process* field select the process. it will be executed immediately and then saved.
 
 Finally, press the *Tree* button to organize the new menu option in the menu tree, and now the process defined can be executed selecting this new menu created.
 
-####  Executing a process from a button
+#### Executing a process from a button
 
 To execute a process with a button you need to define a column that references a button. In `Application Dictionary > Tables and Columns`, go to the column you want to use to execute the process and in the field *Reference* select the *Button* entry, then in the *Process* field select the process you want to execute and save.
 
 When executing a process with a button, the record ID of the current record selected of the table will be passed to the process. This allows to execute functions for specific records.
 
-####  Executing a process in the background
+#### Executing a process in the background
 
 Backgroung processes are defined in `General Setup > Process Scheduling > Process Request`. 
 
@@ -130,7 +131,7 @@ In this window you can define a background process. The process to be executed c
 !!!note
     There is no user interaction necessary to execute the process, thus, no pop-up will appear prompting for additional parameters.
 
-#####  Kill a background Process
+##### Kill a background Process
  
   
 A button *Kill Process* is shown in the Process Monitor window on that processes that implement the KillableProcess interface while a process is being executed (Status = Processing). The interface KillableProcess will let you kill your process using a kill mechanism.

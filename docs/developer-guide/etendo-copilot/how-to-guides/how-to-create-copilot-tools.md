@@ -1,8 +1,9 @@
 ---
 tags:
-    - Copilot
-    - IA
-    - Machine Learning
+    - How to
+    - Create Tool
+    - Tool
+    - Python Dependencies
 ---
 
 # How to Create Copilot Tools

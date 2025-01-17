@@ -2,9 +2,9 @@
 title: Install Etendo Development Environment
 search:
   boost: 2
-tags: 
-    - Install
-    - Development
+tags:
+    - Getting Started
+    - Development Mode
     - Develop
     - Install Etendo
 ---

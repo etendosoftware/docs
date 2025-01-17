@@ -1,15 +1,15 @@
 ---
 title: How to Create a Window
-tags: 
-  - window creation
-  - module development
-  - field management
-  - UI design
-  - Database table creation
+tags:
+  - How to
+  - Window Creation
+  - Development
+  - Database Table Creation
 ---
 
-  
-##  Overview
+# How to Create a Window
+
+## Overview
 
 The objective of this section is to show how you can create a new window from scratch. 
 
@@ -17,7 +17,7 @@ The objective of this section is to show how you can create a new window from sc
     This section builds on top of two previous sections which explain
     [How to Create a Module](../how-to-guides/How_To_Create_a_Module.md)  and [How to Create a Table](../how-to-guides/How_to_create_a_Table.md).
 
-##  Module & Table
+## Module & Table
 
 As mentioned above, this tutorial is based on two previous tutorials and assumes that the following objectives have been already completed:
 

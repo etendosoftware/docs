@@ -1,9 +1,10 @@
 ---
-tags: 
- - Etendo Mobile
- - Settings
- - Sub-apps
- - Etendo Classic
+tags:
+    - Etendo Mobile
+    - User Interface
+    - App Settings
+    - Mobile Navigation
+    - Sub-application Management
 ---
 
 # User Interface

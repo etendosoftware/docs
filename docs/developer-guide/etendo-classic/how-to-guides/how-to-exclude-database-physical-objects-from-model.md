@@ -1,10 +1,11 @@
 ---
 tags:
-    - Etendo Classic
-    - Model
-    - Database
-    - Exclude
-    - Physical objects
+  - How to 
+  - Etendo Classic
+  - Model
+  - Database
+  - Exclude
+  - Physical objects
 ---
 
 # How To Exclude Database Physical Objects From Model

@@ -1,6 +1,13 @@
 ---
 title: Migrating to Etendo (from Openbravo)
+tags:
+    - Migration
+    - Openbravo
+    - Attachments Configuration
 ---
+
+# Migrating to Etendo (from Openbravo)
+
 ## Overview
 
 This guide provides the necessary information to migrate an existing Openbravo instance to a new Etendo instance (in its latest release). 

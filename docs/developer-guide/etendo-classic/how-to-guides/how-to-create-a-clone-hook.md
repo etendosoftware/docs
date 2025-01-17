@@ -1,5 +1,9 @@
 ---
 title: How to Create a Clone Hook
+tags:
+  - How to
+  - Hook
+  - Clone Hook
 ---
 ## Introduction
 

@@ -1,5 +1,6 @@
 ---
 tags:
+  - How to
   - Infrastructure
   - OpenAPI
   - Swagger

@@ -1,7 +1,8 @@
 ---
 tags:
-  - client event handler
-  - actions
+  - How to
+  - Client Event Handler
+  - Actions
   - Etendo Classic
 ---
 

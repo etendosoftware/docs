@@ -1,5 +1,11 @@
 ---
 title: Material Requirement Planning 
+tags:
+    - Material Requirement Planning
+    - Manufacturing Plan
+    - Purchasing Plan
+    - MRP Forecast
+    - Transactions
 ---
 ## Overview
 

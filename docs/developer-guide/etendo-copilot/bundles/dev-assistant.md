@@ -1,11 +1,11 @@
 ---
 tags:
-    - Beta
     - Copilot
-    - IA
     - Tools
     - Creator
-    - Assistants
+    - Assistant
+    - Developer Assistant
+    - Dev Assistant 
 ---
 
 # Dev Assistant
