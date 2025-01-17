@@ -2,7 +2,7 @@
 title: How to Change an Existing Window
 tags: 
     - How to
-    - Application Dictionary (AD)
+    - Application Dictionary
     - UI Customization
     - Physical Inventory
     - Module Development

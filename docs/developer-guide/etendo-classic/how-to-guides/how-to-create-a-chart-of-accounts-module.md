@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - How to
   - Etendo Classic
   - Localization
   - Chart of Accounts

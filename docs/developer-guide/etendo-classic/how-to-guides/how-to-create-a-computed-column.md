@@ -1,7 +1,8 @@
 ---
-tags: 
-  - Computed column
+title: How to Create a Computed Column
+tags:
   - How to
+  - Computed column
   - SQL logic
   - Etendo classic
 ---

@@ -1,10 +1,8 @@
 ---
 tags: 
+  - How to
   - Build validations
   - Module scripts
-  - implementation
-  - java class
-  - dependencies
 ---
 #  How to Create Build Validations and Module Scripts
 

@@ -1,7 +1,6 @@
 ---
 tags:
     - Copilot
-    - IA
     - Tool
     - Write
     - File

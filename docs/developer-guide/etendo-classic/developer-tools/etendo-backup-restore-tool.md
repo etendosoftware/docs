@@ -1,7 +1,6 @@
 ---
 title: Etendo Backup and Restore Tool
 tags: 
-  - Etendo Classic
   - Plugin
   - Gradle
   - Backup

@@ -1,11 +1,9 @@
 ---
 tags:
-  - Property field
-  - Derived information
-  - Validation rules
-  - Form display
-  - Grid display
-  - Child records
+  - How to
+  - Property Field
+  - Derived Information
+  - Validation Rules
 --- 
 
 #  How to Use Property Fields

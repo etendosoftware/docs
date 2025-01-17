@@ -1,5 +1,10 @@
 ---
 title: Upgrade Etendo to Any Version
+tags:
+    - Etendo Upgrade
+    - Version Management
+    - Gradle Plugin
+    - Core Migration
 ---
 
 ## Overview

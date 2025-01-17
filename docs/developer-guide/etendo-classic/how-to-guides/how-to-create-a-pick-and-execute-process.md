@@ -1,5 +1,6 @@
 ---
 tags:
+  - How to
   - PickandExecute
   - Process definition
   - Action handler

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Etendo
+  - How to
   - Swagger
   - Secure Web Services
   - Secure Webservices

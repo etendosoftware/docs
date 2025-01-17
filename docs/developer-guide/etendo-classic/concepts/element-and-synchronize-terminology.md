@@ -1,10 +1,12 @@
 ---
 title: Element and Synchronize Terminology  
-tags: 
+tags:
+  - Concepts
   - Application Dictionary
   - Element
   - Field Labels
   - Translation
+  - Synchronize Terminology
 ---
 
 # Element and Synchronize Terminology

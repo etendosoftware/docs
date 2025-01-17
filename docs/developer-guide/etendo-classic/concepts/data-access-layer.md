@@ -1,6 +1,7 @@
 ---
 title: Data Access Layer
-tags: 
+tags:
+  - Concepts
   - Data Access Layer
   - Business Logic
   - Hibernate

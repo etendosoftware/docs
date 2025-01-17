@@ -5,6 +5,7 @@ tags:
     - Etendo RX
     - Dynamic App Configuration
     - Subapp
+    - Create Sub-application
 ---
 
 # Create New Subapplication

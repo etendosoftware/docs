@@ -3,9 +3,9 @@ title: Install Modules in Etendo
 search:
   boost: 2
 tags:
+    - Getting Started
     - Install
     - Install Modules
-    - Modules
     - Dependencies
 ---
 

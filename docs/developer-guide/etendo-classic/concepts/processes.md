@@ -1,11 +1,11 @@
 ---
 title: Processes
-tags: 
+tags:
+  - Concepts
   - SQL Processes
   - Java Processes
   - Execution Methods
   - Process Scheduling
-  - Parameters
 ---
 # Processes
   

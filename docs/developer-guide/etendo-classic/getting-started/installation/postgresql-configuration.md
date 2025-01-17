@@ -1,6 +1,13 @@
 ---
 title: PostgreSQL Configuration 
+tags:
+    - PostgreSQL Configuration
+    - User configuration
+    - Database
+    - PostgreSQL Extension
 ---
+
+# PostgreSQL Configuration 
 
 ## Overview
 

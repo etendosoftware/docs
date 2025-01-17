@@ -1,10 +1,10 @@
 ---
 tags:
     - Copilot
-    - IA
     - Tavily
     - API
-    - Etendo
+    - Search Engine
+    - Tool
 ---
 
 # Tavily Tool

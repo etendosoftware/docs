@@ -1,6 +1,7 @@
 ---
 title: Tables
 tags:
+  - Concepts
   - Tables
   - Database
   - Common Columns

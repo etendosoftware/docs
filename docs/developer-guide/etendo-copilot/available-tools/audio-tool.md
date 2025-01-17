@@ -1,7 +1,6 @@
 ---
 tags:
     - Copilot
-    - IA
     - Audio Recognition
     - Audio
     - Transcription

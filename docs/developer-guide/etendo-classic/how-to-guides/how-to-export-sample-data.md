@@ -1,7 +1,8 @@
 ---
 tags:
-  - export sample data
-  - extensions
+  - How to
+  - Export Sample Data
+  - Extensions
   - Etendo Classic
 ---
 

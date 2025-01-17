@@ -1,11 +1,14 @@
 ---
+title: Format XML
 tags:
+  - Concepts
   - Configuration
   - Numeric Formatting
   - XML Configuration
-  - Application Dictionary
   - Format Mask
 ---
+
+# Format XML
 
 ## Overview
 

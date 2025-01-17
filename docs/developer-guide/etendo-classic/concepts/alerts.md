@@ -1,6 +1,7 @@
 ---
 title: Alerts
-tags: 
+tags:
+  - Concepts
   - alerts
   - system administration
   - alert rules

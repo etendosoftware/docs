@@ -1,11 +1,9 @@
 ---
 title: Constraints
 tags: 
-  - constrains
-  - indexes
-  - naming
-  - modularity
-  - messages
+  - Concepts
+  - Constraint
+  - Indexes
 ---
 
 # Constraints

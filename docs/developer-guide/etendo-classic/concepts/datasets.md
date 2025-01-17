@@ -1,8 +1,8 @@
 ---
 title: Datasets
-tags: 
+tags:
+  - Concepts
   - Dataset
-  - Where Clause
   - Dataset Table
   - Reference Data
   - Business Objects

@@ -1,7 +1,6 @@
 ---
 tags:
   - Copilot
-  - AI
   - Tool
   - Test
   - Run Test
