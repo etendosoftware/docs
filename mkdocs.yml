@@ -536,6 +536,7 @@ nav:
         - Test Run Tool: developer-guide/etendo-copilot/available-tools/test-run-tool.md
         - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
+        - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides: 
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
