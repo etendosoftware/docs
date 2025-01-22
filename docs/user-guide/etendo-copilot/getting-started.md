@@ -44,7 +44,7 @@ In turn, it is possible to configure assistant managers, able to delegate a spec
 Each tool represents a dedicated and self-contained project, meticulously designed to excel at specialized tasks. Whether it involves code translation, text analysis, or data manipulation, the diverse suite of tools operates in seamless coordination.  
 
 !!! info 
-    For a overview of the available tools and their technical details, please refer to the [ Available Tools - Developer Guide](../../developer-guide/etendo-copilot/available-tools/overview/).
+    For a overview of the available tools and their technical details, please refer to the [Available Tools - Developer Guide](../../developer-guide/etendo-copilot/available-tools/overview.md).
 
 
 ##  Key Features
