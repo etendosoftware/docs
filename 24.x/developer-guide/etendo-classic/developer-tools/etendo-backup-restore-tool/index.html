@@ -25,7 +25,7 @@
     
     
       
-        <title>Etendo Backup and Restore Tool - Etendo Documentation</title>
+        <title>Etendo Backup and Restore Plugin - Etendo Documentation</title>
       
     
     
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Etendo Backup and Restore Tool
+              Etendo Backup and Restore Plugin
             
           </span>
         </div>
@@ -9343,7 +9343,7 @@
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To know the available versions of the plugin, please visit <a href="../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/">Etendo Backup and Restore Plugin | Release Notes</a>.</p>
+<p>To know the available versions of the plugin, please visit the <a href="../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/">Release Notes</a>.</p>
 </div>
 <p>To resolve the plugin dependiencies, you should add the following lines on top of the <code>settings.gradle</code> file</p>
 <div class="language-groovy highlight"><span class="filename">settings.gradle</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pluginManagement</span><span class="w"> </span><span class="o">{</span>
@@ -9355,26 +9355,19 @@
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                </span><span class="n">password</span><span class="w"> </span><span class="s2">&quot;${githubToken}&quot;</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="o">}</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://repo.futit.cloud/repository/static-public-snapshots&quot;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">mavenCentral</span><span class="o">()</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="o">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">mavenCentral</span><span class="o">()</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="o">}</span>
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Make sure you have your Github credentials (<code>githubUser</code> and <code>githubToken</code>) set in the <code>gradle.properties</code> file.</p>
 </div>
 <h2 id="backup-task">Backup task</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The User running the backup must have <code>SUDO</code> access and the <code>backup.properties</code> file properly configured.</p>
-</div>
 <p>To run the backup, execute</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>backup<span class="w"> </span>-PbkpMode<span class="o">=</span>&lt;mode&gt;
 </span></code></pre></div>
-<p>Where the mode could be <code>manual</code> or <code>auto</code></p>
+<p>Where the mode could be <code>manual</code> or <code>auto</code>. If the parameter is not specified, the default mode is <code>manual</code>.</p>
 <h3 id="backup-properties-file">Backup properties file</h3>
 <p>The <code>backup.properties</code> file is found inside the <code>config</code> folder on the root project.
 If it does not exists, run <code>./gradlew setup</code> to generate the missing files.</p>
@@ -9396,6 +9389,10 @@ Sets the group related to the user running the backup.</p>
 <li>
 <p><code>BACKUPS_DIR</code>
 Sets the path where the backup will be stored.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ensure that the directory where the backups will be stored is already created and that the configured user has write permissions on it.</p>
+</div>
 </li>
 <li>
 <p><code>BACKUPS_TMP_DIR</code>
@@ -9467,7 +9464,7 @@ Specifies the environment for sending emails.</li>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order to send the email to multiple accounts, separate addresses with <code>;</code>.<br>
-For example: <code>EMAIL_ERROR_CC=user1@smfconsulting.es;user2@smfconsulting.es</code></p>
+For example: <code>EMAIL_ERROR_CC=user1@etendo.software;user2@etendo.software</code></p>
 </div>
 <h3 id="end-states">End states</h3>
 <p>The following are the possible states at the end of the <code>backup</code> task:</p>
