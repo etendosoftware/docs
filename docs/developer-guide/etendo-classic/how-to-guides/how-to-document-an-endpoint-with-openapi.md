@@ -86,6 +86,58 @@ Each OpenAPI Flow record can:
 
 To ensure an OpenAPI Request appears in Swagger documentation, it must be linked to an OpenAPI Flow. This ensures logical grouping and visibility.
 
+## Additional OpenAPI Request Types
+
+!!! info
+    To be able to include the following OpenAPI Request Types, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+
+=== "Tab (Etendo RX)"
+
+    This type allows documenting existing entities or tables without defining a custom class that extends `OpenAPIDefaultRequest`. It enables seamless interaction with the ERP entities and supports full CRUD operations.
+
+    To configure a "Tab" OpenAPI Request:
+
+    1. **Create a New Record in the `OpenAPI Request` Window**:
+      - **Type**: Set the type to "Tab."
+      - **Description**: Provide a description of the endpoint.
+      - **Tabs**: A new window tab will be visible. Add a new record and select the desired window tab from the tab selector.
+
+      ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Tab_OpenAPI_Request.png)
+
+    2. **Link the Request to an OpenAPI Flow**:
+      - Open the `OpenAPI Flow` window.
+      - Add a new record.
+      - Link the OpenAPI Request in the child tab.
+
+    **Features**:
+    - All fields defined in the tab will be available in the endpoint.
+    - Callouts, event handlers, triggers, and default values are automatically applied when adding, modifying, or deleting data.
+    - Endpoints are session-aware, ensuring data consistency and security.
+
+=== "Webhook (Webhook Events)"
+
+    This type allows documenting webhook events without defining a custom class that extends `OpenAPIDefaultRequest`. It is designed for ease of integration and adherence to standardized formats.
+
+    To configure a "Webhook" OpenAPI Request:
+
+    1. **Create a New Record in the `OpenAPI Request` Window**:
+      - **Type**: Set the type to "Webhook."
+      - **Description**: Provide a description of the webhook.
+      - **Webhook Tab**: A new window tab will be visible. Add a new record and select the desired webhook from the selector.
+
+      ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Webhook_OpenAPI_Request.png)
+
+    2. **Link the Request to an OpenAPI Flow**:
+      - Open the `OpenAPI Flow` window.
+      - Add a new record.
+      - Link the OpenAPI Request in the child tab.
+
+    **Features**:
+    - Enables clear documentation of webhook events.
+    - Simplifies integration by following standardized formats.
+    - Easily accessible in the Swagger UI.
+
+
 ## Check Swagger
 
 The new endpoint documentation should now be visible at the Swagger UI URL. The URL might vary depending on your deployment but typically follows the format:
