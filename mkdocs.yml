@@ -44,17 +44,21 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-extra_css:
-  - stylesheets/extra.css
-  - assets/stylesheets/custom-styles.css
 
 
 exclude_docs:
   .*
 
 extra_javascript:
-  - assets/javascripts/custom-search.js
   - assets/javascripts/feedback.js
+  - assets/javascripts/algolia-search.js
+  - https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - assets/stylesheets/custom-styles.css
+  - https://cdn.jsdelivr.net/npm/instantsearch.css/themes/reset.css
+
 
 markdown_extensions:
   - abbr
@@ -82,15 +86,6 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-  - search:
-    algolia:
-      app_id: YOUR_APP_ID
-      api_key: YOUR_API_KEY
-      index_name: YOUR_INDEX_NAME
-      placeholder: 'Search the docs'
-      autocomplete: true
-      debug: false
-         
   - tags
   - glightbox
   - rss:
@@ -116,6 +111,12 @@ plugins:
         utm_medium: 'RSS'
         utm_campaign: 'feed-syndication'
 extra:
+  search:
+    provider: algolia
+    index_name: etendo_docs_index
+    app_id: XMLZ1ZZEY7
+    api_key: de992ae25d65509474690fe8761e2a21
+
   version:
     provider: mike
     default: stable

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css/themes/reset.css">
+{% endblock %}
+
+{% block content %}
+<div id="search-container" class="ais-InstantSearch"></div>
+{{ super() }}
+{% endblock %}
