@@ -7449,6 +7449,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#write-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Usage Example
@@ -9186,6 +9195,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#write-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Usage Example
@@ -9294,12 +9312,22 @@
     if a backup did not need to be created.</p>
 </li>
 </ul>
+<h2 id="write-permissions">Write Permissions</h2>
+<p>To handle file and folder permissions, the Write File Tool leverages the <code>COPILOT_WRITE_RULE</code> environment variable. Add this variable to the <code>gradle.properties</code> file if needed.</p>
+<p>This variable allows you to specify the file permissions (in octal format) to be applied to files and folders created by the tool. It is optional, and if not set, the system's default file permissions will be used.</p>
+<ul>
+<li><strong>Folder Creation</strong>: If the specified folder does not exist, it will be created. If <code>COPILOT_WRITE_RULE</code> is set, the tool applies the corresponding permissions to the newly created folder.</li>
+<li><strong>File Creation</strong>: When a new file is created, the tool applies the permissions specified in <code>COPILOT_WRITE_RULE</code>.</li>
+</ul>
+<p>The value of <code>COPILOT_WRITE_RULE</code> must be a valid octal representation of file permissions (e.g., <code>777</code> for full read/write/execute access).</p>
 <h2 id="usage-example">Usage Example</h2>
-<p>Imagine we want to write <em>Hello World</em> in the file <code>/tmp/test.txt</code>, overwriting its contents, in the first line of the file. Our entry could be:
-- filepath: /tmp/test.txt
-- content: Hello World
-- override: True
-- lineno: 1</p>
+<p>Imagine we want to write <em>Hello World</em> in the file <code>/tmp/test.txt</code>, overwriting its contents, in the first line of the file. Our entry could be:</p>
+<ul>
+<li>filepath: /tmp/test.txt</li>
+<li>content: Hello World</li>
+<li>override: True</li>
+<li>lineno: 1</li>
+</ul>
 <p>The Write File Tool will process these parameters, write <em>Hello World</em> to the first line of the <code>/tmp/test.txt</code> file and return a message indicating that the operation completed successfully and whether a backup was created.</p>
 
 
