@@ -34,7 +34,7 @@ The main information that can be retrieved from the report is:
 - days delay for each task and each phase
 - cumulative delay for the whole project
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-progress.png)
 
 ## Project Profitability
 
@@ -79,7 +79,7 @@ Real Services and Expenses:
     - Gross margin percentage: calculated using the formula: ((Revenue - Cost - Outsource) + (Reinvoicing - Expenses)) x 100/(Revenue + Reinvoicing)
 - Collected: amount that was collected from the customer for the sales invoices related to the project
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-profitability.png)
 
 ## Expense Report
 
@@ -87,7 +87,7 @@ VA
 
 The Expense Report shows a listing of expense sheets with their details. Filters can be applied to show expense reports for certain business partners, projects or employees. Also a filter to select time sheets or expense sheets can be applied.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/expense-report.png)
 
 ## Invoiceable Expenses
 
@@ -101,7 +101,7 @@ Select the customer who will be receiving the sales invoice.
 
 In the grid view an overview of all customers for which expenses related to projects have to be invoiced is listed. In the records, the Price List and Payment Terms to be used for the creation of the Sales Order are displayed.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses.png)
 
 ### Lines Tab
 
@@ -109,7 +109,7 @@ In this tab, the user can view each expense line to be included in the sales inv
 
 The information displayed in the lines tab is taken from the lines tab from the Expense Sheets. All lines are related to the selected business partner, but different lines can be related to different projects.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses-lines.png)
 
 ## Employee Expenses
 

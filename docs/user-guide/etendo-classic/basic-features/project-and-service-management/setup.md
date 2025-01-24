@@ -26,13 +26,13 @@ A Project Type is a template with the typical phases and tasks that are applicab
 
 Here, a project type can be defined and, for this, the main field is the Name of the project type. An intuitive name should be given so that once the multiphase project is entered, the user can easily recognize the project type that could be used to generate the phases and tasks.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/project-type.png)
 
 ### Standard Phase Tab
 
 In this tab, the user can define phases and products required during each phase, to be included in this type. Each phase is added by creating a line.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-phase.png)
 
 The fields on this tab are:
 
@@ -49,7 +49,7 @@ The fields on this tab are:
 
 Here, the user can define tasks to be completed during each phase. Each task is added by creating a line.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-task.png)
 
 The fields on the tasks are:
 
@@ -60,3 +60,7 @@ The fields on the tasks are:
 - Standard Duration in Days: the scheduled duration of the task.
 - Active checkbox: indication of validity of the line
 - Description: note field for the phase
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

@@ -38,14 +38,13 @@ From the multiphase project window, sales orders are generated at the end of eac
 
 ### Header
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/multiphase-project.png)
 
 Here, the fields to note are:
 
 - Organization: organization of the project
 - Search Key: field used to easily filter records
 - Name: name of the project. The name has to be unique between Service Projects and Multiphase projects.
-- Summary Level checkbox: discard, has not been developed
 - Current Phase: field to manually keep track of the current phase of the project
 - Starting Date: start date of the project
 - Planned End Date: scheduled end date of the project
@@ -87,10 +86,11 @@ In the more information section:
 
 In this tab, the individual phases of the project can be defined.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-phase.png)
 
 The following fields are displayed in this tab:
 
+- Organization: organization of the phase
 - Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
 - Name: name of the phase.
 - Product: product or service that is sold in the phase.
@@ -103,19 +103,16 @@ The following fields are displayed in this tab:
 - Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Phase Complete checkbox.
 - Phase Complete checkbox: to set the phase to complete. In order to set the phase to Phase Complete, it is not mandatory that the task(s) related to this phase are set to complete first.
 
-In the More Information section:
-
-- Sales Order: one the sales order for the phase has been created, the number appears in this field.
-- Create Sales Order from Project Phase button: to create a sales order upon completion of a phase. From the sales order a sales invoice is created to document that the customer has to pay for the executed work on the project.
 
 ### Project Task Subtab
 
 In this subtab, the individual tasks that are necessary to complete the phase of the project are defined.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-task.png)
 
 The following fields are displayed in this subtab:
 
+- Organization: organization of the task
 - Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
 - Name: name of the task
 - Product: product or service that is sold related to this task.
@@ -136,17 +133,17 @@ The following fields are displayed in this subtab:
 
 An Expense Sheet is used to register time sheets and item expenses.
 
-Based on time sheets, the cost related to assigned employees to the project is calculated and can be viewed on the Project Profitability report.
+Based on time sheets, the cost related to assigned employees to the project is calculated and can be viewed on the [Project Profitability](../project-and-service-management/analysis-tools.md#project-profitability) report.
 
-For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a Purchase Invoice.
+For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](../procurement-management/transactions.md#purchase-invoice).
 
-For both time sheets and item expenses, it can be indicated whether the customer related to the project is invoiced for these costs. The follow up of this is that a Sales Order is created in order to create a Sales Invoice.
+For both time sheets and item expenses, it can be indicated whether the customer related to the project is invoiced for these costs. The follow up of this is that a [Sales Order](../sales-management/transactions.md#sales-order) is created in order to create a [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 
 ### Header
 
 In this window, the user can create and process an expense sheet.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet.png)
 
 Here, the fields to note are:
 
@@ -155,8 +152,8 @@ The fields on this tab are:
 - Organization: organization of the expense
 - Document No.: populated number of the expense sheet
 - Employee: employee that made the expense related to a project or spend time on a project. It is important to remark that employees:
-    need to be created as Employee in "Business Partner" window
-    need to be created as Openbravo users in the "User" window
+    need to be created as [Employee](../master-data-management/master-data.md#employee) in "Business Partner" window
+    need to be created as Openbravo [users](../general-setup/security.md#user) in the "User" window
     and finally, employee and user need to be related to each other.
     That relationship can be set by selecting "Employee" business partner record in the employee "User" record, as shown in the image below.
 - Report Date: date for which the expense is entered
@@ -166,7 +163,7 @@ The fields on this tab are:
 
 In this tab, the user can add time and regular expense lines to the sheet. Each expense is added to an individual line and may or may not be invoiced to customers.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet-lines.png)
 
 The fields to note in this tab are:
 
@@ -191,7 +188,7 @@ The fields to note in this tab are:
 :material-menu: `Application` > `Project and Service Management` > `Transactions` > `Create Sales Orders from Expenses`
 
 This is a process which automatically generates sales orders per customer for all outstanding expenses to be invoiced. In order for the process to create the sales order with the correct information, the customer needs to be set up with the [Customer] tab in the Business Partner window filled out.
-This process is integrated with the Sales Management Module:
+This process is integrated with the [Sales Management](../sales-management/getting-started.md) Module:
 
 - All the sales orders generated can be checked and modified through that module.
 - The invoice process can be run afterwards.
@@ -199,7 +196,7 @@ This process is integrated with the Sales Management Module:
 
 A Sales Order type Warehouse order with a corresponding Goods Shipment is created by the process if the checkbox Complete and Process Sales Orders automatically is selected.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-sales-orders-from-expenses.png)
 
 ## Create AP Expense Invoices
 
@@ -214,9 +211,9 @@ In order for the process to complete successfully the employee needs to have the
 - The PO Payment Terms
 - The PO Financial Account
 
-This process is directly integrated with the Procurement Management module: all the purchase invoices generated can be checked and modified through that module.
+This process is directly integrated with the [Procurement Management](../procurement-management/getting-started.md) module: all the purchase invoices generated can be checked and modified through that module.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-ap-expense-invoices.png)
 
 ---
 
