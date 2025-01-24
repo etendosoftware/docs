@@ -49053,7 +49053,7 @@ To start creating your module in Etendo, follow the steps below.
 - **Help/Comment**: Additional help text or comments regarding the module (optional).
 - **Version**: The version of the module (e.g., `1.0.0`).
 - **Type**: The type of the module. Option are "M" for standard module, "T" for template module.
-- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `FJTS`).
+- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `LAPY`).
 - **License**: The license type for the module. Options are:
     - `Apache License 2.0`
     - `Openbravo Public License`
@@ -49077,7 +49077,7 @@ body_params = {
   "HelpComment": "This is a test module created for demonstration purposes.",
   "Description": "This module adds test functionality to Etendo Classic.",
   "Version": "1.0.0",
-  "Prefix": "FJTS",
+  "Prefix": "LAPY",
   "Type": "M",
   "ModuleLicense": "Etendo Commercial License"
 }
@@ -50997,9 +50997,21 @@ Using this tool consists of the following actions:
     ```
     if a backup did not need to be created.
 
+#### Write Permissions
+
+To handle file and folder permissions, the Write File Tool leverages the `COPILOT_WRITE_RULE` environment variable. Add this variable to the `gradle.properties` file if needed.
+
+This variable allows you to specify the file permissions (in octal format) to be applied to files and folders created by the tool. It is optional, and if not set, the system's default file permissions will be used.
+
+- **Folder Creation**: If the specified folder does not exist, it will be created. If `COPILOT_WRITE_RULE` is set, the tool applies the corresponding permissions to the newly created folder.
+- **File Creation**: When a new file is created, the tool applies the permissions specified in `COPILOT_WRITE_RULE`.
+
+The value of `COPILOT_WRITE_RULE` must be a valid octal representation of file permissions (e.g., `777` for full read/write/execute access).
+
 #### Usage Example
 
 Imagine we want to write *Hello World* in the file `/tmp/test.txt`, overwriting its contents, in the first line of the file. Our entry could be:
+
 - filepath: /tmp/test.txt
 - content: Hello World
 - override: True
@@ -53687,7 +53699,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.9.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.1){target="_blank"} | 10/01/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.10.0){target="_blank"} | 23/01/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.1){target="_blank"} | 10/01/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.0){target="_blank"} | 20/12/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.4](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.4){target="_blank"} | 13/12/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.1){target="_blank"} | 15/11/2024 | 23.4.0 | * | C | :white_check_mark: |
