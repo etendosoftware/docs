@@ -21,6 +21,8 @@ This section describes the windows related to the accounting transactions that a
 
 [:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Not Posted Documents](#not-posted-documents){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: VAT Regularization](#vat-regularization){ .md-button .md-button--primary } <br>
@@ -892,6 +894,75 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 !!!info
     With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
+
+## Not Posted Documents
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Not Posted Documents`
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+### Overview
+
+With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
+
+VA
+
+### Search button
+
+With the **Search** button, the following fields are used to specify the documents to search. 
+
+- Organization: The corresponding organization of the search.
+- Document: Type of document that the user is searching. This is the only field that is optional. The listed options are:
+    - Amortization
+    - Bank Statements 
+    - Bill of Materials Production
+    - Cost Adjustment
+    - Doubtful Debt
+    - GL Journal
+    - Goods Receipt
+    - Goods Shipment
+    - Internal Consumption
+    - Inventory
+    - Landed Cost
+    - Landed Cost Cost
+    - Matched Invoices
+    - Movements
+    - Payment In
+    - Payment Out
+    - Purchase Invoice
+    - Reconciliation
+    - Return Material Receipt
+    - Return to Vendor Shipment
+    - Sales Invoice
+    - Transaction
+    - Work Effort
+
+- Accounting Status: the corresponding accounting status of the search. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+
+VA
+
+### Bulk Posting button
+
+Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once. 
+
+VA
+
+### Grid filtering
+
+In the grid where documents are displayed after the search, users can filter the documents using the following criteria:
+
+- Organization
+- Type of document
+- Document Description
+- Accounting Date
+
+VA
+
+As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
+
+!!! info
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md)
 
 ## Reset Accounting
 
