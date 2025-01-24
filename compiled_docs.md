@@ -49053,7 +49053,7 @@ To start creating your module in Etendo, follow the steps below.
 - **Help/Comment**: Additional help text or comments regarding the module (optional).
 - **Version**: The version of the module (e.g., `1.0.0`).
 - **Type**: The type of the module. Option are "M" for standard module, "T" for template module.
-- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `FJTS`).
+- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `LAPY`).
 - **License**: The license type for the module. Options are:
     - `Apache License 2.0`
     - `Openbravo Public License`
@@ -49077,7 +49077,7 @@ body_params = {
   "HelpComment": "This is a test module created for demonstration purposes.",
   "Description": "This module adds test functionality to Etendo Classic.",
   "Version": "1.0.0",
-  "Prefix": "FJTS",
+  "Prefix": "LAPY",
   "Type": "M",
   "ModuleLicense": "Etendo Commercial License"
 }
