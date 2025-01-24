@@ -60,7 +60,10 @@ The simplest configuration we are going to follow as an example is to mount Copi
     |ANTHROPIC_API_KEY      | `***********************` | **Optional** You can use an [ANTHROPIC API Key](https://docs.anthropic.com/en/api/getting-started){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use Anthropic AI Models. |
 
     !!! info
-        The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo`. Its recommended to access to the Docker Container shell and check the network configuration to get the correct IP address.
+        The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo` if you are using Docker Desktop.
+    
+    !!! warning 
+        If you are using docker via console, the `ETENDO_HOST_DOCKER` variable should be `http://172.17.0.1:8080/etendo`
    
 
 2.  Once the Copilot Extensions Bundle dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:
