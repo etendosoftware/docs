@@ -27,7 +27,7 @@ This section describes the windows related to project and service management rep
 
 :material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Project Progress`
 
-The Project Progress report permits to track the progress of projects with useful indicators such as the time burned or the completion percentage. It is used to monitor to timelines of projects.
+The Project Progress report allows to track the progress of projects with useful indicators such as the time burned or the completion percentage. It is used to monitor to timelines of projects.
 
 The main information that can be retrieved from the report is:
 
@@ -95,9 +95,7 @@ The Expense Report shows a listing of expense sheets with their details. Filters
 
 In this window, the user can view expenses before invoicing them to customers. This is a read-only overview of all invoiceable cost related to projects. The costs that appear are marked as reinvoicing in expense sheets that are processed. All items that are displayed are for invoicing to the customers related to the projects.
 
-Customer (?)
-
-Select the customer who will be receiving the sales invoice.
+Customer
 
 In the grid view an overview of all customers for which expenses related to projects have to be invoiced is listed. In the records, the Price List and Payment Terms to be used for the creation of the Sales Order are displayed.
 
@@ -117,13 +115,11 @@ The information displayed in the lines tab is taken from the lines tab from the 
 
 In this window, the user can view internal employee expenses before processing them. This is a read-only overview of all expenses that need to be reimbursed to an employee.
 
-Employee (?)
-
-Select the employee who is submitting the expenses.
+Employee
 
 In the grid view an overview of all employees that have expenses pending to be reimbursed is listed. Each record has the Purchase Price List and the Purchase Order Payment Terms displayed, to be used for the creation of the Purchase Invoice.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses.png)
 
 ### Lines Tab
 
@@ -131,7 +127,7 @@ In this tab, the user can view each expense line for the employee.
 
 The information displayed in the lines tab is taken from the lines tab in the Expense Sheet. All lines are related to the employee, but different lines can be related to different projects.
 
-VA
+![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses-lines.png)
 
 ---
 

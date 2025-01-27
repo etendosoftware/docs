@@ -18,7 +18,7 @@ The Project and Service Management module consists of:
 - Multiphase Project to manage project with phases and tasks
 - Expense Sheets to manage cost related to projects
 
-IMAGE TO EDIT (ASK ALE)
+VA - IMAGE TO EDIT - ALE
 
 ### Configuration
 
@@ -56,14 +56,14 @@ The Multiphase Project has the following sequence of events:
     - any Sales Invoice created as a result of the Expense Sheets have the project name refereced
     - at the end of each phase a Sales Order related to the phase is created from the Multiphase Project. This results in the creation of a Sales Invoice
 - progress of the project is monitored in the Project Progress report
-- after completion of all phases the Multiphase Project status is changed to Order Closed
+- after completion of all phases the Multiphase Project status is changed to Order Closed.
 
 The key project and service management concepts mentioned in this chapter are:
 
 - Business Partner:
     - Supplier: third party that supplies goods and/or services. In project and service management the supplier is the vendor of provided goods related to the project, the consultancy company that consultancy services were outsourced to and the employee that is reimbursed for expenses related to a project.
     - Customer: the party that goods or services are sold to. In project and service management the customer is who gets charged for the cost and expenses of the project.
-    - Employee: person that works in the company.In project and service management the employee information is used for the cost calculation of the project, based on time sheets.
+    - Employee: person that works in the company.In project and service management, the employee information is used for the cost calculation of the project, based on time sheets.
 - Sales Order: document that lists goods and/or services provided to a customer and the conditions of the sale.
 - Sales Invoice: document used to administer a right to collect. The document lists the goods and/or services provided to a customer and the conditions of the sale.
 - Purchase Invoice: document used to administer an obligation to pay. The document lists goods and/or services provided by a supplier.
