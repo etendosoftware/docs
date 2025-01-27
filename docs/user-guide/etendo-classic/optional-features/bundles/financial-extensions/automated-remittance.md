@@ -1,11 +1,9 @@
 ---
 tags:
-- automated
-- remittance
-- accounting
-- financial
-- extensions
-- bundle
+    - Automated Remittance
+    - Accounting
+    - Financial
+    - Remittance Protest
 ---
 
 # Automated Remittance

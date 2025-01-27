@@ -1,10 +1,10 @@
 ---
 tags:
     - Copilot
-    - IA
-    - Database
-    - DB Query Tool
-    - SQL Assistant
+    - SQL Queries
+    - Database Access
+    - Query Automation
+    - Assistant Features
 ---
 
 # SQL Expert

@@ -1,5 +1,8 @@
 ---
 title: Modelo 190
+tags:
+    - Modelo 190
+    - Localizacion Española
 ---
 ## Javapackages 
 

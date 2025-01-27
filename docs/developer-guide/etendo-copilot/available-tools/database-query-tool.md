@@ -1,9 +1,10 @@
 ---
 tags:
-    - Copilot
-    - IA
-    - Database
-    - DB query tool
+    - Tool
+    - Etendo Copilot
+    - SQL Database
+    - Query Execution
+    - Data Introspection
 ---
 
 # Database Query Generator tool

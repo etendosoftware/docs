@@ -1,6 +1,10 @@
 ---
-hide:
-    - navigation
+tags:
+    - Etendo BI
+    - Configuration
+    - PowerBI Reports
+    - Inclusion/Exclusion
+    - Entity Management
 ---
 
 # Etendo BI Inclusion/Exclusion Configuration

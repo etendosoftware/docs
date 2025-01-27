@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - How to
   - Java Implementation
   - Validation
   - Backend

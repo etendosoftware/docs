@@ -1,6 +1,13 @@
 ---
 title: Financial Extensions Bundle
+tags:
+ - Financial Management
+ - Etendo Features
+ - Banking
+ - Accounting Enhancements
+ - Automated Processes
 ---
+
 :octicons-package-16: Javapackage: `com.etendoerp.financial.extensions`
 
 :material-store: Etendo Marketplace:  [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
@@ -21,6 +28,28 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 !!! info
     For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
+
+### Advanced Bank Account Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+
+!!! info
+    This functionality is available in the following windows:
+
+    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
+    - [Sales invoice]()
+    - [Purchase Invoice]()
+    - [Sales order]()
+    - [Purchase order]()
+    - [Payment In]()
+    - [Payment Out]()
+
+    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+
 
 ### Advanced Business Partner Settlement
 

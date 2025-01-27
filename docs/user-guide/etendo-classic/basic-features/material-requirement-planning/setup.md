@@ -1,5 +1,11 @@
 ---
 title: Material Requirement Planning Setup
+tags:
+    - Material Requirement Planning
+    - Planning Method
+    - Manufacturing Plan
+    - Purchasing Plan
+    - Planner Configuration
 ---
 ## Overview
 

@@ -1,5 +1,9 @@
 ---
 title: Essentials Extensions Bundle
+tags:
+    - Essentials Extensions
+    - Advanced Business Partner
+    - Bulk Completion
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.essentials.extensions`
 

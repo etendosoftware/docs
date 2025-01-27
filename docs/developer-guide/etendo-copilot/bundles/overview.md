@@ -1,10 +1,10 @@
 ---
 tags: 
-    - Copilot
+    - Copilot Extensions
     - AI
     - Tools
     - Assistants
-    - machine Learning
+    - Developer
 ---
 
 # Copilot Extensions

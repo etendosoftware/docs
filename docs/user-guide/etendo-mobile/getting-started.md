@@ -1,9 +1,10 @@
 ---
-tags: 
- - Etendo Mobile
- - Apps
- - Sub-apps
- - Etendo Classic
+tags:
+    - Etendo Mobile
+    - Mobile Apps
+    - Dynamic Sub-apps
+    - Configuration
+    - App Integration
 ---
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/cover-getting-started-mobile.png)
@@ -15,7 +16,7 @@ tags:
 Etendo Mobile is a **mobile app** in which the user can access to sub-applications via mobile devices in a fast and practical way. By enabling seamless integration between Etendo Classic and mobile sub-applications, Etendo Mobile allows users to log in to Etendo Classic and configure **dynamic applications** tailored to specific user roles, enhancing productivity and efficiency.
 
 !!!info
-    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
 
 
 Etendo Mobile is available in both Play and App Store:
@@ -69,7 +70,7 @@ Once the server URL is configured, the user must log in entering **the user and 
 
 ## Dynamic App Role Configuration
 
-Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Classic Subapp Extensions](../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Mobile Extensions](../etendo-mobile/bundles/mobile-extensions/mobile-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
 
 Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
 
@@ -80,4 +81,3 @@ Fields to note:
 - **Active:** Select if this application is active or not.
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
-

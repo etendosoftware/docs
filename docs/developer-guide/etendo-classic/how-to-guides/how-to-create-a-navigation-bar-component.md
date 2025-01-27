@@ -1,7 +1,9 @@
 ---
+title: How to create a Navigation Bar Component
 tags:
-  - navigation bar
-  - components
+  - How to
+  - Navigation Bar
+  - Component
   - Etendo Classic
 ---
 

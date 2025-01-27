@@ -1,10 +1,10 @@
 ---
 tags:
-  - Beta
-  - Etendo Classic
-  - Install
-  - Modules Instalation
-  - Dependency Manager
+    - Beta
+    - Getting Started
+    - Install
+    - Modules Instalation
+    - Dependency Manager
 ---
 
 # Dependency Manager

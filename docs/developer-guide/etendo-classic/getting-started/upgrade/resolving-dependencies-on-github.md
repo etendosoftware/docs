@@ -1,5 +1,10 @@
 ---
 title: Migrating and Resolving Dependencies of Bundles and Modules on GitHub
+tags:
+    - GitHub Migration
+    - Dependencies Update
+    - Etendo Modules
+    - Transition Guide
 ---
 ## 🔄 Migrating and Resolving Dependencies of Bundles and Modules on GitHub
 
@@ -17,18 +22,18 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 
 |Bundle|Javapakage|Version|From Core | To core|
 |--|--|--|--|--|
-|Sales Extensions					|com.etendoerp.sales.extensions							|1.5.0|22.1.0	|23.2.x	|
-|Sales Extensions ES			|com.etendoerp.sales.extensions.es_es				|1.4.0|22.1.0	|23.2.x	|
+|Sales Extensions						|com.etendoerp.sales.extensions							|1.5.0|22.1.0	|23.2.x	|
+|Sales Extensions ES		|com.etendoerp.sales.extensions.es_es				|1.4.0|22.1.0	|23.2.x	|
 |Financial Extensions			|com.etendoerp.financial.extensions					|1.8.0|23.1.4	|23.2.x	|
 |Financial Extensions ES	|com.etendoerp.financial.extensions.es_es		|1.2.0|23.1.4	|23.2.x	|
 |Production Extensions		|com.etendoerp.production.extensions.				|1.3.0|22.1.0	|23.2.x	|
 |Production Extensions ES	|com.etendoerp.production.extensions.es_es	|1.1.0|22.1.0	|23.2.x	|
 |Platform Extensions			|com.etendoerp.platform.extensions					|1.6.0|23.2.0	|23.2.x	|
-|Platform Extensions ES		|com.etendoerp.platform.extensions.es_es		|1.2.0|22.1.0	|23.2.x	|
+|Platform Extensions ES		|com.etendoerp.platform.extensions.es_es	|1.2.0|22.1.0	|23.2.x	|
 |Warehouse Extensions			|com.etendoerp.warehouse.extensions					|1.3.0|23.1.4	|23.2.x	|
 |Warehouse Extensions ES	|com.etendoerp.warehouse.extensions.es_es		|1.2.0|23.1.4	|23.2.x	|
 |Essential Extensions			|com.etendoerp.essentials.extensions				|1.1.0|23.1.4	|23.2.x	|
-|Essential Extensions ES	|com.etendoerp.essentials.extensions.es_es	|1.0.0|23.1.4	|23.2.x	|
+|Essential Extensions ES	|com.etendoerp.essentials.extensions.es_es		|1.0.0|23.1.4	|23.2.x	|
 |Localizacion Española		|com.etendoerp.localization.spain.extensions|1.4.0|22.4.3	|23.2.x	|
 
 

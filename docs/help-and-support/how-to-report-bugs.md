@@ -1,7 +1,13 @@
 ---
 title: How to Report Bugs
+tags:
+    - Bug Reporting
+    - Etendo
+    - Error Description
+    - Reporting Template
 ---
-### Template to report bugs
+
+## Template to report bugs
 
 !!! warning
     *This structure should always be respected to report a bug in [Etendo service desk](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*

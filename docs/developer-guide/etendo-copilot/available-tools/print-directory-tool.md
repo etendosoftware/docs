@@ -3,8 +3,8 @@ tags:
     - Copilot
     - IA
     - Tool
-    - Print
     - Directory
+    - File System
 ---
 
 # Print Directory Tool

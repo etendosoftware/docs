@@ -1,5 +1,8 @@
 ---
 title: Modelo 349
+tags:
+    - Modelo 349
+    - Localizacion Española
 ---
 ## Javapackages 
 

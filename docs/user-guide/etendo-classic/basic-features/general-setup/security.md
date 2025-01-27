@@ -63,7 +63,7 @@ The admin user has several roles assigned:
 - the _F&B International Group Admin Role_ demo data (this one is also assigned to it by default)
     - this role enables admin users to have "F&B demo data" Client admin rights.
 - and besides:
-    - every time a new "Client" is created by running the [Initial Client Setup process](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md), Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
+    - every time a new "Client" is created by running the [Initial Client Setup process](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md), Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
       - the client admin role enables "Client Admin" user to have admin access rights to that Client and all the organization/s of that client once signed in.
       - the newly created client admin role is also assigned to the admin user by default, therefore it will be possible for the admin user to access the newly created Client.
 

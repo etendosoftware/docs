@@ -1,11 +1,11 @@
 ---
-tags:
-- localización española
-- spain localization
-- cashvat
-- iva de caja
-- impuestos
 title: Impuestos IVA de Caja
+tags:
+    - Localización Española
+    - spain localization
+    - cashvat
+    - iva de caja
+    - Impuestos
 ---
 
 ## Introducción

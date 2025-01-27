@@ -1,3 +1,11 @@
+---
+tags:
+  - How to
+  - Prepaid Receivables
+  - Customer Payments
+  - Sales Order
+---
+
 # How to Manage Prepaid Invoices in Receivables
 
 ## Overview

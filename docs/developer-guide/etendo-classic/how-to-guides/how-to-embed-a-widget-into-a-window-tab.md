@@ -1,8 +1,9 @@
 ---
 tags:
-    - Etendo Classic
-    - Widget
-    - Tab
+  - How to
+  - Etendo Classic
+  - Widget
+  - Tab
 ---
 
 #  How to embed a Widget into a Window Tab

@@ -1,5 +1,10 @@
 ---
 title: Etendo BI Bundle
+tags:
+    - Etendo BI
+    - Power BI Integration
+    - Data Configuration
+    - BI Modules
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.etendobi.extensions`
@@ -35,7 +40,7 @@ This module allows the user to create base queries and customize them when neede
 A background process must be set which creates CSV files that will be uploaded to a server.  
 
 !!! info
-    For more information, visit the [Etendo BI Connector Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md) and the [Etendo BI Connector Module developer guide](../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle.md#etendo-bi-connector).
+    For more information, visit the [Etendo BI Connector Module developer guide](../../../../../developer-guide/etendo-classic/bundles/etendo-bi-extensions.md#etendo-bi-connector).
 
 ### Base Queries for Etendo BI 
 

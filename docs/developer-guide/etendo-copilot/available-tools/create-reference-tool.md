@@ -1,12 +1,10 @@
 ---
 tags:
     - Copilot
-    - IA
     - Tool
-    - Machine Learning
     - Assistant
     - Create Reference
-    - Add lists
+    - List
 ---
 
 ## Overview

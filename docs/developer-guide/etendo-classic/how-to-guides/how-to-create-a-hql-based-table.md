@@ -1,5 +1,7 @@
 ---
-tags: 
+title: How to create a HQL Based Table
+tags:
+  - How to
   - HQL
   - Table
   - Column

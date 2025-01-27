@@ -1,11 +1,8 @@
 ---
 tags:
-- bulk posting
-- accounting
-- setup
-- financial
-- extensions
-- bundle
+- Bulk Posting
+- Accounting
+- Financial
 ---
 
 # Bulk Posting

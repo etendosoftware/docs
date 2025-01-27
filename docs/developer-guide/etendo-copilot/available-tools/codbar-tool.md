@@ -1,10 +1,9 @@
 ---
 tags:
     - Copilot
-    - IA
     - Codbar
     - Image Recognition
-    - Barcodes
+    - Barcode
 ---
 
 # Codbar Tool

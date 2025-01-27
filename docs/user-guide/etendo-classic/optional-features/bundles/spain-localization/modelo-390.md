@@ -1,5 +1,8 @@
 ---
 title: Modelo 390
+tags:
+    - Modelo 390
+    - AEAT
 ---
 
 ## Javapackages 
@@ -107,13 +110,13 @@ Configuración General | Organización | Gestión del módulo de Empresa.
 
 Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
 
-1\. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
+1. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
 
 ![](../../../../../assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
 
 De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2021.
 
-2\. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
+2. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
 
 ![](../../../../../assets/drive/xl0hUWgK97dvKk9LYorJ4vXXpltQStE57Zd_QmJ7BMlmTgWxmNBDiWnjz8FznBhE39VtlzT8WOd5sVjWVsnzgDa3mRuXsc-IU0e8M9O2CDxE6f1Zs9tSjwMZsJPIXGhgy_hzwe4Rlpszp9GHu0Wd4WocXCEHmOoukjpUTjGKM2Hy2kQzd3Wz9Q_dYJMhJQ.png)
 
@@ -124,7 +127,7 @@ En la imagen del ejemplo se muestra como las bases imponibles/cuotas ligadas al 
 -   IVA devengado - Total Bases y Cuotas IVA
 -   Volumen de operaciones - Operaciones en Régimen General
 
-3\. Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación del modelo 390 del período fiscal que corresponda, desde la ruta de aplicación:
+3. Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación del modelo 390 del período fiscal que corresponda, desde la ruta de aplicación:
 
 Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos.
 
@@ -213,7 +216,6 @@ Los parámetros de entrada tienen que ver con datos que no pueden extraerse dire
 -   campos de texto para introducir el **total de devoluciones mensuales/trimestrales de IVA** (Modelo 303 en los casos de inscripción en el registro de devolución mensual
 -   campo de texto para introducir el **Resultado de la autoliquidación del último período a compensar**
 -   campo de texto para introducir "las cuotas pendientes de compensación al término del ejercicio" 
-
 
 
 

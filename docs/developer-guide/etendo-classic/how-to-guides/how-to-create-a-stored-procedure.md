@@ -1,5 +1,6 @@
 ---
 tags:
+  - How to
   - Etendo classic
   - Create a stored procedure
 ---

@@ -1,5 +1,11 @@
 ---
 title: Warehouse Extensions Bundle
+tags:
+    - Warehouse Management
+    - Automated Reservation
+    - Stock History
+    - Document Reactivation
+    - Product Operations
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.warehouse.extensions`
 

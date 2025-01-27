@@ -1,6 +1,6 @@
 ---
 tags:
-  - Etendo classic
+  - How to
   - Column
   - Application Dictionary
   - Column Size

@@ -1,3 +1,10 @@
+---
+tags:
+    - Purchase Invoices
+    - Validation
+    - Duplicate Prevention
+    - Etendo Features
+---
 
 # Purchase Invoice Validations
 :octicons-package-16: Javapackage: `com.etendoerp.purchase.invoice.validations` 

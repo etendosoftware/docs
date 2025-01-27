@@ -1,5 +1,11 @@
 ---
 title: Sales Extensions Bundle
+tags:
+    - Sales Management
+    - Sales Extensions
+    - Sales Quotation
+    - Advanced Rappels
+
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.sales.extensions`
 

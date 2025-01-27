@@ -1,9 +1,9 @@
 ---
 tags:
     - Copilot
-    - IA
     - Tool
     - Uncompress files
+    - Zip
 ---
 
 # Uncompress Tool

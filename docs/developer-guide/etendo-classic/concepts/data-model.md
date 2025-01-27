@@ -1,10 +1,10 @@
 ---
 tags:
-  - data model
-  - application dictionary
-  - tables
-  - columns
-  - Etendo Classic
+    - Concepts
+    - Data Model
+    - Application Dictionary
+    - Tables
+    - Columns
 ---
 
 # Data Model

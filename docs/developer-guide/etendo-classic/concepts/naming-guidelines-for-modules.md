@@ -1,5 +1,11 @@
 ---
 title: Naming Guidelines for Modules
+tags:
+    - Module Naming
+    - Etendo Guidelines
+    - Module Branding
+    - Language Conventions
+    - Module Types
 ---
 ## Introduction
 

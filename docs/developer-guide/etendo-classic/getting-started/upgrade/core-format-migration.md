@@ -1,7 +1,13 @@
 ---
 title: Core format migration
+tags:
+    - Core Migration
+    - JAR to Source
+    - Etendo Core Dependency
+    - Build Gradle Configuration
 ---
-## Core format migration
+
+# Core format migration
 
 === "From Sources to JAR"
 

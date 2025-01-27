@@ -1,7 +1,6 @@
 ---
 tags:
     - Copilot
-    - IA
     - PDF
     - Images
     - Tool

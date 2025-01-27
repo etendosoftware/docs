@@ -1,5 +1,7 @@
 ---
 title: Debezium configuration
+search:
+  exclude: true
 ---
 ## Debezium configuration
 

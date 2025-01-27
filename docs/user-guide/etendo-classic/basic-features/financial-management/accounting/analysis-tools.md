@@ -1,6 +1,13 @@
 ---
 title: Reports - Accounting
+tags:
+    - Etendo Classic
+    - Financial Reports
+    - Accounting Analysis
+    - Balance Sheet
+    - General Ledger
 ---
+
 ## Overview
 
 This section describes the windows related to accounting financial reports in Etendo. These are:

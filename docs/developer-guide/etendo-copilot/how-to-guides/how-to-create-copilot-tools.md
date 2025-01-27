@@ -1,8 +1,9 @@
 ---
 tags:
-    - Copilot
-    - IA
-    - Machine Learning
+    - How to
+    - Create Tool
+    - Tool
+    - Python Dependencies
 ---
 
 # How to Create Copilot Tools
@@ -89,10 +90,10 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
 
 
     class PingTool(ToolWrapper):
-        name = 'PingTool'  # Name of the tool
+        name: str = 'PingTool'  # Name of the tool
         # Description of the tool.
         # This description tells Copilot what the tool does and based on this description it will decide if this tool will solve the user's request.
-        description = (
+        description: str = (
             '''This tool receives a hostname and returns the ping result.''')
         args_schema: Type[ToolInput] = PingToolInput  # The args_schema attribute must be a Pydantic model that defines the inputs of the tool.
         
@@ -187,11 +188,8 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
         Remember to execute `Sync Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
 5. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
-To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
+To test the developed Tool, you can ask to an assistant that has the tool associated. The assistant will execute the tool and return the result.
 
-    ``` bash title="Terminal"
-    ./gradlew copilot.do -Pprompt="What tools do you have available?"
-    ```
 
 ## Interacting with Etendo
 
@@ -218,8 +216,8 @@ class UpdateSOToolInput(ToolInput):
    description: str = ToolField(description="New description to set in the Sales Order")
 
 class UpdateSOTool(ToolWrapper):
-   name = "UpdateSOTool"
-   description = "Set description in a Sales Order by DocumentNo2"
+   name: str = "UpdateSOTool"
+   description: str  = "Set description in a Sales Order by DocumentNo2"
    args_schema: Type[ToolInput] = UpdateSOToolInput
    return_direct: bool = False
 
