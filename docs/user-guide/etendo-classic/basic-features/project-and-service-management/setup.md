@@ -10,7 +10,7 @@ tags:
 
 ## Overview
 
-This section describes the window that is necessary to set up the Project and Service Management process in Etendo: Project Type.
+This section describes the window that is used to set up the Project and Service Management process in Etendo: Project Type.
 
 ## Project Type
 
@@ -20,7 +20,10 @@ This section describes the window that is necessary to set up the Project and Se
 
 This window is used to define projects types with typical phases and tasks to be used in projects.
 
-A Project Type is a template with the typical phases and tasks that are applicable for a certain type of project. During the entry of a multiphase project, a project type can be selected to automatically add the phases and tasks associated with that project type.
+A Project Type is a template with the typical phases and tasks that are applicable for a certain type of project. During the entry of a multiphase project, a project type can be selected to automatically add the phases and tasks associated with that project type. 
+
+!!!info 
+    The use of this window is not mandatory, but it is recommended since it enables to complete the multiphase project in an easier way. If not used, each multiphase project, its phases and tasks, should be completed manually.
 
 ### Header
 

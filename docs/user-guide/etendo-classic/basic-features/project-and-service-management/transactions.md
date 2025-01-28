@@ -34,7 +34,7 @@ This window is used to manage a project, its related phases and tasks and to pop
 - The cost overview: based on the planned cost overview entered in the multiphase project once documents are created referencing the project, the actual cost can be compared with them.
 - The schedule: based on planned start dates and end dates, the progress of the project can be monitored.
 
-From the multiphase project window, sales orders are generated at the end of each completed phase.
+From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the **Create Sales Order from Project Phase** button at Project Phase tab level.
 
 ### Header
 

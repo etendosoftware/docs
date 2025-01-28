@@ -13,6 +13,8 @@ tags:
 
 ## Overview
 
+HOW IS THIS USEFUL?
+
 The Project and Service Management module consists of:
 
 - Multiphase Project to manage project with phases and tasks
@@ -20,11 +22,13 @@ The Project and Service Management module consists of:
 
 VA - IMAGE TO EDIT - ALE
 
+ADD EXPLANATION
+
 ### Configuration
 
 The following is entered in the application for the project and service management module:
 
-- **Project Dimension**: in order to be able to select projects on orders and invoices, the project [dimension](../financial-management/accounting/setup.md#general-ledger-configuration#dimension) is created as a new record with type Project in the Dimension tab of the General Ledger Configuration window.
+- **Project Dimension**: in order to be able to select projects on orders and invoices, the project [dimension](../financial-management/accounting/setup.md#general-ledger-configuration#dimension) is created as a new record with type Project in the Dimension tab of the [General Ledger Configuration]() window.
 
 - [**Product**](../master-data-management/master-data.md#product):
     - Product type Service and Expense Type: for the expense sheet products with product type Service (for time) and product type Expense Type (for expenses) are set up.
@@ -41,13 +45,13 @@ The following is entered in the application for the project and service manageme
 
 ### Execution
 
-The Multiphase Project has the following sequence of events:
+The [Multiphase Project]() has the following sequence of events:
 
 - the creation of the Multiphase Project with the following information:
     - planned amounts and margins related to the project
     - information needed to create a Sales Order
-    - product information related to the project
-    - optionally a Project Type is created or an existing one is used to create the phases and tasks. Alternatively without using a project type, phases and tasks are created directly on the Multiphase Project.
+    - product information related to the project (?)
+    - optionally a Project Type is created or an existing one is used to create the phases and tasks. Alternatively without using a project type, phases and tasks are created manually on the Multiphase Project.
     - start and end dates for the overall project and for phases and tasks
     - project status is changed to Order
 - planned versus actual cost is monitored on the Project Profitability report based on the following:
