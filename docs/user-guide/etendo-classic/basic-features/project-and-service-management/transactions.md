@@ -34,7 +34,8 @@ This window is used to manage a project, its related phases and tasks and to pop
 - The cost overview: based on the planned cost overview entered in the multiphase project once documents are created referencing the project, the actual cost can be compared with them.
 - The schedule: based on planned start dates and end dates, the progress of the project can be monitored.
 
-From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the **Create Sales Order from Project Phase** button at Project Phase tab level.
+!!! important
+    From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the [**Create Sales Order from Project Phase**]() button at Project Phase tab level.
 
 ### Header
 
@@ -42,45 +43,54 @@ From the multiphase project window, sales orders, in draft status, are generated
 
 Here, the fields to note are:
 
-- Organization: organization of the project
-- Search Key: field used to easily filter records
+- Organization: organization of the project.
+- Search Key: field used to easily filter records.
 - Name: name of the project. The name has to be unique between Service Projects and Multiphase projects.
-- Current Phase: field to manually keep track of the current phase of the project
-- Starting Date: start date of the project
-- Planned End Date: scheduled end date of the project
-- Real End Date: actual end date of the project
-- Description: note field
-- Sales Representative: sales contact related to this project
-- Person in Charge: project manager
+- Current Phase: field to manually keep track of the current phase of the project.
+- Starting Date: start date of the project.
+- Planned End Date: scheduled end date of the project.
+- Real End Date: actual end date of the project.
+- Description: note field.
+- Sales Representative: sales contact related to this project.
+- Person in Charge: project manager.
 
 In the Amounts section:
 
-- Service Revenue: expected revenue for services (consulting)
-- Planned Expenses: expected expenses
-- Services Provided Cost: expected internal cost of the services (labour x hours x cost)
-- Outsourced Cost: expected cost of services executed by third party
-- Total Service Cost: populated information of the Services Provided Cost + Outsourced Cost
-- Reinvoiced Expenses: defaults to the planned expenses, but can be overwritten by the actual amount that will be invoiced to the business partner
+- Legally Binding Contract: If checked, it indicates if the document is legally binding.
+- Price Ceiling: Only shown if Legally Binding Contract is checked. The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: Only shown if Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Contract Quantity: Only shown if  Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Service Revenue: expected revenue for services (consulting).
+- Planned Expenses: expected expenses.
+- Services Provided Cost: expected internal cost of the services (labour x hours x cost).
+- Outsourced Cost: expected cost of services executed by third party.
+- Total Service Cost: populated information of the Services Provided Cost + Outsourced Cost.
+- Reinvoiced Expenses: defaults to the planned expenses, but can be overwritten by the actual amount that will be invoiced to the business partner.
 - Planned Service Margin %: populated information with the profit or loss percentage on the services: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
 - Planned Expenses Margin %: Populated information with the profit or loss percentage on the expenses: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
 
-In the more information section:
+In the More Information section:
 
-- Business Partner: the customer that is being charged for the project
-- Partner Address: address of the business partner
-- User/Contact: user working for the business partner
-- Order Reference: reference number of the business partner to appear on the sales order
-- Payment Method: payment method of the business partner to appear on the sales order
-- Payment Terms: payment terms of the business partner to appear on the sales order
-- Price List: price list related to the business partner
-- Currency: currency related to the business partner
-- Warehouse: warehouse used to ship to the business partner
-- Set Project Type button: to select a project type in order to copy the phases and tasks from that particular project type to the multiphase project. Based on the durations of the phases and tasks in the project type, the starting date and end date on the multiphase project are overwritten.
-- Change Project Status button: to change the status of the project. The statuses of the multiphase project are:
-    Open: initial status, comparable with the status draft on other documents.
-    Order: status to indicate that the sales orders can be generated.
-    Order closed: final status of the project. When changed to this status, the Real End Date field information gets automatically populated with the system date. Once the project status is Order closed, the project can not be opened again.
-- Copy Details button: the project phase(s) and project task(s) information from another multiphase project is copied.
+- Business Partner: the customer that is being charged for the project.
+- Partner Address: address of the business partner.
+- User/Contact: user working for the business partner.
+- Order Reference: reference number of the business partner to appear on the sales order.
+- Payment Method: payment method of the business partner to appear on the sales order.
+- Payment Terms: payment terms of the business partner to appear on the sales order.
+- Price List: price list related to the business partner.
+- Currency: currency related to the business partner.
+- Warehouse: warehouse used to ship to the business partner.
+
+#### Process Buttons
+
+- Set Project Type: to select a project type in order to copy the phases and tasks from that particular project type to the multiphase project. Based on the durations of the phases and tasks in the project type, the starting date and end date on the multiphase project are overwritten.
+- Change Project Status: to change the status of the project. The statuses of the multiphase project are:
+    - Open: initial status, comparable with the Draft status on other documents.
+    - Order: status to indicate that the sales orders can be generated.
+    - Order closed: final status of the project. When changed to this status, the Real End Date field information gets automatically populated with the system date. Once the project status is Order closed, the project can not be opened again.
+    !!!info
+        In order to use this button, the Business Partner and the Sales Representative fields of the header must be completed.
+- Copy Details : the project phase(s) and project task(s) information from another multiphase project is copied.
 
 ### Project Phase Tab
 
@@ -95,13 +105,28 @@ The following fields are displayed in this tab:
 - Name: name of the phase.
 - Product: product or service that is sold in the phase.
 - Quantity: quantity of the product to be sold in the phase.
-    - Note: Above fields are copied from the Project Type if the Set Project Type functionality is used.
-- Net Unit Price: when filled out, this is the new unit price that will appear for the phase on the sales order, thus overwriting the price list net unit price.
-- Starting Date: planned starting date of the phase
-- Planned End Date: planned ending date of the phase
-    - Note: Starting Date and Planned End Date of the phase are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
+
+    !!!note:
+        Above fields are copied from the Project Type if the Set Project Type functionality is used.
+- Net Unit Price: When filled out, this is the new unit price that will appear for the phase on the sales order, thus overwriting the price list net unit price.
+- Starting Date: Planned starting date of the phase.
+- Planned End Date: Planned ending date of the phase.
+    !!!note: 
+        Starting Date and Planned End Date of the phase are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
 - Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Phase Complete checkbox.
-- Phase Complete checkbox: to set the phase to complete. In order to set the phase to Phase Complete, it is not mandatory that the task(s) related to this phase are set to complete first.
+- Phase Complete checkbox: to set the phase to complete. In order to set the phase to Phase Complete, it is not mandatory that the task(s) related to this phase are set to complete first. However, once the Phase Complete checkbox is marked, the tasks of this phase are also marked as completed.
+
+In the More Information section:
+
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+- Standard Phase: Phase of the project with standard performance information with standard work.
+- Sales Order: Unique identifier and a reference to a Sales Order originating from the document sequence defined for this document type.
+
+#### Process Button
+
+- Create Sales Order from Project Phase: to create a sales order upon completion of a phase. From the sales order, a sales invoice is created to document that the customer has to pay for the executed work on the project.
 
 
 ### Project Task Subtab
@@ -125,6 +150,13 @@ The following fields are displayed in this subtab:
 - Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Task Complete checkbox.
 - Task Complete checkbox: to set the task to completed.
 
+In the More Information section:
+
+- Standard Task: Standard Project Task in a Project Phase with standard effort
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+
 ## Expense Sheet
 
 :material-menu: `Application` > `Project and Service Management` > `Transactions` > `Expense Sheet`
@@ -135,7 +167,7 @@ An Expense Sheet is used to register time sheets and item expenses.
 
 Based on time sheets, the cost related to assigned employees to the project is calculated and can be viewed on the [Project Profitability](../project-and-service-management/analysis-tools.md#project-profitability) report.
 
-For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](../procurement-management/transactions.md#purchase-invoice).
+For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](../procurement-management/transactions.md#purchase-invoice). To link the corresponding invoices to the project, there is a project dimension field in the header of the Purchase Invoice window.
 
 For both time sheets and item expenses, it can be indicated whether the customer related to the project is invoiced for these costs. The follow up of this is that a [Sales Order](../sales-management/transactions.md#sales-order) is created in order to create a [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 
@@ -159,7 +191,7 @@ The fields on this tab are:
 - Report Date: date for which the expense is entered
 - Process Expenses button: to execute the processing of the sheet.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
+    ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
 
 ### Lines Tab
 
