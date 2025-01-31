@@ -906,7 +906,7 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.png)
 
 ### Search button
 
@@ -940,13 +940,7 @@ With the **Search** button, the following fields are used to specify the documen
 
 - Accounting Status: the corresponding accounting status of the search. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
 
-VA
-
-### Bulk Posting button
-
-Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once. 
-
-VA
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents2.png)
 
 ### Grid filtering
 
@@ -957,12 +951,19 @@ In the grid where documents are displayed after the search, users can filter the
 - Document Description
 - Accounting Date
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents3.png)
+
+### Bulk Posting button
+
+Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents4.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents5.png)
 
 As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
 
 !!! info
-    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md)
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Reset Accounting
 
