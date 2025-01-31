@@ -16225,6 +16225,8 @@ This section describes the windows related to the accounting transactions that a
 
 [:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Not Posted Documents](#not-posted-documents){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: VAT Regularization](#vat-regularization){ .md-button .md-button--primary } <br>
@@ -17096,6 +17098,76 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 !!!info
     With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
+
+#### Not Posted Documents
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Not Posted Documents`
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+##### Overview
+
+With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.png)
+
+##### Search button
+
+With the **Search** button, the following fields are used to specify the documents to search. 
+
+- Organization: The corresponding organization of the search.
+- Document: Type of document that the user is searching. This is the only field that is optional. The listed options are:
+    - Amortization
+    - Bank Statements 
+    - Bill of Materials Production
+    - Cost Adjustment
+    - Doubtful Debt
+    - GL Journal
+    - Goods Receipt
+    - Goods Shipment
+    - Internal Consumption
+    - Inventory
+    - Landed Cost
+    - Landed Cost Cost
+    - Matched Invoices
+    - Movements
+    - Payment In
+    - Payment Out
+    - Purchase Invoice
+    - Reconciliation
+    - Return Material Receipt
+    - Return to Vendor Shipment
+    - Sales Invoice
+    - Transaction
+    - Work Effort
+
+- Accounting Status: the corresponding accounting status of the search. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents2.png)
+
+##### Grid filtering
+
+In the grid where documents are displayed after the search, users can filter the documents using the following criteria:
+
+- Organization
+- Type of document
+- Document Description
+- Accounting Date
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents3.png)
+
+##### Bulk Posting button
+
+Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents4.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents5.png)
+
+As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
+
+!!! info
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Reset Accounting
 
@@ -20978,6 +21050,8 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 ![](https://docs.etendo.software/latest/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 
+#### Available Windows
+
 This functionality is available in the following windows:
 
 - [Amortization](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#bulk-posting)
@@ -21002,8 +21076,7 @@ This functionality is available in the following windows:
 - [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
 - [Physical Inventory](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#bulk-posting)
 
-
-##### Accounting Status
+##### Accounting Status Column
 
 All the records existing previously to the installation of this new functionality have a default **pending refresh** value in the column **Accounting Status**. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
 
@@ -21016,6 +21089,13 @@ To configure the preference, go to the **Preference** window and create a new re
 It is necessary to run the **Days Back to Refresh Accounting** background process to update the accounting status column.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
+
+#### Not Posted Documents Window
+
+The Bulk Posting module includes the Not Posted Documents functionality. This is used to find all the not posted documents in the same window and to post them massively.
+
+!!!info
+    For more information, visit [Not Posted Documents](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Automated Remittance
