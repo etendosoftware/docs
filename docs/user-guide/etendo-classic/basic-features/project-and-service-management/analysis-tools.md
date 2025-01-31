@@ -46,12 +46,12 @@ The following information is displayed on the report:
 
 **Planned Services and Expenses**:
 
-- Revenue: the amount from the field Service Revenue on the multiphase project
-- Cost: the amount from the field Services Provided Cost on the multiphase project
-- Outsource: the amount from the field Outsourced Cost on the multiphase project
+- Revenue: the amount from the field Service Revenue on the multiphase project.
+- Cost: the amount from the field Services Provided Cost on the multiphase project.
+- Outsource: the amount from the field Outsourced Cost on the multiphase project.
 - Margin%: the margin from the field Planned Service Margin % on the multiphase project. The planned service margin % is calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
-- Reinvoicing: the amount from the field Reinvoiced Expenses on the multiphase project
-- Expenses: the amount from the field Planned Expenses on the multiphase project
+- Reinvoicing: the amount from the field Reinvoiced Expenses on the multiphase project.
+- Expenses: the amount from the field Planned Expenses on the multiphase project.
 - Margin%: the margin from the field Planned Expenses Margin % on the multiphase project. The planned expenses margin % is calculated using the formula: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
 - Gross margin: overall planned margin for the project
     - Gross margin amount: calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) + (Reinvoiced Expenses - Planned Expenses).
@@ -67,17 +67,17 @@ Real Services and Expenses:
 - Outsource: cost of worked hours executed by a third party based on purchases invoices.
 - Margin%: real margin for services based on the formula: (Revenue - Cost -Outsource) x 100/Revenue
 - Reinvoicing: expenses invoiced to the customer on sales invoices for:
-    - purchased goods related to the project
+    - purchased goods related to the project.
     - invoiceable item expenses.
     - only sales invoice lines with products whose type is not service will be taken into account.
 - Expenses: real expenses based on purchase invoices for:
-    - purchased goods related to the project from a vendor
+    - purchased goods related to the project from a vendor.
     - reimbursement for item expenses for an employee.
 - Margin%: real margin for expenses based on the formula: (Reinvoicing - Expenses) x 100/Reinvoicing
 - Gross margin: overall real margin for the project.
     - Gross margin amount: calculated using the formula: (Revenue - Cost - Outsource) + (Reinvoicing - Expenses)
     - Gross margin percentage: calculated using the formula: ((Revenue - Cost - Outsource) + (Reinvoicing - Expenses)) x 100/(Revenue + Reinvoicing)
-- Collected: amount that was collected from the customer for the sales invoices related to the project
+- Collected: amount that was collected from the customer for the sales invoices related to the project.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-profitability.png)
 

@@ -35,7 +35,7 @@ This window is used to manage a project, its related phases and tasks and to pop
 - The schedule: based on planned start dates and end dates, the progress of the project can be monitored.
 
 !!! important
-    From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the [**Create Sales Order from Project Phase**]() button at Project Phase tab level.
+    From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the [**Create Sales Order from Project Phase**](../project-and-service-management/transactions.md#process-button) button at Project Phase tab level.
 
 ### Header
 
@@ -106,13 +106,16 @@ The following fields are displayed in this tab:
 - Product: product or service that is sold in the phase.
 - Quantity: quantity of the product to be sold in the phase.
 
-    !!!note:
-        Above fields are copied from the Project Type if the Set Project Type functionality is used.
+    !!!note
+        Above fields are copied from the [Project Type](../project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
 - Net Unit Price: When filled out, this is the new unit price that will appear for the phase on the sales order, thus overwriting the price list net unit price.
 - Starting Date: Planned starting date of the phase.
 - Planned End Date: Planned ending date of the phase.
-    !!!note: 
-        Starting Date and Planned End Date of the phase are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
+
+    !!!note 
+        Starting Date and Planned End Date of the phase are calculated based on the start date and the Standard Duration in Days defined in the [Project Type](../project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
 - Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Phase Complete checkbox.
 - Phase Complete checkbox: to set the phase to complete. In order to set the phase to Phase Complete, it is not mandatory that the task(s) related to this phase are set to complete first. However, once the Phase Complete checkbox is marked, the tasks of this phase are also marked as completed.
 
@@ -128,6 +131,8 @@ In the More Information section:
 
 - Create Sales Order from Project Phase: to create a sales order upon completion of a phase. From the sales order, a sales invoice is created to document that the customer has to pay for the executed work on the project.
 
+    !!!info
+        The created sales order includes all the lines from the phase and its related tasks.
 
 ### Project Task Subtab
 
@@ -142,11 +147,17 @@ The following fields are displayed in this subtab:
 - Name: name of the task
 - Product: product or service that is sold related to this task.
 - Quantity: quantity of the product to be sold for the task.
-    - Note: Above fields are copied from the Project Type if the Set Project Type functionality is used.
+
+    !!!note
+        Above fields are copied from the Project Type if the Set Project Type functionality is used.
+
 - Net Unit Price: when filled out, this is the new unit price that will appear for the task on the sales order, thus overwriting the price list net unit price.
 - Starting Date: planned starting date
 - Planned End Date: planned ending date
-    - Note: Starting Date and Planned End Date of the task are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
+
+    !!!note
+        Starting Date and Planned End Date of the task are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
+
 - Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Task Complete checkbox.
 - Task Complete checkbox: to set the task to completed.
 
@@ -177,21 +188,18 @@ In this window, the user can create and process an expense sheet.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet.png)
 
-Here, the fields to note are:
-
 The fields on this tab are:
 
-- Organization: organization of the expense
-- Document No.: populated number of the expense sheet
+- Organization: organization of the expense.
+- Document No.: populated number of the expense sheet.
 - Employee: employee that made the expense related to a project or spend time on a project. It is important to remark that employees:
-    - need to be created as [Employee](../master-data-management/master-data.md#employee) in Business Partner window
-    - need to be created as Etendo [users](../general-setup/security.md#user) in the User window
+    - need to be created as [Employee](../master-data-management/master-data.md#employee) in Business Partner window,
+    - need to be created as Etendo [users](../general-setup/security.md#user) in the User window,
     - and finally, employee and user need to be related to each other.
     That relationship can be set by selecting Employee business partner record in the employee User record, as shown in the image below.
-- Report Date: date for which the expense is entered
-- Process Expenses button: to execute the processing of the sheet.
+- Report Date: date for which the expense is entered.
 
-    ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
+ ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
 
 ### Lines Tab
 
@@ -202,20 +210,24 @@ In this tab, the user can add time and regular expense lines to the sheet. Each 
 The fields to note in this tab are:
 
 - Time Sheet checkbox: to indicate if the expense is for time or item expenses.
-- Product: product related to the expense line. As seen in the configuration section, for time sheets, the products set up with Product - Type Service appear. For item expenses, products set up with Product Type Expense Type appear.
-- Quantity: quantity for the registered product
-- UOM: unit of measure of the product
+- Product: product related to the expense line. As seen in the [configuration](../project-and-service-management/getting-started.md#configuration) section, for time sheets, the products set up with Service type appear. For item expenses, products set up with Expense type appear.
+- Quantity: quantity for the registered product.
+- UOM: unit of measure of the product.
 - Line No.: numbering of the line. By default 10,20,30,...etc.
-- Expense Amount: not visible on time sheet. Populated field with the amount information
+- Expense Amount: not visible on time sheet. Populated field with the amount information.
 - Converted Amount: not visible on time sheet. Amount of the expense converted to the currency of the client.
-- Currency: currency of the entered expense
+- Currency: currency of the entered expense.
 - Reinvoicing checkbox: checkbox to indicate if the customer (the business partner related to the project) will be invoiced for this expense.
 - Business Partner: only visible when the Reinvoicing checkbox is selected. The Business Partner that is invoiced for the expense. The value will be populated based on the entered project information.
-- Net Unit Price: price related to the product
-- Expense Date: date related to the reported expense
-- Project: project that the expense relates to
-- Project Phase: project phase that the expense relates to
-- Project Task: project task that the expense relates to
+- Net Unit Price: price related to the product.
+- Expense Date: date related to the reported expense.
+- Project: project that the expense relates to.
+- Project Phase: project phase that the expense relates to.
+- Project Task: project task that the expense relates to.
+
+### Process Button
+
+- Process/Unprocess Expenses: Once the corresponding information of the sheet is entered, you can process the expense. If the document is processed, it is possible to select it and unprocess it to edit it if necessary.
 
 ## Create Sales Orders from Expenses
 
