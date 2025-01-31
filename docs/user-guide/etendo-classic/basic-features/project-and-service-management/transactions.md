@@ -1,13 +1,11 @@
 ---
+title: Project and Service Transactions
 tags: 
- - multiphase
- - project
- - expense
- - sheet
- - service
- - management
- - transactions
- - etendo
+ - Pultiphase Project
+ - Expense Sheet
+ - Create Sales Orders from Expenses
+ - Create AP Expense Invoices
+
 ---
 # Project and Service Transactions
 

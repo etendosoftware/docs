@@ -1,10 +1,10 @@
 ---
+title: Project and Service Setup
 tags: 
- - project
- - service
- - management
- - setup
- - etendo
+    - Multiphase Project
+    - Project Type
+    - Setup
+    - Project Template
 ---
 # Project and Service Setup
 

@@ -1,10 +1,13 @@
 ---
+title: Project and Service Management Analysis Tools
 tags: 
- - project
- - service
- - management
- - analysis tools
- - etendo
+    - Multiphase Project
+    - Service
+    - Planned Services and Expenses
+    - Analysis Tools
+    - Project Progress
+    - Expense Report
+    - Employee Expenses
 ---
 
 # Project and Service Management Analysis Tools

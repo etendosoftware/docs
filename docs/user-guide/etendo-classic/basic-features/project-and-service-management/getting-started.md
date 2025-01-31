@@ -1,11 +1,11 @@
 ---
 tags: 
- - getting started
- - project
- - service
- - management
- - transactions
- - setup
+ - Getting Started
+ - Multiphase Project
+ - Expense Sheets
+ - Project Progress
+ - Project Type
+ 
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
