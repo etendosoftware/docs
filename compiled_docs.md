@@ -12788,6 +12788,560 @@ This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/S
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/✨ Getting Started
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/getting-started
+## Article Content: 
+
+#### Overview
+
+The Project and Service Management functionality is essential for businesses to handle projects, services, or both. It helps organizations plan, execute, monitor, and optimize projects and services efficiently by integrating them with other functionalities such as Procurement Management, Sales Management, Financial Management, etc.
+
+The Project and Service Management module consists of:
+
+- [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) to manage project with phases and tasks.
+- [Expense Sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) to manage cost related to projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/getting-started/project-and-service-diagram.png)
+
+As seen in this diagram, after setting up the information shown [below](#configuration), in order to manage a project, the user should enter a [Multiphase project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) in the corresponding window. This window allows registering the progress of a project in different [phases](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab). Each project includes one or more phases and, in each phase, one or more [tasks](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab). For each of these phases, it is possible to perform a [Procure to Pay](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) process, for necessary purchases in the project, or an [Order to Cash](https://docs.etendo.software/latest/sales-management/getting-started.md#order-to-cash-business-flow) process  for necessary sales in the project. For registering required project expenses, the [expense sheet](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) window is used. Once one phase is closed, the user can review profitability by using the available [analysis tools](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md). This flow is done for each of the phases of a project, and once all the phases are completed, the project can be [closed](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+
+##### Key Concepts
+
+The key project and service management concepts mentioned in this chapter are:
+
+- [Business Partner](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner):
+    - Supplier: third party that supplies goods and/or services. In project and service management the supplier is the vendor of provided goods related to the project, the consultancy company that consultancy services were outsourced to and the employee that is reimbursed for expenses related to a project.
+    - Customer: the party that goods or services are sold to. In project and service management the customer is who gets charged for the cost and expenses of the project.
+    - Employee: person that works in the company.In project and service management, the employee information is used for the cost calculation of the project, based on [time sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet).
+- [Sales Order](https://docs.etendo.software/latest/sales-management/transactions.md#sales-order): document that lists goods and/or services provided to a customer and the conditions of the sale.
+- [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice): document used to administer a right to collect. The document lists the goods and/or services provided to a customer and the conditions of the sale.
+- [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice): document used to administer an obligation to pay. The document lists goods and/or services provided by a supplier.
+- [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type): template used to easily create phases and tasks on a multiphase project. This is specially useful to automatically complete phases and tasks according to the template without doing the process manually.
+- [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project): form used to registrate a project, the planned expenses, margins, who the project will be executed for and the phases and tasks of the project.
+- [Project Phase](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab): a time period during which certain activities are executed.
+- [Project Task](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab): activities that are executed during a project phase.
+- [Expense Sheet](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet): form used to register item expenses and time for a project.
+
+##### Configuration
+
+The following is entered in the application for the project and service management module:
+
+- [**Project Dimension**](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-ledger-configuration#dimension): in order to be able to select projects on orders and invoices, the project dimension is created as a new record with type Project in the Dimension tab of the [General Ledger Configuration](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-ledger-configuration) window.
+
+- [**Product**](https://docs.etendo.software/latest/master-data-management/master-data.md#product):
+    - **Service** and **Expense Type** Products Types: for the expense sheet products with product type Service (for time) and product type Expense Type (for expenses) are set up.
+    - **Item** Product type: the standard [procure to pay](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) process is used for the purchase or products related to the project.
+
+- [**Business Partner**](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner):
+    - Customer: the third party for whom the project is executed is set up as a customer.
+    - Vendor: the third party that supplies products related to the project is set up as a vendor.
+    - Employee:
+        - The vendor information is filled out in order to create purchase invoices to reimburse expenses.
+        - The salary category is filled out to calculate cost for the time spend on the project as documented in time sheets.
+
+- [**Project Type**](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type): a template with standard phases and tasks can be created to easily generate phases and tasks on a multiphase project.
+
+##### Execution
+
+The [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) has the following sequence of events:
+
+- The creation of the Multiphase Project with the following information:
+    - Planned amounts and margins related to the project in the Amounts section of the header.
+    - Information needed to create a Sales Order in the More Information section of the header.
+    - Optionally, with the [**Set Project Type**](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons) button, an existing Project Type is used to create the phases and tasks. Alternatively without using a project type, phases and tasks are created manually on the Multiphase Project.
+    - Start and end dates for the overall project and for phases and tasks.
+    - Once this information is entered, the project status is changed to [Order](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+- Planned versus actual cost is monitored on the [Project Profitability](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-profitability) report based on the following:
+    - Time sheets and item expenses are reported in [Expense Sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) related to the project. Based on the salary category of the employee at the time of the project, the cost of the time spend is calculated by the application.
+    - Purchase invoices are created for any purchases, outsourcing cost or expenses reimbursement related to the project. This is done through the [Create AP Expense Invoices](https://docs.etendo.software/latest/project-and-service-management/transactions.md#create-ap-expense-invoices).
+    - Sales invoices are created as a result of the Expense Sheets of the project. This is done through the [Create Sales Orders from Expenses](https://docs.etendo.software/latest/project-and-service-management/transactions.md#create-sales-orders-from-expenses) process.
+    - At the end of each phase, a Sales Order related to the phase is created from the Multiphase Project using the [Create Sales Order from Project Phase](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-button) process. The information for the creation of the Sales Order is taken from the definition of the Project and it is made for the customer of the project. Later, this results in the creation of a Sales Invoice.
+- The progress of the project is monitored in two ways. For each project, the [phases](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab) and [tasks](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab) can be marked as completed in the checkbox for this purpose. Also, the [Project Progress](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-progress) report can be used. Remember the accuracy of the information in the report depends on the Complete checkboxes use in the Phase and Task tabs.
+- After completion of all phases, the Multiphase Project status is changed to [Order Closed](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+
+!!!info
+    Remember this is a general overview of the Project and Service Management, visit the [Setup](https://docs.etendo.software/latest/project-and-service-management/setup.md), [Transactions](https://docs.etendo.software/latest/project-and-service-management/transactions.md) and [Analysis Tools](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md) sections for more specific information.
+
+#### Relationship with other areas
+
+Project and Service Management interacts with the following modules:
+
+- [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md):
+    - Materials related to the project are ordered using the Procure to Pay process.
+    - Purchase invoices are generated for expenses paid to employees and for good ordered from vendors.
+- [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md): Sales orders and sales invoices are generated for the customer for whom the project is executed.
+- [Warehouse Management](https://docs.etendo.software/latest/warehouse-management/getting-started.md): Materials ordered for the project may be received into stock.
+- [Financial Management](https://docs.etendo.software/latest/financial-management/getting-started.md): The information of the created sales and purchase invoices is send to accounts payables and receivables.
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Transactions
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Transactions
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/transactions
+## Article Content: 
+### Project and Service Transactions
+
+#### Overview
+
+This section describes the different windows that are used for transactions included in the Project and Service Management process in Etendo. These are:
+
+[:material-file-document-outline: Multiphase Project](#multiphase-project){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Expense Sheet](#expense-sheet){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Create Sales Orders from Expenses](#create-sales-orders-from-expenses){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Create AP Expense Invoices](#create-ap-expense-invoices){ .md-button .md-button--primary } <br>
+
+#### Multiphase Project 
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Multiphase Project`
+
+##### Overview
+
+This window is used to manage a project, its related phases and tasks and to populate the related sales invoices. The following aspects are monitored for projects:
+
+- The cost overview: based on the planned cost overview entered in the multiphase project once documents are created referencing the project, the actual cost can be compared with them.
+- The schedule: based on planned start dates and end dates, the progress of the project can be monitored.
+
+!!! important
+    From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the [**Create Sales Order from Project Phase**](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-button) button at Project Phase tab level.
+
+##### Header
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/multiphase-project.png)
+
+Here, the fields to note are:
+
+- Organization: organization of the project.
+- Search Key: field used to easily filter records.
+- Name: name of the project. The name has to be unique between Service Projects and Multiphase projects.
+- Current Phase: field to manually keep track of the current phase of the project.
+- Starting Date: start date of the project.
+- Planned End Date: scheduled end date of the project.
+- Real End Date: actual end date of the project.
+- Description: note field.
+- Sales Representative: sales contact related to this project.
+- Person in Charge: project manager.
+
+In the Amounts section:
+
+- Legally Binding Contract: If checked, it indicates if the document is legally binding.
+- Price Ceiling: Only shown if Legally Binding Contract is checked. The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: Only shown if Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Contract Quantity: Only shown if  Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Service Revenue: expected revenue for services (consulting).
+- Planned Expenses: expected expenses.
+- Services Provided Cost: expected internal cost of the services (labour x hours x cost).
+- Outsourced Cost: expected cost of services executed by third party.
+- Total Service Cost: populated information of the Services Provided Cost + Outsourced Cost.
+- Reinvoiced Expenses: defaults to the planned expenses, but can be overwritten by the actual amount that will be invoiced to the business partner.
+- Planned Service Margin %: populated information with the profit or loss percentage on the services: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
+- Planned Expenses Margin %: Populated information with the profit or loss percentage on the expenses: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
+
+In the More Information section:
+
+- Business Partner: the customer that is being charged for the project.
+- Partner Address: address of the business partner.
+- User/Contact: user working for the business partner.
+- Order Reference: reference number of the business partner to appear on the sales order.
+- Payment Method: payment method of the business partner to appear on the sales order.
+- Payment Terms: payment terms of the business partner to appear on the sales order.
+- Price List: price list related to the business partner.
+- Currency: currency related to the business partner.
+- Warehouse: warehouse used to ship to the business partner.
+
+###### Process Buttons
+
+- Set Project Type: to select a project type in order to copy the phases and tasks from that particular project type to the multiphase project. Based on the durations of the phases and tasks in the project type, the starting date and end date on the multiphase project are overwritten.
+- Change Project Status: to change the status of the project. The statuses of the multiphase project are:
+    - Open: initial status, comparable with the Draft status on other documents.
+    - Order: status to indicate that the sales orders can be generated.
+    - Order closed: final status of the project. When changed to this status, the Real End Date field information gets automatically populated with the system date. Once the project status is Order closed, the project can not be opened again.
+    !!!info
+        In order to use this button, the Business Partner and the Sales Representative fields of the header must be completed.
+- Copy Details : the project phase(s) and project task(s) information from another multiphase project is copied.
+
+##### Project Phase Tab
+
+In this tab, the individual phases of the project can be defined.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-phase.png)
+
+The following fields are displayed in this tab:
+
+- Organization: organization of the phase
+- Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the phase.
+- Product: product or service that is sold in the phase.
+- Quantity: quantity of the product to be sold in the phase.
+
+    !!!note
+        Above fields are copied from the [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
+- Net Unit Price: When filled out, this is the new unit price that will appear for the phase on the sales order, thus overwriting the price list net unit price.
+- Starting Date: Planned starting date of the phase.
+- Planned End Date: Planned ending date of the phase.
+
+    !!!note 
+        Starting Date and Planned End Date of the phase are calculated based on the start date and the Standard Duration in Days defined in the [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
+- Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Phase Complete checkbox.
+- Phase Complete checkbox: to set the phase to complete. In order to set the phase to Phase Complete, it is not mandatory that the task(s) related to this phase are set to complete first. However, once the Phase Complete checkbox is marked, the tasks of this phase are also marked as completed.
+
+In the More Information section:
+
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+- Standard Phase: Phase of the project with standard performance information with standard work.
+- Sales Order: Unique identifier and a reference to a Sales Order originating from the document sequence defined for this document type.
+
+###### Process Button
+
+- Create Sales Order from Project Phase: to create a sales order upon completion of a phase. From the sales order, a sales invoice is created to document that the customer has to pay for the executed work on the project.
+
+    !!!info
+        The created sales order includes all the lines from the phase and its related tasks.
+
+##### Project Task Subtab
+
+In this subtab, the individual tasks that are necessary to complete the phase of the project are defined.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-task.png)
+
+The following fields are displayed in this subtab:
+
+- Organization: organization of the task
+- Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the task
+- Product: product or service that is sold related to this task.
+- Quantity: quantity of the product to be sold for the task.
+
+    !!!note
+        Above fields are copied from the Project Type if the Set Project Type functionality is used.
+
+- Net Unit Price: when filled out, this is the new unit price that will appear for the task on the sales order, thus overwriting the price list net unit price.
+- Starting Date: planned starting date
+- Planned End Date: planned ending date
+
+    !!!note
+        Starting Date and Planned End Date of the task are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
+
+- Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Task Complete checkbox.
+- Task Complete checkbox: to set the task to completed.
+
+In the More Information section:
+
+- Standard Task: Standard Project Task in a Project Phase with standard effort
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+
+#### Expense Sheet
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Expense Sheet`
+
+##### Overview
+
+An Expense Sheet is used to register time sheets and item expenses.
+
+Based on time sheets, the cost related to assigned employees to the project is calculated and can be viewed on the [Project Profitability](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-profitability) report.
+
+For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice). To link the corresponding invoices to the project, there is a project dimension field in the header of the Purchase Invoice window.
+
+For both time sheets and item expenses, it can be indicated whether the customer related to the project is invoiced for these costs. The follow up of this is that a [Sales Order](https://docs.etendo.software/latest/sales-management/transactions.md#sales-order) is created in order to create a [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice).
+
+##### Header
+
+In this window, the user can create and process an expense sheet.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet.png)
+
+The fields on this tab are:
+
+- Organization: organization of the expense.
+- Document No.: populated number of the expense sheet.
+- Employee: employee that made the expense related to a project or spend time on a project. It is important to remark that employees:
+    - need to be created as [Employee](https://docs.etendo.software/latest/master-data-management/master-data.md#employee) in Business Partner window,
+    - need to be created as Etendo [users](https://docs.etendo.software/latest/general-setup/security.md#user) in the User window,
+    - and finally, employee and user need to be related to each other.
+    That relationship can be set by selecting Employee business partner record in the employee User record, as shown in the image below.
+- Report Date: date for which the expense is entered.
+
+ ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
+
+##### Lines Tab
+
+In this tab, the user can add time and regular expense lines to the sheet. Each expense is added to an individual line and may or may not be invoiced to customers.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet-lines.png)
+
+The fields to note in this tab are:
+
+- Time Sheet checkbox: to indicate if the expense is for time or item expenses.
+- Product: product related to the expense line. As seen in the [configuration](https://docs.etendo.software/latest/project-and-service-management/getting-started.md#configuration) section, for time sheets, the products set up with Service type appear. For item expenses, products set up with Expense type appear.
+- Quantity: quantity for the registered product.
+- UOM: unit of measure of the product.
+- Line No.: numbering of the line. By default 10,20,30,...etc.
+- Expense Amount: not visible on time sheet. Populated field with the amount information.
+- Converted Amount: not visible on time sheet. Amount of the expense converted to the currency of the client.
+- Currency: currency of the entered expense.
+- Reinvoicing checkbox: checkbox to indicate if the customer (the business partner related to the project) will be invoiced for this expense.
+- Business Partner: only visible when the Reinvoicing checkbox is selected. The Business Partner that is invoiced for the expense. The value will be populated based on the entered project information.
+- Net Unit Price: price related to the product.
+- Expense Date: date related to the reported expense.
+- Project: project that the expense relates to.
+- Project Phase: project phase that the expense relates to.
+- Project Task: project task that the expense relates to.
+
+##### Process Button
+
+- Process/Unprocess Expenses: Once the corresponding information of the sheet is entered, you can process the expense. If the document is processed, it is possible to select it and unprocess it to edit it if necessary.
+
+#### Create Sales Orders from Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Create Sales Orders from Expenses`
+
+This is a process which automatically generates sales orders per customer for all outstanding expenses to be invoiced. In order for the process to create the sales order with the correct information, the customer needs to be set up with the [Customer] tab in the Business Partner window filled out.
+This process is integrated with the [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md) Module:
+
+- All the sales orders generated can be checked and modified through that module.
+- The invoice process can be run afterwards.
+- There is a checkbox Complete and Process Sales Orders automatically to indicate whether the Sales Orders should be created in booked state or not.
+
+A Sales Order type Warehouse order with a corresponding Goods Shipment is created by the process if the checkbox Complete and Process Sales Orders automatically is selected.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-sales-orders-from-expenses.png)
+
+#### Create AP Expense Invoices
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Create AP Expense Invoices`
+
+This is a process which automatically generates Purchase Invoices for Accounts Payable based on all expenses to be reimbursed to the employee. Separate Purchase Invoices will be generated for each project. 
+
+In order for the process to complete successfully the employee needs to have the Vendor tab in the Business Partner filled out including the following information:
+
+- A Purchase Price List
+- The PO Payment Method
+- The PO Payment Terms
+- The PO Financial Account
+
+This process is directly integrated with the [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md) module: all the purchase invoices generated can be checked and modified through that module.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-ap-expense-invoices.png)
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Analysis Tools
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Analysis Tools
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/analysis-tools
+## Article Content: 
+### Project and Service Management Analysis Tools
+
+#### Overview
+
+This section describes the windows related to project and service management reports in Etendo. These are:
+
+[:material-file-document-outline: Project Progress](#project-progress){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Project Profitability](#project-profitability){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Expense Report](#expense-report){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Invoiceable Expenses](#invoiceable-expenses){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Employee Expenses](#employee-expenses){ .md-button .md-button--primary } <br>
+
+#### Project Progress
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Project Progress`
+
+The Project Progress report allows to track the progress of projects with useful indicators such as the time burned or the completion percentage. It is used to monitor to timelines of projects.
+
+The main information that can be retrieved from the report is:
+
+- days delay for each task and each phase
+- cumulative delay for the whole project
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-progress.png)
+
+#### Project Profitability
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Project Profitability`
+
+The Project Profitability report is used to monitor the planned and real cost related to a project.
+
+The following information is displayed on the report:
+
+**Planned Services and Expenses**:
+
+- Revenue: the amount from the field Service Revenue on the multiphase project.
+- Cost: the amount from the field Services Provided Cost on the multiphase project.
+- Outsource: the amount from the field Outsourced Cost on the multiphase project.
+- Margin%: the margin from the field Planned Service Margin % on the multiphase project. The planned service margin % is calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
+- Reinvoicing: the amount from the field Reinvoiced Expenses on the multiphase project.
+- Expenses: the amount from the field Planned Expenses on the multiphase project.
+- Margin%: the margin from the field Planned Expenses Margin % on the multiphase project. The planned expenses margin % is calculated using the formula: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
+- Gross margin: overall planned margin for the project
+    - Gross margin amount: calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) + (Reinvoiced Expenses - Planned Expenses).
+    - Gross margin percentage: calculated using the formula: ((Service Revenue - Services Provided Cost - Outsourced Cost) + (Reinvoiced Expenses - Planned Expenses)) x100/(Service Renevue + Reinvoiced Expenses)
+
+Real Services and Expenses:
+
+- Revenue: cost reflected on sales invoices for the customer for:
+    - reinvoicing of outsourced work by a third party.
+    - invoicing of the cost for completed project phases.
+    - only sales invoice lines with service type products will be taken into account.
+- Cost: cost of worked hours based on processed time sheets multiplied by the cost that is linked to the salary category of the employee at the expense date.
+- Outsource: cost of worked hours executed by a third party based on purchases invoices.
+- Margin%: real margin for services based on the formula: (Revenue - Cost -Outsource) x 100/Revenue
+- Reinvoicing: expenses invoiced to the customer on sales invoices for:
+    - purchased goods related to the project.
+    - invoiceable item expenses.
+    - only sales invoice lines with products whose type is not service will be taken into account.
+- Expenses: real expenses based on purchase invoices for:
+    - purchased goods related to the project from a vendor.
+    - reimbursement for item expenses for an employee.
+- Margin%: real margin for expenses based on the formula: (Reinvoicing - Expenses) x 100/Reinvoicing
+- Gross margin: overall real margin for the project.
+    - Gross margin amount: calculated using the formula: (Revenue - Cost - Outsource) + (Reinvoicing - Expenses)
+    - Gross margin percentage: calculated using the formula: ((Revenue - Cost - Outsource) + (Reinvoicing - Expenses)) x 100/(Revenue + Reinvoicing)
+- Collected: amount that was collected from the customer for the sales invoices related to the project.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-profitability.png)
+
+#### Expense Report
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Expense Report`
+
+The Expense Report shows a listing of expense sheets with their details. Filters can be applied to show expense reports for certain business partners, projects or employees. Also a filter to select time sheets or expense sheets can be applied.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/expense-report.png)
+
+#### Invoiceable Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Invoiceable Expenses`
+
+In this window, the user can view expenses before invoicing them to customers. This is a read-only overview of all invoiceable cost related to projects. The costs that appear are marked as reinvoicing in expense sheets that are processed. All items that are displayed are for invoicing to the customers related to the projects.
+
+Customer
+
+In the grid view an overview of all customers for which expenses related to projects have to be invoiced is listed. In the records, the Price List and Payment Terms to be used for the creation of the Sales Order are displayed.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses.png)
+
+##### Lines Tab
+
+In this tab, the user can view each expense line to be included in the sales invoice.
+
+The information displayed in the lines tab is taken from the lines tab from the Expense Sheets. All lines are related to the selected business partner, but different lines can be related to different projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses-lines.png)
+
+#### Employee Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Employee Expenses`
+
+In this window, the user can view internal employee expenses before processing them. This is a read-only overview of all expenses that need to be reimbursed to an employee.
+
+Employee
+
+In the grid view an overview of all employees that have expenses pending to be reimbursed is listed. Each record has the Purchase Price List and the Purchase Order Payment Terms displayed, to be used for the creation of the Purchase Invoice.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses.png)
+
+##### Lines Tab
+
+In this tab, the user can view each expense line for the employee.
+
+The information displayed in the lines tab is taken from the lines tab in the Expense Sheet. All lines are related to the employee, but different lines can be related to different projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses-lines.png)
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Setup
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Setup
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/setup
+## Article Content: 
+### Project and Service Setup
+
+#### Overview
+
+This section describes the window that is used to set up the Project and Service Management process in Etendo: Project Type.
+
+#### Project Type
+
+:material-menu: `Application` > `Project and Service Management` > `Setup` > `Project Type`
+
+##### Overview
+
+This window is used to define projects types with typical phases and tasks to be used in projects.
+
+A Project Type is a template with the typical phases and tasks that are applicable for a certain type of project. During the entry of a multiphase project, a project type can be selected to automatically add the phases and tasks associated with that project type.  This is essential for companies that use the same standard processes on many occasions.
+
+!!!info 
+    The use of this window is not mandatory, but it is recommended since it enables to complete the multiphase project in an easier way. If not used, each multiphase project, its phases and tasks, should be completed manually.
+
+##### Header
+
+Here, a project type can be defined and, for this, the main field is the Name of the project type. An intuitive name should be given so that once the multiphase project is entered, the user can easily recognize the project type that could be used to generate the phases and tasks.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/project-type.png)
+
+##### Standard Phase Tab
+
+In this tab, the user can define phases and products required during each phase, to be included in this type. Each phase is added by creating a line.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-phase.png)
+
+The fields on this tab are:
+
+- Sequence number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the phase.
+- Product: product or service that is sold in the phase.
+- Standard Quantity: quantity of the product to be sold in the phase. For example, if the product is Sales Consultancy with a unit of measure set to hours, the quantity 10 entered in this field indicates that 10 hours of Sales Consultancy is sold in this phase.
+- Standard Duration in Days: the scheduled duration of the phase. Based on this setup, when the project type is used for a multiphase project, the begin and end dates of each phase is based on this setup.When left blank at the phase level, the begin date will be populated based on the start date of the project and the end date will be left blank.
+- Active checkbox: indication of validity of the line.
+- Description: note field for the phase.
+
+
+##### Standard Task Subtab
+
+Here, the user can define tasks to be completed during each phase. Each task is added by creating a line.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-task.png)
+
+The fields on the tasks are:
+
+- Sequence number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the task.
+- Product: product or service that is sold related to this task.
+- Standard Quantity: quantity of the product to be sold for the task. For example if the product is Sales Consultancy with a unit of measure set to hours, the quantity 10 entered in this field indicates that 10 hours of Sales Consultancy is sold related to this task.
+- Standard Duration in Days: the scheduled duration of the task.
+- Active checkbox: indication of validity of the line.
+- Description: note field for the phase.
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ✨ Getting Started
 ## Article Path: /User Guide/Etendo Classic/Basic Features/Financial Management/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started
@@ -16653,7 +17207,7 @@ Accounting information related to the GL Journal
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-<iframe width=**854** height=**480** src=**https://www.youtube.com/embed/K7XOBkmRLAQ** title=**YouTube video player** frameborder=**0** allow=**accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture** allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K7XOBkmRLAQ?si=l-p9u_IvzFmMc46F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This functionality allows the user to duplicate a journal entry as many times as required, indicating the regularity and the period in which the first copy must be made. Starting from the second copy, the duplication will take place with the corresponding regularity.
 The process to create a journal entry from the beginning and duplicate it later is shown below.
