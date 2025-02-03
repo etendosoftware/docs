@@ -1,40 +1,99 @@
 ---
 tags:
   - Etendo News
-  - New Developments
+  - New Features
   - Release Notes
   - Functional Documentation
   - Versions
-  - News
 ---
 
-![](../../assets/whats-new/etendo-news/etendo-news-0.png)
+![](../assets/whats-new/etendo-news/etendo-news-0.png)
 
 #
+
+## January 2025
+
+### Copilot Extensions 
+
+<div class="grid cards" markdown>
+
+- :material-robot: **You can now use multiple files in conversations with an agent**
+
+    ---
+
+    ![](../assets/whats-new/etendo-news/attach-multiple-files-copilot.png)
+
+    In version [1.10.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new functionalities have been added:
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   :material-robot: **[Upload multiple files](../user-guide/etendo-copilot/getting-started.md#attach-files)**
+    
+    ---
+    
+    It is now possible to attach multiple files at once in Etendo Copilot, optimizing document management and improving the user experience.
+
+-   :octicons-package-16: **Automatic permissions management**
+    
+    ---
+
+    When creating a new agent, the necessary permissions will be automatically generated for its execution in the current role, reducing friction in the configuration.
+
+-   :octicons-package-16: **Optimized visualization**
+    
+    ---
+    
+    The agent window now shows the module to which each agent belongs, improving organization and navigation.
+
+-  :material-tools: **Tool Pack: New tool to read Excel and CSV files** 
+    
+    ---
+    
+    [XLS Tool](../developer-guide/etendo-copilot/available-tools/xls-tool.md) has been added in the available Tools, allowing agents to read and process data directly from Excel or CSV files, facilitating automation and integration of structured information.
+
+</div>
+
+
 ## December 2024
 
 ### Etendo Classic
-:octicons-rocket-24: **New Etendo Classic Release Available!**
-
-Version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 <div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Classic Release Available!**
+
+    Version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
 - **The document completion process allows the use of Credit Payment as a payment method again.** 
 
     From now on, the completion is again one record at a time and is added to the [Bulk Completion](../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+
 </div>
 
 ### Essentials Extensions
 
-:octicons-package-16: **Managing documents has never been so fast and easy**
+<div class="grid cards" markdown>
 
-![](../../assets/whats-new/etendo-news/bulk-completion.png)
-In version [1.7.0](../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+- :octicons-package-16: **Managing documents has never been so fast and easy**
+
+    ![](../assets/whats-new/etendo-news/bulk-completion.png)
+    
+    In version [1.7.0](../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+</div>
+
 
 ### Warehouse Extensions
-:octicons-package-16: **More accurate automatic stock reservation**
 
-In version [1.10.0](../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](../../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **More accurate automatic stock reservation**
+
+    ![](../assets/whats-new/etendo-news/automatic-warehouse-reservation.png)
+
+    In version [1.10.0](../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](../../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+</div>
 
 ### Financial Extensions
 
@@ -42,25 +101,35 @@ In version [1.10.0](../../whats-new/release-notes/etendo-classic/bundles/warehou
 
 - :octicons-package-16: **Automated remittances: Simplify remittance management by automating the settlement and protest process.**
 
-    ![](../../assets/whats-new/etendo-news/automated-remittances.png)
+    ---
+
+    ![](../assets/whats-new/etendo-news/automated-remittances.png)
 
     In version [1.21.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
 
     The Protest Remittance button has also been added, making it possible to return receipts in collection remittances from a single place.
 
 - :octicons-package-16: **Bank account and payment management allows for more automation**
+    
+    --- 
 
-    In version [1.21.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the Advanced Bank Account Management module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
+    ![](../assets/whats-new/etendo-news/advanced-bank-account.png )
+
+    In version [1.21.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Advanced Bank Account Management](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md) module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
     The possibility to select the bank account when adding payments and even edit payment plans with the Modify Payment button has also been added.
 </div>
 
 ### Copilot Extensions 
 
-:material-robot: **Copilot allows the use of multiple AI models from different suppliers.**
+<div class="grid cards" markdown>
 
-In version [1.9.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
-In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
+- :material-robot: **Copilot allows the use of multiple AI models from different suppliers.**
+    
+    ---
 
+    In version [1.9.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
+    In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
+</div>
 
 ## November 2024
 
@@ -106,7 +175,7 @@ New Copilot Extensions bundle version [1.7.0](../../whats-new/release-notes/eten
 
 ### Dependency Manager
 :octicons-package-16: **Managing Etendo modules and dependencies has never been so easy**
-![](../../assets/whats-new/etendo-news/devassistant.png)
+![](../assets/whats-new/etendo-news/devassistant.png)
 
 The [Dependency Manager](../../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
 
@@ -129,7 +198,7 @@ New Copilot Extensions bundle version [1.5.0](../../whats-new/release-notes/eten
 <div class="grid cards" markdown>
 - **New Feature Update: Zip File Support for LangChain Assistants**
     
-    ![](../../assets/whats-new/etendo-news/LangChain.png)
+    ![](../assets/whats-new/etendo-news/LangChain.png)
 
     We are excited to announce a new functionality in LangChain assistants: the ability to upload .zip files directly into the knowledge base! These .zip files can contain a variety of file formats, including .txt, .pdf, .md, .py, .java, and .js.
     This enhancement allows developers to train assistants with example source code.
@@ -143,7 +212,7 @@ New Copilot Extensions bundle version [1.5.0](../../whats-new/release-notes/eten
 
 [:material-robot: **New Etendo Copilot Release Available!**](../../user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
 
-![](../../assets/whats-new/etendo-news/copilot.png)
+![](../assets/whats-new/etendo-news/copilot.png)
 
 The newest version [1.4.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
 
@@ -173,7 +242,7 @@ These updates make Etendo Copilot more powerful, secure, and user-friendly, driv
 
 [:simple-docker: **Docker Management**](../../developer-guide/etendo-classic/bundles/platform/docker-management.md)
 
-![](../../assets/whats-new/etendo-news/docker.gif){align=right width=400}
+![](../assets/whats-new/etendo-news/docker.gif){align=right width=400}
 
 - In version [1.18.0](../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
 - This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
@@ -189,7 +258,7 @@ These updates make Etendo Copilot more powerful, secure, and user-friendly, driv
 ### Warehouse Extensions
 [:octicons-package-16: **Product Operations**](../../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
-![](../../assets/whats-new/etendo-news/product-operation.png)
+![](../assets/whats-new/etendo-news/product-operation.png)
 
 In the version [1.8.0](../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
 
