@@ -22,9 +22,9 @@ This section describes the windows related to assets, part of the Financial Mana
 
 The user can define amortization characteristics for assets owned by the company.
 
-#### Assets
-
 The user can define assets owned by the company and create an amortization for them.
+
+### Assets window
 
 ![](../../../../../assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
@@ -33,7 +33,7 @@ Fields to note:
 -   **Organization** : Organizational entity within client.
 -   **Search Key** : A fast method for finding a particular record.
 -   **Name** : A non-unique identifier for a record/document often used as a search tool.
--   **Asset Category** : A classification of assets based on similar characteristics.
+-   **Asset Category** : A classification of assets based on similar characteristics defined in the [Asset Group window](#asset-group-window). 
 -   **Document No.** : An automatically generated identifier for all documents.
 -   **Description** : A space to write additional related information.
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
@@ -60,7 +60,13 @@ Fields to note:
 -   **Project** : Identifier of a project defined within the Project & Service Management module.
 -   **Create Amortization** : it will create (or recalculate) the amortization plan based on the asset definition.
 
-### **Asset Amortization**
+#### Buttons
+
+- **Create Amortization**: The Create Amortization button populates the Asset Amortization tab.
+
+- **Recalculate Amortization**: The Recalculate Amortization button allows the user to update information when needed. 
+
+### Asset Amortization tab
 
 The user can add asset amortizations for a selected asset.
 
@@ -71,8 +77,6 @@ The user can add asset amortizations for a selected asset.
 -   **Amortization Percentage** : Amortization Percentage
 -   **Amortization Amount** : Amortization Amount
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
-
-The *Create Amortization* process populates the Asset Amortization tab.
 
 The Asset Amortization tab shows the depreciation plan of the asset based on its usable life-time and its value that is the amount to be depreciated. The asset value is split within its usable life (months or years), therefore each depreciation plan line represents a percentage of the total depreciation amount of the asset.
 
@@ -89,11 +93,44 @@ The depreciation line of February cannot be removed until the depreciation line 
 
 The process assumes that if the March depreciation line exists, then the February depreciation line exists.
 
-#### **Accounting**
+### Accounting tab
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
+Agregar info sobre estos dos campos: 
+Accumulated Depreciation 
+Depreciation 
+
 ![](../../../../../assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
+
+### Accounting Dimentions Assets
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+In addition to the existing Product dimensions for assets, this module allows users to select **additional accounting dimensions** which will be automatically transferred to the amortization lines, allowing better integration with accounting processes. 
+
+The dimensions the user can apply to the asset creation process are the following: 
+
+- Business Partner
+- Activity
+- 1st Dimension
+- 2nd Dimension 
+- Sales Region
+- Campaign
+- Cost Center
+
+!!! info
+    When creating or recalculating the amortization schedule for an asset, the specified accounting dimensions are transferred to the lines of the amortization schedule.
+
+![assets1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+
+!!! info
+    For more information about Dimentions configuration visit [Dimentions](../../../../etendo-classic/basic-features/financial-management/accounting/setup.md#dimension).
+
+#### Buttons 
+
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab by grouping them according to the amortization period. This information is also populated in the [Amortization window](#amortization-window).  
 
 ## Asset Group
 
@@ -103,9 +140,9 @@ The user can create and edit G/L accounts to be used in transactions which inclu
 
 Assets can be grouped into different categories with the aim of helping their depreciation management and analysis.
 
-#### Asset Category
+### Asset Group window 
 
-Asset category window allows the user to create and configure every asset category your organization may need.
+Asset Group window allows the user to create and configure every asset category your organization may need.
 
 ![](../../../../../assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
 
@@ -123,7 +160,7 @@ As shown in the image above, the creation of an asset category requires the user
 
 Depreciation configuration will be inherited from the asset category when creating a new asset.
 
-#### Accounting
+### Accounting tab
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
@@ -133,36 +170,38 @@ Each asset category allows the user to configure a different set of accounts to 
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Amortization`
 
-### **Overview**
+### Overview
 
 The user can create and edit amortization for a selected year.
 
-### **Header**
+### Amortization window
 
 In the header, the user creates amortizations for particular periods.
 
 ![](../../../../../assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
 
-### **Lines**
+### Lines tab
 
 In each line, the user adds amortized assets and details of amortization.
 
 ![](../../../../../assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
 
-#### **Accounting**
+### Accounting tab
 
 Accounting information related to the amortization
 
 ![](../../../../../assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
 
-### How to Reactivate Amortizations
+### Accounting Dimentions Assets
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
-Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](../../../../../assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+With this module, the Amortization window shows the assets records created from the Asset window, **grouped per period (monthly or yearly)**, keeping the accounting dimensions in the amortization lines to be used to generate accounting entries.
+
+![assets2](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
+
 
 ### Bulk Posting
 
@@ -175,6 +214,15 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 > 
 !!! info
     For more information, visit [the Bulk Posting module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+
+## How to Reactivate Amortizations
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
+
+![](../../../../../assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
 
 
 ## Asset Amortization Report (Excel)
