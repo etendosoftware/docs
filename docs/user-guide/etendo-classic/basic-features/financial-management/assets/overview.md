@@ -138,6 +138,35 @@ The dimensions the user can apply to the asset creation process are the followin
 
 - **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab by grouping them according to the **amortization period (monthly, yearly)**. This information is also populated in the [Amortization window](#amortization-window).  
 
+### Accounting Dimentions Assets
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+In addition to the existing Product dimensions for assets, this module allows users to select **additional accounting dimensions** which will be automatically transferred to the amortization lines, allowing better integration with accounting processes. 
+
+The dimensions the user can apply to the asset creation process are the following: 
+
+- Business Partner
+- Activity
+- 1st Dimension
+- 2nd Dimension 
+- Sales Region
+- Campaign
+- Cost Center
+
+!!! info
+    When creating or recalculating the amortization schedule for an asset, the specified accounting dimensions are transferred to the lines of the amortization schedule.
+
+![assets1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+
+!!! info
+    For more information about Dimentions configuration visit [Dimentions](../../../../etendo-classic/basic-features/financial-management/accounting/setup.md#dimension).
+
+#### Buttons 
+
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab by grouping them according to the amortization period. This information is also populated in the [Amortization window](#amortization-window).  
+
 ## Asset Group
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Asset Group`
