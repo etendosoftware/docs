@@ -151,6 +151,8 @@ The new endpoint documentation should now be visible at the Swagger UI URL. The 
 
 Verify that the new endpoint appears under the defined tag and displays the correct request and response schemas.
 
+It will look like this:
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_Flow_Example.png)
 
 ## Key Components of OpenAPI Integration
 
@@ -178,3 +180,5 @@ This interface ensures consistent API endpoint behavior by defining methods such
 - `void add(OpenAPI openAPI)`
 
 For example, the `ImageUploadOpenAPI` class implements these methods to validate tags and add endpoint definitions to the OpenAPI object.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_ImageUpload_Example.png)
