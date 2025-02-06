@@ -29,7 +29,7 @@ This bundle includes enhancements for Financial Management functionalities in Et
 The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
 
 !!! info
-    For more information, visit the [Accounting Dimentions Assets user guide](../../../basic-features/financial-management/assets/overview.md#accounting-dimentions-assets).
+    For more information, visit the [Accounting Dimensions Assets user guide](../../../basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
 
 
 ### Accounting Templates
