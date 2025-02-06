@@ -213,7 +213,11 @@ nav:
           - Transactions: user-guide/etendo-classic/basic-features/sales-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md
           - Setup: user-guide/etendo-classic/basic-features/sales-management/setup.md 
-        # - Project & Service Management: user-guide/etendo-classic/basic-features/project-and-services-management/index.md
+        - Project and Service Management:
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/project-and-service-management/getting-started.md
+          - Transactions: user-guide/etendo-classic/basic-features/project-and-service-management/transactions.md
+          - Analysis Tools: user-guide/etendo-classic/basic-features/project-and-service-management/analysis-tools.md
+          - Setup: user-guide/etendo-classic/basic-features/project-and-service-management/setup.md
         - Financial Management: 
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
           - Receivables and Payables:
