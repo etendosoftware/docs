@@ -20,9 +20,7 @@ This section describes the windows related to assets, part of the Financial Mana
 
 ### Overview
 
-The user can define amortization characteristics for assets owned by the company.
-
-The user can define assets owned by the company and create an amortization for them.
+The user can define company-owned assets and configure their amortization characteristics. 
 
 ### Assets window
 
@@ -33,42 +31,41 @@ Fields to note:
 -   **Organization** : Organizational entity within client.
 -   **Search Key** : A fast method for finding a particular record.
 -   **Name** : A non-unique identifier for a record/document often used as a search tool.
--   **Asset Category** : A classification of assets based on similar characteristics defined in the [Asset Group window](#asset-group-window). 
+-   **Asset Category** : A classification of assets based on similar characteristics defined in the [Asset Group window](#asset-group-window). Configuration fields will be completed automatically according to the characteristics defined in this window. 
 -   **Document No.** : An automatically generated identifier for all documents.
 -   **Description** : A space to write additional related information.
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
 -   **Product** : An item produced by a process.
--   **Summary Level** : A means of grouping fields in order to view or hide additional information.
--   **Static** : Prevents from moving the record into the tree
--   **Depreciate** : The asset is used internally and will be depreciated
--   **Depreciation Type** : Depreciation Type
--   **Calculate Type** : Calculate type
+-   **Summary Level** : When checked, it groups other assets and displays them in tree view. 
+-   **Static** : Prevents from moving the record into the tree view.
+-   **Depreciate** : The asset is used internally and will be depreciated.
+-   **Depreciation Type** : Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** : It indicates how amortization will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation %** : Depreciation annual %
--   **Amortize** : Asset schedule
--   **Usable Life - Years** : Years of the usable life of the asset
--   **Usable Life - Months** : Months of the usable life of the asset
--   **Every Month Is 30 Day** : When calculating the amortization plan every month will be considered as a 30 day month and years of 365 days (no leap-years).
--   **Purchase Date** : Purchase date
--   **Cancellation Date** : Cancellation date
+-   **Amortize** : Asset schedule.
+-   **Usable Life - Years** : Years of the usable life of the asset.
+-   **Usable Life - Months** : Months of the usable life of the asset.
+-   **Every Month Is 30 Day** : If checked, it calculates the amortization plan every month to be considered as a 30 day month and years of 365 days. If it is not checked, it considers real month days and leap-years.
+-   **Purchase Date** : Purchase date.
+-   **Cancellation Date** : life-utility date.
 -   **Depreciation Start Date** : Depreciation Start Date. The amortization plan will be calculated starting from this date.
--   **Depreciation End Date** : Depreciation end date
--   **Asset Value** : Asset value
--   **Residual Asset Value** : Residual asset value amount
--   **Depreciation Amt.** : Depreciation Amount
+-   **Depreciation End Date** : Depreciation end date.
+-   **Asset Value** : Asset value.
+-   **Residual Asset Value** : Residual asset value amount.
+-   **Depreciation Amt.** : Depreciation Amount.
 -   **Previously Depreciated Amt.** : This amount is subtracted to the Depreciation amount when calculating the amortization plan. Total amount to be depreciated = Depreciation Amount - Previously Depreciated Amount
--   **Depreciated Value** : Depreciated value
+-   **Depreciated Value** : Depreciated value.
 -   **Project** : Identifier of a project defined within the Project & Service Management module.
--   **Create Amortization** : it will create (or recalculate) the amortization plan based on the asset definition.
 
 #### Buttons
 
-- **Create Amortization**: The Create Amortization button populates the Asset Amortization tab.
+- **Create Amortization**: The Create Amortization button populates the Asset Amortization tab. It creates the amortization plan based on the asset definition.
 
 - **Recalculate Amortization**: The Recalculate Amortization button allows the user to update information when needed. 
 
 ### Asset Amortization tab
 
-The user can add asset amortizations for a selected asset.
+Asset amortizations for a selected asset are added to this tab. 
 
 ![](../../../../../assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
@@ -136,7 +133,7 @@ The dimensions the user can apply to the asset creation process are the followin
 
 #### Buttons 
 
-- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab by grouping them according to the **amortization period (monthly, yearly)**. This information is also populated in the [Amortization window](#amortization-window).  
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab by grouping them only according to the **amortization period (monthly, yearly)**. This information is also populated in the [Amortization window](#amortization-window).  
  
 
 ## Asset Group
@@ -158,14 +155,14 @@ As shown in the image above, the creation of an asset category requires the user
 -   **Name** or short name which helps to easily find a category.
 -   **Description** a space to write additional related information.
 -   **Depreciate** indicates if the assets of this group will be depreciated.
--   **Depreciation Type** method used to depreciate the asset.
--   **Calculate Type** indicates how the depreciation will be calculated (Time or Percentage).
+-   **Depreciation Type** Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** it indicates how the depreciation will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation** Annual percentage used to depreciate this asset.
 -   **Amortize** it refers to the periods chosen between depreciation entries (monthly, yearly).
 -   **Usable Life - Months** Years of the usable life of the asset.
 -   **Usable Life - Years** Months of the usable life of the asset.
 
-Depreciation configuration will be inherited from the asset category when creating a new asset.
+Depreciation configuration will be inherited from the asset category when creating a new asset from the Asset window.
 
 ### Accounting tab
 
@@ -179,11 +176,12 @@ Each asset category allows the user to configure a different set of accounts to 
 
 ### Overview
 
-The user can create and edit amortization for a selected year.
+Asset amortization are generated for a selected year grouping them by dates. Also, amortizations are processed 
+and posted to the ledger. 
 
 ### Amortization window
 
-From the header the user can create amortizations for particular periods.
+From the header, amortizations are created for particular periods.
 
 ![assets4](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets4.png)
 
@@ -201,7 +199,7 @@ Fields to note:
 
 ### Lines tab
 
-In each line, the user adds amortized assets and details of amortization.
+Each line shows the amortized assets and details of amortization.
 
 ![assets5](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/Assets5.png)
 
@@ -209,7 +207,7 @@ In each line, the user adds amortized assets and details of amortization.
 Fields to note: 
 
 - **Line No.**: Indicates the unique line for a document. 
-- **Asset**: Any item of economic value owned by the corporation, especially that which could be converted to cash.
+- **Asset**: the asset to be amortized.
 - **Amortization Percentage**: Amortization Percentage (either calculated in Time or Percentage).
 - **Amortization Amount**: Amortization Amount.
 - **Currency**: Indicates the currency to be used when processing this document.
@@ -217,7 +215,7 @@ Fields to note:
 
 ### Accounting tab
 
-Accounting information related to the amortization.
+Accounting information related to the amortization once the document is posted.
 
 Fields to note: 
 
@@ -237,7 +235,7 @@ Fields to note:
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 
-With this module, the Amortization window shows the assets records created from the Asset window, **grouped per period (monthly or yearly)**, keeping the accounting dimensions in the amortization lines to be used to generate accounting entries.
+This module allows the Amortization window to, unlike the standard operation that grouped asset amortizations according to dates, group the assets records created from the Asset window **only per period (monthly or yearly)**, without considering the defined accounting dimentions. It keeps the accounting dimensions in the amortization lines to be used to generate accounting entries.
 
 ![assets2](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
 
