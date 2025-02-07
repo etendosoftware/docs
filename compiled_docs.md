@@ -21316,7 +21316,7 @@ This feature allows entering in the system all the financings the company has. I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This functionality allows the user to post or unpost multiple records at the same time.
+This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the Not Posted Documents window, which allows users to identify and post all pending transactions directly from one window. 
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
@@ -53139,6 +53139,27 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/etendo-news
 ## Article Content: 
+
+#### February 2025
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Enhanced asset management with accounting dimensions**
+
+    ---
+    In version [1.22.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+
+- :octicons-package-16: **Gain better control with the Not Posted Documents window**
+
+    ---
+    In version [1.22.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
+
+    Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
+
+</div>
+
 
 #### January 2025
 
