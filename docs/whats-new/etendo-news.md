@@ -11,6 +11,27 @@ tags:
 
 #
 
+## February 2025
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Enhanced asset management with accounting dimensions**
+
+    ---
+    In version [1.22.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+
+- :octicons-package-16: **Gain better control with the Not Posted Documents window**
+
+    ---
+    In version [1.22.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
+
+    Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
+
+</div>
+
+
 ## January 2025
 
 ### Copilot Extensions 
