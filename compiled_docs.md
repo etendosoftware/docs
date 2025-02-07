@@ -20298,11 +20298,9 @@ This section describes the windows related to assets, part of the Financial Mana
 
 ##### Overview
 
-The user can define amortization characteristics for assets owned by the company.
+The user can define company-owned assets and configure their amortization characteristics. 
 
-###### Assets
-
-The user can define assets owned by the company and create an amortization for them.
+##### Assets window
 
 ![](https://docs.etendo.software/latest/assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
@@ -20311,36 +20309,41 @@ Fields to note:
 -   **Organization** : Organizational entity within client.
 -   **Search Key** : A fast method for finding a particular record.
 -   **Name** : A non-unique identifier for a record/document often used as a search tool.
--   **Asset Category** : A classification of assets based on similar characteristics.
+-   **Asset Category** : A classification of assets based on similar characteristics defined in the [Asset Group window](#asset-group-window). Configuration fields will be completed automatically according to the characteristics defined in this window. 
 -   **Document No.** : An automatically generated identifier for all documents.
 -   **Description** : A space to write additional related information.
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
 -   **Product** : An item produced by a process.
--   **Summary Level** : A means of grouping fields in order to view or hide additional information.
--   **Static** : Prevents from moving the record into the tree
--   **Depreciate** : The asset is used internally and will be depreciated
--   **Depreciation Type** : Depreciation Type
--   **Calculate Type** : Calculate type
+-   **Summary Level** : When checked, it groups other assets and displays them in tree view. 
+-   **Static** : Prevents from moving the record into the tree view.
+-   **Depreciate** : The asset is used internally and will be depreciated.
+-   **Depreciation Type** : Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** : It indicates how amortization will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation %** : Depreciation annual %
--   **Amortize** : Asset schedule
--   **Usable Life - Years** : Years of the usable life of the asset
--   **Usable Life - Months** : Months of the usable life of the asset
--   **Every Month Is 30 Day** : When calculating the amortization plan every month will be considered as a 30 day month and years of 365 days (no leap-years).
--   **Purchase Date** : Purchase date
--   **Cancellation Date** : Cancellation date
+-   **Amortize** : Asset schedule.
+-   **Usable Life - Years** : Years of the usable life of the asset.
+-   **Usable Life - Months** : Months of the usable life of the asset.
+-   **Every Month Is 30 Day** : If checked, it calculates the amortization plan every month to be considered as a 30 day month and years of 365 days. If it is not checked, it considers real month days and leap-years.
+-   **Purchase Date** : Purchase date.
+-   **Cancellation Date** : life-utility date.
 -   **Depreciation Start Date** : Depreciation Start Date. The amortization plan will be calculated starting from this date.
--   **Depreciation End Date** : Depreciation end date
--   **Asset Value** : Asset value
--   **Residual Asset Value** : Residual asset value amount
--   **Depreciation Amt.** : Depreciation Amount
+-   **Depreciation End Date** : Depreciation end date.
+-   **Asset Value** : Asset value.
+-   **Residual Asset Value** : Residual asset value amount.
+-   **Depreciation Amt.** : Depreciation Amount.
 -   **Previously Depreciated Amt.** : This amount is subtracted to the Depreciation amount when calculating the amortization plan. Total amount to be depreciated = Depreciation Amount - Previously Depreciated Amount
--   **Depreciated Value** : Depreciated value
+-   **Depreciated Value** : Depreciated value.
 -   **Project** : Identifier of a project defined within the Project & Service Management module.
--   **Create Amortization** : it will create (or recalculate) the amortization plan based on the asset definition.
 
-##### **Asset Amortization**
+###### Buttons
 
-The user can add asset amortizations for a selected asset.
+- **Create Amortization**: The Create Amortization button populates the Asset Amortization tab. It creates the amortization plan based on the asset definition.
+
+- **Recalculate Amortization**: The Recalculate Amortization button allows the user to update information when needed. 
+
+##### Asset Amortization tab
+
+Asset amortizations for a selected asset are added to this tab. 
 
 ![](https://docs.etendo.software/latest/assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
@@ -20349,8 +20352,6 @@ The user can add asset amortizations for a selected asset.
 -   **Amortization Percentage** : Amortization Percentage
 -   **Amortization Amount** : Amortization Amount
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
-
-The *Create Amortization* process populates the Asset Amortization tab.
 
 The Asset Amortization tab shows the depreciation plan of the asset based on its usable life-time and its value that is the amount to be depreciated. The asset value is split within its usable life (months or years), therefore each depreciation plan line represents a percentage of the total depreciation amount of the asset.
 
@@ -20367,11 +20368,51 @@ The depreciation line of February cannot be removed until the depreciation line 
 
 The process assumes that if the March depreciation line exists, then the February depreciation line exists.
 
-###### **Accounting**
+##### Accounting tab
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
-![](https://docs.etendo.software/latest/assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
+![assets3](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets3.png)
+
+- **General Ledger**: The book containing all financial transactions recorded for the legal entity.
+- **Accumulated Depreciation**: Accumulated Depreciation Account. 
+- **Depreciation**: Depreciation account.
+
+The shown accounts are configured by default and can be changed. 
+
+##### Accounting Dimensions Assets
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. 
+    To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+    For more information about the available versions, core compatibility and new features, visit
+    [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+In addition to the existing Product dimensions for assets, this module allows users to select **additional accounting dimensions** which 
+will be automatically transferred to the amortization lines, allowing better integration with accounting processes. 
+
+The dimensions the user can apply to the asset creation process are the following: 
+
+- **Business Partner**
+- **Activity**
+- **1st Dimension**
+- **2nd Dimension** 
+- **Sales Region**
+- **Campaign**
+- **Cost Center**
+
+!!! info
+    When creating or recalculating the amortization schedule for an asset, the specified accounting dimensions are transferred to the lines of the amortization schedule.
+
+![assets1](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+
+!!! info
+    For more information about Dimensions configuration visit [Dimensions](https://docs.etendo.software/latest/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension).
+
+###### Buttons 
+
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab related to the selected asset.  In addition, these same lines are added in the Amortization window, grouping them only according to the **depreciation period**, (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage).
+ 
 
 #### Asset Group
 
@@ -20381,27 +20422,27 @@ The user can create and edit G/L accounts to be used in transactions which inclu
 
 Assets can be grouped into different categories with the aim of helping their depreciation management and analysis.
 
-###### Asset Category
+##### Asset Group window 
 
-Asset category window allows the user to create and configure every asset category your organization may need.
+Asset Group window allows the user to create and configure every asset category your organization may need.
 
 ![](https://docs.etendo.software/latest/assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
 
 As shown in the image above, the creation of an asset category requires the user to enter below listed information for each category:
 
--   **Name** or short name which helps to easily find a category
--   **Description**
+-   **Name** or short name which helps to easily find a category.
+-   **Description** a space to write additional related information.
 -   **Depreciate** indicates if the assets of this group will be depreciated.
--   **Depreciation Type** method used to depreciate the asset.
--   **Calculate Type** indicates how the depreciation will be calculated (Time or Percentage)
+-   **Depreciation Type** Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** it indicates how the depreciation will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation** Annual percentage used to depreciate this asset.
 -   **Amortize** it refers to the periods chosen between depreciation entries (monthly, yearly).
--   **Usable Life - Months** Years of the usable life of the asset
--   **Usable Life - Years** Months of the usable life of the asset
+-   **Usable Life - Months** Years of the usable life of the asset.
+-   **Usable Life - Years** Months of the usable life of the asset.
 
-Depreciation configuration will be inherited from the asset category when creating a new asset.
+Depreciation configuration will be inherited from the asset category when creating a new asset from the Asset window.
 
-###### Accounting
+##### Accounting tab
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
@@ -20411,36 +20452,71 @@ Each asset category allows the user to configure a different set of accounts to 
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Amortization`
 
-##### **Overview**
+##### Overview
 
-The user can create and edit amortization for a selected year.
+In the  Amortization window, assets depreciations are recorded, grouped by date. In addition, from this window, these records are processed and posted to the general ledger.
 
-##### **Header**
+##### Amortization window
 
-In the header, the user creates amortizations for particular periods.
+From the header, amortizations are created for particular periods.
 
-![](https://docs.etendo.software/latest/assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
+![assets4](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets4.png)
 
-##### **Lines**
 
-In each line, the user adds amortized assets and details of amortization.
+Fields to note: 
 
-![](https://docs.etendo.software/latest/assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
+- **Organization**: Organizational entity within client.
+- **Name**: A non-unique identifier for a record/document often used as a search tool.
+- **Description**: A space to write additional related information.
+- **Accounting Date**: The date on which the asset is to be booked.
+- **Starting Date**: Date from which amortization begins. 
+- **Total Amortization**: amortization amount. 
+- **Currency**: An accepted medium of monetary exchange that may vary across countries.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
 
-###### **Accounting**
+##### Lines tab
 
-Accounting information related to the amortization
+Each line shows the amortized assets and details of amortization.
 
-![](https://docs.etendo.software/latest/assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
+![assets5](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/Assets5.png)
 
-##### How to Reactivate Amortizations
+
+Fields to note: 
+
+- **Line No.**: Indicates the unique line for a document. 
+- **Asset**: the asset to be amortized.
+- **Amortization Percentage**: Amortization Percentage (either calculated in Time or Percentage).
+- **Amortization Amount**: Amortization Amount.
+- **Currency**: Indicates the currency to be used when processing this document.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
+
+##### Accounting tab
+
+Accounting information related to the amortization once the document is posted.
+
+Fields to note: 
+
+- **Accounting Date**: The date this transaction is recorded on in the general ledger. This date also indicates which accounting period within the fiscal year this transaction will be part of.
+- **Account**: The account used. 
+- **Debit**: The Account Debit Amount indicates the transaction amount converted to this organization's accounting currency.
+- **Credit**: The Account Credit Amount indicates the transaction amount converted to this organization's accounting currency.
+
+![assets6](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets6.png)
+
+!!!info 
+    For more information about Financial Account functionality visit [Financial Account](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account).
+
+##### Accounting Dimensions Assets
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
-Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+This module allows that in the Amortization window, unlike the standard operation in which asset depreciations were grouped according to specific dates, to group the depreciation records **only per periods** (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage). Also in the grouping the dimensions are not considered.
+In addition, the accounting dimensions are maintained in the amortization lines to be used in the generation of accounting entries.
+
+![assets2](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
+
 
 ##### Bulk Posting
 
@@ -20454,6 +20530,15 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
+#### How to Reactivate Amortizations
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
+
+![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+
 
 #### Asset Amortization Report (Excel)
 
@@ -20462,7 +20547,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
+The Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
 ![](https://docs.etendo.software/latest/assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
 
@@ -21108,6 +21193,18 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 #### Modules
 
+##### Accounting Dimensions Assets
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets.template`
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets`
+
+The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
+
+!!! info
+    For more information, visit the [Accounting Dimensions Assets user guide](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
+
+
 ##### Accounting Templates
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
@@ -21461,6 +21558,75 @@ As in the case of the Add Payment button, the Add Details button has been enhanc
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba8.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Automated Remittance
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
+## Article Content: 
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+
+#### Overview
+
+This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+
+This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
+
+!!!important
+    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
+
+#### Setup
+
+To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
+
+For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
+
+#### Automated Remittance Process
+
+This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
+
+
+1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
+
+    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
+
+2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
+
+3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
+
+!!!note
+    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
+
+#### Automated Remittance Protest
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
+
+1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
+
+2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
+
+3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Bank Integration PSD2
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Bank Integration PSD2
 ## Article URL: 
@@ -21650,75 +21816,6 @@ The Bulk Posting module includes the Not Posted Documents functionality. This is
 
 !!!info
     For more information, visit [Not Posted Documents](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Automated Remittance
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
-## Article Content: 
-### Automated Remittance
-
-:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
-
-#### Overview
-
-This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
-
-
-This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
-
-!!!important
-    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
-
-#### Setup
-
-To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
-
-For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
-
-#### Automated Remittance Process
-
-This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
-
-
-1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
-
-    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
-
-2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
-
-3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
-
-!!!note
-    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
-
-#### Automated Remittance Protest
-
-The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
-
-1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
-
-2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
-
-3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
