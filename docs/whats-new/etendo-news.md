@@ -20,12 +20,12 @@ tags:
 - :octicons-package-16: **Enhanced asset management with accounting dimensions**
 
     ---
-    In version [1.22.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
 
 - :octicons-package-16: **Gain better control with the Not Posted Documents window**
 
     ---
-    In version [1.22.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
 
     Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
 
@@ -44,7 +44,7 @@ tags:
 
     ![](../assets/whats-new/etendo-news/attach-multiple-files-copilot.png)
 
-    In version [1.10.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new functionalities have been added:
+    In version [1.10.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new functionalities have been added:
 
 </div>
 
@@ -85,11 +85,11 @@ tags:
 
 - :octicons-rocket-24: **New Etendo Classic Release Available!**
 
-    Version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+    Version [24.4.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 - **The document completion process allows the use of Credit Payment as a payment method again.** 
 
-    From now on, the completion is again one record at a time and is added to the [Bulk Completion](../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+    From now on, the completion is again one record at a time and is added to the [Bulk Completion](../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
 
 </div>
 
@@ -101,7 +101,7 @@ tags:
 
     ![](../assets/whats-new/etendo-news/bulk-completion.png)
     
-    In version [1.7.0](../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+    In version [1.7.0](./release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
 </div>
 
 
@@ -113,7 +113,7 @@ tags:
 
     ![](../assets/whats-new/etendo-news/automatic-warehouse-reservation.png)
 
-    In version [1.10.0](../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](../../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+    In version [1.10.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
 </div>
 
 ### Financial Extensions
@@ -126,7 +126,7 @@ tags:
 
     ![](../assets/whats-new/etendo-news/automated-remittances.png)
 
-    In version [1.21.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
 
     The Protest Remittance button has also been added, making it possible to return receipts in collection remittances from a single place.
 
@@ -136,7 +136,7 @@ tags:
 
     ![](../assets/whats-new/etendo-news/advanced-bank-account.png )
 
-    In version [1.21.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Advanced Bank Account Management](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md) module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Advanced Bank Account Management](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md) module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
     The possibility to select the bank account when adding payments and even edit payment plans with the Modify Payment button has also been added.
 </div>
 
@@ -148,7 +148,7 @@ tags:
     
     ---
 
-    In version [1.9.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
+    In version [1.9.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
     In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
 </div>
 
@@ -158,13 +158,13 @@ tags:
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.8.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) 
+New Copilot Extensions bundle version [1.8.0](./release-notes/etendo-copilot/bundles/release-notes.md) 
 
 <div class="grid cards" markdown>
 -  **Improve your Python Tools development with the Code Run assistant**
 
     ---
-    The [Code Run](../../developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) assistant combined with the [Docker Tool](../../developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
+    The [Code Run](../developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) assistant combined with the [Docker Tool](../developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
 
     Equipped with advanced capabilities, the assistant prioritizes Python for troubleshooting, manages library installations dynamically, integrates Bash commands for flexible operations and handles file processing with precision. Whether you are troubleshooting, automating tasks or testing scripts, this tool ensures efficiency and security. Transform your development workflow with this powerful addition to Etendo.
 </div>
@@ -175,13 +175,13 @@ New Copilot Extensions bundle version [1.8.0](../../whats-new/release-notes/eten
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.7.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
 
 <div class="grid cards" markdown>
 -  **Boost Your Development Workflow with the New Dev Assistant!**
 
     ---
-    The [Dev Assistant](../../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo Classic. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
+    The [Dev Assistant](../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo Classic. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
 
     This assistants are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
 </div>
@@ -190,7 +190,7 @@ New Copilot Extensions bundle version [1.7.0](../../whats-new/release-notes/eten
 -  **Copilot in Mobile: Try Copilot on Your Mobile Devices and Tablets!**
 
     ---
-    The new [Etendo Copilot sub-application](../../user-guide/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) enables you to interact with AI-powered assistants from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
+    The new [Etendo Copilot sub-application](../user-guide/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) enables you to interact with AI-powered assistants from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
 
 </div>
 
@@ -198,7 +198,7 @@ New Copilot Extensions bundle version [1.7.0](../../whats-new/release-notes/eten
 :octicons-package-16: **Managing Etendo modules and dependencies has never been so easy**
 ![](../assets/whats-new/etendo-news/devassistant.png)
 
-The [Dependency Manager](../../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
+The [Dependency Manager](../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
 
 
 ## September 2024
@@ -207,14 +207,14 @@ The [Dependency Manager](../../developer-guide/etendo-classic/getting-started/in
 
 :octicons-rocket-24: **New Etendo Classic Release Available!**
 
-Version [24.3.0](../../whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+Version [24.3.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 
 ### Copilot Extensions
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.5.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
 
 <div class="grid cards" markdown>
 - **New Feature Update: Zip File Support for LangChain Assistants**
@@ -231,11 +231,11 @@ New Copilot Extensions bundle version [1.5.0](../../whats-new/release-notes/eten
 
 ### Copilot Extensions
 
-[:material-robot: **New Etendo Copilot Release Available!**](../../user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
+[:material-robot: **New Etendo Copilot Release Available!**](../user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
 
 ![](../assets/whats-new/etendo-news/copilot.png)
 
-The newest version [1.4.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
+The newest version [1.4.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
 
 <div class="grid cards" markdown>
 
@@ -261,27 +261,27 @@ These updates make Etendo Copilot more powerful, secure, and user-friendly, driv
 
 
 
-[:simple-docker: **Docker Management**](../../developer-guide/etendo-classic/bundles/platform/docker-management.md)
+[:simple-docker: **Docker Management**](../developer-guide/etendo-classic/bundles/platform/docker-management.md)
 
 ![](../assets/whats-new/etendo-news/docker.gif){align=right width=400}
 
-- In version [1.18.0](../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
 - This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
 - PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
 
-[:simple-apachetomcat: **Tomcat Dockerized Service**](../../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md)
+[:simple-apachetomcat: **Tomcat Dockerized Service**](../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md)
 
-- In version [1.18.0](../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
 - With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
 
 
 
 ### Warehouse Extensions
-[:octicons-package-16: **Product Operations**](../../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+[:octicons-package-16: **Product Operations**](../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
 ![](../assets/whats-new/etendo-news/product-operation.png)
 
-In the version [1.8.0](../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
+In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
 
 
 ## July 2024
@@ -290,41 +290,41 @@ In the version [1.8.0](../../whats-new/release-notes/etendo-classic/bundles/ware
 
 <div class="grid cards" markdown>
 
--   [:material-tools: **Tool Pack**](../../developer-guide/etendo-copilot/available-tools/overview.md)
+-   [:material-tools: **Tool Pack**](../developer-guide/etendo-copilot/available-tools/overview.md)
 
     ---
     
-    The Tool Pack module, available from version [1.3.1](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
+    The Tool Pack module, available from version [1.3.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
 
--   [:material-tools: **OCR Tool**](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+-   [:material-tools: **OCR Tool**](../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
     ---
 
-    From version [1.3.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
+    From version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
 
--   [:material-robot: **Purchase Expert**](../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+-   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
     
     ---   
 
-    As of version [1.3.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](../../developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
+    As of version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](../developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
 
--   [:material-robot: **Dev Assistant**](../../developer-guide/etendo-copilot/bundles/dev-assistant.md)
+-   [:material-robot: **Dev Assistant**](../developer-guide/etendo-copilot/bundles/dev-assistant.md)
 
     ---
 
-    From version [1.1.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](../../developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
+    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](../developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
 
 </div>
 
 :material-bug: **Fixed Issues**
 
-In version [1.2.1](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
+In version [1.2.1](./release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
 
 ### Financial Extensions
 
-[:octicons-package-16: **VAT Regularization**](../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization)
+[:octicons-package-16: **VAT Regularization**](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization)
 
-In version [1.16.1](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
+In version [1.16.1](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
 
 ---
 
@@ -334,23 +334,23 @@ In version [1.16.1](../../whats-new/release-notes/etendo-classic/bundles/financi
 
 :octicons-rocket-24: **New Release Available!**
 
-Etendo Classic version [24.2.0](../../whats-new/release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
+Etendo Classic version [24.2.0](./release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
 
 :material-bug: **Fixed Issues**
 
-In version [24.1.8](../../whats-new/release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
+In version [24.1.8](./release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
 
 ### Copilot Extensions
 
 :material-trending-up: **Optimizations**
 
-Starting with version [1.2.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
+Starting with version [1.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
 
 ### Financial Extensions
 
-[:octicons-package-16: **G/L Journal Clone**](../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
+[:octicons-package-16: **G/L Journal Clone**](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
 
-Starting with version [1.15.0](../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
+Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 
 ---
 
@@ -358,9 +358,9 @@ Starting with version [1.15.0](../../whats-new/release-notes/etendo-classic/bund
 
 ### Copilot Extensions
 
-[:material-robot: **SQL Expert**](../../user-guide/etendo-copilot/bundles/sql-expert.md)
+[:material-robot: **SQL Expert**](../user-guide/etendo-copilot/bundles/sql-expert.md)
 
-In the version [1.1.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
 With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
 
 ---
@@ -369,18 +369,18 @@ With this assistant, you will be allowed to **formulate questions** in natural l
 
 ### Copilot Extensions
 
-[:material-robot: **Purchase Expert Assistant**](../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+[:material-robot: **Purchase Expert Assistant**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
 
-In the version [1.1.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
 Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
 
 ### Spanish Localization
 
 :material-trending-up: **Optimizations**
 
-As of version [1.9.4](../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
+As of version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
 
-To take advantage of these enhancements, when upgrading to version [1.9.4](../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
+To take advantage of these enhancements, when upgrading to version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
 
 ---
 
@@ -390,23 +390,23 @@ To take advantage of these enhancements, when upgrading to version [1.9.4](../..
 
 :material-trending-up: **Optimizations**
 
-As of version [24.1.0](../../whats-new/release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
+As of version [24.1.0](./release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
 
 ### Copilot Extensions
 
-[:material-tools: **OCR Tool**](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+[:material-tools: **OCR Tool**](../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
-In the version [1.0.0](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
+In the version [1.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
 With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
 
 ### Procurement Extensions
 
-[:octicons-package-16: **Purchase Invoice Validation**](../../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+[:octicons-package-16: **Purchase Invoice Validation**](../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
-In the version [1.0.0](../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
+In the version [1.0.0](./release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
 
 ### Platform Extensions
 
 :material-trending-up: **Optimizations**
 
-As of version [1.13.2](../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
+As of version [1.13.2](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
