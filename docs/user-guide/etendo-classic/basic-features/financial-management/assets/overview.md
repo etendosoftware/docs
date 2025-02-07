@@ -1,5 +1,10 @@
 ---
 title: Financial Management - Assets
+tags:
+    - Assets
+    - Amortization
+    - Asset Group
+    - Accounting Dimensions Assets
 ---
 ## Overview
 
@@ -133,7 +138,7 @@ The dimensions the user can apply to the asset creation process are the followin
 
 #### Buttons 
 
-- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab by grouping them only according to the **amortization period (monthly, yearly)**. This information is also populated in the [Amortization window](#amortization-window).  
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab related to the selected asset.  In addition, these same lines are added in the Amortization window, grouping them only according to the **depreciation period**, (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage).
  
 
 ## Asset Group
@@ -176,8 +181,7 @@ Each asset category allows the user to configure a different set of accounts to 
 
 ### Overview
 
-Asset amortization are generated for a selected year grouping them by dates. Also, amortizations are processed 
-and posted to the ledger. 
+In the  Amortization window, assets depreciations are recorded, grouped by date. In addition, from this window, these records are processed and posted to the general ledger.
 
 ### Amortization window
 
@@ -235,7 +239,8 @@ Fields to note:
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 
-This module allows the Amortization window to, unlike the standard operation that grouped asset amortizations according to dates, group the assets records created from the Asset window **only per period (monthly or yearly)**, without considering the defined accounting dimentions. It keeps the accounting dimensions in the amortization lines to be used to generate accounting entries.
+This module allows that in the Amortization window, unlike the standard operation in which asset depreciations were grouped according to specific dates, to group the depreciation records **only per periods** (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage). Also in the grouping the dimensions are not considered.
+In addition, the accounting dimensions are maintained in the amortization lines to be used in the generation of accounting entries.
 
 ![assets2](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
 
