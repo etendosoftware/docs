@@ -21,9 +21,6 @@ This section explains how to install a new Etendo environment. It includes:
 ## Requirements 
 This section outlines the [System Requirements](../getting-started/requirements.md).
 
-!!!info
-    The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module. If these containers are used, the **services must be launched**, and then follow with the installation guide.
-
 ## PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
 
@@ -34,20 +31,20 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     1.  Clone Etendo Base project in a temporal directory.
 
-        ``` bash
+        ``` bash title="Terminal"
         cd /tmp
         git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
         ```
     2.  Copy the sources in `/opt/EtendoERP` folder.
 
-        ```bash
+        ``` bash title="Terminal"
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
 
     3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
        
-        ```groovy
+        ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
         githubUser= username
@@ -66,7 +63,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
     4. Change the `build.gradle` file, uncomment the core dependency in the dependencies section:
             
-        ```
+        ```groovy title="build.gradle"
         implementation('com.etendoerp.platform:etendo-core:<version>')
         ```
 
@@ -75,7 +72,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     5. Modify the `gradle.properties` file with your environment variables, if it is necessary:
         
-        ```groovy
+        ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
         githubUser= username
@@ -91,19 +88,19 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         bbdd.password=tad
         ```
     6. Dependencies
-        ``` bash
+        ``` bash title="Terminal"
         ./gradlew dependencies
         ```
     7. Setup 
-        ```
+        ``` bash title="Terminal"
         ./gradlew setup
         ```
     8. Installation 
-        ```
+        ``` bash title="Terminal"
         ./gradlew install smartbuild
         ```
     9. Start the Tomcat, in case of Linux you can run:
-        ```
+        ``` bash title="Terminal"
         sudo /etc/init.d/tomcat start
         ```
         
@@ -118,18 +115,20 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     1.  Clone Etendo Base project in a temporal directory.
 
-        ``` bash
+        ``` bash title="Terminal"
         cd /tmp
         git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
         ```
 
     2.  Copy the sources in `/opt/EtendoERP` folder.
-        ```bash
+        
+        ``` bash title="Terminal"
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
     3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
-        ```groovy
+        
+        ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
         githubUser= username
@@ -148,7 +147,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`.
         
-        ```groovy
+        ```groovy title="build.gradle"
         etendo {
             coreVersion = "<version>"
         }
@@ -159,12 +158,12 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     5.  Expand Etendo Base
 
-        ```
+        ``` bash title="Terminal"
         ./gradlew expand 
         ```
     6. Modify the `gradle.properties` file with your environment variables, if it is necessary:
 
-        ```groovy
+        ```groovy title="gradle.properties"
         context.name=etendo
 
         bbdd.sid=etendo
@@ -176,24 +175,30 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
 
     7. Setup: to apply or create the initial configurations
-        ```
+        
+        ``` bash title="Terminal"
         ./gradlew setup
         ```
+
     8. Installation: Create the database, compile the sources and deploy to Apache Tomcat
-        ```
+        
+        ``` bash title="Terminal"
         ./gradlew install smartbuild
         ```
+
     9. Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
-        ```
+        
+        ``` bash title="Terminal"
         lc_numeric = 'en_US.UTF-8'
         max_locks_per_transaction = 128
         ```        
 
         !!! note
-            After modifying the file restart postgresql
+            After modifying the file restart postgresql service
            
     10.  Start the Tomcat, in case of Linux you can run:
-        ```
+        
+        ``` bash title="Terminal"
         sudo /etc/init.d/tomcat start
         ```
 
@@ -204,6 +209,9 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
 === ":octicons-issue-opened-24: ISO"
 
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
     ### Steps to Install the ISO with Internet Connection
 
     1. Download the ISO from the [release notes](../whats-new/release-notes/etendo-classic/iso.md) page.
@@ -244,4 +252,109 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     7. After the installation is finished, the server will be ready for use.
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+=== ":material-docker:  Database and Tomcat Dockerized"
+
+    ### Steps to Install Etendo with Postgres Database and Tomcat Dockerized
+
+    The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module.
+
+    
+    !!! info
+        In this guide we will assume the installation of Etendo Classic in Sources format, in case you want to install it in JAR format you should consult the changes in the corresponding tab.
+
+    1.  Clone Etendo Base project in a temporal directory.
+
+        ```bash title="Terminal"
+        cd /tmp
+        git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
+        ```
+    2.  Copy the sources in `/opt/EtendoERP` folder.
+
+        ```bash title="Terminal"
+        mv EtendoERP/* /opt/EtendoERP/
+        cd /opt/EtendoERP
+        ```
+
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
+       
+        ```groovy title="gradle.properties"
+        nexusUser=
+        nexusPassword=
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "<version>"`.
+        
+        ```groovy title="build.gradle"
+        etendo {
+            coreVersion = "<version>"
+        }
+        ```
+
+        !!! info
+            To know the available versions,, please visit the Etendo Classic [Release Notes](../whats-new/release-notes/etendo-classic/release-notes.md) page.
+
+    5.  Expand Etendo Classic
+
+        ``` bash title="Terminal"
+        ./gradlew expand 
+        ```
+
+    6.  Add Platform Extensions bundle dependency, to include the  dockeridez platform features
+
+        ```groovy title="build.gradle"
+        dependencies {
+            //Add other dependencies bellow
+            implementation ('com.etendoerp:platform.extensions:latest.release')
+        }
+        ```
+    7. Modify the `gradle.properties` file with your environment variables
+
+        ```groovy title="gradle.properties"
+        
+        context.name=etendo
+
+        bbdd.sid=etendo
+        bbdd.port=5433
+        bbdd.systemUser=postgres
+        bbdd.systemPassword=syspass
+        bbdd.user=tad
+        bbdd.password=tad
+
+        org.gradle.jvmargs=-Dfile.encoding=UTF-8
+
+        docker_com.etendoerp.tomcat=true
+        docker_com.etendoerp.docker_db=true
+        ```
+        
+        !!! info
+            The dockerized database service will run on the port defined in the `bbdd.port` variable, we suggest using port `5433` to avoid conflict if you have a local Postgres instance using the default port.
+
+            By default the tomcat service will be up on port `8080`, in case that port is busy you can use the variable `docker_com.etendoerp.tomcat_port=<port>`.
+
+
+    8. Launching Dockerized Tomcat and Database services
+
+        ``` bash title="Terminal"
+        ./gradlew resources.up
+        ```
+    9. Setup: to apply or create the initial configurations
+    
+        ``` bash title="Terminal"
+        ./gradlew setup
+        ```
+
+    10. Installation: Create the database, compile the sources and deploy to Apache Tomcat
+        
+        ``` bash title="Terminal"
+        ./gradlew install smartbuild
+        ```
+           
+    11. After the smartbuild task finish, the Tomacat service will  automatically restart,  open your browser in: 
+    
+        `https://<Public server IP>/<context.name>` or in case that you run in local environment `http://localhost:8080/etendo`
+
+
+
+

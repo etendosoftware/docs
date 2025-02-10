@@ -365,7 +365,7 @@ nav:
 #        - XML REST Web Services: developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md
       - Connectors:
         - Openbravo Connector:
-          - ✨ Getting Started: developer-guide/etendo-classic/connectors/installation-guide.md
+          - ✨ Installation: developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide.md
       - How to Guides:
 #        - Categories: developer-guide/etendo-classic/how-to-guides/Categories.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/how-to-guides/Category_Developers_Guide.md
