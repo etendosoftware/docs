@@ -13,6 +13,17 @@ tags:
 
 ## February 2025
 
+### Etendo ISO
+
+<div class="grid cards" markdown>
+
+- :material-trending-up: **Optimizations**
+    
+    ---
+    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+
+</div>
+
 ### Financial Extensions
 
 <div class="grid cards" markdown>
