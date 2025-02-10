@@ -12788,6 +12788,560 @@ This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/S
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/✨ Getting Started
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/getting-started
+## Article Content: 
+
+#### Overview
+
+The Project and Service Management functionality is essential for businesses to handle projects, services, or both. It helps organizations plan, execute, monitor, and optimize projects and services efficiently by integrating them with other functionalities such as Procurement Management, Sales Management, Financial Management, etc.
+
+The Project and Service Management module consists of:
+
+- [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) to manage project with phases and tasks.
+- [Expense Sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) to manage cost related to projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/getting-started/project-and-service-diagram.png)
+
+As seen in this diagram, after setting up the information shown [below](#configuration), in order to manage a project, the user should enter a [Multiphase project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) in the corresponding window. This window allows registering the progress of a project in different [phases](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab). Each project includes one or more phases and, in each phase, one or more [tasks](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab). For each of these phases, it is possible to perform a [Procure to Pay](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) process, for necessary purchases in the project, or an [Order to Cash](https://docs.etendo.software/latest/sales-management/getting-started.md#order-to-cash-business-flow) process  for necessary sales in the project. For registering required project expenses, the [expense sheet](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) window is used. Once one phase is closed, the user can review profitability by using the available [analysis tools](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md). This flow is done for each of the phases of a project, and once all the phases are completed, the project can be [closed](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+
+##### Key Concepts
+
+The key project and service management concepts mentioned in this chapter are:
+
+- [Business Partner](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner):
+    - Supplier: third party that supplies goods and/or services. In project and service management the supplier is the vendor of provided goods related to the project, the consultancy company that consultancy services were outsourced to and the employee that is reimbursed for expenses related to a project.
+    - Customer: the party that goods or services are sold to. In project and service management the customer is who gets charged for the cost and expenses of the project.
+    - Employee: person that works in the company.In project and service management, the employee information is used for the cost calculation of the project, based on [time sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet).
+- [Sales Order](https://docs.etendo.software/latest/sales-management/transactions.md#sales-order): document that lists goods and/or services provided to a customer and the conditions of the sale.
+- [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice): document used to administer a right to collect. The document lists the goods and/or services provided to a customer and the conditions of the sale.
+- [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice): document used to administer an obligation to pay. The document lists goods and/or services provided by a supplier.
+- [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type): template used to easily create phases and tasks on a multiphase project. This is specially useful to automatically complete phases and tasks according to the template without doing the process manually.
+- [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project): form used to registrate a project, the planned expenses, margins, who the project will be executed for and the phases and tasks of the project.
+- [Project Phase](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab): a time period during which certain activities are executed.
+- [Project Task](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab): activities that are executed during a project phase.
+- [Expense Sheet](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet): form used to register item expenses and time for a project.
+
+##### Configuration
+
+The following is entered in the application for the project and service management module:
+
+- [**Project Dimension**](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-ledger-configuration#dimension): in order to be able to select projects on orders and invoices, the project dimension is created as a new record with type Project in the Dimension tab of the [General Ledger Configuration](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-ledger-configuration) window.
+
+- [**Product**](https://docs.etendo.software/latest/master-data-management/master-data.md#product):
+    - **Service** and **Expense Type** Products Types: for the expense sheet products with product type Service (for time) and product type Expense Type (for expenses) are set up.
+    - **Item** Product type: the standard [procure to pay](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) process is used for the purchase or products related to the project.
+
+- [**Business Partner**](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner):
+    - Customer: the third party for whom the project is executed is set up as a customer.
+    - Vendor: the third party that supplies products related to the project is set up as a vendor.
+    - Employee:
+        - The vendor information is filled out in order to create purchase invoices to reimburse expenses.
+        - The salary category is filled out to calculate cost for the time spend on the project as documented in time sheets.
+
+- [**Project Type**](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type): a template with standard phases and tasks can be created to easily generate phases and tasks on a multiphase project.
+
+##### Execution
+
+The [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) has the following sequence of events:
+
+- The creation of the Multiphase Project with the following information:
+    - Planned amounts and margins related to the project in the Amounts section of the header.
+    - Information needed to create a Sales Order in the More Information section of the header.
+    - Optionally, with the [**Set Project Type**](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons) button, an existing Project Type is used to create the phases and tasks. Alternatively without using a project type, phases and tasks are created manually on the Multiphase Project.
+    - Start and end dates for the overall project and for phases and tasks.
+    - Once this information is entered, the project status is changed to [Order](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+- Planned versus actual cost is monitored on the [Project Profitability](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-profitability) report based on the following:
+    - Time sheets and item expenses are reported in [Expense Sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) related to the project. Based on the salary category of the employee at the time of the project, the cost of the time spend is calculated by the application.
+    - Purchase invoices are created for any purchases, outsourcing cost or expenses reimbursement related to the project. This is done through the [Create AP Expense Invoices](https://docs.etendo.software/latest/project-and-service-management/transactions.md#create-ap-expense-invoices).
+    - Sales invoices are created as a result of the Expense Sheets of the project. This is done through the [Create Sales Orders from Expenses](https://docs.etendo.software/latest/project-and-service-management/transactions.md#create-sales-orders-from-expenses) process.
+    - At the end of each phase, a Sales Order related to the phase is created from the Multiphase Project using the [Create Sales Order from Project Phase](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-button) process. The information for the creation of the Sales Order is taken from the definition of the Project and it is made for the customer of the project. Later, this results in the creation of a Sales Invoice.
+- The progress of the project is monitored in two ways. For each project, the [phases](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab) and [tasks](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab) can be marked as completed in the checkbox for this purpose. Also, the [Project Progress](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-progress) report can be used. Remember the accuracy of the information in the report depends on the Complete checkboxes use in the Phase and Task tabs.
+- After completion of all phases, the Multiphase Project status is changed to [Order Closed](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+
+!!!info
+    Remember this is a general overview of the Project and Service Management, visit the [Setup](https://docs.etendo.software/latest/project-and-service-management/setup.md), [Transactions](https://docs.etendo.software/latest/project-and-service-management/transactions.md) and [Analysis Tools](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md) sections for more specific information.
+
+#### Relationship with other areas
+
+Project and Service Management interacts with the following modules:
+
+- [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md):
+    - Materials related to the project are ordered using the Procure to Pay process.
+    - Purchase invoices are generated for expenses paid to employees and for good ordered from vendors.
+- [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md): Sales orders and sales invoices are generated for the customer for whom the project is executed.
+- [Warehouse Management](https://docs.etendo.software/latest/warehouse-management/getting-started.md): Materials ordered for the project may be received into stock.
+- [Financial Management](https://docs.etendo.software/latest/financial-management/getting-started.md): The information of the created sales and purchase invoices is send to accounts payables and receivables.
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Transactions
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Transactions
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/transactions
+## Article Content: 
+### Project and Service Transactions
+
+#### Overview
+
+This section describes the different windows that are used for transactions included in the Project and Service Management process in Etendo. These are:
+
+[:material-file-document-outline: Multiphase Project](#multiphase-project){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Expense Sheet](#expense-sheet){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Create Sales Orders from Expenses](#create-sales-orders-from-expenses){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Create AP Expense Invoices](#create-ap-expense-invoices){ .md-button .md-button--primary } <br>
+
+#### Multiphase Project 
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Multiphase Project`
+
+##### Overview
+
+This window is used to manage a project, its related phases and tasks and to populate the related sales invoices. The following aspects are monitored for projects:
+
+- The cost overview: based on the planned cost overview entered in the multiphase project once documents are created referencing the project, the actual cost can be compared with them.
+- The schedule: based on planned start dates and end dates, the progress of the project can be monitored.
+
+!!! important
+    From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the [**Create Sales Order from Project Phase**](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-button) button at Project Phase tab level.
+
+##### Header
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/multiphase-project.png)
+
+Here, the fields to note are:
+
+- Organization: organization of the project.
+- Search Key: field used to easily filter records.
+- Name: name of the project. The name has to be unique between Service Projects and Multiphase projects.
+- Current Phase: field to manually keep track of the current phase of the project.
+- Starting Date: start date of the project.
+- Planned End Date: scheduled end date of the project.
+- Real End Date: actual end date of the project.
+- Description: note field.
+- Sales Representative: sales contact related to this project.
+- Person in Charge: project manager.
+
+In the Amounts section:
+
+- Legally Binding Contract: If checked, it indicates if the document is legally binding.
+- Price Ceiling: Only shown if Legally Binding Contract is checked. The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: Only shown if Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Contract Quantity: Only shown if  Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Service Revenue: expected revenue for services (consulting).
+- Planned Expenses: expected expenses.
+- Services Provided Cost: expected internal cost of the services (labour x hours x cost).
+- Outsourced Cost: expected cost of services executed by third party.
+- Total Service Cost: populated information of the Services Provided Cost + Outsourced Cost.
+- Reinvoiced Expenses: defaults to the planned expenses, but can be overwritten by the actual amount that will be invoiced to the business partner.
+- Planned Service Margin %: populated information with the profit or loss percentage on the services: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
+- Planned Expenses Margin %: Populated information with the profit or loss percentage on the expenses: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
+
+In the More Information section:
+
+- Business Partner: the customer that is being charged for the project.
+- Partner Address: address of the business partner.
+- User/Contact: user working for the business partner.
+- Order Reference: reference number of the business partner to appear on the sales order.
+- Payment Method: payment method of the business partner to appear on the sales order.
+- Payment Terms: payment terms of the business partner to appear on the sales order.
+- Price List: price list related to the business partner.
+- Currency: currency related to the business partner.
+- Warehouse: warehouse used to ship to the business partner.
+
+###### Process Buttons
+
+- Set Project Type: to select a project type in order to copy the phases and tasks from that particular project type to the multiphase project. Based on the durations of the phases and tasks in the project type, the starting date and end date on the multiphase project are overwritten.
+- Change Project Status: to change the status of the project. The statuses of the multiphase project are:
+    - Open: initial status, comparable with the Draft status on other documents.
+    - Order: status to indicate that the sales orders can be generated.
+    - Order closed: final status of the project. When changed to this status, the Real End Date field information gets automatically populated with the system date. Once the project status is Order closed, the project can not be opened again.
+    !!!info
+        In order to use this button, the Business Partner and the Sales Representative fields of the header must be completed.
+- Copy Details : the project phase(s) and project task(s) information from another multiphase project is copied.
+
+##### Project Phase Tab
+
+In this tab, the individual phases of the project can be defined.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-phase.png)
+
+The following fields are displayed in this tab:
+
+- Organization: organization of the phase
+- Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the phase.
+- Product: product or service that is sold in the phase.
+- Quantity: quantity of the product to be sold in the phase.
+
+    !!!note
+        Above fields are copied from the [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
+- Net Unit Price: When filled out, this is the new unit price that will appear for the phase on the sales order, thus overwriting the price list net unit price.
+- Starting Date: Planned starting date of the phase.
+- Planned End Date: Planned ending date of the phase.
+
+    !!!note 
+        Starting Date and Planned End Date of the phase are calculated based on the start date and the Standard Duration in Days defined in the [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
+- Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Phase Complete checkbox.
+- Phase Complete checkbox: to set the phase to complete. In order to set the phase to Phase Complete, it is not mandatory that the task(s) related to this phase are set to complete first. However, once the Phase Complete checkbox is marked, the tasks of this phase are also marked as completed.
+
+In the More Information section:
+
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+- Standard Phase: Phase of the project with standard performance information with standard work.
+- Sales Order: Unique identifier and a reference to a Sales Order originating from the document sequence defined for this document type.
+
+###### Process Button
+
+- Create Sales Order from Project Phase: to create a sales order upon completion of a phase. From the sales order, a sales invoice is created to document that the customer has to pay for the executed work on the project.
+
+    !!!info
+        The created sales order includes all the lines from the phase and its related tasks.
+
+##### Project Task Subtab
+
+In this subtab, the individual tasks that are necessary to complete the phase of the project are defined.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-task.png)
+
+The following fields are displayed in this subtab:
+
+- Organization: organization of the task
+- Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the task
+- Product: product or service that is sold related to this task.
+- Quantity: quantity of the product to be sold for the task.
+
+    !!!note
+        Above fields are copied from the Project Type if the Set Project Type functionality is used.
+
+- Net Unit Price: when filled out, this is the new unit price that will appear for the task on the sales order, thus overwriting the price list net unit price.
+- Starting Date: planned starting date
+- Planned End Date: planned ending date
+
+    !!!note
+        Starting Date and Planned End Date of the task are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
+
+- Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Task Complete checkbox.
+- Task Complete checkbox: to set the task to completed.
+
+In the More Information section:
+
+- Standard Task: Standard Project Task in a Project Phase with standard effort
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+
+#### Expense Sheet
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Expense Sheet`
+
+##### Overview
+
+An Expense Sheet is used to register time sheets and item expenses.
+
+Based on time sheets, the cost related to assigned employees to the project is calculated and can be viewed on the [Project Profitability](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-profitability) report.
+
+For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice). To link the corresponding invoices to the project, there is a project dimension field in the header of the Purchase Invoice window.
+
+For both time sheets and item expenses, it can be indicated whether the customer related to the project is invoiced for these costs. The follow up of this is that a [Sales Order](https://docs.etendo.software/latest/sales-management/transactions.md#sales-order) is created in order to create a [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice).
+
+##### Header
+
+In this window, the user can create and process an expense sheet.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet.png)
+
+The fields on this tab are:
+
+- Organization: organization of the expense.
+- Document No.: populated number of the expense sheet.
+- Employee: employee that made the expense related to a project or spend time on a project. It is important to remark that employees:
+    - need to be created as [Employee](https://docs.etendo.software/latest/master-data-management/master-data.md#employee) in Business Partner window,
+    - need to be created as Etendo [users](https://docs.etendo.software/latest/general-setup/security.md#user) in the User window,
+    - and finally, employee and user need to be related to each other.
+    That relationship can be set by selecting Employee business partner record in the employee User record, as shown in the image below.
+- Report Date: date for which the expense is entered.
+
+ ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
+
+##### Lines Tab
+
+In this tab, the user can add time and regular expense lines to the sheet. Each expense is added to an individual line and may or may not be invoiced to customers.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet-lines.png)
+
+The fields to note in this tab are:
+
+- Time Sheet checkbox: to indicate if the expense is for time or item expenses.
+- Product: product related to the expense line. As seen in the [configuration](https://docs.etendo.software/latest/project-and-service-management/getting-started.md#configuration) section, for time sheets, the products set up with Service type appear. For item expenses, products set up with Expense type appear.
+- Quantity: quantity for the registered product.
+- UOM: unit of measure of the product.
+- Line No.: numbering of the line. By default 10,20,30,...etc.
+- Expense Amount: not visible on time sheet. Populated field with the amount information.
+- Converted Amount: not visible on time sheet. Amount of the expense converted to the currency of the client.
+- Currency: currency of the entered expense.
+- Reinvoicing checkbox: checkbox to indicate if the customer (the business partner related to the project) will be invoiced for this expense.
+- Business Partner: only visible when the Reinvoicing checkbox is selected. The Business Partner that is invoiced for the expense. The value will be populated based on the entered project information.
+- Net Unit Price: price related to the product.
+- Expense Date: date related to the reported expense.
+- Project: project that the expense relates to.
+- Project Phase: project phase that the expense relates to.
+- Project Task: project task that the expense relates to.
+
+##### Process Button
+
+- Process/Unprocess Expenses: Once the corresponding information of the sheet is entered, you can process the expense. If the document is processed, it is possible to select it and unprocess it to edit it if necessary.
+
+#### Create Sales Orders from Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Create Sales Orders from Expenses`
+
+This is a process which automatically generates sales orders per customer for all outstanding expenses to be invoiced. In order for the process to create the sales order with the correct information, the customer needs to be set up with the [Customer] tab in the Business Partner window filled out.
+This process is integrated with the [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md) Module:
+
+- All the sales orders generated can be checked and modified through that module.
+- The invoice process can be run afterwards.
+- There is a checkbox Complete and Process Sales Orders automatically to indicate whether the Sales Orders should be created in booked state or not.
+
+A Sales Order type Warehouse order with a corresponding Goods Shipment is created by the process if the checkbox Complete and Process Sales Orders automatically is selected.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-sales-orders-from-expenses.png)
+
+#### Create AP Expense Invoices
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Create AP Expense Invoices`
+
+This is a process which automatically generates Purchase Invoices for Accounts Payable based on all expenses to be reimbursed to the employee. Separate Purchase Invoices will be generated for each project. 
+
+In order for the process to complete successfully the employee needs to have the Vendor tab in the Business Partner filled out including the following information:
+
+- A Purchase Price List
+- The PO Payment Method
+- The PO Payment Terms
+- The PO Financial Account
+
+This process is directly integrated with the [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md) module: all the purchase invoices generated can be checked and modified through that module.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-ap-expense-invoices.png)
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Analysis Tools
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Analysis Tools
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/analysis-tools
+## Article Content: 
+### Project and Service Management Analysis Tools
+
+#### Overview
+
+This section describes the windows related to project and service management reports in Etendo. These are:
+
+[:material-file-document-outline: Project Progress](#project-progress){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Project Profitability](#project-profitability){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Expense Report](#expense-report){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Invoiceable Expenses](#invoiceable-expenses){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Employee Expenses](#employee-expenses){ .md-button .md-button--primary } <br>
+
+#### Project Progress
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Project Progress`
+
+The Project Progress report allows to track the progress of projects with useful indicators such as the time burned or the completion percentage. It is used to monitor to timelines of projects.
+
+The main information that can be retrieved from the report is:
+
+- days delay for each task and each phase
+- cumulative delay for the whole project
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-progress.png)
+
+#### Project Profitability
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Project Profitability`
+
+The Project Profitability report is used to monitor the planned and real cost related to a project.
+
+The following information is displayed on the report:
+
+**Planned Services and Expenses**:
+
+- Revenue: the amount from the field Service Revenue on the multiphase project.
+- Cost: the amount from the field Services Provided Cost on the multiphase project.
+- Outsource: the amount from the field Outsourced Cost on the multiphase project.
+- Margin%: the margin from the field Planned Service Margin % on the multiphase project. The planned service margin % is calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
+- Reinvoicing: the amount from the field Reinvoiced Expenses on the multiphase project.
+- Expenses: the amount from the field Planned Expenses on the multiphase project.
+- Margin%: the margin from the field Planned Expenses Margin % on the multiphase project. The planned expenses margin % is calculated using the formula: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
+- Gross margin: overall planned margin for the project
+    - Gross margin amount: calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) + (Reinvoiced Expenses - Planned Expenses).
+    - Gross margin percentage: calculated using the formula: ((Service Revenue - Services Provided Cost - Outsourced Cost) + (Reinvoiced Expenses - Planned Expenses)) x100/(Service Renevue + Reinvoiced Expenses)
+
+Real Services and Expenses:
+
+- Revenue: cost reflected on sales invoices for the customer for:
+    - reinvoicing of outsourced work by a third party.
+    - invoicing of the cost for completed project phases.
+    - only sales invoice lines with service type products will be taken into account.
+- Cost: cost of worked hours based on processed time sheets multiplied by the cost that is linked to the salary category of the employee at the expense date.
+- Outsource: cost of worked hours executed by a third party based on purchases invoices.
+- Margin%: real margin for services based on the formula: (Revenue - Cost -Outsource) x 100/Revenue
+- Reinvoicing: expenses invoiced to the customer on sales invoices for:
+    - purchased goods related to the project.
+    - invoiceable item expenses.
+    - only sales invoice lines with products whose type is not service will be taken into account.
+- Expenses: real expenses based on purchase invoices for:
+    - purchased goods related to the project from a vendor.
+    - reimbursement for item expenses for an employee.
+- Margin%: real margin for expenses based on the formula: (Reinvoicing - Expenses) x 100/Reinvoicing
+- Gross margin: overall real margin for the project.
+    - Gross margin amount: calculated using the formula: (Revenue - Cost - Outsource) + (Reinvoicing - Expenses)
+    - Gross margin percentage: calculated using the formula: ((Revenue - Cost - Outsource) + (Reinvoicing - Expenses)) x 100/(Revenue + Reinvoicing)
+- Collected: amount that was collected from the customer for the sales invoices related to the project.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-profitability.png)
+
+#### Expense Report
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Expense Report`
+
+The Expense Report shows a listing of expense sheets with their details. Filters can be applied to show expense reports for certain business partners, projects or employees. Also a filter to select time sheets or expense sheets can be applied.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/expense-report.png)
+
+#### Invoiceable Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Invoiceable Expenses`
+
+In this window, the user can view expenses before invoicing them to customers. This is a read-only overview of all invoiceable cost related to projects. The costs that appear are marked as reinvoicing in expense sheets that are processed. All items that are displayed are for invoicing to the customers related to the projects.
+
+Customer
+
+In the grid view an overview of all customers for which expenses related to projects have to be invoiced is listed. In the records, the Price List and Payment Terms to be used for the creation of the Sales Order are displayed.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses.png)
+
+##### Lines Tab
+
+In this tab, the user can view each expense line to be included in the sales invoice.
+
+The information displayed in the lines tab is taken from the lines tab from the Expense Sheets. All lines are related to the selected business partner, but different lines can be related to different projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses-lines.png)
+
+#### Employee Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Employee Expenses`
+
+In this window, the user can view internal employee expenses before processing them. This is a read-only overview of all expenses that need to be reimbursed to an employee.
+
+Employee
+
+In the grid view an overview of all employees that have expenses pending to be reimbursed is listed. Each record has the Purchase Price List and the Purchase Order Payment Terms displayed, to be used for the creation of the Purchase Invoice.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses.png)
+
+##### Lines Tab
+
+In this tab, the user can view each expense line for the employee.
+
+The information displayed in the lines tab is taken from the lines tab in the Expense Sheet. All lines are related to the employee, but different lines can be related to different projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses-lines.png)
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Setup
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Setup
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/setup
+## Article Content: 
+### Project and Service Setup
+
+#### Overview
+
+This section describes the window that is used to set up the Project and Service Management process in Etendo: Project Type.
+
+#### Project Type
+
+:material-menu: `Application` > `Project and Service Management` > `Setup` > `Project Type`
+
+##### Overview
+
+This window is used to define projects types with typical phases and tasks to be used in projects.
+
+A Project Type is a template with the typical phases and tasks that are applicable for a certain type of project. During the entry of a multiphase project, a project type can be selected to automatically add the phases and tasks associated with that project type.  This is essential for companies that use the same standard processes on many occasions.
+
+!!!info 
+    The use of this window is not mandatory, but it is recommended since it enables to complete the multiphase project in an easier way. If not used, each multiphase project, its phases and tasks, should be completed manually.
+
+##### Header
+
+Here, a project type can be defined and, for this, the main field is the Name of the project type. An intuitive name should be given so that once the multiphase project is entered, the user can easily recognize the project type that could be used to generate the phases and tasks.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/project-type.png)
+
+##### Standard Phase Tab
+
+In this tab, the user can define phases and products required during each phase, to be included in this type. Each phase is added by creating a line.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-phase.png)
+
+The fields on this tab are:
+
+- Sequence number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the phase.
+- Product: product or service that is sold in the phase.
+- Standard Quantity: quantity of the product to be sold in the phase. For example, if the product is Sales Consultancy with a unit of measure set to hours, the quantity 10 entered in this field indicates that 10 hours of Sales Consultancy is sold in this phase.
+- Standard Duration in Days: the scheduled duration of the phase. Based on this setup, when the project type is used for a multiphase project, the begin and end dates of each phase is based on this setup.When left blank at the phase level, the begin date will be populated based on the start date of the project and the end date will be left blank.
+- Active checkbox: indication of validity of the line.
+- Description: note field for the phase.
+
+
+##### Standard Task Subtab
+
+Here, the user can define tasks to be completed during each phase. Each task is added by creating a line.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-task.png)
+
+The fields on the tasks are:
+
+- Sequence number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the task.
+- Product: product or service that is sold related to this task.
+- Standard Quantity: quantity of the product to be sold for the task. For example if the product is Sales Consultancy with a unit of measure set to hours, the quantity 10 entered in this field indicates that 10 hours of Sales Consultancy is sold related to this task.
+- Standard Duration in Days: the scheduled duration of the task.
+- Active checkbox: indication of validity of the line.
+- Description: note field for the phase.
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ✨ Getting Started
 ## Article Path: /User Guide/Etendo Classic/Basic Features/Financial Management/✨ Getting Started
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started
@@ -16225,6 +16779,8 @@ This section describes the windows related to the accounting transactions that a
 
 [:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Not Posted Documents](#not-posted-documents){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: VAT Regularization](#vat-regularization){ .md-button .md-button--primary } <br>
@@ -16651,7 +17207,7 @@ Accounting information related to the GL Journal
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-<iframe width=**854** height=**480** src=**https://www.youtube.com/embed/K7XOBkmRLAQ** title=**YouTube video player** frameborder=**0** allow=**accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture** allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K7XOBkmRLAQ?si=l-p9u_IvzFmMc46F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This functionality allows the user to duplicate a journal entry as many times as required, indicating the regularity and the period in which the first copy must be made. Starting from the second copy, the duplication will take place with the corresponding regularity.
 The process to create a journal entry from the beginning and duplicate it later is shown below.
@@ -17096,6 +17652,76 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 !!!info
     With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
+
+#### Not Posted Documents
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Not Posted Documents`
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+##### Overview
+
+With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.png)
+
+##### Search button
+
+With the **Search** button, the following fields are used to specify the documents to search. 
+
+- Organization: The corresponding organization of the search.
+- Document: Type of document that the user is searching. This is the only field that is optional. The listed options are:
+    - Amortization
+    - Bank Statements 
+    - Bill of Materials Production
+    - Cost Adjustment
+    - Doubtful Debt
+    - GL Journal
+    - Goods Receipt
+    - Goods Shipment
+    - Internal Consumption
+    - Inventory
+    - Landed Cost
+    - Landed Cost Cost
+    - Matched Invoices
+    - Movements
+    - Payment In
+    - Payment Out
+    - Purchase Invoice
+    - Reconciliation
+    - Return Material Receipt
+    - Return to Vendor Shipment
+    - Sales Invoice
+    - Transaction
+    - Work Effort
+
+- Accounting Status: the corresponding accounting status of the search. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents2.png)
+
+##### Grid filtering
+
+In the grid where documents are displayed after the search, users can filter the documents using the following criteria:
+
+- Organization
+- Type of document
+- Document Description
+- Accounting Date
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents3.png)
+
+##### Bulk Posting button
+
+Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents4.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents5.png)
+
+As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
+
+!!! info
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Reset Accounting
 
@@ -19672,11 +20298,9 @@ This section describes the windows related to assets, part of the Financial Mana
 
 ##### Overview
 
-The user can define amortization characteristics for assets owned by the company.
+The user can define company-owned assets and configure their amortization characteristics. 
 
-###### Assets
-
-The user can define assets owned by the company and create an amortization for them.
+##### Assets window
 
 ![](https://docs.etendo.software/latest/assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
@@ -19685,36 +20309,41 @@ Fields to note:
 -   **Organization** : Organizational entity within client.
 -   **Search Key** : A fast method for finding a particular record.
 -   **Name** : A non-unique identifier for a record/document often used as a search tool.
--   **Asset Category** : A classification of assets based on similar characteristics.
+-   **Asset Category** : A classification of assets based on similar characteristics defined in the [Asset Group window](#asset-group-window). Configuration fields will be completed automatically according to the characteristics defined in this window. 
 -   **Document No.** : An automatically generated identifier for all documents.
 -   **Description** : A space to write additional related information.
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
 -   **Product** : An item produced by a process.
--   **Summary Level** : A means of grouping fields in order to view or hide additional information.
--   **Static** : Prevents from moving the record into the tree
--   **Depreciate** : The asset is used internally and will be depreciated
--   **Depreciation Type** : Depreciation Type
--   **Calculate Type** : Calculate type
+-   **Summary Level** : When checked, it groups other assets and displays them in tree view. 
+-   **Static** : Prevents from moving the record into the tree view.
+-   **Depreciate** : The asset is used internally and will be depreciated.
+-   **Depreciation Type** : Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** : It indicates how amortization will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation %** : Depreciation annual %
--   **Amortize** : Asset schedule
--   **Usable Life - Years** : Years of the usable life of the asset
--   **Usable Life - Months** : Months of the usable life of the asset
--   **Every Month Is 30 Day** : When calculating the amortization plan every month will be considered as a 30 day month and years of 365 days (no leap-years).
--   **Purchase Date** : Purchase date
--   **Cancellation Date** : Cancellation date
+-   **Amortize** : Asset schedule.
+-   **Usable Life - Years** : Years of the usable life of the asset.
+-   **Usable Life - Months** : Months of the usable life of the asset.
+-   **Every Month Is 30 Day** : If checked, it calculates the amortization plan every month to be considered as a 30 day month and years of 365 days. If it is not checked, it considers real month days and leap-years.
+-   **Purchase Date** : Purchase date.
+-   **Cancellation Date** : life-utility date.
 -   **Depreciation Start Date** : Depreciation Start Date. The amortization plan will be calculated starting from this date.
--   **Depreciation End Date** : Depreciation end date
--   **Asset Value** : Asset value
--   **Residual Asset Value** : Residual asset value amount
--   **Depreciation Amt.** : Depreciation Amount
+-   **Depreciation End Date** : Depreciation end date.
+-   **Asset Value** : Asset value.
+-   **Residual Asset Value** : Residual asset value amount.
+-   **Depreciation Amt.** : Depreciation Amount.
 -   **Previously Depreciated Amt.** : This amount is subtracted to the Depreciation amount when calculating the amortization plan. Total amount to be depreciated = Depreciation Amount - Previously Depreciated Amount
--   **Depreciated Value** : Depreciated value
+-   **Depreciated Value** : Depreciated value.
 -   **Project** : Identifier of a project defined within the Project & Service Management module.
--   **Create Amortization** : it will create (or recalculate) the amortization plan based on the asset definition.
 
-##### **Asset Amortization**
+###### Buttons
 
-The user can add asset amortizations for a selected asset.
+- **Create Amortization**: The Create Amortization button populates the Asset Amortization tab. It creates the amortization plan based on the asset definition.
+
+- **Recalculate Amortization**: The Recalculate Amortization button allows the user to update information when needed. 
+
+##### Asset Amortization tab
+
+Asset amortizations for a selected asset are added to this tab. 
 
 ![](https://docs.etendo.software/latest/assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
@@ -19723,8 +20352,6 @@ The user can add asset amortizations for a selected asset.
 -   **Amortization Percentage** : Amortization Percentage
 -   **Amortization Amount** : Amortization Amount
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
-
-The *Create Amortization* process populates the Asset Amortization tab.
 
 The Asset Amortization tab shows the depreciation plan of the asset based on its usable life-time and its value that is the amount to be depreciated. The asset value is split within its usable life (months or years), therefore each depreciation plan line represents a percentage of the total depreciation amount of the asset.
 
@@ -19741,11 +20368,51 @@ The depreciation line of February cannot be removed until the depreciation line 
 
 The process assumes that if the March depreciation line exists, then the February depreciation line exists.
 
-###### **Accounting**
+##### Accounting tab
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
-![](https://docs.etendo.software/latest/assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
+![assets3](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets3.png)
+
+- **General Ledger**: The book containing all financial transactions recorded for the legal entity.
+- **Accumulated Depreciation**: Accumulated Depreciation Account. 
+- **Depreciation**: Depreciation account.
+
+The shown accounts are configured by default and can be changed. 
+
+##### Accounting Dimensions Assets
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. 
+    To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+    For more information about the available versions, core compatibility and new features, visit
+    [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+In addition to the existing Product dimensions for assets, this module allows users to select **additional accounting dimensions** which 
+will be automatically transferred to the amortization lines, allowing better integration with accounting processes. 
+
+The dimensions the user can apply to the asset creation process are the following: 
+
+- **Business Partner**
+- **Activity**
+- **1st Dimension**
+- **2nd Dimension** 
+- **Sales Region**
+- **Campaign**
+- **Cost Center**
+
+!!! info
+    When creating or recalculating the amortization schedule for an asset, the specified accounting dimensions are transferred to the lines of the amortization schedule.
+
+![assets1](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+
+!!! info
+    For more information about Dimensions configuration visit [Dimensions](https://docs.etendo.software/latest/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension).
+
+###### Buttons 
+
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab related to the selected asset.  In addition, these same lines are added in the Amortization window, grouping them only according to the **depreciation period**, (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage).
+ 
 
 #### Asset Group
 
@@ -19755,27 +20422,27 @@ The user can create and edit G/L accounts to be used in transactions which inclu
 
 Assets can be grouped into different categories with the aim of helping their depreciation management and analysis.
 
-###### Asset Category
+##### Asset Group window 
 
-Asset category window allows the user to create and configure every asset category your organization may need.
+Asset Group window allows the user to create and configure every asset category your organization may need.
 
 ![](https://docs.etendo.software/latest/assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
 
 As shown in the image above, the creation of an asset category requires the user to enter below listed information for each category:
 
--   **Name** or short name which helps to easily find a category
--   **Description**
+-   **Name** or short name which helps to easily find a category.
+-   **Description** a space to write additional related information.
 -   **Depreciate** indicates if the assets of this group will be depreciated.
--   **Depreciation Type** method used to depreciate the asset.
--   **Calculate Type** indicates how the depreciation will be calculated (Time or Percentage)
+-   **Depreciation Type** Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** it indicates how the depreciation will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation** Annual percentage used to depreciate this asset.
 -   **Amortize** it refers to the periods chosen between depreciation entries (monthly, yearly).
--   **Usable Life - Months** Years of the usable life of the asset
--   **Usable Life - Years** Months of the usable life of the asset
+-   **Usable Life - Months** Years of the usable life of the asset.
+-   **Usable Life - Years** Months of the usable life of the asset.
 
-Depreciation configuration will be inherited from the asset category when creating a new asset.
+Depreciation configuration will be inherited from the asset category when creating a new asset from the Asset window.
 
-###### Accounting
+##### Accounting tab
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
@@ -19785,36 +20452,71 @@ Each asset category allows the user to configure a different set of accounts to 
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Amortization`
 
-##### **Overview**
+##### Overview
 
-The user can create and edit amortization for a selected year.
+In the  Amortization window, assets depreciations are recorded, grouped by date. In addition, from this window, these records are processed and posted to the general ledger.
 
-##### **Header**
+##### Amortization window
 
-In the header, the user creates amortizations for particular periods.
+From the header, amortizations are created for particular periods.
 
-![](https://docs.etendo.software/latest/assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
+![assets4](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets4.png)
 
-##### **Lines**
 
-In each line, the user adds amortized assets and details of amortization.
+Fields to note: 
 
-![](https://docs.etendo.software/latest/assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
+- **Organization**: Organizational entity within client.
+- **Name**: A non-unique identifier for a record/document often used as a search tool.
+- **Description**: A space to write additional related information.
+- **Accounting Date**: The date on which the asset is to be booked.
+- **Starting Date**: Date from which amortization begins. 
+- **Total Amortization**: amortization amount. 
+- **Currency**: An accepted medium of monetary exchange that may vary across countries.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
 
-###### **Accounting**
+##### Lines tab
 
-Accounting information related to the amortization
+Each line shows the amortized assets and details of amortization.
 
-![](https://docs.etendo.software/latest/assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
+![assets5](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/Assets5.png)
 
-##### How to Reactivate Amortizations
+
+Fields to note: 
+
+- **Line No.**: Indicates the unique line for a document. 
+- **Asset**: the asset to be amortized.
+- **Amortization Percentage**: Amortization Percentage (either calculated in Time or Percentage).
+- **Amortization Amount**: Amortization Amount.
+- **Currency**: Indicates the currency to be used when processing this document.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
+
+##### Accounting tab
+
+Accounting information related to the amortization once the document is posted.
+
+Fields to note: 
+
+- **Accounting Date**: The date this transaction is recorded on in the general ledger. This date also indicates which accounting period within the fiscal year this transaction will be part of.
+- **Account**: The account used. 
+- **Debit**: The Account Debit Amount indicates the transaction amount converted to this organization's accounting currency.
+- **Credit**: The Account Credit Amount indicates the transaction amount converted to this organization's accounting currency.
+
+![assets6](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets6.png)
+
+!!!info 
+    For more information about Financial Account functionality visit [Financial Account](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account).
+
+##### Accounting Dimensions Assets
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
-Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+This module allows that in the Amortization window, unlike the standard operation in which asset depreciations were grouped according to specific dates, to group the depreciation records **only per periods** (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage). Also in the grouping the dimensions are not considered.
+In addition, the accounting dimensions are maintained in the amortization lines to be used in the generation of accounting entries.
+
+![assets2](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
+
 
 ##### Bulk Posting
 
@@ -19828,6 +20530,15 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
+#### How to Reactivate Amortizations
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
+
+![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+
 
 #### Asset Amortization Report (Excel)
 
@@ -19836,7 +20547,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
+The Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
 ![](https://docs.etendo.software/latest/assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
 
@@ -20482,6 +21193,18 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 #### Modules
 
+##### Accounting Dimensions Assets
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets.template`
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets`
+
+The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
+
+!!! info
+    For more information, visit the [Accounting Dimensions Assets user guide](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
+
+
 ##### Accounting Templates
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
@@ -20593,7 +21316,7 @@ This feature allows entering in the system all the financings the company has. I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This functionality allows the user to post or unpost multiple records at the same time.
+This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the Not Posted Documents window, which allows users to identify and post all pending transactions directly from one window. 
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
@@ -20835,6 +21558,75 @@ As in the case of the Add Payment button, the Add Details button has been enhanc
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba8.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Automated Remittance
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
+## Article Content: 
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+
+#### Overview
+
+This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+
+This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
+
+!!!important
+    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
+
+#### Setup
+
+To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
+
+For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
+
+#### Automated Remittance Process
+
+This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
+
+
+1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
+
+    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
+
+2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
+
+3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
+
+!!!note
+    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
+
+#### Automated Remittance Protest
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
+
+1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
+
+2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
+
+3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Bank Integration PSD2
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Bank Integration PSD2
 ## Article URL: 
@@ -20978,6 +21770,8 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 ![](https://docs.etendo.software/latest/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 
+#### Available Windows
+
 This functionality is available in the following windows:
 
 - [Amortization](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#bulk-posting)
@@ -21002,8 +21796,7 @@ This functionality is available in the following windows:
 - [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
 - [Physical Inventory](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#bulk-posting)
 
-
-##### Accounting Status
+##### Accounting Status Column
 
 All the records existing previously to the installation of this new functionality have a default **pending refresh** value in the column **Accounting Status**. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
 
@@ -21016,75 +21809,13 @@ To configure the preference, go to the **Preference** window and create a new re
 It is necessary to run the **Days Back to Refresh Accounting** background process to update the accounting status column.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Automated Remittance
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
-## Article Content: 
-### Automated Remittance
 
-:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+#### Not Posted Documents Window
 
-#### Overview
+The Bulk Posting module includes the Not Posted Documents functionality. This is used to find all the not posted documents in the same window and to post them massively.
 
-This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
-
-
-This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
-
-!!!important
-    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
-
-#### Setup
-
-To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
-
-For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
-
-#### Automated Remittance Process
-
-This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
-
-
-1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
-
-    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
-
-2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
-
-3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
-
-!!!note
-    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
-
-#### Automated Remittance Protest
-
-The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
-
-1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
-
-2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
-
-3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
+!!!info
+    For more information, visit [Not Posted Documents](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -52408,30 +53139,111 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/etendo-news
 ## Article Content: 
+
+#### February 2025
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Enhanced asset management with accounting dimensions**
+
+    ---
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+
+- :octicons-package-16: **Gain better control with the Not Posted Documents window**
+
+    ---
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
+
+    Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
+
+</div>
+
+
+#### January 2025
+
+##### Copilot Extensions 
+
+<div class="grid cards" markdown>
+
+- :material-robot: **You can now use multiple files in conversations with an agent**
+
+    ---
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/attach-multiple-files-copilot.png)
+
+    In version [1.10.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new functionalities have been added:
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   :material-robot: **[Upload multiple files](https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started.md#attach-files)**
+    
+    ---
+    
+    It is now possible to attach multiple files at once in Etendo Copilot, optimizing document management and improving the user experience.
+
+-   :octicons-package-16: **Automatic permissions management**
+    
+    ---
+
+    When creating a new agent, the necessary permissions will be automatically generated for its execution in the current role, reducing friction in the configuration.
+
+-   :octicons-package-16: **Optimized visualization**
+    
+    ---
+    
+    The agent window now shows the module to which each agent belongs, improving organization and navigation.
+
+-  :material-tools: **Tool Pack: New tool to read Excel and CSV files** 
+    
+    ---
+    
+    [XLS Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xls-tool.md) has been added in the available Tools, allowing agents to read and process data directly from Excel or CSV files, facilitating automation and integration of structured information.
+
+</div>
+
+
 #### December 2024
 
 ##### Etendo Classic
-:octicons-rocket-24: **New Etendo Classic Release Available!**
-
-Version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 <div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Classic Release Available!**
+
+    Version [24.4.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
 - **The document completion process allows the use of Credit Payment as a payment method again.** 
 
     From now on, the completion is again one record at a time and is added to the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+
 </div>
 
 ##### Essentials Extensions
 
-:octicons-package-16: **Managing documents has never been so fast and easy**
+<div class="grid cards" markdown>
 
-![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/bulk-completion.png)
-In version [1.7.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+- :octicons-package-16: **Managing documents has never been so fast and easy**
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/bulk-completion.png)
+    
+    In version [1.7.0](./release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+</div>
+
 
 ##### Warehouse Extensions
-:octicons-package-16: **More accurate automatic stock reservation**
 
-In version [1.10.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **More accurate automatic stock reservation**
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/automatic-warehouse-reservation.png)
+
+    In version [1.10.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+</div>
 
 ##### Financial Extensions
 
@@ -52439,25 +53251,35 @@ In version [1.10.0](https://docs.etendo.software/latest/whats-new/release-notes/
 
 - :octicons-package-16: **Automated remittances: Simplify remittance management by automating the settlement and protest process.**
 
+    ---
+
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/automated-remittances.png)
 
-    In version [1.21.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
 
     The Protest Remittance button has also been added, making it possible to return receipts in collection remittances from a single place.
 
 - :octicons-package-16: **Bank account and payment management allows for more automation**
+    
+    --- 
 
-    In version [1.21.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the Advanced Bank Account Management module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/advanced-bank-account.png )
+
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Advanced Bank Account Management](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md) module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
     The possibility to select the bank account when adding payments and even edit payment plans with the Modify Payment button has also been added.
 </div>
 
 ##### Copilot Extensions 
 
-:material-robot: **Copilot allows the use of multiple AI models from different suppliers.**
+<div class="grid cards" markdown>
 
-In version [1.9.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
-In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
+- :material-robot: **Copilot allows the use of multiple AI models from different suppliers.**
+    
+    ---
 
+    In version [1.9.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
+    In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
+</div>
 
 #### November 2024
 
@@ -52465,7 +53287,7 @@ In addition, the AI Models window was added where the user can manage the models
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) 
+New Copilot Extensions bundle version [1.8.0](./release-notes/etendo-copilot/bundles/release-notes.md) 
 
 <div class="grid cards" markdown>
 -  **Improve your Python Tools development with the Code Run assistant**
@@ -52482,7 +53304,7 @@ New Copilot Extensions bundle version [1.8.0](https://docs.etendo.software/lates
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.7.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
 
 <div class="grid cards" markdown>
 -  **Boost Your Development Workflow with the New Dev Assistant!**
@@ -52514,14 +53336,14 @@ The [Dependency Manager](https://docs.etendo.software/latest/developer-guide/ete
 
 :octicons-rocket-24: **New Etendo Classic Release Available!**
 
-Version [24.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+Version [24.3.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 
 ##### Copilot Extensions
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.5.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
 
 <div class="grid cards" markdown>
 - **New Feature Update: Zip File Support for LangChain Assistants**
@@ -52542,7 +53364,7 @@ New Copilot Extensions bundle version [1.5.0](https://docs.etendo.software/lates
 
 ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot.png)
 
-The newest version [1.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
+The newest version [1.4.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
 
 <div class="grid cards" markdown>
 
@@ -52572,13 +53394,13 @@ These updates make Etendo Copilot more powerful, secure, and user-friendly, driv
 
 ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/docker.gif){align=right width=400}
 
-- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
 - This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
 - PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
 
-[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md)
+[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md)
 
-- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
 - With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
 
 
@@ -52588,7 +53410,7 @@ These updates make Etendo Copilot more powerful, secure, and user-friendly, driv
 
 ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/product-operation.png)
 
-In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
+In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
 
 
 #### July 2024
@@ -52601,37 +53423,37 @@ In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-not
 
     ---
     
-    The Tool Pack module, available from version [1.3.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
+    The Tool Pack module, available from version [1.3.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
 
 -   [:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
     ---
 
-    From version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
+    From version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
 
 -   [:material-robot: **Purchase Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
     
     ---   
 
-    As of version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
+    As of version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
 
 -   [:material-robot: **Dev Assistant**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md)
 
     ---
 
-    From version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
+    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
 
 </div>
 
 :material-bug: **Fixed Issues**
 
-In version [1.2.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
+In version [1.2.1](./release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
 
 ##### Financial Extensions
 
 [:octicons-package-16: **VAT Regularization**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization)
 
-In version [1.16.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
+In version [1.16.1](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
 
 ---
 
@@ -52641,23 +53463,23 @@ In version [1.16.1](https://docs.etendo.software/latest/whats-new/release-notes/
 
 :octicons-rocket-24: **New Release Available!**
 
-Etendo Classic version [24.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
+Etendo Classic version [24.2.0](./release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
 
 :material-bug: **Fixed Issues**
 
-In version [24.1.8](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
+In version [24.1.8](./release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
 
 ##### Copilot Extensions
 
 :material-trending-up: **Optimizations**
 
-Starting with version [1.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
+Starting with version [1.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
 
 ##### Financial Extensions
 
 [:octicons-package-16: **G/L Journal Clone**](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
 
-Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
+Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 
 ---
 
@@ -52667,7 +53489,7 @@ Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/rel
 
 [:material-robot: **SQL Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md)
 
-In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
 With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
 
 ---
@@ -52678,16 +53500,16 @@ With this assistant, you will be allowed to **formulate questions** in natural l
 
 [:material-robot: **Purchase Expert Assistant**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
 
-In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
 Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
 
 ##### Spanish Localization
 
 :material-trending-up: **Optimizations**
 
-As of version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
+As of version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
 
-To take advantage of these enhancements, when upgrading to version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
+To take advantage of these enhancements, when upgrading to version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
 
 ---
 
@@ -52697,26 +53519,26 @@ To take advantage of these enhancements, when upgrading to version [1.9.4](https
 
 :material-trending-up: **Optimizations**
 
-As of version [24.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
+As of version [24.1.0](./release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
 
 ##### Copilot Extensions
 
 [:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
-In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
+In the version [1.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
 With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
 
 ##### Procurement Extensions
 
 [:octicons-package-16: **Purchase Invoice Validation**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
-In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
+In the version [1.0.0](./release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
 
 ##### Platform Extensions
 
 :material-trending-up: **Optimizations**
 
-As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
+As of version [1.13.2](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -52868,7 +53690,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | QAA |  | :white_check_mark: |
+| [24Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.3){target="_blank"} | 30/01/2025 | 24.4.3 | QAA |  | :white_check_mark: |
+| [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | C |  | :white_check_mark: |
 | [24Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.1){target="_blank"} | 17/01/2025 | 24.4.1 | C |  | :white_check_mark: |
 | [24Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.0){target="_blank"} | 19/12/2024 | 24.4.0 | C | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso){target="_blank"} | :white_check_mark: |
 | [24Q3.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.6){target="_blank"} | 13/12/2024 | 24.3.6 | CS |  | :white_check_mark: |
@@ -52984,8 +53807,9 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | Status | GitHub |
 | --- | --- | :---: | :---: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.0) | 06/03/2024 | CS | :white_check_mark: |
-| [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.0.0) | 19/12/2022 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.1) | 23/01/2025 | CS | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.0) | 06/03/2024 | C  | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.0.0) | 19/12/2022 | C  | |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -53155,7 +53979,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.21.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.2){target="_blank"} | 24/01/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.22.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.22.0){target="_blank"} | 07/02/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.21.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.2){target="_blank"} | 24/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.1){target="_blank"} | 17/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.0){target="_blank"} | 21/12/2024 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.20.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.20.0){target="_blank"} | 06/12/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
@@ -53216,7 +54041,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.24.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.24.0){target="_blank"} | 20/01/2025 | 22.4.3 | 24.4.x | CS | :white_check_mark: |
+| [1.25.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.25.0){target="_blank"} | 30/01/2025 | 22.4.3 | 24.4.x | CS | :white_check_mark: |
+| [1.24.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.24.0){target="_blank"} | 20/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
 | [1.23.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.23.0){target="_blank"} | 07/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
 | [1.22.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.22.0){target="_blank"} | 20/12/2024 | 22.4.3 | 24.4.x | C | :white_check_mark: |
 | [1.21.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.1){target="_blank"} | 14/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
