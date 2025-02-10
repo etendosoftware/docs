@@ -53142,6 +53142,17 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 #### February 2025
 
+##### Etendo ISO
+
+<div class="grid cards" markdown>
+
+- :material-trending-up: **Optimizations**
+    
+    ---
+    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+
+</div>
+
 ##### Financial Extensions
 
 <div class="grid cards" markdown>
@@ -54251,7 +54262,7 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
-| [24.4.3](#2443) | 30/01/2025 | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso){target="_blank"} |
+| [24.4.3](#2443) | 10/02/2025 | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) |
 | [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
 | [24.2.0](#2420) | 28/06/2024 | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso) |
@@ -54265,6 +54276,8 @@ Article URL: https://etendo.software
 
 #### 24.4.3
 New ISO with Etendo Classsic version 24.4.3
+##### Fixed
+ - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 #### 24.4.0
 New ISO with Etendo Classsic version 24.4.0
@@ -54278,7 +54291,7 @@ New ISO with Etendo Classsic version 24.2.0
 #### 24.1.4
 New ISO with Etendo Classsic version 24.1.4
 ##### Fixed
- - [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
+ - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 #### 24.1.0
 New ISO with Etendo Classsic version 24.1.0
