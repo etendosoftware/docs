@@ -47,19 +47,8 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
-        githubUser= username
-        githubToken=*******
-
-        context.name=etendo
-
-        bbdd.sid=etendo
-        bbdd.port=5432
-        bbdd.systemUser=postgres
-        bbdd.systemPassword=syspass
-        bbdd.user=tad
-        bbdd.password=tad
-
-        org.gradle.jvmargs=-Dfile.encoding=UTF-8
+        githubUser=<username>
+        githubToken=<*******>
         ```
     4. Change the `build.gradle` file, uncomment the core dependency in the dependencies section:
             
@@ -73,10 +62,6 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
     5. Modify the `gradle.properties` file with your environment variables, if it is necessary:
         
         ```groovy title="gradle.properties"
-        nexusUser=
-        nexusPassword=
-        githubUser= username
-        githubToken=*******
 
         context.name=etendo
 
@@ -86,8 +71,11 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         bbdd.systemPassword=syspass
         bbdd.user=tad
         bbdd.password=tad
+
+        org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
     6. Dependencies
+        
         ``` bash title="Terminal"
         ./gradlew dependencies
         ```
@@ -131,18 +119,8 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
-        githubUser= username
-        githubToken=*******
-        context.name=etendo
-
-        bbdd.sid=etendo
-        bbdd.port=5432
-        bbdd.systemUser=postgres
-        bbdd.systemPassword=syspass
-        bbdd.user=tad
-        bbdd.password=tad
-
-        org.gradle.jvmargs=-Dfile.encoding=UTF-8
+        githubUser=<username>
+        githubToken=<*******>
         ```
 
     4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`.
@@ -164,6 +142,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
     6. Modify the `gradle.properties` file with your environment variables, if it is necessary:
 
         ```groovy title="gradle.properties"
+        
         context.name=etendo
 
         bbdd.sid=etendo
@@ -172,6 +151,8 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         bbdd.systemPassword=syspass
         bbdd.user=tad
         bbdd.password=tad
+
+        org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
 
     7. Setup: to apply or create the initial configurations
