@@ -35,12 +35,14 @@ New ISO with Etendo Classsic version 24.2.0
 
 ## 24.1.4
 New ISO with Etendo Classsic version 24.1.4
-### Fixed
+
+**Fixed**
  - [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 ## 24.1.0
 New ISO with Etendo Classsic version 24.1.0
-### Changes
+
+**Changes**
  - Upgrade Tomcat version to 9.0.87
 
 ## 23.4.0
