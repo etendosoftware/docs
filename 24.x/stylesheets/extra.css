@@ -18,3 +18,18 @@
 .legacy-image-style {
   filter: grayscale(100%)
 }
+
+
+.md-nav--primary >.md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #202452;;
+}
+
+.md-nav__item--section > .md-nav__link:not(.md-nav__container) {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #202452;
+}
+
+
