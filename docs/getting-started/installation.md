@@ -238,8 +238,8 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     ### Steps to Install Etendo with Postgres Database and Tomcat Dockerized
 
-    The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module.
-
+    The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module, which, as its name suggests, provides the Tomcat service.
+    These modules are part of the [Platform Extensions](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md) bundle, which will be covered in this step-by-step guide on how to install them.
     
     !!! info
         In this guide we will assume the installation of Etendo Classic in Sources format, in case you want to install it in JAR format you should consult the changes in the corresponding tab.
@@ -297,7 +297,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         context.name=etendo
 
         bbdd.sid=etendo
-        bbdd.port=5433
+        bbdd.port=5434
         bbdd.systemUser=postgres
         bbdd.systemPassword=syspass
         bbdd.user=tad
@@ -310,9 +310,9 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
         
         !!! info
-            The dockerized database service will run on the port defined in the `bbdd.port` variable, we suggest using port `5433` to avoid conflict if you have a local Postgres instance using the default port.
+            The dockerized database service will run on the port defined in the `bbdd.port` variable, we suggest using port `5434` to avoid conflict if you have a local Postgres instance using the default port.
 
-            By default the tomcat service will be up on port `8080`, in case that port is busy you can use the variable `docker_com.etendoerp.tomcat_port=<port>`.
+            By default the Tomcat service will be up on port `8080`, in case that port is busy you can use the variable `docker_com.etendoerp.tomcat_port=<port>`.
 
 
     8. Launching Dockerized Tomcat and Database services
@@ -320,6 +320,12 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ``` bash title="Terminal"
         ./gradlew resources.up
         ```
+        <figure markdown="span">
+        ![tomcat-database-dockerized](../assets/getting-started/installation/tomcat-database-dockerized.png)
+        <figcaption> Postgres database and Tomcat service running dockerized, if necessary you can access the log of each service. </figcaption>
+        </figure>
+        
+
     9. Setup: to apply or create the initial configurations
     
         ``` bash title="Terminal"
@@ -334,7 +340,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
            
     11. After the smartbuild task finish, the Tomacat service will  automatically restart,  open your browser in: 
     
-        `https://<Public server IP>/<context.name>` or in case that you run in local environment `http://localhost:8080/etendo`
+        `https://<Public server IP>/<context.name>` or in case that you run in local environment `[http://localhost:8080/etendo](http://localhost:8080/etendo)`
 
 
 

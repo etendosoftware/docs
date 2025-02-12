@@ -7,7 +7,6 @@ tags:
     - Etendo Classic
     - Etendo RX 
     - Environment Synk
-    - Demo
 ---
 
 
@@ -27,7 +26,7 @@ In this guide we will start from two clean environments using test data, which f
 - [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"}
 - [Openbravo 24Q4](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo) or later
-- [Etendo Environment 24.4.0](../../../../whats-new/release-notes/etendo-classic/release-notes.md) or later
+- [Etendo Classic 24.4.0](../../../../whats-new/release-notes/etendo-classic/release-notes.md) or later
 - [Platform Extensions Bundle ](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) latest version installed in Etendo.
 
 ## Openbravo
@@ -313,44 +312,40 @@ UPDATE public.ad_org SET em_obretco_dbp_orgid='D270A5AC50874F8BA67A88EE977F8E3B'
 
 ```
 
-
-
 ### Openbravo Access
 
 You can now access Openbravo with initialized sample data
 
 !!! success
     Openbravo Back Office
-    [http://localhost:8081/openbravo/](http://localhost:8081/openbravo/)
-    User: Openbravo
-    Password: openbravo
+    
+    - [http://localhost:8081/openbravo/](http://localhost:8081/openbravo/)
+    
+    - User: Openbravo
+    - Password: openbravo
 
 !!! success 
     Openbravo POS
-    [http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login](http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login)
-    User: vallblanca
-    Password: openbravo
+    
+    - [http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login](http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login)
+    - User: vallblanca
+    - Password: openbravo
 
 By following these steps the POS should be correctly configured, for more information you can visit [Retail:Configuration Guide](https://wiki.openbravo.com/wiki/Retail:Configuration_Guide){target="_blank"}
-
 
 
 ## Etendo 
 
 ### Configure Etendo Environment
 
-Follow the steps in the [Install Etendo Development Environment Guide](../../../etendo-classic/getting-started/installation/install-etendo-development-environment.md) for development setup in **JAR Format**.
+Follow the steps in the Install Etendo guide, in the tab [Steps to Install Etendo with Postgres Database and Tomcat Dockerized](../../../../getting-started/installation.md#steps-to-install-etendo-with-postgres-database-and-tomcat-dockerized).
 
 !!! info 
-    At this point we assume that you already have a development environment with Etendo Base, installed following the guide on how to install Etendo with dockerized Tomcat and Postgres Database services.
+    At this point we assume that you already have a development environment with Etendo Base, and Tomcat and Postgres SQL dockerized.
 
-###  Openbravo Database Backup
-Now we must create a dump of the Openbravo database to restore in Etendo and keep all the master data.
-In a terminal in the Etendo project we execute: 
+Then, You can open the `EtendoERP` project in IntelliJ, as mentioned in the [Install Etendo - Development Environment](../../../etendo-classic/getting-started/installation/install-etendo-development-environment.md) guide, although it is not necessary to configure Tomcat, since the service is already dockeridez and preconfigured.
 
-```bash title="Terminal"
-pg_dump -U tad -p 5432 -F c -b -v -f ./openbravo.dump  openbravo
-```
+
 
 
 ### Install Modules
@@ -365,12 +360,11 @@ others
 
 Also, in the gradle.properties file the following configuration variables must be added, to execute all the necessary dockerized services:
 
-``` groovy title=gradle.properties
-
+``` groovy title="gradle.properties"
 context.name=etendo
 
 bbdd.sid=etendo
-bbdd.port=5433
+bbdd.port=5434
 bbdd.systemUser=postgres
 bbdd.systemPassword=syspass
 bbdd.user=tad
@@ -379,10 +373,10 @@ bbdd.password=tad
 org.gradle.jvmargs=-Dfile.encoding=UTF-8
 
 docker_com.etendoerp.docker_db=true
+docker_com.etendoerp.tomcat=true
 docker_com.etendoerp.etendorx=true
 docker_com.etendoerp.etendorx_async=true
 docker_com.etendoerp.etendorx_connector=true
-docker_com.etendoerp.tomcat=true
 docker_com.etendoerp.integration.to_openbravo=true
 
 etendorx.dependencies=com.etendorx.integration.to_openbravo:mapping:1.0.0, com.etendorx.integration.to_openbravo:worker:1.0.0
@@ -390,7 +384,7 @@ etendorx.basepackage=com.etendorx.integration.to_openbravo.mapping
 ```
 
 !!! warning
-    Since the database service will run dockerized and Openbravo is assumed to be installed on a local Postgres service on port `5432`, we will change the Etendo database port to `ddbb.port=5433` so that when the dockerized Postgres service is raised it will do so on that port.
+    Since the database service will run dockerized and Openbravo is assumed to be installed on a local Postgres service on port `5432`, we will change the Etendo database port to `ddbb.port=5434` so that when the dockerized Postgres service is raised it will do so on that port.
 
 Now in a terminal in the Etendo project, we execute the commands:
 
@@ -404,31 +398,38 @@ To apply the changes in the `gradle.properties` file settings.
 ```
 To launch all dockerized services
 
-## Database Restore
-
-Ahora restauraremos la base de datos de Openbravo, cambiando el nombre por defecto a etendo, o el nombre que se defina en el ddbb.sid 
-
-PGPASSWORD=syspass psql -U postgres -d postgres -h localhost -p 5434
-CREATE ROLE tad LOGIN PASSWORD 'tad' SUPERUSER CREATEDB CREATEROLE VALID UNTIL 'infinity';
-CREATE DATABASE etendojar WITH ENCODING='UTF8' OWNER=tad;
-pg_restore -v -U tad -d etendojar -h localhost -p 5434 -v -O openbravo.dump
-pasword:tad
-
-Luego debemos borrar el contenido de algunas tablas
-
-PGPASSWORD=tad psql -U tad -d etendojar -h localhost -p 5434
-TRUNCATE TABLE m_offer, obuiapp_gc_tab, obuiapp_gc_field CASCADE;
+<figure markdown="span">
+    ![dockerized-services.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services.png)
+    <figcaption> As you can see all the services required for the Openbravo Etendo integration are running </figcaption>
+</figure>
 
 
-Ahora vamos a compilar el entorno, forzando el update.database ya que los modulos de retail no estan en Etendo pero queremos conservar los datos maestros. 
+### Compile and access to Etendo Classic 
+
+The next step is to install Etendo and apply sampledata
+
 ```bash title="Terminal"
-./gradlew update.database -Dforce=yes compile.complete smartbuild
-````
-Una vez compilado el entorno, se levanta el Tomcat y veremos 
-!!! info 
-    Access Etendo at: [http://localhost:8080/etendo](http://localhost:8080/etendo)
-    User:admin
-    Password: admin
+./gradlew install
+./gradlew import.sample.data -Dmodule=com.etendoerp.integration.to.openbravo.sampledata
+./gradlew smartbuild
+```
+
+Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps, and you can now access 
+
+!!! success 
+    Access Etendo Classic
+        - [http://localhost:8080/etendo](http://localhost:8080/etendo)
+        - User: admin
+        - Password: admin
+
+
+###  Etendo RX Configurations
+
+
+
+
+
+
 
 ### Aplicar Configuraciones
 
@@ -478,3 +479,121 @@ Ensure Etendo RX middleware is configured to handle synchronization between Open
 - Openbravo Documentation
 - Etendo Installation Guide
 - PostgreSQL Official Documentation
+
+
+
+
+
+
+###  Openbravo Database Backup
+Now we must create a dump of the Openbravo database to restore in Etendo and keep all the master data.
+In a terminal in the Etendo project we execute: 
+
+```bash title="Terminal"
+pg_dump -U tad -p 5432 -F c -b -v -f ./openbravo.dump  openbravo
+```
+### Database Restore
+
+Now we will restore the Openbravo database, changing the default name to etendo which is the database name we defined in the `bbdd.sid` variable, or the database name defined in the `bbdd.sid` variable. 
+
+```bash title="Terminal"
+PGPASSWORD=syspass psql -U postgres -d postgres -h localhost -p 5434
+```
+Once connected to the database we will create the tad role and the empty database where we will restore the information.
+
+```sql title="PSQL Terminal"
+CREATE ROLE tad LOGIN PASSWORD 'tad' SUPERUSER CREATEDB CREATEROLE VALID UNTIL 'infinity';
+CREATE DATABASE etendo WITH ENCODING='UTF8' OWNER=tad;
+```
+Finally, we restore the database with the following command: 
+
+```bash title="Terminal"
+PGPASSWORD=tad pg_restore -v -U tad -d etendo -h localhost -p 5434 -v -O openbravo.dump
+```
+The last step is to delete the content of some tables, as these tables are no longer available in Etendo. 
+
+```bash title="Terminal"
+PGPASSWORD=tad psql -U tad -d etendo -h localhost -p 5434
+```
+Execute: 
+```sql title="PSQL Terminal"
+
+DELETE FROM M_OFFER
+WHERE M_OFFER_TYPE_ID = '20E4EC27397344309A2185097392D964';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '1C36D6974F4E4C41AA92E1EEBCD577E1';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '41616748FCCD42D287CFA1C0B5116140';
+
+DELETE FROM M_OFFER
+WHERE M_OFFER_TYPE_ID = '94AEA884F5AD4EABB72322832B9C5172';
+
+DELETE FROM M_OFFER_ORGANIZATION
+WHERE M_OFFER_ID = '0C681EECD8974D56921D47DBFFF5A22C';
+
+DELETE FROM M_OFFER
+WHERE M_OFFER_TYPE_ID = '8338556C0FBF45249512DB343FEFD280';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '1C47E773ACB341C48C8C7B970955C3DE';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '21BF154DAD644B38A667A58E12A45CAB';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '6C41BA4C0AA44BC9B38A64353DEDCB21';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '74F2E10500374BD8B2EED9E7594279EE';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '84408A74ADE548358E6701E0BF85CAC9';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '95AF235142FB4656A4B7D5A08DE24927';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '9B5F1139A656454898AE5D5D8C5A77EE';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = 'A5190E45A59E4E4DBA19E06A8ED543D5';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = 'AEBCDD6E9FD647C38E521E6AEABFEBA9';
+
+DELETE FROM M_OFFER_BPARTNER
+WHERE M_OFFER_ID = 'AEBCDD6E9FD647C38E521E6AEABFEBA9';
+
+DELETE FROM M_OFFER
+WHERE M_OFFER_TYPE_ID = '312D41071ED34BA18B748607CA679F44';
+
+DELETE FROM M_OFFER
+WHERE M_OFFER_TYPE_ID = '7B49D8CC4E084A75B7CB4D85A6A3A578';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '65BD8402B1CD428A952A0AF37B325BC3';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = '86D0C2B35B454D95A0A09E245B430FED';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = 'DB155972EDA6446290DDC3FF0387E832';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = 'DBE6100C27484800A19B6D5044B12715';
+
+DELETE FROM M_OFFER_PRODUCT
+WHERE M_OFFER_ID = 'DBE6100C27484800A19B6D5044B12715';
+
+DELETE FROM M_OFFER
+WHERE M_OFFER_TYPE_ID = 'BE5D42E554644B6AA262CCB097753951';
+
+DELETE FROM OBUIAPP_GC_FIELD
+WHERE OBUIAPP_GC_TAB_ID = '1AD989605ACA4F5FB6C11B2E7AC88867';
+
+DELETE FROM OBUIAPP_GC_TAB
+WHERE AD_TAB_ID = '14BDEAB664C146DCB662B2E3EA7A495E';
+
+``` 
