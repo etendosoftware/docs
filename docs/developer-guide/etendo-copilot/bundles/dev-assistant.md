@@ -315,8 +315,6 @@ The **Jasper Assistant** is designed to facilitate the creation, editing, and re
 
 ### Tools
 
-- [DBQueryGeneratorTool](../available-tools/database-query-tool.md)
-
 - **JasperTool**
 
 - [OCRTool](../available-tools/ocr-tool.md)

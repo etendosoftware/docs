@@ -94,14 +94,6 @@ This module includes an assistant capable of performing operations related to th
 !!! info
     For more information, visit [Copilot Purchase Expert](../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md) user guide.
 
-### Database Query Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
-
-!!! info
-    For more information, visit [Database Query Tool](../../../developer-guide/etendo-copilot/available-tools/database-query-tool.md) developer guide.
 
 ### Dev Assistant
 

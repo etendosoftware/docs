@@ -119,4 +119,4 @@ When exporting assistants that need to be pre-configured in a module installatio
 </figure>
 
 !!!info
-    For more information, visit [How to create a Copilot Tool](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
+    For more information, visit [How to create a Copilot Tool](../how-to-guides/how-to-create-copilot-tools.md).
