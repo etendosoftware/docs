@@ -20298,11 +20298,9 @@ This section describes the windows related to assets, part of the Financial Mana
 
 ##### Overview
 
-The user can define amortization characteristics for assets owned by the company.
+The user can define company-owned assets and configure their amortization characteristics. 
 
-###### Assets
-
-The user can define assets owned by the company and create an amortization for them.
+##### Assets window
 
 ![](https://docs.etendo.software/latest/assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
@@ -20311,36 +20309,41 @@ Fields to note:
 -   **Organization** : Organizational entity within client.
 -   **Search Key** : A fast method for finding a particular record.
 -   **Name** : A non-unique identifier for a record/document often used as a search tool.
--   **Asset Category** : A classification of assets based on similar characteristics.
+-   **Asset Category** : A classification of assets based on similar characteristics defined in the [Asset Group window](#asset-group-window). Configuration fields will be completed automatically according to the characteristics defined in this window. 
 -   **Document No.** : An automatically generated identifier for all documents.
 -   **Description** : A space to write additional related information.
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
 -   **Product** : An item produced by a process.
--   **Summary Level** : A means of grouping fields in order to view or hide additional information.
--   **Static** : Prevents from moving the record into the tree
--   **Depreciate** : The asset is used internally and will be depreciated
--   **Depreciation Type** : Depreciation Type
--   **Calculate Type** : Calculate type
+-   **Summary Level** : When checked, it groups other assets and displays them in tree view. 
+-   **Static** : Prevents from moving the record into the tree view.
+-   **Depreciate** : The asset is used internally and will be depreciated.
+-   **Depreciation Type** : Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** : It indicates how amortization will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation %** : Depreciation annual %
--   **Amortize** : Asset schedule
--   **Usable Life - Years** : Years of the usable life of the asset
--   **Usable Life - Months** : Months of the usable life of the asset
--   **Every Month Is 30 Day** : When calculating the amortization plan every month will be considered as a 30 day month and years of 365 days (no leap-years).
--   **Purchase Date** : Purchase date
--   **Cancellation Date** : Cancellation date
+-   **Amortize** : Asset schedule.
+-   **Usable Life - Years** : Years of the usable life of the asset.
+-   **Usable Life - Months** : Months of the usable life of the asset.
+-   **Every Month Is 30 Day** : If checked, it calculates the amortization plan every month to be considered as a 30 day month and years of 365 days. If it is not checked, it considers real month days and leap-years.
+-   **Purchase Date** : Purchase date.
+-   **Cancellation Date** : life-utility date.
 -   **Depreciation Start Date** : Depreciation Start Date. The amortization plan will be calculated starting from this date.
--   **Depreciation End Date** : Depreciation end date
--   **Asset Value** : Asset value
--   **Residual Asset Value** : Residual asset value amount
--   **Depreciation Amt.** : Depreciation Amount
+-   **Depreciation End Date** : Depreciation end date.
+-   **Asset Value** : Asset value.
+-   **Residual Asset Value** : Residual asset value amount.
+-   **Depreciation Amt.** : Depreciation Amount.
 -   **Previously Depreciated Amt.** : This amount is subtracted to the Depreciation amount when calculating the amortization plan. Total amount to be depreciated = Depreciation Amount - Previously Depreciated Amount
--   **Depreciated Value** : Depreciated value
+-   **Depreciated Value** : Depreciated value.
 -   **Project** : Identifier of a project defined within the Project & Service Management module.
--   **Create Amortization** : it will create (or recalculate) the amortization plan based on the asset definition.
 
-##### **Asset Amortization**
+###### Buttons
 
-The user can add asset amortizations for a selected asset.
+- **Create Amortization**: The Create Amortization button populates the Asset Amortization tab. It creates the amortization plan based on the asset definition.
+
+- **Recalculate Amortization**: The Recalculate Amortization button allows the user to update information when needed. 
+
+##### Asset Amortization tab
+
+Asset amortizations for a selected asset are added to this tab. 
 
 ![](https://docs.etendo.software/latest/assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
@@ -20349,8 +20352,6 @@ The user can add asset amortizations for a selected asset.
 -   **Amortization Percentage** : Amortization Percentage
 -   **Amortization Amount** : Amortization Amount
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
-
-The *Create Amortization* process populates the Asset Amortization tab.
 
 The Asset Amortization tab shows the depreciation plan of the asset based on its usable life-time and its value that is the amount to be depreciated. The asset value is split within its usable life (months or years), therefore each depreciation plan line represents a percentage of the total depreciation amount of the asset.
 
@@ -20367,11 +20368,51 @@ The depreciation line of February cannot be removed until the depreciation line 
 
 The process assumes that if the March depreciation line exists, then the February depreciation line exists.
 
-###### **Accounting**
+##### Accounting tab
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
-![](https://docs.etendo.software/latest/assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
+![assets3](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets3.png)
+
+- **General Ledger**: The book containing all financial transactions recorded for the legal entity.
+- **Accumulated Depreciation**: Accumulated Depreciation Account. 
+- **Depreciation**: Depreciation account.
+
+The shown accounts are configured by default and can be changed. 
+
+##### Accounting Dimensions Assets
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. 
+    To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+    For more information about the available versions, core compatibility and new features, visit
+    [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+In addition to the existing Product dimensions for assets, this module allows users to select **additional accounting dimensions** which 
+will be automatically transferred to the amortization lines, allowing better integration with accounting processes. 
+
+The dimensions the user can apply to the asset creation process are the following: 
+
+- **Business Partner**
+- **Activity**
+- **1st Dimension**
+- **2nd Dimension** 
+- **Sales Region**
+- **Campaign**
+- **Cost Center**
+
+!!! info
+    When creating or recalculating the amortization schedule for an asset, the specified accounting dimensions are transferred to the lines of the amortization schedule.
+
+![assets1](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+
+!!! info
+    For more information about Dimensions configuration visit [Dimensions](https://docs.etendo.software/latest/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension).
+
+###### Buttons 
+
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab related to the selected asset.  In addition, these same lines are added in the Amortization window, grouping them only according to the **depreciation period**, (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage).
+ 
 
 #### Asset Group
 
@@ -20381,27 +20422,27 @@ The user can create and edit G/L accounts to be used in transactions which inclu
 
 Assets can be grouped into different categories with the aim of helping their depreciation management and analysis.
 
-###### Asset Category
+##### Asset Group window 
 
-Asset category window allows the user to create and configure every asset category your organization may need.
+Asset Group window allows the user to create and configure every asset category your organization may need.
 
 ![](https://docs.etendo.software/latest/assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
 
 As shown in the image above, the creation of an asset category requires the user to enter below listed information for each category:
 
--   **Name** or short name which helps to easily find a category
--   **Description**
+-   **Name** or short name which helps to easily find a category.
+-   **Description** a space to write additional related information.
 -   **Depreciate** indicates if the assets of this group will be depreciated.
--   **Depreciation Type** method used to depreciate the asset.
--   **Calculate Type** indicates how the depreciation will be calculated (Time or Percentage)
+-   **Depreciation Type** Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** it indicates how the depreciation will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation** Annual percentage used to depreciate this asset.
 -   **Amortize** it refers to the periods chosen between depreciation entries (monthly, yearly).
--   **Usable Life - Months** Years of the usable life of the asset
--   **Usable Life - Years** Months of the usable life of the asset
+-   **Usable Life - Months** Years of the usable life of the asset.
+-   **Usable Life - Years** Months of the usable life of the asset.
 
-Depreciation configuration will be inherited from the asset category when creating a new asset.
+Depreciation configuration will be inherited from the asset category when creating a new asset from the Asset window.
 
-###### Accounting
+##### Accounting tab
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
@@ -20411,36 +20452,71 @@ Each asset category allows the user to configure a different set of accounts to 
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Amortization`
 
-##### **Overview**
+##### Overview
 
-The user can create and edit amortization for a selected year.
+In the  Amortization window, assets depreciations are recorded, grouped by date. In addition, from this window, these records are processed and posted to the general ledger.
 
-##### **Header**
+##### Amortization window
 
-In the header, the user creates amortizations for particular periods.
+From the header, amortizations are created for particular periods.
 
-![](https://docs.etendo.software/latest/assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
+![assets4](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets4.png)
 
-##### **Lines**
 
-In each line, the user adds amortized assets and details of amortization.
+Fields to note: 
 
-![](https://docs.etendo.software/latest/assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
+- **Organization**: Organizational entity within client.
+- **Name**: A non-unique identifier for a record/document often used as a search tool.
+- **Description**: A space to write additional related information.
+- **Accounting Date**: The date on which the asset is to be booked.
+- **Starting Date**: Date from which amortization begins. 
+- **Total Amortization**: amortization amount. 
+- **Currency**: An accepted medium of monetary exchange that may vary across countries.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
 
-###### **Accounting**
+##### Lines tab
 
-Accounting information related to the amortization
+Each line shows the amortized assets and details of amortization.
 
-![](https://docs.etendo.software/latest/assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
+![assets5](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/Assets5.png)
 
-##### How to Reactivate Amortizations
+
+Fields to note: 
+
+- **Line No.**: Indicates the unique line for a document. 
+- **Asset**: the asset to be amortized.
+- **Amortization Percentage**: Amortization Percentage (either calculated in Time or Percentage).
+- **Amortization Amount**: Amortization Amount.
+- **Currency**: Indicates the currency to be used when processing this document.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
+
+##### Accounting tab
+
+Accounting information related to the amortization once the document is posted.
+
+Fields to note: 
+
+- **Accounting Date**: The date this transaction is recorded on in the general ledger. This date also indicates which accounting period within the fiscal year this transaction will be part of.
+- **Account**: The account used. 
+- **Debit**: The Account Debit Amount indicates the transaction amount converted to this organization's accounting currency.
+- **Credit**: The Account Credit Amount indicates the transaction amount converted to this organization's accounting currency.
+
+![assets6](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets6.png)
+
+!!!info 
+    For more information about Financial Account functionality visit [Financial Account](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account).
+
+##### Accounting Dimensions Assets
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
-Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+This module allows that in the Amortization window, unlike the standard operation in which asset depreciations were grouped according to specific dates, to group the depreciation records **only per periods** (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage). Also in the grouping the dimensions are not considered.
+In addition, the accounting dimensions are maintained in the amortization lines to be used in the generation of accounting entries.
+
+![assets2](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
+
 
 ##### Bulk Posting
 
@@ -20454,6 +20530,15 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
+#### How to Reactivate Amortizations
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
+
+![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+
 
 #### Asset Amortization Report (Excel)
 
@@ -20462,7 +20547,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
+The Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
 ![](https://docs.etendo.software/latest/assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
 
@@ -21108,6 +21193,18 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 #### Modules
 
+##### Accounting Dimensions Assets
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets.template`
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets`
+
+The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
+
+!!! info
+    For more information, visit the [Accounting Dimensions Assets user guide](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
+
+
 ##### Accounting Templates
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
@@ -21219,7 +21316,7 @@ This feature allows entering in the system all the financings the company has. I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This functionality allows the user to post or unpost multiple records at the same time.
+This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the Not Posted Documents window, which allows users to identify and post all pending transactions directly from one window. 
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
@@ -21461,6 +21558,75 @@ As in the case of the Add Payment button, the Add Details button has been enhanc
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba8.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Automated Remittance
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
+## Article Content: 
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+
+#### Overview
+
+This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+
+This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
+
+!!!important
+    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
+
+#### Setup
+
+To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
+
+For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
+
+#### Automated Remittance Process
+
+This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
+
+
+1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
+
+    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
+
+2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
+
+3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
+
+!!!note
+    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
+
+#### Automated Remittance Protest
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
+
+1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
+
+2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
+
+3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Bank Integration PSD2
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Bank Integration PSD2
 ## Article URL: 
@@ -21650,75 +21816,6 @@ The Bulk Posting module includes the Not Posted Documents functionality. This is
 
 !!!info
     For more information, visit [Not Posted Documents](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Automated Remittance
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
-## Article Content: 
-### Automated Remittance
-
-:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
-
-#### Overview
-
-This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
-
-
-This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
-
-!!!important
-    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
-
-#### Setup
-
-To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
-
-For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
-
-#### Automated Remittance Process
-
-This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
-
-
-1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
-
-    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
-
-2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
-
-3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
-
-!!!note
-    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
-
-#### Automated Remittance Protest
-
-The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
-
-1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
-
-2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
-
-3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -53043,6 +53140,38 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
  https://docs.etendo.software/latest/whats-new/etendo-news
 ## Article Content: 
 
+#### February 2025
+
+##### Etendo ISO
+
+<div class="grid cards" markdown>
+
+- :material-trending-up: **Optimizations**
+    
+    ---
+    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+
+</div>
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Enhanced asset management with accounting dimensions**
+
+    ---
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+
+- :octicons-package-16: **Gain better control with the Not Posted Documents window**
+
+    ---
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
+
+    Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
+
+</div>
+
+
 #### January 2025
 
 ##### Copilot Extensions 
@@ -53055,7 +53184,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/attach-multiple-files-copilot.png)
 
-    In version [1.10.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new functionalities have been added:
+    In version [1.10.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new functionalities have been added:
 
 </div>
 
@@ -53096,7 +53225,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 - :octicons-rocket-24: **New Etendo Classic Release Available!**
 
-    Version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+    Version [24.4.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 - **The document completion process allows the use of Credit Payment as a payment method again.** 
 
@@ -53112,7 +53241,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/bulk-completion.png)
     
-    In version [1.7.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+    In version [1.7.0](./release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
 </div>
 
 
@@ -53124,7 +53253,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/automatic-warehouse-reservation.png)
 
-    In version [1.10.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+    In version [1.10.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
 </div>
 
 ##### Financial Extensions
@@ -53137,7 +53266,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/automated-remittances.png)
 
-    In version [1.21.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
 
     The Protest Remittance button has also been added, making it possible to return receipts in collection remittances from a single place.
 
@@ -53147,7 +53276,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/advanced-bank-account.png )
 
-    In version [1.21.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Advanced Bank Account Management](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md) module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Advanced Bank Account Management](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md) module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
     The possibility to select the bank account when adding payments and even edit payment plans with the Modify Payment button has also been added.
 </div>
 
@@ -53159,7 +53288,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
     
     ---
 
-    In version [1.9.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
+    In version [1.9.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
     In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
 </div>
 
@@ -53169,7 +53298,7 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) 
+New Copilot Extensions bundle version [1.8.0](./release-notes/etendo-copilot/bundles/release-notes.md) 
 
 <div class="grid cards" markdown>
 -  **Improve your Python Tools development with the Code Run assistant**
@@ -53186,7 +53315,7 @@ New Copilot Extensions bundle version [1.8.0](https://docs.etendo.software/lates
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.7.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
 
 <div class="grid cards" markdown>
 -  **Boost Your Development Workflow with the New Dev Assistant!**
@@ -53218,14 +53347,14 @@ The [Dependency Manager](https://docs.etendo.software/latest/developer-guide/ete
 
 :octicons-rocket-24: **New Etendo Classic Release Available!**
 
-Version [24.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+Version [24.3.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 
 ##### Copilot Extensions
 
 :material-robot: **New Etendo Copilot Release Available!**
 
-New Copilot Extensions bundle version [1.5.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
+New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
 
 <div class="grid cards" markdown>
 - **New Feature Update: Zip File Support for LangChain Assistants**
@@ -53246,7 +53375,7 @@ New Copilot Extensions bundle version [1.5.0](https://docs.etendo.software/lates
 
 ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot.png)
 
-The newest version [1.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
+The newest version [1.4.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
 
 <div class="grid cards" markdown>
 
@@ -53276,13 +53405,13 @@ These updates make Etendo Copilot more powerful, secure, and user-friendly, driv
 
 ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/docker.gif){align=right width=400}
 
-- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
 - This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
 - PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
 
-[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md)
+[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md)
 
-- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
 - With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
 
 
@@ -53292,7 +53421,7 @@ These updates make Etendo Copilot more powerful, secure, and user-friendly, driv
 
 ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/product-operation.png)
 
-In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
+In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
 
 
 #### July 2024
@@ -53305,37 +53434,37 @@ In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-not
 
     ---
     
-    The Tool Pack module, available from version [1.3.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
+    The Tool Pack module, available from version [1.3.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
 
 -   [:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
     ---
 
-    From version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
+    From version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
 
 -   [:material-robot: **Purchase Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
     
     ---   
 
-    As of version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
+    As of version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
 
 -   [:material-robot: **Dev Assistant**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md)
 
     ---
 
-    From version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
+    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
 
 </div>
 
 :material-bug: **Fixed Issues**
 
-In version [1.2.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
+In version [1.2.1](./release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
 
 ##### Financial Extensions
 
 [:octicons-package-16: **VAT Regularization**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization)
 
-In version [1.16.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
+In version [1.16.1](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
 
 ---
 
@@ -53345,23 +53474,23 @@ In version [1.16.1](https://docs.etendo.software/latest/whats-new/release-notes/
 
 :octicons-rocket-24: **New Release Available!**
 
-Etendo Classic version [24.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
+Etendo Classic version [24.2.0](./release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
 
 :material-bug: **Fixed Issues**
 
-In version [24.1.8](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
+In version [24.1.8](./release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
 
 ##### Copilot Extensions
 
 :material-trending-up: **Optimizations**
 
-Starting with version [1.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
+Starting with version [1.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
 
 ##### Financial Extensions
 
 [:octicons-package-16: **G/L Journal Clone**](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
 
-Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
+Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 
 ---
 
@@ -53371,7 +53500,7 @@ Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/rel
 
 [:material-robot: **SQL Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md)
 
-In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
 With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
 
 ---
@@ -53382,16 +53511,16 @@ With this assistant, you will be allowed to **formulate questions** in natural l
 
 [:material-robot: **Purchase Expert Assistant**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
 
-In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
 Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
 
 ##### Spanish Localization
 
 :material-trending-up: **Optimizations**
 
-As of version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
+As of version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
 
-To take advantage of these enhancements, when upgrading to version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
+To take advantage of these enhancements, when upgrading to version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
 
 ---
 
@@ -53401,26 +53530,26 @@ To take advantage of these enhancements, when upgrading to version [1.9.4](https
 
 :material-trending-up: **Optimizations**
 
-As of version [24.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
+As of version [24.1.0](./release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
 
 ##### Copilot Extensions
 
 [:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
-In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
+In the version [1.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
 With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
 
 ##### Procurement Extensions
 
 [:octicons-package-16: **Purchase Invoice Validation**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
-In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
+In the version [1.0.0](./release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
 
 ##### Platform Extensions
 
 :material-trending-up: **Optimizations**
 
-As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
+As of version [1.13.2](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -53572,7 +53701,7 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.3){target="_blank"} | 30/01/2025 | 24.4.3 | QAA |  | :white_check_mark: |
+| [24Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.3){target="_blank"} | 30/01/2025 | 24.4.3 | QAA | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) | :white_check_mark: |
 | [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | C |  | :white_check_mark: |
 | [24Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.1){target="_blank"} | 17/01/2025 | 24.4.1 | C |  | :white_check_mark: |
 | [24Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.0){target="_blank"} | 19/12/2024 | 24.4.0 | C | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso){target="_blank"} | :white_check_mark: |
@@ -53861,7 +53990,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.21.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.2){target="_blank"} | 24/01/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.22.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.22.0){target="_blank"} | 07/02/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.21.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.2){target="_blank"} | 24/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.1){target="_blank"} | 17/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.0){target="_blank"} | 21/12/2024 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.20.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.20.0){target="_blank"} | 06/12/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
@@ -53922,7 +54052,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.25.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.25.0){target="_blank"} | 30/01/2025 | 22.4.3 | 24.4.x | CS | :white_check_mark: |
+| [1.26.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.26.0){target="_blank"} | 10/02/2025 | 22.4.3 | 24.4.x | CS | :white_check_mark: |
+| [1.25.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.25.0){target="_blank"} | 30/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
 | [1.24.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.24.0){target="_blank"} | 20/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
 | [1.23.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.23.0){target="_blank"} | 07/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
 | [1.22.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.22.0){target="_blank"} | 20/12/2024 | 22.4.3 | 24.4.x | C | :white_check_mark: |
@@ -54132,6 +54263,7 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [24.4.3](#2443) | 10/02/2025 | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) |
 | [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
 | [24.2.0](#2420) | 28/06/2024 | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso) |
@@ -54142,6 +54274,11 @@ Article URL: https://etendo.software
 | [23.2.0](#2320) | 27/06/2023 | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) |
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
+
+#### 24.4.3
+New ISO with Etendo Classsic version 24.4.3
+##### Fixed
+ - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 #### 24.4.0
 New ISO with Etendo Classsic version 24.4.0
@@ -54155,7 +54292,7 @@ New ISO with Etendo Classsic version 24.2.0
 #### 24.1.4
 New ISO with Etendo Classsic version 24.1.4
 ##### Fixed
- - [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
+ - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 #### 24.1.0
 New ISO with Etendo Classsic version 24.1.0
