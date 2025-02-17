@@ -1371,41 +1371,44 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 Create Invoices from Orders allows the user to see the Sales Orders pending to be invoiced and it automatically generates the corresponding Sales Invoices based on them.
 
-A "Sales Invoice" can be generated for one or more "Sales Orders" or for all "Sales Orders" that are pending to be invoiced.
+With this window, Sales Invoices can be generated for one or more Sales Orders or for all Sales Orders that are pending to be invoiced.
 
-![Create invoices from orders](../../../../assets/drive/1J4B0wWAqAz5lHmjwKB13zjCjqd9_LaEp.png)
+!!!info
+    By default, this process filters records in accordance with the defined Organization in the session configuration variables. This means, only these records are shown.
 
-Filters such as the "Business Partner" or the "Organization" are available to narrow down the shown results.
+![](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders.png)
 
-Overall this form shows:
 
-- "Sales Orders" having an "Immediate" Invoice Term, without the need of having a Goods Shipment related.
-- "Sales Orders" having an "After Delivery" Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
-- "Sales Orders" having an "After Order Delivery" Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
-- "Sales Orders" having a "Customer Schedule After Delivery" Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
+As seen above, it is possible to navigate directly to the corresponding order from the document number under the Document number column.
 
-Same way this form does not show for invoice "Sales Orders" having a "Do not invoice" Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
+Filters such as Business Partner, Document Type and Organization, among others, are available to narrow down the shown results.
 
-For all Invoice Term but _Customer Schedule After Delivery_ one Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
+Overall, this form shows:
 
-If there are several Goods Shipment that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
+- Sales Orders having an **Immediate** Invoice Term, without the need of having a Goods Shipment related.
+- Sales Orders having an **After Delivery** Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
+- Sales Orders having an **After Order Delivery** Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
+- Sales Orders having a **Customer Schedule After Delivery** Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
 
-If the Invoice Term is _Customer Schedule After Delivery_ then a sales invoice is created grouping deliveries from different orders for the same customer.
+Same way, this form does not show Sales Orders having a **Do not invoice** Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
+
+For all Invoice Terms but **Customer Schedule After Delivery**, Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
+
+If there are several Goods Shipments that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
+
+If the Invoice Term is **Customer Schedule After Delivery**, then a sales invoice is created grouping deliveries from different orders for the same customer.
 
 Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
 
 Finally, it is important to notice that this process also uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
 
-### **Form**
+### Buttons
 
-Fields to note:
+- **Refresh**: To refresh the orders shown in this window, use the **Refresh** process button.
 
-- **From Date** and **To Date:** specify **Order Date** field ranges for filtering.
-- **Total Lines:** total net amount of the sales order (of all its lines).
-- **Invoiced:** already invoiced net amount for the sales order.
-- **Ready to Invoice:** the net amount pending (according to Invoice Term criteria) to be invoiced for the specific order.
+- **Done**: Then, select the order(s) you want to invoice and click the **Done** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
 
-Select the order(s) you want to invoice and click the **Process** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
+![](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders3.png)
 
 ## Generate Invoices
 
