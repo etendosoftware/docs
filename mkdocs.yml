@@ -523,9 +523,6 @@ nav:
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
         - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
-        - Create Reference Tool: developer-guide/etendo-copilot/available-tools/create-reference-tool.md
-        - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
-        - DDL Tool: developer-guide/etendo-copilot/available-tools/ddl-tool.md
         - Docker Tool: developer-guide/etendo-copilot/available-tools/docker-tool.md
         - File Copy Tool: developer-guide/etendo-copilot/available-tools/file-copy-tool.md
         - File Downloader Tool: developer-guide/etendo-copilot/available-tools/file-downloader-tool.md
