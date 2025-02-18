@@ -396,14 +396,14 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 ![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
 
-## Java Test Supervisor
+## Test Supervisor
 A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
 
 ### Functionality 
-This assistant receives an Etendo Module and will check for Java files, determining which ones have tests and which ones do not. 
+This assistant receives an Etendo Module and will check for Java and Javascript files, determining which ones have tests and which ones do not. 
 
 - The assistant will generate a report with the results and will suggest the user to generate tests for the files without them. 
-- The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+- The assistant will generate the Java and React tests. 
 
 ### Team Members
 
@@ -449,10 +449,29 @@ This assistant will generate the tests and execute them, checking for errors and
 - [Write File Tool](../available-tools/write-file-tool.md)
 - [Test Run Tool](../available-tools/test-run-tool.md)
 
+
+#### React Test Assistant
+
+The **React Test Assistant** is a specialized agent for creating and managing React component tests using **TypeScript** and **@testing-library/react-native**. Its primary focus is generating high-quality test files for React and React Native components within **Etendo sub-application** modules.
+
+Detects React components (`.tsx` or `.jsx` files) that lack corresponding test files in the `__tests__` directory. Analyzes component structure, props, and dependencies, generates Jest and React Testing Library test files and covers key scenarios such as rendering, user interactions, state changes, and edge cases.
+
+!!!info
+    This assistant is designed to be used within the Etendo ecosystem as part of a **Test Supervisor** LangGraph agent. However, it can be used independently with limited functionality.
+
+### Tools
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+
+
+
 ### Usage Example
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Java Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
+
 2. Open Copilot and select `Java Test Supervisor`, then ask to the assistant what you need to create. A suggested input could be `Generate tests for the module com.etendoerp.examplemodule`.
+
 3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
 
 
 ## Message Creator
@@ -666,6 +685,7 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ./gradlew smartbuild -Dlocal=no
 ```
 
+
 ## Refactor Assistant
 
 An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
@@ -683,6 +703,8 @@ An expert code refactoring assistant focused on improving clarity, maintainabili
 2. Open Copilot and select Refactor Assistant, then ask to the assistant what you need to refactor. For example, a suggested input could be `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
 3. The assistant will read the file, analyze it, and suggest changes.
 4. The assistant will write the file with the changes, overwriting the original file.
+
+
 
 ## Reference Creator
 
