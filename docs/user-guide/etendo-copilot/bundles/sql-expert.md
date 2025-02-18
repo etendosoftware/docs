@@ -19,40 +19,49 @@ This Assistant is designed to help users read information from the database. It 
 
 The SQL Expert Assistant is composed of the following components:
 
-- **DBQueryExec Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The assistant call the Webhook to execute the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
+- [API Call Tool](../available-tools/openapi-tool.md)
+
+- **DBQueryExec - Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The assistant call the Webhook to execute the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
 
 
 ## Assistant Setup 
 
 1. This module is included in the Copilot Extensions Bundle
 
-!!! info
-    To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+    !!! info
+        To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 
-2. It is necessary to add the ```gradle.properties``` file with the following configuration:
-    ``` properties
+2. Check the necessary ETENDO_HOST variable in the `gradle.properties` file.
+    
+    ```groovy title="gradle.properties"
     ETENDO_HOST=http://localhost:8080/etendo
     ```
 
     !!! warning
         Replace http://localhost:8080/etendo with the real url of the Etendo system.
 
-3. Do a compilation with a database update, to register the tool and the assistant in the database.
-    ``` bash title="Terminal"   
-    ./gradlew update.database smartbuild --info
-    ```
 
-4. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
+3.  A new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
 
-5. Run **Sync Assistant** process.
+4. Run **Sync Assistant** process, loged as System Administrator role.
 
-6. Restart Docker image using `./gradlew resources.down` and `./gradlew resources.up` tasks.
+5. Restart Docker image using `./gradlew resources.up` tasks.
 
-    !!! note 
-        If you have problems with shutting down the container, you can use the `docker ps` command to see the container id and then use `docker stop <container_id>` to stop it manually.
+6. Configure access to the agent from the [Assistant Access](../../etendo-copilot/setup-and-usage.md#assistant-access-window) window.
 
-7. You can use the **SQL Expert** assistant as a **System Administrator**. In case of using this assistant with other roles, first, you need to configure the coplilot app access in the **Role** window as described in the [initial assistant configuration](../../etendo-copilot/setup.md#role-window) and also configure access to the role in the [WebHooks](../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window for the WebHook **DBQueryExec**, this webhook is automatically added when the module is installed.
+7. You can use the **SQL Expert** assistant as a **System Administrator**
+
+    !!!warning 
+        In case of using this assistant with other roles: 
+        
+        1. It must be verified that the role has webhooks execution enabled: 
+            ![](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-service-enabled.png)
+        
+        2. Access must be given to the corresponding role in the  [WebHooks](../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window, in the **Role** tab, for the WebHook **DBQueryExec**.  This webhook is automatically added when the module is installed.
+            ![](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-setup.png)
+
+
 
 ## Examples
 

@@ -692,7 +692,7 @@ It is particularly useful in the development process, enabling system administra
 
 ### Tools
 
-- [Create Reference Tool](../available-tools/create-reference-tool.md)
+- [API Call Tool](../available-tools/openapi-tool.md)
 
 ### Functionality
 
@@ -736,7 +736,7 @@ It is possible to give an input with all the necessary information, or the assis
 
 ### Tools
 
-- [**DDL Tool**](../../etendo-copilot/available-tools/ddl-tool.md): This tool allows to registering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+- [API Call Tool](../available-tools/openapi-tool.md)
 
 - **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 

@@ -5,8 +5,6 @@ Here you can find a list of the all the available tools in the Copilot bundle.
 - [Attach File Tool](../available-tools/attach-file-tool.md)
 - [Audio Tool](../available-tools/audio-tool.md)
 - [Codbar Tool](../available-tools/codbar-tool.md)
-- [Create Reference Tool](../available-tools/create-reference-tool.md)
-- [DDL Tool](../available-tools/ddl-tool.md)
 - [Docker Tool](../available-tools/docker-tool.md)
 - [File Copy Tool](../available-tools/file-copy-tool.md)
 - [File Downloader Tool](../available-tools/file-downloader-tool.md)
