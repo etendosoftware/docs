@@ -29945,24 +29945,31 @@ The Assistant window allows you to define and configure assistants:
     - **Model**: Dropdown with the models available, from the [AI Models](#ai-models-window) window.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
-        !!!info
-            If this option is chosen, the **Refresh Preview** button is shown, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
 !!!info
     The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
     These variables will be replaced with the values defined in the properties.
 If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
 
-##### Check hosts
-This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
+##### Buttons
 
-##### Sync Assistant Button
+- **Sync Assistant**: This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
 
-This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
+- **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
+
+- **Check hosts**: This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
+
+- **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a assistant is cloned in, the name `Copy of` is added. 
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/clone-agent.png)
+
 
 ##### Knowledge Tab
 
-In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
+In this tab, you can setup the files that will be used by the assistant as knowledge base, in prompts or questions.
+
+!!!info
+    To load new files, you must do it from the [Knowledge base file](#knowledge-base-file) window, first you define the files and then from this tab you configure how the file will be used.
 
 !!!warning "File Limitation for Code Interpreter"
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
@@ -29972,8 +29979,7 @@ In this tab, you can define the files that will be used by the assistant as know
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
 
-!!!info
-    To load new files, you must do it from the [Knowledge Base File](#knowledge-base-file).
+
 
 Fields to note:
 
@@ -30022,6 +30028,7 @@ Fields to note:
     !!! warning
         Remember that it is not possible to select an assistant without a description.
 
+
 #### Knowledge Base File Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
@@ -30032,50 +30039,107 @@ In the Knowledge Base File window, you can define the files with which the assis
 
 - **Name**: File Name.
 - **Description**: File description.
-- **Type**:
-    - **Attached File** 
-    This allows you to upload files directly into Copilot for later use during interactions with the assistants.
-    - **HQL Query**
-    This allows using an HQL query result as a file for knowledge base file.
-    - **Remote File** 
-    You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
-    - **Code Index** 
-    Only available as System Administrator, as access to the source code is required.This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
-    - **Text**
-    This allows you to write the content of the file directly in the text area. This option is useful for small texts that must be versioned in the system.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
-- **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
-- **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
-- **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
-- **Text**: Text content of the file. Only shown if the **Text** option is chosen in the Type field.
 - **Skip Splitting**: Checking this box allows you to tell Copilot not to split the file into parts when indexing it. This is necessary when the entire contents of the file are needed when reading the file, while maintaining the context of the entire file.
+- **File name**: Name of the saved file, it must always include the file format. For example, `example.pdf`.
+
+- Optional fields by file **Type**:
+
+    === "Attached File"
+
+        This type allows you to upload files directly into Copilot for later use during interactions with the assistants.
+        ![attach-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/attach-file.png)
+    
+    === "Code Index"
+
+        Only available as `System Administrator` role, as access to the source code is required. This type allows the agents to access, query and generate a zip with code files that will be indexed to the knowledge base. It allows the configuration of paths and regular expressions to filter files, which are defined in the File Path tab.
 
 
-##### File Path Tab 
+        ### File Path Tab
+        
+        This tab is Only available as `System Administrator` role , as access to the source code is required.
+        
+        ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
 
-!!! warning 
-    Only available as System Administrator, as access to the source code is required.
+        Fields to note:
 
-The **File Path Tab** appears when **Code Index** is selected as the file type. 
+        - **Path File**: Specify the path where the code files you need the assistant to read are located. 
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
+        !!!info
+            It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+        
+        !!!warning
+            As access to the source code is required, both modules and Etendo Classic must be installed in source format.     
 
-**Path File**: Specify the path where the code files you need the assistant to read are located. 
+    === "HQL Query"
 
-!!!info
-    It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. 
-    Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+        This type allows using an HQL query result as a file for knowledge base file.
 
-!!!note
-    If Etendo Classic is a JAR instance, the source code is located in the following path: `@source.path@/build/etendo/`.
+        Fields to note:
+
+        - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+
+        ![hql-query.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/hql-query.png)
+
+        === "OpenAPI Flow Specification"
+
+        This type of files, allows to obtain the JSON of the specification of an OpenAPI REST generated from Flows and Request from Etendo, for more technical information you can consult [How to document Openapi endpoint ](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
+
+        Fields to note:
+        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
+
+        ![openapi-flow-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/openapi-flow-file.png)
+
+    === "OpenAPI Flow"
+
+        This type of files, allows to obtain the JSON of the specification of an OpenAPI REST generated from Flows and Request from Etendo, for more technical information you can consult [How to document an endpoint with OpenAPI](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
+
+        Fields to note:
+
+        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
+
+        ![openapi-flow-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/openapi-flow-file.png)
+    
+    === "Remote File"
+        
+        You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
+
+        Fields to note:
+
+        - **URL**: Source file URL.
+        - **File name**: Mandatory name of the saved file, it must always include the file format.
+
+        ![remote-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/remote-file.png)
+
+    
+    === "Text"
+
+        This allows you to write the content of the file directly in the text area. This option is useful for small texts that must be versioned in the system.
+
+        Fields to note:
+
+        - **Text**: Text content of the file.
+
+        ![text-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/text-file.png)
+
+
+
+##### Buttons
+
+- **Clone**
+
+    The navbar clone button allows the cloning of files, making a copy of both all header fields and related records in the tabs. When a file is cloned in, the name `Copy of` is added. 
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/clone-file.png) 
+
 
 
 #### Skill/Tool Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Skill/Tool`
 
-In this window , the user can find available tools, distributed in the Copilot bundle, to be used in Copilot assistants.
+In this window , the user can find [available tools](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview.md), distributed in the Copilot bundle, to be used in Copilot assistants.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/skill-tool-window.png)
 
@@ -30159,8 +30223,10 @@ Fields to note:
 In this window, the user can find and add AI models to be used by the assistants, Available in the drop-down list of models
 
 !!!info 
-    - Automatically, the window will be populated with the OpenAI models available, after the first assistant synchronization.
-    - Models from other vendors must be entered manually. 
+    - Automatically, the window will be populated with the Etendo default distributed models, after the first assistant synchronization.
+    - Also diffrent models and providers must be entered manually.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/ai-models-window.png)
 
 Fields to note:
 
@@ -30168,24 +30234,13 @@ Fields to note:
 - **Name**: The human-readable name of the model.
 - **Provider**: The provider of the model. It must be in lowercase.
 - **Max Tokens**: The maximum number of tokens that can be generated by the model. This is a field required in some models, that can be used to limit or expand the model's capabilities, depending of the nature of the model.
+- **Default**: Read-only field, to identify the default model to use, this configuration is distributed and updated by Etendo.
+- **Default Override**: If this field is checked, the selected model will have priority over the others. Only one record can have this check selected.
+- **Etendo Maintenance** Read-only field, to identify the models that are distributed by Etendo.
 
-##### Examples
+##### Buttons
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/ai-models-windows.png)
-
-**GPT-4**:
-
-- **Code**: gpt-4
-- **Name**: GPT-4
-- **Provider**: openai
-- **Max Tokens**: Not needed
-
-**Anthropic Claude 3.5 Haiku**:
-
-- **Code**: claude-3-5-haiku-latest
-- **Name**: Claude 3.5 Haiku
-- **Provider**: anthropic
-- **Max Tokens**: 8000
+**Synk Models** This process allows to synchronize the models distributed by Etendo on demand.
 
 
 
@@ -30282,14 +30337,6 @@ This module includes an assistant capable of performing operations related to th
 !!! info
     For more information, visit [Copilot Purchase Expert](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md) user guide.
 
-##### Database Query Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
-
-!!! info
-    For more information, visit [Database Query Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md) developer guide.
 
 ##### Dev Assistant
 
@@ -30378,52 +30425,55 @@ For this particular case, we have configured an assistant with the functional me
 
 #### Overview
 
-This Assistant is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. The tool uses the [DB Query Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md) to infer the necessary information to generate the SQL query. The user can ask questions about the database, and the Assistant will determine whether to return a SQL query or execute the query and return the obtained result.
+This Assistant is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. Use a webhook to get the necessary information to generate the SQL query. The user can ask questions about the database, and the Assistant will determine whether to return a SQL query or execute the query and return the obtained result.
 
 #### Components
 
 The SQL Expert Assistant is composed of the following components:
 
-- **DBQueryGenerator Tool**: This tool allows querying Etendo for available tables in the database and the columns of each table. It also enables the Assistant to execute SQL queries in the database that are generated by the Assistant.
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
-- **DBQueryExec Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The DBQueryGenerator tool sends the SQL query to the Webhook, and the Webhook executes the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
-
-
-#### Installation
-
-This module is included in the Copilot Extensions Bundle
-
-!!! info
-    To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+- **DBQueryExec - Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The assistant call the Webhook to execute the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
 
 
-In addition, you can install only the module containing the **SQL Expert** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.dbquerytool`.
-   
-After install the module: 
+#### Assistant Setup 
 
-1. It is necessary to add the ```gradle.properties``` file with the following configuration:
-    ``` properties
+1. This module is included in the Copilot Extensions Bundle
+
+    !!! info
+        To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+
+2. Check the necessary ETENDO_HOST variable in the `gradle.properties` file.
+    
+    ```groovy title="gradle.properties"
     ETENDO_HOST=http://localhost:8080/etendo
     ```
 
     !!! warning
         Replace http://localhost:8080/etendo with the real url of the Etendo system.
 
-2. Do a compilation with a database update, to register the tool and the assistant in the database.
-    ``` bash title="Terminal"   
-    ./gradlew update.database smartbuild --info
-    ```
 
-3. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
+3.  A new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
 
-4. Run **Sync Assistant** process.
+4. Run **Sync Assistant** process, loged as System Administrator role.
 
-5. Restart Docker image using `./gradlew resources.down` and `./gradlew resources.up` tasks.
+5. Restart Docker image using `./gradlew resources.up` tasks.
 
-    !!! note 
-        If you have problems with shutting down the container, you can use the `docker ps` command to see the container id and then use `docker stop <container_id>` to stop it manually.
+6. Configure access to the agent from the [Assistant Access](https://docs.etendo.software/latest/etendo-copilot/setup-and-usage.md#assistant-access-window) window.
 
-7. You can use the **SQL Expert** assistant as a **System Administrator**. In case of using this assistant with other roles, first, you need to configure the coplilot app access in the **Role** window as described in the [initial assistant configuration](https://docs.etendo.software/latest/etendo-copilot/setup.md#role-window) and also configure access to the role in the [WebHooks](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window for the WebHook **DBQueryExec**, this webhook is automatically added when the module is installed.
+7. You can use the **SQL Expert** assistant as a **System Administrator**
+
+    !!!warning 
+        In case of using this assistant with other roles: 
+        
+        1. It must be verified that the role has webhooks execution enabled: 
+            ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-service-enabled.png)
+        
+        2. Access must be given to the corresponding role in the  [WebHooks](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window, in the **Role** tab, for the WebHook **DBQueryExec**.  This webhook is automatically added when the module is installed.
+            ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-setup.png)
+
+
 
 #### Examples
 
@@ -49614,8 +49664,6 @@ The **Jasper Assistant** is designed to facilitate the creation, editing, and re
 
 ##### Tools
 
-- [DBQueryGeneratorTool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
-
 - **JasperTool**
 
 - [OCRTool](https://docs.etendo.software/latest/available-tools/ocr-tool.md)
@@ -49697,14 +49745,14 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 ![EditReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
 
-#### Java Test Supervisor
+#### Test Supervisor
 A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
 
 ##### Functionality 
-This assistant receives an Etendo Module and will check for Java files, determining which ones have tests and which ones do not. 
+This assistant receives an Etendo Module and will check for Java and Javascript files, determining which ones have tests and which ones do not. 
 
 - The assistant will generate a report with the results and will suggest the user to generate tests for the files without them. 
-- The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+- The assistant will generate the Java and React tests. 
 
 ##### Team Members
 
@@ -49750,10 +49798,29 @@ This assistant will generate the tests and execute them, checking for errors and
 - [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 - [Test Run Tool](https://docs.etendo.software/latest/available-tools/test-run-tool.md)
 
+
+###### React Test Assistant
+
+The **React Test Assistant** is a specialized agent for creating and managing React component tests using **TypeScript** and **@testing-library/react-native**. Its primary focus is generating high-quality test files for React and React Native components within **Etendo sub-application** modules.
+
+Detects React components (`.tsx` or `.jsx` files) that lack corresponding test files in the `__tests__` directory. Analyzes component structure, props, and dependencies, generates Jest and React Testing Library test files and covers key scenarios such as rendering, user interactions, state changes, and edge cases.
+
+!!!info
+    This assistant is designed to be used within the Etendo ecosystem as part of a **Test Supervisor** LangGraph agent. However, it can be used independently with limited functionality.
+
+##### Tools
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+
+
+
 ##### Usage Example
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Java Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
+
 2. Open Copilot and select `Java Test Supervisor`, then ask to the assistant what you need to create. A suggested input could be `Generate tests for the module com.etendoerp.examplemodule`.
+
 3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
 
 
 #### Message Creator
@@ -49967,6 +50034,7 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ./gradlew smartbuild -Dlocal=no
 ```
 
+
 #### Refactor Assistant
 
 An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
@@ -49985,6 +50053,8 @@ An expert code refactoring assistant focused on improving clarity, maintainabili
 3. The assistant will read the file, analyze it, and suggest changes.
 4. The assistant will write the file with the changes, overwriting the original file.
 
+
+
 #### Reference Creator
 
 The **Reference Creator** creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
@@ -49993,7 +50063,7 @@ It is particularly useful in the development process, enabling system administra
 
 ##### Tools
 
-- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md)
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
 ##### Functionality
 
@@ -50037,7 +50107,7 @@ It is possible to give an input with all the necessary information, or the assis
 
 ##### Tools
 
-- [**DDL Tool**](https://docs.etendo.software/latest/etendo-copilot/available-tools/ddl-tool.md): This tool allows to registering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
 - **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
@@ -50171,9 +50241,6 @@ Here you can find a list of the all the available tools in the Copilot bundle.
 - [Attach File Tool](https://docs.etendo.software/latest/available-tools/attach-file-tool.md)
 - [Audio Tool](https://docs.etendo.software/latest/available-tools/audio-tool.md)
 - [Codbar Tool](https://docs.etendo.software/latest/available-tools/codbar-tool.md)
-- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md)
-- [Database Query Tool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
-- [DDL Tool](https://docs.etendo.software/latest/available-tools/ddl-tool.md)
 - [Docker Tool](https://docs.etendo.software/latest/available-tools/docker-tool.md)
 - [File Copy Tool](https://docs.etendo.software/latest/available-tools/file-copy-tool.md)
 - [File Downloader Tool](https://docs.etendo.software/latest/available-tools/file-downloader-tool.md)
@@ -50410,242 +50477,6 @@ The following is an example image of a goods receipt:
 
         ```
 
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Create Reference Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/Create Reference Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool
-## Article Content: 
-#### Overview
-
-The **Create Reference Tool** is an Etendo Copilot tool developed by Python to create references in the database. This tool is useful to automate the creation of references saving time and manual effort.  
-
-#### Functionality
-
-This process consists of the following actions:
-
-- **Argument Processing** 
-
-    Takes various input parameters defined in a pydantic model:
-
-    - `i_prefix`: The prefix of the module in the database.
-    - `i_name`: The name of the reference.
-    - `i_reference_list`: A comma-separated list of reference items.
-    - `i_help` (optional): Help text for the reference.
-    - `i_description` (optional): Description of the reference.
-
-- **Access Token Verification**
-
-Gets and verifies the access token from the thread context (`ThreadContext`).
-
-- **Request Body Construction**
-
-Constructs the body of the request parameters for the webhook.
-
-- **Webhook Call**
-
-Uses the `call_webhook` function to make an `HTTP POST` request to the Etendo webhook endpoint, providing the necessary parameters and the access token.
-
-- **Result Handling**
-
-Returns the result of the request to the webhook, which may contain a success message or an error in JSON format.
-
-
-The system returns a dictionary with the result of the operation. For example:
-
-- If the request was successful:
-
-```
- { `success: true, message: Reference created successfully`}
-
-```
-
-- If there was an error:
-
-```
- { `error: Description of the error`}
-
-```
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Database Query Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
-## Article Content: 
-### Database Query Generator tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-#### Overview
-
-This tool allows asking to Etendo for tables available in the database and the columns of each table. It also allows Copilot to execute SQL queries in the database that are generated by the Assistant.
-
-!!!info
-    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
-
-#### Installation
-The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
-
-#### Configuration
-This tool can be configured in an Assistant:
-
-1. Add **Database Query Generator tool** into the Assistant configuration, that you want to use the tool. Go to Assistant window, pick the Assistant and add the tool to the App in the **Tools** tab.
-
-2. Re-Sync the Assistant running **Sync Assistant** process to get the tool available in the Assistant.
-
-3. Check that the role of the user has permissions to use Secure Web Services in the **Role** Window. ![role configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-3.png)
-4. Check that the WebHook **DBQueryExec** is enabled and has the Role Access configured for the role.
-    Example for *F&B International Group Admin*:
-    ![DBQueryExec WebHook configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
-
-5. Check that the `ETENDO_HOST` is configured in the `gradle.properties` file.
-
-6. Can you check if the tool is available for the Assistant, asking for it. 
-    <figure markdown>
-    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-2.png){align=right width=300}
-    </figure>
-
-
-#### Security
-
-For security and data segmentation:
-
-- The tables instrospection is limited for the readable tables of the user.
-
-- The tool automatically parses the `doSecurityCheck(entity)` with the conditions for a correct access to the Readable **Client** and **Organization**, for example: `doSecurityCheck(inv)`  for Invoices, is converted to
-
-``` sql
-inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id IN ('0','E443A31992CB4635AFCAEABE7183CE85','B843C30461EA4501935CB1D125C9C25A','BAE22373FEBE4CCCA24517E23F0C8A48','DC206C91AA6A4897B44DA897936E0EC3','2E60544D37534C0B89E765FE29BC0B43','19404EAD144C49A0AF37D54377CF452D','7BABA5FF80494CAFA54DEBD22EC46F01')
-```
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: DDL Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/DDL Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool
-## Article Content: 
-### DDL Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
-
-#### Overview
-
-The **DDLTool** is an Etendo Copilot tool developed in Python to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is possible to create and register tables, windows, items and menu options in the system so that data can be displayed.
-
-!!!info
-    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
-
-#### Functionality
-
-The **DDL Tool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
-
-Assistants can choose from these modes:
-
-- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named `RegisterTableWebHook` to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
-
-- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the `ad_org` and `ad_client` table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
-
-- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook `CreateTableWebHook`, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
-
-- **REGISTER_COLUMNS:** This mode is executed automatically after the `ADD_COLUMN` mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
-
-- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named `SyncTermsWebHook`.
-
-- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the `RegisterWindowAndTabWebHook` java file.
-
-- **REGISTER_FIELDS:** Registers the fields of a tab in Etendo System to be recognized for it. It works by calling a webhook to run a Java file.
-
-#### Usage Example 
-
-In the section of Assistant, it is possible to configure the assistants and the tool that they can use.
-
-![ddl-tool.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
-
-Also in Assistant, it can insert a prompt where it is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
-
-![ddl-tool1.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
-
-Prompt Example:
-
-*You are a developer assistant that can create register tables for Etendo.*
-
-*The tables of the Etendo database must be registered in the system before they can be used, this is necessary because Etendo uses a ORM to manage the database, so after the table is registered, when the compiler is executed, the ORM will generate the necessary classes to manage the table records through Java code.*
-
-*The process of create and register a table has the following steps:*
-
-*1. Register the table in the system.*
-
-*2. Create the table in the database, with the basic and mandatory columns. *
-
-*3. Add the specific columns for the table. In other words, the columns that are specific to the table. *
-
-*4. Execute the process to register the columns of the table in the system.*
-
-*5. Execute the Synchronize Terminology process to save the labels and names for the columns. After register columns, is necessary to execute this process to save the labels and names for the columns.*
-
-*6. Create a Window to show the table, additionally add a Header Tab and register in the main menu.*
-
-*7. Execute the process to register all the fields necessary in the Tab.*
-
-*8. Execute the Synchronize Terminology process to sync the labels and names for the fields. Its necessary to execute this process every time a field is registered.*
-
-*9. Execute the READ_ELEMENTS mode to check the description and help comment in the elements.*
-
-*10. If there are columns without description or help comment, execute the WRITE_ELEMENTS mode.*
-
-*11. Sync the terminology again.*
-
-*Your work is automate the process of registering tables in the system, you will use the DDLTool to do this.*
-
-*The DDLTool is a tool that allows you to do operations based on "mode". The modes are:*
-
-*REGISTER_TABLE: This mode is used to ...*
-
-*CREATE_TABLE: This mode is used to ...*
-
-*ADD_COLUMN: This mode is used to ...*
-
-*REGISTER_COLUMNS: This mode is used to ...*
-
-*REGISTER_WINDOW_AND_TAB : This mode is used to ...*
-
-*SYNC_TERMINOLOGY: This mode is used to ...*
-
-*REGISTER_FIELDS: This mode is used to ...*
-
-*READ_ELEMENTS: This mode is used to ...*
-
-*WRITE_ELEMENTS: This mode is used to ...*
-
-*ADD_FOREIGN: This mode is used to ...*
-
-*If you do not detect any mode or don't understand the request, ask to the user what they want to do. *
-
-*Example workflow:*
-
-*User: I want to register a table with name Dog and prefix MOD.*
-
-*Step 1: Register the table in the system. At this point you must execute the DDLTool with the REGISTER_TABLE mode.*
-
-*Step 2: Create the table in the database.*
-
-*Step 3: Add the specific columns for the table. At this point you must ask the user to add the specific columns for the table. *
-
-*Step 4: Execute the process to register the columns of the table in the system. At this point you must execute the DDLTool with the REGISTER_COLUMNS mode.*
-
-*Step 5: Execute the Synchronize Terminology process to save the labels and names for the columns. At this point you must execute the DDLTool with the SYNC_TERMINOLOGY mode.*
-
-*Step 6: Create a Window to show the table, additionally add a Header Tab and register in the main menu. 
-*
-*Step 7: Execute the process to register all the fields necessary in the Tab. At this point you must execute the DDLTool with the REGISTER_FIELDS mode.*
-
-*Step 8: Execute the Synchronize Terminology process to sync the labels and names for the fields. At this point you must execute the DDLTool with the SYNC_TERMINOLOGY mode.*
-
-*Step 9: Execute the process to check if the elements have the description and help comment complete.*
-
-*Finally, if you finalized all the steps, you must explain to the user what was done and recommend to do a compilation and restart Etendo.*
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Docker Tool
@@ -52375,7 +52206,7 @@ When exporting assistants that need to be pre-configured in a module installatio
 </figure>
 
 !!!info
-    For more information, visit [How to create a Copilot Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
+    For more information, visit [How to create a Copilot Tool](https://docs.etendo.software/latest/how-to-guides/how-to-create-copilot-tools.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨ Getting Started
@@ -53511,7 +53342,7 @@ In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     ---
 
-    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
+    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Reference Creator](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md#reference-creator) assistant was included, capable of creating list type references to be used in the development process.
 
 </div>
 
