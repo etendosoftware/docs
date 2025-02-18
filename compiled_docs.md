@@ -30082,16 +30082,8 @@ In the Knowledge Base File window, you can define the files with which the assis
 
         ![hql-query.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/hql-query.png)
 
-        === "OpenAPI Flow Specification"
 
-        This type of files, allows to obtain the JSON of the specification of an OpenAPI REST generated from Flows and Request from Etendo, for more technical information you can consult [How to document Openapi endpoint ](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
-
-        Fields to note:
-        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
-
-        ![openapi-flow-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/openapi-flow-file.png)
-
-    === "OpenAPI Flow"
+    === "OpenAPI Flow Specification"
 
         This type of files, allows to obtain the JSON of the specification of an OpenAPI REST generated from Flows and Request from Etendo, for more technical information you can consult [How to document an endpoint with OpenAPI](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
 
