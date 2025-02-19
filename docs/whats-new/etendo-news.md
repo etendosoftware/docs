@@ -323,7 +323,7 @@ In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     ---
 
-    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](../developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
+    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Reference Creator](../developer-guide/etendo-copilot/bundles/dev-assistant.md#reference-creator) assistant was included, capable of creating list type references to be used in the development process.
 
 </div>
 
