@@ -1,21 +1,21 @@
 ---
-title: How to Create a Navigable ClientClass
+title: How to Create a Navigable Link
 tags: 
   - How to
   - Create
   - Navigable
-  - ClientClass
+  - Link
 ---
 
-#  How to Create a Navigable ClientClass
+#  How to Create a Navigable Link
 
 ## Overview
 
-This article explains how to create a navigable ClientClass, i.e. clickable. A ClientClass allows you to add visual components to a form or a row of a grid. This is useful for adding calculated fields to forms and grids, integrating elements such as buttons, links or dynamic labels.
+This section explains how to create a navigable link in Etendo Classic, implementing a ClientClass. A ClientClass allows you to add visual components to a form or a row of a grid. This is useful for adding calculated fields to forms and grids, integrating elements such as buttons, links or dynamic labels.
 
 In this case, we will implement a navigable ClientClass so that the documentNo in the **Create Invoice from Orders** window allows to directly open the corresponding sales order in the Sales Order window.
 
-This tutorial shows how to use the record and form information to get dynamic data in the grid or form. 
+This section shows how to use the record and form information to get dynamic data in the grid or form. 
 
 !!! info
     The implementation of these fields requires JavaScript knowledge.
@@ -25,16 +25,17 @@ This tutorial shows how to use the record and form information to get dynamic da
 
 1. Implement the ClientClass in JavaScript:
 
-    Create the JavaScript file with the corresponding class and place it in the appropriate directory. The convention is to place the `.js` files in:
+    - Create the JavaScript file with the corresponding class and place it in the appropriate directory. The convention is to place the `.js` files in:
 
-    ```web/[module.java.package]/js```
+        ```web/[module.java.package]/js```
 
-    Register the JavaScript file (along with other static resources such as CSS files) in a ComponentProvider.
+    - Register the JavaScript file (along with other static resources such as CSS files) in a ComponentProvider.
 
 
 2. Specify the JavaScript class in the field definition:
 
-    Configure the field in the tab/window where the functionality will be applied.
+    - Configure the field in the tab/window where the functionality will be applied.
+
 
 ## Implementing the ClientClass in JavaScript
 
@@ -43,7 +44,7 @@ The first step is to define the class in JavaScript in two stages:
 1. Create the JavaScript class and calculate `tabId` and `recordId`.
     In this case, the logic is implemented in the `DirectTabLink` class, which handles the opening of the window, passing the values of `tabId` and `recordId`.
 
-    ``` 
+    ``` javascript title="direct-tab-link.js"
     isc.ClassFactory.defineClass('DirectTabLink', isc.OBGridFormLabel);
 
 
@@ -101,7 +102,7 @@ The first step is to define the class in JavaScript in two stages:
 
     The `recordId`, on the other hand, contains the unique identifier of each order, which facilitates navigation without the need for additional calculations.
 
-    ```
+    ``` javascript title="sales-order-tab-link.js"
     isc.ClassFactory.defineClass('SalesOrderTabLink', DirectTabLink);
     isc.SalesOrderTabLink.addProperties({
     getTabAndRecordId: function(record, callback) {
@@ -121,14 +122,14 @@ The first step is to define the class in JavaScript in two stages:
     });
     ```
 
-### Special cases: Calculating `recordId` with Java
+## Special cases: Calculating `recordId` with Java
 
 In some cases, the `recordId` information is not available directly in the record, so it must be calculated. This can be achieved through a Java class that determines the corresponding `recordId`.
 
 Example:
 If the record does not have the `recordId` of the commands directly, we can calculate it by calling a specific Java class:
 
-```
+``` java title="sales-order-tab-link-with-java.js"
 isc.ClassFactory.defineClass('SalesOrderTabLink', DirectTabLink);
 isc.SalesOrderTabLink.addProperties({
  getTabAndRecordId: function(record, callback) {
@@ -161,7 +162,7 @@ isc.SalesOrderTabLink.addProperties({
 
 In Java:
 
-```
+``` java title="GetSalesOrderIdActionHandler.java"
 import org.openbravo.dal.service.OBCriteria;
 import org.openbravo.dal.service.OBDal;
 import org.openbravo.model.common.order.Order;
@@ -224,11 +225,11 @@ public class GetSalesOrderIdActionHandler extends BaseActionHandler {
    return result;
 ```
 
-### Registering the JavaScript file in the ComponentProvider
+## Registering the JavaScript file in the ComponentProvider
 
 Once the JavaScript class is created, it is necessary to register it in the ComponentProvider of the corresponding module.
 
-```
+``` javascript title="UIComponentProvider.java"
 /** JavaScript files required for UI navigation. */
 protected static final String[] JS_FILES = new String[]{
    "direct-tab-link.js",
@@ -236,12 +237,14 @@ protected static final String[] JS_FILES = new String[]{
 };
 ```
 
-### Definition of the ClientClass in the tab field (ADField)
+## Definition of the ClientClass in the tab field (ADField)
 
 The last step is to add the implementation in the field where the functionality will be applied and configure its ClientClass.
 
-Screenshot
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.png)
 
 ## Final Result
 
-Screenshot (GIF)
+As seen below, using the created link, you can directly open the linked sales order in the Sales Order window.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/createinvoicesfromorders.gif)
