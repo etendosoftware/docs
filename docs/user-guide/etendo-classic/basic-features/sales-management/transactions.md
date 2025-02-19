@@ -1398,9 +1398,12 @@ If there are several Goods Shipments that take place on different dates - severa
 
 If the Invoice Term is **Customer Schedule After Delivery**, then a sales invoice is created grouping deliveries from different orders for the same customer.
 
-Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
+**Lines include taxes**: If this box is checked, the amounts of the orders shown include taxes.
 
-Finally, it is important to notice that this process also uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
+**Invoice Date**: The Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
+
+!!!important
+    This process uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
 
 ### Buttons
 
