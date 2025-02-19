@@ -40598,6 +40598,7 @@ Currently, not all references available in **Standard windows** are available in
   * Table 
   * TableDir 
   * Tree
+  * PAttribute
 
 #####  UI Logic
 
