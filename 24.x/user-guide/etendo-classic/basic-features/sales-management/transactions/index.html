@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -2666,9 +2666,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#form_1" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
-      Form
+      Buttons
     </span>
   </a>
   
@@ -2690,7 +2690,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#form_2" class="md-nav__link">
+  <a href="#form_1" class="md-nav__link">
     <span class="md-ellipsis">
       Form
     </span>
@@ -6506,11 +6506,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Create a Navigable Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    How to create a Navigation Bar Component
+    How to Create a Navigation Bar Component
     
   </span>
   
@@ -6870,10 +6892,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_36" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_37" >
         
           
-          <label class="md-nav__link" for="__nav_4_2_3_36" id="__nav_4_2_3_36_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_3_37" id="__nav_4_2_3_37_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6885,8 +6907,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_36_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2_3_36">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_37_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3_37">
             <span class="md-nav__icon md-icon"></span>
             How to Create Test Cases
           </label>
@@ -11312,9 +11334,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#form_1" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
-      Form
+      Buttons
     </span>
   </a>
   
@@ -11336,7 +11358,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#form_2" class="md-nav__link">
+  <a href="#form_1" class="md-nav__link">
     <span class="md-ellipsis">
       Form
     </span>
@@ -12699,31 +12721,41 @@ When using the option “Create lines from orders”, if all orders have the sam
 <h2 id="create-invoices-from-orders">Create Invoices from Orders</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Transactions</code> &gt; <code>Create Invoices from Orders</code></p>
 <p>Create Invoices from Orders allows the user to see the Sales Orders pending to be invoiced and it automatically generates the corresponding Sales Invoices based on them.</p>
-<p>A "Sales Invoice" can be generated for one or more "Sales Orders" or for all "Sales Orders" that are pending to be invoiced.</p>
-<p><a class="glightbox" href="../../../../../assets/drive/1J4B0wWAqAz5lHmjwKB13zjCjqd9_LaEp.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create invoices from orders" src="../../../../../assets/drive/1J4B0wWAqAz5lHmjwKB13zjCjqd9_LaEp.png" /></a></p>
-<p>Filters such as the "Business Partner" or the "Organization" are available to narrow down the shown results.</p>
-<p>Overall this form shows:</p>
+<p>With this window, Sales Invoices can be generated for one or more Sales Orders or for all Sales Orders that are pending to be invoiced.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>By default, this process filters records in accordance with the defined Organization in the session configuration variables. This means, only these records are shown.</p>
+</div>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders.png" /></a></p>
+<p>As seen above, it is possible to navigate directly to the corresponding order from the document number under the Document number column.</p>
+<p>Filters such as Business Partner, Document Type and Organization, among others, are available to narrow down the shown results.</p>
+<p>Overall, this form shows:</p>
 <ul>
-<li>"Sales Orders" having an "Immediate" Invoice Term, without the need of having a Goods Shipment related.</li>
-<li>"Sales Orders" having an "After Delivery" Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.</li>
-<li>"Sales Orders" having an "After Order Delivery" Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.</li>
-<li>"Sales Orders" having a "Customer Schedule After Delivery" Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.</li>
+<li>Sales Orders having an <strong>Immediate</strong> Invoice Term, without the need of having a Goods Shipment related.</li>
+<li>Sales Orders having an <strong>After Delivery</strong> Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.</li>
+<li>Sales Orders having an <strong>After Order Delivery</strong> Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.</li>
+<li>Sales Orders having a <strong>Customer Schedule After Delivery</strong> Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.</li>
 </ul>
-<p>Same way this form does not show for invoice "Sales Orders" having a "Do not invoice" Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.</p>
-<p>For all Invoice Term but <em>Customer Schedule After Delivery</em> one Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.</p>
-<p>If there are several Goods Shipment that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.</p>
-<p>If the Invoice Term is <em>Customer Schedule After Delivery</em> then a sales invoice is created grouping deliveries from different orders for the same customer.</p>
-<p>Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.</p>
-<p>Finally, it is important to notice that this process also uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.</p>
-<h3 id="form_1"><strong>Form</strong></h3>
-<p>Fields to note:</p>
+<p>Same way, this form does not show Sales Orders having a <strong>Do not invoice</strong> Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.</p>
+<p>For all Invoice Terms but <strong>Customer Schedule After Delivery</strong>, Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.</p>
+<p>If there are several Goods Shipments that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.</p>
+<p>If the Invoice Term is <strong>Customer Schedule After Delivery</strong>, then a sales invoice is created grouping deliveries from different orders for the same customer.</p>
+<p><strong>Lines include taxes</strong>: If this box is checked, the amounts of the orders shown include taxes.</p>
+<p><strong>Invoice Date</strong>: The Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This process uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.</p>
+</div>
+<h3 id="buttons">Buttons</h3>
 <ul>
-<li><strong>From Date</strong> and <strong>To Date:</strong> specify <strong>Order Date</strong> field ranges for filtering.</li>
-<li><strong>Total Lines:</strong> total net amount of the sales order (of all its lines).</li>
-<li><strong>Invoiced:</strong> already invoiced net amount for the sales order.</li>
-<li><strong>Ready to Invoice:</strong> the net amount pending (according to Invoice Term criteria) to be invoiced for the specific order.</li>
+<li>
+<p><strong>Refresh</strong>: To refresh the orders shown in this window, use the <strong>Refresh</strong> process button.</p>
+</li>
+<li>
+<p><strong>Done</strong>: Then, select the order(s) you want to invoice and click the <strong>Done</strong> button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.</p>
+</li>
 </ul>
-<p>Select the order(s) you want to invoice and click the <strong>Process</strong> button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.</p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders3.png" /></a></p>
 <h2 id="generate-invoices">Generate Invoices</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Transactions</code> &gt; <code>Generate Invoices</code></p>
 <p>Generate Invoices executes automatic bulk generation of Sales Invoices for all Sales Orders pending to be invoiced that belong to the selected Organization or, if the Include Child Organizations checkbox is checked, to the selected Organization and its children. The Invoices generated are going to be created against the selected Organization.</p>
@@ -12742,7 +12774,7 @@ When using the option “Create lines from orders”, if all orders have the sam
 </div>
 <p>For all Invoice Terms but <em>Customer Schedule After Delivery</em> one Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order that meets Generate Invoices process criteria. If there are several Goods Shipments that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If Goods Shipment does not exist one Sales Invoice is created for one full Sales Order that meets Generate Invoices process criteria. If the Invoice Term is <em>Customer Schedule After Delivery</em> then only one sales invoice is created grouping deliveries from different orders for the same customer.</p>
 <p>Finally, it is important to remark that the Generate invoices process also uses the values specified at product level for deferring the sales revenue of corresponding sales invoice lines.</p>
-<h3 id="form_2"><strong>Form</strong></h3>
+<h3 id="form_1"><strong>Form</strong></h3>
 <p>An important field to note is <strong>Invoice Date</strong>. If specified, this date is transferred as the Invoice Date to the generated Sales Invoices (and so to Accounting Date field that is used in the posting record of the invoice to the general ledger). If not defined then Movement Date field from the Goods Shipment related to the original Sales Order is set as Invoice Date. If Goods Shipment does not exist then the Order Date field from the original Sales Order is used as Invoice Date.</p>
 <p><strong>OK</strong> button launches the process and all orders pending to be invoiced that match the filters are automatically invoiced.</p>
 <p>When the process is finished, a message is shown with the total number of created invoices and their document numbers.</p>
