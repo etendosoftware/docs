@@ -590,7 +590,7 @@ The calculated cost of a "Goods Shipment" is used while posting it to the ledger
 
 The user can create and process a shipment.
 
-![Good shipments creation](../../../../assets/drive/1dIvnkhJxhRrVVO7sceBpifLN1EYTbhsP.png)
+![Good shipments creation](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/goodsshipment.png)
 
 The Header lists main terms and conditions related to the customer delivery that apply to all products (Lines) included in it.
 
@@ -622,6 +622,8 @@ Fields to note:
 - **Attribute Set Value:** This field is displayed if the product to be shipped in the line has attributes (color, size, serial number or several of them together etc).
 - **Storage Bin:** From where the product is taken for shipment. Populated automatically based on the Product field which includes storage bin as the part of its selector.
 - **Sales Order Line:** Reference to the sales order line that is being shipped.
+
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the shipment. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 

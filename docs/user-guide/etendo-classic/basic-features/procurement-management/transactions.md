@@ -184,6 +184,15 @@ The **Purchase order header** allows you to enter the following information:
 - **Payment Method**, **Payment Terms** and **Price List**: These ones are defaulted by Etendo once a business partner is selected.
 - **Order Reference**, free text which can be found under "More Information" section, you can use it to save the supplier order number, if any.
 
+In the **Status Bar** of the header, the user can find the following information:
+
+- **Document Status**: Document status of the order.
+- **Total Gross Amount**: Total Net amount of the order.
+- **Total Net Amount**: Total Net amount of the order.
+- **Currency**: Currency of the order.
+- **Delivery Status**: It indicates in % how much quantity of the order has been delivered.  
+- **Invoice Status**: It indicates in % how much quantity of the order has been invoiced.  
+
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
 
 !!! info
@@ -195,7 +204,7 @@ It is possible to take up to **three possible actions regarding a purchase order
 - **Void it**, in case that purchase order is not required anymore and therefore needs to be voided.
 - **Book it**, in case it is correct and final.
 
-![Purchase order window](../../../../assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png)
+![Purchase order window](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png)
 
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
@@ -253,6 +262,11 @@ The lines information of the selected orders will be inserted in the purchase or
 In this case, you must use the process button **"Copy Lines".**
 
 This process button enables a new window named "Copy Lines from order" which allows you to create order lines by selecting the products already purchased from the supplier of the order by taking into account the _Consumption days_ configured for the supplier.
+
+In the **Status Bar** of each line, you can find information about:
+
+- **Delivered quantity**: number of delivered products of the line.
+- **Invoiced quantity**: number of invoiced product of the line.
 
 #### **Explode button**
 
@@ -351,9 +365,9 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
-## Goods Receipts
+## Goods Receipt
 
-:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipts`
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipt`
 
 A Goods Receipt is a document issued to acknowledge the receipt of the items listed in it. In other words, it is a document used to register in Etendo the specifics of items physically received in the warehouse.
 
@@ -361,7 +375,7 @@ A Goods Receipt is a document issued to acknowledge the receipt of the items lis
 
 Goods Receipts can be issued and booked in the header section of the goods receipt window.
 
-![Good receipts header](../../../../assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png)
+![Good receipts header](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt2.png)
 
 The fields to fill in the **Goods Receipt header** are:
 
@@ -372,6 +386,11 @@ The fields to fill in the **Goods Receipt header** are:
 - **Accounting Date**, accounting date in case of posting the Goods Receipt.
 - **Purchase Order**, purchase order number linked automatically by Etendo, in case the Goods Receipt is automatically created from a Purchase Order.
 - **Order Reference**, Warehouse team can fill in here the Supplier's Delivery Note number, this way the internal Goods Receipt number and the Supplier's Delivery Note number are linked.
+
+In the **Status Bar** of the header, the user can find the following information:
+ 
+- **Document Status**: Document status of the receipt.
+- **Invoice Status**: It indicates in % how much quantity of the receipt has been invoiced. 
 
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
@@ -427,6 +446,8 @@ Finally:
 
 - If a purchase order/line is selected, this action **links each good receipt line to the corresponding purchase order line**, same applies to purchase invoice.
 
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
+
 #### **Accounting**
 
 Accounting information related to the material receipt.
@@ -435,7 +456,7 @@ A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" tabl
 
 A "Goods Receipt" posting looks like:
 
-![Good receipts posting](../../../../assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png)
+![Good receipts posting](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt3.png)
 
 Posting a "Goods Receipt" requires the calculation of the cost of the contained product/s.
 
