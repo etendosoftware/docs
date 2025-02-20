@@ -410,7 +410,7 @@ The next step is to install Etendo and apply sampledata
 
 ```bash title="Terminal"
 ./gradlew install
-./gradlew import.sample.data -Dmodule=com.etendoerp.integration.to.openbravo.sampledata
+./gradlew import.sample.data -Dmodule=com.etendoerp.integration.to.openbravo.sampledata 
 ./gradlew smartbuild
 ```
 
@@ -425,10 +425,13 @@ Once the environment has been compiled, the Tomcat service is automatically rest
 
 ###  Etendo RX Configurations
 
+En primer lugar client ---- SWS 
 
+Ejecutar Proceso en RX CONFIG
 
+7.1) En Rx Config para el servicio del worker agregar el parametro connector.instance con el valor de id de la instancia del conector (si se hizo el insert deberia ser 6364E51BF1234094A313F17E1DCD2F7D)
 
-
+resources.up
 
 
 ### Aplicar Configuraciones
