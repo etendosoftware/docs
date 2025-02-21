@@ -323,7 +323,7 @@ The *bank account* related data you can enter is:
 
 If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
 
-![bank_account_default.png](../../../../assets/legacy/bank_account_default.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
