@@ -265,7 +265,7 @@ This process button enables a new window named "Copy Lines from order" which all
 
 In the **Status Bar** of each line, you can find information about:
 
-- **Delivered quantity**: number of delivered products of the line.
+- **Delivered quantity**: number of received products of the line.
 - **Invoiced quantity**: number of invoiced product of the line.
 
 #### **Explode button**
