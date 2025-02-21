@@ -165,6 +165,8 @@ Once the product demands are clear and locked, the last step to take in this win
 
 Purchase Order window allows the user to manage orders which once booked will be sent to the external suppliers. In other words, it is a document to register products and/or services to be purchased and documented.
 
+![Purchase order window](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png)
+
 Once the document is booked, it can be sent to the external supplier and it can be prepaid if required.
 
 Purchase orders can be created and booked in the header section of the purchase order window.
@@ -186,11 +188,11 @@ The **Purchase order header** allows you to enter the following information:
 
 In the **Status Bar** of the header, the user can find the following information:
 
-- **Document Status**: Document status of the order.
-- **Total Gross Amount**: Total Net amount of the order.
+- **Document Status**: Document status of the order. The order can be in booked, draft, closed status, among others.
+- **Total Gross Amount**: Total Gross amount of the order.
 - **Total Net Amount**: Total Net amount of the order.
 - **Currency**: Currency of the order.
-- **Delivery Status**: It indicates in % how much quantity of the order has been delivered.  
+- **Delivery Status**: It indicates in % how much quantity of the order has been received.  
 - **Invoice Status**: It indicates in % how much quantity of the order has been invoiced.  
 
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
@@ -203,8 +205,6 @@ It is possible to take up to **three possible actions regarding a purchase order
 - **Process it**, in case you might want to process it but not to book it as final, because it could be you might need to change it later on.
 - **Void it**, in case that purchase order is not required anymore and therefore needs to be voided.
 - **Book it**, in case it is correct and final.
-
-![Purchase order window](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png)
 
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
