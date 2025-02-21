@@ -1568,13 +1568,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#goods-receipts" class="md-nav__link">
+  <a href="#goods-receipt" class="md-nav__link">
     <span class="md-ellipsis">
-      Goods Receipts
+      Goods Receipt
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Goods Receipts">
+    <nav class="md-nav" aria-label="Goods Receipt">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10472,13 +10472,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#goods-receipts" class="md-nav__link">
+  <a href="#goods-receipt" class="md-nav__link">
     <span class="md-ellipsis">
-      Goods Receipts
+      Goods Receipt
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Goods Receipts">
+    <nav class="md-nav" aria-label="Goods Receipt">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -11095,6 +11095,7 @@ That way, during the time that the requisition lines are locked:</p>
 <h2 id="purchase-order">Purchase Order</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Procurement Management</code> &gt; <code>Transactions</code> &gt; <code>Purchase Order</code></p>
 <p>Purchase Order window allows the user to manage orders which once booked will be sent to the external suppliers. In other words, it is a document to register products and/or services to be purchased and documented.</p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Purchase order window" src="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png" /></a></p>
 <p>Once the document is booked, it can be sent to the external supplier and it can be prepaid if required.</p>
 <p>Purchase orders can be created and booked in the header section of the purchase order window.</p>
 <h3 id="header_2">Header</h3>
@@ -11111,6 +11112,15 @@ That way, during the time that the requisition lines are locked:</p>
 <li><strong>Payment Method</strong>, <strong>Payment Terms</strong> and <strong>Price List</strong>: These ones are defaulted by Etendo once a business partner is selected.</li>
 <li><strong>Order Reference</strong>, free text which can be found under "More Information" section, you can use it to save the supplier order number, if any.</li>
 </ul>
+<p>In the <strong>Status Bar</strong> of the header, the user can find the following information:</p>
+<ul>
+<li><strong>Document Status</strong>: Document status of the order. The order can be in booked, draft, closed status, among others.</li>
+<li><strong>Total Gross Amount</strong>: Total Gross amount of the order.</li>
+<li><strong>Total Net Amount</strong>: Total Net amount of the order.</li>
+<li><strong>Currency</strong>: Currency of the order.</li>
+<li><strong>Delivery Status</strong>: It indicates in % how much quantity of the order has been received.  </li>
+<li><strong>Invoice Status</strong>: It indicates in % how much quantity of the order has been invoiced.  </li>
+</ul>
 <p><strong>Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -11122,7 +11132,6 @@ That way, during the time that the requisition lines are locked:</p>
 <li><strong>Void it</strong>, in case that purchase order is not required anymore and therefore needs to be voided.</li>
 <li><strong>Book it</strong>, in case it is correct and final.</li>
 </ul>
-<p><a class="glightbox" href="../../../../../assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Purchase order window" src="../../../../../assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.</p>
@@ -11166,6 +11175,11 @@ That way, during the time that the requisition lines are locked:</p>
 <p><strong>3. By copying lines from other purchase orders.</strong></p>
 <p>In this case, you must use the process button <strong>"Copy Lines".</strong></p>
 <p>This process button enables a new window named "Copy Lines from order" which allows you to create order lines by selecting the products already purchased from the supplier of the order by taking into account the <em>Consumption days</em> configured for the supplier.</p>
+<p>In the <strong>Status Bar</strong> of each line, you can find information about:</p>
+<ul>
+<li><strong>Delivered quantity</strong>: number of received products of the line.</li>
+<li><strong>Invoiced quantity</strong>: number of invoiced product of the line.</li>
+</ul>
 <h4 id="explode-button"><strong>Explode button</strong></h4>
 <p>Explode button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components the selected product consists of are shown in the order.</p>
 <div class="admonition info">
@@ -11245,12 +11259,12 @@ That way, during the time that the requisition lines are locked:</p>
 <p class="admonition-title">Info</p>
 <p>For more information, visit <a href="../../../optional-features/bundles/essentials-extensions/bulk-completion/">the Bulk Completion module user guide</a>.</p>
 </div>
-<h2 id="goods-receipts">Goods Receipts</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Procurement Management</code> &gt; <code>Transactions</code> &gt; <code>Goods Receipts</code></p>
+<h2 id="goods-receipt">Goods Receipt</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Procurement Management</code> &gt; <code>Transactions</code> &gt; <code>Goods Receipt</code></p>
 <p>A Goods Receipt is a document issued to acknowledge the receipt of the items listed in it. In other words, it is a document used to register in Etendo the specifics of items physically received in the warehouse.</p>
 <h3 id="header_3"><strong>Header</strong></h3>
 <p>Goods Receipts can be issued and booked in the header section of the goods receipt window.</p>
-<p><a class="glightbox" href="../../../../../assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Good receipts header" src="../../../../../assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png" /></a></p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Good receipts header" src="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt2.png" /></a></p>
 <p>The fields to fill in the <strong>Goods Receipt header</strong> are:</p>
 <ul>
 <li><strong>Document Type</strong>, which is filled in by default as "MM Receipt".</li>
@@ -11260,6 +11274,11 @@ That way, during the time that the requisition lines are locked:</p>
 <li><strong>Accounting Date</strong>, accounting date in case of posting the Goods Receipt.</li>
 <li><strong>Purchase Order</strong>, purchase order number linked automatically by Etendo, in case the Goods Receipt is automatically created from a Purchase Order.</li>
 <li><strong>Order Reference</strong>, Warehouse team can fill in here the Supplier's Delivery Note number, this way the internal Goods Receipt number and the Supplier's Delivery Note number are linked.</li>
+</ul>
+<p>In the <strong>Status Bar</strong> of the header, the user can find the following information:</p>
+<ul>
+<li><strong>Document Status</strong>: Document status of the receipt.</li>
+<li><strong>Invoice Status</strong>: It indicates in % how much quantity of the receipt has been invoiced. </li>
 </ul>
 <p><strong>Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"</strong>.</p>
 <div class="admonition info">
@@ -11307,11 +11326,12 @@ That is the way the user could turn to in case there is not a booked purchase or
 <ul>
 <li>If a purchase order/line is selected, this action <strong>links each good receipt line to the corresponding purchase order line</strong>, same applies to purchase invoice.</li>
 </ul>
+<p>In the <strong>Status Bar</strong> of each line, you can find information about the <strong>Invoiced quantity</strong>, the number of invoiced products of the line.</p>
 <h4 id="accounting"><strong>Accounting</strong></h4>
 <p>Accounting information related to the material receipt.</p>
 <p>A <strong>"Goods Receipts" can be posted</strong> if the "<strong>MaterialMgmtShipmentInOut</strong>" table is set to Active for accounting in the [<em>Active Tables</em>] tab of the organization's general ledger configuration.</p>
 <p>A "Goods Receipt" posting looks like:</p>
-<p><a class="glightbox" href="../../../../../assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Good receipts posting" src="../../../../../assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png" /></a></p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Good receipts posting" src="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt3.png" /></a></p>
 <p>Posting a "Goods Receipt" requires the calculation of the cost of the contained product/s.</p>
 <p>In the case of a goods receipt, that is:</p>
 <ul>
