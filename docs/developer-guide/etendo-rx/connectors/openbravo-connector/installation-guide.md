@@ -25,6 +25,7 @@ In this guide we will start from two clean environments using test data, which f
 - [Eclipse](https://eclipseide.org/){target="_blank"}
 - [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"}
+- [Postman](https://www.postman.com/downloads/){target="_blank"}
 - [Openbravo 24Q4](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo) or later
 - [Etendo Classic 24.4.0](../../../../whats-new/release-notes/etendo-classic/release-notes.md) or later
 - [Platform Extensions Bundle ](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) latest version installed in Etendo.
@@ -73,20 +74,24 @@ Run the following commands to set up the Openbravo environment:
 ```bash title="Terminal"
 ant setup
 ant install.sources
+ant import.sample.data -Dmodule=org.openbravo.retail.sampledata
 ant smartbuild
 ```
 
-Configurar Tomcat para correr en el puerto `8081` ya que el puerto `8080` estará ocupado por Etendo, luego reiniciar Tomcat.  
+!!! warning
+    Configure Tomcat to run on port `8081` since port `8080` will be occupied by Etendo, then restart Tomcat.  
 
 
 ### Master Data Configuration
 
-Luego, para simplificar la configuracion haremos algunos inserts en base de datos con configuraciones en Openbravo, para ello nos podemos conectar desde PGAdmin o bien por linea de comandos. 
+Then, to simplify the configurations we will make some inserts in the `openbravo` database, for this we can connect from PG Admin or by command line:
 
 ```bash title="Terminal"
 PGPASSWORD=tad  psql -U tad  -d openbravo -h localhost -p 5432
 ```
 
+Run the following script:
+ 
 ```SQL title="Setup Script"
 
 INSERT INTO public.c_external_system(c_external_system_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, description, connectivity_process, name, ad_protocol_id)
@@ -316,17 +321,12 @@ UPDATE public.ad_org SET em_obretco_dbp_orgid='D270A5AC50874F8BA67A88EE977F8E3B'
 
 You can now access Openbravo with initialized sample data
 
-!!! success
-    Openbravo Back Office
-    
+!!! success "Openbravo Back Office"    
     - [http://localhost:8081/openbravo/](http://localhost:8081/openbravo/)
-    
     - User: Openbravo
     - Password: openbravo
 
-!!! success 
-    Openbravo POS
-    
+!!! success "Openbravo POS"
     - [http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login](http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login)
     - User: vallblanca
     - Password: openbravo
@@ -347,15 +347,17 @@ Then, You can open the `EtendoERP` project in IntelliJ, as mentioned in the [Ins
 
 
 
-
 ### Install Modules
 Once we have the Etendo environment we must install the Platform Bundle and the modules specific to the Etendo-Openbravo connector.
 To do this we simply add the dependencies in the build.gradle file:
 
 ```groovy title="build.gradle"
 implementation ('com.etendoerp:platform.extensions:latest.release')
-implementation ('com.etendoerp:.extensions:latest.release')
-others
+
+moduleDeps ('com.etendoerp:integration.to.openbravo:1.0.0@zip')
+moduleDeps ('com.etendoerp:integration.to.openbravo.template:1.0.0@zip')
+moduleDeps ('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
+
 ```
 
 Also, in the gradle.properties file the following configuration variables must be added, to execute all the necessary dockerized services:
@@ -388,19 +390,26 @@ etendorx.basepackage=com.etendorx.integration.to_openbravo.mapping
 
 Now in a terminal in the Etendo project, we execute the commands:
 
-```bash title="Terminal"
+```bash title="Terminal" 
 ./gradlew setup 
 ```
 To apply the changes in the `gradle.properties` file settings.
 
+
+```bash title="Terminal"
+./gradlew expandModules 
+```
+Expand source modules:
+
+
 ```bash title="Terminal"
 ./gradlew resources.up 
 ```
-To launch all dockerized services
+To launch the dockerized services,
 
 <figure markdown="span">
-    ![dockerized-services.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services.png)
-    <figcaption> As you can see all the services required for the Openbravo Etendo integration are running </figcaption>
+    ![dockerized-services.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-1.png)
+    <figcaption> As you can see the DB Postgres services required for the Etendo installation is running </figcaption>
 </figure>
 
 
@@ -416,30 +425,113 @@ The next step is to install Etendo and apply sampledata
 
 Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps, and you can now access 
 
-!!! success 
-    Access Etendo Classic
-        - [http://localhost:8080/etendo](http://localhost:8080/etendo)
-        - User: admin
-        - Password: admin
+!!! success "Access Etendo Classic:"
+    - [http://localhost:8080/etendo](http://localhost:8080/etendo)
+    - User: admin
+    - Password: admin
 
 
 ###  Etendo RX Configurations
 
-En primer lugar client ---- SWS 
+After starting the dockerized services, there are some configurations that need to be done in Etendo Classic
 
-Ejecutar Proceso en RX CONFIG
+### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
 
-7.1) En Rx Config para el servicio del worker agregar el parametro connector.instance con el valor de id de la instancia del conector (si se hizo el insert deberia ser 6364E51BF1234094A313F17E1DCD2F7D)
+It is necessary to configure the encryption token for the authentication in the `Client` window with the `System Administrator` role.
+If the expiration time is equal to `0` the tokens do not expire.
 
-resources.up
+Generate a random key with the **Generate key** button.
+
+![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 
 
-### Aplicar Configuraciones
+### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
 
-cd modules/com.etendoerp.integration.to_openbravo/utils
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. As `System Administrator` role, in this window, run the `Initialize RX Services` process in the toolbar. 
+
+![](../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
+
+After the execution of this process the default configuration variables are completed, depending on the configuration of the instance and the infrastructure, even the default parameters required by each service are configured.
+
+!!! warning 
+    In the particular case of the `Worker Service` it is necessary to add the `connector.instance` parameter, which refers to the ID of the connector instance with Openbravo, this instance is distributed within the connector, so you must always set the ID `6364E51BF1234094A313F17E1DCD2F7D`. 
+
+![default-rx-config.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/default-rx-config-connector.png)
+
+### Relunch RX services
+
+Then, to effectively run all  the services, it is necessary to **execute the command** in the terminal: 
+
+```bash title="Terminal"
+./gradlew resources.up
+```
+
+Here, all the services and their respective logs can be seen running using [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} for a simple and fast container management. 
+
+<figure markdown="span">
+    ![dockerized-services.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-2.png)
+    <figcaption> As you can see all the services required for the Openbravo Etendo integration are running </figcaption>
+</figure>
+
+
+###  Initial Configuration Scripts
+
+```bash title="Terminal"
+cd modules/com.etendoerp.integration.to.openbravo/utils
 make set_wal
 make insert
 make setupconnector
+```
+
+## Testing Data Synchronization between Environments
+
+##  Etendo Access Token
+The last configuration step is to generate an access token for communication from Openbravo to Etendo. To do this we must through a request manager such as Postman execute the following request:
+
+- **HTTP Method**: `POST`
+- **URL**: `http://localhost:8080/etendo/sws/login`
+- **Request Body**:
+  ```json
+  {
+    "username": "obconnector",
+    "password": "obconnector",
+    "role": "E717F902C44C455793463450495FF36B",
+    "client": "39363B0921BB4293B48383844325E84C",
+    "organization": "0",
+    "warehouse": "0",
+    "secret": "123456",
+    "service": "obconnector"
+  }
+  ```
+
+After making the request, you will receive a JSON response. Copy the value of the token field, as it will be used for authentication in subsequent requests. For example:
+
+```json
+{
+"status": "success",
+"token": "eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJzd3MiLCJyb2xlIjoiRTcxN0Y5MDJDNDRDNDU1NzkzNDYzNDUwNDk1RkYzNkIiLCJvcmdhbml6YXRpb24iOiIwIiwiaXNzIjoic3dzIiwiY2xpZW50IjoiMzkzNjNCMDkyMUJCNDI5M0I0ODM4Mzg0NDMyNUU4NEMiLCJ3YXJlaG91c2UiOiI0RDQ1RkU0QzUxNTA0MTcwOTA0N0Y1MUQxMzlBMjFBQyIsInVzZXIiOiJFOEFEOUIyNkI3RDE0Nzg2OEI2OEE5NTAwQ0M3NkRERCIsImlhdCI6MTc0MDA3NTc5M30.MEQCIHh8GI1kW3l56I5ic6KXaezeSZug-Yb42eejf5YRvCJ5AiA1ulTKNpCqqu8GTWjpLRFUarI33zobyn5BuSuTEmq5mQ",
+...
+}
+```
+
+### External System
+:material-menu: `Application` > `General Setup` > `Application` > `External System`
+
+In the Openbravo environment, logged in as `System Administrator`, it is necessary to access the `External System` window and set the generated token in the token field.
+
+![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/openbravo-external-system.png)
+
+!!! Suceess "Test Connection"
+    Once configured, run the `Test` process to check the connection, make sure that all the integration services are running.
+    
+
+
+
+
+
+
 
 
 ### 5. Verify Middleware Configuration
@@ -447,7 +539,7 @@ Ensure Etendo RX middleware is configured to handle synchronization between Open
 
 ### 6. Testing the Integration
 #### Generating Documents in Openbravo POS
-1. Log in to the Openbravo POS terminal.
+1. Log in to the Openbravo POS Terminal.
 2. Perform a sales transaction or any activity that generates a document.
 3. Confirm that the document is synchronized to the Etendo environment.
 
@@ -468,135 +560,3 @@ Ensure Etendo RX middleware is configured to handle synchronization between Open
   ./gradlew smartbuild --info
   ```
 
-## Troubleshooting
-- Ensure all services (Openbravo, Etendo RX, and Etendo) are running correctly.
-- Verify database connections and network configurations.
-
-## Default Credentials
-- **Openbravo POS**: Default credentials vary based on setup.
-- **Etendo**:
-  - Username: `admin`
-  - Password: `admin`
-
-## References
-- Openbravo Documentation
-- Etendo Installation Guide
-- PostgreSQL Official Documentation
-
-
-
-
-
-
-###  Openbravo Database Backup
-Now we must create a dump of the Openbravo database to restore in Etendo and keep all the master data.
-In a terminal in the Etendo project we execute: 
-
-```bash title="Terminal"
-pg_dump -U tad -p 5432 -F c -b -v -f ./openbravo.dump  openbravo
-```
-### Database Restore
-
-Now we will restore the Openbravo database, changing the default name to etendo which is the database name we defined in the `bbdd.sid` variable, or the database name defined in the `bbdd.sid` variable. 
-
-```bash title="Terminal"
-PGPASSWORD=syspass psql -U postgres -d postgres -h localhost -p 5434
-```
-Once connected to the database we will create the tad role and the empty database where we will restore the information.
-
-```sql title="PSQL Terminal"
-CREATE ROLE tad LOGIN PASSWORD 'tad' SUPERUSER CREATEDB CREATEROLE VALID UNTIL 'infinity';
-CREATE DATABASE etendo WITH ENCODING='UTF8' OWNER=tad;
-```
-Finally, we restore the database with the following command: 
-
-```bash title="Terminal"
-PGPASSWORD=tad pg_restore -v -U tad -d etendo -h localhost -p 5434 -v -O openbravo.dump
-```
-The last step is to delete the content of some tables, as these tables are no longer available in Etendo. 
-
-```bash title="Terminal"
-PGPASSWORD=tad psql -U tad -d etendo -h localhost -p 5434
-```
-Execute: 
-```sql title="PSQL Terminal"
-
-DELETE FROM M_OFFER
-WHERE M_OFFER_TYPE_ID = '20E4EC27397344309A2185097392D964';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '1C36D6974F4E4C41AA92E1EEBCD577E1';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '41616748FCCD42D287CFA1C0B5116140';
-
-DELETE FROM M_OFFER
-WHERE M_OFFER_TYPE_ID = '94AEA884F5AD4EABB72322832B9C5172';
-
-DELETE FROM M_OFFER_ORGANIZATION
-WHERE M_OFFER_ID = '0C681EECD8974D56921D47DBFFF5A22C';
-
-DELETE FROM M_OFFER
-WHERE M_OFFER_TYPE_ID = '8338556C0FBF45249512DB343FEFD280';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '1C47E773ACB341C48C8C7B970955C3DE';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '21BF154DAD644B38A667A58E12A45CAB';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '6C41BA4C0AA44BC9B38A64353DEDCB21';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '74F2E10500374BD8B2EED9E7594279EE';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '84408A74ADE548358E6701E0BF85CAC9';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '95AF235142FB4656A4B7D5A08DE24927';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '9B5F1139A656454898AE5D5D8C5A77EE';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = 'A5190E45A59E4E4DBA19E06A8ED543D5';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = 'AEBCDD6E9FD647C38E521E6AEABFEBA9';
-
-DELETE FROM M_OFFER_BPARTNER
-WHERE M_OFFER_ID = 'AEBCDD6E9FD647C38E521E6AEABFEBA9';
-
-DELETE FROM M_OFFER
-WHERE M_OFFER_TYPE_ID = '312D41071ED34BA18B748607CA679F44';
-
-DELETE FROM M_OFFER
-WHERE M_OFFER_TYPE_ID = '7B49D8CC4E084A75B7CB4D85A6A3A578';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '65BD8402B1CD428A952A0AF37B325BC3';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = '86D0C2B35B454D95A0A09E245B430FED';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = 'DB155972EDA6446290DDC3FF0387E832';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = 'DBE6100C27484800A19B6D5044B12715';
-
-DELETE FROM M_OFFER_PRODUCT
-WHERE M_OFFER_ID = 'DBE6100C27484800A19B6D5044B12715';
-
-DELETE FROM M_OFFER
-WHERE M_OFFER_TYPE_ID = 'BE5D42E554644B6AA262CCB097753951';
-
-DELETE FROM OBUIAPP_GC_FIELD
-WHERE OBUIAPP_GC_TAB_ID = '1AD989605ACA4F5FB6C11B2E7AC88867';
-
-DELETE FROM OBUIAPP_GC_TAB
-WHERE AD_TAB_ID = '14BDEAB664C146DCB662B2E3EA7A495E';
-
-``` 
