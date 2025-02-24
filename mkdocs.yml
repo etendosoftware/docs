@@ -51,13 +51,14 @@ exclude_docs:
 
 extra_javascript:
   - assets/javascripts/feedback.js
-  - assets/javascripts/algolia-search.js
-  - https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js
+  - assets/javascripts/custom-algolia.js
+  - https://cdn.jsdelivr.net/npm/@docsearch/js@3
+
 
 extra_css:
   - stylesheets/extra.css
-  - assets/stylesheets/custom-styles.css
-  - https://cdn.jsdelivr.net/npm/instantsearch.css/themes/reset.css
+  - assets/stylesheets/custom-algolia.css
+  - https://cdn.jsdelivr.net/npm/@docsearch/css@3
 
 
 markdown_extensions:
@@ -111,12 +112,6 @@ plugins:
         utm_medium: 'RSS'
         utm_campaign: 'feed-syndication'
 extra:
-  search:
-    provider: algolia
-    index_name: etendo_docs_index
-    app_id: XMLZ1ZZEY7
-    api_key: de992ae25d65509474690fe8761e2a21
-
   version:
     provider: mike
     default: stable
