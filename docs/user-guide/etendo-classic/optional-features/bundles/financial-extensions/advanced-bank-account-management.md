@@ -42,7 +42,7 @@ This module introduces the possibility to mark a bank account as Default within 
 The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partner window to associate specific bank accounts to the different locations.  
 
 !!!info
-    The default account will always be used when generating a new document unless an account is set up in a specific location. 
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png)
 

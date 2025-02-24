@@ -364,7 +364,7 @@ Etendo allows the user to define any type of business partner address, by fillin
 The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
 
 !!! warning
-    The default account will always be used when generating a new document unless an account is set up in a specific location. 
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
 ### **Contact**
 

@@ -337,7 +337,7 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 This module adds a new field to the header of the Purchase Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
 
-![bank_account_3.png](../../../../assets/legacy/bank_account_3.png)
+![bank-account-3.png](../../../../assets/legacy/bank-account-3.png)
 
 !!! info
     For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
@@ -717,7 +717,7 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 This module adds a new field to the header of the Purchase Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice.
 
-![bank_account.png](../../../../assets/legacy/bank_account.png)
+![bank-account.png](../../../../assets/legacy/bank-account.png)
 
 !!! info
     For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
