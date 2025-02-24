@@ -22,12 +22,12 @@ This functionality enhances the bank account management enabling greater customi
 This functionality is available in the following windows: 
 
 - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management)
-- [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account_1)
-- [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account_1)
-- [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account)
-- [Purchase order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account)
-- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account_1)
-- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account)
+- [Sales Invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+- [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+- [Sales Order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
+- [Purchase Order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
 ## Business Partner - Bank Account
 :material-menu: `Application` > `Master Data Management` > `Business Partner`
@@ -51,7 +51,7 @@ The Advanced Bank Account Management field is introduced in the Location/ Addres
 
 :material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Order`
 
-A Bank Account field has also been added to the Purchase and Sales Order windows, in the Advanced Bank Account Management section of the header. 
+A Bank Account field has also been added header section of the Purchase and Sales Order windows.
 
 This field is automatically filled based on the selected address. If a specific account is associated with the address, that account is used; if no account is configured, the default account is selected. In cases where neither option is configured, the field remains blank. Payment plans generated from these Purchase and Sales Orders now include the bank account information.
 

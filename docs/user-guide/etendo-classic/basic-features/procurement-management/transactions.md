@@ -200,27 +200,6 @@ It is possible to take up to **three possible actions regarding a purchase order
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
 
-#### Remittance
-
-!!! info
-    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
- 
-The Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
-
-![bank_account_3.png](../../../../assets/legacy/bank_account_3.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-#### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Purchase Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
-
 
 ### **Lines**
 
@@ -350,6 +329,19 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank_account_3.png](../../../../assets/legacy/bank_account_3.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 
 ## Goods Receipts
 
@@ -608,31 +600,6 @@ Once completed, a purchase invoice can be:
 
 ![Purchase invoice window](../../../../assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
-#### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
-
-![bank_account.png](../../../../assets/legacy/bank_account.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-
-???+ note
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-  
-#### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Purchase Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
-
 ### **Lines**
 
 Once the purchase invoice header has been properly filled in and saved purchase invoice lines can be registered in this tab.
@@ -742,6 +709,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice.
+
+![bank_account.png](../../../../assets/legacy/bank_account.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 ## Matched Invoices
 
