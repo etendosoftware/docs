@@ -210,7 +210,11 @@ nav:
           - Transactions: user-guide/etendo-classic/basic-features/sales-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md
           - Setup: user-guide/etendo-classic/basic-features/sales-management/setup.md 
-        # - Project & Service Management: user-guide/etendo-classic/basic-features/project-and-services-management/index.md
+        - Project and Service Management:
+          - ✨ Getting Started: user-guide/etendo-classic/basic-features/project-and-service-management/getting-started.md
+          - Transactions: user-guide/etendo-classic/basic-features/project-and-service-management/transactions.md
+          - Analysis Tools: user-guide/etendo-classic/basic-features/project-and-service-management/analysis-tools.md
+          - Setup: user-guide/etendo-classic/basic-features/project-and-service-management/setup.md
         - Financial Management: 
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
           - Receivables and Payables:
@@ -238,9 +242,9 @@ nav:
           - Financial Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
+            - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
             - Bank Integration PSD2: user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
-            - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
@@ -396,7 +400,8 @@ nav:
         - How to Create a Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
 #        - How to create a Multi Selector: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector.md
-        - How to create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component.md
+        - How to Create a Navigable Link: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.md
+        - How to Create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component.md
 #        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
 #        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
@@ -516,9 +521,6 @@ nav:
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
         - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
-        - Create Reference Tool: developer-guide/etendo-copilot/available-tools/create-reference-tool.md
-        - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
-        - DDL Tool: developer-guide/etendo-copilot/available-tools/ddl-tool.md
         - Docker Tool: developer-guide/etendo-copilot/available-tools/docker-tool.md
         - File Copy Tool: developer-guide/etendo-copilot/available-tools/file-copy-tool.md
         - File Downloader Tool: developer-guide/etendo-copilot/available-tools/file-downloader-tool.md
@@ -548,11 +550,10 @@ nav:
       #  - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md
       - Etendo UI Library: "https://main--65785998e8389d9993e8ec4c.chromatic.com"
   - What's New:
-    - Overview: whats-new/overview.md
+    - ✨ Etendo News: whats-new/etendo-news.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://etendo.software"
     - Release Notes:
-      - ✨ Etendo News: whats-new/release-notes/etendo-news.md
       - Etendo Classic:
         - Release Notes: whats-new/release-notes/etendo-classic/release-notes.md
         - Plugins:

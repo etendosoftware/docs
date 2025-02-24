@@ -1,5 +1,5 @@
 ---
-title: Etendo Backup and Restore Tool
+title: Etendo Backup and Restore Plugin
 tags: 
   - Plugin
   - Gradle
@@ -22,7 +22,7 @@ plugins {
 ```
 
 !!! info
-    To know the available versions of the plugin, please visit [Etendo Backup and Restore Plugin | Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md).
+    To know the available versions of the plugin, please visit the [Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md).
 
 To resolve the plugin dependiencies, you should add the following lines on top of the `settings.gradle` file
 
@@ -36,9 +36,6 @@ pluginManagement {
                 password "${githubToken}"
             }
         }
-        maven {
-            url "https://repo.futit.cloud/repository/static-public-snapshots"
-        }
         mavenCentral()
     }
 }
@@ -49,17 +46,13 @@ pluginManagement {
 
 ## Backup task
 
-!!! warning
-    The User running the backup must have `SUDO` access and the `backup.properties` file properly configured.
-
-
 To run the backup, execute
 
 ``` bash title="Terminal"
 ./gradlew backup -PbkpMode=<mode>
 ```
 
-Where the mode could be `manual` or `auto`
+Where the mode could be `manual` or `auto`. If the parameter is not specified, the default mode is `manual`.
 
 ### Backup properties file
 
@@ -83,6 +76,9 @@ Sets the group related to the user running the backup.
 
 * `BACKUPS_DIR`
 Sets the path where the backup will be stored.
+
+    !!! warning
+        Ensure that the directory where the backups will be stored is already created and that the configured user has write permissions on it.
 
 * `BACKUPS_TMP_DIR`
 Sets the path where the temp directory will be created to store the generated files.
@@ -142,7 +138,7 @@ Depending on the end `STATE`, the following properties are used to specify the e
 
 !!! note
     In order to send the email to multiple accounts, separate addresses with `;`.<br>
-    For example: `EMAIL_ERROR_CC=user1@smfconsulting.es;user2@smfconsulting.es`
+    For example: `EMAIL_ERROR_CC=user1@etendo.software;user2@etendo.software`
 
 ### End states
 The following are the possible states at the end of the `backup` task:
