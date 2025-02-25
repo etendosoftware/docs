@@ -26,7 +26,7 @@ In this guide we will start from two clean environments using test data, which f
 - [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"}
 - [Postman](https://www.postman.com/downloads/){target="_blank"}
-- [Openbravo 24Q4](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo) or later
+- [Openbravo 23Q4.2](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo)
 - [Etendo Classic 24.4.0](../../../../whats-new/release-notes/etendo-classic/release-notes.md) or later
 - [Platform Extensions Bundle ](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) latest version installed in Etendo.
 
@@ -38,7 +38,7 @@ First, follow the [Openbravo Custom Installation Guide](https://wiki.openbravo.c
 
 In the Openbravo environment we need to install the Retail POS, EDL and Business API modules.
 
-To obtain these modules, an active Openbravo License and access to the Openbravo Forge are required. Ensure that the Openbravo environment includes the following modules in versions compatible with the corresponding Openbravo Core version. In this example, the modules will be used in version 24Q4.
+To obtain these modules, an active Openbravo License and access to the Openbravo Forge are required. Ensure that the Openbravo environment includes the following modules in versions compatible with the corresponding Openbravo Core version. In this example, the modules will be used in version 23Q4.2.
 
 - `org.openbravo.retail.sampledata`
 - `org.openbravo.retail.returns`
@@ -73,7 +73,7 @@ Run the following commands to set up the Openbravo environment:
 
 ```bash title="Terminal"
 ant setup
-ant install.sources
+ant install.source
 ant import.sample.data -Dmodule=org.openbravo.retail.sampledata
 ant smartbuild
 ```
@@ -120,8 +120,6 @@ INSERT INTO public.obedl_configuration(obedl_configuration_id, ad_client_id, ad_
     VALUES ('B1F00DAB0FEC4C549AF0068E77492638','39363B0921BB4293B48383844325E84C','0','Y','2024-12-20 11:22:20.267','100','2024-12-20 11:22:20.267','100','9B8E4B855B7E41EB87EE37D3394B7AD2');
 INSERT INTO public.obedl_config_output(obedl_config_output_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, seqno, output_path, output_user, output_pass, output_filename, obedl_configuration_id, obedl_output_type_id, wsmethod, isretryenabled, maxretry, retryinterval, timeout)
     VALUES ('EE980DAA10CA40B78547056656192F76','39363B0921BB4293B48383844325E84C','0','Y','2024-12-20 11:22:38.946','100','2024-12-20 11:22:38.946','100',10,NULL,NULL,NULL,NULL,'B1F00DAB0FEC4C549AF0068E77492638','BF9649DF97A14168A4C142222E2CBF0C',NULL,'N',NULL,NULL,5);
-INSERT INTO public.ad_preference(ad_preference_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, ad_window_id, ad_user_id, attribute, value, property, ispropertylist, visibleat_client_id, visibleat_org_id, visibleat_role_id, selected, ad_module_id, inherited_from)
-    VALUES ('BAB39C0A1E2D49CB85C150677CBA9C3F','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 12:41:34.285','100','2024-05-16 12:41:34.285','100',NULL,'100',NULL,'Y','ETINT_DefaultSyncValue','Y',NULL,NULL,NULL,'N',NULL,NULL);
 INSERT INTO public.ad_preference(ad_preference_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, ad_window_id, ad_user_id, attribute, value, property, ispropertylist, visibleat_client_id, visibleat_org_id, visibleat_role_id, selected, ad_module_id, inherited_from)
     VALUES ('36675A275AC2478C83AB05771EAA23A5','39363B0921BB4293B48383844325E84C','D270A5AC50874F8BA67A88EE977F8E3B','Y','2024-05-23 18:04:26.01','3073EDF96A3C42CC86C7069E379522D2','2024-05-27 10:48:48.382','100',null,null,null,'Y','ETINT_DefaultSyncValue','Y',null,null,null,'Y',null,null);
 DELETE FROM ad_role_orgaccess WHERE ad_client_id='39363B0921BB4293B48383844325E84C';
@@ -526,11 +524,6 @@ In the Openbravo environment, logged in as `System Administrator`, it is necessa
 !!! Suceess "Test Connection"
     Once configured, run the `Test` process to check the connection, make sure that all the integration services are running.
     
-
-
-
-
-
 
 
 
