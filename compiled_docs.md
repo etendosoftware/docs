@@ -5351,11 +5351,11 @@ Discounts and Promotions, formerly Price Adjustments, defines rules to be applie
 This feature requires to set as "Active":
 
 - the "Read-Only" Tab "Discounts and Promotions" is found in below listed windows:
-  - Purchase Order
-  - Sales Order
-  - Purchase Invoice
-  - Sales Invoice
-  - and Sales Quotation
+    - Purchase Order
+    - Sales Order
+    - Purchase Invoice
+    - Sales Invoice
+    - and Sales Quotation
 
 ###### How Promotions are Applied
 
@@ -5835,6 +5835,8 @@ Once the product demands are clear and locked, the last step to take in this win
 
 Purchase Order window allows the user to manage orders which once booked will be sent to the external suppliers. In other words, it is a document to register products and/or services to be purchased and documented.
 
+![Purchase order window](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png)
+
 Once the document is booked, it can be sent to the external supplier and it can be prepaid if required.
 
 Purchase orders can be created and booked in the header section of the purchase order window.
@@ -5854,6 +5856,15 @@ The **Purchase order header** allows you to enter the following information:
 - **Payment Method**, **Payment Terms** and **Price List**: These ones are defaulted by Etendo once a business partner is selected.
 - **Order Reference**, free text which can be found under "More Information" section, you can use it to save the supplier order number, if any.
 
+In the **Status Bar** of the header, the user can find the following information:
+
+- **Document Status**: Document status of the order. The order can be in booked, draft, closed status, among others.
+- **Total Gross Amount**: Total Gross amount of the order.
+- **Total Net Amount**: Total Net amount of the order.
+- **Currency**: Currency of the order.
+- **Delivery Status**: It indicates in % how much quantity of the order has been received.  
+- **Invoice Status**: It indicates in % how much quantity of the order has been invoiced.  
+
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
 
 !!! info
@@ -5864,8 +5875,6 @@ It is possible to take up to **three possible actions regarding a purchase order
 - **Process it**, in case you might want to process it but not to book it as final, because it could be you might need to change it later on.
 - **Void it**, in case that purchase order is not required anymore and therefore needs to be voided.
 - **Book it**, in case it is correct and final.
-
-![Purchase order window](https://docs.etendo.software/latest/assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png)
 
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
@@ -5923,6 +5932,11 @@ The lines information of the selected orders will be inserted in the purchase or
 In this case, you must use the process button **"Copy Lines".**
 
 This process button enables a new window named "Copy Lines from order" which allows you to create order lines by selecting the products already purchased from the supplier of the order by taking into account the _Consumption days_ configured for the supplier.
+
+In the **Status Bar** of each line, you can find information about:
+
+- **Delivered quantity**: number of received products of the line.
+- **Invoiced quantity**: number of invoiced product of the line.
 
 ###### **Explode button**
 
@@ -6021,9 +6035,9 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
-#### Goods Receipts
+#### Goods Receipt
 
-:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipts`
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipt`
 
 A Goods Receipt is a document issued to acknowledge the receipt of the items listed in it. In other words, it is a document used to register in Etendo the specifics of items physically received in the warehouse.
 
@@ -6031,7 +6045,7 @@ A Goods Receipt is a document issued to acknowledge the receipt of the items lis
 
 Goods Receipts can be issued and booked in the header section of the goods receipt window.
 
-![Good receipts header](https://docs.etendo.software/latest/assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png)
+![Good receipts header](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt2.png)
 
 The fields to fill in the **Goods Receipt header** are:
 
@@ -6042,6 +6056,11 @@ The fields to fill in the **Goods Receipt header** are:
 - **Accounting Date**, accounting date in case of posting the Goods Receipt.
 - **Purchase Order**, purchase order number linked automatically by Etendo, in case the Goods Receipt is automatically created from a Purchase Order.
 - **Order Reference**, Warehouse team can fill in here the Supplier's Delivery Note number, this way the internal Goods Receipt number and the Supplier's Delivery Note number are linked.
+
+In the **Status Bar** of the header, the user can find the following information:
+ 
+- **Document Status**: Document status of the receipt.
+- **Invoice Status**: It indicates in % how much quantity of the receipt has been invoiced. 
 
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
@@ -6097,6 +6116,8 @@ Finally:
 
 - If a purchase order/line is selected, this action **links each good receipt line to the corresponding purchase order line**, same applies to purchase invoice.
 
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
+
 ###### **Accounting**
 
 Accounting information related to the material receipt.
@@ -6105,7 +6126,7 @@ A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" tabl
 
 A "Goods Receipt" posting looks like:
 
-![Good receipts posting](https://docs.etendo.software/latest/assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png)
+![Good receipts posting](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt3.png)
 
 Posting a "Goods Receipt" requires the calculation of the cost of the contained product/s.
 
@@ -11253,7 +11274,7 @@ This module adds a new section to the header of the Sales Order window: Advanced
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
 
-![Sales order lines](https://docs.etendo.software/latest/assets/drive/14rZJriNxaHIaBACYjwi-4I0rUGuCSCpD.png)
+![Sales order lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorder.png)
 
 Fields to note:
 
@@ -11263,6 +11284,7 @@ Fields to note:
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
 - **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -11453,7 +11475,7 @@ The calculated cost of a "Goods Shipment" is used while posting it to the ledger
 
 The user can create and process a shipment.
 
-![Good shipments creation](https://docs.etendo.software/latest/assets/drive/1dIvnkhJxhRrVVO7sceBpifLN1EYTbhsP.png)
+![Good shipments creation](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/goodsshipment.png)
 
 The Header lists main terms and conditions related to the customer delivery that apply to all products (Lines) included in it.
 
@@ -11485,6 +11507,8 @@ Fields to note:
 - **Attribute Set Value:** This field is displayed if the product to be shipped in the line has attributes (color, size, serial number or several of them together etc).
 - **Storage Bin:** From where the product is taken for shipment. Populated automatically based on the Product field which includes storage bin as the part of its selector.
 - **Sales Order Line:** Reference to the sales order line that is being shipped.
+
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the shipment. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -11873,13 +11897,14 @@ This module adds a new section to the header of the Sales Invoice window: Advanc
 
 Once the sales invoice header has been properly filled in and saved, each sales invoice line can be registered in this tab one by one.
 
-![Sales invoice lines](https://docs.etendo.software/latest/assets/drive/12b9z3VPpvude4CJ8QhoDoW9V7k00KkL7.png)
+![Sales invoice lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoice.png)
 
 Fields to note:
 
 - **Attribute Set Value:** field is displayed if the product in the line has attributes (color, size, serial number or several of them together etc).
 - **Sales Order Line** and **Goods Shipment Line:** references to the sales order and goods shipment line that is being invoiced.
 - **Financial Invoice line:** is selected when the invoice line is not a product but an account not set up as a product but as a G/L item, or an asset not set up as a product. When selected, the product field disappears from the screen and an account field appears that will be related to the sales invoice line.
+- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
 
 As already mentioned, sales revenue can be deferred therefore they are not recognized at the sales accounting date but within a given number of accounting periods.
 
@@ -53838,7 +53863,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.4){target="_blank"} | 14/02/2025 | 24.4.4 | QAA |  | :white_check_mark: |
+| [24Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.5){target="_blank"} | 21/02/2025 | 24.4.5 | QAA |  | :white_check_mark: |
+| [24Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.4){target="_blank"} | 14/02/2025 | 24.4.4 | C |  | :white_check_mark: |
 | [24Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.3){target="_blank"} | 30/01/2025 | 24.4.3 | C | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) | :white_check_mark: |
 | [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | C |  | :white_check_mark: |
 | [24Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.1){target="_blank"} | 17/01/2025 | 24.4.1 | C |  | :white_check_mark: |
@@ -53991,7 +54017,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.10.0){target="_blank"} | 26/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.8.0){target="_blank"} | 23/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.7.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.7.0){target="_blank"} | 08/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.6.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
