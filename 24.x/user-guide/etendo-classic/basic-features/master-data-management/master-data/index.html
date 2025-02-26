@@ -1312,15 +1312,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#remittance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remittance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#advanced-bank-account-management" class="md-nav__link">
     <span class="md-ellipsis">
       Advanced Bank Account Management
@@ -10243,15 +10234,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#remittance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remittance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#advanced-bank-account-management" class="md-nav__link">
     <span class="md-ellipsis">
       Advanced Bank Account Management
@@ -10936,13 +10918,13 @@ To learn more, visit <a href="../../sales-management/transactions/#sales-invoice
 <li><strong>SWIFT Code</strong> - Corresponds to the ISO 9362 international bank code identifier. It must be mandatory filled in case <em>Use SWIFT + Generic Account No.</em> is selected at the Bank Account Format field.</li>
 <li><strong>Displayed Account</strong>: It is automatically generated based on the value selected into the Bank Account Format. This field is read only, and it is used by other reports or processes.</li>
 </ul>
-<h4 id="remittance">Remittance</h4>
+<h4 id="advanced-bank-account-management"><strong>Advanced Bank Account Management</strong></h4>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
+<p>To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
-<p>If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.</p>
-<p><a class="glightbox" href="../../../../../assets/legacy/bank_account_default.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="bank_account_default.png" src="../../../../../assets/legacy/bank_account_default.png" /></a></p>
+<p>This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. </p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.</p>
@@ -10951,12 +10933,6 @@ To learn more, visit <a href="../../sales-management/transactions/#sales-invoice
 <p class="admonition-title">Warning</p>
 <p>Only one bank account can be selected as default for each business partner.</p>
 </div>
-<h4 id="advanced-bank-account-management"><strong>Advanced Bank Account Management</strong></h4>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
-</div>
-<p>This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. In the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. </p>
 <h3 id="locationaddress"><strong>Location/Address</strong></h3>
 <p>Business partner locations and full address details can be set up in this tab.</p>
 <p>Business partners might have different address details depending on location/address used for either <em>Goods Receipts/Shipments</em> purposes or location/address used for <em>Invoices</em> purposes.</p>
@@ -10988,7 +10964,7 @@ To learn more, visit <a href="../../sales-management/transactions/#sales-invoice
 <p>The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to <strong>associate specific bank accounts</strong> to the different locations.  </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The default account will always be used when generating a new document unless an account is set up in a specific location. </p>
+<p>In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.</p>
 </div>
 <h3 id="contact"><strong>Contact</strong></h3>
 <p>Contact tab allows the user to add and configure the business partner contacts you deal with.</p>

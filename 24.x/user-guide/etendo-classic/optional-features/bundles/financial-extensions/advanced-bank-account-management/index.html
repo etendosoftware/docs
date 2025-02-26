@@ -9807,29 +9807,29 @@
 <p>This functionality is available in the following windows: </p>
 <ul>
 <li><a href="../../../../basic-features/master-data-management/master-data/#advanced-bank-account-management">Business Partner</a></li>
-<li><a href="../../../../basic-features/sales-management/transactions/#advanced-bank-account_1">Sales invoice</a></li>
-<li><a href="../../../../basic-features/procurement-management/transactions/#advanced-bank-account_1">Purchase Invoice</a></li>
-<li><a href="../../../../basic-features/sales-management/transactions/#advanced-bank-account">Sales order</a></li>
-<li><a href="../../../../basic-features/procurement-management/transactions/#advanced-bank-account">Purchase order</a></li>
-<li><a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/#advanced-bank-account_1">Payment In</a></li>
-<li><a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/#advanced-bank-account">Payment Out</a></li>
+<li><a href="../../../../basic-features/sales-management/transactions/#advanced-bank-account-management_1">Sales Invoice</a></li>
+<li><a href="../../../../basic-features/procurement-management/transactions/#advanced-bank-account-management_1">Purchase Invoice</a></li>
+<li><a href="../../../../basic-features/sales-management/transactions/#advanced-bank-account-management">Sales Order</a></li>
+<li><a href="../../../../basic-features/procurement-management/transactions/#advanced-bank-account-management">Purchase Order</a></li>
+<li><a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/#advanced-bank-account-management_1">Payment In</a></li>
+<li><a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/#advanced-bank-account-management">Payment Out</a></li>
 </ul>
 <h2 id="business-partner-bank-account">Business Partner - Bank Account</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Business Partner</code></p>
-<p>This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, in the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.</p>
+<p>This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.</p>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png" /></a></p>
 <h2 id="business-partner-locationaddress">Business Partner - Location/Address</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Business Partner</code> </p>
 <p>The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partner window to associate specific bank accounts to the different locations.  </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The default account will always be used when generating a new document unless an account is set up in a specific location. </p>
+<p>In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.</p>
 </div>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png" /></a></p>
 <h2 id="salespurchase-order-windows">Sales/Purchase Order windows</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Transactions</code> &gt; <code>Sales Order</code></p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Procurement Management</code> &gt; <code>Transactions</code> &gt; <code>Purchase Order</code></p>
-<p>A Bank Account field has also been added to the Purchase and Sales Order windows, in the Advanced Bank Account Management section of the header. </p>
+<p>A Bank Account field has also been added header section of the Purchase and Sales Order windows.</p>
 <p>This field is automatically filled based on the selected address. If a specific account is associated with the address, that account is used; if no account is configured, the default account is selected. In cases where neither option is configured, the field remains blank. Payment plans generated from these Purchase and Sales Orders now include the bank account information.</p>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba3.png" /></a></p>
 <h4 id="add-payment-button">Add Payment button</h4>
@@ -9848,6 +9848,10 @@ Additionally, invoices created from Purchase and Sales Orders inherit the bank a
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba6.png" /></a></p>
 <h4 id="modify-payment-plan-button">Modify Payment Plan button</h4>
 <p>A Modify Payment Plan button is found at Payment Plan tab level in both the Purchase and Sales Invoice windows. This function allows users to modify payment plans already created, adding or deleting payments, and even specifying the bank account for each payment plan record.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This button is only available when the payment plan has no associated payments.</p>
+</div>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png" /></a></p>
 <h2 id="payment-in-payment-out-windows">Payment In /Payment Out windows</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Payment In / Payment Out</code> </p>
