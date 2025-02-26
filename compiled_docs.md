@@ -3231,28 +3231,20 @@ The *bank account* related data you can enter is:
 - **SWIFT Code** - Corresponds to the ISO 9362 international bank code identifier. It must be mandatory filled in case _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
 - **Displayed Account**: It is automatically generated based on the value selected into the Bank Account Format. This field is read only, and it is used by other reports or processes.
 
-###### Remittance
+###### **Advanced Bank Account Management**
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
+This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
 
-![bank_account_default.png](https://docs.etendo.software/latest/assets/legacy/bank_account_default.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
 
 !!! warning
     Only one bank account can be selected as default for each business partner.
-
-###### **Advanced Bank Account Management**
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. In the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
-
 
 ##### **Location/Address**
 
@@ -3287,7 +3279,7 @@ Etendo allows the user to define any type of business partner address, by fillin
 The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
 
 !!! warning
-    The default account will always be used when generating a new document unless an account is set up in a specific location. 
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
 ##### **Contact**
 
@@ -5351,11 +5343,11 @@ Discounts and Promotions, formerly Price Adjustments, defines rules to be applie
 This feature requires to set as "Active":
 
 - the "Read-Only" Tab "Discounts and Promotions" is found in below listed windows:
-  - Purchase Order
-  - Sales Order
-  - Purchase Invoice
-  - Sales Invoice
-  - and Sales Quotation
+    - Purchase Order
+    - Sales Order
+    - Purchase Invoice
+    - Sales Invoice
+    - and Sales Quotation
 
 ###### How Promotions are Applied
 
@@ -5835,6 +5827,8 @@ Once the product demands are clear and locked, the last step to take in this win
 
 Purchase Order window allows the user to manage orders which once booked will be sent to the external suppliers. In other words, it is a document to register products and/or services to be purchased and documented.
 
+![Purchase order window](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png)
+
 Once the document is booked, it can be sent to the external supplier and it can be prepaid if required.
 
 Purchase orders can be created and booked in the header section of the purchase order window.
@@ -5854,6 +5848,15 @@ The **Purchase order header** allows you to enter the following information:
 - **Payment Method**, **Payment Terms** and **Price List**: These ones are defaulted by Etendo once a business partner is selected.
 - **Order Reference**, free text which can be found under "More Information" section, you can use it to save the supplier order number, if any.
 
+In the **Status Bar** of the header, the user can find the following information:
+
+- **Document Status**: Document status of the order. The order can be in booked, draft, closed status, among others.
+- **Total Gross Amount**: Total Gross amount of the order.
+- **Total Net Amount**: Total Net amount of the order.
+- **Currency**: Currency of the order.
+- **Delivery Status**: It indicates in % how much quantity of the order has been received.  
+- **Invoice Status**: It indicates in % how much quantity of the order has been invoiced.  
+
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
 
 !!! info
@@ -5865,31 +5868,8 @@ It is possible to take up to **three possible actions regarding a purchase order
 - **Void it**, in case that purchase order is not required anymore and therefore needs to be voided.
 - **Book it**, in case it is correct and final.
 
-![Purchase order window](https://docs.etendo.software/latest/assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png)
-
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
-
-###### Remittance
-
-!!! info
-    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
- 
-The Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
-
-![bank_account_3.png](https://docs.etendo.software/latest/assets/legacy/bank_account_3.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Purchase Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
 
 
 ##### **Lines**
@@ -5923,6 +5903,11 @@ The lines information of the selected orders will be inserted in the purchase or
 In this case, you must use the process button **"Copy Lines".**
 
 This process button enables a new window named "Copy Lines from order" which allows you to create order lines by selecting the products already purchased from the supplier of the order by taking into account the _Consumption days_ configured for the supplier.
+
+In the **Status Bar** of each line, you can find information about:
+
+- **Delivered quantity**: number of received products of the line.
+- **Invoiced quantity**: number of invoiced product of the line.
 
 ###### **Explode button**
 
@@ -6021,9 +6006,22 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-3.png](https://docs.etendo.software/latest/assets/legacy/bank-account-3.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
+
 #### Goods Receipts
 
-:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipts`
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipt`
 
 A Goods Receipt is a document issued to acknowledge the receipt of the items listed in it. In other words, it is a document used to register in Etendo the specifics of items physically received in the warehouse.
 
@@ -6031,7 +6029,7 @@ A Goods Receipt is a document issued to acknowledge the receipt of the items lis
 
 Goods Receipts can be issued and booked in the header section of the goods receipt window.
 
-![Good receipts header](https://docs.etendo.software/latest/assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png)
+![Good receipts header](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt2.png)
 
 The fields to fill in the **Goods Receipt header** are:
 
@@ -6042,6 +6040,11 @@ The fields to fill in the **Goods Receipt header** are:
 - **Accounting Date**, accounting date in case of posting the Goods Receipt.
 - **Purchase Order**, purchase order number linked automatically by Etendo, in case the Goods Receipt is automatically created from a Purchase Order.
 - **Order Reference**, Warehouse team can fill in here the Supplier's Delivery Note number, this way the internal Goods Receipt number and the Supplier's Delivery Note number are linked.
+
+In the **Status Bar** of the header, the user can find the following information:
+ 
+- **Document Status**: Document status of the receipt.
+- **Invoice Status**: It indicates in % how much quantity of the receipt has been invoiced. 
 
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
@@ -6097,6 +6100,8 @@ Finally:
 
 - If a purchase order/line is selected, this action **links each good receipt line to the corresponding purchase order line**, same applies to purchase invoice.
 
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
+
 ###### **Accounting**
 
 Accounting information related to the material receipt.
@@ -6105,7 +6110,7 @@ A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" tabl
 
 A "Goods Receipt" posting looks like:
 
-![Good receipts posting](https://docs.etendo.software/latest/assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png)
+![Good receipts posting](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt3.png)
 
 Posting a "Goods Receipt" requires the calculation of the cost of the contained product/s.
 
@@ -6278,31 +6283,6 @@ Once completed, a purchase invoice can be:
 
 ![Purchase invoice window](https://docs.etendo.software/latest/assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
-
-![bank_account.png](https://docs.etendo.software/latest/assets/legacy/bank_account.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-
-???+ note
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-  
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Purchase Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
-
 ##### **Lines**
 
 Once the purchase invoice header has been properly filled in and saved purchase invoice lines can be registered in this tab.
@@ -6412,6 +6392,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account.png](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/bank-account.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Matched Invoices
 
@@ -11228,32 +11220,11 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 **Canceled Order**, this field stores the document number of the original order canceled by the inverse order.
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
-
-![bank_account_4.png](https://docs.etendo.software/latest/assets/legacy/bank_account_4.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
 ##### Lines
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
 
-![Sales order lines](https://docs.etendo.software/latest/assets/drive/14rZJriNxaHIaBACYjwi-4I0rUGuCSCpD.png)
+![Sales order lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorder.png)
 
 Fields to note:
 
@@ -11263,6 +11234,7 @@ Fields to note:
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
 - **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -11437,6 +11409,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-4.png](https://docs.etendo.software/latest/assets/legacy/bank-account-4.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 #### Goods Shipment
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Goods Shipment`
@@ -11453,7 +11437,7 @@ The calculated cost of a "Goods Shipment" is used while posting it to the ledger
 
 The user can create and process a shipment.
 
-![Good shipments creation](https://docs.etendo.software/latest/assets/drive/1dIvnkhJxhRrVVO7sceBpifLN1EYTbhsP.png)
+![Good shipments creation](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/goodsshipment.png)
 
 The Header lists main terms and conditions related to the customer delivery that apply to all products (Lines) included in it.
 
@@ -11485,6 +11469,8 @@ Fields to note:
 - **Attribute Set Value:** This field is displayed if the product to be shipped in the line has attributes (color, size, serial number or several of them together etc).
 - **Storage Bin:** From where the product is taken for shipment. Populated automatically based on the Product field which includes storage bin as the part of its selector.
 - **Sales Order Line:** Reference to the sales order line that is being shipped.
+
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the shipment. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -11841,45 +11827,20 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
-
-![bank_account_2.png](https://docs.etendo.software/latest/assets/legacy/bank_account_2.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-!!! note
-    **Important**:
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
-
 ##### **Lines**
 
 **Lines** lists each product to be delivered and its characteristics.
 
 Once the sales invoice header has been properly filled in and saved, each sales invoice line can be registered in this tab one by one.
 
-![Sales invoice lines](https://docs.etendo.software/latest/assets/drive/12b9z3VPpvude4CJ8QhoDoW9V7k00KkL7.png)
+![Sales invoice lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoice.png)
 
 Fields to note:
 
 - **Attribute Set Value:** field is displayed if the product in the line has attributes (color, size, serial number or several of them together etc).
 - **Sales Order Line** and **Goods Shipment Line:** references to the sales order and goods shipment line that is being invoiced.
 - **Financial Invoice line:** is selected when the invoice line is not a product but an account not set up as a product but as a G/L item, or an asset not set up as a product. When selected, the product field disappears from the screen and an account field appears that will be related to the sales invoice line.
+- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
 
 As already mentioned, sales revenue can be deferred therefore they are not recognized at the sales accounting date but within a given number of accounting periods.
 
@@ -12228,47 +12189,65 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account-2.png](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/bank-account-2.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 #### Create Invoices from Orders
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Create Invoices from Orders`
 
 Create Invoices from Orders allows the user to see the Sales Orders pending to be invoiced and it automatically generates the corresponding Sales Invoices based on them.
 
-A "Sales Invoice" can be generated for one or more "Sales Orders" or for all "Sales Orders" that are pending to be invoiced.
+With this window, Sales Invoices can be generated for one or more Sales Orders or for all Sales Orders that are pending to be invoiced.
 
-![Create invoices from orders](https://docs.etendo.software/latest/assets/drive/1J4B0wWAqAz5lHmjwKB13zjCjqd9_LaEp.png)
+!!!info
+    By default, this process filters records in accordance with the defined Organization in the session configuration variables. This means, only these records are shown.
 
-Filters such as the "Business Partner" or the "Organization" are available to narrow down the shown results.
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders.png)
 
-Overall this form shows:
 
-- "Sales Orders" having an "Immediate" Invoice Term, without the need of having a Goods Shipment related.
-- "Sales Orders" having an "After Delivery" Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
-- "Sales Orders" having an "After Order Delivery" Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
-- "Sales Orders" having a "Customer Schedule After Delivery" Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
+As seen above, it is possible to navigate directly to the corresponding order from the document number under the Document number column.
 
-Same way this form does not show for invoice "Sales Orders" having a "Do not invoice" Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
+Filters such as Business Partner, Document Type and Organization, among others, are available to narrow down the shown results.
 
-For all Invoice Term but _Customer Schedule After Delivery_ one Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
+Overall, this form shows:
 
-If there are several Goods Shipment that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
+- Sales Orders having an **Immediate** Invoice Term, without the need of having a Goods Shipment related.
+- Sales Orders having an **After Delivery** Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
+- Sales Orders having an **After Order Delivery** Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
+- Sales Orders having a **Customer Schedule After Delivery** Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
 
-If the Invoice Term is _Customer Schedule After Delivery_ then a sales invoice is created grouping deliveries from different orders for the same customer.
+Same way, this form does not show Sales Orders having a **Do not invoice** Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
 
-Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
+For all Invoice Terms but **Customer Schedule After Delivery**, Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
 
-Finally, it is important to notice that this process also uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
+If there are several Goods Shipments that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
 
-##### **Form**
+If the Invoice Term is **Customer Schedule After Delivery**, then a sales invoice is created grouping deliveries from different orders for the same customer.
 
-Fields to note:
+**Lines include taxes**: If this box is checked, the amounts of the orders shown include taxes.
 
-- **From Date** and **To Date:** specify **Order Date** field ranges for filtering.
-- **Total Lines:** total net amount of the sales order (of all its lines).
-- **Invoiced:** already invoiced net amount for the sales order.
-- **Ready to Invoice:** the net amount pending (according to Invoice Term criteria) to be invoiced for the specific order.
+**Invoice Date**: The Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
 
-Select the order(s) you want to invoice and click the **Process** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
+!!!important
+    This process uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
+
+##### Buttons
+
+- **Refresh**: To refresh the orders shown in this window, use the **Refresh** process button.
+
+- **Done**: Then, select the order(s) you want to invoice and click the **Done** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders3.png)
 
 #### Generate Invoices
 
@@ -21209,7 +21188,7 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account
+This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
     For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
@@ -21220,20 +21199,20 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
-This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
 
 !!! info
     This functionality is available in the following windows:
 
-    - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
-    - [Sales invoice]()
-    - [Purchase Invoice]()
-    - [Sales order]()
-    - [Purchase order]()
-    - [Payment In]()
-    - [Payment Out]()
+    - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Sales invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+    - [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+    - [Sales order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management)
+    - [Purchase order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+    - [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+    - [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
-    For more information, visit the [Advanced Bank Account Management](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+    For more information, visit the [Advanced Bank Account Management](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 
 ##### Advanced Business Partner Settlement
@@ -21479,17 +21458,17 @@ This functionality enhances the bank account management enabling greater customi
 This functionality is available in the following windows: 
 
 - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management)
-- [Sales invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account_1)
-- [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account_1)
-- [Sales order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account)
-- [Purchase order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account)
-- [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account_1)
-- [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account)
+- [Sales Invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+- [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+- [Sales Order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management)
+- [Purchase Order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+- [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+- [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
 #### Business Partner - Bank Account
 :material-menu: `Application` > `Master Data Management` > `Business Partner`
 
-This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, in the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.
+This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png)
 
@@ -21499,7 +21478,7 @@ This module introduces the possibility to mark a bank account as Default within 
 The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partner window to associate specific bank accounts to the different locations.  
 
 !!!info
-    The default account will always be used when generating a new document unless an account is set up in a specific location. 
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png)
 
@@ -21508,7 +21487,7 @@ The Advanced Bank Account Management field is introduced in the Location/ Addres
 
 :material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Order`
 
-A Bank Account field has also been added to the Purchase and Sales Order windows, in the Advanced Bank Account Management section of the header. 
+A Bank Account field has also been added header section of the Purchase and Sales Order windows.
 
 This field is automatically filled based on the selected address. If a specific account is associated with the address, that account is used; if no account is configured, the default account is selected. In cases where neither option is configured, the field remains blank. Payment plans generated from these Purchase and Sales Orders now include the bank account information.
 
@@ -21545,6 +21524,9 @@ Furthermore, the Add Payment button has been enhanced to include a Bank Account 
 ###### Modify Payment Plan button
 
 A Modify Payment Plan button is found at Payment Plan tab level in both the Purchase and Sales Invoice windows. This function allows users to modify payment plans already created, adding or deleting payments, and even specifying the bank account for each payment plan record.
+
+!!!warning
+    This button is only available when the payment plan has no associated payments.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
 
@@ -39229,8 +39211,256 @@ The dataset definition is ready, so the user just needs to export it to a file p
     In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create a Navigation Bar Component
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Navigation Bar Component
+# Article Title: How to Create a Navigable Link
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Navigable Link
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link
+## Article Content: 
+###  How to Create a Navigable Link
+
+#### Overview
+
+This section explains how to create a navigable link in Etendo Classic, implementing a ClientClass. A ClientClass allows you to add visual components to a form or a row of a grid. This is useful for adding calculated fields to forms and grids, integrating elements such as buttons, links or dynamic labels.
+
+In this case, we will implement a navigable ClientClass so that the documentNo in the **Create Invoice from Orders** window allows to directly open the corresponding sales order in the Sales Order window.
+
+This section shows how to use the record and form information to get dynamic data in the grid or form. 
+
+!!! info
+    The implementation of these fields requires JavaScript knowledge.
+
+
+#### Main Steps to Create a new ClientClass
+
+1. Implement the ClientClass in JavaScript:
+
+    - Create the JavaScript file with the corresponding class and place it in the appropriate directory. The convention is to place the `.js` files in:
+
+        ```web/[module.java.package]/js```
+
+    - Register the JavaScript file (along with other static resources such as CSS files) in a ComponentProvider.
+
+
+2. Specify the JavaScript class in the field definition:
+
+    - Configure the field in the tab/window where the functionality will be applied.
+
+
+#### Implementing the ClientClass in JavaScript
+
+The first step is to define the class in JavaScript in two stages:
+
+1. Create the JavaScript class and calculate `tabId` and `recordId`.
+    In this case, the logic is implemented in the `DirectTabLink` class, which handles the opening of the window, passing the values of `tabId` and `recordId`.
+
+    ``` javascript title="direct-tab-link.js"
+    isc.ClassFactory.defineClass('DirectTabLink', isc.OBGridFormLabel);
+
+
+    isc.DirectTabLink.addProperties({
+    height: 1,
+    width: 1,
+    overflow: 'visible',
+
+
+    // Method that subclasses must override
+    getTabAndRecordId: function(record, callback) {
+    callback({ tabId: null, recordId: null });
+    },
+
+
+    setRecord: function(record) {
+    var value = record[this.field.name];
+
+
+    // Call the asynchronous function from the subclass
+    this.getTabAndRecordId(record, function(result) {
+        var tabId = result.tabId;
+        var recordId = result.recordId;
+
+
+        if (!value || !tabId || !recordId) {
+        this.setContents("");
+        return;
+        }
+
+
+        // Create the inline function for onclick
+        var linkHTML =
+        "<a href='#' style='color:blue; text-decoration:underline;' " +
+        "onclick='OB.Utilities.openDirectTab(\"" + tabId + "\", \"" + recordId + "\"); return false;'>" +
+        value + "</a>";
+
+
+        this.setContents(linkHTML);
+
+
+        // Force grid redraw
+        if (this.grid && this.grid.body) {
+        this.grid.body.markForRedraw();
+        }
+    }.bind(this));
+    }
+    });
+
+    ```
+
+2. Specific Implementation of the ClientClass
+
+    In our example, the target window is Sales Order. Since the `tabId` is fixed and does not change, it can be left as a static value.
+
+    The `recordId`, on the other hand, contains the unique identifier of each order, which facilitates navigation without the need for additional calculations.
+
+    ``` javascript title="sales-order-tab-link.js"
+    isc.ClassFactory.defineClass('SalesOrderTabLink', DirectTabLink);
+    isc.SalesOrderTabLink.addProperties({
+    getTabAndRecordId: function(record, callback) {
+    var tabId = "186"; // Fixed tab ID for "Sales Order"
+    var recordId = record.id;
+
+
+    if (!recordId) {
+        console.error("Error: Record ID not found in the record.");
+        callback({ tabId: null, recordId: null });
+        return;
+    }
+
+
+    callback({ tabId: tabId, recordId: recordId });
+    }
+    });
+    ```
+
+#### Special cases: Calculating `recordId` with Java
+
+In some cases, the `recordId` information is not available directly in the record, so it must be calculated. This can be achieved through a Java class that determines the corresponding `recordId`.
+
+Example:
+If the record does not have the `recordId` of the commands directly, we can calculate it by calling a specific Java class:
+
+``` java title="sales-order-tab-link-with-java.js"
+isc.ClassFactory.defineClass('SalesOrderTabLink', DirectTabLink);
+isc.SalesOrderTabLink.addProperties({
+ getTabAndRecordId: function(record, callback) {
+   var tabId = "186"; // Predefined Tab ID for "Sales Order"
+   var documentNo = record.documentNo; // Retrieve documentNo from the record
+
+
+   if (!documentNo) {
+     console.error("Error: documentNo not found in the record.");
+     callback({ tabId: null, recordId: null });
+     return;
+   }
+   // Call the Openbravo Action Handler to retrieve the recordId
+   OB.RemoteCallManager.call(
+     'org.openbravo.client.application.GetSalesOrderIdActionHandler', // Java Action Handler class name
+     { documentNo: documentNo }, // Parameter sent to the backend
+     {},
+     function(response, data, request) {
+       if (data.success && data.recordId) {
+         callback({ tabId: tabId, recordId: data.recordId }); // Use predefined tabId
+       } else {
+         console.error("Error retrieving recordId: " + (data.errorMessage || "Invalid response"));
+         callback({ tabId: null, recordId: null });
+       }
+     }
+   );
+ }
+});
+```
+
+In Java:
+
+``` java title="GetSalesOrderIdActionHandler.java"
+import org.openbravo.dal.service.OBCriteria;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.model.common.order.Order;
+
+
+/**
+* Action handler to retrieve the sales order ID based on a given document number.
+*/
+public class GetSalesOrderIdActionHandler extends BaseActionHandler {
+
+
+ private static final String DOCUMENT_NO = "documentNo";
+ private static final String SUCCESS = "success";
+ private static final String RECORD_ID = "recordId";
+ private static final String ERROR_MESSAGE = "errorMessage";
+
+
+ /**
+  * Executes the action to retrieve the sales order ID based on the provided document number.
+  *
+  * @param parameters A map containing execution parameters.
+  * @param content A JSON string containing the document number.
+  * @return A JSON object containing the sales order ID and status of the operation.
+  */
+ @Override
+ protected JSONObject execute(Map<String, Object> parameters, String content) {
+   JSONObject result = new JSONObject();
+   try {
+     final JSONObject jsonData = new JSONObject(content);
+
+
+     if (!jsonData.has(DOCUMENT_NO) || jsonData.isNull(DOCUMENT_NO)) {
+       result.put(SUCCESS, false);
+       result.put(ERROR_MESSAGE, "The 'documentNo' parameter is required.");
+       return result;
+     }
+
+
+     String documentNo = jsonData.getString(DOCUMENT_NO);
+
+
+     OBCriteria<Order> orderOBCriteria = OBDal.getInstance().createCriteria(Order.class);
+     orderOBCriteria.add(Restrictions.eq(Order.PROPERTY_DOCUMENTNO, documentNo));
+     orderOBCriteria.setMaxResults(1);
+
+
+     Order order = (Order) orderOBCriteria.uniqueResult();
+     result.put(RECORD_ID, order.getId());
+     result.put(SUCCESS, true);
+
+
+   } catch (Exception e) {
+     try {
+       result.put(SUCCESS, false);
+       result.put(ERROR_MESSAGE, e.getMessage());
+     } catch (Exception ex) {
+       throw new OBException(e);
+     }
+   }
+   return result;
+```
+
+#### Registering the JavaScript file in the ComponentProvider
+
+Once the JavaScript class is created, it is necessary to register it in the ComponentProvider of the corresponding module.
+
+``` javascript title="UIComponentProvider.java"
+/** JavaScript files required for UI navigation. */
+protected static final String[] JS_FILES = new String[]{
+   "direct-tab-link.js",
+   "sales-order-tab-link.js"
+};
+```
+
+#### Definition of the ClientClass in the tab field (ADField)
+
+The last step is to add the implementation in the field where the functionality will be applied and configure its ClientClass.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.png)
+
+#### Final Result
+
+As seen below, using the created link, you can directly open the linked sales order in the Sales Order window.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/createinvoicesfromorders.gif)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Navigation Bar Component
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Navigation Bar Component
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component
 ## Article Content: 
@@ -53584,7 +53814,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.4){target="_blank"} | 14/02/2025 | 24.4.4 | QAA |  | :white_check_mark: |
+| [24Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.5){target="_blank"} | 21/02/2025 | 24.4.5 | QAA |  | :white_check_mark: |
+| [24Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.4){target="_blank"} | 14/02/2025 | 24.4.4 | C |  | :white_check_mark: |
 | [24Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.3){target="_blank"} | 30/01/2025 | 24.4.3 | C | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) | :white_check_mark: |
 | [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | C |  | :white_check_mark: |
 | [24Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.1){target="_blank"} | 17/01/2025 | 24.4.1 | C |  | :white_check_mark: |
@@ -53737,7 +53968,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.10.0){target="_blank"} | 26/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.8.0){target="_blank"} | 23/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.7.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.7.0){target="_blank"} | 08/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.6.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |

@@ -365,32 +365,11 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 **Canceled Order**, this field stores the document number of the original order canceled by the inverse order.
 
-#### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
-
-![bank_account_4.png](../../../../assets/legacy/bank_account_4.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-#### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
 ### Lines
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
 
-![Sales order lines](../../../../assets/drive/14rZJriNxaHIaBACYjwi-4I0rUGuCSCpD.png)
+![Sales order lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorder.png)
 
 Fields to note:
 
@@ -400,6 +379,7 @@ Fields to note:
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
 - **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -574,6 +554,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-4.png](../../../../assets/legacy/bank-account-4.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 ## Goods Shipment
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Goods Shipment`
@@ -590,7 +582,7 @@ The calculated cost of a "Goods Shipment" is used while posting it to the ledger
 
 The user can create and process a shipment.
 
-![Good shipments creation](../../../../assets/drive/1dIvnkhJxhRrVVO7sceBpifLN1EYTbhsP.png)
+![Good shipments creation](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/goodsshipment.png)
 
 The Header lists main terms and conditions related to the customer delivery that apply to all products (Lines) included in it.
 
@@ -622,6 +614,8 @@ Fields to note:
 - **Attribute Set Value:** This field is displayed if the product to be shipped in the line has attributes (color, size, serial number or several of them together etc).
 - **Storage Bin:** From where the product is taken for shipment. Populated automatically based on the Product field which includes storage bin as the part of its selector.
 - **Sales Order Line:** Reference to the sales order line that is being shipped.
+
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the shipment. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -978,45 +972,20 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-#### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
-
-![bank_account_2.png](../../../../assets/legacy/bank_account_2.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-!!! note
-    **Important**:
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-
-#### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
-
 ### **Lines**
 
 **Lines** lists each product to be delivered and its characteristics.
 
 Once the sales invoice header has been properly filled in and saved, each sales invoice line can be registered in this tab one by one.
 
-![Sales invoice lines](../../../../assets/drive/12b9z3VPpvude4CJ8QhoDoW9V7k00KkL7.png)
+![Sales invoice lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoice.png)
 
 Fields to note:
 
 - **Attribute Set Value:** field is displayed if the product in the line has attributes (color, size, serial number or several of them together etc).
 - **Sales Order Line** and **Goods Shipment Line:** references to the sales order and goods shipment line that is being invoiced.
 - **Financial Invoice line:** is selected when the invoice line is not a product but an account not set up as a product but as a G/L item, or an asset not set up as a product. When selected, the product field disappears from the screen and an account field appears that will be related to the sales invoice line.
+- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
 
 As already mentioned, sales revenue can be deferred therefore they are not recognized at the sales accounting date but within a given number of accounting periods.
 
@@ -1365,47 +1334,65 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account-2.png](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/bank-account-2.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 ## Create Invoices from Orders
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Create Invoices from Orders`
 
 Create Invoices from Orders allows the user to see the Sales Orders pending to be invoiced and it automatically generates the corresponding Sales Invoices based on them.
 
-A "Sales Invoice" can be generated for one or more "Sales Orders" or for all "Sales Orders" that are pending to be invoiced.
+With this window, Sales Invoices can be generated for one or more Sales Orders or for all Sales Orders that are pending to be invoiced.
 
-![Create invoices from orders](../../../../assets/drive/1J4B0wWAqAz5lHmjwKB13zjCjqd9_LaEp.png)
+!!!info
+    By default, this process filters records in accordance with the defined Organization in the session configuration variables. This means, only these records are shown.
 
-Filters such as the "Business Partner" or the "Organization" are available to narrow down the shown results.
+![](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders.png)
 
-Overall this form shows:
 
-- "Sales Orders" having an "Immediate" Invoice Term, without the need of having a Goods Shipment related.
-- "Sales Orders" having an "After Delivery" Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
-- "Sales Orders" having an "After Order Delivery" Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
-- "Sales Orders" having a "Customer Schedule After Delivery" Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
+As seen above, it is possible to navigate directly to the corresponding order from the document number under the Document number column.
 
-Same way this form does not show for invoice "Sales Orders" having a "Do not invoice" Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
+Filters such as Business Partner, Document Type and Organization, among others, are available to narrow down the shown results.
 
-For all Invoice Term but _Customer Schedule After Delivery_ one Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
+Overall, this form shows:
 
-If there are several Goods Shipment that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
+- Sales Orders having an **Immediate** Invoice Term, without the need of having a Goods Shipment related.
+- Sales Orders having an **After Delivery** Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
+- Sales Orders having an **After Order Delivery** Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
+- Sales Orders having a **Customer Schedule After Delivery** Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
 
-If the Invoice Term is _Customer Schedule After Delivery_ then a sales invoice is created grouping deliveries from different orders for the same customer.
+Same way, this form does not show Sales Orders having a **Do not invoice** Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
 
-Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
+For all Invoice Terms but **Customer Schedule After Delivery**, Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
 
-Finally, it is important to notice that this process also uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
+If there are several Goods Shipments that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
 
-### **Form**
+If the Invoice Term is **Customer Schedule After Delivery**, then a sales invoice is created grouping deliveries from different orders for the same customer.
 
-Fields to note:
+**Lines include taxes**: If this box is checked, the amounts of the orders shown include taxes.
 
-- **From Date** and **To Date:** specify **Order Date** field ranges for filtering.
-- **Total Lines:** total net amount of the sales order (of all its lines).
-- **Invoiced:** already invoiced net amount for the sales order.
-- **Ready to Invoice:** the net amount pending (according to Invoice Term criteria) to be invoiced for the specific order.
+**Invoice Date**: The Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
 
-Select the order(s) you want to invoice and click the **Process** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
+!!!important
+    This process uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
+
+### Buttons
+
+- **Refresh**: To refresh the orders shown in this window, use the **Refresh** process button.
+
+- **Done**: Then, select the order(s) you want to invoice and click the **Done** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders3.png)
 
 ## Generate Invoices
 
