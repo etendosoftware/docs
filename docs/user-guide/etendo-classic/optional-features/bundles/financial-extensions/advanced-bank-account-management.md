@@ -89,6 +89,9 @@ Furthermore, the Add Payment button has been enhanced to include a Bank Account 
 
 A Modify Payment Plan button is found at Payment Plan tab level in both the Purchase and Sales Invoice windows. This function allows users to modify payment plans already created, adding or deleting payments, and even specifying the bank account for each payment plan record.
 
+!!!warning
+    This button is only available when the payment plan has no associated payments.
+
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
 
 ## Payment In /Payment Out windows
