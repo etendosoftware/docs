@@ -18,7 +18,7 @@ This guide provides step-by-step instructions to install and configure the integ
 In this guide we will start from two clean environments using test data, which facilitates the configuration and demonstrates the potential of this integration.
 
 !!! info 
-    This guide is based on Openbravo 24Q4 and Etendo 24.4.0
+    This guide is based on Openbravo 23Q4.2 and Etendo 24.4.0
 
 ## Required Software and Tools
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community or Ultimate Edition)
