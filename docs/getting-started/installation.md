@@ -340,7 +340,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
            
     11. After the smartbuild task finish, the Tomacat service will  automatically restart,  open your browser in: 
     
-        `https://<Public server IP>/<context.name>` or in case that you run in local environment `[http://localhost:8080/etendo](http://localhost:8080/etendo)`
+        `https://<Public server IP>/<context.name>` or in case that you run in local environment [`http://localhost:8080/etendo`](http://localhost:8080/etendo){target="_blank"}
 
 
 

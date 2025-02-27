@@ -27,8 +27,8 @@ In this guide we will start from two clean environments using test data, which f
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"}
 - [Postman](https://www.postman.com/downloads/){target="_blank"}
 - [Openbravo 23Q4.2](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo)
-- [Etendo Classic 24.4.0](../../../../whats-new/release-notes/etendo-classic/release-notes.md) or later
-- [Platform Extensions Bundle ](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) latest version installed in Etendo.
+- [Etendo Classic 24.4.0](../../../../whats-new/release-notes/etendo-classic/release-notes.md) or later.
+- [Platform Extensions Bundle ](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) latest version.
 
 ## Openbravo
 
@@ -36,23 +36,23 @@ First, follow the [Openbravo Custom Installation Guide](https://wiki.openbravo.c
 
 ### Modules to Install on Openbravo
 
-In the Openbravo environment we need to install the Retail POS, EDL and Business API modules.
+In the Openbravo environment we need to install the Retail, EDL and Business API modules.
 
 To obtain these modules, an active Openbravo License and access to the Openbravo Forge are required. Ensure that the Openbravo environment includes the following modules in versions compatible with the corresponding Openbravo Core version. In this example, the modules will be used in version 23Q4.2.
 
-- `org.openbravo.retail.sampledata`
-- `org.openbravo.retail.returns`
-- `org.openbravo.retail.posterminal`
-- `org.openbravo.retail.poshwmanager`
-- `org.openbravo.retail.pack`
-- `org.openbravo.retail.discounts`
-- `org.openbravo.retail.config`
-- `org.openbravo.mobile.core`
-- `org.openbravo.events.core`
-- `org.openbravo.api`
-- `org.openbravo.service.openapi`
-- `org.openbravo.service.external.integration`
-- `org.openbravo.externaldata.integration`
+- [`org.openbravo.retail.sampledata`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Retail-Sampledata){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.returns`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Return-From-Original){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.posterminal`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Web-POS){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.poshwmanager`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Web-POS-Hardware-Manager){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.pack`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Openbravo-For-Retail){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.discounts`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Discounts--Promotions-Rules-For-Retail){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.config`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Retail-Configuration){target="_blank"} version `23Q4.2`
+- [`org.openbravo.mobile.core`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Mobile-Core-Infrastructure){target="_blank"} version `23Q4.2`
+- [`org.openbravo.events.core`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Events-Core){target="_blank"} version `1.0.233000`
+- [`org.openbravo.api`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Openbravo-API){target="_blank"} version `1.0.234001` 
+- [`org.openbravo.service.openapi`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Open-API){target="_blank"} version `1.1.233000`  
+- [`org.openbravo.service.external.integration`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/External-Integration-Infrastructure){target="_blank"} version `2.0.234000` 
+- [`org.openbravo.externaldata.integration`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/External-Data-Integration-In-The-ERP){target="_blank"} version `2.0.234000` 
 
 !!! warning
     Is necesary to apply a change in the `modules/org.openbravo.api/src/org/openbravo/api/util/ApiUtils.java` file  in line 38 reeplace by: 
@@ -317,7 +317,7 @@ UPDATE public.ad_org SET em_obretco_dbp_orgid='D270A5AC50874F8BA67A88EE977F8E3B'
 
 ### Openbravo Access
 
-You can now access Openbravo with initialized sample data
+Now, start Tomcat and access to Openbravo.
 
 !!! success "Openbravo Back Office"    
     - [http://localhost:8081/openbravo/](http://localhost:8081/openbravo/)
@@ -325,7 +325,7 @@ You can now access Openbravo with initialized sample data
     - Password: openbravo
 
 !!! success "Openbravo POS"
-    - [http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login](http://localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login)
+    - [http://a.localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login](http://a.localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login)
     - User: vallblanca
     - Password: openbravo
 
@@ -341,24 +341,28 @@ Follow the steps in the Install Etendo guide, in the tab [Steps to Install Etend
 !!! info 
     At this point we assume that you already have a development environment with Etendo Base, and Tomcat and Postgres SQL dockerized.
 
-Then, You can open the `EtendoERP` project in IntelliJ, as mentioned in the [Install Etendo - Development Environment](../../../etendo-classic/getting-started/installation/install-etendo-development-environment.md) guide, although it is not necessary to configure Tomcat, since the service is already dockeridez and preconfigured.
+Then, You can open the `EtendoERP` project in IntelliJ, as mentioned in the [Install Etendo - Development Environment](../../../etendo-classic/getting-started/installation/install-etendo-development-environment.md) guide.
 
+!!! warning 
+    It is not necessary to configure Tomcat, since the service is already dockeridez and preconfigured.
 
 
 ### Install Modules
-Once we have the Etendo environment we must install the Platform Bundle and the modules specific to the Etendo-Openbravo connector.
-To do this we simply add the dependencies in the build.gradle file:
+Once we have the Etendo environment we must install the **Platform Extensions** bundle and the modules specific to the Openbravo connector.
+
+To do this we simply add the dependencies in the `build.gradle` file:
 
 ```groovy title="build.gradle"
-implementation ('com.etendoerp:platform.extensions:latest.release')
+dependencies {
+    implementation ('com.etendoerp:platform.extensions:latest.release')
 
-moduleDeps ('com.etendoerp:integration.to.openbravo:1.0.0@zip')
-moduleDeps ('com.etendoerp:integration.to.openbravo.template:1.0.0@zip')
-moduleDeps ('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
+    moduleDeps('com.etendoerp:integration.to.openbravo:1.0.0@zip')
+    moduleDeps('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
+}
+
 
 ```
-
-Also, in the gradle.properties file the following configuration variables must be added, to execute all the necessary dockerized services:
+Also, in the `gradle.properties` file the following configuration variables must be added, to execute all the necessary dockerized services:
 
 ``` groovy title="gradle.properties"
 context.name=etendo
@@ -388,22 +392,21 @@ etendorx.basepackage=com.etendorx.integration.to_openbravo.mapping
 
 Now in a terminal in the Etendo project, we execute the commands:
 
-```bash title="Terminal" 
-./gradlew setup 
-```
-To apply the changes in the `gradle.properties` file settings.
+1. To apply the changes in the `gradle.properties` file settings.
 
+    ```bash title="Terminal" 
+    ./gradlew setup 
+    ```
+2. Expand source code modules:
 
-```bash title="Terminal"
-./gradlew expandModules 
-```
-Expand source modules:
-
+    ```bash title="Terminal"
+    ./gradlew expandModules 
+    ```
+3. Launch the dockerized services:
 
 ```bash title="Terminal"
 ./gradlew resources.up 
 ```
-To launch the dockerized services,
 
 <figure markdown="span">
     ![dockerized-services.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-1.png)
@@ -485,7 +488,7 @@ make setupconnector
 
 ## Testing Data Synchronization between Environments
 
-##  Etendo Access Token
+###  Etendo Access Token
 The last configuration step is to generate an access token for communication from Openbravo to Etendo. To do this we must through a request manager such as Postman execute the following request:
 
 - **HTTP Method**: `POST`
@@ -517,39 +520,36 @@ After making the request, you will receive a JSON response. Copy the value of th
 ### External System
 :material-menu: `Application` > `General Setup` > `Application` > `External System`
 
-In the Openbravo environment, logged in as `System Administrator`, it is necessary to access the `External System` window and set the generated token in the token field.
+In the Openbravo environment, logged in as `System Administrator`, it is necessary to access the `External System` window and set the generated token in the token field, this token is used to authenticate the requests form Openbravo to Etendo.
 
 ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/openbravo-external-system.png)
-
-!!! Suceess "Test Connection"
-    Once configured, run the `Test` process to check the connection, make sure that all the integration services are running.
     
 
+### Testing the Integration
 
+1. Log in to the Openbravo POS Terminal, with Valblanca user:
 
-### 5. Verify Middleware Configuration
-Ensure Etendo RX middleware is configured to handle synchronization between Openbravo and Etendo. Update any required endpoints and authorization tokens.
+    ![pos-login.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-login.png)
 
-### 6. Testing the Integration
-#### Generating Documents in Openbravo POS
-1. Log in to the Openbravo POS Terminal.
-2. Perform a sales transaction or any activity that generates a document.
-3. Confirm that the document is synchronized to the Etendo environment.
+2. Create a new customer:
 
-#### Verifying Synchronization
-1. Check the Etendo environment for the synchronized document.
-2. Review logs in Etendo RX middleware to ensure smooth data flow.
+    ![pos-create-bpartner.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-create-bpartner.png)
 
-## Additional Notes
-- Logs can be enabled in Etendo by modifying the `config/log4j2-web.xml` file:
+3. Create a Purchase Order for this new customer, and make the corresponding payment:
 
-  ```xml
-  <AppenderRef ref="Console"/>
-  ```
+    ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-create-order.png)
 
-- Run the `smartbuild` task after updating configurations:
+4. As you can see, the sales order was created in Openbravo:
 
-  ```bash
-  ./gradlew smartbuild --info
-  ```
+    ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-sales-order.png)
 
+5. In the **EDL Request Window** you can see the transactions sent from Openbravo to Etendo, their status and in case of failure see the error log and retry sending: 
+
+   ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-edl-request.png)
+
+6. Now, after a synchronization time, you can confirm that the documents are synchronized with the Etendo environment correctly with all related master data: 
+
+    ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/etendo-sale-order.png)
+
+7. Finally, in the External ID Mapping window you can see the external record IDs and the mapping to local records:
+    ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/external-id-mappings.png)
