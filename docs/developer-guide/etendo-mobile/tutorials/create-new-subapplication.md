@@ -58,7 +58,7 @@ Fields to note:
 
 - **Module**: The module that can export the window configuration. In our example case, set `Product SubApp`.
 - **Name**: Name with the application will be shown. In our example case, set `Product Subapp`
-- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our example case, set `/`
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/web/<javapackage>/`. In our example case, set `/`
 - **Active**: To select if this application is active or not. In our example case, set `true`
 
 
