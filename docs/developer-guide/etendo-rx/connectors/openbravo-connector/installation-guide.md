@@ -21,10 +21,9 @@ In this guide we will start from two clean environments using test data, which f
     This guide is based on Openbravo 23Q4.2 and Etendo 24.4.0
 
 ## Required Software and Tools
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community or Ultimate Edition)
 - [Eclipse](https://eclipseide.org/){target="_blank"}
 - [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"}
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} or [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"}
 - [Postman](https://www.postman.com/downloads/){target="_blank"}
 - [Openbravo 23Q4.2](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo)
 - [Etendo Classic 24.4.0](../../../../whats-new/release-notes/etendo-classic/release-notes.md) or later.
@@ -61,7 +60,7 @@ To obtain these modules, an active Openbravo License and access to the Openbravo
         Matcher m = Pattern.compile("(^|[^\\\\]{2}):{1}([a-zA-Z0-9_]+)").matcher(hqlWhereClause);
     ```
 
-Also, you must clone the Openbravo-Etendo connector modules, to do that Partner access level is required :
+Also, you must clone in the `/modules` folder the Etendo Connector integration modules, to do that the Partner access level to Etendo Software organization in GitHub is required:
 
 ```bash
 git clone git@github.com:etendosoftware/com.etendoerp.integration.openbravo.git --branch 1.0.0
@@ -84,7 +83,7 @@ ant smartbuild
 
 ### Master Data Configuration
 
-Then, to simplify the configurations we will make some inserts in the `openbravo` database, for this we can connect from PG Admin or by command line:
+Then, to simplify the configurations we will make some inserts in the `openbravo` database, for this we can connect from PGAdmin or by command line:
 
 ```bash title="Terminal"
 PGPASSWORD=tad  psql -U tad  -d openbravo -h localhost -p 5432
@@ -339,18 +338,16 @@ By following these steps the POS should be correctly configured, for more inform
 Follow the steps in the Install Etendo guide, in the tab [Steps to Install Etendo with Postgres Database and Tomcat Dockerized](../../../../getting-started/installation.md#steps-to-install-etendo-with-postgres-database-and-tomcat-dockerized).
 
 !!! info 
-    At this point we assume that you already have a development environment with Etendo Base, and Tomcat and Postgres SQL dockerized.
-
-Then, You can open the `EtendoERP` project in IntelliJ, as mentioned in the [Install Etendo - Development Environment](../../../etendo-classic/getting-started/installation/install-etendo-development-environment.md) guide.
+    At this point we assume that you already have a local Etendo environment, Tomcat and Postgres SQL services dockerized.
 
 !!! warning 
     It is not necessary to configure Tomcat, since the service is already dockeridez and preconfigured.
 
 
 ### Install Modules
-Once we have the Etendo environment we must install the **Platform Extensions** bundle and the modules specific to the Openbravo connector.
+Once you have the Etendo environment you must install the **Platform Extensions** bundle and the specific modules to the Openbravo connector.
 
-To do this we simply add the dependencies in the `build.gradle` file:
+To do this, add the dependencies in the `build.gradle` file:
 
 ```groovy title="build.gradle"
 dependencies {
@@ -416,15 +413,15 @@ Now in a terminal in the Etendo project, we execute the commands:
 
 ### Compile and access to Etendo Classic 
 
-The next step is to install Etendo and apply sampledata
+The next step is to compile the Etendo environment and apply sampledata
 
 ```bash title="Terminal"
-./gradlew install
+./gradlew update.database
 ./gradlew import.sample.data -Dmodule=com.etendoerp.integration.to.openbravo.sampledata 
 ./gradlew smartbuild
 ```
 
-Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps, and you can now access 
+Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps.
 
 !!! success "Access Etendo Classic:"
     - [http://localhost:8080/etendo](http://localhost:8080/etendo)
@@ -461,6 +458,15 @@ After the execution of this process the default configuration variables are comp
 
 ![default-rx-config.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/default-rx-config-connector.png)
 
+###  Initial Configuration Scripts
+
+```bash title="Terminal"
+cd modules/com.etendoerp.integration.to.openbravo/utils
+make set_wal
+make insert
+make setupconnector
+```
+
 ### Relunch RX services
 
 Then, to effectively run all  the services, it is necessary to **execute the command** in the terminal: 
@@ -476,15 +482,6 @@ Here, all the services and their respective logs can be seen running using [lazy
     <figcaption> As you can see all the services required for the Openbravo Etendo integration are running </figcaption>
 </figure>
 
-
-###  Initial Configuration Scripts
-
-```bash title="Terminal"
-cd modules/com.etendoerp.integration.to.openbravo/utils
-make set_wal
-make insert
-make setupconnector
-```
 
 ## Testing Data Synchronization between Environments
 
