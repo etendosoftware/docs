@@ -21,7 +21,7 @@ In this guide we will start from two clean environments using test data, which f
     This guide is based on Openbravo 23Q4.2 and Etendo 24.4.0
 
 ## Required Software and Tools
-- [Eclipse](https://eclipseide.org/){target="_blank"}
+- [Eclipse IDE](https://eclipseide.org/){target="_blank"}
 - [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} or [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"}
 - [Postman](https://www.postman.com/downloads/){target="_blank"}
