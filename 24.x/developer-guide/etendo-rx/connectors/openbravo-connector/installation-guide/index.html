@@ -7169,18 +7169,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#relunch-rx-services" class="md-nav__link">
+  <a href="#initial-configuration-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Relunch RX services
+      Initial Configuration Scripts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#initial-configuration-scripts" class="md-nav__link">
+  <a href="#relunch-rx-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Initial Configuration Scripts
+      Relunch RX services
     </span>
   </a>
   
@@ -9990,18 +9990,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#relunch-rx-services" class="md-nav__link">
+  <a href="#initial-configuration-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Relunch RX services
+      Initial Configuration Scripts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#initial-configuration-scripts" class="md-nav__link">
+  <a href="#relunch-rx-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Initial Configuration Scripts
+      Relunch RX services
     </span>
   </a>
   
@@ -10123,10 +10123,9 @@
 </div>
 <h2 id="required-software-and-tools">Required Software and Tools</h2>
 <ul>
-<li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> (Community or Ultimate Edition)</li>
 <li><a href="https://eclipseide.org/" target="_blank">Eclipse</a></li>
 <li><a href="https://tomcat.apache.org/" target="_blank">Apache Tomcat</a></li>
-<li><a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a></li>
+<li><a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> or <a href="https://github.com/jesseduffield/lazydocker#installation" target="_blank">lazydocker</a></li>
 <li><a href="https://www.postman.com/downloads/" target="_blank">Postman</a></li>
 <li><a href="https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo">Openbravo 23Q4.2</a></li>
 <li><a href="../../../../../whats-new/release-notes/etendo-classic/release-notes/">Etendo Classic 24.4.0</a> or later.</li>
@@ -10158,7 +10157,7 @@
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">Matcher</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">&quot;(^|[^\\\\]{2}):{1}([a-zA-Z0-9_]+)&quot;</span><span class="p">).</span><span class="na">matcher</span><span class="p">(</span><span class="n">hqlWhereClause</span><span class="p">);</span>
 </span></code></pre></div>
 </div>
-<p>Also, you must clone the Openbravo-Etendo connector modules, to do that Partner access level is required :</p>
+<p>Also, you must clone in the <code>/modules</code> folder the Etendo Connector integration modules, to do that the Partner access level to Etendo Software organization in GitHub is required:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.integration.openbravo.git<span class="w"> </span>--branch<span class="w"> </span><span class="m">1</span>.0.0
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.integration.openbravo.template.git<span class="w"> </span>--branch<span class="w"> </span><span class="m">1</span>.0.0
 </span></code></pre></div>
@@ -10174,7 +10173,7 @@
 <p>Configure Tomcat to run on port <code>8081</code> since port <code>8080</code> will be occupied by Etendo, then restart Tomcat.  </p>
 </div>
 <h3 id="master-data-configuration">Master Data Configuration</h3>
-<p>Then, to simplify the configurations we will make some inserts in the <code>openbravo</code> database, for this we can connect from PG Admin or by command line:</p>
+<p>Then, to simplify the configurations we will make some inserts in the <code>openbravo</code> database, for this we can connect from PGAdmin or by command line:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">PGPASSWORD</span><span class="o">=</span>tad<span class="w">  </span>psql<span class="w"> </span>-U<span class="w"> </span>tad<span class="w">  </span>-d<span class="w"> </span>openbravo<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>
 </span></code></pre></div>
 <p>Run the following script:</p>
@@ -10421,16 +10420,15 @@
 <p>Follow the steps in the Install Etendo guide, in the tab <a href="../../../../../getting-started/installation/#steps-to-install-etendo-with-postgres-database-and-tomcat-dockerized">Steps to Install Etendo with Postgres Database and Tomcat Dockerized</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>At this point we assume that you already have a development environment with Etendo Base, and Tomcat and Postgres SQL dockerized.</p>
+<p>At this point we assume that you already have a local Etendo environment, Tomcat and Postgres SQL services dockerized.</p>
 </div>
-<p>Then, You can open the <code>EtendoERP</code> project in IntelliJ, as mentioned in the <a href="../../../../etendo-classic/getting-started/installation/install-etendo-development-environment/">Install Etendo - Development Environment</a> guide.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It is not necessary to configure Tomcat, since the service is already dockeridez and preconfigured.</p>
 </div>
 <h3 id="install-modules">Install Modules</h3>
-<p>Once we have the Etendo environment we must install the <strong>Platform Extensions</strong> bundle and the modules specific to the Openbravo connector.</p>
-<p>To do this we simply add the dependencies in the <code>build.gradle</code> file:</p>
+<p>Once you have the Etendo environment you must install the <strong>Platform Extensions</strong> bundle and the specific modules to the Openbravo connector.</p>
+<p>To do this, add the dependencies in the <code>build.gradle</code> file:</p>
 <p><div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendoerp:platform.extensions:latest.release&#39;</span><span class="o">)</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
@@ -10483,12 +10481,12 @@ Also, in the <code>gradle.properties</code> file the following configuration var
     <figcaption> As you can see the DB Postgres services required for the Etendo installation is running </figcaption>
 </figure>
 <h3 id="compile-and-access-to-etendo-classic">Compile and access to Etendo Classic</h3>
-<p>The next step is to install Etendo and apply sampledata</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./gradlew<span class="w"> </span>install
+<p>The next step is to compile the Etendo environment and apply sampledata</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./gradlew<span class="w"> </span>update.database
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>./gradlew<span class="w"> </span>import.sample.data<span class="w"> </span>-Dmodule<span class="o">=</span>com.etendoerp.integration.to.openbravo.sampledata<span class="w"> </span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>./gradlew<span class="w"> </span>smartbuild
 </span></code></pre></div>
-<p>Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps, and you can now access </p>
+<p>Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps.</p>
 <div class="admonition success">
 <p class="admonition-title">Access Etendo Classic:</p>
 <ul>
@@ -10515,21 +10513,21 @@ If the expiration time is equal to <code>0</code> the tokens do not expire.</p>
 <p>In the particular case of the <code>Worker Service</code> it is necessary to add the <code>connector.instance</code> parameter, which refers to the ID of the connector instance with Openbravo, this instance is distributed within the connector, so you must always set the ID <code>6364E51BF1234094A313F17E1DCD2F7D</code>. </p>
 </div>
 <p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/default-rx-config-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="default-rx-config.png" src="../../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/default-rx-config-connector.png" /></a></p>
+<h3 id="initial-configuration-scripts">Initial Configuration Scripts</h3>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">cd</span><span class="w"> </span>modules/com.etendoerp.integration.to.openbravo/utils
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>make<span class="w"> </span>set_wal
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>make<span class="w"> </span>insert
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>make<span class="w"> </span>setupconnector
+</span></code></pre></div>
 <h3 id="relunch-rx-services">Relunch RX services</h3>
 <p>Then, to effectively run all  the services, it is necessary to <strong>execute the command</strong> in the terminal: </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./gradlew<span class="w"> </span>resources.up
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
 <p>Here, all the services and their respective logs can be seen running using <a href="https://github.com/jesseduffield/lazydocker#installation" target="_blank">lazydocker</a> or <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> for a simple and fast container management. </p>
 <figure>
     <a class="glightbox" href="../../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dockerized-services.png" src="../../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-2.png" /></a>
     <figcaption> As you can see all the services required for the Openbravo Etendo integration are running </figcaption>
 </figure>
-<h3 id="initial-configuration-scripts">Initial Configuration Scripts</h3>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">cd</span><span class="w"> </span>modules/com.etendoerp.integration.to.openbravo/utils
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>make<span class="w"> </span>set_wal
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>make<span class="w"> </span>insert
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>make<span class="w"> </span>setupconnector
-</span></code></pre></div>
 <h2 id="testing-data-synchronization-between-environments">Testing Data Synchronization between Environments</h2>
 <h3 id="etendo-access-token">Etendo Access Token</h3>
 <p>The last configuration step is to generate an access token for communication from Openbravo to Etendo. To do this we must through a request manager such as Postman execute the following request:</p>
