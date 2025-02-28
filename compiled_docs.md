@@ -49299,9 +49299,9 @@ In the Openbravo environment, logged in as `System Administrator`, it is necessa
 
     ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-sales-order.png)
 
-5. In the **EDL Request Window** you can see the transactions sent from Openbravo to Etendo, their status and in case of failure see the error log and retry sending: 
-
-   ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-edl-request.png)
+5. In the **EDL Request Window** you can see the transactions sent from Openbravo to Etendo, their status and in case of failure see the error log and retry sending:
+    
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-edl-request.png)
 
 6. Now, after a synchronization time, you can confirm that the documents are synchronized with the Etendo environment correctly with all related master data: 
 
