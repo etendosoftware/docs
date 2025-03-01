@@ -20,7 +20,35 @@ tags:
 - :material-trending-up: **Optimizations**
     
     ---
-    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the Etendo ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Now, you can clone agents in one click**
+
+    ---
+
+    ![copilot-clone.png](../assets/whats-new/etendo-news/copilot-clone.png)
+    
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the functionality to [clone agents](../user-guide/etendo-copilot/setup-and-usage.md#buttons) and knowledge bases is added, allowing you to modify and customize the agents' wizards according to your needs.
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   :material-robot: **Improvements in agent knowledge bases**
+
+    --- 
+
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new capabilities are added:
+
+    ![knowledge-base-files-news.png](../assets/whats-new/etendo-news/knowledge-base-files-news.png)
+
+    For more info visit [Knowledge Base File](../user-guide/etendo-copilot/setup-and-usage.md#knowledge-base-file-window) windows documentation.
 
 </div>
 
@@ -31,11 +59,17 @@ tags:
 - :octicons-package-16: **Enhanced asset management with accounting dimensions**
 
     ---
+
+    ![dimension.png](../assets/whats-new/etendo-news/financial-dimension.png)
+
     In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
 
 - :octicons-package-16: **Gain better control with the Not Posted Documents window**
 
     ---
+
+    ![](../assets/whats-new/etendo-news/financial-not-posted.png)
+
     In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
 
     Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
