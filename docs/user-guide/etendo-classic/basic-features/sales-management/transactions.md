@@ -369,7 +369,7 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
 
-![Sales order lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorder.png)
+![Sales order lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorderlines.png)
 
 Fields to note:
 
@@ -379,7 +379,7 @@ Fields to note:
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
 - **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
-- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
+- **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](../master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -978,14 +978,14 @@ Once completed a sales invoice can be:
 
 Once the sales invoice header has been properly filled in and saved, each sales invoice line can be registered in this tab one by one.
 
-![Sales invoice lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoice.png)
+![Sales invoice lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoicelines.png)
 
 Fields to note:
 
 - **Attribute Set Value:** field is displayed if the product in the line has attributes (color, size, serial number or several of them together etc).
 - **Sales Order Line** and **Goods Shipment Line:** references to the sales order and goods shipment line that is being invoiced.
 - **Financial Invoice line:** is selected when the invoice line is not a product but an account not set up as a product but as a G/L item, or an asset not set up as a product. When selected, the product field disappears from the screen and an account field appears that will be related to the sales invoice line.
-- **Cancel Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. If this box is checked, promotions for this line are cancelled; otherwise, they are calculated normally.
+-  **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](../master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 As already mentioned, sales revenue can be deferred therefore they are not recognized at the sales accounting date but within a given number of accounting periods.
 
