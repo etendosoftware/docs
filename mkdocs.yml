@@ -506,6 +506,9 @@ nav:
         - Config Server: developer-guide/etendo-rx/concepts/config-server.md
         - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
         - Projections and Mappings: developer-guide/etendo-rx/concepts/projections.md
+      - Connectors:
+        - Openbravo Connector:
+          - ✨ Installation: developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to Guides:

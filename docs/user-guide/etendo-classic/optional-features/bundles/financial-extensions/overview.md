@@ -36,7 +36,7 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account
+This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
     For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
@@ -47,20 +47,20 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
-This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
 
 !!! info
     This functionality is available in the following windows:
 
-    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
-    - [Sales invoice]()
-    - [Purchase Invoice]()
-    - [Sales order]()
-    - [Purchase order]()
-    - [Payment In]()
-    - [Payment Out]()
+    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+    - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+    - [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
+    - [Purchase order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+    - [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+    - [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
-    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 
 ### Advanced Business Partner Settlement
