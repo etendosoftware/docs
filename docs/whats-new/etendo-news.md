@@ -11,6 +11,23 @@ tags:
 
 #
 
+## March 2025
+
+### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :material-trending-up: **Fixed Issue**
+    
+    ---
+    As of version [24.3.7](./release-notes/etendo-classic/release-notes.md), a bug affecting dropdown selectors in dimensional reports has been fixed. In environments running Etendo 24.3.6 or earlier, the first record in combo boxes was displayed incorrectly, showing a concatenation of all values instead of the correct individual value. This issue was caused by improper handling of `<option>` tags in HTML.
+
+    The bug has been resolved in 24.3.7, and Etendo 24.4.0 or later was not affected, as the refactor to fix the issue was already included in that version. 
+    
+    *See more details in Issue [#629](https://github.com/etendosoftware/etendo_core/issues/629)*.
+
+</div>
+
 ## February 2025
 
 ### Etendo ISO
