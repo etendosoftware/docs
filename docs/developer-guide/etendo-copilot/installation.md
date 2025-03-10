@@ -1,11 +1,10 @@
 ---
 title: Copilot Installation
 tags:
-    - Etendo Copilot
-    - Copilot Core
+    - Copilot
+    - Install
     - IA
     - Infrastructure
-    - Chat
     - Assistants
 ---
 
@@ -37,6 +36,8 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
 1. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
 
+    !!!info
+        From Etendo Classic version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) onwards the variables `ETENDO_HOST`, `COPILOT_HOST` and `ETENDO_HOST_DOCKER` are optional, in case they are defined they will overwrite the automatically generated variables.
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
@@ -51,14 +52,18 @@ The simplest configuration we are going to follow as an example is to mount Copi
     | **Environment Variable**   | **Default**  | **Info** |
     | -------------------------- | -------------| -------- |
     | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
-    | ETENDO_HOST            |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
-    | ETENDO_HOST_DOCKER     |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
-    | COPILOT_HOST           | `localhost` | **Required** The copilot host can be defined by the user. By default use `localhost` |
+    | ETENDO_HOST            |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
+    | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
+    | COPILOT_HOST           | `localhost` | **Optional** The copilot host can be defined by the user. By default use `localhost` |
     | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
     | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
+    |ANTHROPIC_API_KEY      | `***********************` | **Optional** You can use an [ANTHROPIC API Key](https://docs.anthropic.com/en/api/getting-started){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use Anthropic AI Models. |
 
     !!! info
-        The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo`. Its recommended to access to the Docker Container shell and check the network configuration to get the correct IP address.
+        The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo` if you are using Docker Desktop.
+    
+    !!! warning 
+        If you are using docker via console, the `ETENDO_HOST_DOCKER` variable should be `http://172.17.0.1:8080/etendo`
    
 
 2.  Once the Copilot Extensions Bundle dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:

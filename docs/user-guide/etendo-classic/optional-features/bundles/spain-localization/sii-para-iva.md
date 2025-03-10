@@ -1,5 +1,10 @@
 ---
 title: Spain SII
+tags:
+    - SII
+    - Localizacion Española
+    - Facturas en RECC
+    - Monitor SII
 ---
 ## Javapackages 
 

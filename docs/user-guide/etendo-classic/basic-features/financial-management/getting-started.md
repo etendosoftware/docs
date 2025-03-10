@@ -1,10 +1,10 @@
 ---
-tags: 
-    - getting started
-    - financial management
-    - payment
-    - accounting
-    - assets
+tags:
+    - Etendo Classic
+    - Financial Management
+    - Accounting Automation
+    - Payables and Receivables Management
+    - Year-End Closing
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)

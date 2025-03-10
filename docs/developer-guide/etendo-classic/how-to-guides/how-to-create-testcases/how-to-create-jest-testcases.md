@@ -1,9 +1,10 @@
 ---
+title: How to Create Jest Test Cases
 tags:
+  - How to
   - Jest
   - Test
   - Test Cases
-title: How to Create Jest Test Cases
 ---
 
 # How to Create Jest Test Cases

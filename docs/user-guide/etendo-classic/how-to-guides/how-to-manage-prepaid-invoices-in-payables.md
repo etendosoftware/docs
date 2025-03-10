@@ -1,3 +1,11 @@
+---
+tags:
+  - How to
+  - Prepaid Invoices
+  - Purchase Order
+  - Vendor Payments
+---
+
 ## Overview
 
 There are vendors which do not wish to extend credit to their customers:

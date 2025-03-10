@@ -1,9 +1,11 @@
 ---
+title: Copilot Extensions
 tags: 
-    - Copilot
-    - AI
-    - Tools
-    - Assistants
+    - Copilot Extensions
+    - AI Tools
+    - Assistant Features
+    - Etendo Modules
+    - Integration Guide
 ---
 
 # Copilot Extensions
@@ -92,14 +94,6 @@ This module includes an assistant capable of performing operations related to th
 !!! info
     For more information, visit [Copilot Purchase Expert](../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md) user guide.
 
-### Database Query Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
-
-!!! info
-    For more information, visit [Database Query Tool](../../../developer-guide/etendo-copilot/available-tools/database-query-tool.md) developer guide.
 
 ### Dev Assistant
 
@@ -116,10 +110,7 @@ The **Dev Assistant** is designed to develop other assistants to facilitate proc
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
 
 !!! info
     For more information, visit [XML Translation Tool](../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool.md) developer guide.
-

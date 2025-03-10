@@ -3,10 +3,8 @@
 Here you can find a list of the all the available tools in the Copilot bundle.
 
 - [Attach File Tool](../available-tools/attach-file-tool.md)
+- [Audio Tool](../available-tools/audio-tool.md)
 - [Codbar Tool](../available-tools/codbar-tool.md)
-- [Create Reference Tool](../available-tools/create-reference-tool.md)
-- [Database Query Tool](../available-tools/database-query-tool.md)
-- [DDL Tool](../available-tools/ddl-tool.md)
 - [Docker Tool](../available-tools/docker-tool.md)
 - [File Copy Tool](../available-tools/file-copy-tool.md)
 - [File Downloader Tool](../available-tools/file-downloader-tool.md)
@@ -18,5 +16,8 @@ Here you can find a list of the all the available tools in the Copilot bundle.
 - [Send Email Tool](../available-tools/send-email-tool.md)
 - [Tavily Tool](../available-tools/tavily-tool.md)
 - [Template Tool](../available-tools/template-tool.md)
+- [Test Run Tool](../available-tools/test-run-tool.md)
 - [Uncompress Tool](../available-tools/uncompress-tool.md)
 - [Write File Tool](../available-tools/write-file-tool.md)
+- [XLS Tool](../available-tools/xls-tool.md)
+- [XML Translation Tool](../available-tools/xml-translation-tool.md)

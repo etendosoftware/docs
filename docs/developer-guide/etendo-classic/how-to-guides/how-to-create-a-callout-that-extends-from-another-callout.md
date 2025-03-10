@@ -1,7 +1,9 @@
 ---
-tags: 
-  - callout
-  - extended callout
+title: How to Create a Callout that Extends from Another Callout
+tags:
+  - How to
+  - Callout
+  - Extend Callout
   - Etendo Classic
 ---
 

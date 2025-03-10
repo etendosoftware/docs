@@ -1,3 +1,13 @@
+---
+title: Subapplications Structure in Etendo Mobile
+tags:
+    - Etendo Mobile
+    - Subapplications Structure
+    - React-Native
+    - Language Management
+    - Etendo UI Library
+---
+
 # Subapplications Structure in Etendo Mobile
 
 ## Overview
@@ -5,7 +15,6 @@ This page provides a comprehensive guide to the structure of subapplications in 
 
 ## App File
 In `App.tsx`, it is the main file located in the root of the subapplication. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible for the initialization of the subapplication and gets the params from Etendo Mobile.
-
 
 ### Params from Etendo Mobile
 Etendo Mobile _sends_ params to the subapplication and all of them are ready to use, they are:
@@ -21,7 +30,6 @@ Etendo Mobile _sends_ params to the subapplication and all of them are ready to 
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
     - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component includes a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
     - _sharedFiles_: IFile array, if a file is shared to Etendo Mobile from an external application, sharing and selecting a sub-application will add the file to the file array of the corresponding sub-application.
-
 
 ### Language
 The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the _language_ parameter received as input to initialize the remaining aspects of the application in the `App.tsx` file.

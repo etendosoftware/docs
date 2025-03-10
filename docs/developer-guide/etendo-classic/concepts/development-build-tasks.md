@@ -1,10 +1,11 @@
 ---
 tags: 
-  - gradle Tasks
-  - Build Tasks
-  - Initial instalation
-  - Database export
-  - Update database
+  - Concepts
+  - Gradle Task
+  - Build Task
+  - Install
+  - Export Database 
+  - Update Database
 ---
 
 # Development Build Tasks

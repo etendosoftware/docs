@@ -1,8 +1,9 @@
 ---
 tags: 
-  - selectors
-  - etendo
-  - hql
+  - Concepts
+  - Selector
+  - HQL
+  - Reference
 ---
 
 # Selectors

@@ -1,6 +1,13 @@
 ---
 title: Financial Extensions Bundle
+tags:
+ - Financial Management
+ - Etendo Features
+ - Banking
+ - Accounting Enhancements
+ - Automated Processes
 ---
+
 :octicons-package-16: Javapackage: `com.etendoerp.financial.extensions`
 
 :material-store: Etendo Marketplace:  [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
@@ -13,14 +20,48 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 ## Modules
 
+### Accounting Dimensions Assets
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets.template`
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets`
+
+The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
+
+!!! info
+    For more information, visit the [Accounting Dimensions Assets user guide](../../../basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
+
+
 ### Accounting Templates
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account
+This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
     For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
+
+### Advanced Bank Account Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
+
+!!! info
+    This functionality is available in the following windows:
+
+    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+    - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+    - [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
+    - [Purchase order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+    - [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+    - [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
+
+    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 
 ### Advanced Business Partner Settlement
 
@@ -102,7 +143,7 @@ This feature allows entering in the system all the financings the company has. I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This functionality allows the user to post or unpost multiple records at the same time.
+This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the Not Posted Documents window, which allows users to identify and post all pending transactions directly from one window. 
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).

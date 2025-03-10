@@ -1,10 +1,10 @@
 ---
 tags:
-  - Etendo
+  - How to
   - Swagger
   - Secure Web Services
   - Secure Webservices
-  - Web Service
+  - Web Services
 ---
 
 # How to Use Secure Web Services
@@ -15,7 +15,27 @@ This module allows calling any standard Etendo web service in the same way as ca
 
 This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
-Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+Besides the authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+
+## Setup 
+
+!!! Info 
+    By default, the ES256 encryption algorithm is used, it is possible to change it by setting a new preference with the `Encryption Algorithm` property and set its value to `HS256`.
+
+### Initial configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+It is necessary to configure the encryption key and the expiration time for the authentication tokens in the Client window with the System Administrator role.
+
+If the expiration time is equal to "0" the tokens do not expire.
+
+Generate a random key with the "Generate key" button.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+## Secure Web Services Swagger
 
 !!! info
-    For more information, follow this information in [Secure Web Services](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+    For more information, visit [Secure Web Services Swagger](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+
+

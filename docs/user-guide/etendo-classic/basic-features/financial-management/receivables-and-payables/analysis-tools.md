@@ -1,5 +1,11 @@
 ---
 title: Financial Management - Analysis Tools
+tags:
+    - Financial Analysis
+    - Receivables Management
+    - Payables Management
+    - Reporting Tools
+    - Etendo Financials
 ---
 ## Overview
 
@@ -271,9 +277,9 @@ Some relevant fields to note are:
     -   if there is not a payment, this field shows the number of days the invoice is pending to be paid, calculated with the formula **Current Date - Invoice Date**.
 -   **Overdue** this fields indicates whether a payment was received on time (overdue number is set to zero), early (overdue number is a negative number) or late (overdue number is a positive number)
 
-An invoice marked with an (\*) means that the invoice has been paid by using a credit payment.
+An invoice marked with an (*) means that the invoice has been paid by using a credit payment.
 
-Several invoices marked with (\*\*) means that the invoices have been paid by using the same credit payment.
+Several invoices marked with (**) means that the invoices have been paid by using the same credit payment.
 
 ## Payment Run
 

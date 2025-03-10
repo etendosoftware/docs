@@ -1,5 +1,12 @@
 ---
 title: How to Use Advanced Sequences
+
+tags:
+	- How to
+    - Sequences
+    - Transactional Sequences
+    - Non-Transactional Sequences
+    - Database Sequence Management
 ---
 
 # Sequences

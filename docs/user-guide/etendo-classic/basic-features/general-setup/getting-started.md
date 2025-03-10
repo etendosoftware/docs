@@ -1,10 +1,9 @@
 ---
 tags: 
- - getting started
- - installations
- - client
- - organization
- - setup
+ - Getting Started
+ - Installations
+ - Client Setup
+ - Organization Setup
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
@@ -35,7 +34,7 @@ The language is automatically available once the localization bundle has been su
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](../general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or the [Initial Organization setup](../general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
 
 #### Initial Client Setup
 
@@ -46,7 +45,7 @@ Above means that certain configurations such as users, customers, vendors and ot
 !!! info
     Each client can host at least one or even more than one organization that can be used to model your enterprise.
 
-The [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) is the process which creates a Client in Etendo. A Client cannot be created manually.
+The [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) is the process which creates a Client in Etendo. A Client cannot be created manually.
 
 This process besides creating a Client allows selecting the reference data included in the bundle/s already installed.
 All that data, if applied to the Client, will be shared by all the organizations which belong to the Client.

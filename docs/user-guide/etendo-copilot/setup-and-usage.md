@@ -1,9 +1,10 @@
 ---
 tags: 
- - copilot
- - ai
- - ai tools
- - setup
+ - Etendo Copilot
+ - Configuration Guide
+ - Assistant Management
+ - AI Tools Setup
+ - User Instructions
 ---
 
 # Copilot Setup and Usage
@@ -40,7 +41,7 @@ The Assistant window allows you to define and configure assistants:
 
 - **Name**: Assistant name
 - **Description**: Assistant description
-- **App Type**: Langchain Agent, Open AI Assistant or Langgraph
+- **App Type**:
 
     **Open AI Assistant**
 
@@ -49,6 +50,9 @@ The Assistant window allows you to define and configure assistants:
     **Langchain Agent**
 
     These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc. The difference between Langchain and Open AI is that Langchain can save the information locally and it is a multiprovider agent.
+
+    **Multi-Model Assistant**
+    This type of assistant extends the “Langchain” type with the particularity that it can be used with models from various vendors such as “Anthropic” and “Gemini”, in addition to the existing “OpenAI” models. In the future, Langchain assistants will be replaced by this type of multi-model agents.
 
     **LangGraph**
 
@@ -61,21 +65,20 @@ The Assistant window allows you to define and configure assistants:
 
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
-    - **Model**: Dropdown with the Open AI models available. If none of the options are selected, the model defined by default for the Etendo Copilot module in the [preference](../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference) window is to be used.
+    - **Model**: Dropdown with the Open AI models available from the [AI Models](#ai-models-window) window. If none of the options are selected, the model defined by default for the `Copilot Default Model for OpenAI Provider` [preference](../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference) window is to be used.
     - **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
     - **Open AI Assistant ID**: Read-only field in which the ID of the assistant once created is displayed.
     - **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
     - **Open AI Vectordb ID**: Read-only field in which the ID of the vector database is displayed.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
-=== "Langchain Agent"
+=== "Langchain Agent or Multi-Model Assistant"
 
     In case of defining an **Langchain Agent** type app, the following fields will be enabled: 
 
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish.
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case. 
-    - **Provider**: Model provider information.
-    - **Model**: Dropdown with the models available according to the selected provider.
+    - **Model**: Dropdown with the models available,from the [AI Models](#ai-models-window) window.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
 === "LangGraph"
@@ -85,25 +88,34 @@ The Assistant window allows you to define and configure assistants:
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
     - **Graph Preview**: It shows the tree of assistants under a certain manager.
-    - **Provider**: Model provider information.
-    - **Model**: Dropdown with the models available according to the selected provider.
+    - **Model**: Dropdown with the models available, from the [AI Models](#ai-models-window) window.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
-        !!!info
-            If this option is chosen, the **Refresh Preview** button is shown, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
 !!!info
     The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
     These variables will be replaced with the values defined in the properties.
 If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
 
-### Sync Assistant Button
+### Buttons
 
-This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
+- **Sync Assistant**: This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
+
+- **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
+
+- **Check hosts**: This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
+
+- **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a assistant is cloned in, the name `Copy of` is added. 
+
+    ![](../../assets/user-guide/etendo-copilot/setup/clone-agent.png)
+
 
 ### Knowledge Tab
 
-In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
+In this tab, you can setup the files that will be used by the assistant as knowledge base, in prompts or questions.
+
+!!!info
+    To load new files, you must do it from the [Knowledge base file](#knowledge-base-file) window, first you define the files and then from this tab you configure how the file will be used.
 
 !!!warning "File Limitation for Code Interpreter"
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
@@ -113,8 +125,7 @@ In this tab, you can define the files that will be used by the assistant as know
 
 ![](../../assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
 
-!!!info
-    To load new files, you must do it from the [Knowledge Base File](#knowledge-base-file).
+
 
 Fields to note:
 
@@ -163,6 +174,7 @@ Fields to note:
     !!! warning
         Remember that it is not possible to select an assistant without a description.
 
+
 ## Knowledge Base File Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
@@ -173,45 +185,99 @@ In the Knowledge Base File window, you can define the files with which the assis
 
 - **Name**: File Name.
 - **Description**: File description.
-- **Type**:
-    - **Attached File** 
-    This allows you to upload files directly into Copilot for later use during interactions with the assistants.
-    - **HQL Query**
-    This allows using an HQL query result as a file for knowledge base file.
-    - **Remote File** 
-    You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
-    - **Code Index** 
-    Only available as System Administrator, as access to the source code is required.This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
-- **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
-- **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
-- **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+- **Skip Splitting**: Checking this box allows you to tell Copilot not to split the file into parts when indexing it. This is necessary when the entire contents of the file are needed when reading the file, while maintaining the context of the entire file.
+- **File name**: Name of the saved file, it must always include the file format. For example, `example.pdf`.
 
-### File Path Tab 
+- Optional fields by file **Type**:
 
-!!! warning 
-    Only available as System Administrator, as access to the source code is required.
+    === "Attached File"
 
-The **File Path Tab** appears when **Code Index** is selected as the file type. 
+        This type allows you to upload files directly into Copilot for later use during interactions with the assistants.
+        ![attach-file.png](../../assets/user-guide/etendo-copilot/setup/attach-file.png)
+    
+    === "Code Index"
 
-![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
+        Only available as `System Administrator` role, as access to the source code is required. This type allows the agents to access, query and generate a zip with code files that will be indexed to the knowledge base. It allows the configuration of paths and regular expressions to filter files, which are defined in the File Path tab.
 
-**Path File**: Specify the path where the code files you need the assistant to read are located. 
 
-!!!info
-    It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. 
-    Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+        ### File Path Tab
+        
+        This tab is Only available as `System Administrator` role , as access to the source code is required.
+        
+        ![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
 
-!!!note
-    If Etendo Classic is a JAR instance, the source code is located in the following path: `@source.path@/build/etendo/`.
+        Fields to note:
+
+        - **Path File**: Specify the path where the code files you need the assistant to read are located. 
+
+        !!!info
+            It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+        
+        !!!warning
+            As access to the source code is required, both modules and Etendo Classic must be installed in source format.     
+
+    === "HQL Query"
+
+        This type allows using an HQL query result as a file for knowledge base file.
+
+        Fields to note:
+
+        - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+
+        ![hql-query.png](../../assets/user-guide/etendo-copilot/setup/hql-query.png)
+
+
+    === "OpenAPI Flow Specification"
+
+        This type of files, allows to obtain the JSON of the specification of an OpenAPI REST generated from Flows and Request from Etendo, for more technical information you can consult [How to document an endpoint with OpenAPI](../../developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
+
+        Fields to note:
+
+        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
+
+        ![openapi-flow-file.png](../../assets/user-guide/etendo-copilot/setup/openapi-flow-file.png)
+    
+    === "Remote File"
+        
+        You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
+
+        Fields to note:
+
+        - **URL**: Source file URL.
+        - **File name**: Mandatory name of the saved file, it must always include the file format.
+
+        ![remote-file.png](../../assets/user-guide/etendo-copilot/setup/remote-file.png)
+
+    
+    === "Text"
+
+        This allows you to write the content of the file directly in the text area. This option is useful for small texts that must be versioned in the system.
+
+        Fields to note:
+
+        - **Text**: Text content of the file.
+
+        ![text-file.png](../../assets/user-guide/etendo-copilot/setup/text-file.png)
+
+
+
+### Buttons
+
+- **Clone**
+
+    The navbar clone button allows the cloning of files, making a copy of both all header fields and related records in the tabs. When a file is cloned in, the name `Copy of` is added. 
+
+    ![](../../assets/user-guide/etendo-copilot/setup/clone-file.png) 
+
 
 
 ## Skill/Tool Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Skill/Tool`
 
-In this window , the user can find available tools, distributed in the Copilot bundle, to be used in Copilot assistants.
+In this window , the user can find [available tools](../../developer-guide/etendo-copilot/available-tools/overview.md), distributed in the Copilot bundle, to be used in Copilot assistants.
 
 ![](../../assets/user-guide/etendo-copilot/setup/skill-tool-window.png)
 
@@ -286,3 +352,32 @@ Fields to note:
 - **Message**: Exact message used in the conversation
 - **Time**: Time of the message
 - **Creation Date**: Date of the message
+
+
+## AI Models Window
+
+:material-menu: `Application`>`Service`>`Copilot`>`AI Models`
+
+In this window, the user can find and add AI models to be used by the assistants, Available in the drop-down list of models
+
+!!!info 
+    - Automatically, the window will be populated with the Etendo default distributed models, after the first assistant synchronization.
+    - Also diffrent models and providers must be entered manually.
+
+![](../../assets/user-guide/etendo-copilot/setup/ai-models-window.png)
+
+Fields to note:
+
+- **Code**: The code name of the model. It must be in lowercase.
+- **Name**: The human-readable name of the model.
+- **Provider**: The provider of the model. It must be in lowercase.
+- **Max Tokens**: The maximum number of tokens that can be generated by the model. This is a field required in some models, that can be used to limit or expand the model's capabilities, depending of the nature of the model.
+- **Default**: Read-only field, to identify the default model to use, this configuration is distributed and updated by Etendo.
+- **Default Override**: If this field is checked, the selected model will have priority over the others. Only one record can have this check selected.
+- **Etendo Maintenance** Read-only field, to identify the models that are distributed by Etendo.
+
+### Buttons
+
+**Synk Models** This process allows to synchronize the models distributed by Etendo on demand.
+
+

@@ -1,5 +1,11 @@
 ---
 title: How to Copy and Paste Images in Etendo
+tags:
+    - How to
+    - Copy Images
+    - Paste Images
+    - Rich Text
+    - Base64
 ---
 ## Copy and Paste Images in Etendo
 

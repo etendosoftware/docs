@@ -1,5 +1,6 @@
 ---
 tags:
+  - How to
   - Etendo classic
   - create a table
   - table

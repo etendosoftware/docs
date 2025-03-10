@@ -1,5 +1,10 @@
 ---
 title: Etendo JARS
+tags:
+    - Etendo JARs
+    - Java Libraries
+    - Gradle Configuration
+    - Module Publishing
 ---
 ## Overview
 

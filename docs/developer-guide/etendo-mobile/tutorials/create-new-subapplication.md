@@ -5,6 +5,7 @@ tags:
     - Etendo RX
     - Dynamic App Configuration
     - Subapp
+    - Create Sub-application
 ---
 
 # Create New Subapplication
@@ -57,7 +58,7 @@ Fields to note:
 
 - **Module**: The module that can export the window configuration. In our example case, set `Product SubApp`.
 - **Name**: Name with the application will be shown. In our example case, set `Product Subapp`
-- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our example case, set `/`
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/web/<javapackage>/`. In our example case, set `/`
 - **Active**: To select if this application is active or not. In our example case, set `true`
 
 
@@ -104,7 +105,53 @@ Logged in as the **Group Admin** role (which is the default role for accessing E
     ```
 
 ## Dockerized Services
+Before starting the dockerized services, there are some configurations that need to be done in Etendo Classic
 
+### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption token for the authentication in the  Client window with the System Administrator role.
+If the expiration time is equal to "0" the tokens do not expire.
+
+Generate a random key with the "Generate key" button.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, some records need to be created.
+As `System Administrator` role, in this window, it is necessary to add the entries, one for each service to be used. The following fields should be included:
+
+- **Service Name**: The name of each service.
+- **Service URL**: The internal URL of the Docker service.
+- **Updatable Configs**: Check this checkbox.
+- **Public URL**: Configure the publicly accessible URL for the service.
+
+!!!info
+    The **Public URL** field only needs to be configured when the sub-application is set to production.
+
+
+See the configuration examples bellow and replicate them. 
+
+```
+application   
+auth        http://localhost:8094
+config      http://localhost:8888
+das         http://localhost:8092  
+edge        http://localhost:8096
+```
+
+Also in the case of **edge** and **auth** services it is necessary to add the `das.url` Parameter Key with the Parameter Value `http://das:8092`.
+
+![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config.png)
+
+!!!info 
+    If using Dockerized Tomcat, the URLs within the container's network are `http://auth:8094`, `http://config:8888`, `http://das:8092`  and `http://edge:8096`.
+
+
+### Execute RX services
 Before proceeding, it is necessary to start the **Etendo RX** services. These services provide a security layer (Auth Service), a data access layer (Das Service), which are essential for consuming or writing data in Etendo and Edge Service . Additionally, by selecting the **isReact** checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.
 
 To launch all the services, it is necessary to define the following configuration variables in the `gradle.properties` file:
@@ -133,30 +180,6 @@ Then, to effectively run the services, it is necessary to **execute the command*
 Here, all the services and their respective logs can be seen running using [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank} tool.
 
 ![Docker RX Services](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
-
-### RX Config window
-:material-menu: `Application` > `Etendo RX` > `RX Config`
-
-This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, two records need to be created: one for the **RX Config** service, responsible for distributing the dynamic configurations of other available services, and another for the **Auth** service, which provides security utilities. The Auth service must be accessible by the subapplication to obtain the authentication token for requests.
-
-As `System Administrator` role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:
-
-- **Service Name**: The name of each service.
-- **Service URL**: The internal URL of the Docker service.
-- **Updatable Configs**: Check this checkbox.
-- **Public URL**: Configure the publicly accessible URL for the service.
-
-See the configuration examples bellow and replicate them. 
-
-!!!info
-    The **Public URL** field only needs to be configured when the subapplication is set to production.
-
-![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
-
-![alt text](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png)
-
-!!!info 
-    If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`.
 
 
 ## Projections and Search
@@ -489,7 +512,7 @@ export default ProductDetail;
 
 ```
     
-### Navegation 
+### Navigation 
 
 In addition, it is necessary to add the navigation configuration in the `app.tsx` file, in the return statement. This configuration provides the infrastructure to navigate between the different screens of the application.
 
@@ -511,7 +534,7 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 ```
 
 !!! info 
-    For more information, visit [Navegation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
+    For more information, visit [Navigation Stack](../concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
 
 !!! info 
     For more information about the language management and translations, visit [Languague](../concepts/subapp-structure.md#language) concept.
@@ -593,4 +616,42 @@ In this section, we will explain how to receive external files from another appl
 The `sharedFiles` parameter is passed to the subapplication and used to process the received files. Below is the important excerpt from `App.tsx` where `sharedFiles` is handled:
 
 Attached is the source code of the example application and the explanation of how to implement the file sharing functionality in your own sub-application. For more information visit [Documents Manager Subapp](https://github.com/etendosoftware/com.etendoerp.subapp.docsmanager){target="_blank"} repository.
+
+## Debug Log
+
+This section explains how to log data in a sub-application using the `logger` utility function. To log any information, call the `logger` function with a key and a value:
+
+```javascript
+logger('key', value );
+
+```
+
+**Importing the Logger Function** 
+To use the logger in any file, import it as follows:
+
+``` javascript
+import logger from '../../utils/log'; // The path to the file is relative 
+
+```
+
+!!!info "Automatic String Conversion"
+    Objects passed to the `logger` function will be automatically converted to strings using the `JSON.stringify` function. This ensures compatibility with the logging mechanism.
+
+**Example Usage**
+Below is an example of how to use the logger function, including handling errors:
+
+``` javascript
+try {
+  // Your code here
+} catch (err) {
+  logger('Handle Error', err));
+  showAlert(labels.connectionError, 'error');
+}
+```
+In this example:
+
+- The error object `err` is automatically converted to a `String` using `JSON.stringify` and logged.
+- An alert is shown using `showAlert` component to inform the user of a connection error.
+
+By integrating this logging utility, developers can track application behavior and debug more effectively.
 

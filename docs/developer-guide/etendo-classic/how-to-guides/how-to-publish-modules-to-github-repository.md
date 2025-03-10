@@ -1,5 +1,11 @@
 ---
 title: How to Publish Modules to a GitHub Repository
+tags:
+    - How to
+    - GitHub
+    - Module Deployment
+    - Gradle
+    - Publish Modules
 ---
 ## Overview
 
@@ -48,7 +54,6 @@ Example:
 !!! info
      To make use of the dependencies resolution approach, you should declare in the modules dependencies which version of the core your module depends on.
     If the Etendo Core dependency is omitted, the module can be installed on any version of Etendo, even if there are inconsistencies in the compilation.
-
 
 
 

@@ -1,9 +1,10 @@
 ---
 tags:
-  - client-side development
-  - JavaScript functions
-  - OnChange event handling
-  - user interface interactions
+  - How to
+  - Development
+  - JavaScript Functions
+  - OnChange Event Handling
+  - User Interface Interactions
 ---
 
 # How to Create Client Side Callout OnChange Function

@@ -1,5 +1,7 @@
 ---
+title: Application Menu
 tags: 
+  - Concepts
   - Application menu
   - General setup
   - Etendo Classic

@@ -1,5 +1,11 @@
 ---
-    Title: Support Service
+Title: Support Service
+tags:
+    - Etendo Support
+    - Help Center
+    - Technical Support
+    - User Assistance
+    - Contact Information
 ---
 
 ## Help Center
@@ -21,4 +27,3 @@ Here, the user can ask questions or send information in these sections:
 
 !!! info
         For commercial information, visit the [Get in Touch section](https://etendo.software/get-in-touch/){target="_blank"} in the Etendo website.
-

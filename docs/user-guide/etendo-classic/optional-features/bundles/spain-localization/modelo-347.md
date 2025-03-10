@@ -1,5 +1,8 @@
 ---
 title: Modelo 347
+tags:
+    - Modelo 347
+    - Localizacion Española
 ---
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat347apr.es`

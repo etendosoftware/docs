@@ -94,9 +94,6 @@ This section explains how to install a new Etendo environment. It includes:
 #### Requirements 
 This section outlines the [System Requirements](https://docs.etendo.software/latest/getting-started/requirements.md).
 
-!!!info
-    The [Docker Management](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module. If these containers are used, the **services must be launched**, and then follow with the installation guide.
-
 #### PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
 
@@ -107,24 +104,37 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     1.  Clone Etendo Base project in a temporal directory.
 
-        ``` bash
+        ``` bash title="Terminal"
         cd /tmp
         git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
         ```
     2.  Copy the sources in `/opt/EtendoERP` folder.
 
-        ```bash
+        ``` bash title="Terminal"
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
 
     3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
        
-        ```groovy
+        ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
-        githubUser= username
-        githubToken=*******
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+    4. Change the `build.gradle` file, uncomment the core dependency in the dependencies section:
+            
+        ```groovy title="build.gradle"
+        implementation('com.etendoerp.platform:etendo-core:<version>')
+        ```
+
+        !!! info
+            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
+
+    5. Modify the `gradle.properties` file with your environment variables, if it is necessary:
+        
+        ```groovy title="gradle.properties"
 
         context.name=etendo
 
@@ -137,46 +147,21 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
         org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
-    4. Change the `build.gradle` file, uncomment the core dependency in the dependencies section:
-            
-        ```
-        implementation('com.etendoerp.platform:etendo-core:<version>')
-        ```
-
-        !!! info
-            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
-
-    5. Modify the `gradle.properties` file with your environment variables, if it is necessary:
-        
-        ```groovy
-        nexusUser=
-        nexusPassword=
-        githubUser= username
-        githubToken=*******
-
-        context.name=etendo
-
-        bbdd.sid=etendo
-        bbdd.port=5432
-        bbdd.systemUser=postgres
-        bbdd.systemPassword=syspass
-        bbdd.user=tad
-        bbdd.password=tad
-        ```
     6. Dependencies
-        ``` bash
+        
+        ``` bash title="Terminal"
         ./gradlew dependencies
         ```
     7. Setup 
-        ```
+        ``` bash title="Terminal"
         ./gradlew setup
         ```
     8. Installation 
-        ```
+        ``` bash title="Terminal"
         ./gradlew install smartbuild
         ```
     9. Start the Tomcat, in case of Linux you can run:
-        ```
+        ``` bash title="Terminal"
         sudo /etc/init.d/tomcat start
         ```
         
@@ -191,22 +176,46 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     1.  Clone Etendo Base project in a temporal directory.
 
-        ``` bash
+        ``` bash title="Terminal"
         cd /tmp
         git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
         ```
 
     2.  Copy the sources in `/opt/EtendoERP` folder.
-        ```bash
+        
+        ``` bash title="Terminal"
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
     3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
-        ```groovy
+        
+        ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
-        githubUser= username
-        githubToken=*******
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`.
+        
+        ```groovy title="build.gradle"
+        etendo {
+            coreVersion = "<version>"
+        }
+        ```
+
+        !!! info
+            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
+
+    5.  Expand Etendo Base
+
+        ``` bash title="Terminal"
+        ./gradlew expand 
+        ```
+    6. Modify the `gradle.properties` file with your environment variables, if it is necessary:
+
+        ```groovy title="gradle.properties"
+        
         context.name=etendo
 
         bbdd.sid=etendo
@@ -219,54 +228,31 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
 
-    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`.
-        
-        ```groovy
-        etendo {
-            coreVersion = "<version>"
-        }
-        ```
-
-        !!! info
-            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
-
-    5.  Expand Etendo Base
-
-        ```
-        ./gradlew expand 
-        ```
-    6. Modify the `gradle.properties` file with your environment variables, if it is necessary:
-
-        ```groovy
-        context.name=etendo
-
-        bbdd.sid=etendo
-        bbdd.port=5432
-        bbdd.systemUser=postgres
-        bbdd.systemPassword=syspass
-        bbdd.user=tad
-        bbdd.password=tad
-        ```
-
     7. Setup: to apply or create the initial configurations
-        ```
+        
+        ``` bash title="Terminal"
         ./gradlew setup
         ```
+
     8. Installation: Create the database, compile the sources and deploy to Apache Tomcat
-        ```
+        
+        ``` bash title="Terminal"
         ./gradlew install smartbuild
         ```
+
     9. Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
-        ```
+        
+        ``` bash title="Terminal"
         lc_numeric = 'en_US.UTF-8'
         max_locks_per_transaction = 128
         ```        
 
         !!! note
-            After modifying the file restart postgresql
+            After modifying the file restart postgresql service
            
     10.  Start the Tomcat, in case of Linux you can run:
-        ```
+        
+        ``` bash title="Terminal"
         sudo /etc/init.d/tomcat start
         ```
 
@@ -277,6 +263,9 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
 === ":octicons-issue-opened-24: ISO"
 
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
     ### Steps to Install the ISO with Internet Connection
 
     1. Download the ISO from the [release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/iso.md) page.
@@ -317,7 +306,118 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     7. After the installation is finished, the server will be ready for use.
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+=== ":material-docker:  Database and Tomcat Dockerized"
+
+    ### Steps to Install Etendo with Postgres Database and Tomcat Dockerized
+
+    The [Docker Management](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module, which, as its name suggests, provides the Tomcat service.
+    These modules are part of the [Platform Extensions](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md) bundle, which will be covered in this step-by-step guide on how to install them.
+    
+    !!! info
+        In this guide we will assume the installation of Etendo Classic in Sources format, in case you want to install it in JAR format you should consult the changes in the corresponding tab.
+
+    1.  Clone Etendo Base project in a temporal directory.
+
+        ```bash title="Terminal"
+        cd /tmp
+        git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
+        ```
+    2.  Copy the sources in `/opt/EtendoERP` folder.
+
+        ```bash title="Terminal"
+        mv EtendoERP/* /opt/EtendoERP/
+        cd /opt/EtendoERP
+        ```
+
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
+       
+        ```groovy title="gradle.properties"
+        nexusUser=
+        nexusPassword=
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "<version>"`.
+        
+        ```groovy title="build.gradle"
+        etendo {
+            coreVersion = "<version>"
+        }
+        ```
+
+        !!! info
+            To know the available versions,, please visit the Etendo Classic [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
+
+    5.  Expand Etendo Classic
+
+        ``` bash title="Terminal"
+        ./gradlew expand 
+        ```
+
+    6.  Add Platform Extensions bundle dependency, to include the  dockeridez platform features
+
+        ```groovy title="build.gradle"
+        dependencies {
+            //Add other dependencies bellow
+            implementation ('com.etendoerp:platform.extensions:latest.release')
+        }
+        ```
+    7. Modify the `gradle.properties` file with your environment variables
+
+        ```groovy title="gradle.properties"
+        
+        context.name=etendo
+
+        bbdd.sid=etendo
+        bbdd.port=5434
+        bbdd.systemUser=postgres
+        bbdd.systemPassword=syspass
+        bbdd.user=tad
+        bbdd.password=tad
+
+        org.gradle.jvmargs=-Dfile.encoding=UTF-8
+
+        docker_com.etendoerp.tomcat=true
+        docker_com.etendoerp.docker_db=true
+        ```
+        
+        !!! info
+            The dockerized database service will run on the port defined in the `bbdd.port` variable, we suggest using port `5434` to avoid conflict if you have a local Postgres instance using the default port.
+
+            By default the Tomcat service will be up on port `8080`, in case that port is busy you can use the variable `docker_com.etendoerp.tomcat_port=<port>`.
+
+
+    8. Launching Dockerized Tomcat and Database services
+
+        ``` bash title="Terminal"
+        ./gradlew resources.up
+        ```
+        <figure markdown="span">
+        ![tomcat-database-dockerized](https://docs.etendo.software/latest/assets/getting-started/installation/tomcat-database-dockerized.png)
+        <figcaption> Postgres database and Tomcat service running dockerized, if necessary you can access the log of each service. </figcaption>
+        </figure>
+        
+
+    9. Setup: to apply or create the initial configurations
+    
+        ``` bash title="Terminal"
+        ./gradlew setup
+        ```
+
+    10. Installation: Create the database, compile the sources and deploy to Apache Tomcat
+        
+        ``` bash title="Terminal"
+        ./gradlew install smartbuild
+        ```
+           
+    11. After the smartbuild task finish, the Tomacat service will  automatically restart,  open your browser in: 
+    
+        `https://<Public server IP>/<context.name>` or in case that you run in local environment [`http://localhost:8080/etendo`](http://localhost:8080/etendo){target="_blank"}
+
+
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -736,6 +836,7 @@ In case of tab overflow, when the total width of the tabs exceeds the available 
   
 ---
 This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -809,7 +910,7 @@ The language is automatically available once the localization bundle has been su
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](https://docs.etendo.software/latest/general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or the [Initial Organization setup](https://docs.etendo.software/latest/general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
 
 ###### Initial Client Setup
 
@@ -820,7 +921,7 @@ Above means that certain configurations such as users, customers, vendors and ot
 !!! info
     Each client can host at least one or even more than one organization that can be used to model your enterprise.
 
-The [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) is the process which creates a Client in Etendo. A Client cannot be created manually.
+The [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) is the process which creates a Client in Etendo. A Client cannot be created manually.
 
 This process besides creating a Client allows selecting the reference data included in the bundle/s already installed.
 All that data, if applied to the Client, will be shared by all the organizations which belong to the Client.
@@ -1450,6 +1551,7 @@ Etendo supports alerts notification to user or roles by email:
 Alert tab list the events happening which generate the corresponding alert.
 
 ![](https://docs.etendo.software/latest/assets/drive/qRqaP9bx7a04XzXIrzdpZZ3eS3OaglF9SMM3xvRYaL3Vrkhcxz_EI5BxPbtrnQoW_DXad8d-_oQBJntpSgZdchM9RtWisxif2I3GWPM2Yda4XlbPG_kkWIqlvgDl5cvOObV43F4W.png)
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Client
@@ -1469,7 +1571,7 @@ Normally, it is enough creating just one Client which hosts multiple organizatio
 - besides, each organization can also manage its own master data and have its own transactional data
 - finally, a Client cannot share any master data with another Client.
 
-Clients are created by running the [Initial Client setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) available for the "System Administrator" role.
+Clients are created by running the [Initial Client setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) available for the "System Administrator" role.
 
 Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.
 
@@ -1727,7 +1829,7 @@ This action creates:
 - a General Ledger configuration which is automatically linked to the Organization being created
 - and an Account Tree or Chart of Accounts which is also linked to the Organization being created
 
-This step does not create a Fiscal Calendar as the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
+This step does not create a Fiscal Calendar as the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
 
 !!! note
     This step does not imply to manage accounting within an organization, but just to include an accounting file or an accounting reference data in an organization.
@@ -2206,7 +2308,7 @@ The admin user has several roles assigned:
 - the _F&B International Group Admin Role_ demo data (this one is also assigned to it by default)
     - this role enables admin users to have "F&B demo data" Client admin rights.
 - and besides:
-    - every time a new "Client" is created by running the [Initial Client Setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md), Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
+    - every time a new "Client" is created by running the [Initial Client Setup process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md), Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
       - the client admin role enables "Client Admin" user to have admin access rights to that Client and all the organization/s of that client once signed in.
       - the newly created client admin role is also assigned to the admin user by default, therefore it will be possible for the admin user to access the newly created Client.
 
@@ -3229,14 +3331,14 @@ The *bank account* related data you can enter is:
 - **SWIFT Code** - Corresponds to the ISO 9362 international bank code identifier. It must be mandatory filled in case _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
 - **Displayed Account**: It is automatically generated based on the value selected into the Bank Account Format. This field is read only, and it is used by other reports or processes.
 
-###### Remittance
+###### **Advanced Bank Account Management**
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
+This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
 
-![bank_account_default.png](https://docs.etendo.software/latest/assets/legacy/bank_account_default.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
@@ -3268,6 +3370,16 @@ Etendo allows the user to define any type of business partner address, by fillin
 - the **Fax** number
 - **Ship to Address** checkbox - the user should flag this one if the address being set up must be used for Goods Receipts/Shipments related transactions.
 - **Invoice to Address** checkbox - the user should flag this one if the address being setup must be used for sales or purchase invoices transactions.
+
+###### **Advanced Bank Account Management**
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
+
+!!! warning
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
 ##### **Contact**
 
@@ -5331,11 +5443,11 @@ Discounts and Promotions, formerly Price Adjustments, defines rules to be applie
 This feature requires to set as "Active":
 
 - the "Read-Only" Tab "Discounts and Promotions" is found in below listed windows:
-  - Purchase Order
-  - Sales Order
-  - Purchase Invoice
-  - Sales Invoice
-  - and Sales Quotation
+    - Purchase Order
+    - Sales Order
+    - Purchase Invoice
+    - Sales Invoice
+    - and Sales Quotation
 
 ###### How Promotions are Applied
 
@@ -5815,6 +5927,8 @@ Once the product demands are clear and locked, the last step to take in this win
 
 Purchase Order window allows the user to manage orders which once booked will be sent to the external suppliers. In other words, it is a document to register products and/or services to be purchased and documented.
 
+![Purchase order window](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/purchaseorder.png)
+
 Once the document is booked, it can be sent to the external supplier and it can be prepaid if required.
 
 Purchase orders can be created and booked in the header section of the purchase order window.
@@ -5834,6 +5948,15 @@ The **Purchase order header** allows you to enter the following information:
 - **Payment Method**, **Payment Terms** and **Price List**: These ones are defaulted by Etendo once a business partner is selected.
 - **Order Reference**, free text which can be found under "More Information" section, you can use it to save the supplier order number, if any.
 
+In the **Status Bar** of the header, the user can find the following information:
+
+- **Document Status**: Document status of the order. The order can be in booked, draft, closed status, among others.
+- **Total Gross Amount**: Total Gross amount of the order.
+- **Total Net Amount**: Total Net amount of the order.
+- **Currency**: Currency of the order.
+- **Delivery Status**: It indicates in % how much quantity of the order has been received.  
+- **Invoice Status**: It indicates in % how much quantity of the order has been invoiced.  
+
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
 
 !!! info
@@ -5845,21 +5968,9 @@ It is possible to take up to **three possible actions regarding a purchase order
 - **Void it**, in case that purchase order is not required anymore and therefore needs to be voided.
 - **Book it**, in case it is correct and final.
 
-![Purchase order window](https://docs.etendo.software/latest/assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png)
-
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
 
-###### Remittance
-
-!!! info
-    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
- 
-The Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
-
-![bank_account_3.png](https://docs.etendo.software/latest/assets/legacy/bank_account_3.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
 
 ##### **Lines**
 
@@ -5892,6 +6003,11 @@ The lines information of the selected orders will be inserted in the purchase or
 In this case, you must use the process button **"Copy Lines".**
 
 This process button enables a new window named "Copy Lines from order" which allows you to create order lines by selecting the products already purchased from the supplier of the order by taking into account the _Consumption days_ configured for the supplier.
+
+In the **Status Bar** of each line, you can find information about:
+
+- **Delivered quantity**: number of received products of the line.
+- **Invoiced quantity**: number of invoiced product of the line.
 
 ###### **Explode button**
 
@@ -5990,9 +6106,22 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-3.png](https://docs.etendo.software/latest/assets/legacy/bank-account-3.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
+
 #### Goods Receipts
 
-:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipts`
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipt`
 
 A Goods Receipt is a document issued to acknowledge the receipt of the items listed in it. In other words, it is a document used to register in Etendo the specifics of items physically received in the warehouse.
 
@@ -6000,7 +6129,7 @@ A Goods Receipt is a document issued to acknowledge the receipt of the items lis
 
 Goods Receipts can be issued and booked in the header section of the goods receipt window.
 
-![Good receipts header](https://docs.etendo.software/latest/assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png)
+![Good receipts header](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt2.png)
 
 The fields to fill in the **Goods Receipt header** are:
 
@@ -6011,6 +6140,11 @@ The fields to fill in the **Goods Receipt header** are:
 - **Accounting Date**, accounting date in case of posting the Goods Receipt.
 - **Purchase Order**, purchase order number linked automatically by Etendo, in case the Goods Receipt is automatically created from a Purchase Order.
 - **Order Reference**, Warehouse team can fill in here the Supplier's Delivery Note number, this way the internal Goods Receipt number and the Supplier's Delivery Note number are linked.
+
+In the **Status Bar** of the header, the user can find the following information:
+ 
+- **Document Status**: Document status of the receipt.
+- **Invoice Status**: It indicates in % how much quantity of the receipt has been invoiced. 
 
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
@@ -6066,6 +6200,8 @@ Finally:
 
 - If a purchase order/line is selected, this action **links each good receipt line to the corresponding purchase order line**, same applies to purchase invoice.
 
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
+
 ###### **Accounting**
 
 Accounting information related to the material receipt.
@@ -6074,7 +6210,7 @@ A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" tabl
 
 A "Goods Receipt" posting looks like:
 
-![Good receipts posting](https://docs.etendo.software/latest/assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png)
+![Good receipts posting](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/goodsreceipt3.png)
 
 Posting a "Goods Receipt" requires the calculation of the cost of the contained product/s.
 
@@ -6247,21 +6383,6 @@ Once completed, a purchase invoice can be:
 
 ![Purchase invoice window](https://docs.etendo.software/latest/assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
-
-![bank_account.png](https://docs.etendo.software/latest/assets/legacy/bank_account.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-
-???+ note
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-
 ##### **Lines**
 
 Once the purchase invoice header has been properly filled in and saved purchase invoice lines can be registered in this tab.
@@ -6371,6 +6492,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account.png](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/bank-account.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Matched Invoices
 
@@ -7474,7 +7607,12 @@ A sales order can be reserved when the document is booked and pending to be deli
 
 - Manual: No reservation is generated automatically. So when the order is booked the reservations needs to be done manually selecting the storage bin, attribute, etc.
 
-- Automatic: The reservation is automatically created and processed, reserving the available stock
+- Automatic: The reservation is automatically created and processed, reserving the available stock.  This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
+
+- Automatic - Only default warehouse: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
+
+    !!!info
+        This last option is only available if the [Automated Warehouse Reservation](https://docs.etendo.software/latest/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module is installed, part of the Warehouse Extensions Bundle. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
 For more information, visit [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
 
@@ -10267,8 +10405,6 @@ The Material Requirement Planning consists of two plans:
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png)
 
-
-
 ##### **Configuration**
 
 !!!info
@@ -10329,6 +10465,7 @@ The MRP interacts with the following modules:
 - [Production Management](https://docs.etendo.software/latest/production-management/getting-started.md):
     - the [Process Plan](https://docs.etendo.software/latest/production-management/setup.md#process-plan) is used for the calculation of the Manufacturing Plan
     - [Work Requirements](https://docs.etendo.software/latest/production-management/transactions.md#work-requirement) are created from the Manufacturing Plan
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Transactions
@@ -10549,6 +10686,7 @@ Add products to be included in your MRP forecast. Each product is added by creat
 -   Planned Date: the date that is taken into account for the demand on the Manufacturing Plan and Purchasing Plan as Planned Order Date.
 -   Product: the product that is planned on a Manufacturing Plan or Purchasing Plan.
 -   Quantity: the amount of the product that is required by the planned date.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup
@@ -11182,22 +11320,11 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 **Canceled Order**, this field stores the document number of the original order canceled by the inverse order.
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
-
-![bank_account_4.png](https://docs.etendo.software/latest/assets/legacy/bank_account_4.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
 ##### Lines
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
 
-![Sales order lines](https://docs.etendo.software/latest/assets/drive/14rZJriNxaHIaBACYjwi-4I0rUGuCSCpD.png)
+![Sales order lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorderlines.png)
 
 Fields to note:
 
@@ -11207,6 +11334,7 @@ Fields to note:
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
 - **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](https://docs.etendo.software/latest/master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -11226,7 +11354,13 @@ Fields to be noted:
 
 - **Stock Reservation**: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:
     -  _Manual_: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
-    -  _Automatic_: The reservation is automatically created and processed, reserving the available stock.
+    -  _Automatic_: The reservation is automatically created and processed, reserving the available stock. This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
+    -  _Automatic - Only default warehouse_: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
+
+        !!!info
+            This last option is only available if the [Automated Warehouse Reservation](https://docs.etendo.software/latest/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module is installed, part of the Warehouse Extensions Bundle. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
+
+
 - **Reservation Status**: Defines whether the line is _Fully Reserved_ or _Partially Reserved_ or _Not Reserved_.
 
 **Manage Reservation: Pick and Execute**
@@ -11375,6 +11509,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-4.png](https://docs.etendo.software/latest/assets/legacy/bank-account-4.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 #### Goods Shipment
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Goods Shipment`
@@ -11391,7 +11537,7 @@ The calculated cost of a "Goods Shipment" is used while posting it to the ledger
 
 The user can create and process a shipment.
 
-![Good shipments creation](https://docs.etendo.software/latest/assets/drive/1dIvnkhJxhRrVVO7sceBpifLN1EYTbhsP.png)
+![Good shipments creation](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/goodsshipment.png)
 
 The Header lists main terms and conditions related to the customer delivery that apply to all products (Lines) included in it.
 
@@ -11423,6 +11569,8 @@ Fields to note:
 - **Attribute Set Value:** This field is displayed if the product to be shipped in the line has attributes (color, size, serial number or several of them together etc).
 - **Storage Bin:** From where the product is taken for shipment. Populated automatically based on the Product field which includes storage bin as the part of its selector.
 - **Sales Order Line:** Reference to the sales order line that is being shipped.
+
+In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the shipment. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -11779,34 +11927,20 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
-
-![bank_account_2.png](https://docs.etendo.software/latest/assets/legacy/bank_account_2.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-!!! note
-    **Important**:
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-
 ##### **Lines**
 
 **Lines** lists each product to be delivered and its characteristics.
 
 Once the sales invoice header has been properly filled in and saved, each sales invoice line can be registered in this tab one by one.
 
-![Sales invoice lines](https://docs.etendo.software/latest/assets/drive/12b9z3VPpvude4CJ8QhoDoW9V7k00KkL7.png)
+![Sales invoice lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoicelines.png)
 
 Fields to note:
 
 - **Attribute Set Value:** field is displayed if the product in the line has attributes (color, size, serial number or several of them together etc).
 - **Sales Order Line** and **Goods Shipment Line:** references to the sales order and goods shipment line that is being invoiced.
 - **Financial Invoice line:** is selected when the invoice line is not a product but an account not set up as a product but as a G/L item, or an asset not set up as a product. When selected, the product field disappears from the screen and an account field appears that will be related to the sales invoice line.
+-  **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](https://docs.etendo.software/latest/master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 As already mentioned, sales revenue can be deferred therefore they are not recognized at the sales accounting date but within a given number of accounting periods.
 
@@ -12155,47 +12289,65 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account-2.png](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/bank-account-2.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 #### Create Invoices from Orders
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Create Invoices from Orders`
 
 Create Invoices from Orders allows the user to see the Sales Orders pending to be invoiced and it automatically generates the corresponding Sales Invoices based on them.
 
-A "Sales Invoice" can be generated for one or more "Sales Orders" or for all "Sales Orders" that are pending to be invoiced.
+With this window, Sales Invoices can be generated for one or more Sales Orders or for all Sales Orders that are pending to be invoiced.
 
-![Create invoices from orders](https://docs.etendo.software/latest/assets/drive/1J4B0wWAqAz5lHmjwKB13zjCjqd9_LaEp.png)
+!!!info
+    By default, this process filters records in accordance with the defined Organization in the session configuration variables. This means, only these records are shown.
 
-Filters such as the "Business Partner" or the "Organization" are available to narrow down the shown results.
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders.png)
 
-Overall this form shows:
 
-- "Sales Orders" having an "Immediate" Invoice Term, without the need of having a Goods Shipment related.
-- "Sales Orders" having an "After Delivery" Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
-- "Sales Orders" having an "After Order Delivery" Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
-- "Sales Orders" having a "Customer Schedule After Delivery" Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
+As seen above, it is possible to navigate directly to the corresponding order from the document number under the Document number column.
 
-Same way this form does not show for invoice "Sales Orders" having a "Do not invoice" Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
+Filters such as Business Partner, Document Type and Organization, among others, are available to narrow down the shown results.
 
-For all Invoice Term but _Customer Schedule After Delivery_ one Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
+Overall, this form shows:
 
-If there are several Goods Shipment that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
+- Sales Orders having an **Immediate** Invoice Term, without the need of having a Goods Shipment related.
+- Sales Orders having an **After Delivery** Invoice Term, whenever there is a Goods Shipment related to at least some products contained in Sales Order that have been already delivered.
+- Sales Orders having an **After Order Delivery** Invoice Term, whenever there is a Goods Shipment/s related to all the products contained in Sales Order, that have been already delivered.
+- Sales Orders having a **Customer Schedule After Delivery** Invoice Term, whenever there is a Goods Shipment/s according to the defined schedule agreed with the customer.
 
-If the Invoice Term is _Customer Schedule After Delivery_ then a sales invoice is created grouping deliveries from different orders for the same customer.
+Same way, this form does not show Sales Orders having a **Do not invoice** Invoice Term, as those sales orders are not supposed to be invoices for whatever kind of reason.
 
-Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
+For all Invoice Terms but **Customer Schedule After Delivery**, Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order.
 
-Finally, it is important to notice that this process also uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
+If there are several Goods Shipments that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If there are no Goods Shipments, a Sales Invoice is created for a full Sales Order.
 
-##### **Form**
+If the Invoice Term is **Customer Schedule After Delivery**, then a sales invoice is created grouping deliveries from different orders for the same customer.
 
-Fields to note:
+**Lines include taxes**: If this box is checked, the amounts of the orders shown include taxes.
 
-- **From Date** and **To Date:** specify **Order Date** field ranges for filtering.
-- **Total Lines:** total net amount of the sales order (of all its lines).
-- **Invoiced:** already invoiced net amount for the sales order.
-- **Ready to Invoice:** the net amount pending (according to Invoice Term criteria) to be invoiced for the specific order.
+**Invoice Date**: The Invoice Date for the generated Sales Invoices (and so the Accounting Date field that is used in the posting record of the invoice to the general ledger) is taken first from Invoice Date field. If this field is not populated, it is inherited from the Movement Date field of the Goods Shipment related to the Sales Order. If there are no Goods Shipments, then the Order Date field from the original Sales Order is used as Invoice Date.
 
-Select the order(s) you want to invoice and click the **Process** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
+!!!important
+    This process uses the values specified at product level for deferring the sales revenue of the corresponding sales invoice lines.
+
+##### Buttons
+
+- **Refresh**: To refresh the orders shown in this window, use the **Refresh** process button.
+
+- **Done**: Then, select the order(s) you want to invoice and click the **Done** button to generate corresponding Sales Invoice document(s). Process execution message displays sales order number(s) and corresponding invoice number(s) that was just created.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders3.png)
 
 #### Generate Invoices
 
@@ -12712,6 +12864,560 @@ In this window, the user defines the reasons to reject quotations. These values 
 
 ---
 This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ✨ Getting Started
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/✨ Getting Started
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/getting-started
+## Article Content: 
+
+#### Overview
+
+The Project and Service Management functionality is essential for businesses to handle projects, services, or both. It helps organizations plan, execute, monitor, and optimize projects and services efficiently by integrating them with other functionalities such as Procurement Management, Sales Management, Financial Management, etc.
+
+The Project and Service Management module consists of:
+
+- [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) to manage project with phases and tasks.
+- [Expense Sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) to manage cost related to projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/getting-started/project-and-service-diagram.png)
+
+As seen in this diagram, after setting up the information shown [below](#configuration), in order to manage a project, the user should enter a [Multiphase project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) in the corresponding window. This window allows registering the progress of a project in different [phases](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab). Each project includes one or more phases and, in each phase, one or more [tasks](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab). For each of these phases, it is possible to perform a [Procure to Pay](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) process, for necessary purchases in the project, or an [Order to Cash](https://docs.etendo.software/latest/sales-management/getting-started.md#order-to-cash-business-flow) process  for necessary sales in the project. For registering required project expenses, the [expense sheet](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) window is used. Once one phase is closed, the user can review profitability by using the available [analysis tools](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md). This flow is done for each of the phases of a project, and once all the phases are completed, the project can be [closed](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+
+##### Key Concepts
+
+The key project and service management concepts mentioned in this chapter are:
+
+- [Business Partner](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner):
+    - Supplier: third party that supplies goods and/or services. In project and service management the supplier is the vendor of provided goods related to the project, the consultancy company that consultancy services were outsourced to and the employee that is reimbursed for expenses related to a project.
+    - Customer: the party that goods or services are sold to. In project and service management the customer is who gets charged for the cost and expenses of the project.
+    - Employee: person that works in the company.In project and service management, the employee information is used for the cost calculation of the project, based on [time sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet).
+- [Sales Order](https://docs.etendo.software/latest/sales-management/transactions.md#sales-order): document that lists goods and/or services provided to a customer and the conditions of the sale.
+- [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice): document used to administer a right to collect. The document lists the goods and/or services provided to a customer and the conditions of the sale.
+- [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice): document used to administer an obligation to pay. The document lists goods and/or services provided by a supplier.
+- [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type): template used to easily create phases and tasks on a multiphase project. This is specially useful to automatically complete phases and tasks according to the template without doing the process manually.
+- [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project): form used to registrate a project, the planned expenses, margins, who the project will be executed for and the phases and tasks of the project.
+- [Project Phase](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab): a time period during which certain activities are executed.
+- [Project Task](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab): activities that are executed during a project phase.
+- [Expense Sheet](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet): form used to register item expenses and time for a project.
+
+##### Configuration
+
+The following is entered in the application for the project and service management module:
+
+- [**Project Dimension**](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-ledger-configuration#dimension): in order to be able to select projects on orders and invoices, the project dimension is created as a new record with type Project in the Dimension tab of the [General Ledger Configuration](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-ledger-configuration) window.
+
+- [**Product**](https://docs.etendo.software/latest/master-data-management/master-data.md#product):
+    - **Service** and **Expense Type** Products Types: for the expense sheet products with product type Service (for time) and product type Expense Type (for expenses) are set up.
+    - **Item** Product type: the standard [procure to pay](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) process is used for the purchase or products related to the project.
+
+- [**Business Partner**](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner):
+    - Customer: the third party for whom the project is executed is set up as a customer.
+    - Vendor: the third party that supplies products related to the project is set up as a vendor.
+    - Employee:
+        - The vendor information is filled out in order to create purchase invoices to reimburse expenses.
+        - The salary category is filled out to calculate cost for the time spend on the project as documented in time sheets.
+
+- [**Project Type**](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type): a template with standard phases and tasks can be created to easily generate phases and tasks on a multiphase project.
+
+##### Execution
+
+The [Multiphase Project](https://docs.etendo.software/latest/project-and-service-management/transactions.md#multiphase-project) has the following sequence of events:
+
+- The creation of the Multiphase Project with the following information:
+    - Planned amounts and margins related to the project in the Amounts section of the header.
+    - Information needed to create a Sales Order in the More Information section of the header.
+    - Optionally, with the [**Set Project Type**](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons) button, an existing Project Type is used to create the phases and tasks. Alternatively without using a project type, phases and tasks are created manually on the Multiphase Project.
+    - Start and end dates for the overall project and for phases and tasks.
+    - Once this information is entered, the project status is changed to [Order](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+- Planned versus actual cost is monitored on the [Project Profitability](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-profitability) report based on the following:
+    - Time sheets and item expenses are reported in [Expense Sheets](https://docs.etendo.software/latest/project-and-service-management/transactions.md#expense-sheet) related to the project. Based on the salary category of the employee at the time of the project, the cost of the time spend is calculated by the application.
+    - Purchase invoices are created for any purchases, outsourcing cost or expenses reimbursement related to the project. This is done through the [Create AP Expense Invoices](https://docs.etendo.software/latest/project-and-service-management/transactions.md#create-ap-expense-invoices).
+    - Sales invoices are created as a result of the Expense Sheets of the project. This is done through the [Create Sales Orders from Expenses](https://docs.etendo.software/latest/project-and-service-management/transactions.md#create-sales-orders-from-expenses) process.
+    - At the end of each phase, a Sales Order related to the phase is created from the Multiphase Project using the [Create Sales Order from Project Phase](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-button) process. The information for the creation of the Sales Order is taken from the definition of the Project and it is made for the customer of the project. Later, this results in the creation of a Sales Invoice.
+- The progress of the project is monitored in two ways. For each project, the [phases](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-phase-tab) and [tasks](https://docs.etendo.software/latest/project-and-service-management/transactions.md#project-task-subtab) can be marked as completed in the checkbox for this purpose. Also, the [Project Progress](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-progress) report can be used. Remember the accuracy of the information in the report depends on the Complete checkboxes use in the Phase and Task tabs.
+- After completion of all phases, the Multiphase Project status is changed to [Order Closed](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-buttons).
+
+!!!info
+    Remember this is a general overview of the Project and Service Management, visit the [Setup](https://docs.etendo.software/latest/project-and-service-management/setup.md), [Transactions](https://docs.etendo.software/latest/project-and-service-management/transactions.md) and [Analysis Tools](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md) sections for more specific information.
+
+#### Relationship with other areas
+
+Project and Service Management interacts with the following modules:
+
+- [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md):
+    - Materials related to the project are ordered using the Procure to Pay process.
+    - Purchase invoices are generated for expenses paid to employees and for good ordered from vendors.
+- [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md): Sales orders and sales invoices are generated for the customer for whom the project is executed.
+- [Warehouse Management](https://docs.etendo.software/latest/warehouse-management/getting-started.md): Materials ordered for the project may be received into stock.
+- [Financial Management](https://docs.etendo.software/latest/financial-management/getting-started.md): The information of the created sales and purchase invoices is send to accounts payables and receivables.
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Transactions
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Transactions
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/transactions
+## Article Content: 
+### Project and Service Transactions
+
+#### Overview
+
+This section describes the different windows that are used for transactions included in the Project and Service Management process in Etendo. These are:
+
+[:material-file-document-outline: Multiphase Project](#multiphase-project){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Expense Sheet](#expense-sheet){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Create Sales Orders from Expenses](#create-sales-orders-from-expenses){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Create AP Expense Invoices](#create-ap-expense-invoices){ .md-button .md-button--primary } <br>
+
+#### Multiphase Project 
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Multiphase Project`
+
+##### Overview
+
+This window is used to manage a project, its related phases and tasks and to populate the related sales invoices. The following aspects are monitored for projects:
+
+- The cost overview: based on the planned cost overview entered in the multiphase project once documents are created referencing the project, the actual cost can be compared with them.
+- The schedule: based on planned start dates and end dates, the progress of the project can be monitored.
+
+!!! important
+    From the multiphase project window, sales orders, in draft status, are generated at the end of each completed phase. This is done with the [**Create Sales Order from Project Phase**](https://docs.etendo.software/latest/project-and-service-management/transactions.md#process-button) button at Project Phase tab level.
+
+##### Header
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/multiphase-project.png)
+
+Here, the fields to note are:
+
+- Organization: organization of the project.
+- Search Key: field used to easily filter records.
+- Name: name of the project. The name has to be unique between Service Projects and Multiphase projects.
+- Current Phase: field to manually keep track of the current phase of the project.
+- Starting Date: start date of the project.
+- Planned End Date: scheduled end date of the project.
+- Real End Date: actual end date of the project.
+- Description: note field.
+- Sales Representative: sales contact related to this project.
+- Person in Charge: project manager.
+
+In the Amounts section:
+
+- Legally Binding Contract: If checked, it indicates if the document is legally binding.
+- Price Ceiling: Only shown if Legally Binding Contract is checked. The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: Only shown if Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Contract Quantity: Only shown if  Legally Binding Contract is checked. The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Service Revenue: expected revenue for services (consulting).
+- Planned Expenses: expected expenses.
+- Services Provided Cost: expected internal cost of the services (labour x hours x cost).
+- Outsourced Cost: expected cost of services executed by third party.
+- Total Service Cost: populated information of the Services Provided Cost + Outsourced Cost.
+- Reinvoiced Expenses: defaults to the planned expenses, but can be overwritten by the actual amount that will be invoiced to the business partner.
+- Planned Service Margin %: populated information with the profit or loss percentage on the services: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
+- Planned Expenses Margin %: Populated information with the profit or loss percentage on the expenses: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
+
+In the More Information section:
+
+- Business Partner: the customer that is being charged for the project.
+- Partner Address: address of the business partner.
+- User/Contact: user working for the business partner.
+- Order Reference: reference number of the business partner to appear on the sales order.
+- Payment Method: payment method of the business partner to appear on the sales order.
+- Payment Terms: payment terms of the business partner to appear on the sales order.
+- Price List: price list related to the business partner.
+- Currency: currency related to the business partner.
+- Warehouse: warehouse used to ship to the business partner.
+
+###### Process Buttons
+
+- Set Project Type: to select a project type in order to copy the phases and tasks from that particular project type to the multiphase project. Based on the durations of the phases and tasks in the project type, the starting date and end date on the multiphase project are overwritten.
+- Change Project Status: to change the status of the project. The statuses of the multiphase project are:
+    - Open: initial status, comparable with the Draft status on other documents.
+    - Order: status to indicate that the sales orders can be generated.
+    - Order closed: final status of the project. When changed to this status, the Real End Date field information gets automatically populated with the system date. Once the project status is Order closed, the project can not be opened again.
+    !!!info
+        In order to use this button, the Business Partner and the Sales Representative fields of the header must be completed.
+- Copy Details : the project phase(s) and project task(s) information from another multiphase project is copied.
+
+##### Project Phase Tab
+
+In this tab, the individual phases of the project can be defined.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-phase.png)
+
+The following fields are displayed in this tab:
+
+- Organization: organization of the phase
+- Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the phase.
+- Product: product or service that is sold in the phase.
+- Quantity: quantity of the product to be sold in the phase.
+
+    !!!note
+        Above fields are copied from the [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
+- Net Unit Price: When filled out, this is the new unit price that will appear for the phase on the sales order, thus overwriting the price list net unit price.
+- Starting Date: Planned starting date of the phase.
+- Planned End Date: Planned ending date of the phase.
+
+    !!!note 
+        Starting Date and Planned End Date of the phase are calculated based on the start date and the Standard Duration in Days defined in the [Project Type](https://docs.etendo.software/latest/project-and-service-management/setup.md#project-type) if the [Set Project Type](#process-buttons) functionality is used.
+
+- Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Phase Complete checkbox.
+- Phase Complete checkbox: to set the phase to complete. In order to set the phase to Phase Complete, it is not mandatory that the task(s) related to this phase are set to complete first. However, once the Phase Complete checkbox is marked, the tasks of this phase are also marked as completed.
+
+In the More Information section:
+
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+- Standard Phase: Phase of the project with standard performance information with standard work.
+- Sales Order: Unique identifier and a reference to a Sales Order originating from the document sequence defined for this document type.
+
+###### Process Button
+
+- Create Sales Order from Project Phase: to create a sales order upon completion of a phase. From the sales order, a sales invoice is created to document that the customer has to pay for the executed work on the project.
+
+    !!!info
+        The created sales order includes all the lines from the phase and its related tasks.
+
+##### Project Task Subtab
+
+In this subtab, the individual tasks that are necessary to complete the phase of the project are defined.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/project-task.png)
+
+The following fields are displayed in this subtab:
+
+- Organization: organization of the task
+- Sequence Number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the task
+- Product: product or service that is sold related to this task.
+- Quantity: quantity of the product to be sold for the task.
+
+    !!!note
+        Above fields are copied from the Project Type if the Set Project Type functionality is used.
+
+- Net Unit Price: when filled out, this is the new unit price that will appear for the task on the sales order, thus overwriting the price list net unit price.
+- Starting Date: planned starting date
+- Planned End Date: planned ending date
+
+    !!!note
+        Starting Date and Planned End Date of the task are calculated based on the start date and the Standard Duration in Days defined in the Project Type if the Set Project type functionality is used.
+
+- Ending Date: actual ending date to be filled out manually. This date does not get populated when selecting and saving the Task Complete checkbox.
+- Task Complete checkbox: to set the task to completed.
+
+In the More Information section:
+
+- Standard Task: Standard Project Task in a Project Phase with standard effort
+- Price Ceiling: The commitment amount and quantity is the maximum amount and quantity to be charged. Ignored, if the amount or quantity is zero.
+- Contract Amount: The commitment amount is independent from the planned amount. You would use the planned amount for your realistic estimation, which might be higher or lower than the commitment amount.
+- Description: A description is limited to 255 characters.
+
+#### Expense Sheet
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Expense Sheet`
+
+##### Overview
+
+An Expense Sheet is used to register time sheets and item expenses.
+
+Based on time sheets, the cost related to assigned employees to the project is calculated and can be viewed on the [Project Profitability](https://docs.etendo.software/latest/project-and-service-management/analysis-tools.md#project-profitability) report.
+
+For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice). To link the corresponding invoices to the project, there is a project dimension field in the header of the Purchase Invoice window.
+
+For both time sheets and item expenses, it can be indicated whether the customer related to the project is invoiced for these costs. The follow up of this is that a [Sales Order](https://docs.etendo.software/latest/sales-management/transactions.md#sales-order) is created in order to create a [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice).
+
+##### Header
+
+In this window, the user can create and process an expense sheet.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet.png)
+
+The fields on this tab are:
+
+- Organization: organization of the expense.
+- Document No.: populated number of the expense sheet.
+- Employee: employee that made the expense related to a project or spend time on a project. It is important to remark that employees:
+    - need to be created as [Employee](https://docs.etendo.software/latest/master-data-management/master-data.md#employee) in Business Partner window,
+    - need to be created as Etendo [users](https://docs.etendo.software/latest/general-setup/security.md#user) in the User window,
+    - and finally, employee and user need to be related to each other.
+    That relationship can be set by selecting Employee business partner record in the employee User record, as shown in the image below.
+- Report Date: date for which the expense is entered.
+
+ ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
+
+##### Lines Tab
+
+In this tab, the user can add time and regular expense lines to the sheet. Each expense is added to an individual line and may or may not be invoiced to customers.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/expense-sheet-lines.png)
+
+The fields to note in this tab are:
+
+- Time Sheet checkbox: to indicate if the expense is for time or item expenses.
+- Product: product related to the expense line. As seen in the [configuration](https://docs.etendo.software/latest/project-and-service-management/getting-started.md#configuration) section, for time sheets, the products set up with Service type appear. For item expenses, products set up with Expense type appear.
+- Quantity: quantity for the registered product.
+- UOM: unit of measure of the product.
+- Line No.: numbering of the line. By default 10,20,30,...etc.
+- Expense Amount: not visible on time sheet. Populated field with the amount information.
+- Converted Amount: not visible on time sheet. Amount of the expense converted to the currency of the client.
+- Currency: currency of the entered expense.
+- Reinvoicing checkbox: checkbox to indicate if the customer (the business partner related to the project) will be invoiced for this expense.
+- Business Partner: only visible when the Reinvoicing checkbox is selected. The Business Partner that is invoiced for the expense. The value will be populated based on the entered project information.
+- Net Unit Price: price related to the product.
+- Expense Date: date related to the reported expense.
+- Project: project that the expense relates to.
+- Project Phase: project phase that the expense relates to.
+- Project Task: project task that the expense relates to.
+
+##### Process Button
+
+- Process/Unprocess Expenses: Once the corresponding information of the sheet is entered, you can process the expense. If the document is processed, it is possible to select it and unprocess it to edit it if necessary.
+
+#### Create Sales Orders from Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Create Sales Orders from Expenses`
+
+This is a process which automatically generates sales orders per customer for all outstanding expenses to be invoiced. In order for the process to create the sales order with the correct information, the customer needs to be set up with the [Customer] tab in the Business Partner window filled out.
+This process is integrated with the [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md) Module:
+
+- All the sales orders generated can be checked and modified through that module.
+- The invoice process can be run afterwards.
+- There is a checkbox Complete and Process Sales Orders automatically to indicate whether the Sales Orders should be created in booked state or not.
+
+A Sales Order type Warehouse order with a corresponding Goods Shipment is created by the process if the checkbox Complete and Process Sales Orders automatically is selected.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-sales-orders-from-expenses.png)
+
+#### Create AP Expense Invoices
+
+:material-menu: `Application` > `Project and Service Management` > `Transactions` > `Create AP Expense Invoices`
+
+This is a process which automatically generates Purchase Invoices for Accounts Payable based on all expenses to be reimbursed to the employee. Separate Purchase Invoices will be generated for each project. 
+
+In order for the process to complete successfully the employee needs to have the Vendor tab in the Business Partner filled out including the following information:
+
+- A Purchase Price List
+- The PO Payment Method
+- The PO Payment Terms
+- The PO Financial Account
+
+This process is directly integrated with the [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md) module: all the purchase invoices generated can be checked and modified through that module.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-ap-expense-invoices.png)
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Analysis Tools
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Analysis Tools
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/analysis-tools
+## Article Content: 
+### Project and Service Management Analysis Tools
+
+#### Overview
+
+This section describes the windows related to project and service management reports in Etendo. These are:
+
+[:material-file-document-outline: Project Progress](#project-progress){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Project Profitability](#project-profitability){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Expense Report](#expense-report){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Invoiceable Expenses](#invoiceable-expenses){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Employee Expenses](#employee-expenses){ .md-button .md-button--primary } <br>
+
+#### Project Progress
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Project Progress`
+
+The Project Progress report allows to track the progress of projects with useful indicators such as the time burned or the completion percentage. It is used to monitor to timelines of projects.
+
+The main information that can be retrieved from the report is:
+
+- days delay for each task and each phase
+- cumulative delay for the whole project
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-progress.png)
+
+#### Project Profitability
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Project Profitability`
+
+The Project Profitability report is used to monitor the planned and real cost related to a project.
+
+The following information is displayed on the report:
+
+**Planned Services and Expenses**:
+
+- Revenue: the amount from the field Service Revenue on the multiphase project.
+- Cost: the amount from the field Services Provided Cost on the multiphase project.
+- Outsource: the amount from the field Outsourced Cost on the multiphase project.
+- Margin%: the margin from the field Planned Service Margin % on the multiphase project. The planned service margin % is calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) x 100/Service Revenue.
+- Reinvoicing: the amount from the field Reinvoiced Expenses on the multiphase project.
+- Expenses: the amount from the field Planned Expenses on the multiphase project.
+- Margin%: the margin from the field Planned Expenses Margin % on the multiphase project. The planned expenses margin % is calculated using the formula: (Reinvoiced Expenses - Planned Expenses) x 100/Reinvoiced Expenses.
+- Gross margin: overall planned margin for the project
+    - Gross margin amount: calculated using the formula: (Service Revenue - Services Provided Cost - Outsourced Cost) + (Reinvoiced Expenses - Planned Expenses).
+    - Gross margin percentage: calculated using the formula: ((Service Revenue - Services Provided Cost - Outsourced Cost) + (Reinvoiced Expenses - Planned Expenses)) x100/(Service Renevue + Reinvoiced Expenses)
+
+Real Services and Expenses:
+
+- Revenue: cost reflected on sales invoices for the customer for:
+    - reinvoicing of outsourced work by a third party.
+    - invoicing of the cost for completed project phases.
+    - only sales invoice lines with service type products will be taken into account.
+- Cost: cost of worked hours based on processed time sheets multiplied by the cost that is linked to the salary category of the employee at the expense date.
+- Outsource: cost of worked hours executed by a third party based on purchases invoices.
+- Margin%: real margin for services based on the formula: (Revenue - Cost -Outsource) x 100/Revenue
+- Reinvoicing: expenses invoiced to the customer on sales invoices for:
+    - purchased goods related to the project.
+    - invoiceable item expenses.
+    - only sales invoice lines with products whose type is not service will be taken into account.
+- Expenses: real expenses based on purchase invoices for:
+    - purchased goods related to the project from a vendor.
+    - reimbursement for item expenses for an employee.
+- Margin%: real margin for expenses based on the formula: (Reinvoicing - Expenses) x 100/Reinvoicing
+- Gross margin: overall real margin for the project.
+    - Gross margin amount: calculated using the formula: (Revenue - Cost - Outsource) + (Reinvoicing - Expenses)
+    - Gross margin percentage: calculated using the formula: ((Revenue - Cost - Outsource) + (Reinvoicing - Expenses)) x 100/(Revenue + Reinvoicing)
+- Collected: amount that was collected from the customer for the sales invoices related to the project.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-profitability.png)
+
+#### Expense Report
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Expense Report`
+
+The Expense Report shows a listing of expense sheets with their details. Filters can be applied to show expense reports for certain business partners, projects or employees. Also a filter to select time sheets or expense sheets can be applied.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/expense-report.png)
+
+#### Invoiceable Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Invoiceable Expenses`
+
+In this window, the user can view expenses before invoicing them to customers. This is a read-only overview of all invoiceable cost related to projects. The costs that appear are marked as reinvoicing in expense sheets that are processed. All items that are displayed are for invoicing to the customers related to the projects.
+
+Customer
+
+In the grid view an overview of all customers for which expenses related to projects have to be invoiced is listed. In the records, the Price List and Payment Terms to be used for the creation of the Sales Order are displayed.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses.png)
+
+##### Lines Tab
+
+In this tab, the user can view each expense line to be included in the sales invoice.
+
+The information displayed in the lines tab is taken from the lines tab from the Expense Sheets. All lines are related to the selected business partner, but different lines can be related to different projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses-lines.png)
+
+#### Employee Expenses
+
+:material-menu: `Application` > `Project and Service Management` > `Analysis Tools` > `Employee Expenses`
+
+In this window, the user can view internal employee expenses before processing them. This is a read-only overview of all expenses that need to be reimbursed to an employee.
+
+Employee
+
+In the grid view an overview of all employees that have expenses pending to be reimbursed is listed. Each record has the Purchase Price List and the Purchase Order Payment Terms displayed, to be used for the creation of the Purchase Invoice.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses.png)
+
+##### Lines Tab
+
+In this tab, the user can view each expense line for the employee.
+
+The information displayed in the lines tab is taken from the lines tab in the Expense Sheet. All lines are related to the employee, but different lines can be related to different projects.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses-lines.png)
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Setup
+## Article Path: /User Guide/Etendo Classic/Basic Features/Project and Service Management/Setup
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/setup
+## Article Content: 
+### Project and Service Setup
+
+#### Overview
+
+This section describes the window that is used to set up the Project and Service Management process in Etendo: Project Type.
+
+#### Project Type
+
+:material-menu: `Application` > `Project and Service Management` > `Setup` > `Project Type`
+
+##### Overview
+
+This window is used to define projects types with typical phases and tasks to be used in projects.
+
+A Project Type is a template with the typical phases and tasks that are applicable for a certain type of project. During the entry of a multiphase project, a project type can be selected to automatically add the phases and tasks associated with that project type.  This is essential for companies that use the same standard processes on many occasions.
+
+!!!info 
+    The use of this window is not mandatory, but it is recommended since it enables to complete the multiphase project in an easier way. If not used, each multiphase project, its phases and tasks, should be completed manually.
+
+##### Header
+
+Here, a project type can be defined and, for this, the main field is the Name of the project type. An intuitive name should be given so that once the multiphase project is entered, the user can easily recognize the project type that could be used to generate the phases and tasks.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/project-type.png)
+
+##### Standard Phase Tab
+
+In this tab, the user can define phases and products required during each phase, to be included in this type. Each phase is added by creating a line.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-phase.png)
+
+The fields on this tab are:
+
+- Sequence number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the phase.
+- Product: product or service that is sold in the phase.
+- Standard Quantity: quantity of the product to be sold in the phase. For example, if the product is Sales Consultancy with a unit of measure set to hours, the quantity 10 entered in this field indicates that 10 hours of Sales Consultancy is sold in this phase.
+- Standard Duration in Days: the scheduled duration of the phase. Based on this setup, when the project type is used for a multiphase project, the begin and end dates of each phase is based on this setup.When left blank at the phase level, the begin date will be populated based on the start date of the project and the end date will be left blank.
+- Active checkbox: indication of validity of the line.
+- Description: note field for the phase.
+
+
+##### Standard Task Subtab
+
+Here, the user can define tasks to be completed during each phase. Each task is added by creating a line.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/standard-task.png)
+
+The fields on the tasks are:
+
+- Sequence number: numbering of the entered lines. By default 10,20,30,..etc.
+- Name: name of the task.
+- Product: product or service that is sold related to this task.
+- Standard Quantity: quantity of the product to be sold for the task. For example if the product is Sales Consultancy with a unit of measure set to hours, the quantity 10 entered in this field indicates that 10 hours of Sales Consultancy is sold related to this task.
+- Standard Duration in Days: the scheduled duration of the task.
+- Active checkbox: indication of validity of the line.
+- Description: note field for the phase.
+
+---
+
+This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨ Getting Started
@@ -13433,6 +14139,16 @@ The settlement record is registered in the **Business Partner Settlement** windo
 
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+  
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module includes the Bank account column to the Add details pop-up window to be able to filter possible payments by bank account.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Payment Proposal
 
@@ -13833,6 +14549,16 @@ The settlement record is registered in the **Business Partner Settlement** windo
 
 !!! info
     For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module includes the Bank account column to the Add details pop-up window to be able to filter possible payments by bank account.
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Financial Account
 
@@ -15488,9 +16214,9 @@ Some relevant fields to note are:
     -   if there is not a payment, this field shows the number of days the invoice is pending to be paid, calculated with the formula **Current Date - Invoice Date**.
 -   **Overdue** this fields indicates whether a payment was received on time (overdue number is set to zero), early (overdue number is a negative number) or late (overdue number is a positive number)
 
-An invoice marked with an (\*) means that the invoice has been paid by using a credit payment.
+An invoice marked with an (*) means that the invoice has been paid by using a credit payment.
 
-Several invoices marked with (\*\*) means that the invoices have been paid by using the same credit payment.
+Several invoices marked with (**) means that the invoices have been paid by using the same credit payment.
 
 #### Payment Run
 
@@ -15550,6 +16276,7 @@ For instance, the "Print Check simple process" execution process delivered by Et
 ![](https://docs.etendo.software/latest/assets/drive/14j20K8igu1aLPxaZLE1jDu_9jG-ydeaj.png)
 
 This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup
@@ -16131,6 +16858,8 @@ This section describes the windows related to the accounting transactions that a
 
 [:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Not Posted Documents](#not-posted-documents){ .md-button .md-button--primary } <br>
+
 [:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: VAT Regularization](#vat-regularization){ .md-button .md-button--primary } <br>
@@ -16557,7 +17286,7 @@ Accounting information related to the GL Journal
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-<iframe width=**854** height=**480** src=**https://www.youtube.com/embed/K7XOBkmRLAQ** title=**YouTube video player** frameborder=**0** allow=**accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture** allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K7XOBkmRLAQ?si=l-p9u_IvzFmMc46F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This functionality allows the user to duplicate a journal entry as many times as required, indicating the regularity and the period in which the first copy must be made. Starting from the second copy, the duplication will take place with the corresponding regularity.
 The process to create a journal entry from the beginning and duplicate it later is shown below.
@@ -17002,6 +17731,76 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 !!!info
     With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
+
+#### Not Posted Documents
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Not Posted Documents`
+
+!!!info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+##### Overview
+
+With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.png)
+
+##### Search button
+
+With the **Search** button, the following fields are used to specify the documents to search. 
+
+- Organization: The corresponding organization of the search.
+- Document: Type of document that the user is searching. This is the only field that is optional. The listed options are:
+    - Amortization
+    - Bank Statements 
+    - Bill of Materials Production
+    - Cost Adjustment
+    - Doubtful Debt
+    - GL Journal
+    - Goods Receipt
+    - Goods Shipment
+    - Internal Consumption
+    - Inventory
+    - Landed Cost
+    - Landed Cost Cost
+    - Matched Invoices
+    - Movements
+    - Payment In
+    - Payment Out
+    - Purchase Invoice
+    - Reconciliation
+    - Return Material Receipt
+    - Return to Vendor Shipment
+    - Sales Invoice
+    - Transaction
+    - Work Effort
+
+- Accounting Status: the corresponding accounting status of the search. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents2.png)
+
+##### Grid filtering
+
+In the grid where documents are displayed after the search, users can filter the documents using the following criteria:
+
+- Organization
+- Type of document
+- Document Description
+- Accounting Date
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents3.png)
+
+##### Bulk Posting button
+
+Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents4.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents5.png)
+
+As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
+
+!!! info
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 #### Reset Accounting
 
@@ -17822,7 +18621,7 @@ For instance, the Spanish Localization Bundle includes
 -   the PYMES Spanish CoA.
 -   and the Abreviado Spanish CoA.
 
-After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) and the Initial Organization setup.
+After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the Initial Organization setup.
 
 On the other hand, some countries such as the USA do not require that specific level of detail.
 
@@ -19578,11 +20377,9 @@ This section describes the windows related to assets, part of the Financial Mana
 
 ##### Overview
 
-The user can define amortization characteristics for assets owned by the company.
+The user can define company-owned assets and configure their amortization characteristics. 
 
-###### Assets
-
-The user can define assets owned by the company and create an amortization for them.
+##### Assets window
 
 ![](https://docs.etendo.software/latest/assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
@@ -19591,36 +20388,41 @@ Fields to note:
 -   **Organization** : Organizational entity within client.
 -   **Search Key** : A fast method for finding a particular record.
 -   **Name** : A non-unique identifier for a record/document often used as a search tool.
--   **Asset Category** : A classification of assets based on similar characteristics.
+-   **Asset Category** : A classification of assets based on similar characteristics defined in the [Asset Group window](#asset-group-window). Configuration fields will be completed automatically according to the characteristics defined in this window. 
 -   **Document No.** : An automatically generated identifier for all documents.
 -   **Description** : A space to write additional related information.
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
 -   **Product** : An item produced by a process.
--   **Summary Level** : A means of grouping fields in order to view or hide additional information.
--   **Static** : Prevents from moving the record into the tree
--   **Depreciate** : The asset is used internally and will be depreciated
--   **Depreciation Type** : Depreciation Type
--   **Calculate Type** : Calculate type
+-   **Summary Level** : When checked, it groups other assets and displays them in tree view. 
+-   **Static** : Prevents from moving the record into the tree view.
+-   **Depreciate** : The asset is used internally and will be depreciated.
+-   **Depreciation Type** : Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** : It indicates how amortization will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation %** : Depreciation annual %
--   **Amortize** : Asset schedule
--   **Usable Life - Years** : Years of the usable life of the asset
--   **Usable Life - Months** : Months of the usable life of the asset
--   **Every Month Is 30 Day** : When calculating the amortization plan every month will be considered as a 30 day month and years of 365 days (no leap-years).
--   **Purchase Date** : Purchase date
--   **Cancellation Date** : Cancellation date
+-   **Amortize** : Asset schedule.
+-   **Usable Life - Years** : Years of the usable life of the asset.
+-   **Usable Life - Months** : Months of the usable life of the asset.
+-   **Every Month Is 30 Day** : If checked, it calculates the amortization plan every month to be considered as a 30 day month and years of 365 days. If it is not checked, it considers real month days and leap-years.
+-   **Purchase Date** : Purchase date.
+-   **Cancellation Date** : life-utility date.
 -   **Depreciation Start Date** : Depreciation Start Date. The amortization plan will be calculated starting from this date.
--   **Depreciation End Date** : Depreciation end date
--   **Asset Value** : Asset value
--   **Residual Asset Value** : Residual asset value amount
--   **Depreciation Amt.** : Depreciation Amount
+-   **Depreciation End Date** : Depreciation end date.
+-   **Asset Value** : Asset value.
+-   **Residual Asset Value** : Residual asset value amount.
+-   **Depreciation Amt.** : Depreciation Amount.
 -   **Previously Depreciated Amt.** : This amount is subtracted to the Depreciation amount when calculating the amortization plan. Total amount to be depreciated = Depreciation Amount - Previously Depreciated Amount
--   **Depreciated Value** : Depreciated value
+-   **Depreciated Value** : Depreciated value.
 -   **Project** : Identifier of a project defined within the Project & Service Management module.
--   **Create Amortization** : it will create (or recalculate) the amortization plan based on the asset definition.
 
-##### **Asset Amortization**
+###### Buttons
 
-The user can add asset amortizations for a selected asset.
+- **Create Amortization**: The Create Amortization button populates the Asset Amortization tab. It creates the amortization plan based on the asset definition.
+
+- **Recalculate Amortization**: The Recalculate Amortization button allows the user to update information when needed. 
+
+##### Asset Amortization tab
+
+Asset amortizations for a selected asset are added to this tab. 
 
 ![](https://docs.etendo.software/latest/assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
@@ -19629,8 +20431,6 @@ The user can add asset amortizations for a selected asset.
 -   **Amortization Percentage** : Amortization Percentage
 -   **Amortization Amount** : Amortization Amount
 -   **Currency** : An accepted medium of monetary exchange that may vary across countries.
-
-The *Create Amortization* process populates the Asset Amortization tab.
 
 The Asset Amortization tab shows the depreciation plan of the asset based on its usable life-time and its value that is the amount to be depreciated. The asset value is split within its usable life (months or years), therefore each depreciation plan line represents a percentage of the total depreciation amount of the asset.
 
@@ -19647,11 +20447,51 @@ The depreciation line of February cannot be removed until the depreciation line 
 
 The process assumes that if the March depreciation line exists, then the February depreciation line exists.
 
-###### **Accounting**
+##### Accounting tab
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
-![](https://docs.etendo.software/latest/assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
+![assets3](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets3.png)
+
+- **General Ledger**: The book containing all financial transactions recorded for the legal entity.
+- **Accumulated Depreciation**: Accumulated Depreciation Account. 
+- **Depreciation**: Depreciation account.
+
+The shown accounts are configured by default and can be changed. 
+
+##### Accounting Dimensions Assets
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. 
+    To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+    For more information about the available versions, core compatibility and new features, visit
+    [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
+In addition to the existing Product dimensions for assets, this module allows users to select **additional accounting dimensions** which 
+will be automatically transferred to the amortization lines, allowing better integration with accounting processes. 
+
+The dimensions the user can apply to the asset creation process are the following: 
+
+- **Business Partner**
+- **Activity**
+- **1st Dimension**
+- **2nd Dimension** 
+- **Sales Region**
+- **Campaign**
+- **Cost Center**
+
+!!! info
+    When creating or recalculating the amortization schedule for an asset, the specified accounting dimensions are transferred to the lines of the amortization schedule.
+
+![assets1](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+
+!!! info
+    For more information about Dimensions configuration visit [Dimensions](https://docs.etendo.software/latest/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension).
+
+###### Buttons 
+
+- **Create Amortization**: The Create Amortization button generates the amortization lines in the Asset Amortization tab related to the selected asset.  In addition, these same lines are added in the Amortization window, grouping them only according to the **depreciation period**, (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage).
+ 
 
 #### Asset Group
 
@@ -19661,27 +20501,27 @@ The user can create and edit G/L accounts to be used in transactions which inclu
 
 Assets can be grouped into different categories with the aim of helping their depreciation management and analysis.
 
-###### Asset Category
+##### Asset Group window 
 
-Asset category window allows the user to create and configure every asset category your organization may need.
+Asset Group window allows the user to create and configure every asset category your organization may need.
 
 ![](https://docs.etendo.software/latest/assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
 
 As shown in the image above, the creation of an asset category requires the user to enter below listed information for each category:
 
--   **Name** or short name which helps to easily find a category
--   **Description**
+-   **Name** or short name which helps to easily find a category.
+-   **Description** a space to write additional related information.
 -   **Depreciate** indicates if the assets of this group will be depreciated.
--   **Depreciation Type** method used to depreciate the asset.
--   **Calculate Type** indicates how the depreciation will be calculated (Time or Percentage)
+-   **Depreciation Type** Linear. It indicates the method used to depreciate this asset.
+-   **Calculate Type** it indicates how the depreciation will be calculated: Time (monthly or yearly) or Percentage (yearly).
 -   **Annual Depreciation** Annual percentage used to depreciate this asset.
 -   **Amortize** it refers to the periods chosen between depreciation entries (monthly, yearly).
--   **Usable Life - Months** Years of the usable life of the asset
--   **Usable Life - Years** Months of the usable life of the asset
+-   **Usable Life - Months** Years of the usable life of the asset.
+-   **Usable Life - Years** Months of the usable life of the asset.
 
-Depreciation configuration will be inherited from the asset category when creating a new asset.
+Depreciation configuration will be inherited from the asset category when creating a new asset from the Asset window.
 
-###### Accounting
+##### Accounting tab
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
@@ -19691,36 +20531,71 @@ Each asset category allows the user to configure a different set of accounts to 
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Amortization`
 
-##### **Overview**
+##### Overview
 
-The user can create and edit amortization for a selected year.
+In the  Amortization window, assets depreciations are recorded, grouped by date. In addition, from this window, these records are processed and posted to the general ledger.
 
-##### **Header**
+##### Amortization window
 
-In the header, the user creates amortizations for particular periods.
+From the header, amortizations are created for particular periods.
 
-![](https://docs.etendo.software/latest/assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
+![assets4](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets4.png)
 
-##### **Lines**
 
-In each line, the user adds amortized assets and details of amortization.
+Fields to note: 
 
-![](https://docs.etendo.software/latest/assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
+- **Organization**: Organizational entity within client.
+- **Name**: A non-unique identifier for a record/document often used as a search tool.
+- **Description**: A space to write additional related information.
+- **Accounting Date**: The date on which the asset is to be booked.
+- **Starting Date**: Date from which amortization begins. 
+- **Total Amortization**: amortization amount. 
+- **Currency**: An accepted medium of monetary exchange that may vary across countries.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
 
-###### **Accounting**
+##### Lines tab
 
-Accounting information related to the amortization
+Each line shows the amortized assets and details of amortization.
 
-![](https://docs.etendo.software/latest/assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
+![assets5](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/Assets5.png)
 
-##### How to Reactivate Amortizations
+
+Fields to note: 
+
+- **Line No.**: Indicates the unique line for a document. 
+- **Asset**: the asset to be amortized.
+- **Amortization Percentage**: Amortization Percentage (either calculated in Time or Percentage).
+- **Amortization Amount**: Amortization Amount.
+- **Currency**: Indicates the currency to be used when processing this document.
+- **Project**: Identifier of a project defined within the Project & Service Management module.
+
+##### Accounting tab
+
+Accounting information related to the amortization once the document is posted.
+
+Fields to note: 
+
+- **Accounting Date**: The date this transaction is recorded on in the general ledger. This date also indicates which accounting period within the fiscal year this transaction will be part of.
+- **Account**: The account used. 
+- **Debit**: The Account Debit Amount indicates the transaction amount converted to this organization's accounting currency.
+- **Credit**: The Account Credit Amount indicates the transaction amount converted to this organization's accounting currency.
+
+![assets6](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets6.png)
+
+!!!info 
+    For more information about Financial Account functionality visit [Financial Account](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account).
+
+##### Accounting Dimensions Assets
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
-Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+This module allows that in the Amortization window, unlike the standard operation in which asset depreciations were grouped according to specific dates, to group the depreciation records **only per periods** (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage). Also in the grouping the dimensions are not considered.
+In addition, the accounting dimensions are maintained in the amortization lines to be used in the generation of accounting entries.
+
+![assets2](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
+
 
 ##### Bulk Posting
 
@@ -19734,6 +20609,15 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
+#### How to Reactivate Amortizations
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
+
+![](https://docs.etendo.software/latest/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+
 
 #### Asset Amortization Report (Excel)
 
@@ -19742,7 +20626,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
+The Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
 ![](https://docs.etendo.software/latest/assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
 
@@ -19792,7 +20676,16 @@ This bundle includes fundamental modules that affect most areas in Etendo.
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [the Advanced Business Partner module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md).
+    For more information, visit [Advanced Business Partner - User guide](https://docs.etendo.software/latest/essentials-extensions/advanced-business-partner.md).
+
+##### Bulk Completion
+
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.completion` 
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [Bulk Completion - User guide](https://docs.etendo.software/latest/essentials-extensions/bulk-completion.md)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Advanced Business Partner
@@ -20042,8 +20935,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
-
+    For more information, visit the [Webhook Events developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).  
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Advanced Security
@@ -20233,6 +21125,14 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 #### Modules
 
+##### Automated Warehouse Reservation
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.warehouse.reservation`
+
+This module adds the option Automatic - Only Default Warehouse to the Stock Reservation field of the lines tab in the Sales Order window. This is used to limit the reservation only to the warehouse specified in the header of the order.
+
+!!! info
+    For more information, visit [Sales Order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#stock-reservation).
 
 ##### Stock History
 
@@ -20295,7 +21195,6 @@ This bundle includes enhancements for the Production Management functionalities 
 
 -  :material-translate: Spanish: [Production Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=0FFED1B8A5AE471AA1A672F4D7E1B1C4){target="_blank"}
 
-
 #### Modules
 
 ##### Advanced Work Effort
@@ -20357,6 +21256,7 @@ This functionality allows the user to configure and grant rappels to business pa
 
 !!! info
 	For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -20372,14 +21272,48 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 #### Modules
 
+##### Accounting Dimensions Assets
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets.template`
+
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets`
+
+The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
+
+!!! info
+    For more information, visit the [Accounting Dimensions Assets user guide](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
+
+
 ##### Accounting Templates
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account
+This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
     For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
+
+##### Advanced Bank Account Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
+
+!!! info
+    This functionality is available in the following windows:
+
+    - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Sales invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+    - [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+    - [Sales order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management)
+    - [Purchase order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+    - [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+    - [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
+
+    For more information, visit the [Advanced Bank Account Management](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 
 ##### Advanced Business Partner Settlement
 
@@ -20461,7 +21395,7 @@ This feature allows entering in the system all the financings the company has. I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This functionality allows the user to post or unpost multiple records at the same time.
+This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the Not Posted Documents window, which allows users to identify and post all pending transactions directly from one window. 
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
@@ -20600,6 +21534,179 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
     For more information, visit the [VAT Regularization User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
 
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Advanced Bank Account Management
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Advanced Bank Account Management
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management
+## Article Content: 
+### Advanced Bank Account Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+#### Overview
+This section describes the Advanced Bank Account Management module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+This functionality enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+
+This functionality is available in the following windows: 
+
+- [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management)
+- [Sales Invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+- [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+- [Sales Order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management)
+- [Purchase Order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+- [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+- [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
+
+#### Business Partner - Bank Account
+:material-menu: `Application` > `Master Data Management` > `Business Partner`
+
+This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png)
+
+#### Business Partner - Location/Address
+:material-menu: `Application` > `Master Data Management` > `Business Partner` 
+
+The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partner window to associate specific bank accounts to the different locations.  
+
+!!!info
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png)
+
+#### Sales/Purchase Order windows
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Order`
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Order`
+
+A Bank Account field has also been added header section of the Purchase and Sales Order windows.
+
+This field is automatically filled based on the selected address. If a specific account is associated with the address, that account is used; if no account is configured, the default account is selected. In cases where neither option is configured, the field remains blank. Payment plans generated from these Purchase and Sales Orders now include the bank account information.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba3.png)
+
+###### Add Payment button
+
+Furthermore, the Add Payment button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Sales Invoice and Purchase invoice windows.
+
+
+#### Sales/Purchase Invoice windows
+
+:material-menu: `Application` > `Sales Management` > `Transactions` > `Sales Invoice`
+
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Invoice`
+
+Similarly, a Bank Account field has been added to the Purchase and Sales Invoice windows, which functions in the same manner as in orders. The field is auto-filled based on the selected address, using a specific account if associated, falling back to the default account if none is specified, or remaining blank otherwise. 
+The payment plan inherits the bank account information from the header
+Additionally, invoices created from Purchase and Sales Orders inherit the bank account information from the respective orders.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba4.png)
+
+The Payment Plan in Sales Invoice and Purchase Invoice windows now displays the associated bank account information in the Payment Plan tab. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba5.png)
+
+###### Add Payment button
+
+Furthermore, the Add Payment button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Sales Invoice and Purchase invoice windows.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba6.png)
+
+
+###### Modify Payment Plan button
+
+A Modify Payment Plan button is found at Payment Plan tab level in both the Purchase and Sales Invoice windows. This function allows users to modify payment plans already created, adding or deleting payments, and even specifying the bank account for each payment plan record.
+
+!!!warning
+    This button is only available when the payment plan has no associated payments.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
+
+#### Payment In /Payment Out windows
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Payment In / Payment Out` 
+##### Add Details button
+
+
+As in the case of the Add Payment button, the Add Details button has been enhanced to include a Bank Account field, allowing users to filter payments by bank account. This button is present in the Payment In and Payment Out windows.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba8.png)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Automated Remittance
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
+## Article Content: 
+### Automated Remittance
+
+:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+
+#### Overview
+
+This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+
+This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
+
+!!!important
+    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
+
+#### Setup
+
+To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
+
+For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
+
+#### Automated Remittance Process
+
+This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
+
+
+1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
+
+    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
+
+2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
+
+3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
+
+!!!note
+    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
+
+#### Automated Remittance Protest
+
+The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
+
+1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
+
+2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
+
+3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Bank Integration PSD2
@@ -20745,6 +21852,8 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 ![](https://docs.etendo.software/latest/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 
+#### Available Windows
+
 This functionality is available in the following windows:
 
 - [Amortization](https://docs.etendo.software/latest/basic-features/financial-management/assets/overview.md#bulk-posting)
@@ -20769,8 +21878,7 @@ This functionality is available in the following windows:
 - [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
 - [Physical Inventory](https://docs.etendo.software/latest/basic-features/warehouse-management/transactions.md#bulk-posting)
 
-
-##### Accounting Status
+##### Accounting Status Column
 
 All the records existing previously to the installation of this new functionality have a default **pending refresh** value in the column **Accounting Status**. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
 
@@ -20783,75 +21891,13 @@ To configure the preference, go to the **Preference** window and create a new re
 It is necessary to run the **Days Back to Refresh Accounting** background process to update the accounting status column.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Automated Remittance
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Financial Extensions Bundle/Automated Remittance
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance
-## Article Content: 
-### Automated Remittance
 
-:octicons-package-16: Javapackage: `com.etendoerp.automated.remittance` 
+#### Not Posted Documents Window
 
-#### Overview
+The Bulk Posting module includes the Not Posted Documents functionality. This is used to find all the not posted documents in the same window and to post them massively.
 
-This section describes the Automated Remittance module included in the Etendo Financial Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
-
-
-This functionality allows the user to automatically process and protest remittances. To better understand this section, it is necessary to visit the [Remittance user guide](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
-
-!!!important
-    This functionality depends on the `org.openbravo.module.remittance` module in version `3.15.0` or higher. In case of installing the financial extensions bundle, the dependencies are handled automatically.
-
-#### Setup
-
-To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
-
-For this, go to the [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
-
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
-
-#### Automated Remittance Process
-
-This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
-
-
-1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
-
-    Once the Process button is used, Etendo automatically creates the corresponding lines in the Bank Instructions and Settled tabs, as explained below.
-
-2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
-
-3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
-
-!!!note
-    The invoice selection, grouping and processing steps already existed; what's new is the automation of the remittance processing by selecting the Process Automated checkbox.
-
-#### Automated Remittance Protest
-
-The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of remittances. This automatic protest creates a negative payment, therefore it is not necessary to use the Settle/Protest Remittance window or add a payment manually.
-
-1. Remittance Selection: In the Settled tab, of the Remittance window, select the remittance to be protested.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance-selection.png)
-
-2. Return Generation: By pressing the Protest Remittance button and selecting a return date, the system will automatically generate the return of the remittance.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/protest-generation.png)
-
-3. Negative Invoice Payment: The return will include the generation of a negative payment of the invoice to be returned, allowing the remittance to be settled again in the future.
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative-invoice-payment.png)
-
-    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/negative.png)
+!!!info
+    For more information, visit [Not Posted Documents](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -24344,13 +25390,13 @@ Configuración General | Organización | Gestión del módulo de Empresa.
 
 Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
 
-1\. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
+1. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
 
 ![](https://docs.etendo.software/latest/assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
 
 De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2021.
 
-2\. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
+2. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
 
 ![](https://docs.etendo.software/latest/assets/drive/xl0hUWgK97dvKk9LYorJ4vXXpltQStE57Zd_QmJ7BMlmTgWxmNBDiWnjz8FznBhE39VtlzT8WOd5sVjWVsnzgDa3mRuXsc-IU0e8M9O2CDxE6f1Zs9tSjwMZsJPIXGhgy_hzwe4Rlpszp9GHu0Wd4WocXCEHmOoukjpUTjGKM2Hy2kQzd3Wz9Q_dYJMhJQ.png)
 
@@ -24361,7 +25407,7 @@ En la imagen del ejemplo se muestra como las bases imponibles/cuotas ligadas al 
 -   IVA devengado - Total Bases y Cuotas IVA
 -   Volumen de operaciones - Operaciones en Régimen General
 
-3\. Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación del modelo 390 del período fiscal que corresponda, desde la ruta de aplicación:
+3. Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación del modelo 390 del período fiscal que corresponda, desde la ruta de aplicación:
 
 Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos.
 
@@ -24450,7 +25496,6 @@ Los parámetros de entrada tienen que ver con datos que no pueden extraerse dire
 -   campos de texto para introducir el **total de devoluciones mensuales/trimestrales de IVA** (Modelo 303 en los casos de inscripción en el registro de devolución mensual
 -   campo de texto para introducir el **Resultado de la autoliquidación del último período a compensar**
 -   campo de texto para introducir "las cuotas pendientes de compensación al término del ejercicio" 
-
 
 
 
@@ -26769,7 +27814,7 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Bundle/Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Extensions Bundle/Overview
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview
 ## Article Content: 
@@ -26802,7 +27847,7 @@ This module allows the user to create base queries and customize them when neede
 A background process must be set which creates CSV files that will be uploaded to a server.  
 
 !!! info
-    For more information, visit the [Etendo BI Connector Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md) and the [Etendo BI Connector Module developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle.md#etendo-bi-connector).
+    For more information, visit the [Etendo BI Connector Module developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-extensions.md#etendo-bi-connector).
 
 ##### Base Queries for Etendo BI 
 
@@ -26810,7 +27855,7 @@ A background process must be set which creates CSV files that will be uploaded t
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo BI Inclusion/Exclusion Module Configuration
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Bundle/Etendo BI Inclusion/Exclusion Module Configuration
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Extensions Bundle/Etendo BI Inclusion/Exclusion Module Configuration
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration
 ## Article Content: 
@@ -26921,260 +27966,10 @@ Main categories for account configuration:
 ###### Configuration of sales costs accounts:
 
 ![sales_cost.png](https://docs.etendo.software/latest/assets/legacy/sales_cost.png)
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Etendo BI Connector Module
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Etendo BI Bundle/Etendo BI Connector Module
-## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector
-## Article Content: 
-### Etendo BI Connector 
-:octicons-package-16: Javapackage: `com.etendoerp:integration.powerbi` 
-
-#### Overview
-
-!!! info
-    To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/?#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}.
-
-In Etendo, it is possible to create base queries and to customize them when needed. This will provide information which can be used by Power BI.
-
-For this process, a background setting is required in order to create CSV files that will be uploaded to a server. The files will use information from the pre-established base queries and their customazation in case there are any. 
-
-The following documentation is about the steps to consider when configuring this funtionality to create the CSV files, since it is necessary to execute the process in Etendo from different windows:
-
-#### Etendo BI Connector Module Configuration
-
-
-First, make the proper configurations from the **Webhooks window**. This will later allow BI Logs to be sent to the **BI Logs Monitor window**.
-
-##### Webhooks window
-From the webhooks window, it is necessary to create a new record and complete the required fields as follows: 
-
-• **Module**: Base Queries for EtendoBI 
-
-• **Name**: EtendoBI Logger
-
-• **Description**: Fill EtendoBI Log window
-
-• **Event Class**: Java
-
-• **Java\_Class**: com.etendoerp.integration.powerbi.processes.FillLogWindow
-
-!!! info
-    It is highly recommended to have just one Webhook for this module to work properly, as its functionality will not vary. That’s why, it is better to use the organization \* in order to cover all child organizations.
-
-
-In the **Params tab**, four records must be created under the names:
-
-• **description**
-
-**• logtype**
-
-**• organization**
-
-**• rule**
-
-
-![](https://docs.etendo.software/latest/assets/drive/1J07aRNJeYl5QsU0z6Q95m2lT-hAp6FrC.png)
-
-
-!!! info
-    For more information about Webhooks, visit Webhooks Events.
-
-##### User API Token window 
-
-Then, make the proper configurations from the **User API Token window**. Here, it is necessary to grant access to a **user role**, so a token in this window needs to be created.
-
-![](https://docs.etendo.software/latest/assets/drive/Bl15uB38OKLSH0-MZwACXtCP4Jzz7uvYLqwRMJVv_Fc5n9aknGQN7SoMEDwGvo-nZ56ShJxB3gJ6xT_4CGpVNMdlph3rSUB1z6J7tpYmVBF5T7xHqo9VBdNrR8OGLrzR4nJU0ob85tLZcdINBrPF2Ek.png)
-
-Then, go back to the **Webhooks window**, and create a record in the **Access tab** in order to add the previously generated token. 
-
-![](https://docs.etendo.software/latest/assets/drive/901aflhvMb72shBzBttOe-B3AyBS5CPEWWJhojALTB79N_ODpPAo9ZUeRazDPmgmB9ukpw8b2OpPKUzQZOJ_jui58NOVewSkgQ2Mj78vXTJ1zkvsza7Z9qWGsWAFWqHAVnagb_7PrGeNr3IkQYyMF9o.png)
-
-
-!!! success 
-    This way the Webhook is configured. Now, it is necessary to configure the EtendoBI Connector module.
-
-
-##### Etendo BI Connector Module Window
-
-In the **BI Connection window**, It is necessary to create a record to specify the path to the CSVs creation script and the Webhook to use. If the **EtendoBI bundle** is installed and the script path was not changed, the user should use the default value of ‘repository path’ field. Otherwise, the corresponding path should be specified. 
-
-!!! info
-    It is important to note that the **'Repository path'** will search for the corresponding path INSIDE the WebContent folder of the project. 
-
-
-
-![](https://docs.etendo.software/latest/assets/drive/1ayeGDCTnguR7Bio_pBs2KBxYfcwn1rwv.png)
-
-
-In the **Data Destination** tab, the file name of the script needs to be specified. 
-
-![](https://docs.etendo.software/latest/assets/drive/KWkJfoJfr0eGo-zdI470rUUEMpGo9Hc2ABpO5qpPUUQ-4kH2-aswwkYHGLJpVVl7Hie77xW16UfNcqD-fyP4wO6_DqNLYkA1H9CfI2T1XWYsnZmt64yLcTA_326PqQmRkDpMUz7C69Js6vGrSGKmH_A.png)
-
-Finally, in the **Execution variables** tab, some records must be created being the ‘Variable’ field:
-
-- **ip**: ip of the server where the files will be uploaded **(mandatory)**
-
--   **client**: the name of our client **(mandatory)**
--   **user**: the user used to connect to the server. **(mandatory)**
-
-- **application_url**: url of our application. e.g. "https://my-domain.cloud/etendo" **(mandatory)**
-
-- **port**: port of the server where the user is  connecting to **(default: 22)** 
-
-- **path**: path of the server where the files will be sent **(default: /)**
-
-- **private-key-path**: path of the private key used for the connection to the server
-
-- **bbdd\_user**: username of a read only user to access the database
-
-- **bbdd\_password**: password of the read only user
-
-- **csv_separator**: delimiter to use in the final csv files (default: |)
-
-**“private-key-path”** is the path of the private key used for the connection to the server. If this variable is not specified, the script will try to connect without specifying a private key.
-In the **“bbdd\_user” and “bbdd\_password” variables**, enter the **username** and **password** of a user with read-only permissions to the database. If either of these two variables is not found, the process will use the credentials of the database superuser.
-
-!!! info
-    However, it is **highly recommended** to use a user with read only permissions as it is a great security measure.
-
-
-As an example, let’s use the following values:
-
-![](https://docs.etendo.software/latest/assets/drive/YFy5yV9lx64qO3638txrEGkKRxBY0fZqu7ep6YSJ7Ef8E0SsPZ1tywDDifwDL8JeJ-vO8GU3ViTdF6MkHH32PG55y9a7y7AyCTfD0tCMSV0WU1P8GvXWn7LPq083UDuD-zq2M0A6NwZgAqH8KJJ-eR8.png)
-
-!!! info
-    It is important to respect the specified names for the “Variable” field.
-
-
-Also, it is important to note that the script is going to create a folder named as the value of the **“Client” variable**, and it will contain folders for each organization that executes the background process. Therefore, if there are **two BI Connections** with the same **“Client” value**, the last execution of the process will overwrite the folder.  
-  
- 
-
-For example, let's say there is  Organization A, which has Organizations B and C as its child organizations. If the user needs to have the same configuration for both, we can create a BI Connection using Organization A and set up two background processes that run the "EtendoBI Process," one for Organization B and the other for Organization C.
-
-When the script is executed, a folder will be created with the value of the "Client" variable in the BI Connection window as its name. Within that folder, subfolders will be created for each organization (in this case, A\_logs and A\_output for Organization A, and B\_logs and B\_output for Organization B).
-
-##### Enterprise Module Management window
-
-To load the Etendo base queries, go to the **Enterprise Module Management window**, and select Base Queries for EtendoBI and then click the **OK button**.
-
-![](https://docs.etendo.software/latest/assets/drive/gjw0zq66nVJjH1vlMJ_u7gHGlpIpB4L13owW4LNmd7XsB6kz1YjIS_9DEQI_4mNtovBk8xjus3gMwqGvNhGMTHPs-CgWOmdkkEEYXSO6Rr8_D2dkHg9BD1VTBP1wrf_uP9nHVGE6I3p_LM6sReNwAQA.png)
-
-##### BI Query window 
-
-After that, Etendo base queries should be successfully loaded in the **BI Query window**.
-
-![](https://docs.etendo.software/latest/assets/drive/zED4oSr1NOEXkhP-gZkR3br6-vi_piTylQGfK-QFfkscUWKIOEqAaIX_KU1y8D15iXh1aPwJUtyTJnM0mnS3Jyd2O6njJTmL1PJlMPlNoNfv4f7s9hva8Kmpmoo7rHcTdBOfKZMz67kHhq3VdsiAs90.png)
-
-There are several points to consider when handling queries in this module.
-
-• **Primary Key Requirement**: Every base query must have its primary key as the first column. This is crucial  since in the script it is assumed that the first column is the identifier. 
-
-!!! warning
-    A failure to adhere to this can result in incorrect output, duplicated records, and an immense number of rows.
-
-
-
-• **Client column on base query**: Every base query must include ad\_client\_id column, with the alias “ClientID”
-
-• **Organization column on base query**: Every base query must include ad\_org\_id column, with the alias “OrgID”
-
-• **Custom Query Customization**: The customization of the query must also include the primary key (which is the same as the base query since customization is performed on the same table) with the SAME ALIAS as the base query. 
-
-!!! warning
-    Failing to respect this can lead to improper mapping between the results of the base query and its customization, resulting in incorrect output.
-
-
-
-Let’s see an example of a correct base query and customization.
-
-![](https://docs.etendo.software/latest/assets/drive/1UIyNY8fo3FhcRDzjs_OPjcJYvFIc5oHZ.png)
-
-
-
-In this case, as a base query there are three columns. In its customization, there is a new column “name”. 
-
-!!! info
-    Note that there are three mandatory columns in the base query, with the correct alias for column **ad\_client\_id and ad\_org\_id**. It is important to make sure that **“ClientID”** and **“OrgID”** aliases are being set WITHOUT double quotes. Also, **there should not be** more than one space between the “as” keyword. 
-
-… ad_client_id as “ClientID”, …    **INCORRECT**
-… ad_client_id as ClientID, …       **CORRECT**
-
-
-
-
-In the customization query, despite the requirement to have the primary key with the same alias as the base query, it is not necessary for it to be the first column. In this case, if instead of having:
-
-- SELECT m\_warehouse\_id as WarehouseID, name as "Warehouse Name" FROM m\_warehouse
-
-We have:
-
-- SELECT name as "Warehouse Name", m\_warehouse\_id as WarehouseID FROM m\_warehouse
-
-The result will be exactly the same.
-
-The script executes the base query, and then merges the customization, using both primary keys for mapping the rows.
-
-If a base query has a **customization**, the script creates **three different CSVs**.
-
-- A CSV file that contains the **result of the base query**. This CSV file has the prefix “EBI\_” if it is an Etendo base query. If it is a client base query, it has the **first three letters** of the value of the “Client” variable that was set earlier as a prefix.
-
-- A CSV file with the prefix “BASE\_”, which contains the **columns from the base query**, but if the customization overrides any of these values, they will be overwritten with the values from the customization. In this case, the “BASE\_” CSV file will be the same as the base query since the **customization does not override** any values from the base query columns.
-
-- A CSV file with the prefix “FULL\_”, which includes b**oth the columns from the base query and any additional columns added in the customization**. In the given example, the “FULL\_” CSV file will contain the additional column “Warehouse Name”. 
-
-Later, at the end of the configuration,  this example query will be executed to analyze the **generated CSV files**.
-
-!!! info
-    It is important to note that there should be only one customization per base query. It should also be made clear that it is not possible to add constraints to the customization to remove rows from the base query. Instead, the customization allows adding or overwriting columns in the original query, using the primary key to map the records.
-
-
-Base queries must all contain the **ad\_client\_id** and **ad\_org\_id columns**, with alias **“ClientID”** and **“OrgID”** (case insensitive). 
-!!! warning
-    If a query does not have these columns with their alias, it will produce an error and be ignored.
-
-##### Process Request window
-
-Once the query configuration is done, go to the **Process Request window**, create a new record, select the **“EtendoBI Process”** from the process field and schedule it.
-
-![](https://docs.etendo.software/latest/assets/drive/5ud_n--k9OgupQZYlbOPy2MAQQfzmCyAETSNt5gOV5ZIYhH0Yq7RsCnDx9bkgsQCF9XBvVILtwMui-iNVXDHIeC1P04UfVxjomlQahtvx4ws-LelIg6XLvvxkeRzZc6iQcEZrdipa_2ylO87WoWwlU0.png)
-
-The scope of the data collection performed by the queries is based on the **organization** that configured the **background process**. In other words, all the obtained data is  filtered by the **client** and the **organization** that configured the **background process**, and **NOT** by the organization used in the **BI Connection window**. If the organization does not have a configuration in the **BI Connection**, Etendo will search for the **configuration** in one of its **parent organizations**, but the data scope will remain the same (itself and its child organizations).
-
-!!! info
-    If the organization that configured the background process does not have a BI Connection and there is no BI Connection found for its parent organizations either, the **process will not be executed**. 
-
-
-The process will never search for a BI Connection in the child organizations of the one which was set on the background process.
-
-
-![](https://docs.etendo.software/latest/assets/drive/AK3H85SVLjjFxSk-2mMbDlcGyBK1gMAWsi-bATJTtsVIV8VJPj3QuxscOqkcZphInHViVUfSCJLj9jEB0LyDX73D5qIsMtn4A9Z5o4IrQ5tC2mzfSnpvfB2X5qJyb-Cwz7Uvgl3DWa75iXgQIDGEgBk.png)
-
-In the **Process Monitor** tab, the status of **“Success”** is shown in the new record that appears when the process is executed. It is good to know that this process executes our python script, so if there were no issues up until the execution of the python script, it will return to success status regardless of whether the python script fails.
-
-##### BI Logs Monitor window 
-
-The execution process can be checked in the **BI Logs Monitor** window.
-
-
-
-
-![](https://docs.etendo.software/latest/assets/drive/ldN9QIT1oj9bKdnQhcBW8x70touvdAarz4qdtHI37RpnDEjY7jV77RkGSmYb7fvwIQqwB-T8uKtbGdg31b7PuSvwisFQPYCCRFQuDQxXW3kggv8UZRWFnh7dXR3hhN7ntv30Hxzk63m5Vieci2tUmQY.png)
-
-In this example image, the information about the script execution can be seen.
-
-If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
-
-!!! info
-    To do that, visit the [Etendo BI Bundle developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle.md). 
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions Bundle/Overview
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview
 ## Article Content: 
@@ -27200,7 +27995,7 @@ This module allows users to prevent the duplication of purchase invoices within 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Purchase Invoice Validation
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Purchase Invoice Validation
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions Bundle/Purchase Invoice Validation
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation
 ## Article Content: 
@@ -28681,7 +29476,7 @@ Above scenario would somehow mean an expense in Organization A and a revenue in 
 Etendo Mobile is a **mobile app** in which the user can access to sub-applications via mobile devices in a fast and practical way. By enabling seamless integration between Etendo Classic and mobile sub-applications, Etendo Mobile allows users to log in to Etendo Classic and configure **dynamic applications** tailored to specific user roles, enhancing productivity and efficiency.
 
 !!!info
-    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
 
 
 Etendo Mobile is available in both Play and App Store:
@@ -28735,7 +29530,7 @@ Once the server URL is configured, the user must log in entering **the user and 
 
 #### Dynamic App Role Configuration
 
-Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Classic Subapp Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Mobile Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/mobile-extensions/mobile-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
 
 Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
 
@@ -28746,7 +29541,6 @@ Fields to note:
 - **Active:** Select if this application is active or not.
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
-
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -28783,8 +29577,8 @@ Here, by selecting the profile image, it is possible to navigate to the **Settin
 If the drawer is displayed, it is possible to navigate to Home and also to the sub applications previously loaded. 
 
 !!! note
-    To be able to include sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
+    To be able to include sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions Bundle - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/user-interface-3.png)
 
@@ -28800,35 +29594,63 @@ In case the user has a picture, it will be shown both in this window and in the 
     The role can only be modified from Etendo Classic, so each user will enter with their default role setup.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo Classic Subapp Extensions
-## Article Path: /User Guide/Etendo Mobile/Bundles/Etendo Classic Subapp Extensions
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Mobile/Bundles/Mobile Extensions/Overview
 ## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions
+ https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/overview
 ## Article Content: 
+### Mobile Extensions
+
+:octicons-package-16: Javapackage: `com.etendoerp.mobile.extensions`
+
+:material-store: Etendo Marketplace:  [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}
+
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and the Etendo Copilot Sub-Application. Also it includes the configurations in Etendo Classic. 
+This bundle includes mobile sub-applications.
 
 !!! info
+    - To be able to include the sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md). <br>
 
-    - Initially, add Etendo Classic Subapp bundle in Etendo Classic. <br>
-    To be able to include these sub-applications, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md).
-
-    Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured and the apps will be available. Acces must be given to each role from the [Dynamic APPs tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window.
-
-
-!!!info
-    For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
+    - Once the bundle is installed in Etendo Classic, the dynamic apps will be configured and the apps will be available. Acces must be given to each role from the [Dynamic Apps tab](https://docs.etendo.software/latest/getting-started.md#dynamic-app-role-configuration) in the Role window. <br>
+    
+    - For more information read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md). 
 
 
-#### Etendo Classic Sub App
+#### Modules
 
-##### Overview
+##### Etendo Classic Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
+
+The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way **to view data**. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+!!! info
+    For more information, visit [Etendo Classic Subapp - User Guide](./etendo-classic-subapp.md).
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Classic Subapp
+## Article Path: /User Guide/Etendo Mobile/Bundles/Mobile Extensions/Etendo Classic Subapp
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp
+## Article Content: 
+### Etendo Classic Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
+
+
+#### Overview 
 
 The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
 
 The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+
+!!! info
+    - To be able to include the sub-application, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="_blank"}. <br>
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
+
 
 ##### Initial Configuration
 
@@ -28949,13 +29771,15 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](https://docs.etendo.software/latest/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-##### Mobile App Scanning Helpers
+#### Mobile App Scanning Helpers
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
+##### Overview
+
 The **Mobile App Scanning Helpers** allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App.
 
-###### Usage Examples
+##### Usage Examples
 
  The module has the Inventory Scan process by default, which is responsible for scanning this code from a mobile and thus, change values of the Physical Inventory lines.
 
@@ -29005,12 +29829,6 @@ It will also be noticed that the Product's Stock has been updated in the indicat
 
  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
 
-
-
-
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨ Getting Started
@@ -29048,7 +29866,11 @@ In turn, it is possible to configure assistant managers, able to delegate a spec
 
 #### Tools
 
-Each tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of tools work in harmony to deliver unparalleled support.
+Each tool represents a dedicated and self-contained project, meticulously designed to excel at specialized tasks. Whether it involves code translation, text analysis, or data manipulation, the diverse suite of tools operates in seamless coordination.  
+
+!!! info 
+    For a overview of the available tools and their technical details, please refer to the [Available Tools - Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview.md).
+
 
 ####  Key Features
 
@@ -29064,25 +29886,37 @@ Each tool represents a separate independent project, designed to excel at specif
 - **LangGraph**: In this case, this option works as a manager of other assistants and allows to select team members. 
 
 - **Langchain Agent**: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.
+- **Multi-Model Assistant** This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
+- **Attach Files** Etendo Copilot allows users to attach one or multiple files for assistants.
 
 #### Copilot Interface
-
-In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
+---
 
 ![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with [`Langchain Agent`, `LangGraph` and `Open AI Assistant` types](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md#assistant-window).
+In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
-##### Visualization Mode
+Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`, `Multi-Model Assistant`, `LangGraph` and `Open AI Assistant` types, for more information visit [Assistant Windows](https://docs.etendo.software/latest/etendo-copilot/setup-and-usage.md#assistant-window) documentation.
 
+##### Attach Files
 ---
 
+![Attach-Files](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/attach-files.png){align=right  width="300"}
+
+Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports any file format, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.
+
+This functionality ensures that users can seamlessly incorporate external data into their workflows, whether it involves parsing documents, analyzing spreadsheets, or processing images. Assistants and tools can be tailored to address specific requirements based on the type of attached files, providing contextualized and intelligent responses.
+
+<br>
+<br>
+
+##### Visualization Mode
+---
 <figure markdown>
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=200}
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=300}
 <br><br>
 Copilot, by default, can be used as a pop-up window. This is comfortable to use as an integrated assistant available in any window you are using.
 </figure>
-
 ---
 
 <figure markdown>
@@ -29092,15 +29926,12 @@ Select the fullscreen mode for a more comfortable use when having long conversat
 </figure>
 
 ---
-
 <figure markdown>
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200}
 <br><br>
 It can also be minimized. In this case, the logo will be shown in the lower-right section of the screen.
 </figure>
-
 ---
-
 When asked something, Copilot informs the user about the assistants and tools used when processing each message.
 
 !!!note
@@ -29146,7 +29977,7 @@ The Assistant window allows you to define and configure assistants:
 
 - **Name**: Assistant name
 - **Description**: Assistant description
-- **App Type**: Langchain Agent, Open AI Assistant or Langgraph
+- **App Type**:
 
     **Open AI Assistant**
 
@@ -29155,6 +29986,9 @@ The Assistant window allows you to define and configure assistants:
     **Langchain Agent**
 
     These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc. The difference between Langchain and Open AI is that Langchain can save the information locally and it is a multiprovider agent.
+
+    **Multi-Model Assistant**
+    This type of assistant extends the “Langchain” type with the particularity that it can be used with models from various vendors such as “Anthropic” and “Gemini”, in addition to the existing “OpenAI” models. In the future, Langchain assistants will be replaced by this type of multi-model agents.
 
     **LangGraph**
 
@@ -29167,21 +30001,20 @@ The Assistant window allows you to define and configure assistants:
 
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
-    - **Model**: Dropdown with the Open AI models available. If none of the options are selected, the model defined by default for the Etendo Copilot module in the [preference](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#preference) window is to be used.
+    - **Model**: Dropdown with the Open AI models available from the [AI Models](#ai-models-window) window. If none of the options are selected, the model defined by default for the `Copilot Default Model for OpenAI Provider` [preference](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#preference) window is to be used.
     - **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
     - **Open AI Assistant ID**: Read-only field in which the ID of the assistant once created is displayed.
     - **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
     - **Open AI Vectordb ID**: Read-only field in which the ID of the vector database is displayed.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
-=== "Langchain Agent"
+=== "Langchain Agent or Multi-Model Assistant"
 
     In case of defining an **Langchain Agent** type app, the following fields will be enabled: 
 
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish.
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case. 
-    - **Provider**: Model provider information.
-    - **Model**: Dropdown with the models available according to the selected provider.
+    - **Model**: Dropdown with the models available,from the [AI Models](#ai-models-window) window.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
 === "LangGraph"
@@ -29191,25 +30024,34 @@ The Assistant window allows you to define and configure assistants:
     - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
     - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
     - **Graph Preview**: It shows the tree of assistants under a certain manager.
-    - **Provider**: Model provider information.
-    - **Model**: Dropdown with the models available according to the selected provider.
+    - **Model**: Dropdown with the models available, from the [AI Models](#ai-models-window) window.
     - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
-        !!!info
-            If this option is chosen, the **Refresh Preview** button is shown, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
 !!!info
     The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
     These variables will be replaced with the values defined in the properties.
 If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
 
-##### Sync Assistant Button
+##### Buttons
 
-This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
+- **Sync Assistant**: This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
+
+- **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
+
+- **Check hosts**: This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
+
+- **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a assistant is cloned in, the name `Copy of` is added. 
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/clone-agent.png)
+
 
 ##### Knowledge Tab
 
-In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
+In this tab, you can setup the files that will be used by the assistant as knowledge base, in prompts or questions.
+
+!!!info
+    To load new files, you must do it from the [Knowledge base file](#knowledge-base-file) window, first you define the files and then from this tab you configure how the file will be used.
 
 !!!warning "File Limitation for Code Interpreter"
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
@@ -29219,8 +30061,7 @@ In this tab, you can define the files that will be used by the assistant as know
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
 
-!!!info
-    To load new files, you must do it from the [Knowledge Base File](#knowledge-base-file).
+
 
 Fields to note:
 
@@ -29269,6 +30110,7 @@ Fields to note:
     !!! warning
         Remember that it is not possible to select an assistant without a description.
 
+
 #### Knowledge Base File Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
@@ -29279,45 +30121,99 @@ In the Knowledge Base File window, you can define the files with which the assis
 
 - **Name**: File Name.
 - **Description**: File description.
-- **Type**:
-    - **Attached File** 
-    This allows you to upload files directly into Copilot for later use during interactions with the assistants.
-    - **HQL Query**
-    This allows using an HQL query result as a file for knowledge base file.
-    - **Remote File** 
-    You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
-    - **Code Index** 
-    Only available as System Administrator, as access to the source code is required.This type allows assistants to access and consult indexed code files. It enables options related to file path configuration which can be defined in the File Path tab.
 - **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
 - **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
-- **File name**: Name of the remote file in case you want to modify it. This name must include the file format. For example, `example.pdf`.
-- **URL**: Source file URL. Only shown if the **Remote file** option is chosen in the Type field.
-- **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+- **Skip Splitting**: Checking this box allows you to tell Copilot not to split the file into parts when indexing it. This is necessary when the entire contents of the file are needed when reading the file, while maintaining the context of the entire file.
+- **File name**: Name of the saved file, it must always include the file format. For example, `example.pdf`.
 
-##### File Path Tab 
+- Optional fields by file **Type**:
 
-!!! warning 
-    Only available as System Administrator, as access to the source code is required.
+    === "Attached File"
 
-The **File Path Tab** appears when **Code Index** is selected as the file type. 
+        This type allows you to upload files directly into Copilot for later use during interactions with the assistants.
+        ![attach-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/attach-file.png)
+    
+    === "Code Index"
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
+        Only available as `System Administrator` role, as access to the source code is required. This type allows the agents to access, query and generate a zip with code files that will be indexed to the knowledge base. It allows the configuration of paths and regular expressions to filter files, which are defined in the File Path tab.
 
-**Path File**: Specify the path where the code files you need the assistant to read are located. 
 
-!!!info
-    It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. 
-    Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+        ### File Path Tab
+        
+        This tab is Only available as `System Administrator` role , as access to the source code is required.
+        
+        ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
 
-!!!note
-    If Etendo Classic is a JAR instance, the source code is located in the following path: `@source.path@/build/etendo/`.
+        Fields to note:
+
+        - **Path File**: Specify the path where the code files you need the assistant to read are located. 
+
+        !!!info
+            It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
+        
+        !!!warning
+            As access to the source code is required, both modules and Etendo Classic must be installed in source format.     
+
+    === "HQL Query"
+
+        This type allows using an HQL query result as a file for knowledge base file.
+
+        Fields to note:
+
+        - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
+
+        ![hql-query.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/hql-query.png)
+
+
+    === "OpenAPI Flow Specification"
+
+        This type of files, allows to obtain the JSON of the specification of an OpenAPI REST generated from Flows and Request from Etendo, for more technical information you can consult [How to document an endpoint with OpenAPI](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
+
+        Fields to note:
+
+        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
+
+        ![openapi-flow-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/openapi-flow-file.png)
+    
+    === "Remote File"
+        
+        You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
+
+        Fields to note:
+
+        - **URL**: Source file URL.
+        - **File name**: Mandatory name of the saved file, it must always include the file format.
+
+        ![remote-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/remote-file.png)
+
+    
+    === "Text"
+
+        This allows you to write the content of the file directly in the text area. This option is useful for small texts that must be versioned in the system.
+
+        Fields to note:
+
+        - **Text**: Text content of the file.
+
+        ![text-file.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/text-file.png)
+
+
+
+##### Buttons
+
+- **Clone**
+
+    The navbar clone button allows the cloning of files, making a copy of both all header fields and related records in the tabs. When a file is cloned in, the name `Copy of` is added. 
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/clone-file.png) 
+
 
 
 #### Skill/Tool Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Skill/Tool`
 
-In this window , the user can find available tools, distributed in the Copilot bundle, to be used in Copilot assistants.
+In this window , the user can find [available tools](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview.md), distributed in the Copilot bundle, to be used in Copilot assistants.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/skill-tool-window.png)
 
@@ -29392,6 +30288,35 @@ Fields to note:
 - **Message**: Exact message used in the conversation
 - **Time**: Time of the message
 - **Creation Date**: Date of the message
+
+
+#### AI Models Window
+
+:material-menu: `Application`>`Service`>`Copilot`>`AI Models`
+
+In this window, the user can find and add AI models to be used by the assistants, Available in the drop-down list of models
+
+!!!info 
+    - Automatically, the window will be populated with the Etendo default distributed models, after the first assistant synchronization.
+    - Also diffrent models and providers must be entered manually.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/ai-models-window.png)
+
+Fields to note:
+
+- **Code**: The code name of the model. It must be in lowercase.
+- **Name**: The human-readable name of the model.
+- **Provider**: The provider of the model. It must be in lowercase.
+- **Max Tokens**: The maximum number of tokens that can be generated by the model. This is a field required in some models, that can be used to limit or expand the model's capabilities, depending of the nature of the model.
+- **Default**: Read-only field, to identify the default model to use, this configuration is distributed and updated by Etendo.
+- **Default Override**: If this field is checked, the selected model will have priority over the others. Only one record can have this check selected.
+- **Etendo Maintenance** Read-only field, to identify the models that are distributed by Etendo.
+
+##### Buttons
+
+**Synk Models** This process allows to synchronize the models distributed by Etendo on demand.
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -29486,14 +30411,6 @@ This module includes an assistant capable of performing operations related to th
 !!! info
     For more information, visit [Copilot Purchase Expert](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md) user guide.
 
-##### Database Query Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
-
-!!! info
-    For more information, visit [Database Query Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md) developer guide.
 
 ##### Dev Assistant
 
@@ -29510,13 +30427,10 @@ The **Dev Assistant** is designed to develop other assistants to facilitate proc
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
 
 !!! info
     For more information, visit [XML Translation Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool.md) developer guide.
-
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -29585,52 +30499,55 @@ For this particular case, we have configured an assistant with the functional me
 
 #### Overview
 
-This Assistant is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. The tool uses the [DB Query Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md) to infer the necessary information to generate the SQL query. The user can ask questions about the database, and the Assistant will determine whether to return a SQL query or execute the query and return the obtained result.
+This Assistant is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. Use a webhook to get the necessary information to generate the SQL query. The user can ask questions about the database, and the Assistant will determine whether to return a SQL query or execute the query and return the obtained result.
 
 #### Components
 
 The SQL Expert Assistant is composed of the following components:
 
-- **DBQueryGenerator Tool**: This tool allows querying Etendo for available tables in the database and the columns of each table. It also enables the Assistant to execute SQL queries in the database that are generated by the Assistant.
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
-- **DBQueryExec Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The DBQueryGenerator tool sends the SQL query to the Webhook, and the Webhook executes the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
-
-
-#### Installation
-
-This module is included in the Copilot Extensions Bundle
-
-!!! info
-    To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+- **DBQueryExec - Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The assistant call the Webhook to execute the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
 
 
-In addition, you can install only the module containing the **SQL Expert** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.dbquerytool`.
-   
-After install the module: 
+#### Assistant Setup 
 
-1. It is necessary to add the ```gradle.properties``` file with the following configuration:
-    ``` properties
+1. This module is included in the Copilot Extensions Bundle
+
+    !!! info
+        To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+
+2. Check the necessary ETENDO_HOST variable in the `gradle.properties` file.
+    
+    ```groovy title="gradle.properties"
     ETENDO_HOST=http://localhost:8080/etendo
     ```
 
     !!! warning
         Replace http://localhost:8080/etendo with the real url of the Etendo system.
 
-2. Do a compilation with a database update, to register the tool and the assistant in the database.
-    ``` bash title="Terminal"   
-    ./gradlew update.database smartbuild --info
-    ```
 
-3. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
+3.  A new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
 
-4. Run **Sync Assistant** process.
+4. Run **Sync Assistant** process, loged as System Administrator role.
 
-5. Restart Docker image using `./gradlew resources.down` and `./gradlew resources.up` tasks.
+5. Restart Docker image using `./gradlew resources.up` tasks.
 
-    !!! note 
-        If you have problems with shutting down the container, you can use the `docker ps` command to see the container id and then use `docker stop <container_id>` to stop it manually.
+6. Configure access to the agent from the [Assistant Access](https://docs.etendo.software/latest/etendo-copilot/setup-and-usage.md#assistant-access-window) window.
 
-7. You can use the **SQL Expert** assistant as a **System Administrator**. In case of using this assistant with other roles, first, you need to configure the coplilot app access in the **Role** window as described in the [initial assistant configuration](https://docs.etendo.software/latest/etendo-copilot/setup.md#role-window) and also configure access to the role in the [WebHooks](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window for the WebHook **DBQueryExec**, this webhook is automatically added when the module is installed.
+7. You can use the **SQL Expert** assistant as a **System Administrator**
+
+    !!!warning 
+        In case of using this assistant with other roles: 
+        
+        1. It must be verified that the role has webhooks execution enabled: 
+            ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-service-enabled.png)
+        
+        2. Access must be given to the corresponding role in the  [WebHooks](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window, in the **Role** tab, for the WebHook **DBQueryExec**.  This webhook is automatically added when the module is installed.
+            ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-setup.png)
+
+
 
 #### Examples
 
@@ -29678,6 +30595,7 @@ After install the module:
     <br>
     **Query to obtain which is the invoice with the highest registered amount?**
     </figure> 
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -29871,6 +30789,8 @@ This document covers how IntelliJ IDEA  is capable of importing code formatter s
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo
 ## Article Content: 
+### Use of Repositories in Etendo
+
 #### Overview
 
 While Etendo supports any Maven package repository, we will focus on explaining how to configure Etendo's standard repositories credentials.
@@ -30161,6 +31081,8 @@ Another option to force the installation of all the translation modules is to ad
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo
 ## Article Content: 
+### Install Translation Bundles in Etendo
+
 #### Overview
 This page will explain how to install translation bundles, as their process is different from that of the other bundles. 
 These bundles require the correct version of the ones they translate to be installed manually.
@@ -30209,6 +31131,8 @@ For information on what bundle version is compatible with which translation bund
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration
 ## Article Content: 
+### PostgreSQL Configuration 
+
 #### Overview
 
 This section explains how to set up postgres to work properly with Etendo Classic, once you have installed postgres, you need to make sure that the configuration is set up properly.
@@ -30473,6 +31397,8 @@ Since the information about packages is daily updated, the user can execute manu
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo
 ## Article Content: 
+### Migrating to Etendo (from Openbravo)
+
 #### Overview
 
 This guide provides the necessary information to migrate an existing Openbravo instance to a new Etendo instance (in its latest release). 
@@ -30881,6 +31807,8 @@ To solve issues with taxes arising from these modules being migrated from Openbr
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2
 ## Article Content: 
+###Upgrading to Openbravo 21Q3.2
+
 #### Overview
 
 This guide explains how to upgrade your current Openbravo environment to version 21Q3.2. This involves two main steps:
@@ -31093,7 +32021,7 @@ To work with the plugin you need to specify in the root project from where the p
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration
 ## Article Content: 
-#### Core format migration
+### Core format migration
 
 === "From Sources to JAR"
 
@@ -31186,18 +32114,18 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 
 |Bundle|Javapakage|Version|From Core | To core|
 |--|--|--|--|--|
-|Sales Extensions					|com.etendoerp.sales.extensions							|1.5.0|22.1.0	|23.2.x	|
-|Sales Extensions ES			|com.etendoerp.sales.extensions.es_es				|1.4.0|22.1.0	|23.2.x	|
+|Sales Extensions						|com.etendoerp.sales.extensions							|1.5.0|22.1.0	|23.2.x	|
+|Sales Extensions ES		|com.etendoerp.sales.extensions.es_es				|1.4.0|22.1.0	|23.2.x	|
 |Financial Extensions			|com.etendoerp.financial.extensions					|1.8.0|23.1.4	|23.2.x	|
 |Financial Extensions ES	|com.etendoerp.financial.extensions.es_es		|1.2.0|23.1.4	|23.2.x	|
 |Production Extensions		|com.etendoerp.production.extensions.				|1.3.0|22.1.0	|23.2.x	|
 |Production Extensions ES	|com.etendoerp.production.extensions.es_es	|1.1.0|22.1.0	|23.2.x	|
 |Platform Extensions			|com.etendoerp.platform.extensions					|1.6.0|23.2.0	|23.2.x	|
-|Platform Extensions ES		|com.etendoerp.platform.extensions.es_es		|1.2.0|22.1.0	|23.2.x	|
+|Platform Extensions ES		|com.etendoerp.platform.extensions.es_es	|1.2.0|22.1.0	|23.2.x	|
 |Warehouse Extensions			|com.etendoerp.warehouse.extensions					|1.3.0|23.1.4	|23.2.x	|
 |Warehouse Extensions ES	|com.etendoerp.warehouse.extensions.es_es		|1.2.0|23.1.4	|23.2.x	|
 |Essential Extensions			|com.etendoerp.essentials.extensions				|1.1.0|23.1.4	|23.2.x	|
-|Essential Extensions ES	|com.etendoerp.essentials.extensions.es_es	|1.0.0|23.1.4	|23.2.x	|
+|Essential Extensions ES	|com.etendoerp.essentials.extensions.es_es		|1.0.0|23.1.4	|23.2.x	|
 |Localizacion Española		|com.etendoerp.localization.spain.extensions|1.4.0|22.4.3	|23.2.x	|
 
 
@@ -31480,7 +32408,7 @@ If you find any issues or need additional help, do not hesitate to reach out to 
 # Article Title: Alerts
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Alerts
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Alerts
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/alerts
 ## Article Content: 
 ### Alerts
 
@@ -31651,8 +32579,10 @@ This work is a derivative of [Application Menu](http://wiki.openbravo.com/wiki/A
 # Article Title: Constraints
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Constraints
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/constraints
 ## Article Content: 
+### Constraints
+
 #### Overview
 
 Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for constraints but just the particularities Etendo Classic has in their usage.
@@ -31845,9 +32775,9 @@ This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.co
 # Article Title: Data Access Layer
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Data Access Layer
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Data_Access_Layer
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/data-access-layer
 ## Article Content: 
-###  Data Access Layer
+### Data Access Layer
   
 ####  Overview
 
@@ -33422,11 +34352,11 @@ This work is a derivative of [Data Model](http://wiki.openbravo.com/wiki/Data_Mo
 # Article Title: Datasets
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Datasets
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Datasets
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/datasets
 ## Article Content: 
-###  Datasets
+### Datasets
   
-####  Overview
+#### Overview
 
 The Dataset concept allows you to define sets of data from different tables and export this data in one step. Datasets are especially useful for managing reference data for a module, for example tax rates or default data in new
 tables added by a module. The reference data is published, distributed and
@@ -33446,12 +34376,12 @@ organization using the `Enterprise Module Management` window. They contain
 Organization level information.
 
 Client/Organization-level datasets work like Organization-level datasets, but
-can also be applied on [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) when creating a new client. They
+can also be applied on [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) when creating a new client. They
 contain Organization/Client level information.
 
-####  Main Concepts
+#### Main Concepts
 
-#####  Dataset
+##### Dataset
 
 A Dataset is a grouping of different tables (entities) which are exported
 together. Datasets are defined through the `Dataset` menu in the Application
@@ -33584,7 +34514,7 @@ Select the organization and the module from which to import the reference data i
 
 
 !!!note
-    If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) utility to create a new client.
+    If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) utility to create a new client.
 
 ---
   
@@ -33729,11 +34659,11 @@ This work is a derivative of [Development Build Tasks](http://wiki.openbravo.com
 # Article Title: Element and Synchronize Terminology
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Element and Synchronize Terminology
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/element-and-synchronize-terminology
 ## Article Content: 
 ### Element and Synchronize Terminology
 
-####  Element
+#### Element
 
 Elements  define the text in the label to be displayed for each field in the
 application as well as its related help. Each column in the Application
@@ -33745,14 +34675,14 @@ For example, `C_BPartner_ID` is the name for a number of columns in the applicat
 well as the help for all of them is the same; instead of maintaining that
 information redundantly in each column all these columns use the same element.
 
-#####  Element maintenance
+##### Element maintenance
 
 Elements can be edited in `Application Dictionary` > `Setup ` >`Element` 
 window (as *System Administrator*); but, usually, elements are not directly
 created using this window but by the *Synchronize terminology* . Once the
 element is created, this window is used to edit its contents.
 
-#####  Synchronize Terminology
+##### Synchronize Terminology
 
 It is the process that creates the elements for the columns that do not
 already have an associated one and copies the information in the elements to
@@ -33783,7 +34713,7 @@ fields that represent the columns for those elements.
     Note that once the element is created the changes in the column fields will also be overwritten in this process.  
 
   
-######  In detail
+###### In detail
 
 Here are all the steps the *Synchronize Terminology* process executes.
 
@@ -33817,7 +34747,7 @@ module. This is done by setting the field for `AD_Language` column in
 *Module* tab as not centrally maintained and writing directly in the field the
 name and help.
 
-#####  Translations
+##### Translations
 
 As elements are used to define text to be displayed in UI, they can be
 translated to different languages. 
@@ -33828,7 +34758,7 @@ The text in the element must be written in the language its module defines, and 
     The standard way to translate is by creating a new module with no additional
     functionality but just translations for the module.
 
-#####  Purchase entries
+##### Purchase entries
 
 If you observe the fields in the `Application Dictionary` > `Setup` >`Element` 
 you will notice there are standard fields (name, help...) and similar ones
@@ -33993,6 +34923,8 @@ All the Etendo development tasks used with the core in sources should still be w
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/format-xml
 ## Article Content: 
+### Format XML
+
 #### Overview
 
 `Format.xml` is a configuration file for Etendo installation that allows configuring the format output for numeric values. It is used by the different **numeric references** in Application Dictionary, but also can be used in **manual** code. By default, Etendo ships a `Format.xml.template` that can be copied as it is without any modification.
@@ -34070,7 +35002,7 @@ By default, all the Bins will be in an undefined Inventory Status. There are two
 The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. 
 
 !!! info
-        For more information, visit the [Allow Negative Stock user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client.md).
+    For more information, visit the [Allow Negative Stock user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client.md).
 
 #### Functionality
 
@@ -34275,11 +35207,11 @@ Usually customization modules are not intended to be published in Central Reposi
 # Article Title: Processes
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Processes
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Processes
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/processes
 ## Article Content: 
-###  Processes
+### Processes
   
-####  Overview
+#### Overview
 
 A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes _SQL Processes_ and _Java Processes_.
 
@@ -34289,7 +35221,7 @@ Once a process is defined it can be added to the menu to be called directly from
 
 Background processes can be set as _Prevent Concurrent Executions_ . Before a process with this attribute is about to be executed, it is checked there are no other instances of the same process in execution at the same time, in this case another execution is aborted.
 
-#####  Parameters
+##### Parameters
 
 When a process (SQL or Java) or a Jasper Report is set as _Standard_, a pop-up message is automatically generated and displayed when invoking it, this message looks like this:
 
@@ -34322,12 +35254,12 @@ Let's overview some of the most important fields in this tab:
   * *Reference* , *Reference Search Key* and *Validation*: These three fields work exactly like the same ones when defining references for columns. 
   * *Range* : If it is checked, the pop-up will display two parameters in order to define a range, the first parameter will be named as specified in _DB Column name_ field and the second one will have the same name with a _TO_ suffix. 
 
-#####  Defining Processes
+##### Defining Processes
 
 Processes can be of two different types: _SQL Processes_ and _Java
 Processes_ . SQL processes are implemented in the SQL language and are executed by the database engine. Java proceses are implemented in the Java language and are executed by the application server.
 
-######  SQL Processes
+###### SQL Processes
 
 _SQL Processes_ are implemented by database stored procedures. 
 
@@ -34348,7 +35280,7 @@ In case the process requires any parameter, it is possible to define them.
 !!!info
     To learn more about how to do it read [Parameters](#parameters).
 
-######  Java Processes
+###### Java Processes
 
 Java processes are implemented by java classes. 
 
@@ -34367,7 +35299,7 @@ It is also necessary to indicate the Java class that is going to implement the p
 !!!info
     If the process requires parameters they can be defined in the *Parameter* tab as explained in the [Parameters](#parameters) section of this document.
 
-#####  Executing processes
+##### Executing processes
 
 !!!note
     It is required to define the process compilation in order to be able to
@@ -34377,19 +35309,19 @@ It is also necessary to indicate the Java class that is going to implement the p
   
 Processes can be executed from the user interface from a menu or with a button. It can also be scheduled to be executed in the background without any user interaction.
 
-######  Executing a process from a menu option
+###### Executing a process from a menu option
 
 To execute a process from a menu option, you need to define a new menu option that executes the process. Menus are defined in `General Setup > Application > Menu`. In the *Action* field the *Process* entry must be selected, then in the *Process* field select the process. it will be executed immediately and then saved.
 
 Finally, press the *Tree* button to organize the new menu option in the menu tree, and now the process defined can be executed selecting this new menu created.
 
-######  Executing a process from a button
+###### Executing a process from a button
 
 To execute a process with a button you need to define a column that references a button. In `Application Dictionary > Tables and Columns`, go to the column you want to use to execute the process and in the field *Reference* select the *Button* entry, then in the *Process* field select the process you want to execute and save.
 
 When executing a process with a button, the record ID of the current record selected of the table will be passed to the process. This allows to execute functions for specific records.
 
-######  Executing a process in the background
+###### Executing a process in the background
 
 Backgroung processes are defined in `General Setup > Process Scheduling > Process Request`. 
 
@@ -34401,7 +35333,7 @@ In this window you can define a background process. The process to be executed c
 !!!note
     There is no user interaction necessary to execute the process, thus, no pop-up will appear prompting for additional parameters.
 
-#######  Kill a background Process
+####### Kill a background Process
  
   
 A button *Kill Process* is shown in the Process Monitor window on that processes that implement the KillableProcess interface while a process is being executed (Status = Processing). The interface KillableProcess will let you kill your process using a kill mechanism.
@@ -35000,23 +35932,23 @@ This work is a derivative of [Standard Windows](http://wiki.openbravo.com/wiki/S
 # Article Title: Tables
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Tables
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Tables
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/tables
 ## Article Content: 
-###  Tables
+### Tables
 
   
-####  Overview
+#### Overview
 
 Physical database tables are the basis  Application Dictionary Data Model  is
 built on. This document discusses the particularities all tables in Etendo
 ERP must have.
 
-####  Common Columns
+#### Common Columns
 
 All tables in Etendo must have some common columns. All these columns
 must be defined as not nullable.
 
-#####  Primary Key
+##### Primary Key
 
 All tables in Etendo have a single column primary key. This column will
 be automatically populated with a generated  UUID  therefore the type for this
@@ -35028,7 +35960,7 @@ primary key column for *HT Salary* table would be *HT Salary ID*.
 This column must be also set as primary key in database, it is not enough with
 defining it as ID in Application Dictionary.
 
-#####  Client/Organization
+##### Client/Organization
 
 As Etendo ERP is a [multi client and multi organization](Multi_Client_and_Multi_Org.md) application, all
 data belongs to a client and an organization, so all tables must have these
@@ -35041,7 +35973,7 @@ These columns are a foreign key to *AD Client*  and  *AD Org*  tables. So, their
 types must also be *VARCHAR2(32)* , and there must be a foreign key to these
 tables.
 
-#####  Audit Information
+##### Audit Information
 
 Finally, there are some columns that store information about whether a record
 is active and when and who created and last modified it. This information is
@@ -35053,12 +35985,12 @@ maintained in the following columns:
   * _Upated_ : It contains the last date and time when the record was modified (or created if no modification was performed later). Its type is _DATE_ . 
   * _UpdatedBy_ : Indicates the last user that updated the record. It is a foreign key to  *AD User*  so its type is _VARCHAR2(32)_ . 
 
-####  Naming conventions
+#### Naming conventions
 
 When creating new tables it is necessary to pay special attention to the names
 given to tables and columns, particularly regarding modularity.
 
-#####  Tables
+##### Tables
 
 The only element to take into consideration is the module's  DB Prefix  . The
 table's name must start with this DB prefix followed by underscore character
@@ -35095,9 +36027,9 @@ OBUISEL  |  User Interface Selector
 OBUISC  |  Smartclient  
 FINPR  |  Orders Awaiting Delivery  
   
-#####  Columns
+##### Columns
 
-######  Modularity
+###### Modularity
 
 In case the column belongs to the same module than its table no special rule
 must be followed for its name. But if the column is going to be added to a
@@ -35116,12 +36048,12 @@ plus* the *DB Prefix* of the module the column belongs to. For instance,
   
 This restriction also applies for naming constraints, triggers and functions.
 
-######  Primary Key Column
+###### Primary Key Column
 
 !!!info
     Naming for primary key column is explained in [Primary Key](#primary-key) section of this document.
 
-######  Foreign Key Columns
+###### Foreign Key Columns
 
 It is a best practice to name, if possible, foreign key columns in the same
 manner than the primary key column of the table they link to. The reason for
@@ -35135,7 +36067,7 @@ same table or when adding columns in a different module than the table's one.
 Following this naming rule allows to define standard references as *TableDir*
 when the column is defined in Application Dictionary.
 
-######  Naming of Columns and the Data Access Layer
+###### Naming of Columns and the Data Access Layer
 
 In Etendo, Java classes are generated from the tables definition. A DAL
 entity is generated from every table defined in the Application Dictionary.
@@ -35151,7 +36083,7 @@ which collide with Java keywords* , such as *class* , *if* , *int* , ...
 !!!info
     Here you can find a list of the [Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html){target="\_blank"}.
 
-####  Supported Column Data types
+#### Supported Column Data types
 
 `DBSourceManager`, the utility that Etendo uses to manage database related
 operations, supports a subset of the datatypes that Oracle and PostgreSQL
@@ -35591,6 +36523,201 @@ The result shows the sum of the 2 selected order headers:
 This work is a derivative of [How to add a button to the toolbar](https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Add a Canvas Field to a Form or Grid
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Canvas Field to a Form or Grid
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid
+## Article Content: 
+###  How to add a canvas field to a Form or Grid
+
+#### Overview
+
+This guide explains how to integrate canvas fields into forms and grids within Etendo, enabling the addition of customized visual components such as buttons, links, and calculated labels. 
+Canvas fields offer dynamic data presentation and interaction, leveraging JavaScript development expertise for implementation.
+
+####  Introduction
+
+A canvas field allows the user to add any visual component to a form or a row in a grid. 
+This concept can be used to add a calculated field to a form and grid. 
+Visual components which can be added are for example buttons, links and (computed) labels.
+
+In this section, we will be adding a button and a calculated field to the form and to every row in the grid.
+We will illustrate how information from the record and form can be used to get dynamic information from the Form/Grid.
+
+The implementation of canvas fields requires javascript development experience. 
+See the following concept pages for background information on javascript development:
+
+  * [Client Side Development and API](https://docs.etendo.software/latest/concepts/Client_Side_Development_and_API.md)
+  * [JavaScript Coding Conventions](https://docs.etendo.software/latest/concepts/JavaScript_Coding_Conventions.md) 
+
+It also makes sense to study the following page: [Etendo Architecture](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md).
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
+
+####  Example Module
+
+This section is supported by an example module which shows examples of the code shown and discussed.
+
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+
+####  Main development steps for creating a new canvas field
+
+The development consists of 2 steps:
+
+  1. Implement the canvas itself, normally this is done in javascript. 
+  2. Specify the canvas javascript class in the field definition of the tab/window 
+
+#####  Implementing your canvas in javascript
+
+The first step is to implement your canvas class in javascript. This is done in 2 steps:
+
+  * Create a  [javascript](https://docs.etendo.software/latest/concepts/Client_Side_Development_and_API.md#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
+  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md#component-provider) 
+
+The example module implements a button and a calculated field in the `example-canvas-field.js` file.
+
+The first example in the file implements a button which shows the identifier of the current record:
+
+    
+```javascript title="example-canvas-field.js"
+isc.defineClass('OBEXAPP_SalesOrderActionButton', isc.OBGridFormButton);
+ 
+isc.OBEXAPP_SalesOrderActionButton.addProperties({
+  noTitle: true,
+  title: OB.I18N.getLabel('OBUISC_Identifier'),
+  click: function() {
+    var info = '';
+    if (this.record) {
+      info = this.record._identifier;
+    } else if (this.canvasItem) {
+      info = this.canvasItem.form.getValue(OB.Constants.IDENTIFIER);
+    }
+    isc.say(info);
+  }
+});
+```
+
+The second example shows a calculated field which divides 2 values from the current record and displays the result in a formatted way. 
+It also illustrates several methods which are called when the context/environment changes (for example when a value on the form changes):
+
+    
+```javascript title="example-canvas-field.js"
+isc.defineClass('OBEXAPP_SalesOrderCalculated', isc.Label);
+ 
+isc.OBEXAPP_SalesOrderCalculated.addProperties({
+  height: 1,
+  width: 1,
+  overflow: 'visible',
+  contents: '',
+  initWidget: function() {
+    if (this.canvasItem) {
+      this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+    }
+ 
+    this.Super('initWidget', arguments);
+  },
+  
+  // is called when the form gets redrawn
+  redrawingItem: function() {
+    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+  },
+  
+  // is called when a field on the form changes its value
+  onItemChanged: function() {
+    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+  },
+  
+  // is called in grid-display mode when the canvas is created/used
+  // for a record
+  setRecord: function(record) {
+    this.computeContents(record.grandTotalAmount, record.summedLineAmount);
+  },
+  
+  computeContents: function(val1, val2) {
+    var num;
+    if (!val2) {
+      this.setContents('');
+    } else {
+      num = OB.Utilities.Number.JSToOBMasked(val1/val2, 
+          OB.Format.defaultNumericMask,
+          OB.Format.defaultDecimalSymbol,
+          OB.Format.defaultGroupingSymbol,
+          OB.Format.defaultGroupingSize);
+      
+      this.setContents(num);
+    }
+  }
+});
+```
+
+The javascript file is registered in the example modules' [ComponentProvider](https://docs.etendo.software/latest/concepts/Etendo_Architecture/#component-provider) like this:
+
+    
+```java title="ExampleComponentProvider.java"
+@Override
+public List<ComponentResource> getGlobalComponentResources() {
+  final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
+  globalResources.add(createStaticResource(
+      "web/org.openbravo.client.application.examples/js/example-canvas-field.js", false));
+.....
+```
+
+#####  Defining the canvas in the Tab-Field (ADField)
+
+The next step is to create a new field in the tab, and set its client class field:  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png)
+
+It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title": "My Action Button"}'
+
+#####  The result
+
+The result is shown in both the grid and the form:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-2.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-3.png)
+
+####  Javascript events passed to the canvas
+
+When implementing your canvas, you should take into account that the canvas is used in 3 different situations:
+
+  * When displaying a row in the grid 
+  * When editing a row in the grid 
+  * In form view, when editing a record 
+
+The last 2 cases are similar.
+
+In grid-display mode the following applies:
+
+  * In grid mode the following properties are set on the canvas: 
+    * `grid`: the grid object 
+    * `rowNum`: the row number/record index for which the canvas is used 
+    * `record`: the record for which the canvas is used 
+    * `colNum`: the column in which the canvas is shown 
+    * `field`: the field where the canvas is used 
+  * A canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. 
+  When a canvas is used for a record, then the setRecord method on it is called (if the canvas has this method). 
+
+In form-edit or grid-edit mode, the following applies:
+
+  * The canvasItem property will be set pointing to the form item the canvasItem can be used to get to the form itself and to the grid (if editing in the grid): 
+    * `this.canvasItem.form`: the form instance 
+    * `this.canvasItem.form.grid`: in case of grid editing 
+  * If the canvas has a property noTitle with the value `true` then in form mode no title/label is displayed 
+  * Form changes: the canvas can capture form/value change events by implementing 2 methods (both without arguments): 
+    * `onItemChanged`: is called when a value on the form changes 
+    * `redrawingItem`: is called just before the form is redrawn 
+
+####  Adding server side actions
+
+The button implementation can easily be extended with a server side action. Etendo Classic supports the [action handler concept](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md#actionhandler-server-side-calling-from-the-client)  for this purpose.
+
+---
+
+This work is a derivative of ["How to add a canvas field to a form or grid"](http://wiki.openbravo.com/wiki/How_to_add_a_canvas_field_to_a_Form_or_Grid){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Add a Field to a Window Tab
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Field to a Window Tab
 ## Article URL: 
@@ -35640,12 +36767,11 @@ This work is a derivative of [How to add a field to a window tab](http://wiki.op
 # Article Title: How to Add a Rich Text Field and Column
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Add a Rich Text Field and Column
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column
 ## Article Content: 
-###  How to Add a Rich Text Field and Column
- 
+### How to Add a Rich Text Field and Column
   
-####  Overview
+#### Overview
 
 This How-to section explains how to add a rich text field and column to the Etendo Classic.
 
@@ -35896,11 +37022,10 @@ This work is a derivative of [How to Add Columns to a Table](http://wiki.openbra
 # Article Title: How to Change an Existing Window
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Change an Existing Window
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window
 ## Article Content: 
 ###  How to Change an Existing Window
 
-  
 ####  Overview
 
 Application elements ([windows, tabs and fields](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Modularity_Concepts.md#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
@@ -36075,7 +37200,7 @@ As seen in the image above, the “image” field was created, in which it is po
 # Article Title: How to Create a Background Process
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Background Process
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process
 ## Article Content: 
 ###  How to Create a Background Process
 
@@ -36163,7 +37288,7 @@ This work is a derivative of [How to Create a Background Process](http://wiki.op
 # Article Title: How to Create a Callout
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Callout
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout
 ## Article Content: 
 ### How to Create a Callout
 
@@ -36599,7 +37724,7 @@ This work is a derivative of [How to Create a Callout that Extends from Another 
 # Article Title: How to Create a Chart of Accounts Module
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Chart of Accounts Module
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module
 ## Article Content: 
 ### How to Create a Chart of Accounts Module
 
@@ -36614,7 +37739,7 @@ In some countries, it is required to have a specific chart of accounts to be use
 
 #### Creating the CSV file
 
-The first step for creating a chart of accounts module is to write the CSV file with the list of accounts we want to include. All the information can be found in [How to Create Accounts Files](How-to-Create-Accounts-Files.md).
+The first step for creating a chart of accounts module is to write the CSV file with the list of accounts we want to include. All the information can be found in [How to Create Accounts Files](how-to-create-accounts-files.md).
 
 #### Testing the CSV file
 
@@ -36779,8 +37904,8 @@ To create a Clone Hook, you only have to follow a few steps:
     The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create a Computed Column
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Computed Column
+# Article Title: How to Create a Computed Column
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Computed Column
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column
 ## Article Content: 
@@ -36907,10 +38032,9 @@ This work is a derivative of [How to Create a Computed Column](http://wiki.openb
 # Article Title: How to Create a Dataset
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Dataset
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset
 ## Article Content: 
 ### How to Create a Dataset
-
   
 ####  Overview
 
@@ -36918,8 +38042,6 @@ This how-to will focus on creating a dataset in Etendo Classic and also will giv
 
 #####  Introduction to Dataset Concept
 
-
-  
 First of all we need to understand the dataset concept, which allows to export
 the sets of data from different tables in one step. This is especially useful
 to manage and distribute the module along with _reference data_ , for instance
@@ -36929,13 +38051,10 @@ A dataset is defined by its Dataset Tables and Dataset Columns. This detailed
 configuration leads to which tables to be exported, and which columns of each
 table are executed and exported.
 
-  
 There are some important things to note:
 
   * A Dataset belongs to a module, so modules can add Datasets and define their own Datasets. 
-  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set. 
-
-  
+  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set.   
   
 #####  Reference Data
 
@@ -36958,52 +38077,44 @@ applying the module.
 There are mainly three tables referred to as data structure to define datasets. They
 are:
 
-1\. *DataSet* with the following columns: _Value, Name, Description, Module
+1. 
+    * DataSet with the following columns: _Value, Name, Description, Module
 and DataAccessLevel_
+    * Data sets have a name and a description to describe the content of the data set. 
+    * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
+    * A data set is owned by a module in the same way that all Application Dictionary components. 
 
-  * Data sets have a name and a description to describe the content of the data set. 
-  * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
-  * A data set is owned by a module in the same way that all Application Dictionary components. 
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
-
-    
-
-!!!note
+    !!!note
     If the export allowed column is flagged, then an **Export Reference Data** button is displayed. 
     
 
-2\. *DataSet_Table* with the following columns: _DataSet, Table,
-fullBusinessObject, includeAllColumns, excludeAuditInfo and whereClause (HQL
-expression)_
+2. 
+    * DataSet_Table* with the following columns: _DataSet, Table, fullBusinessObject, includeAllColumns, excludeAuditInfo and whereClause (HQLexpression)_
+    * A data set can have one or many tables from the ones registered in the `AD_Table`. For each of them developers can decide to include only records in that table or export the full business object using the check `fullBusinessObject`. 
+    * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the `includeAllColumns` check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
+    * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
+    * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the `excludeAuditInfo` column. 
 
-  * A data set can have one or many tables from the ones registered in the `AD_Table`. For each of them developers can decide to include only records in that table or export the full business object using the check `fullBusinessObject`. 
-  * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the `includeAllColumns` check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
-  * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
-  * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the `excludeAuditInfo` column. 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
     
-!!!note 
-    If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
-    For example if the Dataset Table is defined for the ` C_Order ` table and this field is flagged then also the related ` C_OrderLines ` are exported. 
-    
-
+    !!!note 
+        If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
+        For example if the Dataset Table is defined for the ` C_Order ` table and this field is flagged then also the related ` C_OrderLines ` are exported. 
   
-!!!info
-    A full business object is a record including all its one-to-many relationships
-    as defined in the AD through the isParent attribute of a column. An example of
-    a full business object is a product with its vendors, prices, etc. A complete
-    description of business objects is provided in the DAL project.
+    !!!info
+        A full business object is a record including all its one-to-many relationships
+        as defined in the AD through the isParent attribute of a column. An example of
+        a full business object is a product with its vendors, prices, etc. A complete
+        description of business objects is provided in the DAL project.
 
-  
-  
-3\. *Dataset_column* with the following columns: *DataSet_Table, Column, isExcluded and conditionClause(Java expression)*.
+3. 
+    * Dataset_column* with the following columns: *DataSet_Table, Column, isExcluded and conditionClause(Java expression).
+    * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
+    * They can exclude columns using the `isExcluded` check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
 
-  * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
-  * They can exclude columns using the `isExcluded` check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
-
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
 
 #####  Data Access Level
 
@@ -37952,12 +39063,12 @@ public class AddPaymentOrderInvoicesTransformer extends HqlQueryTransformer {
 This work is a derivative of [How to create a HQL Based Table](http://wiki.openbravo.com/wiki/How_to_create_a_HQL_Based_Table){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How To Create a Module
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How To Create a Module
+# Article Title: How to Create a Module
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Module
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module
 ## Article Content: 
-###  How To Create a Module
+###  How to Create a Module
 
 ####  Overview
 
@@ -38200,8 +39311,256 @@ The dataset definition is ready, so the user just needs to export it to a file p
     In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create a Navigation Bar Component
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Navigation Bar Component
+# Article Title: How to Create a Navigable Link
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Navigable Link
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link
+## Article Content: 
+###  How to Create a Navigable Link
+
+#### Overview
+
+This section explains how to create a navigable link in Etendo Classic, implementing a ClientClass. A ClientClass allows you to add visual components to a form or a row of a grid. This is useful for adding calculated fields to forms and grids, integrating elements such as buttons, links or dynamic labels.
+
+In this case, we will implement a navigable ClientClass so that the documentNo in the **Create Invoice from Orders** window allows to directly open the corresponding sales order in the Sales Order window.
+
+This section shows how to use the record and form information to get dynamic data in the grid or form. 
+
+!!! info
+    The implementation of these fields requires JavaScript knowledge.
+
+
+#### Main Steps to Create a new ClientClass
+
+1. Implement the ClientClass in JavaScript:
+
+    - Create the JavaScript file with the corresponding class and place it in the appropriate directory. The convention is to place the `.js` files in:
+
+        ```web/[module.java.package]/js```
+
+    - Register the JavaScript file (along with other static resources such as CSS files) in a ComponentProvider.
+
+
+2. Specify the JavaScript class in the field definition:
+
+    - Configure the field in the tab/window where the functionality will be applied.
+
+
+#### Implementing the ClientClass in JavaScript
+
+The first step is to define the class in JavaScript in two stages:
+
+1. Create the JavaScript class and calculate `tabId` and `recordId`.
+    In this case, the logic is implemented in the `DirectTabLink` class, which handles the opening of the window, passing the values of `tabId` and `recordId`.
+
+    ``` javascript title="direct-tab-link.js"
+    isc.ClassFactory.defineClass('DirectTabLink', isc.OBGridFormLabel);
+
+
+    isc.DirectTabLink.addProperties({
+    height: 1,
+    width: 1,
+    overflow: 'visible',
+
+
+    // Method that subclasses must override
+    getTabAndRecordId: function(record, callback) {
+    callback({ tabId: null, recordId: null });
+    },
+
+
+    setRecord: function(record) {
+    var value = record[this.field.name];
+
+
+    // Call the asynchronous function from the subclass
+    this.getTabAndRecordId(record, function(result) {
+        var tabId = result.tabId;
+        var recordId = result.recordId;
+
+
+        if (!value || !tabId || !recordId) {
+        this.setContents("");
+        return;
+        }
+
+
+        // Create the inline function for onclick
+        var linkHTML =
+        "<a href='#' style='color:blue; text-decoration:underline;' " +
+        "onclick='OB.Utilities.openDirectTab(\"" + tabId + "\", \"" + recordId + "\"); return false;'>" +
+        value + "</a>";
+
+
+        this.setContents(linkHTML);
+
+
+        // Force grid redraw
+        if (this.grid && this.grid.body) {
+        this.grid.body.markForRedraw();
+        }
+    }.bind(this));
+    }
+    });
+
+    ```
+
+2. Specific Implementation of the ClientClass
+
+    In our example, the target window is Sales Order. Since the `tabId` is fixed and does not change, it can be left as a static value.
+
+    The `recordId`, on the other hand, contains the unique identifier of each order, which facilitates navigation without the need for additional calculations.
+
+    ``` javascript title="sales-order-tab-link.js"
+    isc.ClassFactory.defineClass('SalesOrderTabLink', DirectTabLink);
+    isc.SalesOrderTabLink.addProperties({
+    getTabAndRecordId: function(record, callback) {
+    var tabId = "186"; // Fixed tab ID for "Sales Order"
+    var recordId = record.id;
+
+
+    if (!recordId) {
+        console.error("Error: Record ID not found in the record.");
+        callback({ tabId: null, recordId: null });
+        return;
+    }
+
+
+    callback({ tabId: tabId, recordId: recordId });
+    }
+    });
+    ```
+
+#### Special cases: Calculating `recordId` with Java
+
+In some cases, the `recordId` information is not available directly in the record, so it must be calculated. This can be achieved through a Java class that determines the corresponding `recordId`.
+
+Example:
+If the record does not have the `recordId` of the commands directly, we can calculate it by calling a specific Java class:
+
+``` java title="sales-order-tab-link-with-java.js"
+isc.ClassFactory.defineClass('SalesOrderTabLink', DirectTabLink);
+isc.SalesOrderTabLink.addProperties({
+ getTabAndRecordId: function(record, callback) {
+   var tabId = "186"; // Predefined Tab ID for "Sales Order"
+   var documentNo = record.documentNo; // Retrieve documentNo from the record
+
+
+   if (!documentNo) {
+     console.error("Error: documentNo not found in the record.");
+     callback({ tabId: null, recordId: null });
+     return;
+   }
+   // Call the Openbravo Action Handler to retrieve the recordId
+   OB.RemoteCallManager.call(
+     'org.openbravo.client.application.GetSalesOrderIdActionHandler', // Java Action Handler class name
+     { documentNo: documentNo }, // Parameter sent to the backend
+     {},
+     function(response, data, request) {
+       if (data.success && data.recordId) {
+         callback({ tabId: tabId, recordId: data.recordId }); // Use predefined tabId
+       } else {
+         console.error("Error retrieving recordId: " + (data.errorMessage || "Invalid response"));
+         callback({ tabId: null, recordId: null });
+       }
+     }
+   );
+ }
+});
+```
+
+In Java:
+
+``` java title="GetSalesOrderIdActionHandler.java"
+import org.openbravo.dal.service.OBCriteria;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.model.common.order.Order;
+
+
+/**
+* Action handler to retrieve the sales order ID based on a given document number.
+*/
+public class GetSalesOrderIdActionHandler extends BaseActionHandler {
+
+
+ private static final String DOCUMENT_NO = "documentNo";
+ private static final String SUCCESS = "success";
+ private static final String RECORD_ID = "recordId";
+ private static final String ERROR_MESSAGE = "errorMessage";
+
+
+ /**
+  * Executes the action to retrieve the sales order ID based on the provided document number.
+  *
+  * @param parameters A map containing execution parameters.
+  * @param content A JSON string containing the document number.
+  * @return A JSON object containing the sales order ID and status of the operation.
+  */
+ @Override
+ protected JSONObject execute(Map<String, Object> parameters, String content) {
+   JSONObject result = new JSONObject();
+   try {
+     final JSONObject jsonData = new JSONObject(content);
+
+
+     if (!jsonData.has(DOCUMENT_NO) || jsonData.isNull(DOCUMENT_NO)) {
+       result.put(SUCCESS, false);
+       result.put(ERROR_MESSAGE, "The 'documentNo' parameter is required.");
+       return result;
+     }
+
+
+     String documentNo = jsonData.getString(DOCUMENT_NO);
+
+
+     OBCriteria<Order> orderOBCriteria = OBDal.getInstance().createCriteria(Order.class);
+     orderOBCriteria.add(Restrictions.eq(Order.PROPERTY_DOCUMENTNO, documentNo));
+     orderOBCriteria.setMaxResults(1);
+
+
+     Order order = (Order) orderOBCriteria.uniqueResult();
+     result.put(RECORD_ID, order.getId());
+     result.put(SUCCESS, true);
+
+
+   } catch (Exception e) {
+     try {
+       result.put(SUCCESS, false);
+       result.put(ERROR_MESSAGE, e.getMessage());
+     } catch (Exception ex) {
+       throw new OBException(e);
+     }
+   }
+   return result;
+```
+
+#### Registering the JavaScript file in the ComponentProvider
+
+Once the JavaScript class is created, it is necessary to register it in the ComponentProvider of the corresponding module.
+
+``` javascript title="UIComponentProvider.java"
+/** JavaScript files required for UI navigation. */
+protected static final String[] JS_FILES = new String[]{
+   "direct-tab-link.js",
+   "sales-order-tab-link.js"
+};
+```
+
+#### Definition of the ClientClass in the tab field (ADField)
+
+The last step is to add the implementation in the field where the functionality will be applied and configure its ClientClass.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.png)
+
+#### Final Result
+
+As seen below, using the created link, you can directly open the linked sales order in the Sales Order window.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/createinvoicesfromorders.gif)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Navigation Bar Component
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Navigation Bar Component
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component
 ## Article Content: 
@@ -38681,7 +40040,7 @@ This work is a derivative of [How to create a Pick and Execute Process](http://w
 # Article Title: How to Create a Report
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Report
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report
 ## Article Content: 
 ###  How to Create a Report
   
@@ -39569,6 +40928,7 @@ Currently, not all references available in **Standard windows** are available in
   * Table 
   * TableDir 
   * Tree
+  * PAttribute
 
 #####  UI Logic
 
@@ -39603,8 +40963,8 @@ This work is a derivative of [How to Create a Standard Process Definition](http:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create a Stored Procedure
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to create a Stored Procedure
+# Article Title: How to Create a Stored Procedure
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Stored Procedure
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure
 ## Article Content: 
@@ -39958,9 +41318,11 @@ This work is a derivative of [How to Create a Table](http://wiki.openbravo.com/w
 # Article Title: How to Create a Window
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Window
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-window
 ## Article Content: 
-####  Overview
+### How to Create a Window
+
+#### Overview
 
 The objective of this section is to show how you can create a new window from scratch. 
 
@@ -39968,7 +41330,7 @@ The objective of this section is to show how you can create a new window from sc
     This section builds on top of two previous sections which explain
     [How to Create a Module](https://docs.etendo.software/latest/how-to-guides/How_To_Create_a_Module.md)  and [How to Create a Table](https://docs.etendo.software/latest/how-to-guides/How_to_create_a_Table.md).
 
-####  Module & Table
+#### Module & Table
 
 As mentioned above, this tutorial is based on two previous tutorials and assumes that the following objectives have been already completed:
 
@@ -40125,7 +41487,7 @@ This work is a derivative of [How to create a window](http://wiki.openbravo.com/
 # Article Title: How to Create Accounts Files
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create Accounts Files
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files
 ## Article Content: 
 ### How to Create Accounts Files
 
@@ -40231,7 +41593,7 @@ Once we have entered all the accounts into our spreadsheet, it is time to export
 
 #### Chart of accounts in Etendo Classic
 
-After the [Initial client setup process](How_to_run_an_initial_client_setup_process.md), the user can find the corresponding Chart of accounts in the *Account Tree* window of Etendo Classic.
+After the [Initial client setup process](how-to-run-an-initial-client-setup-process.md), the user can find the corresponding Chart of accounts in the *Account Tree* window of Etendo Classic.
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/chartofaccountsics.png)
 
@@ -40243,7 +41605,7 @@ This work is a derivative of [Creating Account Files](https://wiki.openbravo.com
 # Article Title: How to Create an Alert
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create an Alert
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert
 ## Article Content: 
 ###  How to Create an Alert
 
@@ -42394,7 +43756,7 @@ This work is a derivative of [How to define Display Logic Evaluated at Server Le
 # Article Title: How to Develop a DAL Background Process
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Develop a DAL Background Process
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process
 ## Article Content: 
 ###  How to Develop a DAL Background Process
 
@@ -42597,8 +43959,189 @@ This work is a derivative of [How to develop a DAL background process](http://wi
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to embed a Widget into a Window Tab
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to embed a Widget into a Window Tab
+# Article Title: How to Document an Endpoint with OpenAPI
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Document an Endpoint with OpenAPI
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi
+## Article Content: 
+### How to Document an Endpoint with OpenAPI
+
+#### Overview
+
+This documentation details the steps to document API endpoints using the OpenAPI specification. By leveraging Swagger, developers can ensure their APIs are well-documented, standardized, and easy to integrate.
+
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+
+#### Define a New OpenAPIDefaultRequest
+
+To define a new `OpenAPIDefaultRequest`, you need to extend the abstract class `OpenAPIDefaultRequest`.
+
+Here is an example:
+
+```java
+package com.etendoerp.etendorx.openapi;
+
+public class ImageUploadOpenAPI extends OpenAPIDefaultRequest {
+    public static final String ETENDO_ID_PATTERN = "^[0-9a-fA-F]{1,32}$";
+
+    @Override
+    protected Class<?>[] getClasses() {
+        return new Class<?>[]{ com.etendoerp.etendorx.services.ImageUploadServlet.class };
+    }
+
+    @Override
+    protected String getEndpointPath() {
+        return "/sws/com.etendoerp.etendorx.imageUpload/";
+    }
+
+    @Override
+    Operation getPOSTEndpoint() {
+        Operation endpoint = new Operation();
+        endpoint.setSummary("Upload an image to EtendoERP");
+        endpoint.setDescription("Upload an image to EtendoERP, it can use a configuration associated with a Column ID to automatically resize the image.");
+
+        Schema reqSchema = new Schema()
+            .addProperty("filename", new StringSchema().description("The name of the file").example("image.jpg"))
+            .addProperty("columnId", new StringSchema().description("The column ID where the size and resize configuration is stored").pattern(ETENDO_ID_PATTERN))
+            .addProperty("base64Image", new StringSchema().description("The base64 encoded image"));
+        reqSchema.required(List.of("filename", "base64Image"));
+
+        RequestBody requestBody = new RequestBody().content(new Content()
+            .addMediaType("application/json", new MediaType().schema(reqSchema)));
+        endpoint.requestBody(requestBody);
+
+        return endpoint;
+    }
+}
+```
+
+This class specifies a POST endpoint for uploading images. It defines the endpoint path, request body schema, and required properties.
+
+
+#### Define an OpenAPI Request & Flow
+
+An OpenAPI Request record represents a single API endpoint in your application. OpenAPI Requests are defined in the window `OpenAPI Request`.
+
+1. **Type**: Set the type to `Default`.
+2. **Description**: Add the endpoint description.
+3. **Java Class**: Specify the Java class created that extends the `OpenAPIDefaultRequest` class.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-0.png)
+
+
+An **OpenAPI Flow** groups related API endpoints under a single category or _flow_. These flows make it easier to organize and navigate the API documentation.
+
+Each OpenAPI Flow record can:
+
+- Define a flow name and description.
+- Include one or more OpenAPI Requests through the `Endpoints` tab.
+- Specify which HTTP methods (GET, GET by ID, POST, PUT) the endpoints support using the `Endpoints` tab fields. When these fields are checked, they generate the corresponding endpoint methods documentation.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-1.png)
+
+To ensure an OpenAPI Request appears in Swagger documentation, it must be linked to an OpenAPI Flow. This ensures logical grouping and visibility.
+
+#### Additional OpenAPI Request Types
+
+=== "Tab - Etendo RX Module"
+
+    This type allows documenting existing entities or tables without defining a custom class that extends `OpenAPIDefaultRequest`. It enables seamless interaction with the ERP entities and supports full CRUD operations.
+
+    To configure a **Tab** OpenAPI Request:
+
+    1. **Create a New Record in the `OpenAPI Request` Window**:
+
+        - **Type**: Set the type to _Tab_.
+        - **Description**: Provide a description of the endpoint.
+        - **Tabs**: A new window tab will be visible. Add a new record and select the desired window tab from the tab selector.
+
+        ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Tab_OpenAPI_Request.png)
+
+    2. **Link the Request to an OpenAPI Flow**:
+
+        - Open the `OpenAPI Flow` window.
+        - Add a new record.
+        - Link the OpenAPI Request in the child tab.
+
+    **Features**:
+
+    - All fields defined in the tab will be available in the endpoint.
+    - Callouts, event handlers, triggers, and default values are automatically applied when adding, modifying, or deleting data.
+    - Endpoints are session-aware, ensuring data consistency and security.
+
+=== "Webhook - Webhook Events Module"
+
+    This type allows documenting webhook events without defining a custom class that extends `OpenAPIDefaultRequest`. It is designed for ease of integration and adherence to standardized formats.
+
+    To configure a **Webhook** OpenAPI Request:
+
+    1. **Create a New Record in the `OpenAPI Request` Window**:
+        
+        - **Type**: Set the type to _Webhook_.
+        - **Description**: Provide a description of the webhook.
+        - **Webhook Tab**: A new window tab will be visible. Add a new record and select the desired webhook from the selector.
+
+        ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Webhook_OpenAPI_Request.png)
+
+    2. **Link the Request to an OpenAPI Flow**:
+     
+        - Open the `OpenAPI Flow` window.
+        - Add a new record.
+        - Link the OpenAPI Request in the child tab.
+
+    **Features**:
+
+    - Enables clear documentation of webhook events.
+    - Simplifies integration by following standardized formats.
+    - Easily accessible in the Swagger UI.
+
+
+#### Check Swagger
+
+The new endpoint documentation should now be visible at the Swagger UI URL. The URL might vary depending on your deployment but typically follows the format:
+
+
+[http://localhost:8080/etendo/web/com.etendoerp.openapi/#/](http://localhost:8080/etendo/web/com.etendoerp.openapi/#/)
+
+
+Verify that the new endpoint appears under the defined tag and displays the correct request and response schemas.
+
+It will look like this:
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_Flow_Example.png)
+
+#### Key Components of OpenAPI Integration
+
+##### OpenAPIDefaultRequest
+
+The `OpenAPIDefaultRequest` abstract class provides the base functionality for adding default API endpoints to Swagger documentation. It:
+
+- Retrieves related tags and flows.
+- Adds definitions to the OpenAPI object.
+- Supports GET, POST, and PUT operations.
+
+##### Example of an OpenAPI Endpoint Implementation
+
+The `ImageUploadOpenAPI` class demonstrates:
+
+- **Endpoint Path**: `/sws/com.etendoerp.etendorx.imageUpload/`
+- **POST Operation**: Defines required properties (`filename`, `base64Image`) and validates input.
+- **Java Class Association**: Links to `ImageUploadServlet` for handling requests.
+
+##### OpenAPIEndpoint Interface
+
+This interface ensures consistent API endpoint behavior by defining methods such as:
+
+- `boolean isValid(String tag)`
+- `void add(OpenAPI openAPI)`
+
+For example, the `ImageUploadOpenAPI` class implements these methods to validate tags and add endpoint definitions to the OpenAPI object.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_ImageUpload_Example.png)
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Embed a Widget into a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Embed a Widget into a Window Tab
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab
 ## Article Content: 
@@ -42759,8 +44302,8 @@ This concludes this HowTo which placed the information about collectible invoice
 This work is a derivative of [How to embed a widget into a window tab](http://wiki.openbravo.com/wiki/How_to_embed_a_Widget_into_a_Window_Tab){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How To Exclude Database Physical Objects From Model
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How To Exclude Database Physical Objects From Model
+# Article Title: How to Exclude Database Physical Objects From Model
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Exclude Database Physical Objects From Model
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model
 ## Article Content: 
@@ -42840,7 +44383,7 @@ This work is a derivative of [How to Export Sample Data](http://wiki.openbravo.c
 # Article Title: How to Implement a Business Event Handler
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Implement a Business Event Handler
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler
 ## Article Content: 
 ### How to Implement a Business Event Handler
 
@@ -43245,7 +44788,6 @@ Example:
 
 
 
-
 Modules Dependencies example:
 
 ```groovy title="build.gradle"
@@ -43368,7 +44910,7 @@ Add to the **beans.xml**
 # Article Title: How to Run an Initial Client Setup Process
 ## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Run an Initial Client Setup Process
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process
 ## Article Content: 
 ###  How to Run an Initial Client Setup Process
 
@@ -43427,7 +44969,7 @@ Etendo also allows choosing the accounting `CSV` file with the corresponding cha
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
 
 !!!info
-    For more information, read [How to Create Accounts Files](How-to-Create-Accounts-Files.md) 
+    For more information, read [How to Create Accounts Files](how-to-create-accounts-files.md) 
 
 #### Module configuration
 
@@ -43835,8 +45377,8 @@ Some things to note when creating these type of windows:
 This work is a derivative of [How to add a canvas field to a form or grid](http://wiki.openbravo.com/wiki/How_to_use_property_fields){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to Use Secure Webservices
-## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Webservices
+# Article Title: How to Use Secure Web Services
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Use Secure Web Services
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
@@ -43848,10 +45390,30 @@ This module allows calling any standard Etendo web service in the same way as ca
 
 This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
-Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+Besides the authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+
+#### Setup 
+
+!!! Info 
+    By default, the ES256 encryption algorithm is used, it is possible to change it by setting a new preference with the `Encryption Algorithm` property and set its value to `HS256`.
+
+##### Initial configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+It is necessary to configure the encryption key and the expiration time for the authentication tokens in the Client window with the System Administrator role.
+
+If the expiration time is equal to "0" the tokens do not expire.
+
+Generate a random key with the "Generate key" button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+#### Secure Web Services Swagger
 
 !!! info
-    For more information, follow this information in [Secure Web Services](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+    For more information, visit [Secure Web Services Swagger](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -44573,7 +46135,7 @@ plugins {
 ```
 
 !!! info
-    To know the available versions of the plugin, please visit [Etendo Backup and Restore Plugin | Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md).
+    To know the available versions of the plugin, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md).
 
 To resolve the plugin dependiencies, you should add the following lines on top of the `settings.gradle` file
 
@@ -44587,9 +46149,6 @@ pluginManagement {
                 password "${githubToken}"
             }
         }
-        maven {
-            url "https://repo.futit.cloud/repository/static-public-snapshots"
-        }
         mavenCentral()
     }
 }
@@ -44600,17 +46159,13 @@ pluginManagement {
 
 #### Backup task
 
-!!! warning
-    The User running the backup must have `SUDO` access and the `backup.properties` file properly configured.
-
-
 To run the backup, execute
 
 ``` bash title="Terminal"
 ./gradlew backup -PbkpMode=<mode>
 ```
 
-Where the mode could be `manual` or `auto`
+Where the mode could be `manual` or `auto`. If the parameter is not specified, the default mode is `manual`.
 
 ##### Backup properties file
 
@@ -44634,6 +46189,9 @@ Sets the group related to the user running the backup.
 
 * `BACKUPS_DIR`
 Sets the path where the backup will be stored.
+
+    !!! warning
+        Ensure that the directory where the backups will be stored is already created and that the configured user has write permissions on it.
 
 * `BACKUPS_TMP_DIR`
 Sets the path where the temp directory will be created to store the generated files.
@@ -44693,7 +46251,7 @@ Depending on the end `STATE`, the following properties are used to specify the e
 
 !!! note
     In order to send the email to multiple accounts, separate addresses with `;`.<br>
-    For example: `EMAIL_ERROR_CC=user1@smfconsulting.es;user2@smfconsulting.es`
+    For example: `EMAIL_ERROR_CC=user1@etendo.software;user2@etendo.software`
 
 ##### End states
 The following are the possible states at the end of the `backup` task:
@@ -44763,15 +46321,6 @@ A menu will be shown where you can choose multiple options to be performed.
 #### Overview
 
 This bundle includes enhancements for platform functionalities in Etendo.
-
-#### Dependency Manager
-
-:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
-
-This module allows access to all the available dependencies to add and configure them, and to check information about versions, validations, among other information.
-
-!!!info
-    For more information visit, [Dependency Manager developer guide](https://docs.etendo.software/latest/platform/dependency-manager.md). 
 
 #### Docker Management
 
@@ -44873,7 +46422,7 @@ Then `./gradlew setup` must be executed.
 
 #### Etendo Webhooks
 
-**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
+It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
     For more information, visit the [Etendo Webhooks developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
@@ -45003,6 +46552,15 @@ public class NumberToWord_es extends NumberToWord {
 }
 ```
 
+#### OpenAPI
+
+:octicons-package-16: Javapackage: `com.etendoerp.openapi`
+
+This module module serves as an integration layer for documenting and exposing APIs within the Etendo ecosystem. It enables developers to define, organize, and document API endpoints using the OpenAPI specification, ensuring compatibility with tools like Swagger for visualization and testing.
+
+!!!info
+    For more information, visit [How to Document an Endpoint with OpenAPI](https://docs.etendo.software/latest/how-to-guides/how-to-document-an-endpoint-with-openapi.md). 
+
 #### Print Document Web Service
 
 :octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
@@ -45063,7 +46621,7 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 :octicons-package-16: Javapackage: `com.etendoerp.upload.file`
 
-**Purpose**: This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
+This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
 
 !!!info
     For more information, visit [How to Create a Standard Process Definition developer guide](https://docs.etendo.software/latest/how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
@@ -46354,18 +47912,26 @@ Afterward, you can continue with the setup in the [Bank Integration PSD2 User Gu
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo BI Bundle
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Etendo BI Bundle
+# Article Title: Etendo BI Extensions Bundle
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Etendo BI Extensions Bundle
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-extensions
 ## Article Content: 
 #### Overview
 
-In this section, the user can find technical information about the Etendo BI Bundle.
+In this section, the user can find technical information about the Etendo BI Extensions Bundle.
 
 #### Etendo BI Connector
 
-##### Technical Aspects
+:octicons-package-16: Javapackage: `com.etendoerp.integration.powerbi`
+
+In Etendo, it is possible to create base queries and to customize them when needed. This will provide information which can be used by Power BI.
+
+For this process, a background setting is required in order to create CSV files that will be uploaded to a server. The files will use information from the pre-established base queries and their customazation in case there are any. 
+
+The following documentation is about the steps to consider when configuring this funtionality to create the CSV files.
+
+##### Requirements
 
 To ensure proper functioning of the script, follow the steps below:
 
@@ -46377,7 +47943,6 @@ To ensure proper functioning of the script, follow the steps below:
     ``` bash title="Terminal"
     sudo apt install rsync
     ```
-
 
 2. Make sure you have at least python3.7 or above installed on your system. You can verify the installation by running
 
@@ -46420,7 +47985,7 @@ To ensure proper functioning of the script, follow the steps below:
 5. The following libraries need to be installed using pip3 for them to work: psycopg2, pandas and requests. You can install them by running:
 
     ``` bash title="Terminal"
-    pip3 install psycopg2-binary
+    sudo apt install python3-psycopg2
     ```
 
     ``` bash title="Terminal"
@@ -46431,7 +47996,239 @@ To ensure proper functioning of the script, follow the steps below:
     pip3 install requests
     ```
 
-##### Etendo BI Connector
+##### Etendo BI Connector Module Configuration
+
+First, make the proper configurations from the **Webhooks window**. This will later allow BI Logs to be sent to the **BI Logs Monitor window**.
+
+###### Webhooks window
+
+:material-menu: `Application` > `General Setup` > `WebHook Events` > `Webhooks`
+
+From the Webhooks window, it is necessary to create a new record and complete the required fields as follows:
+
+- **Module**: Base Queries for EtendoBI 
+
+- **Name**: EtendoBI Logger
+
+- **Description**: Fill EtendoBI Log window
+
+- **Event Class**: Java
+
+- **Java\_Class**: `com.etendoerp.integration.powerbi.processes.FillLogWindow`
+
+!!! info
+    It is highly recommended to have just one Webhook for this module to work properly, as its functionality will not vary. That’s why, it is better to use the organization \* in order to cover all child organizations.
+
+
+In the **Params tab**, four records must be created under the names:
+
+- **client**
+   
+- **description**
+
+- **logtype**
+
+- **organization**
+
+- **rule**
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-0.png)
+
+
+!!! info
+    For more information about Webhooks, visit [Webhooks Events](https://docs.etendo.software/latest/bundles/platform/etendo-webhooks.md).
+
+###### User API Token window 
+
+:material-menu: `Application` > `General Setup` > `WebHook Events` > `User API Token`
+
+Then, make the proper configurations from the **User API Token window**. Here, it is necessary to grant access to a **user role**, so a token in this window needs to be created.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-1.png)
+
+Then, go back to the **Webhooks window**, and create a record in the **Access tab** in order to add the previously generated token. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-2.png)
+
+
+!!! success 
+    This way the Webhook is configured. Now, it is necessary to configure the EtendoBI Connector module.
+
+
+###### BI Connection Window
+
+:material-menu: `Application` > `Master Data Management` > `Analysis` > `BI Connection`
+
+In the **BI Connection window**, It is necessary to create a record to specify the path to the CSVs creation script and the Webhook to use. If the **EtendoBI bundle** is installed and the script path was not changed, the user should use the default value of ‘repository path’ field. Otherwise, the corresponding path should be specified. 
+
+!!! info
+    It is important to note that the **Repository path** will search for the corresponding path INSIDE the WebContent folder of the project. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-3.png)
+
+
+In the **Data Destination** tab, the file name of the script needs to be specified. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-4.png)
+
+Finally, in the **Execution variables** tab, some records must be created being the ‘Variable’ field:
+
+- **ip**: ip of the server where the files will be uploaded **(mandatory)**
+
+- **client**: the name of our client **(mandatory)**
+
+- **user**: the user used to connect to the server. **(mandatory)**
+
+- **application_url**: url of our application. e.g. "https://my-domain.cloud/etendo" **(mandatory)**
+
+- **port**: port of the server where the user is  connecting to **(default: 22)** 
+
+- **path**: path of the server where the files will be sent **(default: /)**
+
+- **private-key-path**: path of the private key used for the connection to the server
+
+- **bbdd\_user**: username of a read only user to access the database
+
+- **bbdd\_password**: password of the read only user
+
+- **csv_separator**: delimiter to use in the final csv files **(default: |)**
+
+**private-key-path** is the path of the private key used for the connection to the server. If this variable is not specified, the script will try to connect without specifying a private key.
+In the **bbdd\_user** and **bbdd\_password** variables, enter the **username** and **password** of a user with read-only permissions to the database. If either of these two variables is not found, the process will use the credentials of the database superuser.
+
+!!! info
+    However, it is **highly recommended** to use a user with read only permissions as it is a great security measure.
+
+
+As an example, let’s use the following values:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-5.png)
+
+!!! info
+    It is important to respect the specified names for the “Variable” field.
+
+
+Also, it is important to note that the script is going to create a folder named as the value of the **“Client” variable**, and it will contain folders for each organization that executes the background process. Therefore, if there are **two BI Connections** with the same **“Client” value**, the last execution of the process will overwrite the folder.  
+  
+ 
+
+For example, let's say there is  Organization A, which has Organizations B and C as its child organizations. If the user needs to have the same configuration for both, we can create a BI Connection using Organization A and set up two background processes that run the "EtendoBI Process," one for Organization B and the other for Organization C.
+
+When the script is executed, a folder will be created with the value of the "Client" variable in the BI Connection window as its name. Within that folder, subfolders will be created for each organization (in this case, A\_logs and A\_output for Organization A, and B\_logs and B\_output for Organization B).
+
+###### Enterprise Module Management window
+
+:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Enterprise Module Management`
+
+To load the Etendo base queries, go to the **Enterprise Module Management window**, and select Base Queries for EtendoBI and then click the **OK button**.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-6.png)
+
+###### BI Query window 
+
+:material-menu: `Application` > `Master Data Management` > `Analysis` > `BI Query`
+
+After that, Etendo base queries should be successfully loaded in the **BI Query window**.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-7.png)
+
+There are several points to consider when handling queries in this module.
+
+- **Primary Key Requirement**: Every base query must have its primary key as the first column. This is crucial  since in the script it is assumed that the first column is the identifier. 
+
+!!! warning
+    A failure to adhere to this can result in incorrect output, duplicated records, and an immense number of rows.
+
+- **Client column on base query**: Every base query must include `ad_client_id` column, with the alias “ClientID”
+
+- **Organization column on base query**: Every base query must include `ad_org_id` column, with the alias “OrgID”
+
+- **Custom Query Customization**: The customization of the query must also include the primary key (which is the same as the base query since customization is performed on the same table) with the SAME ALIAS as the base query. 
+
+!!! warning
+    Failing to respect this can lead to improper mapping between the results of the base query and its customization, resulting in incorrect output.
+
+Let’s see an example of a correct base query and customization.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-8.png)
+
+In this case, as a base query there are three columns. In its customization, there is a new column “name”. 
+
+!!! info
+    Note that there are three mandatory columns in the base query, with the correct alias for column `ad_client_id` and `ad_org_id`. It is important to make sure that **“ClientID”** and **“OrgID”** aliases are being set WITHOUT double quotes. Also, **there should not be** more than one space between the “as” keyword. 
+
+    ``` sql
+        … ad_client_id as “ClientID”, …    -- INCORRECT
+        … ad_client_id as ClientID, …      -- CORRECT
+    ```
+
+In the customization query, despite the requirement to have the primary key with the same alias as the base query, it is not necessary for it to be the first column. In this case, if instead of having:
+
+``` sql
+SELECT m_warehouse_id as WarehouseID, name as "Warehouse Name" FROM m_warehouse
+```
+
+We have:
+
+``` sql
+SELECT name as "Warehouse Name", m_warehouse_id as WarehouseID FROM m_warehouse
+```
+
+The result will be exactly the same.
+
+The script executes the base query, and then merges the customization, using both primary keys for mapping the rows.
+
+If a base query has a **customization**, the script creates **three different CSVs**.
+
+- A CSV file that contains the **result of the base query**. This CSV file has the prefix `EBI_` if it is an Etendo base query. If it is a client base query, it has the **first three letters** of the value of the “Client” variable that was set earlier as a prefix.
+
+- A CSV file with the prefix `BASE_`, which contains the **columns from the base query**, but if the customization overrides any of these values, they will be overwritten with the values from the customization. In this case, the `BASE_` CSV file will be the same as the base query since the **customization does not override** any values from the base query columns.
+
+- A CSV file with the prefix `FULL_`, which includes b**oth the columns from the base query and any additional columns added in the customization**. In the given example, the `FULL_` CSV file will contain the additional column “Warehouse Name”. 
+
+Later, at the end of the configuration,  this example query will be executed to analyze the **generated CSV files**.
+
+!!! info
+    It is important to note that there should be only one customization per base query. It should also be made clear that it is not possible to add constraints to the customization to remove rows from the base query. Instead, the customization allows adding or overwriting columns in the original query, using the primary key to map the records.
+
+
+Base queries must all contain the `ad_client_id` and `ad_org_id` columns, with alias **“ClientID”** and **“OrgID”** (case insensitive). 
+!!! warning
+    If a query does not have these columns with their alias, it will produce an error and be ignored.
+
+###### Process Request window
+
+:material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Request`
+
+Once the query configuration is done, go to the **Process Request window**, create a new record, select the **EtendoBI Process** from the process field and schedule it.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-9.png)
+
+The scope of the data collection performed by the queries is based on the **organization** that configured the **background process**. In other words, all the obtained data is  filtered by the **client** and the **organization** that configured the **background process**, and **NOT** by the organization used in the **BI Connection window**. If the organization does not have a configuration in the **BI Connection**, Etendo will search for the **configuration** in one of its **parent organizations**, but the data scope will remain the same (itself and its child organizations).
+
+!!! info
+    If the organization that configured the background process does not have a BI Connection and there is no BI Connection found for its parent organizations either, the **process will not be executed**. 
+
+
+The process will never search for a BI Connection in the child organizations of the one which was set on the background process.
+
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-10.png)
+
+In the **Process Monitor** tab, the status of **Success** is shown in the new record that appears when the process is executed. It is good to know that this process executes our python script, so if there were no issues up until the execution of the python script, it will return to success status regardless of whether the python script fails.
+
+###### BI Logs Monitor window 
+
+:material-menu: `Application` > `Master Data Management` > `Analysis` > `BI Logs Monitor`
+
+The execution process can be checked in the **BI Logs Monitor** window.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-11.png)
+
+In this example image, the information about the script execution can be seen.
+
+If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
+
 
 After the execution of the process, two new directories should be created in the filesystem. One will contain the logs files, one for the rsync execution that will contain information about the file upload to the server; another file called syncScript.log.{datetime}, that will contain information about the script execution (most of this information can be seen in the Logs Monitor window, but if for any reason the window cannot receive this information, it should be able to be seen using this .log file).
 
@@ -46454,17 +48251,16 @@ The output directory, will contain all the CSVs that should have been uploaded t
     Remember that the main folder is created using the prefix of the “Client” variable that is set on BI Connection window. If two connections have the same value for “Client” variable, these directories will be overwritten.
 
 
-This is the content of Ete\_Example.csv and BASE\_Example.csv files: 
+This is the content of `Ete_Example.csv` and `BASE_Example.csv` files: 
 
 !!! info
     Remember that since any column is not being overridden, these files are the same. 
 
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-12.png)
 
-![](https://docs.etendo.software/latest/assets/drive/Y4E0AENgxCWmVoMCapDwvyeO4C0sALvcF7SFWvbxeT5GPcThHq0EgmN1avZxkVhNjWqYYa8phTQ_cnA-RBn1P8-DmePbVoOoN9qTb1uk1kAFG9ccvM2nCxVcHBRpom4t_4SlZkJYdzZX9JtTyEY5Qlg.png)
+On the other hand, this is the content of `FULL_Example.csv`:
 
-On the other hand, this is the content of FULL\_Example.csv:
-
-![](https://docs.etendo.software/latest/assets/drive/BAPACrYCcoprIrjoMndmxL7d7u1GFOS32ZZMCBXS3S6DsRdZpDRPgRblzPKMTlM2b1QTFLf2mgy7w4LaI_bFnNc9-AwGsl78PIlqpD4o0YkTsXO-qp6h9fFR392DYJRqvZfvefs-hLLbGE04vvU8OoU.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-13.png)
 
 !!! warning
     Make sure to have the corresponding permissions to connect to Files, since an incorrect configuration can lead to an error.
@@ -46510,6 +48306,39 @@ docker_com.etendoerp.etendorx=true
 
     If you want to debug Tomcat locally with IntelliJ, visit [Tomcat Dockerized Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md).
 
+
+#####  Etendo RX Configurations
+
+Before starting the dockerized services, there are some configurations that need to be done in Etendo Classic
+
+##### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption token for the authentication in the `Client` window with the `System Administrator` role.
+If the expiration time is equal to `0` the tokens do not expire.
+
+Generate a random key with the **Generate key** button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. As `System Administrator` role, in this window, run the `Initialize RX Services` process in the toolbar. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
+
+After the execution of this process the default configuration variables are completed, depending on the configuration of the instance and the infrastructure, even the default parameters required by each service are configured.
+
+![default-rx-config.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/getting-started/default-rx-config.png)
+
+!!!info
+    The **Public URL** field only needs to be configured when the services is set to production.
+
+
+##### Launch RX services
+
 Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
@@ -46529,6 +48358,8 @@ By default, the following services should be up and running:
 
 !!! success
     You have successfully set up the Etendo RX services. For more information, visit [Projections and Mappings](./concepts/projections.md) and [Creating a New Microservice](https://docs.etendo.software/latest/developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md) page in the developer guide section.
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Config Server
@@ -46931,6 +48762,554 @@ Fields to note:
 - Organization: Organizational entity within client.
 - Name: It describes the identifier name of the value.
 - Constant Value: It describes the value to set, for example, an entity ID.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ✨ Installation
+## Article Path: /Developer Guide/Etendo RX/Connectors/Openbravo Connector/✨ Installation
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide
+## Article Content: 
+### Installation: Connecting Openbravo POS and Etendo
+
+#### Overview
+This guide provides step-by-step instructions to install and configure the integration between Openbravo and Etendo environments. This setup allows you to generate documents in Openbravo POS Terminal, store them in the Openbravo environment and synchronize them with Etendo using Etendo RX as middleware.
+
+In this guide we will start from two clean environments using test data, which facilitates the configuration and demonstrates the potential of this integration.
+
+!!! info 
+    This guide is based on Openbravo 23Q4.2 and Etendo 24.4.0
+
+#### Required Software and Tools
+- [Eclipse IDE](https://eclipseide.org/){target="_blank"}
+- [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} or [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"}
+- [Postman](https://www.postman.com/downloads/){target="_blank"}
+- [Openbravo 23Q4.2](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo)
+- [Etendo Classic 24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) or later.
+- [Platform Extensions Bundle ](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) latest version.
+
+#### Openbravo
+
+First, follow the [Openbravo Custom Installation Guide](https://wiki.openbravo.com/wiki/Installation/Custom){target="_blank"} and install in a local environment following [How to setup Eclipse IDE](https://wiki.openbravo.com/wiki/How_to_setup_Eclipse_IDE){target="_blank"}.  
+
+##### Modules to Install on Openbravo
+
+In the Openbravo environment we need to install the Retail, EDL and Business API modules.
+
+To obtain these modules, an active Openbravo License and access to the Openbravo Forge are required. Ensure that the Openbravo environment includes the following modules in versions compatible with the corresponding Openbravo Core version. In this example, the modules will be used in version 23Q4.2.
+
+- [`org.openbravo.retail.sampledata`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Retail-Sampledata){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.returns`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Return-From-Original){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.posterminal`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Web-POS){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.poshwmanager`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Web-POS-Hardware-Manager){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.pack`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Openbravo-For-Retail){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.discounts`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Discounts--Promotions-Rules-For-Retail){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.config`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Retail-Configuration){target="_blank"} version `23Q4.2`
+- [`org.openbravo.mobile.core`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Mobile-Core-Infrastructure){target="_blank"} version `23Q4.2`
+- [`org.openbravo.events.core`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Events-Core){target="_blank"} version `1.0.233000`
+- [`org.openbravo.api`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Openbravo-API){target="_blank"} version `1.0.234001` 
+- [`org.openbravo.service.openapi`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Open-API){target="_blank"} version `1.1.233000`  
+- [`org.openbravo.service.external.integration`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/External-Integration-Infrastructure){target="_blank"} version `2.0.234000` 
+- [`org.openbravo.externaldata.integration`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/External-Data-Integration-In-The-ERP){target="_blank"} version `2.0.234000` 
+
+!!! warning
+    Is necesary to apply a change in the `modules/org.openbravo.api/src/org/openbravo/api/util/ApiUtils.java` file  in line 38 reeplace by: 
+
+    ```java
+        Matcher m = Pattern.compile("(^|[^\\\\]{2}):{1}([a-zA-Z0-9_]+)").matcher(hqlWhereClause);
+    ```
+
+Also, you must clone in the `/modules` folder the Etendo Connector integration modules, to do that the Partner access level to Etendo Software organization in GitHub is required:
+
+```bash
+git clone git@github.com:etendosoftware/com.etendoerp.integration.openbravo.git --branch 1.0.0
+git clone git@github.com:etendosoftware/com.etendoerp.integration.openbravo.template.git --branch 1.0.0
+```
+
+##### Set Up the Openbravo Environment
+Run the following commands to set up the Openbravo environment:
+
+```bash title="Terminal"
+ant setup
+ant install.source
+ant import.sample.data -Dmodule=org.openbravo.retail.sampledata
+ant smartbuild
+```
+
+!!! warning
+    Configure Tomcat to run on port `8081` since port `8080` will be occupied by Etendo, then restart Tomcat.  
+
+
+##### Master Data Configuration
+
+Then, to simplify the configurations we will make some inserts in the `openbravo` database, for this we can connect from PGAdmin or by command line:
+
+```bash title="Terminal"
+PGPASSWORD=tad  psql -U tad  -d openbravo -h localhost -p 5432
+```
+
+Run the following script:
+ 
+```SQL title="Setup Script"
+
+INSERT INTO public.c_external_system(c_external_system_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, description, connectivity_process, name, ad_protocol_id)
+    VALUES('73159A3D97824F07ABB4176F2D514F7D','0','0','Y','2024-05-16 08:12:58.295','0','2024-05-16 08:12:58.295','0',NULL,'N','OB Connector','36ADC30F67164F119013515280D82C01');
+INSERT INTO public.c_external_system_http(c_external_system_http_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, c_external_system_id, url, authorization_type, username, password, request_method, timeout, oauth2_client_identifier, oauth2_client_secret, oauth2_auth_server_url, em_etint_token)
+    VALUES ('EC60C5CF35234C648D9B5B00015190E2','0','0','Y','2024-03-12 10:02:38.42','100','2024-12-18 12:03:21.298','100','73159A3D97824F07ABB4176F2D514F7D','http://localhost:8096','ETINT_X-TOKEN',NULL,NULL,'POST',10,NULL,NULL,NULL,'eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJzd3MiLCJyb2xlIjoiRTcxN0Y5MDJDNDRDNDU1NzkzNDYzNDUwNDk1RkYzNkIiLCJvcmdhbml6YXRpb24iOiIwIiwiaXNzIjoic3dzIiwiY2xpZW50IjoiMzkzNjNCMDkyMUJCNDI5M0I0ODM4Mzg0NDMyNUU4NEMiLCJ3YXJlaG91c2UiOiI0RDQ1RkU0QzUxNTA0MTcwOTA0N0Y1MUQxMzlBMjFBQyIsInVzZXIiOiJFOEFEOUIyNkI3RDE0Nzg2OEI2OEE5NTAwQ0M3NkRERCIsImlhdCI6MTczNzE0MzkyM30.MEYCIQDvVJXsg-6stuky6l93cdpM_jsgu5VHDRFh81iUTK0zigIhAJb6Ha2-EnGsb9RrcBsmMPzjJ2-cAYonuuYmfF3YJG3w');
+INSERT INTO public.cnc_events_subs (cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('10F0532FC9074E80923C02AA50234437','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:50.672','100','2024-05-16 09:00:50.672','100','4CABD83993ED4DD185354B826CF282AB','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('19299136996A41A188FDF0EBA613439C','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 08:59:57.049','100','2024-05-16 08:59:57.049','100','EC44C2BF556F4DE5936F77032CFFEDFA','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('41E108F4B4324D93A3822452FC28EAE2','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 08:59:45.106','100','2024-05-16 08:59:45.106','100','D4220C11026E4BCEB9F5C9E6986E3027','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('74411877488542F9A29E1A62AE9A3095','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:18.521','100','2024-05-16 09:00:18.521','100','C8846AB5E6D64201AEB1D8BDDFD1FCB8','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('8D9B45DED9154D12BB59FC61881DF504','39363B0921BB4293B48383844325E84C','0','Y','2024-12-18 16:14:12.695','100','2024-12-18 16:14:12.695','100','1E9960A3751E42BE9C295F659BF31481','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('9B196742FCBF438AB0F993CCEB0FD128','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:01:35.509','100','2024-05-16 09:01:35.509','100','9A827B001D82408D90DA622E6860EC1C','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('B30C7FAA3FE849568C7DFD7B6463A89B','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:01:26.548','100','2024-05-16 09:01:26.548','100','60F1B0A744904709A5BEC2D3163CB0F5','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('D1DFB1E5ACC1482097D2BDF79810B6C5','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:32.893','100','2024-05-16 09:00:32.893','100','EE70B36B9755410289137250E4CA3F49','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('FADDA04F4AF54C41B16F13F111834488','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:07.792','100','2024-05-16 09:00:07.792','100','C999B37599FA4705A110BEA8F358372A','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.obedl_configuration(obedl_configuration_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, obedl_process_id)
+    VALUES ('B1F00DAB0FEC4C549AF0068E77492638','39363B0921BB4293B48383844325E84C','0','Y','2024-12-20 11:22:20.267','100','2024-12-20 11:22:20.267','100','9B8E4B855B7E41EB87EE37D3394B7AD2');
+INSERT INTO public.obedl_config_output(obedl_config_output_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, seqno, output_path, output_user, output_pass, output_filename, obedl_configuration_id, obedl_output_type_id, wsmethod, isretryenabled, maxretry, retryinterval, timeout)
+    VALUES ('EE980DAA10CA40B78547056656192F76','39363B0921BB4293B48383844325E84C','0','Y','2024-12-20 11:22:38.946','100','2024-12-20 11:22:38.946','100',10,NULL,NULL,NULL,NULL,'B1F00DAB0FEC4C549AF0068E77492638','BF9649DF97A14168A4C142222E2CBF0C',NULL,'N',NULL,NULL,5);
+INSERT INTO public.ad_preference(ad_preference_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, ad_window_id, ad_user_id, attribute, value, property, ispropertylist, visibleat_client_id, visibleat_org_id, visibleat_role_id, selected, ad_module_id, inherited_from)
+    VALUES ('36675A275AC2478C83AB05771EAA23A5','39363B0921BB4293B48383844325E84C','D270A5AC50874F8BA67A88EE977F8E3B','Y','2024-05-23 18:04:26.01','3073EDF96A3C42CC86C7069E379522D2','2024-05-27 10:48:48.382','100',null,null,null,'Y','ETINT_DefaultSyncValue','Y',null,null,null,'Y',null,null);
+DELETE FROM ad_role_orgaccess WHERE ad_client_id='39363B0921BB4293B48383844325E84C';
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('00E25567B08143EEB0218D4539268FFD','4AF94371114B4125877650274C245C5D','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:59:33.521','100','2023-10-11 11:59:33.521','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('05E6998CD5B44072809EC2D8DC89810C','FF808181259DADEB01259DDDA4BB01E5','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:48.42','100','2016-05-10 17:33:48.42','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('06F04F083ABA408499DA19988FBAAB8C','FF808181259DADEB01259DDDA4C201E6','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('070EB80EFFB945998F16D69825225A54','898E1715D1DF4C15A9CBE0813F23F892','E2A8087A81F54203969C6AED1AABBC72','39363B0921BB4293B48383844325E84C','Y','2019-02-08 00:33:00.243','100','2019-02-08 00:33:00.243','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0B8FB016F525412E8F51A3041F022DED','45A63D86E04D4052A3E8D04ABCC17E1E','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2017-01-26 13:41:31.129','100','2017-01-26 13:41:31.129','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0C6E8B1A5F7A46639ADDEDE817E59DB6','FF8081812250326E012250353BDE0006','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0C8EB7C3DF964C91922987E6A525A855','FF808181259DADEB01259DDDA4C201E6','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0E212E2128B34AC18969896B1642074B','FF808181259DADEB01259DDDA4C201E6','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0F73E3802207447A965055B702DAF36D','D7D7D228E4594ACE8D00FD0E08B333DE','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('145D57C3347D4F32B21EE04DC3993A2B','463683CFA16C40C0A4EC8CF934114146','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('15B90797F244416AB8F4DC181DA7BC2B','463683CFA16C40C0A4EC8CF934114146','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('1A9D803990FA42058D41EE0995AD9DE3','FF8081812250326E012250353BDE0006','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('1EFCD742FDD94113A8BC9D51651ACB42','463683CFA16C40C0A4EC8CF934114146','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('204B559EFBF94116AF0558C428FEF5C3','D7D7D228E4594ACE8D00FD0E08B333DE','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('21C7FA46793B4C8A8120D96FF8EFF68C','463683CFA16C40C0A4EC8CF934114146','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('24CFC72398FC400FB70B427A4B37D275','28D1AFB16B7C4B69B4C8026C16BF88F6','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2018-07-16 09:45:00.77','100','2018-07-16 09:45:00.77','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('27FB52278FD8499E859885BBBA81469D','FF808181259DADEB01259DDDA4BB01E5','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:32:17.675','100','2016-05-10 17:32:17.675','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('310886C13CEF4618B4854F796E297CEA','D7D7D228E4594ACE8D00FD0E08B333DE','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('37CBB9594B014AF098B8CAF10316B00C','FF8081812250326E012250353BDE0006','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('38688BD551FA4718BD865FE8D4EA3FA7','FF808181259DADEB01259DDDA4BB01E5','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:12.588','100','2016-05-10 17:33:12.588','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3AA4B571EBDA4757B30E59B19A28752B','FF808181259DADEB01259DDDA4C201E7','DF86640764AA4492AB6D4CA2D432B8D4','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:39.566','100','2016-09-05 19:05:39.566','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3AED4DB65F374ED09558D3B2BC2D2FAD','D7D7D228E4594ACE8D00FD0E08B333DE','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3FB7C8A13A954ED9B5AF469FFAD769CD','FF808181259DADEB01259DDDA4C201E6','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('43CFCE1377B046659E5C75B3C9A67447','E0E04AEBED4F497B98821315A039FAE0','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','Y',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('454CFB3140DA4FFEA6247835FC8A8C9D','FF808181259DADEB01259DDDA4C201E7','0','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:21.172','100','2016-09-05 19:05:21.172','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('471CD13FA7024D2CAC8A23B7492EAB8D','FF808181259DADEB01259DDDA4C201E6','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('49CA2A40287E400DA0D8CAC3B5A6C7BA','FF808181259DADEB01259DDDA4C201E7','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:49.47','100','2016-09-05 19:05:49.47','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4E087E72C4BC49C3A28FE2EB88FC5560','FF808181259DADEB01259DDDA4C201E6','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4E6BA6809674438DADBA699E91A2F4A1','D7D7D228E4594ACE8D00FD0E08B333DE','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('533DACF943EA4C68939C2F00EACBBC92','F539FCE19DD744DEA5BFD9387E61EB42','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2015-10-08 12:40:03.398','100','2015-10-08 12:40:03.398','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('53979ED48C834DD69162C1B390D5C0AA','FF808181259DADEB01259DDDA4BB01E5','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:32:00.203','100','2016-05-10 17:32:00.203','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('539B9A17F57F4298B07EDA0DA9791CC0','FF8081812250326E012250353BDE0006','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('53A6D8FFA4C84A8C93F6CDC83B00A7B3','5FA11B3DD8F04C0986C774624809C31E','0','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('551489F6FFB841FFB6A851C9253CEB66','463683CFA16C40C0A4EC8CF934114146','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('56402FE8BD5449EC9244A6AC08AB7F90','4AF94371114B4125877650274C245C5D','65C1C46FB1D04CBD98CBD4167CCFE600','39363B0921BB4293B48383844325E84C','Y','2019-02-07 18:01:06.808','100','2019-02-07 18:01:06.808','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('595C29533DAA4E59AB71FBEFD9D10AEA','E717F902C44C455793463450495FF36B','0','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('5A59133E18CE476AB489FA0EC51ACBF2','FF808181259DADEB01259DDDA4C201E7','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:45.382','100','2016-09-05 19:05:45.382','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('5F31E242A9BB4BD18CB7E5B496A858D7','FF808181259DADEB01259DDDA4C201E6','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('5FF9AAB3C384462D8E812DF4C1B5E35A','D7D7D228E4594ACE8D00FD0E08B333DE','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('6899F9065C3F4A18B46FC78DAFF0442B','FF808181259DADEB01259DDDA4BB01E5','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:17.069','100','2016-05-10 17:33:17.069','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('69F88418E80D4747BE967690EA0EC454','FF808181259DADEB01259DDDA4C201E7','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:53.711','100','2016-09-05 19:05:53.711','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('6F9D0F236DFB42E6BE596C4569DCD58B','FF808181259DADEB01259DDDA4BB01E5','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:43.374','100','2016-05-10 17:33:43.374','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('734B0E318B7C488196F9FF57DD409D40','FF8081812250326E012250353BDE0006','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('7420FFCA3DD94FA08754F1C309164C10','FF8081812250326E012250353BDE0006','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('78D4E9A3C23B494DB2236F0667A6B567','FF808181259DADEB01259DDDA4C201E7','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:29.563','100','2016-09-05 19:06:29.563','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('7944BC0FC2E246EAB81DAC10BA66C3DF','FF8081812250326E012250353BDE0006','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('832EF36B4C8B40E18E13971A3E682CC3','FF808181259DADEB01259DDDA4C201E7','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:58.908','100','2016-09-05 19:05:58.908','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('85D5D57E01F44B49A923611D23DAD691','D7D7D228E4594ACE8D00FD0E08B333DE','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('88650D508D294A79B306CEA9DBF850D7','FF808181259DADEB01259DDDA4C201E6','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('88C6B42E7FA7458EB20426226AC2F2BE','7499FEEA12DF46918F5448E8260B5E3E','0','39363B0921BB4293B48383844325E84C','Y','2020-05-22 08:57:23.772','100','2020-05-22 08:57:23.772','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('893248F94B7B45D4B418825A1124B7B7','463683CFA16C40C0A4EC8CF934114146','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.047','0','2013-07-04 23:01:15.047','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('89F8E8215E85452D883DB5A44695F206','FF808181259DADEB01259DDDA4BB01E5','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:32:59.49','100','2016-05-10 17:32:59.49','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('8AA885C4DA0B441D81937BE1890F2031','FF808181259DADEB01259DDDA4C201E6','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('8ED25886285A405F981F251F45C0E58F','D7D7D228E4594ACE8D00FD0E08B333DE','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9097B346A30C41BB914C657B4049F552','D7D7D228E4594ACE8D00FD0E08B333DE','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('90ABBC7550EA4CC98C8869AE959A1C1B','FF8081812250326E012250353BDE0006','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('974063A1AD9D4501ACF9FD7072BFF94D','FF808181259DADEB01259DDDA4C201E7','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:33.941','100','2016-09-05 19:06:33.941','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('97AC72DCF7AF40D793D6E4BE80BD65F2','FF808181259DADEB01259DDDA4C201E6','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9A7EC9E6391944688C7DF136379E7C30','FF8081812250326E012250353BDE0006','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9ACFD154DEDA4B63B67648F4FE4AF833','FF808181259DADEB01259DDDA4BB01E5','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:38.56','100','2016-05-10 17:33:38.56','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('A30D63F28BEE4CDF99ABCE1A6C8F801D','FF808181259DADEB01259DDDA4BB01E5','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:53.083','100','2016-05-10 17:33:53.083','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('A9403C5AC5E340029CCF6A319C5FC970','45A63D86E04D4052A3E8D04ABCC17E1E','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2017-01-26 13:41:18.384','100','2017-01-26 13:41:18.384','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('AE13511035D64E4A925DAF042FB5C909','FF808181259DADEB01259DDDA4C201E7','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:23.97','100','2016-09-05 19:06:23.97','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('AFD3C34DD9AA4CC590E986DC7581F571','463683CFA16C40C0A4EC8CF934114146','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.047','0','2013-07-04 23:01:15.047','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('AFEB72B0B7424EC99167DE820AD2F20D','FF808181259DADEB01259DDDA4C201E7','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:12.551','100','2016-09-05 19:06:12.551','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('B259A9E578C740F483C5FA93DDE34203','41DAFA0C214D4954A6A9B383AF9A3D96','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:59:08.846','100','2023-10-11 11:59:08.846','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('B4B94E5E0E61475998070EC51D81FF75','FF808181259DADEB01259DDDA4C201E7','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:08.283','100','2016-09-05 19:06:08.283','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('C94DD74AAB414D4996AE4AD6D4067886','FE77051CF38044DCB7471664F9CBB44B','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-09-05 10:16:42.287','100','2016-09-05 10:16:42.287','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D1621B93AA2B46A8BD2C17A461B75417','FF8081812250326E012250353BDE0006','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D22D0FB1D0F447919D0A8B8A75747DEB','FF808181259DADEB01259DDDA4BB01E5','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:34','100','2016-05-10 17:33:34','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D7774F5E00B743DBA062612850A343F8','D7D7D228E4594ACE8D00FD0E08B333DE','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D95911EC4DFF426785F928105499766D','FF808181259DADEB01259DDDA4C201E6','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D9B55D1899F24A549DE4F37CE2C37722','D7D7D228E4594ACE8D00FD0E08B333DE','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('DBF5A71716C64C41BBB95516EE3BFDA5','898E1715D1DF4C15A9CBE0813F23F892','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:58:48.036','100','2023-10-11 11:58:48.036','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('E1E5122BECCD402B857A7F5719E02101','463683CFA16C40C0A4EC8CF934114146','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.047','0','2013-07-04 23:01:15.047','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('E35081972A7C4F8F9A6E33041F67BF80','5FA11B3DD8F04C0986C774624809C31E','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:57:53.708','100','2023-10-11 11:57:53.708','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('E54135DA0A6E4F449F385986A69C355F','FF808181259DADEB01259DDDA4C201E7','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:03.536','100','2016-09-05 19:06:03.536','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('EA1A8571906A470EA02AD544190EA841','FF8081812250326E012250353BDE0006','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('EACCEB3F06564BC98A938B3CDC905D90','FF808181259DADEB01259DDDA4BB01E5','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:04.719','100','2016-05-10 17:33:04.719','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('26930A6961E443CDAD94248319D8BC01','E717F902C44C455793463450495FF36B','DF86640764AA4492AB6D4CA2D432B8D4','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:19.791','100','2024-12-17 14:49:19.791','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4B63427EF7194253AE5623B1A166F6CF','E717F902C44C455793463450495FF36B','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:22.767','100','2024-12-17 14:49:22.767','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3E3FDCE69F6847E28BE33CFA53D41EED','E717F902C44C455793463450495FF36B','CCAAD77DA7994401A9657F04AEB6342E','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:25.427','100','2024-12-17 14:49:25.427','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('99014DA3A05247BBAE2FEFC8EB0B4547','E717F902C44C455793463450495FF36B','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:28.241','100','2024-12-17 14:49:28.241','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('DB5BB8E6E568469DBC173CFD06D21F2E','E717F902C44C455793463450495FF36B','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:32.368','100','2024-12-17 14:49:32.368','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9E3BA9AD88A7453CA81EC5CE2A36A9E5','E717F902C44C455793463450495FF36B','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:34.943','100','2024-12-17 14:49:34.943','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9A8B84A3197B4044A5F4C9315942BBA2','E717F902C44C455793463450495FF36B','E2A8087A81F54203969C6AED1AABBC72','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:39.476','100','2024-12-17 14:49:39.476','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('B59E0EFB9E7D42C699C1F0A4A406C5AF','E717F902C44C455793463450495FF36B','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:42.525','100','2024-12-17 14:49:42.525','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('ABC7AF1DEC994A4DAEAE9BD545074686','E717F902C44C455793463450495FF36B','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:46.204','100','2024-12-17 14:49:46.204','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('C44405A869AB4756AD723D26FB54AC54','E717F902C44C455793463450495FF36B','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:57.448','100','2024-12-17 14:49:57.448','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('CDBCDE2BB7E54D248A34F6C624F222F0','E717F902C44C455793463450495FF36B','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:01.988','100','2024-12-17 14:50:01.988','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4E49A87DF3FA40FC93B1502824A9A06D','E717F902C44C455793463450495FF36B','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:05.95','100','2024-12-17 14:50:05.95','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4AFE1EB76EB64AF9B378C15A200CCD46','E717F902C44C455793463450495FF36B','65C1C46FB1D04CBD98CBD4167CCFE600','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:09.615','100','2024-12-17 14:50:09.615','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('C860DD8876AB49C496A0229AD09A8B29','E717F902C44C455793463450495FF36B','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:13.15','100','2024-12-17 14:50:13.15','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('73736A39CBBB4301B04A056A831A80FA','5FA11B3DD8F04C0986C774624809C31E','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2024-12-17 15:02:50.305','100','2024-12-17 15:02:50.305','100','N',NULL);
+UPDATE public.ad_org SET em_obretco_dbp_orgid='D270A5AC50874F8BA67A88EE977F8E3B' WHERE ad_org_id='D270A5AC50874F8BA67A88EE977F8E3B';
+
+```
+
+##### Openbravo Access
+
+Now, start Tomcat and access to Openbravo.
+
+!!! success "Openbravo Back Office"    
+    - [http://localhost:8081/openbravo/](http://localhost:8081/openbravo/)
+    - User: Openbravo
+    - Password: openbravo
+
+!!! success "Openbravo POS"
+    - [http://a.localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login](http://a.localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login)
+    - User: vallblanca
+    - Password: openbravo
+
+By following these steps the POS should be correctly configured, for more information you can visit [Retail:Configuration Guide](https://wiki.openbravo.com/wiki/Retail:Configuration_Guide){target="_blank"}
+
+
+#### Etendo 
+
+##### Configure Etendo Environment
+
+Follow the steps in the Install Etendo guide, in the tab [Steps to Install Etendo with Postgres Database and Tomcat Dockerized](https://docs.etendo.software/latest/getting-started/installation.md#steps-to-install-etendo-with-postgres-database-and-tomcat-dockerized).
+
+!!! info 
+    At this point we assume that you already have a local Etendo environment, Tomcat and Postgres SQL services dockerized.
+
+!!! warning 
+    It is not necessary to configure Tomcat, since the service is already dockeridez and preconfigured.
+
+
+##### Install Modules
+Once you have the Etendo environment you must install the **Platform Extensions** bundle and the specific modules to the Openbravo connector.
+
+To do this, add the dependencies in the `build.gradle` file:
+
+```groovy title="build.gradle"
+dependencies {
+    implementation ('com.etendoerp:platform.extensions:latest.release')
+
+    moduleDeps('com.etendoerp:integration.to.openbravo:1.0.0@zip')
+    moduleDeps('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
+}
+
+
+```
+Also, in the `gradle.properties` file the following configuration variables must be added, to execute all the necessary dockerized services:
+
+``` groovy title="gradle.properties"
+context.name=etendo
+
+bbdd.sid=etendo
+bbdd.port=5434
+bbdd.systemUser=postgres
+bbdd.systemPassword=syspass
+bbdd.user=tad
+bbdd.password=tad
+
+org.gradle.jvmargs=-Dfile.encoding=UTF-8
+
+docker_com.etendoerp.docker_db=true
+docker_com.etendoerp.tomcat=true
+docker_com.etendoerp.etendorx=true
+docker_com.etendoerp.etendorx_async=true
+docker_com.etendoerp.etendorx_connector=true
+docker_com.etendoerp.integration.to_openbravo=true
+
+etendorx.dependencies=com.etendorx.integration.to_openbravo:mapping:1.0.0, com.etendorx.integration.to_openbravo:worker:1.0.0
+etendorx.basepackage=com.etendorx.integration.to_openbravo.mapping
+```
+
+!!! warning
+    Since the database service will run dockerized and Openbravo is assumed to be installed on a local Postgres service on port `5432`, we will change the Etendo database port to `ddbb.port=5434` so that when the dockerized Postgres service is raised it will do so on that port.
+
+Now in a terminal in the Etendo project, we execute the commands:
+
+1. To apply the changes in the `gradle.properties` file settings.
+
+    ```bash title="Terminal" 
+    ./gradlew setup 
+    ```
+2. Expand source code modules:
+
+    ```bash title="Terminal"
+    ./gradlew expandModules 
+    ```
+3. Launch the dockerized services:
+
+```bash title="Terminal"
+./gradlew resources.up 
+```
+
+<figure markdown="span">
+    ![dockerized-services.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-1.png)
+    <figcaption> As you can see the DB Postgres services required for the Etendo installation is running </figcaption>
+</figure>
+
+
+##### Compile and access to Etendo Classic 
+
+The next step is to compile the Etendo environment and apply sampledata
+
+```bash title="Terminal"
+./gradlew update.database
+./gradlew import.sample.data -Dmodule=com.etendoerp.integration.to.openbravo.sampledata 
+./gradlew smartbuild
+```
+
+Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps.
+
+!!! success "Access Etendo Classic:"
+    - [http://localhost:8080/etendo](http://localhost:8080/etendo)
+    - User: admin
+    - Password: admin
+
+
+#####  Etendo RX Configurations
+
+After starting the dockerized services, there are some configurations that need to be done in Etendo Classic
+
+##### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption token for the authentication in the `Client` window with the `System Administrator` role.
+If the expiration time is equal to `0` the tokens do not expire.
+
+Generate a random key with the **Generate key** button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. As `System Administrator` role, in this window, run the `Initialize RX Services` process in the toolbar. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
+
+After the execution of this process the default configuration variables are completed, depending on the configuration of the instance and the infrastructure, even the default parameters required by each service are configured.
+
+!!! warning 
+    In the particular case of the `Worker Service` it is necessary to add the `connector.instance` parameter, which refers to the ID of the connector instance with Openbravo, this instance is distributed within the connector, so you must always set the ID `6364E51BF1234094A313F17E1DCD2F7D`. 
+
+![default-rx-config.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/default-rx-config-connector.png)
+
+#####  Initial Configuration Scripts
+
+```bash title="Terminal"
+cd modules/com.etendoerp.integration.to.openbravo/utils
+make set_wal
+make insert
+make setupconnector
+```
+
+##### Relunch RX services
+
+Then, to effectively run all  the services, it is necessary to **execute the command** in the terminal: 
+
+```bash title="Terminal"
+./gradlew resources.up
+```
+
+Here, all the services and their respective logs can be seen running using [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} for a simple and fast container management. 
+
+<figure markdown="span">
+    ![dockerized-services.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-2.png)
+    <figcaption> As you can see all the services required for the Openbravo Etendo integration are running </figcaption>
+</figure>
+
+
+#### Testing Data Synchronization between Environments
+
+#####  Etendo Access Token
+The last configuration step is to generate an access token for communication from Openbravo to Etendo. To do this we must through a request manager such as Postman execute the following request:
+
+- **HTTP Method**: `POST`
+- **URL**: `http://localhost:8080/etendo/sws/login`
+- **Request Body**:
+  ```json
+  {
+    "username": "obconnector",
+    "password": "obconnector",
+    "role": "E717F902C44C455793463450495FF36B",
+    "client": "39363B0921BB4293B48383844325E84C",
+    "organization": "0",
+    "warehouse": "0",
+    "secret": "123456",
+    "service": "obconnector"
+  }
+  ```
+
+After making the request, you will receive a JSON response. Copy the value of the token field, as it will be used for authentication in subsequent requests. For example:
+
+```json
+{
+"status": "success",
+"token": "eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJzd3MiLCJyb2xlIjoiRTcxN0Y5MDJDNDRDNDU1NzkzNDYzNDUwNDk1RkYzNkIiLCJvcmdhbml6YXRpb24iOiIwIiwiaXNzIjoic3dzIiwiY2xpZW50IjoiMzkzNjNCMDkyMUJCNDI5M0I0ODM4Mzg0NDMyNUU4NEMiLCJ3YXJlaG91c2UiOiI0RDQ1RkU0QzUxNTA0MTcwOTA0N0Y1MUQxMzlBMjFBQyIsInVzZXIiOiJFOEFEOUIyNkI3RDE0Nzg2OEI2OEE5NTAwQ0M3NkRERCIsImlhdCI6MTc0MDA3NTc5M30.MEQCIHh8GI1kW3l56I5ic6KXaezeSZug-Yb42eejf5YRvCJ5AiA1ulTKNpCqqu8GTWjpLRFUarI33zobyn5BuSuTEmq5mQ",
+...
+}
+```
+
+##### External System
+:material-menu: `Application` > `General Setup` > `Application` > `External System`
+
+In the Openbravo environment, logged in as `System Administrator`, it is necessary to access the `External System` window and set the generated token in the token field, this token is used to authenticate the requests form Openbravo to Etendo.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/openbravo-external-system.png)
+    
+
+##### Testing the Integration
+
+1. Log in to the Openbravo POS Terminal, with Valblanca user:
+
+    ![pos-login.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-login.png)
+
+2. Create a new customer:
+
+    ![pos-create-bpartner.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-create-bpartner.png)
+
+3. Create a Purchase Order for this new customer, and make the corresponding payment:
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-create-order.png)
+
+4. As you can see, the sales order was created in Openbravo:
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-sales-order.png)
+
+5. In the **EDL Request Window** you can see the transactions sent from Openbravo to Etendo, their status and in case of failure see the error log and retry sending:
+    
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-edl-request.png)
+
+6. Now, after a synchronization time, you can confirm that the documents are synchronized with the Etendo environment correctly with all related master data: 
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/etendo-sale-order.png)
+
+7. Finally, in the External ID Mapping window you can see the external record IDs and the mapping to local records:
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/external-id-mappings.png)
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Creating a New Microservice
@@ -47706,6 +50085,8 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
 1. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
 
+    !!!info
+        From Etendo Classic version [24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) onwards the variables `ETENDO_HOST`, `COPILOT_HOST` and `ETENDO_HOST_DOCKER` are optional, in case they are defined they will overwrite the automatically generated variables.
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
@@ -47720,14 +50101,18 @@ The simplest configuration we are going to follow as an example is to mount Copi
     | **Environment Variable**   | **Default**  | **Info** |
     | -------------------------- | -------------| -------- |
     | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
-    | ETENDO_HOST            |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
-    | ETENDO_HOST_DOCKER     |  | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
-    | COPILOT_HOST           | `localhost` | **Required** The copilot host can be defined by the user. By default use `localhost` |
+    | ETENDO_HOST            |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
+    | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
+    | COPILOT_HOST           | `localhost` | **Optional** The copilot host can be defined by the user. By default use `localhost` |
     | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
     | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
+    |ANTHROPIC_API_KEY      | `***********************` | **Optional** You can use an [ANTHROPIC API Key](https://docs.anthropic.com/en/api/getting-started){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use Anthropic AI Models. |
 
     !!! info
-        The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo`. Its recommended to access to the Docker Container shell and check the network configuration to get the correct IP address.
+        The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo` if you are using Docker Desktop.
+    
+    !!! warning 
+        If you are using docker via console, the `ETENDO_HOST_DOCKER` variable should be `http://172.17.0.1:8080/etendo`
    
 
 2.  Once the Copilot Extensions Bundle dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:
@@ -47884,9 +50269,9 @@ The **Dev Assistant** module includes various development assistants that will f
 
 #### Overview
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 This page provides an overview of the tools, functionality, and usage examples for various development assistants available in Etendo. Dev Assistant streamlines workflow management for developers by offering **specialized assistants** that simplify tasks such as creating buttons, windows, tabs and tables, Event Handlers, Jasper Reports, background processes, and more. These assistants are designed to enhance productivity and reduce complexity, making it easier for developers to efficiently build and manage different components within the Etendo platform.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -47896,35 +50281,41 @@ This page provides an overview of the tools, functionality, and usage examples f
 
 Access to the information for each of the Assistants:
 
-[:material-file-document-outline: Background process creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#background-process-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Background Process Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#background-process-creator){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Button process creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Button Process Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Code Run](https://docs.etendo.software/latest/bundles/dev-assistant.md#code-run){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Etendo Code Expert](https://docs.etendo.software/latest/bundles/dev-assistant.md#etendo-code-expert){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Event Handler creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Event Handler Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Jasper report creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Jasper Report Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Java Test Supervisor](https://docs.etendo.software/latest/bundles/dev-assistant.md#java-test-supervisor){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Message Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#message-creator){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Module creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Module Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Module Translation Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#module-translation-creator){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Reference creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#reference-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Refactor Assistant](https://docs.etendo.software/latest/bundles/dev-assistant.md#refactor-assistant){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tables, windows and tabs](https://docs.etendo.software/latest/bundles/dev-assistant.md#tables-windows-and-tabs-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Reference Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#reference-creator){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Webhook creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#webhook-creator){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tables, Windows and Tabs Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#tables-windows-and-tabs-creator){ .md-button .md-button--primary } <br>
 
-##### Background Process Creator
+[:material-file-document-outline: Unique Java Test Assistant](https://docs.etendo.software/latest/bundles/dev-assistant.md#unique-java-test-assistant){ .md-button .md-button--primary } <br>
+
+[:material-file-document-outline: Webhook Creator](https://docs.etendo.software/latest/bundles/dev-assistant.md#webhook-creator){ .md-button .md-button--primary } <br>
+
+#### Background Process Creator
 
 **Background Process Creator** is an assistant specialized in the automatic creation of Background Processes in Java. The assistant reads previously indexed code and uses examples of classes extending `DalBaseProcess` to build new Background Processes.
 
-###### Tools
+##### Tools
 
 - [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
@@ -47932,7 +50323,7 @@ Access to the information for each of the Assistants:
   
 - [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
-###### Functionality
+##### Functionality
 
 Background Process Creator generates Background Processes in Java using indexed examples of classes that extend `DalBaseProcess`. To configure the assistant properly, you need to provide the following parameters:
 
@@ -47941,9 +50332,9 @@ Background Process Creator generates Background Processes in Java using indexed 
 - **Search Key**: A key that will be used to locate the process in other windows when necessary.
 - **Code description**: The purpose and logic that the Background Process should fulfill.
 
-###### Usage Example
+##### Usage Example
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Background Process Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Background Process Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
 
     ![background.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG1.png)
 
@@ -47958,11 +50349,11 @@ Background Process Creator generates Background Processes in Java using indexed 
 
 
 
-##### Button Process Creator
+#### Button Process Creator
 
 The **Button Process Creator** simplifies the process of creating and registering buttons and process definitions in Etendo Classic. By automating the workflow through webhooks, it removes the need for manual configuration, ensuring that your processes and buttons are set up correctly and efficiently.
 
-###### Tools
+##### Tools
 
 - [ApiCallTool](https://docs.etendo.software/latest/available-tools/openapi-tool.md) 
     
@@ -47970,7 +50361,7 @@ The **Button Process Creator** simplifies the process of creating and registerin
 
 - [WriteFileTool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
-###### Functionality
+##### Functionality
 
 The **Button Process Creation Assistant** automates the creation of a button and the registration of a process in Etendo Classic through a webhook call. Through a webhook call, the tool ensures the correct setup by validating necessary parameters like the module prefix, Java package, and process name, making sure the search key is correctly formed. It then generates a Java class for the button, which extends `BaseProcessActionHandler`, and registers this button in the desired window, tab, and table within the Etendo system. 
 
@@ -48018,7 +50409,7 @@ body_params = {
 
 This call registers the process in the system and attaches the necessary parameters.
 
-###### Usage Example 
+##### Usage Example 
 
 The process and the button will be automatically registered, and the user will be notified.
 
@@ -48029,15 +50420,15 @@ At this point, we will have the Java class of the button created along with the 
 ![ButtonProcess2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
 
-##### Code Run
+#### Code Run
 
 **Code Run** is an assistant designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
 
-###### Tools
+##### Tools
 
 - [Docker Tool](https://docs.etendo.software/latest/available-tools/docker-tool.md)
 
-###### Functionality
+##### Functionality
 
 Code Run enables users to execute Python scripts and commands dynamically, even if dependencies or configurations are missing. Key features include:
 
@@ -48070,7 +50461,7 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
     - Supports file operations and multi-step workflows combining Python and Bash.
 
 
-###### Usage Example
+##### Usage Example
 
 1. Log in to the system as the **System Administrator** role and configure the assistant in the **Assistant** window. Synchronize it and grant access to the role in the **Assistant Access** window.
 
@@ -48106,18 +50497,18 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
       ```
       
 
-##### Etendo Code Expert 
+#### Etendo Code Expert 
 
 **Etendo Code Expert** is an assistant designed to read indexed files and provide answers related to their content. 
 
-###### Functionality
+##### Functionality
 
 With this assistant it is possible to ask **code development questions** and based on Etendo code indexed, the assistant will give possible code suggestions or solutions. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
 
 This assistant is useful for avoiding the need to manually review all files. Also, multiple files can be configured if neccesary.
 
 
-###### Usage Example 
+##### Usage Example 
 
 1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. This assistant do not include the path configured to the indexed files. To do that, go to the **Knowledge Base File** window in `Application`>`Service`>`Copilot`>`Knowledge Base File` and select the `EtendoJAvaSourceCode` file and, in the **File Path Tab**, specify the path where the code files you need the assistant to read are located. 
 		
@@ -48138,17 +50529,17 @@ This assistant is useful for avoiding the need to manually review all files. Als
     ![code-expert.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
 
-##### Event Handler Creator
+#### Event Handler Creator
 
 This assistant is capable of creating **Event Handlers** in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
 
-###### Tools
+##### Tools
 
 - [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
   
 - [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
-###### Functionality
+##### Functionality
 
 **Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the assistant requires the following parameters:
   
@@ -48157,9 +50548,9 @@ This assistant is capable of creating **Event Handlers** in Etendo Classic. You 
 - **Entity**: The entity to observe.
 - **Description**: A description of the functionality to be implemented by the event handler.
 
-###### Usage Example
+##### Usage Example
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Event Handler Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Event Handler Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
 
 2. Open Copilot and select Event Handler Creator, then ask to the assistant what you need to create.
 
@@ -48170,16 +50561,14 @@ This assistant is capable of creating **Event Handlers** in Etendo Classic. You 
     ![eventhandler.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH2.png)
 
 
-##### Jasper Report Creator
+#### Jasper Report Creator
 
 The **Jasper Assistant** is designed to facilitate the creation, editing, and registration of reports within the Etendo platform. Using JasperReports, it allows developers to define the structure of the report, apply styles, manage parameters, and register the reports in the system to use in different modules.
 
 !!!info
     This assistant simplifies the process by verifying that all fields used in a report are correctly defined in the database, thus avoiding common errors such as **Field not found**. It also supports integrating logos, applying styles, and performing data grouping to ensure that the reports meet business requirements.
 
-###### Tools
-
-- [DBQueryGeneratorTool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
+##### Tools
 
 - **JasperTool**
 
@@ -48189,7 +50578,7 @@ The **Jasper Assistant** is designed to facilitate the creation, editing, and re
 
 - [WriteFileTool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
-###### Functionality
+##### Functionality
 
 **Report Creation**
 
@@ -48225,9 +50614,9 @@ The assistant also allows editing existing reports. Available actions include:
 - **SQL Query Update**: Modification of the SQL query used by the report.
 - **Change of Styles and Groupings**: Update of visual styles and data grouping configuration.
 
-###### Usage Example
+##### Usage Example
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Jasper Report Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Jasper Report Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
 
 2. Open Copilot and select Jasper Report Creator
 
@@ -48262,16 +50651,93 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 ![EditReport.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
 
+#### Test Supervisor
+A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
 
-##### Message Creator
+##### Functionality 
+This assistant receives an Etendo Module and will check for Java and Javascript files, determining which ones have tests and which ones do not. 
+
+- The assistant will generate a report with the results and will suggest the user to generate tests for the files without them. 
+- The assistant will generate the Java and React tests. 
+
+##### Team Members
+
+###### Java Test Checker
+
+This assistant receiving a Etendo Module, will check for Java files, determining which ones have tests and which ones do not. The assistant will generate a report with the results and will suggest the user to generate tests for the files without them.
+
+!!!info
+    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+**Tools**
+
+- [Print Directory Tool](https://docs.etendo.software/latest/available-tools/print-directory-tool.md)
+
+###### Java Test Executor
+
+This assistant is designed to execute tests for a Java Package, can be used to execute:
+
+- All tests.
+- Tests for a module.
+- Tests for a single Java file.
+
+This depends on the user input. The assistant will execute the tests and provide feedback to the user.
+
+!!!info
+    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+**Tools** 
+
+- [Test Run Tool](https://docs.etendo.software/latest/available-tools/test-run-tool.md)
+
+###### Java Test Generator
+
+This assistant generates tests for a single Java file. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
+This assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+!!!info
+    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+**Tools**
+
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+- [Test Run Tool](https://docs.etendo.software/latest/available-tools/test-run-tool.md)
+
+
+###### React Test Assistant
+
+The **React Test Assistant** is a specialized agent for creating and managing React component tests using **TypeScript** and **@testing-library/react-native**. Its primary focus is generating high-quality test files for React and React Native components within **Etendo sub-application** modules.
+
+Detects React components (`.tsx` or `.jsx` files) that lack corresponding test files in the `__tests__` directory. Analyzes component structure, props, and dependencies, generates Jest and React Testing Library test files and covers key scenarios such as rendering, user interactions, state changes, and edge cases.
+
+!!!info
+    This assistant is designed to be used within the Etendo ecosystem as part of a **Test Supervisor** LangGraph agent. However, it can be used independently with limited functionality.
+
+##### Tools
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+
+
+
+##### Usage Example
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
+
+2. Open Copilot and select `Java Test Supervisor`, then ask to the assistant what you need to create. A suggested input could be `Generate tests for the module com.etendoerp.examplemodule`.
+
+3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+
+
+#### Message Creator
 
 The **Message Creator** streamlines the process of creating and registering AD_Messages in Etendo Classic. By utilizing a webhook, it ensures efficient and error-free message creation while adhering to naming conventions and best practices. 
 
-###### Tools
+##### Tools
 
 - [ApiCallTool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
-###### Functionality
+##### Functionality
 
 The **Message Creator** facilitates the creation of AD_Messages by interacting with Etendo Classic via a webhook. It validates the input parameters, enforces the proper format for search keys, and registers the message with the appropriate module. This assistant supports both parametric and non-parametric messages and ensures messages are immediately usable in Java code. 
 
@@ -48309,7 +50775,7 @@ Notes:
   String formattedMessage = String.format(OBMessageUtils.messageBD("PREFIX_InvalidValue"), value);
   ```
 
-###### Usage Example
+##### Usage Example
 
 1. Provide the required inputs:
     - Module Java Package: `com.etendoerp.module`
@@ -48331,16 +50797,15 @@ Notes:
     OBMessageUtils.messageBD("MODPREFIX_InvalidInput");
     ```
 
-
-##### Module Creator
+#### Module Creator
 
 Etendo Classic allows you to create modules that provide additional functionality that can be deployed independently. These modules can range from additional reports to content packs (translations, chart of accounts, etc.).
 
-###### Tools
+##### Tools
 
 - [ApiCallTool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
-###### Functionality
+##### Functionality
 
 The Module Creator streamlines the process of building independent modules that enhance Etendo Classic with new functionalities, such as additional reports or content packs like translations or charts of accounts. By using the `CreateModuleWebHook`, the tool automates several critical steps. It begins by validating essential details like the module's Java package, name, description, version, and database prefix, ensuring everything is properly formatted and complete. After validation, it assigns the necessary database prefix, registers the module within the system, and allows for optional inclusion of dependencies. 
 
@@ -48353,7 +50818,8 @@ To start creating your module in Etendo, follow the steps below.
 - **Description**: A brief description of the module's functionality.
 - **Help/Comment**: Additional help text or comments regarding the module (optional).
 - **Version**: The version of the module (e.g., `1.0.0`).
-- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `FJTS`).
+- **Type**: The type of the module. Option are "M" for standard module, "T" for template module.
+- **DBprefix**: A prefix for the database objects associated with the module (must be in uppercase, e.g., `LAPY`).
 - **License**: The license type for the module. Options are:
     - `Apache License 2.0`
     - `Openbravo Public License`
@@ -48377,7 +50843,8 @@ body_params = {
   "HelpComment": "This is a test module created for demonstration purposes.",
   "Description": "This module adds test functionality to Etendo Classic.",
   "Version": "1.0.0",
-  "Prefix": "FJTS",
+  "Prefix": "LAPY",
+  "Type": "M",
   "ModuleLicense": "Etendo Commercial License"
 }
 ```
@@ -48385,9 +50852,9 @@ body_params = {
 !!!note
     The database prefix must always be in uppercase.
 
-###### Usage Example
+##### Usage Example
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Module Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Module Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
 
 2. Open Copilot and select Module Creator, then ask to the assistant what you need to create.
 
@@ -48422,13 +50889,13 @@ You can confirm that the module has been created by navigating to the `Module` w
     For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
 
 
-##### Module Translation Creator
+#### Module Translation Creator
 
-###### Tools
+##### Tools
 
 - [XML Translation Tool](https://docs.etendo.software/latest/available-tools/xml-translation-tool.md)
 
-###### Functionality
+##### Functionality
 
 The Module Translation Creator automatically translates the content of a module.
 
@@ -48438,7 +50905,7 @@ Before using the assistant, the user will need to have a translation module alre
 
 Then, provide the path to the translation module to the assistant (e.g., `/modules/com.etendoerp.mymodule.es_ES`) and it will automatically translate all the files to the desired language.
 
-###### Usage Example
+##### Usage Example
 1. Create a new module in the `Module` window
     - Check the flag "Is translation module".
     - Select the module languague (e.g., `Spanish (Spain)`). 
@@ -48459,7 +50926,7 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ![](https://docs.etendo.software/latest/assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
 
 
-5. Now, to use this assistant it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Module Translation Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+5. Now, to use this assistant it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Module Translation Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
 
 
 6. Open Copilot and select Module Translation Creator, then ask to the assistant to translate the files in your module (e.g., `/modules/<JAVAPACKAGE.OF.YOUR.MODULE>`).
@@ -48474,21 +50941,41 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ```
 
 
-##### Reference Creator
+#### Refactor Assistant
+
+An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
+##### Functionality
+- The refactor assistant receives a file path.
+- The assistant will read the file.
+- The assistant may ask to it knowledge base for suggestions.
+- The assistant will write the file with the changes, overwriting the original file.
+- The assistant will read the file again to verify the changes.
+##### Tools
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+##### Usage Example
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Refactor Assistant and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+2. Open Copilot and select Refactor Assistant, then ask to the assistant what you need to refactor. For example, a suggested input could be `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
+3. The assistant will read the file, analyze it, and suggest changes.
+4. The assistant will write the file with the changes, overwriting the original file.
+
+
+
+#### Reference Creator
 
 The **Reference Creator** creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
 It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
 
-###### Tools
+##### Tools
 
-- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md)
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
-###### Functionality
+##### Functionality
 
 The **Reference Creator** is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
 
-###### Usage Example 
+##### Usage Example 
 
 1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
@@ -48514,7 +51001,7 @@ The **Reference Creator** is designed to facilitate the creation of references, 
     ```
 
 
-##### Tables, Windows and Tabs Creator
+#### Tables, Windows and Tabs Creator
 
 !!!warning
     The Tables, windows and tabs assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
@@ -48524,14 +51011,14 @@ The **Reference Creator** is designed to facilitate the creation of references, 
 The **Tables, Windows and Tabs Creator** is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  as well as tables and columns in the database.
 It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
 
-###### Tools
+##### Tools
 
-- [**DDL Tool**](https://docs.etendo.software/latest/etendo-copilot/available-tools/ddl-tool.md): This tool allows to registering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+- [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
 - **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
 
-###### Functionality
+##### Functionality
 
 !!! info
     With this assistant, it is possible to create: 
@@ -48550,7 +51037,7 @@ It is possible to give an input with all the necessary information, or the assis
 - The user must confirm the steps or set up a modification about the given information.
 
 
-###### Usage Example 
+##### Usage Example 
 
 1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
@@ -48578,12 +51065,42 @@ It is possible to give an input with all the necessary information, or the assis
 ./gradlew export.database --info
 ```
 
+#### Unique Java Test Assistant
+This assistant is designed to generate tests for a single Java File or an Etendo Classic module. 
+##### Functionality
+- This assistant receives a Java file path or a module path, but its main functionality is to generate tests for a single Java File. 
+- In the case of a given Module, the assistant will check for file without tests and generate for them.
+- The assistant expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. 
+- The assistant will also generate the test methods for each method in the Java.
+- This assistant has a Knowledge Base with the Java classes of Etendo Classic.
 
-##### Webhook Creator
+##### Tools
+
+- [Print Directory Tool](https://docs.etendo.software/latest/available-tools/print-directory-tool.md)
+- [Read File Tool](https://docs.etendo.software/latest/available-tools/read-file-tool.md)
+- [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+
+!!!warning Disclaimer
+    The test generators provided by this tool are designed to deliver an initial batch of test cases efficiently, based on the parameters provided. However, it is important to note that the generated tests serve as a starting point and may require additional work to:
+
+    - Fix potential errors in the generated test cases.
+    - Improve test coverage.
+    - Adapt them to the specific scenarios of your project or environment.
+
+    We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
+
+##### Usage Example
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Java Test Generator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+2. Open Copilot and select Unique Java Test Assistant, then ask to the assistant what you need to create. A suggested input could be ```Generate tests for the Java file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java```.
+3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+
+
+#### Webhook Creator
 
 **Webhook Creator** is an assistant designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.
 
-###### Tools
+##### Tools
 
 - [API Call Tool](https://docs.etendo.software/latest/available-tools/openapi-tool.md)
 
@@ -48591,7 +51108,7 @@ It is possible to give an input with all the necessary information, or the assis
   
 - [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
 
-###### Functionality
+##### Functionality
 
 This assistant simplifies webhook creation by automatically generating the necessary Java files and registering them in the Etendo ERP system, taking examples of indexing code readeing the classes extends of `BaseWebhookService`. It is necessary give some useful information:
 
@@ -48599,9 +51116,9 @@ This assistant simplifies webhook creation by automatically generating the neces
 - **Webhook Name**: The name of the Java file to be created.
 - **Parameters**: The parameters will be added to the webhook for the use.
 
-###### Usage Example
+##### Usage Example
 
-1.  To use thisassistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, configure Webhook Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+1.  To use thisassistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Webhook Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
 
 2. Open Copilot and select Webhook Creator, then ask to the assistant what you need to create.
 
@@ -48612,6 +51129,7 @@ This assistant simplifies webhook creation by automatically generating the neces
     ![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH2.png)
 
     ![webhook.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
+
 
 
 
@@ -48627,10 +51145,8 @@ This assistant simplifies webhook creation by automatically generating the neces
 Here you can find a list of the all the available tools in the Copilot bundle.
 
 - [Attach File Tool](https://docs.etendo.software/latest/available-tools/attach-file-tool.md)
+- [Audio Tool](https://docs.etendo.software/latest/available-tools/audio-tool.md)
 - [Codbar Tool](https://docs.etendo.software/latest/available-tools/codbar-tool.md)
-- [Create Reference Tool](https://docs.etendo.software/latest/available-tools/create-reference-tool.md)
-- [Database Query Tool](https://docs.etendo.software/latest/available-tools/database-query-tool.md)
-- [DDL Tool](https://docs.etendo.software/latest/available-tools/ddl-tool.md)
 - [Docker Tool](https://docs.etendo.software/latest/available-tools/docker-tool.md)
 - [File Copy Tool](https://docs.etendo.software/latest/available-tools/file-copy-tool.md)
 - [File Downloader Tool](https://docs.etendo.software/latest/available-tools/file-downloader-tool.md)
@@ -48642,8 +51158,11 @@ Here you can find a list of the all the available tools in the Copilot bundle.
 - [Send Email Tool](https://docs.etendo.software/latest/available-tools/send-email-tool.md)
 - [Tavily Tool](https://docs.etendo.software/latest/available-tools/tavily-tool.md)
 - [Template Tool](https://docs.etendo.software/latest/available-tools/template-tool.md)
+- [Test Run Tool](https://docs.etendo.software/latest/available-tools/test-run-tool.md)
 - [Uncompress Tool](https://docs.etendo.software/latest/available-tools/uncompress-tool.md)
 - [Write File Tool](https://docs.etendo.software/latest/available-tools/write-file-tool.md)
+- [XLS Tool](https://docs.etendo.software/latest/available-tools/xls-tool.md)
+- [XML Translation Tool](https://docs.etendo.software/latest/available-tools/xml-translation-tool.md)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Attach File Tool
@@ -48721,6 +51240,76 @@ Imagine there is a file at `/home/user/document.pdf`, and it is necessary to upl
     ```
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Audio Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Audio Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/audio-tool
+## Article Content: 
+### Audio Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The Audio Tool is a tool that recognizes text from audio files. It can be used in Assistants to extract information from audio files, such as transcribing interviews, meetings, or podcasts. The tool accepts an audio file path as input and returns the text extracted from the audio.
+
+!!!info
+    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool automates the process of **text extraction from audio files**. This can be particularly useful for tasks such as transcribing conversation or speech from audio recordings. The tool uses a speech-to-text model to convert the audio content into text.
+
+Using this tool consists of the following actions:
+
+- Receiving Parameters:
+
+    - The tool receives an input object that contains the path of the audio file to be processed.
+    - **path**: The path of the audio file to be processed.
+       
+- Obtaining the File:
+
+    - The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (this tool uses the [Whisper model of OpenAI ](https://platform.openai.com/docs/guides/speech-to-text)).
+
+
+- Returning the Result:
+
+    - The tool returns a JSON object containing the extracted text from the audio file.
+    - **message**: The extracted text from the audio file.
+
+#### Usage Example
+
+##### Requesting text recognition from an audio file
+
+Suppose you have an audio at `/home/user/request.mp3` and you want to extract text related to an invoice information: 
+
+**Audio Content**
+``` txt
+Can you create a new invoice for the customer John Doe with the following items: 2 Product A, 1 Product B and 3 Product C
+```
+
+- Use the tool as follows:
+
+    - Input:
+
+        ```
+        {
+            "path": "/home/user/request.mp3"
+        }
+        ```
+
+    - Output:
+
+        ``` Json title="Output Json"
+        {
+            "message": "Can you create a new invoice for the customer John Doe with the following items: 2 Product A, 1 Product B and 3 Product C"
+        }
+        ```
+
+!!!note
+    Remember that the result of the tool can be used in other tools, for example, you can use the result of the Audio Tool as input for an agent that uses the extracted text to create an invoice.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Codbar Tool
 ## Article Path: /Developer Guide/Etendo Copilot/Tools/Codbar Tool
 ## Article URL: 
@@ -48794,242 +51383,6 @@ The following is an example image of a goods receipt:
 
         ```
 
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Create Reference Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/Create Reference Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool
-## Article Content: 
-#### Overview
-
-The **Create Reference Tool** is an Etendo Copilot tool developed by Python to create references in the database. This tool is useful to automate the creation of references saving time and manual effort.  
-
-#### Functionality
-
-This process consists of the following actions:
-
-- **Argument Processing** 
-
-    Takes various input parameters defined in a pydantic model:
-
-    - `i_prefix`: The prefix of the module in the database.
-    - `i_name`: The name of the reference.
-    - `i_reference_list`: A comma-separated list of reference items.
-    - `i_help` (optional): Help text for the reference.
-    - `i_description` (optional): Description of the reference.
-
-- **Access Token Verification**
-
-Gets and verifies the access token from the thread context (`ThreadContext`).
-
-- **Request Body Construction**
-
-Constructs the body of the request parameters for the webhook.
-
-- **Webhook Call**
-
-Uses the `call_webhook` function to make an `HTTP POST` request to the Etendo webhook endpoint, providing the necessary parameters and the access token.
-
-- **Result Handling**
-
-Returns the result of the request to the webhook, which may contain a success message or an error in JSON format.
-
-
-The system returns a dictionary with the result of the operation. For example:
-
-- If the request was successful:
-
-```
- { `success: true, message: Reference created successfully`}
-
-```
-
-- If there was an error:
-
-```
- { `error: Description of the error`}
-
-```
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Database Query Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
-## Article Content: 
-### Database Query Generator tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-#### Overview
-
-This tool allows asking to Etendo for tables available in the database and the columns of each table. It also allows Copilot to execute SQL queries in the database that are generated by the Assistant.
-
-!!!info
-    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
-
-#### Installation
-The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
-
-#### Configuration
-This tool can be configured in an Assistant:
-
-1. Add **Database Query Generator tool** into the Assistant configuration, that you want to use the tool. Go to Assistant window, pick the Assistant and add the tool to the App in the **Tools** tab.
-
-2. Re-Sync the Assistant running **Sync Assistant** process to get the tool available in the Assistant.
-
-3. Check that the role of the user has permissions to use Secure Web Services in the **Role** Window. ![role configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-3.png)
-4. Check that the WebHook **DBQueryExec** is enabled and has the Role Access configured for the role.
-    Example for *F&B International Group Admin*:
-    ![DBQueryExec WebHook configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
-
-5. Check that the `ETENDO_HOST` is configured in the `gradle.properties` file.
-
-6. Can you check if the tool is available for the Assistant, asking for it. 
-    <figure markdown>
-    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-2.png){align=right width=300}
-    </figure>
-
-
-#### Security
-
-For security and data segmentation:
-
-- The tables instrospection is limited for the readable tables of the user.
-
-- The tool automatically parses the `doSecurityCheck(entity)` with the conditions for a correct access to the Readable **Client** and **Organization**, for example: `doSecurityCheck(inv)`  for Invoices, is converted to
-
-``` sql
-inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id IN ('0','E443A31992CB4635AFCAEABE7183CE85','B843C30461EA4501935CB1D125C9C25A','BAE22373FEBE4CCCA24517E23F0C8A48','DC206C91AA6A4897B44DA897936E0EC3','2E60544D37534C0B89E765FE29BC0B43','19404EAD144C49A0AF37D54377CF452D','7BABA5FF80494CAFA54DEBD22EC46F01')
-```
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: DDL Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/DDL Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool
-## Article Content: 
-### DDL Tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
-
-#### Overview
-
-The **DDLTool** is an Etendo Copilot tool developed in Python to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is possible to create and register tables, windows, items and menu options in the system so that data can be displayed.
-
-!!!info
-    To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
-
-#### Functionality
-
-The **DDL Tool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode needed to do the task requested by the user. The tool has a variable that contains a list with the available modes so the assistant will choose the most appropriate mode for the task. 
-
-Assistants can choose from these modes:
-
-- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named `RegisterTableWebHook` to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
-
-- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the `ad_org` and `ad_client` table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
-
-- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook `CreateTableWebHook`, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
-
-- **REGISTER_COLUMNS:** This mode is executed automatically after the `ADD_COLUMN` mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
-
-- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named `SyncTermsWebHook`.
-
-- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the `RegisterWindowAndTabWebHook` java file.
-
-- **REGISTER_FIELDS:** Registers the fields of a tab in Etendo System to be recognized for it. It works by calling a webhook to run a Java file.
-
-#### Usage Example 
-
-In the section of Assistant, it is possible to configure the assistants and the tool that they can use.
-
-![ddl-tool.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
-
-Also in Assistant, it can insert a prompt where it is possible to indicate the tool to use. It is useful to provide a workflow example so the IA can use it to build its own workflow. 
-
-![ddl-tool1.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
-
-Prompt Example:
-
-*You are a developer assistant that can create register tables for Etendo.*
-
-*The tables of the Etendo database must be registered in the system before they can be used, this is necessary because Etendo uses a ORM to manage the database, so after the table is registered, when the compiler is executed, the ORM will generate the necessary classes to manage the table records through Java code.*
-
-*The process of create and register a table has the following steps:*
-
-*1. Register the table in the system.*
-
-*2. Create the table in the database, with the basic and mandatory columns. *
-
-*3. Add the specific columns for the table. In other words, the columns that are specific to the table. *
-
-*4. Execute the process to register the columns of the table in the system.*
-
-*5. Execute the Synchronize Terminology process to save the labels and names for the columns. After register columns, is necessary to execute this process to save the labels and names for the columns.*
-
-*6. Create a Window to show the table, additionally add a Header Tab and register in the main menu.*
-
-*7. Execute the process to register all the fields necessary in the Tab.*
-
-*8. Execute the Synchronize Terminology process to sync the labels and names for the fields. Its necessary to execute this process every time a field is registered.*
-
-*9. Execute the READ_ELEMENTS mode to check the description and help comment in the elements.*
-
-*10. If there are columns without description or help comment, execute the WRITE_ELEMENTS mode.*
-
-*11. Sync the terminology again.*
-
-*Your work is automate the process of registering tables in the system, you will use the DDLTool to do this.*
-
-*The DDLTool is a tool that allows you to do operations based on "mode". The modes are:*
-
-*REGISTER_TABLE: This mode is used to ...*
-
-*CREATE_TABLE: This mode is used to ...*
-
-*ADD_COLUMN: This mode is used to ...*
-
-*REGISTER_COLUMNS: This mode is used to ...*
-
-*REGISTER_WINDOW_AND_TAB : This mode is used to ...*
-
-*SYNC_TERMINOLOGY: This mode is used to ...*
-
-*REGISTER_FIELDS: This mode is used to ...*
-
-*READ_ELEMENTS: This mode is used to ...*
-
-*WRITE_ELEMENTS: This mode is used to ...*
-
-*ADD_FOREIGN: This mode is used to ...*
-
-*If you do not detect any mode or don't understand the request, ask to the user what they want to do. *
-
-*Example workflow:*
-
-*User: I want to register a table with name Dog and prefix MOD.*
-
-*Step 1: Register the table in the system. At this point you must execute the DDLTool with the REGISTER_TABLE mode.*
-
-*Step 2: Create the table in the database.*
-
-*Step 3: Add the specific columns for the table. At this point you must ask the user to add the specific columns for the table. *
-
-*Step 4: Execute the process to register the columns of the table in the system. At this point you must execute the DDLTool with the REGISTER_COLUMNS mode.*
-
-*Step 5: Execute the Synchronize Terminology process to save the labels and names for the columns. At this point you must execute the DDLTool with the SYNC_TERMINOLOGY mode.*
-
-*Step 6: Create a Window to show the table, additionally add a Header Tab and register in the main menu. 
-*
-*Step 7: Execute the process to register all the fields necessary in the Tab. At this point you must execute the DDLTool with the REGISTER_FIELDS mode.*
-
-*Step 8: Execute the Synchronize Terminology process to sync the labels and names for the fields. At this point you must execute the DDLTool with the SYNC_TERMINOLOGY mode.*
-
-*Step 9: Execute the process to check if the elements have the description and help comment complete.*
-
-*Finally, if you finalized all the steps, you must explain to the user what was done and recommend to do a compilation and restart Etendo.*
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Docker Tool
@@ -49976,6 +52329,78 @@ return {“message”: f “Sum result is {result}”}
 ```
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Test Run Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Test Run Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/test-run-tool
+## Article Content: 
+### Test Run Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The **Test Run Tool** is designed to execute Java tests using Gradle, providing an efficient way to run tests in Java projects within a specific environment.
+
+!!!info
+    To include this functionality, the Copilot Extensions Bundle must be installed. For more information, follow the instructions in the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For information about available versions, core compatibility, and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool is especially useful for running and validating Java test suites. It can be used in various scenarios, such as:
+
+- Running specific tests or groups of tests to ensure functionalities are correctly implemented.
+- Integrating automated tests into the development workflow.
+
+The process consists of the following actions:
+
+**Receiving Parameters**
+
+The tool receives the following input parameters:
+
+- `test_targets`: One or more tests or packages to execute.
+- `working_directory`: The directory where the `gradlew` script is located.
+
+**Running Tests**
+
+- A Gradle command is constructed and executed with the specified tests.
+- The execution is performed in the specified working directory.
+
+**Returning the Result**
+
+Returns a summary of the test execution along with details of passed and failed tests.
+
+#### Usage Example
+
+If you want to run specific tests in the `/path/to/erp` directory, the input and output format would be as follows:
+
+- **Input**
+
+```json
+{
+  "test_targets": ["com.etendoerp.webhookevents.WebhookSetupTest"],
+  "working_directory": "/path/to/erp"
+}
+```
+
+- **Output**
+
+```json
+{
+  "summary": "Some tests failed. Review the details below.",
+  "details": {
+    "passed_tests": [
+      "Test 1 PASSED>"
+    ],
+    "failed_tests": [
+      "Test 2 FAILED> Reason"
+    ]
+  },
+  "raw_logs": "Complete logs in case of failure"
+}
+```
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Uncompress Tool
 ## Article Path: /Developer Guide/Etendo Copilot/Tools/Uncompress Tool
 ## Article URL: 
@@ -50102,15 +52527,110 @@ Using this tool consists of the following actions:
     ```
     if a backup did not need to be created.
 
+#### Write Permissions
+
+To handle file and folder permissions, the Write File Tool leverages the `COPILOT_WRITE_RULE` environment variable. Add this variable to the `gradle.properties` file if needed.
+
+This variable allows you to specify the file permissions (in octal format) to be applied to files and folders created by the tool. It is optional, and if not set, the system's default file permissions will be used.
+
+- **Folder Creation**: If the specified folder does not exist, it will be created. If `COPILOT_WRITE_RULE` is set, the tool applies the corresponding permissions to the newly created folder.
+- **File Creation**: When a new file is created, the tool applies the permissions specified in `COPILOT_WRITE_RULE`.
+
+The value of `COPILOT_WRITE_RULE` must be a valid octal representation of file permissions (e.g., `777` for full read/write/execute access).
+
 #### Usage Example
 
 Imagine we want to write *Hello World* in the file `/tmp/test.txt`, overwriting its contents, in the first line of the file. Our entry could be:
+
 - filepath: /tmp/test.txt
 - content: Hello World
 - override: True
 - lineno: 1
 
 The Write File Tool will process these parameters, write *Hello World* to the first line of the `/tmp/test.txt` file and return a message indicating that the operation completed successfully and whether a backup was created.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: XLS Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/XLS Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xls-tool
+## Article Content: 
+### XLS Tool
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
+
+#### Overview
+
+The XLS Tool processes `XLS` or `CSV` files to extract data. It is designed to facilitate tasks such as parsing spreadsheet content, processing tabular data, and extracting specific information from XLS files. The tool accepts the file path of an data file and returns processed data based on defined parameters.
+
+!!!info
+    To include this functionality, the Copilot Extensions Bundle must be installed. Follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about available versions, core compatibility, and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+#### Functionality
+
+This tool automates the process of **data extraction from XLS files**. It is particularly useful for tasks such as reading financial data, extracting customer details, or parsing inventory records. The tool supports customizable processing logic to handle diverse data structures.
+
+Using this tool consists of the following actions:
+
+- **Receiving Parameters**:
+
+    - The tool receives an input object containing the file path of the XLS file to be processed and optional parameters for data extraction.
+    - **path**: The path of the XLS file to be processed.
+    - **parameters**: Optional extraction parameters such as sheet name, specific rows, or columns.
+
+- **Processing the File**:
+
+    - The tool reads the XLS file from the specified path, verifies its existence, and ensures the file format is supported.
+    - It processes the file based on the input parameters to extract the required data.
+
+- **Returning the Result**:
+
+    - The tool returns a JSON object containing the extracted data.
+    - **data**: The processed data extracted from the XLS file.
+
+#### Usage Example
+
+##### Extracting data from an XLS file
+
+Suppose you have an Excel file at `/home/user/data.xls` and you want to extract customer information from the file:
+
+**XLS Content**
+``` txt
+| Customer ID | Name       | Purchase Amount |
+|-------------|------------|-----------------|
+| 1001        | John Doe   | 500             |
+| 1002        | Jane Smith | 300             |
+```
+
+- Use the tool as follows:
+
+    - **Input**:
+
+        ```
+        {
+            "path": "/home/user/data.xls",
+            "parameters": {
+                "sheet": "Customers",
+                "columns": ["Customer ID", "Name", "Purchase Amount"]
+            }
+        }
+        ```
+
+    - **Output**:
+
+        ```Json title="Output Json"
+        {
+            "data": [
+                {"Customer ID": "1001", "Name": "John Doe", "Purchase Amount": 500},
+                {"Customer ID": "1002", "Name": "Jane Smith", "Purchase Amount": 300}
+            ]
+        }
+        ```
+
+!!!note
+    The result of the tool can be used as input for other processes. For instance, the extracted customer data can be utilized to generate personalized marketing campaigns or invoices.
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: XML Translation Tool
@@ -50281,10 +52801,10 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
 
 
     class PingTool(ToolWrapper):
-        name = 'PingTool'  # Name of the tool
+        name: str = 'PingTool'  # Name of the tool
         # Description of the tool.
         # This description tells Copilot what the tool does and based on this description it will decide if this tool will solve the user's request.
-        description = (
+        description: str = (
             '''This tool receives a hostname and returns the ping result.''')
         args_schema: Type[ToolInput] = PingToolInput  # The args_schema attribute must be a Pydantic model that defines the inputs of the tool.
         
@@ -50379,11 +52899,8 @@ For the case of the PingTool, we will create a class called `PingToolInput` that
         Remember to execute `Sync Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
 5. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
-To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
+To test the developed Tool, you can ask to an assistant that has the tool associated. The assistant will execute the tool and return the result.
 
-    ``` bash title="Terminal"
-    ./gradlew copilot.do -Pprompt="What tools do you have available?"
-    ```
 
 #### Interacting with Etendo
 
@@ -50410,8 +52927,8 @@ class UpdateSOToolInput(ToolInput):
    description: str = ToolField(description="New description to set in the Sales Order")
 
 class UpdateSOTool(ToolWrapper):
-   name = "UpdateSOTool"
-   description = "Set description in a Sales Order by DocumentNo2"
+   name: str = "UpdateSOTool"
+   description: str  = "Set description in a Sales Order by DocumentNo2"
    args_schema: Type[ToolInput] = UpdateSOToolInput
    return_direct: bool = False
 
@@ -50442,6 +52959,42 @@ The above tool leverages utilities provided by Copilot Core:
 ##### Conclusion: Simplified WebHook Integration
 
 By using these utilities, you can easily call Etendo Classic WebHooks, leaving only the logic of building the request body and the specific tool's logic itself. This approach streamlines the process of creating tools that interact with Etendo Classic.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to execute Copilot through the console
+## Article Path: /Developer Guide/Etendo Copilot/How to Guides/How to execute Copilot through the console
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console
+## Article Content: 
+### How to execute Copilot through the console
+
+#### Overview
+
+This article explains how to execute Copilot through the console. This is useful when you want to test a tool or assistant without using the Etendo Classic interface.
+
+#### Prerequisites
+* Access to the Etendo Classic host.
+
+#### Command
+```bash
+./gradlew copilot.do -Phost='https://my.etendo.instance/etendo' -Papp_id="Module Creator" -Pusername=my-user -Ppassword=my-password -Pquestion="Can you create a Module called 'Test Module? "  --console=plain 
+```
+
+#### Parameters
+
+* **-Phost**: The URL of the Etendo Classic host. If not provided, the default host http://localhost:8080/etendo will be used.
+* **-Pusername**: The Etendo Classic username, who will execute the command. This user must have the necessary permissions to execute the command.
+* **-Ppassword**: The Etendo Classic password who will execute the command. 
+* **-Prole**: The role of the user who will execute the command. If not provided, the default role will be used.
+* **-Papp_id**: The ID of the assistant to be executed. It can be the **exact** name of the assistant or the **ID** of the assistant.
+* **-Pquestion**: The question you want to ask the assistant.
+
+* **--console=plain**: This parameter is used to avoid the Gradle console from showing the progress bar.
+
+
+!!! warning
+    - The parameters ```username``` and ```password``` are mandatory.
+    - If not provided, the script will ask for them. This is to avoid storing sensitive information in the command history.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Export Tools and Assistants
@@ -50559,7 +53112,7 @@ When exporting assistants that need to be pre-configured in a module installatio
 </figure>
 
 !!!info
-    For more information, visit [How to create a Copilot Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
+    For more information, visit [How to create a Copilot Tool](https://docs.etendo.software/latest/how-to-guides/how-to-create-copilot-tools.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨ Getting Started
@@ -50594,6 +53147,7 @@ On this page we will explain what are the requirements to create a subapplicatio
 - [Java](https://www.oracle.com/ar/java/technologies/downloads/#jdk17){target="_blank"} JDK 17 
 
 Then continue with the [Create New Subappliction](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Sup-application Structure
@@ -50609,7 +53163,6 @@ This page provides a comprehensive guide to the structure of subapplications in 
 #### App File
 In `App.tsx`, it is the main file located in the root of the subapplication. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible for the initialization of the subapplication and gets the params from Etendo Mobile.
 
-
 ##### Params from Etendo Mobile
 Etendo Mobile _sends_ params to the subapplication and all of them are ready to use, they are:
 
@@ -50623,7 +53176,6 @@ Etendo Mobile _sends_ params to the subapplication and all of them are ready to 
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
     - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component includes a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
-
 
 ##### Language
 The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the _language_ parameter received as input to initialize the remaining aspects of the application in the `App.tsx` file.
@@ -50784,7 +53336,7 @@ Fields to note:
 
 - **Module**: The module that can export the window configuration. In our example case, set `Product SubApp`.
 - **Name**: Name with the application will be shown. In our example case, set `Product Subapp`
-- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our example case, set `/`
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/web/<javapackage>/`. In our example case, set `/`
 - **Active**: To select if this application is active or not. In our example case, set `true`
 
 
@@ -50831,7 +53383,53 @@ Logged in as the **Group Admin** role (which is the default role for accessing E
     ```
 
 #### Dockerized Services
+Before starting the dockerized services, there are some configurations that need to be done in Etendo Classic
 
+##### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption token for the authentication in the  Client window with the System Administrator role.
+If the expiration time is equal to "0" the tokens do not expire.
+
+Generate a random key with the "Generate key" button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, some records need to be created.
+As `System Administrator` role, in this window, it is necessary to add the entries, one for each service to be used. The following fields should be included:
+
+- **Service Name**: The name of each service.
+- **Service URL**: The internal URL of the Docker service.
+- **Updatable Configs**: Check this checkbox.
+- **Public URL**: Configure the publicly accessible URL for the service.
+
+!!!info
+    The **Public URL** field only needs to be configured when the sub-application is set to production.
+
+
+See the configuration examples bellow and replicate them. 
+
+```
+application   
+auth        http://localhost:8094
+config      http://localhost:8888
+das         http://localhost:8092  
+edge        http://localhost:8096
+```
+
+Also in the case of **edge** and **auth** services it is necessary to add the `das.url` Parameter Key with the Parameter Value `http://das:8092`.
+
+![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config.png)
+
+!!!info 
+    If using Dockerized Tomcat, the URLs within the container's network are `http://auth:8094`, `http://config:8888`, `http://das:8092`  and `http://edge:8096`.
+
+
+##### Execute RX services
 Before proceeding, it is necessary to start the **Etendo RX** services. These services provide a security layer (Auth Service), a data access layer (Das Service), which are essential for consuming or writing data in Etendo and Edge Service . Additionally, by selecting the **isReact** checkbox in the previously defined module, React code will be automatically generated, allowing for easier data access.
 
 To launch all the services, it is necessary to define the following configuration variables in the `gradle.properties` file:
@@ -50860,30 +53458,6 @@ Then, to effectively run the services, it is necessary to **execute the command*
 Here, all the services and their respective logs can be seen running using [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank} tool.
 
 ![Docker RX Services](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
-
-##### RX Config window
-:material-menu: `Application` > `Etendo RX` > `RX Config`
-
-This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. In this case, two records need to be created: one for the **RX Config** service, responsible for distributing the dynamic configurations of other available services, and another for the **Auth** service, which provides security utilities. The Auth service must be accessible by the subapplication to obtain the authentication token for requests.
-
-As `System Administrator` role, in this window, it is necessary to add two entries, one for each service to be used. The following fields should be included:
-
-- **Service Name**: The name of each service.
-- **Service URL**: The internal URL of the Docker service.
-- **Updatable Configs**: Check this checkbox.
-- **Public URL**: Configure the publicly accessible URL for the service.
-
-See the configuration examples bellow and replicate them. 
-
-!!!info
-    The **Public URL** field only needs to be configured when the subapplication is set to production.
-
-![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-config.png)
-
-![alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-config-auth.png)
-
-!!!info 
-    If using Dockerized Tomcat, the URLs within the container's network are `http://config:8888` and `http://auth:8096`.
 
 
 #### Projections and Search
@@ -51216,7 +53790,7 @@ export default ProductDetail;
 
 ```
     
-##### Navegation 
+##### Navigation 
 
 In addition, it is necessary to add the navigation configuration in the `app.tsx` file, in the return statement. This configuration provides the infrastructure to navigate between the different screens of the application.
 
@@ -51238,7 +53812,7 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 ```
 
 !!! info 
-    For more information, visit [Navegation Stack](https://docs.etendo.software/latest/concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
+    For more information, visit [Navigation Stack](https://docs.etendo.software/latest/concepts/subapp-structure.md#navigation-stack) concept in Subapplication Structure Page.
 
 !!! info 
     For more information about the language management and translations, visit [Languague](https://docs.etendo.software/latest/concepts/subapp-structure.md#language) concept.
@@ -51308,6 +53882,46 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
     ![app-home.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home.png)
 
 4. Now you can view, filter, create, edit and delete products.
+
+#### Debug Log
+
+This section explains how to log data in a sub-application using the `logger` utility function. To log any information, call the `logger` function with a key and a value:
+
+```javascript
+logger('key', value );
+
+```
+
+**Importing the Logger Function** 
+To use the logger in any file, import it as follows:
+
+``` javascript
+import logger from '../../utils/log'; // The path to the file is relative 
+
+```
+
+!!!info "Automatic String Conversion"
+    Objects passed to the `logger` function will be automatically converted to strings using the `JSON.stringify` function. This ensures compatibility with the logging mechanism.
+
+**Example Usage**
+Below is an example of how to use the logger function, including handling errors:
+
+``` javascript
+try {
+  // Your code here
+} catch (err) {
+  logger('Handle Error', err));
+  showAlert(labels.connectionError, 'error');
+}
+```
+In this example:
+
+- The error object `err` is automatically converted to a `String` using `JSON.stringify` and logged.
+- An alert is shown using `showAlert` component to inform the user of a connection error.
+
+By integrating this logging utility, developers can track application behavior and debug more effectively.
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo UI Library
@@ -51316,43 +53930,474 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Overview
-## Article Path: /What's New/Overview
+# Article Title: ✨ Etendo News
+## Article Path: /What's New/✨ Etendo News
 ## Article URL: 
- https://docs.etendo.software/latest/whats-new/overview
+ https://docs.etendo.software/latest/whats-new/etendo-news
 ## Article Content: 
-#### Welcome to our Release Notes Documentation
 
-Here, you'll discover a comprehensive overview of the latest updates, enhancements, and fixes that have been meticulously crafted to elevate your Etendo software experience.
+#### March 2025
 
-Stay informed and empowered as we walk you through each new iteration, showcasing the innovative features and improvements that await your exploration. Whether you're a seasoned user or just getting started, our Release Notes provide a roadmap to navigate the ever-evolving landscape of our software.
+##### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :material-trending-up: **Fixed Issue**
+    
+    ---
+    As of version [24.3.7](./release-notes/etendo-classic/release-notes.md), a bug affecting dropdown selectors in dimensional reports has been fixed. In environments running Etendo 24.3.6 or earlier, the first record in combo boxes was displayed incorrectly, showing a concatenation of all values instead of the correct individual value. This issue was caused by improper handling of `<option>` tags in HTML.
+
+    The bug has been resolved in 24.3.7, and Etendo 24.4.0 or later was not affected, as the refactor to fix the issue was already included in that version. 
+    
+    *See more details in Issue [#629](https://github.com/etendosoftware/etendo_core/issues/629)*.
+
+</div>
+
+#### February 2025
+
+##### Etendo ISO
+
+<div class="grid cards" markdown>
+
+- :material-trending-up: **Optimizations**
+    
+    ---
+    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the Etendo ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+
+</div>
+
+##### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Now, you can clone agents in one click**
+
+    ---
+
+    ![copilot-clone.png](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot-clone.png)
+    
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the functionality to [clone agents](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md#buttons) and knowledge bases is added, allowing you to modify and customize the agents' wizards according to your needs.
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   :material-robot: **Improvements in agent knowledge bases**
+
+    --- 
+
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new capabilities are added:
+
+    ![knowledge-base-files-news.png](https://docs.etendo.software/latest/assets/whats-new/etendo-news/knowledge-base-files-news.png)
+
+    For more info visit [Knowledge Base File](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md#knowledge-base-file-window) windows documentation.
+
+</div>
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Enhanced asset management with accounting dimensions**
+
+    ---
+
+    ![dimension.png](https://docs.etendo.software/latest/assets/whats-new/etendo-news/financial-dimension.png)
+
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+
+- :octicons-package-16: **Gain better control with the Not Posted Documents window**
+
+    ---
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/financial-not-posted.png)
+
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
+
+    Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
+
+</div>
+
+
+#### January 2025
+
+##### Copilot Extensions 
+
+<div class="grid cards" markdown>
+
+- :material-robot: **You can now use multiple files in conversations with an agent**
+
+    ---
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/attach-multiple-files-copilot.png)
+
+    In version [1.10.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new functionalities have been added:
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   :material-robot: **[Upload multiple files](https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started.md#attach-files)**
+    
+    ---
+    
+    It is now possible to attach multiple files at once in Etendo Copilot, optimizing document management and improving the user experience.
+
+-   :octicons-package-16: **Automatic permissions management**
+    
+    ---
+
+    When creating a new agent, the necessary permissions will be automatically generated for its execution in the current role, reducing friction in the configuration.
+
+-   :octicons-package-16: **Optimized visualization**
+    
+    ---
+    
+    The agent window now shows the module to which each agent belongs, improving organization and navigation.
+
+-  :material-tools: **Tool Pack: New tool to read Excel and CSV files** 
+    
+    ---
+    
+    [XLS Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xls-tool.md) has been added in the available Tools, allowing agents to read and process data directly from Excel or CSV files, facilitating automation and integration of structured information.
+
+</div>
+
+
+#### December 2024
+
+##### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Classic Release Available!**
+
+    Version [24.4.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
+- **The document completion process allows the use of Credit Payment as a payment method again.** 
+
+    From now on, the completion is again one record at a time and is added to the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) button by installing the Essential Extensions bundle.
+
+</div>
+
+##### Essentials Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Managing documents has never been so fast and easy**
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/bulk-completion.png)
+    
+    In version [1.7.0](./release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) of the Essentials Extensions bundle, you can effortlessly manage multiple records with the [Bulk Completion](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md) feature. Select the records you want to complete, reactivate, or close, and process them all at once with a single click.
+</div>
+
+
+##### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **More accurate automatic stock reservation**
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/automatic-warehouse-reservation.png)
+
+    In version [1.10.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, with the [Automatic Warehouse Reservation](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module the stock reservations can be limited only to the warehouse specified in the order header. This way you can ensure that your orders always use the right warehouse.
+</div>
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Automated remittances: Simplify remittance management by automating the settlement and protest process.**
+
+    ---
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/automated-remittances.png)
+
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Automated remittances](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md) module, when processing remittances, bank instructions are created and automatically settled with the current date. 
+
+    The Protest Remittance button has also been added, making it possible to return receipts in collection remittances from a single place.
+
+- :octicons-package-16: **Bank account and payment management allows for more automation**
+    
+    --- 
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/advanced-bank-account.png )
+
+    In version [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Advanced Bank Account Management](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md) module, added the possibility to set a default bank account in the busines partner configuration, as well as to define bank accounts for each location. 
+    The possibility to select the bank account when adding payments and even edit payment plans with the Modify Payment button has also been added.
+</div>
+
+##### Copilot Extensions 
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot allows the use of multiple AI models from different suppliers.**
+    
+    ---
+
+    In version [1.9.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Multi-Model Assistant type was added, this agents extends the `Langchain` type with the particularity that it can be used with models from various suppliers such as Anthropic or Gemini, in addition to the existing OpenAI models.
+    In addition, the AI Models window was added where the user can manage the models to be used by the different agents.
+</div>
+
+#### November 2024
+
+##### Copilot Extensions
+
+:material-robot: **New Etendo Copilot Release Available!**
+
+New Copilot Extensions bundle version [1.8.0](./release-notes/etendo-copilot/bundles/release-notes.md) 
+
+<div class="grid cards" markdown>
+-  **Improve your Python Tools development with the Code Run assistant**
+
+    ---
+    The [Code Run](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) assistant combined with the [Docker Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
+
+    Equipped with advanced capabilities, the assistant prioritizes Python for troubleshooting, manages library installations dynamically, integrates Bash commands for flexible operations and handles file processing with precision. Whether you are troubleshooting, automating tasks or testing scripts, this tool ensures efficiency and security. Transform your development workflow with this powerful addition to Etendo.
+</div>
+
+#### October 2024
+
+##### Copilot Extensions
+
+:material-robot: **New Etendo Copilot Release Available!**
+
+New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
+
+<div class="grid cards" markdown>
+-  **Boost Your Development Workflow with the New Dev Assistant!**
+
+    ---
+    The [Dev Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo Classic. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
+
+    This assistants are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
+</div>
+
+<div class="grid cards" markdown>
+-  **Copilot in Mobile: Try Copilot on Your Mobile Devices and Tablets!**
+
+    ---
+    The new [Etendo Copilot sub-application](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) enables you to interact with AI-powered assistants from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
+
+</div>
+
+##### Dependency Manager
+:octicons-package-16: **Managing Etendo modules and dependencies has never been so easy**
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/devassistant.png)
+
+The [Dependency Manager](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
+
+
+#### September 2024
+
+##### Etendo Classic
+
+:octicons-rocket-24: **New Etendo Classic Release Available!**
+
+Version [24.3.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+
+
+##### Copilot Extensions
+
+:material-robot: **New Etendo Copilot Release Available!**
+
+New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
+
+<div class="grid cards" markdown>
+- **New Feature Update: Zip File Support for LangChain Assistants**
+    
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/LangChain.png)
+
+    We are excited to announce a new functionality in LangChain assistants: the ability to upload .zip files directly into the knowledge base! These .zip files can contain a variety of file formats, including .txt, .pdf, .md, .py, .java, and .js.
+    This enhancement allows developers to train assistants with example source code.
+    Boost your assistant’s capabilities with this powerful new feature!
+
+</div>
+
+#### August 2024
+
+##### Copilot Extensions
+
+[:material-robot: **New Etendo Copilot Release Available!**](https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot.png)
+
+The newest version [1.4.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
+
+<div class="grid cards" markdown>
+
+-   **New Capabilities:**
+    
+    ---
+    - **Database Queries:** Use system database queries as knowledge bases to automate tasks under specific conditions.
+    -  **Copilot Stream:** Track in real-time which assistant or tool is working.
+    -  **Improved UX:** The chat now retains the last assistant used for seamless interaction.
+
+-   **Assistants Updates:**
+    
+    ---
+    -  **Langchain Assistants:** Now manage local knowledge bases, keeping your data secure.
+    -  **LangGraph Assistants:** Manage a team of assistants, delegating tasks efficiently. 
+     
+</div>
+
+These updates make Etendo Copilot more powerful, secure, and user-friendly, driving efficiency to new heights.
+
+
+##### Platform Extensions
+
+
+
+[:simple-docker: **Docker Management**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/docker.gif){align=right width=400}
+
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
+- This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
+- PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
+
+[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md)
+
+- In version [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
+- With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
+
+
+
+##### Warehouse Extensions
+[:octicons-package-16: **Product Operations**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+
+![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/product-operation.png)
+
+In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
+
+
+#### July 2024
+
+##### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+-   [:material-tools: **Tool Pack**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview.md)
+
+    ---
+    
+    The Tool Pack module, available from version [1.3.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
+
+-   [:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+
+    ---
+
+    From version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
+
+-   [:material-robot: **Purchase Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+    
+    ---   
+
+    As of version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
+
+-   [:material-robot: **Dev Assistant**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md)
+
+    ---
+
+    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Reference Creator](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md#reference-creator) assistant was included, capable of creating list type references to be used in the development process.
+
+</div>
+
+:material-bug: **Fixed Issues**
+
+In version [1.2.1](./release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
+
+##### Financial Extensions
+
+[:octicons-package-16: **VAT Regularization**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization)
+
+In version [1.16.1](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
 
 ---
 
-<figure markdown>
-![release-cycle.png](https://docs.etendo.software/latest/assets/whats-new/overview/release-cycle.png){align=right width=400}
-<br><br>
-##### In this section you can learn about Etendo's life cycle, when updates are released and valuable information to keep you up to date with our news.
-</figure>
+#### June 2024
 
+##### Etendo Classic
+
+:octicons-rocket-24: **New Release Available!**
+
+Etendo Classic version [24.2.0](./release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
+
+:material-bug: **Fixed Issues**
+
+In version [24.1.8](./release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
+
+##### Copilot Extensions
+
+:material-trending-up: **Optimizations**
+
+Starting with version [1.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
+
+##### Financial Extensions
+
+[:octicons-package-16: **G/L Journal Clone**](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
+
+Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 
 ---
 
-<figure markdown>
-![roadmap.png](https://docs.etendo.software/latest/assets/whats-new/overview/roadmap.png){align=left width=400}
-<br><br>
-##### Get to know about our current projects, their  status and future ideas and projects.                                            
-</figure>
+#### May 2024
+
+##### Copilot Extensions
+
+[:material-robot: **SQL Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md)
+
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
+With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
 
 ---
 
-<figure markdown>
-![release-notes.png](https://docs.etendo.software/latest/assets/whats-new/overview/release-notes.png){align=right width=400}
-<br><br>
+#### April 2024
 
-##### In this section, you will find a concise summary of the latest updates and improvements, bug fixes and news introduced in our latest releases for each of our products
+##### Copilot Extensions
 
-</figure>
+[:material-robot: **Purchase Expert Assistant**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
+Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
+
+##### Spanish Localization
+
+:material-trending-up: **Optimizations**
+
+As of version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
+
+To take advantage of these enhancements, when upgrading to version [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
+
+---
+
+#### March 2024
+
+##### Etendo Classic
+
+:material-trending-up: **Optimizations**
+
+As of version [24.1.0](./release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
+
+##### Copilot Extensions
+
+[:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+
+In the version [1.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
+With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
+
+##### Procurement Extensions
+
+[:octicons-package-16: **Purchase Invoice Validation**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
+
+In the version [1.0.0](./release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
+
+##### Platform Extensions
+
+:material-trending-up: **Optimizations**
+
+As of version [1.13.2](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Release Cycle
@@ -51492,273 +54537,6 @@ Article URL: https://etendo.software
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: ✨ Etendo News
-## Article Path: /What's New/Release Notes/✨ Etendo News
-## Article URL: 
- https://docs.etendo.software/latest/whats-new/release-notes/etendo-news
-## Article Content: 
-
-#### November 2024
-
-##### Copilot Extensions
-
-:material-robot: **New Etendo Copilot Release Available!**
-
-New Copilot Extensions bundle version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) 
-
-<div class="grid cards" markdown>
--  **Improve your Python Tools development with the Code Run assistant**
-
-    ---
-    The [Code Run](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) assistant combined with the [Docker Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
-
-    Equipped with advanced capabilities, the assistant prioritizes Python for troubleshooting, manages library installations dynamically, integrates Bash commands for flexible operations and handles file processing with precision. Whether you are troubleshooting, automating tasks or testing scripts, this tool ensures efficiency and security. Transform your development workflow with this powerful addition to Etendo.
-</div>
-
-#### October 2024
-
-##### Copilot Extensions
-
-:material-robot: **New Etendo Copilot Release Available!**
-
-New Copilot Extensions bundle version [1.7.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
-
-<div class="grid cards" markdown>
--  **Boost Your Development Workflow with the New Dev Assistant!**
-
-    ---
-    The [Dev Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo Classic. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
-
-    This assistants are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
-</div>
-
-<div class="grid cards" markdown>
--  **Copilot in Mobile: Try Copilot on Your Mobile Devices and Tablets!**
-
-    ---
-    The new [Etendo Copilot sub-application](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) enables you to interact with AI-powered assistants from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
-
-</div>
-
-##### Dependency Manager
-:octicons-package-16: **Managing Etendo modules and dependencies has never been so easy**
-![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/devassistant.png)
-
-The [Dependency Manager](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
-
-
-#### September 2024
-
-##### Etendo Classic
-
-:octicons-rocket-24: **New Etendo Classic Release Available!**
-
-Version [24.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
-
-
-##### Copilot Extensions
-
-:material-robot: **New Etendo Copilot Release Available!**
-
-New Copilot Extensions bundle version [1.5.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md)  
-
-<div class="grid cards" markdown>
-- **New Feature Update: Zip File Support for LangChain Assistants**
-    
-    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/LangChain.png)
-
-    We are excited to announce a new functionality in LangChain assistants: the ability to upload .zip files directly into the knowledge base! These .zip files can contain a variety of file formats, including .txt, .pdf, .md, .py, .java, and .js.
-    This enhancement allows developers to train assistants with example source code.
-    Boost your assistant’s capabilities with this powerful new feature!
-
-</div>
-
-#### August 2024
-
-##### Copilot Extensions
-
-[:material-robot: **New Etendo Copilot Release Available!**](https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started.md): Boost Your Productivity
-
-![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot.png)
-
-The newest version [1.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle brings the following key enhancements in Etendo Copilot:
-
-<div class="grid cards" markdown>
-
--   **New Capabilities:**
-    
-    ---
-    - **Database Queries:** Use system database queries as knowledge bases to automate tasks under specific conditions.
-    -  **Copilot Stream:** Track in real-time which assistant or tool is working.
-    -  **Improved UX:** The chat now retains the last assistant used for seamless interaction.
-
--   **Assistants Updates:**
-    
-    ---
-    -  **Langchain Assistants:** Now manage local knowledge bases, keeping your data secure.
-    -  **LangGraph Assistants:** Manage a team of assistants, delegating tasks efficiently. 
-     
-</div>
-
-These updates make Etendo Copilot more powerful, secure, and user-friendly, driving efficiency to new heights.
-
-
-##### Platform Extensions
-
-
-
-[:simple-docker: **Docker Management**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md)
-
-![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/docker.gif){align=right width=400}
-
-- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Docker Management** module has been introduced.
-- This module simplifies the deployment of services by allowing you to configure the entire infrastructure your service requires using Etendo modules.
-- PostgreSQL Database Service is included in the module, making service installation faster and easier than ever.
-
-[:simple-apachetomcat: **Tomcat Dockerized Service**](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md)
-
-- In version [1.18.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the new **Tomcat Dockerized Service** module has been introduced, which simplifies the installation of Etendo on any server.
-- With this module, setting up Etendo becomes a quick and straightforward process, removing the complexities typically associated with server configuration. 
-
-
-
-##### Warehouse Extensions
-[:octicons-package-16: **Product Operations**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
-
-![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/product-operation.png)
-
-In the version [1.8.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Product Operations** functionality has been included. This module allows you to centralize and control all your product movements with Products Operations. View every transaction, from shipments and receipts to costs and location, in one place. Simplify analysis and get a clear view of your operations' performance.
-
-
-#### July 2024
-
-##### Copilot Extensions
-
-<div class="grid cards" markdown>
-
--   [:material-tools: **Tool Pack**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview.md)
-
-    ---
-    
-    The Tool Pack module, available from version [1.3.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
-
--   [:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
-
-    ---
-
-    From version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
-
--   [:material-robot: **Purchase Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
-    
-    ---   
-
-    As of version [1.3.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot bundle, the [Attach File tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/attach-file-tool.md) was included, a tool capable of adding attachments to any record in Etendo.
-
--   [:material-robot: **Dev Assistant**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/bundles/dev-assistant.md)
-
-    ---
-
-    From version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Create Reference Assistant](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/create-reference-tool.md) was included, capable of creating list type references to be used in the development process.
-
-</div>
-
-:material-bug: **Fixed Issues**
-
-In version [1.2.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md), Issue [#5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/issues/5){target="_blank"} which caused incorrect rendering of line breaks in code blocks, has been resolved.
-
-##### Financial Extensions
-
-[:octicons-package-16: **VAT Regularization**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization)
-
-In version [1.16.1](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the [VAT Regularization](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization) module has been included, which allows you to **easily adjust the accounts** to ensure that the **VAT balance is adjusted**.
-
----
-
-#### June 2024
-
-##### Etendo Classic
-
-:octicons-rocket-24: **New Release Available!**
-
-Etendo Classic version [24.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
-
-:material-bug: **Fixed Issues**
-
-In version [24.1.8](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), Issue [#270](https://github.com/etendosoftware/etendo_core/issues/270){target="_blank"}, which caused **unexpected execution of callouts** in the **Sales Order** window, has been resolved.
-
-##### Copilot Extensions
-
-:material-trending-up: **Optimizations**
-
-Starting with version [1.2.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of this package, bugs have been fixed and stability improvements have been made to Copilot. This update also introduces visual improvements to the chat by making it possible to enter **text on more than one line**.
-
-##### Financial Extensions
-
-[:octicons-package-16: **G/L Journal Clone**](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
-
-Starting with version [1.15.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
-
----
-
-#### May 2024
-
-##### Copilot Extensions
-
-[:material-robot: **SQL Expert**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md)
-
-In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
-With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
-
----
-
-#### April 2024
-
-##### Copilot Extensions
-
-[:material-robot: **Purchase Expert Assistant**](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
-
-In the version [1.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
-Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
-
-##### Spanish Localization
-
-:material-trending-up: **Optimizations**
-
-As of version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) of this bundle, we have simplified maintenance by replacing the `org.openbravo.util.saaj.impl` and `org.openbravo.util.javax.xml.soap` module dependencies with the new Maven dependencies [Jakarta SOAP Implementation](https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3){target="_blank"} and [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}.
-
-To take advantage of these enhancements, when upgrading to version [1.9.4](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) or higher, be sure to manually remove the old modules from the `/modules` directory so that the new build will use the new dependencies.
-
----
-
-#### March 2024
-
-##### Etendo Classic
-
-:material-trending-up: **Optimizations**
-
-As of version [24.1.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md), the support for [Tomcat 9](https://tomcat.apache.org/download-90.cgi){target="_blank"} has been updated.
-
-##### Copilot Extensions
-
-[:material-tools: **OCR Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md)
-
-In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the OCR Tool has been included.
-With this tool designed for **optical character recognition**, you will be able to extract text from images or PDF files.
-
-##### Procurement Extensions
-
-[:octicons-package-16: **Purchase Invoice Validation**](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
-
-In the version [1.0.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md) of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to **avoid the duplication of purchase invoices** through established rules and automatic validations.
-
-##### Platform Extensions
-
-:material-trending-up: **Optimizations**
-
-As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of this bundle, the module dependency `org.openbravo.util.javax.xml.soap` has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the Maven dependency [Jakarta SOAP with Attachments API](https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2){target="_blank"}
-
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: Release Notes
 ## Article Path: /What's New/Release Notes/Etendo Classic/Release Notes
 ## Article URL: 
@@ -51770,14 +54548,23 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q3.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.6){target="_blank"} | 13/12/2024 | 24.3.6 | QAA |  | :white_check_mark: |
+| [24Q4.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.7){target="_blank"} | 07/03/2025 | 24.4.7 | QAA |  | :white_check_mark: |
+| [24Q4.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.6){target="_blank"} | 28/02/2025 | 24.4.6 | C |  | :white_check_mark: |
+| [24Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.5){target="_blank"} | 21/02/2025 | 24.4.5 | C |  | :white_check_mark: |
+| [24Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.4){target="_blank"} | 14/02/2025 | 24.4.4 | C |  | :white_check_mark: |
+| [24Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.3){target="_blank"} | 30/01/2025 | 24.4.3 | C | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) | :white_check_mark: |
+| [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | C |  | :white_check_mark: |
+| [24Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.1){target="_blank"} | 17/01/2025 | 24.4.1 | C |  | :white_check_mark: |
+| [24Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.0){target="_blank"} | 19/12/2024 | 24.4.0 | C | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso){target="_blank"} | :white_check_mark: |
+| [24Q3.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.7){target="_blank"} | 07/03/2025 | 24.3.7 | CS |  | :white_check_mark: |
+| [24Q3.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.6){target="_blank"} | 13/12/2024 | 24.3.6 | C |  | :white_check_mark: |
 | [24Q3.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.5){target="_blank"} | 06/12/2024 | 24.3.5 | C |  | :white_check_mark: |
 | [24Q3.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.4){target="_blank"} | 29/11/2024 | 24.3.4 | C |  | :white_check_mark: |
 | [24Q3.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.3){target="_blank"} | 12/11/2024 | 24.3.3 | C |  | :white_check_mark: |
 | [24Q3.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.2){target="_blank"} | 02/11/2024 | 24.3.2 | C |  | :white_check_mark: |
 | [24Q3.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.1){target="_blank"} | 10/10/2024 | 24.3.1 | C |  | :white_check_mark: |
 | [24Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.0){target="_blank"} | 30/09/2024 | 24.3.0 | C | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso){target="_blank"} | :white_check_mark: |
-| [24Q2.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.8){target="_blank"} | 27/09/2024 | 24.2.8 | CS |  | :white_check_mark: |
+| [24Q2.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.8){target="_blank"} | 27/09/2024 | 24.2.8 | C |  | :white_check_mark: |
 | [24Q2.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.7){target="_blank"} | 20/09/2024 | 24.2.7 | C |  | :white_check_mark: |
 | [24Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.6){target="_blank"} | 23/08/2024 | 24.2.6 | C |  | :white_check_mark: |
 | [24Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.2.5){target="_blank"} | 09/08/2024 | 24.2.5 | C |  | :white_check_mark: |
@@ -51883,8 +54670,9 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | Status | GitHub |
 | --- | --- | :---: | :---: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.0) | 06/03/2024 | CS | :white_check_mark: |
-| [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.0.0) | 19/12/2022 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.1) | 23/01/2025 | CS | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.0) | 06/03/2024 | C  | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.0.0) | 19/12/2022 | C  | |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -51897,7 +54685,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.6.1](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.7.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.6.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.5.0){target="_blank"} | 28/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -51916,7 +54705,12 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.5.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.5.1){target="_blank"} | 29/11/2024 | 23.2.0 | 24.3.x | CS | :white_check_mark: |
+| [2.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.10.0){target="_blank"} | 26/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.8.0){target="_blank"} | 23/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.7.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.7.0){target="_blank"} | 08/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.6.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.5.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.5.1){target="_blank"} | 29/11/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [2.5.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.5.0){target="_blank"} | 08/11/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [2.5.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.5.0){target="_blank"} | 08/11/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [2.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.4.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
@@ -51966,7 +54760,12 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.9.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.9.0){target="_blank"} | 01/10/2024 | 21.4.0 | 24.3.x | CS | :white_check_mark: |
+| [1.10.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.1){target="_blank"} | 28/02/2025 | 24.4.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.9.0){target="_blank"} | 01/10/2024 | 21.4.0 | 24.3.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.8.0){target="_blank"} | 02/08/2024 | 21.4.0 | 24.2.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.7.0){target="_blank"} | 29/06/2024 | 21.4.0 | 24.2.x | C | :white_check_mark: |
 | [1.6.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.1){target="_blank"} | 17/05/2024 | 21.4.0 | 24.1.x | C | :white_check_mark: |
@@ -51991,7 +54790,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.8.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.9.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.8.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.7.0){target="_blank"} | 28/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.6.0){target="_blank"} | 29/03/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
@@ -52011,7 +54811,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.10.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.10.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.11.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.11.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.10.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.9.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.2){target="_blank"} | 30/08/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.9.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.1){target="_blank"} | 26/07/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.9.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
@@ -52044,7 +54845,13 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.20.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.20.0){target="_blank"} | 06/12/2024 | 23.1.4 | 24.3.x | CS | :white_check_mark: |
+| [1.23.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.1){target="_blank"} | 07/03/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.23.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.0){target="_blank"} | 28/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.22.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.22.0){target="_blank"} | 07/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.21.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.2){target="_blank"} | 24/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.21.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.1){target="_blank"} | 17/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.21.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.0){target="_blank"} | 21/12/2024 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.20.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.20.0){target="_blank"} | 06/12/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
 | [1.19.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.19.0){target="_blank"} | 12/11/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
 | [1.18.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.18.1){target="_blank"} | 04/10/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
 | [1.18.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.18.0){target="_blank"} | 01/10/2024 | 23.1.4 | 24.3.x | C | :white_check_mark: |
@@ -52102,7 +54909,12 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.21.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.1){target="_blank"} | 14/11/2024 | 22.4.3 | 24.3.x | CS | :white_check_mark: |
+| [1.26.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.26.0){target="_blank"} | 10/02/2025 | 22.4.3 | 24.4.x | CS | :white_check_mark: |
+| [1.25.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.25.0){target="_blank"} | 30/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
+| [1.24.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.24.0){target="_blank"} | 20/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
+| [1.23.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.23.0){target="_blank"} | 07/01/2025 | 22.4.3 | 24.4.x | C | :white_check_mark: |
+| [1.22.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.22.0){target="_blank"} | 20/12/2024 | 22.4.3 | 24.4.x | C | :white_check_mark: |
+| [1.21.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.1){target="_blank"} | 14/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.21.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.21.0){target="_blank"} | 06/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.20.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.20.1){target="_blank"} | 01/11/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
 | [1.20.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.20.0){target="_blank"} | 24/10/2024 | 22.4.3 | 24.3.x | C | :white_check_mark: |
@@ -52153,7 +54965,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.3.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.4.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.3.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.2.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.1.2](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.2){target="_blank"} | 14/06/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.1.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.1.1){target="_blank"} | 31/05/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -52161,8 +54974,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | 22.1.0 | 24.1.0 | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo BI Bundle
-## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Etendo BI Bundle
+# Article Title: Etendo BI Extensions Bundle
+## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Etendo BI Extensions Bundle
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes
 ## Article Content: 
@@ -52170,7 +54983,9 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.6.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | CS | :white_check_mark: |
+| [1.7.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.7.1){target="_blank"} | 17/01/2025 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.7.0){target="_blank"} | 20/12/2024 | 22.1.0 | 24.4.x | C | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.6.1){target="_blank"} | 01/11/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.6.0){target="_blank"} | 01/10/2024 | 22.1.0 | 24.3.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.5.0){target="_blank"} | 29/06/2024 | 22.1.0 | 24.2.x | C | :white_check_mark: |
 | [1.4.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.1){target="_blank"} | 10/05/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
@@ -52282,8 +55097,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | [1.0.0, latest] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo BI Bundle ES
-## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Etendo BI Bundle ES
+# Article Title: Etendo BI Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Etendo BI Extensions Bundle ES
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes
 ## Article Content: 
@@ -52305,6 +55120,8 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [24.4.3](#2443) | 10/02/2025 | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) |
+| [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
 | [24.2.0](#2420) | 28/06/2024 | [24Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q2.0.iso) |
 | [24.1.4](#2414) | 03/05/2024 | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso) |
@@ -52315,6 +55132,15 @@ As of version [1.13.2](https://docs.etendo.software/latest/whats-new/release-not
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
+#### 24.4.3
+New ISO with Etendo Classsic version 24.4.3
+
+**Fixed**
+    - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
+
+#### 24.4.0
+New ISO with Etendo Classsic version 24.4.0
+
 #### 24.3.0
 New ISO with Etendo Classsic version 24.3.0
 
@@ -52323,13 +55149,15 @@ New ISO with Etendo Classsic version 24.2.0
 
 #### 24.1.4
 New ISO with Etendo Classsic version 24.1.4
-##### Fixed
- - [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
+
+**Fixed**
+    - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 #### 24.1.0
 New ISO with Etendo Classsic version 24.1.0
-##### Changes
- - Upgrade Tomcat version to 9.0.87
+
+**Changes**
+    - Upgrade Tomcat version to 9.0.87
 
 #### 23.4.0
 New ISO with Etendo Classsic version 23.4.0
@@ -52343,8 +55171,8 @@ New ISO with Etendo Classsic version 23.2.0
 #### 23.1.0
 New ISO with Etendo Classsic version 23.1.0
 
-#### 22.4.5 ✨
-First ISO version with Etendo Classsic version 23.4.0
+#### 22.4.5
+First ISO version with Etendo Classsic version 22.4.5 :sparkles:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Known Issues
@@ -52512,16 +55340,19 @@ This page displays the known issues reported by the support team.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo Classic Subapp Extensions
-## Article Path: /What's New/Release Notes/Etendo Mobile/Bundles/Etendo Classic Subapp Extensions
+# Article Title: Etendo Mobile Extensions
+## Article Path: /What's New/Release Notes/Etendo Mobile/Bundles/Etendo Mobile Extensions
 ## Article URL: 
- https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes
 ## Article Content: 
 #### Overview
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.0){target="_blank"} | 06/03/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.9.0){target="_blank"} | 15/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.8.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.6.0){target="_blank"} | 02/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.5.0){target="_blank"} | 29/06/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
@@ -52540,7 +55371,12 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.8.4](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.4){target="_blank"} | 13/12/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.12.0){target="_blank"} | 07/03/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.11.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.11.0){target="_blank"} | 14/02/2025 | 23.4.0 | * | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.10.0){target="_blank"} | 23/01/2025 | 23.4.0 | * | C | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.1){target="_blank"} | 10/01/2025 | 23.4.0 | * | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.0){target="_blank"} | 20/12/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.8.4](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.4){target="_blank"} | 13/12/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.1){target="_blank"} | 15/11/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.8.0){target="_blank"} | 08/11/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.7.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.7.2){target="_blank"} | 29/10/2024 | 23.4.0 | * | C | :white_check_mark: |
@@ -52593,9 +55429,9 @@ Step into a world of exploration using either Postgres or Oracle as database man
 
 This page holds live testing instances. These live builds are updated and reset once per day at 03:30 UTC.
 
-[ :simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
+[ :simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
 
-[:simple-esbuild: Etendo 24.3.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+[:simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 ??? warning "Oracle"
     If you need to test on Oracle, please feel free to [contact us](https://docs.etendo.software/latest/help-and-support/overview.md).
@@ -52647,7 +55483,6 @@ Here, the user can ask questions or send information in these sections:
 !!! info
         For commercial information, visit the [Get in Touch section](https://etendo.software/get-in-touch/){target="_blank"} in the Etendo website.
 
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to report bugs
@@ -52655,7 +55490,7 @@ Here, the user can ask questions or send information in these sections:
 ## Article URL: 
  https://docs.etendo.software/latest/help-and-support/how-to-report-bugs
 ## Article Content: 
-##### Template to report bugs
+#### Template to report bugs
 
 !!! warning
     *This structure should always be respected to report a bug in [Etendo service desk](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*

@@ -1,9 +1,10 @@
 ---
-
 tags:
     - Etendo Mobile
     - React-Native
-    - Subapp
+    - Subapp Development
+    - Environment Setup
+    - Infrastructure
 ---
 
 # Etendo Mobile

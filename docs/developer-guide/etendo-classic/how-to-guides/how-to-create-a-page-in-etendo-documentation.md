@@ -1,10 +1,10 @@
 ---
 tags: 
-  - Etendo
-  - documentation
-  - documentation page
-  - style
-  - format
+  - How to
+  - Create Page
+  - Documentation Page
+  - Style
+  - Format
 ---
 
 # How to Create a Page in Etendo Documentation

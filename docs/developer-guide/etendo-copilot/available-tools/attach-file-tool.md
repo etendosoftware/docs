@@ -1,9 +1,10 @@
 ---
 tags:
-    - Copilot
-    - IA
     - Tool
-    - Attach file
+    - Etendo Copilot
+    - File Upload
+    - Webhook Integration
+    - Base64 Encoding
 ---
 
 # Attach File Tool

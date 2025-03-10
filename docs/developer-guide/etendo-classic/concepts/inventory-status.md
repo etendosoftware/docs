@@ -1,5 +1,11 @@
 ---
 title: Inventory Status
+tags:
+    - Concepts
+    - Inventory Management
+    - Inventory Status
+    - Stock Control
+    - Warehouse Operations
 ---
 ## Overview
 
@@ -17,7 +23,7 @@ By default, all the Bins will be in an undefined Inventory Status. There are two
 The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. 
 
 !!! info
-        For more information, visit the [Allow Negative Stock user guide](../../../user-guide/etendo-classic/basic-features/general-setup/client.md).
+    For more information, visit the [Allow Negative Stock user guide](../../../user-guide/etendo-classic/basic-features/general-setup/client.md).
 
 ## Functionality
 

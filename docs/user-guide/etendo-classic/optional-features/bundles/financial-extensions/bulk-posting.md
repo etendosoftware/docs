@@ -1,11 +1,8 @@
 ---
 tags:
-- bulk posting
-- accounting
-- setup
-- financial
-- extensions
-- bundle
+- Bulk Posting
+- Accounting
+- Financial
 ---
 
 # Bulk Posting
@@ -23,6 +20,8 @@ This section describes the Bulk Posting module included in the Etendo Financial 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 ![](../../../../../assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
+
+## Available Windows
 
 This functionality is available in the following windows:
 
@@ -48,8 +47,7 @@ This functionality is available in the following windows:
 - [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
 - [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#bulk-posting)
 
-
-### Accounting Status
+### Accounting Status Column
 
 All the records existing previously to the installation of this new functionality have a default **pending refresh** value in the column **Accounting Status**. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
 
@@ -62,3 +60,10 @@ To configure the preference, go to the **Preference** window and create a new re
 It is necessary to run the **Days Back to Refresh Accounting** background process to update the accounting status column.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
+
+## Not Posted Documents Window
+
+The Bulk Posting module includes the Not Posted Documents functionality. This is used to find all the not posted documents in the same window and to post them massively.
+
+!!!info
+    For more information, visit [Not Posted Documents](../../../basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.

@@ -1,5 +1,10 @@
 ---
 title: Localización Española
+tags:
+    - Localización Española   
+    - Características de Etendo
+    - Requisitos fiscales
+    - Legislación española
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.localization.spain.extensions`
 

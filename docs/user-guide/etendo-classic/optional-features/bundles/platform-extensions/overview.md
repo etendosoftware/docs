@@ -1,6 +1,13 @@
 ---
 title: Platform Extensions Bundle
+tags:
+    - Etendo Platform
+    - Extension Bundle
+    - Docker Management
+    - Advanced Security
+    - Webhook Events
 ---
+
 :octicons-package-16: Javapackage: `com.etendoerp.platform.extensions`
 
 :material-store: Etendo Marketplace:  [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}
@@ -135,4 +142,4 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
+    For more information, visit the [Webhook Events developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).  

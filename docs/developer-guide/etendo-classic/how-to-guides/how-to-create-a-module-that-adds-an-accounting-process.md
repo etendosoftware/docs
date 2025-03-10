@@ -1,5 +1,9 @@
 ---
 title: How to Create a Module that Adds an Accounting Process
+tags: 
+    - How to
+    - Accounting Process
+    - Module
 ---
 ## Introduction
 
