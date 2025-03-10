@@ -111,3 +111,61 @@ When asked something, Copilot informs the user about the assistants and tools us
 
 !!!note
     When closed and opened again, by default, Copilot will select the last assistant previously used.
+
+## Copilot Toolbar and Context Handling
+---
+
+One of the most convenient ways to access Etendo Copilot is through the dedicated **Copilot** button located in the **Etendo Classic toolbar**. This button appears only when the Copilot module is installed and provides direct access to AI-driven assistance.
+
+![Copilot Toolbar Button](../../assets/user-guide/etendo-copilot/getting-started/copilot-button-toolbar.png)
+
+<br clear="all">
+
+### Visibility & Activation
+
+- **Module-Driven Appearance**  
+  The toolbar button is automatically displayed when the Copilot module is installed and active. If the module is disabled or removed, the button disappears to keep the user interface uncluttered.
+
+- **Instant Access**  
+  Clicking the **Copilot** button opens the Copilot window (pop-up or sidebar), allowing you to start a conversation or attach files right away. If you minimize or close Copilot, clicking the button again will reopen it with your session intact.
+
+### Context Awareness
+
+Etendo Copilot can leverage context from the currently active window or record in Etendo Classic. Whenever you click the toolbar button:
+
+1. **Form Context**: If you have a form open (e.g., a Sales Order or a Customer record), Copilot automatically retrieves the key fields and any unsaved edits, giving you real-time suggestions or validations.
+
+2. **List/Grid Context**: When a row is selected in a grid or a list, Copilot captures that specific record’s details—such as record ID, status, or customer name—so you can receive relevant AI-based advice.
+
+3. **Tab & Window Context**: In multi-tab environments, Etendo Copilot identifies which tab or window is currently active. This means that if you switch from one view to another (e.g., from Orders to Products), Copilot updates its internal context accordingly.
+
+### Typical Scenarios
+
+- **Editing a Record**  
+  You are modifying fields in a Sales Order but haven’t yet saved changes. By clicking the Copilot button, any unsaved edits are still captured, allowing Copilot to validate or suggest improvements before you formally save the record.
+
+- **Navigating Between Records**  
+  If you move from one Customer record to another, each time you click the Copilot button, the new record’s data is automatically sent, ensuring context-based suggestions are always up to date.
+
+- **Multiple Windows  
+  In cases where you have multiple Etendo windows or tabs open, Copilot focuses on the one you clicked the toolbar button in. This prevents confusion and ensures that only the relevant data is sent for analysis or advice.
+
+**Example Usage: Asking Copilot About a Role**
+
+When you open the **Role** window in Etendo, select a record, and click the Copilot button, the system automatically captures the active record context. In this example, the **F&B International Group Admin** role is selected (as shown in the background). Once Copilot opens, you can type a prompt directly in the chat window.
+
+![Copilot Prompt - Role](../../assets/user-guide/etendo-copilot/getting-started/copilot-role-prompt.png)
+
+### Security Considerations
+
+- **Role-Based Access**  
+  The Copilot toolbar button respects Etendo’s security framework. Only users with the correct permissions will see or be able to use this feature.
+
+- **Trustworthy Data Exchange**  
+  When Copilot is opened via the toolbar, all context data is transferred securely within Etendo’s environment. The system uses origin checks and `postMessage` filtering to ensure messages are only processed if they come from the trusted ERP domain.
+
+### Benefits of Toolbar Integration
+
+- **User-Friendly**: Instantly open Copilot from any part of the interface—no separate logins or external tabs required.
+- **Less Manual Input**: Because context is automatically gathered (form data, list selections, etc.), you save time by not having to re-describe the scenario to Copilot.
+- **Improved Accuracy**: With relevant fields and records captured at click-time, Copilot can provide more precise and context-sensitive recommendations, summarizations, or next-step guidance.
