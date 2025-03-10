@@ -29,6 +29,7 @@ Etendo Mobile _sends_ params to the subapplication and all of them are ready to 
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
     - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component includes a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
+    - _sharedFiles_: IFile array, if a file is shared to Etendo Mobile from an external application, sharing and selecting a sub-application will add the file to the file array of the corresponding sub-application.
 
 ### Language
 The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the _language_ parameter received as input to initialize the remaining aspects of the application in the `App.tsx` file.
