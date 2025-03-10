@@ -50,13 +50,13 @@ Etendo Copilot is a platform that optimises development time with AI-enabled too
     For more information, visit [Etendo Copilot user guide](../../../user-guide/etendo-copilot/setup-and-usage.md).
 
 
-### Etendo Copilot SubApp
+### Etendo Copilot Subapp
 
 :octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
 
 The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
 
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific data** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
 
 With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
 
