@@ -8517,6 +8517,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#receiving-shared-files-from-etendo-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiving Shared Files from Etendo Mobile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debug-log" class="md-nav__link">
     <span class="md-ellipsis">
       Debug Log
@@ -10128,6 +10137,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#receiving-shared-files-from-etendo-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiving Shared Files from Etendo Mobile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debug-log" class="md-nav__link">
     <span class="md-ellipsis">
       Debug Log
@@ -10740,6 +10758,18 @@ As we can see, it will be generated in the <code>/subapp/src/libs/</code> folder
 <p>Now you can view, filter, create, edit and delete products.</p>
 </li>
 </ol>
+<h2 id="receiving-shared-files-from-etendo-mobile">Receiving Shared Files from Etendo Mobile</h2>
+<p>In this section, we will explain how to receive external files from another application into <strong>Etendo Mobile</strong> using as example the sub-application <a href="../../../../user-guide/etendo-mobile/bundles/mobile-extensions/overview/#documents-manager-subapp">Documents Manager Subapp</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Ensure that the <strong>Receive External Files</strong> checkbox is set to <code>true</code> in the <strong>Dynamic App</strong> window. This is crucial for the subapplication to appear as an option when sharing external files.
+<a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/bundles/platform/dynamic-app/dynamic-app.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="configuration-docsmanager.png" src="../../../../assets/developer-guide/etendo-classic/bundles/platform/dynamic-app/dynamic-app.png" /></a></p>
+</div>
+<p>The <code>sharedFiles</code> parameter is passed to the subapplication and used to process the received files.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit the <a href="https://github.com/etendosoftware/com.etendoerp.subapp.docsmanager" target="“_blank”">Documents Manager Subapp</a> repository. There you will find an example su-application, and the explanation of how to implement the file sharing functionality in your own app. </p>
+</div>
 <h2 id="debug-log">Debug Log</h2>
 <p>This section explains how to log data in a sub-application using the <code>logger</code> utility function. To log any information, call the <code>logger</code> function with a key and a value:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">logger</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="p">);</span>
