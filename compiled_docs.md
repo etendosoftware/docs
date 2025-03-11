@@ -29475,9 +29475,6 @@ Above scenario would somehow mean an expense in Organization A and a revenue in 
 
 Etendo Mobile is a **mobile app** in which the user can access to sub-applications via mobile devices in a fast and practical way. By enabling seamless integration between Etendo Classic and mobile sub-applications, Etendo Mobile allows users to log in to Etendo Classic and configure **dynamic applications** tailored to specific user roles, enhancing productivity and efficiency.
 
-!!!info
-    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
-
 
 Etendo Mobile is available in both Play and App Store:
 
@@ -29495,8 +29492,9 @@ Etendo Mobile is available in both Play and App Store:
     
 
 #### Initial Configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
 
-In order to use the app, the user must access Etendo Classic in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself. So, as System Administrator role, generate a token by clicking on the **generate key** button, this token is used to start the session in the app.
+In order to use the Etendo Mobile app, the user must access Etendo Classic as `System Administrator` role in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself and generate a token by clicking on the **Generate Key** button, this token is used to start the session in the app.
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-0.png)
 
@@ -29512,10 +29510,16 @@ For this, the gear icon shown in the welcome window allows the user to enter the
 !!!info
     In the Add new link field, it is possible to add other URLs to connect the app from different servers. It is also possible to modify or remove URLs.
 
-#### Log In
+
+<br>
+<br>
+<br>
 <br>
 
-![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="right" }
+#### Log In
+
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="left" }
 
 Once the server URL is configured, the user must log in entering **the user and the password** assigned by the system administrator.
 
@@ -29528,11 +29532,29 @@ Once the server URL is configured, the user must log in entering **the user and 
 !!!info
     Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the **Demo Try** button must be pressed so the user can enter the app without credential requirements.
 
-#### Dynamic App Role Configuration
 
-Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Mobile Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/mobile-extensions/mobile-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+#### Sub-Applications Distributed by Etendo
 
-Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
+
+##### Mobile Extensions bundle
+
+- [Etendo Classic Subapp](./bundles/mobile-extensions/etendo-classic-subapp.md) 
+- [Documents Manager Subapp](./bundles/mobile-extensions/overview.md)
+
+##### Copilot Extensions bundle
+
+- [Etendo Copilot Subapp](https://docs.etendo.software/latest/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) 
+
+!!! info
+    In order to be able to configure the dynamic sub-applications, it is necessary to install the corresponding bundle. [Mobile Extensions](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"} bundle or [Copilot Extensions](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"} bundle
+
+#### Role Configuration - Dynamic App 
+
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
+
+Etendo Mobile allows the creation and configuration of mobile sub-applications. 
+
+Once the sub-application bundle is installed, go to the **Role window** and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
 
 Fields to note:
 
@@ -29541,6 +29563,25 @@ Fields to note:
 - **Active:** Select if this application is active or not.
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
+
+
+
+#### Share Files
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
+
+Etendo mobile allows **receiving files** from external applications and being used by sub-applications.  
+
+- The [Documents Manager Subapp](./bundles/mobile-extensions/overview.md#documents-manager-subapp) is a sample implementation capable of receiving external files and rendering them within Etendo Mobile. 
+- The [Etendo Copilot Subapp](https://docs.etendo.software/latest/etendo-copilot/bundles/overview.md#etendo-copilot-subapp), able to receive any external file as input and in one simple step be processed by the agents.
+
+!!! warning
+    The file sharing functionality enables the files for any sub-application and then displays a selector capable of opening the corresponding sub-application.
+
+!!! info
+    For more technical information visit [Create New Sub-application](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md) guide
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -29629,6 +29670,23 @@ The Etendo Classic Sub-application allows users to access and manage their clien
 
 !!! info
     For more information, visit [Etendo Classic Subapp - User Guide](./etendo-classic-subapp.md).
+
+
+##### Documents Manager Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.docsmanager`
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
+
+The **Documents Manager Subapp** is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
+
+!!! note
+    The application supports different formats of Images, Audio, PDF, CSV and txt. Although on iPadOS it may be limited.
+
+
+!!! info
+    For more technical information, visit [Create New Subapplication - Receiving Shared Files from Etendo Mobile](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#receiving-shared-files-from-etendo-mobile).
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -29946,6 +30004,7 @@ When asked something, Copilot informs the user about the assistants and tools us
 ### Copilot Setup and Usage
 
 #### Initial Configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client` 
 
 In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
 
@@ -30367,13 +30426,13 @@ Etendo Copilot is a platform that optimises development time with AI-enabled too
     For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md).
 
 
-##### Etendo Copilot SubApp
+##### Etendo Copilot Subapp
 
 :octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
 
 The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
 
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific data** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
 
 With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
 
@@ -47097,7 +47156,7 @@ This page explains how to configure and export dynamic applications in Etendo Cl
 
 As `System Administrator` role, in the **Dynamic App** window, specify the paths and versions for each subapplication. These settings determine how subapplications are displayed when users log into Etendo Mobile.
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/dynamic-app-creation.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dynamic-app/dynamic-app.png)
 
 Fields to note:
 
@@ -47116,6 +47175,7 @@ Fields to note:
 - **Default**: This check defines that this version is productive.
 - **Is Development**: This check defines that this version is in development and can be deployed locally.
 - **Active**: To select if this application version is active or not.
+- **Receive External Files** Identifies sub-applications that allow receiving shared files from external applications and are capable of handling them.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -53176,6 +53236,7 @@ Etendo Mobile _sends_ params to the subapplication and all of them are ready to 
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
     - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component includes a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
+    - _sharedFiles_: IFile array, if a file is shared to Etendo Mobile from an external application, sharing and selecting a sub-application will add the file to the file array of the corresponding sub-application.
 
 ##### Language
 The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the _language_ parameter received as input to initialize the remaining aspects of the application in the `App.tsx` file.
@@ -53882,6 +53943,19 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
     ![app-home.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home.png)
 
 4. Now you can view, filter, create, edit and delete products.
+
+#### Receiving Shared Files from Etendo Mobile
+
+In this section, we will explain how to receive external files from another application into **Etendo Mobile** using as example the sub-application [Documents Manager Subapp](https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/overview.md#documents-manager-subapp).
+
+!!! warning "Important"
+    Ensure that the **Receive External Files** checkbox is set to `true` in the **Dynamic App** window. This is crucial for the subapplication to appear as an option when sharing external files.
+    ![configuration-docsmanager.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dynamic-app/dynamic-app.png)
+    
+The `sharedFiles` parameter is passed to the subapplication and used to process the received files.
+
+!!! info 
+    For more information, visit the [Documents Manager Subapp](https://github.com/etendosoftware/com.etendoerp.subapp.docsmanager){target=“_blank”} repository. There you will find an example su-application, and the explanation of how to implement the file sharing functionality in your own app. 
 
 #### Debug Log
 
