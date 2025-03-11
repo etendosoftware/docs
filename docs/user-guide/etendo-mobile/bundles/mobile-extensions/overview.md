@@ -37,3 +37,20 @@ The Etendo Classic Sub-application allows users to access and manage their clien
 
 !!! info
     For more information, visit [Etendo Classic Subapp - User Guide](./etendo-classic-subapp.md).
+
+
+### Documents Manager Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.docsmanager`
+
+![](../../../../assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
+
+The **Documents Manager Subapp** is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
+
+!!! note
+    The application supports different formats of Images, Audio, PDF, CSV and txt. Although on iPadOS it may be limited.
+
+
+!!! info
+    For more technical information, visit [Create New Subapplication - Receiving Shared Files from Etendo Mobile](../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#receiving-shared-files-from-etendo-mobile).
+
+
