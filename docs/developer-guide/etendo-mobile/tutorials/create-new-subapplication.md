@@ -605,6 +605,19 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 
 4. Now you can view, filter, create, edit and delete products.
 
+## Receiving Shared Files from Etendo Mobile
+
+In this section, we will explain how to receive external files from another application into **Etendo Mobile** using as example the sub-application [Documents Manager Subapp](../../../user-guide/etendo-mobile/bundles/mobile-extensions/overview.md#documents-manager-subapp).
+
+!!! warning "Important"
+    Ensure that the **Receive External Files** checkbox is set to `true` in the **Dynamic App** window. This is crucial for the subapplication to appear as an option when sharing external files.
+    ![configuration-docsmanager.png](../../../assets/developer-guide/etendo-classic/bundles/platform/dynamic-app/dynamic-app.png)
+    
+The `sharedFiles` parameter is passed to the subapplication and used to process the received files.
+
+!!! info 
+    For more information, visit the [Documents Manager Subapp](https://github.com/etendosoftware/com.etendoerp.subapp.docsmanager){target=“_blank”} repository. There you will find an example su-application, and the explanation of how to implement the file sharing functionality in your own app. 
+
 ## Debug Log
 
 This section explains how to log data in a sub-application using the `logger` utility function. To log any information, call the `logger` function with a key and a value:
