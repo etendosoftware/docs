@@ -1,4 +1,5 @@
 ---
+title: User Guide - Etendo Mobile - Getting Started
 tags:
     - Etendo Mobile
     - Mobile Apps
@@ -9,7 +10,7 @@ tags:
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/cover-getting-started-mobile.png)
 
-# Etendo Mobile
+# User Guide - Etendo Mobile - Getting Started
 
 ## Overview
 

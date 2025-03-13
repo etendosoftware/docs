@@ -1,5 +1,5 @@
 ---
-title: Etendo Copilot
+title: User Guide - Etendo Copilot - Getting Started
 tags: 
  - Etendo Copilot
  - AI Integration
@@ -11,7 +11,7 @@ tags:
 
 ![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
 
-# Etendo Copilot
+# User Guide - Etendo Copilot - Getting Started
 
 ## Overview
 

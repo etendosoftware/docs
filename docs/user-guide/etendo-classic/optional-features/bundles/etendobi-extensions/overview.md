@@ -1,5 +1,5 @@
 ---
-title: Etendo BI Bundle
+title: Etendo BI Extensions Bundle
 tags:
     - Etendo BI
     - Power BI Integration

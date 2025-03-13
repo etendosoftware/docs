@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Sales Extensions - Release Notes
 tags:
     - Release Notes
     - Sales

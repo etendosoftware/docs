@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Developer Guide - Etendo RX - Getting Started
 ---
 
 ## Overview

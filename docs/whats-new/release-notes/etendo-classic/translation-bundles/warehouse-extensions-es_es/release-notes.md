@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Warehouse Extensions Spanish Translation - Release Notes
 tags:
     - Release Notes
     - Warehouse

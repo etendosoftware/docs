@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Procurement Extensions Spanish Translation - Release Notes
 tags:
     - Release Notes
     - Procurement

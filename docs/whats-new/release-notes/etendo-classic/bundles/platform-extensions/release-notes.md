@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Platform Extensions - Release Notes
 tags:
     - Release Notes
     - Platform

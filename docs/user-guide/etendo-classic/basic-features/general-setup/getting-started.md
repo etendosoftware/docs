@@ -1,4 +1,5 @@
 ---
+title: General Setup - Getting Started
 tags: 
  - Getting Started
  - Installations
@@ -7,7 +8,7 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-#
+# General Setup - Getting Started
 
 ## Overview
 

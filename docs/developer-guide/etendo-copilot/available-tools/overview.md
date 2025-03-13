@@ -1,4 +1,13 @@
-# Overview
+---
+title: Copilot Tools
+tags: 
+    - Tools
+    - Copilot Tools
+    - Copilot
+---
+
+
+# Copilot Tools
 
 Here you can find a list of the all the available tools in the Copilot bundle.
 

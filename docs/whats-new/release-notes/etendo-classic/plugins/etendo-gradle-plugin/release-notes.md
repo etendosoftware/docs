@@ -1,5 +1,5 @@
 ---
-title: Etendo Gradle Plugin
+title: Etendo Gradle Plugin - Release Notes
 tags:
     - Release Notes
     - Etendo
