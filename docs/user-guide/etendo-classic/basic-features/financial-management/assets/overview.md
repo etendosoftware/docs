@@ -6,6 +6,9 @@ tags:
     - Asset Group
     - Accounting Dimensions Assets
 ---
+
+# Financial Management - Assets
+
 ## Overview
 
 This section describes the windows related to assets, part of the Financial Management in Etendo. These are:

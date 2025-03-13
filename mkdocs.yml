@@ -58,7 +58,7 @@ extra_javascript:
 
 extra_css:
   - stylesheets/extra.css
-  - assets/stylesheets/custom-search.css
+  - assets/stylesheets/custom-styles.css
   - https://cdn.jsdelivr.net/npm/@docsearch/css@3
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/reset-min.css
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css

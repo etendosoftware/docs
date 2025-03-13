@@ -1,4 +1,5 @@
 ---
+title: Financial Management - Getting Started
 tags:
     - Etendo Classic
     - Financial Management
@@ -8,7 +9,7 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-#
+# Financial Management - Getting Started
 
 ## Overview
 
