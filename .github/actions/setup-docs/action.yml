@@ -22,4 +22,6 @@ runs:
         pip install mike
         pip install mkdocs-glightbox
         pip install mkdocs-rss-plugin
+        pip install beautifulsoup4
+        
       shell: bash
