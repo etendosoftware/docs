@@ -1,0 +1,116 @@
+:root {
+  /* Color constants */
+  --color-results-text: #000000DE;
+  --color-results-bg: #ffffff;
+  --color-status-bg: #00000012;
+  --color-status-text: #0000008A;
+  --border-color-result-item: #EDEDED;
+  --color-title: #000000;
+  --color-tag-bg: #00000012;
+  --color-tag-text: #6D6D7D;
+  --color-highlight: #7585FF;
+
+  /* Font & spacing constants */
+  --font-size-status: 0.64rem;
+  --line-height-status: 1.8rem;
+  --padding-status: 0 1.25rem;
+  --font-size-title: 0.8rem;
+  --padding-title: 0.5rem;
+  --padding-tag: 0.3125em 0.78125em;
+  --border-radius-tag: 2.4rem;
+  --gap-tag: 0.5em;
+  --margin-right-tag: 0.2em;
+  --font-size-tag: 0.65em;
+}
+
+/* Results container – displayed only when there is a query */
+.md-search__output {
+  height: 80vh;
+  overflow: auto;
+  color: var(--color-results-text);
+  background: var(--color-results-bg);
+  display: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-highlight) transparent;
+}
+
+/* Search status (displayed only when there is a query) */
+.md-search-status {
+  background-color: var(--color-status-bg);
+  color: var(--color-status-text);
+  font-size: var(--font-size-status);
+  line-height: var(--line-height-status);
+  padding: var(--padding-status);
+  scroll-snap-align: start;
+}
+
+/* Styles for each result item */
+.md-search-result__item {
+  border-bottom: 1px solid var(--border-color-result-item);
+}
+
+/* Title for each result */
+.md-search__output .md-search-result__item h1 {
+  color: var(--color-title);
+  font-size: var(--font-size-title);
+  padding: var(--padding-title);
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.md-search-result__link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.md-search-result__icon {
+  margin-right: 0.5rem;
+  width: 24px;
+  height: 24px;
+}
+
+.md-search-result__article {
+  flex: 1;
+}
+
+/* Styles for tags */
+.md-tags .md-tag {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  padding: var(--padding-tag);
+  border-radius: var(--border-radius-tag);
+  gap: var(--gap-tag);
+  margin-right: var(--margin-right-tag);
+  font-size: var(--font-size-tag) !important;
+}
+
+/* Highlight style for titles */
+.custom-highlight {
+  color: var(--color-highlight) !important;
+  margin-right: 0.2em;
+}
+
+/* Highlight style for tags */
+.custom-tag-highlight {
+  color: var(--color-highlight);
+  text-decoration: underline;
+}
+
+/* Mobile: display text continuously without columns */
+@media (max-width: 768px) {
+  .md-search-result__link {
+    display: block;
+  }
+  .md-search__output .md-search-result__item h1 {
+    display: block;
+  }
+  .md-tags {
+    display: block;
+  }
+  .md-tag {
+    display: inline;
+  }
+}

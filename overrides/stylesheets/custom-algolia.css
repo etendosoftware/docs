@@ -1,0 +1,29 @@
+/* Estilo para el contenedor de búsqueda */
+#docsearch-container {
+    flex: 1;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Asegurar que el botón de DocSearch se vea apropiado */
+  .DocSearch-Button {
+    height: 36px;
+    padding: 0 12px;
+    width: 100%;
+    border-radius: 4px;
+    background: var(--md-primary-bg-color, #fff);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+  
+  /* Estilo para el botón de búsqueda en tema oscuro */
+  [data-md-color-scheme="slate"] .DocSearch-Button {
+    background: var(--md-default-bg-color, #1e2029);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Ocultar elementos originales de búsqueda */
+  .md-search__form {
+    display: none !important;
+  }
