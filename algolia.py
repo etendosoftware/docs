@@ -40,9 +40,6 @@ def index_docs(output_dir, ALGOLIA_WRITE_INDEX_KEY):
                 canonical_link = soup.find("link", rel="canonical")
                 url = canonical_link["href"] if canonical_link else "No URL"
 
-                # Adjust the URL to add '/latest/' after the domain
-                if url != "No URL" and url.startswith(base_url):
-                    url = url.replace(base_url, base_url + "latest/")
 
                 # Build the object to be indexed
                 result = {
