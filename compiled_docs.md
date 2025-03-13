@@ -13,6 +13,7 @@ Etendo is a highly adaptable and scalable ERP software designed for non-retail b
 ## Article URL: 
  https://docs.etendo.software/latest/getting-started/overview
 ## Article Content: 
+### Getting Started 
 We're excited to guide you through the swift setup of Etendo Classic, enabling you to have it up and running within a matter of a few simple steps. <br>
 Before you embark on this journey, it's important to ensure that you've met the necessary technical prerequisites for the Etendo installation process. <br> Additionally, take a moment to acquaint yourself with the intuitive navigation interface, which will prove invaluable as you navigate the software's features.
 To expedite and streamline your workflow, we've thoughtfully provided convenient shortcuts to make your work easier and faster.
@@ -884,6 +885,7 @@ Whether you're looking to master the basics or explore advanced features, our gu
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/getting-started
 ## Article Content: 
+### General Setup - Getting Started
 
 #### Overview
 
@@ -5578,6 +5580,7 @@ In this tab, different Ranges can be created based on the amount of the related 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started
 ## Article Content: 
+### Procurement Management - Getting Started
 
 #### Overview
 
@@ -7191,6 +7194,7 @@ Field to note:
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started
 ## Article Content: 
+### Warehouse Management - Getting Started
 
 #### Overview
 
@@ -9049,6 +9053,7 @@ These last 4 options show the Entity Field therefore by selecting one of these 4
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/getting-started
 ## Article Content: 
+### Production Management - Getting Started
 
 #### Overview
 
@@ -10387,6 +10392,7 @@ All maintenance tasks that are scheduled for the machines in production are ente
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started
 ## Article Content: 
+### Material Requirement Planning - Getting Started
 
 #### Overview
 
@@ -10778,6 +10784,7 @@ Define the planner in charge of managing the purchase or production of specific 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started
 ## Article Content: 
+### Sales Management - Getting Started
 
 #### Overview
 
@@ -12871,6 +12878,7 @@ This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/S
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/project-and-service-management/getting-started
 ## Article Content: 
+### Project and Service Management - Getting Started
 
 #### Overview
 
@@ -13425,6 +13433,7 @@ This work is a derivative of ["Project and Service Management"](https://wiki.ope
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started
 ## Article Content: 
+### Financial Management - Getting Started
 
 #### Overview
 
@@ -20358,6 +20367,8 @@ Above node must be an Account Tree element properly configured.
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview
 ## Article Content: 
+### Financial Management - Assets
+
 #### Overview
 
 This section describes the windows related to assets, part of the Financial Management in Etendo. These are:
@@ -29469,7 +29480,7 @@ Above scenario would somehow mean an expense in Organization A and a revenue in 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started
 ## Article Content: 
-### Etendo Mobile
+### User Guide - Etendo Mobile - Getting Started
 
 #### Overview
 
@@ -29640,7 +29651,7 @@ In case the user has a picture, it will be shown both in this window and in the 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/overview
 ## Article Content: 
-### Mobile Extensions
+### Mobile Extensions Bundle
 
 :octicons-package-16: Javapackage: `com.etendoerp.mobile.extensions`
 
@@ -29894,7 +29905,7 @@ It will also be noticed that the Product's Stock has been updated in the indicat
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started
 ## Article Content: 
-### Etendo Copilot
+### User Guide - Etendo Copilot - Getting Started
 
 #### Overview
 
@@ -30384,7 +30395,7 @@ Fields to note:
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview
 ## Article Content: 
-### Copilot Extensions
+### Copilot Extensions Bundle
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
 
@@ -51200,7 +51211,7 @@ This assistant simplifies webhook creation by automatically generating the neces
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/overview
 ## Article Content: 
-### Overview
+### Copilot Tools
 
 Here you can find a list of the all the available tools in the Copilot bundle.
 
@@ -54616,7 +54627,7 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes
 ## Article Content: 
-### Release Notes
+### Etendo Classic - Release Notes
 
 :octicons-package-16: Javapackage: `com.etendoerp.platform.etendo-core`
 
@@ -55188,7 +55199,7 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/iso
 ## Article Content: 
-### ISO Image
+### Etendo Classic - ISO Image
 
 :material-tools: Installation Guide: [ISO Installation Guide](https://docs.etendo.software/latest/getting-started/installation.md#steps-to-install-the-iso-with-internet-connection)
 
