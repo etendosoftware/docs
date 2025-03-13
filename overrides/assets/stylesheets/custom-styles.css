@@ -15,7 +15,7 @@
     --line-height-status: 1.8rem;
     --padding-status: 0 1.25rem;
     --font-size-title: 0.8rem;
-    --padding-title: 0.5rem;
+    --padding-title: 0.6rem;
     --padding-tag: 0.3125em 0.78125em;
     --border-radius-tag: 2.4rem;
     --gap-tag: 0.5em;
@@ -53,9 +53,10 @@
 .md-search__output .md-search-result__item h1 {
     color: var(--color-title);
     font-size: var(--font-size-title);
-    padding: var(--padding-title);
     display: flex;
     align-items: center;
+    padding-top: var(--padding-title);
+    font-weight: 500;
     margin: 0;
 }
 
@@ -93,11 +94,18 @@
     margin-right: 0.2em;
 }
 
+/* Highlight style for h2, h3 & h4 */
+.md-search-result__sections {
+    color: var(--color-status-text);
+    font-size: var(--font-size-status);
+}
+
 /* Highlight style for tags */
 .custom-tag-highlight {
     color: var(--color-highlight);
     text-decoration: underline;
 }
+
 
 /* Mobile: display text continuously without columns */
 @media (max-width: 768px) {

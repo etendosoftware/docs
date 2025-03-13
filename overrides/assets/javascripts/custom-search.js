@@ -28,6 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
+    // Helper: Convierte un texto en un slug (ej. "Bulk Posting" -> "bulk-posting")
+    function slugify(text) {
+        return text.toString().toLowerCase().trim()
+            .replace(/\s+/g, '-')       // Reemplaza espacios con -
+            .replace(/[^\w\-]+/g, '')    // Elimina caracteres no válidos
+            .replace(/\-\-+/g, '-');     // Reemplaza múltiples guiones por uno solo
+    }
+
     // Function to update the visibility of results based on the query
     function updateResultsVisibility() {
         const query = searchInput.value.trim();
@@ -59,7 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
             li.className = "md-search-result__item";
 
             const a = document.createElement("a");
-            a.href = hit.url;
+            // Dynamic link building
+            let finalUrl = hit.url;
+            if (finalUrl) {
+                const dynamicSuffix = `?h=${encodeURIComponent(query)}#${slugify(hit.title || "")}`;
+                finalUrl += dynamicSuffix;
+            }
+            a.href = finalUrl;
             a.className = "md-search-result__link";
             a.setAttribute("tabindex", "-1");
 
@@ -85,6 +99,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 h1.textContent = hit.title;
             }
             article.appendChild(h1);
+
+            // --- Combine sections (h2, h3, h4) ---
+            let sectionsArray = [];
+            if (hit.h2 && Array.isArray(hit.h2)) {
+                sectionsArray = sectionsArray.concat(hit.h2);
+            }
+            if (hit.h3 && Array.isArray(hit.h3)) {
+                sectionsArray = sectionsArray.concat(hit.h3);
+            }
+            if (hit.h4 && Array.isArray(hit.h4)) {
+                sectionsArray = sectionsArray.concat(hit.h4);
+            }
+            if (sectionsArray.length > 0) {
+                const sectionsElem = document.createElement("p");
+                sectionsElem.className = "md-search-result__sections";
+                sectionsElem.textContent = sectionsArray.join(", ");
+                article.appendChild(sectionsElem);
+            }
 
             // --- Tags ---
             if (hit.tags && Array.isArray(hit.tags)) {
@@ -135,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (searchContainer) {
         const sectionFilter = document.createElement("select");
-        const searchInput = document.querySelector("input.md-search__input")
         sectionFilter.id = "section-filter";
         sectionFilter.innerHTML = `
             <option value="">All Sections</option>
@@ -143,36 +174,32 @@ document.addEventListener("DOMContentLoaded", function () {
             <option value="developer-guide">Developer Guide</option>
         `;
         searchContainer.insertAdjacentElement("afterend", sectionFilter);
-        const resultsContainer = document.querySelector(".md-search__output"); 
+        const resultsContainer = document.querySelector(".md-search__output");
 
-    
         function applyFilter() {
             const filterValue = sectionFilter.value;
             const results = document.querySelectorAll(".md-search-result__item");
 
             results.forEach(result => {
-                const resultUrl = result.querySelector("a").href; 
+                const resultUrl = result.querySelector("a").href;
                 if (filterValue === "" || resultUrl.includes(`/${filterValue}/`)) {
-                    result.style.display = "block"; 
+                    result.style.display = "block";
                 } else {
-                    result.style.display = "none"; 
+                    result.style.display = "none";
                 }
             });
         }
 
-         const observer = new MutationObserver(() => {
+        const observer = new MutationObserver(() => {
             applyFilter();
         });
 
-       
         if (resultsContainer) {
             observer.observe(resultsContainer, { childList: true, subtree: true });
         }
 
-        
         sectionFilter.addEventListener("change", function () {
             applyFilter();
         });
-        
     }
 });
