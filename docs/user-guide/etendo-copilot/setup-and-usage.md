@@ -10,6 +10,7 @@ tags:
 # Copilot Setup and Usage
 
 ## Initial Configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client` 
 
 In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
 

@@ -94,9 +94,6 @@ This section explains how to install a new Etendo environment. It includes:
 #### Requirements 
 This section outlines the [System Requirements](https://docs.etendo.software/latest/getting-started/requirements.md).
 
-!!!info
-    The [Docker Management](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module. If these containers are used, the **services must be launched**, and then follow with the installation guide.
-
 #### PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
 
@@ -107,24 +104,37 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     1.  Clone Etendo Base project in a temporal directory.
 
-        ``` bash
+        ``` bash title="Terminal"
         cd /tmp
         git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
         ```
     2.  Copy the sources in `/opt/EtendoERP` folder.
 
-        ```bash
+        ``` bash title="Terminal"
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
 
     3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
        
-        ```groovy
+        ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
-        githubUser= username
-        githubToken=*******
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+    4. Change the `build.gradle` file, uncomment the core dependency in the dependencies section:
+            
+        ```groovy title="build.gradle"
+        implementation('com.etendoerp.platform:etendo-core:<version>')
+        ```
+
+        !!! info
+            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
+
+    5. Modify the `gradle.properties` file with your environment variables, if it is necessary:
+        
+        ```groovy title="gradle.properties"
 
         context.name=etendo
 
@@ -137,46 +147,21 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
         org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
-    4. Change the `build.gradle` file, uncomment the core dependency in the dependencies section:
-            
-        ```
-        implementation('com.etendoerp.platform:etendo-core:<version>')
-        ```
-
-        !!! info
-            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
-
-    5. Modify the `gradle.properties` file with your environment variables, if it is necessary:
-        
-        ```groovy
-        nexusUser=
-        nexusPassword=
-        githubUser= username
-        githubToken=*******
-
-        context.name=etendo
-
-        bbdd.sid=etendo
-        bbdd.port=5432
-        bbdd.systemUser=postgres
-        bbdd.systemPassword=syspass
-        bbdd.user=tad
-        bbdd.password=tad
-        ```
     6. Dependencies
-        ``` bash
+        
+        ``` bash title="Terminal"
         ./gradlew dependencies
         ```
     7. Setup 
-        ```
+        ``` bash title="Terminal"
         ./gradlew setup
         ```
     8. Installation 
-        ```
+        ``` bash title="Terminal"
         ./gradlew install smartbuild
         ```
     9. Start the Tomcat, in case of Linux you can run:
-        ```
+        ``` bash title="Terminal"
         sudo /etc/init.d/tomcat start
         ```
         
@@ -191,22 +176,46 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     1.  Clone Etendo Base project in a temporal directory.
 
-        ``` bash
+        ``` bash title="Terminal"
         cd /tmp
         git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
         ```
 
     2.  Copy the sources in `/opt/EtendoERP` folder.
-        ```bash
+        
+        ``` bash title="Terminal"
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
     3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
-        ```groovy
+        
+        ```groovy title="gradle.properties"
         nexusUser=
         nexusPassword=
-        githubUser= username
-        githubToken=*******
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`.
+        
+        ```groovy title="build.gradle"
+        etendo {
+            coreVersion = "<version>"
+        }
+        ```
+
+        !!! info
+            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
+
+    5.  Expand Etendo Base
+
+        ``` bash title="Terminal"
+        ./gradlew expand 
+        ```
+    6. Modify the `gradle.properties` file with your environment variables, if it is necessary:
+
+        ```groovy title="gradle.properties"
+        
         context.name=etendo
 
         bbdd.sid=etendo
@@ -219,54 +228,31 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         org.gradle.jvmargs=-Dfile.encoding=UTF-8
         ```
 
-    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`.
-        
-        ```groovy
-        etendo {
-            coreVersion = "<version>"
-        }
-        ```
-
-        !!! info
-            To know the available versions of Etendo Classic, please visit the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
-
-    5.  Expand Etendo Base
-
-        ```
-        ./gradlew expand 
-        ```
-    6. Modify the `gradle.properties` file with your environment variables, if it is necessary:
-
-        ```groovy
-        context.name=etendo
-
-        bbdd.sid=etendo
-        bbdd.port=5432
-        bbdd.systemUser=postgres
-        bbdd.systemPassword=syspass
-        bbdd.user=tad
-        bbdd.password=tad
-        ```
-
     7. Setup: to apply or create the initial configurations
-        ```
+        
+        ``` bash title="Terminal"
         ./gradlew setup
         ```
+
     8. Installation: Create the database, compile the sources and deploy to Apache Tomcat
-        ```
+        
+        ``` bash title="Terminal"
         ./gradlew install smartbuild
         ```
+
     9. Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
-        ```
+        
+        ``` bash title="Terminal"
         lc_numeric = 'en_US.UTF-8'
         max_locks_per_transaction = 128
         ```        
 
         !!! note
-            After modifying the file restart postgresql
+            After modifying the file restart postgresql service
            
     10.  Start the Tomcat, in case of Linux you can run:
-        ```
+        
+        ``` bash title="Terminal"
         sudo /etc/init.d/tomcat start
         ```
 
@@ -277,6 +263,9 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
 === ":octicons-issue-opened-24: ISO"
 
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
     ### Steps to Install the ISO with Internet Connection
 
     1. Download the ISO from the [release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/iso.md) page.
@@ -317,7 +306,118 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     7. After the installation is finished, the server will be ready for use.
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+=== ":material-docker:  Database and Tomcat Dockerized"
+
+    ### Steps to Install Etendo with Postgres Database and Tomcat Dockerized
+
+    The [Docker Management](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module, which, as its name suggests, provides the Tomcat service.
+    These modules are part of the [Platform Extensions](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md) bundle, which will be covered in this step-by-step guide on how to install them.
+    
+    !!! info
+        In this guide we will assume the installation of Etendo Classic in Sources format, in case you want to install it in JAR format you should consult the changes in the corresponding tab.
+
+    1.  Clone Etendo Base project in a temporal directory.
+
+        ```bash title="Terminal"
+        cd /tmp
+        git clone https://github.com/etendosoftware/etendo_base.git EtendoERP 
+        ```
+    2.  Copy the sources in `/opt/EtendoERP` folder.
+
+        ```bash title="Terminal"
+        mv EtendoERP/* /opt/EtendoERP/
+        cd /opt/EtendoERP
+        ```
+
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
+       
+        ```groovy title="gradle.properties"
+        nexusUser=
+        nexusPassword=
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "<version>"`.
+        
+        ```groovy title="build.gradle"
+        etendo {
+            coreVersion = "<version>"
+        }
+        ```
+
+        !!! info
+            To know the available versions,, please visit the Etendo Classic [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) page.
+
+    5.  Expand Etendo Classic
+
+        ``` bash title="Terminal"
+        ./gradlew expand 
+        ```
+
+    6.  Add Platform Extensions bundle dependency, to include the  dockeridez platform features
+
+        ```groovy title="build.gradle"
+        dependencies {
+            //Add other dependencies bellow
+            implementation ('com.etendoerp:platform.extensions:latest.release')
+        }
+        ```
+    7. Modify the `gradle.properties` file with your environment variables
+
+        ```groovy title="gradle.properties"
+        
+        context.name=etendo
+
+        bbdd.sid=etendo
+        bbdd.port=5434
+        bbdd.systemUser=postgres
+        bbdd.systemPassword=syspass
+        bbdd.user=tad
+        bbdd.password=tad
+
+        org.gradle.jvmargs=-Dfile.encoding=UTF-8
+
+        docker_com.etendoerp.tomcat=true
+        docker_com.etendoerp.docker_db=true
+        ```
+        
+        !!! info
+            The dockerized database service will run on the port defined in the `bbdd.port` variable, we suggest using port `5434` to avoid conflict if you have a local Postgres instance using the default port.
+
+            By default the Tomcat service will be up on port `8080`, in case that port is busy you can use the variable `docker_com.etendoerp.tomcat_port=<port>`.
+
+
+    8. Launching Dockerized Tomcat and Database services
+
+        ``` bash title="Terminal"
+        ./gradlew resources.up
+        ```
+        <figure markdown="span">
+        ![tomcat-database-dockerized](https://docs.etendo.software/latest/assets/getting-started/installation/tomcat-database-dockerized.png)
+        <figcaption> Postgres database and Tomcat service running dockerized, if necessary you can access the log of each service. </figcaption>
+        </figure>
+        
+
+    9. Setup: to apply or create the initial configurations
+    
+        ``` bash title="Terminal"
+        ./gradlew setup
+        ```
+
+    10. Installation: Create the database, compile the sources and deploy to Apache Tomcat
+        
+        ``` bash title="Terminal"
+        ./gradlew install smartbuild
+        ```
+           
+    11. After the smartbuild task finish, the Tomacat service will  automatically restart,  open your browser in: 
+    
+        `https://<Public server IP>/<context.name>` or in case that you run in local environment [`http://localhost:8080/etendo`](http://localhost:8080/etendo){target="_blank"}
+
+
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -3231,28 +3331,20 @@ The *bank account* related data you can enter is:
 - **SWIFT Code** - Corresponds to the ISO 9362 international bank code identifier. It must be mandatory filled in case _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
 - **Displayed Account**: It is automatically generated based on the value selected into the Bank Account Format. This field is read only, and it is used by other reports or processes.
 
-###### Remittance
+###### **Advanced Bank Account Management**
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
+This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
 
-![bank_account_default.png](https://docs.etendo.software/latest/assets/legacy/bank_account_default.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
 
 !!! warning
     Only one bank account can be selected as default for each business partner.
-
-###### **Advanced Bank Account Management**
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. In the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
-
 
 ##### **Location/Address**
 
@@ -3287,7 +3379,7 @@ Etendo allows the user to define any type of business partner address, by fillin
 The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
 
 !!! warning
-    The default account will always be used when generating a new document unless an account is set up in a specific location. 
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
 ##### **Contact**
 
@@ -5351,11 +5443,11 @@ Discounts and Promotions, formerly Price Adjustments, defines rules to be applie
 This feature requires to set as "Active":
 
 - the "Read-Only" Tab "Discounts and Promotions" is found in below listed windows:
-  - Purchase Order
-  - Sales Order
-  - Purchase Invoice
-  - Sales Invoice
-  - and Sales Quotation
+    - Purchase Order
+    - Sales Order
+    - Purchase Invoice
+    - Sales Invoice
+    - and Sales Quotation
 
 ###### How Promotions are Applied
 
@@ -5879,27 +5971,6 @@ It is possible to take up to **three possible actions regarding a purchase order
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
 
-###### Remittance
-
-!!! info
-    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
- 
-The Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
-
-![bank_account_3.png](https://docs.etendo.software/latest/assets/legacy/bank_account_3.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Purchase Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
-
 
 ##### **Lines**
 
@@ -6035,7 +6106,20 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
 
-#### Goods Receipt
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-3.png](https://docs.etendo.software/latest/assets/legacy/bank-account-3.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
+
+#### Goods Receipts
 
 :material-menu: `Application` > `Procurement Management` > `Transactions` > `Goods Receipt`
 
@@ -6299,31 +6383,6 @@ Once completed, a purchase invoice can be:
 
 ![Purchase invoice window](https://docs.etendo.software/latest/assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
-
-![bank_account.png](https://docs.etendo.software/latest/assets/legacy/bank_account.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-
-???+ note
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-  
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Purchase Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
-
 ##### **Lines**
 
 Once the purchase invoice header has been properly filled in and saved purchase invoice lines can be registered in this tab.
@@ -6433,6 +6492,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Purchase Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account.png](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/bank-account.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Matched Invoices
 
@@ -11249,32 +11320,11 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 **Canceled Order**, this field stores the document number of the original order canceled by the inverse order.
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
-
-![bank_account_4.png](https://docs.etendo.software/latest/assets/legacy/bank_account_4.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
 ##### Lines
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
 
-![Sales order lines](https://docs.etendo.software/latest/assets/drive/14rZJriNxaHIaBACYjwi-4I0rUGuCSCpD.png)
+![Sales order lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorderlines.png)
 
 Fields to note:
 
@@ -11284,6 +11334,7 @@ Fields to note:
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
 - **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](https://docs.etendo.software/latest/master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -11457,6 +11508,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-4.png](https://docs.etendo.software/latest/assets/legacy/bank-account-4.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Goods Shipment
 
@@ -11864,45 +11927,20 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-###### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
-
-![bank_account_2.png](https://docs.etendo.software/latest/assets/legacy/bank_account_2.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-!!! note
-    **Important**:
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-
-###### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
-
 ##### **Lines**
 
 **Lines** lists each product to be delivered and its characteristics.
 
 Once the sales invoice header has been properly filled in and saved, each sales invoice line can be registered in this tab one by one.
 
-![Sales invoice lines](https://docs.etendo.software/latest/assets/drive/12b9z3VPpvude4CJ8QhoDoW9V7k00KkL7.png)
+![Sales invoice lines](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoicelines.png)
 
 Fields to note:
 
 - **Attribute Set Value:** field is displayed if the product in the line has attributes (color, size, serial number or several of them together etc).
 - **Sales Order Line** and **Goods Shipment Line:** references to the sales order and goods shipment line that is being invoiced.
 - **Financial Invoice line:** is selected when the invoice line is not a product but an account not set up as a product but as a G/L item, or an asset not set up as a product. When selected, the product field disappears from the screen and an account field appears that will be related to the sales invoice line.
+-  **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](https://docs.etendo.software/latest/master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](https://docs.etendo.software/latest/master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 As already mentioned, sales revenue can be deferred therefore they are not recognized at the sales accounting date but within a given number of accounting periods.
 
@@ -12250,6 +12288,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](https://docs.etendo.software/latest/optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+##### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account-2.png](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/sales-management/transactions/bank-account-2.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 #### Create Invoices from Orders
 
@@ -21238,7 +21288,7 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account
+This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
     For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
@@ -21249,20 +21299,20 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
-This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
 
 !!! info
     This functionality is available in the following windows:
 
-    - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
-    - [Sales invoice]()
-    - [Purchase Invoice]()
-    - [Sales order]()
-    - [Purchase order]()
-    - [Payment In]()
-    - [Payment Out]()
+    - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Sales invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+    - [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+    - [Sales order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management)
+    - [Purchase order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+    - [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+    - [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
-    For more information, visit the [Advanced Bank Account Management](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+    For more information, visit the [Advanced Bank Account Management](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 
 ##### Advanced Business Partner Settlement
@@ -21508,17 +21558,17 @@ This functionality enhances the bank account management enabling greater customi
 This functionality is available in the following windows: 
 
 - [Business Partner](https://docs.etendo.software/latest/basic-features/master-data-management/master-data.md#advanced-bank-account-management)
-- [Sales invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account_1)
-- [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account_1)
-- [Sales order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account)
-- [Purchase order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account)
-- [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account_1)
-- [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account)
+- [Sales Invoice](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+- [Purchase Invoice](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+- [Sales Order](https://docs.etendo.software/latest/basic-features/sales-management/transactions.md#advanced-bank-account-management)
+- [Purchase Order](https://docs.etendo.software/latest/basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+- [Payment In](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+- [Payment Out](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
 #### Business Partner - Bank Account
 :material-menu: `Application` > `Master Data Management` > `Business Partner`
 
-This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, in the Advanced Bank Account Management field, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.
+This module introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in invoices and orders. This information determines the bank account of each payment.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png)
 
@@ -21528,7 +21578,7 @@ This module introduces the possibility to mark a bank account as Default within 
 The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partner window to associate specific bank accounts to the different locations.  
 
 !!!info
-    The default account will always be used when generating a new document unless an account is set up in a specific location. 
+    In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png)
 
@@ -21537,7 +21587,7 @@ The Advanced Bank Account Management field is introduced in the Location/ Addres
 
 :material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Order`
 
-A Bank Account field has also been added to the Purchase and Sales Order windows, in the Advanced Bank Account Management section of the header. 
+A Bank Account field has also been added header section of the Purchase and Sales Order windows.
 
 This field is automatically filled based on the selected address. If a specific account is associated with the address, that account is used; if no account is configured, the default account is selected. In cases where neither option is configured, the field remains blank. Payment plans generated from these Purchase and Sales Orders now include the bank account information.
 
@@ -21574,6 +21624,9 @@ Furthermore, the Add Payment button has been enhanced to include a Bank Account 
 ###### Modify Payment Plan button
 
 A Modify Payment Plan button is found at Payment Plan tab level in both the Purchase and Sales Invoice windows. This function allows users to modify payment plans already created, adding or deleting payments, and even specifying the bank account for each payment plan record.
+
+!!!warning
+    This button is only available when the payment plan has no associated payments.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
 
@@ -29422,9 +29475,6 @@ Above scenario would somehow mean an expense in Organization A and a revenue in 
 
 Etendo Mobile is a **mobile app** in which the user can access to sub-applications via mobile devices in a fast and practical way. By enabling seamless integration between Etendo Classic and mobile sub-applications, Etendo Mobile allows users to log in to Etendo Classic and configure **dynamic applications** tailored to specific user roles, enhancing productivity and efficiency.
 
-!!!info
-    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
-
 
 Etendo Mobile is available in both Play and App Store:
 
@@ -29442,8 +29492,9 @@ Etendo Mobile is available in both Play and App Store:
     
 
 #### Initial Configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
 
-In order to use the app, the user must access Etendo Classic in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself. So, as System Administrator role, generate a token by clicking on the **generate key** button, this token is used to start the session in the app.
+In order to use the Etendo Mobile app, the user must access Etendo Classic as `System Administrator` role in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself and generate a token by clicking on the **Generate Key** button, this token is used to start the session in the app.
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-0.png)
 
@@ -29459,10 +29510,16 @@ For this, the gear icon shown in the welcome window allows the user to enter the
 !!!info
     In the Add new link field, it is possible to add other URLs to connect the app from different servers. It is also possible to modify or remove URLs.
 
-#### Log In
+
+<br>
+<br>
+<br>
 <br>
 
-![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="right" }
+#### Log In
+
+
+![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="left" }
 
 Once the server URL is configured, the user must log in entering **the user and the password** assigned by the system administrator.
 
@@ -29475,11 +29532,29 @@ Once the server URL is configured, the user must log in entering **the user and 
 !!!info
     Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the **Demo Try** button must be pressed so the user can enter the app without credential requirements.
 
-#### Dynamic App Role Configuration
 
-Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Mobile Extensions](https://docs.etendo.software/latest/etendo-mobile/bundles/mobile-extensions/mobile-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
+#### Sub-Applications Distributed by Etendo
 
-Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
+
+##### Mobile Extensions bundle
+
+- [Etendo Classic Subapp](./bundles/mobile-extensions/etendo-classic-subapp.md) 
+- [Documents Manager Subapp](./bundles/mobile-extensions/overview.md)
+
+##### Copilot Extensions bundle
+
+- [Etendo Copilot Subapp](https://docs.etendo.software/latest/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) 
+
+!!! info
+    In order to be able to configure the dynamic sub-applications, it is necessary to install the corresponding bundle. [Mobile Extensions](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"} bundle or [Copilot Extensions](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"} bundle
+
+#### Role Configuration - Dynamic App 
+
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
+
+Etendo Mobile allows the creation and configuration of mobile sub-applications. 
+
+Once the sub-application bundle is installed, go to the **Role window** and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
 
 Fields to note:
 
@@ -29488,6 +29563,25 @@ Fields to note:
 - **Active:** Select if this application is active or not.
 
 ![alt text](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
+
+
+
+#### Share Files
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
+
+Etendo mobile allows **receiving files** from external applications and being used by sub-applications.  
+
+- The [Documents Manager Subapp](./bundles/mobile-extensions/overview.md#documents-manager-subapp) is a sample implementation capable of receiving external files and rendering them within Etendo Mobile. 
+- The [Etendo Copilot Subapp](https://docs.etendo.software/latest/etendo-copilot/bundles/overview.md#etendo-copilot-subapp), able to receive any external file as input and in one simple step be processed by the agents.
+
+!!! warning
+    The file sharing functionality enables the files for any sub-application and then displays a selector capable of opening the corresponding sub-application.
+
+!!! info
+    For more technical information visit [Create New Sub-application](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md) guide
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -29576,6 +29670,23 @@ The Etendo Classic Sub-application allows users to access and manage their clien
 
 !!! info
     For more information, visit [Etendo Classic Subapp - User Guide](./etendo-classic-subapp.md).
+
+
+##### Documents Manager Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.docsmanager`
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
+
+The **Documents Manager Subapp** is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
+
+!!! note
+    The application supports different formats of Images, Audio, PDF, CSV and txt. Although on iPadOS it may be limited.
+
+
+!!! info
+    For more technical information, visit [Create New Subapplication - Receiving Shared Files from Etendo Mobile](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#receiving-shared-files-from-etendo-mobile).
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -29893,6 +30004,7 @@ When asked something, Copilot informs the user about the assistants and tools us
 ### Copilot Setup and Usage
 
 #### Initial Configuration
+:material-menu: `Application` > `General Setup` > `Client` > `Client` 
 
 In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
 
@@ -30314,13 +30426,13 @@ Etendo Copilot is a platform that optimises development time with AI-enabled too
     For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md).
 
 
-##### Etendo Copilot SubApp
+##### Etendo Copilot Subapp
 
 :octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
 
 The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
 
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific windows** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific data** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
 
 With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
 
@@ -47044,7 +47156,7 @@ This page explains how to configure and export dynamic applications in Etendo Cl
 
 As `System Administrator` role, in the **Dynamic App** window, specify the paths and versions for each subapplication. These settings determine how subapplications are displayed when users log into Etendo Mobile.
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/dynamic-app-creation.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dynamic-app/dynamic-app.png)
 
 Fields to note:
 
@@ -47063,6 +47175,7 @@ Fields to note:
 - **Default**: This check defines that this version is productive.
 - **Is Development**: This check defines that this version is in development and can be deployed locally.
 - **Active**: To select if this application version is active or not.
+- **Receive External Files** Identifies sub-applications that allow receiving shared files from external applications and are capable of handling them.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -48253,6 +48366,39 @@ docker_com.etendoerp.etendorx=true
 
     If you want to debug Tomcat locally with IntelliJ, visit [Tomcat Dockerized Service](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md).
 
+
+#####  Etendo RX Configurations
+
+Before starting the dockerized services, there are some configurations that need to be done in Etendo Classic
+
+##### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption token for the authentication in the `Client` window with the `System Administrator` role.
+If the expiration time is equal to `0` the tokens do not expire.
+
+Generate a random key with the **Generate key** button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. As `System Administrator` role, in this window, run the `Initialize RX Services` process in the toolbar. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
+
+After the execution of this process the default configuration variables are completed, depending on the configuration of the instance and the infrastructure, even the default parameters required by each service are configured.
+
+![default-rx-config.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/getting-started/default-rx-config.png)
+
+!!!info
+    The **Public URL** field only needs to be configured when the services is set to production.
+
+
+##### Launch RX services
+
 Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
@@ -48272,6 +48418,8 @@ By default, the following services should be up and running:
 
 !!! success
     You have successfully set up the Etendo RX services. For more information, visit [Projections and Mappings](./concepts/projections.md) and [Creating a New Microservice](https://docs.etendo.software/latest/developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md) page in the developer guide section.
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Config Server
@@ -48674,6 +48822,554 @@ Fields to note:
 - Organization: Organizational entity within client.
 - Name: It describes the identifier name of the value.
 - Constant Value: It describes the value to set, for example, an entity ID.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ✨ Installation
+## Article Path: /Developer Guide/Etendo RX/Connectors/Openbravo Connector/✨ Installation
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide
+## Article Content: 
+### Installation: Connecting Openbravo POS and Etendo
+
+#### Overview
+This guide provides step-by-step instructions to install and configure the integration between Openbravo and Etendo environments. This setup allows you to generate documents in Openbravo POS Terminal, store them in the Openbravo environment and synchronize them with Etendo using Etendo RX as middleware.
+
+In this guide we will start from two clean environments using test data, which facilitates the configuration and demonstrates the potential of this integration.
+
+!!! info 
+    This guide is based on Openbravo 23Q4.2 and Etendo 24.4.0
+
+#### Required Software and Tools
+- [Eclipse IDE](https://eclipseide.org/){target="_blank"}
+- [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} or [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"}
+- [Postman](https://www.postman.com/downloads/){target="_blank"}
+- [Openbravo 23Q4.2](https://gitlab.com/orisha-group/bu-commerce/openbravo/product/openbravo)
+- [Etendo Classic 24.4.0](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md) or later.
+- [Platform Extensions Bundle ](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) latest version.
+
+#### Openbravo
+
+First, follow the [Openbravo Custom Installation Guide](https://wiki.openbravo.com/wiki/Installation/Custom){target="_blank"} and install in a local environment following [How to setup Eclipse IDE](https://wiki.openbravo.com/wiki/How_to_setup_Eclipse_IDE){target="_blank"}.  
+
+##### Modules to Install on Openbravo
+
+In the Openbravo environment we need to install the Retail, EDL and Business API modules.
+
+To obtain these modules, an active Openbravo License and access to the Openbravo Forge are required. Ensure that the Openbravo environment includes the following modules in versions compatible with the corresponding Openbravo Core version. In this example, the modules will be used in version 23Q4.2.
+
+- [`org.openbravo.retail.sampledata`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Retail-Sampledata){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.returns`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Return-From-Original){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.posterminal`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Web-POS){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.poshwmanager`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Web-POS-Hardware-Manager){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.pack`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Openbravo-For-Retail){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.discounts`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Discounts--Promotions-Rules-For-Retail){target="_blank"} version `23Q4.2`
+- [`org.openbravo.retail.config`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Retail-Configuration){target="_blank"} version `23Q4.2`
+- [`org.openbravo.mobile.core`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Mobile-Core-Infrastructure){target="_blank"} version `23Q4.2`
+- [`org.openbravo.events.core`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Events-Core){target="_blank"} version `1.0.233000`
+- [`org.openbravo.api`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Openbravo-API){target="_blank"} version `1.0.234001` 
+- [`org.openbravo.service.openapi`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/Open-API){target="_blank"} version `1.1.233000`  
+- [`org.openbravo.service.external.integration`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/External-Integration-Infrastructure){target="_blank"} version `2.0.234000` 
+- [`org.openbravo.externaldata.integration`](https://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/ForgeModuleDetail/External-Data-Integration-In-The-ERP){target="_blank"} version `2.0.234000` 
+
+!!! warning
+    Is necesary to apply a change in the `modules/org.openbravo.api/src/org/openbravo/api/util/ApiUtils.java` file  in line 38 reeplace by: 
+
+    ```java
+        Matcher m = Pattern.compile("(^|[^\\\\]{2}):{1}([a-zA-Z0-9_]+)").matcher(hqlWhereClause);
+    ```
+
+Also, you must clone in the `/modules` folder the Etendo Connector integration modules, to do that the Partner access level to Etendo Software organization in GitHub is required:
+
+```bash
+git clone git@github.com:etendosoftware/com.etendoerp.integration.openbravo.git --branch 1.0.0
+git clone git@github.com:etendosoftware/com.etendoerp.integration.openbravo.template.git --branch 1.0.0
+```
+
+##### Set Up the Openbravo Environment
+Run the following commands to set up the Openbravo environment:
+
+```bash title="Terminal"
+ant setup
+ant install.source
+ant import.sample.data -Dmodule=org.openbravo.retail.sampledata
+ant smartbuild
+```
+
+!!! warning
+    Configure Tomcat to run on port `8081` since port `8080` will be occupied by Etendo, then restart Tomcat.  
+
+
+##### Master Data Configuration
+
+Then, to simplify the configurations we will make some inserts in the `openbravo` database, for this we can connect from PGAdmin or by command line:
+
+```bash title="Terminal"
+PGPASSWORD=tad  psql -U tad  -d openbravo -h localhost -p 5432
+```
+
+Run the following script:
+ 
+```SQL title="Setup Script"
+
+INSERT INTO public.c_external_system(c_external_system_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, description, connectivity_process, name, ad_protocol_id)
+    VALUES('73159A3D97824F07ABB4176F2D514F7D','0','0','Y','2024-05-16 08:12:58.295','0','2024-05-16 08:12:58.295','0',NULL,'N','OB Connector','36ADC30F67164F119013515280D82C01');
+INSERT INTO public.c_external_system_http(c_external_system_http_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, c_external_system_id, url, authorization_type, username, password, request_method, timeout, oauth2_client_identifier, oauth2_client_secret, oauth2_auth_server_url, em_etint_token)
+    VALUES ('EC60C5CF35234C648D9B5B00015190E2','0','0','Y','2024-03-12 10:02:38.42','100','2024-12-18 12:03:21.298','100','73159A3D97824F07ABB4176F2D514F7D','http://localhost:8096','ETINT_X-TOKEN',NULL,NULL,'POST',10,NULL,NULL,NULL,'eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJzd3MiLCJyb2xlIjoiRTcxN0Y5MDJDNDRDNDU1NzkzNDYzNDUwNDk1RkYzNkIiLCJvcmdhbml6YXRpb24iOiIwIiwiaXNzIjoic3dzIiwiY2xpZW50IjoiMzkzNjNCMDkyMUJCNDI5M0I0ODM4Mzg0NDMyNUU4NEMiLCJ3YXJlaG91c2UiOiI0RDQ1RkU0QzUxNTA0MTcwOTA0N0Y1MUQxMzlBMjFBQyIsInVzZXIiOiJFOEFEOUIyNkI3RDE0Nzg2OEI2OEE5NTAwQ0M3NkRERCIsImlhdCI6MTczNzE0MzkyM30.MEYCIQDvVJXsg-6stuky6l93cdpM_jsgu5VHDRFh81iUTK0zigIhAJb6Ha2-EnGsb9RrcBsmMPzjJ2-cAYonuuYmfF3YJG3w');
+INSERT INTO public.cnc_events_subs (cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('10F0532FC9074E80923C02AA50234437','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:50.672','100','2024-05-16 09:00:50.672','100','4CABD83993ED4DD185354B826CF282AB','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('19299136996A41A188FDF0EBA613439C','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 08:59:57.049','100','2024-05-16 08:59:57.049','100','EC44C2BF556F4DE5936F77032CFFEDFA','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('41E108F4B4324D93A3822452FC28EAE2','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 08:59:45.106','100','2024-05-16 08:59:45.106','100','D4220C11026E4BCEB9F5C9E6986E3027','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('74411877488542F9A29E1A62AE9A3095','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:18.521','100','2024-05-16 09:00:18.521','100','C8846AB5E6D64201AEB1D8BDDFD1FCB8','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('8D9B45DED9154D12BB59FC61881DF504','39363B0921BB4293B48383844325E84C','0','Y','2024-12-18 16:14:12.695','100','2024-12-18 16:14:12.695','100','1E9960A3751E42BE9C295F659BF31481','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('9B196742FCBF438AB0F993CCEB0FD128','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:01:35.509','100','2024-05-16 09:01:35.509','100','9A827B001D82408D90DA622E6860EC1C','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('B30C7FAA3FE849568C7DFD7B6463A89B','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:01:26.548','100','2024-05-16 09:01:26.548','100','60F1B0A744904709A5BEC2D3163CB0F5','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('D1DFB1E5ACC1482097D2BDF79810B6C5','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:32.893','100','2024-05-16 09:00:32.893','100','EE70B36B9755410289137250E4CA3F49','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.cnc_events_subs(cnc_events_subs_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, cnc_public_events_id, em_api_c_external_system_id)
+    VALUES ('FADDA04F4AF54C41B16F13F111834488','39363B0921BB4293B48383844325E84C','0','Y','2024-05-16 09:00:07.792','100','2024-05-16 09:00:07.792','100','C999B37599FA4705A110BEA8F358372A','73159A3D97824F07ABB4176F2D514F7D');
+INSERT INTO public.obedl_configuration(obedl_configuration_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, obedl_process_id)
+    VALUES ('B1F00DAB0FEC4C549AF0068E77492638','39363B0921BB4293B48383844325E84C','0','Y','2024-12-20 11:22:20.267','100','2024-12-20 11:22:20.267','100','9B8E4B855B7E41EB87EE37D3394B7AD2');
+INSERT INTO public.obedl_config_output(obedl_config_output_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, seqno, output_path, output_user, output_pass, output_filename, obedl_configuration_id, obedl_output_type_id, wsmethod, isretryenabled, maxretry, retryinterval, timeout)
+    VALUES ('EE980DAA10CA40B78547056656192F76','39363B0921BB4293B48383844325E84C','0','Y','2024-12-20 11:22:38.946','100','2024-12-20 11:22:38.946','100',10,NULL,NULL,NULL,NULL,'B1F00DAB0FEC4C549AF0068E77492638','BF9649DF97A14168A4C142222E2CBF0C',NULL,'N',NULL,NULL,5);
+INSERT INTO public.ad_preference(ad_preference_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, ad_window_id, ad_user_id, attribute, value, property, ispropertylist, visibleat_client_id, visibleat_org_id, visibleat_role_id, selected, ad_module_id, inherited_from)
+    VALUES ('36675A275AC2478C83AB05771EAA23A5','39363B0921BB4293B48383844325E84C','D270A5AC50874F8BA67A88EE977F8E3B','Y','2024-05-23 18:04:26.01','3073EDF96A3C42CC86C7069E379522D2','2024-05-27 10:48:48.382','100',null,null,null,'Y','ETINT_DefaultSyncValue','Y',null,null,null,'Y',null,null);
+DELETE FROM ad_role_orgaccess WHERE ad_client_id='39363B0921BB4293B48383844325E84C';
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('00E25567B08143EEB0218D4539268FFD','4AF94371114B4125877650274C245C5D','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:59:33.521','100','2023-10-11 11:59:33.521','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('05E6998CD5B44072809EC2D8DC89810C','FF808181259DADEB01259DDDA4BB01E5','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:48.42','100','2016-05-10 17:33:48.42','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('06F04F083ABA408499DA19988FBAAB8C','FF808181259DADEB01259DDDA4C201E6','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('070EB80EFFB945998F16D69825225A54','898E1715D1DF4C15A9CBE0813F23F892','E2A8087A81F54203969C6AED1AABBC72','39363B0921BB4293B48383844325E84C','Y','2019-02-08 00:33:00.243','100','2019-02-08 00:33:00.243','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0B8FB016F525412E8F51A3041F022DED','45A63D86E04D4052A3E8D04ABCC17E1E','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2017-01-26 13:41:31.129','100','2017-01-26 13:41:31.129','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0C6E8B1A5F7A46639ADDEDE817E59DB6','FF8081812250326E012250353BDE0006','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0C8EB7C3DF964C91922987E6A525A855','FF808181259DADEB01259DDDA4C201E6','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0E212E2128B34AC18969896B1642074B','FF808181259DADEB01259DDDA4C201E6','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('0F73E3802207447A965055B702DAF36D','D7D7D228E4594ACE8D00FD0E08B333DE','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('145D57C3347D4F32B21EE04DC3993A2B','463683CFA16C40C0A4EC8CF934114146','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('15B90797F244416AB8F4DC181DA7BC2B','463683CFA16C40C0A4EC8CF934114146','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('1A9D803990FA42058D41EE0995AD9DE3','FF8081812250326E012250353BDE0006','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('1EFCD742FDD94113A8BC9D51651ACB42','463683CFA16C40C0A4EC8CF934114146','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('204B559EFBF94116AF0558C428FEF5C3','D7D7D228E4594ACE8D00FD0E08B333DE','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('21C7FA46793B4C8A8120D96FF8EFF68C','463683CFA16C40C0A4EC8CF934114146','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('24CFC72398FC400FB70B427A4B37D275','28D1AFB16B7C4B69B4C8026C16BF88F6','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2018-07-16 09:45:00.77','100','2018-07-16 09:45:00.77','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('27FB52278FD8499E859885BBBA81469D','FF808181259DADEB01259DDDA4BB01E5','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:32:17.675','100','2016-05-10 17:32:17.675','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('310886C13CEF4618B4854F796E297CEA','D7D7D228E4594ACE8D00FD0E08B333DE','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('37CBB9594B014AF098B8CAF10316B00C','FF8081812250326E012250353BDE0006','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('38688BD551FA4718BD865FE8D4EA3FA7','FF808181259DADEB01259DDDA4BB01E5','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:12.588','100','2016-05-10 17:33:12.588','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3AA4B571EBDA4757B30E59B19A28752B','FF808181259DADEB01259DDDA4C201E7','DF86640764AA4492AB6D4CA2D432B8D4','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:39.566','100','2016-09-05 19:05:39.566','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3AED4DB65F374ED09558D3B2BC2D2FAD','D7D7D228E4594ACE8D00FD0E08B333DE','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3FB7C8A13A954ED9B5AF469FFAD769CD','FF808181259DADEB01259DDDA4C201E6','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('43CFCE1377B046659E5C75B3C9A67447','E0E04AEBED4F497B98821315A039FAE0','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','Y',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('454CFB3140DA4FFEA6247835FC8A8C9D','FF808181259DADEB01259DDDA4C201E7','0','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:21.172','100','2016-09-05 19:05:21.172','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('471CD13FA7024D2CAC8A23B7492EAB8D','FF808181259DADEB01259DDDA4C201E6','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('49CA2A40287E400DA0D8CAC3B5A6C7BA','FF808181259DADEB01259DDDA4C201E7','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:49.47','100','2016-09-05 19:05:49.47','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4E087E72C4BC49C3A28FE2EB88FC5560','FF808181259DADEB01259DDDA4C201E6','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4E6BA6809674438DADBA699E91A2F4A1','D7D7D228E4594ACE8D00FD0E08B333DE','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('533DACF943EA4C68939C2F00EACBBC92','F539FCE19DD744DEA5BFD9387E61EB42','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2015-10-08 12:40:03.398','100','2015-10-08 12:40:03.398','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('53979ED48C834DD69162C1B390D5C0AA','FF808181259DADEB01259DDDA4BB01E5','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:32:00.203','100','2016-05-10 17:32:00.203','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('539B9A17F57F4298B07EDA0DA9791CC0','FF8081812250326E012250353BDE0006','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('53A6D8FFA4C84A8C93F6CDC83B00A7B3','5FA11B3DD8F04C0986C774624809C31E','0','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('551489F6FFB841FFB6A851C9253CEB66','463683CFA16C40C0A4EC8CF934114146','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('56402FE8BD5449EC9244A6AC08AB7F90','4AF94371114B4125877650274C245C5D','65C1C46FB1D04CBD98CBD4167CCFE600','39363B0921BB4293B48383844325E84C','Y','2019-02-07 18:01:06.808','100','2019-02-07 18:01:06.808','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('595C29533DAA4E59AB71FBEFD9D10AEA','E717F902C44C455793463450495FF36B','0','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.048','0','2013-07-04 23:01:15.048','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('5A59133E18CE476AB489FA0EC51ACBF2','FF808181259DADEB01259DDDA4C201E7','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:45.382','100','2016-09-05 19:05:45.382','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('5F31E242A9BB4BD18CB7E5B496A858D7','FF808181259DADEB01259DDDA4C201E6','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('5FF9AAB3C384462D8E812DF4C1B5E35A','D7D7D228E4594ACE8D00FD0E08B333DE','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('6899F9065C3F4A18B46FC78DAFF0442B','FF808181259DADEB01259DDDA4BB01E5','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:17.069','100','2016-05-10 17:33:17.069','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('69F88418E80D4747BE967690EA0EC454','FF808181259DADEB01259DDDA4C201E7','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:53.711','100','2016-09-05 19:05:53.711','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('6F9D0F236DFB42E6BE596C4569DCD58B','FF808181259DADEB01259DDDA4BB01E5','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:43.374','100','2016-05-10 17:33:43.374','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('734B0E318B7C488196F9FF57DD409D40','FF8081812250326E012250353BDE0006','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('7420FFCA3DD94FA08754F1C309164C10','FF8081812250326E012250353BDE0006','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('78D4E9A3C23B494DB2236F0667A6B567','FF808181259DADEB01259DDDA4C201E7','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:29.563','100','2016-09-05 19:06:29.563','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('7944BC0FC2E246EAB81DAC10BA66C3DF','FF8081812250326E012250353BDE0006','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('832EF36B4C8B40E18E13971A3E682CC3','FF808181259DADEB01259DDDA4C201E7','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:05:58.908','100','2016-09-05 19:05:58.908','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('85D5D57E01F44B49A923611D23DAD691','D7D7D228E4594ACE8D00FD0E08B333DE','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('88650D508D294A79B306CEA9DBF850D7','FF808181259DADEB01259DDDA4C201E6','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('88C6B42E7FA7458EB20426226AC2F2BE','7499FEEA12DF46918F5448E8260B5E3E','0','39363B0921BB4293B48383844325E84C','Y','2020-05-22 08:57:23.772','100','2020-05-22 08:57:23.772','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('893248F94B7B45D4B418825A1124B7B7','463683CFA16C40C0A4EC8CF934114146','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.047','0','2013-07-04 23:01:15.047','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('89F8E8215E85452D883DB5A44695F206','FF808181259DADEB01259DDDA4BB01E5','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:32:59.49','100','2016-05-10 17:32:59.49','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('8AA885C4DA0B441D81937BE1890F2031','FF808181259DADEB01259DDDA4C201E6','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('8ED25886285A405F981F251F45C0E58F','D7D7D228E4594ACE8D00FD0E08B333DE','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9097B346A30C41BB914C657B4049F552','D7D7D228E4594ACE8D00FD0E08B333DE','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('90ABBC7550EA4CC98C8869AE959A1C1B','FF8081812250326E012250353BDE0006','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('974063A1AD9D4501ACF9FD7072BFF94D','FF808181259DADEB01259DDDA4C201E7','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:33.941','100','2016-09-05 19:06:33.941','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('97AC72DCF7AF40D793D6E4BE80BD65F2','FF808181259DADEB01259DDDA4C201E6','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9A7EC9E6391944688C7DF136379E7C30','FF8081812250326E012250353BDE0006','0','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9ACFD154DEDA4B63B67648F4FE4AF833','FF808181259DADEB01259DDDA4BB01E5','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:38.56','100','2016-05-10 17:33:38.56','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('A30D63F28BEE4CDF99ABCE1A6C8F801D','FF808181259DADEB01259DDDA4BB01E5','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:53.083','100','2016-05-10 17:33:53.083','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('A9403C5AC5E340029CCF6A319C5FC970','45A63D86E04D4052A3E8D04ABCC17E1E','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2017-01-26 13:41:18.384','100','2017-01-26 13:41:18.384','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('AE13511035D64E4A925DAF042FB5C909','FF808181259DADEB01259DDDA4C201E7','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:23.97','100','2016-09-05 19:06:23.97','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('AFD3C34DD9AA4CC590E986DC7581F571','463683CFA16C40C0A4EC8CF934114146','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.047','0','2013-07-04 23:01:15.047','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('AFEB72B0B7424EC99167DE820AD2F20D','FF808181259DADEB01259DDDA4C201E7','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:12.551','100','2016-09-05 19:06:12.551','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('B259A9E578C740F483C5FA93DDE34203','41DAFA0C214D4954A6A9B383AF9A3D96','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:59:08.846','100','2023-10-11 11:59:08.846','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('B4B94E5E0E61475998070EC51D81FF75','FF808181259DADEB01259DDDA4C201E7','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:08.283','100','2016-09-05 19:06:08.283','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('C94DD74AAB414D4996AE4AD6D4067886','FE77051CF38044DCB7471664F9CBB44B','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-09-05 10:16:42.287','100','2016-09-05 10:16:42.287','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D1621B93AA2B46A8BD2C17A461B75417','FF8081812250326E012250353BDE0006','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D22D0FB1D0F447919D0A8B8A75747DEB','FF808181259DADEB01259DDDA4BB01E5','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:34','100','2016-05-10 17:33:34','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D7774F5E00B743DBA062612850A343F8','D7D7D228E4594ACE8D00FD0E08B333DE','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D95911EC4DFF426785F928105499766D','FF808181259DADEB01259DDDA4C201E6','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:53:57.752511','100','2016-05-10 18:53:57.752511','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('D9B55D1899F24A549DE4F37CE2C37722','D7D7D228E4594ACE8D00FD0E08B333DE','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:04.121774','100','2016-05-10 18:55:04.121774','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('DBF5A71716C64C41BBB95516EE3BFDA5','898E1715D1DF4C15A9CBE0813F23F892','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:58:48.036','100','2023-10-11 11:58:48.036','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('E1E5122BECCD402B857A7F5719E02101','463683CFA16C40C0A4EC8CF934114146','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2013-07-04 23:01:15.047','0','2013-07-04 23:01:15.047','0','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('E35081972A7C4F8F9A6E33041F67BF80','5FA11B3DD8F04C0986C774624809C31E','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','N','2023-10-11 11:57:53.708','100','2023-10-11 11:57:53.708','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('E54135DA0A6E4F449F385986A69C355F','FF808181259DADEB01259DDDA4C201E7','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2016-09-05 19:06:03.536','100','2016-09-05 19:06:03.536','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('EA1A8571906A470EA02AD544190EA841','FF8081812250326E012250353BDE0006','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2016-05-10 18:55:21.710401','100','2016-05-10 18:55:21.710401','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('EACCEB3F06564BC98A938B3CDC905D90','FF808181259DADEB01259DDDA4BB01E5','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2016-05-10 17:33:04.719','100','2016-05-10 17:33:04.719','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('26930A6961E443CDAD94248319D8BC01','E717F902C44C455793463450495FF36B','DF86640764AA4492AB6D4CA2D432B8D4','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:19.791','100','2024-12-17 14:49:19.791','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4B63427EF7194253AE5623B1A166F6CF','E717F902C44C455793463450495FF36B','3B187EC130A549A7A9388F8060EF156D','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:22.767','100','2024-12-17 14:49:22.767','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('3E3FDCE69F6847E28BE33CFA53D41EED','E717F902C44C455793463450495FF36B','CCAAD77DA7994401A9657F04AEB6342E','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:25.427','100','2024-12-17 14:49:25.427','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('99014DA3A05247BBAE2FEFC8EB0B4547','E717F902C44C455793463450495FF36B','102D0E6D37DA46C3BABA6DFF3708F341','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:28.241','100','2024-12-17 14:49:28.241','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('DB5BB8E6E568469DBC173CFD06D21F2E','E717F902C44C455793463450495FF36B','687AD71263F94A31B85A3CC9942FF7ED','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:32.368','100','2024-12-17 14:49:32.368','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9E3BA9AD88A7453CA81EC5CE2A36A9E5','E717F902C44C455793463450495FF36B','14B1927026BE471E9B85FE699BCA61C2','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:34.943','100','2024-12-17 14:49:34.943','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('9A8B84A3197B4044A5F4C9315942BBA2','E717F902C44C455793463450495FF36B','E2A8087A81F54203969C6AED1AABBC72','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:39.476','100','2024-12-17 14:49:39.476','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('B59E0EFB9E7D42C699C1F0A4A406C5AF','E717F902C44C455793463450495FF36B','B5DE96143D6642228E3B9DEC69886A47','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:42.525','100','2024-12-17 14:49:42.525','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('ABC7AF1DEC994A4DAEAE9BD545074686','E717F902C44C455793463450495FF36B','4399136852B145BD96CC2A6CE0800C68','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:46.204','100','2024-12-17 14:49:46.204','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('C44405A869AB4756AD723D26FB54AC54','E717F902C44C455793463450495FF36B','01AD882EFC8545ACA6455E2F6FD51EE9','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:49:57.448','100','2024-12-17 14:49:57.448','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('CDBCDE2BB7E54D248A34F6C624F222F0','E717F902C44C455793463450495FF36B','67839EEFA49E44AC969BD60093FCC899','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:01.988','100','2024-12-17 14:50:01.988','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4E49A87DF3FA40FC93B1502824A9A06D','E717F902C44C455793463450495FF36B','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:05.95','100','2024-12-17 14:50:05.95','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('4AFE1EB76EB64AF9B378C15A200CCD46','E717F902C44C455793463450495FF36B','65C1C46FB1D04CBD98CBD4167CCFE600','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:09.615','100','2024-12-17 14:50:09.615','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('C860DD8876AB49C496A0229AD09A8B29','E717F902C44C455793463450495FF36B','BF129721D9FB4EB0819509934153E972','39363B0921BB4293B48383844325E84C','Y','2024-12-17 14:50:13.15','100','2024-12-17 14:50:13.15','100','N',NULL);
+INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id, ad_client_id, isactive, created, createdby, updated, updatedby, is_org_admin, inherited_from)
+    VALUES ('73736A39CBBB4301B04A056A831A80FA','5FA11B3DD8F04C0986C774624809C31E','D270A5AC50874F8BA67A88EE977F8E3B','39363B0921BB4293B48383844325E84C','Y','2024-12-17 15:02:50.305','100','2024-12-17 15:02:50.305','100','N',NULL);
+UPDATE public.ad_org SET em_obretco_dbp_orgid='D270A5AC50874F8BA67A88EE977F8E3B' WHERE ad_org_id='D270A5AC50874F8BA67A88EE977F8E3B';
+
+```
+
+##### Openbravo Access
+
+Now, start Tomcat and access to Openbravo.
+
+!!! success "Openbravo Back Office"    
+    - [http://localhost:8081/openbravo/](http://localhost:8081/openbravo/)
+    - User: Openbravo
+    - Password: openbravo
+
+!!! success "Openbravo POS"
+    - [http://a.localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login](http://a.localhost:8081/openbravo/web/org.openbravo.retail.posterminal/?terminal=VBS-1#login)
+    - User: vallblanca
+    - Password: openbravo
+
+By following these steps the POS should be correctly configured, for more information you can visit [Retail:Configuration Guide](https://wiki.openbravo.com/wiki/Retail:Configuration_Guide){target="_blank"}
+
+
+#### Etendo 
+
+##### Configure Etendo Environment
+
+Follow the steps in the Install Etendo guide, in the tab [Steps to Install Etendo with Postgres Database and Tomcat Dockerized](https://docs.etendo.software/latest/getting-started/installation.md#steps-to-install-etendo-with-postgres-database-and-tomcat-dockerized).
+
+!!! info 
+    At this point we assume that you already have a local Etendo environment, Tomcat and Postgres SQL services dockerized.
+
+!!! warning 
+    It is not necessary to configure Tomcat, since the service is already dockeridez and preconfigured.
+
+
+##### Install Modules
+Once you have the Etendo environment you must install the **Platform Extensions** bundle and the specific modules to the Openbravo connector.
+
+To do this, add the dependencies in the `build.gradle` file:
+
+```groovy title="build.gradle"
+dependencies {
+    implementation ('com.etendoerp:platform.extensions:latest.release')
+
+    moduleDeps('com.etendoerp:integration.to.openbravo:1.0.0@zip')
+    moduleDeps('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
+}
+
+
+```
+Also, in the `gradle.properties` file the following configuration variables must be added, to execute all the necessary dockerized services:
+
+``` groovy title="gradle.properties"
+context.name=etendo
+
+bbdd.sid=etendo
+bbdd.port=5434
+bbdd.systemUser=postgres
+bbdd.systemPassword=syspass
+bbdd.user=tad
+bbdd.password=tad
+
+org.gradle.jvmargs=-Dfile.encoding=UTF-8
+
+docker_com.etendoerp.docker_db=true
+docker_com.etendoerp.tomcat=true
+docker_com.etendoerp.etendorx=true
+docker_com.etendoerp.etendorx_async=true
+docker_com.etendoerp.etendorx_connector=true
+docker_com.etendoerp.integration.to_openbravo=true
+
+etendorx.dependencies=com.etendorx.integration.to_openbravo:mapping:1.0.0, com.etendorx.integration.to_openbravo:worker:1.0.0
+etendorx.basepackage=com.etendorx.integration.to_openbravo.mapping
+```
+
+!!! warning
+    Since the database service will run dockerized and Openbravo is assumed to be installed on a local Postgres service on port `5432`, we will change the Etendo database port to `ddbb.port=5434` so that when the dockerized Postgres service is raised it will do so on that port.
+
+Now in a terminal in the Etendo project, we execute the commands:
+
+1. To apply the changes in the `gradle.properties` file settings.
+
+    ```bash title="Terminal" 
+    ./gradlew setup 
+    ```
+2. Expand source code modules:
+
+    ```bash title="Terminal"
+    ./gradlew expandModules 
+    ```
+3. Launch the dockerized services:
+
+```bash title="Terminal"
+./gradlew resources.up 
+```
+
+<figure markdown="span">
+    ![dockerized-services.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-1.png)
+    <figcaption> As you can see the DB Postgres services required for the Etendo installation is running </figcaption>
+</figure>
+
+
+##### Compile and access to Etendo Classic 
+
+The next step is to compile the Etendo environment and apply sampledata
+
+```bash title="Terminal"
+./gradlew update.database
+./gradlew import.sample.data -Dmodule=com.etendoerp.integration.to.openbravo.sampledata 
+./gradlew smartbuild
+```
+
+Once the environment has been compiled, the Tomcat service is automatically restarted, as can be seen in the last compilation steps.
+
+!!! success "Access Etendo Classic:"
+    - [http://localhost:8080/etendo](http://localhost:8080/etendo)
+    - User: admin
+    - Password: admin
+
+
+#####  Etendo RX Configurations
+
+After starting the dockerized services, there are some configurations that need to be done in Etendo Classic
+
+##### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption token for the authentication in the `Client` window with the `System Administrator` role.
+If the expiration time is equal to `0` the tokens do not expire.
+
+Generate a random key with the **Generate key** button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+##### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. As `System Administrator` role, in this window, run the `Initialize RX Services` process in the toolbar. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
+
+After the execution of this process the default configuration variables are completed, depending on the configuration of the instance and the infrastructure, even the default parameters required by each service are configured.
+
+!!! warning 
+    In the particular case of the `Worker Service` it is necessary to add the `connector.instance` parameter, which refers to the ID of the connector instance with Openbravo, this instance is distributed within the connector, so you must always set the ID `6364E51BF1234094A313F17E1DCD2F7D`. 
+
+![default-rx-config.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/default-rx-config-connector.png)
+
+#####  Initial Configuration Scripts
+
+```bash title="Terminal"
+cd modules/com.etendoerp.integration.to.openbravo/utils
+make set_wal
+make insert
+make setupconnector
+```
+
+##### Relunch RX services
+
+Then, to effectively run all  the services, it is necessary to **execute the command** in the terminal: 
+
+```bash title="Terminal"
+./gradlew resources.up
+```
+
+Here, all the services and their respective logs can be seen running using [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} for a simple and fast container management. 
+
+<figure markdown="span">
+    ![dockerized-services.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-2.png)
+    <figcaption> As you can see all the services required for the Openbravo Etendo integration are running </figcaption>
+</figure>
+
+
+#### Testing Data Synchronization between Environments
+
+#####  Etendo Access Token
+The last configuration step is to generate an access token for communication from Openbravo to Etendo. To do this we must through a request manager such as Postman execute the following request:
+
+- **HTTP Method**: `POST`
+- **URL**: `http://localhost:8080/etendo/sws/login`
+- **Request Body**:
+  ```json
+  {
+    "username": "obconnector",
+    "password": "obconnector",
+    "role": "E717F902C44C455793463450495FF36B",
+    "client": "39363B0921BB4293B48383844325E84C",
+    "organization": "0",
+    "warehouse": "0",
+    "secret": "123456",
+    "service": "obconnector"
+  }
+  ```
+
+After making the request, you will receive a JSON response. Copy the value of the token field, as it will be used for authentication in subsequent requests. For example:
+
+```json
+{
+"status": "success",
+"token": "eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJzd3MiLCJyb2xlIjoiRTcxN0Y5MDJDNDRDNDU1NzkzNDYzNDUwNDk1RkYzNkIiLCJvcmdhbml6YXRpb24iOiIwIiwiaXNzIjoic3dzIiwiY2xpZW50IjoiMzkzNjNCMDkyMUJCNDI5M0I0ODM4Mzg0NDMyNUU4NEMiLCJ3YXJlaG91c2UiOiI0RDQ1RkU0QzUxNTA0MTcwOTA0N0Y1MUQxMzlBMjFBQyIsInVzZXIiOiJFOEFEOUIyNkI3RDE0Nzg2OEI2OEE5NTAwQ0M3NkRERCIsImlhdCI6MTc0MDA3NTc5M30.MEQCIHh8GI1kW3l56I5ic6KXaezeSZug-Yb42eejf5YRvCJ5AiA1ulTKNpCqqu8GTWjpLRFUarI33zobyn5BuSuTEmq5mQ",
+...
+}
+```
+
+##### External System
+:material-menu: `Application` > `General Setup` > `Application` > `External System`
+
+In the Openbravo environment, logged in as `System Administrator`, it is necessary to access the `External System` window and set the generated token in the token field, this token is used to authenticate the requests form Openbravo to Etendo.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/openbravo-external-system.png)
+    
+
+##### Testing the Integration
+
+1. Log in to the Openbravo POS Terminal, with Valblanca user:
+
+    ![pos-login.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-login.png)
+
+2. Create a new customer:
+
+    ![pos-create-bpartner.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-create-bpartner.png)
+
+3. Create a Purchase Order for this new customer, and make the corresponding payment:
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/pos-create-order.png)
+
+4. As you can see, the sales order was created in Openbravo:
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-sales-order.png)
+
+5. In the **EDL Request Window** you can see the transactions sent from Openbravo to Etendo, their status and in case of failure see the error log and retry sending:
+    
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/ob-edl-request.png)
+
+6. Now, after a synchronization time, you can confirm that the documents are synchronized with the Etendo environment correctly with all related master data: 
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/etendo-sale-order.png)
+
+7. Finally, in the External ID Mapping window you can see the external record IDs and the mapping to local records:
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/external-id-mappings.png)
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Creating a New Microservice
@@ -52540,6 +53236,7 @@ Etendo Mobile _sends_ params to the subapplication and all of them are ready to 
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
     - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component includes a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
+    - _sharedFiles_: IFile array, if a file is shared to Etendo Mobile from an external application, sharing and selecting a sub-application will add the file to the file array of the corresponding sub-application.
 
 ##### Language
 The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the _language_ parameter received as input to initialize the remaining aspects of the application in the `App.tsx` file.
@@ -52700,7 +53397,7 @@ Fields to note:
 
 - **Module**: The module that can export the window configuration. In our example case, set `Product SubApp`.
 - **Name**: Name with the application will be shown. In our example case, set `Product Subapp`
-- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/<javapackage>/web/`. In our example case, set `/`
+- **Directory Location**: The path where the compiled application bundle is located. In development, the path is empty `/`, but in production, the path is `/web/<javapackage>/`. In our example case, set `/`
 - **Active**: To select if this application is active or not. In our example case, set `true`
 
 
@@ -53247,6 +53944,19 @@ In addition, it is necessary to add the navigation configuration in the `app.tsx
 
 4. Now you can view, filter, create, edit and delete products.
 
+#### Receiving Shared Files from Etendo Mobile
+
+In this section, we will explain how to receive external files from another application into **Etendo Mobile** using as example the sub-application [Documents Manager Subapp](https://docs.etendo.software/latest/user-guide/etendo-mobile/bundles/mobile-extensions/overview.md#documents-manager-subapp).
+
+!!! warning "Important"
+    Ensure that the **Receive External Files** checkbox is set to `true` in the **Dynamic App** window. This is crucial for the subapplication to appear as an option when sharing external files.
+    ![configuration-docsmanager.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dynamic-app/dynamic-app.png)
+    
+The `sharedFiles` parameter is passed to the subapplication and used to process the received files.
+
+!!! info 
+    For more information, visit the [Documents Manager Subapp](https://github.com/etendosoftware/com.etendoerp.subapp.docsmanager){target=“_blank”} repository. There you will find an example su-application, and the explanation of how to implement the file sharing functionality in your own app. 
+
 #### Debug Log
 
 This section explains how to log data in a sub-application using the `logger` utility function. To log any information, call the `logger` function with a key and a value:
@@ -53300,6 +54010,23 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
  https://docs.etendo.software/latest/whats-new/etendo-news
 ## Article Content: 
 
+#### March 2025
+
+##### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :material-trending-up: **Fixed Issue**
+    
+    ---
+    As of version [24.3.7](./release-notes/etendo-classic/release-notes.md), a bug affecting dropdown selectors in dimensional reports has been fixed. In environments running Etendo 24.3.6 or earlier, the first record in combo boxes was displayed incorrectly, showing a concatenation of all values instead of the correct individual value. This issue was caused by improper handling of `<option>` tags in HTML.
+
+    The bug has been resolved in 24.3.7, and Etendo 24.4.0 or later was not affected, as the refactor to fix the issue was already included in that version. 
+    
+    *See more details in Issue [#629](https://github.com/etendosoftware/etendo_core/issues/629)*.
+
+</div>
+
 #### February 2025
 
 ##### Etendo ISO
@@ -53309,7 +54036,35 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 - :material-trending-up: **Optimizations**
     
     ---
-    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the Etendo ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+
+</div>
+
+##### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Now, you can clone agents in one click**
+
+    ---
+
+    ![copilot-clone.png](https://docs.etendo.software/latest/assets/whats-new/etendo-news/copilot-clone.png)
+    
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the functionality to [clone agents](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md#buttons) and knowledge bases is added, allowing you to modify and customize the agents' wizards according to your needs.
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   :material-robot: **Improvements in agent knowledge bases**
+
+    --- 
+
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new capabilities are added:
+
+    ![knowledge-base-files-news.png](https://docs.etendo.software/latest/assets/whats-new/etendo-news/knowledge-base-files-news.png)
+
+    For more info visit [Knowledge Base File](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup-and-usage.md#knowledge-base-file-window) windows documentation.
 
 </div>
 
@@ -53320,11 +54075,17 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 - :octicons-package-16: **Enhanced asset management with accounting dimensions**
 
     ---
+
+    ![dimension.png](https://docs.etendo.software/latest/assets/whats-new/etendo-news/financial-dimension.png)
+
     In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
 
 - :octicons-package-16: **Gain better control with the Not Posted Documents window**
 
     ---
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/financial-not-posted.png)
+
     In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
 
     Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
@@ -53861,13 +54622,16 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.5){target="_blank"} | 21/02/2025 | 24.4.5 | QAA |  | :white_check_mark: |
+| [24Q4.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.7){target="_blank"} | 07/03/2025 | 24.4.7 | QAA |  | :white_check_mark: |
+| [24Q4.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.6){target="_blank"} | 28/02/2025 | 24.4.6 | C |  | :white_check_mark: |
+| [24Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.5){target="_blank"} | 21/02/2025 | 24.4.5 | C |  | :white_check_mark: |
 | [24Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.4){target="_blank"} | 14/02/2025 | 24.4.4 | C |  | :white_check_mark: |
 | [24Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.3){target="_blank"} | 30/01/2025 | 24.4.3 | C | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) | :white_check_mark: |
 | [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | C |  | :white_check_mark: |
 | [24Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.1){target="_blank"} | 17/01/2025 | 24.4.1 | C |  | :white_check_mark: |
 | [24Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.0){target="_blank"} | 19/12/2024 | 24.4.0 | C | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso){target="_blank"} | :white_check_mark: |
-| [24Q3.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.6){target="_blank"} | 13/12/2024 | 24.3.6 | CS |  | :white_check_mark: |
+| [24Q3.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.7){target="_blank"} | 07/03/2025 | 24.3.7 | CS |  | :white_check_mark: |
+| [24Q3.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.6){target="_blank"} | 13/12/2024 | 24.3.6 | C |  | :white_check_mark: |
 | [24Q3.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.5){target="_blank"} | 06/12/2024 | 24.3.5 | C |  | :white_check_mark: |
 | [24Q3.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.4){target="_blank"} | 29/11/2024 | 24.3.4 | C |  | :white_check_mark: |
 | [24Q3.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.3){target="_blank"} | 12/11/2024 | 24.3.3 | C |  | :white_check_mark: |
@@ -54015,7 +54779,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.10.0){target="_blank"} | 26/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.8.0){target="_blank"} | 23/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.7.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.7.0){target="_blank"} | 08/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.6.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
@@ -54069,7 +54834,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.1){target="_blank"} | 28/02/2025 | 24.4.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.0){target="_blank"} | 19/12/2024 | 24.4.0 | 24.4.x | C | :white_check_mark: |
@@ -54153,7 +54919,9 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.22.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.22.0){target="_blank"} | 07/02/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.23.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.1){target="_blank"} | 07/03/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.23.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.0){target="_blank"} | 28/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.22.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.22.0){target="_blank"} | 07/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.2){target="_blank"} | 24/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.1){target="_blank"} | 17/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.0){target="_blank"} | 21/12/2024 | 23.1.4 | 24.4.x | C | :white_check_mark: |
@@ -54440,8 +55208,9 @@ Article URL: https://etendo.software
 
 #### 24.4.3
 New ISO with Etendo Classsic version 24.4.3
-##### Fixed
- - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
+
+**Fixed**
+    - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 #### 24.4.0
 New ISO with Etendo Classsic version 24.4.0
@@ -54454,13 +55223,15 @@ New ISO with Etendo Classsic version 24.2.0
 
 #### 24.1.4
 New ISO with Etendo Classsic version 24.1.4
-##### Fixed
- - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
+
+**Fixed**
+    - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 #### 24.1.0
 New ISO with Etendo Classsic version 24.1.0
-##### Changes
- - Upgrade Tomcat version to 9.0.87
+
+**Changes**
+    - Upgrade Tomcat version to 9.0.87
 
 #### 23.4.0
 New ISO with Etendo Classsic version 23.4.0
@@ -54652,7 +55423,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.9.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.9.0){target="_blank"} | 15/01/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.0){target="_blank"} | 06/03/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.9.0){target="_blank"} | 15/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.8.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.6.0){target="_blank"} | 02/08/2024 | 23.2.0 | 24.2.x | C | :white_check_mark: |
@@ -54673,7 +55445,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.11.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.11.0){target="_blank"} | 14/02/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.12.0){target="_blank"} | 07/03/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.11.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.11.0){target="_blank"} | 14/02/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.10.0){target="_blank"} | 23/01/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.9.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.1){target="_blank"} | 10/01/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.0){target="_blank"} | 20/12/2024 | 23.4.0 | * | C | :white_check_mark: |
