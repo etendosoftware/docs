@@ -1,4 +1,5 @@
 ---
+title: Production Management - Getting Started
 tags: 
  - getting started
  - production management
@@ -8,7 +9,7 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-#
+# Production Management - Getting Started
 
 ## Overview
 

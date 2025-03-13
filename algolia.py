@@ -1,13 +1,13 @@
 import os
+import sys
 import json
 from bs4 import BeautifulSoup
 from algoliasearch.search.client import SearchClientSync
 
-client = SearchClientSync("XMLZ1ZZEY7", "fcfbff215223081526cae74652f4f884")
-
-output_dir = "site"
-
-def index_docs(output_dir):
+def index_docs(output_dir, ALGOLIA_WRITE_INDEX_KEY):
+    # Create the Algolia client using the passed key
+    client = SearchClientSync("XMLZ1ZZEY7", ALGOLIA_WRITE_INDEX_KEY)
+    
     result_json = []
     base_url = "https://docs.etendo.software/"
 
@@ -28,12 +28,11 @@ def index_docs(output_dir):
                 # Remove the unwanted substring if present
                 title = raw_title.replace(" - Etendo Documentation", "")
 
-                # Extract h2 elements
+                # Extract h2, h3, h4 elements
                 h2_elements = [h2.get_text(strip=True) for h2 in soup.find_all("h2")]
-                
-                # Extract h3 elements
                 h3_elements = [h3.get_text(strip=True) for h3 in soup.find_all("h3")]
-                
+                h4_elements = [h4.get_text(strip=True) for h4 in soup.find_all("h4")]
+
                 # Extract tags
                 tags = [tag.get_text(strip=True) for tag in soup.find_all(class_="md-tag")]
 
@@ -51,6 +50,7 @@ def index_docs(output_dir):
                     "title": title,
                     "h2": h2_elements,
                     "h3": h3_elements,
+                    "h4": h4_elements,
                     "tags": tags,
                     "url": url
                 }
@@ -67,6 +67,16 @@ def index_docs(output_dir):
     else:
         print("No HTML documents found to index.")
 
+def main():
+    # Read the key from command line argument (e.g., sys.argv[1])
+    if len(sys.argv) < 2:
+        print("Usage: python index_docs.py <ALGOLIA_WRITE_INDEX_KEY>")
+        sys.exit(1)
 
-# Index the docs
-index_docs(output_dir)
+    ALGOLIA_WRITE_INDEX_KEY = sys.argv[1]
+    output_dir = "site"
+
+    index_docs(output_dir, ALGOLIA_WRITE_INDEX_KEY)
+
+if __name__ == "__main__":
+    main()

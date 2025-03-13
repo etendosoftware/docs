@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Etendo Mobile Extensions - Release Notes
 tags:
     - Release Notes
     - Classic Subapp

@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Financial Extensions - Release Notes
 tags:
     - Release Notes
     - Financial

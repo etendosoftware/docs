@@ -1,4 +1,5 @@
 ---
+title: Developer Guide - Etendo Mobile - Getting Started
 tags:
     - Etendo Mobile
     - React-Native

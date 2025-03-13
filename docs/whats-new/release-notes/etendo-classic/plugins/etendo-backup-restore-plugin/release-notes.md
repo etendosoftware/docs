@@ -1,5 +1,5 @@
 ---
-title: Etendo Backup Restore Plugin
+title: Etendo Backup Restore Plugin - Release Notes
 tags:
     - Release Notes
     - Gradle

@@ -1,5 +1,5 @@
 ---
-title: ISO Image
+title: Etendo Classic - ISO Images
 tags:
     - Release Notes
     - Etendo
@@ -7,7 +7,7 @@ tags:
     - ISO
 ---
 
-# ISO Image
+# Etendo Classic - ISO Images
 
 :material-tools: Installation Guide: [ISO Installation Guide](../../../getting-started/installation.md#steps-to-install-the-iso-with-internet-connection)
 

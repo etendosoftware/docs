@@ -1,4 +1,5 @@
 ---
+title: Developer Guide - Copilot Extensions
 tags: 
     - Copilot Extensions
     - AI

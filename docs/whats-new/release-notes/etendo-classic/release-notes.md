@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Etendo Classic - Release Notes
 tags:
     - Release Notes
     - Etendo
@@ -8,7 +8,7 @@ tags:
     - Etendo Core
 ---
 
-# Release Notes
+# Etendo Classic - Release Notes
 
 :octicons-package-16: Javapackage: `com.etendoerp.platform.etendo-core`
 

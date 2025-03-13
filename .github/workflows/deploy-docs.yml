@@ -33,6 +33,9 @@ jobs:
               run: |
                 git config --local user.email "${{ secrets.ETENDOBOT_EMAIL }}"
                 git config --local user.name "${{ secrets.ETENDOBOT_NAME }}"
+            - name: Run Algolia Script
+              if: steps.commit-check.outputs.skip_steps != 'true'
+              run: python algolia.py ${{ secrets.ALGOLIA_WRITE_INDEX_KEY }}
             - name: Deploy docs
               if: steps.commit-check.outputs.skip_steps != 'true'
               run: mike deploy --push --update-aliases ${{ secrets.DOCS_VERSION }} latest

@@ -1,5 +1,5 @@
 ---
-title: Versiones Disponibles
+title: Localizacion Española - Versiones Disponibles
 tags:
   - Release Notes
   - Localizacion Española

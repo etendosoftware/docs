@@ -1,4 +1,5 @@
 ---
+title: User Guide - Overview
 hide:
     - toc
 ---
