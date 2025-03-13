@@ -28,14 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
-    // Helper: Convierte un texto en un slug (ej. "Bulk Posting" -> "bulk-posting")
-    function slugify(text) {
-        return text.toString().toLowerCase().trim()
-            .replace(/\s+/g, '-')       // Reemplaza espacios con -
-            .replace(/[^\w\-]+/g, '')    // Elimina caracteres no válidos
-            .replace(/\-\-+/g, '-');     // Reemplaza múltiples guiones por uno solo
-    }
-
     // Function to update the visibility of results based on the query
     function updateResultsVisibility() {
         const query = searchInput.value.trim();
@@ -50,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Render the list of results and update the status with the number of hits
     function renderResults(hits, query) {
         resultsContainer.innerHTML = "";
+        
         // Create a status element showing the number of matching documents
         const statusDiv = document.createElement("div");
         statusDiv.className = "md-search-status";
@@ -70,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Dynamic link building
             let finalUrl = hit.url;
             if (finalUrl) {
-                const dynamicSuffix = `?h=${encodeURIComponent(query)}#${slugify(hit.title || "")}`;
+                const dynamicSuffix = `?h=${encodeURIComponent(query)}`;
                 finalUrl += dynamicSuffix;
             }
             a.href = finalUrl;
@@ -114,7 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if (sectionsArray.length > 0) {
                 const sectionsElem = document.createElement("p");
                 sectionsElem.className = "md-search-result__sections";
-                sectionsElem.textContent = sectionsArray.join(", ");
+                const sectionsText = sectionsArray.join(", ");
+                if (queryWords.length > 0) {
+                    const pattern = queryWords.map(word => escapeRegExp(word)).join('|');
+                    const regex = new RegExp(`\\b((?:${pattern})\\S*)\\b`, 'gi');
+                    sectionsElem.innerHTML = sectionsText.replace(regex, `<span class="custom-keyword-highlight">$1</span>`);
+                } else {
+                    sectionsElem.textContent = sectionsText;
+                }
                 article.appendChild(sectionsElem);
             }
 
@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initial state
     updateResultsVisibility();
-
 
     if (searchContainer) {
         const sectionFilter = document.createElement("select");

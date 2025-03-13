@@ -94,7 +94,12 @@
     margin-right: 0.2em;
 }
 
-/* Highlight style for h2, h3 & h4 */
+/* Highlight style for keywords */
+.custom-keyword-highlight {
+    color: var(--color-highlight) !important;
+}
+
+/* Highlight style for h2, h3, h4 */
 .md-search-result__sections {
     color: var(--color-status-text);
     font-size: var(--font-size-status);
