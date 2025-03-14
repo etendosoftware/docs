@@ -38528,6 +38528,8 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     pip install mkdocs-glightbox
     pip install mike
     pip install mkdocs-rss-plugin
+    pip install beautifulsoup4
+    pip install algoliasearch
     ```
 
 3. Create a new branch with [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
