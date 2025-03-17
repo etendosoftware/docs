@@ -297,29 +297,48 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+This **General Ledger Advanced** report is an enhanced version of the previous General Ledger Report. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
 ![](../../../../../assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png)
 
-
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
+
 - User 1
 - User 2
 - Activity
 - Sales Region
-- Sales campaign
-- Cost center
+- Sales Campaign
+- Cost Center
 
-Moreover, the “Organization filter” was added, a filter that combines the original Organization field with the “Show related operations” check, to show intercompany transactions.
-
-In each filter, more than one option can be selected.
+Moreover, the Organization filter was added, a filter that combines the original Organization field with the Show Related Operations check, to show intercompany transactions. In each filter, more than one option can be selected.
 
 ![](../../../../../assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png)
 
+In the Group By menu, the following options are added:
 
-Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
+- Activity
+- 1st Dimension
+- 2nd Dimension
+- Sales Region
+- Sales Campaign
+- Cost Center
 
-![](../../../../../assets/drive/1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W.png)
+The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
+
+VA
+
+### Buttons
+
+In the toolbar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
+
+VA
+
+!!!warning
+    If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
+
+Also, with this functionality you can navigate to the related journal entry directly from the report. This allows easier and more efficient access to information. By clicking on a journal entry, the user can navigate to the Journal Entries Report window, applying all selected filters.
+
+VA
 
 ## Journal Entries Report
 
