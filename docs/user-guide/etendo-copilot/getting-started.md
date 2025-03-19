@@ -49,7 +49,6 @@ Each tool represents a dedicated and self-contained project, meticulously design
 
 ##  Key Features
 
-
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
 
 - **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
@@ -61,111 +60,72 @@ Each tool represents a dedicated and self-contained project, meticulously design
 - **LangGraph**: In this case, this option works as a manager of other assistants and allows to select team members. 
 
 - **Langchain Agent**: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.
-- **Multi-Model Assistant** This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
-- **Attach Files** Etendo Copilot allows users to attach one or multiple files for assistants.
+- **Multi-Model Assistant**: This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
+- **Attach Files**: Etendo Copilot allows users to attach one or multiple files for assistants.
+- **Context Sharing**: Etendo Copilot can automatically capture and share the context of your current Etendo Classic session, such as selected records or active windows. This eliminates the need to manually input information, streamlining workflows and improving efficiency.
 
 ## Copilot Interface
----
 
-![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+### Navegation Bar
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`, `Multi-Model Assistant`, `LangGraph` and `Open AI Assistant` types, for more information visit [Assistant Windows](../etendo-copilot/setup-and-usage.md#assistant-window) documentation.
 
+![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+
+### Tool Bar
+
+In any standard Etendo Classic window, you will see in the **toolbar a button** with the Copilot icon. Clicking this button opens the Copilot chat, automatically passing the context of the current tab or selected records. This feature ensures that Copilot has all the relevant information about your current session, eliminating the need to manually input details and streamlining your workflow.
+
+![](../../assets/user-guide/etendo-copilot/getting-started/toolbar.png)
+
+**Context awareness**
+
+Etendo Copilot can take advantage of the context of the currently active window or record in Etendo Classic. Clicking the toolbar button updates the current context automatically.
+
+1. **Form Context**: If you have a form open (for example, a sales order or a customer record), Copilot retrieves the key fields and any unsaved edits, offering you real-time suggestions or validations.
+
+2. **Grid context**: When a row is selected in a grid, Copilot captures the details of those specific records, sending Copilot all relevant information so you can receive relevant AI-based recommendations.
+
+3. **Tab and window context**: In multi-tabbed environments, context must be sent to Copilot each time you switch from one view to another (e.g., from Orders to Products).
+
+![Attach-Files](../../assets/user-guide/etendo-copilot/getting-started/attach-files.png){align=left  width="300"}
+
 ### Attach Files
----
 
-![Attach-Files](../../assets/user-guide/etendo-copilot/getting-started/attach-files.png){align=right  width="300"}
-
-Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports any file format, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.
+Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports various file formats, such as `.pdf`, `.csv`, `.jpg`, and more, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.
 
 This functionality ensures that users can seamlessly incorporate external data into their workflows, whether it involves parsing documents, analyzing spreadsheets, or processing images. Assistants and tools can be tailored to address specific requirements based on the type of attached files, providing contextualized and intelligent responses.
-
 <br>
-<br>
+<br clear="all">
 
 ### Visualization Mode
----
+
+**Pop-up**
 <figure markdown>
 ![](../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=300}
 <br><br>
-Copilot, by default, can be used as a pop-up window. This is comfortable to use as an integrated assistant available in any window you are using.
+By default, Copilot operates as a pop-up window, providing convenient access as an integrated assistant in any active window.
 </figure>
 ---
 
+**Full Screen**
 <figure markdown>
 ![](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
 <br><br>
-Select the fullscreen mode for a more comfortable use when having long conversations.
+Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.
 </figure>
-
 ---
+
+**Minimized**
 <figure markdown>
 ![](../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200}
 <br><br>
-It can also be minimized. In this case, the logo will be shown in the lower-right section of the screen.
+Copilot's interface can also be minimized. In this case, a Copilot bubble will be active at the bottom right of the screen.
 </figure>
----
+
 When asked something, Copilot informs the user about the assistants and tools used when processing each message.
 
 !!!note
-    When closed and opened again, by default, Copilot will select the last assistant previously used.
-
-## Copilot Toolbar and Context Handling
----
-
-One of the most convenient ways to access Etendo Copilot is through the dedicated **Copilot** button located in the **Etendo Classic toolbar**. This button appears only when the Copilot module is installed and provides direct access to AI-driven assistance.
-
-![Copilot Toolbar Button](../../assets/user-guide/etendo-copilot/getting-started/copilot-button-toolbar.png)
-
-<br clear="all">
-
-### Visibility & Activation
-
-- **Module-Driven Appearance**  
-  The toolbar button is automatically displayed when the Copilot module is installed and active. If the module is disabled or removed, the button disappears to keep the user interface uncluttered.
-
-- **Instant Access**  
-  Clicking the **Copilot** button opens the Copilot window (pop-up or sidebar), allowing you to start a conversation or attach files right away. If you minimize or close Copilot, clicking the button again will reopen it with your session intact.
-
-### Context Awareness
-
-Etendo Copilot can leverage context from the currently active window or record in Etendo Classic. Whenever you click the toolbar button:
-
-1. **Form Context**: If you have a form open (e.g., a Sales Order or a Customer record), Copilot automatically retrieves the key fields and any unsaved edits, giving you real-time suggestions or validations.
-
-2. **List/Grid Context**: When a row is selected in a grid or a list, Copilot captures that specific record’s details—such as record ID, status, or customer name—so you can receive relevant AI-based advice.
-
-3. **Tab & Window Context**: In multi-tab environments, Etendo Copilot identifies which tab or window is currently active. This means that if you switch from one view to another (e.g., from Orders to Products), Copilot updates its internal context accordingly.
-
-### Typical Scenarios
-
-- **Editing a Record**  
-  You are modifying fields in a Sales Order but haven’t yet saved changes. By clicking the Copilot button, any unsaved edits are still captured, allowing Copilot to validate or suggest improvements before you formally save the record.
-
-- **Navigating Between Records**  
-  If you move from one Customer record to another, each time you click the Copilot button, the new record’s data is automatically sent, ensuring context-based suggestions are always up to date.
-
-- **Multiple Windows  
-  In cases where you have multiple Etendo windows or tabs open, Copilot focuses on the one you clicked the toolbar button in. This prevents confusion and ensures that only the relevant data is sent for analysis or advice.
-
-**Example Usage: Asking Copilot About a Role**
-
-When you open the **Role** window in Etendo, select a record, and click the Copilot button, the system automatically captures the active record context. In this example, the **F&B International Group Admin** role is selected (as shown in the background). Once Copilot opens, you can type a prompt directly in the chat window.
-
-![Copilot Prompt - Role](../../assets/user-guide/etendo-copilot/getting-started/copilot-role-prompt.png)
-
-### Security Considerations
-
-- **Role-Based Access**  
-  The Copilot toolbar button respects Etendo’s security framework. Only users with the correct permissions will see or be able to use this feature.
-
-- **Trustworthy Data Exchange**  
-  When Copilot is opened via the toolbar, all context data is transferred securely within Etendo’s environment. The system uses origin checks and `postMessage` filtering to ensure messages are only processed if they come from the trusted ERP domain.
-
-### Benefits of Toolbar Integration
-
-- **User-Friendly**: Instantly open Copilot from any part of the interface—no separate logins or external tabs required.
-- **Less Manual Input**: Because context is automatically gathered (form data, list selections, etc.), you save time by not having to re-describe the scenario to Copilot.
-- **Improved Accuracy**: With relevant fields and records captured at click-time, Copilot can provide more precise and context-sensitive recommendations, summarizations, or next-step guidance.
+   By default, Copilot will open the last assistant previously used.
