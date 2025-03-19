@@ -615,9 +615,9 @@ The **Complete** button finishes the creation of the invoice document with the f
 
 Once completed, a purchase invoice can be:
 
-- **posted** to the ledger by using the button _Post_
-- **voided** by using the button _Reactivate_
-- and **paid** by using the button _Add Payment_.
+- **posted** to the ledger by using the button [Post](#post)
+- **voided** by using the button [Reactivate](#reactivate)
+- and **paid** by using the button [Add Payment](#add-payment).
 
 ![Purchase invoice window](../../../../assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
@@ -661,7 +661,80 @@ Only processed Landed Cost documents will be shown in this Window. It allows you
 !!! warning
     Note that if the "Process Matching" check-box is not selected here, landed cost matching will have to be processed in the _landed cost_ window by using **Process Matching** button.
 
-### How to Reactivate a Voided Purchase Invoice
+### Buttons
+
+#### Post/Unpost
+
+A purchase invoice can be posted to the ledger when required at a given Accounting Date by using this process button. Once posted, it can be unposted with the same button.
+
+#### Reactivate
+
+Using this button, the user has two options: Reactivating or voiding the Completed invoice.
+
+In the case of the Reactivate option, it turns the record from Completed into Draft status. 
+
+With the Void option, it is possible to totally void a purchase invoice. This action creates a new document that reverses the invoice.
+
+Void action allows to specify a "Void Date" and a "Void Accounting Date" for the new document that reverse the invoice.
+
+Both "date" fields above take the current date as default date and validate that the dates entered are not prior to the invoice date and the invoice accounting date, respectively.
+
+Also, this process window includes a Supplier Reference field to enter the supplier reference number to...
+
+This action implies that:
+
+Etendo automatically generates a new document in the Purchase Invoice window that reverse the original invoice.
+Etendo also informs about the new document number. This new document is created as described below:
+The "transaction document" used by Etendo is "Reversed Purchase Invoice".
+
+This document is exactly the same as the original one being reversed but the invoiced quantity is negative.
+Once the new document has been created, you can change both the "Invoice Date" and the "Accounting Date" of the new document prior to get it posted.
+
+#### Add Payment 
+
+Payment/s can be made against a purchase invoice by using the Add Payment button which opens the Add Payment pop-up window.
+
+#### Bulk Posting
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
+
+Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
+
+!!! info
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+
+#### Bulk Completion
+
+!!! info
+    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
+
+The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+
+!!! info
+    For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+#### Remove Payment (Payment Removal)
+
+The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+From this window, it is possible to delete payments associated with a purchase invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Purchase Order window > Payment Plan tab).
+
+If the payment is included in the financial account, i.e., if it is in Deposited/Withdrawn not cleared status, the transaction in it will also be deleted (Financial account window > Transaction tab).
+
+If the payment is reconciled through an automatic method, then in addition to the transaction in the financial account, the line of the bank statement to which it was linked (Financial Account window > Imported Bank Statements) and the corresponding line of the bank reconciliation (Financial Account > Reconciliations) will be deleted.
+
+!!! info
+    If the payment is posted, the accounting entry is deleted too.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
+
+#### Unvoid (How to Reactivate a Voided Purchase Invoice)
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -681,24 +754,6 @@ Once the process is finished, the sales invoice status turns to Complete.
 !!! info
     Check the Technical documentation about Advanced Financial Docs Processing to extend the process.
 
-### Payment Removal
-
-The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-From this window, it is possible to delete payments associated with a purchase invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Purchase Order window > Payment Plan tab).
-
-If the payment is included in the financial account, i.e., if it is in Deposited/Withdrawn not cleared status, the transaction in it will also be deleted (Financial account window > Transaction tab).
-
-If the payment is reconciled through an automatic method, then in addition to the transaction in the financial account, the line of the bank statement to which it was linked (Financial Account window > Imported Bank Statements) and the corresponding line of the bank reconciliation (Financial Account > Reconciliations) will be deleted.
-
-!!! info
-    If the payment is posted, the accounting entry is deleted too.
-
-![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
-
 ### Intercompany
 
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
@@ -709,27 +764,6 @@ In case the user has to create orders or invoices among two or more organization
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-### Bulk Posting
-
-!!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
-
-Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
-
-!!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-
-### Bulk Completion
-
-!!! info
-    To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
-
-The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
-
-!!! info
-    For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
 ### Advanced Bank Account Management
 
