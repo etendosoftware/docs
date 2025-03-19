@@ -509,6 +509,8 @@ nav:
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
           - Bank Integration PSD2: developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration.md
         - Etendo BI Extensions Bundle: developer-guide/etendo-classic/bundles/etendo-bi-extensions.md
+      - Developer Changelog:
+        - API Changes: developer-guideetendo-classic/developer-changelog/apichanges.md
     - Etendo RX:
       - ✨ Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
