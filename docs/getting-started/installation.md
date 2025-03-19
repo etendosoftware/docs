@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Install Etendo Classic
 
 tags:
     - Etendo Installation
@@ -7,6 +7,8 @@ tags:
     - Docker Management
     - PostgreSQL Setup
     - Etendo Environment
+    - Install
+    - Etendo Install
 ---
 ## Overview
 This section explains how to install a new Etendo environment. It includes:

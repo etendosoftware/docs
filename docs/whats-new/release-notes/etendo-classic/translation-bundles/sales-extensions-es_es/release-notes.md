@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Sales Extensions Spanish Translation - Release Notes
 tags:
     - Release Notes
     - Sales

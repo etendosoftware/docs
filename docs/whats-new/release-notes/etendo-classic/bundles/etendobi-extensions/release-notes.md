@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Etendo BI Extensions - Release Notes
 tags:
     - Release Notes
     - Etendo BI

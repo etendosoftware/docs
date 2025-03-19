@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Procurement Extensions - Release Notes
 tags:
     - Release Notes
     - Procurement

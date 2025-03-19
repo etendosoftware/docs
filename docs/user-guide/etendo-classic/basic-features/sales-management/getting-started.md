@@ -1,4 +1,5 @@
 ---
+title: Sales Management - Getting Started
 tags: 
     - getting started
     - sales management
@@ -7,7 +8,7 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-#
+# Sales Management - Getting Started
 
 ## Overview
 

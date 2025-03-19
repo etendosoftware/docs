@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Essentials Extensions - Release Notes
 tags:
   - Release Notes
   - Essentials

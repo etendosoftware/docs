@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Copilot Extensions Spanish Tranlation - Release Notes
 tags:
     - Release Notes
     - Copilot

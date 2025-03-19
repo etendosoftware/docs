@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Etendo Mobile Extensions - Release Notes
 tags:
     - Release Notes
     - Classic Subapp
@@ -15,7 +15,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.10.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.0){target="_blank"} | 06/03/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.1](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.1){target="_blank"} | 14/03/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.0){target="_blank"} | 06/03/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.9.0){target="_blank"} | 15/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.8.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |

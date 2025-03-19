@@ -1,5 +1,5 @@
 ---
-title: Mobile Extensions
+title: Mobile Extensions Bundle
 tags: 
     - Mobile Extensions
     - Sub-applications
@@ -7,7 +7,7 @@ tags:
     - Inventory Management
 ---
 
-# Mobile Extensions
+# Mobile Extensions Bundle
 
 :octicons-package-16: Javapackage: `com.etendoerp.mobile.extensions`
 

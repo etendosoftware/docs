@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Etendo BI Extensions Spanish Translation - Release Notes
 tags:
     - Release Notes
     - Etendo BI

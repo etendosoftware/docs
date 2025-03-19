@@ -1,5 +1,5 @@
 ---
-title: Copilot Extensions
+title: Copilot Extensions Bundle
 tags: 
     - Copilot Extensions
     - AI Tools
@@ -8,7 +8,7 @@ tags:
     - Integration Guide
 ---
 
-# Copilot Extensions
+# Copilot Extensions Bundle
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
 

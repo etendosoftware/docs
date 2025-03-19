@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Financial Extensions Spanish Translation - Release Notes
 tags:
     - Release Notes
     - Financial

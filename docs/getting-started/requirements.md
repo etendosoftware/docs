@@ -7,6 +7,8 @@ tags:
     - Network Connectivity
     - Java Platform
     - Software Stack
+    - Etendo Classic
+    - Requirements
 ---
 ## Overview
 

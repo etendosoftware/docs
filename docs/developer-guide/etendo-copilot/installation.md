@@ -1,5 +1,5 @@
 ---
-title: Copilot Installation
+title: Developer Guide - Copilot Installation
 tags:
     - Copilot
     - Install
