@@ -191,10 +191,14 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
+The Balance Sheet and P&L Structure Advanced, General Ledger Report Advanced and Journal Entries Report Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
-    For more information, visit [the Balance Sheet and P&L Structure user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced), [the General Ledger Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) and [the Journal Entries Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced).
+    For more information, visit:
+    
+    - [Balance Sheet and P&L Structure Advanced ](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
+    - [General Ledger Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
+    - [Journal Entries Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
 
 ### G/L Journal Clone
 

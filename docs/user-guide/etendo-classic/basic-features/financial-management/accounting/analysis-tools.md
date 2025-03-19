@@ -352,7 +352,7 @@ The Journal Entries Report is a list of all the journal vouchers of an organizat
 
 A journal entry is the recording of financial data in a journal voucher such that the debit equals credit and the debits are entered before the credits.
 
-![](../../../../../assets/drive/1R5ckg6bUk6VCZecVNI0KYiEgig4y4ZDk.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport.png)
 
 As shown in the image above, the "Primary Filters" section allows the user to specify:
 
@@ -383,7 +383,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 
 -   *HTML* format. An example of the HTML output:
 
-![](../../../../../assets/drive/1a9mebyPB8r9ZqAmlrQzmieeBsgolbsYb.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png)
 
 -   *PDF* format by using the "Print Record" action button of the Toolbar
 -   or *XML* format by using the "Export to Excel" action button of the Toolbar.
@@ -395,12 +395,13 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-This **Journal Entries Advanced** report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+This **Journal Entries Advanced** report is an enhanced version of the previous [Journal Entries Report](#journal-entries-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../assets/drive/1bZUV65uj-1R6hXX6dE9AQeEMBffjmKbc.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1.png)
 
 
 In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:
+
 - Business Partner
 - Product
 - User 1
@@ -409,16 +410,26 @@ In addition to the previous basic filters: Date from, Date to, Organization, Gen
 - Activity
 - Sales Region
 - Sales campaign
+- Cost Center
 
-The report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary.
+The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-In each filter, more than one option can be selected:
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png)
 
-![](../../../../../assets/drive/11J-cgWCMLSQg5h-TVuoeWa09pcwXrCYm.png)
+After using the available fields and checkboxes, the report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary. In each filter, more than one option can be selected.
 
-Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
+### Buttons
 
-![](../../../../../assets/drive/1tcD3dKQCRkQ_EjE3KMUFyCpDUXyGmyLF.png)
+In the upper bar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png)
+
+!!!warning
+    If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
+
+Also, with this functionality you can navigate to the related transaction directly from the entry number of reports. This improves traceability and streamlines accounting analysis. 
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera2.png)
 
 ## Create Tax Report
 
