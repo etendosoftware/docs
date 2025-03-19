@@ -252,7 +252,7 @@ This report can also be shown in:
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
-![](../../../../../assets/drive/1pAPw9gmjnNbZUJ4bbL6oTXNBUrvdUkhS.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport1.png)
 
 As shown in the image above, the fields to fill in for launching this report are:
 
@@ -288,7 +288,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
     -   This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
-![](../../../../../assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png)
 
 ## General Ledger Report Advanced
 
@@ -297,9 +297,9 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-This **General Ledger Advanced** report is an enhanced version of the previous General Ledger Report. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+This **General Ledger Advanced** report is an enhanced version of the previous [General Ledger Report](#general-ledger-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv.png)
 
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
 
@@ -312,7 +312,9 @@ In addition to the previous basic filters: Date from, Date to, From amount, To a
 
 Moreover, the Organization filter was added, a filter that combines the original Organization field with the Show Related Operations check, to show intercompany transactions. In each filter, more than one option can be selected.
 
-![](../../../../../assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png)
+The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv2.png)
 
 In the Group By menu, the following options are added:
 
@@ -323,22 +325,22 @@ In the Group By menu, the following options are added:
 - Sales Campaign
 - Cost Center
 
-The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
+It is possible to select the desired accounting dimension for the grouping. When generating the report, the selected dimension appears in the header, indicating the grouping criteria used.
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv4.png)
 
 ### Buttons
 
 In the toolbar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv3.png)
 
 !!!warning
     If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
 
 Also, with this functionality you can navigate to the related journal entry directly from the report. This allows easier and more efficient access to information. By clicking on a journal entry, the user can navigate to the Journal Entries Report window, applying all selected filters.
 
-VA
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv5.png)
 
 ## Journal Entries Report
 
