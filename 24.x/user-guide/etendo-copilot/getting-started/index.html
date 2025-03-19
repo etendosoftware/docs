@@ -9947,6 +9947,7 @@
 <h2 id="what-is-etendo-copilot">What is Etendo Copilot?</h2>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Copilot Chat" src="../../../assets/user-guide/etendo-copilot/getting-started/copilot.png" width="300" /></a></p>
 <p>At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the <em>Assistant</em> which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as <em>Tools</em>. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.</p>
+<p><br clear="all"> </p>
 <h2 id="assistant">Assistant</h2>
 <p>The Assistant serves you making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.</p>
 <p>Each assistant has defined instructions, as well as the possibility to configure a knowledge base and a set of skills or tools.
@@ -9986,55 +9987,43 @@ The assistant is able to make decisions based on a question, using the most appr
 <h3 id="navegation-bar">Navegation Bar</h3>
 <p>In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.</p>
 <p>Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with <code>Langchain Agent</code>, <code>Multi-Model Assistant</code>, <code>LangGraph</code> and <code>Open AI Assistant</code> types, for more information visit <a href="../setup-and-usage/#assistant-window">Assistant Windows</a> documentation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, Copilot will open the last assistant previously used.</p>
+</div>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copilot Navbar" src="../../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png" /></a></p>
 <h3 id="tool-bar">Tool Bar</h3>
 <p>In any standard Etendo Classic window, you will see in the <strong>toolbar a button</strong> with the Copilot icon. Clicking this button opens the Copilot chat, automatically passing the context of the current tab or selected records. This feature ensures that Copilot has all the relevant information about your current session, eliminating the need to manually input details and streamlining your workflow.</p>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/toolbar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/toolbar.png" /></a></p>
 <p><strong>Context awareness</strong></p>
 <p>Etendo Copilot can take advantage of the context of the currently active window or record in Etendo Classic. Clicking the toolbar button updates the current context automatically.</p>
-<ol>
-<li>
-<p><strong>Form Context</strong>: If you have a form open (for example, a sales order or a customer record), Copilot retrieves the key fields and any unsaved edits, offering you real-time suggestions or validations.</p>
-</li>
-<li>
-<p><strong>Grid context</strong>: When a row is selected in a grid, Copilot captures the details of those specific records, sending Copilot all relevant information so you can receive relevant AI-based recommendations.</p>
-</li>
-<li>
-<p><strong>Tab and window context</strong>: In multi-tabbed environments, context must be sent to Copilot each time you switch from one view to another (e.g., from Orders to Products).</p>
-</li>
-</ol>
+<ul>
+<li><strong>Form Context</strong>: If you have a form open (for example, a sales order or a customer record), Copilot retrieves the key fields and any unsaved edits, offering you real-time suggestions or validations.</li>
+<li><strong>Grid context</strong>: When a row is selected in a grid, Copilot captures the details of those specific records, sending Copilot all relevant information so you can receive relevant AI-based recommendations.</li>
+<li><strong>Tab and window context</strong>: In multi-tabbed environments, context must be sent to Copilot each time you switch from one view to another (e.g., from Orders to Products).</li>
+</ul>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/attach-files.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Attach-Files" src="../../../assets/user-guide/etendo-copilot/getting-started/attach-files.png" width="300" /></a></p>
 <h3 id="attach-files">Attach Files</h3>
 <p>Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports various file formats, such as <code>.pdf</code>, <code>.csv</code>, <code>.jpg</code>, and more, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.</p>
 <p>This functionality ensures that users can seamlessly incorporate external data into their workflows, whether it involves parsing documents, analyzing spreadsheets, or processing images. Assistants and tools can be tailored to address specific requirements based on the type of attached files, providing contextualized and intelligent responses.
-<br>
 <br clear="all"></p>
 <h3 id="visualization-mode">Visualization Mode</h3>
-<p><strong>Pop-up</strong></p>
 <figure>
 <p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png" width="300" /></a>
 <br><br>
+<strong>Pop-up</strong> <br>
 By default, Copilot operates as a pop-up window, providing convenient access as an integrated assistant in any active window.</p>
 </figure>
-<hr />
-<p><strong>Full Screen</strong></p>
 <figure>
-<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png" /></a>
-<br><br>
-Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.</p>
+<p><strong>Full Screen</strong> <br>
+Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.
+<a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png" /></a></p>
 </figure>
-<hr />
-<p><strong>Minimized</strong></p>
 <figure>
-<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png" width="200" /></a>
-<br><br>
+<p><a class="glightbox" href="../../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../../assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png" width="200" /></a> <br>
+<strong>Minimized</strong> <br>
 Copilot's interface can also be minimized. In this case, a Copilot bubble will be active at the bottom right of the screen.</p>
 </figure>
-<p>When asked something, Copilot informs the user about the assistants and tools used when processing each message.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<p>By default, Copilot will open the last assistant previously used.</p>
 
 
 
