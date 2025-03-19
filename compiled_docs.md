@@ -30017,7 +30017,6 @@ This functionality ensures that users can seamlessly incorporate external data i
 <br><br>
 By default, Copilot operates as a pop-up window, providing convenient access as an integrated assistant in any active window.
 </figure>
----
 
 **Full Screen**
 <figure markdown>
@@ -30025,7 +30024,6 @@ By default, Copilot operates as a pop-up window, providing convenient access as 
 <br><br>
 Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.
 </figure>
----
 
 **Minimized**
 <figure markdown>
