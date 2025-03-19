@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2460,6 +2460,21 @@
       Journal Entries Report Advanced
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Journal Entries Report Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -10182,6 +10197,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Journal Entries Report Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -10630,13 +10660,15 @@
 </div>
 <p>This <strong>General Ledger Advanced</strong> report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png" /></a></p>
-<p>In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
-- User 1
-- User 2
-- Activity
-- Sales Region
-- Sales campaign
-- Cost center</p>
+<p>In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:</p>
+<ul>
+<li>User 1</li>
+<li>User 2</li>
+<li>Activity</li>
+<li>Sales Region</li>
+<li>Sales Campaign</li>
+<li>Cost Center</li>
+</ul>
 <p>Moreover, the “Organization filter” was added, a filter that combines the original Organization field with the “Show related operations” check, to show intercompany transactions.</p>
 <p>In each filter, more than one option can be selected.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png" /></a></p>
@@ -10647,7 +10679,7 @@
 <h3 id="overview_5">Overview</h3>
 <p>The Journal Entries Report is a list of all the journal vouchers of an organization and general ledger shown in a chronological order.</p>
 <p>A journal entry is the recording of financial data in a journal voucher such that the debit equals credit and the debits are entered before the credits.</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/1R5ckg6bUk6VCZecVNI0KYiEgig4y4ZDk.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1R5ckg6bUk6VCZecVNI0KYiEgig4y4ZDk.png" /></a></p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport.png" /></a></p>
 <p>As shown in the image above, the "Primary Filters" section allows the user to specify:</p>
 <ul>
 <li>the "<em>Organization</em>" and the "<em>General Ledger</em>" for which the financial data taken from the journal entries is required.</li>
@@ -10687,7 +10719,7 @@
 <ul>
 <li><em>HTML</em> format. An example of the HTML output:</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../assets/drive/1a9mebyPB8r9ZqAmlrQzmieeBsgolbsYb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1a9mebyPB8r9ZqAmlrQzmieeBsgolbsYb.png" /></a></p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png" /></a></p>
 <ul>
 <li><em>PDF</em> format by using the "Print Record" action button of the Toolbar</li>
 <li>or <em>XML</em> format by using the "Export to Excel" action button of the Toolbar.</li>
@@ -10698,22 +10730,32 @@
 <p class="admonition-title">Info</p>
 <p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
-<p>This <strong>Journal Entries Advanced</strong> report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/1bZUV65uj-1R6hXX6dE9AQeEMBffjmKbc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1bZUV65uj-1R6hXX6dE9AQeEMBffjmKbc.png" /></a></p>
-<p>In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:
-- Business Partner
-- Product
-- User 1
-- User 2
-- Project
-- Activity
-- Sales Region
-- Sales campaign</p>
-<p>The report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary.</p>
-<p>In each filter, more than one option can be selected:</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/11J-cgWCMLSQg5h-TVuoeWa09pcwXrCYm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/11J-cgWCMLSQg5h-TVuoeWa09pcwXrCYm.png" /></a></p>
-<p>Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/1tcD3dKQCRkQ_EjE3KMUFyCpDUXyGmyLF.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1tcD3dKQCRkQ_EjE3KMUFyCpDUXyGmyLF.png" /></a></p>
+<p>This <strong>Journal Entries Advanced</strong> report is an enhanced version of the previous <a href="#journal-entries-report">Journal Entries Report</a>. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1.png" /></a></p>
+<p>In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:</p>
+<ul>
+<li>Business Partner</li>
+<li>Product</li>
+<li>User 1</li>
+<li>User 2</li>
+<li>Project</li>
+<li>Activity</li>
+<li>Sales Region</li>
+<li>Sales campaign</li>
+<li>Cost Center</li>
+</ul>
+<p>The new <strong>Show Dimensional Entities</strong> field enables the selection of accounting dimensions to be included in the report.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png" /></a></p>
+<p>After using the available fields and checkboxes, the report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary. In each filter, more than one option can be selected.</p>
+<h3 id="buttons">Buttons</h3>
+<p>In the upper bar, you can find the buttons <strong>View</strong>, <strong>Export to PDF</strong> and <strong>Export to Excel</strong> to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.</p>
+</div>
+<p>Also, with this functionality you can navigate to the related transaction directly from the entry number of reports. This improves traceability and streamlines accounting analysis. </p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera2.png" /></a></p>
 <h2 id="create-tax-report">Create Tax Report</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Analysis Tools</code> &gt; <code>Create Tax Report</code></p>
 <h3 id="overview_6">Overview</h3>
