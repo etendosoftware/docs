@@ -2428,6 +2428,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="General Ledger Report Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2465,7 +2480,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#buttons" class="md-nav__link">
+  <a href="#buttons_1" class="md-nav__link">
     <span class="md-ellipsis">
       Buttons
     </span>
@@ -10186,6 +10201,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="General Ledger Report Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -10223,7 +10253,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#buttons" class="md-nav__link">
+  <a href="#buttons_1" class="md-nav__link">
     <span class="md-ellipsis">
       Buttons
     </span>
@@ -10539,8 +10569,8 @@
 <ul>
 <li>Business Partner  </li>
 <li>Product   </li>
-<li>User 1    </li>
-<li>User 2  </li>
+<li>1st Dimension</li>
+<li>2nd Dimension </li>
 <li>Project </li>
 <li>Activity    </li>
 <li>Sales Region    </li>
@@ -10567,27 +10597,17 @@
 <p>At the end of the report, the total sum of debits must be equal to the total sum of credits.</p>
 <p><a class="glightbox" href="../../../../../../assets/drive/1Khc4yKHg-WQAjZBTFfNegete-k0l0qhX.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1Khc4yKHg-WQAjZBTFfNegete-k0l0qhX.png" /></a></p>
 <p>As shown in the screen above, it is possible to enter below data before launching the Trial Balance.</p>
-<p>Under the <strong>Primary Filters</strong> section, it is possible to specify:</p>
-<ul>
-<li>the <em>"From"</em> date when the account balance is going to be taken</li>
-<li>the <em>"To"</em> date when the account balance is going to be calculated by following the formula below:<ul>
-<li><em>Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts</em></li>
-</ul>
-</li>
-<li>the <em>"Organization"</em> for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:<ul>
-<li>"Legal with Accounting" type organizations</li>
-<li>"Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.<ul>
-<li>It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.</li>
-</ul>
-</li>
-<li>"Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.<ul>
-<li>Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>and finally the "General Ledger".</li>
-</ul>
+<p>Under the <strong>Primary Filters</strong> section, it is possible to specify:
+- the <em>"From"</em> date when the account balance is going to be taken
+- the <em>"To"</em> date when the account balance is going to be calculated by following the formula below:
+    - <em>Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts</em>
+- the <em>"Organization"</em> for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
+    - "Legal with Accounting" type organizations
+    - "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
+        - It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
+    - "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
+        - Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
+- and finally the "General Ledger".</p>
 <p><strong>Advanced filters</strong> is a collapsible section which can be shown by clicking on it. Under this section, it is possible to specify:</p>
 <ul>
 <li>the Account Level to show. The options available are from top to bottom:<ul>
@@ -10607,7 +10627,7 @@
 <p>3. select "<strong>Include Zero Figures</strong>" flag which allows the user to display all subaccounts even those which hold zero figures.</p>
 <ul>
 <li>It is possible to enter the <strong>initial page number</strong> of the trial report if required</li>
-<li>Also, the "<strong>Opening Entry Amount to Initial Balance</strong>" flag is marked by default.<br />
+<li>Also, the "<strong>Opening Entry Amount to Initial Balance</strong>" flag is marked by default.
     This checkbox allows the user to configure if the "Opening" account balance (dated i.e. 1st January 2021) is shown separately in the first column "Balance As Of" or either in the "Debit" or in the "Credit" column.<br />
     In other words:<ul>
 <li>the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column</li>
@@ -10633,7 +10653,7 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Analysis Tools</code> &gt; <code>General Ledger Report</code></p>
 <h3 id="overview_4">Overview</h3>
 <p>The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/1pAPw9gmjnNbZUJ4bbL6oTXNBUrvdUkhS.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1pAPw9gmjnNbZUJ4bbL6oTXNBUrvdUkhS.png" /></a></p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport1.png" /></a></p>
 <p>As shown in the image above, the fields to fill in for launching this report are:</p>
 <ul>
 <li>the <em>"Organization"</em> for which the accounting information is required.<br />
@@ -10673,29 +10693,47 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" href="../../../../../../assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png" /></a></p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png" /></a></p>
 <h2 id="general-ledger-report-advanced">General Ledger Report Advanced</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Analysis Tools</code> &gt; <code>General Ledger Report Advanced</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
-<p>This <strong>General Ledger Advanced</strong> report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png" /></a></p>
+<p>This <strong>General Ledger Advanced</strong> report is an enhanced version of the previous <a href="#general-ledger-report">General Ledger Report</a>. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv.png" /></a></p>
 <p>In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:</p>
 <ul>
-<li>User 1</li>
-<li>User 2</li>
+<li>1st Dimension</li>
+<li>2nd Dimension</li>
 <li>Activity</li>
 <li>Sales Region</li>
 <li>Sales Campaign</li>
 <li>Cost Center</li>
 </ul>
-<p>Moreover, the “Organization filter” was added, a filter that combines the original Organization field with the “Show related operations” check, to show intercompany transactions.</p>
-<p>In each filter, more than one option can be selected.</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png" /></a></p>
-<p>Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.</p>
-<p><a class="glightbox" href="../../../../../../assets/drive/1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W.png" /></a></p>
+<p>Moreover, the Organization filter was added, a filter that combines the original Organization field with the Show Related Operations check, to show intercompany transactions. In each filter, more than one option can be selected.</p>
+<p>The new <strong>Show Dimensional Entities</strong> field enables the selection of accounting dimensions to be included in the report.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv2.png" /></a></p>
+<p>In the Group By menu, the following options are added:</p>
+<ul>
+<li>Activity</li>
+<li>1st Dimension</li>
+<li>2nd Dimension</li>
+<li>Sales Region</li>
+<li>Sales Campaign</li>
+<li>Cost Center</li>
+</ul>
+<p>It is possible to select the desired accounting dimension for the grouping. When generating the report, the selected dimension appears in the header, indicating the grouping criteria used.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv4.png" /></a></p>
+<h3 id="buttons">Buttons</h3>
+<p>In the toolbar, you can find the buttons <strong>View</strong>, <strong>Export to PDF</strong> and <strong>Export to Excel</strong> to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv3.png" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.</p>
+</div>
+<p>Also, with this functionality you can navigate to the related journal entry directly from the report. This allows easier and more efficient access to information. By clicking on a journal entry, the user can navigate to the Journal Entries Report window, applying all selected filters.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv5.png" /></a></p>
 <h2 id="journal-entries-report">Journal Entries Report</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Analysis Tools</code> &gt; <code>Journal Entries Report</code></p>
 <h3 id="overview_5">Overview</h3>
@@ -10758,8 +10796,8 @@
 <ul>
 <li>Business Partner</li>
 <li>Product</li>
-<li>User 1</li>
-<li>User 2</li>
+<li>1st Dimension</li>
+<li>2nd Dimension</li>
 <li>Project</li>
 <li>Activity</li>
 <li>Sales Region</li>
@@ -10769,7 +10807,7 @@
 <p>The new <strong>Show Dimensional Entities</strong> field enables the selection of accounting dimensions to be included in the report.</p>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png" /></a></p>
 <p>After using the available fields and checkboxes, the report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary. In each filter, more than one option can be selected.</p>
-<h3 id="buttons">Buttons</h3>
+<h3 id="buttons_1">Buttons</h3>
 <p>In the upper bar, you can find the buttons <strong>View</strong>, <strong>Export to PDF</strong> and <strong>Export to Excel</strong> to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.</p>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png" /></a></p>
 <div class="admonition warning">
