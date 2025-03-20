@@ -141,14 +141,14 @@ In addition to the previous basic filters:
 
 the following were added:    
 
--   Business Partner  
--   Product   
--   User 1    
--   User 2  
--   Project 
--   Activity    
--   Sales Region    
--   Sales Campaign  
+- Business Partner  
+- Product   
+- 1st Dimension
+- 2nd Dimension 
+- Project 
+- Activity    
+- Sales Region    
+- Sales Campaign  
 
 In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
 
@@ -175,10 +175,10 @@ This report is commonly launched at the end of the period prior to the preparati
 
 In Etendo terms, the "Trial Balance" shows for a given Organization and General Ledger:
 
--   the account balance as of a given date from
--   the account total sum of debits within a given period of time
--   the account total sum of credits within a given period of time
--   and finally the account balance as of a given date to
+- the account balance as of a given date from
+- the account total sum of debits within a given period of time
+- the account total sum of credits within a given period of time
+- and finally the account balance as of a given date to
 
 At the end of the report, the total sum of debits must be equal to the total sum of credits.
 
@@ -188,25 +188,24 @@ At the end of the report, the total sum of debits must be equal to the total sum
 As shown in the screen above, it is possible to enter below data before launching the Trial Balance.
 
 Under the **Primary Filters** section, it is possible to specify:
-
--   the *"From"* date when the account balance is going to be taken
--   the *"To"* date when the account balance is going to be calculated by following the formula below:
-    -   *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
--   the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
-    -   "Legal with Accounting" type organizations
-    -   "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
-        -   It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
-    -   "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
-        -   Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
--   and finally the "General Ledger".
+- the *"From"* date when the account balance is going to be taken
+- the *"To"* date when the account balance is going to be calculated by following the formula below:
+    - *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
+- the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
+    - "Legal with Accounting" type organizations
+    - "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
+        - It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
+    - "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
+        - Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
+- and finally the "General Ledger".
 
 **Advanced filters** is a collapsible section which can be shown by clicking on it. Under this section, it is possible to specify:
 
--   the Account Level to show. The options available are from top to bottom:
-    -   **Heading**
-    -   **Account**
-    -   **Breakdown**
-    -   and **Subaccount**.
+- the Account Level to show. The options available are from top to bottom:
+    - **Heading**
+    - **Account**
+    - **Breakdown**
+    - and **Subaccount**.
 
 These are the Account Tree Elements.
 
@@ -222,12 +221,12 @@ Also, the selection of this value allows the user to:
 
 3\. select "**Include Zero Figures**" flag which allows the user to display all subaccounts even those which hold zero figures.
 
--   It is possible to enter the **initial page number** of the trial report if required
--   Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.  
+- It is possible to enter the **initial page number** of the trial report if required
+- Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.
     This checkbox allows the user to configure if the "Opening" account balance (dated i.e. 1st January 2021) is shown separately in the first column "Balance As Of" or either in the "Debit" or in the "Credit" column.  
     In other words:
-    -   the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
-    -   the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
+    - the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
+    - the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
         This check only applies if the "From" date entered while launching the report is the same as the "Opening" Accounting date (i.e. 1st January 2021), otherwise the "Opening" account balance is always shown in the "Balance As Of" column.
 
 Once all the data above has been properly filled in, the "Search" process button shows the results in the same window.
@@ -238,11 +237,11 @@ An example of the output of the report is:
 
 This report can also be shown in:
 
--   a *PDF format* by pressing the "Print" action icon of the Toolbar.
-    -   the PDF file can be printed or archived for later reviews.
-    -   the PDF file has the same grouping rules as the search button.
--   and in *excel format*:
--   the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
+- a *PDF format* by pressing the "Print" action icon of the Toolbar.
+    - the PDF file can be printed or archived for later reviews.
+    - the PDF file has the same grouping rules as the search button.
+- and in *excel format*:
+- the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
 
 ## General Ledger Report
 
@@ -256,37 +255,37 @@ The General Ledger report lists every ledger "subaccount" and its debit and cred
 
 As shown in the image above, the fields to fill in for launching this report are:
 
--   the *"Organization"* for which the accounting information is required.  
+- the *"Organization"* for which the accounting information is required.  
     Once more, the accounting information provided by this report relies on the organization type selected as:
-    -   accounting information shown might be just related to a "Generic" organization belonging to a "legal Entity with Accounting"
-    -   or could be a roll-up in case of selecting either a "Legal Entity with Accounting" or an "Organization" having other organizations underneath.
--   *"Show Open Balances"* option which will hide those entries for which the balance is zero. (Ex. removing receivables/payables entries from invoices once those have been paid.)
--   and the corresponding *"General Ledger"* which will also rely on the Organization previously selected.
+    - accounting information shown might be just related to a "Generic" organization belonging to a "legal Entity with Accounting"
+    - or could be a roll-up in case of selecting either a "Legal Entity with Accounting" or an "Organization" having other organizations underneath.
+- *"Show Open Balances"* option which will hide those entries for which the balance is zero. (Ex. removing receivables/payables entries from invoices once those have been paid.)
+- and the corresponding *"General Ledger"* which will also rely on the Organization previously selected.
 
 It is possible to narrow down the accounting information to be shown in the report by:
 
--   a range of "*amounts*"
--   a set of *"subaccounts"*
--   and a set of *"accounting dimensions"* such as business partner, product and project
+- a range of "*amounts*"
+- a set of *"subaccounts"*
+- and a set of *"accounting dimensions"* such as business partner, product and project
 
 Finally, it is also possible to:
 
--   *"group"* the information by any of the accounting dimensions
--   and enter a *"Initial Page Number"* for the report
+- *"group"* the information by any of the accounting dimensions
+- and enter a *"Initial Page Number"* for the report
 
 Once all data have been properly entered, the "Search" button shows the outcome of the report in the same window:
 
--   the ledger entries displayed for each subaccount are ordered by accounting date and besides the subaccount balance is shown for each ledger entry.
+- the ledger entries displayed for each subaccount are ordered by accounting date and besides the subaccount balance is shown for each ledger entry.
 
 The arrows in the toolbar allows the user to navigate through the report outcome shown in the window.
 
 The General Ledger Report can also be viewed and saved in Excel format and PDF format:
 
--   Excel format by pressing on the *"Export to Excel"* action button of the Toolbar:
-    -   This format contains a list of all the ledger entries per each subaccount not grouped, therefore it is possible to group them as desired.
-    -   It also lists the corresponding accounting dimensions of each ledger entry.
+- Excel format by pressing on the *"Export to Excel"* action button of the Toolbar:
+    - This format contains a list of all the ledger entries per each subaccount not grouped, therefore it is possible to group them as desired.
+    - It also lists the corresponding accounting dimensions of each ledger entry.
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
-    -   This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
+    - This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png)
 
@@ -303,8 +302,8 @@ This **General Ledger Advanced** report is an enhanced version of the previous [
 
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
 
-- User 1
-- User 2
+- 1st Dimension
+- 2nd Dimension
 - Activity
 - Sales Region
 - Sales Campaign
@@ -360,33 +359,33 @@ As shown in the image above, the "Primary Filters" section allows the user to sp
 
 The "Advanced Filters" is now a collapsible section. Under this section, it is possible to specify:
 
--   a **From/To Account** to display journal entries with at least one line using an account defined in the range.
--   a Document Type to narrow down the financial data to be shown in the report to just the one related to that particular document type.
-    -   If the document type selected has a document number associated, for instance an invoice document type, it will be possible to narrow down the data shown to a specific "**Document Number**".
--   the "**Initial Page Number**" *to be shown in the PDF format of the report*
--   the **"Initial Entry Number"** to be shown in the PDF format of the report
--   the **"Entry Description**" to be shown in the PDF format of the report
+- a **From/To Account** to display journal entries with at least one line using an account defined in the range.
+- a Document Type to narrow down the financial data to be shown in the report to just the one related to that particular document type.
+    - If the document type selected has a document number associated, for instance an invoice document type, it will be possible to narrow down the data shown to a specific "**Document Number**".
+- the "**Initial Page Number**" *to be shown in the PDF format of the report*
+- the **"Initial Entry Number"** to be shown in the PDF format of the report
+- the **"Entry Description**" to be shown in the PDF format of the report
 
 The rest of the checkboxes are selected by default in order to show:
 
--   the *"**regular**"* journal entries:
-    -   these entries are the ones generated while posting either any of the Etendo document types or while posting a General Ledger Journal do not flag as "Opening".
--   the *"**opening**"* journal entries:
-    -   these entries are automatically generated by Etendo after the closing of a given fiscal year
-    -   these entries can also be manually generated while posting a General Ledger Journal whenever its journal entries are flagged as "Opening".
--   the "**closing**" journal entries:
-    -   these entries are automatically generated by Etendo after the closing a given fiscal year
--   and finally the *"**P&L closing**"* journal entries:
-    -   these entries are automatically generated by Etendo after the closing of a given fiscal year
+- the *"**regular**"* journal entries:
+    - these entries are the ones generated while posting either any of the Etendo document types or while posting a General Ledger Journal do not flag as "Opening".
+- the *"**opening**"* journal entries:
+    - these entries are automatically generated by Etendo after the closing of a given fiscal year
+    - these entries can also be manually generated while posting a General Ledger Journal whenever its journal entries are flagged as "Opening".
+- the "**closing**" journal entries:
+    - these entries are automatically generated by Etendo after the closing a given fiscal year
+- and finally the *"**P&L closing**"* journal entries:
+    - these entries are automatically generated by Etendo after the closing of a given fiscal year
 
 Finally, and same way as for the rest of financial reports, the Journal Entries Report can be launched in:
 
--   *HTML* format. An example of the HTML output:
+- *HTML* format. An example of the HTML output:
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png)
 
--   *PDF* format by using the "Print Record" action button of the Toolbar
--   or *XML* format by using the "Export to Excel" action button of the Toolbar.
+- *PDF* format by using the "Print Record" action button of the Toolbar
+- or *XML* format by using the "Export to Excel" action button of the Toolbar.
 
 ## Journal Entries Report Advanced
 
@@ -404,8 +403,8 @@ In addition to the previous basic filters: Date from, Date to, Organization, Gen
 
 - Business Partner
 - Product
-- User 1
-- User 2
+- 1st Dimension
+- 2nd Dimension
 - Project
 - Activity
 - Sales Region
@@ -449,14 +448,14 @@ This window allows the user to create or modify different Tax Report for the dif
 
 The window has some parameters to indicate the Tax Report created:
 
--   **Name:** The name of the Report.
--   **Tax:** The tax that will be shown in the report.
--   **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
--   **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
--   **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
--   **Active:** If it’s an active Tax Report.
+- **Name:** The name of the Report.
+- **Tax:** The tax that will be shown in the report.
+- **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
+- **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
+- **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
+- **Active:** If it’s an active Tax Report.
 
 Once, the Tax Report has been set up, it will appear in the Create Tax Report form:
 
@@ -466,10 +465,10 @@ This window allows printing Reports previously defined by the user. In order to 
 
 ![](../../../../../assets/drive/174ocSJCYYPhTy_2AmynTHIQv93BlA4rB.png)
 
--   **From Date:** Starting Date of the Report.
--   **To Date:** Last Date of the Report.
--   **Tax Report:** In this list, all the Tax Reports created will appear to be chosen-
--   **Organization:** Organization for which the Report will be printed.
+- **From Date:** Starting Date of the Report.
+- **To Date:** Last Date of the Report.
+- **Tax Report:** In this list, all the Tax Reports created will appear to be chosen-
+- **Organization:** Organization for which the Report will be printed.
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
@@ -485,10 +484,10 @@ Customer statement is a consolidated statement of every transaction of a custome
 
 Transactions aggregated from various sources like:
 
--   **Sales Invoices**
--   **Payment In**
--   **Financial Transactions**
--   **Reconciliations**
+- **Sales Invoices**
+- **Payment In**
+- **Financial Transactions**
+- **Reconciliations**
 
 !!! warning
     Note that *Completed* but not *posted* transactions are not taken into consideration.
@@ -499,10 +498,10 @@ The *Multicurrency* parameter of the report, in case of checked, will group reco
 
 The Customer Statement provides the following details:
 
--   The credit/debit information including the document number of the transaction
--   The accounting date
--   The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
--   The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
+- The credit/debit information including the document number of the transaction
+- The accounting date
+- The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
+- The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
     Note that negative amounts are highlighted by using brackets ().
 
 #### Customer Statement Report
@@ -513,8 +512,8 @@ An example of the customer statement filter is shown in the image below:
 
 Note about some filters:
 
--   **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
--   **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
+- **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
+- **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
 
 An example of the Customer Statement output:
 
@@ -538,14 +537,14 @@ This window allows the user to create or modify different Tax Reports for the di
 
 The window has some parameters to indicate the Tax Report created:
 
--   **Name:** The name of the Report.
--   **Tax:** The tax that will be shown in the report.
--   **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
--   **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
--   **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
--   **Active:** If it is an active Tax Report.
+- **Name:** The name of the Report.
+- **Tax:** The tax that will be shown in the report.
+- **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
+- **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
+- **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
+- **Active:** If it is an active Tax Report.
 
 Once, the Tax Report has been set up, it will appear in the Create Tax Report form:
 
@@ -555,10 +554,10 @@ This window allows to print Reports previously defined by the user. In order to 
 
 ![](../../../../../assets/drive/17xPpINQrk2rcbebH6-hCCsIjwDP0X7qH.png)
 
--   **From Date:** Starting Date of the Report
--   **To Date:** Last Date of the Report
--   **Tax Report:** In this list, all the Tax Reports created will appear to be chosen.
--   **Organization:** Organization for which the Report will be printed.
+- **From Date:** Starting Date of the Report
+- **To Date:** Last Date of the Report
+- **Tax Report:** In this list, all the Tax Reports created will appear to be chosen.
+- **Organization:** Organization for which the Report will be printed.
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
