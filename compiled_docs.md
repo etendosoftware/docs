@@ -17960,14 +17960,14 @@ In addition to the previous basic filters:
 
 the following were added:    
 
--   Business Partner  
--   Product   
--   User 1    
--   User 2  
--   Project 
--   Activity    
--   Sales Region    
--   Sales Campaign  
+- Business Partner  
+- Product   
+- 1st Dimension
+- 2nd Dimension 
+- Project 
+- Activity    
+- Sales Region    
+- Sales Campaign  
 
 In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
 
@@ -17994,10 +17994,10 @@ This report is commonly launched at the end of the period prior to the preparati
 
 In Etendo terms, the "Trial Balance" shows for a given Organization and General Ledger:
 
--   the account balance as of a given date from
--   the account total sum of debits within a given period of time
--   the account total sum of credits within a given period of time
--   and finally the account balance as of a given date to
+- the account balance as of a given date from
+- the account total sum of debits within a given period of time
+- the account total sum of credits within a given period of time
+- and finally the account balance as of a given date to
 
 At the end of the report, the total sum of debits must be equal to the total sum of credits.
 
@@ -18007,25 +18007,24 @@ At the end of the report, the total sum of debits must be equal to the total sum
 As shown in the screen above, it is possible to enter below data before launching the Trial Balance.
 
 Under the **Primary Filters** section, it is possible to specify:
-
--   the *"From"* date when the account balance is going to be taken
--   the *"To"* date when the account balance is going to be calculated by following the formula below:
-    -   *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
--   the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
-    -   "Legal with Accounting" type organizations
-    -   "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
-        -   It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
-    -   "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
-        -   Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
--   and finally the "General Ledger".
+- the *"From"* date when the account balance is going to be taken
+- the *"To"* date when the account balance is going to be calculated by following the formula below:
+    - *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
+- the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
+    - "Legal with Accounting" type organizations
+    - "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
+        - It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
+    - "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
+        - Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
+- and finally the "General Ledger".
 
 **Advanced filters** is a collapsible section which can be shown by clicking on it. Under this section, it is possible to specify:
 
--   the Account Level to show. The options available are from top to bottom:
-    -   **Heading**
-    -   **Account**
-    -   **Breakdown**
-    -   and **Subaccount**.
+- the Account Level to show. The options available are from top to bottom:
+    - **Heading**
+    - **Account**
+    - **Breakdown**
+    - and **Subaccount**.
 
 These are the Account Tree Elements.
 
@@ -18041,12 +18040,12 @@ Also, the selection of this value allows the user to:
 
 3\. select "**Include Zero Figures**" flag which allows the user to display all subaccounts even those which hold zero figures.
 
--   It is possible to enter the **initial page number** of the trial report if required
--   Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.  
+- It is possible to enter the **initial page number** of the trial report if required
+- Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.
     This checkbox allows the user to configure if the "Opening" account balance (dated i.e. 1st January 2021) is shown separately in the first column "Balance As Of" or either in the "Debit" or in the "Credit" column.  
     In other words:
-    -   the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
-    -   the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
+    - the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
+    - the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
         This check only applies if the "From" date entered while launching the report is the same as the "Opening" Accounting date (i.e. 1st January 2021), otherwise the "Opening" account balance is always shown in the "Balance As Of" column.
 
 Once all the data above has been properly filled in, the "Search" process button shows the results in the same window.
@@ -18057,11 +18056,11 @@ An example of the output of the report is:
 
 This report can also be shown in:
 
--   a *PDF format* by pressing the "Print" action icon of the Toolbar.
-    -   the PDF file can be printed or archived for later reviews.
-    -   the PDF file has the same grouping rules as the search button.
--   and in *excel format*:
--   the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
+- a *PDF format* by pressing the "Print" action icon of the Toolbar.
+    - the PDF file can be printed or archived for later reviews.
+    - the PDF file has the same grouping rules as the search button.
+- and in *excel format*:
+- the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
 
 #### General Ledger Report
 
@@ -18071,43 +18070,43 @@ This report can also be shown in:
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
-![](https://docs.etendo.software/latest/assets/drive/1pAPw9gmjnNbZUJ4bbL6oTXNBUrvdUkhS.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport1.png)
 
 As shown in the image above, the fields to fill in for launching this report are:
 
--   the *"Organization"* for which the accounting information is required.  
+- the *"Organization"* for which the accounting information is required.  
     Once more, the accounting information provided by this report relies on the organization type selected as:
-    -   accounting information shown might be just related to a "Generic" organization belonging to a "legal Entity with Accounting"
-    -   or could be a roll-up in case of selecting either a "Legal Entity with Accounting" or an "Organization" having other organizations underneath.
--   *"Show Open Balances"* option which will hide those entries for which the balance is zero. (Ex. removing receivables/payables entries from invoices once those have been paid.)
--   and the corresponding *"General Ledger"* which will also rely on the Organization previously selected.
+    - accounting information shown might be just related to a "Generic" organization belonging to a "legal Entity with Accounting"
+    - or could be a roll-up in case of selecting either a "Legal Entity with Accounting" or an "Organization" having other organizations underneath.
+- *"Show Open Balances"* option which will hide those entries for which the balance is zero. (Ex. removing receivables/payables entries from invoices once those have been paid.)
+- and the corresponding *"General Ledger"* which will also rely on the Organization previously selected.
 
 It is possible to narrow down the accounting information to be shown in the report by:
 
--   a range of "*amounts*"
--   a set of *"subaccounts"*
--   and a set of *"accounting dimensions"* such as business partner, product and project
+- a range of "*amounts*"
+- a set of *"subaccounts"*
+- and a set of *"accounting dimensions"* such as business partner, product and project
 
 Finally, it is also possible to:
 
--   *"group"* the information by any of the accounting dimensions
--   and enter a *"Initial Page Number"* for the report
+- *"group"* the information by any of the accounting dimensions
+- and enter a *"Initial Page Number"* for the report
 
 Once all data have been properly entered, the "Search" button shows the outcome of the report in the same window:
 
--   the ledger entries displayed for each subaccount are ordered by accounting date and besides the subaccount balance is shown for each ledger entry.
+- the ledger entries displayed for each subaccount are ordered by accounting date and besides the subaccount balance is shown for each ledger entry.
 
 The arrows in the toolbar allows the user to navigate through the report outcome shown in the window.
 
 The General Ledger Report can also be viewed and saved in Excel format and PDF format:
 
--   Excel format by pressing on the *"Export to Excel"* action button of the Toolbar:
-    -   This format contains a list of all the ledger entries per each subaccount not grouped, therefore it is possible to group them as desired.
-    -   It also lists the corresponding accounting dimensions of each ledger entry.
+- Excel format by pressing on the *"Export to Excel"* action button of the Toolbar:
+    - This format contains a list of all the ledger entries per each subaccount not grouped, therefore it is possible to group them as desired.
+    - It also lists the corresponding accounting dimensions of each ledger entry.
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
-    -   This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
+    - This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
-![](https://docs.etendo.software/latest/assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png)
 
 #### General Ledger Report Advanced
 
@@ -18116,29 +18115,50 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+This **General Ledger Advanced** report is an enhanced version of the previous [General Ledger Report](#general-ledger-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](https://docs.etendo.software/latest/assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png)
-
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv.png)
 
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
-- User 1
-- User 2
+
+- 1st Dimension
+- 2nd Dimension
 - Activity
 - Sales Region
-- Sales campaign
-- Cost center
+- Sales Campaign
+- Cost Center
 
-Moreover, the “Organization filter” was added, a filter that combines the original Organization field with the “Show related operations” check, to show intercompany transactions.
+Moreover, the Organization filter was added, a filter that combines the original Organization field with the Show Related Operations check, to show intercompany transactions. In each filter, more than one option can be selected.
 
-In each filter, more than one option can be selected.
+The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-![](https://docs.etendo.software/latest/assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv2.png)
 
+In the Group By menu, the following options are added:
 
-Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
+- Activity
+- 1st Dimension
+- 2nd Dimension
+- Sales Region
+- Sales Campaign
+- Cost Center
 
-![](https://docs.etendo.software/latest/assets/drive/1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W.png)
+It is possible to select the desired accounting dimension for the grouping. When generating the report, the selected dimension appears in the header, indicating the grouping criteria used.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv4.png)
+
+##### Buttons
+
+In the toolbar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv3.png)
+
+!!!warning
+    If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
+
+Also, with this functionality you can navigate to the related journal entry directly from the report. This allows easier and more efficient access to information. By clicking on a journal entry, the user can navigate to the Journal Entries Report window, applying all selected filters.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv5.png)
 
 #### Journal Entries Report
 
@@ -18150,7 +18170,7 @@ The Journal Entries Report is a list of all the journal vouchers of an organizat
 
 A journal entry is the recording of financial data in a journal voucher such that the debit equals credit and the debits are entered before the credits.
 
-![](https://docs.etendo.software/latest/assets/drive/1R5ckg6bUk6VCZecVNI0KYiEgig4y4ZDk.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport.png)
 
 As shown in the image above, the "Primary Filters" section allows the user to specify:
 
@@ -18158,33 +18178,33 @@ As shown in the image above, the "Primary Filters" section allows the user to sp
 
 The "Advanced Filters" is now a collapsible section. Under this section, it is possible to specify:
 
--   a **From/To Account** to display journal entries with at least one line using an account defined in the range.
--   a Document Type to narrow down the financial data to be shown in the report to just the one related to that particular document type.
-    -   If the document type selected has a document number associated, for instance an invoice document type, it will be possible to narrow down the data shown to a specific "**Document Number**".
--   the "**Initial Page Number**" *to be shown in the PDF format of the report*
--   the **"Initial Entry Number"** to be shown in the PDF format of the report
--   the **"Entry Description**" to be shown in the PDF format of the report
+- a **From/To Account** to display journal entries with at least one line using an account defined in the range.
+- a Document Type to narrow down the financial data to be shown in the report to just the one related to that particular document type.
+    - If the document type selected has a document number associated, for instance an invoice document type, it will be possible to narrow down the data shown to a specific "**Document Number**".
+- the "**Initial Page Number**" *to be shown in the PDF format of the report*
+- the **"Initial Entry Number"** to be shown in the PDF format of the report
+- the **"Entry Description**" to be shown in the PDF format of the report
 
 The rest of the checkboxes are selected by default in order to show:
 
--   the *"**regular**"* journal entries:
-    -   these entries are the ones generated while posting either any of the Etendo document types or while posting a General Ledger Journal do not flag as "Opening".
--   the *"**opening**"* journal entries:
-    -   these entries are automatically generated by Etendo after the closing of a given fiscal year
-    -   these entries can also be manually generated while posting a General Ledger Journal whenever its journal entries are flagged as "Opening".
--   the "**closing**" journal entries:
-    -   these entries are automatically generated by Etendo after the closing a given fiscal year
--   and finally the *"**P&L closing**"* journal entries:
-    -   these entries are automatically generated by Etendo after the closing of a given fiscal year
+- the *"**regular**"* journal entries:
+    - these entries are the ones generated while posting either any of the Etendo document types or while posting a General Ledger Journal do not flag as "Opening".
+- the *"**opening**"* journal entries:
+    - these entries are automatically generated by Etendo after the closing of a given fiscal year
+    - these entries can also be manually generated while posting a General Ledger Journal whenever its journal entries are flagged as "Opening".
+- the "**closing**" journal entries:
+    - these entries are automatically generated by Etendo after the closing a given fiscal year
+- and finally the *"**P&L closing**"* journal entries:
+    - these entries are automatically generated by Etendo after the closing of a given fiscal year
 
 Finally, and same way as for the rest of financial reports, the Journal Entries Report can be launched in:
 
--   *HTML* format. An example of the HTML output:
+- *HTML* format. An example of the HTML output:
 
-![](https://docs.etendo.software/latest/assets/drive/1a9mebyPB8r9ZqAmlrQzmieeBsgolbsYb.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png)
 
--   *PDF* format by using the "Print Record" action button of the Toolbar
--   or *XML* format by using the "Export to Excel" action button of the Toolbar.
+- *PDF* format by using the "Print Record" action button of the Toolbar
+- or *XML* format by using the "Export to Excel" action button of the Toolbar.
 
 #### Journal Entries Report Advanced
 
@@ -18193,30 +18213,41 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-This **Journal Entries Advanced** report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+This **Journal Entries Advanced** report is an enhanced version of the previous [Journal Entries Report](#journal-entries-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](https://docs.etendo.software/latest/assets/drive/1bZUV65uj-1R6hXX6dE9AQeEMBffjmKbc.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1.png)
 
 
 In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:
+
 - Business Partner
 - Product
-- User 1
-- User 2
+- 1st Dimension
+- 2nd Dimension
 - Project
 - Activity
 - Sales Region
 - Sales campaign
+- Cost Center
 
-The report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary.
+The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-In each filter, more than one option can be selected:
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png)
 
-![](https://docs.etendo.software/latest/assets/drive/11J-cgWCMLSQg5h-TVuoeWa09pcwXrCYm.png)
+After using the available fields and checkboxes, the report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary. In each filter, more than one option can be selected.
 
-Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
+##### Buttons
 
-![](https://docs.etendo.software/latest/assets/drive/1tcD3dKQCRkQ_EjE3KMUFyCpDUXyGmyLF.png)
+In the upper bar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png)
+
+!!!warning
+    If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
+
+Also, with this functionality you can navigate to the related transaction directly from the entry number of reports. This improves traceability and streamlines accounting analysis. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera2.png)
 
 #### Create Tax Report
 
@@ -18236,14 +18267,14 @@ This window allows the user to create or modify different Tax Report for the dif
 
 The window has some parameters to indicate the Tax Report created:
 
--   **Name:** The name of the Report.
--   **Tax:** The tax that will be shown in the report.
--   **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
--   **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
--   **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
--   **Active:** If it’s an active Tax Report.
+- **Name:** The name of the Report.
+- **Tax:** The tax that will be shown in the report.
+- **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
+- **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
+- **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
+- **Active:** If it’s an active Tax Report.
 
 Once, the Tax Report has been set up, it will appear in the Create Tax Report form:
 
@@ -18253,10 +18284,10 @@ This window allows printing Reports previously defined by the user. In order to 
 
 ![](https://docs.etendo.software/latest/assets/drive/174ocSJCYYPhTy_2AmynTHIQv93BlA4rB.png)
 
--   **From Date:** Starting Date of the Report.
--   **To Date:** Last Date of the Report.
--   **Tax Report:** In this list, all the Tax Reports created will appear to be chosen-
--   **Organization:** Organization for which the Report will be printed.
+- **From Date:** Starting Date of the Report.
+- **To Date:** Last Date of the Report.
+- **Tax Report:** In this list, all the Tax Reports created will appear to be chosen-
+- **Organization:** Organization for which the Report will be printed.
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
@@ -18272,10 +18303,10 @@ Customer statement is a consolidated statement of every transaction of a custome
 
 Transactions aggregated from various sources like:
 
--   **Sales Invoices**
--   **Payment In**
--   **Financial Transactions**
--   **Reconciliations**
+- **Sales Invoices**
+- **Payment In**
+- **Financial Transactions**
+- **Reconciliations**
 
 !!! warning
     Note that *Completed* but not *posted* transactions are not taken into consideration.
@@ -18286,10 +18317,10 @@ The *Multicurrency* parameter of the report, in case of checked, will group reco
 
 The Customer Statement provides the following details:
 
--   The credit/debit information including the document number of the transaction
--   The accounting date
--   The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
--   The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
+- The credit/debit information including the document number of the transaction
+- The accounting date
+- The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
+- The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
     Note that negative amounts are highlighted by using brackets ().
 
 ###### Customer Statement Report
@@ -18300,8 +18331,8 @@ An example of the customer statement filter is shown in the image below:
 
 Note about some filters:
 
--   **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
--   **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
+- **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
+- **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
 
 An example of the Customer Statement output:
 
@@ -18325,14 +18356,14 @@ This window allows the user to create or modify different Tax Reports for the di
 
 The window has some parameters to indicate the Tax Report created:
 
--   **Name:** The name of the Report.
--   **Tax:** The tax that will be shown in the report.
--   **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
--   **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
--   **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
--   **Active:** If it is an active Tax Report.
+- **Name:** The name of the Report.
+- **Tax:** The tax that will be shown in the report.
+- **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
+- **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
+- **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
+- **Active:** If it is an active Tax Report.
 
 Once, the Tax Report has been set up, it will appear in the Create Tax Report form:
 
@@ -18342,10 +18373,10 @@ This window allows to print Reports previously defined by the user. In order to 
 
 ![](https://docs.etendo.software/latest/assets/drive/17xPpINQrk2rcbebH6-hCCsIjwDP0X7qH.png)
 
--   **From Date:** Starting Date of the Report
--   **To Date:** Last Date of the Report
--   **Tax Report:** In this list, all the Tax Reports created will appear to be chosen.
--   **Organization:** Organization for which the Report will be printed.
+- **From Date:** Starting Date of the Report
+- **To Date:** Last Date of the Report
+- **Tax Report:** In this list, all the Tax Reports created will appear to be chosen.
+- **Organization:** Organization for which the Report will be printed.
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
@@ -21454,10 +21485,14 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
+The Balance Sheet and P&L Structure Advanced, General Ledger Report Advanced and Journal Entries Report Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
-    For more information, visit [the Balance Sheet and P&L Structure user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced), [the General Ledger Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) and [the Journal Entries Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced).
+    For more information, visit:
+    
+    - [Balance Sheet and P&L Structure Advanced ](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
+    - [General Ledger Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
+    - [Journal Entries Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
 
 ##### G/L Journal Clone
 
@@ -29923,6 +29958,7 @@ Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, 
 
 At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Assistant* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
+<br clear="all"> 
 
 #### Assistant
 
@@ -29943,7 +29979,6 @@ Each tool represents a dedicated and self-contained project, meticulously design
 
 ####  Key Features
 
-
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
 
 - **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
@@ -29955,56 +29990,67 @@ Each tool represents a dedicated and self-contained project, meticulously design
 - **LangGraph**: In this case, this option works as a manager of other assistants and allows to select team members. 
 
 - **Langchain Agent**: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.
-- **Multi-Model Assistant** This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
-- **Attach Files** Etendo Copilot allows users to attach one or multiple files for assistants.
+- **Multi-Model Assistant**: This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
+- **Attach Files**: Etendo Copilot allows users to attach one or multiple files for assistants.
+- **Context Sharing**: Etendo Copilot can automatically capture and share the context of your current Etendo Classic session, such as selected records or active windows. This eliminates the need to manually input information, streamlining workflows and improving efficiency.
 
 #### Copilot Interface
----
 
-![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+##### Navegation Bar
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`, `Multi-Model Assistant`, `LangGraph` and `Open AI Assistant` types, for more information visit [Assistant Windows](https://docs.etendo.software/latest/etendo-copilot/setup-and-usage.md#assistant-window) documentation.
 
+!!!note
+    By default, Copilot will open the last assistant previously used.
+
+![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+
+##### Tool Bar
+
+In any standard Etendo Classic window, you will see in the **toolbar a button** with the Copilot icon. Clicking this button opens the Copilot chat, automatically passing the context of the current tab or selected records. This feature ensures that Copilot has all the relevant information about your current session, eliminating the need to manually input details and streamlining your workflow.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/toolbar.png)
+
+**Context awareness**
+
+Etendo Copilot can take advantage of the context of the currently active window or record in Etendo Classic. Clicking the toolbar button updates the current context automatically.
+
+- **Form Context**: If you have a form open (for example, a sales order or a customer record), Copilot retrieves the key fields and any unsaved edits, offering you real-time suggestions or validations.
+- **Grid context**: When a row is selected in a grid, Copilot captures the details of those specific records, sending Copilot all relevant information so you can receive relevant AI-based recommendations.
+- **Tab and window context**: In multi-tabbed environments, context must be sent to Copilot each time you switch from one view to another (e.g., from Orders to Products).
+
+![Attach-Files](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/attach-files.png){align=left  width="300"}
+
 ##### Attach Files
----
 
-![Attach-Files](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/attach-files.png){align=right  width="300"}
-
-Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports any file format, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.
+Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports various file formats, such as `.pdf`, `.csv`, `.jpg`, and more, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.
 
 This functionality ensures that users can seamlessly incorporate external data into their workflows, whether it involves parsing documents, analyzing spreadsheets, or processing images. Assistants and tools can be tailored to address specific requirements based on the type of attached files, providing contextualized and intelligent responses.
-
-<br>
-<br>
+<br clear="all">
 
 ##### Visualization Mode
----
+
+
 <figure markdown>
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=300}
 <br><br>
-Copilot, by default, can be used as a pop-up window. This is comfortable to use as an integrated assistant available in any window you are using.
+**Pop-up** <br>
+By default, Copilot operates as a pop-up window, providing convenient access as an integrated assistant in any active window.
 </figure>
----
 
 <figure markdown>
+**Full Screen** <br>
+Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
-<br><br>
-Select the fullscreen mode for a more comfortable use when having long conversations.
 </figure>
 
----
 <figure markdown>
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200}
-<br><br>
-It can also be minimized. In this case, the logo will be shown in the lower-right section of the screen.
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200} <br>
+**Minimized** <br>
+Copilot's interface can also be minimized. In this case, a Copilot bubble will be active at the bottom right of the screen.
 </figure>
----
-When asked something, Copilot informs the user about the assistants and tools used when processing each message.
-
-!!!note
-    When closed and opened again, by default, Copilot will select the last assistant previously used.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup and Usage
@@ -34591,6 +34637,236 @@ Select the organization and the module from which to import the reference data i
 This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Datasources
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Datasources
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/datasources
+## Article Content: 
+###  Datasources
+
+####  Overview
+
+This section describes how to define and implement data sources on the basis of
+the Etendo Datasource functionality. A datasource is the main provider of
+data in the Etendo User Interface. The datasource API
+contains methods to fetch data, update data and to create and delete data on
+the server. A datasource has a client-side as well as a server side
+representation.
+
+This section describes how to implement a custom datasource. A custom
+datasource can be used in Etendo Classic user interface components such as the
+[Selectors](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Selectors).
+
+####  Related Information
+
+The Etendo Datasource functions make use of and extend the
+[JSON_REST_Web_Services](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services) functionality.
+
+The Etendo Datasource implements and extends the Smartclient
+RESTDatasource in two ways:
+
+  * on the client, it generates a Smartclient RESTDatasource instance (in javascript) 
+  * on the server, it provides a JSON REST web service which supports the same API as defined by Smartclient 
+
+The Datasource implementation consists of two parts:
+
+  * the server side implementation of the datasource in java 
+  * the definition of the datasource in the Application Dictionary 
+
+####  Datasource API
+
+The Datasource API is defined by the [DataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DataSourceService.java){target="\_blank"} interface. This
+interface defines methods which are required for correct server side
+operation. It is best to extend the [BaseDataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/BaseDataSourceService.java){target="\_blank"} class which takes care of implementing most methods.
+
+After extending the BaseDataSourceService class, the following methods need to
+be implemented:
+
+    
+    
+      /**
+       * Execute a query request and return the result as a json string. For a query request, the content
+       * ({@link #getContent()}) is normally empty, the query parameters can be found in the parameters
+       * map ({@link #getParameters()}).
+       * 
+       * @param parameters
+       *          the parameters often coming from the HTTP request
+       * @return the json result string
+       */
+      public String fetch(Map<String, String> parameters);
+     
+      /**
+       * Execute a delete action. The ID of the deleted record is present in the parameters.
+       * 
+       * @param parameters
+       *          the parameters often coming from the HTTP request
+       * @return the result message as a json string
+       */
+      public String remove(Map<String, String> parameters);
+     
+      /**
+       * Execute an insert action. There can be parameters in the parameter map (
+       * {@link #getParameters()}) but often the data to insert is present in the content (
+       * {@link #getContent()}).
+       * 
+       * @param parameters
+       *          the parameters often coming from the HTTP request
+       * @param content
+       *          , the request content, is assumed to be a json string
+       * @return the result message as a json string
+       */
+      public String add(Map<String, String> parameters, String content);
+     
+      /**
+       * Execute an update action. There can be parameters in the parameter map (
+       * {@link #getParameters()}) but often the data to insert is present in the content (
+       * {@link #getContent()}).
+       * 
+       * @param parameters
+       *          the parameters often coming from the HTTP request
+       * @param content
+       *          , the request content, is assumed to be a json string
+       * @return the result message as a json string
+       */
+      public String update(Map<String, String> parameters, String content);
+
+The content and return Strings are JSON Strings which need to adhere to the
+same format as defined in the  Smartclient RESTDatasource.
+
+When using the datasource in a classic Etendo window/form (such as in the
+case of the [Selector](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Selectors/#property-paths-showing-linked-information)) then the parameters will contain all form fields
+present in the HTML form.
+
+For its runtime behavior, the datasource makes extensive use of the
+[JSON_REST_Web_Services](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services). So the datasource at runtime operates very much like the JSON webservice. There are, however, some minor differences:
+
+  * When only a single object is [requested](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services#get), then JSON REST will return only a JSON string with this object. The datasource will wrap this single JSON string and add metadata required for the client-side datasource. 
+  * The datasource definition in the Application Dictionary allows specifying a where clause. The datasource will add this where clause to the query before calling JSON Rest to execute the query and return the JSON string. 
+
+When developing your own datasource, it makes sense to study and use the [core
+classes](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services#JSON_Core_Classes) of the JSON REST functionality.
+
+####  Datasource Definition
+
+After the server side implementation of the datasource, the next step is to
+define it in the application dictionary. This makes it possible to use the
+datasource in user interface components defined in the application
+dictionary.
+
+The datasource definition consists of two parts:
+
+  * the datasource 'header' defining the class implementing the datasource. 
+  * datasource fields defining the fields of the datasource. 
+
+To define the datasource in the application dictionary, go to: Application
+Dictionary > User Interface > Datasource. Then click the insert button.
+
+  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Datasource1.png)
+
+  
+A description of the fields in the datasource definition:
+
+  * Module: choose the module which delivers this datasource 
+  * Name/Description: a relevant and descripting name and description 
+  * Table and Whereclause: these can be used to define a datasource, reading directly from a table. 
+  * Java class name: the class name of the class implementing the datasource. This field can be empty. In which case the table field must be set. If no java class name is specified, then the  [DefaultDataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DefaultDataSourceService.java){target="\_blank"} class is used. This class fully implements the Datasource interface (full CRUD support through webservices and client-side representation of the datasource). 
+  * Template: the template is responsible for generating the client-side datasource in javascript. See the next section on how to implement a custom client-side datasource for more information on the meaning of this field. In general, the only option to select is template (the default one). 
+
+If a table is specified and the DefaultDataSourceService is used (java class
+name is empty, for example), then it is not needed to specify datasource fields.
+All the columns from the table are automatically available as datasource
+fields.
+
+If however, you have a custom datasource class or want to add additional
+(computed) fields to a datasource, then they need to be defined as Datasource
+Fields.
+
+To add fields to a datasource, click on the Datasource Field link in the top of
+the datasource window.
+
+  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Datasource2.png)
+
+  
+A description of the fields in the datasource field definition:
+
+  * Name: a unique name which should also be a valid javascript name. 
+  * Description: a free-format descriptive field. 
+  * Reference: the reference defines the type of the field. 
+  * Table: if the reference is a foreign key reference then this field can be used to specify the table which is being referenced. 
+
+####  Implementing your own client-side datasource (Advanced)
+
+The datasource definition is converted to javascript code using a template.
+The template is selected in the datasource definition (see step above). It is
+possible for a module to add a new template which can be used for creating
+client-side datasources.
+
+Creating a new template needs to be done by a developer with a good
+understanding of Etendo. To implement a new template, it is necessary to
+understand the template processing and template handling functionality used by
+Etendo. The [Etendo Architecture](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Etendo_Architecture) page provides detailed information.
+It discusses both template processing, caching, i18n and also gives pointers
+on how to implement a custom template.
+
+The template used for the datasource can be found in the source tree of the
+org.openbravo.service.datasource package inside the
+org.openbravo.service.datasource.templates package in the datasource.ftl file.
+The template makes use of the freemarker templating language.
+
+A custom template should be created inside a separate module. To make use of
+it define it inside the Application Dictionary > User interface > Template.
+
+  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Datasource3.png)
+
+  
+The main fields to set:
+
+  * The TemplateClasspathLocation should point to the location in the source tree of the custom template, incl. its filename. 
+  * The ComponentType must be set to datasource. The ComponentType determines if the template can be selected in the datasource definition window. 
+
+  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Datasource4.png)
+
+  
+Then, when defining datasources, the custom template can be selected.
+
+####  Datasource examples
+
+The datasource source code contains 2 examples of a datasource implementation:
+
+  * [DefaultDataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DefaultDataSourceService.java){target="\_blank"}: this is a complete implementation of the  [DataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DataSourceService.java){target="\_blank"}  interface. It supports fetching with querying and paging and update, add and delete operations. This datasource is used extensively in the Etendo Classic user interface. 
+  * ModelDataSourceService  : is an in-memory datasource which provides access to the properties of a model using a dot-path syntax. It only implements the fetch method. It is used in the  [Selector](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Selectors/#property-paths-showing-linked-information)  to provide access to the model. 
+
+  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Datasources-4.png){: .legacy-image-style}
+
+  
+The datasource definitions can be found in the application in Application
+Dictionary > User Interface > Datasource.
+
+  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Datasource6.png)
+  
+!!!note
+    The DefaultDataSourceService does not have an explicit
+    definition as it is instantiated on request on the server. This facilitates
+    using the datasource directly for any table within Etendo Classic without requiring
+    an explicit definition for each table.
+
+---
+
+This work is a derivative of ["Datasources"](http://wiki.openbravo.com/wiki/Datasources){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Development Build Tasks
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Development Build Tasks
 ## Article URL: 
@@ -38528,6 +38804,8 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     pip install mkdocs-glightbox
     pip install mike
     pip install mkdocs-rss-plugin
+    pip install beautifulsoup4
+    pip install algoliasearch
     ```
 
 3. Create a new branch with [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
@@ -54633,7 +54911,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q4.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.7){target="_blank"} | 07/03/2025 | 24.4.7 | QAA |  | :white_check_mark: |
+| [24Q4.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.8){target="_blank"} | 14/03/2025 | 24.4.8 | QAA |  | :white_check_mark: |
+| [24Q4.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.7){target="_blank"} | 07/03/2025 | 24.4.7 | C |  | :white_check_mark: |
 | [24Q4.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.6){target="_blank"} | 28/02/2025 | 24.4.6 | C |  | :white_check_mark: |
 | [24Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.5){target="_blank"} | 21/02/2025 | 24.4.5 | C |  | :white_check_mark: |
 | [24Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.4){target="_blank"} | 14/02/2025 | 24.4.4 | C |  | :white_check_mark: |
@@ -54930,7 +55209,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.23.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.1){target="_blank"} | 07/03/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.23.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.2){target="_blank"} | 14/03/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.23.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.1){target="_blank"} | 07/03/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.23.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.0){target="_blank"} | 28/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.22.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.22.0){target="_blank"} | 07/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.21.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.21.2){target="_blank"} | 24/01/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
@@ -55435,7 +55715,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.10.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.0){target="_blank"} | 06/03/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.1](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.1){target="_blank"} | 14/03/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.0){target="_blank"} | 06/03/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.9.0){target="_blank"} | 15/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.8.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.8.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.7.0){target="_blank"} | 01/10/2024 | 23.2.0 | 24.3.x | C | :white_check_mark: |
