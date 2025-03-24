@@ -556,6 +556,7 @@ nav:
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
         - How to execute Copilot through the console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Run Self-Hosted models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-run-self-hosted-models-with-ollama.md
     - Etendo Mobile:
       - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
       - Concepts: 
