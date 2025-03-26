@@ -7,6 +7,10 @@ tags:
  - User Instructions
 ---
 
+!!! warning
+    Currently, we are migrating the terminology from *Assistant* to *Agent*. This change will be reflected in the documentation soon. Where you see *Assistant*, consider it as *Agent* and vice versa.
+
+
 # Copilot Setup and Usage
 
 ## Initial Configuration
