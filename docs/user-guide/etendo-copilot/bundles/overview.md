@@ -113,6 +113,9 @@ The module includes the following agents:
     - **Purchase Order Expert**: This agent creates purchase orders.
     - **Sales Order Expert**: This agent creates sales orders.
 
+!!! info
+    This sub-agents presented can be used individually if needed.
+
 ## Dev Assistant
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
