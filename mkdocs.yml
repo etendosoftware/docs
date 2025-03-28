@@ -336,7 +336,7 @@ nav:
         - Data Access Layer: developer-guide/etendo-classic/concepts/data-access-layer.md
         - Data Model: developer-guide/etendo-classic/concepts/data-model.md
         - Datasets: developer-guide/etendo-classic/concepts/datasets.md
-#        - Datasources: developer-guide/etendo-classic/concepts/Datasources.md
+        - Datasources: developer-guide/etendo-classic/concepts/datasources.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
 #        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
         - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
