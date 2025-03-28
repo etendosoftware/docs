@@ -36,7 +36,7 @@ For this, go to the [Enterprise Module Management](../../../../../user-guide/ete
 This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](../../../basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
 
 
-1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+1. Activation: To activate automated processing, check the Automated Processing checkbox in the Remittance header. If manual processing is preferred, keep this option unchecked.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
 
@@ -44,7 +44,7 @@ This functionality allows the automatic processing of remittances. This function
 
 2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
 
-3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+3. Date Processing: The remittance lines will be processed with the date of the invoices or orders corresponding to them. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
 
