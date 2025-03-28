@@ -1,0 +1,32 @@
+:root {
+  --md-primary-fg-color: #202452;
+  --md-primary-fg-color--light: #202452;
+  --md-primary-fg-color--dark: #ffffff;
+  --md-accent-fg-color: #7182ff;
+  --md-typeset-a-color: #7182ff;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #ffffff;
+  --md-accent-fg-color: #7182ff;
+}
+
+/* To add this style to an imagge add {.legacy-image-style} 
+*  E.g: ![cover-welcome-to-etendo.png](/assets/home/index/cover-welcome-to-etendo.png){.legacy-image-style} 
+*/
+
+.legacy-image-style {
+  filter: grayscale(100%)
+}
+
+.md-nav--primary >.md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.md-nav__item--section > .md-nav__link:not(.md-nav__container) {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+
