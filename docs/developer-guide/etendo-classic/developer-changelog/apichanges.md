@@ -5,20 +5,20 @@
 ## March 2025
 
 **Etendo Classic** 
-[Release 25.1.0]()
+[Release 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
 
 ### Overview
 Provide a brief overview of the purpose of this release, including high-level objectives, key improvements, and the rationale behind major changes.
-
-> **Example**:  
-> Version 25.1.0 of our ERP system introduces performance enhancements, new inventory management features, security improvements, and a major update of several third-party libraries used within the platform. Additionally, several high-priority bugs from the previous version have been fixed to ensure increased stability and reliability.
 
 ### API Changes
 
 ## Etendo Software Stack
 
+- ## Stack component: `[Ubuntu Live Server amd64]`
+   - **New Version Supported**: `22.04.5`
+
 - ## Stack component: `[Java SE]`
-   - **New Version Supported**: `17.0.13+7`
+   - **New Version Supported**: `17.0.14`
    - ## Notable Changes:
 
       - **Java SE 12.x**
@@ -47,16 +47,17 @@ Provide a brief overview of the purpose of this release, including high-level ob
          - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
 
       - **Java SE 17 (LTS)**
-         - [Java SE 17.0.13 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-13-relnotes.html)
+         - [Java SE 17.0.14 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html)
          - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)
 
 
 - ## Stack component: `[PostgreSQL]`
-   - **New Version Supported**: `16.6.1`
+   - **New Version Supported**: `16.8.1`
    - ## Notable Changes:
 
       - **PostgreSQL 16.x**
-         - [PostgreSQL 16.6.1 Release Notes](https://www.postgresql.org/docs/release/16.6.1/)
+         - [PostgreSQL 16.8 Release Notes](https://www.postgresql.org/docs/release/16.8/)
+         - [PostgreSQL 16.7 Release Notes](https://www.postgresql.org/docs/release/16.7/)
          - [PostgreSQL 16.6 Release Notes](https://www.postgresql.org/docs/release/16.6/)
          - [PostgreSQL 16.5 Release Notes](https://www.postgresql.org/docs/release/16.5/)
          - [PostgreSQL 16.4 Release Notes](https://www.postgresql.org/docs/release/16.4/)
@@ -115,83 +116,6 @@ Provide a brief overview of the purpose of this release, including high-level ob
          - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
          - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
 
-#### Added Endpoints
-List and describe any new API endpoints introduced in this version.
-
-- **Endpoint**: `/api/newEndpointExample`  
-  - **Method**: `GET | POST | PUT | DELETE`  
-  - **Description**: Briefly explain the purpose, required/optional parameters, and expected functionality.  
-  - **Parameters**:  
-    - `param1`: Data type, short description  
-    - `param2`: Data type, short description  
-  - **Response Codes**:  
-    - `200`: Successful response example  
-    - `400`: Client error example  
-  - **Sample Request**:  
-    ```bash
-    curl -X GET "https://yourserver.com/api/newEndpointExample" \
-    -H "Authorization: Bearer <TOKEN>"
-    ```
-  - **Sample Response**:  
-    ```json
-    {
-      "status": "success",
-      "data": []
-    }
-    ```
-
-#### e Endpoints
-List the endpoints that have been updated, indicating the nature of the modifications (e.g., new parameters, updated response structures, stricter authentication, etc.).
-
-1. **Endpoint**: `/api/existingEndpoint`  
-   - **Change**: Added a new optional parameter `documentType`.  
-   - **Updated Response Example**:  
-     ```json
-     {
-       "id": 101,
-       "documentType": "Invoice",
-       "date": "2025-03-01"
-     }
-     ```
-   - **Notes**: While older clients remain compatible, it is recommended to account for the new parameter in any client implementation.
-
-2. **Endpoint**: `/api/anotherEndpoint`
-   - **Change**: Requires an additional **header** (`x-api-key`) for authentication.  
-   - **Impact**: Requests missing this header will return `401 - Unauthorized`.
-
-#### Deprecated Endpoints
-Endpoints marked as deprecated and scheduled for removal in a future release.
-
-- **Endpoint**: `/api/deprecatedEndpoint`  
-  - **Reason**: Superseded by `/api/newEndpoint` which offers better security and performance.  
-  - **Removal Date**: Planned for version 26.0.0.  
-  - **Recommendation**: Switch to `/api/newEndpoint` as soon as possible.
-
----
-
-### Data Structure Changes
-Highlight changes in any data models, database tables, or JSON objects used by the API.
-
-> **Example**:
-> - **Table/Model**: `Orders`  
->   - **Removed Field**: `additionalDiscount`  
->   - **New Field**: `promoCode` (String, max length of 20)  
->   - **Reason for Change**: Consolidating discounts and promotional offers under a single field.  
->   - **Impact**: Client applications must update their logic to use `promoCode`.
-
----
-
-### Breaking Changes
-Explicitly list changes that break backward compatibility. Provide guidance on how to address them.
-
-1. **Breaking**: Fields `x` and `y` in `/api/invoices` have been removed.  
-   - **Solution**: Use `promoCode` and `specialDiscount` instead.  
-
-2. **Breaking**: Authentication now requires OAuth2 instead of Basic Auth.  
-   - **Solution**: Update client code to request OAuth2 tokens instead of using username/password in the header.
-
-
-
 ### Third-Party Library Updates
 List and describe the key external libraries that have been upgraded in this release, along with the versions and any relevant breaking changes in those libraries.
 
@@ -222,6 +146,24 @@ List and describe the key external libraries that have been upgraded in this rel
       - [Commons Collections 4.2 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_2.html)
       - [Commons Collections 4.3 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_3.html)
       - [Commons Collections 4.4 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_4.html)
+
+  - **API Changes - Migration from Apache Commons Collections 3.2.2 to 4.4**
+
+      Starting with version **25Q1** of Etendo, Apache Commons Collections has been upgraded from version **3.2.2** to **4.4**. This upgrade includes a change in the package structure: all references previously pointing to `org.apache.commons.collections` must now be updated to `org.apache.commons.collections4`.
+
+  - **Migration Instructions**
+
+      Developers should update all import statements and internal references to reflect the new package structure. The previous package `org.apache.commons.collections` has been replaced by `org.apache.commons.collections4` in the new version. Please verify that the updated classes and methods are compatible with your existing code, as some methods may have been deprecated, renamed, or modified in behavior.
+
+      ```java
+      // Before (Apache Commons Collections 3.2.2)
+      import org.apache.commons.collections.CollectionUtils;
+
+      // After (Apache Commons Collections 4.4)
+      import org.apache.commons.collections4.CollectionUtils;
+      ```
+
+      For more detailed migration guidelines, please refer to the [Apache Commons Collections 4.4 documentation](https://commons.apache.org/proper/commons-collections/).
 
 - **Library Name**: `[commons-digester]`
   - **Old Version**: 1.8.1
@@ -254,6 +196,28 @@ List and describe the key external libraries that have been upgraded in this rel
       - [Commons Lang 3.11 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.11)
       - [Commons Lang 3.12.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.12.0)
       - [Commons Lang 3.13.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.13.0)
+
+  - **API Changes - Migration from Apache Commons Lang 2.6 to 3.17**
+
+      Starting with version **25Q1** of Etendo, Apache Commons Lang has been upgraded from version **2.6** to **3.17**. As part of this upgrade, the package structure has changed. All classes previously imported from `org.apache.commons.lang.*` must now be updated to use the new package `org.apache.commons.lang3.*`.
+
+  - **Migration Instructions**
+
+      Developers should update their import statements to reflect the new package structure. The previous package `org.apache.commons.lang` has been replaced by `org.apache.commons.lang3` in the new version. Please verify that the updated classes and methods are compatible with your existing code, as some methods may have been deprecated, renamed, or modified in behavior.
+
+      ```java
+      // Before (Apache Commons Lang 2.6)
+      import org.apache.commons.lang.StringUtils;
+
+      // After (Apache Commons Lang 3.17)
+      import org.apache.commons.lang3.StringUtils;
+      ```
+
+      For more detailed migration guidelines, refer to the [Apache Commons Lang 3 migration notes](https://commons.apache.org/proper/commons-lang/article3_0.html).
+
+  - **Deprecated Library**
+
+      Although the previous version of the library is maintained for backward compatibility, it will be removed in future releases. It is strongly recommended to migrate to Apache Commons Lang 3.17 to ensure long-term support and compatibility.
 
 - **Library Name**: `[hibernate-commons-annotations]`
   - **Old Version**: 5.1.0.Final
@@ -344,27 +308,5 @@ List and describe the key external libraries that have been upgraded in this rel
 
    - **Library Name**: `[jxl]`
       - **Version**: 2.6.10
-
-### Additional Notes
-Include any remaining points relevant to this release, such as known limitations, performance tips, or future roadmap items.
-
-
-    **Example**:  
-        - Enabling **query caching** is recommended to enhance API response times.  
-        - We plan to introduce GraphQL support in a subsequent release.
-
----
-
-###  Migration Guide
-Give clear, step-by-step instructions on how to migrate existing integrations to the new version, minimizing disruptions.
-
-1. **Dependency Update**:  
-   - Indicate any third-party library or component version requirements.  
-2. **Endpoint Refactoring**:  
-   - Show which deprecated endpoints have replacements.  
-3. **Added Parameters**:  
-   - Explain mandatory vs. optional parameters that developers need to include.  
-4. **Integration Testing**:  
-   - Recommend testing in a staging environment before deploying to production.
 
 ---
