@@ -29,14 +29,14 @@ tags:
 ## 25.1.0
 New ISO with Etendo Classsic version 25.1.0
 
-**Changes**
+- **Changes**
     - Upgrade Etendo software stack. For more information visit [API Change Documentation](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md)
 
 
 ## 24.4.3
 New ISO with Etendo Classsic version 24.4.3
 
-**Fixed**
+- **Fixed**
     - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 ## 24.4.0
@@ -51,13 +51,13 @@ New ISO with Etendo Classsic version 24.2.0
 ## 24.1.4
 New ISO with Etendo Classsic version 24.1.4
 
-**Fixed**
+- **Fixed**
     - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 ## 24.1.0
 New ISO with Etendo Classsic version 24.1.0
 
-**Changes**
+- **Changes**
     - Upgrade Tomcat version to 9.0.87
 
 ## 23.4.0
