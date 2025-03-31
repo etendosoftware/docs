@@ -108,6 +108,86 @@ Provide a brief overview of the purpose of this release, including high-level ob
             - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
             - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
 
+- `[Etendo Gradle Plugin]`
+    - **New Version Supported**: `2.0.0`
+    - Notable Changes:
+
+         **New Gradle Plugin Task**
+         ``` bash title="Terminal"
+         ./gradlew cleanExpandCore
+         ```
+
+         This new task deletes directories created by the expandCore task.
+
+         **Compatibility Flag**
+
+         ``` bash title="Terminal"
+         -Pjava.version=11
+         ```
+
+         This new flag forces the use of Java 11 with version 25Q1.
+
+    - **Migration Guide**
+
+      To migrate your existing integration to support the new version with Gradle 8.12.1 and Etendo Gradle Plugin RC 2.0.0, follow these steps carefully:
+
+      - **Update the Etendo Gradle Plugin**
+
+         In your `build.gradle` file, replace the old plugin declaration:
+
+         ```groovy title="build.gradle"
+         id 'com.etendoerp.gradleplugin' version '1.5.X'
+         ```
+
+         with the new Release Candidate version:
+
+         ```groovy title="build.gradle"
+         id 'com.etendoerp.gradleplugin-rc' version '2.0.0'
+         ```
+
+      - **Update core version in Etendo Base**
+
+         In your `build.gradle` file, replace the old plugin declaration:
+
+         ```groovy title="build.gradle"
+         etendo {
+            coreVersion = "[21.4.0,25.1.0)"
+         }
+         ```
+
+         with:
+
+         ```groovy title="build.gradle"
+         etendo {
+            coreName = "etendo-core-rc"
+            coreVersion = "[21.4.0,25.2.0)"
+         }
+         ```
+
+      - **Upgrade the Gradle Wrapper to version 8.12.1**
+
+         Run the following command to upgrade your Gradle wrapper to version 8.12.1:
+
+         ``` bash title="Terminal"
+         ./gradlew wrapper --gradle-version 8.12.1
+         ```
+
+         For more detailed migration guidelines, refer to the [Upgrading the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
+
+      - **Expand the Core**
+
+         Execute the expandCore task to extract the necessary core components:
+
+         ``` bash title="Terminal"
+         ./gradlew expandCore
+         ```
+
+      - **Run Update Database and Compile Tasks**
+
+         ``` bash title="Terminal"
+         ./gradlew update.database compile.complete smartbuild
+         ```
+
 ##### Third-Party Library Updates
   List and describe the key external libraries that have been upgraded in this release, along with the versions and any relevant breaking changes in those libraries.
 
@@ -235,9 +315,8 @@ Provide a brief overview of the purpose of this release, including high-level ob
             - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
             - [Full changelog overview](https://poi.apache.org/changes.html)
 
-    !!! note
+    !!! info
         Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
-
 
 ##### New Libraries
 

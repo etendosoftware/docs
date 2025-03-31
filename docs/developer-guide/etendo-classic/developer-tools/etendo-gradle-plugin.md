@@ -149,6 +149,15 @@ etendo {
 
 ## Common Gradle tasks
 
+!!!danger
+    Since Etendo 25Q1 all Gradle tasks with Java versions below 17 are not allowed. To add support for previous versions, a new flag has been added.
+
+    ``` bash title="Terminal"
+    -Pjava.version=11
+    ```
+
+    This new flag forces the use of Java 11.
+
 - Creates the properties and configuration files.
   
     ``` bash title="Terminal"
@@ -244,6 +253,11 @@ etendo {
     | Command line parameter    | Description                                                        |  
     |  -------------------       | ------------------------------------                                                                                                  |
     | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
+
+- Task to delete directories created by the expandCore task.
+    ``` bash title="Terminal"
+    ./gradlew cleanExpandCore
+    ```
 
 ## Submodules
 
