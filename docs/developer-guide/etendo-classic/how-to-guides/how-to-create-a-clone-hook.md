@@ -77,3 +77,7 @@ To create a Clone Hook, you only have to follow a few steps:
 
     Override this method when there is an existing hook for your selected Entity (for example, there is a cloning process already implemented for Invoices and Orders), and you want your own hook to be used instead.
     The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.
+
+## How to extend an already existing Clone Hook?
+The Clonning action its a particular action that can be extended by creating a new Hook, for implementing a custom logic for a specific entity. This has the disadvantage that only one Hook per entity can be used, but there are mechanisms to extend this functionality. These are the preActionHooks and postActionHooks. More information can be found in the following page: [How to Create Jobs and Actions](./how-to-create-jobs-and-actions.md#how-to-extend-an-action-using-preaction-and-postaction-hooks)
+
