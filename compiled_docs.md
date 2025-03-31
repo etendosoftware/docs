@@ -38248,6 +38248,11 @@ To create a Clone Hook, you only have to follow a few steps:
 
     Override this method when there is an existing hook for your selected Entity (for example, there is a cloning process already implemented for Invoices and Orders), and you want your own hook to be used instead.
     The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.
+
+#### How to extend an already existing Clone Hook?
+The Clonning action its a particular action that can be extended by creating a new Hook, for implementing a custom logic for a specific entity. This has the disadvantage that only one Hook per entity can be used, but there are mechanisms to extend this functionality. These are the preActionHooks and postActionHooks. More information can be found in the following page: [How to Create Jobs and Actions](./how-to-create-jobs-and-actions.md#how-to-extend-an-action-using-preaction-and-postaction-hooks)
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Computed Column
@@ -43350,6 +43355,172 @@ public static void executeProcessOrderAction(Order order) {
 It is necessary to implement a method that gets and executes the current action, in our example we implement `executeProcessOrderAction(Order order)` which dynamically gets an instance of the `ExtendProcessOrder` class and executes it.
 It is also possible to add validations and override the original methods.
 
+#### How to extend an Action using preAction and postAction hooks
+There is a way to extend an Action without modifying it. This is done by implementing the pre and post hooks that are available in the `com.smf.jobs.Action` class.
+
+When an Action is executed, all the implementation of the PreActionHook are executed before the run method of the Action, and all the implementation of the PostActionHook, are executed. This allows for the extension of the Action without modifying the original code, to add validations, or to execute additional logic.
+
+##### Example of an Action 
+The following is an example of an Action that puts information in a Singleton class.
+
+```Java
+package com.smf.jobs;
+
+import java.util.HashMap;
+
+import org.apache.commons.lang.mutable.MutableBoolean;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.base.structure.BaseOBObject;
+
+public class TestAction extends Action {
+  private HashMap<String, Boolean> metadata = new HashMap<>();
+
+  @Override
+  protected ActionResult action(JSONObject parameters, MutableBoolean isStopped) {
+    SingletonToTestHooks.getInstance().setMetadata("actionExecuted", true);
+    var res = new ActionResult();
+    res.setType(Result.Type.SUCCESS);
+    res.setMessage("Test action executed");
+
+    return res;
+  }
+
+
+  @Override
+  protected Class<?> getInputClass() {
+    return BaseOBObject.class;
+  }
+}
+```
+
+##### Implementing the PreActionHook
+The following is an example of a PreActionHook that introduce a logic before the Action is executed.
+
+```Java
+package com.smf.jobs;
+
+import javax.enterprise.context.ApplicationScoped;
+
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.kernel.ComponentProvider;
+
+import com.smf.jobs.interfaces.PreActionHook;
+
+/**
+ * PreActionHook that sets a property in a singleton instance, before the action: TestAction is
+ * executed.
+ */
+@ApplicationScoped
+@ComponentProvider.Qualifier("com.smf.jobs.TestAction")
+public class TestActionPreHook implements PreActionHook {
+
+  /**
+   * Returns the priority of this pre-action hook.
+   * <p>
+   * This method returns the priority value which determines the order in which the hook is executed.
+   *
+   * @return The priority value of this pre-action hook.
+   */
+  @Override
+  public int getPriority() {
+    return 121;
+  }
+
+  /**
+   * Checks if this pre-action hook applies to the given parameters.
+   * <p>
+   * This method determines if the pre-action hook should be applied based on the provided parameters.
+   *
+   * @param parameters
+   *     The JSON object containing the parameters.
+   * @return true if the pre-action hook applies, false otherwise.
+   */
+  @Override
+  public boolean applies(JSONObject parameters) {
+    return true;
+  }
+
+  /**
+   * Executes the pre-action hook with the given action.
+   * <p>
+   * This method runs the pre-action hook logic using the provided action JSON object.
+   *
+   * @param action
+   *     The JSON object containing the action data.
+   */
+  @Override
+  public void run(JSONObject action) {
+    SingletonToTestHooks.getInstance().setMetadata("propAddedByPreHook", true);
+  }
+}
+```
+
+##### Implementing the PostActionHook
+The following is an example of a PostActionHook that introduce a logic after the Action is executed. Its pretty similar to the PreActionHook.
+
+```Java
+package com.smf.jobs;
+
+import javax.enterprise.context.ApplicationScoped;
+
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.kernel.ComponentProvider;
+
+import com.smf.jobs.interfaces.PostActionHook;
+
+/*
+ * PostActionHook that sets a property in a singleton instance, after the action: TestAction is
+ * executed.
+ */
+@ApplicationScoped
+@ComponentProvider.Qualifier("com.smf.jobs.TestAction")
+public class TestActionPostHook implements PostActionHook {
+
+  /**
+   * Returns the priority of this post-action hook.
+   * <p>
+   * This method returns the priority value which determines the order in which the hook is executed.
+   *
+   * @return The priority value of this post-action hook.
+   */
+  @Override
+  public int getPriority() {
+    return 10;
+  }
+
+  /**
+   * Checks if this post-action hook applies to the given parameters.
+   * <p>
+   * This method determines if the post-action hook should be applied based on the provided action and result.
+   *
+   * @param action
+   *     The JSON object containing the action data.
+   * @param result
+   *     The ActionResult object containing the result data.
+   * @return true if the post-action hook applies, false otherwise.
+   */
+  @Override
+  public boolean applies(JSONObject action, ActionResult result) {
+    return true;
+  }
+
+  /**
+   * Executes the post-action hook with the given action and result.
+   * <p>
+   * This method runs the post-action hook logic using the provided action and result JSON objects.
+   *
+   * @param actionParam
+   *     The JSON object containing the action data.
+   * @param result
+   *     The ActionResult object containing the result data.
+   */
+  @Override
+  public void run(JSONObject actionParam, ActionResult result) {
+    SingletonToTestHooks.getInstance().setMetadata("propAddedByPostHook", true);
+  }
+}
+```
+After the Action is executed, the SingletonToTestHooks instance will have the properties `propAddedByPreHook`, `propAddedByPostHook` and `actionExecuted` set to `true`.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Scan Process
