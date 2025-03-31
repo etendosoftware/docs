@@ -104,7 +104,7 @@ To work with the plugin you need to specify in the root project from where the p
 
         ```groovy title="build.gradle"
 
-        // latest.release will download the most recent stable version (Not recomended)
+        // latest.release will download the most recent stable version (Not recommended)
         // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
         etendo {
             coreVersion = "[22.1.0,23.2.0)"
