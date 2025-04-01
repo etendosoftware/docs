@@ -108,7 +108,6 @@ Provide a brief overview of the purpose of this release, including high-level ob
             - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
             - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
 
-<<<<<<< HEAD
 - `[Etendo Gradle Plugin]`
     - **New Version Supported**: `2.0.0`
     - Notable Changes:
@@ -190,9 +189,6 @@ Provide a brief overview of the purpose of this release, including high-level ob
          ```
 
 ##### Third-Party Library Updates
-=======
-#### Third-Party Library Updates
->>>>>>> develop
   List and describe the key external libraries that have been upgraded in this release, along with the versions and any relevant breaking changes in those libraries.
 
 - `[dbsourcemanager] 1.0.3 -> 1.0.4`
@@ -322,12 +318,7 @@ Provide a brief overview of the purpose of this release, including high-level ob
     !!! info
         Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
 
-<<<<<<< HEAD
 ##### New Libraries
-=======
-
-#### New Libraries
->>>>>>> develop
 
 - `[commons-text]`
     - **Version**: 1.10.0
