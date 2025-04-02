@@ -374,6 +374,6 @@ Fields to note:
 
 ### Buttons
 
-**SynC Models** This process allows to synchronize the models distributed by Etendo on demand.
+**Sync Models** This process allows to synchronize the models distributed by Etendo on demand.
 
 

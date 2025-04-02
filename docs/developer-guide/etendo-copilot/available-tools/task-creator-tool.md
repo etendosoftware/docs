@@ -28,7 +28,7 @@ This tool provides the assistant with:
 
 It is especially useful for team collaboration, project onboarding, data entry workflows, and recurring structured task setups.
 
-To know when is the best time to use this tool or how there are executed this tasks, check the [How to create bulk tasks for Copilot](../how-to-guides/how-to-create-bulk-tasks-for-copilot.md) guide.
+To know when is the best time to use this tool or how there are executed this tasks, check the [How to create bulk tasks for Copilot](../how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md) guide.
 
 ## Setup
 

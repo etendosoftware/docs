@@ -67,7 +67,8 @@ Its an agent oriented to help users read information from the database. ![alt te
 - **Knowledge Base**: The agent has a knowledge base composed by a OpenAPI Specification (of a flow with the endpoints that the agent can use) that is appended to the prompt.
 - **API Call Tool**: The agent uses the API Call Tool to make the requests to Etendo Classic. 
 
-More information about how to allow the agent to interact with Etendo Classic can be found in the [How to allow Copilot to interact with Etendo Classic](../how-to-guides/how-to-allow-copilot-to-interact-with-etendo-classic.md) guide.
+More information about how to allow the agent to interact with Etendo Classic can be found in the [How to allow Copilot to interact with Etendo Classic](../how-to-guides/how-to-create-an-agent.md#how-to-allow-copilot-to-interact-with-etendo-classic
+) guide.
 
 
 ### Etendo Copilot Agents
@@ -98,7 +99,7 @@ The module includes the following agents:
 
 #### Components
 - **Prompt**: The agents have a prompt that explains their purpose, the request that the user can make and the response that the agent will give. In addition, it has a brief explanation of the particularities of each agent, explaining how to search for information, which has to be indicated punctually and which has to be found out. They also include information about the order in which the requests to Etendo Classic have to be made, from which we have to use which values from one to the other. 
-- **Knowledge Base**: Most of these agents use OpenAPI Specifications in their knowledge base, appending them to their prompt to understand how to use it. More information about how to allow the agent to interact with Etendo Classic can be found in the [How to allow Copilot to interact with Etendo Classic](../how-to-guides/how-to-allow-copilot-to-interact-with-etendo-classic.md) guide.
+- **Knowledge Base**: Most of these agents use OpenAPI Specifications in their knowledge base, appending them to their prompt to understand how to use it. More information about how to allow the agent to interact with Etendo Classic can be found in the [How to allow Copilot to interact with Etendo Classic](../how-to-guides/how-to-create-an-agent.md#how-to-allow-copilot-to-interact-with-etendo-classic) guide.
 - **API Call Tool**: The agents use the API Call Tool to make the requests to Etendo Classic.
 - **OCR Tool**: The agents use the OCR Tool to read the information from the images that are attached to the requests. This tool is necessary if the model selected for the agent is not capable of reading the information from the images by itself.
 - **Bulk Task Creator Tool**: The agent called `Bulk task creator` uses the Bulk Task Creator Tool to create bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in background. More information about this tool and strategies to use it can be found in the [Bulk Task Creator Tool](../available-tools/task-creator-tool.md) guide.
