@@ -289,7 +289,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```groovy title="build.gradle"
         dependencies {
             //Add other dependencies bellow
-            implementation ('com.etendoerp:platform.extensions:latest.release')
+            implementation ('com.etendoerp:platform.extensions:2.6.0') // version 2.6.0 or later
         }
         ```
     7. Modify the `gradle.properties` file with your environment variables
