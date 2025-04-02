@@ -351,7 +351,7 @@ To do this, add the dependencies in the `build.gradle` file:
 
 ```groovy title="build.gradle"
 dependencies {
-    implementation ('com.etendoerp:platform.extensions:latest.release')
+    implementation ('com.etendoerp:platform.extensions:2.10.0') // version 2.10.0 or later
 
     moduleDeps('com.etendoerp:integration.to.openbravo:1.0.0@zip')
     moduleDeps('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')

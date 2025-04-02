@@ -11,184 +11,126 @@ Provide a brief overview of the purpose of this release, including high-level ob
 
 #### Etendo Software Stack
 
-- `[Ubuntu Live Server amd64]`
-    - **New Version Supported**: `22.04.5`
+##### Ubuntu Live Server amd64
+- **New Version Supported**: `22.04.5`
 
-- `[Java SE]`
-    - **New Version Supported**: `17.0.14`
-    - Notable Changes:
-        - **Java SE 12.x**
-            - [Java SE 12 Release Notes](https://www.oracle.com/java/technologies/javase/12-relnote.html)
-            - [Java SE 12.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html)
-            - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html)
+##### Java SE
+- **New Version Supported**: `17.0.14`
+- Notable Changes:
+    - **Java SE 12.x**
+        - [Java SE 12 Release Notes](https://www.oracle.com/java/technologies/javase/12-relnote.html)
+        - [Java SE 12.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html)
+        - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html)
 
-        - **Java SE 13.x**
-            - [Java SE 13 Release Notes](https://www.oracle.com/java/technologies/javase/13-relnote.html)
-            - [Java SE 13.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html)
-            - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html)
+    - **Java SE 13.x**
+        - [Java SE 13 Release Notes](https://www.oracle.com/java/technologies/javase/13-relnote.html)
+        - [Java SE 13.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html)
+        - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html)
 
-        - **Java SE 14.x**
-            - [Java SE 14 Release Notes](https://www.oracle.com/java/technologies/javase/14-relnote.html)
-            - [Java SE 14.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html)
-            - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html)
+    - **Java SE 14.x**
+        - [Java SE 14 Release Notes](https://www.oracle.com/java/technologies/javase/14-relnote.html)
+        - [Java SE 14.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html)
+        - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html)
 
-        - **Java SE 15.x**
-            - [Java SE 15 Release Notes](https://www.oracle.com/java/technologies/javase/15-relnote.html)
-            - [Java SE 15.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html)
-            - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html)
+    - **Java SE 15.x**
+        - [Java SE 15 Release Notes](https://www.oracle.com/java/technologies/javase/15-relnote.html)
+        - [Java SE 15.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html)
+        - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html)
 
-        - **Java SE 16.x**
-            - [Java SE 16 Release Notes](https://www.oracle.com/java/technologies/javase/16-relnote.html)
-            - [Java SE 16.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)
-            - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
+    - **Java SE 16.x**
+        - [Java SE 16 Release Notes](https://www.oracle.com/java/technologies/javase/16-relnote.html)
+        - [Java SE 16.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)
+        - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
 
-        - **Java SE 17 (LTS)**
-            - [Java SE 17.0.14 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html)
-            - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)
+    - **Java SE 17 (LTS)**
+        - [Java SE 17.0.14 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html)
+        - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)
 
-- `[PostgreSQL]`
-    - **New Version Supported**: `16.8.1`
-    - Notable Changes:
-        - **PostgreSQL 16.x**
-            - [PostgreSQL 16.8 Release Notes](https://www.postgresql.org/docs/release/16.8/)
-            - [PostgreSQL 16.7 Release Notes](https://www.postgresql.org/docs/release/16.7/)
-            - [PostgreSQL 16.6 Release Notes](https://www.postgresql.org/docs/release/16.6/)
-            - [PostgreSQL 16.5 Release Notes](https://www.postgresql.org/docs/release/16.5/)
-            - [PostgreSQL 16.4 Release Notes](https://www.postgresql.org/docs/release/16.4/)
-            - [PostgreSQL 16.3 Release Notes](https://www.postgresql.org/docs/release/16.3/)
-            - [PostgreSQL 16.2 Release Notes](https://www.postgresql.org/docs/release/16.2/)
-            - [PostgreSQL 16.1 Release Notes](https://www.postgresql.org/docs/release/16.1/)
-            - [PostgreSQL 16.0 Release Notes](https://www.postgresql.org/docs/release/16.0/)
+##### PostgreSQL
+- **New Version Supported**: `16.8.1`
+- Notable Changes:
+    - **PostgreSQL 16.x**
+        - [PostgreSQL 16.8 Release Notes](https://www.postgresql.org/docs/release/16.8/)
+        - [PostgreSQL 16.7 Release Notes](https://www.postgresql.org/docs/release/16.7/)
+        - [PostgreSQL 16.6 Release Notes](https://www.postgresql.org/docs/release/16.6/)
+        - [PostgreSQL 16.5 Release Notes](https://www.postgresql.org/docs/release/16.5/)
+        - [PostgreSQL 16.4 Release Notes](https://www.postgresql.org/docs/release/16.4/)
+        - [PostgreSQL 16.3 Release Notes](https://www.postgresql.org/docs/release/16.3/)
+        - [PostgreSQL 16.2 Release Notes](https://www.postgresql.org/docs/release/16.2/)
+        - [PostgreSQL 16.1 Release Notes](https://www.postgresql.org/docs/release/16.1/)
+        - [PostgreSQL 16.0 Release Notes](https://www.postgresql.org/docs/release/16.0/)
 
-        - **PostgreSQL 15.x**
-            - [PostgreSQL 15.10 Release Notes](https://www.postgresql.org/docs/release/15.10/)
-            - [PostgreSQL 15.9 Release Notes](https://www.postgresql.org/docs/release/15.9/)
-            - [PostgreSQL 15.8 Release Notes](https://www.postgresql.org/docs/release/15.8/)
-            - [PostgreSQL 15.7 Release Notes](https://www.postgresql.org/docs/release/15.7/)
-            - [PostgreSQL 15.6 Release Notes](https://www.postgresql.org/docs/release/15.6/)
-            - [PostgreSQL 15.5 Release Notes](https://www.postgresql.org/docs/release/15.5/)
-            - [PostgreSQL 15.4 Release Notes](https://www.postgresql.org/docs/release/15.4/)
-            - [PostgreSQL 15.3 Release Notes](https://www.postgresql.org/docs/release/15.3/)
-            - [PostgreSQL 15.2 Release Notes](https://www.postgresql.org/docs/release/15.2/)
-            - [PostgreSQL 15.1 Release Notes](https://www.postgresql.org/docs/release/15.1/)
-            - [PostgreSQL 15.0 Release Notes](https://www.postgresql.org/docs/release/15.0/)
+    - **PostgreSQL 15.x**
+        - [PostgreSQL 15.10 Release Notes](https://www.postgresql.org/docs/release/15.10/)
+        - [PostgreSQL 15.9 Release Notes](https://www.postgresql.org/docs/release/15.9/)
+        - [PostgreSQL 15.8 Release Notes](https://www.postgresql.org/docs/release/15.8/)
+        - [PostgreSQL 15.7 Release Notes](https://www.postgresql.org/docs/release/15.7/)
+        - [PostgreSQL 15.6 Release Notes](https://www.postgresql.org/docs/release/15.6/)
+        - [PostgreSQL 15.5 Release Notes](https://www.postgresql.org/docs/release/15.5/)
+        - [PostgreSQL 15.4 Release Notes](https://www.postgresql.org/docs/release/15.4/)
+        - [PostgreSQL 15.3 Release Notes](https://www.postgresql.org/docs/release/15.3/)
+        - [PostgreSQL 15.2 Release Notes](https://www.postgresql.org/docs/release/15.2/)
+        - [PostgreSQL 15.1 Release Notes](https://www.postgresql.org/docs/release/15.1/)
+        - [PostgreSQL 15.0 Release Notes](https://www.postgresql.org/docs/release/15.0/)
 
-- `[Apache Tomcat]`
-    - **New Version Supported**: `9.0.98`
-    - Notable Changes:
-        - **Apache Tomcat 9.x**
-            - [Apache Tomcat 9 Release Notes](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html)
+##### Apache Tomcat
+- **New Version Supported**: `9.0.98`
+- Notable Changes:
+    - **Apache Tomcat 9.x**
+        - [Apache Tomcat 9 Release Notes](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html)
 
 
-- `[Gradle]`
-    - **New Version Supported**: `8.12.1`
-    - Notable Changes:
-        - **Gradle 8.x**
-            - [Gradle 8.12.1 Release Notes](https://docs.gradle.org/8.12.1/release-notes.html)
-            - [Gradle 8.12 Release Notes](https://docs.gradle.org/8.12/release-notes.html)
-            - [Gradle 8.11 Release Notes](https://docs.gradle.org/8.11/release-notes.html)
-            - [Gradle 8.10 Release Notes](https://docs.gradle.org/8.10/release-notes.html)
-            - [Gradle 8.9 Release Notes](https://docs.gradle.org/8.9/release-notes.html)
-            - [Gradle 8.8 Release Notes](https://docs.gradle.org/8.8/release-notes.html)
-            - [Gradle 8.7 Release Notes](https://docs.gradle.org/8.7/release-notes.html)
-            - [Gradle 8.6 Release Notes](https://docs.gradle.org/8.6/release-notes.html)
-            - [Gradle 8.5 Release Notes](https://docs.gradle.org/8.5/release-notes.html)
-            - [Gradle 8.4 Release Notes](https://docs.gradle.org/8.4/release-notes.html)
-            - [Gradle 8.3 Release Notes](https://docs.gradle.org/8.3/release-notes.html)
-            - [Gradle 8.2 Release Notes](https://docs.gradle.org/8.2/release-notes.html)
-            - [Gradle 8.1 Release Notes](https://docs.gradle.org/8.1/release-notes.html)
-            - [Gradle 8.0 Release Notes](https://docs.gradle.org/8.0/release-notes.html)
+##### Gradle
+- **New Version Supported**: `8.12.1`
+- Notable Changes:
+    - **Gradle 8.x**
+        - [Gradle 8.12.1 Release Notes](https://docs.gradle.org/8.12.1/release-notes.html)
+        - [Gradle 8.12 Release Notes](https://docs.gradle.org/8.12/release-notes.html)
+        - [Gradle 8.11 Release Notes](https://docs.gradle.org/8.11/release-notes.html)
+        - [Gradle 8.10 Release Notes](https://docs.gradle.org/8.10/release-notes.html)
+        - [Gradle 8.9 Release Notes](https://docs.gradle.org/8.9/release-notes.html)
+        - [Gradle 8.8 Release Notes](https://docs.gradle.org/8.8/release-notes.html)
+        - [Gradle 8.7 Release Notes](https://docs.gradle.org/8.7/release-notes.html)
+        - [Gradle 8.6 Release Notes](https://docs.gradle.org/8.6/release-notes.html)
+        - [Gradle 8.5 Release Notes](https://docs.gradle.org/8.5/release-notes.html)
+        - [Gradle 8.4 Release Notes](https://docs.gradle.org/8.4/release-notes.html)
+        - [Gradle 8.3 Release Notes](https://docs.gradle.org/8.3/release-notes.html)
+        - [Gradle 8.2 Release Notes](https://docs.gradle.org/8.2/release-notes.html)
+        - [Gradle 8.1 Release Notes](https://docs.gradle.org/8.1/release-notes.html)
+        - [Gradle 8.0 Release Notes](https://docs.gradle.org/8.0/release-notes.html)
 
-        - **Gradle 7.x**
-            - [Gradle 7.6 Release Notes](https://docs.gradle.org/7.6/release-notes.html)
-            - [Gradle 7.5.1 Release Notes](https://docs.gradle.org/7.5.1/release-notes.html)
-            - [Gradle 7.5 Release Notes](https://docs.gradle.org/7.5/release-notes.html)
-            - [Gradle 7.4.2 Release Notes](https://docs.gradle.org/7.4.2/release-notes.html)
-            - [Gradle 7.4.1 Release Notes](https://docs.gradle.org/7.4.1/release-notes.html)
-            - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
-            - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
+    - **Gradle 7.x**
+        - [Gradle 7.6 Release Notes](https://docs.gradle.org/7.6/release-notes.html)
+        - [Gradle 7.5.1 Release Notes](https://docs.gradle.org/7.5.1/release-notes.html)
+        - [Gradle 7.5 Release Notes](https://docs.gradle.org/7.5/release-notes.html)
+        - [Gradle 7.4.2 Release Notes](https://docs.gradle.org/7.4.2/release-notes.html)
+        - [Gradle 7.4.1 Release Notes](https://docs.gradle.org/7.4.1/release-notes.html)
+        - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
+        - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
 
-- `[Etendo Gradle Plugin]`
-    - **New Version Supported**: `2.0.0`
-    - Notable Changes:
+!!! warning
+    To update the Gradle wrapper, you must run `./gradlew wrapper --gradle-version 8.12.1`. For more detailed migration guidelines, refer to the [Upgrading the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
 
-         **New Gradle Plugin Task**
-         ``` bash title="Terminal"
-         ./gradlew cleanExpandCore
-         ```
+##### Etendo Gradle Plugin
+- **New Version Supported**: `2.0.0`
+- Notable Changes:
 
-         This new task deletes directories created by the expandCore task.
+    - **New Gradle Plugin Task**
+        ``` bash title="Terminal"
+        ./gradlew cleanExpandCore
+        ```
 
-         **Compatibility Flag**
+        This new task deletes directories created by the `expandCore` task.
 
-         ``` bash title="Terminal"
-         -Pjava.version=11
-         ```
+    - **Compatibility Flag**
 
-         This new flag forces the use of Java 11 with version 25Q1.
+        ``` bash title="Terminal"
+        -Pjava.version=11
+        ```
 
-    - **Migration Guide**
+        This new flag forces the use of Java 11 with version 25Q1.
 
-      To migrate your existing integration to support the new version with Gradle 8.12.1 and Etendo Gradle Plugin RC 2.0.0, follow these steps carefully:
-
-      - **Update the Etendo Gradle Plugin**
-
-         In your `build.gradle` file, replace the old plugin declaration:
-
-         ```groovy title="build.gradle"
-         id 'com.etendoerp.gradleplugin' version '1.5.X'
-         ```
-
-         with the new Release Candidate version:
-
-         ```groovy title="build.gradle"
-         id 'com.etendoerp.gradleplugin-rc' version '2.0.0'
-         ```
-
-      - **Update core version in Etendo Base**
-
-         In your `build.gradle` file, replace the old plugin declaration:
-
-         ```groovy title="build.gradle"
-         etendo {
-            coreVersion = "[21.4.0,25.1.0)"
-         }
-         ```
-
-         with:
-
-         ```groovy title="build.gradle"
-         etendo {
-            coreName = "etendo-core-rc"
-            coreVersion = "[21.4.0,25.2.0)"
-         }
-         ```
-
-      - **Upgrade the Gradle Wrapper to version 8.12.1**
-
-         Run the following command to upgrade your Gradle wrapper to version 8.12.1:
-
-         ``` bash title="Terminal"
-         ./gradlew wrapper --gradle-version 8.12.1
-         ```
-
-         For more detailed migration guidelines, refer to the [Upgrading the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
-
-      - **Expand the Core**
-
-         Execute the expandCore task to extract the necessary core components:
-
-         ``` bash title="Terminal"
-         ./gradlew expandCore
-         ```
-
-      - **Run Update Database and Compile Tasks**
-
-         ``` bash title="Terminal"
-         ./gradlew update.database compile.complete smartbuild
-         ```
-
-##### Third-Party Library Updates
+#### Third-Party Library Updates
   List and describe the key external libraries that have been upgraded in this release, along with the versions and any relevant breaking changes in those libraries.
 
 - `[dbsourcemanager] 1.0.3 -> 1.0.4`
@@ -312,13 +254,14 @@ Provide a brief overview of the purpose of this release, including high-level ob
         - [Apache POI 4.0.0 (2018-09-07)](https://poi.apache.org/changes.html#version-4.0.0-2018-09-07)
 
         For older versions like **3.10.1**, you can check:
-            - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
-            - [Full changelog overview](https://poi.apache.org/changes.html)
+
+        - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
+        - [Full changelog overview](https://poi.apache.org/changes.html)
 
     !!! info
         Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
 
-##### New Libraries
+#### New Libraries
 
 - `[commons-text]`
     - **Version**: 1.10.0

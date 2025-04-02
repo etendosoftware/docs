@@ -150,10 +150,10 @@ etendo {
 ## Common Gradle tasks
 
 !!!danger
-    Since Etendo 25Q1 all Gradle tasks with Java versions below 17 are not allowed. To add support for previous versions, a new flag has been added.
+    Since Etendo Classic 25Q1 all Gradle tasks with Java versions below 17 are not allowed. To add support for previous versions, the new flag `java.version` has been added.
 
     ``` bash title="Terminal"
-    -Pjava.version=11
+    ./gradlew <task> -Pjava.version=11
     ```
 
     This new flag forces the use of Java 11.
@@ -165,7 +165,7 @@ etendo {
     
     ```
   
-    | Command line parameters                  | Description                                               |                       
+    | Command line parameters    | Description                                               |                       
     |  -------------------       | ------------------------------------                      |
     | `-PforceDefaultProps=true` | Recreates the default properties file from the template.  |
     | `-PforceBackupProps=true`  | Recreates the backup.properties file from the template.   |
@@ -250,7 +250,7 @@ etendo {
     ``` 
 
 
-    | Command line parameter    | Description                                                        |  
+    | Command line parameter     | Description                                                                                                                           |  
     |  -------------------       | ------------------------------------                                                                                                  |
     | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
 
@@ -267,7 +267,7 @@ etendo {
                       
     ```  
 
-    | Command line parameters                  | Description                                               |                       
+    | Command line parameters    | Description                                               |                       
     |  -------------------       | ------------------------------------                      |
     | `-Ppkg=<package name>`     | The name of the module.                                   |
     | `-Prepo=<repository name>` | The name of the repository.                               |
@@ -296,7 +296,7 @@ etendo {
                               
     ``` 
     
-    | Command line parameter                  | Description                                                                         |                       
+    | Command line parameter     | Description                                                                         |                       
     |  -------------------       | ------------------------------------                                                |
     | `-Ppkg=<modulename>`       | The javapackage of the source module to uninstall.                                  |
 
@@ -321,7 +321,7 @@ etendo {
 
 
 
-      | Command line parameter                  | Description                                                  |                       
+      | Command line parameter                 | Description                                                  |                       
       |  -------------------                   | ------------------------------------                         |
       | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
 
@@ -333,7 +333,7 @@ etendo {
                                           
     ```
 
-    | Command line parameter                  | Description                                                  |                       
+    | Command line parameter                 | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
     | `-Prepo=<repository name>`             | **Required** The name of the repository                      |
@@ -344,7 +344,7 @@ etendo {
 
 - Parameters to override the default core group, name and version.
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-PcoreGroup=<core group>`             | The core group name                                          |
     | `-PcoreName=<core name>`               | The core name                                                |
@@ -358,7 +358,7 @@ etendo {
                                               
     ```
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PupdateLeaf=true`                     | This updates automatically the version of all the project beign published. By defaul false.|
     | `-Pupdate=<mayor, minor, patch>`        | Used to specify which part of the version will be updated. By default patch.               |
@@ -372,7 +372,7 @@ etendo {
                                                           
     ```
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By defaul false.|
         
@@ -388,14 +388,14 @@ etendo {
         If you put a wrong version, you have to revert the changes manually.
 
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
     | `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
     | `-PlowerBoundInclusive=<true or false>` | (Default false)|
     | `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`|
-    | `-PupperBoundInclusive=<true or false>` |(Default false)|
-    | `-PexactVersion=<version>`             |Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
+    | `-PupperBoundInclusive=<true or false>` | (Default false)|
+    | `-PexactVersion=<version>`              | Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
 
 
 
