@@ -361,7 +361,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```groovy title="build.gradle"
         dependencies {
             //Add other dependencies bellow
-            implementation ('com.etendoerp:platform.extensions:latest.release')
+            implementation ('com.etendoerp:platform.extensions:2.6.0') // version 2.6.0 or later
         }
         ```
     7. Modify the `gradle.properties` file with your environment variables
@@ -32049,11 +32049,11 @@ To work with the plugin you need to specify in the root project from where the p
     rootProject.name = "etendo"
     ```
 
-2. Add in the `build.gradle` file the Etendo Gradle Plugin
+2. Add in the `build.gradle` file the Etendo Gradle Plugin Version compatible with your core version. For example, for version 1.5.0:
 
     ```groovy title="build.gradle"
     plugins {
-        id 'com.etendoerp.gradleplugin' version 'latest.release'
+        id 'com.etendoerp.gradleplugin' version '1.5.0'
     }
     ```
 
@@ -32091,14 +32091,14 @@ To work with the plugin you need to specify in the root project from where the p
 
 === "Source Core"
 
-    1.  Verify the target version inside `build.gradle`
+    1.  Verify the target version inside `build.gradle`. For example, for versions 23.1.x;
 
         ```groovy title="build.gradle"
 
-        // latest.release will download the most recent stable version
+        // latest.release will download the most recent stable version (Not recommended)
         // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
         etendo {
-            coreVersion = "latest.release"
+            coreVersion = "[22.1.0,23.2.0)"
         }
         ```
 
@@ -32278,7 +32278,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
     rootProject.name = "etendo"
     ```
 
-2. **Update Etendo Gradle Plugin**: You need to update `com.etendoerp.gradleplugin` to version 1.1.0 or later. Alternatively, you can use `latest.release` to always get the latest version, in this case the gradle version should be 7.3.2, to check the gradle version execute './gradlew --version' and to upgrade execute ./gradlew wrapper --gradle-version 7.3.2 
+2. **Update Etendo Gradle Plugin**: You need to update `com.etendoerp.gradleplugin` to version 1.1.0 or later.
 
     ```groovy title="build.gradle"
     plugins {
@@ -32286,7 +32286,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
         id 'war'
         id 'groovy'
         id 'maven-publish'
-        id 'com.etendoerp.gradleplugin' version 'latest.release' 
+        id 'com.etendoerp.gradleplugin' version '<version>' 
     }
     ```
 
@@ -32485,9 +32485,9 @@ This affects the current environments, to fix this we have to:
 
     2. Modify the build.gradle of our project and change the dependencies to lowercase. For example:
         ```groovy title="build.gradle"
-        moduleDeps('com.etendoerp:financial.extensions.es_ES:latest.release@zip') {transitive = true}
+        moduleDeps('com.etendoerp:financial.extensions.es_ES:<version>@zip') {transitive = true}
         // Replace by
-        moduleDeps('com.etendoerp:financial.extensions.es_es:latest.release@zip') {transitive = true}
+        moduleDeps('com.etendoerp:financial.extensions.es_es:<version>@zip') {transitive = true}
 
         ```
     3. Execute `./gradlew expandModules` task to download the new dependencies. 
@@ -32499,9 +32499,9 @@ This affects the current environments, to fix this we have to:
     For example:
 
     ``` groovy
-    implementation('com.etendoerp:financial.extensions.es_ES:latest.release')
+    implementation('com.etendoerp:financial.extensions.es_ES:<version>')
     // Replace by
-    implementation('com.etendoerp:financial.extensions.es_es:latest.release')
+    implementation('com.etendoerp:financial.extensions.es_es:<version>')
 
     ```
 
@@ -46351,6 +46351,15 @@ etendo {
 
 #### Common Gradle tasks
 
+!!!danger
+    Since Etendo Classic 25Q1 all Gradle tasks with Java versions below 17 are not allowed. To add support for previous versions, the new flag `java.version` has been added.
+
+    ``` bash title="Terminal"
+    ./gradlew <task> -Pjava.version=11
+    ```
+
+    This new flag forces the use of Java 11.
+
 - Creates the properties and configuration files.
   
     ``` bash title="Terminal"
@@ -46358,7 +46367,7 @@ etendo {
     
     ```
   
-    | Command line parameters                  | Description                                               |                       
+    | Command line parameters    | Description                                               |                       
     |  -------------------       | ------------------------------------                      |
     | `-PforceDefaultProps=true` | Recreates the default properties file from the template.  |
     | `-PforceBackupProps=true`  | Recreates the backup.properties file from the template.   |
@@ -46443,9 +46452,14 @@ etendo {
     ``` 
 
 
-    | Command line parameter    | Description                                                        |  
+    | Command line parameter     | Description                                                                                                                           |  
     |  -------------------       | ------------------------------------                                                                                                  |
     | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
+
+- Task to delete directories created by the expandCore task.
+    ``` bash title="Terminal"
+    ./gradlew cleanExpandCore
+    ```
 
 #### Submodules
 
@@ -46455,7 +46469,7 @@ etendo {
                       
     ```  
 
-    | Command line parameters                  | Description                                               |                       
+    | Command line parameters    | Description                                               |                       
     |  -------------------       | ------------------------------------                      |
     | `-Ppkg=<package name>`     | The name of the module.                                   |
     | `-Prepo=<repository name>` | The name of the repository.                               |
@@ -46484,7 +46498,7 @@ etendo {
                               
     ``` 
     
-    | Command line parameter                  | Description                                                                         |                       
+    | Command line parameter     | Description                                                                         |                       
     |  -------------------       | ------------------------------------                                                |
     | `-Ppkg=<modulename>`       | The javapackage of the source module to uninstall.                                  |
 
@@ -46509,7 +46523,7 @@ etendo {
 
 
 
-      | Command line parameter                  | Description                                                  |                       
+      | Command line parameter                 | Description                                                  |                       
       |  -------------------                   | ------------------------------------                         |
       | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
 
@@ -46521,7 +46535,7 @@ etendo {
                                           
     ```
 
-    | Command line parameter                  | Description                                                  |                       
+    | Command line parameter                 | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
     | `-Prepo=<repository name>`             | **Required** The name of the repository                      |
@@ -46532,7 +46546,7 @@ etendo {
 
 - Parameters to override the default core group, name and version.
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-PcoreGroup=<core group>`             | The core group name                                          |
     | `-PcoreName=<core name>`               | The core name                                                |
@@ -46546,7 +46560,7 @@ etendo {
                                               
     ```
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PupdateLeaf=true`                     | This updates automatically the version of all the project beign published. By defaul false.|
     | `-Pupdate=<mayor, minor, patch>`        | Used to specify which part of the version will be updated. By default patch.               |
@@ -46560,7 +46574,7 @@ etendo {
                                                           
     ```
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By defaul false.|
         
@@ -46576,14 +46590,14 @@ etendo {
         If you put a wrong version, you have to revert the changes manually.
 
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
     | `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
     | `-PlowerBoundInclusive=<true or false>` | (Default false)|
     | `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`|
-    | `-PupperBoundInclusive=<true or false>` |(Default false)|
-    | `-PexactVersion=<version>`             |Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
+    | `-PupperBoundInclusive=<true or false>` | (Default false)|
+    | `-PexactVersion=<version>`              | Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
 
 
 
@@ -49073,102 +49087,124 @@ Provide a brief overview of the purpose of this release, including high-level ob
 
 ###### Etendo Software Stack
 
-- `[Ubuntu Live Server amd64]`
-    - **New Version Supported**: `22.04.5`
+####### Ubuntu Live Server amd64
+- **New Version Supported**: `22.04.5`
 
-- `[Java SE]`
-    - **New Version Supported**: `17.0.14`
-    - Notable Changes:
-        - **Java SE 12.x**
-            - [Java SE 12 Release Notes](https://www.oracle.com/java/technologies/javase/12-relnote.html)
-            - [Java SE 12.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html)
-            - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html)
+####### Java SE
+- **New Version Supported**: `17.0.14`
+- Notable Changes:
+    - **Java SE 12.x**
+        - [Java SE 12 Release Notes](https://www.oracle.com/java/technologies/javase/12-relnote.html)
+        - [Java SE 12.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html)
+        - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html)
 
-        - **Java SE 13.x**
-            - [Java SE 13 Release Notes](https://www.oracle.com/java/technologies/javase/13-relnote.html)
-            - [Java SE 13.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html)
-            - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html)
+    - **Java SE 13.x**
+        - [Java SE 13 Release Notes](https://www.oracle.com/java/technologies/javase/13-relnote.html)
+        - [Java SE 13.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html)
+        - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html)
 
-        - **Java SE 14.x**
-            - [Java SE 14 Release Notes](https://www.oracle.com/java/technologies/javase/14-relnote.html)
-            - [Java SE 14.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html)
-            - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html)
+    - **Java SE 14.x**
+        - [Java SE 14 Release Notes](https://www.oracle.com/java/technologies/javase/14-relnote.html)
+        - [Java SE 14.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html)
+        - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html)
 
-        - **Java SE 15.x**
-            - [Java SE 15 Release Notes](https://www.oracle.com/java/technologies/javase/15-relnote.html)
-            - [Java SE 15.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html)
-            - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html)
+    - **Java SE 15.x**
+        - [Java SE 15 Release Notes](https://www.oracle.com/java/technologies/javase/15-relnote.html)
+        - [Java SE 15.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html)
+        - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html)
 
-        - **Java SE 16.x**
-            - [Java SE 16 Release Notes](https://www.oracle.com/java/technologies/javase/16-relnote.html)
-            - [Java SE 16.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)
-            - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
+    - **Java SE 16.x**
+        - [Java SE 16 Release Notes](https://www.oracle.com/java/technologies/javase/16-relnote.html)
+        - [Java SE 16.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)
+        - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
 
-        - **Java SE 17 (LTS)**
-            - [Java SE 17.0.14 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html)
-            - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)
+    - **Java SE 17 (LTS)**
+        - [Java SE 17.0.14 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html)
+        - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)
 
-- `[PostgreSQL]`
-    - **New Version Supported**: `16.8.1`
-    - Notable Changes:
-        - **PostgreSQL 16.x**
-            - [PostgreSQL 16.8 Release Notes](https://www.postgresql.org/docs/release/16.8/)
-            - [PostgreSQL 16.7 Release Notes](https://www.postgresql.org/docs/release/16.7/)
-            - [PostgreSQL 16.6 Release Notes](https://www.postgresql.org/docs/release/16.6/)
-            - [PostgreSQL 16.5 Release Notes](https://www.postgresql.org/docs/release/16.5/)
-            - [PostgreSQL 16.4 Release Notes](https://www.postgresql.org/docs/release/16.4/)
-            - [PostgreSQL 16.3 Release Notes](https://www.postgresql.org/docs/release/16.3/)
-            - [PostgreSQL 16.2 Release Notes](https://www.postgresql.org/docs/release/16.2/)
-            - [PostgreSQL 16.1 Release Notes](https://www.postgresql.org/docs/release/16.1/)
-            - [PostgreSQL 16.0 Release Notes](https://www.postgresql.org/docs/release/16.0/)
+####### PostgreSQL
+- **New Version Supported**: `16.8.1`
+- Notable Changes:
+    - **PostgreSQL 16.x**
+        - [PostgreSQL 16.8 Release Notes](https://www.postgresql.org/docs/release/16.8/)
+        - [PostgreSQL 16.7 Release Notes](https://www.postgresql.org/docs/release/16.7/)
+        - [PostgreSQL 16.6 Release Notes](https://www.postgresql.org/docs/release/16.6/)
+        - [PostgreSQL 16.5 Release Notes](https://www.postgresql.org/docs/release/16.5/)
+        - [PostgreSQL 16.4 Release Notes](https://www.postgresql.org/docs/release/16.4/)
+        - [PostgreSQL 16.3 Release Notes](https://www.postgresql.org/docs/release/16.3/)
+        - [PostgreSQL 16.2 Release Notes](https://www.postgresql.org/docs/release/16.2/)
+        - [PostgreSQL 16.1 Release Notes](https://www.postgresql.org/docs/release/16.1/)
+        - [PostgreSQL 16.0 Release Notes](https://www.postgresql.org/docs/release/16.0/)
 
-        - **PostgreSQL 15.x**
-            - [PostgreSQL 15.10 Release Notes](https://www.postgresql.org/docs/release/15.10/)
-            - [PostgreSQL 15.9 Release Notes](https://www.postgresql.org/docs/release/15.9/)
-            - [PostgreSQL 15.8 Release Notes](https://www.postgresql.org/docs/release/15.8/)
-            - [PostgreSQL 15.7 Release Notes](https://www.postgresql.org/docs/release/15.7/)
-            - [PostgreSQL 15.6 Release Notes](https://www.postgresql.org/docs/release/15.6/)
-            - [PostgreSQL 15.5 Release Notes](https://www.postgresql.org/docs/release/15.5/)
-            - [PostgreSQL 15.4 Release Notes](https://www.postgresql.org/docs/release/15.4/)
-            - [PostgreSQL 15.3 Release Notes](https://www.postgresql.org/docs/release/15.3/)
-            - [PostgreSQL 15.2 Release Notes](https://www.postgresql.org/docs/release/15.2/)
-            - [PostgreSQL 15.1 Release Notes](https://www.postgresql.org/docs/release/15.1/)
-            - [PostgreSQL 15.0 Release Notes](https://www.postgresql.org/docs/release/15.0/)
+    - **PostgreSQL 15.x**
+        - [PostgreSQL 15.10 Release Notes](https://www.postgresql.org/docs/release/15.10/)
+        - [PostgreSQL 15.9 Release Notes](https://www.postgresql.org/docs/release/15.9/)
+        - [PostgreSQL 15.8 Release Notes](https://www.postgresql.org/docs/release/15.8/)
+        - [PostgreSQL 15.7 Release Notes](https://www.postgresql.org/docs/release/15.7/)
+        - [PostgreSQL 15.6 Release Notes](https://www.postgresql.org/docs/release/15.6/)
+        - [PostgreSQL 15.5 Release Notes](https://www.postgresql.org/docs/release/15.5/)
+        - [PostgreSQL 15.4 Release Notes](https://www.postgresql.org/docs/release/15.4/)
+        - [PostgreSQL 15.3 Release Notes](https://www.postgresql.org/docs/release/15.3/)
+        - [PostgreSQL 15.2 Release Notes](https://www.postgresql.org/docs/release/15.2/)
+        - [PostgreSQL 15.1 Release Notes](https://www.postgresql.org/docs/release/15.1/)
+        - [PostgreSQL 15.0 Release Notes](https://www.postgresql.org/docs/release/15.0/)
 
-- `[Apache Tomcat]`
-    - **New Version Supported**: `9.0.98`
-    - Notable Changes:
-        - **Apache Tomcat 9.x**
-            - [Apache Tomcat 9 Release Notes](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html)
+####### Apache Tomcat
+- **New Version Supported**: `9.0.98`
+- Notable Changes:
+    - **Apache Tomcat 9.x**
+        - [Apache Tomcat 9 Release Notes](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html)
 
 
-- `[Gradle]`
-    - **New Version Supported**: `8.12.1`
-    - Notable Changes:
-        - **Gradle 8.x**
-            - [Gradle 8.12.1 Release Notes](https://docs.gradle.org/8.12.1/release-notes.html)
-            - [Gradle 8.12 Release Notes](https://docs.gradle.org/8.12/release-notes.html)
-            - [Gradle 8.11 Release Notes](https://docs.gradle.org/8.11/release-notes.html)
-            - [Gradle 8.10 Release Notes](https://docs.gradle.org/8.10/release-notes.html)
-            - [Gradle 8.9 Release Notes](https://docs.gradle.org/8.9/release-notes.html)
-            - [Gradle 8.8 Release Notes](https://docs.gradle.org/8.8/release-notes.html)
-            - [Gradle 8.7 Release Notes](https://docs.gradle.org/8.7/release-notes.html)
-            - [Gradle 8.6 Release Notes](https://docs.gradle.org/8.6/release-notes.html)
-            - [Gradle 8.5 Release Notes](https://docs.gradle.org/8.5/release-notes.html)
-            - [Gradle 8.4 Release Notes](https://docs.gradle.org/8.4/release-notes.html)
-            - [Gradle 8.3 Release Notes](https://docs.gradle.org/8.3/release-notes.html)
-            - [Gradle 8.2 Release Notes](https://docs.gradle.org/8.2/release-notes.html)
-            - [Gradle 8.1 Release Notes](https://docs.gradle.org/8.1/release-notes.html)
-            - [Gradle 8.0 Release Notes](https://docs.gradle.org/8.0/release-notes.html)
+####### Gradle
+- **New Version Supported**: `8.12.1`
+- Notable Changes:
+    - **Gradle 8.x**
+        - [Gradle 8.12.1 Release Notes](https://docs.gradle.org/8.12.1/release-notes.html)
+        - [Gradle 8.12 Release Notes](https://docs.gradle.org/8.12/release-notes.html)
+        - [Gradle 8.11 Release Notes](https://docs.gradle.org/8.11/release-notes.html)
+        - [Gradle 8.10 Release Notes](https://docs.gradle.org/8.10/release-notes.html)
+        - [Gradle 8.9 Release Notes](https://docs.gradle.org/8.9/release-notes.html)
+        - [Gradle 8.8 Release Notes](https://docs.gradle.org/8.8/release-notes.html)
+        - [Gradle 8.7 Release Notes](https://docs.gradle.org/8.7/release-notes.html)
+        - [Gradle 8.6 Release Notes](https://docs.gradle.org/8.6/release-notes.html)
+        - [Gradle 8.5 Release Notes](https://docs.gradle.org/8.5/release-notes.html)
+        - [Gradle 8.4 Release Notes](https://docs.gradle.org/8.4/release-notes.html)
+        - [Gradle 8.3 Release Notes](https://docs.gradle.org/8.3/release-notes.html)
+        - [Gradle 8.2 Release Notes](https://docs.gradle.org/8.2/release-notes.html)
+        - [Gradle 8.1 Release Notes](https://docs.gradle.org/8.1/release-notes.html)
+        - [Gradle 8.0 Release Notes](https://docs.gradle.org/8.0/release-notes.html)
 
-        - **Gradle 7.x**
-            - [Gradle 7.6 Release Notes](https://docs.gradle.org/7.6/release-notes.html)
-            - [Gradle 7.5.1 Release Notes](https://docs.gradle.org/7.5.1/release-notes.html)
-            - [Gradle 7.5 Release Notes](https://docs.gradle.org/7.5/release-notes.html)
-            - [Gradle 7.4.2 Release Notes](https://docs.gradle.org/7.4.2/release-notes.html)
-            - [Gradle 7.4.1 Release Notes](https://docs.gradle.org/7.4.1/release-notes.html)
-            - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
-            - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
+    - **Gradle 7.x**
+        - [Gradle 7.6 Release Notes](https://docs.gradle.org/7.6/release-notes.html)
+        - [Gradle 7.5.1 Release Notes](https://docs.gradle.org/7.5.1/release-notes.html)
+        - [Gradle 7.5 Release Notes](https://docs.gradle.org/7.5/release-notes.html)
+        - [Gradle 7.4.2 Release Notes](https://docs.gradle.org/7.4.2/release-notes.html)
+        - [Gradle 7.4.1 Release Notes](https://docs.gradle.org/7.4.1/release-notes.html)
+        - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
+        - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
+
+!!! warning
+    To update the Gradle wrapper, you must run `./gradlew wrapper --gradle-version 8.12.1`. For more detailed migration guidelines, refer to the [Upgrading the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
+
+####### Etendo Gradle Plugin
+- **New Version Supported**: `2.0.0`
+- Notable Changes:
+
+    - **New Gradle Plugin Task**
+        ``` bash title="Terminal"
+        ./gradlew cleanExpandCore
+        ```
+
+        This new task deletes directories created by the `expandCore` task.
+
+    - **Compatibility Flag**
+
+        ``` bash title="Terminal"
+        -Pjava.version=11
+        ```
+
+        This new flag forces the use of Java 11 with version 25Q1.
 
 ###### Third-Party Library Updates
   List and describe the key external libraries that have been upgraded in this release, along with the versions and any relevant breaking changes in those libraries.
@@ -49294,12 +49330,12 @@ Provide a brief overview of the purpose of this release, including high-level ob
         - [Apache POI 4.0.0 (2018-09-07)](https://poi.apache.org/changes.html#version-4.0.0-2018-09-07)
 
         For older versions like **3.10.1**, you can check:
-            - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
-            - [Full changelog overview](https://poi.apache.org/changes.html)
 
-    !!! note
+        - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
+        - [Full changelog overview](https://poi.apache.org/changes.html)
+
+    !!! info
         Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
-
 
 ###### New Libraries
 
@@ -50183,7 +50219,7 @@ To do this, add the dependencies in the `build.gradle` file:
 
 ```groovy title="build.gradle"
 dependencies {
-    implementation ('com.etendoerp:platform.extensions:latest.release')
+    implementation ('com.etendoerp:platform.extensions:2.10.0') // version 2.10.0 or later
 
     moduleDeps('com.etendoerp:integration.to.openbravo:1.0.0@zip')
     moduleDeps('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
