@@ -10684,10 +10684,17 @@ In the following sections, you can find all the flags or variables available to 
 </span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="o">}</span>
 </span></code></pre></div>
 <h2 id="common-gradle-tasks">Common Gradle tasks</h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Since Etendo Classic 25Q1 all Gradle tasks with Java versions below 17 are not allowed. To add support for previous versions, the new flag <code>java.version</code> has been added.</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>&lt;task&gt;<span class="w"> </span>-Pjava.version<span class="o">=</span><span class="m">11</span>
+</span></code></pre></div>
+<p>This new flag forces the use of Java 11.</p>
+</div>
 <ul>
 <li>
 <p>Creates the properties and configuration files.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -10714,17 +10721,17 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Creates the properties files from the templates in <code>/config</code> folder. The <em>setup</em> tasks depend on this task.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>prepareConfig
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>prepareConfig
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Creates the database and installs reference data. 
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>install
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>install
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Compiles the Java classes that were modified and deploys them to Tomcat.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <table>
 <thead>
@@ -10743,32 +10750,32 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Deletes all the Java Classes and recompiles them. 
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>compile.complete
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./gradlew<span class="w"> </span>compile.complete
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Updates the database applying the changes in XML files.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./gradlew<span class="w"> </span>update.database
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./gradlew<span class="w"> </span>update.database
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Exports the database changes to XML files
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./gradlew<span class="w"> </span>export.database
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Exports the module Application Dictionary data.
     <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./gradlew<span class="w"> </span>export.database
 </span></code></pre></div></p>
 </li>
 <li>
+<p>Exports the module Application Dictionary data.
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./gradlew<span class="w"> </span>export.database
+</span></code></pre></div></p>
+</li>
+<li>
 <p>Exports the configuration script. 
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./gradlew<span class="w"> </span>export.config.script<span class="w"> </span>
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./gradlew<span class="w"> </span>export.config.script<span class="w"> </span>
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Task to download core dependency.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./gradlew<span class="w"> </span>expandCore
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./gradlew<span class="w"> </span>expandCore
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -10787,7 +10794,7 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Task to download the modules dependencies in sources.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./gradlew<span class="w"> </span>expandModules
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>./gradlew<span class="w"> </span>expandModules
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -10804,12 +10811,17 @@ In the following sections, you can find all the flags or variables available to 
 </tbody>
 </table>
 </li>
+<li>
+<p>Task to delete directories created by the expandCore task.
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>./gradlew<span class="w"> </span>cleanExpandCore
+</span></code></pre></div></p>
+</li>
 </ul>
 <h2 id="submodules">Submodules</h2>
 <ul>
 <li>
 <p>Creates the <code>build.gradle</code> file with all the necessary information to publish.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>./gradlew<span class="w"> </span>createModuleBuild
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./gradlew<span class="w"> </span>createModuleBuild
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -10832,7 +10844,7 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Publish the module to a custom repository.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>./gradlew<span class="w"> </span>publishVersion
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>./gradlew<span class="w"> </span>publishVersion
 </span></code></pre></div>
 <table>
 <thead>
@@ -10859,7 +10871,7 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Uninstalls a source module.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./gradlew<span class="w"> </span>uninstallModule
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>./gradlew<span class="w"> </span>uninstallModule
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -10881,12 +10893,12 @@ In the following sections, you can find all the flags or variables available to 
 <ul>
 <li>
 <p>Used to clone all the git submodules of a module extension (bundle). The module <code>build.gradle</code> should contain the property
-      <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>./gradlew<span class="w"> </span>cloneDependencies
+      <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>./gradlew<span class="w"> </span>cloneDependencies
 </span></code></pre></div></p>
-<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">ext</span><span class="o">.</span><span class="na">defaultExtensionModules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="s1">&#39;git@bitbucket.org:example1.git&#39;</span><span class="o">,</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="s1">&#39;git@bitbucket.org:example2.git&#39;</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span><span class="o">]</span>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">ext</span><span class="o">.</span><span class="na">defaultExtensionModules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="s1">&#39;git@bitbucket.org:example1.git&#39;</span><span class="o">,</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="s1">&#39;git@bitbucket.org:example2.git&#39;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">  </span><span class="o">]</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -10905,7 +10917,7 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Creates all the <code>build.gradle</code> files for each module using the database from AD_MODULExml.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>./gradlew<span class="w"> </span>createModuleBuild
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>./gradlew<span class="w"> </span>createModuleBuild
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -10961,7 +10973,7 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Parameters to override the default repository. Publish all the modules located in the source modules directory.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>./gradlew<span class="w"> </span>publishAll
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>./gradlew<span class="w"> </span>publishAll
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -10992,7 +11004,7 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Task used to push and tag the modules' changes.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>./gradlew<span class="w"> </span>pushToGit
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>./gradlew<span class="w"> </span>pushToGit
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -11011,7 +11023,7 @@ In the following sections, you can find all the flags or variables available to 
 </li>
 <li>
 <p>Updates the version of a dependency in each <code>build.gradle</code> submodule.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>./gradlew<span class="w"> </span>updateModuleBuildDependency
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>./gradlew<span class="w"> </span>updateModuleBuildDependency
 </span></code></pre></div></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -11055,7 +11067,7 @@ In the following sections, you can find all the flags or variables available to 
 </ul>
 <h2 id="ant-tasks">Ant tasks</h2>
 <p>Most of <a href="http://wiki.openbravo.com/wiki/Development_Build_Tasks#Detailed_Build_Tasks" target="_blank">ant build tasks</a> previously used can be run with Gradle:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>./gradlew<span class="w"> </span>&lt;ant<span class="w"> </span>task&gt;<span class="w"> </span><span class="o">[</span>params<span class="o">]</span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>./gradlew<span class="w"> </span>&lt;ant<span class="w"> </span>task&gt;<span class="w"> </span><span class="o">[</span>params<span class="o">]</span>
 </span></code></pre></div>
 <p>Except for some commands:</p>
 <table>
@@ -11095,27 +11107,27 @@ In the following sections, you can find all the flags or variables available to 
 </div>
 <p>This approach is used to identify conflict between Etendo artifacts published in a repository.</p>
 <p>For example, when you make use of an Etendo module, which depends on the Etendo core</p>
-<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">group</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;com.etendo&#39;</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">ext</span><span class="o">.</span><span class="na">artifact</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;moduleCextract&quot;</span>
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="n">version</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1.0.1&#39;</span>
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">    </span><span class="c1">// Etendo CORE dependency</span>
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.platform:etendo-core:[22.1.1, 22.1.2]&#39;</span>
-</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="o">}</span>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">group</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;com.etendo&#39;</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">ext</span><span class="o">.</span><span class="na">artifact</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;moduleCextract&quot;</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="n">version</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1.0.1&#39;</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">    </span><span class="c1">// Etendo CORE dependency</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.platform:etendo-core:[22.1.1, 22.1.2]&#39;</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="o">}</span>
 </span></code></pre></div>
 <p>and you are currently working with the Etendo core in <code>22.1.0</code>, then a conflict resolution is found.</p>
 <p>Depending on the type of conflict, if the problem is with the Etendo Core, then a Exception will be thrown.</p>
 <div class="admonition danger">
 <p class="admonition-title">To force the dependencies' resolution must be the last step to follow</p>
 <p>You can force the resolution using the extension flag
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="n">forceResolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="o">}</span>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="n">forceResolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="o">}</span>
 </span></code></pre></div></p>
 <p>If you want to skip the resolution you can add to the plugin extension the flag.
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span><span class="n">performResolutionConflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="o">}</span>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="n">performResolutionConflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="o">}</span>
 </span></code></pre></div></p>
 </div>
 <h2 id="version-consistency">Version consistency</h2>
@@ -11124,16 +11136,16 @@ In the following sections, you can find all the flags or variables available to 
 You can force the compilation tasks by adding to the Etendo plugin extension the ignore flag</p>
 <div class="admonition warning">
 <p class="admonition-title">These section explains how to ingore the consistency verification. Use this approach only if there are no conflicts between versions. </p>
-<p><div class="language-groovy highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="n">ignoreConsistencyVerification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span>
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="o">}</span>
+<p><div class="language-groovy highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="n">ignoreConsistencyVerification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="o">}</span>
 </span></code></pre></div>
 or run the tasks with the <code>-PignoreConsistency=true</code> flag.</p>
 <p>By default Etendo does not allow you to add a JAR dependency with an old version to the current installed one.
 You can ignore this behavior adding the module name to be updated with an old version as a configuration.
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="n">ignoredArtifacts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;com.etendoerp.mymodulename&#39;</span><span class="o">]</span>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="o">}</span>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">  </span><span class="n">ignoredArtifacts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;com.etendoerp.mymodulename&#39;</span><span class="o">]</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="o">}</span>
 </span></code></pre></div></p>
 </div>
 <h2 id="uninstall-modules">Uninstall modules</h2>
@@ -11141,7 +11153,7 @@ You can ignore this behavior adding the module name to be updated with an old ve
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>To uninstall an Etendo module you need to run the gradle task.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>./gradlew<span class="w"> </span>uninstallModule<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;modulename&gt;
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>./gradlew<span class="w"> </span>uninstallModule<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;modulename&gt;
 </span></code></pre></div>
 <p>This task will try to delete the source module and the source dependencies which depends on it.</p>
 <p>If the module to uninstall is a dependency of other source module, an exception is thrown. You can force the uninstall providing the flag <code>-Pforce=true</code>.</p>
@@ -11149,10 +11161,10 @@ You can ignore this behavior adding the module name to be updated with an old ve
 <div class="tabbed-block">
 <p>You can make use of Gradle exclusion rules to prevent the extraction of a JAR dependency.
 In the <code>build.gradle</code> of the root project you can specify the dependency to exclude.</p>
-<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">configurations</span><span class="o">.</span><span class="na">implementation</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">  </span><span class="n">exclude</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.test&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">module:</span><span class="w"> </span><span class="s1">&#39;custommodule1&#39;</span>
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">  </span><span class="n">exclude</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.test&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">module:</span><span class="w"> </span><span class="s1">&#39;custommodule2&#39;</span>
-</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="o">}</span>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">configurations</span><span class="o">.</span><span class="na">implementation</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="n">exclude</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.test&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">module:</span><span class="w"> </span><span class="s1">&#39;custommodule1&#39;</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">  </span><span class="n">exclude</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.test&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">module:</span><span class="w"> </span><span class="s1">&#39;custommodule2&#39;</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="o">}</span>
 </span></code></pre></div>
 <p>If the dependency belongs to a <code>build.gradl</code> of a source module, it may be downloaded when the <code>javaCompile</code> task is executed. You can also make use of gradle exclude rules.</p>
 <div class="admonition warning">
@@ -11174,7 +11186,7 @@ and remove the root parent dependency.</p>
 <p>Each <code>build.gradle</code> file (from the root project or source modules) can be using the dependency directly or by transitivity and this can lead to resolution of the module.</p>
 </div>
 <p>Finally you need to rebuild the system:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete
 </span></code></pre></div>
 </div>
 </div>
@@ -11195,34 +11207,34 @@ and remove the root parent dependency.</p>
 <ol>
 <li>
 <p>Install NVM (Node Version Manager):
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>curl<span class="w"> </span>-o-<span class="w"> </span>https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>curl<span class="w"> </span>-o-<span class="w"> </span>https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </span></code></pre></div>
 Close and reopen your terminal to start using NVM, or execute the following commands:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NVM_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.nvm&quot;</span>
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="o">[</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\.</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh&quot;</span>
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="o">[</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\.</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NVM_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.nvm&quot;</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="o">[</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\.</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh&quot;</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="o">[</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\.</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion&quot;</span>
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Install Node.js version 16.10.0:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>nvm<span class="w"> </span>install<span class="w"> </span><span class="m">16</span>.10.0
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>nvm<span class="w"> </span>install<span class="w"> </span><span class="m">16</span>.10.0
 </span></code></pre></div></p>
 <p><strong>Note:</strong> If you encounter errors during the installation of Node.js with the <code>nvm install 16.10.0</code> command, it might be because <code>curl</code> isn't installed or is misconfigured on your system. In such cases, you can try running the following commands:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>sudo<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>curl
-</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>sudo<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>curl
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl
 </span></code></pre></div>
 <p>After successfully configuring <code>curl</code> using this method, return to this guide and execute the steps above to install NVM and set up Node.js.</p>
 </li>
 <li>
 <p>Set Node.js version 16.10.0 as the default version:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>nvm<span class="w"> </span>use<span class="w"> </span><span class="m">16</span>.10.0
-</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>nvm<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>default<span class="w"> </span><span class="m">16</span>.10.0
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>nvm<span class="w"> </span>use<span class="w"> </span><span class="m">16</span>.10.0
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>nvm<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>default<span class="w"> </span><span class="m">16</span>.10.0
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Verify the installation:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>node<span class="w"> </span>-v
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>npm<span class="w"> </span>-v
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>node<span class="w"> </span>-v
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>npm<span class="w"> </span>-v
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -11232,29 +11244,29 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <ul>
 <li>Install Homebrew by running the following command in the terminal:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
 </span></code></pre></div>
 <ul>
 <li>Once Homebrew is installed, verify it by checking its version:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>brew<span class="w"> </span>--version
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>brew<span class="w"> </span>--version
 </span></code></pre></div>
 <p><strong>Node.js &amp; npm Installation using Homebrew:</strong></p>
 <ol>
 <li>
 <p>Update Homebrew (ensuring you have the latest package definitions):
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>brew<span class="w"> </span>update
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>brew<span class="w"> </span>update
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Install Node.js and npm:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Verify the installation of Node.js and npm:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>node<span class="w"> </span>-v
-</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>npm<span class="w"> </span>-v
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>node<span class="w"> </span>-v
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>npm<span class="w"> </span>-v
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -11270,8 +11282,8 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 </li>
 <li>
 <p>After installation, open a command prompt or PowerShell and verify the installation:
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">node</span> <span class="n">-v</span>
-</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="n">npm</span> <span class="n">-v</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">node</span> <span class="n">-v</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="n">npm</span> <span class="n">-v</span>
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -11283,38 +11295,38 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <ul>
 <li>Install npm globally using the following command:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>npm
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>npm
 </span></code></pre></div>
 <ul>
 <li>Confirm the installation by checking the versions of node and npm:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>node<span class="w"> </span>-v
-</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>npm<span class="w"> </span>-v
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>node<span class="w"> </span>-v
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>npm<span class="w"> </span>-v
 </span></code></pre></div>
 <p><strong>Installing Sass (Syntactically Awesome Style Sheets)</strong></p>
 <p>If you have npm installed and need the Sass compiler, follow these instructions:</p>
 <ul>
 <li>Use npm to install Sass globally on your system:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>sass
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>sass
 </span></code></pre></div>
 <ul>
 <li>Confirm the Sass installation by running:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>sass<span class="w"> </span>--version
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>sass<span class="w"> </span>--version
 </span></code></pre></div>
 <p>Seeing the Sass version number means that Sass has been installed correctly.</p>
 </details>
 <h3 id="execution">Execution</h3>
 <p>The <code>cssCompile</code> task in the Etendo Gradle configuration is specifically designed to convert <code>.scss</code> files into <code>.css</code> files. To customize the Etendo skin, you will need to work with <code>.scss</code> files. </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>./gradlew<span class="w"> </span>cssCompile<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>./gradlew<span class="w"> </span>cssCompile<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <p>After executing the task, look for the following output to indicate a successful build:</p>
 <div class="admonition success">
 <p class="admonition-title">Successful Execution</p>
 <p>After executing the task, the following output indicates a successful build:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>&gt; Task :cssCompile
-</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>&gt; BUILD SUCCESSFUL
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>&gt; Task :cssCompile
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>&gt; BUILD SUCCESSFUL
 </span></code></pre></div>
 <p>This confirms the successful processing of the files.</p>
 </div>
@@ -11323,7 +11335,7 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <ul>
 <li>
 <p>The <code>delete.client</code> task allow runs Delete Client Process directly from gradlew, also this task allows runs this process with Tomcat service down to avoid database locks.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>./gradlew<span class="w"> </span>delete.client
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>./gradlew<span class="w"> </span>delete.client
 </span></code></pre></div>
 <table>
 <thead>
