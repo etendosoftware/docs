@@ -70,7 +70,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
     rootProject.name = "etendo"
     ```
 
-2. **Update Etendo Gradle Plugin**: You need to update `com.etendoerp.gradleplugin` to version 1.1.0 or later. Alternatively, you can use `latest.release` to always get the latest version, in this case the gradle version should be 7.3.2, to check the gradle version execute './gradlew --version' and to upgrade execute ./gradlew wrapper --gradle-version 7.3.2 
+2. **Update Etendo Gradle Plugin**: You need to update `com.etendoerp.gradleplugin` to version 1.1.0 or later.
 
     ```groovy title="build.gradle"
     plugins {
@@ -78,7 +78,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
         id 'war'
         id 'groovy'
         id 'maven-publish'
-        id 'com.etendoerp.gradleplugin' version 'latest.release' 
+        id 'com.etendoerp.gradleplugin' version '<version>' 
     }
     ```
 
@@ -277,9 +277,9 @@ This affects the current environments, to fix this we have to:
 
     2. Modify the build.gradle of our project and change the dependencies to lowercase. For example:
         ```groovy title="build.gradle"
-        moduleDeps('com.etendoerp:financial.extensions.es_ES:latest.release@zip') {transitive = true}
+        moduleDeps('com.etendoerp:financial.extensions.es_ES:<version>@zip') {transitive = true}
         // Replace by
-        moduleDeps('com.etendoerp:financial.extensions.es_es:latest.release@zip') {transitive = true}
+        moduleDeps('com.etendoerp:financial.extensions.es_es:<version>@zip') {transitive = true}
 
         ```
     3. Execute `./gradlew expandModules` task to download the new dependencies. 
@@ -291,9 +291,9 @@ This affects the current environments, to fix this we have to:
     For example:
 
     ``` groovy
-    implementation('com.etendoerp:financial.extensions.es_ES:latest.release')
+    implementation('com.etendoerp:financial.extensions.es_ES:<version>')
     // Replace by
-    implementation('com.etendoerp:financial.extensions.es_es:latest.release')
+    implementation('com.etendoerp:financial.extensions.es_es:<version>')
 
     ```
 
