@@ -55061,9 +55061,48 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 #### March 2025
 
+##### Etendo Mobile
+
+<div class="grid cards" markdown>
+
+- :material-share: **Receive and share files with Etendo Mobile**
+
+    ---
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/share-files-mobile.png)
+
+    A new feature has been added to Etendo Mobile to streamline integration with external applications. With the new **Share files** option, you can now receive files from outside apps and use them directly in subapplications like:
+
+    - **Documents Manager**, where you can view files right in Etendo Mobile.
+    - **Copilot**, where specialized assistants can extract information from images, transform audios into sales orders, and much more.
+
+    This feature improves data flow and efficiency across your platform.
+
+    Try it now using the *Demo Try* button in the app, or download the latest version from the App Store or Play Store.
+
+</div>
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Now in the advanced financial reports you can view accounting dimensions.**
+    ---
+
+    ![alt text](https://docs.etendo.software/latest/assets/whats-new/etendo-news/financial-reports-advanced.png)
+
+    In version [1.24.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, improvements to advanced financial reporting are included.In this version, the [General Ledger Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced) and [Journal Entries Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report-advanced) will allow you to view and filter by the desired accounting dimensions.
+    In addition, you can navigate to related entities in each report!
+
+</div>
+
 ##### Etendo Classic
 
 <div class="grid cards" markdown>
+
+- :octicons-rocket-24: **25.1 Release Candidate Now Available!**
+
+    The new version [25.1](./release-notes/etendo-classic/release-notes.md) of Etendo Classic introduces the latest stack enhancements. While this version is currently in Release Candidate (RC) status, you can already explore the detailed [API changelog](https://docs.etendo.software/latest/developer-guide/etendo-classic/developer-changelog/apichanges.md) to review the changes and improvements included in this release.
 
 - :material-trending-up: **Fixed Issue**
     
@@ -55331,7 +55370,7 @@ New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bun
     
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/LangChain.png)
 
-    We are excited to announce a new functionality in LangChain assistants: the ability to upload .zip files directly into the knowledge base! These .zip files can contain a variety of file formats, including .txt, .pdf, .md, .py, .java, and .js.
+    We are excited to announce a new functionality in LangChain assistants: the ability to upload `.zip` files directly into the knowledge base! These `.zip ` files can contain a variety of file formats, including `.txt`, `.pdf`, `.md`, `.py`, `.java`, and `.js`.
     This enhancement allows developers to train assistants with example source code.
     Boost your assistant’s capabilities with this powerful new feature!
 
