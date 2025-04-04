@@ -33,21 +33,15 @@ Create a new record in **Process Definition** window. Fields to consider:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-1.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-2.png)
-
 The `BaseReportActionHandler` is the default action handler to use in reports. In case you desire to make some Java validations or include some extra parameters that are not defined in the Process Definition parameters tab it is possible to use a custom Action Handler that extends the `BaseReportActionHandler`.
 
 ### Parameter Definition
 
 In the **Parameter** tab are added all the parameters that are needed to filter the results of the report. Their values are handled by the `BaseReportActionHandler` and sent to Jasper Reports as parameters. These parameters need to be defined in the JR template with the same name as the column name.
 
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-2.png)
+
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-3.png)
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-4.png)
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-5.png)
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-6.png)
 
 When the filter parameter is a Selector reference the value is sent as a **JSONOBject** that includes 2 keys:
 
@@ -77,13 +71,10 @@ The identifiers can be shown in a Text field with the following Expression:
 
     $P{M_Product_Category_ID}.getString("strIdentifiers")
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-4.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-8.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-5.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-9.png)
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-10.png)
 
 The `BaseReportActionHandler` and the `ReportingUtils` class used to generate the report includes some additional parameters that can be used in the template:
 
@@ -162,9 +153,9 @@ When a button list parameter is added, the buttons are added together with the p
 
 Below is an example of a button list that adds two buttons (Button 1, Button 2) to this type of process:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-18.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-6.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-19.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-7.png)
 
 In order to add execution logic to these buttons, the `handleCustomAction` method must be redefined within the java class of the process:
 
@@ -200,11 +191,11 @@ Once the configuration is done, it is necessary to compile.
 
 Then, when you enter the process, you will see your custom buttons next to the predefined report buttons.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-20.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-8.png)
 
 Then, when you press the buttons, your custom logic is executed.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-21.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-9.png)
 
 ### Report Datasource Definition
 
@@ -232,6 +223,26 @@ Map<String, Object> jrParameters = (Map<String, Object>) parameters
 
 This allows generating the report data dynamically, i.e, based on some kind of logic built with the value of any of these parameters.
 
+### Message Handling
+
+It is possible to display messages (success, warning, etc.) to the user after running a report based on a Process Definition.
+
+This is useful when the report is generated successfully, but the system still needs to inform the user about potential issues in the data — for example, when some products have transactions with no calculated cost.
+
+To enable this functionality, override the `addAdditionalParameters` method in your custom Java class that extends `BaseReportActionHandler`. In this method, you can add a new entry to the `parameters` map with the key `"message"` and a value of type `OBError`. For example:
+
+``` java
+OBError msg = new OBError();
+msg.setType("Warning");
+msg.setMessage("Please review the report for incomplete data.");
+parameters.put("message", msg);
+```
+
+This message will be automatically captured by the BaseReportActionHandler and shown in the UI once the report finishes.
+
+If the "message" parameter is not provided, the system will show a default success message:
+"Report successfully generated."
+
 ### Sub-Report Runtime Compilation
 
 In case our process definition report contains sub-reports, the infrastructure supports compiling the sub-reports at runtime. To do that the following conditions should be met:
@@ -249,17 +260,79 @@ In the **Report Definition** tab the JR Templates of the report are defined. Eac
 
 The templates need to be stored in the **web** folder.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-14.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-10.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-15.png)
+### Adding Hyperlinks to a Report
+
+You can add hyperlinks to report elements to allow navigation to another record, open a different report, or execute custom logic as needed.
+
+To do this, select the component you want to make clickable (e.g. **Text Field**, **Image**, **Chart**, or **Subreport**) and configure its hyperlink properties:
+
+- **Link Target**: `"Self"` — Opens the link in the same browser window.
+- **Link Type**: `"Reference"` — Indicates that this is a URL link.
+- **Hyperlink Reference Expression**: This is the expression or URL to execute when clicked.
+- **Hyperlink When Expression**: (Optional) A boolean expression to control when the hyperlink should be active.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-11.png)
+
+#### Example 1: Navigating to a specific record (e.g., an invoice)
+
+To open a specific window and record in the system (e.g., an Invoice window with a given invoice ID), use an expression like this in the **Hyperlink Reference Expression**:
+
+```java
+"javascript:top.OB.Utilities.openDirectTab('" + $V{OPEN_INVOICE_TAB} + "', '" + $F{C_INVOICE_ID} + "')"
+```
+
+Where:
+
+- **$V{OPEN_INVOICE_TAB}** is the window ID of the Sales Invoice window.
+- **$F{InvoiceID}** is the field containing the ID of the invoice you want to open.
+
+You can also add a Hyperlink When Expression to make sure the link is only clickable when the report is being viewed in `HTML` format, or add any other conditions as needed.
+
+``` java
+$P{OUTPUT_FORMAT}.equalsIgnoreCase("HTML")? Boolean.TRUE: Boolean.FALSE
+```
+
+Where:
+
+- **$P{OUTPUT_FORMAT}** is the output format of the report.
+
+#### Example 2: Opening another report from a link
+
+You can also use a hyperlink to trigger the generation of another report. In this case, instead of a simple URL, the Hyperlink Reference Expression should contain a javascript: call to OB.RemoteCallManager.call(...), passing all the required parameters for the report:
+
+``` java
+"javascript:top.OB.RemoteCallManager.call('your.custom.ReportActionHandler',"
+  + "{"
+  + "  _buttonValue: 'HTML',"
+  + "  _params: {"
+  + "    // Add here all the necessary input parameters"
+  + "    Param1: '" + $P{Param1} + "',"
+  + "    Param2: '" + $F{FieldFromDataSet} + "',"
+  + "    DateParam: '" + $P{DateValue} + "'"
+  + "  }"
+  + "},"
+  + "{"
+  + "  processId: '" + $P{processId} + "',"
+  + "  reportId: '" + $P{reportId} + "',"
+  + "  windowId: null"
+  + "},"
+  + "function(rpcResponse, data, rpcRequest) {"
+  + "  top.OB.Utilities.Action.executeJSON(data.responseActions, null, null, null);"
+  + "}"
+  + ");"
+```
+
+This JavaScript snippet makes a remote call to the report's process handler, passing all the parameters it needs. The report will be generated and opened as a result of this action.
+
+You can fully customize this logic to fit your navigation or integration needs.
 
 ## Result
 
 The result is shown in a new form with all the parameters and the corresponding Export button(s).
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-16.png)
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-17.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-12.png)
 
 Once the report is generated, a file download is requested in the browser. The form is kept enabled so it is possible to rerun the report with different parameters.
 
