@@ -55710,8 +55710,9 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [25Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0){target="_blank"} | 28/03/2025 | 25.1.0 | QAA | [25Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.0.iso){target="_blank"} | :white_check_mark: |
-| [24Q4.10](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.10){target="_blank"} | 28/03/2025 | 24.4.10 | CS |  | :white_check_mark: |
+| [25Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0){target="_blank"} | 28/03/2025 | 25.1.0 | RC | [25Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.0.iso){target="_blank"} | :white_check_mark: |
+| [24Q4.11](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.11){target="_blank"} | 04/04/2025 | 24.4.11 | CS |  | :white_check_mark: |
+| [24Q4.10](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.10){target="_blank"} | 28/03/2025 | 24.4.10 | C |  | :white_check_mark: |
 | [24Q4.9](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.9){target="_blank"} | 22/03/2025 | 24.4.9 | C |  | :white_check_mark: |
 | [24Q4.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.8){target="_blank"} | 14/03/2025 | 24.4.8 | C |  | :white_check_mark: |
 | [24Q4.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.7){target="_blank"} | 07/03/2025 | 24.4.7 | C |  | :white_check_mark: |
@@ -55811,7 +55812,8 @@ Article URL: https://etendo.software
 | Version | Publication Date | Status |
 | --- | --- | --- |
 | [2.0.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.0.0){target="_blank"} | 26/03/2025 | RC |
-| [1.5.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.3){target="_blank"} | 26/03/2025 | CS |
+| [1.5.4](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.4){target="_blank"} | 04/04/2025 | CS |
+| [1.5.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.3){target="_blank"} | 26/03/2025 | C |
 | [1.5.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.2){target="_blank"} | 21/03/2025 | C |
 | [1.5.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.1){target="_blank"} | 12/11/2024 | C |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.0){target="_blank"} | 08/11/2024 | C |
