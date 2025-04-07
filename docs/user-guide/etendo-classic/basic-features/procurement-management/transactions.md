@@ -688,9 +688,6 @@ This action implies that:
 The transaction document used by Etendo is the Reversed Purchase Invoice. This document is exactly the same as the original one being reversed but the invoiced quantity is negative.
 - Once the new document has been created, you can change both the Invoice Date and the Accounting Date of the new document prior to get it posted. You can also enter the Supplier Reference if not entered before or modify the existing one.
 
-!!!warning
-    If the [Purchase Invoice Validation](../../optional-features/bundles/procurement-extensions/purchase-invoice-validation.md) module is installed and its corresponding default preference is active, the voiding process may fail. This occurs when the same business partner, accounting date, and supplier reference are used to void an invoice, as it creates a duplicate invoice with the same information. The module's preference is designed to prevent this duplication, which causes the voiding process to fail. 
-
 #### Add Payment 
 
 Payment/s can be made against a purchase invoice by using the Add Payment button which opens the Add Payment pop-up window.
@@ -718,7 +715,7 @@ The Bulk Completion functionality allows the user to complete, reactivate or voi
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
 !!!warning
-    The bulk voiding option fails when the [Purchase Invoice Validation](../../optional-features/bundles/procurement-extensions/purchase-invoice-validation.md) module is installed. This is because the module includes a default preference that prevents the duplication of invoices with the same business partner, accounting date, and supplier reference. Since massive voiding attempts to reverse invoices, it leads to duplication, as the supplier reference for each reversed invoice cannot be modified. As a result, the module prevents the bulk voiding process from functioning.
+    The bulk voiding option fails when the [Purchase Invoice Validation](../../optional-features/bundles/procurement-extensions/purchase-invoice-validation.md) module is installed. This is because the module includes a default preference that prevents the duplication of invoices with the same business partner, accounting year, and supplier reference. Since massive voiding attempts to reverse invoices, it leads to duplication, as the supplier reference for each reversed invoice cannot be modified. As a result, the module prevents the bulk voiding process from functioning.
 
 #### Remove Payment
 
@@ -758,7 +755,7 @@ Once the process is finished, the sales invoice status turns to Complete.
 !!! info
     Check the Technical documentation about [Advanced Financial Docs Processing](../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#advanced-financial-docs-processing) to extend the process.
 
-### Modify Payment Plan
+#### Modify Payment Plan
 
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
