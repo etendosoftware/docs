@@ -95,7 +95,7 @@ The module "Copilot Agents" is a collection of agents that can be used to do bas
 ### Content
 The module includes the following agents:
 
-- **Zip Reader**: This agent reads a zip file and returns the paths of the files inside the zip. Its usefull to add to a supervisor agent to chain the unzip and
+- **Zip Reader**: This agent reads a zip file and returns the paths of the files inside the zip. Its useful to add to a supervisor agent to chain the unzip and
 - **Client Initialization Supervisor**: This is a supervisor agent that delegates and orchestrates initialization tasks for the client (creation of initial business partners, products, etc.).
     ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/client-initialization-graph.png)
     This supervisor has the following agents:
