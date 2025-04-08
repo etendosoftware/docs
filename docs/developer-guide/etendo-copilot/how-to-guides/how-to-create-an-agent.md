@@ -58,7 +58,7 @@ This article explains how to create a new agent in Etendo Copilot from scratch. 
 For example, we will create a new agent called "Task definition agent" to help users define an issue with the mandatory format for his team. The purpose of the agent is to receive a description of the task and return the task definition with the mandatory format. We will create a new agent with the following information:
 - **Name**: Task definition agent
 - **Description**: This agent helps users define a task description with the mandatory format for his team.
-- **Model**: No needed to select a specific model, the [default](#) model will be used.
+- **Model**: No need to select a specific model, the [default](#) model will be used.
 - **Temperature**: Set to `0.5` because we want to have some "creativity" in the responses.
 - **Module**: This agent will not be exported to a module.
 - **Prompt**: 
@@ -97,7 +97,7 @@ For example, we will create a new agent called "Task definition agent" to help u
 
     Once you respond with your answers, I will revise the description accordingly and provide additional questions for further refinement.
 
-    Traduce everything to english, because the issues must be in English.
+    Translate everything to English, because the issues must be in English.
     ```
 
 After saving the agent, the system will auto-give access to it. Open the Copilot Chat with the button `✨Copilot` and select the agent `Task definition agent`. You can start interacting with the agent.

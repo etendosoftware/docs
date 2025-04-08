@@ -22,8 +22,7 @@ In order to use Copilot, the user must access the Etendo Classic under the role 
 
 ## How to Set up Assistants
 
-With Etendo Copilot it possible to:
-
+With Etendo Copilot, it is possible to:
 1. *Create your own Assistant*: Use the Assistant window to set up a new assistant with all the specific necessary characteristics.
 
 2. *Install a module with a pre-configured assistant*: Some modules come with pre-configured assistants, which can be used as is or modified to suit your needs.

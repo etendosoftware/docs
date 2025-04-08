@@ -111,8 +111,7 @@ Press **Start** again. The query will execute thrice.
 This feature is crucial for testing various requests and modifying prompts to meet requirements.
 
 ## System Prompt debugging
-The playground allopws you to debug the prompt used in the agent. This is useful to improve the behavior of the agent in case of unexpected results.
- 
+The playground allows you to debug the prompt used in the agent. This is useful to improve the behavior of the agent in case of unexpected results.
 As we have seen above, in Langsmith you can see the execution of tools and other actions performed by the assistant, which are indicated by the LLM. That is, the decision or reasoning comes from the LLM and it is at these points that we can use it. 
 
 When loading the playground we will see:
