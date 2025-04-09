@@ -361,7 +361,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```groovy title="build.gradle"
         dependencies {
             //Add other dependencies bellow
-            implementation ('com.etendoerp:platform.extensions:latest.release')
+            implementation ('com.etendoerp:platform.extensions:2.6.0') // version 2.6.0 or later
         }
         ```
     7. Modify the `gradle.properties` file with your environment variables
@@ -17960,14 +17960,14 @@ In addition to the previous basic filters:
 
 the following were added:    
 
--   Business Partner  
--   Product   
--   User 1    
--   User 2  
--   Project 
--   Activity    
--   Sales Region    
--   Sales Campaign  
+- Business Partner  
+- Product   
+- 1st Dimension
+- 2nd Dimension 
+- Project 
+- Activity    
+- Sales Region    
+- Sales Campaign  
 
 In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
 
@@ -17994,10 +17994,10 @@ This report is commonly launched at the end of the period prior to the preparati
 
 In Etendo terms, the "Trial Balance" shows for a given Organization and General Ledger:
 
--   the account balance as of a given date from
--   the account total sum of debits within a given period of time
--   the account total sum of credits within a given period of time
--   and finally the account balance as of a given date to
+- the account balance as of a given date from
+- the account total sum of debits within a given period of time
+- the account total sum of credits within a given period of time
+- and finally the account balance as of a given date to
 
 At the end of the report, the total sum of debits must be equal to the total sum of credits.
 
@@ -18007,25 +18007,24 @@ At the end of the report, the total sum of debits must be equal to the total sum
 As shown in the screen above, it is possible to enter below data before launching the Trial Balance.
 
 Under the **Primary Filters** section, it is possible to specify:
-
--   the *"From"* date when the account balance is going to be taken
--   the *"To"* date when the account balance is going to be calculated by following the formula below:
-    -   *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
--   the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
-    -   "Legal with Accounting" type organizations
-    -   "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
-        -   It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
-    -   "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
-        -   Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
--   and finally the "General Ledger".
+- the *"From"* date when the account balance is going to be taken
+- the *"To"* date when the account balance is going to be calculated by following the formula below:
+    - *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
+- the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
+    - "Legal with Accounting" type organizations
+    - "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
+        - It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
+    - "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
+        - Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
+- and finally the "General Ledger".
 
 **Advanced filters** is a collapsible section which can be shown by clicking on it. Under this section, it is possible to specify:
 
--   the Account Level to show. The options available are from top to bottom:
-    -   **Heading**
-    -   **Account**
-    -   **Breakdown**
-    -   and **Subaccount**.
+- the Account Level to show. The options available are from top to bottom:
+    - **Heading**
+    - **Account**
+    - **Breakdown**
+    - and **Subaccount**.
 
 These are the Account Tree Elements.
 
@@ -18041,12 +18040,12 @@ Also, the selection of this value allows the user to:
 
 3\. select "**Include Zero Figures**" flag which allows the user to display all subaccounts even those which hold zero figures.
 
--   It is possible to enter the **initial page number** of the trial report if required
--   Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.  
+- It is possible to enter the **initial page number** of the trial report if required
+- Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.
     This checkbox allows the user to configure if the "Opening" account balance (dated i.e. 1st January 2021) is shown separately in the first column "Balance As Of" or either in the "Debit" or in the "Credit" column.  
     In other words:
-    -   the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
-    -   the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
+    - the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
+    - the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
         This check only applies if the "From" date entered while launching the report is the same as the "Opening" Accounting date (i.e. 1st January 2021), otherwise the "Opening" account balance is always shown in the "Balance As Of" column.
 
 Once all the data above has been properly filled in, the "Search" process button shows the results in the same window.
@@ -18057,11 +18056,11 @@ An example of the output of the report is:
 
 This report can also be shown in:
 
--   a *PDF format* by pressing the "Print" action icon of the Toolbar.
-    -   the PDF file can be printed or archived for later reviews.
-    -   the PDF file has the same grouping rules as the search button.
--   and in *excel format*:
--   the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
+- a *PDF format* by pressing the "Print" action icon of the Toolbar.
+    - the PDF file can be printed or archived for later reviews.
+    - the PDF file has the same grouping rules as the search button.
+- and in *excel format*:
+- the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
 
 #### General Ledger Report
 
@@ -18071,43 +18070,43 @@ This report can also be shown in:
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
-![](https://docs.etendo.software/latest/assets/drive/1pAPw9gmjnNbZUJ4bbL6oTXNBUrvdUkhS.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport1.png)
 
 As shown in the image above, the fields to fill in for launching this report are:
 
--   the *"Organization"* for which the accounting information is required.  
+- the *"Organization"* for which the accounting information is required.  
     Once more, the accounting information provided by this report relies on the organization type selected as:
-    -   accounting information shown might be just related to a "Generic" organization belonging to a "legal Entity with Accounting"
-    -   or could be a roll-up in case of selecting either a "Legal Entity with Accounting" or an "Organization" having other organizations underneath.
--   *"Show Open Balances"* option which will hide those entries for which the balance is zero. (Ex. removing receivables/payables entries from invoices once those have been paid.)
--   and the corresponding *"General Ledger"* which will also rely on the Organization previously selected.
+    - accounting information shown might be just related to a "Generic" organization belonging to a "legal Entity with Accounting"
+    - or could be a roll-up in case of selecting either a "Legal Entity with Accounting" or an "Organization" having other organizations underneath.
+- *"Show Open Balances"* option which will hide those entries for which the balance is zero. (Ex. removing receivables/payables entries from invoices once those have been paid.)
+- and the corresponding *"General Ledger"* which will also rely on the Organization previously selected.
 
 It is possible to narrow down the accounting information to be shown in the report by:
 
--   a range of "*amounts*"
--   a set of *"subaccounts"*
--   and a set of *"accounting dimensions"* such as business partner, product and project
+- a range of "*amounts*"
+- a set of *"subaccounts"*
+- and a set of *"accounting dimensions"* such as business partner, product and project
 
 Finally, it is also possible to:
 
--   *"group"* the information by any of the accounting dimensions
--   and enter a *"Initial Page Number"* for the report
+- *"group"* the information by any of the accounting dimensions
+- and enter a *"Initial Page Number"* for the report
 
 Once all data have been properly entered, the "Search" button shows the outcome of the report in the same window:
 
--   the ledger entries displayed for each subaccount are ordered by accounting date and besides the subaccount balance is shown for each ledger entry.
+- the ledger entries displayed for each subaccount are ordered by accounting date and besides the subaccount balance is shown for each ledger entry.
 
 The arrows in the toolbar allows the user to navigate through the report outcome shown in the window.
 
 The General Ledger Report can also be viewed and saved in Excel format and PDF format:
 
--   Excel format by pressing on the *"Export to Excel"* action button of the Toolbar:
-    -   This format contains a list of all the ledger entries per each subaccount not grouped, therefore it is possible to group them as desired.
-    -   It also lists the corresponding accounting dimensions of each ledger entry.
+- Excel format by pressing on the *"Export to Excel"* action button of the Toolbar:
+    - This format contains a list of all the ledger entries per each subaccount not grouped, therefore it is possible to group them as desired.
+    - It also lists the corresponding accounting dimensions of each ledger entry.
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
-    -   This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
+    - This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
-![](https://docs.etendo.software/latest/assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png)
 
 #### General Ledger Report Advanced
 
@@ -18116,29 +18115,50 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+This **General Ledger Advanced** report is an enhanced version of the previous [General Ledger Report](#general-ledger-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](https://docs.etendo.software/latest/assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png)
-
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv.png)
 
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
 
-- User 1
-- User 2
+- 1st Dimension
+- 2nd Dimension
 - Activity
 - Sales Region
 - Sales Campaign
 - Cost Center
 
-Moreover, the “Organization filter” was added, a filter that combines the original Organization field with the “Show related operations” check, to show intercompany transactions.
+Moreover, the Organization filter was added, a filter that combines the original Organization field with the Show Related Operations check, to show intercompany transactions. In each filter, more than one option can be selected.
 
-In each filter, more than one option can be selected.
+The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-![](https://docs.etendo.software/latest/assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv2.png)
 
-Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
+In the Group By menu, the following options are added:
 
-![](https://docs.etendo.software/latest/assets/drive/1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W.png)
+- Activity
+- 1st Dimension
+- 2nd Dimension
+- Sales Region
+- Sales Campaign
+- Cost Center
+
+It is possible to select the desired accounting dimension for the grouping. When generating the report, the selected dimension appears in the header, indicating the grouping criteria used.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv4.png)
+
+##### Buttons
+
+In the toolbar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv3.png)
+
+!!!warning
+    If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
+
+Also, with this functionality you can navigate to the related journal entry directly from the report. This allows easier and more efficient access to information. By clicking on a journal entry, the user can navigate to the Journal Entries Report window, applying all selected filters.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv5.png)
 
 #### Journal Entries Report
 
@@ -18158,33 +18178,33 @@ As shown in the image above, the "Primary Filters" section allows the user to sp
 
 The "Advanced Filters" is now a collapsible section. Under this section, it is possible to specify:
 
--   a **From/To Account** to display journal entries with at least one line using an account defined in the range.
--   a Document Type to narrow down the financial data to be shown in the report to just the one related to that particular document type.
-    -   If the document type selected has a document number associated, for instance an invoice document type, it will be possible to narrow down the data shown to a specific "**Document Number**".
--   the "**Initial Page Number**" *to be shown in the PDF format of the report*
--   the **"Initial Entry Number"** to be shown in the PDF format of the report
--   the **"Entry Description**" to be shown in the PDF format of the report
+- a **From/To Account** to display journal entries with at least one line using an account defined in the range.
+- a Document Type to narrow down the financial data to be shown in the report to just the one related to that particular document type.
+    - If the document type selected has a document number associated, for instance an invoice document type, it will be possible to narrow down the data shown to a specific "**Document Number**".
+- the "**Initial Page Number**" *to be shown in the PDF format of the report*
+- the **"Initial Entry Number"** to be shown in the PDF format of the report
+- the **"Entry Description**" to be shown in the PDF format of the report
 
 The rest of the checkboxes are selected by default in order to show:
 
--   the *"**regular**"* journal entries:
-    -   these entries are the ones generated while posting either any of the Etendo document types or while posting a General Ledger Journal do not flag as "Opening".
--   the *"**opening**"* journal entries:
-    -   these entries are automatically generated by Etendo after the closing of a given fiscal year
-    -   these entries can also be manually generated while posting a General Ledger Journal whenever its journal entries are flagged as "Opening".
--   the "**closing**" journal entries:
-    -   these entries are automatically generated by Etendo after the closing a given fiscal year
--   and finally the *"**P&L closing**"* journal entries:
-    -   these entries are automatically generated by Etendo after the closing of a given fiscal year
+- the *"**regular**"* journal entries:
+    - these entries are the ones generated while posting either any of the Etendo document types or while posting a General Ledger Journal do not flag as "Opening".
+- the *"**opening**"* journal entries:
+    - these entries are automatically generated by Etendo after the closing of a given fiscal year
+    - these entries can also be manually generated while posting a General Ledger Journal whenever its journal entries are flagged as "Opening".
+- the "**closing**" journal entries:
+    - these entries are automatically generated by Etendo after the closing a given fiscal year
+- and finally the *"**P&L closing**"* journal entries:
+    - these entries are automatically generated by Etendo after the closing of a given fiscal year
 
 Finally, and same way as for the rest of financial reports, the Journal Entries Report can be launched in:
 
--   *HTML* format. An example of the HTML output:
+- *HTML* format. An example of the HTML output:
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png)
 
--   *PDF* format by using the "Print Record" action button of the Toolbar
--   or *XML* format by using the "Export to Excel" action button of the Toolbar.
+- *PDF* format by using the "Print Record" action button of the Toolbar
+- or *XML* format by using the "Export to Excel" action button of the Toolbar.
 
 #### Journal Entries Report Advanced
 
@@ -18202,8 +18222,8 @@ In addition to the previous basic filters: Date from, Date to, Organization, Gen
 
 - Business Partner
 - Product
-- User 1
-- User 2
+- 1st Dimension
+- 2nd Dimension
 - Project
 - Activity
 - Sales Region
@@ -18247,14 +18267,14 @@ This window allows the user to create or modify different Tax Report for the dif
 
 The window has some parameters to indicate the Tax Report created:
 
--   **Name:** The name of the Report.
--   **Tax:** The tax that will be shown in the report.
--   **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
--   **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
--   **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
--   **Active:** If it’s an active Tax Report.
+- **Name:** The name of the Report.
+- **Tax:** The tax that will be shown in the report.
+- **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
+- **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
+- **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
+- **Active:** If it’s an active Tax Report.
 
 Once, the Tax Report has been set up, it will appear in the Create Tax Report form:
 
@@ -18264,10 +18284,10 @@ This window allows printing Reports previously defined by the user. In order to 
 
 ![](https://docs.etendo.software/latest/assets/drive/174ocSJCYYPhTy_2AmynTHIQv93BlA4rB.png)
 
--   **From Date:** Starting Date of the Report.
--   **To Date:** Last Date of the Report.
--   **Tax Report:** In this list, all the Tax Reports created will appear to be chosen-
--   **Organization:** Organization for which the Report will be printed.
+- **From Date:** Starting Date of the Report.
+- **To Date:** Last Date of the Report.
+- **Tax Report:** In this list, all the Tax Reports created will appear to be chosen-
+- **Organization:** Organization for which the Report will be printed.
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
@@ -18283,10 +18303,10 @@ Customer statement is a consolidated statement of every transaction of a custome
 
 Transactions aggregated from various sources like:
 
--   **Sales Invoices**
--   **Payment In**
--   **Financial Transactions**
--   **Reconciliations**
+- **Sales Invoices**
+- **Payment In**
+- **Financial Transactions**
+- **Reconciliations**
 
 !!! warning
     Note that *Completed* but not *posted* transactions are not taken into consideration.
@@ -18297,10 +18317,10 @@ The *Multicurrency* parameter of the report, in case of checked, will group reco
 
 The Customer Statement provides the following details:
 
--   The credit/debit information including the document number of the transaction
--   The accounting date
--   The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
--   The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
+- The credit/debit information including the document number of the transaction
+- The accounting date
+- The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
+- The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
     Note that negative amounts are highlighted by using brackets ().
 
 ###### Customer Statement Report
@@ -18311,8 +18331,8 @@ An example of the customer statement filter is shown in the image below:
 
 Note about some filters:
 
--   **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
--   **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
+- **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
+- **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
 
 An example of the Customer Statement output:
 
@@ -18336,14 +18356,14 @@ This window allows the user to create or modify different Tax Reports for the di
 
 The window has some parameters to indicate the Tax Report created:
 
--   **Name:** The name of the Report.
--   **Tax:** The tax that will be shown in the report.
--   **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
--   **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
--   **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
--   **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
--   **Active:** If it is an active Tax Report.
+- **Name:** The name of the Report.
+- **Tax:** The tax that will be shown in the report.
+- **Sales Transaction:** Checked if it’s a Sales Tax Report, unchecked if it’s a Purchase Tax Report.
+- **Report:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Shown:** If checked, it will appear in the Create Tax Report form to be chosen.
+- **Summary Level:** If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any “children,” it should not be checked as summary.
+- **Negative:** If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.
+- **Active:** If it is an active Tax Report.
 
 Once, the Tax Report has been set up, it will appear in the Create Tax Report form:
 
@@ -18353,10 +18373,10 @@ This window allows to print Reports previously defined by the user. In order to 
 
 ![](https://docs.etendo.software/latest/assets/drive/17xPpINQrk2rcbebH6-hCCsIjwDP0X7qH.png)
 
--   **From Date:** Starting Date of the Report
--   **To Date:** Last Date of the Report
--   **Tax Report:** In this list, all the Tax Reports created will appear to be chosen.
--   **Organization:** Organization for which the Report will be printed.
+- **From Date:** Starting Date of the Report
+- **To Date:** Last Date of the Report
+- **Tax Report:** In this list, all the Tax Reports created will appear to be chosen.
+- **Organization:** Organization for which the Report will be printed.
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
@@ -21701,7 +21721,7 @@ For this, go to the [Enterprise Module Management](https://docs.etendo.software/
 This functionality allows the automatic processing of remittances. This functionality is activated by selecting the Process Automated checkbox in the header of the [Remittance](https://docs.etendo.software/latest/basic-features/financial-management/receivables-and-payables/transactions.md#remittance) window.
 
 
-1. Activation: To activate the automated processing, the Process Automated checkbox in the Remittance header is selected by default. This selection is included once the module is installed. If the manual processing is preferred, the user can uncheck this option.
+1. Activation: To activate automated processing, check the Automated Processing checkbox in the Remittance header. If manual processing is preferred, keep this option unchecked.
 
     ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/process-automated-check.png)
 
@@ -21709,7 +21729,7 @@ This functionality allows the automatic processing of remittances. This function
 
 2. Generation of Bank Instructions: The system automatically generates the corresponding Bank Instructions.
 
-3. Date Processing: Remittance lines will be processed with the current date, automating the entire workflow. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
+3. Date Processing: The remittance lines will be processed with the date of the invoices or orders corresponding to them. This lines can be found in the Settled tab. If necessary, this date can be manually modified in the corresponding field from the Settled tab, after remittance processing.
 
     ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/remittance.png)
 
@@ -29938,6 +29958,7 @@ Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, 
 
 At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Assistant* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
+<br clear="all"> 
 
 #### Assistant
 
@@ -29958,7 +29979,6 @@ Each tool represents a dedicated and self-contained project, meticulously design
 
 ####  Key Features
 
-
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
 
 - **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
@@ -29970,56 +29990,67 @@ Each tool represents a dedicated and self-contained project, meticulously design
 - **LangGraph**: In this case, this option works as a manager of other assistants and allows to select team members. 
 
 - **Langchain Agent**: These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management.
-- **Multi-Model Assistant** This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
-- **Attach Files** Etendo Copilot allows users to attach one or multiple files for assistants.
+- **Multi-Model Assistant**: This type of assistant can be used with multi-vendor models such as *Anthropic* and *Gemini*, in addition to existing *OpenAI* models.
+- **Attach Files**: Etendo Copilot allows users to attach one or multiple files for assistants.
+- **Context Sharing**: Etendo Copilot can automatically capture and share the context of your current Etendo Classic session, such as selected records or active windows. This eliminates the need to manually input information, streamlining workflows and improving efficiency.
 
 #### Copilot Interface
----
 
-![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+##### Navegation Bar
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 Here, you can select an Assistant and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`, `Multi-Model Assistant`, `LangGraph` and `Open AI Assistant` types, for more information visit [Assistant Windows](https://docs.etendo.software/latest/etendo-copilot/setup-and-usage.md#assistant-window) documentation.
 
+!!!note
+    By default, Copilot will open the last assistant previously used.
+
+![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+
+##### Tool Bar
+
+In any standard Etendo Classic window, you will see in the **toolbar a button** with the Copilot icon. Clicking this button opens the Copilot chat, automatically passing the context of the current tab or selected records. This feature ensures that Copilot has all the relevant information about your current session, eliminating the need to manually input details and streamlining your workflow.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/toolbar.png)
+
+**Context awareness**
+
+Etendo Copilot can take advantage of the context of the currently active window or record in Etendo Classic. Clicking the toolbar button updates the current context automatically.
+
+- **Form Context**: If you have a form open (for example, a sales order or a customer record), Copilot retrieves the key fields and any unsaved edits, offering you real-time suggestions or validations.
+- **Grid context**: When a row is selected in a grid, Copilot captures the details of those specific records, sending Copilot all relevant information so you can receive relevant AI-based recommendations.
+- **Tab and window context**: In multi-tabbed environments, context must be sent to Copilot each time you switch from one view to another (e.g., from Orders to Products).
+
+![Attach-Files](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/attach-files.png){align=left  width="300"}
+
 ##### Attach Files
----
 
-![Attach-Files](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/attach-files.png){align=right  width="300"}
-
-Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports any file format, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.
+Etendo Copilot allows users to attach one or multiple files for assistants to process. This feature supports various file formats, such as `.pdf`, `.csv`, `.jpg`, and more, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific assistant configuration, the defined tools, and the underlying model used.
 
 This functionality ensures that users can seamlessly incorporate external data into their workflows, whether it involves parsing documents, analyzing spreadsheets, or processing images. Assistants and tools can be tailored to address specific requirements based on the type of attached files, providing contextualized and intelligent responses.
-
-<br>
-<br>
+<br clear="all">
 
 ##### Visualization Mode
----
+
+
 <figure markdown>
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=300}
 <br><br>
-Copilot, by default, can be used as a pop-up window. This is comfortable to use as an integrated assistant available in any window you are using.
+**Pop-up** <br>
+By default, Copilot operates as a pop-up window, providing convenient access as an integrated assistant in any active window.
 </figure>
----
 
 <figure markdown>
+**Full Screen** <br>
+Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
-<br><br>
-Select the fullscreen mode for a more comfortable use when having long conversations.
 </figure>
 
----
 <figure markdown>
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200}
-<br><br>
-It can also be minimized. In this case, the logo will be shown in the lower-right section of the screen.
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/minimized-copilot.png){align=right width=200} <br>
+**Minimized** <br>
+Copilot's interface can also be minimized. In this case, a Copilot bubble will be active at the bottom right of the screen.
 </figure>
----
-When asked something, Copilot informs the user about the assistants and tools used when processing each message.
-
-!!!note
-    When closed and opened again, by default, Copilot will select the last assistant previously used.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup and Usage
@@ -32018,11 +32049,11 @@ To work with the plugin you need to specify in the root project from where the p
     rootProject.name = "etendo"
     ```
 
-2. Add in the `build.gradle` file the Etendo Gradle Plugin
+2. Add in the `build.gradle` file the Etendo Gradle Plugin Version compatible with your core version. For example, for version 1.5.0:
 
     ```groovy title="build.gradle"
     plugins {
-        id 'com.etendoerp.gradleplugin' version 'latest.release'
+        id 'com.etendoerp.gradleplugin' version '1.5.0'
     }
     ```
 
@@ -32060,14 +32091,14 @@ To work with the plugin you need to specify in the root project from where the p
 
 === "Source Core"
 
-    1.  Verify the target version inside `build.gradle`
+    1.  Verify the target version inside `build.gradle`. For example, for versions 23.1.x;
 
         ```groovy title="build.gradle"
 
-        // latest.release will download the most recent stable version
+        // latest.release will download the most recent stable version (Not recommended)
         // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
         etendo {
-            coreVersion = "latest.release"
+            coreVersion = "[22.1.0,23.2.0)"
         }
         ```
 
@@ -32247,7 +32278,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
     rootProject.name = "etendo"
     ```
 
-2. **Update Etendo Gradle Plugin**: You need to update `com.etendoerp.gradleplugin` to version 1.1.0 or later. Alternatively, you can use `latest.release` to always get the latest version, in this case the gradle version should be 7.3.2, to check the gradle version execute './gradlew --version' and to upgrade execute ./gradlew wrapper --gradle-version 7.3.2 
+2. **Update Etendo Gradle Plugin**: You need to update `com.etendoerp.gradleplugin` to version 1.1.0 or later.
 
     ```groovy title="build.gradle"
     plugins {
@@ -32255,7 +32286,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
         id 'war'
         id 'groovy'
         id 'maven-publish'
-        id 'com.etendoerp.gradleplugin' version 'latest.release' 
+        id 'com.etendoerp.gradleplugin' version '<version>' 
     }
     ```
 
@@ -32454,9 +32485,9 @@ This affects the current environments, to fix this we have to:
 
     2. Modify the build.gradle of our project and change the dependencies to lowercase. For example:
         ```groovy title="build.gradle"
-        moduleDeps('com.etendoerp:financial.extensions.es_ES:latest.release@zip') {transitive = true}
+        moduleDeps('com.etendoerp:financial.extensions.es_ES:<version>@zip') {transitive = true}
         // Replace by
-        moduleDeps('com.etendoerp:financial.extensions.es_es:latest.release@zip') {transitive = true}
+        moduleDeps('com.etendoerp:financial.extensions.es_es:<version>@zip') {transitive = true}
 
         ```
     3. Execute `./gradlew expandModules` task to download the new dependencies. 
@@ -32468,9 +32499,9 @@ This affects the current environments, to fix this we have to:
     For example:
 
     ``` groovy
-    implementation('com.etendoerp:financial.extensions.es_ES:latest.release')
+    implementation('com.etendoerp:financial.extensions.es_ES:<version>')
     // Replace by
-    implementation('com.etendoerp:financial.extensions.es_es:latest.release')
+    implementation('com.etendoerp:financial.extensions.es_es:<version>')
 
     ```
 
@@ -38217,6 +38248,11 @@ To create a Clone Hook, you only have to follow a few steps:
 
     Override this method when there is an existing hook for your selected Entity (for example, there is a cloning process already implemented for Invoices and Orders), and you want your own hook to be used instead.
     The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.
+
+#### How to extend an already existing Clone Hook?
+The Clonning action its a particular action that can be extended by creating a new Hook, for implementing a custom logic for a specific entity. This has the disadvantage that only one Hook per entity can be used, but there are mechanisms to extend this functionality. These are the preActionHooks and postActionHooks. More information can be found in the following page: [How to Create Jobs and Actions](./how-to-create-jobs-and-actions.md#how-to-extend-an-action-using-preaction-and-postaction-hooks)
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Computed Column
@@ -40624,6 +40660,274 @@ In Platform Features module, there is an example of a report making use of diffe
 ---
 
 This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Report using Process Definition
+## Article Path: /Developer Guide/Etendo Classic/How to Guides/How to Create a Report using Process Definition
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition
+## Article Content: 
+### How to Create a Report using Process Definition
+
+#### Overview
+
+This section explains how to add a new Report using a Process Definition and create a menu entry to invoke it.
+
+!!!info
+     For background information, visit [How to Create a Standard Process Definition](https://docs.etendo.software/latest/how-to-guides/how-to-create-a-standard-process-definition.md) and [How to Create a Report](https://docs.etendo.software/latest/how-to-guides/how-to-create-a-report.md).
+
+#### Example Module
+
+This section is supported by an example module which includes the simple report described in the examples of this document. The report is named **Product Simple Report** and prints in `PDF` a list of Products that can be filtered by Product Category.
+
+The code of the example module can be downloaded from this mercurial repository:
+https://code.openbravo.com/erp/mods/org.openbravo.platform.features
+
+#### Report Definition in Application Dictionary
+
+##### Process Definition
+
+Create a new record in **Process Definition** window. Fields to consider:
+
+- **UI Pattern**: Set `Report (Using JR Templates)` . This value will display the Report Definition tab.
+
+- **Action Handler**: If none is set when the UI Pattern is selected, the `org.openbravo.client.application.report.BaseReportActionHandler` is set.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-1.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-2.png)
+
+The `BaseReportActionHandler` is the default action handler to use in reports. In case you desire to make some Java validations or include some extra parameters that are not defined in the Process Definition parameters tab it is possible to use a custom Action Handler that extends the `BaseReportActionHandler`.
+
+##### Parameter Definition
+
+In the **Parameter** tab are added all the parameters that are needed to filter the results of the report. Their values are handled by the `BaseReportActionHandler` and sent to Jasper Reports as parameters. These parameters need to be defined in the JR template with the same name as the column name.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-3.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-4.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-5.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-6.png)
+
+When the filter parameter is a Selector reference the value is sent as a **JSONOBject** that includes 2 keys:
+
+- **value** with the id of the selected BaseOBObject to be used in the SQL query
+- **identifier** with the readable identifier that can be used to print in the report the filter values.
+
+In case of Multiple Selectors the **JSONObject** includes 4 keys:
+
+- **values** with a JSONArray including all the selected ids.
+- **identifiers** with a JSONArray including all the identifiers.
+- **strValues** with a comma separated String with all the selected ids that can be used in a SQL _IN_ clause.
+- **strIdentifiers** with a comma separated String with all the selected identifiers.
+
+In the Jasper Template, the parameter has to be defined using the class _org.codehaus.jettison.json.JSONObject_ . In the example, it is set a _Product Category_ multiple selector. As this parameter is optional, the filter is included in the query using an auxiliary parameter ( _AUX_Product_category_ ).
+The auxiliary parameter has a default expression that returns **" 1 = 1 "** when there is no category selected and the corresponding where clause when some categories are selected:
+
+    ("".equals($P{M_Product_Category_ID}.getString("strValues"))) ? " 1 = 1 " : " pc.m_product_category_id IN ("+$P{M_Product_Category_ID}.getString("strValues")+")"
+
+This parameter is then included in the query using the "$P!{}" notation to replace it with the parameter value instead of using SQL Parameters.
+
+    FROM m_product p
+      JOIN m_product_category pc ON p.m_product_category_id = pc.m_product_category_id
+    WHERE $P!{AUX_Product_category}
+      AND p.ad_client_id = $P{Current_Client_ID}
+
+The identifiers can be shown in a Text field with the following Expression:
+
+    $P{M_Product_Category_ID}.getString("strIdentifiers")
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-7.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-8.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-9.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-10.png)
+
+The `BaseReportActionHandler` and the `ReportingUtils` class used to generate the report includes some additional parameters that can be used in the template:
+
+**SUBREPORT_DIR**
+
+    The path where the main template is located. Useful to set the paths of the subreports.
+
+**jasper_process**
+
+    A _org.openbravo.client.application.Process_ object with the Process Definition of the report.
+
+**jasper_hbSession**
+
+    A _org.hibernate.Session_ object with the current hibernate session.
+
+**jasper_obContext**
+
+    A _org.openbravo.dal.core.OBContext_ with the OBContext that has launched the report.
+
+**AMOUNTFORMAT**
+
+    A _java.text.DecimalFormat_ object with the format to be used on Amounts.
+
+**QUANTITYFORMAT**
+
+    A _java.text.DecimalFormat_ object with the format to be used on Quantities.
+
+**REPORT_FORMAT_FACTORY**
+
+    JR Base parameter with the date format.
+
+**Current_Client_ID**
+
+    String with the current _AD_Client_ID_. Useful to filter the SQL of the report.
+
+**Readable_Organizations**
+
+    Comma separated String with the readable organizations of the User/Role executing the report. Useful to filter the `SQL` of the report.
+
+Depending on the report output some additional parameters are set:
+
+**PDF** output:
+
+**IS_IGNORE_PAGINATION**
+
+    with **false** value to ensure that the report breaks in different pages.
+
+**XLS** output:
+
+**IS_IGNORE_PAGINATION**
+
+    with **true** value to ensure that the report does not break in different pages and all the results are shown in the same sheet.
+
+In case it is desired to add more parameters that cannot be defined as **Parameters** of the **Process Definition**, it is possible to use a custom **Handler** that extends the `BaseReportActionHandler` and overwrites the `addAdditionalParameters` method.
+
+It is possible to check all the parameters and values sent to the Jasper Report engine by enabling the **DEBUG log level** on the `org.openbravo.client.application.report.ReportingUtils` class by modifying
+the `log4j2-web.xml` and for older versions, `log4j.lcf` file:
+
+    DEBUG org.openbravo.client.application.report.ReportingUtils - list of parameters available in the jasper report
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: SUBREPORT_DIR value: /home/gorkaion/src/openbravo/pi-reporting-merge/WebContent/web/org.openbravo.platform.features/jasper/
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: Current_Client_ID value: 23C59575B9CF467C9620760EB255B389
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: REPORT_FORMAT_FACTORY value: org.openbravo.erpCommon.utility.JRFormatFactory@14ffa3fc
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: REPORT_VIRTUALIZER value: net.sf.jasperreports.engine.fill.JRSwapFileVirtualizer@1b670029
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_process value: OBUIAPP_Process(70889433974B409BAC4F9D7BFB211248) (name: Product Simple Report)
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: M_Product_Category_ID value: {"values":["291B401A38354A2C8247DFF0DFBDF4AE","5525FCABFE9545018EE221E8802AA283"],"identifiers":["Bio","Fruit juice"],"strValues":"'291B401A38354A2C8247DFF0DFBDF4AE', '5525FCABFE9545018EE221E8802AA283'","strIdentifiers":"Bio, Fruit juice"}
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: AMOUNTFORMAT value: java.text.DecimalFormat@674dc
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: QUANTITYFORMAT value: java.text.DecimalFormat@674dc
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: Readable_Organizations value: 'E443A31992CB4635AFCAEABE7183CE85','0','DC206C91AA6A4897B44DA897936E0EC3','7BABA5FF80494CAFA54DEBD22EC46F01','BAE22373FEBE4CCCA24517E23F0C8A48','19404EAD144C49A0AF37D54377CF452D','B843C30461EA4501935CB1D125C9C25A','2E60544D37534C0B89E765FE29BC0B43'
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_obContext value: org.openbravo.dal.core.OBContext@73b91cd
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_hbSession value: SessionImpl(PersistenceContext[entityKeys=...
+    DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: IS_IGNORE_PAGINATION value: false
+
+##### Button List Parameters
+
+When a button list parameter is added, the buttons are added together with the predefined buttons of this type of process (**View**, **Export To PDF**, **Export To Excel**). This behavior allows adding additional logic to the standard behavior of these processes, since it is possible to extend the base behavior from the java implementation of the process.
+
+Below is an example of a button list that adds two buttons (Button 1, Button 2) to this type of process:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-18.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-19.png)
+
+In order to add execution logic to these buttons, the `handleCustomAction` method must be redefined within the java class of the process:
+
+```java
+  @Override
+  protected void handleCustomAction(JSONObject result, Map<String, Object> parameters,
+      JSONObject jsonContent, String action) throws JSONException {
+    switch (action) {
+      case "B1":
+        result.put("message", new JSONObject()
+            .put("severity", "success")
+            .put("text", "Button B1 has been pressed."));
+        break;
+      case "B2":
+        result.put("message", new JSONObject()
+            .put("severity", "success")
+            .put("text", "Button B2 has been pressed."));
+        break;
+      default:
+        super.handleCustomAction(result, parameters, jsonContent, action);
+    }
+  }
+```
+
+!!! note
+    The action parameter will have the information corresponding to the search key of the button pressed, the identifiers are mandatory and are defined together with the button in the reference tab of the list within the reference.
+
+Once the configuration is done, it is necessary to compile.
+
+```bash title="Terminal"
+./gradlew smartbuild
+```
+
+Then, when you enter the process, you will see your custom buttons next to the predefined report buttons.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-20.png)
+
+Then, when you press the buttons, your custom logic is executed.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-21.png)
+
+##### Report Datasource Definition
+
+There are two ways of defining the data to be displayed by the report:
+
+1. Defining a **query** in the `jrxml` template.
+2. Providing a **datasource** to the `jrxml` template.
+
+In case of the second approach, we need to use a custom **Handler** that extends the `BaseReportActionHandler` and overwrites the `getReportData` method. This method receives a parameter map as an argument that contains:
+
+- The parameters of the HTTP request.
+- The parameters available inside the Jasper Report. They are available through another map that can be accessed by using the _JASPER_REPORT_PARAMETERS_ key.
+
+```
+protected JRDataSource getReportData(Map<String, Object> parameters) {
+// Retrieve the report id (HTTP request parameter)
+String reportId = (String) parameters.get("reportId");
+// retrieve the map of JR Parameters
+Map<String, Object> jrParameters = (Map<String, Object>) parameters
+.get(JASPER_REPORT_PARAMETERS);
+// Here goes the logic to generate the JRDataSource
+...
+}
+```
+
+This allows generating the report data dynamically, i.e, based on some kind of logic built with the value of any of these parameters.
+
+##### Sub-Report Runtime Compilation
+
+In case our process definition report contains sub-reports, the infrastructure supports compiling the sub-reports at runtime. To do that the following conditions should be met:
+
+1. The parameter name for the sub-report in the main report follows this pattern: `SUBREP_name_of_the_sub_report_file` .
+2. The sub-reports (jrxml files) are placed in the same folder as the main report.
+
+##### Report Definition
+
+In the **Report Definition** tab the JR Templates of the report are defined. Each Process Definition can only have a Report definition. It is also needed to define at least one template: `HTML`, `PDF` or `Excel`.
+
+- If `PDF` and `Excel` outputs share the same template, it is possible to set the `PDF` template and check the **Use PDF as Excel Template** flag.
+- If `PDF` and `HTML` outputs share the same template, it is possible to set the `PDF` template and check the **Use PDF as HTML Template** flag.
+- If `HTML`, `PDF` and `Excel` outputs share the same template, then the `PDF` template must be set and both flags must be checked.
+
+The templates need to be stored in the **web** folder.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-14.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-15.png)
+
+#### Result
+
+The result is shown in a new form with all the parameters and the corresponding Export button(s).
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-16.png)
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-17.png)
+
+Once the report is generated, a file download is requested in the browser. The form is kept enabled so it is possible to rerun the report with different parameters.
+
+---
+
+This work is a derivative of [How to create a Report using Process Definition](http://wiki.openbravo.com/wiki/How_to_create_a_Report_using_Process_Definition){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Standard Process Definition
@@ -43319,6 +43623,172 @@ public static void executeProcessOrderAction(Order order) {
 It is necessary to implement a method that gets and executes the current action, in our example we implement `executeProcessOrderAction(Order order)` which dynamically gets an instance of the `ExtendProcessOrder` class and executes it.
 It is also possible to add validations and override the original methods.
 
+#### How to extend an Action using preAction and postAction hooks
+There is a way to extend an Action without modifying it. This is done by implementing the pre and post hooks that are available in the `com.smf.jobs.Action` class.
+
+When an Action is executed, all the implementation of the PreActionHook are executed before the run method of the Action, and all the implementation of the PostActionHook, are executed. This allows for the extension of the Action without modifying the original code, to add validations, or to execute additional logic.
+
+##### Example of an Action 
+The following is an example of an Action that puts information in a Singleton class.
+
+```Java
+package com.smf.jobs;
+
+import java.util.HashMap;
+
+import org.apache.commons.lang.mutable.MutableBoolean;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.base.structure.BaseOBObject;
+
+public class TestAction extends Action {
+  private HashMap<String, Boolean> metadata = new HashMap<>();
+
+  @Override
+  protected ActionResult action(JSONObject parameters, MutableBoolean isStopped) {
+    SingletonToTestHooks.getInstance().setMetadata("actionExecuted", true);
+    var res = new ActionResult();
+    res.setType(Result.Type.SUCCESS);
+    res.setMessage("Test action executed");
+
+    return res;
+  }
+
+
+  @Override
+  protected Class<?> getInputClass() {
+    return BaseOBObject.class;
+  }
+}
+```
+
+##### Implementing the PreActionHook
+The following is an example of a PreActionHook that introduce a logic before the Action is executed.
+
+```Java
+package com.smf.jobs;
+
+import javax.enterprise.context.ApplicationScoped;
+
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.kernel.ComponentProvider;
+
+import com.smf.jobs.interfaces.PreActionHook;
+
+/**
+ * PreActionHook that sets a property in a singleton instance, before the action: TestAction is
+ * executed.
+ */
+@ApplicationScoped
+@ComponentProvider.Qualifier("com.smf.jobs.TestAction")
+public class TestActionPreHook implements PreActionHook {
+
+  /**
+   * Returns the priority of this pre-action hook.
+   * <p>
+   * This method returns the priority value which determines the order in which the hook is executed.
+   *
+   * @return The priority value of this pre-action hook.
+   */
+  @Override
+  public int getPriority() {
+    return 121;
+  }
+
+  /**
+   * Checks if this pre-action hook applies to the given parameters.
+   * <p>
+   * This method determines if the pre-action hook should be applied based on the provided parameters.
+   *
+   * @param parameters
+   *     The JSON object containing the parameters.
+   * @return true if the pre-action hook applies, false otherwise.
+   */
+  @Override
+  public boolean applies(JSONObject parameters) {
+    return true;
+  }
+
+  /**
+   * Executes the pre-action hook with the given action.
+   * <p>
+   * This method runs the pre-action hook logic using the provided action JSON object.
+   *
+   * @param action
+   *     The JSON object containing the action data.
+   */
+  @Override
+  public void run(JSONObject action) {
+    SingletonToTestHooks.getInstance().setMetadata("propAddedByPreHook", true);
+  }
+}
+```
+
+##### Implementing the PostActionHook
+The following is an example of a PostActionHook that introduce a logic after the Action is executed. Its pretty similar to the PreActionHook.
+
+```Java
+package com.smf.jobs;
+
+import javax.enterprise.context.ApplicationScoped;
+
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.kernel.ComponentProvider;
+
+import com.smf.jobs.interfaces.PostActionHook;
+
+/*
+ * PostActionHook that sets a property in a singleton instance, after the action: TestAction is
+ * executed.
+ */
+@ApplicationScoped
+@ComponentProvider.Qualifier("com.smf.jobs.TestAction")
+public class TestActionPostHook implements PostActionHook {
+
+  /**
+   * Returns the priority of this post-action hook.
+   * <p>
+   * This method returns the priority value which determines the order in which the hook is executed.
+   *
+   * @return The priority value of this post-action hook.
+   */
+  @Override
+  public int getPriority() {
+    return 10;
+  }
+
+  /**
+   * Checks if this post-action hook applies to the given parameters.
+   * <p>
+   * This method determines if the post-action hook should be applied based on the provided action and result.
+   *
+   * @param action
+   *     The JSON object containing the action data.
+   * @param result
+   *     The ActionResult object containing the result data.
+   * @return true if the post-action hook applies, false otherwise.
+   */
+  @Override
+  public boolean applies(JSONObject action, ActionResult result) {
+    return true;
+  }
+
+  /**
+   * Executes the post-action hook with the given action and result.
+   * <p>
+   * This method runs the post-action hook logic using the provided action and result JSON objects.
+   *
+   * @param actionParam
+   *     The JSON object containing the action data.
+   * @param result
+   *     The ActionResult object containing the result data.
+   */
+  @Override
+  public void run(JSONObject actionParam, ActionResult result) {
+    SingletonToTestHooks.getInstance().setMetadata("propAddedByPostHook", true);
+  }
+}
+```
+After the Action is executed, the SingletonToTestHooks instance will have the properties `propAddedByPreHook`, `propAddedByPostHook` and `actionExecuted` set to `true`.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Scan Process
@@ -45881,6 +46351,15 @@ etendo {
 
 #### Common Gradle tasks
 
+!!!danger
+    Since Etendo Classic 25Q1 all Gradle tasks with Java versions below 17 are not allowed. To add support for previous versions, the new flag `java.version` has been added.
+
+    ``` bash title="Terminal"
+    ./gradlew <task> -Pjava.version=11
+    ```
+
+    This new flag forces the use of Java 11.
+
 - Creates the properties and configuration files.
   
     ``` bash title="Terminal"
@@ -45888,7 +46367,7 @@ etendo {
     
     ```
   
-    | Command line parameters                  | Description                                               |                       
+    | Command line parameters    | Description                                               |                       
     |  -------------------       | ------------------------------------                      |
     | `-PforceDefaultProps=true` | Recreates the default properties file from the template.  |
     | `-PforceBackupProps=true`  | Recreates the backup.properties file from the template.   |
@@ -45973,9 +46452,14 @@ etendo {
     ``` 
 
 
-    | Command line parameter    | Description                                                        |  
+    | Command line parameter     | Description                                                                                                                           |  
     |  -------------------       | ------------------------------------                                                                                                  |
     | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
+
+- Task to delete directories created by the expandCore task.
+    ``` bash title="Terminal"
+    ./gradlew cleanExpandCore
+    ```
 
 #### Submodules
 
@@ -45985,7 +46469,7 @@ etendo {
                       
     ```  
 
-    | Command line parameters                  | Description                                               |                       
+    | Command line parameters    | Description                                               |                       
     |  -------------------       | ------------------------------------                      |
     | `-Ppkg=<package name>`     | The name of the module.                                   |
     | `-Prepo=<repository name>` | The name of the repository.                               |
@@ -46014,7 +46498,7 @@ etendo {
                               
     ``` 
     
-    | Command line parameter                  | Description                                                                         |                       
+    | Command line parameter     | Description                                                                         |                       
     |  -------------------       | ------------------------------------                                                |
     | `-Ppkg=<modulename>`       | The javapackage of the source module to uninstall.                                  |
 
@@ -46039,7 +46523,7 @@ etendo {
 
 
 
-      | Command line parameter                  | Description                                                  |                       
+      | Command line parameter                 | Description                                                  |                       
       |  -------------------                   | ------------------------------------                         |
       | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
 
@@ -46051,7 +46535,7 @@ etendo {
                                           
     ```
 
-    | Command line parameter                  | Description                                                  |                       
+    | Command line parameter                 | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
     | `-Prepo=<repository name>`             | **Required** The name of the repository                      |
@@ -46062,7 +46546,7 @@ etendo {
 
 - Parameters to override the default core group, name and version.
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-PcoreGroup=<core group>`             | The core group name                                          |
     | `-PcoreName=<core name>`               | The core name                                                |
@@ -46076,7 +46560,7 @@ etendo {
                                               
     ```
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PupdateLeaf=true`                     | This updates automatically the version of all the project beign published. By defaul false.|
     | `-Pupdate=<mayor, minor, patch>`        | Used to specify which part of the version will be updated. By default patch.               |
@@ -46090,7 +46574,7 @@ etendo {
                                                           
     ```
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By defaul false.|
         
@@ -46106,14 +46590,14 @@ etendo {
         If you put a wrong version, you have to revert the changes manually.
 
 
-    | Command line parameters                  | Description                                                  |                       
+    | Command line parameters                 | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
     | `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
     | `-PlowerBoundInclusive=<true or false>` | (Default false)|
     | `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`|
-    | `-PupperBoundInclusive=<true or false>` |(Default false)|
-    | `-PexactVersion=<version>`             |Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
+    | `-PupperBoundInclusive=<true or false>` | (Default false)|
+    | `-PexactVersion=<version>`              | Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
 
 
 
@@ -48585,6 +49069,313 @@ On the other hand, this is the content of `FULL_Example.csv`:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: API Changes
+## Article Path: /Developer Guide/Etendo Classic/Developer Changelog/API Changes
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/developer-changelog/apichanges
+## Article Content: 
+### API Change Documentation  
+
+#### March 2025
+
+[Release 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
+
+##### Overview
+Provide a brief overview of the purpose of this release, including high-level objectives, key improvements, and the rationale behind major changes.
+
+##### API Changes
+
+###### Etendo Software Stack
+
+####### Ubuntu Live Server amd64
+- **New Version Supported**: `22.04.5`
+
+####### Java SE
+- **New Version Supported**: `17.0.14`
+- Notable Changes:
+    - **Java SE 12.x**
+        - [Java SE 12 Release Notes](https://www.oracle.com/java/technologies/javase/12-relnote.html)
+        - [Java SE 12.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html)
+        - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html)
+
+    - **Java SE 13.x**
+        - [Java SE 13 Release Notes](https://www.oracle.com/java/technologies/javase/13-relnote.html)
+        - [Java SE 13.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html)
+        - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html)
+
+    - **Java SE 14.x**
+        - [Java SE 14 Release Notes](https://www.oracle.com/java/technologies/javase/14-relnote.html)
+        - [Java SE 14.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html)
+        - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html)
+
+    - **Java SE 15.x**
+        - [Java SE 15 Release Notes](https://www.oracle.com/java/technologies/javase/15-relnote.html)
+        - [Java SE 15.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html)
+        - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html)
+
+    - **Java SE 16.x**
+        - [Java SE 16 Release Notes](https://www.oracle.com/java/technologies/javase/16-relnote.html)
+        - [Java SE 16.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)
+        - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
+
+    - **Java SE 17 (LTS)**
+        - [Java SE 17.0.14 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html)
+        - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)
+
+####### PostgreSQL
+- **New Version Supported**: `16.8.1`
+- Notable Changes:
+    - **PostgreSQL 16.x**
+        - [PostgreSQL 16.8 Release Notes](https://www.postgresql.org/docs/release/16.8/)
+        - [PostgreSQL 16.7 Release Notes](https://www.postgresql.org/docs/release/16.7/)
+        - [PostgreSQL 16.6 Release Notes](https://www.postgresql.org/docs/release/16.6/)
+        - [PostgreSQL 16.5 Release Notes](https://www.postgresql.org/docs/release/16.5/)
+        - [PostgreSQL 16.4 Release Notes](https://www.postgresql.org/docs/release/16.4/)
+        - [PostgreSQL 16.3 Release Notes](https://www.postgresql.org/docs/release/16.3/)
+        - [PostgreSQL 16.2 Release Notes](https://www.postgresql.org/docs/release/16.2/)
+        - [PostgreSQL 16.1 Release Notes](https://www.postgresql.org/docs/release/16.1/)
+        - [PostgreSQL 16.0 Release Notes](https://www.postgresql.org/docs/release/16.0/)
+
+    - **PostgreSQL 15.x**
+        - [PostgreSQL 15.10 Release Notes](https://www.postgresql.org/docs/release/15.10/)
+        - [PostgreSQL 15.9 Release Notes](https://www.postgresql.org/docs/release/15.9/)
+        - [PostgreSQL 15.8 Release Notes](https://www.postgresql.org/docs/release/15.8/)
+        - [PostgreSQL 15.7 Release Notes](https://www.postgresql.org/docs/release/15.7/)
+        - [PostgreSQL 15.6 Release Notes](https://www.postgresql.org/docs/release/15.6/)
+        - [PostgreSQL 15.5 Release Notes](https://www.postgresql.org/docs/release/15.5/)
+        - [PostgreSQL 15.4 Release Notes](https://www.postgresql.org/docs/release/15.4/)
+        - [PostgreSQL 15.3 Release Notes](https://www.postgresql.org/docs/release/15.3/)
+        - [PostgreSQL 15.2 Release Notes](https://www.postgresql.org/docs/release/15.2/)
+        - [PostgreSQL 15.1 Release Notes](https://www.postgresql.org/docs/release/15.1/)
+        - [PostgreSQL 15.0 Release Notes](https://www.postgresql.org/docs/release/15.0/)
+
+####### Apache Tomcat
+- **New Version Supported**: `9.0.98`
+- Notable Changes:
+    - **Apache Tomcat 9.x**
+        - [Apache Tomcat 9 Release Notes](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html)
+
+
+####### Gradle
+- **New Version Supported**: `8.12.1`
+- Notable Changes:
+    - **Gradle 8.x**
+        - [Gradle 8.12.1 Release Notes](https://docs.gradle.org/8.12.1/release-notes.html)
+        - [Gradle 8.12 Release Notes](https://docs.gradle.org/8.12/release-notes.html)
+        - [Gradle 8.11 Release Notes](https://docs.gradle.org/8.11/release-notes.html)
+        - [Gradle 8.10 Release Notes](https://docs.gradle.org/8.10/release-notes.html)
+        - [Gradle 8.9 Release Notes](https://docs.gradle.org/8.9/release-notes.html)
+        - [Gradle 8.8 Release Notes](https://docs.gradle.org/8.8/release-notes.html)
+        - [Gradle 8.7 Release Notes](https://docs.gradle.org/8.7/release-notes.html)
+        - [Gradle 8.6 Release Notes](https://docs.gradle.org/8.6/release-notes.html)
+        - [Gradle 8.5 Release Notes](https://docs.gradle.org/8.5/release-notes.html)
+        - [Gradle 8.4 Release Notes](https://docs.gradle.org/8.4/release-notes.html)
+        - [Gradle 8.3 Release Notes](https://docs.gradle.org/8.3/release-notes.html)
+        - [Gradle 8.2 Release Notes](https://docs.gradle.org/8.2/release-notes.html)
+        - [Gradle 8.1 Release Notes](https://docs.gradle.org/8.1/release-notes.html)
+        - [Gradle 8.0 Release Notes](https://docs.gradle.org/8.0/release-notes.html)
+
+    - **Gradle 7.x**
+        - [Gradle 7.6 Release Notes](https://docs.gradle.org/7.6/release-notes.html)
+        - [Gradle 7.5.1 Release Notes](https://docs.gradle.org/7.5.1/release-notes.html)
+        - [Gradle 7.5 Release Notes](https://docs.gradle.org/7.5/release-notes.html)
+        - [Gradle 7.4.2 Release Notes](https://docs.gradle.org/7.4.2/release-notes.html)
+        - [Gradle 7.4.1 Release Notes](https://docs.gradle.org/7.4.1/release-notes.html)
+        - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
+        - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
+
+!!! warning
+    To update the Gradle wrapper, you must run `./gradlew wrapper --gradle-version 8.12.1`. For more detailed migration guidelines, refer to the [Upgrading the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
+
+####### Etendo Gradle Plugin
+- **New Version Supported**: `2.0.0`
+- Notable Changes:
+
+    - **New Gradle Plugin Task**
+        ``` bash title="Terminal"
+        ./gradlew cleanExpandCore
+        ```
+
+        This new task deletes directories created by the `expandCore` task.
+
+    - **Compatibility Flag**
+
+        ``` bash title="Terminal"
+        -Pjava.version=11
+        ```
+
+        This new flag forces the use of Java 11 with version 25Q1.
+
+###### Third-Party Library Updates
+  List and describe the key external libraries that have been upgraded in this release, along with the versions and any relevant breaking changes in those libraries.
+
+- `[dbsourcemanager] 1.0.3 -> 1.0.4`
+    - **Notable Changes**:
+        - Renamed jar file to dbsourcemanager-1.0.4.jar.
+        - Changes to use new version of Apache Commons Lang 3 library.
+        - Changes to use new version of Apache Commons Collections 4 library.
+        - Changes in deprecated or removed features used in Java 17.
+        - Added support for PostgreSQL 16.
+
+- `[commons-beanutils] 1.8.3 -> 1.9.4`
+
+- `[commons-codec] 1.11 -> 1.17.1`
+
+- `[commons-collections] 3.2.2 -> 4.4` 
+    - **Notable Changes**:
+        - [Commons Collections 4.0 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_0.html)
+        - [Commons Collections 4.1 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_1.html)
+        - [Commons Collections 4.2 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_2.html)
+        - [Commons Collections 4.3 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_3.html)
+        - [Commons Collections 4.4 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_4.html)
+
+    - **API Changes - Migration from Apache Commons Collections 3.2.2 to 4.4**
+
+        Starting with version **25Q1** of Etendo, Apache Commons Collections has been upgraded from version **3.2.2** to **4.4**. This upgrade includes a change in the package structure: all references previously pointing to `org.apache.commons.collections` must now be updated to `org.apache.commons.collections4`.
+
+    - **Migration Instructions**
+
+        Developers should update all import statements and internal references to reflect the new package structure. The previous package `org.apache.commons.collections` has been replaced by `org.apache.commons.collections4` in the new version. Please verify that the updated classes and methods are compatible with your existing code, as some methods may have been deprecated, renamed, or modified in behavior.
+
+        ```java
+        // Before (Apache Commons Collections 3.2.2)
+        import org.apache.commons.collections.CollectionUtils;
+
+        // After (Apache Commons Collections 4.4)
+        import org.apache.commons.collections4.CollectionUtils;
+        ```
+
+        For more detailed migration guidelines, please refer to the [Apache Commons Collections 4.4 documentation](https://commons.apache.org/proper/commons-collections/).
+
+- `[commons-digester] 1.8.1 -> 2.1`
+
+- `[commons-fileupload] 1.4 -> 1.5`
+
+- `[commons-io] 2.4 -> 2.16.1`
+
+- `[commons-lang] 2.6 -> 3.17.0`
+    - **Notable Changes**:
+        - [Commons Lang 3.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.0)
+        - [Commons Lang 3.1 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.1)
+        - [Commons Lang 3.2 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.2)
+        - [Commons Lang 3.3 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.3)
+        - [Commons Lang 3.4 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.4)
+        - [Commons Lang 3.5 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.5)
+        - [Commons Lang 3.6 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.6)
+        - [Commons Lang 3.7 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.7)
+        - [Commons Lang 3.8 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.8)
+        - [Commons Lang 3.8.1 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.8.1)
+        - [Commons Lang 3.9 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.9)
+        - [Commons Lang 3.10 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.10)
+        - [Commons Lang 3.11 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.11)
+        - [Commons Lang 3.12.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.12.0)
+        - [Commons Lang 3.13.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.13.0)
+
+    - **API Changes - Migration from Apache Commons Lang 2.6 to 3.17**
+
+        Starting with version **25Q1** of Etendo, Apache Commons Lang has been upgraded from version **2.6** to **3.17**. As part of this upgrade, the package structure has changed. All classes previously imported from `org.apache.commons.lang.*` must now be updated to use the new package `org.apache.commons.lang3.*`.
+
+    - **Migration Instructions**
+
+        Developers should update their import statements to reflect the new package structure. The previous package `org.apache.commons.lang` has been replaced by `org.apache.commons.lang3` in the new version. Please verify that the updated classes and methods are compatible with your existing code, as some methods may have been deprecated, renamed, or modified in behavior.
+
+        ```java
+        // Before (Apache Commons Lang 2.6)
+        import org.apache.commons.lang.StringUtils;
+
+        // After (Apache Commons Lang 3.17)
+        import org.apache.commons.lang3.StringUtils;
+        ```
+
+        For more detailed migration guidelines, refer to the [Apache Commons Lang 3 migration notes](https://commons.apache.org/proper/commons-lang/article3_0.html).
+
+    - **Deprecated Library**
+
+        Although the previous version of the library is maintained for backward compatibility, it will be removed in future releases. It is strongly recommended to migrate to Apache Commons Lang 3.17 to ensure long-term support and compatibility.
+
+- `[hibernate-commons-annotations] 5.1.0.Final -> 5.1.2.Final`
+    - **Notable Changes**:
+        - [5.1.1.Final Release Notes](https://in.relation.to/2016/08/12/hibernate-orm-511-final-release/)
+        - [5.1.2.Final Release Notes](https://in.relation.to/2016/09/19/hibernate-orm-5011-final-and-512-final-release/)
+
+- `[hibernate-core] 5.4.2.Final -> 5.6.15.Final`
+    - **Notable Changes**:
+        - [5.4.x Release Notes](https://github.com/hibernate/hibernate-orm/blob/5.4/changelog.txt)
+        - [5.5.x Release Notes](https://github.com/hibernate/hibernate-orm/blob/5.5/changelog.txt)
+
+- `[istack-commons-runtime] 3.0.7 -> 4.2.0`
+
+- `[jasperreports] 6.0.0 -> 6.17.0`
+    - **Notable Changes**:
+        - [Releases Page – GitHub](https://github.com/Jaspersoft/jasperreports/releases)
+
+- `[jasperreports-fonts] 6.0.0 -> 6.17.0`
+
+- `[poi] 3.10.1 -> 5.4.0`
+    - **Notable Changes**:
+        - [Apache POI 5.4.0 (2025-01-08)](https://poi.apache.org/changes.html#version-5.4.0-2025-01-08)
+        - [Apache POI 5.3.0 (2024-07-02)](https://poi.apache.org/changes.html#version-5.3.0-2024-07-02)
+        - [Apache POI 5.2.5 (2023-11-25)](https://poi.apache.org/changes.html#version-5.2.5-2023-11-25)
+        - [Apache POI 5.2.4 (2023-09-28)](https://poi.apache.org/changes.html#version-5.2.4-2023-09-28)
+        - [Apache POI 5.2.3 (2023-05-22)](https://poi.apache.org/changes.html#version-5.2.3-2023-05-22)
+        - [Apache POI 5.2.2 (2023-01-19)](https://poi.apache.org/changes.html#version-5.2.2-2023-01-19)
+        - [Apache POI 5.2.1 (2022-09-09)](https://poi.apache.org/changes.html#version-5.2.1-2022-09-09)
+        - [Apache POI 5.2.0 (2022-01-14)](https://poi.apache.org/changes.html#version-5.2.0-2022-01-14)
+        - [Apache POI 5.1.0 (2021-08-07)](https://poi.apache.org/changes.html#version-5.1.0-2021-08-07)
+        - [Apache POI 5.0.0 (2021-02-08)](https://poi.apache.org/changes.html#version-5.0.0-2021-02-08)
+        - [Apache POI 4.1.2 (2019-12-16)](https://poi.apache.org/changes.html#version-4.1.2-2019-12-16)
+        - [Apache POI 4.1.1 (2019-07-20)](https://poi.apache.org/changes.html#version-4.1.1-2019-07-20)
+        - [Apache POI 4.1.0 (2019-04-22)](https://poi.apache.org/changes.html#version-4.1.0-2019-04-22)
+        - [Apache POI 4.0.1 (2018-11-24)](https://poi.apache.org/changes.html#version-4.0.1-2018-11-24)
+        - [Apache POI 4.0.0 (2018-09-07)](https://poi.apache.org/changes.html#version-4.0.0-2018-09-07)
+
+        For older versions like **3.10.1**, you can check:
+
+        - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
+        - [Full changelog overview](https://poi.apache.org/changes.html)
+
+    !!! info
+        Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
+
+###### New Libraries
+
+- `[commons-text]`
+    - **Version**: 1.10.0
+    - [Documentation](https://commons.apache.org/proper/commons-text/)
+
+- `[commons-math3]`
+    - **Version**: 3.6.1
+    - [Documentation](https://commons.apache.org/proper/commons-math/)
+
+- `[castor-core]`
+    - **Version**: 1.4.1
+    - [Documentation](https://castor-data-binding.github.io/castor/)
+
+- `[castor-xml]`
+    - **Version**: 1.4.1
+    - [Documentation](https://castor-data-binding.github.io/castor/)
+
+- `[itext]`
+    - **Version**: 2.1.7.js8
+    - [Documentation](https://itextpdf.com/resources)
+
+###### Removed Libraries
+
+- `[itext-pdfa]`
+    - **Version**: 5.5.0
+
+- `[itextpdf]`
+    - **Version**: 5.5.0
+
+- `[jcommon]`
+    - **Version**: 1.0.15
+
+- `[jxl]`
+    - **Version**: 2.6.10
+
+---
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: ✨ Getting Started
 ## Article Path: /Developer Guide/Etendo RX/✨ Getting Started
 ## Article URL: 
@@ -49428,7 +50219,7 @@ To do this, add the dependencies in the `build.gradle` file:
 
 ```groovy title="build.gradle"
 dependencies {
-    implementation ('com.etendoerp:platform.extensions:latest.release')
+    implementation ('com.etendoerp:platform.extensions:2.10.0') // version 2.10.0 or later
 
     moduleDeps('com.etendoerp:integration.to.openbravo:1.0.0@zip')
     moduleDeps('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
@@ -54270,9 +55061,48 @@ Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 #### March 2025
 
+##### Etendo Mobile
+
+<div class="grid cards" markdown>
+
+- :material-share: **Receive and share files with Etendo Mobile**
+
+    ---
+
+    ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/share-files-mobile.png)
+
+    A new feature has been added to Etendo Mobile to streamline integration with external applications. With the new **Share files** option, you can now receive files from outside apps and use them directly in subapplications like:
+
+    - **Documents Manager**, where you can view files right in Etendo Mobile.
+    - **Copilot**, where specialized assistants can extract information from images, transform audios into sales orders, and much more.
+
+    This feature improves data flow and efficiency across your platform.
+
+    Try it now using the *Demo Try* button in the app, or download the latest version from the App Store or Play Store.
+
+</div>
+
+##### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Now in the advanced financial reports you can view accounting dimensions.**
+    ---
+
+    ![alt text](https://docs.etendo.software/latest/assets/whats-new/etendo-news/financial-reports-advanced.png)
+
+    In version [1.24.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, improvements to advanced financial reporting are included.In this version, the [General Ledger Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced) and [Journal Entries Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report-advanced) will allow you to view and filter by the desired accounting dimensions.
+    In addition, you can navigate to related entities in each report!
+
+</div>
+
 ##### Etendo Classic
 
 <div class="grid cards" markdown>
+
+- :octicons-rocket-24: **25.1 Release Candidate Now Available!**
+
+    The new version [25.1](./release-notes/etendo-classic/release-notes.md) of Etendo Classic introduces the latest stack enhancements. While this version is currently in Release Candidate (RC) status, you can already explore the detailed [API changelog](https://docs.etendo.software/latest/developer-guide/etendo-classic/developer-changelog/apichanges.md) to review the changes and improvements included in this release.
 
 - :material-trending-up: **Fixed Issue**
     
@@ -54540,7 +55370,7 @@ New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bun
     
     ![](https://docs.etendo.software/latest/assets/whats-new/etendo-news/LangChain.png)
 
-    We are excited to announce a new functionality in LangChain assistants: the ability to upload .zip files directly into the knowledge base! These .zip files can contain a variety of file formats, including .txt, .pdf, .md, .py, .java, and .js.
+    We are excited to announce a new functionality in LangChain assistants: the ability to upload `.zip` files directly into the knowledge base! These `.zip ` files can contain a variety of file formats, including `.txt`, `.pdf`, `.md`, `.py`, `.java`, and `.js`.
     This enhancement allows developers to train assistants with example source code.
     Boost your assistant’s capabilities with this powerful new feature!
 
@@ -54880,7 +55710,11 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q4.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.8){target="_blank"} | 14/03/2025 | 24.4.8 | QAA |  | :white_check_mark: |
+| [25Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0){target="_blank"} | 28/03/2025 | 25.1.0 | RC | [25Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.0.iso){target="_blank"} | :white_check_mark: |
+| [24Q4.11](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.11){target="_blank"} | 04/04/2025 | 24.4.11 | CS |  | :white_check_mark: |
+| [24Q4.10](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.10){target="_blank"} | 28/03/2025 | 24.4.10 | C |  | :white_check_mark: |
+| [24Q4.9](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.9){target="_blank"} | 22/03/2025 | 24.4.9 | C |  | :white_check_mark: |
+| [24Q4.8](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.8){target="_blank"} | 14/03/2025 | 24.4.8 | C |  | :white_check_mark: |
 | [24Q4.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.7){target="_blank"} | 07/03/2025 | 24.4.7 | C |  | :white_check_mark: |
 | [24Q4.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.6){target="_blank"} | 28/02/2025 | 24.4.6 | C |  | :white_check_mark: |
 | [24Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.5){target="_blank"} | 21/02/2025 | 24.4.5 | C |  | :white_check_mark: |
@@ -54889,7 +55723,7 @@ Article URL: https://etendo.software
 | [24Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.2){target="_blank"} | 24/01/2025 | 24.4.2 | C |  | :white_check_mark: |
 | [24Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.1){target="_blank"} | 17/01/2025 | 24.4.1 | C |  | :white_check_mark: |
 | [24Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.0){target="_blank"} | 19/12/2024 | 24.4.0 | C | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso){target="_blank"} | :white_check_mark: |
-| [24Q3.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.7){target="_blank"} | 07/03/2025 | 24.3.7 | CS |  | :white_check_mark: |
+| [24Q3.7](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.7){target="_blank"} | 07/03/2025 | 24.3.7 | C |  | :white_check_mark: |
 | [24Q3.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.6){target="_blank"} | 13/12/2024 | 24.3.6 | C |  | :white_check_mark: |
 | [24Q3.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.5){target="_blank"} | 06/12/2024 | 24.3.5 | C |  | :white_check_mark: |
 | [24Q3.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.3.4){target="_blank"} | 29/11/2024 | 24.3.4 | C |  | :white_check_mark: |
@@ -54915,7 +55749,7 @@ Article URL: https://etendo.software
 | [24Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.2){target="_blank"} | 12/04/2024 | 24.1.2 | C |  | :white_check_mark: |
 | [24Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.1){target="_blank"} | 05/04/2024 | 24.1.1 | C |  | :white_check_mark: |
 | [24Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.0){target="_blank"} | 28/03/2024 | 24.1.0 | C | [24Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.0.iso){target="_blank"} | :white_check_mark: |
-| [23Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.5){target="_blank"} | 22/03/2024 | 23.4.5 | CS |  | :white_check_mark: |
+| [23Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.5){target="_blank"} | 22/03/2024 | 23.4.5 | C |  | :white_check_mark: |
 | [23Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.4){target="_blank"} | 15/03/2024 | 23.4.4 | C |  | :white_check_mark: |
 | [23Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.3){target="_blank"} | 08/03/2024 | 23.4.3 | C |  | :white_check_mark: |
 | [23Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.2){target="_blank"} | 26/02/2024 | 23.4.2 | C |  | :white_check_mark: |
@@ -54977,7 +55811,11 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| [1.5.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.1){target="_blank"} | 12/11/2024 | CS |
+| [2.0.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.0.0){target="_blank"} | 26/03/2025 | RC |
+| [1.5.4](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.4){target="_blank"} | 04/04/2025 | CS |
+| [1.5.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.3){target="_blank"} | 26/03/2025 | C |
+| [1.5.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.2){target="_blank"} | 21/03/2025 | C |
+| [1.5.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.1){target="_blank"} | 12/11/2024 | C |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.0){target="_blank"} | 08/11/2024 | C |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.4.0){target="_blank"} | 18/10/2024 | C |
 | [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | C |
@@ -55038,7 +55876,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.10.0){target="_blank"} | 26/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.11.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.11.0){target="_blank"} | 31/03/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.10.0){target="_blank"} | 26/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.8.0){target="_blank"} | 23/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.7.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.7.0){target="_blank"} | 08/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
@@ -55178,7 +56017,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.23.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.2){target="_blank"} | 14/03/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.24.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.24.0){target="_blank"} | 22/03/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.23.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.2){target="_blank"} | 14/03/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.23.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.1){target="_blank"} | 07/03/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.23.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.23.0){target="_blank"} | 28/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.22.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.22.0){target="_blank"} | 07/02/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
@@ -55455,6 +56295,7 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [25.1.0](#2510) | 28/03/2025 | [25Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.0.iso) |
 | [24.4.3](#2443) | 10/02/2025 | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) |
 | [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
@@ -55467,10 +56308,17 @@ Article URL: https://etendo.software
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
+#### 25.1.0
+New ISO with Etendo Classsic version 25.1.0
+
+- **Changes**
+    - Upgrade Etendo software stack. For more information visit [API Change Documentation](https://docs.etendo.software/latest/developer-guide/etendo-classic/developer-changelog/apichanges.md)
+
+
 #### 24.4.3
 New ISO with Etendo Classsic version 24.4.3
 
-**Fixed**
+- **Fixed**
     - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 #### 24.4.0
@@ -55485,13 +56333,13 @@ New ISO with Etendo Classsic version 24.2.0
 #### 24.1.4
 New ISO with Etendo Classsic version 24.1.4
 
-**Fixed**
+- **Fixed**
     - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 #### 24.1.0
 New ISO with Etendo Classsic version 24.1.0
 
-**Changes**
+- **Changes**
     - Upgrade Tomcat version to 9.0.87
 
 #### 23.4.0
@@ -55707,7 +56555,9 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.12.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.12.0){target="_blank"} | 07/03/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.13.1){target="_blank"} | 04/04/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.13.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.13.0){target="_blank"} | 01/04/2025 | 23.4.0 | * | C | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.12.0){target="_blank"} | 07/03/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.11.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.11.0){target="_blank"} | 14/02/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.10.0){target="_blank"} | 23/01/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.9.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.9.1){target="_blank"} | 10/01/2025 | 23.4.0 | * | C | :white_check_mark: |

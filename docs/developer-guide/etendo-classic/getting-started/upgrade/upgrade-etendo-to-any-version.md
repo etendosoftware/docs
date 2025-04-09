@@ -58,11 +58,11 @@ To work with the plugin you need to specify in the root project from where the p
     rootProject.name = "etendo"
     ```
 
-2. Add in the `build.gradle` file the Etendo Gradle Plugin
+2. Add in the `build.gradle` file the Etendo Gradle Plugin Version compatible with your core version. For example, for version 1.5.0:
 
     ```groovy title="build.gradle"
     plugins {
-        id 'com.etendoerp.gradleplugin' version 'latest.release'
+        id 'com.etendoerp.gradleplugin' version '1.5.0'
     }
     ```
 
@@ -100,14 +100,14 @@ To work with the plugin you need to specify in the root project from where the p
 
 === "Source Core"
 
-    1.  Verify the target version inside `build.gradle`
+    1.  Verify the target version inside `build.gradle`. For example, for versions 23.1.x;
 
         ```groovy title="build.gradle"
 
-        // latest.release will download the most recent stable version
+        // latest.release will download the most recent stable version (Not recommended)
         // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
         etendo {
-            coreVersion = "latest.release"
+            coreVersion = "[22.1.0,23.2.0)"
         }
         ```
 

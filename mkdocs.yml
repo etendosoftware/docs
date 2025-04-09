@@ -420,7 +420,7 @@ nav:
         - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
 #        - How to create a QueryList Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_QueryList_Widget.md
         - How to Create a Report: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md
-#        - How to create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition.md
+        - How to Create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
         - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
         - How to Create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
@@ -509,6 +509,8 @@ nav:
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
           - Bank Integration PSD2: developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration.md
         - Etendo BI Extensions Bundle: developer-guide/etendo-classic/bundles/etendo-bi-extensions.md
+      - Developer Changelog:
+        - API Changes: developer-guide/etendo-classic/developer-changelog/apichanges.md
     - Etendo RX:
       - ✨ Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
