@@ -669,11 +669,15 @@ A purchase invoice can be posted to the ledger when required at a given Accounti
 
 #### Reactivate
 
+![pop-up-reactivate](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/pop-up-reactivate.png)
+
 Using this button, the user has two options: reactivating or voiding the Completed invoice.
 
 In the case of the **Reactivate** option, it turns the record from Completed into Draft status. 
 
 With the **Void** option, it is possible to totally void a purchase invoice. This action creates a new document that reverses the invoice.
+
+![pop-up-void](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/popup-void.png)
 
 Voiding allows specifying a **Void Date** and a **Void Accounting Date** for the new document that reverses the invoice.
 
@@ -716,6 +720,7 @@ The Bulk Completion functionality allows the user to complete, reactivate or voi
 
 !!!warning
     The bulk voiding option fails when the [Purchase Invoice Validation](../../optional-features/bundles/procurement-extensions/purchase-invoice-validation.md) module is installed. This is because the module includes a default preference that prevents the duplication of invoices with the same business partner, accounting year, and supplier reference. Since massive voiding attempts to reverse invoices, it leads to duplication, as the supplier reference for each reversed invoice cannot be modified. As a result, the module prevents the bulk voiding process from functioning.
+    ![popup-bulk-void](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/popup-bulk-void.png)
 
 #### Remove Payment
 

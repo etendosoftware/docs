@@ -35,7 +35,7 @@ The overall flow is the following:
     - **Reactivate**  
     - **Create a sales order**  
     - **Reject the quotation**
-- **Closed** - Order created: After creating the sales order the document turns into this status. No further actions are allowed.
+- **Closed - Order created**: After creating the sales order the document turns into this status. No further actions are allowed.
 
 !!! info
     One quotation, one sales order. Several sales orders cannot be created from the same quotation.
