@@ -1,5 +1,5 @@
 ---
-title: How to Create JUnit 5 Test Cases
+title: How to Create JUnit Test Cases
 tags:
   - How to
   - JUnit
@@ -7,7 +7,7 @@ tags:
   - Test Cases
 ---
 
-# How to Create JUnit 5 Test Cases
+# How to Create JUnit Test Cases
 
 ##  Overview
 
@@ -225,77 +225,70 @@ Hamcrest is a framework for writing matcher objects allowing 'match' rules to be
 
 When writing tests it is sometimes difficult to get the balance right between overspecifying the test, and not specifying enough (making the test less valuable). Having a tool that allows you to pick out precisely the aspect under test and describe the values it should have, to a controlled level of precision, helps greatly in writing tests.
 
-### Mocking with Mockito in JUnit 5
+### Mocking with Mockito in JUnit
 
 When writing unit tests, it's often necessary to simulate the behavior of external dependencies. [Mockito](https://site.mockito.org/) is a popular mocking library for Java that allows you to create mock objects to isolate the code being tested from its dependencies.
 
-#### Types of Mocks in Mockito
+#### Ways to Create Mocks
 
-Mockito offers several ways to create mocks:
+There are two main approaches to creating mocks in Mockito:
 
-1. **Basic Mocks**: To simulate behaviors of regular objects
-2. **Static Mocks**: To simulate behaviors of static methods (requires mockito-inline)
+1. **Using Annotations**
 
-#### Mocking Regular Dependencies
+    The cleanest way is to use annotations:
 
-There are two main ways to create mocks in Mockito:
-
-#### 1. Using Annotations
-
-The cleanest way is to use annotations:
-
-```java
-@ExtendWith(MockitoExtension.class)
-class UserServiceTest {
-    
-    @Mock
-    private UserRepository userRepository;
-    
-    @InjectMocks
-    private UserService userService;
-    
-    @Test
-    void testGetUserById() {
-        // Arrange
-        String userId = "123";
-        User mockUser = new User(userId, "John Doe");
-        when(userRepository.findById(userId)).thenReturn(mockUser);
+    ```java
+    @ExtendWith(MockitoExtension.class)
+    class UserServiceTest {
         
-        // Act
-        User result = userService.getUserById(userId);
+        @Mock
+        private UserRepository userRepository;
         
-        // Assert
-        assertEquals(mockUser.getName(), result.getName());
-        verify(userRepository).findById(userId);
+        @InjectMocks
+        private UserService userService;
+        
+        @Test
+        void testGetUserById() {
+            // Arrange
+            String userId = "123";
+            User mockUser = new User(userId, "John Doe");
+            when(userRepository.findById(userId)).thenReturn(mockUser);
+            
+            // Act
+            User result = userService.getUserById(userId);
+            
+            // Assert
+            assertEquals(mockUser.getName(), result.getName());
+            verify(userRepository).findById(userId);
+        }
     }
-}
-```
+    ```
 
-In this example:
-- `@ExtendWith(MockitoExtension.class)` integrates Mockito with JUnit 5
-- `@Mock` creates a mock implementation of UserRepository
-- `@InjectMocks` injects the created mocks into UserService
+    In this example:
+    - `@ExtendWith(MockitoExtension.class)` integrates Mockito with JUnit 5
+    - `@Mock` creates a mock implementation of UserRepository
+    - `@InjectMocks` injects the created mocks into UserService
 
-#### 2. Creating Mocks Manually
+2. Creating Mocks Manually
 
-You can also create mocks manually:
+    You can also create mocks manually:
 
-```java
-@Test
-void testUserServiceManualMocks() {
-    // Create mocks manually
-    UserRepository mockRepo = mock(UserRepository.class);
-    UserService service = new UserService(mockRepo);
-    
-    // Configure behavior
-    User mockUser = new User("123", "Jane Doe");
-    when(mockRepo.findById("123")).thenReturn(mockUser);
-    
-    // Execute and verify
-    User result = service.getUserById("123");
-    assertEquals("Jane Doe", result.getName());
-}
-```
+    ```java
+    @Test
+    void testUserServiceManualMocks() {
+        // Create mocks manually
+        UserRepository mockRepo = mock(UserRepository.class);
+        UserService service = new UserService(mockRepo);
+        
+        // Configure behavior
+        User mockUser = new User("123", "Jane Doe");
+        when(mockRepo.findById("123")).thenReturn(mockUser);
+        
+        // Execute and verify
+        User result = service.getUserById("123");
+        assertEquals("Jane Doe", result.getName());
+    }
+    ```
 
 #### Mocking Static Methods
 
