@@ -209,18 +209,17 @@ This last point is important because there can be always reasons why during a te
 ####  Parameterized Tests
 
 !!! info
-    For more information, visit:  [Parameterized-Test](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests){target="_blank"}
+    For more information, visit:  [Parameterized-Test](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests){target="_blank"}.
 
 ####  Extension
 
 !!! info
-    For more information, visit:  [Extension](https://junit.org/junit5/docs/current/user-guide/#extensions){target="_blank"}
-    In JUnit 5, the Rules concept has been replaced by Extensions.
+    In JUnit 5, the Rules concept has been replaced by Extensions. For more information, visit:  [Extension](https://junit.org/junit5/docs/current/user-guide/#extensions){target="_blank"}.
 
 ####  Assertions and Hamcrest 1.13
 
 !!! info
-    For more information, visit:  [Hamcrest](https://hamcrest.org/){target="_blank"}
+    For more information, visit:  [Hamcrest](https://hamcrest.org/){target="_blank"}.
 
 Hamcrest is a framework for writing matcher objects allowing 'match' rules to be defined declaratively. There are a number of situations where matchers are invaluble, such as UI validation, or data filtering, but it is in the area of writing flexible tests that matchers are most commonly used.
 
@@ -228,7 +227,7 @@ When writing tests it is sometimes difficult to get the balance right between ov
 
 ### Mocking with Mockito in JUnit 5
 
-When writing unit tests, it's often necessary to simulate the behavior of external dependencies. Mockito is a popular mocking library for Java that allows you to create mock objects to isolate the code being tested from its dependencies.
+When writing unit tests, it's often necessary to simulate the behavior of external dependencies. [Mockito](https://site.mockito.org/) is a popular mocking library for Java that allows you to create mock objects to isolate the code being tested from its dependencies.
 
 #### Types of Mocks in Mockito
 
