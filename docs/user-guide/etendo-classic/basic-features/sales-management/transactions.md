@@ -35,7 +35,7 @@ The overall flow is the following:
     - **Reactivate**  
     - **Create a sales order**  
     - **Reject the quotation**
-- **Closed** - Order created: After creating the sales order the document turns into this status. No further actions are allowed.
+- **Closed - Order created**: After creating the sales order the document turns into this status. No further actions are allowed.
 
 !!! info
     One quotation, one sales order. Several sales orders cannot be created from the same quotation.
@@ -686,7 +686,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
-The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+The Bulk Completion functionality allows the user to complete, reactivate or void multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
@@ -1329,7 +1329,7 @@ These sales invoices have a negative amount that represents the discount of the 
 !!! info
     To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
-The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+The Bulk Completion functionality allows the user to complete, reactivate or void multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).

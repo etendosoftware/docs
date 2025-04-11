@@ -65,8 +65,10 @@ import static org.junit.Assert.assertTrue;
  
 import java.util.List;
  
-import org.junit.Test;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.openbravo.dal.core.OBContext;
 import org.openbravo.dal.service.OBCriteria;
 import org.openbravo.dal.service.OBDal;
@@ -77,10 +79,11 @@ import org.openbravo.client.kernel.RequestContext;
 import org.openbravo.base.secureApp.VariablesSecureApp;
 
 
+@TestMethodOrder(OrderAnnotation.class)
 public class ExampleTest extends WeldBaseTest {
 
   @Override
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     super.setUp();
     OBContext.setOBContext(TestConstants.Users.SYSTEM, TestConstants.Roles.SYS_ADMIN,
@@ -93,7 +96,7 @@ public class ExampleTest extends WeldBaseTest {
     );
     RequestContext.get().setVariableSecureApp(vsa);
   }
- 
+ 
   @Test
   public void testUsersCount() {
     final OBCriteria<User> uCriteria = OBDal.getInstance().createCriteria(User.class);
@@ -103,7 +106,7 @@ public class ExampleTest extends WeldBaseTest {
       if (u != null && u.getPassword() != null && !u.getPassword().isEmpty())
         userCount++;
     }
-    assertTrue(userCount > 0);
+    assertTrue(userCount > 0, "There should be at least one user with password");
     System.out.println("Total of users with password: " + (userCount));
   }
 }
@@ -115,15 +118,20 @@ public class ExampleTest extends WeldBaseTest {
 You have just created a new class named Example that extends from the `WeldBaseTest` class.
 
 ```java
+@TestMethodOrder(OrderAnnotation.class)
+```
+
+This annotation specifies that test methods will be executed in the order specified by the `@Order` annotation. You can use `@Order` on test methods to define their execution order.
+
+```java
 public void testUsersCount() {}
 ```
 
-This class has a testUsersCount function. Note that all testing methods _must_ start with test in the function name. e.g. ``testAllWarehouses()``, ``testMyFirstTest()``, etc        
+This class has a testUsersCount function. Note that in JUnit 5, the method naming convention is not required anymore as the `@Test` annotation is what identifies a test method. However, for clarity, it's still a good practice to use a naming convention for test methods.
 
 ```java
-
 @Override
-@Before
+@BeforeEach
 public void setUp() throws Exception {
   super.setUp();
   OBContext.setOBContext(TestConstants.Users.SYSTEM, TestConstants.Roles.SYS_ADMIN,
@@ -138,7 +146,7 @@ public void setUp() throws Exception {
 }
 ```
 
-Sets the context as if a System Administrator is logged in the application. You can also set the context as if another user is logged in the application.
+Note the `@BeforeEach` annotation instead of JUnit 4's `@Before`. This method sets the context as if a System Administrator is logged in the application. You can also set the context as if another user is logged in the application.
 
 ```java
 final OBCriteria<User> uCriteria = OBDal.getInstance().createCriteria(User.class);
@@ -155,13 +163,13 @@ for (User u: uList) {
 }
 ```
 
-We loop trough the uList collection, and we increment the userCount variable if the user has a password.
+We loop through the uList collection, and we increment the userCount variable if the user has a password.
 
 ```java
-assertTrue(userCount > 0);
+assertTrue(userCount > 0, "There should be at least one user with password");
 ```
 
-We assert that the userCount is more than 0.
+We assert that the userCount is more than 0. Note the optional message parameter in JUnit 5's assertion methods.
 
 ```java
 System.out.println("Total of users with password: " + (userCount));
@@ -192,7 +200,7 @@ There are certainly cases whereby it makes sense to have more control over the d
 A test case will often change the data in the underlying database. Most of the time, it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
 
   * When the test-case changes data then it should have a test method which is run as the last test method which cleans up/repairs the data. 
-  * This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used `@AfterClass` notation. This method runs automatically at the end of the class.
+  * This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used `@AfterAll` notation. This method runs automatically at the end of the class.
 
 This last point is important because there can be always reasons why during a test the clean-up step is not performed. For example because the test run is stopped before the clean-up is done.
 
@@ -201,22 +209,174 @@ This last point is important because there can be always reasons why during a te
 ####  Parameterized Tests
 
 !!! info
-    For more information, visit:  [Parameterized-Test](https://github.com/junit-team/junit4/wiki/Parameterized-tests){target="_blank"}
+    For more information, visit:  [Parameterized-Test](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests){target="_blank"}.
 
-####  Rules
+####  Extension
 
 !!! info
-    For more information, visit:  [Rules](https://github.com/junit-team/junit4/wiki/Rules){target="_blank"}
+    In JUnit 5, the Rules concept has been replaced by Extensions. For more information, visit:  [Extension](https://junit.org/junit5/docs/current/user-guide/#extensions){target="_blank"}.
 
 ####  Assertions and Hamcrest 1.13
 
 !!! info
-    For more information, visit:  [Hamcrest](https://hamcrest.org/){target="_blank"}
+    For more information, visit:  [Hamcrest](https://hamcrest.org/){target="_blank"}.
 
 Hamcrest is a framework for writing matcher objects allowing 'match' rules to be defined declaratively. There are a number of situations where matchers are invaluble, such as UI validation, or data filtering, but it is in the area of writing flexible tests that matchers are most commonly used.
 
 When writing tests it is sometimes difficult to get the balance right between overspecifying the test, and not specifying enough (making the test less valuable). Having a tool that allows you to pick out precisely the aspect under test and describe the values it should have, to a controlled level of precision, helps greatly in writing tests.
-  
+
+### Mocking with Mockito in JUnit
+
+When writing unit tests, it's often necessary to simulate the behavior of external dependencies. [Mockito](https://site.mockito.org/) is a popular mocking library for Java that allows you to create mock objects to isolate the code being tested from its dependencies.
+
+#### Ways to Create Mocks
+
+There are two main approaches to creating mocks in Mockito:
+
+1. **Using Annotations**
+
+    The cleanest way is to use annotations:
+
+    ```java
+    @ExtendWith(MockitoExtension.class)
+    class UserServiceTest {
+        
+        @Mock
+        private UserRepository userRepository;
+        
+        @InjectMocks
+        private UserService userService;
+        
+        @Test
+        void testGetUserById() {
+            // Arrange
+            String userId = "123";
+            User mockUser = new User(userId, "John Doe");
+            when(userRepository.findById(userId)).thenReturn(mockUser);
+            
+            // Act
+            User result = userService.getUserById(userId);
+            
+            // Assert
+            assertEquals(mockUser.getName(), result.getName());
+            verify(userRepository).findById(userId);
+        }
+    }
+    ```
+
+    In this example:
+    - `@ExtendWith(MockitoExtension.class)` integrates Mockito with JUnit 5
+    - `@Mock` creates a mock implementation of UserRepository
+    - `@InjectMocks` injects the created mocks into UserService
+
+2. Creating Mocks Manually
+
+    You can also create mocks manually:
+
+    ```java
+    @Test
+    void testUserServiceManualMocks() {
+        // Create mocks manually
+        UserRepository mockRepo = mock(UserRepository.class);
+        UserService service = new UserService(mockRepo);
+        
+        // Configure behavior
+        User mockUser = new User("123", "Jane Doe");
+        when(mockRepo.findById("123")).thenReturn(mockUser);
+        
+        // Execute and verify
+        User result = service.getUserById("123");
+        assertEquals("Jane Doe", result.getName());
+    }
+    ```
+
+#### Mocking Static Methods
+
+To mock static methods, you must use `mockito-inline`. This allows you to simulate classes with static methods such as utilities or service facades.
+
+#### Example with MockedStatic
+
+```java
+@Test
+void testWithStaticMock() {
+    // The static mock must be created inside a try-with-resources block
+    // or closed manually to prevent memory leaks
+    try (MockedStatic<DateUtils> dateUtilsMock = mockStatic(DateUtils.class)) {
+        // Configure the behavior of the static method
+        LocalDate fixedDate = LocalDate.of(2025, 4, 8);
+        dateUtilsMock.when(DateUtils::getCurrentDate).thenReturn(fixedDate);
+        
+        // Now DateUtils.getCurrentDate() will return our fixed date
+        LocalDate result = DateUtils.getCurrentDate();
+        
+        assertEquals(fixedDate, result);
+        dateUtilsMock.verify(DateUtils::getCurrentDate);
+    }
+}
+```
+
+#### Complete Example: Mocking Regular and Static Dependencies
+
+Here's an example that combines regular and static mocks:
+
+```java
+@ExtendWith(MockitoExtension.class)
+class PaymentProcessorTest {
+    
+    @Mock
+    private PaymentGateway paymentGateway;
+    
+    @InjectMocks
+    private PaymentProcessor paymentProcessor;
+    
+    @Test
+    void testProcessPayment() {
+        // Regular object mock
+        Payment payment = new Payment("123", 100.00);
+        TransactionResult mockResult = new TransactionResult(true, "Approved");
+        when(paymentGateway.submitPayment(payment)).thenReturn(mockResult);
+        
+        // Static method mock for current date
+        try (MockedStatic<TransactionUtils> transUtilsMock = mockStatic(TransactionUtils.class)) {
+            LocalDateTime fixedDateTime = LocalDateTime.of(2025, 4, 8, 15, 30);
+            transUtilsMock.when(TransactionUtils::getCurrentDateTime).thenReturn(fixedDateTime);
+            
+            // Act
+            TransactionResponse response = paymentProcessor.processPayment(payment);
+            
+            // Assert
+            assertTrue(response.isSuccessful());
+            assertEquals(fixedDateTime, response.getTransactionDate());
+            
+            // Verify that methods were called correctly
+            verify(paymentGateway).submitPayment(payment);
+            transUtilsMock.verify(TransactionUtils::getCurrentDateTime);
+        }
+    }
+}
+```
+#### Mocking Best Practices
+
+1. **Close static mocks**: Static mocks must be closed to prevent memory leaks.
+   ```java
+   try (MockedStatic<UtilityClass> mock = mockStatic(UtilityClass.class)) {
+       // Use the static mock
+   } // Automatically closed
+   ```
+
+2. **Verify interactions**: Use `verify()` to confirm that expected methods were called.
+   ```java
+   verify(mockObject).someMethod();
+   verify(mockObject, times(3)).someMethod();
+   verify(mockObject, never()).otherMethod();
+   ```
+
+3. **Use annotations for simple cases**: Annotations like `@Mock` and `@InjectMocks` make the code more readable.
+
+4. **Reset mocks when necessary**: If you need to reuse a mock with different behavior:
+   ```java
+   reset(mockObject);
+   ```
 
 ###  JSON Matchers
   
@@ -227,7 +387,6 @@ Etendo provides a set of matchers that can be useful when asserting JSONObjects 
 Matches when the examined `JSONObject` has exactly the same number of properties with the same values as the expected one. The order of the keys is not taken into account. Supports matcher properties.
 
 ```java  
-   
 @Test
 public void testEqual() {
   JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
@@ -326,7 +485,7 @@ Etendo has a number of ant tasks which run the test cases:
   * `./gradlew test --tests "module-name.*"`: This suite contains all the test cases of a particular module. (e.g. `./gradlew test --tests "com.etendoerp.example.*"`)
 
 !!! info
-    If tests have been implemented or modified for [etendo_core](https://github.com/etendosoftware/etendo_core.git), make sure that the class is included in the `StandaloneTestSuite` or `WebserviceTestSuite`.
+    If tests have been implemented or modified for [etendo_core](https://github.com/etendosoftware/etendo_core.git) and package belongs to org.openbravo, make sure that the class is included in the `StandaloneTestSuite` or `WebserviceTestSuite`.
 
 ###  The Result
 
@@ -361,12 +520,11 @@ In general unit tests don't require of an Etendo Classic instance running in Tom
   
 Default test cases extending ` org.openbravo.test.base.OBBaseTest ` class cannot make use of dependency injection. In order to use it ` org.openbravo.base.weld.test.WeldBaseTest ` class needs to be extended instead. This is also a subclass of ` OBBaseTest ` , so it makes available all DAL infrastructure.
 
-` OBBaseTest ` uses internally  Arquillian  runner to create a Weld container.
+` WeldBaseTest ` uses internally Weld SE containers for CDI support.
 
 Example of a test case injecting dependencies:
 
 ```java
-
 public class CdiInfrastructure extends WeldBaseTest {
  
 @Inject
@@ -381,9 +539,9 @@ private RequestScopedBean requestBean;
 /** beans are correctly injected */
 @Test
 public void beansAreInjected() {
-  assertThat("application bean is injected", applicationBean, notNullValue());
-  assertThat("session bean is injected", sessionBean, notNullValue());
-  assertThat("request bean is injected", requestBean, notNullValue());
+  assertNotNull(applicationBean, "application bean is injected");
+  assertNotNull(sessionBean, "session bean is injected");
+  assertNotNull(requestBean, "request bean is injected");
 }
 }
 ```
@@ -393,56 +551,63 @@ public void beansAreInjected() {
 Application and session scopes are shared among all test cases in the same class whereas a new request scope is created for each test case method. Application scope is reset for each new class.
 
 ```java
-
 /** starts application and session scopes */
 @Test
-@InSequence(1)
+@Order(1)
 public void start() {
   applicationBean.setValue("application");
   sessionBean.setValue("session");
   requestBean.setValue("request");
- 
-  assertThat(applicationBean.getValue(), equalTo("application"));
-  assertThat(sessionBean.getValue(), equalTo("session"));
-  assertThat(requestBean.getValue(), equalTo("request"));
+ 
+  assertEquals("application", applicationBean.getValue());
+  assertEquals("session", sessionBean.getValue());
+  assertEquals("request", requestBean.getValue());
 }
- 
+ 
 /** application and session scopes are preserved but not request scope */
 @Test
-@InSequence(2)
+@Order(2)
 public void applicationAndSessionShouldBeKept() {
-  assertThat(applicationBean.getValue(), equalTo("application"));
-  assertThat(sessionBean.getValue(), equalTo("session"));
-  assertThat(requestBean.getValue(), nullValue());
+  assertEquals("application", applicationBean.getValue());
+  assertEquals("session", sessionBean.getValue());
+  assertNull(requestBean.getValue());
 }
 ```
 
 ###  Parameterization
 
-Because ` CdiInfrastructure ` class uses `org.jboss.arquillian.junit.Arquillian` runner, it is not possible to use other runners, which also includes ` org.junit.runners.Parameterized ` runner.
-
-This limitation can be workarounded by adding a field annotated as ` @Rule ` with ` org.openbravo.base.weld.test.ParameterCdiTestRule ` type created with the list of the values for parameters and another field annotated as ` @ParameterCdiTest ` which will take those values. In this case each test case will be executed as many times as number of items the parameter list contains each of them the parameter field will take a different item.
+In JUnit 5, parameterized tests are natively supported via the `@ParameterizedTest` annotation, eliminating the need for special runners or rules:
 
 ```java
- 
 public class ParameterizedCdi extends WeldBaseTest {
-  public static final List<String> PARAMS = Arrays.asList("param1", "param2", "param3");
- 
-  /** defines the values the parameter will take. */
-  @Rule
-  public ParameterCdiTestRule<String> parameterValuesRule = new ParameterCdiTestRule<String>(
-      PARAMS);
- 
-  /** this field will take the values defined by parameterValuesRule field. */
-  private @ParameterCdiTest String parameter;
- 
-  private static int counterTest1 = 0;
- 
-  /** Test case to be executed once per parameter value */
-  @Test
-  public void test1() {
-    assertThat("parameter value", parameter, equalTo(PARAMS.get(counterTest1)));
-    counterTest1++;
+  
+  @ParameterizedTest
+  @ValueSource(strings = {"param1", "param2", "param3"})
+  public void testWithParameters(String parameter) {
+    assertNotNull(parameter);
+    assertTrue(parameter.startsWith("param"));
+  }
+  
+  @ParameterizedTest
+  @CsvSource({
+    "param1, 1",
+    "param2, 2",
+    "param3, 3"
+  })
+  public void testWithMultipleParameters(String name, int value) {
+    assertNotNull(name);
+    assertTrue(name.endsWith(String.valueOf(value)));
+  }
+  
+  @ParameterizedTest
+  @MethodSource("provideParameters")
+  public void testWithMethodSource(String parameter) {
+    assertNotNull(parameter);
+    assertTrue(parameter.startsWith("param"));
+  }
+  
+  static Stream<String> provideParameters() {
+    return Stream.of("param1", "param2", "param3");
   }
 }
 ```

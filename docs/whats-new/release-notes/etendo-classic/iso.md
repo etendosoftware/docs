@@ -13,6 +13,7 @@ tags:
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [25.1.0](#2510) | 28/03/2025 | [25Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.0.iso) |
 | [24.4.3](#2443) | 10/02/2025 | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) |
 | [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
 | [24.3.0](#2430) | 30/09/2024 | [24Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q3.0.iso) |
@@ -25,10 +26,17 @@ tags:
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
+## 25.1.0
+New ISO with Etendo Classsic version 25.1.0
+
+- **Changes**
+    - Upgrade Etendo software stack. For more information visit [API Change Documentation](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md)
+
+
 ## 24.4.3
 New ISO with Etendo Classsic version 24.4.3
 
-**Fixed**
+- **Fixed**
     - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 ## 24.4.0
@@ -43,13 +51,13 @@ New ISO with Etendo Classsic version 24.2.0
 ## 24.1.4
 New ISO with Etendo Classsic version 24.1.4
 
-**Fixed**
+- **Fixed**
     - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 ## 24.1.0
 New ISO with Etendo Classsic version 24.1.0
 
-**Changes**
+- **Changes**
     - Upgrade Tomcat version to 9.0.87
 
 ## 23.4.0
