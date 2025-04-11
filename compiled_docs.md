@@ -44014,7 +44014,7 @@ All new developments must belong to a module that is not the _core_ module.
 ####  Preparing development environment
 
 !!! info
-    Make sure that in the root `build.gradle` you have the line `apply from: 'tests.gradle'`. In case it is not there, add it and reload Gradle from your IntelliJ.
+    Make sure that in the root build.gradle you have included the plugin `com.etendoerp.testing.gradleplugin`. If you don't have it, consult the [Etendo Testing Plugin](https://docs.etendo.software/latest/developer-tools/etendo-testing-plugin.md#installation) documentation to install it and finally reload Gradle from your IntelliJ.
 
 First of all you need to create a src-test directory in your module package directory in Etendo ERP.
 
@@ -47325,6 +47325,105 @@ A menu will be shown where you can choose multiple options to be performed.
 
 5. *Database properties*<br>
   In the end, a message will be shown with the properties which the database will use to be restored. These properties depend on the ones selected previously.
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Testing Plugin
+## Article Path: /Developer Guide/Etendo Classic/Developer Tools/Etendo Testing Plugin
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/developer-tools/etendo-testing-plugin
+## Article Content: 
+#### Overview
+
+This article describes how to use the Etendo Testing Plugin. This plugin provides a standardized test environment compatible with Groovy, Spock, JUnit 4/5, and Mockito for Etendo Classic projects.
+
+---
+
+#### Installation
+
+Add the plugin to your `build.gradle` file:
+
+```groovy title="build.gradle"
+plugins {
+    id 'com.etendoerp.testing.gradleplugin' version '<version>'
+}
+```
+
+!!! info
+    Check the available plugin versions in the [Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes.md).
+
+
+#### Test structure
+
+The plugin includes the following test directories by default:
+
+```
+src-test/
+├── src/          → Java test sources
+├── test/groovy/  → Groovy/Spock tests
+├── resources/    → Test resources
+```
+
+It also dynamically includes test sources from:
+
+- `modules/**/src-test/src`
+- `modules_core/**/src-test`
+
+---
+
+#### Example usage
+
+Run tests:
+
+```bash
+./gradlew test
+```
+
+Generate reports:
+
+- Spock HTML reports are enabled via `spock-reports`
+- Use standard Gradle test reports in `build/reports/tests/test/index.html`
+
+---
+
+#### Advanced options
+
+You can add additional libraries to `lib/test/` and they will be automatically included:
+
+```groovy
+testImplementation fileTree(project.projectDir) {
+    include "lib/test/*.jar"
+}
+```
+
+The plugin also registers an optional helper task:
+
+```bash
+./gradlew depsTest
+```
+
+Which injects compile-time dependencies into `testImplementation`.
+
+---
+
+#### Technologies used
+
+- Groovy 3.0.9  
+- Spock Framework 2.0 (Groovy 3)
+- JUnit 4.13.1 + JUnit Platform
+- Mockito 5.0.0
+- Spock Reports 2.0
+
+---
+
+#### Compatibility
+
+| Plugin Version | Gradle | Java |
+|----------------|--------|------|
+| 1.0.0          | 7.0+   | 11+  |
+| 2.0.0          | 8.0+   | 17+  |
+
+---
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -56059,6 +56158,19 @@ Article URL: https://etendo.software
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.0) | 06/03/2024 | C  | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.0.0) | 19/12/2022 | C  | |
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Testing Plugin
+## Article Path: /What's New/Release Notes/Etendo Classic/Plugins/Etendo Testing Plugin
+## Article URL: 
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Status |
+| ------- | ---------------- | ------ |
+| [2.0.0](https://github.com/etendosoftware/com.etendoerp.testing.gradleplugin/releases/tag/2.0.0){target="_blank"} | 11/04/2025 | CS |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.testing.gradleplugin/releases/tag/1.0.0){target="_blank"} | 07/04/2025 | CS |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Essentials Extensions Bundle
