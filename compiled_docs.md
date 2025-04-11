@@ -56770,7 +56770,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.13.1){target="_blank"} | 04/04/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.13.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.13.2){target="_blank"} | 11/04/2025 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.13.1){target="_blank"} | 04/04/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.13.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.13.0){target="_blank"} | 01/04/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.12.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.12.0){target="_blank"} | 07/03/2025 | 23.4.0 | * | C | :white_check_mark: |
 | [1.11.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.11.0){target="_blank"} | 14/02/2025 | 23.4.0 | * | C | :white_check_mark: |
