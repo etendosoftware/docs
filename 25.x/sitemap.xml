@@ -125,6 +125,10 @@
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-classic/developer-tools/etendo-testing-plugin/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/25.x/developer-guide/etendo-classic/getting-started/installation/dependency-manager/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
@@ -990,6 +994,10 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/25.x/whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes/</loc>
+         <lastmod>2025-04-11</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes/</loc>
          <lastmod>2025-04-11</lastmod>
     </url>
     <url>
