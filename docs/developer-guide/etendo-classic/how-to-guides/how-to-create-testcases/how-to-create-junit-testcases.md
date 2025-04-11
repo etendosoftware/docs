@@ -20,7 +20,7 @@ All new developments must belong to a module that is not the _core_ module.
 ##  Preparing development environment
 
 !!! info
-    Make sure that in the root `build.gradle` you have the line `apply from: 'tests.gradle'`. In case it is not there, add it and reload Gradle from your IntelliJ.
+    Make sure that in the root build.gradle you have included the plugin `com.etendoerp.testing.gradleplugin`. If you don't have it, consult the [Etendo Testing Plugin](../../developer-tools/etendo-testing-plugin.md#installation) documentation to install it and finally reload Gradle from your IntelliJ.
 
 First of all you need to create a src-test directory in your module package directory in Etendo ERP.
 
