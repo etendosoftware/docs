@@ -29,7 +29,7 @@ Configure your `gradle.properties` file to include the following environment var
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
 LANGCHAIN_API_KEY="your-langsmith-api-key"
-LANGCHAIN_PROJECT="your name"
+LANGCHAIN_PROJECT="your project name"
 ```
 
 - `LANGCHAIN_TRACING_V2`: Set to `true` to enable tracing.
@@ -38,37 +38,35 @@ LANGCHAIN_PROJECT="your name"
 - `LANGCHAIN_PROJECT`: The name of your project in LangSmith. The executions, called traces, and events will be stored under this name. If this project does not exist, it will be created automatically. For this article, the name will be `MyLangsmithProjectForCopilot`.
 
 Ensure you restart Copilot to set environment variables in the container.
-``` bash
+``` bash title="Terminalß"
 ./gradlew resources.up --info
 ```
 
-
 ## Viewing From LangSmith
 
-Once in LangSmith, access to your organization's projects is available. 
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith.png)
-. In *Tracing Projects*, the name set in the `LANGCHAIN_PROJECT` variable should appear. This is the project where all traces will be stored.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-1.png)
-Selecting your project allows you to view the trace of queries made in Copilot and evaluate responses.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-2.png)
+- Once in LangSmith, access to your organization's projects is available.
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith.png)
+- In *Tracing Projects*, the name set in the `LANGCHAIN_PROJECT` variable should appear. This is the project where all traces will be stored.
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-1.png)
+- Selecting your project allows you to view the trace of queries made in Copilot and evaluate responses.
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-2.png)
 
 ## Usage Example
 
 1. Make a request to any Copilot agent.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-3.png)
-Upon receiving a response, if you want to evaluate internal processes or investigate issues, view the trace in LangSmith. 
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-4.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-3.png)
+2. Upon receiving a response, if you want to evaluate internal processes or investigate issues, view the trace in LangSmith. 
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-4.png)
+3. The most recent entry will be the last request made to the assistant. Access it to see detailed information:
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-5.png)
+    - On the left, view all checkpoints from user interaction to response.
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-6.png)
+    - Access each endpoint, webhook, or tool to see how queries are formed.
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-7.png)
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-8.png)
 
-The most recent entry will be the last request made to the assistant. Access it to see detailed information:
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-5.png)
-- On the left, view all checkpoints from user interaction to response.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-6.png)
-- Access each endpoint, webhook, or tool to see how queries are formed.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-7.png)
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-8.png)
-
-For interactions with OpenAI, an option called **Playground** is available.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-9.png)
+    - For interactions with OpenAI, an option called **Playground** is available.
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-9.png)
 
 ### Using the Playground
 
@@ -77,54 +75,54 @@ Accessing the Playground lets you experiment, test, and debug prompt chains and 
 - Real-time task execution visualization.
 - Model performance analysis.
 - Error and inefficiency detection for optimization and improvement of Copilot.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-10.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-10.png)
 
-You can test different prompts or user interactions without returning to the assistant.
-
-For instance, if you want to see how an assistant responds with a prefix like "ETHRT":
+- You can test different prompts or user interactions without returning to the assistant. For instance, if you want to see how an assistant responds with a prefix like "ETHRT":
 
 - Find the user query section in the Playground and modify the prefix.
 
-=== BEFORE
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-11.png)
 
-=== NOW
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-12.png)
+    === "BEFORE"
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-11.png)
 
-Select **Start** to rerun with the prefix.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-13.png)
+    === "NOW"
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-12.png)
 
-Instantly, observe the trace executing with the prefix **ETHRT**.
+- Select **Start** to rerun with the prefix.
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-13.png)
+
+- Instantly, observe the trace executing with the prefix **ETHRT**.
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-14.png)
 
-To run multiple interactions to test assistant consistency:
+- To run multiple interactions to test assistant consistency:
 
-- Click the arrow next to **Start**.
-- Deselect **Enable streaming**.
-- Adjust the **Repetitions** to your desired count, such as three times.
-
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-15.png)
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-16.png)
-Press **Start** again. The query will execute thrice.
-
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-17.png)
+    - Click the arrow next to **Start**.
+    - Deselect **Enable streaming**.
+    - Adjust the **Repetitions** to your desired count, such as three times.
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-15.png)
+        ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-16.png)
+    - Press **Start** again. The query will execute thrice.
+        ![ alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-17.png)
 This feature is crucial for testing various requests and modifying prompts to meet requirements.
 
-## System Prompt debugging
+## System Prompt Debugging
 The playground allows you to debug the prompt used in the agent. This is useful to improve the behavior of the agent in case of unexpected results.
 As we have seen above, in Langsmith you can see the execution of tools and other actions performed by the assistant, which are indicated by the LLM. That is, the decision or reasoning comes from the LLM and it is at these points that we can use it. 
 
 When loading the playground we will see:
+
 - The system prompt.
 - And the sequence of messages, tool executions and answers up to that moment.
 
 When executing Start, what we do is to request to the LLM, its answer given that system prompt and that conversation. Where we will be able to receive an answer in text or the order to execute a tool with certain parameters.
 
-Then, if analyzing the execution trace, we find the point where the agent “made a mistake” or “decided wrong”, we can place ourselves at that point and adjust the prompt to improve the reasoning. we can place ourselves at that point and adjust the prompt to improve the reasoning. Additionally, we can execute this request multiple times to make sure it has decided correctly because the prompt was improved and not by chance (the LLM is not deterministic in situations not clearly defined).
+Then, if analyzing the execution trace, we find the point where the agent “made a mistake” or “decided wrong”, we can place ourselves at that point and adjust the prompt to improve the reasoning. Additionally, we can execute this request multiple times to make sure it has decided correctly because the prompt was improved and not by chance (the LLM is not deterministic in situations not clearly defined).
 
 ### Example
+
 In this example we will see how to improve the prompt of an agent that is not giving the expected answer.
-In this case we will use the agent **Writer agent**, and the prompt is:
+In this case we will use the agent **Writer Agent**, and the prompt is:
+
 ```text
 You task is to write notes.
 The path must be ./[filename].txt

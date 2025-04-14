@@ -41,6 +41,8 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
+    DEEPSEEK_API_KEY= ****
+    DEEPSEEK_API_KEY= ****
     ETENDO_HOST=https://<Etendo URL>/<Context Path>
     ETENDO_HOST_DOCKER=http://host.docker.internal:<Tomcat Port>/<Context Path>
     COPILOT_HOST=<Copilot URL>
@@ -51,14 +53,14 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
     | **Environment Variable**   | **Default**  | **Info** |
     | -------------------------- | -------------| -------- |
-    | OPENAI_API_KEY         | `***********************` | **Required** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
+    | OPENAI_API_KEY         | `****` | **Optinal** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
+    |ANTHROPIC_API_KEY      | `****` | **Optional** You can use an [ANTHROPIC API Key](https://docs.anthropic.com/en/api/getting-started){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use Anthropic AI Models. |
+    |DEEPSEEK_API_KEY      | `****` | **Optional** You can use an [DEEPSEEK API Key](https://deepseek.ai/){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use DeepSeek AI Models. |
     | ETENDO_HOST            |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
     | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
     | COPILOT_HOST           | `localhost` | **Optional** The copilot host can be defined by the user. By default use `localhost` |
     | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
     | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
-    |ANTHROPIC_API_KEY      | `***********************` | **Optional** You can use an [ANTHROPIC API Key](https://docs.anthropic.com/en/api/getting-started){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use Anthropic AI Models. |
-    |DEEPSEEK_API_KEY      | `***********************` | **Optional** You can use an [DEEPSEEK API Key](https://deepseek.ai/){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use DeepSeek AI Models. |
 
     !!! info
         The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo` if you are using Docker Desktop.

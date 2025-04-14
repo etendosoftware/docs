@@ -19,6 +19,9 @@ The **Task Creator Tool** automates the creation of tasks based on the content o
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
+!!! tip
+    To know when is the best time to use this tool or how there are executed this tasks, check the [How to create bulk tasks for Copilot](../how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md) guide.
+
 This tool provides the assistant with:
 
 - Bulk Task Creation: Automatically generate multiple tasks from one file.
@@ -27,8 +30,6 @@ This tool provides the assistant with:
 - Parallel Execution: Creates tasks concurrently for better performance.
 
 It is especially useful for team collaboration, project onboarding, data entry workflows, and recurring structured task setups.
-
-To know when is the best time to use this tool or how there are executed this tasks, check the [How to create bulk tasks for Copilot](../how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md) guide.
 
 ## Setup
 
@@ -47,6 +48,7 @@ The tool follows these main steps:
 - **Input Processing**
 
     Accepts the following parameters:
+
     - `question`: Description or request that will be used as the task base.
     - `file_path`: Path to the input file (ZIP, CSV, XLS, or XLSX).
     - `group_id`: Optional group ID. If not set, it uses the conversation ID.
@@ -56,12 +58,14 @@ The tool follows these main steps:
 - **File Extraction**
 
     Depending on the file type:
+
     - ZIP: Unzips and lists file paths.
     - CSV/XLS/XLSX: Reads and converts each row to a string representation.
   
 - **Task Generation**
 
     For each extracted item (file path or row), it generates a task with:
+    
     - The base `question` + item content.
     - The associated `task_type`, `status`, `group_id`, and the current assistant ID.
 
