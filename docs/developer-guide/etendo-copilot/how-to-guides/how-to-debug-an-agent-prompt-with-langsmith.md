@@ -134,7 +134,7 @@ Create a note that remind me "call to my boss, tomorrow"
 
 Inspecting the trace, can see the LLM decision to execute the tool **WriteFileTool** with the parameters:
 ```text
-"filepath: ./reminder.txt
+filepath: ./reminder.txt
 content: call to my boss, tomorrow
 override: false
 ```

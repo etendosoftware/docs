@@ -559,7 +559,7 @@ nav:
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
-        - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-run-self-hosted-models-with-ollama.md
+        - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
         - How to Debug an Agent Prompt with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith.md
     - Etendo Mobile:
       - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
