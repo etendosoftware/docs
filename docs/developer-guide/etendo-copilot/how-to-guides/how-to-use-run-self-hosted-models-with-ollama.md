@@ -12,8 +12,6 @@ tags:
 
 This article explains how to run and use self-hosted models with Ollama in Copilot. Copilot uses by default LLM models hosted from cloud providers. However, you can use your own models by hosting them on your own servers. This can be useful for privacy reasons or to use models that are not available in OpenAI. Ollama allows to run self-hosted models in a Docker container.
 
-### Requirements
-
 ### Running Ollama as a Docker Container.
 Copilot includes a Docker Compose file that allows to run Ollama with the Docker module gradle tasks. To see more information about the Docker module, visit [Docker Management](../../etendo-classic/bundles/platform/docker-management.md) documentation.
 
@@ -30,7 +28,7 @@ After that, you can run the following command to start the Ollama container:
 
 ### Installing a Model In 
 
-The models available in Ollama need to be installed in order to be used. This is done only once because the container configuration allows the models to be persisted, so restarting the container will not affect the availability of the models once installed.
+The [models available in Ollama](https://ollama.com/search){target=_isblank} need to be installed in order to be used. This is done only once because the container configuration allows the models to be persisted, so restarting the container will not affect the availability of the models once installed.
 
 To install the models, it is necessary to enter the Ollama container and run the following command:
 

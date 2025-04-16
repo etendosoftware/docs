@@ -39,9 +39,8 @@ The capabilities of an agent are:
 - **Text Generation**: The agent can answer questions or retrieve results from his knowledge base from the LLM model(general knowledge).Those models are able to generate text based on the input prompt, so if we specify in the prompt "Answer with the result of the operation sent" and the user sends "2+2", the agent will respond with "4".
 - **Retrieval**: The agent can be configured with a custom knowledge base, which can be used to retrieve information. Its usefull when there is documentation or information that the agent can use to answer questions.
 - **Tools**: The agent can use tools to perform specific tasks. The tools are defined in the [Skill/Tool window](#skilltool-window).
-- **Receive attachments**
+- **Receive attachments**: Both agents and tools can utilize files in multiple formats.
 - **Read images**: There are models can receive images as input, and work directly with them. This feature is only available for the Multi-Model Agent type.
-
 
 ![](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
 

@@ -104,14 +104,13 @@ Currently, Copilot support the following providers:
 - **OpenAI**: This provider is the default one and is the most used. It is the most versatile and has the best performance in most cases.
 - **Anthropic**: This provider is is specialized in code generation. It is the best option for code-related tasks.
 - **Deepseek**: This provider is for generaral tasks like OpenAI, but cheaper.
-- **Ollama (Self-hosted models)**: This provider is for users that have their own models running in their own infrastructure. The support for this provider is in experimental phase.
-For more information visit, [How to Use and RunSelf Hosted Models with Ollama](how-to-use-run-self-hosted-models-with-ollama.md) guide.
+- **Ollama (Self-hosted models)**: This provider is for users that have their own models running in their own infrastructure. The support for this provider is in experimental phase. For more information visit, [How to Use and RunSelf Hosted Models with Ollama](how-to-use-run-self-hosted-models-with-ollama.md) guide.
 
 ### Default Model
 The default model for Etendo Copilot is `gpt-4o` from **OpenAI**. This model is selected automatically if the agent hasn't a specific model selected.
 
 ### What Model are Available? - AI Models window
-Etendo Copilot provides a Window where you can see the available models and their details. This window is populated when synchronizing the models. More information here [AI Models](../../../user-guide/etendo-copilot/setup-and-usage.md#ai-models)
+Etendo Copilot provides a Window where you can see the available models and their details. This window is populated when synchronizing the models. Additionally, if the provider offers models that are not present in this list, they can be added manually. More information here [AI Models](../../../user-guide/etendo-copilot/setup-and-usage.md#ai-models)
 
 
 ## Add a Knowledge Base
@@ -215,6 +214,7 @@ The steps to allow an agent to interact with Etendo Classic are:
     If the behaviour of the Knowledge Base File is `[Assistant] Add to the assistant as Knowledge Base`, the agent will not be able to use the information in the knowledge base file to generate responses without using the `Knowledge base Search` tool. So the agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.
 
 ### Auto Generation of Tools
+
 When the OpenAPI Specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`, the agent will automatically generate tools for each method and endpoint of the API. These tools can be used to make requests to the API without the need to configure the API Call Tool. The agent will have a tool for each method and endpoint of the API. This functionality is currently in the experimental phase.
 
 
