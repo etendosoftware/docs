@@ -41,7 +41,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
-    DEEPSEEK_API_KEY= ****
+    ANTHROPIC_API_KEY= ****
     DEEPSEEK_API_KEY= ****
     ETENDO_HOST=https://<Etendo URL>/<Context Path>
     ETENDO_HOST_DOCKER=http://host.docker.internal:<Tomcat Port>/<Context Path>
