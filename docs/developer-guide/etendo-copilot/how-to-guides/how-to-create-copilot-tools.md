@@ -22,7 +22,7 @@ Etendo Copilot module allows the creation of tools that add functionality to it.
 ### Requirements
 - Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](../../../developer-guide/etendo-copilot/installation.md){target="_blank"}.
 
-### Create a new tool
+### Create a New Tool
 For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
 
 !!! note "Create the classic module"

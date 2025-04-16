@@ -12,14 +12,11 @@ tags:
 Langsmith is a powerful observability tool that allows you to track and analyze the performance of your AI applications, if based on LangChain/Langgraph. It provides a comprehensive view of your application's behavior, enabling you to identify bottlenecks, optimize performance, and improve user experience.
 This tutorial guides you through setting up the observability SDK to track Copilot in LangSmith.
 
-## Installation Dependencies
-
-There is no need to install any dependencies, Copilot already includes the observability SDK.
 
 ## Create an API Key
-Go to the [Langsmith Website](https://smith.langchain.com/) and log in. If you don't have an account, create one.
+Go to the [Langsmith Website](https://smith.langchain.com/){target=_isblank} and log in. If you don't have an account, create one.
 
-To create an API key, navigate to the LangSmith settings page. Then, click on ![Create API Key] and follow the instructions.
+To create an API key, navigate to the LangSmith settings page. Then, click on **Create API Key** and follow the instructions.
 
 ## Set Up Your Environment
 
@@ -38,6 +35,7 @@ LANGCHAIN_PROJECT="your project name"
 - `LANGCHAIN_PROJECT`: The name of your project in LangSmith. The executions, called traces, and events will be stored under this name. If this project does not exist, it will be created automatically. For this article, the name will be `MyLangsmithProjectForCopilot`.
 
 Ensure you restart Copilot to set environment variables in the container.
+
 ``` bash title="Terminalß"
 ./gradlew resources.up --info
 ```

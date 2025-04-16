@@ -26,7 +26,7 @@ After that, you can run the following command to start the Ollama container:
 ./gradlew resources.up --info
 ```
 
-### Installing a Model In 
+### Installing a Model
 
 The [models available in Ollama](https://ollama.com/search){target=_isblank} need to be installed in order to be used. This is done only once because the container configuration allows the models to be persisted, so restarting the container will not affect the availability of the models once installed.
 
@@ -46,5 +46,5 @@ After the model is installed, you must create a record in the [AI Model](../../.
 - Provider: "ollama"
 - Model: "llama3.2:3b"
 
-### Using the model in Copilot
+### Using the Model in Copilot
 - Finally you can use the model in Copilot by selecting the record created in the model selector in the [Assistant](../../../user-guide/etendo-copilot/setup-and-usage.md#assistant-window) window.
