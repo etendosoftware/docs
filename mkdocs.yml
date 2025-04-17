@@ -297,7 +297,6 @@ nav:
       - Bundles:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
-          - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
           
 
@@ -535,19 +534,19 @@ nav:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
-        - Overview: developer-guide/etendo-copilot/available-tools/overview.md
+        - API Call Tool: developer-guide/etendo-copilot/available-tools/api-call-tool.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
         - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
         - Docker Tool: developer-guide/etendo-copilot/available-tools/docker-tool.md
         - File Copy Tool: developer-guide/etendo-copilot/available-tools/file-copy-tool.md
         - File Downloader Tool: developer-guide/etendo-copilot/available-tools/file-downloader-tool.md
-        - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
         - PDF to Images Tool: developer-guide/etendo-copilot/available-tools/pdf-to-images-tool.md
         - Print Directory Tool: developer-guide/etendo-copilot/available-tools/print-directory-tool.md
         - Read File Tool: developer-guide/etendo-copilot/available-tools/read-file-tool.md
         - Send Email Tool: developer-guide/etendo-copilot/available-tools/send-email-tool.md
+        - Task Creator Tool: developer-guide/etendo-copilot/available-tools/task-creator-tool.md
         - Tavily Tool: developer-guide/etendo-copilot/available-tools/tavily-tool.md
         - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
         - Test Run Tool: developer-guide/etendo-copilot/available-tools/test-run-tool.md
@@ -555,10 +554,14 @@ nav:
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
-      - How to Guides: 
+      - How to Guides:
+        - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
-        - How to execute Copilot through the console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
+        - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
+        - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+        - How to Debug an Agent Prompt with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith.md
     - Etendo Mobile:
       - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
       - Concepts: 

@@ -7,6 +7,10 @@ tags:
  - User Instructions
 ---
 
+!!! warning
+    Currently, we are migrating the terminology from *Assistant* to *Agent*. This change will be reflected in the documentation soon. Where you see *Assistant*, consider it as *Agent* and vice versa.
+
+
 # Copilot Setup and Usage
 
 ## Initial Configuration
@@ -18,85 +22,76 @@ In order to use Copilot, the user must access the Etendo Classic under the role 
 
 ## How to Set up Assistants
 
-In this case, Etendo Copilot has two alternatives:
+With Etendo Copilot, it is possible to:
 
-1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, **Etendo Copilot** dataset is available, which includes Bastian assistant to answer your questions about Etendo documentation.
-
-
-    ![](../../assets/user-guide/etendo-copilot/setup/dataset-installing.png)
-
-    !!!info
-        To check the list of available assistants, visit [Default Assistants](../../user-guide/etendo-copilot/bundles/overview.md#default-assistants).
-
-    Once the reference data is applied, it is necessary to go to the **Assistant Window**, select the corresponding Assistant and click [Sync Assistant](#sync-assistant-button).
-
-2. *Create your own Assistant*: Use the Assistant window to set up a new assistant with all the specific necessary characteristics.
+1. *Create your own Assistant*: Use the Assistant window to set up a new assistant with all the specific necessary characteristics.
+2. *Install a module with a pre-configured assistant*: Some modules come with pre-configured assistants, which can be used as is or modified to suit your needs. For more information visit, [Copilot Extensions](./bundles/overview.md) bundle.
 
 ## Assistant Window
 
 :material-menu: `Application` > `Service` > `Copilot` > `Assistant`
 
-The Assistant window allows you to define and configure assistants:
+The Assistant window allows you to define and configure assistants.
+
+### Capabilities
+The capabilities of an agent are:
+
+- **Text Generation**: The agent can answer questions or retrieve results from his knowledge base from the LLM model(general knowledge).Those models are able to generate text based on the input prompt, so if we specify in the prompt "Answer with the result of the operation sent" and the user sends "2+2", the agent will respond with "4".
+- **Retrieval**: The agent can be configured with a custom knowledge base, which can be used to retrieve information. Its usefull when there is documentation or information that the agent can use to answer questions.
+- **Tools**: The agent can use tools to perform specific tasks. The tools are defined in the [Skill/Tool window](#skilltool-window).
+- **Receive attachments**: Both agents and tools can utilize files in multiple formats.
+- **Read images**: There are models can receive images as input, and work directly with them. This feature is only available for the Multi-Model Agent type.
 
 ![](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
 
+Fields to note:
+
 - **Name**: Assistant name
 - **Description**: Assistant description
+- **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish.
+    
+    !!!info
+        The **Prompt** field can have the following dynamic variables: `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@`. These variables will be replaced with the values defined in the `gradle.properties`file.
+
+- **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case. 
+- **Model**: Dropdown with the models available,from the [AI Models](#ai-models-window) window.
+- **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 - **App Type**:
 
-    **Open AI Assistant**
+    - **Multi-Model Agent**
+        This type of assistant can use multiple models of different providers, such as OpenAI, Anthropic, etc. 
+        This is the most recommended option to define a simple agent. The Agents can have a knowledge base filled with files, and can use tools to do specific tasks. The agent will strategically use the tools and knowledge base to provide the best possible response.
 
-    These assistants leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.
+    -  **LangGraph**
 
-    **Langchain Agent**
-
-    These assistants can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc. The difference between Langchain and Open AI is that Langchain can save the information locally and it is a multiprovider agent.
-
-    **Multi-Model Assistant**
-    This type of assistant extends the “Langchain” type with the particularity that it can be used with models from various vendors such as “Anthropic” and “Gemini”, in addition to the existing “OpenAI” models. In the future, Langchain assistants will be replaced by this type of multi-model agents.
-
-    **LangGraph**
-
-    This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured.
+        This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured.
 
 
-=== "Open AI Assistant"
+    - **Open AI Assistant (Deprecated)**
 
-    In case of defining an **Open AI Assistant** type app, the following fields will be enabled: 
+        These assistants leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions. Currently is deprecated, but still available for use for compatibility reasons. Its recommended to migrate to the Multi-Model Agent type.
 
-    - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
-    - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
-    - **Model**: Dropdown with the Open AI models available from the [AI Models](#ai-models-window) window. If none of the options are selected, the model defined by default for the `Copilot Default Model for OpenAI Provider` [preference](../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference) window is to be used.
-    - **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
-    - **Open AI Assistant ID**: Read-only field in which the ID of the assistant once created is displayed.
-    - **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
-    - **Open AI Vectordb ID**: Read-only field in which the ID of the vector database is displayed.
-    - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
+    - **Langchain Agent (Deprecated)**
 
-=== "Langchain Agent or Multi-Model Assistant"
+        This type of assistant is very similar to the Multi-Model Agent, but its based on a older implementation of Langchain. Currently is deprecated, but still available for use for compatibility reasons. Its recommended to migrate to the Multi-Model Agent type.
 
-    In case of defining an **Langchain Agent** type app, the following fields will be enabled: 
-
-    - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish.
-    - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case. 
-    - **Model**: Dropdown with the models available,from the [AI Models](#ai-models-window) window.
-    - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
 === "LangGraph"
 
     In case of defining an **LangGraph** type app, the following fields will be enabled: 
-
-    - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
-    - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
+    
     - **Graph Preview**: It shows the tree of assistants under a certain manager.
-    - **Model**: Dropdown with the models available, from the [AI Models](#ai-models-window) window.
-    - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
+=== "Open AI Assistant (Deprecated)"
 
-!!!info
-    The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
-    These variables will be replaced with the values defined in the properties.
-If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
+    In case of defining an **Open AI Assistant** type app, the following fields will be enabled: 
+
+    - **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
+    - **Open AI Assistant ID**: Read-only field in which the ID of the assistant once created is displayed.
+    - **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
+    - **Open AI Vectordb ID**: Read-only field in which the ID of the vector database is displayed.
+
+If the `App type` Open AI Assistant, Langchain Agent or Multi-Model Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
 
 ### Buttons
 
@@ -118,14 +113,13 @@ In this tab, you can setup the files that will be used by the assistant as knowl
 !!!info
     To load new files, you must do it from the [Knowledge base file](#knowledge-base-file) window, first you define the files and then from this tab you configure how the file will be used.
 
-!!!warning "File Limitation for Code Interpreter"
+??? warning "File Limitation for Code Interpreter - Open AI Assistant"
     If an assistant has the Code Interpreter check enabled, a maximum of 20 files is supported. Although it is possible to include more files in the knowledge base, exceeding this limit means that some files must be excluded. To do this, use the **Exclude from Code Interpreter** option on the files that you do not want to be processed by the Code Interpreter.
 
 !!!info
-    When configuring files for Langchain agent assistants, remember the supported formats are `.zip`, `.txt`, `.pdf` and `.md`. For `.zip` files, note that these are the only formats that the wizard will read: `.txt`, `.pdf`, `.md`, `.py`, `.java` and `.js`.
+    When configuring files for **Langchain Agent** or **Multi-Model Agent**, remember the supported formats are `.zip`, `.txt`, `.pdf` and `.md`. For `.zip` files, note that these are the only formats that the wizard will read: `.txt`, `.pdf`, `.md`, `.py`, `.java` and `.js`.
 
 ![](../../assets/user-guide/etendo-copilot/setup/knowledge-tab.png)
-
 
 
 Fields to note:
@@ -379,6 +373,6 @@ Fields to note:
 
 ### Buttons
 
-**Synk Models** This process allows to synchronize the models distributed by Etendo on demand.
+**Sync Models** This process allows to synchronize the models distributed by Etendo on demand.
 
 

@@ -9,7 +9,7 @@ tags:
 
 # SQL Expert
 
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
 ## Overview
 
@@ -32,7 +32,7 @@ The SQL Expert Assistant is composed of the following components:
         To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 
-2. Check the necessary ETENDO_HOST variable in the `gradle.properties` file.
+2. Check the necessary `ETENDO_HOST` variable in the `gradle.properties` file.
     
     ```groovy title="gradle.properties"
     ETENDO_HOST=http://localhost:8080/etendo
@@ -60,7 +60,6 @@ The SQL Expert Assistant is composed of the following components:
         
         2. Access must be given to the corresponding role in the  [WebHooks](../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window, in the **Role** tab, for the WebHook **DBQueryExec**.  This webhook is automatically added when the module is installed.
             ![](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-setup.png)
-
 
 
 ## Examples
