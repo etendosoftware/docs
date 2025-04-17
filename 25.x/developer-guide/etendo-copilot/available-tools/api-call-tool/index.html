@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/25.x/developer-guide/etendo-copilot/available-tools/openapi-tool/">
+        <link rel="canonical" href="https://docs.etendo.software/25.x/developer-guide/etendo-copilot/available-tools/api-call-tool/">
       
       
-        <link rel="prev" href="../file-downloader-tool/">
+        <link rel="prev" href="../../bundles/dev-assistant/">
       
       
-        <link rel="next" href="../ocr-tool/">
+        <link rel="next" href="../attach-file-tool/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>OpenAPI Interaction with Copilot - Etendo Documentation</title>
+        <title>API Call Tool - Etendo Documentation</title>
       
     
     
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openapi-interaction-with-copilot" class="md-skip">
+        <a href="#api-call-tool" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenAPI Interaction with Copilot
+              API Call Tool
             
           </span>
         </div>
@@ -4185,29 +4185,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Copilot Purchase Expert
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../user-guide/etendo-copilot/bundles/sql-expert/" class="md-nav__link">
         
   
@@ -7961,20 +7938,115 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Call Tool
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    API Call Tool
     
   </span>
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functionality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-etendo_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ETENDO_TOKEN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -8122,142 +8194,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    OpenAPI Interaction with Copilot
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    OpenAPI Interaction with Copilot
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#defined-assistant" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defined Assistant
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Defined Assistant">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-configurations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Configurations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functionality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-integrate-copilot-with-other-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to integrate Copilot with other APIs
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -8359,6 +8295,29 @@
   
   <span class="md-ellipsis">
     Send Email Tool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task-creator-tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task Creator Tool
     
   </span>
   
@@ -8588,6 +8547,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-create-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Create an Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to-guides/how-to-create-copilot-tools/" class="md-nav__link">
         
   
@@ -8611,12 +8593,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/how-to-execute-copilot-through-console/" class="md-nav__link">
+      <a href="../../how-to-guides/how-to-export-tools-and-assistants/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    How to execute Copilot through the console
+    How to Export Tools and Assistants
     
   </span>
   
@@ -8634,12 +8616,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/how-to-export-tools-and-assistants/" class="md-nav__link">
+      <a href="../../how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    How to Export Tools and Assistants
+    How to Create and Work with Bulk Tasks for Copilot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-execute-copilot-through-console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Execute Copilot Through the Console
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-use-run-self-hosted-models-with-ollama/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Run Self-Hosted Models with Ollama
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Debug an Agent Prompt with Langsmith
     
   </span>
   
@@ -10327,37 +10378,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Tools
+      Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defined-assistant" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      Defined Assistant
+      Functionality
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Defined Assistant">
+    <nav class="md-nav" aria-label="Functionality">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#using-etendo_token" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-configurations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Configurations
+      Using ETENDO_TOKEN
     </span>
   </a>
   
@@ -10369,18 +10411,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#functionality" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Functionality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-integrate-copilot-with-other-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to integrate Copilot with other APIs
+      Usage Example
     </span>
   </a>
   
@@ -10405,31 +10438,31 @@
       
       
       
-        <span class="md-tag">API</span>
+        <span class="md-tag">API Integration</span>
       
     
       
       
       
-        <span class="md-tag">Copilot</span>
+        <span class="md-tag">Etendo Copilot</span>
       
     
       
       
       
-        <span class="md-tag">IA</span>
+        <span class="md-tag">HTTP Requests</span>
       
     
       
       
       
-        <span class="md-tag">OpenAPI</span>
+        <span class="md-tag">REST API</span>
       
     
       
       
       
-        <span class="md-tag">Swagger</span>
+        <span class="md-tag">Tool</span>
       
     
   </nav>
@@ -10439,144 +10472,102 @@
   
 
 
-<h1 id="openapi-interaction-with-copilot">OpenAPI Interaction with Copilot</h1>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.copilot.openapi</code></p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.copilot.openapi.purchase</code></p>
+<h1 id="api-call-tool">API Call Tool</h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.copilot.toolpack</code></p>
 <h2 id="overview">Overview</h2>
-<p>The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. </p>
+<p>The <strong>API Call Tool</strong> is designed to execute HTTP requests to external APIs. It enables developers to connect their applications to external services using RESTful methods. The tool accepts input parameters such as the API URL, endpoint, HTTP method, query parameters, body content, and an optional authorization token. As output, it returns the response body and the status code of the API call.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">Copilot Extensions - Release notes</a>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>For more information, see the <a href="https://www.openapis.org/" target="_blank">OpenAPI Initiative</a>.</p>
-</div>
-<p>This specification can be useful for Copilot since it can be used as a guide to Copilot to interact with the services, without the need to know the implementation details and implementing specific code for each service is not be necessary.</p>
-<h2 id="tools">Tools</h2>
+<p>This tool provides the assistant with:</p>
 <ul>
-<li>
-<p><strong>Etendo API Tool</strong>: This tool returns the OpenAPI Specification of the Etendo API, it can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). The Etendo API Tool only returns the OpenAPI Specification of the Etendo API to insert purchase orders in Etendo.
-Roughly speaking, this tool reads and returns information from the Swagger (OpenAPI Spec), allowing the Assistant to request general information from the API, for example to know what endpoints it has and what each one does. It can also request specific information about an endpoint (such as the shape of its body). This allows the helper, in real time, to investigate the structure of the API. In addition, if the API changes, the simple fact that the Swagger is updated will ensure that the assistant adapts to those changes.</p>
-<p>This Tool serves as an example and template, since a similar tool could be made to integrate it with another API, as long as it has an OpenAPI Specification. </p>
-</li>
-<li>
-<p><strong>API Call Tool</strong>: This tool allows Copilot to make a call to an API endpoint. 
-This tool will be responsible for making the call to the API endpoint, and will return the response.</p>
-</li>
+<li>Integration: It allows applications to consume external REST APIs easily.</li>
+<li>Flexibility: Supports GET, POST, and PUT methods with customizable headers and payloads.</li>
+<li>Automation: Facilitates interaction with external systems from within Etendo Copilot.</li>
 </ul>
-<h2 id="defined-assistant">Defined Assistant</h2>
-<p>In the basic use case, a <strong>Purchase Assistant</strong> was implemented, in which an assistant is defined that knows the flow of how purchase orders are loaded. And it was provided with a Tool that allows reading the API specification (Etendo API Tool) and "understand" it. It was also given access to a Tool to make the API calls (APICallTool).</p>
-<h3 id="configuration">Configuration</h3>
-<ul>
-<li>In the module <code>com.etendoerp.copilot.openapi.purchase</code> there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. </li>
-<li>After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.</li>
-<li>Finally, give access to the role and configure the permissions in "Role" Window.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&amp;recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.</p>
-</div>
-<h3 id="other-configurations">Other Configurations</h3>
-<ul>
-<li>It is necessary to add the <code>gradle.properties</code> file with the following configuration:
-<div class="language-properties highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="na">ETENDO_HOST</span><span class="o">=</span><span class="s">http://localhost:8080/etendo</span>
-</span></code></pre></div></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Replace http://localhost:8080/etendo with the real url of the Etendo system.</p>
-</div>
+<p>This tool is ideal for developers integrating third-party services, internal APIs, or microservices.</p>
+<h2 id="setup">Setup</h2>
+<p>No specific environment variables are required to use this tool. However, if a bearer token is needed for authorization, it can be passed in the input as the <code>token</code> parameter.</p>
+<p>Additionally, if you use the special token value <code>ETENDO_TOKEN</code>, the tool will fetch the token using Etendo's token management utility.</p>
 <h2 id="functionality">Functionality</h2>
-<p>The combination of the prompt with the functional concepts, the tool that allows to read and analyze the OpenAPI Spec to see the available endpoints and the tool to make the API calls, allows the defined assistant to load the purchase and its lines.</p>
-<h2 id="how-to-integrate-copilot-with-other-apis">How to integrate Copilot with other APIs</h2>
-<p>The case of the purchase assistant is just an implementation to respond to a need. But, the usefulness of this is that, using the OpenAPI Spec reading tool as a base, the same dynamics can be replicated for a different API. For example, if we want to integrate Copilot with a <a href="https://petstore.swagger.io/" target="_blank">PetStore API</a> that has an OpenAPI Spec file, we can create a tool that reads that file and provides the information to the assistant. This way, the assistant will be able to make calls to the PetStore API, without the need to know the implementation details of the API. What we should do is the following:</p>
+<p>This tool enables execution of RESTful requests through the following steps:</p>
 <ul>
-<li>Create an app, describing in the app prompt the functionality we want the helper to perform. In this case, describing that we need the assistant to know how to look up the exchange rates for us.</li>
+<li>
+<p><strong>Processing Arguments</strong></p>
+<p>It processes input parameters such as:
+- <code>url</code>: API base URL (required)
+- <code>endpoint</code>: Specific API endpoint (required)
+- <code>method</code>: HTTP method (<code>GET</code>, <code>POST</code>, or <code>PUT</code>) (required)
+- <code>body_params</code>: Payload (for POST and PUT)
+- <code>query_params</code>: Query string as a JSON object
+- <code>token</code>: Optional bearer token</p>
+</li>
+<li>
+<p><strong>Handling Query Parameters</strong></p>
+<p>If provided, query parameters are appended to the endpoint with appropriate URL encoding.</p>
+</li>
 </ul>
-<p>The important thing is that the prompt is clear and that the assistant has the necessary context to perform the task. For example, in the case of the petStore assistant, the prompt should be clear that the assistant should be able to search for pets, add pets, etc. The prompt could be something like this:</p>
-<div class="language-text highlight"><pre><span></span><code>``` 
-    You are an assistant that can interact with the PetStore API. You can search for pets, add pets, etc. You have a PetStore API Tool that can read the OpenAPI Spec file of the PetStore API. You also have an API Call Tool that allows you to make calls to the PetStore API.
-    The recommended way to interact with the PetStore API is first to use the PetStore API Tool to read the OpenAPI Spec file and understand the available endpoints, without specifiying a specific endpoint(take a look at the general information of the API, like the endpoints and their descriptions). 
-    Then, the PetStore API Tool can be used to read the specific information of the endpoints, like parameters, responses, etc. 
-    Finally, the API Call Tool can be used to make the call to the API endpoint.
-```
-</code></pre></div>
-<ul>
-<li>Create a tool, using the example of the EtendoAPITool, that reads the OpenAPI Spec file, that can be remote or local. This tool should provide the API information. If it is an external API, it is recommended that it reads the remote file provided by the API, so that it is updated on the fly, if the API changes.</li>
-</ul>
-<p>For this example, we will create a PetStoreAPITool.py file in a tools folder of a module. You can see how to create a module in the <a href="../../etendo-classic/how-to-guides/How_To_Create_a_Module.md">How to Create a Module</a> page.</p>
-<p>Here is a sample code to take as a base:</p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Final</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Optional</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.chat_models</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.utilities</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestsWrapper</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tool</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.tool_wrapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">ToolWrapper</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kn">from</span><span class="w"> </span><span class="nn">copilot.core.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">copilot_debug</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">class</span><span class="w"> </span><span class="nc">PetStoreAPIToolInput</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">endpoint</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>                                    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;The endpoint of the API we want to get the information. If not provided, returns the general information of the API, listing all the endpoints. With description of each endpoint,but without the parameters or responses. &quot;</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>                                                <span class="s2">&quot;It needs to include the Method and the Path of the endpoint. For example, if we want to get the information of the endpoint GET of the path /example, we need to provide the parameter endpoint with the value &#39;GET /example&#39;. If the endpoint is provided, returns the information of that endpoint, with the parameters and responses.&quot;</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>                                    <span class="p">)</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="k">class</span><span class="w"> </span><span class="nc">PetStoreAPITool</span><span class="p">(</span><span class="n">ToolWrapper</span><span class="p">):</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;PetStoreAPITool&quot;</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    <span class="n">description</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;&#39; This Tool, based on the OpenAPI specification, allows you to get information about the API,</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="s1">    such as the url of the server, the endpoints, the parameters of each endpoint, the responses of each endpoint, etc.</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="s1">    It has one optional parameter, endpoint, which indicates of what endpoint of the API we want to get the information. It needs</span>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="s1">    to include the Method and the Path of the endpoint. For example, if we want to get the information of the endpoint</span>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="s1">    GET of the path /example, we need to provide the parameter endpoint with the value &quot;GET /example&quot;.</span>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="s1">    If not provided, returns the general information of the API, listing all the endpoints, with description of each endpoint,</span>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="s1">    but without the parameters or responses. If the endpoint is provided, returns the information of that endpoint, with the</span>
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="s1">    parameters and responses.</span>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="s1">    &#39;&#39;&#39;</span><span class="p">)</span>
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    <span class="n">args_schema</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span> <span class="o">=</span> <span class="n">PetStoreAPIToolInput</span>
-</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>
-</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_params</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>        <span class="k">try</span><span class="p">:</span>
-</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>            <span class="n">api_spec_file_url</span> <span class="o">=</span> <span class="s2">&quot;https://petstore.swagger.io/v2/swagger.json&quot;</span>
-</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://petstore.swagger.io/v2/&quot;</span>
-</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>            <span class="n">endpoint</span> <span class="o">=</span> <span class="n">input_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;endpoint&#39;</span><span class="p">)</span>
-</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
-</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>            <span class="n">copilot_debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PetStoreAPITool: endpoint: </span><span class="si">{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>            <span class="c1"># read the file from the internet or from the local file</span>
-</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>            <span class="n">raw_api_spec</span> <span class="o">=</span> <span class="n">read_raw_api_spec</span><span class="p">(</span><span class="n">api_spec_file_url</span><span class="p">)</span>
-</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>
-</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>            <span class="k">if</span> <span class="n">endpoint</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">endpoint</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
-</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>                <span class="n">response</span> <span class="o">=</span> <span class="n">get_general_info</span><span class="p">(</span><span class="n">raw_api_spec</span><span class="p">)</span> <span class="c1"># read the information of the API, like the endpoints names and descriptions</span>
-</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>            <span class="k">else</span><span class="p">:</span>
-</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>                <span class="n">response</span> <span class="o">=</span> <span class="n">get_specific_info</span><span class="p">(</span><span class="n">raw_api_spec</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">)</span> <span class="c1"># read the information of the specific endpoint, like the parameters and responses</span>
-</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>
-</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>            <span class="k">return</span> <span class="n">response</span>
-</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>            <span class="n">response</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)}</span>
-</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>            <span class="k">return</span> <span class="n">response</span>
+<h3 id="using-etendo_token">Using ETENDO_TOKEN</h3>
+<p>If you set the <code>token</code> parameter to the special value <code>ETENDO_TOKEN</code>, Copilot will automatically replace it with a secure token retrieved from the Etendo environment. This approach ensures the token is <strong>not exposed to the language model</strong> and remains secure during execution.</p>
+<p>Example:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://my.etendo.instance/etendo&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;endpoint&quot;</span><span class="p">:</span><span class="s2">&quot;/sws/mySecureWebservice&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ETENDO_TOKEN&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
 </span></code></pre></div>
-This is a simple example, but it can be expanded to filter the information, to provide more details, etc. In the previous code, the functions read_raw_api_spec, get_general_info and get_specific_info are not defined, but they should be implemented to read the OpenAPI Spec file and return the information requested. </p>
 <ul>
 <li>
-<p>Sync the tool information in the "Copilot Tool" tab of Etendo Classic. Remember that is necessary to restart the Docker image using <code>./gradlew resources.down</code> and <code>./gradlew resources.up</code> tasks. Ensure that the tool is loaded by Copilot.
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/available-tools/openapi-how-to.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sync tool info" src="../../../../assets/developer-guide/etendo-copilot/available-tools/openapi-how-to.png" /></a></p>
+<p><strong>Replacing Base64 Placeholders</strong></p>
+<p>If the body contains <code>@BASE64_filepath@</code> placeholders, they are replaced with the base64-encoded content of the specified file.</p>
+<p><div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://my.etendo.instance/etendo&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&quot;endpoint&quot;</span><span class="p">:</span><span class="s2">&quot;/sws/UploadFile&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ETENDO_TOKEN&quot;</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;body_params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@BASE64_filepath@&quot;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
+The API Call Tool will replace <code>@BASE64_filepath@</code> with the base64-encoded content of the file specified in the <code>file</code> parameter without exposing the file content or base64 to the model (not only for security reasons but also to avoid model confusion).</p>
 </li>
 <li>
-<p>Configure the Tool created in the App, together with the APICallTool, which is a tool included in the module (<code>com.etendoerp.copilot.openai</code>) and is generic for any simple API.
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/available-tools/openapi-how-to-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configure the Assistant" src="../../../../assets/developer-guide/etendo-copilot/available-tools/openapi-how-to-2.png" /></a></p>
+<p><strong>Executing the Request</strong></p>
+<p>Based on the method, the tool performs the corresponding request using the <code>requests</code> library.</p>
 </li>
 <li>
-<p>Sync the assistant and try it out.</p>
+<p><strong>Returning the Response</strong></p>
+<p>Returns a structured response with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &quot;requestResponse&quot;: &quot;&lt;response body&gt;&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &quot;requestStatusCode&quot;: 200
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
+</span></code></pre></div>
+<p>In case of error:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    &quot;error&quot;: &quot;Detailed error message&quot;
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>}
+</span></code></pre></div>
 </li>
 </ul>
-<p>This way, we can create assistants for any API, as long as we have the OpenAPI Spec file. The assistant will be able to read the API and make the calls, without the need to know the implementation details of the API. </p>
+<h2 id="usage-example">Usage Example</h2>
+<p>Imagine you want to send a POST request to an external API for creating a new user. The input parameters for the assistant would be:</p>
+<ul>
+<li><code>url</code>: https://api.example.com</li>
+<li><code>endpoint</code>: /users/create</li>
+<li><code>method</code>: POST</li>
+<li><code>body_params</code>: 
+    <div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</span></code></pre></div></li>
+<li><code>token</code>: YOUR_BEARER_TOKEN</li>
+</ul>
+<p>The API Call Tool will format and send the request with the appropriate headers and body, and return the result including the response status code and body content.</p>
 
 
 
