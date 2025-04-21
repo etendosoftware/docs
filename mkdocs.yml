@@ -255,7 +255,6 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
             - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
-            - Bank Integration PSD2: user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
@@ -507,7 +506,6 @@ nav:
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
-          - Bank Integration PSD2: developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration.md
         - Etendo BI Extensions Bundle: developer-guide/etendo-classic/bundles/etendo-bi-extensions.md
       - Developer Changelog:
         - API Changes: developer-guide/etendo-classic/developer-changelog/apichanges.md

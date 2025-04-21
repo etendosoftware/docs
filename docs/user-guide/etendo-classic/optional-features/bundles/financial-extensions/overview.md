@@ -116,16 +116,6 @@ This functionality allows the user to automatically process and protest remittan
 !!! info
     For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
 
-### Bank Integration PSD2
-
-:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
-
-This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
-
-!!!info
-    For more information, visit [Bank Integration PSD2](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
-
-
 ### Banking Pool
 
 :octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
