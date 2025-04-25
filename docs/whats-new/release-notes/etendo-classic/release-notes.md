@@ -15,7 +15,8 @@ tags:
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
 | [25Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0){target="_blank"} | 28/03/2025 | 25.1.0 | RC | [25Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.0.iso){target="_blank"} | :white_check_mark: |
-| [24Q4.12](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.12){target="_blank"} | 17/04/2025 | 24.4.12 | CS |  | :white_check_mark: |
+| [24Q4.13](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.13){target="_blank"} | 25/04/2025 | 24.4.13 | CS |  | :white_check_mark: |
+| [24Q4.12](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.12){target="_blank"} | 17/04/2025 | 24.4.12 | C |  | :white_check_mark: |
 | [24Q4.11](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.11){target="_blank"} | 04/04/2025 | 24.4.11 | C |  | :white_check_mark: |
 | [24Q4.10](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.10){target="_blank"} | 28/03/2025 | 24.4.10 | C |  | :white_check_mark: |
 | [24Q4.9](https://github.com/etendosoftware/etendo_core/releases/tag/24.4.9){target="_blank"} | 22/03/2025 | 24.4.9 | C |  | :white_check_mark: |
