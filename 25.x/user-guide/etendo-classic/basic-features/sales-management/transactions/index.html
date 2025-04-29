@@ -2782,8 +2782,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Header">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#amounts" class="md-nav__link">
@@ -2803,8 +2802,12 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#buttons_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
   
 </li>
         
@@ -12075,8 +12078,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Header">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#amounts" class="md-nav__link">
@@ -12096,8 +12098,12 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#buttons_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
   
 </li>
         
@@ -13451,28 +13457,29 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>When the process is finished, a message is shown with the total number of created invoices and their document numbers.</p>
 <h2 id="commission-payment">Commission Payment</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Transactions</code> &gt; <code>Commission Payment</code></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=1CLcSz5b4iY_J4hy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <p>In this section, the user can create commissions and create corresponding invoices.</p>
-<p>This window is not editable since "commission" records are calculated in the Commission window, however this window allows to create an invoice for the commissions previously calculated.</p>
+<p>This window is not editable since <strong>commission</strong> records are calculated in the <a href="../setup/#commission">Commission</a> window, however this window allows to create an invoice for the commissions previously calculated.</p>
 <p>This window needs to be read as follows:</p>
 <ul>
 <li>The <strong>header</strong> shows the commission document, the starting date and total net amount. In case an invoice is created then both documents are linked to each other later on.</li>
-<li>The <strong>amounts</strong> tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission  window the user has one entry in this tab.</li>
+<li>The <strong>amounts</strong> tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission window the user has one entry in this tab.</li>
 <li>The <strong>Details</strong> tab shows all the Order lines/Invoice lines taking into account to calculate the amount.</li>
 </ul>
-<h3 id="header_7"><strong>Header</strong></h3>
-<p>The user can create and edit a new commission payment.</p>
-<p><a class="glightbox" href="../../../../../assets/drive/16ukK8L3jTWiFdQ1AAOr3snAb4kTNwR0G.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commision payment header" src="../../../../../assets/drive/16ukK8L3jTWiFdQ1AAOr3snAb4kTNwR0G.png" /></a></p>
-<p>A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button "Create Invoice".</p>
+<h3 id="header_7">Header</h3>
+<p>From this window it is possible to visualize the commissions created. </p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commision payment header" src="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission3.png" /></a></p>
 <ul>
 <li><strong>Commission</strong> field indicates which is the defined commission and therefore the conditions used to calculate the commission amount.</li>
 <li><strong>Starting date</strong> as the date used when running the process, for instance an starting date of 1st of March with a Monthly frequency implies to take orders/invoices created and booked in March.</li>
 <li><strong>Total amount</strong> field shows the commission amount after applying the configured conditions. Commission amount is calculated based on amounts excluding taxes.</li>
 <li><strong>Invoice</strong> field shows the invoice created if any.</li>
 </ul>
-<h4 id="amounts"><strong>Amounts</strong></h4>
+<h3 id="amounts">Amounts</h3>
 <p>The user can edit individual sales order lines that yielded a selected commission.</p>
 <p><strong>Amounts</strong> tab shows the amount calculated per each line defined in the commission  window.</p>
-<p><a class="glightbox" href="../../../../../assets/drive/1RKBEy3nS7XSzgh1ST4gl4n7-DBSsXGon.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commision payment amount tab" src="../../../../../assets/drive/1RKBEy3nS7XSzgh1ST4gl4n7-DBSsXGon.png" /></a></p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commision payment amount tab" src="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission4.png" /></a></p>
 <p>For example if the commission has two lines:</p>
 <ul>
 <li>First line:</li>
@@ -13491,9 +13498,10 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <li><strong>Converted Amount</strong>: The total amount without applying the conditions of the commission line in the corresponding currency.</li>
 <li><strong>Actual quantity</strong>: The total quantity. When UOM is different among products this info is not relevant.</li>
 </ul>
-<h4 id="details"><strong>Details</strong></h4>
+<h3 id="details">Details</h3>
 <p>Create and edit the calculation and invoicing of sales commission.</p>
 <p><strong>Details</strong> tab shows all the sales/invoice lines took into account to calculate the corresponding commission line.</p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commision details tab" src="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission5.png" /></a></p>
 <p>Fields to note:</p>
 <ul>
 <li><strong>Reference</strong>: Document number</li>
@@ -13505,6 +13513,10 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <li><strong>Converted Amount</strong>: Amount in the currency of the commission</li>
 <li><strong>Actual Quantity</strong>: Quantity ordered in the order/invoice line</li>
 <li><strong>Is Cost Calculated</strong>: This field's default value is 'YES'. It is only taken into account when the commission is calculated based on the margin. When this flag is not marked the cost of the transaction is not calculated. That means it hasn't been possible to calculate its margin. This flag must be marked in all the details in order to be able to generate the invoice of the commission.</li>
+</ul>
+<h3 id="buttons_1">Buttons</h3>
+<ul>
+<li><strong>Create Invoice</strong>: A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button.</li>
 </ul>
 <hr />
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Sales_Management" target="_blank">Sales Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>

@@ -1976,9 +1976,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#header-within-commission" class="md-nav__link">
+  <a href="#overview_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Header (within Commission)
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
     </span>
   </a>
   
@@ -1988,6 +1997,15 @@
   <a href="#lines" class="md-nav__link">
     <span class="md-ellipsis">
       Lines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
     </span>
   </a>
   
@@ -10389,9 +10407,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#header-within-commission" class="md-nav__link">
+  <a href="#overview_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Header (within Commission)
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
     </span>
   </a>
   
@@ -10401,6 +10428,15 @@
   <a href="#lines" class="md-nav__link">
     <span class="md-ellipsis">
       Lines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
     </span>
   </a>
   
@@ -10477,64 +10513,95 @@
 <p><a class="glightbox" href="../../../../../assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sales region" src="../../../../../assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F.png" /></a></p>
 <h2 id="commission">Commission</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Setup</code> &gt; <code>Commission</code></p>
-<p>The user can define how and when commissions are going to be calculated and to whom they are going to be paid.</p>
-<p>Commissions can be calculated based on two documents: Sales Orders and Sales Invoices. In both documents the sales representative should be selected, as commissions can be calculated per sales representative. Once the commission amount is calculated, a purchase invoice can be created, the business partner of that purchase invoice is the sales representative defined for that commission.</p>
-<p>Prior to use commissions, some configurations need to be done:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=1CLcSz5b4iY_J4hy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="overview_1">Overview</h3>
+<p>The Commission functionality in Etendo begins with the <strong>Commission window</strong>, where users configure the general settings for commission calculation which allows defining <strong>how and when commissions</strong> are going to be calculated and to <strong>whom they are going to be paid</strong>. Commissions can be calculated based on the sales defined in two documents: <strong>Sales Orders and Sales Invoices</strong>. From the Commission window, more detailed criteria are defined, including filters by business partner, product, or region, along with the actual commission structure. A key feature is the ability to assign a <strong>sales representative</strong> directly when creating sales documents (orders and/or invoices), which allows Etendo to link those transactions to the appropriate commission plan and ensures accurate filtering. </p>
+<p>Once all conditions are set, the system generates the corresponding commission, which is displayed in the <a href="../transactions/#commission-payment"><strong>Commission Payment</strong></a> window, where users can review a detailed breakdown of the calculation and even generate a <a href="../../procurement-management/transactions/#purchase-invoice"><strong>purchase invoice</strong></a> to process the commission payment to the sales representative.</p>
+<p>To sum up, the overall flow is:</p>
+<ul>
+<li>Define the commission in the <strong>Commission window</strong>.</li>
+<li>Create the Sales Orders and Sales Invoices linked to a sales representative.</li>
+<li>Generate the commission in the Commission window for a given sales representative by using the process button <strong>Generate Commission</strong>.</li>
+<li>and then from the <a href="../transactions/#commission-payment">Commission Payment</a> window, create an invoice if required by using the process button <strong>Create Invoice</strong>. </li>
+</ul>
+<p>Prior to use commissions, some <strong>configurations</strong> need to be done:</p>
 <ul>
 <li>Create a sales representative. The way to do that is:<ul>
-<li>first create an Etendo user, as the sales representative can be an Etendo user who logs in in Etendo and issues sales orders/invoices.</li>
-<li>then create a Business Partner. It is required to create a business partner because the sales representative could be someone who is going to issue an invoice in order to get the commissions paid.  If that is the case,  that business partner should be marked as "Vendor" in the Vendor tab and have a "PO Payment Method", a "PO Payment Term" and a "Purchase Pricelist" defined for it.<br />
-    Besides, it is required to mark the Business Partner as "Sales Representative" in the Employee tab.</li>
-<li>and finally link them both. The way to do that is:<ul>
-<li>to select the business partner just created in the field "Business Partner" of the user window. That field can be found under the section "<em>More Information</em>".</li>
+<li>First it is possible to create an <a href="../../general-setup/security/#user">Etendo user</a>, as the sales representative can be an Etendo user who logs in in Etendo and issues sales orders/invoices.</li>
+<li>Then create a <a href="../../master-data-management/master-data/#business-partner">Business Partner</a>. It is required to create a business partner because the sales representative could be someone who is going to issue an invoice in order to get the commissions paid.  If that is the case,  that business partner should be marked as <em>Vendor</em> in the <strong>Vendor tab</strong> and have a <em>PO Payment Method</em>, a <em>PO Payment Term</em> and a <em>Purchase Pricelist</em> defined for it. Besides, it is required to mark the Business Partner as Sales Representative in the <strong>Employee tab</strong>.</li>
+<li>And finally if the user was created, link them both. The way to do that is to select the business partner just created in the field <strong>Business Partner</strong> of the <strong>User</strong> window. </li>
+<li>Create a <a href="../../master-data-management/master-data/#product">Product</a> and get it part of a <strong>Price List</strong> without pricing information as part of the required concept when the commission purchase invoice is created. </li>
 </ul>
 </li>
 </ul>
-</li>
-<li>Create a product and get it part of a Price List without pricing information, in case a purchase invoice is required to be created in order to get the commissions invoiced.</li>
-</ul>
-<p>The overall flow is:</p>
+<h3 id="header">Header</h3>
+<p>The user can define a sales commission to be used in the sales process. The header lists main terms that will be used to calculate the commission:</p>
 <ul>
-<li>Define the commission in the Commission window.</li>
-<li>Create the Sales Orders and Sales Invoices linked to a sales representative.</li>
-<li>Generate the commission in the Commission window for a given sales representative by using the process button "Generate Commission".</li>
-<li>and then create an invoice if required by using the process button "Create Invoice". </li>
+<li><strong>Business partner / Sales representative</strong>: Used to create a purchase invoice or used to calculate the commission</li>
+<li><strong>Frequency</strong>: The process takes the orders/invoices that fits the corresponding period.</li>
+<li><strong>Invoice product</strong>: If an invoice is required, the new invoice will have this product.</li>
+<li><strong>Basis Document</strong>: Whether the commission is calculated based on invoices or orders.</li>
+<li><strong>Last Run Date</strong>: Last date when the process Generate Commission was performed.</li>
+<li><strong>Basis Status</strong>: Whether the commission is calculated based on all documents or fully paid documents.</li>
+<li><strong>Basis Amount</strong>: Whether the commission is calculated based on net amount or margin.</li>
+<li><strong>List details</strong>: See the result of the commission grouped or line by line. When the commission is calculated based on margin the list details is always checked.</li>
+<li><strong>Cascade</strong>: Able to manage complex commissions (exclude some invoice/order lines, apply different multiplier quantity/amount for some invoice/order lines, exclude products from already defined product cathegories). When this field is checked the result of the commission is grouped on line by line.</li>
 </ul>
-<h4 id="header-within-commission">Header (within Commission)</h4>
-<p>The user can define a sales commission to be used in the sales process.</p>
-<p>Header lists main terms that will be used to calculate the commission:</p>
-<ul>
-<li>Business partner / Sales representative: Used to create a purchase invoice or used to calculate the commission</li>
-<li>Frequency: The process takes the orders/invoices that fits the corresponding period.</li>
-<li>Invoice product: If an invoice is required, the new invoice will have this product</li>
-<li>Basis Document: Whether the commission is calculated based on invoices or orders</li>
-<li>Last Run Date: Last date when the process Generate Commission was performed</li>
-<li>Basis Status: Whether the commission is calculated based on all documents or fully paid documents</li>
-<li>Basis Amount: Whether the commission is calculated based on net amount or margin.</li>
-<li>List details: See the result of the commission grouped or line by line. When the commission is calculated based on margin the list details is always checked</li>
-<li>Cascade: Able to manage complex commissions (exclude some invoice/order lines, apply different multiplier quantity/amount for some invoice/order lines...). When this field is checked the result of the commission is grouped on line by line.</li>
-</ul>
-<p><a class="glightbox" href="../../../../../assets/drive/11LiWjvIEjdQ143R2q6TUmJyJ2HRbtqpD.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commission's header" src="../../../../../assets/drive/11LiWjvIEjdQ143R2q6TUmJyJ2HRbtqpD.png" /></a></p>
-<p>There are two buttons:</p>
-<ul>
-<li>Copy Lines: Allows to copy the configuration of other commissions</li>
-<li>Generate Commission: Based on the header and lines, the commission is generated. For example, if Monthly frequency is defined and the starting date is 01/03/2012 only orders/invoices of March will be taken into account</li>
-</ul>
-<h4 id="lines">Lines</h4>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commission's header" src="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission1.png" /></a></p>
+<h3 id="lines">Lines</h3>
 <p>The user can edit the selected commission amount.</p>
-<p>Lines tab allows the user to define in deep the conditions of the commission:</p>
+<p>Line tab allows the user to define in deep the conditions of the commission:</p>
+<p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commission's pop up" src="../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission2.png" /></a></p>
 <ul>
-<li>Exclude: If the Cascade box is checked, marked order/invoices lines that satisfied the commission line conditions will not take into account to calculate the commission. This flag will only be visible when in the header Cascade flag is checked.</li>
-<li>Based on Sales Rep.: If the flag is marked, only orders/invoices that have the same sales representative as in the header are taken into account to calculate the commission.</li>
-<li>Business partner category: Only orders/invoices with business partners that belong to that category are taken into account to calculate the commission.</li>
-<li>Business partner: Only orders/invoices with that business partner are taken into account to calculate the commission.</li>
-<li>Product category: Only orders/invoices with products that belong to that category are taken into account to calculate the commission.</li>
-<li>Product: Only orders/invoices with that product are taken into account to calculate the commission.</li>
-<li>Subtract Quantity: The total quantity calculated based on the above criteria is subtracted by this quantity therefore from this number begins to calculate the commission.</li>
-<li>Multiplier Quantity: Price multiplying the result of the above quantity.</li>
+<li><strong>Exclude</strong>: order/invoice lines that meet the conditions set in the commission line will not be taken into account for calculating the commission. This flag will only be visible when the Cascade field is checked in the header.</li>
+<li><strong>Based on Sales Rep.</strong>: If the flag is marked, only orders/invoices that have the same sales representative as in the header are taken into account to calculate the commission.</li>
+<li><strong>Business partner category</strong>: Only orders/invoices with business partners that belong to that category are taken into account to calculate the commission.</li>
+<li><strong>Business partner</strong>: Only orders/invoices with that business partner are taken into account to calculate the commission.</li>
+<li><strong>Product category</strong>: Only orders/invoices with products that belong to that category are taken into account to calculate the commission.</li>
+<li><strong>Product</strong>: Only orders/invoices with that product are taken into account to calculate the commission.</li>
+<li><strong>Subtract Quantity</strong>: The total quantity calculated based on the above criteria is subtracted by this quantity therefore from this number Etendo begins to calculate the commission.</li>
+<li><strong>Multiplier Quantity</strong>: Price multiplying the result of the above quantity.</li>
+<li><strong>Subtract Amount</strong>: The total net amount calculated based on the above criteria is subtracted by this amount therefore, from this number Etendo begins to calculate the commission.</li>
+<li><strong>Multiplier Amount</strong>: cohefficient (percentage) multiplying the result of the above amount. </li>
 </ul>
+<p>Let's see some examples:</p>
+<ul>
+<li>
+<p>I want to pay 10 euros per unit sold over 3000 units: 
+<strong>Subtract Quantity</strong>: 3000
+<strong>Multiplier Quantity</strong>: 10
+<strong>Subtract Amount</strong>: The total amount calculated based on the above criteria (business partner, etc) is subtracted by this amount therefore, from this number Etendo begins to calculate the commission.
+<strong>Multiplier Amount</strong>: percentage multiplying the result of the above amount</p>
+</li>
+<li>
+<p>I want to pay 15% per amount sold over 25000 euros:
+<strong>Subtract Amount</strong>: 25000
+<strong>Multiplier Quantity</strong>: 0.15
+<strong>Positive Only</strong>: If the result of, for example, (Total amount - Subtract Amount) is lower than zero then it is not taken into account for the commission.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please note that quantity and amount fields can be used in combination.</p>
+</div>
+<ul>
+<li>A complex commission example:</li>
+</ul>
+<p>I want to calculate commission at 5% for business partner <em>Healthy Food Supermarkets, Co.</em>.
+I want to exclude <em>soft drinks</em> products.
+For 'Cola 0.5L' I want the commission to be 10%. Not 10% plus the 5% calculated in the first line. So this line will remove what was calculated previously for 'Cola 0.5L'.
+So, in the header you will have to check <strong>Cascade</strong>.
+In lines tab, the first line will have in business partner <em>Healthy Food Supermarkets, Co.</em> and multiplier amount 0.05.
+In lines tab, the second line will have exclude marked and in product 'Cola 0.5L'.
+In lines tab, the third line will have in product 'Cola 0.5L' and multiplier amount 0.10.</p>
 <p>Finally, the result of the commission will be the combination of these three lines.</p>
-<p><a class="glightbox" href="../../../../../assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commission's pop up" src="../../../../../assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png" /></a></p>
+<h3 id="buttons">Buttons</h3>
+<ul>
+<li><strong>Copy Lines</strong>: Allows to copy the configuration of other commissions.</li>
+<li><strong>Generate Commission</strong>: Based on the header and lines, the commission is generated. For example, if Monthly frequency is defined and the starting date is 01/03/2025 only orders/invoices of March will be taken into account.
+    <a class="glightbox" href="../../../../../assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Commission's pop up" src="../../../../../assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png" /></a></li>
+</ul>
 <h2 id="channel">Channel</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Setup</code> &gt; <code>Channel</code></p>
 <p>In this section, the user can create specific sales channels to be used in sales operations and define a sales channel to be used in the sales process.</p>
