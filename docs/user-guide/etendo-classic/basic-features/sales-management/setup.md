@@ -133,6 +133,7 @@ Finally, the result of the commission will be the combination of these three lin
 
 -   **Copy Lines**: Allows to copy the configuration of other commissions.
 -   **Generate Commission**: Based on the header and lines, the commission is generated. For example, if Monthly frequency is defined and the starting date is 01/03/2025 only orders/invoices of March will be taken into account.
+    ![Commission's pop up](../../../../assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png)
 
 
 ## Channel
