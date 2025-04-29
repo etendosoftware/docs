@@ -1437,36 +1437,38 @@ When the process is finished, a message is shown with the total number of create
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Commission Payment`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=1CLcSz5b4iY_J4hy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 In this section, the user can create commissions and create corresponding invoices.
 
-This window is not editable since "commission" records are calculated in the Commission window, however this window allows to create an invoice for the commissions previously calculated.
+This window is not editable since **commission** records are calculated in the [Commission](./setup.md#commission) window, however this window allows to create an invoice for the commissions previously calculated.
 
 This window needs to be read as follows:
 
 - The **header** shows the commission document, the starting date and total net amount. In case an invoice is created then both documents are linked to each other later on.
-- The **amounts** tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission  window the user has one entry in this tab.
+- The **amounts** tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission window the user has one entry in this tab.
 - The **Details** tab shows all the Order lines/Invoice lines taking into account to calculate the amount.
 
-### **Header**
+### Header
 
-The user can create and edit a new commission payment.
+From this window it is possible to visualize the commissions created. 
 
-![Commision payment header](../../../../assets/drive/16ukK8L3jTWiFdQ1AAOr3snAb4kTNwR0G.png)
+![Commision payment header](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission3.png)
 
-A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button "Create Invoice".
 
 - **Commission** field indicates which is the defined commission and therefore the conditions used to calculate the commission amount.
 - **Starting date** as the date used when running the process, for instance an starting date of 1st of March with a Monthly frequency implies to take orders/invoices created and booked in March.
 - **Total amount** field shows the commission amount after applying the configured conditions. Commission amount is calculated based on amounts excluding taxes.
 - **Invoice** field shows the invoice created if any.
 
-#### **Amounts**
+### Amounts
 
 The user can edit individual sales order lines that yielded a selected commission.
 
 **Amounts** tab shows the amount calculated per each line defined in the commission  window.
 
-![Commision payment amount tab](../../../../assets/drive/1RKBEy3nS7XSzgh1ST4gl4n7-DBSsXGon.png)
+![Commision payment amount tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission4.png)
 
 For example if the commission has two lines:
 
@@ -1487,11 +1489,13 @@ Fields to note:
 - **Converted Amount**: The total amount without applying the conditions of the commission line in the corresponding currency.
 - **Actual quantity**: The total quantity. When UOM is different among products this info is not relevant.
 
-#### **Details**
+### Details
 
 Create and edit the calculation and invoicing of sales commission.
 
 **Details** tab shows all the sales/invoice lines took into account to calculate the corresponding commission line.
+
+![Commision details tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission5.png)
 
 Fields to note:
 
@@ -1504,6 +1508,11 @@ Fields to note:
 - **Converted Amount**: Amount in the currency of the commission
 - **Actual Quantity**: Quantity ordered in the order/invoice line
 - **Is Cost Calculated**: This field's default value is 'YES'. It is only taken into account when the commission is calculated based on the margin. When this flag is not marked the cost of the transaction is not calculated. That means it hasn't been possible to calculate its margin. This flag must be marked in all the details in order to be able to generate the invoice of the commission.
+
+### Buttons
+
+- **Create Invoice**: A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button.
+
 
 ---
 
