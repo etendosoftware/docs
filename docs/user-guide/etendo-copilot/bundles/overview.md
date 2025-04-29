@@ -88,14 +88,14 @@ Additionally, the Toolpack includes the following agents:
 
 :octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
 
-The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot assistants directly from their mobile devices, enhancing productivity and accessibility on the go.
+The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot agents directly from their mobile devices, enhancing productivity and accessibility on the go.
 
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot assistants, and access specific data** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot agents, and access specific data** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
 
-With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot assistants, facilitating smoother workflows across different devices.
+With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot agents, facilitating smoother workflows across different devices.
 
 !!! info
-    For more information about sub-application configurations, visit [Dynamic App - Role Configuration](../../etendo-mobile/getting-started.md#dynamic-app-role-configuration).
+    For more information about sub-application configurations, visit [Configure Roles and Dynamic Subapps](../../etendo-mobile/getting-started.md#configure-roles-and-dynamic-subapps).
 
 
 ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/etendo-copilot-subapp2.png){ width="500" }

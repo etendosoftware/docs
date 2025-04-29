@@ -19,11 +19,7 @@ This bundle includes mobile sub-applications.
 
 !!! info
     - To be able to include the sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md). <br>
-
-    - Once the bundle is installed in Etendo Classic, the dynamic apps will be configured and the apps will be available. Acces must be given to each role from the [Dynamic Apps tab](../../getting-started.md#dynamic-app-role-configuration) in the Role window. <br>
-    
-    - For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md). 
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 
 ## Modules
