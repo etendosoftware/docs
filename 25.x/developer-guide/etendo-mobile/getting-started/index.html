@@ -25,7 +25,7 @@
     
     
       
-        <title>Developer Guide - Etendo Mobile - Getting Started - Etendo Documentation</title>
+        <title>Developer Guide - Getting Started - Etendo Mobile - Etendo Documentation</title>
       
     
     
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#etendo-mobile" class="md-skip">
+        <a href="#developer-guide-getting-started-etendo-mobile" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Developer Guide - Etendo Mobile - Getting Started
+              Developer Guide - Getting Started - Etendo Mobile
             
           </span>
         </div>
@@ -8688,13 +8688,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#environment-setup" class="md-nav__link">
+  <a href="#initial-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Setup
+      Initial Setup
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Environment Setup">
+    <nav class="md-nav" aria-label="Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-access-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Access Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-distributed-sub-applications-in-etendo-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Distributed Sub-applications in Etendo Classic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10312,13 +10345,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#environment-setup" class="md-nav__link">
+  <a href="#initial-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Setup
+      Initial Setup
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Environment Setup">
+    <nav class="md-nav" aria-label="Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-access-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Access Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-distributed-sub-applications-in-etendo-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Distributed Sub-applications in Etendo Classic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10388,14 +10454,45 @@
   
 
 
-<h1 id="etendo-mobile">Etendo Mobile</h1>
+<h1 id="developer-guide-getting-started-etendo-mobile">Developer Guide - Getting Started - Etendo Mobile</h1>
 <p><a class="glightbox" href="../../../assets/getting-started/overview/cover-getting-started.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="cover-getting-started.png" src="../../../assets/getting-started/overview/cover-getting-started.png" /></a></p>
 <h2 id="overview">Overview</h2>
 <p><em>Etendo Mobile</em> is a subapplication development platform that includes the possibility to log in to an <em>Etendo Classic</em> server and configure the available dynamic subapplications there according to role. </p>
 <p>A schematic of the infrastructure is shown here:</p>
 <p><a class="glightbox" href="../../../assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="etendo-mobile-infrastructure.png" src="../../../assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png" /></a></p>
-<p>On this page we will explain what are the requirements to create a subapplication and how to install all the necessary tools to develop a new subapplication.</p>
-<h2 id="environment-setup">Environment Setup</h2>
+<p>In this page we will first explain the step-by-step to install and configure for the first time sub-applications on a client and then what are the requirements to create a sub-application and the tools needed to develop a new sub-app.</p>
+<h2 id="initial-setup">Initial Setup</h2>
+<ol>
+<li>
+<h3 id="client-access-token">Client Access Token</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
+<p>It is necessary to configure the encryption token for authentication. This token is required for the mobile app to start a session.</p>
+<ol>
+<li>Access Etendo Classic as a <code>System Administrator</code>.</li>
+<li>Navigate to <code>Client</code> &gt; <code>Secure Web Service Configuration</code> tab.</li>
+<li>Click the <strong>Generate Key</strong> button to create a token. The expiration time is measured in minutes, if set to 0 the token does not expire.
+<a class="glightbox" href="../../../assets/developer-guide/etendo-mobile/getting-started/token.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../assets/developer-guide/etendo-mobile/getting-started/token.png" /></a></li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This token doesn’t require any action; it just needs to be generated for the authentication process to work properly.</p>
+</div>
+</li>
+<li>
+<h3 id="install-distributed-sub-applications-in-etendo-classic">Install Distributed Sub-applications in Etendo Classic</h3>
+<p>You can find the sub-applications distributed by Etendo, available for installation and their documentation in the <a href="../../../user-guide/etendo-mobile/getting-started/#available-sub-apps-to-install">Available Sub-apps to Install</a> section.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The bundles that include subapps are: </p>
+<ul>
+<li><a href="https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589" target="_blank">Mobile Extensions Bundle</a></li>
+<li><a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>.</li>
+</ul>
+</div>
+<p>To install these bundles you can follow the following guide <a href="../../etendo-classic/getting-started/installation/install-modules-in-etendo/">Install Modules in Etendo Classic</a></p>
+</li>
+</ol>
+<h2 id="development-setup">Development Setup</h2>
 <h3 id="requirements">Requirements</h3>
 <ul>
 <li><a href="../../etendo-rx/getting-started/">Etendo Classic</a></li>
