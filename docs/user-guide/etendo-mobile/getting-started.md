@@ -70,7 +70,7 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
 
     You can find the sub-applications distributed by Etendo, available for installation and their documentation below.
 
-    - [Etendo Classic Subapp](./bundles/mobile-extensions/etendo-classic-subapp.md) provides users with an efficient way to access the system's key window information, guaranteeing access in read-only mode, based on their role. 
+    - [Etendo Classic Subapp](./bundles/mobile-extensions/etendo-classic-subapp.md) provides users with an efficient way to access the system's key window information, ensuring read-mode access, based on their role. 
     
     - [Documents Manager Subapp](./bundles/mobile-extensions/overview.md#documents-manager-subapp) is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
 

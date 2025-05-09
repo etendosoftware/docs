@@ -13,9 +13,9 @@ tags:
 
 ## Overview 
 
-The **Etendo Classic Sub-app** provides users with an efficient way to access the system's key window information, guaranteeing access in **read-only** mode, based on their role.
+The **Etendo Classic Sub-app** Provides users with an efficient way to access key system window information based on user roles, guaranteeing read access. While editing records is allowed, it is recommended to perform data creation and management primarily in Etendo Classic.
 
-The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to **view data**. In addition, thanks to features such as **scanning**, users can see a demonstration of inventory management by scanning products during physical inventory.
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to **view data** and make simple edits. In addition, thanks to features such as **scanning**, users can see a demonstration of inventory management by scanning products during physical inventory.
 
 !!! info
     - To be able to include the sub-application, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="_blank"}. <br>

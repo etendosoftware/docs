@@ -25,16 +25,18 @@ In this page we will first explain the step-by-step to install and configure for
 ## Initial Setup
 
 
-1. ### Client Accees Token
+1. ### Client Access Token
     :material-menu: `Application` > `General Setup` > `Client` > `Client`
 
     It is necessary to configure the encryption token for authentication. This token is required for the mobile app to start a session.
 
     1. Access Etendo Classic as a `System Administrator`.
-    2. Go to `Client` > `Secure Web Service Configuration` tab.
-    3. Click the **Generate Key** button to create a token. If the expiration time is equal to 0 the tokens do not expire. 
-
+    2. Navigate to `Client` > `Secure Web Service Configuration` tab.
+    3. Click the **Generate Key** button to create a token. The expiration time is measured in minutes, if set to 0 the token does not expire.
     ![alt text](../../assets/developer-guide/etendo-mobile/getting-started/token.png)
+
+    !!! info
+        This token doesn’t require any action; it just needs to be generated for the authentication process to work properly.
 
 2. ### Install Distributed Sub-applications in Etendo Classic
 
