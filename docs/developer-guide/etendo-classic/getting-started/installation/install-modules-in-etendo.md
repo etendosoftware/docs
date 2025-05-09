@@ -82,7 +82,7 @@ Based on the modules format you want to work with, you need to specify different
     If you want to work with JARs modules, declare your dependencies using the *implementation* configuration.
 
     ```groovy title="Implementation Template"
-        implementation('<groupId>:<artifactId>:<version>')`
+        implementation('<groupId>:<artifactId>:<version>')
     ```
     E.g:
 

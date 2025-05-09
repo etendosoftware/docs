@@ -13,133 +13,125 @@ tags:
 
 ## Overview 
 
-The **Etendo Classic SubApp** is a mobile extension of Etendo Classic, offering users a efficient way to access key business windows based on their role. 
+The **Etendo Classic Sub-app** Provides users with an efficient way to access key system window information based on user roles, guaranteeing read access. While editing records is allowed, it is recommended to perform data creation and management primarily in Etendo Classic.
 
-The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to view data. In addition, thanks to features such as **scanning assistant**, users can see a demonstration of inventory management by scanning products during physical inventory.
+The Etendo Classic Sub-application allows users to access and manage their client’s information directly from Etendo Mobile, providing a quick and efficient way to **view data** and make simple edits. In addition, thanks to features such as **scanning**, users can see a demonstration of inventory management by scanning products during physical inventory.
 
 !!! info
     - To be able to include the sub-application, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="_blank"}. <br>
     For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 
-### Initial Configuration
+## Initial Setup
 
-To allow Etendo windows to be visible in the sub-application, the user must enter to Etendo Classic under the **administrator** role in `Role`>`Window Access` tab and check the box **Show in mobile** in the required windows to be shown in the app.  
+### Show Windows in Mobile
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
 
-![](../../../../assets/drive/WgAVMD7_UawKp1eedwjq260FyWU41AFdrcP_bK3sS3mm1aM6ZVT7oCnfTd8eiydWSDKpSRQf9eAspqn0PCCNK2sLLd9i_77-LObYTJmA3QbSXK5I4hKxhqT-9Ux788FRmZRdBaZQ.png)
+By default, no window will be displayed in the subapp, to allow Etendo windows to be visible: 
 
-### Welcome Window
+1. The user must enter to Etendo Classic under the **Administrator** role.
+2. Select the Role that will give you access to display windows in the sub-application.
+3. In `Role`>`Window Access` tab filter the windows and check the **Show in mobile** flag in the required windows to be shown in the app.
 
-In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
+![alt text](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/show-in-mobile.png)
 
-![](../../../../assets/user-guide//etendo-mobile/user-interface/HomeSubApp.png){ width="300"}
+### Editing Identifiers in Cards and Filters 
+:material-menu: `Application` > `Application Dictionary` > `Windows, Tabs and Fields`
 
+![alt text](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/cards.jpg){ align=right width="300" }
+
+When you open a window, you will notice that the records are displayed in cards with certain information that is configurable. More information about cards in the [User Interface - Cards and Form View](#cards-and-form-view) section.
+By default a title identifier and optionally secondary fields are displayed. 
+
+To edit this information, can be done fom Etendo Classic by configurations. 
+
+!!!warning
+    We recommend that this configuration be done by a developer or someone with technical knowledge. 
+
+1. Log in as `System Administrator`.
+2. Go to `Windows, tabs and fields` window.
+3. Filter the window that you want to modify, and select the main tab, it can have the same name of the window or be called `header`.
+4. In the `Mobile Configuration` tab, you will find a **Default Configuration** record, you must delete it and create a new configuration to be exported in a new module under development.
+5. Create a line for each field that you want to show as identifier in the cards, you must take into account that the first record created will be the title and the other fields will be subtitles and the order is respected according to the creation date.
+6. You must take into account that the searches can filter by each of these fields defined as identifiers, only exact or equal search is allowed, you can also add a maximum of 5 identifiers.
+
+
+For example, by default the `Sales Order` window displays the identifiers `Document No` as title, `Order Date` and `Total Gross Amount` as subtitle. 
+
+In this case we will create a custom view, with `Sales Order - Custom View` name  and it will be exported in a new module called `Mobile Customizations`. 
+
+Add 5 lines, the first one as title will be `Business Partner`, then  `Currency`, `Document Status`, `Total Gross Amount`, `Payment Method` and `Order Date` as subtitles.
+
+!!!warning 
+    Remember that the order of the identifiers depends on the creation date, and that a maximum of 5 identifiers can be displayed.
+
+ ![alt text](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/custom-view-back.png)
+ ![alt text](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/custom-view-cards.png)
+
+
+## User Interface
 
 ### Navigation Menu
 
-In the Home option, the user can find an option menu from which they can access to different windows allowed according to their role. From this menu, it is also possible to:
 
-- Go back (Option to Go back to Etendo Mobile)
+When ingress to **Etendo Classic** Subapp, in the home, the user can find a menu option from which they can:
 
-![](../../../../assets/user-guide/etendo-mobile/user-interface/DrawerSubApp.png){ width="300" }
+- In the top section of the menu the user picture will be shown.
+- Access to different windows allowed according to their role.
+- Go back, Option to go back to Etendo Mobile.
 
-In the top section of the menu, the name and the user picture will be shown.
+![](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/home-nav.png)
 
-### Functional Windows
 
-The user, according to their role, will have access to certain windows. The most common ones are: Product, Business Partner, Sales Invoice, Sales Order, Purchase Invoice, Purchase Order, among others.
+### Cards and Form View
 
-The access to these windows are represented by folder icons with their corresponding name.
+![](../../../../assets/drive/XZFZ8AALW9g42_1StbQnRpAvIszHoPZrp6QoLw1XUQ68kz4iU5nBYCR6XVwC0k4bGJjZFRbjaGMKfOA7lUVXCtz7At6Tt5p8sJtlYHNny4Z6yn_jfHrthRnxym2n_M0GhXLWDR2p.png){ align=right width="180" }
 
-Each window will show its content splitting the records in small boxes, which will contain a preview of main data of these records. That data is configured by default and a customization must be required in case the user wants to add more fields to eliminate some of them, considering that only a max of 5 fields can be displayed.
+- The user, according to the role, will have access to certain windows, and they are configurable as can be seen in [Show Windows in Mobile](#show-windows-in-mobile) section. <br> 
+Some of the most common windows are:  Product, Business Partner, Sales Invoice, Sales Order, Purchase Invoice, Purchase Order, among others.<br> <br> 
 
-The same field present in the preview, will be the criteria by which it is possible to filter if the user wants to search for a record.
+- Each window will display its content by dividing the records into cards, which will contain a preview of the main data of those records. These data are configured by default and customization will be necessary in case the user wants to add more fields or delete any of them, taking into account that only a maximum of 5 fields can be displayed. For more information visit, [Editing Identifiers in Cards and Filters](#editing-identifiers-in-cards-and-filters) <br><br><br>
 
-Considering as an example the Sales Invoice window, the preview of each record provides information regarding the document number and invoice date.
+![](../../../../assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ align=left width="180" }
 
-![](../../../../assets/drive/XZFZ8AALW9g42_1StbQnRpAvIszHoPZrp6QoLw1XUQ68kz4iU5nBYCR6XVwC0k4bGJjZFRbjaGMKfOA7lUVXCtz7At6Tt5p8sJtlYHNny4Z6yn_jfHrthRnxym2n_M0GhXLWDR2p.png){ width="300" }
+- The same field, present in the preview, will be the criteria by which to filter if the user wants to search for a record. Considering the Sales Invoice window as an example, the preview of each record provides information regarding the document number and the invoice date. <br><br><br>
 
-By clicking any of those boxes, detailed information about the records will be displayed.
 
-The fields will be displayed one below the other. Those with this symbol  “(\*)” in their title are mandatory and those with a pencil icon are editable.
+- Records can be searched by inserting a value or keyword in the top **Search** bar. Each window will have certain filters available by field which will match those fields configured by default to be displayed in the preview of each record. In case the user needs to add more filters or to remove some of them, customization will be required.<br><br><br><br><br> 
 
-![](../../../../assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){ width="300" }
+![](../../../../assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){align=right width="180" }
 
-**Folders button** 
+- By clicking any of those boxes, detailed information about the records will be displayed and can be edited. The fields will be displayed one below the other. Those with this symbol  “(\*)” in their title are mandatory and those with a pencil icon are editable.<br><br><br><br><br><br><br><br><br>
+    
+![](../../../../assets/drive/3tj34fwiEnwX6YiWsfv8x8ApOWqEjbtQDFERLIEqZJ6LZsXwvlkJffOm-UYEhS1y0onXLf3rtWKy75WpIqy_pn8KSITpMqW6Olqx5CNaGo5vGpex61Tj7WuCy0NxSAjdGUM0hqyt.png){ align=left  width="180" }
 
-By selecting the Folders button, the user can access the different tabs of the window with information about the records being browsed.
+- To create a new record, the user must click the icon with the symbol “+” and complete the desired fields. Those with the symbol (\*) are mandatory. To edit a field, the user must click the pencil icon. If the field is a list field, click the search icon to display possible options. After selecting the correct data, press the button “Done”.<br><br><br><br><br><br><br><br>
 
-![](../../../../assets/drive/Q0C8H4uO8zHgfmSaWfGMKR5tKMbWlVLOUwUMYG-_qpJBj471MxMFwx0is-MGR0WqleOE4QcqHhWhIhTfeo2xwIX-ftECC3QyeKdI-ygG7o2kGhHJ4CgAoWEgfc1KZnEHHXpaegHG.png){ width="300" }
+![](../../../../assets/drive/pJrdHx58VtWi5NCkN446WAu-Fjg1rHgWe5JJLKGFn7DJxasB8uXnXAtSPrI6gAD_Oe_3ZwkK0Pw9JYVPY6GX0R1a2-mUuYESxwzPpWOf02V0T1jskkbxUy5IddR1m2glXXbcBpJd.png){ align=right  width="180" }
 
-When entering any of the tabs, the view will be the same as in the parent window, e.i., the records will be displayed in small boxes and, when entering these, the fields will be displayed one below the other.
+- If the field is a date type, when selecting the search icon a calendar to select the desired date will be displayed. Free text fields are edited by selecting the field and entering the desired value.<br><br>
+- Once the user has entered the required data, click the save icon. It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.<br><br><br><br> 
 
-![](../../../../assets/drive/XKeIfzzgutwdnJr5kmBVSifBZ1luxaWe3mqYM_U3uHurbAe_0TXkpjjvF5x0RWpIKXRsqYcEifdxpVeNHZjgHZ5-s6uGm8FjIf9RGIfAZoHXZAxlCqzC5H00RUmPBX01SvFgW8v2.png){ width="300" }
+![](../../../../assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ align=left width="180" }
 
-![](../../../../assets/drive/PAfojHNtSzl7SKh6VFDroECbrO7Y0ZSYSnyvDieVQxBZkvATVhtJtNPm6PTpeuLOjzdIB-PIRR-wD1SGCZrHJLdKnhnacGsFhWDSyuOUWlhlMnJ74guN7EsUE2sshKzFyoHn2tiT.png){ width="300" }
+- To delete a record, press it and drag it to the left or hold it, select all the desired records and then the delete icon. Each time a record is deleted in the App, the same record will be deleted in the Etendo Classic as well.<br><br><br><br><br><br><br><br><br><br><br>
 
-To navigate in different levels, the user can resort to the system buttons (Android) or the arrow in the upper left corner or gesture (both systems).
+### Folders Button
 
-In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.
+![](../../../../assets/drive/Q0C8H4uO8zHgfmSaWfGMKR5tKMbWlVLOUwUMYG-_qpJBj471MxMFwx0is-MGR0WqleOE4QcqHhWhIhTfeo2xwIX-ftECC3QyeKdI-ygG7o2kGhHJ4CgAoWEgfc1KZnEHHXpaegHG.png){ align=right  width="180" }
 
-**Actions button**
+- By selecting the Folders button, the user can access the different tabs of the window with information about the records being browsed.
+- When entering any of the tabs, the view will be the same as in the parent window, e.i., the records will be displayed in small boxes and, when entering these, the fields will be displayed one below the other.<br><br>
+
+![](../../../../assets/drive/XKeIfzzgutwdnJr5kmBVSifBZ1luxaWe3mqYM_U3uHurbAe_0TXkpjjvF5x0RWpIKXRsqYcEifdxpVeNHZjgHZ5-s6uGm8FjIf9RGIfAZoHXZAxlCqzC5H00RUmPBX01SvFgW8v2.png){  align=left width="180" }
+
+- To navigate in different levels, the user can resort to the system buttons (Android) or the arrow in the upper left corner or gesture (both systems).
+- In addition, the **path or breadcrumbs** of which records and tabs are being navigated can be displayed at the top of the screen.<br><br><br><br><br><br>
+
+
+### Actions button
 
 Through this button, the user can access the list of available processes corresponding to the window being browsed and execute them.
-
-**Attachments button** 
-
-Through this button, the user can attach files.
-
-### Manage Records
-
-**Create a record**
-
-To create a new record, the user must click the icon with the symbol “+” and complete the desired fields. Those with the symbol (\*) are mandatory.
-
-To edit a field, the user must click the pencil icon. If the field is a list field, click the search icon to display possible options. After selecting the correct data, press the button “Done”.
-
-![](../../../../assets/drive/3tj34fwiEnwX6YiWsfv8x8ApOWqEjbtQDFERLIEqZJ6LZsXwvlkJffOm-UYEhS1y0onXLf3rtWKy75WpIqy_pn8KSITpMqW6Olqx5CNaGo5vGpex61Tj7WuCy0NxSAjdGUM0hqyt.png){ width="300" }
-
-If the field is a date type, when selecting the search icon a calendar to select the desired date will be displayed.
-
-![](../../../../assets/drive/pJrdHx58VtWi5NCkN446WAu-Fjg1rHgWe5JJLKGFn7DJxasB8uXnXAtSPrI6gAD_Oe_3ZwkK0Pw9JYVPY6GX0R1a2-mUuYESxwzPpWOf02V0T1jskkbxUy5IddR1m2glXXbcBpJd.png){ width="300" }
-
-Free text fields are edited by selecting the field and entering the desired value.
-
-Once the user has entered the required data, click the save icon.
-
-When the Header is complete, data can be entered in the tabs. To do so, access through the Folders button and edit the required fields, in the same way as in the main Header.
-
-Each time a new record is created in the App, the same record will be created in the Etendo Classic as well.
-
-It is important to consider that the document will always remain in **Draft** status and can only be completed through the Etendo Classic.
-
-**Delete a record**
-
-To delete a record, press it and drag it to the left or hold it, select all the desired records and then the delete icon.
-
-Each time a record is deleted in the App, the same record will be deleted in the Etendo Classic as well.
-
-![](../../../../assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ width="300" }
-
-**Edit a record**
-
-To edit a record, select the record and then the field to be edited.
-
-Once the changes have been made, press the save icon.
-
-Each time a record is edited in the App, the same record will be edited in the Etendo Classic as well.
-
-**Search a record**
-
-Records can be searched by inserting a value or keyword in the top **Search** bar. This search bar is located both in the main view of each window and in each tab.
-
-Each window will have certain filters available by field which will match those fields configured by default to be displayed in the preview of each record.
-
-In case the user needs to add more filters or to remove some of them, customization will be required.
-
-Continuing with the example of the Sales Invoice window, the available filters are the document number, which will be entered in the search bar together with the invoice date.
-
-![](../../../../assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
 ## Mobile App Scanning Helpers
 
