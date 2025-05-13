@@ -633,3 +633,8 @@ Here, the user can define general maintenance tasks to be used in production.
 All maintenance tasks that are scheduled for the machines in production are entered in this screen:
 
 ![](../../../../assets/drive/YtlJL911EsQf5c-i8qMbFGpGQQFQHr1qO_V-VuJ1MByU4_t0QH3qhOFPgsZWLSareLUEaU7DvfLB8wHCb_ftn4_eDL28TUcbiGExcqGb6fYropD0oB6PVqqrn5jtPdZ7uSeiCA3AS8FUbkiVADrH9Q29ErN4lAKd-cHGjIzocw0nku0vkHPF60nbyKKZPg.png)
+
+
+---
+
+This work is a derivative of ["Production Management"](http://wiki.openbravo.com/wiki/Production_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
