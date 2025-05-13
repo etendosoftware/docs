@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -1643,35 +1643,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#production-management" class="md-nav__link">
+  <a href="#initial-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Production Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Production Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
+      Initial Configuration
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#execution" class="md-nav__link">
     <span class="md-ellipsis">
       Execution
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -10331,35 +10316,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#production-management" class="md-nav__link">
+  <a href="#initial-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Production Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Production Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
+      Initial Configuration
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#execution" class="md-nav__link">
     <span class="md-ellipsis">
       Execution
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -10431,81 +10401,117 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LujFoXYv-XA?si=i8cKV41eHUdipMHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p>The Production Management module allows managing the standard productive process: production plan, work requirement, end products report and its direct and indirect costs. It is also possible to manage quality control and machine maintenance in production.</p>
-<h2 id="production-management">Production Management</h2>
 <p>The main documents to manage the production process are:</p>
 <ul>
-<li>the Process Plan</li>
-<li>the Work Requirement</li>
-<li>the Work Effort</li>
+<li><a href="../setup/#process-plan">Process Plan</a></li>
+<li><a href="../transactions/#work-requirement">Work Requirement</a></li>
+<li><a href="../transactions/#work-effort">Work Effort</a></li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is important to be clear about these concepts and windows before reading on. </p>
+</div>
 <p><a class="glightbox" href="../../../../../assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png" /></a></p>
-<h4 id="configuration"><strong>Configuration</strong></h4>
-<p>Apart from the setup screens in the Production module, additional setups are required.</p>
+<h2 id="initial-configuration">Initial Configuration</h2>
+<p>Apart from the <a href="../setup/">setup windows</a> in the Production module, additional setups are required.</p>
+<ol>
+<li>
 <p>For Production, there are different products that are set up:</p>
 <ul>
-<li>Raw material used in production</li>
-<li>the Production checkbox is selected to indicate that the product is used for production</li>
-<li>the process plan is selected</li>
-<li>the default storage bin that is used for P- raw materials is defined in the <a href="../../master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</li>
-<li>Finished products manufactured in production</li>
-<li>the Production checkbox is selected to indicate the product is manufactured in production</li>
-<li>the process plan is selected</li>
-<li>the default storage bin that is used for the product is defined in the <a href="../../master-data-management/master-data/#product"><em>Manufacturing</em></a> tab</li>
-<li>based on <a href="../transactions/#calculate-standard-costs">cost calculations</a>, a "theoretical" standard cost can be determined for the finished product</li>
-<li>a safety stock level is determined and entered for the product</li>
+<li>
+<p>Raw material used in production:</p>
+<ul>
+<li>The <strong>production</strong> checkbox is selected to indicate that the product is used for production.</li>
+<li>The process plan is selected.</li>
+<li>The default storage bin used to store the raw materials used (P-),  is defined in the <a href="../../master-data-management/master-data/#manufacturing">manufacturing</a> tab.</li>
 </ul>
-<p>Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the <a href="../../master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</p>
+</li>
+<li>
+<p>Any <strong>semi finished products</strong> are created directly in the process plan by copying the information of a raw material product used in the operation using the <a href="../setup/#io-products">Create Product Copy</a> button. Once created, the default storage bin is defined in the <a href="../../master-data-management/master-data/#manufacturing">manufacturing</a> tab.</p>
+</li>
+<li>
+<p>Finished products manufactured in production:</p>
+<ul>
+<li>The <strong>production</strong> checkbox is selected to indicate the product is manufactured in production.</li>
+<li>The process plan is selected.</li>
+<li>The default storage bin that is used for the finished products (P+),  is defined in the <a href="../../master-data-management/master-data/#manufacturing">manufacturing</a> tab.</li>
+<li>Based on <a href="../transactions/#calculate-standard-costs">cost calculations</a>, a <strong>theoretical</strong> standard cost can be determined for the finished product.</li>
+<li>A safety stock level is determined and entered for the product.</li>
+</ul>
+</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about the configuration of products, please refer to the <a href="../../master-data-management/master-data/#product"><em>Product</em></a> section.</p>
+<p>For more information about the configuration of products, please refer to the <a href="../../master-data-management/master-data/#product">Product</a> section.</p>
 </div>
+</li>
+<li>
 <p>Also, Business Partners are configured for production:</p>
-<p>In the Employee tab, any employees that are involved in the production process have the operator checkbox selected.</p>
-<p>Likewise, the <a href="../../master-data-management/master-data/#salary-category"><em>Salary category</em></a> configured for employees is very important since they are included in the final cost calculations.</p>
+<ul>
+<li>In the Employee tab, any employees that are involved in the production process have the <strong>operator</strong> checkbox selected.</li>
+<li>The <a href="../../master-data-management/master-data/#salary-category">Salary category</a> configured for employees is very important since they are included in the final cost calculations.</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about the configuration of business partners, please refer to the <a href="../../master-data-management/master-data/#business-partner"><em>Business Partner</em></a> section.</p>
+<p>For more information about the configuration of business partners, please refer to the <a href="../../master-data-management/master-data/#business-partner">Business Partner</a> section.</p>
 </div>
-<p>Work Efforts can be posted to the <a href="../../financial-management/accounting/transactions/#gl-journal"><em>General Ledger Journal</em></a>. In order to facilitate the posting, the <strong>MaterialMgmtProductionTransaction</strong> table is activated in the <a href="../../financial-management/accounting/setup/#glconfig"><em>Active Tables</em></a> tab of the General Ledger configuration.</p>
-<h4 id="execution"><strong>Execution</strong></h4>
-<p>Sales staff enters Sales Order for the product with the quantity required and the date by when it needs to be delivered. If the product is not in stock, it needs to be produced.</p>
-<p>Also, if the stock level is below the safety stock level, products have to be produced.</p>
+</li>
+<li>
+<p>Work Efforts can be posted to the <a href="../../financial-management/accounting/transactions/#gl-journal">General Ledger Journal</a>. In order to facilitate the posting, the <strong>MaterialMgmtProductionTransaction</strong> table is activated in the <a href="../../financial-management/accounting/setup/#glconfig">Active Tables</a> tab of the General Ledger configuration.</p>
+</li>
+</ol>
+<h2 id="execution">Execution</h2>
+<ol>
+<li>
+<p>Sales staff enters <strong>Sales Order</strong> for the product with the quantity required and the date by when it needs to be delivered. If the product is not in stock, it needs to be produced. Also, if the stock level is below the safety stock level, products have to be produced.</p>
 <p>The information about the demand from sales orders and safety stock is handled in 2 ways:</p>
 <ul>
-<li>automatically in MRP</li>
-<li>manually by a production manager</li>
+<li>Automatically in <a href="../../material-requirement-planning/getting-started/">Material Requirement Planning (MRP)</a>.</li>
+<li>Manually by a production manager.</li>
 </ul>
+</li>
+<li>
 <p>Ideally, the information is handled by MRP. If not, a production manager reviews if production of the product is required by reviewing the total demand:</p>
 <ul>
-<li>the outstanding sales orders</li>
-<li>the safety stock level</li>
+<li>The outstanding sales orders</li>
+<li>The safety stock level</li>
 </ul>
 <p>and compare it with the total supply:</p>
 <ul>
-<li>the stock level</li>
-<li>scheduled Work Requirements</li>
+<li>The stock level.</li>
+<li>Scheduled Work Requirements.</li>
 </ul>
+</li>
+<li>
 <p>If the demand is higher than the supply, or the dates of scheduled Work Requirements are not matching the dates of the outstanding sales orders, the product needs to be produced and a production manager executes:</p>
 <ul>
-<li>review of the stock of the raw material. If needed, the raw material will be requested and used in the <a href="../../procurement-management/transactions/"><em>procurement management</em></a> process.</li>
-<li>entry of the Work Requirement for the required quantity with the required quantity and the planned date</li>
-<li>generate Work Efforts from the Work Requirement.</li>
+<li>Review of the stock of the raw material. If needed, the raw material will be requested and used in the <a href="../../procurement-management/getting-started/">Procurement Management</a> process.</li>
+<li>Entry of the <strong>Work Requirement</strong> for the required quantity with the required quantity and the planned date.</li>
+<li>Generate <strong>Work Efforts</strong> from the Work Requirement.</li>
 </ul>
-<p>The staff responsible for executing the production can see on the Production Run Status Report what production has to be executed.</p>
-<p>At the end of each shift, the production managers enter the information of what is produced in the <a href="../transactions/#production-run_1"><em>Production Run</em></a> screen.</p>
+</li>
+<li>
+<p>The staff responsible for executing the production can see on the <strong>Production Run Status Report</strong> what production has to be executed.</p>
+</li>
+<li>
+<p>At the end of each shift, the production managers enter the information of what is produced in the <a href="../transactions/#production-run-1">Production Run</a> windows.</p>
+</li>
+</ol>
 <h2 id="relationship-with-other-areas">Relationship with other areas</h2>
 <p>Production Management interacts with the following modules:</p>
 <ul>
-<li><a href="../../procurement-management/getting-started/"><em>Procurement Management</em></a>: raw material required for use in production is bought using the Procure to Pay process</li>
-<li><a href="../../sales-management/getting-started/"><em>Sales Management</em></a>: demand for the products that are produced are generated through the Order to Cash process</li>
-<li><a href="../../warehouse-management/getting-started/"><em>Warehouse Management</em></a>:<ul>
-<li>raw material is taken from the warehouse to be used in production</li>
-<li>end products that come out of production are put into stock</li>
+<li><a href="../../procurement-management/getting-started/">Procurement Management</a>: raw material required for use in production is bought using the Procure to Pay process.</li>
+<li><a href="../../sales-management/getting-started/">Sales Management</a>: demand for the products that are produced are generated through the Order to Cash process.</li>
+<li><a href="../../warehouse-management/getting-started/">Warehouse Management</a>:<ul>
+<li>Raw material is taken from the warehouse to be used in production</li>
+<li>End products that come out of production are put into stock</li>
 </ul>
 </li>
-<li><a href="../../material-requirement-planning/getting-started/"><em>MRP</em></a>: Work Requirements can be a result of MRP</li>
-<li><a href="../../financial-management/getting-started/"><em>Financial Management</em></a>: Cost related to Production is calculated for finance.</li>
+<li><a href="../../material-requirement-planning/getting-started/">Material Requirement Planning</a>: Work Requirements can be a result of MRP</li>
+<li><a href="../../financial-management/getting-started/">Financial Management</a>: Cost related to Production is calculated for finance.</li>
 </ul>
+<hr />
+<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Production_Management" target="_blank">"Production Management"</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
@@ -10598,7 +10604,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2021 - 2025 Etendo Software
+      Copyright &copy; 2021 - 2025 Futit Services S.L.
     </div>
   
   
