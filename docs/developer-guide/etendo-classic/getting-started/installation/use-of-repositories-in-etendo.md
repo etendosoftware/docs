@@ -9,51 +9,50 @@ tags:
 # Use of Repositories in Etendo
 
 ## Overview
+Etendo supports any Maven package repository, but this guide focuses on configuring credentials for Etendo's standard repositories.
 
-While Etendo supports any Maven package repository, we will focus on explaining how to configure Etendo's standard repositories credentials.
+!!! tip
+    By default, Etendo Classic and extension bundles are downloaded from the [Etendo GitHub repositories](https://github.com/etendosoftware){target=_isblank}.
 
-By default, Etendo Core and extension packages will be downloaded from the GitHub repositories.
+To access Etendo's GitHub repositories and resolve dependencies, you need the appropriate credentials. This involves using a **Personal Access Token**. This guide explains how to set up and use these credentials.
 
-## Using a Personal Access Token in Etendo Projects
-
-When working with Etendo projects, it is important to have the necessary credentials to access GitHub repositories. One way to do this is by using a Personal Access Token. In this guide, we will walk through the steps of setting up and using a Personal Access Token in an Etendo project.
+## GitHub Token
 
 ### Generating a Personal Access Token
 
 !!! info
-    Along your Etendo License, you will receive an email to join the **Etendo Partners Team** in GitHub, you have to create or associate a GitHub account with the email invited, and your user will have read access to all the Etendo Repositories.
+    As part of your Etendo License, you will receive an email invitation to join the **Etendo Partners Team** on GitHub. You must create or associate a GitHub account with the invited email. Your user will then have read access to all Etendo repositories.
 
-To generate a Personal Access Token, follow these steps:
+Follow these steps to generate a Personal Access Token:
 
-1. Log in to your GitHub account.
-2. Click on your profile picture in the top right corner and select *Settings.*
-3. Select *Developer settings* from the left menu and click on *Personal access tokens.*
-4. In the developer settings page, click on *Personal access tokens*
+1. Log in to your **GitHub account**.
+2. Click your profile picture in the top-right corner and select **Settings**.
+3. Navigate to **Developer settings** in the left menu and click **Personal access tokens**.
 
     ![personal-access-tokens.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 
 
-5. Click the *Generate new token (classic)* button. 
+4. Click **Generate new token (classic)**.
 
-6. Give your token a name and select the permissions you want to grant it. In this case, select *read:packages* check.
+5. Provide a **name** for your token and select the required permissions. At a minimum, ensure the `read:packages` permission is selected.
 
     !!! warning
-        It is strongly recommended to set an expiration date, but it is also posible to set an undefined expiration.
+        It is highly recommended to set an expiration date for the token. However, you can also choose to leave it without an expiration date.
 
     ![new-personal-access-token.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png) 
 
-6. Click *Generate token* and take note of the token value.
+6. Click *Generate token* and copy the token value.
 
     !!! warning
-            You will not be able to see this value again, so be sure to copy it and keep it in a secure location.
+        You will not be able to view the token again, so make sure to copy it and store it securely.
 
-### Setting Up the Personal Access Token in Etendo Projects
+### Configuring the GitHub Token in Etendo Projects
 
-Once you have generated a Personal Access Token, you will need to set it up in your Etendo project. Follow these steps:
+After generating a **Personal Access Token**, configure it in your Etendo project by following these steps:
 
 1. Open the `gradle.properties` file in your project.
-2. Add the following lines to the file, replacing `YOUR_GITHUB_USERNAME` and `YOUR_PERSONAL_ACCESS_TOKEN` with your actual GitHub username and Personal Access Token:
+2. Add the following lines, replacing `YOUR_GITHUB_USERNAME` and `YOUR_PERSONAL_ACCESS_TOKEN` with your actual GitHub username and token:
         
-    ``` bash title="gradle.properties"
+    ```properties title="gradle.properties"
     nexusUser=
     nexusPassword=
     githubUser=YOUR_GITHUB_USERNAME
@@ -67,22 +66,22 @@ Once you have generated a Personal Access Token, you will need to set it up in y
 
 ### Using the Personal Access Token in Gradle Tasks
 
-With the *Personal Access Token* set up in your Etendo project, you can now use it to access GitHub repositories in your Gradle tasks. For example, if you are using the task
+Once your **GitHub Token** is configured, Gradle tasks can seamlessly interact with Etendo's GitHub repositories. For example, when running the following command:
 
-``` bash title="Terminal"
+```bash title="Terminal"
 ./gradlew dependencies
 ```
 
-to resolve dependencies, it will use your *Personal Access Token* to authenticate with GitHub.
+Gradle will automatically use your *Personal Access Token* to authenticate with GitHub and securely resolve dependencies.
 
 ### Revoking a Personal Access Token
 
-If you no longer need a personal access token or believe it has been compromised, you should revoke it immediately. To do so, follow these steps:
+If you no longer need a token or suspect it has been compromised, revoke it immediately by following these steps:
 
-1. Go to your *Settings* page in GitHub.
-2. Click *Developer settings* in the left-hand sidebar.
-3. Click *Personal access tokens*.
-4. Find the token you want to revoke and click the *Revoke* button.
-5. Confirm that you want to revoke the token.
+1. Go to your **Settings** page on GitHub.
+2. Navigate to **Developer settings** in the left-hand sidebar.
+3. Click **Personal access tokens**.
+4. Locate the token you want to revoke and click **Revoke**.
+5. Confirm the revocation.
 
-Your token will be immediately invalidated and will no longer work.
+The token will be invalidated immediately and can no longer be used.
