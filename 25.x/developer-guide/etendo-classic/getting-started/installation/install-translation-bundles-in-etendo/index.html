@@ -14,7 +14,7 @@
         <link rel="prev" href="../install-modules-in-etendo/">
       
       
-        <link rel="next" href="../postgresql-configuration/">
+        <link rel="next" href="../intellij-code-formatting/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-translation-bundles-in-etendo" class="md-skip">
+        <a href="#install-translation-bundles-in-etendo-classic" class="md-skip">
           Skip to content
         </a>
       
@@ -4448,29 +4448,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../intellij-code-formatting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    IntelliJ Code Formatting
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../use-of-repositories-in-etendo/" class="md-nav__link">
         
   
@@ -4499,7 +4476,7 @@
   
   
   <span class="md-ellipsis">
-    Install Modules
+    Install Modules in Etendo Classic
     
   </span>
   
@@ -4531,7 +4508,7 @@
   
   
   <span class="md-ellipsis">
-    Install Translation Bundles
+    Install Translation Bundles in Etendo Classic
     
   </span>
   
@@ -4544,7 +4521,7 @@
   
   
   <span class="md-ellipsis">
-    Install Translation Bundles
+    Install Translation Bundles in Etendo Classic
     
   </span>
   
@@ -4620,12 +4597,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../postgresql-configuration/" class="md-nav__link">
+      <a href="../intellij-code-formatting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    PostgreSQL Configuration
+    IntelliJ Code Formatting
     
   </span>
   
@@ -4643,12 +4620,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependency-manager/" class="md-nav__link">
+      <a href="../postgresql-configuration/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Dependency Manager
+    PostgreSQL Configuration
     
   </span>
   
@@ -10370,7 +10347,13 @@
       
       
       
-        <span class="md-tag">Translations</span>
+        <span class="md-tag">Translation</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Translation Bundle</span>
       
     
   </nav>
@@ -10380,30 +10363,29 @@
   
 
 
-<h1 id="install-translation-bundles-in-etendo">Install Translation Bundles in Etendo</h1>
+<h1 id="install-translation-bundles-in-etendo-classic">Install Translation Bundles in Etendo Classic</h1>
 <h2 id="overview">Overview</h2>
-<p>This page will explain how to install translation bundles, as their process is different from that of the other bundles. 
-These bundles require the correct version of the ones they translate to be installed manually.</p>
+<p>This page explains how to install translation bundles in Etendo Classic, which is slightly different from standard module installation.</p>
 <h2 id="installation-steps">Installation steps</h2>
-<p>To install a bundle, follow the corresponding section of the documentation on how to <a href="../install-modules-in-etendo/">Install Modules in Etendo</a>.</p>
+<p>Follow the standard <a href="../install-modules-in-etendo/">module installation</a> guide, but make sure to include both the original bundle and its corresponding translation bundle, copying the installation line from the <a href="https://marketplace.etendo.cloud/#/modules?page=1&amp;category=0821B7B067004CD0BAD7A583B2BA9FD2" target="_blank">Etendo Marketplace</a>, you can filter the <strong>Translation</strong> category to find all available translations.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember to add both the translation bundle and the correct version of the bundle it translates as dependencies! Otherwise, the environment's compilation will fail. For example:</p>
+<p>Always include both the original module and its translation bundle as dependencies. Missing either will cause compilation to fail.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 6.08s-6.84 1.71-3.56 5.48c.97 1.11-.25 2.11-.25 2.11s2.45-1.25 1.31-2.85c-1.06-1.47-1.86-2.2 2.5-4.74m-4.47 1.2C16.08 4.08 14 2 14 2c.84 3.3-2.96 4.3-4.33 6.36-.94 1.4.46 2.91 2.33 4.64-.71-1.7-3.22-3.16.03-5.72M9.37 17.47c-3.08.86 1.88 2.63 5.79.96-.38-.15-.75-.33-1.1-.54-1.36.31-2.76.37-4.14.18-1.31-.16-.55-.6-.55-.6m5.32-1.68c-1.75.38-3.56.47-5.34.26-1.31-.13-.45-.77-.45-.77-3.4 1.13 1.88 2.4 6.6 1.02-.29-.11-.57-.3-.81-.51m3.42 3.3s.57.47-.61.83c-2.28.68-9.43.89-11.41.03-.71-.31.63-.74 1.05-.83.23-.06.46-.08.69-.08-.79-.54-5.13 1.1-2.19 1.56 7.97 1.3 14.54-.6 12.47-1.51m-2.74-4.86c.29-.19.6-.35.92-.49 0 0-1.51.26-3.02.4-1.6.16-3.21.18-4.81.06-2.35-.31 1.29-1.2 1.29-1.2-1.1 0-2.18.26-3.16.75-2.05 1 5.1 1.45 8.78.48m.9 2.42c-.02.04-.04.07-.08.1 5.01-1.31 3.17-4.64.77-3.81-.13.06-.24.14-.31.25.14-.05.28-.09.43-.12 1.2-.24 2.92 1.63-.81 3.58m.13 4.61c-3.01.52-6.09.56-9.12.14 0 0 .46.38 2.81.53 3.6.23 9.13-.13 9.26-1.83.03.01-.23.65-2.95 1.16"/></svg></span> JARs</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Sources</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// Add your dependency here</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module:1.0.0&#39;</span><span class="o">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module.es_es:1.0.0&#39;</span><span class="o">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module:[3.0.0,4.0.0)&#39;</span><span class="o">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module.es_es:[1.0.0,)&#39;</span><span class="o">)</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="o">}</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="c1">// Add your dependency here</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">moduleDeps</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module:1.0.0@zip&#39;</span><span class="o">){</span><span class="w"> </span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">}</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">moduleDeps</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module.es_es:1.0.0@zip&#39;</span><span class="o">){</span><span class="w"> </span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">moduleDeps</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module:[3.0.0,4.0.0)@zip&#39;</span><span class="o">){</span><span class="w"> </span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">moduleDeps</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;com.etendo:example.module.es_es:[1.0.0,)@zip&#39;</span><span class="o">){</span><span class="w"> </span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">}</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">}</span>
 </span></code></pre></div>
 </div>
@@ -10411,12 +10393,26 @@ These bundles require the correct version of the ones they translate to be insta
 </div>
 </div>
 <h2 id="bundle-compatibility">Bundle Compatibility</h2>
-<p>For information on what bundle version is compatible with which translation bundle, the documentation and <a href="../../../../whats-new/overview.md" target="_blank">Release Notes</a> for each bundle can be referred to.</p>
+<p>To check compatibility between a module and its translation bundle. For example, the <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/">Warehouse Extensions ES - Release Notes</a>.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<ul>
-<li><strong>Access to dependencies not allowed</strong>: check you have your GitHub credentials and their access level correctly configured. Refer to the <a href="../../../../../getting-started/installation/">Etendo installation guide</a> for more information.</li>
-<li><strong>Fields, columns, etc. not found</strong>: check you have set the translated bundle version compatible with the version of the translation bundle you want to install. Refer to the translation bundle's <a href="../../../../whats-new/overview.md" target="_blank">Release Notes</a> for a list of the compatible bundle versions.</li>
-</ul>
+<ol>
+<li>
+<p>By default, translations are applied when you update the database. If they are not, or if you update the module version, run:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>install.translation<span class="w"> </span>-Dmodule<span class="o">=</span>&lt;javapackage&gt;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>install.translation</code> sets the module status to pending to install. The translations will apply during the next <code>update.database</code> run.</p>
+</div>
+</li>
+<li>
+<p>To force installation of all translation modules, add <code>forceRefData=true</code> to <code>gradle.properties</code> file,  then run:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>setup
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild
+</span></code></pre></div>
+</li>
+</ol>
 
 
 
