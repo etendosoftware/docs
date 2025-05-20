@@ -29,14 +29,26 @@ This module adds the option Automatic - Only Default Warehouse to the Stock Rese
 !!! info
     For more information, visit [Sales Order](../../../basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
 
-### Stock History
+### Picking and Packing 
 
-:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
 
-This module provides updated information about the daily history stock of the products. 
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.packing`
+
+In Etendo, the picking and packing functionalities are designed to streamline and improve warehouse operations. These processes are carried out separately and accessed through different windows. The Picking module helps the warehouse staff to manage and deliver picking lists. The Packing module allows warehouse staff to pack products efficiently. If both modules are installed, the workflow begins with picking and continues with packing, ensuring a smooth and organized order fulfillment process.
 
 !!! info
-    For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+    For more information, visit [Picking and Packing](../warehouse-extensions/picking-and-packing.md).
+
+### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
+
 
 ### Reactivate Warehouse Documents
 
@@ -56,14 +68,14 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
 
-### Product Operations
+### Stock History
 
-:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
-This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+This module provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
+    For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
 ## Uninstall bundle
 
