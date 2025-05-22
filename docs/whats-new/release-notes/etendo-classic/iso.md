@@ -28,10 +28,6 @@ tags:
 
 ## 25.1.2
 New ISO with Etendo Classsic version 25.1.2
-
-## 25.1.0
-New ISO with Etendo Classsic version 25.1.0
-
 - **Changes**
     - Upgrade Etendo software stack. For more information visit [API Change Documentation](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md)
 
