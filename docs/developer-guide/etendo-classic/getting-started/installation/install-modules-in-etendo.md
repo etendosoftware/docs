@@ -36,6 +36,8 @@ Depending on the level of access your GitHub user has, you have access to public
 
 ## Gradle Standard Installation
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gY0kLINlyq0?si=fGXiZ9wJsw-Bhs2B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Checklist
 
 :octicons-check-circle-16: **Set up credentials**.<br>
@@ -239,7 +241,7 @@ Finally, update the database and compile the new modules.
 
 ### Installation 
 
-The **Dependency Manager** is distributed by default in the current versions of Etendo Classic, in case it is not installed in your instance you can do it by following the [Gradle Standard Installation](#gradle-standard-installation)section described above.
+The **Dependency Manager** is distributed by default in the current versions of Etendo Classic, in case it is not installed in your instance you can do it by following the [Gradle Standard Installation](#gradle-standard-installation) section described above.
 
 !!! tip
     You can find the module in the Etendo Marketplace at the following link: [Dependency Manager - Marketplace](https://marketplace.etendo.cloud/#/product-details?module=CBD09C84BFB2469096758C3297F1C7A9)
