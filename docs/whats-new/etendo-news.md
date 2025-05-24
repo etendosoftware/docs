@@ -1,4 +1,5 @@
 ---
+title: Etendo News
 tags:
   - Etendo News
   - New Features
@@ -10,6 +11,49 @@ tags:
 ![](../assets/whats-new/etendo-news/etendo-news-0.png)
 
 #
+
+## April 2025
+
+### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Remember: You can simplify the calculation of commissions with Etendo Classic**
+
+    ---
+
+    With **Etendo Classic**, managing sales commissions is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using diffrent criteria and filters such as quantities sold or amounts invoiced: 
+
+    ![Commission Criteria](../assets/whats-new/etendo-news/commission-criteria.png)
+
+    Once calculated, sales agent payments can be generated automatically. 
+    You can configure commissions to apply to all invoices or only paid ones, and decide whether to include invoices without an assigned sales agent.
+    <br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=2zC3RQmYD1ImkoLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot supports multi-vendor models such as  OpenAI, Ollama, Anthropic, and Deepseek, also image input for compatible models**
+
+    ---
+
+    ![alt text](../assets/whats-new/etendo-news/multi-models-support.png)
+    
+    - In version [1.13.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Etendo Copilot expands its capabilities by supporting multiple vendors, including:
+
+        - **Anthropic**: Specializes in code generation, making it the best choice for code-related tasks.
+        - **Deepseek**: A cost-effective alternative for generative tasks similar to OpenAI.
+        - **Ollama (self-hosted models)**: Ideal for users running their own models on their infrastructure.
+
+    - Additionally, images can now be processed directly by language models without requiring a separate tool for pre-processing.
+
+
+</div>
 
 ## March 2025
 
@@ -43,7 +87,7 @@ tags:
 
     ![alt text](../assets/whats-new/etendo-news/financial-reports-advanced.png)
 
-    In version [1.24.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, improvements to advanced financial reporting are included.In this version, the [General Ledger Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced) and [Journal Entries Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report-advanced) will allow you to view and filter by the desired accounting dimensions.
+    In version [1.25.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, improvements to advanced financial reporting are included.In this version, the [General Ledger Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced) and [Journal Entries Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report-advanced) will allow you to view and filter by the desired accounting dimensions.
     In addition, you can navigate to related entities in each report!
 
 </div>
