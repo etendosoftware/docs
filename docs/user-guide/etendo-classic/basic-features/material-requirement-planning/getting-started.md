@@ -1,4 +1,5 @@
 ---
+title: Material Requirement Planning - Getting Started
 tags: 
     - Getting Started
     - Material Requirement Planning
@@ -8,7 +9,8 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-#
+
+# Material Requirement Planning - Getting Started
 
 ## Overview
 

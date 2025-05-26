@@ -20,7 +20,7 @@ Etendo will consider a purchase invoice duplicated if another purchase invoice w
 
 - Business Partner
 - Supplier Reference
-- Invoice Date
+- Invoice Date (Year)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png)
 

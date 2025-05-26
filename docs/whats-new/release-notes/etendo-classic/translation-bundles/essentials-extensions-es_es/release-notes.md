@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: EssentialExtensions Spanish Tranlation - Release Notes
 tags:
     - Release Notes
     - Essentials

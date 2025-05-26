@@ -35,7 +35,7 @@ The overall flow is the following:
     - **Reactivate**  
     - **Create a sales order**  
     - **Reject the quotation**
-- **Closed** - Order created: After creating the sales order the document turns into this status. No further actions are allowed.
+- **Closed - Order created**: After creating the sales order the document turns into this status. No further actions are allowed.
 
 !!! info
     One quotation, one sales order. Several sales orders cannot be created from the same quotation.
@@ -365,32 +365,11 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 **Canceled Order**, this field stores the document number of the original order canceled by the inverse order.
 
-#### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
-
-![bank_account_4.png](../../../../assets/legacy/bank_account_4.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-#### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Order window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the order.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
 ### Lines
 
 Lines tab allows the user to add the products to be included in your sales order. Each product is added by creating a line. Lines tab lists each product ordered and its characteristics.
 
-![Sales order lines](../../../../assets/drive/14rZJriNxaHIaBACYjwi-4I0rUGuCSCpD.png)
+![Sales order lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesorderlines.png)
 
 Fields to note:
 
@@ -400,6 +379,7 @@ Fields to note:
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
 - **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](../master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
@@ -574,6 +554,18 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+
+![bank-account-4.png](../../../../assets/legacy/bank-account-4.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+
 ## Goods Shipment
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Goods Shipment`
@@ -694,7 +686,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
-The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+The Bulk Completion functionality allows the user to complete, reactivate or void multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
@@ -980,45 +972,20 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-#### Remittance
-
-!!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
-
-![bank_account_2.png](../../../../assets/legacy/bank_account_2.png)
-
-This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
-
-!!! note
-    **Important**:
-    When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
-
-#### Advanced Bank Account Management
-
-!!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-
-This module adds a new section to the header of the Sales Invoice window: Advanced Bank Account Management. In this section, the user can find the Bank Account field which is automatically filled with the bank account related to the adress or business partner of the invoice.
-
-!!! info
-    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
-
 ### **Lines**
 
 **Lines** lists each product to be delivered and its characteristics.
 
 Once the sales invoice header has been properly filled in and saved, each sales invoice line can be registered in this tab one by one.
 
-![Sales invoice lines](../../../../assets/drive/12b9z3VPpvude4CJ8QhoDoW9V7k00KkL7.png)
+![Sales invoice lines](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/salesinvoicelines.png)
 
 Fields to note:
 
 - **Attribute Set Value:** field is displayed if the product in the line has attributes (color, size, serial number or several of them together etc).
 - **Sales Order Line** and **Goods Shipment Line:** references to the sales order and goods shipment line that is being invoiced.
 - **Financial Invoice line:** is selected when the invoice line is not a product but an account not set up as a product but as a G/L item, or an asset not set up as a product. When selected, the product field disappears from the screen and an account field appears that will be related to the sales invoice line.
+-  **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](../master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 As already mentioned, sales revenue can be deferred therefore they are not recognized at the sales accounting date but within a given number of accounting periods.
 
@@ -1362,10 +1329,22 @@ These sales invoices have a negative amount that represents the discount of the 
 !!! info
     To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
-The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+The Bulk Completion functionality allows the user to complete, reactivate or void multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
+
+### Advanced Bank Account Management
+
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+This module adds a new field to the header of the Sales Invoice window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the invoice. Also, the Modify Payment Plan button is added for better payment management.
+
+![bank-account-2.png](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/bank-account-2.png)
+
+!!! info
+    For more information, visit the [Advanced Bank Account Management user guide](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 ## Create Invoices from Orders
 
@@ -1458,36 +1437,38 @@ When the process is finished, a message is shown with the total number of create
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Commission Payment`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=1CLcSz5b4iY_J4hy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 In this section, the user can create commissions and create corresponding invoices.
 
-This window is not editable since "commission" records are calculated in the Commission window, however this window allows to create an invoice for the commissions previously calculated.
+This window is not editable since **commission** records are calculated in the [Commission](./setup.md#commission) window, however this window allows to create an invoice for the commissions previously calculated.
 
 This window needs to be read as follows:
 
 - The **header** shows the commission document, the starting date and total net amount. In case an invoice is created then both documents are linked to each other later on.
-- The **amounts** tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission  window the user has one entry in this tab.
+- The **amounts** tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission window the user has one entry in this tab.
 - The **Details** tab shows all the Order lines/Invoice lines taking into account to calculate the amount.
 
-### **Header**
+### Header
 
-The user can create and edit a new commission payment.
+From this window it is possible to visualize the commissions created. 
 
-![Commision payment header](../../../../assets/drive/16ukK8L3jTWiFdQ1AAOr3snAb4kTNwR0G.png)
+![Commision payment header](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission3.png)
 
-A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button "Create Invoice".
 
 - **Commission** field indicates which is the defined commission and therefore the conditions used to calculate the commission amount.
 - **Starting date** as the date used when running the process, for instance an starting date of 1st of March with a Monthly frequency implies to take orders/invoices created and booked in March.
 - **Total amount** field shows the commission amount after applying the configured conditions. Commission amount is calculated based on amounts excluding taxes.
 - **Invoice** field shows the invoice created if any.
 
-#### **Amounts**
+### Amounts
 
 The user can edit individual sales order lines that yielded a selected commission.
 
 **Amounts** tab shows the amount calculated per each line defined in the commission  window.
 
-![Commision payment amount tab](../../../../assets/drive/1RKBEy3nS7XSzgh1ST4gl4n7-DBSsXGon.png)
+![Commision payment amount tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission4.png)
 
 For example if the commission has two lines:
 
@@ -1508,11 +1489,13 @@ Fields to note:
 - **Converted Amount**: The total amount without applying the conditions of the commission line in the corresponding currency.
 - **Actual quantity**: The total quantity. When UOM is different among products this info is not relevant.
 
-#### **Details**
+### Details
 
 Create and edit the calculation and invoicing of sales commission.
 
 **Details** tab shows all the sales/invoice lines took into account to calculate the corresponding commission line.
+
+![Commision details tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission5.png)
 
 Fields to note:
 
@@ -1525,6 +1508,11 @@ Fields to note:
 - **Converted Amount**: Amount in the currency of the commission
 - **Actual Quantity**: Quantity ordered in the order/invoice line
 - **Is Cost Calculated**: This field's default value is 'YES'. It is only taken into account when the commission is calculated based on the margin. When this flag is not marked the cost of the transaction is not calculated. That means it hasn't been possible to calculate its margin. This flag must be marked in all the details in order to be able to generate the invoice of the commission.
+
+### Buttons
+
+- **Create Invoice**: A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button.
+
 
 ---
 

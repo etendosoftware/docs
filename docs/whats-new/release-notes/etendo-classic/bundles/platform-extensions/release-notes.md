@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Platform Extensions - Release Notes
 tags:
     - Release Notes
     - Platform
@@ -14,7 +14,14 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.12.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.12.1){target="_blank"} | 07/05/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark: |
+| [2.12.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.12.0){target="_blank"} | 06/05/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.11.4](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.11.4){target="_blank"} | 30/04/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.11.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.11.3){target="_blank"} | 25/04/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.11.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.11.2){target="_blank"} | 11/04/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.11.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.11.0){target="_blank"} | 31/03/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.10.0){target="_blank"} | 26/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
+| [2.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.9.0){target="_blank"} | 14/02/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.8.0){target="_blank"} | 23/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.7.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.7.0){target="_blank"} | 08/01/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
 | [2.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/2.6.0){target="_blank"} | 20/12/2024 | 23.2.0 | 24.4.x | C | :white_check_mark: |

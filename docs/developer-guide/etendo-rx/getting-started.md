@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Developer Guide - Etendo RX - Getting Started
 ---
 
 ## Overview
@@ -36,6 +36,39 @@ docker_com.etendoerp.etendorx=true
 
     If you want to debug Tomcat locally with IntelliJ, visit [Tomcat Dockerized Service](../../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md).
 
+
+###  Etendo RX Configurations
+
+Before starting the dockerized services, there are some configurations that need to be done in Etendo Classic
+
+### Client Setup 
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption token for the authentication in the `Client` window with the `System Administrator` role.
+If the expiration time is equal to `0` the tokens do not expire.
+
+Generate a random key with the **Generate key** button.
+
+![](../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+
+### RX Config window
+:material-menu: `Application` > `Etendo RX` > `RX Config`
+
+This configuration window stores the access data for Etendo RX services, which are crucial for the interaction between different services. As `System Administrator` role, in this window, run the `Initialize RX Services` process in the toolbar. 
+
+![](../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
+
+After the execution of this process the default configuration variables are completed, depending on the configuration of the instance and the infrastructure, even the default parameters required by each service are configured.
+
+![default-rx-config.png](../../assets/developer-guide/etendo-rx/getting-started/default-rx-config.png)
+
+!!!info
+    The **Public URL** field only needs to be configured when the services is set to production.
+
+
+### Launch RX services
+
 Then, to effectively run the services, it is necessary to **execute the command** in the terminal: 
 
 ```bash title="Terminal"
@@ -55,3 +88,4 @@ By default, the following services should be up and running:
 
 !!! success
     You have successfully set up the Etendo RX services. For more information, visit [Projections and Mappings](./concepts/projections.md) and [Creating a New Microservice](../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md) page in the developer guide section.
+

@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Platform Extensions Spanish Translation - Release Notes
 tags:
     - Release Notes
     - Platform

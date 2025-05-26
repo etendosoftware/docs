@@ -1,4 +1,5 @@
 ---
+title: Warehouse Management - Getting Started
 tags: 
  - getting started
  - warehouse management
@@ -6,7 +7,7 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-#
+# Warehouse Management - Getting Started
 
 ## Overview
 

@@ -1,4 +1,5 @@
 ---
+title: Etendo News
 tags:
   - Etendo News
   - New Features
@@ -11,6 +12,105 @@ tags:
 
 #
 
+## April 2025
+
+### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Remember: You can simplify the calculation of commissions with Etendo Classic**
+
+    ---
+
+    With **Etendo Classic**, managing sales commissions is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using diffrent criteria and filters such as quantities sold or amounts invoiced: 
+
+    ![Commission Criteria](../assets/whats-new/etendo-news/commission-criteria.png)
+
+    Once calculated, sales agent payments can be generated automatically. 
+    You can configure commissions to apply to all invoices or only paid ones, and decide whether to include invoices without an assigned sales agent.
+    <br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=2zC3RQmYD1ImkoLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot supports multi-vendor models such as  OpenAI, Ollama, Anthropic, and Deepseek, also image input for compatible models**
+
+    ---
+
+    ![alt text](../assets/whats-new/etendo-news/multi-models-support.png)
+    
+    - In version [1.13.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Etendo Copilot expands its capabilities by supporting multiple vendors, including:
+
+        - **Anthropic**: Specializes in code generation, making it the best choice for code-related tasks.
+        - **Deepseek**: A cost-effective alternative for generative tasks similar to OpenAI.
+        - **Ollama (self-hosted models)**: Ideal for users running their own models on their infrastructure.
+
+    - Additionally, images can now be processed directly by language models without requiring a separate tool for pre-processing.
+
+
+</div>
+
+## March 2025
+
+### Etendo Mobile
+
+<div class="grid cards" markdown>
+
+- :material-share: **Receive and share files with Etendo Mobile**
+
+    ---
+
+    ![](../assets/whats-new/etendo-news/share-files-mobile.png)
+
+    A new feature has been added to Etendo Mobile to streamline integration with external applications. With the new **Share files** option, you can now receive files from outside apps and use them directly in subapplications like:
+
+    - **Documents Manager**, where you can view files right in Etendo Mobile.
+    - **Copilot**, where specialized assistants can extract information from images, transform audios into sales orders, and much more.
+
+    This feature improves data flow and efficiency across your platform.
+
+    Try it now using the *Demo Try* button in the app, or download the latest version from the App Store or Play Store.
+
+</div>
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Now in the advanced financial reports you can view accounting dimensions.**
+    ---
+
+    ![alt text](../assets/whats-new/etendo-news/financial-reports-advanced.png)
+
+    In version [1.25.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, improvements to advanced financial reporting are included.In this version, the [General Ledger Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced) and [Journal Entries Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report-advanced) will allow you to view and filter by the desired accounting dimensions.
+    In addition, you can navigate to related entities in each report!
+
+</div>
+
+### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **25.1 Release Candidate Now Available!**
+
+    The new version [25.1](./release-notes/etendo-classic/release-notes.md) of Etendo Classic introduces the latest stack enhancements. While this version is currently in Release Candidate (RC) status, you can already explore the detailed [API changelog](../developer-guide/etendo-classic/developer-changelog/apichanges.md) to review the changes and improvements included in this release.
+
+- :material-trending-up: **Fixed Issue**
+    
+    ---
+    As of version [24.3.7](./release-notes/etendo-classic/release-notes.md), a bug affecting dropdown selectors in dimensional reports has been fixed. In environments running Etendo 24.3.6 or earlier, the first record in combo boxes was displayed incorrectly, showing a concatenation of all values instead of the correct individual value. This issue was caused by improper handling of `<option>` tags in HTML.
+
+    The bug has been resolved in 24.3.7, and Etendo 24.4.0 or later was not affected, as the refactor to fix the issue was already included in that version. 
+    
+    *See more details in Issue [#629](https://github.com/etendosoftware/etendo_core/issues/629)*.
+
+</div>
+
 ## February 2025
 
 ### Etendo ISO
@@ -20,7 +120,35 @@ tags:
 - :material-trending-up: **Optimizations**
     
     ---
-    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+    As of version [24.4.3](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso), the Etendo ISO includes performance improvements with optimized memory and database settings to enhance system efficiency. *See more details in Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573)*.
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Now, you can clone agents in one click**
+
+    ---
+
+    ![copilot-clone.png](../assets/whats-new/etendo-news/copilot-clone.png)
+    
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the functionality to [clone agents](../user-guide/etendo-copilot/setup-and-usage.md#buttons) and knowledge bases is added, allowing you to modify and customize the agents' wizards according to your needs.
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   :material-robot: **Improvements in agent knowledge bases**
+
+    --- 
+
+    In version [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, new capabilities are added:
+
+    ![knowledge-base-files-news.png](../assets/whats-new/etendo-news/knowledge-base-files-news.png)
+
+    For more info visit [Knowledge Base File](../user-guide/etendo-copilot/setup-and-usage.md#knowledge-base-file-window) windows documentation.
 
 </div>
 
@@ -31,11 +159,17 @@ tags:
 - :octicons-package-16: **Enhanced asset management with accounting dimensions**
 
     ---
+
+    ![dimension.png](../assets/whats-new/etendo-news/financial-dimension.png)
+
     In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
 
 - :octicons-package-16: **Gain better control with the Not Posted Documents window**
 
     ---
+
+    ![](../assets/whats-new/etendo-news/financial-not-posted.png)
+
     In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the last version of [Bulk Posting](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), the Not Posted Documents windows provides a comprehensive view of all completed financial transactions that have not yet been posted. This report ensures that no pending transactions are overlooked before closing an accounting period or running financial reports.
 
     Users can filter by date range and navigate directly to unposted documents, including journals, invoices, payments, and financial transactions, among others streamlining the posting process.
@@ -232,7 +366,7 @@ New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bun
     
     ![](../assets/whats-new/etendo-news/LangChain.png)
 
-    We are excited to announce a new functionality in LangChain assistants: the ability to upload .zip files directly into the knowledge base! These .zip files can contain a variety of file formats, including .txt, .pdf, .md, .py, .java, and .js.
+    We are excited to announce a new functionality in LangChain assistants: the ability to upload `.zip` files directly into the knowledge base! These `.zip ` files can contain a variety of file formats, including `.txt`, `.pdf`, `.md`, `.py`, `.java`, and `.js`.
     This enhancement allows developers to train assistants with example source code.
     Boost your assistant’s capabilities with this powerful new feature!
 

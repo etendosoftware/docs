@@ -1,4 +1,5 @@
 ---
+title: User Guide - Getting Started - Etendo Mobile
 tags:
     - Etendo Mobile
     - Mobile Apps
@@ -9,75 +10,133 @@ tags:
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/cover-getting-started-mobile.png)
 
-# Etendo Mobile
+# User Guide - Getting Started - Etendo Mobile
 
 ## Overview
 
-Etendo Mobile is a **mobile app** in which the user can access to sub-applications via mobile devices in a fast and practical way. By enabling seamless integration between Etendo Classic and mobile sub-applications, Etendo Mobile allows users to log in to Etendo Classic and configure **dynamic applications** tailored to specific user roles, enhancing productivity and efficiency.
-
-!!!info
-    To be able to access to the sub-applications, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+Etendo Mobile is a **mobile application** that allows users to quickly access different Etendo Classic servers and use sub-applications installed on each instance. You can either try the app immediately using the demo mode or perform a full manual configuration to connect to your own servers and sub-applications.
 
 
-Etendo Mobile is available in both Play and App Store:
+## Quick Start - Demo Try 
 
-=== ":simple-homeassistantcommunitystore: Play store"
+### Checklist
+ 
+:octicons-check-circle-16: Download Etendo App. <br>
+:octicons-check-circle-16: Use the **Demo Try** Button to Access Official Sub-Apps. <br>
 
-    The app is available in Play Store and the download site can be accessed through [_Download the App here._](https://play.google.com/store/apps/details?id=com.smf.mobile.etendo_app_loader){target=_blank}
+1. ### Download the Etendo App 
 
-    ![](../../assets/user-guide/etendo-mobile/user-interface/EtendoPlayStore.png)
+    Etendo Mobile is available on both Play Store and App Store:
 
-=== ":simple-appstore: App Store "
+    === ":simple-homeassistantcommunitystore: Play store"
 
-    The app is available in App Store and the download site can be accessed through [_Download the App here._](https://apps.apple.com/us/app/etendo/id6451114033){target=_blank}
+        The app is available in Play Store. Download it here: [_Download the App here._](https://play.google.com/store/apps/details?id=com.smf.mobile.etendo_app_loader){target=_blank}
 
-    <a href="https://apps.apple.com/us/app/etendo/id6451114033" target="_blank"><img src="/assets/user-guide/etendo-mobile/user-interface/EtendoAppStore.png" alt="EtendoAppStore.png"></a>
+        ![](../../assets/user-guide/etendo-mobile/getting-started/EtendoPlayStore.png)
+        <a href="https://play.google.com/store/apps/details?id=com.smf.mobile.etendo_app_loader" target="_blank"><img src="/assets/user-guide/etendo-mobile/getting-started/etendo-playstore.png" alt="playstore.png"></a>
+
+    === ":simple-appstore: App Store "
+
+        The app is available in App Store. Download it here: [_Download the App here._](https://apps.apple.com/us/app/etendo/id6451114033){target=_blank}
+
+        <a href="https://apps.apple.com/us/app/etendo/id6451114033" target="_blank"><img src="/assets/user-guide/etendo-mobile/getting-started/etendo-appstore.png" alt="appstore.png"></a>
+
+2. ### Demo Try Mode
+
+    Once the app is installed, open it and press the **Demo Try** button to enter the app without needing any credentials. This allows you to explore and test the official sub-applications installed in [https://demo.etendo.cloud](https://demo.etendo.cloud) server immediately.
+
+    !!! info
+        The demo mode provides access to pre-configured sub-applications for testing purposes.
+
+    ![](../../assets/user-guide/etendo-mobile/getting-started/demo-try.png)
+
+
+## Client Environment Setup
+
+### Checklist
+
+:octicons-check-circle-16: Etendo Classic:Install Required Sub-Applications by developer. <br>
+:octicons-check-circle-16: Etendo Classic: Configure Dynamic Sub-Applications. <br>
+:octicons-check-circle-16: Etendo Mobile: Configure Server URL. <br>
+:octicons-check-circle-16: Etendo Mobile: Log In and Use the Apps. <br>
+
+
+1. ### Install Subapps in Etendo Classic
+
+    !!! warning
+        Some initial configuration steps and the installation of bundles containing the available sub-applications or the development of new sub-applications must be performed by a developer or system administrator. For more information see [Developer Guide - Getting Started - Etendo Mobile](../../developer-guide/etendo-mobile/getting-started.md)
+
+    **Available Sub-Apps to Install**
+
+    You can find the sub-applications distributed by Etendo, available for installation and their documentation below.
+
+    - [Etendo Classic Subapp](./bundles/mobile-extensions/etendo-classic-subapp.md) provides users with an efficient way to access the system's key window information, ensuring read-mode access, based on their role. 
     
+    - [Documents Manager Subapp](./bundles/mobile-extensions/overview.md#documents-manager-subapp) is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
 
-## Initial Configuration
+    - [Etendo Copilot Subapp](../etendo-copilot/bundles/overview.md#etendo-copilot-subapp) designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. 
 
-In order to use the app, the user must access Etendo Classic in `Client`>`Secure Web Service Configuration` since the app uses Secure Web Services to authentizate itself. So, as System Administrator role, generate a token by clicking on the **generate key** button, this token is used to start the session in the app.
+    !!!info
+        To configure dynamic sub-applications, you must install the corresponding bundle: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"} or [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}.
 
-![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-0.png)
 
-## Server URL
 
-![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-1.jpg){ width="250" align="right" }
+2. ### Configure Roles and Dynamic Subapps
+    :material-menu: `Application` > `General Setup` > `Security` > `Role`
 
-Once the app is downloaded, the first step will be setting up the **Etendo server URL**.
+    1. Open the **Role** window.
+    2. Select the **Role** to be given access to sub-applications.
+    3. Make sure that the `Is Web Service Enabled` check is selected.
+    4. In the **Dynamic Apps** tab, create a configuration entry for each sub-application to assign access based on the role.
+    5. Set the following fields:
+        - **App:** Select the sub-application from the dropdown list.
+        - **Version:** Assign the version to be used.
+        - **Active:** Mark as active to enable access.
 
-For this, the gear icon shown in the welcome window allows the user to enter the configuration window. In Settings, click the Add new Link button, enter the URL and click **Add new Link** again.
+        !!! info
+            Remember that the subapps must be installed beforehand.
 
+        ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
+
+
+3. ### Configure the Server URL in Etendo Mobile
+
+    1. Open the Etendo  app.
+    2. Click the gear icon on the welcome screen to open Settings.
+    3. Click **Add new Link**, enter your Etendo Classic server URL, and click **Add new Link** again to save.
+
+    ![alt text](../../assets/user-guide/etendo-mobile/getting-started/url-setup.png)
+
+    !!!info
+        You can add multiple server URLs, modify or remove them as needed.
+
+4. ### Log In to the App
+
+    ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="left" }
+
+    1. Enter your user credentials assigned by your system administrator.
+    2. The user will log in with their **default** Role, Organization, Client, and Warehouse settings.
+
+    !!!note
+        The user remains logged in until they choose to log out.
+    
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+
+## Etendo Mobile Features
+
+### Share Files
+
+![](../../assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
+
+Etendo Mobile supports **receiving files** from external applications to be used by sub-applications.
+
+- The [Documents Manager Subapp](./bundles/mobile-extensions/overview.md#documents-manager-subapp) can receive and display external files within Etendo Mobile.
+- The [Etendo Copilot Subapp](../etendo-copilot/bundles/overview.md#etendo-copilot-subapp) can receive any external file and process it through agents in one simple step.
+
+!!!warning
+    The file sharing feature enables files to be opened by any compatible sub-application via a selector.
 
 !!!info
-    In the Add new link field, it is possible to add other URLs to connect the app from different servers. It is also possible to modify or remove URLs.
-
-## Log In
-<br>
-
-![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="right" }
-
-Once the server URL is configured, the user must log in entering **the user and the password** assigned by the system administrator.
-
-!!!info
-    The user will enter with their default **Role, Organization, Client and Warehouse** setup.
-
-!!!note
-    The user will remain logged in unless the session is ended through Log out option.  
-
-!!!info
-    Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the **Demo Try** button must be pressed so the user can enter the app without credential requirements.
-
-## Dynamic App Role Configuration
-
-Etendo Mobile allows the creation and configuration of mobile sub-applications. In order to be able to configure the dynamic sub-applications, it is necessary to install the [Mobile Extensions](../etendo-mobile/bundles/mobile-extensions/mobile-extensions.md) bundle which contains all sub-apps distributed by Etendo. 
-
-Once installed, go to the **Role window** in `General Setup> Security> Role` and create a configuration register in the **Dynamic Apps** tab for each sub-app to be configured. This action sets the access to the sub-applications according to the role.  
-
-Fields to note:
-
-- **App:** This dropdown displays the available applications based on the installed modules. Selecting an application grants access to that application for the role.
-- **Version:** Assign the version of the application to be used in this role.
-- **Active:** Select if this application is active or not.
-
-![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
+    For more technical details, see the [Create New Sub-application](../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md) guide.

@@ -36,7 +36,7 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account
+This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
     For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
@@ -47,20 +47,20 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
-This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors.
+This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
 
 !!! info
     This functionality is available in the following windows:
 
-    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management-1)
-    - [Sales invoice]()
-    - [Purchase Invoice]()
-    - [Sales order]()
-    - [Purchase order]()
-    - [Payment In]()
-    - [Payment Out]()
+    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
+    - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+    - [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
+    - [Purchase order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+    - [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
+    - [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
-    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md)
+    For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 
 ### Advanced Business Partner Settlement
@@ -115,16 +115,6 @@ This functionality allows the user to automatically process and protest remittan
 
 !!! info
     For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
-
-### Bank Integration PSD2
-
-:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
-
-This functionality allows users to synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions in a secure and faster way.
-
-!!!info
-    For more information, visit [Bank Integration PSD2](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md) section. 
-
 
 ### Banking Pool
 
@@ -191,10 +181,14 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
+The Balance Sheet and P&L Structure Advanced, General Ledger Report Advanced and Journal Entries Report Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
-    For more information, visit [the Balance Sheet and P&L Structure user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced), [the General Ledger Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) and [the Journal Entries Report user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced).
+    For more information, visit:
+    
+    - [Balance Sheet and P&L Structure Advanced ](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
+    - [General Ledger Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
+    - [Journal Entries Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
 
 ### G/L Journal Clone
 

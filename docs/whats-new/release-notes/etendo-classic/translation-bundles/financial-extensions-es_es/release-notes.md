@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Financial Extensions Spanish Translation - Release Notes
 tags:
     - Release Notes
     - Financial
@@ -18,7 +18,8 @@ tags:
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.7.0){target="_blank"} | 23/08/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.8.0){target="_blank"} | 21/04/2025 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.7.0){target="_blank"} | 23/08/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.6.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.1){target="_blank"} | 19/07/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 08/07/2024 | [1.13.1, latest] | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.5.0){target="_blank"} | 23/01/2024 | [1.13.1, latest] | C | :white_check_mark: |

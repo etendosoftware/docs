@@ -1,5 +1,5 @@
 ---
-title: Mobile Extensions
+title: Mobile Extensions Bundle
 tags: 
     - Mobile Extensions
     - Sub-applications
@@ -7,7 +7,7 @@ tags:
     - Inventory Management
 ---
 
-# Mobile Extensions
+# Mobile Extensions Bundle
 
 :octicons-package-16: Javapackage: `com.etendoerp.mobile.extensions`
 
@@ -19,11 +19,7 @@ This bundle includes mobile sub-applications.
 
 !!! info
     - To be able to include the sub-applications, the Mobile Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
-    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md). <br>
-
-    - Once the bundle is installed in Etendo Classic, the dynamic apps will be configured and the apps will be available. Acces must be given to each role from the [Dynamic Apps tab](../../getting-started.md#dynamic-app-role-configuration) in the Role window. <br>
-    
-    - For more information read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md). 
+    For more information about the versions available, core compatibility and new features visit [Mobile Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 
 ## Modules
@@ -37,3 +33,20 @@ The Etendo Classic Sub-application allows users to access and manage their clien
 
 !!! info
     For more information, visit [Etendo Classic Subapp - User Guide](./etendo-classic-subapp.md).
+
+
+### Documents Manager Subapp
+:octicons-package-16: Javapackage: `com.etendoerp.subapp.docsmanager`
+
+![](../../../../assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
+
+The **Documents Manager Subapp** is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
+
+!!! note
+    The application supports different formats of Images, Audio, PDF, CSV and txt. Although on iPadOS it may be limited.
+
+
+!!! info
+    For more technical information, visit [Create New Subapplication - Receiving Shared Files from Etendo Mobile](../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#receiving-shared-files-from-etendo-mobile).
+
+

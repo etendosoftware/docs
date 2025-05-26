@@ -946,18 +946,6 @@ This window allows to:
 - select a **bank statement file**
 - and select the **file format** of the selected bank statement file to import.
 
-##### **Get Bank Statement**
-
-!!!info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
-
-Instead of manually import the bank statements, Etendo allows you to synchronize the bank accounts with the financial accounts in order to **automatically download bank statements**. 
-
-This functionality facilitates a **faster and safer integration** between the financial accounts' and bank statements' information to accelerate the process of generating bank statements. 
-
-!!! info
-    For more information about bank integration to automatically import bank statements visit [Bank Integration PSD2](../../../optional-features/bundles/financial-extensions/psd2-bank-integration.md).
-
 ##### **Match Statement**
 
 Once a bank statement file has been imported, the button "Match Statement" opens a new window where the imported bank statement lines and the existing financial transactions are displayed. By default, there is an implicit filter which hides the bank statement lines that are already matched.

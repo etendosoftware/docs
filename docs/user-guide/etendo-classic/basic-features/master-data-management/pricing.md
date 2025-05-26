@@ -296,11 +296,11 @@ Discounts and Promotions, formerly Price Adjustments, defines rules to be applie
 This feature requires to set as "Active":
 
 - the "Read-Only" Tab "Discounts and Promotions" is found in below listed windows:
-  - Purchase Order
-  - Sales Order
-  - Purchase Invoice
-  - Sales Invoice
-  - and Sales Quotation
+    - Purchase Order
+    - Sales Order
+    - Purchase Invoice
+    - Sales Invoice
+    - and Sales Quotation
 
 #### How Promotions are Applied
 

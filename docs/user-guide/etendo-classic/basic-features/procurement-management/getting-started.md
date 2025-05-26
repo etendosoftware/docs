@@ -1,4 +1,5 @@
 ---
+title:  Procurement Management - Getting Started
 tags: 
  - getting started
  - procurement management
@@ -7,7 +8,7 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-#
+# Procurement Management - Getting Started
 
 ## Overview
 

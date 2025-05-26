@@ -44,17 +44,26 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-extra_css:
-  - stylesheets/extra.css
-  - assets/stylesheets/custom-styles.css
 
 
 exclude_docs:
   .*
 
 extra_javascript:
-  - assets/javascripts/custom-search.js
   - assets/javascripts/feedback.js
+  - assets/javascripts/custom-search.js
+  - https://cdn.jsdelivr.net/npm/@docsearch/js@3
+  - https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
+  - https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - assets/stylesheets/custom-styles.css
+  - https://cdn.jsdelivr.net/npm/@docsearch/css@3
+  - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/reset-min.css
+  - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+
 
 markdown_extensions:
   - abbr
@@ -94,7 +103,7 @@ plugins:
         - stemmer
         - stopWordFilter
         - trimmer    
-         
+
   - tags
   - glightbox
   - rss:
@@ -159,7 +168,7 @@ extra:
       - accept
       - manage 
     
-copyright: Copyright &copy; 2021 - 2025 Etendo Software
+copyright: Copyright &copy; 2021 - 2025 Futit Services S.L.
 
 nav:
   - Home : index.md
@@ -246,7 +255,6 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
             - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
-            - Bank Integration PSD2: user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
@@ -288,7 +296,6 @@ nav:
       - Bundles:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
-          - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
           
 
@@ -298,12 +305,11 @@ nav:
       - ✨ Getting Started:
         - Installation :
           - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
-          - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
           - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
-          - Install Modules: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
-          - Install Translation Bundles: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
+          - Install Modules in Etendo Classic: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
+          - Install Translation Bundles in Etendo Classic: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
+          - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
           - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
-          - Dependency Manager: developer-guide/etendo-classic/getting-started/installation/dependency-manager.md 
         - Migration from Openbravo:
           - Migrating to Etendo (from Openbravo): developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo.md
           - Upgrading to Openbravo 21Q3.2: developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2.md
@@ -327,7 +333,7 @@ nav:
         - Data Access Layer: developer-guide/etendo-classic/concepts/data-access-layer.md
         - Data Model: developer-guide/etendo-classic/concepts/data-model.md
         - Datasets: developer-guide/etendo-classic/concepts/datasets.md
-#        - Datasources: developer-guide/etendo-classic/concepts/Datasources.md
+        - Datasources: developer-guide/etendo-classic/concepts/datasources.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
 #        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
         - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
@@ -411,7 +417,7 @@ nav:
         - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
 #        - How to create a QueryList Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_QueryList_Widget.md
         - How to Create a Report: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md
-#        - How to create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition.md
+        - How to Create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
         - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
         - How to Create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
@@ -488,6 +494,7 @@ nav:
       - Developer Tools:
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
+        - Etendo Testing Plugin: developer-guide/etendo-classic/developer-tools/etendo-testing-plugin.md
       - Bundles:
         - Platform Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
@@ -498,14 +505,18 @@ nav:
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
-          - Bank Integration PSD2: developer-guide/etendo-classic/bundles/financial-extensions-bundle/psd2-integration.md
         - Etendo BI Extensions Bundle: developer-guide/etendo-classic/bundles/etendo-bi-extensions.md
+      - Developer Changelog:
+        - API Changes: developer-guide/etendo-classic/developer-changelog/apichanges.md
     - Etendo RX:
       - ✨ Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
         - Config Server: developer-guide/etendo-rx/concepts/config-server.md
         - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
         - Projections and Mappings: developer-guide/etendo-rx/concepts/projections.md
+      - Connectors:
+        - Openbravo Connector:
+          - ✨ Installation: developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to Guides:
@@ -520,19 +531,19 @@ nav:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
-        - Overview: developer-guide/etendo-copilot/available-tools/overview.md
+        - API Call Tool: developer-guide/etendo-copilot/available-tools/api-call-tool.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
         - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
         - Docker Tool: developer-guide/etendo-copilot/available-tools/docker-tool.md
         - File Copy Tool: developer-guide/etendo-copilot/available-tools/file-copy-tool.md
         - File Downloader Tool: developer-guide/etendo-copilot/available-tools/file-downloader-tool.md
-        - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
         - PDF to Images Tool: developer-guide/etendo-copilot/available-tools/pdf-to-images-tool.md
         - Print Directory Tool: developer-guide/etendo-copilot/available-tools/print-directory-tool.md
         - Read File Tool: developer-guide/etendo-copilot/available-tools/read-file-tool.md
         - Send Email Tool: developer-guide/etendo-copilot/available-tools/send-email-tool.md
+        - Task Creator Tool: developer-guide/etendo-copilot/available-tools/task-creator-tool.md
         - Tavily Tool: developer-guide/etendo-copilot/available-tools/tavily-tool.md
         - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
         - Test Run Tool: developer-guide/etendo-copilot/available-tools/test-run-tool.md
@@ -540,11 +551,15 @@ nav:
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
-      - How to Guides: 
+      - How to Guides:
+        - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
-        - How to execute Copilot through the console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
-        - How to use context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
+        - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
+        - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
+        - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
+        - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+        - How to Debug an Agent Prompt with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith.md
     - Etendo Mobile:
       - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
       - Concepts: 
@@ -563,6 +578,7 @@ nav:
         - Plugins:
           - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md
           - Etendo Backup and Restore: whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md
+          - Etendo Testing Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes.md
         - Bundles:
           - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
           - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
