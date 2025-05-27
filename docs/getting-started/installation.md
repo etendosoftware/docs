@@ -190,18 +190,21 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
                 
     11. Open your browser in `https://<Public server IP>/<Context Name>`
 
-=== ":octicons-issue-opened-24: ISO"
+=== ":octicons-issue-opened-24: Etendo ISO"
 
     
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     
-    ### Steps to Install the ISO with Internet Connection
+    ### Steps to Install the Etendo ISO
 
-    1. Download the ISO from the [release notes](../whats-new/release-notes/etendo-classic/iso.md) page.
+    1. Download the Etendo ISO from the [Etendo ISO - Release Notes](../whats-new/release-notes/etendo-classic/iso.md) page.
 
-    2. Burn the ISO image into a USB stick. It is recommended to use balenaEtcher on Linux and Rufus on Windows. Alternatively, you can begin with your preferred virtualizer.
+    2. Burn the Etendo ISO image into a USB stick. It is recommended to use [balenaEtcher](https://etcher.balena.io/#download-etcher){target="_blank"} on Linux or MacOS and [Rufus](https://rufus.ie/en/){target="_blank"} on Windows.
 
-    3. Start the system using the ISO image. You will be prompted:
+        !!! tip
+            If you are installing the Etendo ISO on a virtual machine, it is recommended to use [Qemu](https://www.qemu.org/download/){target="_blank"} along with a graphical interface such as [Virt-Manager (Linux)](https://virt-manager.org/download.html){target="_blank"} or [UTM (MacOS)](https://mac.getutm.app/){target="_blank"} to easily manage your virtual environments. 
+
+    3. Start the system using the Etendo ISO image. You will be prompted:
 
         - **Network Connections**: Verify that you are on a network with an internet connection and that an IP address is correctly assigned to your server.
         
@@ -215,11 +218,11 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
     5. After the restart, the final server configuration will begin. Wait for it to finish, and the server will be ready.
 
-    ### Steps to Install the ISO without Internet Connection
+    **Steps to Install the Etendo ISO without Internet Connection**
 
     If you do not have an internet connection during installation, follow these additional steps:
 
-    1. Follow the same procedure outlined in the previous section, *Steps to Install the ISO with Internet Connection* up to the network configuration stage.
+    1. Follow the same procedure outlined in the previous section, *Steps to Install the Etendo ISO with Internet Connection* up to the network configuration stage.
 
         - **Network Configuration**: In this section, if you do not have an internet connection, select **Continue without internet**.
 
