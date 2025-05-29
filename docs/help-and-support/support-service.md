@@ -26,4 +26,4 @@ Here, the user can ask questions or send information in these sections:
 ## Get In Touch
 
 !!! info
-        For commercial information, visit the [Get in Touch section](https://etendo.software/get-in-touch/){target="_blank"} in the Etendo website.
+    For commercial information, visit the [Contact Us](https://etendo.software/en/contact-us/){target="_blank"} section in the Etendo website.
