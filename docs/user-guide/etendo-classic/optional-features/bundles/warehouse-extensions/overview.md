@@ -31,14 +31,16 @@ This module adds the option Automatic - Only Default Warehouse to the Stock Rese
 
 ### Picking and Packing 
 
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.structure`
+
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.packing`
 
-In Etendo, the picking and packing functionalities are designed to streamline and improve warehouse operations. These processes are carried out separately and accessed through different windows. The Picking module helps the warehouse staff to manage and deliver picking lists. The Packing module allows warehouse staff to pack products efficiently. If both modules are installed, the workflow begins with picking and continues with packing, ensuring a smooth and organized order fulfillment process.
+In Etendo, the picking and packing functionalities are designed to streamline and improve warehouse operations. These processes are carried out separately and have access through different windows. The Picking module helps the warehouse staff to manage and deliver picking lists. The Packing module allows warehouse staff to pack products efficiently. If both modules are installed, the workflow begins with picking and continues with packing, ensuring a smooth and organized order fulfillment process. However, it is also possible to use the modules separately.
 
 !!! info
-    For more information, visit [Picking and Packing](../warehouse-extensions/picking-and-packing.md).
+    For more information, visit [Picking](picking.md) and [Packing](packing.md). 
 
 ### Product Operations
 
