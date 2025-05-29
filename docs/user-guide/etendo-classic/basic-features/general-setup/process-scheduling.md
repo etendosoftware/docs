@@ -25,7 +25,7 @@ The information to fill in to schedule a background process is:
     !!! info
         A Process Group is scheduled in the same way as a single process. However, you cannot schedule a Process Group and a single process at the same time. 
         
-        See the [Process Group Windows](#process-group-windows) section for more details.
+        See the [Process Group Window](#process-group-window) section for more details.
 
 3. Select the **Timing**. Timing options are described in the options below:
 
