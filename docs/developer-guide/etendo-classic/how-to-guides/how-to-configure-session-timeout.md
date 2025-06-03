@@ -64,3 +64,8 @@ If a template is active and you wish to export the modified session timeout conf
     This step is required only when distributing the configuration as part of a template. If not exported, the change may be lost upon future builds or updates.
 
 
+---
+
+- This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+

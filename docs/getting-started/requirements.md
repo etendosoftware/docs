@@ -53,7 +53,7 @@ Either PostgreSQL should also be supported by your target system
 
 | Stack component | Supported versions | Recommended version | Instalation Guide |
 | :--- | :--- | :--- | :--- |
-| :fontawesome-brands-java:  Java SE | 11  | Latest 11.x | [Java Instalation Guide](https://www.java.com/en/download/manual.jsp){target="_blank"} |
-| :simple-postgresql:  PostgreSQL | 10.x, 11.x, 12.x, 13.x, Amazon RDS | Latest 14.x | [Postgres Instalation Guide ](https://www.postgresql.org/download/){target="_blank"} |
-| :simple-apachetomcat:  Apache Tomcat | 8.5.x (x >= 24), 9.0.x | Latest 9.0.x | [Tomcat Instalation Guide](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
+| :fontawesome-brands-java:  Java SE | 17  | Latest 17.x | [Java Instalation Guide](https://www.oracle.com/java/technologies/downloads/#java17){target="_blank"} |
+| :simple-postgresql:  PostgreSQL | 14.x, 16.x Amazon RDS | Latest 16.x | [Postgres Instalation Guide ](https://www.postgresql.org/download/){target="_blank"} |
+| :simple-apachetomcat:  Apache Tomcat | 9.0.x | Latest 9.0.x | [Tomcat Instalation Guide](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
 | :material-database:  Oracle | 19c (LTS) | 19c (LTS) |
