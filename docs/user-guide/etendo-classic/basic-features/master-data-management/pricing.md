@@ -1,10 +1,16 @@
 ---
 title: Pricing
+tags: 
+  - Price List
+  - Discount
+  - Promotions
+  - Price Rule
+
 ---
 
 ## Price List Schema
 
-:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Price List Schema`
+:material-menu: `Application` > `Master Data Management` > `Picing` > `Price List Schema`
 
 ### Overview
 
@@ -142,7 +148,7 @@ Using non-hierarchical behavior:
 
 ## Price List
 
-:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Price List`
+:material-menu: `Application` > `Master Data Management` > `Picing` > `Price List`
 
 ### Overview
 
@@ -249,7 +255,7 @@ Overall, this tab includes two main fields:
 
 ## Create All Price Lists
 
-:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Create All Price Lists`
+:material-menu: `Application` > `Master Data Management` > `Pricing` > `Create All Price Lists`
 
 ### Overview
 
@@ -281,117 +287,188 @@ The Create All Price Lists generates all price lists pending from the selected p
 
 ![](../../../../assets/drive/1JC58tbBLqjqN5hDZv5Puwp_lAmDafJqd.png)
 
-## Discounts and Promotions
 
-:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Discounts and Promotions`
+
+
+## Discounts and Promotions Window
+:material-menu: `Application` > `Master Data Management` > `Picing` > `Discounts and Promotions`
 
 ### Overview
 
-Discounts and Promotions is a mechanism that allows the user to adjust prices based on different rules. External modules can extend this definition by providing additional rules (Discount Types) implementations.
+Discounts and Promotions is a flexible feature that allows you to automatically adjust prices on order and invoice lines according to configurable business rules. You can define when and how promotions apply using filters (such as Business Partners, Products, Price Lists, and Characteristics), configure the type of discount (percentage, fixed amount, or fixed price), and control promotion availability by day and time. Multiple promotions can be applied in a prioritized cascade. The configuration also supports translating promotion names and tracking applied discounts on processed documents through an optional read-only tab.
 
-Discounts and Promotions, formerly Price Adjustments, defines rules to be applied to invoice and order lines to adjust prices.
+### Header
+Defines the core settings and conditions for applying Discounts and Promotions to orders and invoices.
 
-![](../../../../assets/drive/ls88i8jyKuvAYSUkKg3hrJyY9FkEKi8kj9CkQI0hn-YdEggr1Qd25cPG13CO5Y-jVh5L6w6X-Nlnc7l_7ht0zRV8_4TYSYs-_V7JrZxIkIxmK5XS_KS60noJsXVwMK5FWbeKtEctt6kpiZsEqw.png)
+![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-add-promotions.png)
 
-This feature requires to set as "Active":
+Fields to note:
 
-- the "Read-Only" Tab "Discounts and Promotions" is found in below listed windows:
-    - Purchase Order
-    - Sales Order
-    - Purchase Invoice
-    - Sales Invoice
-    - and Sales Quotation
+#### Main Section
 
-#### How Promotions are Applied
+- **Organization**: Organization to which the discount or promotion will be available.
+- **Discount/Promotion Type**: Defines the type of rule used to adjust prices. By default, Etendo includes the _Price Adjustment_ type, but it is possible to extend and add custom types according to the organization's needs.
+- **Name**: Internal identifier for the promotion.
+- **Printed Name**: Label shown to end-users and in reports. Defaults to Name if empty.
+- **Description**: Optional short text describing the promotion (up to 255 characters).
+- **Active**: Enables the promotion for use. Inactive records are retained for auditing/reporting.
 
-Rules are applied to order or invoice lines based on the filters in that rule, for example to a specific Business Partner Category acquiring a concrete set of products during a fixed period of time.
+#### Filter Options 
 
-When the line is saved, the actual price shown in it does not take into account promotions. Promotions are calculated when the invoice/order is processed or by clicking the _Calculate Promotions_ button.
+- **Starting Date**: Date when the promotion becomes valid.
+- **Ending Date**: Date until the promotion remains valid (inclusive).
+- **Priority**: Order of application when multiple promotions apply. Lower number = higher priority.
+- **Apply Next Discount/Promotion**: If checked, subsequent applicable promotions will also be applied.
+- **Filters**:
+
+    Each of the following fields supports two filtering methods that define how the related records configured in the tabs will be treated during promotion evaluation.These options provide flexibility for defining the scope of a promotion in relation to Business Partners, Products, Price Lists, and Organizations.
+
+    - **Included BP Categories**
+    - **Included BP Set**
+    - **Included Business Partners**
+    - **Included Product Categories**
+    - **Included Products**
+    - **Include Price Lists**
+    - **Included Organizations**
+    - **Included External Business Partner References**
+
+        | Method                    | Description                                                                                          |
+        |---------------------------|------------------------------------------------------------------------------------------------------|
+        | **All excluding defined** | **(Default)** The promotion applies to all records **except** those listed in the corresponding tab. |
+        | **Only those defined**    | The promotion applies **only** to the records listed in the corresponding tab.                       |
+
+    Some filters have different filtering methods, which are described below:
+
+    - **Included Characteristics**: Defines how product characteristics are filtered to apply the promotion. Three methods are available:
+    
+        | Method                        | Description                                                                       |
+        |-------------------------------|-----------------------------------------------------------------------------------|
+        | **All Characteristics**       | **(Default)** The promotion applies regardless of product characteristics.        |
+        | **All of the values defined** | The product must match **all** defined characteristic for the promotion to apply. |
+        | **Any of the ones defined**   | The product must match **any** defined characteristic for the promotion to apply. |
+
+    - **Exclude Characteristics**:  Defines how product characteristics are filtered to exclude the promotion. Two methods are available:
+
+        | Method                        | Description                                                                                         |
+        |-------------------------------|-----------------------------------------------------------------------------------------------------|
+        | **All of the values defined** | **(Default)** The product must match **all** defined characteristic for the promotion not to apply. |
+        | **Any of the ones defined**   | The product must match **any** defined characteristic for the promotion not to apply.                       |
+
+#### Definition
+
+- **Discount %**: Percentage discount to apply to the price.
+- **Discount Amount**: Fixed amount to subtract from the price.
+- **Fixed Unit Price**: Final price assigned to the product when the promotion is applied.
+- **Min. Quantity**: Minimum quantity required for the promotion to apply.
+- **Max. Quantity**: Maximum quantity eligible for the promotion.
+- **Is multiple**: Discount applies only if quantity is a multiple of a defined value.
+    - **Units per package**: This option is displayed only if _Is Multiple_ is enabled. It defines the number of units considered per package.
+
+
+#### Availability
+This section defines the days and times when the promotion is active. If no availability is configured, the promotion will always be applied.
+
+- **All Week**: Flag to enable the promotion throughout the entire week.
+    - **Starting Time**: Daily start time for the promotion.
+    - **Ending Time**: Daily end time for the promotion.
+- **Monday – Sunday**: Flags to enable the promotion on individual days of the week.
+    - **Starting Time**: Start time for the specified weekday.
+    - **Ending Time**: End time for the specified weekday.
+
+### Tabs
+
+- **Translation**: Allows defining the language, as well as the corresponding translated **Name** and **Printed Name** for each language.
+- **Business Partner Category**: Allows inclusion or exclusion of Business Partner Categories from a promotion or discount.
+- **Business Partner**: Allows inclusion or exclusion of specific Business Partners from a promotion or discount.
+- **Business Partner Set**: Enables defining Business Partner Sets that a promotion or discount will apply to.
+- **Product Category**: Allows inclusion or exclusion of Product Categories from a promotion or discount.
+- **Products**: Allows inclusion or exclusion of individual Products from a promotion or discount.
+- **Price List**: Enables selection of Price Lists to include or exclude from a promotion or discount.
+- **Organization**: Allows selecting Organizations to include or exclude from a promotion or discount.
+- **Charesteristics**: Allows selecting Product Charesteristics to include from a promotion or discount.
+- **Exclude Charesteristics**: Allows selecting Product Charesteristics to exclude from a promotion or discount.
+- **External Business Partner** Allows selecting External Business Partner to include or exclude from a promotion or discount.
+
+### Buttons
+
+- **Add Organizations**: Adds Organization records in the *Organization* tab to include or exclude them from the promotion.
+    ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/pricing/add-organizations.png)
+- **Add Product Categories**: Adds Product Category records in the *Product Category* tab to include or exclude them from the promotion.
+    ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/pricing/add-product-categories.png)
+- **Add Products**: Adds Product records in the *Products* tab to include or exclude them from the promotion.
+    ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/pricing/add-products.png)
+
+
+
+### How Promotions are Defined?
+
+The process for setting up a promotion is straightforward:
+
+1. **Identify the promotion**: Use the fields **Name** and **Printed Name** to identify the promotion. _Printed Name_ will be shown to the final user, while _Name_ is used internally.
+
+2. **Define the active period**: Set **Starting Date** and **Ending Date** to define when the promotion will be valid.
+
+3. **Control promotion priority and cascade**: Use **Priority** to determine the order in which promotions will apply if more than one is valid. Enable **Apply Next** if you want subsequent promotions to apply after this one.
+
+4. **Configure filters**: Use the **Filter Options** section to determine where the promotion applies:
+    - Select **Included method** for each filter (Business Partners, Products, Price Lists, Characteristics, and Organizations).
+    - Define the actual filter values in the corresponding sub-tabs or use the available buttons.
+
+    !!! tip
+        Filter configuration is key to ensuring the promotion applies only in the intended scenarios.
+
+5. **Define discount logic**: In the **Definition** section, configure the discount:
+    - **Discount Amount** and/or **Discount %** to adjust the price.
+    - **Fixed Unit Price** to override the final price.
+    - **Min and Max Quantities** to apply the promotion only for certain quantities.
+
+    !!! tip
+        Use **Fixed Unit Price** for promotions that should force a specific price, and **Min/Max Quantities** for volume-based promotions.
+
+6. **Set promotion availability (optional)**: In the **Availability** section, configure when the promotion will be active, ff no availability is configured, the promotion will always be applied:
+
+    - Use **All Week** to apply the promotion every day.
+    - Optionally, enable individual days (**Monday** to **Sunday**) to fine-tune when the promotion is active.
+    - For each day (or All Week), set **Starting Time** and **Ending Time** to define the valid time range.
+
+    !!! tip
+        Setting availability ensures promotions are correctly applied based on business hours, special days, or time-based marketing strategies.
+
+### How Promotions are Applied?
+
+Discount and Promotion rules are automatically applied to [sales order lines](../sales-management/transactions.md#lines-1) and [sales invoice lines](../sales-management/transactions.md#lines-5) based on the filters you configure. For example, targeting certain Business Partner Categories or specific products during a defined time period.
+
+Etendo calculates the final price in three steps:
+
+- **Price List**: The base price defined in the product price list.
+- **Price Standard**: The first discount level. This may come from the price list or can be manually adjusted on the line.
+- **Actual Price**: The final price that will appear on the document after applying promotions.
+
+If multiple promotions apply, they will be applied in order of priority. Each new promotion is applied to the price resulting from the previous one (cascade).
+
+Price adjustments are visible immediately when editing the line, you will see the final price before processing the document.
 
 !!! info
-    _Promotions and Discounts_ can be extended to implement complex rules that attend not to a single line but to all lines in the invoice, being impossible for those to be calculated in advance. 
+    Although the discount is shown instantly, the **Discounts and Promotions** record is only created once the document is processed. See the [Optional Configuration](#optional-configuration) section to learn how to display this information in the document window.
 
-Etendo manages prices in 3 chunks:
 
-- Price List: it is the base price defined as Product Price. It is the base price reference.
-- Price Standard: it is the first discount applied to the price. It can come directly from the Price List, or can be manually edited while entering the line.
-- Actual price: it is the real price that will be used in the document. Promotions are applied to the Price Standard to obtain this one.
+### Optional Configuration
 
-Multiple promotions can be chained in cascade, in this case the one applied in 2nd position will use as base the actual price obtained after applying the first one. An alternative mechanism to apply promotions in _WebPOS_ is implemented by the Promotions Best Deal Case module.
+The **Discounts and Promotions** read-only tab can be added to the following windows to display the discounts applied to each price:
 
-#### How Promotions are defined
+- Purchase Order
+- Sales Order
+- Purchase Invoice
+- Sales Invoice
+- Sales Quotation
 
-The main fields to take into account when defining a promotion are:
-
-- _Name_ and _Printed Name_: is the way to identify the promotion. _Printed Name_ is used to display the rule to the final user, whereas name is intended for internal usage, although in case _Printed Name_ is empty, _Name_ is used instead.
-- _Filter Options_ section: filter options configure in which cases it can be applied.
-  - _Starting_ and _Ending_ dates: The period of time the promotion is valid.
-  - _Priority_: As explained in the previous section, multiple promotions can be applied in cascade. _Priority_ field defines which is the order these promotions are applied in. When more than one promotion can be applied to a single line, these promotions are sorted by ascending priority, this is, the promotion with priority 1 will be applied before the one with priority 2.
-
-!!! info
-    Note it is very important to set priority in case of defining rules that can be applied in cascade.
-
-- _Apply Next_: It allows stopping the promotion cascade chain. When it is flagged, in case   there is another promotion that is applicable, after applying the current promotion, it will be applied. If it is not flagged, this rule will be the last in the chain.
-- _Included method_: There are 6 drop down fields to define how _Business Partner Categories_, _Business Partners_, _Product Categories_, _Products_, _Price Lists_ and _Organizations_ are filtered. The actual values for the filters are added in the subtabs with the same names, these fields only define the strategy to filter each of them, values here can be:
-  - _All excluding defined_ (default value). It removes from the filter the items selected. For example if we set it to products and add product A, the promotion will apply to any product but A. Note this is the default value for all filters, in case it is left as it is for all of them, and no filter option is added in any sub tab, the promotion will be always applicable.
-  - _Only those defined_: Restricts the filter to just the items that are included in the correspondent sub tab.
-- _Definition_ section: Fields shown in this section vary depending on the selected promotion type. Here it is typically defined how much to discount and additional conditions to be met to apply the rule.
-
-#### Price Adjustment
-
-_Price Adjustment_ is the promotion type included by default, it behaves almost in the same way _Price Adjustments_ did before they were extended to _Promotions and Discounts_.
-
-As opposed to the rest of Promotions and Discounts, in order to maintain backwards compatibility, prices with adjustments are calculated while the order/invoice line is being edited. So the final price is shown there even before processing it. Promotions and Discounts lines are not created until the document is processed.
-
-!!! warning
-    Due to this different behavior between Price Adjustments and the rest of Discounts and Promotions, it is advisable not to use both of them together, so in case Price Adjustments are defined and applied, do not define other types to be applied to the same products.
-
-To define a promotion of _Price Adjustment_ type, follow the indications in the section above for filtering. In the _Definition_ section these are the fields to be taken into account:
-
-- _Discount Amount_: It is a fixed amount discounted to the price.
-- _Discount %_: Percentage discounted to the price. In case _Discount Amount_ field is not 0, percentage is applied to the price obtained after subtracting _Discount Amount_ value.
-- _Fixed Unit Price_: Sets the price per unit. If this field is set, the two mentioned above are not used.
-- _Min_ and _Max_ quantities: Specifies which is the quantity range to apply the rule, values here are included and any (or both) of them can be empty. For example, a promotion with _Min Quantity_ 5 to product A (which UOM is unit) would apply whenever there is a line with 5 or more units of product A.
-
-### Discounts and Promotions
-
-Defines the Discounts and Promotions main characteristics such as Discount Type, how it is filtered and actual discount information based on type.
-
-### Translation
-
-Maintains translations of Discounts and Promotions to different languages.
-
-### Business Partner Category
-
-The user can add business partner categories in order to include or exclude them from a selected Promotion/Discount.
-
-### Business Partner
-
-The user can add business partners in order to include or exclude them from a selected Promotion/Discount.
-
-### Business Partner Set
-
-The user can define business partner sets for the discount.
-
-### Product Category
-
-The user can add product categories in order to include or exclude them from a selected Promotion/Discount.
-
-### Products
-
-The user can add products in order to include or exclude them from a selected Promotion/Discount..
-
-### Price List
-
-The user can add price lists in order to include or exclude them from a selected Promotion/Discount.
-
-### Organization
-
-The user can add organizations in order to include or exclude them from a selected Promotion/Discount.
+!!! tip
+    To display this tab in the mentioned windows, simply check the **Active** box in the corresponding tab in the **windows, tabs and fields** window. 
+    This action should be performed by a developer, with system administrator role, and  using a development **template** to export the configuration and prevent changes from being lost.
 
 ## Service Price Rule
 
-:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Service Price Rule`
+:material-menu: `Application` > `Master Data Management` > `Picing` > `Service Price Rule`
 
 ### Overview
 
