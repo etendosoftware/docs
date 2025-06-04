@@ -12,6 +12,50 @@ tags:
 
 #
 
+## May 2025
+
+### Etendo Classic
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Classic Release: Version 25.1.x Now Available!**
+
+    ---
+    The latest version [25.1.x](./release-notes/etendo-classic/release-notes.md) of Etendo Classic is here! This release brings compatibility updates with **Java 17**, **PostgreSQL 16**, **Tomcat 9** and third-party dependencies, ensuring a modern and robust tech stack. All supported modules have been updated for full integration.  
+    Want to know more? Check out the [developer updating guide](../developer-guide/etendo-classic/eveloper-changelog/apichanges.md).
+
+    ---
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OtHb45n2dgU?si=dttVeLQxnf97HGjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+</div>
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Shipment and Invoicing Statuses in Purchase Orders and Goods Receipts**
+
+    ---  
+    This release introduces improved visibility in procurement processes. In the [Purchase Order](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) window, the status bar now shows shipment and invoicing percentages. At the line level, you’ll see detailed quantities for what has been invoiced and shipped.  
+    Similarly, the [Goods Receipt](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) window shows invoicing percentages at both header and line levels.
+
+- :octicons-rocket-24: **Easily Exclude Promotions and Discounts with a Simple Checkbox**
+
+    ---
+    A new checkbox in the *More Information* section of [Sales Order](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_1) and [Sales Invoice](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_5) lines allows users to **cancel automatic discounts and promotions**. This gives you more control over pricing on a per-line basis.
+
+- :octicons-rocket-24: **Improved Navigation in the Create Invoices from Orders Process**
+
+    ---
+    Now it’s easier to work with orders! The [Create Invoices from Orders](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#create-invoices-from-orders) process includes improved navigation features that let you access filtered orders more efficiently.
+
+- :octicons-rocket-24: **Enhanced Purchase Invoice Voiding with Supplier Reference**
+
+    ---  
+    When canceling a purchase invoice, Etendo creates a reverse document that now references the supplier’s cancellation document. The [invoice reactivation](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#reactivate) process includes a new `Supplier Reference` field to ensure clear traceability and alignment.
+
+</div>
+
 ## April 2025
 
 ### Etendo Classic
@@ -22,13 +66,14 @@ tags:
 
     ---
 
-    With **Etendo Classic**, managing sales commissions is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using diffrent criteria and filters such as quantities sold or amounts invoiced: 
+    With **Etendo Classic**, managing [sales commissions](../user-guide/etendo-classic/basic-features/sales-management/setup.md#commission) is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using diffrent criteria and filters such as quantities sold or amounts invoiced: 
 
     ![Commission Criteria](../assets/whats-new/etendo-news/commission-criteria.png)
 
     Once calculated, sales agent payments can be generated automatically. 
     You can configure commissions to apply to all invoices or only paid ones, and decide whether to include invoices without an assigned sales agent.
     <br>
+    --- 
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=2zC3RQmYD1ImkoLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -67,7 +112,7 @@ tags:
 
     ![](../assets/whats-new/etendo-news/share-files-mobile.png)
 
-    A new feature has been added to Etendo Mobile to streamline integration with external applications. With the new **Share files** option, you can now receive files from outside apps and use them directly in subapplications like:
+    A new feature has been added to Etendo Mobile to streamline integration with external applications. With the new [Share files](../user-guide/etendo-mobile/) option, you can now receive files from outside apps and use them directly in subapplications like:
 
     - **Documents Manager**, where you can view files right in Etendo Mobile.
     - **Copilot**, where specialized assistants can extract information from images, transform audios into sales orders, and much more.
