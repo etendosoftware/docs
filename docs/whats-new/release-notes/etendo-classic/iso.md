@@ -13,7 +13,6 @@ tags:
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
-| [25.1.3](#2513) | 30/05/2025 | [25Q1.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.3.iso) |
 | [25.1.2](#2512) | 21/05/2025 | [25Q1.2.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q1.2.iso) |
 | [24.4.3](#2443) | 10/02/2025 | [24Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.3.iso) |
 | [24.4.0](#2440) | 20/12/2024 | [24Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q4.0.iso) |
@@ -27,8 +26,6 @@ tags:
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
-## 25.1.3
-New ISO with Etendo Classsic version 25.1.3
 
 ## 25.1.2
 New ISO with Etendo Classsic version 25.1.2
