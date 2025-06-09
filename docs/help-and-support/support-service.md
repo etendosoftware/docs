@@ -10,7 +10,7 @@ tags:
 
 ## Help Center
 
-Etendo provides support to the users through our [Help Center](http://support.etendo.software){target="_blank"} 
+Etendo provides support to partners and users through our [Etendo Help Center](http://support.etendo.software){target="_blank"} 
 
 Here, the user can ask questions or send information in these sections:
 
@@ -25,5 +25,4 @@ Here, the user can ask questions or send information in these sections:
 
 ## Get In Touch
 
-!!! info
-    For commercial information, visit the [Contact Us](https://etendo.software/en/contact-us/){target="_blank"} section in the Etendo website.
+If you have commercial inquiries, or if you are not yet a partner or client, you can visit the [Contact Us](https://etendo.software/en/contact-us/){target="_blank"} section on the Etendo website.
