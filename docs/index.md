@@ -4,9 +4,11 @@ hide:
     - toc
 ---
 
-![cover-welcome-to-etendo.png](assets/home/index/banner.png){ width=250 align="right"}
 
-#  📚 Welcome to Etendo Documentation
+
+![Welcome to Etendo banner](./assets/home/index/banner.png){ width=200 align="right"}
+
+# Welcome to Etendo Documentation
 
 Etendo is a highly adaptable and scalable software platform designed for non-retail businesses. Our product combines a web platform with a user-friendly interface and a mobile application, allowing you to manage your business efficiently from anywhere.
 
@@ -35,19 +37,27 @@ Etendo is a highly adaptable and scalable software platform designed for non-ret
     - [Etendo News](./whats-new/etendo-news.md)
     - [ Release Notes - Etendo Classic](./whats-new/release-notes/etendo-classic/release-notes.md)
 
+-   :material-test-tube:{ .lg .middle } __Etendo Livebuilds__
+
+    ---
+
+    Test new functionalities in our demo environments.
+
+    - [Etendo Livebuilds](./live-builds/overview.md)
+
 -   :material-book-open-page-variant:{ .lg .middle } __User Guide - Basic Features__
 
     ---
 
     Learn about the main business flows:
 
-    - [Sales  Management](./user-guide/etendo-classic/basic-features/sales-management/getting-started.md)         
+    - [Sales Management](./user-guide/etendo-classic/basic-features/sales-management/getting-started.md)         
     - [Procurement  Management](./user-guide/etendo-classic/basic-features/procurement-management/getting-started.md)
     - [Financial Management](./user-guide/etendo-classic/basic-features/financial-management/getting-started.md) 
     - [Warehouse  Management](./user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md)         
     - [Production  Management](./user-guide/etendo-classic/basic-features/production-management/getting-started.md)          
    
--   :material-book-open-page-variant:{ .lg .middle } __User Guide - Bundles Extensions Features__
+-   :material-book-open-page-variant:{ .lg .middle } __User Guide - Bundle Extension__
 
     ---
 
@@ -67,26 +77,16 @@ Etendo is a highly adaptable and scalable software platform designed for non-ret
     
     - [Install Etendo](./getting-started/installation.md)
     - [Install Modules in Etendo](./developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md)
-    - [How to Guides](./developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md)
-    - [Etendo Concepts](./developer-guide/etendo-classic/concepts/standard-windows.md)
+    - [How to Guides](./developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md)
+    - [Etendo Concepts](./developer-guide/etendo-classic/concepts/alerts.md)
 
--   :material-test-tube:{ .lg .middle } __Etendo Copilot__
+-   :material-robot:{ .lg .middle } __Etendo Copilot__
 
     ---
 
     See how AI powers and improves your day.
     
     - [Etendo Copilot](./user-guide/etendo-copilot/getting-started.md)
-
-
--   :material-test-tube:{ .lg .middle } __Etendo Livebuilds__
-
-    ---
-
-    Test new functionalities in our demo environments.
-
-    - [Etendo Livebuilds](./live-builds/overview.md)
-
 
 -   :material-lifebuoy:{ .lg .middle } __Help & Support__
 
