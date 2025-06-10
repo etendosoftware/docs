@@ -29,18 +29,26 @@ This module adds the option Automatic - Only Default Warehouse to the Stock Rese
 !!! info
     For more information, visit [Sales Order](../../../basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
 
-### Picking and Packing 
-
-:octicons-package-16: Javapackage: `org.openbravo.warehouse.structure`
-
-:octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
+### Packing 
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.packing`
 
-In Etendo, the picking and packing functionalities are designed to streamline and improve warehouse operations. These processes are carried out separately and have access through different windows. The Picking module helps the warehouse staff to manage and deliver picking lists. The Packing module allows warehouse staff to pack products efficiently. If both modules are installed, the workflow begins with picking and continues with packing, ensuring a smooth and organized order fulfillment process. However, it is also possible to use the modules separately.
+The Packing functionality in Etendo focuses on helping warehouse staff pack products in an efficient and organized way. This funtionality facilitates  staff to concentrate on packaging items accurately once they have been picked. 
+If both modules picking and packing are installed, the workflow begins with picking and continues with packing, ensuring a smooth and organized order fulfillment process. However, it is also possible to use the modules separately.
 
 !!! info
-    For more information, visit [Picking](picking.md) and [Packing](packing.md). 
+    For more information, visit [Packing](packing.md). 
+
+### Picking 
+
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
+
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.structure`
+
+In Etendo, the Picking functionality is designed to help warehouse staff manage and deliver picking lists efficiently. This module facilitates users to access and organize the items that need to be collected from storage. By streamlining the picking process, it reduces errors and improves the overall speed of order preparation. Picking is typically the first step in the order fulfillment workflow when both Picking and Packing modules are installed.
+
+!!! info
+    For more information, visit [Picking](picking.md).
 
 ### Product Operations
 
