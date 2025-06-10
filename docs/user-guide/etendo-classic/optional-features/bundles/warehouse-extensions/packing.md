@@ -75,13 +75,13 @@ A pop-up is opened showing all the products with their quantities. The user need
 
 ![packing4](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing4.png)
 
-- **Add Box**: New boxes can be added by pressing the Add Box.
+- **Add Box**: New boxes can be added by pressing Add Box.
 
 
 ![packing7](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing7.png)
 
 !!! info
-    After adding the goods shipment and the packing action has been performed if the user removes any of the goods shipments from being packed then, all boxes are deleted and the packing must start again. 
+    After adding the goods shipment, and the packing action has been performed if the user removes any of the goods shipments from being packed then, all boxes are deleted and the packing must start again. 
 
 
 - **Calculate Weight**: Calculate weight by default. The flag **Calculate weight** allows calculating (or not) the weight for each of the boxes. This is configurable and the flag can be marked by default or not by using a preference. To do so:
@@ -101,20 +101,20 @@ A pop-up is opened showing all the products with their quantities. The user need
     If the above message is shown, the UOM must be configured in both the OrganizatiOn and in each product. Even if each product has a UOM configured, when packing it will take the UOM defined in the Organization and the corresponding conversions will be made if necessary.
 
 
-When this happens, it is still possible to calculate the weight once the setup is correctly done. To do so, press the Pack button again and click Pack. The system will calculate the weight for each of the boxes. 
+When this happens, it is still possible to calculate the weight once the setup is correctly done. To do so, press the Pack button again and click Pack in the pop-up window. The system will calculate the weight for each of the boxes. 
 
 **Configuration**
 
 In Etendo, it is possible to calculate the weight of the packing, do this by checking the **calculate weight** box in the pop-up window. Prior to this, some configurations are needed in order to calculate the weight for each box:
 
-- **Product window**: Here it is possible to define the weight and the unit of measure for the product. 
+- [**Product window**](../../../basic-features/master-data-management/master-data.md#product): Here it is possible to define the weight and the unit of measure for the product. 
     - Fields:
         - Weight
         - UOM Packing: It only shows uoms that are defined as Is weight
 
-- **Unit of measure window**: This module adds a new field **Is weight**. Here it is possible to define the conversion between uoms, that is, between the uom packing of the product and the uom packing of the box.
+- [**Unit of measure window**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure): This module adds a new field **Is weight**. Here it is possible to define the conversion between uoms, that is, between the uom packing of the product and the uom packing of the box.
 
-- **Organization window**: This module adds a new field UOM Packing. This uom is the default one for every box. This is needed to make the conversion between the UOM Packing of the Product and the UOM Packing of the box. 
+- [**Organization window**](../../../basic-features/general-setup/enterprise-model.md#organization): This module adds a new field UOM Packing. This uom is the default one for every box. This is needed to make the conversion between the UOM Packing of the Product and the UOM Packing of the box. 
 
 Let's see some examples of how the weight is calculated:
 
