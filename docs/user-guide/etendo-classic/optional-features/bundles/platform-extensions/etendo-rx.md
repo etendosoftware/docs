@@ -6,30 +6,85 @@ tags:
     - API oAuth URL
     - Etendo RX
 ---
+
 # Etendo RX
-:octicons-package-16: Javapackage: `com.etendoerp.etendorx` 
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
 
 ## Overview
 
-This section describes the oAuth Authentication module included in the Platform Extensions bundle.
+## SSO Etendo Login
 
-!!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+Etendo allows you to authenticate using these external provider accounts: **Google**, **Microsoft**, **LinkedIn** **GitHub** and **Facebook**. This is possible due to the integration with the **EtendoAuth** middleware or Auth0 custom implementation.
+
+### 1. Logging into the ERP with an external provider
+
+When accessing the ERP login screen, you’ll see buttons for the **available providers** to authenticate with.
+
+- They are represented by their respective logos and names.
+- These are the same providers available for linking.
+
+    - Middleware  
+        ![Etendo Login Middleware](Auth0DocImages/EtendoLoginMiddleware.png)
+
+    - Auth0  
+        ![Etendo Login Auth0](Auth0DocImages/EtendoLoginAuth0.png)
+
+        Once you click on "Login with external providers", you’ll need to choose the provider you've configured:  
+            ![Login Auth0](Auth0DocImages/LoginAuth0.png)
 
 
-oAuth Authentication process facilitates the **provider type configuration** which allows users to **securely authenticate and authorize access** to their information using their preferred provider.
+## 2. First login attempt with an external provider
 
-oAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resorces on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
+If it’s the **first time** you're using one of these providers, you’ll see a message like:
 
-## oAuth Provider
+>  No User linked - You need to log in with an ERP user and then, link the SSO account.
 
-In the oAuth Provider window in :material-menu: `Application`> `Etendo-RX`> `oAuth-Provider`, set the preferred type provider by adding the user authentication URL in the **API oAuth URL field**. This URL can be found in the provider documentation API.  
+![No User Link](Auth0DocImages/NoUserLink.png)
 
-The other fields will be completed with data referring to the corresponding provider.
-
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauthprovider-1.png)
+This means that you haven’t yet linked your ERP account with your external provider account.
 
 
+## 3. How to link your ERP account with an external account
+
+1. Log into the ERP as usual with your **username and password**.  
+2. Go to your **user profile** (icon in the upper left corner).  
+3. You’ll see a section called **"Link user with"**.  
+4. Click on the provider you want to link.
+
+    - Middleware  
+        ![Link User With Middleware](Auth0DocImages/LinkUserWithMiddleware.png)
+
+    - Auth0  
+        ![Link User With Auth0](Auth0DocImages/LinkUserWithAuth0.png)
 
 
+## 4. Logging in with an external provider
 
+When selecting a provider:
+
+- The **provider’s login screen** will open (Google, Microsoft, etc.).
+- Log in with your personal or corporate account.
+- Once authenticated, the ERP will automatically link your user account with that external account.
+
+## 5. Future logins with an external account
+
+Next time you log into the ERP:
+
+- Click on the **provider’s button** on the login screen.
+- If it’s already linked, you’ll be logged in automatically **without needing your ERP username and password**.
+
+
+## 6. Logging out (Complete logout)
+
+When you log out from the ERP:
+
+1. Your internal ERP session will be closed.  
+2. The ERP will communicate with the **EtendoAuth middleware**.  
+3. The session with the external provider will be closed automatically.  
+4. A small **popup will appear for a few seconds** confirming the external logout.
+
+
+## Additional Notes
+
+- You can link multiple providers to the same user.
+- Authentication is securely managed via Auth0.
