@@ -258,6 +258,151 @@ Provide a brief overview of the purpose of this release, including high-level ob
         - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
         - [Full changelog overview](https://poi.apache.org/changes.html)
 
+    - **Apache POI 5.x Migration Guide**
+
+        This guide outlines the necessary changes to migrate projects using Apache POI 3.x/4.x to version 5.x, including how to replace deprecated classes, methods, and constants removed in recent versions.
+
+        - **Replacing Deprecated Constants (`CellType`)**
+
+            #### Before:
+            ```java
+            cell.getCellType() == Cell.CELL_TYPE_STRING
+            ```
+
+            #### After:
+            ```java
+            cell.getCellType() == CellType.STRING
+            ```
+
+            **Key changes:**
+                
+                - Cell.CELL_TYPE_STRING → CellType.STRING
+                - Cell.CELL_TYPE_NUMERIC → CellType.NUMERIC
+                - Cell.CELL_TYPE_BOOLEAN → CellType.BOOLEAN
+                - Cell.CELL_TYPE_FORMULA → CellType.FORMULA
+                - Cell.CELL_TYPE_BLANK → CellType.BLANK
+
+            Always import:
+            ```java
+            import org.apache.poi.ss.usermodel.CellType;
+            ```
+
+        - **Cell Style Adjustments (`CellStyle`, `XSSFCellStyle`, `HSSFCellStyle`)**
+
+            #### Alignment:
+                - CellStyle.ALIGN_LEFT → HorizontalAlignment.LEFT
+                - CellStyle.ALIGN_CENTER → HorizontalAlignment.CENTER
+                - CellStyle.ALIGN_RIGHT → HorizontalAlignment.RIGHT
+
+            Import:
+            ```java
+            import org.apache.poi.ss.usermodel.HorizontalAlignment;
+            ```
+
+            #### Fill Patterns:
+                - CellStyle.SOLID_FOREGROUND → FillPatternType.SOLID_FOREGROUND
+
+            Import:
+            ```java
+            import org.apache.poi.ss.usermodel.FillPatternType;
+            ```
+
+            #### Borders:
+                - setBorderBottom((short) 1) → setBorderBottom(BorderStyle.THIN)
+                - RegionUtil.setBorderBottom(1, ...) → RegionUtil.setBorderBottom(BorderStyle.THIN, ...)
+
+            Import:
+            ```java
+            import org.apache.poi.ss.usermodel.BorderStyle;
+            ```
+
+        - **Fonts (`Font`, `HSSFFont`, `XSSFFont`)**
+
+            #### Before:
+            ```java
+            font.setBoldweight(Font.BOLDWEIGHT_BOLD);
+            ```
+
+            #### After:
+            ```java
+            font.setBold(true);
+            ```
+
+            #### Before:
+            ```java
+            font.setBoldweight(Font.BOLDWEIGHT_NORMAL);
+            ```
+
+            #### After:
+            ```java
+            font.setBold(false);
+            ```
+
+        - **Formula Evaluation**
+
+            #### Before:
+            ```java
+            switch (cellValue.getCellType()) {
+            case Cell.CELL_TYPE_NUMERIC:
+            ```
+
+            #### After:
+            ```java
+            switch (cellValue.getCellType()) {
+            case NUMERIC:
+            ```
+
+            Use:
+            ```java
+            FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
+            CellValue cellValue = evaluator.evaluate(cell);
+            ```
+
+        - **Additional Best Practices**
+
+            - Avoid creating a new `XSSFWorkbook()` unnecessarily—use `cell.getSheet().getWorkbook()` when applicable.
+            - Prefer `computeIfAbsent(...)` over `containsKey` + `put` for map operations.
+
+        - **Complete Migration Examples**
+
+            #### Before:
+            ```java
+            cellFont.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+            style.setAlignment(CellStyle.ALIGN_RIGHT);
+            style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+            ```
+
+            #### After:
+            ```java
+            cellFont.setBold(true);
+            style.setAlignment(HorizontalAlignment.RIGHT);
+            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+            ```
+
+        - **Formula Evaluation**
+
+            **Before:**
+            ```java
+            CellValue cellValue = evaluator.evaluate(cell);
+            switch (cellValue.getCellType()) {
+            case Cell.CELL_TYPE_STRING:
+                return cellValue.getStringValue();
+            ```
+
+            **After:**
+            ```java
+            CellValue cellValue = evaluator.evaluate(cell);
+            switch (cellValue.getCellType()) {
+            case STRING:
+                return cellValue.getStringValue();
+            ```
+
+        - **Official Resources:**
+            - [Apache POI Documentation](https://poi.apache.org/components/spreadsheet/)
+            - [Migration Guide from Older Versions](https://poi.apache.org/migration.html)
+
+    ---
+
     !!! info
         Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
 
