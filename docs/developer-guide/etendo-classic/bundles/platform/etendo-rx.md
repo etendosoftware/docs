@@ -19,7 +19,7 @@ This section describes the oAuth Authentication module included in the Platform 
 
 oAuth Authentication process facilitates the **provider type configuration** which allows users to **securely authenticate and authorize access** to their information using their preferred provider.
 
-oAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resorces on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
+oAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resources on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
 
 ### oAuth Provider Window
 
@@ -41,12 +41,11 @@ To enable login to **Etendo Classic** using external providers (Google, Microsof
 
 For the authentication class, you need to add:
 
-```title= "gradle.properties"
+``` title="gradle.properties"
 authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 ```
 
 Depending on whether you're using **EtendoAuth Middleware** or **Auth0 directly**, the configuration will vary slightly.
-
 
 ### 1. Enable the SSO Login Preference
 
@@ -59,8 +58,6 @@ Depending on whether you're using **EtendoAuth Middleware** or **Auth0 directly*
    - **Value**: `Y`
 
    ![SSO Preference](Auth0DocImages/NewSSOPreference.png)
-
----
 
 ### 2. Configure EtendoAuth Middleware Integration
 
@@ -75,10 +72,10 @@ To authenticate via the **EtendoAuth Middleware**, follow these steps:
   sso.middleware.redirectUri=http://localhost:8080/oauth/secureApp/LoginHandler.html
   ```
 
-With these settings, EtendoERP will be able to authenticate users through external login providers using the middleware.
+With these settings, Etendo Classic will be able to authenticate users through external login providers using the middleware.
 
 
-#### ⚠️ Warning: Potential SSO Configuration Mismatch
+#### Warning: Potential SSO Configuration Mismatch
   
   In certain cases, a mismatch may occur in the Single Sign-On (SSO) configuration. For example, the SSO preference might be created, but the corresponding SSO type is not defined in the gradle.properties file — or the opposite.
   When this happens, attempting to log in using an external provider will display the following error message:
@@ -90,19 +87,17 @@ With these settings, EtendoERP will be able to authenticate users through extern
 
   To resolve this issue, ensure that both the SSO preference and the corresponding entry in gradle.properties are correctly configured and consistent with each other.
 
----
 
-## How to Integrate Auth0 Social Login with EtendoERP
+## How to Integrate Auth0 Social Login with Etendo Classic
 
-Follow this guide to configure an Auth0 application to enable social login in EtendoERP.
+Follow this guide to configure an Auth0 application to enable social login in Etendo Classic.
 
----
 
 ### 1. Create a New Auth0 Application
 
 1. Go to the Auth0 Dashboard: [https://manage.auth0.com/dashboard](https://manage.auth0.com/dashboard)  
 2. Sign up or log in to your Auth0 account.  
-3. Create a new application for the ERP integration:
+3. Create a new application for the Etendo Classic integration:
    - On the **Getting Started** page, click **Create Application**.
 
       ![Auth0 Dashboard](Auth0DocImages/GettingStarted.png)
@@ -120,11 +115,10 @@ Follow this guide to configure an Auth0 application to enable social login in Et
 
    - Choose a name and select **Regular Web Application**.
 
----
 
 ### 2. Choose the Technology Stack
 
-4. After creating the application, choose the technology used in your project. For EtendoERP, select **Java**.
+4. After creating the application, choose the technology used in your project. For Etendo Classic, select **Java**.
 
   ![Choose Technology](Auth0DocImages/ProjectTechnology.png)
 
@@ -132,7 +126,6 @@ Follow this guide to configure an Auth0 application to enable social login in Et
 
   ![App Quick Start](Auth0DocImages/AppQuickStart.png)
 
----
 
 ### 3. Configure Social Login Providers
 
@@ -155,7 +148,6 @@ Follow this guide to configure an Auth0 application to enable social login in Et
 
 11. Repeat this process for every provider you want to enable.
 
----
 
 ### 4. Retrieve and Set Credentials
 
@@ -181,7 +173,6 @@ sso.client.secret=your-client-secret
   sso.auth.type=Auth0
   ```
 
----
 
 ### 5. Configure Callback and Logout URLs
 
@@ -204,9 +195,9 @@ sso.client.secret=your-client-secret
 
     ![Application URIs](Auth0DocImages/AllowedURIs.png)
 
-> ⚠️ **Note:** During development, you can use `localhost`. However, for production, set your actual domain in **Application Login URI**. If you're still in development, you may leave it blank.
+!!!note
+  During development, you can use `localhost`. However, for production, set your actual domain in **Application Login URI**. If you're still in development, you may leave it blank.
 
----
 
 ### 6. Set the Callback URL
 
@@ -216,8 +207,6 @@ sso.client.secret=your-client-secret
 sso.callback.url=http://localhost:8080/etendo/secureApp/LoginHandler.html
 ```
 
----
-
 ### 7. Compile the Project
 
 17. Once all properties are configured, compile the project:
@@ -226,25 +215,23 @@ sso.callback.url=http://localhost:8080/etendo/secureApp/LoginHandler.html
 ./gradlew setup smartbuild
 ```
 
----
-
 ### 8. Log In via External Providers
 
 18. Start your Tomcat server.
-19. Open the EtendoERP login page and click **Login with external providers**.
+19. Open the Etendo Classic login page and click **Login with external providers**.
 20. Here you will see the Auth0 login page with the configured providers.
 
   ![Auth0 Login](Auth0DocImages/UniversalLoginCustom.png)
 
-💡 *Optional:* Customize your login screen in **Branding** > **Universal Login** in the Auth0 dashboard.
+!!!info
+  Customize your login screen in **Branding** > **Universal Login** in the Auth0 dashboard.
 
 22. The first time you try to log in, you'll likely see an error.
 
   ![Auth0 Link Error](Auth0DocImages/NoUserLink.png)
 
-23. This is expected, as your external account is not yet linked to an EtendoERP user.
+23. This is expected, as your external account is not yet linked to an Etendo Classic user.
 
----
 
 ### 9. Link an External Provider to a User
 
