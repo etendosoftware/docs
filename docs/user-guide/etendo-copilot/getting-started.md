@@ -3,7 +3,6 @@ title: User Guide - Etendo Copilot - Getting Started
 tags: 
  - Etendo Copilot
  - AI Integration
- - Agents
  - Intelligent Tools
  - Agents
  - User Guide
@@ -37,7 +36,7 @@ At its core, Etendo Copilot is a groundbreaking initiative that redefines how de
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
 - **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
 - **Diverse Expertise**: Our ever-growing selection of Tools covers a wide range of domains, ensuring you always have the right solution.
-- **LangGraph Agent**: This kind of agent works as a manager of other agents and allows creating a work team. 
+- **LangGraph Agent**: This kind of agent works as a manager of other agents and allows you to create work teams.
 - **Multi-Model Assistant**: These agents can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. This type of agent can be used with multi-vendor models such as *Anthropic*, *Gemini* or *OpenAI* models, among others.
 - **Attach Files**: Etendo Copilot allows users to attach one or multiple files in the conversation.
 - **Context Sharing**: Etendo Copilot can automatically capture and share the context of your current Etendo Classic session, such as selected records or active windows. This eliminates the need to manually input information, streamlining workflows and improving efficiency.
@@ -67,38 +66,38 @@ Agents can be organized into modules or created directly within your Etendo envi
     For more information, visit the [Assistant](../etendo-copilot/setup-and-usage.md#assistant-window) window documentation.
 
 
-### Skil/Tool
+### Skill/Tool
 
-Each tool represents a dedicated and self-contained project,  designed to excel at specialized tasks. Whether it involves translation, text analysis, or data manipulation, the diverse suite of tools operates in seamless coordination.  
-
-!!! info 
-    For a overview of the available tools and their technical details, please refer to the [Copilot Tools](../../developer-guide/etendo-copilot/available-tools/api-call-tool.md) in the Developer Guide section.
-
-### Knowladge Base
-
-In many cases, we need the agent to have specific information that the model does not have by default, so we resort to generate a Knowledge Base. This will allow us to **train** our agent with specific information. 
+Each tool represents a dedicated and self-contained project, designed to excel at specialized tasks. Whether it involves translation, text analysis, or data manipulation, the diverse suite of tools operates in seamless coordination.  
 
 !!! info 
-    For more information visit [Knowladge Base File](../etendo-copilot/setup-and-usage.md#knowledge-base-file-window) window documentation.
+    For an overview of the available tools and their technical details, please refer to the [Copilot Tools](../../developer-guide/etendo-copilot/available-tools/api-call-tool.md) in the Developer Guide section.
+
+### Knowledge Base
+
+In many cases, we need the agent to have specific information that the model does not have by default, so we generate a Knowledge Base. This will allow us to **train** our agent with specific information.
+
+!!! info 
+    For more information visit the [Knowledge Base File](../etendo-copilot/setup-and-usage.md#knowledge-base-file-window) window documentation.
 
 
 ## Copilot Interface
 
-### Navegation Bar
+### Navigation Bar
 
 In the main Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
-Here, you can select an agent and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent`or `Multi-Model Assistant` types.
+Here, you can select an agent and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent` or `Multi-Model Assistant` types.
 !!!note
     By default, Copilot will open the last agent previously used.
 
 ![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-### Tool Bar
+### Toolbar
 
 In any Etendo Classic window, click the Copilot button in the toolbar to open the chat. Copilot will automatically receive the context of your current tab or selected records, so you don't need to enter details manually.
 
-![](../../assets/user-guide/etendo-copilot/getting-started/toolbar.png)
+![Toolbar](../../assets/user-guide/etendo-copilot/getting-started/toolbar.png)
 
 **Context awareness**
 
@@ -112,15 +111,15 @@ Etendo Copilot can take advantage of the context of the currently active window 
 
 ### Attach Files
 
-![alt text](../../assets/user-guide/etendo-copilot/getting-started/purchase-order-example.png){align=left  width="400"}
+![Purchase Order Example](../../assets/user-guide/etendo-copilot/getting-started/purchase-order-example.png){align=left  width="400"}
 
-Etendo Copilot allows users to attach one or multiple files for agents to process. This feature supports various file formats, such as `.pdf`, `.csv`, `.jpg`, and more, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific agent configuration, the defined tools, and the underlying model used.
+Etendo Copilot allows users to attach one or more files for agents to process. This feature supports various file formats, such as `.pdf`, `.csv`, `.jpg`, and more, enabling flexibility in use cases. However, the ability to interpret and process these files depends on the specific agent configuration, the defined tools, and the underlying model used.
 
 This functionality ensures that users can seamlessly incorporate external data into their workflows, whether it involves parsing documents, analyzing spreadsheets, or processing images. Agents and tools can be tailored to address specific requirements based on the type of attached files, providing contextualized and intelligent responses.
 
 For example, you can attach a purchase order in PDF format and ask the agent to create the purchase order in Etendo. As shown, the agent generates the order while respecting the Business Partner, dates, products, and amounts.  
 
-![Attach-Files](../../assets/user-guide/etendo-copilot/getting-started/purchase-expert.png)
+![Purchase Expert](../../assets/user-guide/etendo-copilot/getting-started/purchase-expert.png)
 
 
 ### Visualization Mode
