@@ -1,165 +1,213 @@
-# API Change Documentation  
+---
+tags: 
+    - API Changes
+    - Updating Guide
+    
+---
+
+# API Change Documentation 
 
 ## March 2025
 
-[Release 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
+- [Etendo - Release 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
+- [Etendo - Release 25.1.1](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.1)
+- [Etendo - Release 25.1.2](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.2)
 
-### Overview
-Provide a brief overview of the purpose of this release, including high-level objectives, key improvements, and the rationale behind major changes.
+### Etendo Platform Stack Upgrade
 
-### API Changes
+=== ":material-language-java: Java SE"
+    
+    #### Java SE
 
-#### Etendo Software Stack
+    - New Version Supported: `17.0.14`
+    - Release Notes:
+        
+        <div class="grid cards" markdown>
 
-##### Ubuntu Live Server amd64
-- **New Version Supported**: `22.04.5`
+        - Java SE 12.x
 
-##### Java SE
-- **New Version Supported**: `17.0.14`
-- Notable Changes:
-    - **Java SE 12.x**
-        - [Java SE 12 Release Notes](https://www.oracle.com/java/technologies/javase/12-relnote.html)
-        - [Java SE 12.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html)
-        - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html)
+            - [Java SE 12.0.2](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html){target="\_blank"}
+            - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html){target="\_blank"}
 
-    - **Java SE 13.x**
-        - [Java SE 13 Release Notes](https://www.oracle.com/java/technologies/javase/13-relnote.html)
-        - [Java SE 13.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html)
-        - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html)
+        - Java SE 13.x
 
-    - **Java SE 14.x**
-        - [Java SE 14 Release Notes](https://www.oracle.com/java/technologies/javase/14-relnote.html)
-        - [Java SE 14.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html)
-        - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html)
+            - [Java SE 13.0.2](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html){target="\_blank"}
+            - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html){target="\_blank"}
 
-    - **Java SE 15.x**
-        - [Java SE 15 Release Notes](https://www.oracle.com/java/technologies/javase/15-relnote.html)
-        - [Java SE 15.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html)
-        - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html)
+        - Java SE 14.x
 
-    - **Java SE 16.x**
-        - [Java SE 16 Release Notes](https://www.oracle.com/java/technologies/javase/16-relnote.html)
-        - [Java SE 16.0.2 Release Notes](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)
-        - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
+            - [Java SE 14.0.2](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html){target="\_blank"}
+            - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html){target="\_blank"}
 
-    - **Java SE 17 (LTS)**
-        - [Java SE 17.0.14 Release Notes (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html)
-        - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)
+        - Java SE 15.x
 
-##### PostgreSQL
-- **New Version Supported**: `16.8.1`
-- Notable Changes:
-    - **PostgreSQL 16.x**
-        - [PostgreSQL 16.8 Release Notes](https://www.postgresql.org/docs/release/16.8/)
-        - [PostgreSQL 16.7 Release Notes](https://www.postgresql.org/docs/release/16.7/)
-        - [PostgreSQL 16.6 Release Notes](https://www.postgresql.org/docs/release/16.6/)
-        - [PostgreSQL 16.5 Release Notes](https://www.postgresql.org/docs/release/16.5/)
-        - [PostgreSQL 16.4 Release Notes](https://www.postgresql.org/docs/release/16.4/)
-        - [PostgreSQL 16.3 Release Notes](https://www.postgresql.org/docs/release/16.3/)
-        - [PostgreSQL 16.2 Release Notes](https://www.postgresql.org/docs/release/16.2/)
-        - [PostgreSQL 16.1 Release Notes](https://www.postgresql.org/docs/release/16.1/)
-        - [PostgreSQL 16.0 Release Notes](https://www.postgresql.org/docs/release/16.0/)
+            - [Java SE 15.0.2](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html){target="\_blank"}
+            - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html){target="\_blank"}
 
-    - **PostgreSQL 15.x**
-        - [PostgreSQL 15.10 Release Notes](https://www.postgresql.org/docs/release/15.10/)
-        - [PostgreSQL 15.9 Release Notes](https://www.postgresql.org/docs/release/15.9/)
-        - [PostgreSQL 15.8 Release Notes](https://www.postgresql.org/docs/release/15.8/)
-        - [PostgreSQL 15.7 Release Notes](https://www.postgresql.org/docs/release/15.7/)
-        - [PostgreSQL 15.6 Release Notes](https://www.postgresql.org/docs/release/15.6/)
-        - [PostgreSQL 15.5 Release Notes](https://www.postgresql.org/docs/release/15.5/)
-        - [PostgreSQL 15.4 Release Notes](https://www.postgresql.org/docs/release/15.4/)
-        - [PostgreSQL 15.3 Release Notes](https://www.postgresql.org/docs/release/15.3/)
-        - [PostgreSQL 15.2 Release Notes](https://www.postgresql.org/docs/release/15.2/)
-        - [PostgreSQL 15.1 Release Notes](https://www.postgresql.org/docs/release/15.1/)
-        - [PostgreSQL 15.0 Release Notes](https://www.postgresql.org/docs/release/15.0/)
+        - Java SE 16.x
 
-##### Apache Tomcat
-- **New Version Supported**: `9.0.98`
-- Notable Changes:
-    - **Apache Tomcat 9.x**
-        - [Apache Tomcat 9 Release Notes](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html)
+            - [Java SE 16.0.2](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html){target="\_blank"}
+            - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html){target="\_blank"}
 
+        - Java SE 17 (LTS)
 
-##### Gradle
-- **New Version Supported**: `8.12.1`
-- Notable Changes:
-    - **Gradle 8.x**
-        - [Gradle 8.12.1 Release Notes](https://docs.gradle.org/8.12.1/release-notes.html)
-        - [Gradle 8.12 Release Notes](https://docs.gradle.org/8.12/release-notes.html)
-        - [Gradle 8.11 Release Notes](https://docs.gradle.org/8.11/release-notes.html)
-        - [Gradle 8.10 Release Notes](https://docs.gradle.org/8.10/release-notes.html)
-        - [Gradle 8.9 Release Notes](https://docs.gradle.org/8.9/release-notes.html)
-        - [Gradle 8.8 Release Notes](https://docs.gradle.org/8.8/release-notes.html)
-        - [Gradle 8.7 Release Notes](https://docs.gradle.org/8.7/release-notes.html)
-        - [Gradle 8.6 Release Notes](https://docs.gradle.org/8.6/release-notes.html)
-        - [Gradle 8.5 Release Notes](https://docs.gradle.org/8.5/release-notes.html)
-        - [Gradle 8.4 Release Notes](https://docs.gradle.org/8.4/release-notes.html)
-        - [Gradle 8.3 Release Notes](https://docs.gradle.org/8.3/release-notes.html)
-        - [Gradle 8.2 Release Notes](https://docs.gradle.org/8.2/release-notes.html)
-        - [Gradle 8.1 Release Notes](https://docs.gradle.org/8.1/release-notes.html)
-        - [Gradle 8.0 Release Notes](https://docs.gradle.org/8.0/release-notes.html)
+            - [Java SE 17.0.14(Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html){target="\_blank"}
+            - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
 
-    - **Gradle 7.x**
-        - [Gradle 7.6 Release Notes](https://docs.gradle.org/7.6/release-notes.html)
-        - [Gradle 7.5.1 Release Notes](https://docs.gradle.org/7.5.1/release-notes.html)
-        - [Gradle 7.5 Release Notes](https://docs.gradle.org/7.5/release-notes.html)
-        - [Gradle 7.4.2 Release Notes](https://docs.gradle.org/7.4.2/release-notes.html)
-        - [Gradle 7.4.1 Release Notes](https://docs.gradle.org/7.4.1/release-notes.html)
-        - [Gradle 7.4 Release Notes](https://docs.gradle.org/7.4/release-notes.html)
-        - [Gradle 7.3.3 Release Notes](https://docs.gradle.org/7.3.3/release-notes.html)
+        </div>
 
-!!! warning
-    To update the Gradle wrapper, you must run `./gradlew wrapper --gradle-version 8.12.1`. For more detailed migration guidelines, refer to the [Upgrading the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
+=== ":simple-postgresql: PostgreSQL"
+    
+    #### PostgreSQL
 
-##### Etendo Gradle Plugin
-- **New Version Supported**: `2.0.0`
-- Notable Changes:
+    - New Version Supported: `16.8.1`
+    - Release Notes:
 
-    - **New Gradle Plugin Task**
+        <div class="grid cards" markdown>
+
+        - PostgreSQL 16.x
+            - [PostgreSQL 16.8](https://www.postgresql.org/docs/release/16.8/){target="\_blank"}
+            - [PostgreSQL 16.7](https://www.postgresql.org/docs/release/16.7/){target="\_blank"}
+            - [PostgreSQL 16.6](https://www.postgresql.org/docs/release/16.6/){target="\_blank"}
+            - [PostgreSQL 16.5](https://www.postgresql.org/docs/release/16.5/){target="\_blank"}
+            - [PostgreSQL 16.4](https://www.postgresql.org/docs/release/16.4/){target="\_blank"}
+            - [PostgreSQL 16.3](https://www.postgresql.org/docs/release/16.3/){target="\_blank"}
+            - [PostgreSQL 16.2](https://www.postgresql.org/docs/release/16.2/){target="\_blank"}
+            - [PostgreSQL 16.1](https://www.postgresql.org/docs/release/16.1/){target="\_blank"}
+            - [PostgreSQL 16.0](https://www.postgresql.org/docs/release/16.0/){target="\_blank"}
+
+        - PostgreSQL 15.x
+            - [PostgreSQL 15.10](https://www.postgresql.org/docs/release/15.10/){target="\_blank"}
+            - [PostgreSQL 15.9](https://www.postgresql.org/docs/release/15.9/){target="\_blank"}
+            - [PostgreSQL 15.8](https://www.postgresql.org/docs/release/15.8/){target="\_blank"}
+            - [PostgreSQL 15.7](https://www.postgresql.org/docs/release/15.7/){target="\_blank"}
+            - [PostgreSQL 15.6](https://www.postgresql.org/docs/release/15.6/){target="\_blank"}
+            - [PostgreSQL 15.5](https://www.postgresql.org/docs/release/15.5/){target="\_blank"}
+            - [PostgreSQL 15.4](https://www.postgresql.org/docs/release/15.4/){target="\_blank"}
+            - [PostgreSQL 15.3](https://www.postgresql.org/docs/release/15.3/){target="\_blank"}
+            - [PostgreSQL 15.2](https://www.postgresql.org/docs/release/15.2/){target="\_blank"}
+            - [PostgreSQL 15.1](https://www.postgresql.org/docs/release/15.1/){target="\_blank"}
+            - [PostgreSQL 15.0](https://www.postgresql.org/docs/release/15.0/){target="\_blank"}
+
+         </div>
+
+=== ":simple-gradle: Gradle"
+
+    #### Gradle
+
+    !!! warning
+        To update the Gradle wrapper in an existing environment , you must run:
+        
         ``` bash title="Terminal"
-        ./gradlew cleanExpandCore
+            ./gradlew wrapper --gradle-version 8.12.1 
         ```
 
-        This new task deletes directories created by the `expandCore` task.
+        For more detailed migration guidelines, refer to [Upgrading Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper){target="\_blank"}
 
-    - **Compatibility Flag**
+    - New Version Supported: `8.12.1`
+    - Release Notes:
 
-        ``` bash title="Terminal"
-        -Pjava.version=11
-        ```
+        <div class="grid cards" markdown>
+        
+        - Gradle 8.x
+            - [Gradle 8.12.1](https://docs.gradle.org/8.12.1/release-notes.html){target="\_blank"}
+            - [Gradle 8.12](https://docs.gradle.org/8.12/release-notes.html){target="\_blank"}
+            - [Gradle 8.11](https://docs.gradle.org/8.11/release-notes.html){target="\_blank"}
+            - [Gradle 8.10](https://docs.gradle.org/8.10/release-notes.html){target="\_blank"}
+            - [Gradle 8.9](https://docs.gradle.org/8.9/release-notes.html){target="\_blank"}
+            - [Gradle 8.8](https://docs.gradle.org/8.8/release-notes.html){target="\_blank"}
+            - [Gradle 8.7](https://docs.gradle.org/8.7/release-notes.html){target="\_blank"}
+            - [Gradle 8.6](https://docs.gradle.org/8.6/release-notes.html){target="\_blank"}
+            - [Gradle 8.5](https://docs.gradle.org/8.5/release-notes.html){target="\_blank"}
+            - [Gradle 8.4](https://docs.gradle.org/8.4/release-notes.html){target="\_blank"}
+            - [Gradle 8.3](https://docs.gradle.org/8.3/release-notes.html){target="\_blank"}
+            - [Gradle 8.2](https://docs.gradle.org/8.2/release-notes.html){target="\_blank"}
+            - [Gradle 8.1](https://docs.gradle.org/8.1/release-notes.html){target="\_blank"}
+            - [Gradle 8.0](https://docs.gradle.org/8.0/release-notes.html){target="\_blank"}
 
-        This new flag forces the use of Java 11 with version 25Q1.
+        - Gradle 7.x
+            - [Gradle 7.6](https://docs.gradle.org/7.6/release-notes.html){target="\_blank"}
+            - [Gradle 7.5.1](https://docs.gradle.org/7.5.1/release-notes.html){target="\_blank"}
+            - [Gradle 7.5](https://docs.gradle.org/7.5/release-notes.html){target="\_blank"}
+            - [Gradle 7.4.2](https://docs.gradle.org/7.4.2/release-notes.html){target="\_blank"}
+            - [Gradle 7.4.1](https://docs.gradle.org/7.4.1/release-notes.html){target="\_blank"}
+            - [Gradle 7.4](https://docs.gradle.org/7.4/release-notes.html){target="\_blank"}
+            - [Gradle 7.3.3](https://docs.gradle.org/7.3.3/release-notes.html){target="\_blank"}
 
-#### Third-Party Library Updates
-  List and describe the key external libraries that have been upgraded in this release, along with the versions and any relevant breaking changes in those libraries.
+         </div>
 
-- `[dbsourcemanager] 1.0.3 -> 1.0.4`
-    - **Notable Changes**:
-        - Renamed jar file to dbsourcemanager-1.0.4.jar.
+=== ":simple-apachetomcat: Apache Tomcat"
+    
+    #### Apache Tomcat
+
+    - New Version Supported: `9.0.98`
+    - Release Notes: [Apache Tomcat 9](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html){target="\_blank"}
+
+=== ":octicons-file-code-24: Etendo Gradle Plugin"
+
+    ####Etendo gradle Plugin
+
+    - New Version Supported: `2.0.0`
+    - Release Notes:
+
+        - [Etendo Gradle Plugin 2.0.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.0.0){target="\_blank"}
+        - New Gradle Plugin Task: 
+
+            ``` bash title="Terminal"
+            ./gradlew cleanExpandCore
+            ```
+            This new task deletes directories created by the `expandCore` task.
+
+        - Compatibility Flag
+
+            ``` bash title="Terminal"
+            -Pjava.version=11
+            ```
+            This new flag forces the use of Java 11 with version 25Q1.
+
+=== ":octicons-issue-opened-24: Etendo ISO"
+
+    #### Etendo ISO
+       
+    !!!note 
+        The Etendo 25.x ISOs are currently based on Ubuntu Live Server `22.04.5` amd64 image. <br>
+        For more information, visit [Etendo ISO Release Notes](../../../whats-new/release-notes/etendo-classic/iso.md).
+
+
+
+### Third-Party Libraries 
+
+All libraries previously located in `/lib/runtime` as JAR files have been updated to Gradle dependencies now defined in the `artifacts.list.COMPILATION.gradle` file at the root of the project.
+
+
+#### Updated Libraries
+
+- `dbsourcemanager.jar` -> `com.etendoerp.dbsm` version  `1.1.0`
+
+    - Release Notes:
+
         - Changes to use new version of Apache Commons Lang 3 library.
         - Changes to use new version of Apache Commons Collections 4 library.
         - Changes in deprecated or removed features used in Java 17.
         - Added support for PostgreSQL 16.
+    
+ - `commons-collections.commons-collections` `3.2.2` -> `4.4`
 
-- `[commons-beanutils] 1.8.3 -> 1.9.4`
+    - Release Notes:
 
-- `[commons-codec] 1.11 -> 1.17.1`
+        - [Commons Collections 4.0](https://commons.apache.org/proper/commons-collections/release_4_0.html){target="\_blank"}
+        - [Commons Collections 4.1](https://commons.apache.org/proper/commons-collections/release_4_1.html){target="\_blank"}
+        - [Commons Collections 4.2](https://commons.apache.org/proper/commons-collections/release_4_2.html){target="\_blank"}
+        - [Commons Collections 4.3](https://commons.apache.org/proper/commons-collections/release_4_3.html){target="\_blank"}
+        - [Commons Collections 4.4](https://commons.apache.org/proper/commons-collections/release_4_4.html){target="\_blank"}
 
-- `[commons-collections] 3.2.2 -> 4.4` 
-    - **Notable Changes**:
-        - [Commons Collections 4.0 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_0.html)
-        - [Commons Collections 4.1 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_1.html)
-        - [Commons Collections 4.2 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_2.html)
-        - [Commons Collections 4.3 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_3.html)
-        - [Commons Collections 4.4 Release Notes](https://commons.apache.org/proper/commons-collections/release_4_4.html)
+    - API Changes - Migration from Apache Commons Collections `3.2.2` to `4.4`:
 
-    - **API Changes - Migration from Apache Commons Collections 3.2.2 to 4.4**
+        Starting with **Etendo 25.1.0**, Apache Commons Collections has been upgraded from **3.2.2** to **4.4**. This version introduces a new package structure. Classes previously imported from `org.apache.commons.collections` must now be updated to `org.apache.commons.collections4`.
 
-        Starting with version **25Q1** of Etendo, Apache Commons Collections has been upgraded from version **3.2.2** to **4.4**. This upgrade includes a change in the package structure: all references previously pointing to `org.apache.commons.collections` must now be updated to `org.apache.commons.collections4`.
+    - Migration Instructions:
 
-    - **Migration Instructions**
-
-        Developers should update all import statements and internal references to reflect the new package structure. The previous package `org.apache.commons.collections` has been replaced by `org.apache.commons.collections4` in the new version. Please verify that the updated classes and methods are compatible with your existing code, as some methods may have been deprecated, renamed, or modified in behavior.
+        Update all import statements and references to reflect the new package structure:
 
         ```java
         // Before (Apache Commons Collections 3.2.2)
@@ -169,39 +217,37 @@ Provide a brief overview of the purpose of this release, including high-level ob
         import org.apache.commons.collections4.CollectionUtils;
         ```
 
-        For more detailed migration guidelines, please refer to the [Apache Commons Collections 4.4 documentation](https://commons.apache.org/proper/commons-collections/).
+        Additionally, review your code for deprecated, removed, or modified methods to ensure full compatibility with the updated library.
 
-- `[commons-digester] 1.8.1 -> 2.1`
+   
+    !!! info 
+        For detailed migration guidelines, please refer to the [Apache Commons Collections 4.4](https://commons.apache.org/proper/commons-collections/){target="\_blank"} documentation.
 
-- `[commons-fileupload] 1.4 -> 1.5`
+- `org.apache.commons:commons-lang3` `2.6` -> `3.17.0`
+    - Release Notes:
+        - [Commons Lang 3.0](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.0){target="\_blank"}
+        - [Commons Lang 3.1](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.1){target="\_blank"}
+        - [Commons Lang 3.2](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.2){target="\_blank"}
+        - [Commons Lang 3.3](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.3){target="\_blank"}
+        - [Commons Lang 3.4](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.4){target="\_blank"}
+        - [Commons Lang 3.5](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.5){target="\_blank"}
+        - [Commons Lang 3.6](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.6){target="\_blank"}
+        - [Commons Lang 3.7](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.7){target="\_blank"}
+        - [Commons Lang 3.8](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.8){target="\_blank"}
+        - [Commons Lang 3.8.1](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.8.1){target="\_blank"}
+        - [Commons Lang 3.9](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.9){target="\_blank"}
+        - [Commons Lang 3.10](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.10){target="\_blank"}
+        - [Commons Lang 3.11](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.11){target="\_blank"}
+        - [Commons Lang 3.12.0](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.12.0){target="\_blank"}
+        - [Commons Lang 3.13.0](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.13.0){target="\_blank"}
 
-- `[commons-io] 2.4 -> 2.16.1`
+    - API Changes - Migration from Apache Commons Lang `2.6` to `3.17`
 
-- `[commons-lang] 2.6 -> 3.17.0`
-    - **Notable Changes**:
-        - [Commons Lang 3.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.0)
-        - [Commons Lang 3.1 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.1)
-        - [Commons Lang 3.2 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.2)
-        - [Commons Lang 3.3 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.3)
-        - [Commons Lang 3.4 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.4)
-        - [Commons Lang 3.5 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.5)
-        - [Commons Lang 3.6 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.6)
-        - [Commons Lang 3.7 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.7)
-        - [Commons Lang 3.8 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.8)
-        - [Commons Lang 3.8.1 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.8.1)
-        - [Commons Lang 3.9 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.9)
-        - [Commons Lang 3.10 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.10)
-        - [Commons Lang 3.11 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.11)
-        - [Commons Lang 3.12.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.12.0)
-        - [Commons Lang 3.13.0 Release Notes](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.13.0)
+        Starting in **Etendo 25.1.0**, Apache Commons Lang has been upgraded from version **2.6** to **3.17**. As part of this upgrade, the package structure has changed. Classes previously imported from `org.apache.commons.lang.*` must now be updated to use `org.apache.commons.lang3.*`.
 
-    - **API Changes - Migration from Apache Commons Lang 2.6 to 3.17**
+    - Migration Instructions
 
-        Starting with version **25Q1** of Etendo, Apache Commons Lang has been upgraded from version **2.6** to **3.17**. As part of this upgrade, the package structure has changed. All classes previously imported from `org.apache.commons.lang.*` must now be updated to use the new package `org.apache.commons.lang3.*`.
-
-    - **Migration Instructions**
-
-        Developers should update their import statements to reflect the new package structure. The previous package `org.apache.commons.lang` has been replaced by `org.apache.commons.lang3` in the new version. Please verify that the updated classes and methods are compatible with your existing code, as some methods may have been deprecated, renamed, or modified in behavior.
+        Update your import statements to reflect the new package structure:
 
         ```java
         // Before (Apache Commons Lang 2.6)
@@ -211,235 +257,265 @@ Provide a brief overview of the purpose of this release, including high-level ob
         import org.apache.commons.lang3.StringUtils;
         ```
 
-        For more detailed migration guidelines, refer to the [Apache Commons Lang 3 migration notes](https://commons.apache.org/proper/commons-lang/article3_0.html).
+        Additionally, review your code for deprecated or modified methods and ensure compatibility with the updated library.
 
-    - **Deprecated Library**
+    - Additional Notes
 
-        Although the previous version of the library is maintained for backward compatibility, it will be removed in future releases. It is strongly recommended to migrate to Apache Commons Lang 3.17 to ensure long-term support and compatibility.
+        The previous version of the library remains available for backward compatibility but will be removed in future releases.
 
-- `[hibernate-commons-annotations] 5.1.0.Final -> 5.1.2.Final`
-    - **Notable Changes**:
-        - [5.1.1.Final Release Notes](https://in.relation.to/2016/08/12/hibernate-orm-511-final-release/)
-        - [5.1.2.Final Release Notes](https://in.relation.to/2016/09/19/hibernate-orm-5011-final-and-512-final-release/)
+        !!! warning
+            We strongly recommend migrating all custom developments to **Apache Commons Lang 3.17** to ensure long-term support and compatibility.
 
-- `[hibernate-core] 5.4.2.Final -> 5.6.15.Final`
-    - **Notable Changes**:
-        - [5.4.x Release Notes](https://github.com/hibernate/hibernate-orm/blob/5.4/changelog.txt)
-        - [5.5.x Release Notes](https://github.com/hibernate/hibernate-orm/blob/5.5/changelog.txt)
+        !!! info
+            For detailed migration guidelines, refer to the [Apache Commons Lang 3 migration notes](https://commons.apache.org/proper/commons-lang/article3_0.html){target="\_blank"}.
 
-- `[istack-commons-runtime] 3.0.7 -> 4.2.0`
+- `org.hibernate.common.hibernate-commons-annotations` `5.1.0.Final` -> `5.1.2.Final`
+    - Release Notes:
+        - [5.1.1.Final](https://in.relation.to/2016/08/12/hibernate-orm-511-final-release/){target="\_blank"}
+        - [5.1.2.Final](https://in.relation.to/2016/09/19/hibernate-orm-5011-final-and-512-final-release/){target="\_blank"}
 
-- `[jasperreports] 6.0.0 -> 6.17.0`
-    - **Notable Changes**:
-        - [Releases Page – GitHub](https://github.com/Jaspersoft/jasperreports/releases)
+- `org.hibernate:hibernate-core` `5.4.2.Final` -> `5.6.15.Final`
+    - Release Notes:
+        - [5.4.x](https://github.com/hibernate/hibernate-orm/blob/5.4/changelog.txt){target="\_blank"}
+        - [5.5.x](https://github.com/hibernate/hibernate-orm/blob/5.5/changelog.txt){target="\_blank"}
 
-- `[jasperreports-fonts] 6.0.0 -> 6.17.0`
+- `net.sf.jasperreports.jasperreports-fonts` `6.0.0` -> `6.17.0`
+- `net.sf.jasperreports.jasperreports` `6.0.0` -> `6.17.0`
+    - Release Notes:
+        - [Releases Page – GitHub](https://github.com/Jaspersoft/jasperreports/releases){target="\_blank"}
 
-- `[poi] 3.10.1 -> 5.4.0`
-    - **Notable Changes**:
-        - [Apache POI 5.4.0 (2025-01-08)](https://poi.apache.org/changes.html#version-5.4.0-2025-01-08)
-        - [Apache POI 5.3.0 (2024-07-02)](https://poi.apache.org/changes.html#version-5.3.0-2024-07-02)
-        - [Apache POI 5.2.5 (2023-11-25)](https://poi.apache.org/changes.html#version-5.2.5-2023-11-25)
-        - [Apache POI 5.2.4 (2023-09-28)](https://poi.apache.org/changes.html#version-5.2.4-2023-09-28)
-        - [Apache POI 5.2.3 (2023-05-22)](https://poi.apache.org/changes.html#version-5.2.3-2023-05-22)
-        - [Apache POI 5.2.2 (2023-01-19)](https://poi.apache.org/changes.html#version-5.2.2-2023-01-19)
-        - [Apache POI 5.2.1 (2022-09-09)](https://poi.apache.org/changes.html#version-5.2.1-2022-09-09)
-        - [Apache POI 5.2.0 (2022-01-14)](https://poi.apache.org/changes.html#version-5.2.0-2022-01-14)
-        - [Apache POI 5.1.0 (2021-08-07)](https://poi.apache.org/changes.html#version-5.1.0-2021-08-07)
-        - [Apache POI 5.0.0 (2021-02-08)](https://poi.apache.org/changes.html#version-5.0.0-2021-02-08)
-        - [Apache POI 4.1.2 (2019-12-16)](https://poi.apache.org/changes.html#version-4.1.2-2019-12-16)
-        - [Apache POI 4.1.1 (2019-07-20)](https://poi.apache.org/changes.html#version-4.1.1-2019-07-20)
-        - [Apache POI 4.1.0 (2019-04-22)](https://poi.apache.org/changes.html#version-4.1.0-2019-04-22)
-        - [Apache POI 4.0.1 (2018-11-24)](https://poi.apache.org/changes.html#version-4.0.1-2018-11-24)
-        - [Apache POI 4.0.0 (2018-09-07)](https://poi.apache.org/changes.html#version-4.0.0-2018-09-07)
+- `org.apache.poi.poi` `3.10.1` -> `5.4.0`
+    - Release Notes:
+        - [Apache POI 5.4.0 (2025-01-08)](https://poi.apache.org/changes.html#version-5.4.0-2025-01-08){target="\_blank"}
+        - [Apache POI 5.3.0 (2024-07-02)](https://poi.apache.org/changes.html#version-5.3.0-2024-07-02){target="\_blank"}
+        - [Apache POI 5.2.5 (2023-11-25)](https://poi.apache.org/changes.html#version-5.2.5-2023-11-25){target="\_blank"}
+        - [Apache POI 5.2.4 (2023-09-28)](https://poi.apache.org/changes.html#version-5.2.4-2023-09-28){target="\_blank"}
+        - [Apache POI 5.2.3 (2023-05-22)](https://poi.apache.org/changes.html#version-5.2.3-2023-05-22){target="\_blank"}
+        - [Apache POI 5.2.2 (2023-01-19)](https://poi.apache.org/changes.html#version-5.2.2-2023-01-19){target="\_blank"}
+        - [Apache POI 5.2.1 (2022-09-09)](https://poi.apache.org/changes.html#version-5.2.1-2022-09-09){target="\_blank"}
+        - [Apache POI 5.2.0 (2022-01-14)](https://poi.apache.org/changes.html#version-5.2.0-2022-01-14){target="\_blank"}
+        - [Apache POI 5.1.0 (2021-08-07)](https://poi.apache.org/changes.html#version-5.1.0-2021-08-07){target="\_blank"}
+        - [Apache POI 5.0.0 (2021-02-08)](https://poi.apache.org/changes.html#version-5.0.0-2021-02-08){target="\_blank"}
+        - [Apache POI 4.1.2 (2019-12-16)](https://poi.apache.org/changes.html#version-4.1.2-2019-12-16){target="\_blank"}
+        - [Apache POI 4.1.1 (2019-07-20)](https://poi.apache.org/changes.html#version-4.1.1-2019-07-20){target="\_blank"}
+        - [Apache POI 4.1.0 (2019-04-22)](https://poi.apache.org/changes.html#version-4.1.0-2019-04-22){target="\_blank"}
+        - [Apache POI 4.0.1 (2018-11-24)](https://poi.apache.org/changes.html#version-4.0.1-2018-11-24){target="\_blank"}
+        - [Apache POI 4.0.0 (2018-09-07)](https://poi.apache.org/changes.html#version-4.0.0-2018-09-07){target="\_blank"}
+        
+        For older versions, you can check:
+        - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/){target="\_blank"}
+        - [Full changelog overview](https://poi.apache.org/changes.html){target="\_blank"}
 
-        For older versions like **3.10.1**, you can check:
+- Apache POI 5.x Migration Guide
 
-        - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/)
-        - [Full changelog overview](https://poi.apache.org/changes.html)
+    This guide outlines the necessary changes to migrate projects using Apache POI 3.x/4.x to version 5.x, including how to replace deprecated classes, methods, and constants removed in recent versions.
 
-    - **Apache POI 5.x Migration Guide**
+    1. Replacing Deprecated Constants (`CellType`)
+        
+        In POI 5.x, the `Cell.CELL_TYPE_*` constants are replaced by the `CellType` enum.
 
-        This guide outlines the necessary changes to migrate projects using Apache POI 3.x/4.x to version 5.x, including how to replace deprecated classes, methods, and constants removed in recent versions.
+        Example:
 
-        - **Replacing Deprecated Constants (`CellType`)**
+        ```java
+        // Before
+        cell.getCellType() == Cell.CELL_TYPE_STRING;
 
-            #### Before:
-            ```java
-            cell.getCellType() == Cell.CELL_TYPE_STRING
-            ```
+        // After
+        cell.getCellType() == CellType.STRING;
+        ```
 
-            #### After:
-            ```java
-            cell.getCellType() == CellType.STRING
-            ```
+        Key Mappings:
 
-            **Key changes:**
-                
-                - Cell.CELL_TYPE_STRING → CellType.STRING
-                - Cell.CELL_TYPE_NUMERIC → CellType.NUMERIC
-                - Cell.CELL_TYPE_BOOLEAN → CellType.BOOLEAN
-                - Cell.CELL_TYPE_FORMULA → CellType.FORMULA
-                - Cell.CELL_TYPE_BLANK → CellType.BLANK
+        | Old Constant              | New Constant       |
+        |---------------------------|--------------------|
+        | `Cell.CELL_TYPE_STRING`   | `CellType.STRING`  |
+        | `Cell.CELL_TYPE_NUMERIC`  | `CellType.NUMERIC` |
+        | `Cell.CELL_TYPE_BOOLEAN`  | `CellType.BOOLEAN` |
+        | `Cell.CELL_TYPE_FORMULA`  | `CellType.FORMULA` |
+        | `Cell.CELL_TYPE_BLANK`    | `CellType.BLANK`   |
 
-            Always import:
-            ```java
-            import org.apache.poi.ss.usermodel.CellType;
-            ```
+        Required Import:
 
-        - **Cell Style Adjustments (`CellStyle`, `XSSFCellStyle`, `HSSFCellStyle`)**
+        ```java
+        import org.apache.poi.ss.usermodel.CellType;
+        ```
 
-            #### Alignment:
-                - CellStyle.ALIGN_LEFT → HorizontalAlignment.LEFT
-                - CellStyle.ALIGN_CENTER → HorizontalAlignment.CENTER
-                - CellStyle.ALIGN_RIGHT → HorizontalAlignment.RIGHT
+    2. Updating Cell Styles
 
-            Import:
-            ```java
-            import org.apache.poi.ss.usermodel.HorizontalAlignment;
-            ```
+        Alignment
 
-            #### Fill Patterns:
-                - CellStyle.SOLID_FOREGROUND → FillPatternType.SOLID_FOREGROUND
+        | Old Constant             | New Constant                |
+        |--------------------------|-----------------------------|
+        | `CellStyle.ALIGN_LEFT`   | `HorizontalAlignment.LEFT`  |
+        | `CellStyle.ALIGN_CENTER` | `HorizontalAlignment.CENTER`|
+        | `CellStyle.ALIGN_RIGHT`  | `HorizontalAlignment.RIGHT` |
+        
+               
+                - CellStyle.ALIGN_CENTER → 
+                -  → 
 
-            Import:
-            ```java
-            import org.apache.poi.ss.usermodel.FillPatternType;
-            ```
+        ```java
+        // Before
+        style.setAlignment(CellStyle.ALIGN_CENTER);
 
-            #### Borders:
-                - setBorderBottom((short) 1) → setBorderBottom(BorderStyle.THIN)
-                - RegionUtil.setBorderBottom(1, ...) → RegionUtil.setBorderBottom(BorderStyle.THIN, ...)
+        // After
+        style.setAlignment(HorizontalAlignment.CENTER);
+        ```
 
-            Import:
-            ```java
-            import org.apache.poi.ss.usermodel.BorderStyle;
-            ```
+        ```java
+        import org.apache.poi.ss.usermodel.HorizontalAlignment;
+        ```
 
-        - **Fonts (`Font`, `HSSFFont`, `XSSFFont`)**
+        Fill Patterns
 
-            #### Before:
-            ```java
-            font.setBoldweight(Font.BOLDWEIGHT_BOLD);
-            ```
+        ```java
+        // Before
+        style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
-            #### After:
-            ```java
-            font.setBold(true);
-            ```
+        // After
+        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        ```
 
-            #### Before:
-            ```java
-            font.setBoldweight(Font.BOLDWEIGHT_NORMAL);
-            ```
+        ```java
+        import org.apache.poi.ss.usermodel.FillPatternType;
+        ```
 
-            #### After:
-            ```java
-            font.setBold(false);
-            ```
+        Borders
 
-        - **Formula Evaluation**
+        ```java
+        // Before
+        setBorderBottom((short) 1);
 
-            #### Before:
-            ```java
-            switch (cellValue.getCellType()) {
+        // After
+        setBorderBottom(BorderStyle.THIN);
+        ```
+
+        ```java
+        import org.apache.poi.ss.usermodel.BorderStyle;
+        ```
+
+    3. Fonts API Changes
+
+        The `Font.setBoldweight()` method is deprecated.  
+        Now, you should use `Font.setBold(boolean)`.
+
+        Example:
+
+        ```java
+        // Before
+        font.setBoldweight(Font.BOLDWEIGHT_BOLD);
+
+        // After
+        font.setBold(true);
+        ```
+
+        ```java
+        // Before
+        font.setBoldweight(Font.BOLDWEIGHT_NORMAL);
+
+        // After
+        font.setBold(false);
+        ```
+
+    4. Formula Evaluation API Changes:
+
+        ```java
+        // Before
+        switch (cellValue.getCellType()) {
             case Cell.CELL_TYPE_NUMERIC:
-            ```
+        }
 
-            #### After:
-            ```java
-            switch (cellValue.getCellType()) {
+        // After
+        switch (cellValue.getCellType()) {
             case NUMERIC:
-            ```
+        }
+        ```
 
-            Use:
-            ```java
-            FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
-            CellValue cellValue = evaluator.evaluate(cell);
-            ```
+        Evaluating formulas:
 
-        - **Additional Best Practices**
+        ```java
+        FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
+        CellValue cellValue = evaluator.evaluate(cell);
+        ```
 
-            - Avoid creating a new `XSSFWorkbook()` unnecessarily—use `cell.getSheet().getWorkbook()` when applicable.
-            - Prefer `computeIfAbsent(...)` over `containsKey` + `put` for map operations.
+        Complete Example:
 
-        - **Complete Migration Examples**
-
-            #### Before:
-            ```java
-            cellFont.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
-            style.setAlignment(CellStyle.ALIGN_RIGHT);
-            style.setFillPattern(CellStyle.SOLID_FOREGROUND);
-            ```
-
-            #### After:
-            ```java
-            cellFont.setBold(true);
-            style.setAlignment(HorizontalAlignment.RIGHT);
-            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-            ```
-
-        - **Formula Evaluation**
-
-            **Before:**
-            ```java
-            CellValue cellValue = evaluator.evaluate(cell);
-            switch (cellValue.getCellType()) {
-            case Cell.CELL_TYPE_STRING:
-                return cellValue.getStringValue();
-            ```
-
-            **After:**
-            ```java
-            CellValue cellValue = evaluator.evaluate(cell);
-            switch (cellValue.getCellType()) {
+        ```java
+        CellValue cellValue = evaluator.evaluate(cell);
+        switch (cellValue.getCellType()) {
             case STRING:
                 return cellValue.getStringValue();
-            ```
+            // other cases...
+        }
+        ```
 
-        - **Official Resources:**
-            - [Apache POI Documentation](https://poi.apache.org/components/spreadsheet/)
-            - [Migration Guide from Older Versions](https://poi.apache.org/migration.html)
+    5. Additional Best Practices
 
-    ---
+        Avoid creating new `XSSFWorkbook()` unnecessarily. Instead, reuse:
 
-    !!! info
-        Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
+        ```java
+        Workbook workbook = cell.getSheet().getWorkbook();
+        ```
+
+        Use modern Map API:
+
+        ```java
+        // Instead of containsKey + put
+        map.computeIfAbsent(key, k -> new ArrayList<>());
+        ```
+
+    6. Full Migration Example
+
+        ```java
+        // Before
+        cellFont.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+        style.setAlignment(CellStyle.ALIGN_RIGHT);
+        style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+
+        // After
+        cellFont.setBold(true);
+        style.setAlignment(HorizontalAlignment.RIGHT);
+        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        ```
+
+    7. **Test your migrated code carefully**. Some subtle behavioral changes may exist in formula evaluation and styling.
+    
+    
+    !!! info "Official Resources"
+        - [Apache POI Documentation](https://poi.apache.org/components/spreadsheet/){target="\_blank"}
+        - [Migration Guide from Older Versions](https://poi.apache.org/migration.html){target="\_blank"}
+    
+
+- `commons-beanutils.commons-beanutils` `1.8.3` -> `1.9.4` 
+- `commons-codec.commons-codec` `1.1.1` -> `1.17.1`
+- `commons-digester.commons-digester` `1.8.1` -> `2.1`
+- `commons-fileupload.commons-fileupload` `1.4` -> `1.5`
+- `commons-io.commons-io` `2.4` -> `2.16.1`
+- `com.sun.istack.istack-commons-runtime` `3.0.7` -> `4.2.0`    
+
+!!! info
+    Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
 
 #### New Libraries
 
-- `[commons-text]`
-    - **Version**: 1.10.0
-    - [Documentation](https://commons.apache.org/proper/commons-text/)
+- `org.apache.commons.commons-text` `1.10.0`
+    - [Documentation](https://commons.apache.org/proper/commons-text/){target="\_blank"}
 
-- `[commons-math3]`
-    - **Version**: 3.6.1
-    - [Documentation](https://commons.apache.org/proper/commons-math/)
+- `org.apache.commons.commons-math3` `3.6.1`
+    - [Documentation](https://commons.apache.org/proper/commons-math/){target="\_blank"}
 
-- `[castor-core]`
-    - **Version**: 1.4.1
-    - [Documentation](https://castor-data-binding.github.io/castor/)
+- `org.codehaus.castor.castor-core` `1.4.1`
+    - [Documentation](https://castor-data-binding.github.io/castor/){target="\_blank"}
 
-- `[castor-xml]`
-    - **Version**: 1.4.1
-    - [Documentation](https://castor-data-binding.github.io/castor/)
+- `org.codehaus.castor:castor-xml` `1.4.1`
+    - [Documentation](https://castor-data-binding.github.io/castor/){target="\_blank"}
 
-- `[itext]`
-    - **Version**: 2.1.7.js8
-    - [Documentation](https://itextpdf.com/resources)
+- `com.lowagie:itext` `2.1.7`
+    - [Documentation](https://itextpdf.com/resources){target="\_blank"}
 
 #### Removed Libraries
 
-- `[itext-pdfa]`
-    - **Version**: 5.5.0
-
-- `[itextpdf]`
-    - **Version**: 5.5.0
-
-- `[jcommon]`
-    - **Version**: 1.0.15
-
-- `[jxl]`
-    - **Version**: 2.6.10
-
----
+- `itext-pdfa-5.5.0.jar`
+- `itextpdf-5.5.0.jar`
+- `jcommon-1.0.15.jar`
+- `jxl-2.6.10.jar`
