@@ -29,6 +29,8 @@ hide:
     - [Etendo 25.X + Bundles](https://demo-25.etendo.cloud/etendo/security/Login){ target="blank"} 
 
 -   :material-test-tube:{ .lg .middle } **Etendo**
+    
+    Etendo environments supported without any modules installed.
 
     ---
 
@@ -37,7 +39,7 @@ hide:
 
 </div>
 
-[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io) _Here you can check the Etendo servers status._
+[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="blank"} _Here you can check the Etendo servers status._
 
 !!! tip "Credentials"
     The default access credentials are: <br> 
