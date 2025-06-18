@@ -62,9 +62,11 @@ b. Add the following properties:
 ```title="gradle.properties"
 sso.auth.type=Middleware
 sso.middleware.url=https://sso.etendo.cloud
-sso.middleware.redirectUri=http://localhost:8080/oauth/secureApp/LoginHandler.html ??
+sso.middleware.redirectUri=http://localhost:8080/oauth/secureApp/LoginHandler.html
 authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 ```
+!!!note
+    During development, you can use `localhost`. However, for production, set your actual domain.
 
 With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
 
@@ -117,6 +119,7 @@ a. In the left-hand menu, go to **Authentication** → **Social**.
 ![Social](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/SocialConnection.png)
 
 b. Click **Create Social Connection**.
+
 c. Choose the selected social login providers (Google, Facebook, etc.).
 
 ![New Social Connection](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewSocialConnection.png)
@@ -150,6 +153,7 @@ sso.domain.url=your-domain.auth0.com
 sso.client.id=your-client-id
 sso.client.secret=your-client-secret
 sso.auth.type=Auth0
+authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 ```
 
 #### 5. Configure Callback and Logout URLs
@@ -170,7 +174,7 @@ In the **Settings** tab, configure the following allowed URLs:
     The URLs Auth0 redirects to after the user logs out.
     ```
     http://localhost:8080/etendo/
-    http://localhost:8080/etendo/web/com.etendoerp.entendorx/resources/logout-auth0.html
+    http://localhost:8080/etendo/web/com.etendoerp.etendorx/resources/logout-auth0.html
     ```
 
     ![Application URIs](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/AllowedURIs.png)
