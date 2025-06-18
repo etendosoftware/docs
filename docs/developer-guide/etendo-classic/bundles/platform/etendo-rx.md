@@ -211,4 +211,4 @@ c. Here you will see the Auth0 login page with the configured providers.
 ![Auth0 Login](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/UniversalLoginCustom.png)
 
 !!! info
-    For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#sso-etendo-login).
+    For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
