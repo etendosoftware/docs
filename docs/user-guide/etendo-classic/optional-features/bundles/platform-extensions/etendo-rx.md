@@ -11,7 +11,7 @@ tags:
 # Etendo RX
 :octicons-package-16: Javapackage: `com.etendoerp.etendorx`
 
-## SSO Etendo Login
+## Etendo SSO Login
 
 Etendo allows you to authenticate using these external provider accounts: **Google**, **Microsoft**, **LinkedIn**, **GitHub** and **Facebook**. Using the Single Sing-On protocol is possible due to the integration with the **EtendoAuth** service or Auth0 custom implementation.
 
@@ -47,7 +47,7 @@ When accessing the Etendo login screen, you’ll see buttons for the **available
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx/SSOLogin3.png)
 
-5. Authorize the external provider to use the account information to log into Etendo? 
+5. Authorize the external provider to use the account information to log into Etendo 
 
 !!!info
     You can link multiple providers to the same user.
