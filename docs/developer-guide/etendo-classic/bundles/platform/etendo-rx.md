@@ -28,7 +28,7 @@ The other fields will be completed with data referring to the corresponding prov
 
 ## Etendo SSO Login
 
-Etendo allows you to authenticate using these external provider accounts: **Google**, **Microsoft**, **LinkedIn**, **GitHub** and **Facebook**. Using the Single Sing-On (SSO) protocol is possible due to the integration through:
+Etendo allows you to authenticate using these external provider accounts: **Google**, **Microsoft**, **LinkedIn**, **GitHub** and **Facebook**. Using the Single Sign-On (SSO) protocol is possible due to the integration through:
 
 - [EtendoAuth Middleware Service](#set-up-etendo-to-login-with-etendoauth-middleware-service-recommended)
 - [Auth0 Custom Implementation](#how-to-integrate-your-own-auth0-login-provider-with-etendo)
