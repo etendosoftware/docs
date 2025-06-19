@@ -32,9 +32,9 @@ This module implements and enhances the management of the **picking operations**
 
 In Etendo there are 2 types of picking lists available: 
 
-- **Direct Picking List to Customer**: **Outbound picking** is a process within warehouse management that involves the preparation and movement of products from their storage bins in the warehouse to a **specific outbound location** for subsequent packaging and shipment to the customer. Outbound picking is a type of pick list that is used to move products included in a sales order from storage bins within the warehouse to a predefined outbound storage bin. 
+- **Outbound picking** is a process within warehouse management that involves the preparation and movement of products from their storage bins in the warehouse to a **specific outbound location** for subsequent packaging and shipment to the customer. Outbound picking is a type of pick list that is used to move products included in a sales order from storage bins within the warehouse to a predefined outbound storage bin. 
 
-- **Outbound Picking Lists**: **Direct Picking List to Customer** is a process where products are shipped without going through an **intermediate outbound bin**.
+- **Direct Picking List to Customer** is a process where products are shipped without going through an **intermediate outbound bin**.
 
 ## Configuration
 
@@ -82,14 +82,14 @@ From the Warehouse Picking List window, only outbound picking lists can be gener
 
 Fields to note: 
 
-- Organization:
-- Document No.: 
-- Document Type:
-- Outbound Storage Bin: It is necessary to set up an outbound storage bin in each warehouse that ships. This bin is defined in the **Warehouse and Storage Bins** window by selecting a bin with the type **Outbound**.
-- Document Date:
-- Description:
-- Date printed:
-- User/contact: 
+- Organization: the organization which creates the packing.
+- Document No.: picking identification number is generated automatically.
+- Document Type: it determines document sequence and processing rules.
+- Outbound Storage Bin: it is necessary to set up an outbound storage bin in each warehouse that ships. This bin is defined in the **Warehouse and Storage Bins** window by selecting a bin with the type **Outbound**.
+- Document Date: date when the Picking List is done and is expected to be completed.
+- Description: an optional description limited to 255 characters.
+- Date printed: indicates the Date that a document was printed. 
+- User/contact: the User identifies a unique user in the system. This could be an internal user or a business partner contact. 
 
 !! info
     When an outbound picking list is generated, Goods Movements are created in draft status to move the products from the storage bins to the outbound bin.

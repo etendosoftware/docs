@@ -152,18 +152,21 @@ In the Packing Box tab, the **Content** tab is a child tab where the **content o
 
 ![packing6](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing6.png)
 
-If the user starts the process from the Packing window, it will be possible to select **more than one shipment to pack**. Remember that the packing process is the same as explained above, except that from this window, the **Pick Shipments** button allows to do the following: 
 
-![packing8](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing8.png)
+- **Pick Shipments**: This button is only shown in the Packing window since it allows selecting **all the available goods shipments** that need to be packed. Remember that the packing process is the same as explained above, except that from this button it is possible to select **more than one shipment to pack** at the same time. 
 
-- **Pick Shipments**: This button  allows selecting **all the available goods shipments** that need to be packed. The criteria to show which goods shipments can be selected is the following:
-
-      - Goods shipments that belong to that business partner and that address.The system des not select goods shipment that belong to the same business partner but with a different address. 
-
-      - Goods shipments that are marked as Packing Required.
-
-      - Goods shipments that have not been packed.
+    ![packing8](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing8.png)
 
 
-After selecting the desired goods shipments, the process continues from the Pack button as mentioned above.
+    The criteria to show which goods shipments can be selected is the following:
+
+
+    - Goods shipments that belong to that business partner and that address.The system des not select goods shipment that belong to the same business partner but with a different address. 
+
+    - Goods shipments that are marked as Packing Required.
+
+    - Goods shipments that have not been packed.
+
+
+    After selecting the desired goods shipments, the process continues from the Pack button as mentioned above.
 
