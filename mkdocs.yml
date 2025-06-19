@@ -503,6 +503,7 @@ nav:
           - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
           - Dockerized Tomcat Service: developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md
           - Dynamic App: developer-guide/etendo-classic/bundles/platform/dynamic-app.md
+          - Task: developer-guide/etendo-classic/bundles/platform/task.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
