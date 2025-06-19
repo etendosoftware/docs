@@ -75,7 +75,7 @@ If the user starts the process from the Packing window, it is possible to create
 
 Fields to note: 
 
-**Organization**: the organization which creates the packing.
+**Organization**: an organization is a unit of your client or legal entity.
 
 **Document No**: packing identification number is generated automatically.
 
