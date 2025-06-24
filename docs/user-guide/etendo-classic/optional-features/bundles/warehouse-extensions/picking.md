@@ -41,7 +41,7 @@ In Etendo there are 2 types of picking lists available:
 In order to generate picking lists, some configuration is needed:
 
 - **Document type**: The Picking list document type must be defined for each organization.
-The module provides a dataset with basic document types that can be applied. Go to [Enterprise module management](../../../basic-features/general-setup/enterprise-model.md#enterprise-module-management) and apply the **Warehouse Picking List dataset** for each organization using Picking Lists. Once it is applied, the document types are created.
+The module provides a dataset with basic document types that can be applied. Go to [Enterprise Module Management](../../../basic-features/general-setup/enterprise-model.md#enterprise-module-management) and apply the **Warehouse Picking List dataset** for each organization using Picking Lists. Once it is applied, the document types are created.
 
 ![picking1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking1.png)
 
@@ -52,7 +52,7 @@ The dataset adds two new document types, with their own Document Sequences which
 
 **Picking List outbound**: Used for **Outbound Picking List**, therefore **Use Outbound location** flag is set as **Yes** by default. This means that a Goods Movement needs to be created to move the goods from goods' storage bin to outbound storage bin. In this case, a storage bin of the warehouse needs to be defined as **Outbound**.
 
- - Generate Shipment on PL Completion flag if check generates Goods Shipments if Picking List is completed. A Goods Shipment document type needs to be selected in the field **Shipment for Picking**.
+ - Generate Shipment on PL Completion flag if checked generates Goods Shipments if Picking List is completed. A Goods Shipment document type needs to be selected in the field **Shipment for Picking**.
 
 **Grouping Pick List**: Using Outbound location and the **Is Grouping Picking List** flag checked. This document type is used when grouping different picking list in one list.
 
@@ -100,14 +100,8 @@ Fields to note:
 !!! info
     Products included in the outbound picking list are automatically reserved, ensuring that they cannot be used by other processes or picking lists.
 
-Once the header is manually created click on the Select Sales Orders button. This opens a window with a grid containing all the Sales Orders pending to be delivered that are not on an open Picking List. The sales orders that are shown are filtered by the warehouse of the outbound bin defined in the header of the picking list.
 
-It could happen that a sales order has items reserved in a warehouse **different than the warehouse defined in its header (due to definition of "qty on hand" per organization and priorities). In that case the picking list will try to re-allocated items from that warehouse to the warehouse of the outbound bin. If there is no way to perform this action the system will throw an error.
-
-!!!note
-    The system assumes that picking bins (from where you get the items) and the outbound bin must belong to the same warehouse. That's the reason why the system always try to reallocated items in the above scenario and also filters sales orders based on the warehouse of the outbound bin.
-
-From the **Sales Order** window, it is possible to select multiple orders which must be booked and they are not completely shipped. Using this process **both type of Picking Lists can be created**.
+From the [Sales Order](../../../basic-features/sales-management/transactions.md#sales-order) window, it is possible to select multiple orders which must be booked and they are not completely shipped. Using this process **both type of Picking Lists can be created**.
 
 
 The module adds a flag **In Picking List** in the Sales Order Header. This is checked when one of the lines of the sales order is present in a Picking List that is not closed. Using this flag and the Delivery Status and Delivery Date fields, it is possible to filter the Sales Order window to identify the Sales Orders needed to be included in a Picking List.
@@ -117,9 +111,29 @@ The module adds a flag **In Picking List** in the Sales Order Header. This is ch
 
 When a Sales Order line is included in a Picking List it must have a related reservation. The stock reserved is the used in the Picking List. The processes that generate the Picking Lists automatically create the reservations if the Sales Order Line does not have one.
 
+### Tab
+
+The **Movement Line** tab is shown when Outbound picking lists grouped is included. This includes all the goods movements related to the Picking List. 
+
+![picking8](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking8.png)
+
+Relevant fields to note:
+
+- **Stock Reservation**: the reservation related to the movement, that links with the sales order line.
+- **Incidence Reason**: in case the line is in Incidence status can show a description of the incidence.
+- **Group Picking List** and **Warehouse Picking List**: in case a picking list is grouped shows the link to the original or the grouping picking list.
+
+#### Button
+
+- **Edit Item**: Edits the lines to change the attributes of the product to be picked. It is possible to select **different attributes and storage bins**. The total quantity must be equal or lower than the movement quantity of the related Stock Reservation. The process updates the reserved stock and the goods movements, deleting or creating new ones if necessary.
+
+![picking9](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking9.png)
+
 ### Buttons
 
-- **Generate Picking List**: When the button is clicked a new window is opened. The first field to be filled is the Picking List type. Based on the selected type additional fields need to be set.
+- **Generate Picking List**: When the button is clicked a pop-up window is opened. The first field to be filled is the Picking List type. Based on the selected type additional fields need to be set.
+
+    ![picking.6](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking6.png)
 
     - **Direct Picking List to Customer type**: it means that the products are picked directly from the storage locations (e.g. shelves or bins) and prepared for shipment to the customer without moving them to a specific intermediate location within the warehouse. When selected, the process generates a Goods Shipment in **Draft status** for each selected Sales Order. The Picking Lists are generated also in Draft status using a Document Type that has the Use Outbound Location flag unchecked.
 
@@ -143,27 +157,46 @@ When a Sales Order line is included in a Picking List it must have a related res
         - Group by Business partner: GBP
         - Group by Organization: GO
 
-    ![picking.6](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking6.png)
+   
 
     !!!info
-        If there is no stock for at least one of the products a message is shown telling that a partial Picking List is created. Reservation, picking list and good shipment are created with the available stock.
+        If there is no stock for at least one of the products a message is shown telling that a partial Picking List is created. Reservation, picking list and goods shipment are created with the available stock.
 
 
     !!!info
-        If none of the products has stock, no picking list, no good shipment and no reservation is created.And an error message is shown.
+        If none of the products has stock, no picking list, no goods shipment and no reservation is created.And an error message is shown.
 
 
-    - **Outbound Picking List**:
+    - **Outbound Picking List**: it means that the products are picked from the storage bins, but instead of taking them directly to the packing/shipping area, they are moved to a **predefined outbound storage bin** in the warehouse. From this location, the products are packed and shipped.
 
-##### Buttons from the Warehouse Picking List window
+    !!! info
+        When generating the outbound picking list from a sales order or manually, Goods Movements are created in draft status to move the products from the storage locations to the outbound location.
+        In this window, the Process Movement button ends the process.
 
-- **Assign**: This button assigns the selected picking list to the warehouse agent chosen in the popup window. 
+    ![picking10](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking10.png)
 
-- **Process**: The selected picking list and its associated good shipment are processed.
+    The operator picks the products and takes them to the designated issue location (e.g., a specific area of the warehouse for products ready for shipment).
+
+- **Sales Order**: The Sales Orders button opens a window with a grid containing all the Sales Orders pending to be delivered that **are not on an open Picking List**. The sales orders that are shown are filtered by the warehouse of the outbound bin defined in the header of the picking list.
+
+    It could happen that a sales order has items reserved in a warehouse **different than the warehouse defined in its header** (due to definition of "qty on hand" per organization and priorities). In that case the picking list will try to re-allocated items from that warehouse to the warehouse of the outbound bin. If there is no way to perform this action the system will throw an error.
+
+    !!!note
+        The system assumes that picking bins and the outbound bin must belong to the same warehouse. That's the reason why the system always try to reallocated items in the above scenario and also filters sales orders based on the warehouse of the outbound bin.
+
+- **Assign**: From the Warehouse Picking List window, this button assigns the selected picking list to the warehouse agent chosen in the pop-up window. 
+
+- **Manage Incidence**: In case there is a problem with the line an incidence can be raised. When the incidence is raised it is possible to set a description of the problem. When a line is in **Incidence status** the status of the document changes to **Incidence**. When the line is already in status Incidence and the incidence has been solved pressing the button again changes the status of the line to **Pending**. Then, the status of the document is also reset to the corresponding value depending on the status of all the lines.
+
+![picking11](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking11.png)
+
+From the Warehouse Picking List window when the picking list type is **Direct Picking List**: 
+
+- **Process**: The Process button process the selected picking list and its associated good shipment. 
 
 - **Cancel**: The associated goods shipment and the picking list header are deleted. Except the lines is in a good shipment that is processed. Those lines, its processed goods shipment and picking list header are not deleted. In that case, the status of the picking list is set as Canceled.
 
-- **Validate**: When the warehouse worker has picked all the items the manager can verify them using this process.
+- **Validate**: When the warehouse worker has picked all the items, the manager can verify them using this process.
 
     The button opens a window showing all the items, for each one it has to be set the Qty Verified field. There are several ways to do it:
 
@@ -181,18 +214,14 @@ When a Sales Order line is included in a Picking List it must have a related res
 
 The Sales Order for Picking window allows **filtering from all the sales orders** that are in the system which are ready for picking.
 
-The sales orders must be:
+The sales orders must be **Completed** and have the box **Exclude from Picking List** unchecked. 
 
-- Completed
-
-- Have the box Exclude from Picking List unchecked
-
-When the sales orders are created, the Reservation Status is Not  Reserved. 
+When the sales orders are created, the Reservation Status is **Not Reserved**. 
 
 ![picking3](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking3.png)
 
 !!!info
-    Once the picking process is complete, the user may continue with the packing process. 
+    Once the Picking process is complete, the user may continue with the Packing process. 
     
-    For more information visit: [packing](../../bundles/warehouse-extensions/packing.md)
+    For more information visit: [Packing](../../bundles/warehouse-extensions/packing.md).
 
