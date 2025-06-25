@@ -7046,15 +7046,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#upload-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upload Files
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -10790,15 +10781,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#upload-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upload Files
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -10888,6 +10870,10 @@ Converts EAN-128 type to a JSON object and returns it as a response.</p>
 <p>To make this module work, authentication Java class must be configured in the <code>gradle.properties</code> file by adding the following line:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">authentication</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">advanced</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">process</span><span class="o">.</span><span class="na">AdvancedAuthenticationManager</span>
 </span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This module cannot be configured together with <a href="../etendo-rx/#etendo-sso-login">Etendo RX - SSO Login</a> because both use the <code>authentication.class</code> property. </p>
+</div>
 <p>Then <code>./gradlew setup</code> must be executed.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -11054,13 +11040,6 @@ Converts EAN-128 type to a JSON object and returns it as a response.</p>
 <p>The reports have to be uploaded in the correct folder, for example: <code>/var/lib/tomcat/webapps/etendo/…</code></p>
 <p>Then, in the "Clear report cache" window, click ’Done’:</p>
 <p><a class="glightbox" href="../../../../../assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clear Report Cache" src="../../../../../assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png" /></a></p>
-<h2 id="upload-files">Upload Files</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.upload.file</code></p>
-<p>This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>For more information, visit <a href="../../../how-to-guides/how-to-create-a-standard-process-definition/#uploading-files">How to Create a Standard Process Definition developer guide</a>. </p>
-</div>
 
 
 
