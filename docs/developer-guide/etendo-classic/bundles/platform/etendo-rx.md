@@ -77,10 +77,10 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
         With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
 
         !!! warning "Potential SSO Configuration Mismatch"
-        
-            If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:
 
-            ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png)
+            ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
+        
+            If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
 
             To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
 
@@ -108,7 +108,7 @@ This option is recommended only if you need to implement your own authentication
 
 2. #### Choose the Technology Stack
 
-    1. After creating the application, choose the technology used in your project. For Etendo, select **Java**.
+    1. After creating the application, choose the technology used in the project. For Etendo, select **Java**.
 
         ![Choose Technology](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProjectTechnology.png)
 
@@ -142,7 +142,7 @@ This option is recommended only if you need to implement your own authentication
 
 4. #### Retrieve and Set Credentials
 
-    1. Return to your application and go to the **Settings** tab.
+    1. Return to the application and go to the **Settings** tab.
 
         ![App Settings](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/AppSettings.png)
 
@@ -151,7 +151,7 @@ This option is recommended only if you need to implement your own authentication
         - **Client ID**
         - **Client Secret**
 
-    3. Add them to your `gradle.properties` file in the following format:
+    3. Add them to the `gradle.properties` file in the following format:
 
         ``` title="gradle.properties"
         sso.domain.url=your-domain.auth0.com
@@ -195,7 +195,7 @@ This option is recommended only if you need to implement your own authentication
 
 6. #### Set the Callback URL
 
-    Add the callback URL to your `gradle.properties`:
+    Add the callback URL to the `gradle.properties`:
 
     ```title="gradle.properties" 
     sso.callback.url=http://localhost:8080/etendo/secureApp/LoginHandler.html
@@ -210,15 +210,18 @@ This option is recommended only if you need to implement your own authentication
     ```
 
 8. #### Log In via External Providers
+    
+   
+    1. Start the Tomcat server.
+    2. Open the Etendo login page and click **Use a Social Account to Sign In** 
+    3. Here you will see the `Auth0` login page with the configured providers.
 
-    1. Start your Tomcat server.
-    2. Open the Etendo login page and click **Use a Social Account to Sign in**.
-    3. Here you will see the Auth0 login page with the configured providers.
+    ![Auth0 Login](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/LoginAuth0.png)
 
-        !!!info
-            Customize your login screen in **Branding** > **Universal Login** in the Auth0 dashboard.
+    !!!tip
+        Customize the login screen in **Branding** > **Universal Login** in the Auth0 dashboard.
 
-        ![Auth0 Login](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/UniversalLoginCustom.png)
+        
 
 !!! info
     For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
