@@ -101,10 +101,13 @@ To make this module work, authentication Java class must be configured in the `g
 authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
 ```
 
+!!! warning
+    This module cannot be configured together with [Etendo RX - SSO Login](./etendo-rx.md#etendo-sso-login) because both use the `authentication.class` property. 
+
 Then `./gradlew setup` must be executed.
 
 !!! warning
-      It is mandatory to execute this step before installing the module. 
+    It is mandatory to execute this step before installing the module. 
 
 ## Etendo Webhooks
 
@@ -303,13 +306,5 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 ![Clear Report Cache](../../../../assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
-## Upload Files
-
-:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
-
-This module facilitates developers to include a type of reference that present a File Upload Element which allows uploading a single file for processing. 
-
-!!!info
-    For more information, visit [How to Create a Standard Process Definition developer guide](../../how-to-guides/how-to-create-a-standard-process-definition.md#uploading-files). 
 
 
