@@ -84,10 +84,13 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
 
             To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
 
+!!! info
+    For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
+
 
 ### How to Integrate your own Auth0 Login Provider with Etendo
 
-Follow this guide to configure an Auth0 application to enable social login in Etendo.
+This option is recommended only if you need to implement your own authentication service and cannot use the EtendoAuth Middleware service. Follow this guide to configure an Auth0 application and enable social login in Etendo.
 
 
 1. #### Create a New Auth0 Application
