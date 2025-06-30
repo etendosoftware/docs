@@ -70,15 +70,15 @@ Fields to note:
 
 - **Active**: is checked or unchecked to enable or disable the configuration.
 
-Barcode Configuration section
+**Barcode Configuration section**
 
-- **Barcode algorithm**:
+- **Barcode algorithm**: A barcode algorithm that allows interpretation according to any of the standards defined by international organizations. The options to select are:
 
     - EAN 128 (Link to documentation - to create)
 
     - SimpleBarcode
 
-- **Ai configuration**: (add concept) - Configured by default, it comes with the dataset. The value is...
+- **Ai configuration**: A set of application identifiers (AIs) defined by GS1 standards that are used in barcodes such as GS1-128 to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities. AIs can be of fixed or variable lengths and are critical to correctly interpreting and processing barcode data. It is configured by default since it is included in the dataset. ?
 
 - **Search Related Barcode**: checkbox, which allows you to search for the product by more than one barcode.
 
@@ -97,6 +97,17 @@ Inventory statuses allow the user to classify and manage stock units according t
 
 !!!info
     For more information on How to setup inventory statuses, visit [Inventory Status](../../../../../developer-guide/etendo-classic/concepts/inventory-status.md)
+
+To add (HERE OR IN THE INVENTORY STATUS EXISTING PAGE): 
+To create an Inventory Status from Etendo (ERP):
+
+1. Login to Etendo with the System Administrator role.
+
+2. Access the Inventory Status window.
+
+3. Create a new record and fill in the required information (Add what it is).
+
+The new status will be available in Etendo Mobile to be assigned to new or existing locators using the **Adjust** or **Relocate** options. In the latter case, the rules defined in the Movement Rules Configuration window, described below, are used.
 
 CHECK THIS SECTION 
 
