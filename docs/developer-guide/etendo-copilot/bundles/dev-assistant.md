@@ -672,7 +672,7 @@ It is possible to give an input with all the necessary information, or the assis
 
 - [API Call Tool](../available-tools/openapi-tool.md)
 
-- **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+- **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `CreateAndRegisterTable`, `RegisterFields`, `RegisterWindow`, `RegisterTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
 
 **Functionality**
