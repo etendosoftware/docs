@@ -14,7 +14,7 @@ tags:
 
 ## Overview
 
-This page provides an overview of the tools, functionality, and usage examples for various development assistants available in Etendo. **Dev Assistant** streamlines workflow management for developers by offering **specialized assistants** that simplify tasks such as creating buttons, windows, tabs and tables, Event Handlers, Jasper Reports, background processes, and more. These assistants are designed to enhance productivity and reduce complexity, making it easier for developers to efficiently build and manage different components within the Etendo platform.
+This page provides an overview of the tools, functionality, and usage examples of the various development agents available in Etendo. **Dev Assistant** streamlines workflow management for developers by offering specialized agents that simplify tasks such as creating buttons, windows, tabs and tables, event handlers, Jasper reports, background processes, and more. These agents are designed to improve productivity and reduce complexity, making it easier for developers to efficiently create and manage different components within the Etendo platform.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -38,7 +38,7 @@ Access to the information for each of the Assistants:
 
 [:material-file-document-outline: Jasper Report Creator](../bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Java Test Supervisor](../bundles/dev-assistant.md#java-test-supervisor){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Test Supervisor](../bundles/dev-assistant.md#test-supervisor){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Message Creator](../bundles/dev-assistant.md#message-creator){ .md-button .md-button--primary } <br>
 
@@ -58,7 +58,16 @@ Access to the information for each of the Assistants:
 
 ## Agents
 
-### Background Process Creator
+### Dev Assistant Supervisor
+The Development Agent streamlines workflow management for developers by offering specialized wizards that simplify tasks such as creating buttons, windows, tabs and tables, event handlers, Jasper reports, background processes, and more.
+
+**Functionality**
+
+The Development Agent acts as a built-in assistant that automates and accelerates repetitive tasks in an application's lifecycle, allowing you to focus on business logic and user experience. Its primary function is to eliminate "plumbing" and repetitive code: it automatically generates and configures your interface elements, binds event logic, builds reports, and orchestrates background processes, all without you having to manually write dozens of files or parameters. By integrating directly into your development environment, it ensures that each component complies with your project's conventions and minimizes configuration errors, thus optimizing your productivity and code quality.The Development Agent acts as a built-in assistant that automates and accelerates repetitive tasks in an application's lifecycle, allowing you to focus on business logic and user experience. Its primary function is to eliminate "plumbing" and repetitive code: it automatically generates and configures your interface elements, binds event logic, builds reports, and orchestrates background processes, all without you having to manually write dozens of files or parameters. By integrating directly into your development environment, it ensures that each component complies with your project's conventions and minimizes configuration errors, thus optimizing your productivity and code quality.
+
+**Team Members**
+
+##### Background Process Creator
 
 **Background Process Creator** is an assistant specialized in the automatic creation of Background Processes in Java. The assistant reads previously indexed code and uses examples of classes extending `DalBaseProcess` to build new Background Processes.
 
@@ -95,8 +104,7 @@ Background Process Creator generates Background Processes in Java using indexed 
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png)
 
 
-
-### Button Process Creator
+##### Button Process Creator
 
 The **Button Process Creator** simplifies the process of creating and registering buttons and process definitions in Etendo Classic. By automating the workflow through webhooks, it removes the need for manual configuration, ensuring that your processes and buttons are set up correctly and efficiently.
 
@@ -167,7 +175,7 @@ At this point, we will have the Java class of the button created along with the 
 ![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
 
 
-### Code Run
+##### Code Run
 
 **Code Run** is an assistant designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
 
@@ -230,7 +238,7 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
       def calculate_sum(start, end):
           return sum(range(start, end + 1))
 
-      # Calculate the sum of numbers between 1 and 100
+     # Calculate the sum of numbers between 1 and 100
       result = calculate_sum(1, 100)
       print(f'The sum of numbers between 1 and 100 is: {result}')
       ```
@@ -244,7 +252,7 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
       ```
       
 
-### Etendo Code Expert 
+##### Etendo Code Expert 
 
 **Etendo Code Expert** is an assistant designed to read indexed files and provide answers related to their content. 
 
@@ -276,7 +284,7 @@ This assistant is useful for avoiding the need to manually review all files. Als
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
 
-### Event Handler Creator
+##### Event Handler Creator
 
 This assistant is capable of creating **Event Handlers** in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
 
@@ -308,7 +316,7 @@ This assistant is capable of creating **Event Handlers** in Etendo Classic. You 
     ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH2.png)
 
 
-### Jasper Report Creator
+##### Jasper Report Creator
 
 The **Jasper Assistant** is designed to facilitate the creation, editing, and registration of reports within the Etendo platform. Using JasperReports, it allows developers to define the structure of the report, apply styles, manage parameters, and register the reports in the system to use in different modules.
 
@@ -398,87 +406,8 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 ![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
 
-### Test Supervisor
-A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
 
-**Functionality**
-
-This assistant receives an Etendo Module and will check for Java and Javascript files, determining which ones have tests and which ones do not. 
-
-- The assistant will generate a report with the results and will suggest the user to generate tests for the files without them. 
-- The assistant will generate the Java and React tests. 
-
-**Team Members**
-
-- #### Java Test Checker
-
-    This assistant receiving a Etendo Module, will check for Java files, determining which ones have tests and which ones do not. The assistant will generate a report with the results and will suggest the user to generate tests for the files without them.
-
-    !!!info
-        This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
-
-    **Tools**
-
-    - [Print Directory Tool](../available-tools/print-directory-tool.md)
-
-- #### Java Test Executor
-
-    This assistant is designed to execute tests for a Java Package, can be used to execute:
-
-    - All tests.
-    - Tests for a module.
-    - Tests for a single Java file.
-
-    This depends on the user input. The assistant will execute the tests and provide feedback to the user.
-
-    !!!info
-        This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
-
-    **Tools** 
-
-    - [Test Run Tool](../available-tools/test-run-tool.md)
-
-- #### Java Test Generator
-
-    This assistant generates tests for a single Java file. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
-    This assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
-
-    !!!info
-        This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
-
-    **Tools**
-
-    - [Read File Tool](../available-tools/read-file-tool.md)
-    - [Write File Tool](../available-tools/write-file-tool.md)
-    - [Test Run Tool](../available-tools/test-run-tool.md)
-
-
-- #### React Test Assistant
-
-    The **React Test Assistant** is a specialized agent for creating and managing React component tests using `TypeScript` and `@testing-library/react-native`. Its primary focus is generating high-quality test files for React and React Native components within **Etendo sub-application** modules.
-
-    Detects React components (`.tsx` or `.jsx` files) that lack corresponding test files in the `__tests__` directory. Analyzes component structure, props, and dependencies, generates Jest and React Testing Library test files and covers key scenarios such as rendering, user interactions, state changes, and edge cases.
-
-    !!!info
-        This assistant is designed to be used within the Etendo ecosystem as part of a **Test Supervisor** LangGraph agent. However, it can be used independently with limited functionality.
-
-    **Tools**
-
-    - [Read File Tool](../available-tools/read-file-tool.md)
-    - [Write File Tool](../available-tools/write-file-tool.md)
-
-
-**Usage Example**
-
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
-
-2. Open Copilot and select `Test Supervisor`, then ask to the assistant what you need to create. A suggested input could be `Generate tests for the module com.etendoerp.examplemodule`.
-
-3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
-
-
-
-### Message Creator
+##### Message Creator
 
 The **Message Creator** streamlines the process of creating and registering AD_Messages in Etendo Classic. By utilizing a webhook, it ensures efficient and error-free message creation while adhering to naming conventions and best practices. 
 
@@ -546,7 +475,7 @@ Notes:
     OBMessageUtils.messageBD("MODPREFIX_InvalidInput");
     ```
 
-### Module Creator
+##### Module Creator
 
 Etendo Classic allows you to create modules that provide additional functionality that can be deployed independently. These modules can range from additional reports to content packs (translations, chart of accounts, etc.).
 
@@ -638,7 +567,7 @@ You can confirm that the module has been created by navigating to the `Module` w
     For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
 
 
-### Module Translation Creator
+##### Module Translation Creator
 
 **Tools**
 
@@ -689,28 +618,7 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ./gradlew smartbuild -Dlocal=no
 ```
 
-
-### Refactor Assistant
-
-An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
-**Functionality**
-- The refactor assistant receives a file path.
-- The assistant will read the file.
-- The assistant may ask to it knowledge base for suggestions.
-- The assistant will write the file with the changes, overwriting the original file.
-- The assistant will read the file again to verify the changes.
-**Tools**
-- [Read File Tool](../available-tools/read-file-tool.md)
-- [Write File Tool](../available-tools/write-file-tool.md)
-**Usage Example**
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Refactor Assistant and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
-2. Open Copilot and select Refactor Assistant, then ask to the assistant what you need to refactor. For example, a suggested input could be `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
-3. The assistant will read the file, analyze it, and suggest changes.
-4. The assistant will write the file with the changes, overwriting the original file.
-
-
-
-### Reference Creator
+##### Reference Creator
 
 The **Reference Creator** creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
@@ -750,7 +658,7 @@ The **Reference Creator** is designed to facilitate the creation of references, 
     ```
 
 
-### Tables, Windows and Tabs Creator
+##### Tables, Windows and Tabs Creator
 
 !!!warning
     The Tables, windows and tabs assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
@@ -814,38 +722,7 @@ It is possible to give an input with all the necessary information, or the assis
 ./gradlew export.database --info
 ```
 
-### Unique Java Test Assistant
-This assistant is designed to generate tests for a single Java File or an Etendo Classic module. 
-**Functionality**
-- This assistant receives a Java file path or a module path, but its main functionality is to generate tests for a single Java File. 
-- In the case of a given Module, the assistant will check for file without tests and generate for them.
-- The assistant expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. 
-- The assistant will also generate the test methods for each method in the Java.
-- This assistant has a Knowledge Base with the Java classes of Etendo Classic.
-
-**Tools**
-
-- [Print Directory Tool](../available-tools/print-directory-tool.md)
-- [Read File Tool](../available-tools/read-file-tool.md)
-- [Write File Tool](../available-tools/write-file-tool.md)
-
-!!!warning Disclaimer
-    The test generators provided by this tool are designed to deliver an initial batch of test cases efficiently, based on the parameters provided. However, it is important to note that the generated tests serve as a starting point and may require additional work to:
-
-    - Fix potential errors in the generated test cases.
-    - Improve test coverage.
-    - Adapt them to the specific scenarios of your project or environment.
-
-    We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
-
-**Usage Example**
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Java Test Generator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
-2. Open Copilot and select Unique Java Test Assistant, then ask to the assistant what you need to create. A suggested input could be ```Generate tests for the Java file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java```.
-3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
-
-
-
-### Webhook Creator
+##### Webhook Creator
 
 **Webhook Creator** is an assistant designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.
 
@@ -878,4 +755,161 @@ This assistant simplifies webhook creation by automatically generating the neces
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
 
 
+### Test Supervisor
+A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
 
+**Functionality**
+
+This assistant receives an Etendo Module and will check for Java and Javascript files, determining which ones have tests and which ones do not. 
+
+- The assistant will generate a report with the results and will suggest the user to generate tests for the files without them. 
+- The assistant will generate the Java and React tests. 
+
+**Team Members**
+
+##### Java Test Checker
+
+    This assistant receiving a Etendo Module, will check for Java files, determining which ones have tests and which ones do not. The assistant will generate a report with the results and will suggest the user to generate tests for the files without them.
+
+    !!!info
+        This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+    **Tools**
+
+    - [Print Directory Tool](../available-tools/print-directory-tool.md)
+
+##### Java Test Executor
+
+    This assistant is designed to execute tests for a Java Package, can be used to execute:
+
+    - All tests.
+    - Tests for a module.
+    - Tests for a single Java file.
+
+    This depends on the user input. The assistant will execute the tests and provide feedback to the user.
+
+    !!!info
+        This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+    **Tools** 
+
+    - [Test Run Tool](../available-tools/test-run-tool.md)
+
+##### Java Test Generator
+
+    This assistant generates tests for a single Java file. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
+    This assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+    !!!info
+        This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+    **Tools**
+
+    - [Read File Tool](../available-tools/read-file-tool.md)
+    - [Write File Tool](../available-tools/write-file-tool.md)
+    - [Test Run Tool](../available-tools/test-run-tool.md)
+
+
+##### React Test Assistant
+
+    The **React Test Assistant** is a specialized agent for creating and managing React component tests using `TypeScript` and `@testing-library/react-native`. Its primary focus is generating high-quality test files for React and React Native components within **Etendo sub-application** modules.
+
+    Detects React components (`.tsx` or `.jsx` files) that lack corresponding test files in the `__tests__` directory. Analyzes component structure, props, and dependencies, generates Jest and React Testing Library test files and covers key scenarios such as rendering, user interactions, state changes, and edge cases.
+
+    !!!info
+        This assistant is designed to be used within the Etendo ecosystem as part of a **Test Supervisor** LangGraph agent. However, it can be used independently with limited functionality.
+
+    **Tools**
+
+    - [Read File Tool](../available-tools/read-file-tool.md)
+    - [Write File Tool](../available-tools/write-file-tool.md)
+
+
+**Usage Example**
+
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
+
+2. Open Copilot and select `Test Supervisor`, then ask to the assistant what you need to create. A suggested input could be `Generate tests for the module com.etendoerp.examplemodule`.
+
+3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+### Refactor Assistant
+
+An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
+
+**Functionality**
+
+- The refactor assistant receives a file path.
+- The assistant will read the file.
+- The assistant may ask to it knowledge base for suggestions.
+- The assistant will write the file with the changes, overwriting the original file.
+- The assistant will read the file again to verify the changes.
+
+**Tools**
+
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+
+**Usage Example**
+
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Refactor Assistant and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+2. Open Copilot and select Refactor Assistant, then ask to the assistant what you need to refactor. For example, a suggested input could be `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
+3. The assistant will read the file, analyze it, and suggest changes.
+4. The assistant will write the file with the changes, overwriting the original file.
+
+### Unique Java Test Assistant
+
+This assistant is designed to generate tests for a single Java File or an Etendo Classic module. 
+
+**Functionality**
+
+- This assistant receives a Java file path or a module path, but its main functionality is to generate tests for a single Java File. 
+- In the case of a given Module, the assistant will check for file without tests and generate for them.
+- The assistant expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. 
+- The assistant will also generate the test methods for each method in the Java.
+- This assistant has a Knowledge Base with the Java classes of Etendo Classic.
+
+**Tools**
+
+- [Print Directory Tool](../available-tools/print-directory-tool.md)
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+
+!!!warning Disclaimer
+    The test generators provided by this tool are designed to deliver an initial batch of test cases efficiently, based on the parameters provided. However, it is important to note that the generated tests serve as a starting point and may require additional work to:
+
+    - Fix potential errors in the generated test cases.
+    - Improve test coverage.
+    - Adapt them to the specific scenarios of your project or environment.
+
+    We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
+
+**Usage Example**
+
+1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Java Test Generator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+2. Open Copilot and select Unique Java Test Assistant, then ask to the assistant what you need to create. A suggested input could be ```Generate tests for the Java file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java```.
+3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+### Client/Organization Initializer
+
+This agent helps the user initialize clients or organizations. 
+
+**Functionality**
+
+- Interactively gather all required information to create a new client or organization.  
+- Execute the creation of the client or organization and automatically validate successful completion.  
+- After creating a **client**:  
+    - Instruct the user to log in using the newly created client’s administrator credentials.  
+    - Prompt the user to configure this wizard’s access for the client.  
+    - Request the creation of organizations under that client.  
+- After creating an **organization**:  
+    - Instruct the user to log in with the administrator credentials to continue setting up the organization.  
+- Handle initialization failures by instructing the user to verify:  
+    - That they are using the correct role and organization.  
+    - Their current permissions (only a System Administrator can create clients; a Client Administrator can only create organizations).  
+- Automatically infer the user’s host and credentials from the session context, avoiding explicit requests for these details.    
+
+**Tools**
+
+- [Organization Initial Setup Tool](../available-tools/org-init-tool.md)
+- [Client Initial Setup](../available-tools/client-init-tool.md)

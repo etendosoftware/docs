@@ -556,6 +556,8 @@ nav:
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
+        - Client Initial Setup: developer-guide/etendo-copilot/available-tools/client-init-tool.md
+        - Organization Initial Setup Tool: developer-guide/etendo-copilot/available-tools/org-init-tool.md
       - How to Guides:
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
