@@ -66,6 +66,9 @@ extra_css:
 
 
 markdown_extensions:
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - abbr
   - attr_list
   - footnotes
@@ -394,6 +397,7 @@ nav:
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
 #        - How To Configure Log: developer-guide/etendo-classic/how-to-guides/How_To_Configure_Log.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
+        - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md
         - How to Create a Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout.md
         - How to Create a Callout that Extends from Another Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout.md
@@ -505,6 +509,7 @@ nav:
           - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
           - Dockerized Tomcat Service: developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md
           - Dynamic App: developer-guide/etendo-classic/bundles/platform/dynamic-app.md
+          - Etendo RX: developer-guide/etendo-classic/bundles/platform/etendo-rx.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
@@ -558,6 +563,7 @@ nav:
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
         - How to Export Tools and Assistants: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
@@ -583,23 +589,23 @@ nav:
           - Etendo Testing Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes.md
         - Bundles:
           - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
+          - Etendo BI Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
+          - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
           - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
-          - Warehouse Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md
+          - Procurement Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md
           - Production Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md
           - Sales Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md
-          - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
           - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md
-          - Procurement Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes.md
-          - Etendo BI Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
+          - Warehouse Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md
         - Translation Bundles:
           - Essentials Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes.md
+          - Etendo BI Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes.md
+          - Financial Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes.md
           - Platform Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes.md
-          - Warehouse Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes.md
+          - Procurement Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes.md
           - Production Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes.md
           - Sales Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes.md
-          - Financial Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes.md
-          - Procurement Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes.md
-          - Etendo BI Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes.md
+          - Warehouse Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes.md
         - ISO image: whats-new/release-notes/etendo-classic/iso.md
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:

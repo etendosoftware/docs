@@ -1,5 +1,5 @@
 ---
-title: Etendo  Gradle  Plugin 
+title: Etendo Gradle Plugin 
 tags: 
   - Gradle
   - Tasks
@@ -35,19 +35,18 @@ You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 
 ## Common Gradle flags
 
-| Flag                   | Description                                          |
-| ---------------------- | ---------------------------------------------------- |
-| --offline              | To execute Gradle without internet connection.       |
-| --stop                 | To stop all Gradle daemons.                          |
-| --no-daemon            | To execute a Gradle task without launching a daemon. |
-| --info                 | To give more information in the task execution.      |
-| --refresh-dependencies | Will force download of dependencies.                 |
+| Flag                     | Description                                          |
+| ------------------------ | ---------------------------------------------------- |
+| `--offline`              | To execute Gradle without internet connection.       |
+| `--stop`                 | To stop all Gradle daemons.                          |
+| `--no-daemon`            | To execute a Gradle task without launching a daemon. |
+| `--info`                 | To give more information in the task execution.      |
+| `--refresh-dependencies` | Will force download of dependencies.                 |
 
 
-## Etendo plugin
+## Etendo Plugin
 
-
-Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) or use `lastest.release` to resolve the latest version.
+Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md).
 
 ```groovy title="build.gradle"
 plugins {
@@ -55,7 +54,7 @@ plugins {
 }
 ```
 
-## Plugin configuration
+## Plugin Configuration
 
 The plugin configuration need to be declared in the *etendo block*. <br>
 In the following sections, you can find all the flags or variables available to set up and a brief description of each one.
@@ -147,7 +146,7 @@ etendo {
 
 ```
 
-## Common Gradle tasks
+## Common Gradle Tasks
 
 !!!danger
     Since Etendo Classic 25Q1 all Gradle tasks with Java versions below 17 are not allowed. To add support for previous versions, the new flag `java.version` has been added.
@@ -165,15 +164,11 @@ etendo {
     
     ```
   
-    | Command line parameters    | Description                                               |                       
-    |  -------------------       | ------------------------------------                      |
-    | `-PforceDefaultProps=true` | Recreates the default properties file from the template.  |
-    | `-PforceBackupProps=true`  | Recreates the backup.properties file from the template.   |
-    | `-PforceQuartzProps=true`  | Recreates the quartz.properties file from the template.   |
-
-
-
-
+    | Command line parameters    | Description                                              |                       
+    | -------------------------- | -------------------------------------------------------- |
+    | `-PforceDefaultProps=true` | Recreates the default properties file from the template. |
+    | `-PforceBackupProps=true`  | Recreates the backup.properties file from the template.  |
+    | `-PforceQuartzProps=true`  | Recreates the quartz.properties file from the template.  |
 
 - Creates the properties files from the templates in `/config` folder. The *setup* tasks depend on this task.
     ``` bash title="Terminal"
@@ -194,9 +189,9 @@ etendo {
         
     ``` 
     
-    | Command line parameter         | Description                                                                                                            |          
-    |  -------------------           | ------------------------------------                                                                                     |
-    | `PignoreConsistency=true`      | Flag used to ignore the consistency verification (verifies the versions between the local modules and the installed ones)|
+    | Command line parameter    | Description                                                                                                               |          
+    |  ------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+    | `PignoreConsistency=true` | Flag used to ignore the consistency verification (verifies the versions between the local modules and the installed ones) |
     
 
 - Deletes all the Java Classes and recompiles them. 
@@ -267,10 +262,10 @@ etendo {
                       
     ```  
 
-    | Command line parameters    | Description                                               |                       
-    |  -------------------       | ------------------------------------                      |
-    | `-Ppkg=<package name>`     | The name of the module.                                   |
-    | `-Prepo=<repository name>` | The name of the repository.                               |
+    | Command line parameters    | Description                 |                       
+    | -------------------------- | --------------------------- |
+    | `-Ppkg=<package name>`     | The name of the module.     |
+    | `-Prepo=<repository name>` | The name of the repository. |
 
 
 
@@ -282,11 +277,10 @@ etendo {
                             
     ``` 
 
-    |   Command Line Parameters         | Description| 
-    |  :------------------------------- | :--- |
-    | `-Ppkg=<packagename>`     | **Required** The name of the module.                                                |
-    | `-Precursive=true    `     | This trigger the republication of all the modules which depends on the module being published. By default false.|
-    | `-PupdateLeaf=true   `     | This updates automatically the version of the project beign published.By default false.|
+    | Command Line Parameters | Description                                                                                                        | 
+    | :---------------------- | :----------------------------------------------------------------------------------------------------------------- |
+    | `-Ppkg=<packagename>`   | **Required** The name of the module.                                                                               |
+    | `-PupdateLeaf=true   `  | This updates automatically the version of the project being published. By default `false`.                         |
 
   
   
@@ -296,13 +290,13 @@ etendo {
                               
     ``` 
     
-    | Command line parameter     | Description                                                                         |                       
-    |  -------------------       | ------------------------------------                                                |
-    | `-Ppkg=<modulename>`       | The javapackage of the source module to uninstall.                                  |
+    | Command line parameter | Description                                        |                       
+    |  --------------------- | -------------------------------------------------- |
+    | `-Ppkg=<modulename>`   | The javapackage of the source module to uninstall. |
 
 
 
-## Internal developer tasks
+## Internal Developer Tasks
 
 - Used to clone all the git submodules of a module extension (bundle). The module `build.gradle` should contain the property
       ``` bash title="Terminal"
@@ -311,59 +305,58 @@ etendo {
       ```
     
 
-
       ```groovy  title="build.gradle"
       ext.defaultExtensionModules = [
-          'git@bitbucket.org:example1.git',
-          'git@bitbucket.org:example2.git'
+          'git@github.com:example1.git',
+          'git@github.com:example2.git'
         ]
       ```
 
 
-
-      | Command line parameter                 | Description                                                  |                       
-      |  -------------------                   | ------------------------------------                         |
-      | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
-
+      | Command line parameter | Description                          |                       
+      |  --------------------- | ------------------------------------ |
+      | `-Ppkg=<package name>` | **Required** The name of the bundle  |
 
 
-- Creates all the `build.gradle` files for each module using the database from AD_MODULExml.
+
+- Creates all the `build.gradle` files for each module using the database from `AD_MODULE.xml`.
     ``` bash title="Terminal"
     ./gradlew createModuleBuild
                                           
     ```
 
-    | Command line parameter                 | Description                                                  |                       
-    |  -------------------                   | ------------------------------------                         |
-    | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
-    | `-Prepo=<repository name>`             | **Required** The name of the repository                      |
-    | `-Pbundle=<bundle package name>`       | The name of the bundle                                       |
-    | `--Ppkg=all`                           |Creates all the `build.gradle` files for each module, each `build.gradle` file will contain the dependencies between projects (in the dependencies block).                |
+    | Command line parameter           | Description                             |                       
+    | -------------------------------- | --------------------------------------- |
+    | `-Ppkg=<package name>`           | **Required** The name of the module     |
+    | `-Prepo=<repository name>`       | **Required** The name of the repository |
+    | `-Pbundle=<bundle package name>` | The name of the bundle                  |
+    | `-Ppkg=all`                      | Creates all the `build.gradle` files for each module, each `build.gradle` file will contain the dependencies between projects (in the dependencies block). |
   
       
 
 - Parameters to override the default core group, name and version.
 
-    | Command line parameters                | Description                                                  |                       
-    |  -------------------                   | ------------------------------------                         |
-    | `-PcoreGroup=<core group>`             | The core group name                                          |
-    | `-PcoreName=<core name>`               | The core name                                                |
-    | `-PcoreVersion=<core version>`         | The core version                                             |
+    | Command line parameters        | Description         |                       
+    |  -------------------           | ------------------- |
+    | `-PcoreGroup=<core group>`     | The core group name |
+    | `-PcoreName=<core name>`       | The core name       |
+    | `-PcoreVersion=<core version>` | The core version    |
 
 
      
-- Parameters to override the default repository. Publish all the modules located in the source modules directory.
+- Parameters to override the default repository. Publish all the modules of a bundle in the source modules directory.
     ``` bash title="Terminal"
     ./gradlew publishAll
                                               
     ```
 
-    | Command line parameters                 | Description                                                  |                       
-    |  -------------------                    | ------------------------------------                         |
-    | `-PupdateLeaf=true`                     | This updates automatically the version of all the project beign published. By defaul false.|
-    | `-Pupdate=<mayor, minor, patch>`        | Used to specify which part of the version will be updated. By default patch.               |
-    | `-PpushAndTag=true`                     | Used to specify if the modules published should push the changes and create a tag in the git repository. By default false.|
-    | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By default false.|
+    | Command line parameters          | Description                                                                                                                  |
+    |  ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+    | `-Ppkg=<bundle package name>`    | **Required** The package of the bundle                                                                                       |
+    | `-PupdateLeaf=true`              | This updates automatically the version of all the project beign published. By default `false`.                               |
+    | `-Pupdate=<major, minor, patch>` | Used to specify which part of the version will be updated. By default `patch`.                                               |
+    | `-PpushAndTag=true`              | Used to specify if the modules published should push the changes and create a tag in the git repository. By default `false`. |
+    | `-PpushAll=true`                 | Used to specify if all the modules should run the push and tag. By default `false`.                                          |
         
 
 - Task used to push and tag the modules' changes.
@@ -372,9 +365,9 @@ etendo {
                                                           
     ```
 
-    | Command line parameters                 | Description                                                  |                       
-    |  -------------------                    | ------------------------------------                         |
-    | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By defaul false.|
+    | Command line parameters | Description                                                                         |
+    | ----------------------- | ----------------------------------------------------------------------------------- |
+    | `-PpushAll=true`        | Used to specify if all the modules should run the push and tag. By default `false`. |
         
  
 
@@ -388,48 +381,47 @@ etendo {
         If you put a wrong version, you have to revert the changes manually.
 
 
-    | Command line parameters                 | Description                                                  |                       
-    |  -------------------                    | ------------------------------------                         |
-    | `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
-    | `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
-    | `-PlowerBoundInclusive=<true or false>` | (Default false)|
-    | `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`|
-    | `-PupperBoundInclusive=<true or false>` | (Default false)|
-    | `-PexactVersion=<version>`              | Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
+    | Command line parameters                 | Description                                                                                                                        |
+    |  -------------------                    | ---------------------------------------------------------------------------------------------------------------------------------- |
+    | `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`                              |
+    | `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`                                                                             |
+    | `-PlowerBoundInclusive=<true or false>` | By default `false`.                                                                                                                |
+    | `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`                                                                             |
+    | `-PupperBoundInclusive=<true or false>` | By default `false`.                                                                                                                |
+    | `-PexactVersion=<version>`              | Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"` |
 
 
 
-## Ant tasks
+## Ant Tasks
 
 Most of [ant build tasks](http://wiki.openbravo.com/wiki/Development_Build_Tasks#Detailed_Build_Tasks){target="_blank"} previously used can be run with Gradle:
 
 ```bash title="Terminal"
-
 ./gradlew <ant task> [params]
 ```
 
 Except for some commands:
 
-|Old Command| New Command| 
-|---|---| 
-|clean| antClean|
-|setup|antSetup|
-|init |antInit|
-|install.source|antInstall|
-|war|antWar|
+| Old Command      | New Command   | 
+| ---------------- | ------------- | 
+| `clean`          | `antClean`    |
+| `setup`          | `antSetup`    |
+| `init`           | `antInit`     |
+| `install.source` | `antInstall`  |
+| `war`            | `antWar`      |
 
 
-## Conflict resolution
+## Conflict Resolution
 
 !!!note
-    Etendo makes use of the [Conflict Resolution Strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} offered by GRADLE.
+    Etendo makes use of the [Conflict Resolution Strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} offered by Gradle.
 
 This approach is used to identify conflict between Etendo artifacts published in a repository.
 
 For example, when you make use of an Etendo module, which depends on the Etendo core
 
 ```groovy title="build.gradle"
-group          = 'com.etendo'
+group          = 'com.etendoerp'
 ext.artifact   = "moduleCextract"
 version        = '1.0.1'
 dependencies {
@@ -459,13 +451,13 @@ Depending on the type of conflict, if the problem is with the Etendo Core, then 
     ```
 
 
-## Version consistency
+## Version Consistency
 The version consistency approach verifies that an extracted Etendo JAR artifact is consistent with the installed one (Equal version).
 
 When a new Etendo JAR dependency is added or the version is updated, a `update.database` is needed to run before executing any compilation task (smartbuild, compile.complete, etc).
 You can force the compilation tasks by adding to the Etendo plugin extension the ignore flag
 
-!!!warning "These section explains how to ingore the consistency verification. Use this approach only if there are no conflicts between versions. "
+!!!warning "These section explains how to ingore the consistency verification. Use this approach only if there are no conflicts between versions."
     ``` groovy
     etendo {
       ignoreConsistencyVerification = true 
@@ -483,7 +475,7 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
 
 
 
-## Uninstall modules
+## Uninstall Modules
 
 === ":octicons-package-16: Source Modules"
 
@@ -510,7 +502,7 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
     }
     ```
 
-    If the dependency belongs to a `build.gradl` of a source module, it may be downloaded when the `javaCompile` task is executed. You can also make use of gradle exclude rules.
+    If the dependency belongs to a `build.gradle` of a source module, it may be downloaded when the `javaCompile` task is executed. You can also make use of gradle exclude rules.
 
     !!! warning
         When you make use of exclude rules in a custom source module, the `pom.xml` can be affected when you publish a new version.

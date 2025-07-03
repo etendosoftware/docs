@@ -1,8 +1,8 @@
 ---
 tags:
-  - Live Builds
+  - Builds
   - Livebuilds
-  - Etendo Classic
+  - Etendo
   - Real-time Testing
   - Postgres
   - Oracle
@@ -12,26 +12,42 @@ hide:
     - navigation
     - toc
 ---
-![cover-live-builds.png](../assets/live-builds/overview/cover-live-builds.png){align="right" }
-#
-## Explore and Experiment with Live Builds in Etendo Classic
 
-Are you eager to test in the Etendo Classic environment? 
+![alt text](../assets/live-builds/overview/livebuilds.png){ width=250 align="right"}
 
-The Live Builds section offers you a versatile platform to test new concepts, innovative solutions and analyze the behavior of Etendo projects in real time. Whether you are fine-tuning the efficiency of your application or exploring new features, Live Builds is your ally for meaningful testing.
+# Etendo Test Environments 
 
-Step into a world of exploration using either Postgres or Oracle as database managers.
+<div class="grid cards" markdown>
 
-This page holds live testing instances. These live builds are updated and reset once per day at 03:30 UTC.
+-   :material-test-tube:{ .lg .middle } **Etendo with Supported Bundles Installed**
 
-[ :simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
+    For detailed information about the installed bundles, please visit the [Etendo Marketplace](https://marketplace.etendo.cloud/#/modules?page=1&partner=434C406CDC664DD38BF4CDABBD72BAE2){ target="blank"}.
 
-[:simple-esbuild: Etendo 24.4.x - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+    ---
 
-??? warning "Oracle"
-    If you need to test on Oracle, please feel free to [contact us](../help-and-support/overview.md).
+    - [Etendo 24.X + Bundles](https://demo-24.etendo.cloud/etendo/security/Login){ target="blank"} 
+    - [Etendo 25.X + Bundles](https://demo-25.etendo.cloud/etendo/security/Login){ target="blank"} 
 
-??? tip "Credentials"
+-   :material-test-tube:{ .lg .middle } **Etendo**
+    
+    Etendo environments supported without any modules installed.
+
+    ---
+
+    - [Etendo 24.X](https://livebuild-24.labs.etendo.cloud/etendo/security/Login){ target="blank"} 
+    - [Etendo 25.X](https://livebuild-25.labs.etendo.cloud/etendo/security/Login){ target="blank"} 
+
+</div>
+
+[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="blank"} _Here you can check the Etendo servers status._
+
+!!! tip "Credentials"
     The default access credentials are: <br> 
-      **Username:** admin <br>
-      **Password:** admin <br>
+        **Username:** admin <br>
+        **Password:** admin <br>
+
+!!! note "These live builds are refreshed and reset every day at 9:00 PM UTC."
+    
+
+!!! warning "If your testing requirements include the Oracle database, please reach out to our [support team](../help-and-support/support-service.md) for further assistance and access to Oracle-based environments."
+

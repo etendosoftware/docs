@@ -10,7 +10,7 @@ tags:
 ## Template to report bugs
 
 !!! warning
-    *This structure should always be respected to report a bug in [Etendo service desk](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*
+    *This structure should always be respected to report a bug in [Etendo Help Center](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*
 
 !!! sucess
     Remember to reproduce the error beforehand in a clean environment. Etendo version must be supported  [Etendo Versions](../whats-new/release-notes/etendo-classic/release-notes.md)
