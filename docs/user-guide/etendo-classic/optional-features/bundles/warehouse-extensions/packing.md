@@ -1,5 +1,5 @@
 ---
-title: Warehouse Extensions Bundle
+title: Packing
 tags: 
     - Packing
     - Goods Shipment
@@ -50,7 +50,7 @@ In Etendo, it is possible to calculate the **weight of the packing**. To do this
     
     ![packing5](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing5.png)
 
-    If the above message is shown, the UOM must be configured in both the OrganizatiOn and in each product. Even if each product has a UOM configured, when packing it will take the UOM defined in the Organization and the corresponding conversions will be made if necessary.
+    If the above message is shown, the UOM must be configured in both the Organization and in each product. Even if each product has a UOM configured, when packing it will take the UOM defined in the Organization and the corresponding conversions will be made if necessary.
 
 
 ## Packing Window
@@ -131,7 +131,7 @@ Fields to note:
     !!! info
         
         - If the user starts the process from the **Goods Shipment** window, this button becomes available once the document is in **Completed** status and the **Packing Required** field is checked.
-        - If the process is innitiated from the **Packing** window, this button is visible once the Goods Shipment is created and under Completed status allowing the user to proceed with packing the products.
+        - If the process is initiated from the **Packing** window, this button is visible once the Goods Shipment is created and under Completed status allowing the user to proceed with packing the products.
 
     When pressing the Pack button:
 

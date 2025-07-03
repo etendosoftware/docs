@@ -1,5 +1,5 @@
 ---
-title: Warehouse Extensions Bundle
+title: Picking
 tags: 
     - Picking lists
     - Direct picking
@@ -49,7 +49,7 @@ In order to generate picking lists, some configuration is needed:
 
     ![picking1.1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking1.1.png)
 
-    1. **Picking List**: Used for **Direct Picking List to Customer** picking list type. By sing this document type the system creates the shipments from the picking location. When they are completed the Goods Shipment is completed.
+    1. **Picking List**: Used for **Direct Picking List to Customer** picking list type. By using this document type the system creates the shipments from the picking location. When they are completed the Goods Shipment is completed.
 
     2. **Picking List outbound**: Used for **Outbound Picking List**, therefore the **Use Outbound location** flag is set as **Yes** by default. This means that a Goods Movement needs to be created to move the goods from goods' storage bin to outbound storage bin. In this case, a storage bin of the warehouse needs to be defined as **Outbound**.
 
@@ -155,7 +155,7 @@ In order to generate picking lists, some configuration is needed:
     ### From Warehouse Picking List window
     :material-menu: `Application` > `warehouse Management` > `Transactions` > `Warehouse Picking List`
 
-    From the **Warehouse Picking List** window, it is possible to only **create Outbound Picking Lists** but it not possible to manually create **Direct Picking Lists**. The last mentioned type of list is generated from the Sales Order window and the process can be finished from the Warehouse Picking List window. 
+    From the **Warehouse Picking List** window, it is possible to only **create Outbound Picking Lists** but it is not possible to manually create **Direct Picking Lists**. The last mentioned type of list is generated from the Sales Order window and the process can be finished from the Warehouse Picking List window. 
 
     === "**Outbound Picking List**"
         
@@ -173,7 +173,7 @@ In order to generate picking lists, some configuration is needed:
         - **Document No.**: picking identification number is generated automatically.
         - **Document Type**: it determines document sequence and processing rules.
         - **Outbound Storage Bin**: it is necessary to set up an outbound storage bin in each warehouse that ships. This bin is defined in the **Warehouse and Storage Bins** window by selecting a bin with the type **Outbound**.
-        - **Document Dat**e**: date when the Picking List is done and is expected to be completed.
+        - **Document Date**: date when the Picking List is done and is expected to be completed.
         - **Description**: an optional description limited to 255 characters.
         - **Date printed**: indicates the Date that a document was printed. 
         - **User/contact**: the User identifies a unique user in the system. This could be an internal user or a business partner contact. 
@@ -293,7 +293,7 @@ When the sales orders are created, the Reservation Status is **Not Reserved**.
 !!!info
     Once the Picking process is complete, the user may continue with the Packing process. 
     
-    For more information visit: [Packing](../../bundles/warehouse-extensions/packing.md).
+    For more information visit: [Packing](packing.md).
 
 
 ---
