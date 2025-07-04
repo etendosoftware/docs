@@ -33,8 +33,8 @@ With Etendo Copilot, it is possible to:
 
 The Assistant window allows you to define and configure assistants. The capabilities of an agent are:
 
-- **Text Generation**: The agent can answer questions or retrieve results from his knowledge base from the LLM model(general knowledge).Those models are able to generate text based on the input prompt, so if we specify in the prompt.
-- **Retrieval**: The agent can be configured with a custom knowledge base, which can be used to retrieve information. Its usefull when there is documentation or information that the agent can use to answer questions.
+- **Text Generation**: The agent can answer questions or retrieve results from his knowledge base from the LLM model (general knowledge). Those models are able to generate text based on the input prompt.
+- **Retrieval**: The agent can be configured with a custom knowledge base, which can be used to retrieve information. Its useful when there is documentation or information that the agent can use to answer questions.
 - **Tools**: The agent can use tools to perform specific tasks. The tools are defined in the [Skill/Tool window](#skilltool-window).
 - **Receive attachments**: Both agents and tools can utilize files in multiple formats.
 - **Read images**: There are models can receive images as input, and work directly with them. This feature is only available for the Multi-Model Agent type.
@@ -62,7 +62,7 @@ Fields to note:
         This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured. 
     
     !!! info
-        If the **App type**  `Multi-Model Agent` are chosen, the tabs shows are  and [Skill and Tools](#skills-and-tools-tab). If the `LangGraph` option is chosen, the [Skill and Tools](#skills-and-tools-tab) and [Team Members](#team-members-tab) tabs are shown.
+        If the **App type**  `Multi-Model Agent` are chosen, the tabs shows are [knowledge](#knowledge-tab) and  [Skill and Tools](#skills-and-tools-tab). If the `LangGraph` option is chosen, the [Skill and Tools](#skills-and-tools-tab) and [Team Members](#team-members-tab) tabs are shown.
 
 - **Sync Status**: This read-only field indicates the current status of the agent.
     - `Pending synchronization` the agent will switch to this status at any change, either in the header or in the tabs.
@@ -142,7 +142,7 @@ Fields to note:
     To enter new tools, you must do it from the [Skill/Tool window](#skilltool-window).
 
 ### Team Members Tab
-In this tab you define the agents members of the team, only present if you select the type of App `LangGraph`. Remember that LangGraph works as a manager of other agents, able to delegate specific tasks.
+In this tab you define the agents' members of the team, only present if you select the type of App `LangGraph`. Remember that LangGraph works as a manager of other agents, able to delegate specific tasks.
 
 ![](../../assets/user-guide/etendo-copilot/setup/team-members-tab.png)
 

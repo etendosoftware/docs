@@ -100,8 +100,8 @@ Currently, Copilot supports the following providers:
 
 - **OpenAI**: This provider is the default one and is the most used. It is the most versatile and has the best performance in most cases.
 - **Anthropic**: This provider is specialized in code generation. It is the best option for code-related tasks.
-- **Deepseek**: This provider is for generaral tasks like OpenAI, but cheaper.
-- **Ollama (Self-hosted models)**: This provider is for users that have their own models running in their own infrastructure. The support for this provider is in experimental phase. For more information visit, [How to Use and RunSelf Hosted Models with Ollama](how-to-use-run-self-hosted-models-with-ollama.md) guide.
+- **Deepseek**: This provider is for general tasks like OpenAI, but cheaper.
+- **Ovider is for users that have their own models running in their own infrastructure. The support for this provider is in experimental phase. For more information visit, [How to Use and Run Self Hosted Models with Ollama](how-to-use-run-self-hosted-models-with-ollama.md) guide.llama (Self-hosted models)**: This pro
 
 ### Default Model
 The default model for Etendo Copilot is `gpt-4.1` from **OpenAI**. This model is selected automatically if the agent hasn't a specific model selected.
@@ -265,7 +265,7 @@ The steps to allow an agent to interact with Etendo Classic are:
 When the OpenAPI Specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`, the agent will automatically generate tools for each method and endpoint of the API. These tools can be used to make requests to the API without the need to configure the API Call Tool. The agent will have a tool for each method and endpoint of the API. This functionality is currently in the experimental phase.
 
 
-### Example of copilot interaction with Etendo
+### Example of Copilot Interaction with Etendo
 For example, we will create an agent to create Products in Etendo Classic, using an already defined flow with the endpoints needed to create Products, Product Categories and Prices. 
 
 1. First, we will create a new Knowledge Base File of type `OpenAPI Flow Specification` and select the flow `Product Flow`.
