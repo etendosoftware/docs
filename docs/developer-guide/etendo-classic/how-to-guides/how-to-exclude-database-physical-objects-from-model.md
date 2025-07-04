@@ -28,12 +28,14 @@ Objects are excluded through a file called `excludeFilter.xml`. This file should
         <excludedTable name="TEST_TABLE"/>
         <excludedView name="TEST_VIEW"/>
         <excludedFunction name="TEST_FUNCTION"/>
+        <excludeColumn name="TEST_COLUMN">
+        <excludeConstraint name="TEST_CONSTRAINT">
         <excludedTrigger name="TEST_TRIGGER"/>
         <excludedSequence name="TEST\_%"/>
       </vector>
 ```
 
-This file will exclude the table **TEST_TABLE**, the view **TEST_VIEW**, the function **TEST_FUNCTION**, and the trigger **TEST_TRIGGER** from the model, and therefore they will be neither exported nor removed, nor modified in any way during the normal database management tasks (`update.database` and `export.database`).
+This file will exclude the table **TEST_TABLE**, the view **TEST_VIEW**, the function **TEST_FUNCTION**, the column **TEST_COLUMN**, the constaint **TEST_CONSTRAINT** and the trigger **TEST_TRIGGER** from the model, and therefore they will be neither exported nor removed, nor modified in any way during the normal database management tasks (`update.database` and `export.database`).
 
 The use of [SQL Wildcards](https://www.w3schools.com/sql/sql_wildcards.asp){target="\_blank"} is supported, so the same treatment will be done to all sequences whose name begins with **TEST_**. All exclusions whose name contain the `%` character will be treated as wildcards. When defining an exclusion using a wildcard, remember to escape with a backslash the `_` characters, unless it is meant to be used as a substitute for any single character.
 
