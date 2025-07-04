@@ -12,48 +12,41 @@ tags:
 
 ## Overview
 
-This article explains how to create a new agent in Etendo Copilot from scratch. The agent will be able to interact with the user and provide responses based on the user's input. This article will guide you through the process of creating a new agent, adding a knowledge base, and selecting a model, etc. The complete explanation of the windows used in this guide can be found in the [Setup and Usage](../../../user-guide/etendo-copilot/setup-and-usage.md) article.
+This article explains how to create a new agent in Etendo Copilot from scratch. The agent will be able to interact with the user and provide responses based on the user's input. This article will guide you through the process of creating a new agent, adding a knowledge base, and selecting a model.
+
+The complete explanation of the windows used in this guide can be found in the [Setup and Usage](../../../user-guide/etendo-copilot/setup-and-usage.md) article.
 
 ## Creating a Basic Response Agent
- :material-menu: `Application` > `Service` > `Copilot` > `Assistant`
- 
- The Assistant window allows you to define and configure assistants:
- 
- ![](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
- 
- - **Name**: Assistant name
- - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or other languages, in general, the English language is recommended.
- - **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case. 
-  - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
- 
- - **App Type**:
- 
-     - **Multi-Model Agent**
-         This type of assistant can use multiple models of different providers, such as OpenAI, Anthropic, etc. 
-         This is the most recommended option to define a simple agent. The Agents can have a knowledge base filled with files, and can use tools to do specific tasks. The agent will strategically use the tools and knowledge base to provide the best possible response.
- 
-     -  **LangGraph**
- 
-         This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured.
- 
- 
+:material-menu: `Application` > `Service` > `Copilot` > `Assistant`
+
+The Assistant window allows you to define and configure assistants.
+
+Some of the main fields to be completed are: 
+
+- **Name**
+- **Prompt**
+- **App Type**:
+
+    - **Multi-Model Agent**
+    - **LangGraph**
+
+- **Model**: Dropdown with the models available, such as OpenAI, Anthropic, etc. Go to section [Which model should I choose?](#which-model-should-i-choose) for more information.
+
 !!!info
-    The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@
+    The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@ 
     These variables will be replaced with the values defined in the properties.
-    If the App types Open AI Assistant or Langchain Agent are chosen, the tabs shows are [Knowledge](#knowledge-tab) and [Skill and Tools](#skills-and-tools-tab). If the LangGraph option is chosen, the [Team Members tab](#team-members-tab) is shown.
 
-### Advanced settings
-  - **Model**: Dropdown with the models available, such as OpenAI, Anthropic, etc. Go to section [Which model should I choose?](#which-model-should-i-choose) for more information.
-  - **Search Results Qty.**: This option allows to set the number of results that the agent will return when using the `Knowledge Base Search` tool. The default value is 4, but it can be changed to any value. This value is useful when the agent has a large knowledge base and you want to increase/decrease the number of results returned by the agent.
+!!!note 
+    For more information on what each field is used for, visit the [Setup and Usage - Agents](../../../user-guide/etendo-copilot/setup-and-usage.md#header) guide.
 
+### Agent Definition Example
 
-### Example
-For example, we will create a new agent called **Task Definition Agent** to help users define an issue with the mandatory format for his team. The purpose of the agent is to receive a description of the task and return the task definition with the mandatory format. We will create a new agent with the following information:
+For example, to create a new agent called **Task Definition Agent** to help users define an issue with the mandatory format for his team. The purpose of the agent is to receive a description of the task and return the task definition with the mandatory format. We will create a new agent with the following information:
 
 - **Name**: Task Definition Agent
 - **Description**: This agent helps users define a task description with the mandatory format for his team.
 - **Model**: No need to select a specific model, the [default](#default-model) model will be used.
-- **Temperature**: Set to `0.5` because we want to have some "creativity" in the responses.
+- **Temperature**: Set to `0.5` because we want to have low **creativity** in the responses.
 - **Module**: This agent will not be exported to a module.
 - **Prompt**:
     
@@ -94,7 +87,8 @@ For example, we will create a new agent called **Task Definition Agent** to help
     Translate everything to English, because the issues must be in English.
     ```
 
-After saving the agent, the system will automatically grant access to it. Open the Copilot Chat with the button `✨Copilot` and select the agent `Task definition agent`. You can start interacting with the agent.
+After saving the agent, the system will automatically grant access to it. Open the Copilot Chat with the button `✨Copilot` and select the agent `Task Definition Agent`. You can start interacting with the agent.
+
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/basic-agent.png)
 
 !!! tip
@@ -112,14 +106,23 @@ Currently, Copilot supports the following providers:
 ### Default Model
 The default model for Etendo Copilot is `gpt-4.1` from **OpenAI**. This model is selected automatically if the agent hasn't a specific model selected.
 
-### What Model are Available? - AI Models window
-Etendo Copilot provides a Window where you can see the available models and their details. This window is populated when synchronizing the models. Additionally, if the provider offers models that are not present in this list, they can be added manually. More information here [AI Models](../../../user-guide/etendo-copilot/setup-and-usage.md#ai-models)
+### AI Models Window - What Model are Available?
+Etendo Copilot provides a Window where you can see the available models and their details. This window is populated when synchronizing the models. Additionally, if the provider offers models that are not present in this list, they can be added manually. 
+
+!!! info 
+    More information here [AI Models](../../../user-guide/etendo-copilot/setup-and-usage.md#ai-models)
 
 ### Image Input
-Models that 
-support image inputs can work with images attached to the conversation. If the model does not support image inputs, it's possible to fix this by adding to the agent the `OCR Tool` that allows extracting text from images. This tool is available in the [Etendo Copilot ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack) module. 
-The OCR Tool is a tool that allows extracting text and information from images. Maybe it's necessary to "explain" to the agent how to use it in the prompt.
-![Image Input](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/image-input-screenshot.png)
+
+![Image Input](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/image-input-screenshot.png){align=right width=250}
+
+Models that support image inputs can work with images attached to the conversation. If the model does not support image inputs, it's possible to fix this by adding to the agent the `OCR Tool` that allows extracting text from images.
+
+This tool is available in the [Etendo Copilot ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack) module.
+
+The OCR Tool is a tool that allows extracting text and information from images. Maybe it's necessary to **explain** to the agent how to use it in the prompt.
+
+<br clear="all"> 
 
 ## Add a Knowledge Base
 LLMs are the brains behind the agent and these come by default with knowledge gained from the model's own training. However, in many cases we need them to have specific information that they do not have, so we resort to the Knowledge Base File to conform their Knowledge Base. This will allow us to **train** our agent with certain information.
@@ -146,8 +149,9 @@ The most crucial is to determine:
 ### Advanced settings
 In the Knowledge Base File window, there is an advanced settings section that allows you to configure the following options in the splitting algorithm of the content of the file: 
 ![Advanced features](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/knowledge-base-advanced-settings.png)
+
 - **Skip Splitting**: Retrieves the entire document as one chunk, which is useful for small files.
-- **Max. Chunk Size**: This option allows to set the maximum size (tokens) of the chunks that will be created when the content is split. This is useful to avoid very large chunks that can cause performance issues. Depending on the file types, the splitting algorithm checks for "separators" to split the content "semantically". For example, in markdown files, the splitting is done by headers, so each chunk will contain the content of a header and its subheaders. Or in the case of Java files, the splitting is done by classes, so each chunk will contain the content of a class and its methods. When the chunk size is reached, the content is split into a new chunk in the next separator found. This is useful to avoid very large chunks that can cause problems with the token limit of the model.  
+- **Max. Chunk Size**: This option allows to set the maximum size (tokens) of the chunks that will be created when the content is split. This is useful to avoid very large chunks that can cause performance issues. Depending on the file types, the splitting algorithm checks for **separators** to split the content semantically. For example, in markdown files, the splitting is done by headers, so each chunk will contain the content of a header and its subheaders. Or in the case of Java files, the splitting is done by classes, so each chunk will contain the content of a class and its methods. When the chunk size is reached, the content is split into a new chunk in the next separator found. This is useful to avoid very large chunks that can cause problems with the token limit of the model.  
 - **Chunk Overlap**: This option allows to set the overlap between chunks. This is useful to avoid losing information when the content is split into chunks. The overlap is the number of tokens that are repeated in each chunk. For example, if the chunk size is 100 and the overlap is 10, each chunk will contain 90 unique tokens and 10 repeated tokens from the previous chunk. This is useful to avoid losing information when the content is split into chunks. Can be 0 if you don't want to have overlap between chunks.
 
 
@@ -167,7 +171,7 @@ In the Knowledge Base File window, there is an advanced settings section that al
     - **Remember the Synchronization**: After adding/modifying/deleting a knowledge base file from an Agent, its necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes.
     - **Splitting**: We the indexation in the knowledge base file is done, the content is splitted in chunks depending of the type of the file. For example, if the file is a markdown file, the content is splitted in chunks by the headers. If the files are not large, its possible to mark as `Skip Splitting` in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.
 
-### Example
+### Add a Knowledge Base Example
 
 We got the example of the default Copilot agent `Bastian` that has a knowledge base file based in the Etendo Documentation from it GitHub repository. Copilot supports `.zip` format for the knowledge base file behavior, automatically extracting it and indexing the files inside.
 In this case, the `ZIP` file contains the Etendo Documentation in markdown format. The agent has the knowledge base file configured as `Remote File` and the behavior as `Add to the assistant as Knowledge Base`. The agent has the following configuration:
@@ -178,34 +182,61 @@ In this case, the `ZIP` file contains the Etendo Documentation in markdown forma
 - Setting the Knowledge Base File Behavior (Connecting the Knowledge Base File to the Agent):
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-2.png)
 
+
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-3.png){align=right width=250}
+
 - After asking the agent for information about a topic, the agent will search in the knowledge base file and return the information. The agent will use the `Knowledge Base Search` tool to search in the knowledge base file. 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-3.png)
+    
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+
+
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-4.png){align=right width=250}
 
 - The agent will return a response with the information found in the knowledge base file.
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-4.png)
+   <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+     
 
-!!! note
+!!! tip
     Remember, explain in the prompt that the agent must search in the knowledge base file to find the information. This will help to the agent to know how to work with the knowledge base file.
+
 
 ## Add Tools
 When creating an agent, it is possible to add tools to it. Tools are functionalities that allow the agent to perform specific tasks. These tools can be used to interact with external systems, manipulate files, or perform other actions. The tools are added in the `Skills and Tools` tab of the `Assistant` window.
 
-### Available Tools
-The following tools are available in Etendo Copilot there listed in the [Etendo Copilot ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack) module documentation. In the module **Etendo Copilot Toolpack** the are a set of tools that can be used to assist in multiple cases.
+!!! info "Available Tools"
+    The following tools are available in Etendo Copilot there listed in the [Etendo Copilot - ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack) module documentation. In the module **Etendo Copilot Toolpack** the are a set of tools that can be used to assist in multiple cases.
 
-### How to add a tool
+### Adding a Tool Example
+
 To add a tool to an agent, follow these steps:
 
 1. Open the `Assistant` window.
 2. Go to the `Skills and Tools` tab.
 3. Add the tool by creating a record in the `Skills and Tools` tab.
 
-### Example
 For example, we will add a tool to the agent `Task Definition Agent` to allow to write a file with the task definition. The tool will be the `Write File Tool` that allows to write a file with the content provided. 
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-5.png)
 
 After adding the tool, the agent will have the tool available to use. The agent can use the tool to write a file with the task definition. The agent will use the tool to write the file with the task definition.
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-6.png)
+
 We can check the created file:
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-7.png)
 
@@ -229,12 +260,12 @@ The steps to allow an agent to interact with Etendo Classic are:
 !!!warning
     If the behavior of the Knowledge Base File is `[Assistant] Add to the assistant as Knowledge Base`, the agent will not be able to use the information in the knowledge base file to generate responses without using the `Knowledge base Search` tool. So the agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.
 
-### Auto Generation of Tools
+#### Auto Generation of Tools
 
 When the OpenAPI Specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`, the agent will automatically generate tools for each method and endpoint of the API. These tools can be used to make requests to the API without the need to configure the API Call Tool. The agent will have a tool for each method and endpoint of the API. This functionality is currently in the experimental phase.
 
 
-### Example
+### Example of copilot interaction with Etendo
 For example, we will create an agent to create Products in Etendo Classic, using an already defined flow with the endpoints needed to create Products, Product Categories and Prices. 
 
 1. First, we will create a new Knowledge Base File of type `OpenAPI Flow Specification` and select the flow `Product Flow`.
