@@ -67,6 +67,21 @@ The module includes the following agents:
 !!! info
     This sub-agents presented can be used individually if needed.
 
+- **Invoice Supervisor**: The Invoice Supervisor is an orchestration agent responsible for managing the creation of purchase invoices in Etendo. This supervisor decides how to route incoming data (ZIP files, individual files, or user input) to the appropriate agents. 
+    ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/invoice-expert-graph.png)
+
+    🧠 Responsibilities
+
+    - Manage the creation of individual or bulk purchase invoices.
+
+    - Extract and validate invoice data.
+
+    - Delegate task creation for batch processing.
+
+    This supervisor has the following agents:
+
+    - **Bulk Task Creator**: Bulk task creator for iterating over ZIP or Excel/CSV files, used when receiving a ZIP file with multiple invoices.
+    - **Purchase Invoice Expert**: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.
 
 ### Etendo Copilot Toolpack
 

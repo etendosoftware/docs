@@ -258,6 +258,48 @@ Fields to note:
 - **Max. Chunk Size**: Sets the maximum size (in tokens) of each chunk when splitting content. This prevents overly large chunks that could impact performance or exceed the model’s token limit. The splitting algorithm uses separators based on file type. For example, headers in markdown or classes in Java, so each chunk groups related content. When the limit is reached, the content is split at the next separator.
 - **Chunk Overlap**: Sets the number of tokens repeated between chunks to prevent information loss when splitting content. For example, with a chunk size of 100 and an overlap of 10, each chunk will have 90 new tokens and 10 tokens from the previous chunk. Set to 0 to disable overlap.
 
+    === "Github Repo"
+
+        You can provide code files from a public GitHub repository from which Copilot will retrieve the files when needed. This makes it easier for Copilot to access the necessary code.
+
+        Fields to note:
+
+        - **Path File**: location of the code file. Must comply with the format:  
+        ```
+        /{owner}/{repo}/tree/{branch}/{subpath}[.{extension}]
+        ```
+
+        Where:
+
+        - `/`  
+            - Always starts with a slash `/`.  
+        - `{owner}`  
+            - The GitHub user or organization (without domain).  
+            - Example: `etendoerp`  
+        - `/{repo}`  
+            - The name of the GitHub repository.  
+            - Example: `etendo`  
+        - `/tree/`  
+            - The literal word `tree` (as in the GitHub URL).  
+        - `{branch}`  
+            - The name of the branch or tag you wish to download.  
+            - Example: `main` or `21Q1`  
+        - `/{subpath}`  
+            - The internal path within the repository you want to filter.  
+            - Can point to a directory or include a file name pattern with `*`.  
+            - Examples:  
+            - `src/com/etendoerp/devassistant`  
+            - `modules_core/org.openbravo.service/src/**/*.java`  
+            - `web/org.openbravo.base/template/*.xml`  
+        - **Optional `.extension`**  
+            - If you end your subpath with `.{ext}` (e.g., `.java` or `.xml`), the hook extracts that extension to build the glob.  
+            - If you omit the extension or use `*` as the extension, it will include all file types under that subpath.
+
+        - **File Name**:  
+        Required name of the saved file; must always include the file extension.
+
+        ![github-repo.png](../../assets/user-guide/etendo-copilot/setup/github-repo.png)
+
 
 ### Buttons
 
