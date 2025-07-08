@@ -253,6 +253,7 @@ nav:
             - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
           - Warehouse Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
+            - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
             - Packing: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md
             - Picking: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
