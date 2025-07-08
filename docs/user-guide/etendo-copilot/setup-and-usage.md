@@ -188,15 +188,15 @@ Fields to note:
     
     === "Code Index"
 
-        Only available as `System Administrator` role, as access to the source code is required. This type allows the agents to access, query and generate a zip with code files that will be indexed to the knowledge base. It allows the configuration of paths and regular expressions to filter files, which are defined in the File Path tab.
+        This type allows the agents to access, query and generate a `zip` with code files that will be indexed to the knowledge base. It allows the configuration of paths and regular expressions to filter files, which are defined in the File Path tab.
 
+        !!! warning
+            This type is only available as `System Administrator` role , as access to the source code is required.
+
+        ![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
 
         **File Path Tab** 
         
-        This tab is Only available as `System Administrator` role , as access to the source code is required.
-        
-        ![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-path.png)
-
         Fields to note:
 
         - **Path File**: Specify the path where the code files you need the assistant to read are located. 
@@ -205,50 +205,92 @@ Fields to note:
             It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
         
         !!!warning
-            As access to the source code is required, both modules and Etendo Classic must be installed in source format.     
+            As access to the source code is required, both modules and Etendo Classic must be installed in source format.  
+        
+        !!! warning
+            It is mandatory to define in the **File name** field a file with extension `.zip`, because when synchronizing the agent using this file a `ZIP` will be generated with the filtered files.
+    
+    === "GitHub Repo"
+
+        You can provide code files from a public **GitHub repository** from which Copilot will retrieve the files when needed. This makes it easier for Copilot to access the necessary code.
+
+        !!! warning
+            This type is only available as `System Administrator` role.
+
+        ![github-repo.png](../../assets/user-guide/etendo-copilot/setup/github-repo.png)
+
+        **File Path Tab**
+
+        Fields to note:
+
+        - **Path File**: Location of the code files. Must comply with the format:  
+        
+            ```
+            /{owner}/{repo}/tree/{branch}/{subpath}[.{extension}]
+            ```
+
+            !!! info
+
+                - `/`: Always starts with a slash.  
+                - `{owner}`: The GitHub user or organization (without domain). E.g:`etendosoftware`  
+                - `/{repo}`: The name of the GitHub repository. E.g.: `etendo_core`  
+                - `{branch}`: The name of the branch or tag you wish to download. E.g: `main` or `release/24.4`  
+                - `/{subpath}` The internal path within the repository you want to filter. Can point to a directory or include a file name pattern with `*`.
+
+                    Examples:  
+                    ```
+                    src/com/etendoerp/devassistant
+                    modules_core/org.openbravo.service/src/**/*.java
+                    web/org.openbravo.base/template/*.xml
+                    ```
+                - `.extension`(Optional): If you end your subpath with extension (e.g., `.java` or `.xml`), the hook only filter that extensions file. If you omit the extension or use `*` as the extension, it will include all file types under that subpath.
+        
+        !!! warning
+            It is mandatory to define in the **File name** field a file with extension `.zip`, because when synchronizing the agent using this file a `ZIP` will be generated with the filtered files.
+    
+
 
     === "HQL Query"
 
         This type allows using an HQL query result as a file for knowledge base file.
 
+        ![hql-query.png](../../assets/user-guide/etendo-copilot/setup/hql-query.png)
+
         Fields to note:
 
         - **HQL**: Only shown if the **HQL Query** option is chosen in the Type field.
-
-        ![hql-query.png](../../assets/user-guide/etendo-copilot/setup/hql-query.png)
 
 
     === "OpenAPI Flow Specification"
 
         This type of files, allows to obtain the JSON of the specification of an OpenAPI REST generated from Flows and Request from Etendo, for more technical information you can consult [How to document an endpoint with OpenAPI](../../developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
 
+        ![openapi-flow-file.png](../../assets/user-guide/etendo-copilot/setup/openapi-flow-file.png)
+
         Fields to note:
 
         - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
-
-        ![openapi-flow-file.png](../../assets/user-guide/etendo-copilot/setup/openapi-flow-file.png)
     
     === "Remote File"
         
         You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access text documents and external text resources.
 
+        ![remote-file.png](../../assets/user-guide/etendo-copilot/setup/remote-file.png)
+
         Fields to note:
 
         - **URL**: Source file URL.
         - **File name**: Mandatory name of the saved file, it must always include the file format.
-
-        ![remote-file.png](../../assets/user-guide/etendo-copilot/setup/remote-file.png)
-
     
     === "Text"
 
         This allows you to write the content of the file directly in the text area. This option is useful for small texts that must be versioned in the system.
 
+        ![text-file.png](../../assets/user-guide/etendo-copilot/setup/text-file.png)
+
         Fields to note:
 
         - **Text**: Text content of the file.
-
-        ![text-file.png](../../assets/user-guide/etendo-copilot/setup/text-file.png)
 
 ### Advanced Settings
 
@@ -258,49 +300,7 @@ Fields to note:
 - **Max. Chunk Size**: Sets the maximum size (in tokens) of each chunk when splitting content. This prevents overly large chunks that could impact performance or exceed the model’s token limit. The splitting algorithm uses separators based on file type. For example, headers in markdown or classes in Java, so each chunk groups related content. When the limit is reached, the content is split at the next separator.
 - **Chunk Overlap**: Sets the number of tokens repeated between chunks to prevent information loss when splitting content. For example, with a chunk size of 100 and an overlap of 10, each chunk will have 90 new tokens and 10 tokens from the previous chunk. Set to 0 to disable overlap.
 
-    === "Github Repo"
-
-        You can provide code files from a public GitHub repository from which Copilot will retrieve the files when needed. This makes it easier for Copilot to access the necessary code.
-
-        Fields to note:
-
-        - **Path File**: location of the code file. Must comply with the format:  
-        ```
-        /{owner}/{repo}/tree/{branch}/{subpath}[.{extension}]
-        ```
-
-        Where:
-
-        - `/`  
-            - Always starts with a slash `/`.  
-        - `{owner}`  
-            - The GitHub user or organization (without domain).  
-            - Example: `etendoerp`  
-        - `/{repo}`  
-            - The name of the GitHub repository.  
-            - Example: `etendo`  
-        - `/tree/`  
-            - The literal word `tree` (as in the GitHub URL).  
-        - `{branch}`  
-            - The name of the branch or tag you wish to download.  
-            - Example: `main` or `21Q1`  
-        - `/{subpath}`  
-            - The internal path within the repository you want to filter.  
-            - Can point to a directory or include a file name pattern with `*`.  
-            - Examples:  
-            - `src/com/etendoerp/devassistant`  
-            - `modules_core/org.openbravo.service/src/**/*.java`  
-            - `web/org.openbravo.base/template/*.xml`  
-        - **Optional `.extension`**  
-            - If you end your subpath with `.{ext}` (e.g., `.java` or `.xml`), the hook extracts that extension to build the glob.  
-            - If you omit the extension or use `*` as the extension, it will include all file types under that subpath.
-
-        - **File Name**:  
-        Required name of the saved file; must always include the file extension.
-
-        ![github-repo.png](../../assets/user-guide/etendo-copilot/setup/github-repo.png)
-
-
+    
 ### Buttons
 
 - **Clone**

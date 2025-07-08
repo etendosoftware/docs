@@ -45,25 +45,9 @@ Etendo Copilot module include a set of windows where you can create, manage, and
 
 **Tools Included**
 
-- [API Call Tool](../available-tools/api-call-tool.md): This tool allows you to make a call to an API and get the response.
-- [Attach File Tool](../available-tools/attach-file-tool.md): This tool allows you to attach a file to an Etendo Classic record.
-- [Audio Tool](../available-tools/audio-tool.md): This tool allows you to convert an audio given to text.
-- [Code Bar Tool](../available-tools/codbar-tool.md): This tool allows you to read a barcode from an image.
-- [Docker Tool](../available-tools/docker-tool.md): This tool allows you to run code in an isolated environment.
-- [OCR Tool](../available-tools/ocr-tool.md): This tool allows you to extract text from an image or PDF.
-- [PDF to Image Tool](../available-tools/pdf-to-images-tool.md): This tool allows you to convert a PDF to images.
-- [Send Email Tool](../available-tools/send-email-tool.md): This tool allows you to send an email.
-- [Task Creator Tool](../available-tools/task-creator-tool.md): This tool allows you to create bulk tasks based on a zip file or a CSV/XLSX file.
-- [Tavily Tool](../available-tools/tavily-tool.md): This tool allows you to search in web.
-- File Management tools:
-    - [File Copy Tool](../available-tools/file-copy-tool.md): This tool allows you to copy a file.
-    - [File Download Tool](../available-tools/file-downloader-tool.md): This tool allows you to download a file.
-    - [Print Directory Tool](../available-tools/): This tool allows you to print recursively files and directories from the current directory or from a specified upstream directory.
-    - [Read File Tool](../available-tools/read-file-tool.md): This tool allows you to read a file.
-    - [Uncompress Tool](../available-tools/uncompress-tool.md): This tool allows you to uncompress various types of compressed files like zip, rar, etc.
-    - [Write File Tool](../available-tools/write-file-tool.md): This tool allows you to write a file.
-    - [XLS/CSV Reader Tool](../available-tools/xls-tool.md): This tool allows you to read an XLS or CSV file.
-
+!!!info
+    You can see the complete list of tools in the [Tools](../available-tools/api-call-tool.md) section.
+    
 !!! note
     For more information visit, [How to Create Copilot Tools](../how-to-guides/how-to-create-copilot-tools.md) guide.
 

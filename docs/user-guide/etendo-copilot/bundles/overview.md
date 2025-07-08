@@ -34,9 +34,12 @@ As the core module of the Copilot Extensions Bundle, **Etendo Copilot** contains
 !!! info
     For more information, visit [Etendo Copilot - User Guide](../../../user-guide/etendo-copilot/setup-and-usage.md).
 
-The module includes the following agents:
 
-- **Bastian**: This module includes **Bastian**, an agent equipped with the Etendo Documentation indexed as a knowledge base. Bastian enables users to search for information within the documentation using natural language queries, providing quick and accurate answers to their questions.
+#### Agents
+
+##### Bastian
+
+This module includes **Bastian**, an agent equipped with the Etendo Documentation indexed as a knowledge base. Bastian enables users to search for information within the documentation using natural language queries, providing quick and accurate answers to their questions.
 
 ### Etendo Copilot Agents
 
@@ -44,44 +47,53 @@ The module includes the following agents:
 
 The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks with interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the assistants and Knowledge base, they can be replicated and customized agents can be created very easily.
 
-The module includes the following agents:
 
-- **Zip Reader**: This agent reads a zip file and returns the paths of the files inside the zip. Its useful to add to a supervisor agent to chain the unzip and
-- **Client Initialization Supervisor**: This is a supervisor agent that delegates and orchestrates initialization tasks for the client (creation of initial business partners, products, etc.).
-    ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/client-initialization-graph.png)
-    This supervisor has the following agents:
+#### Agents
 
-    - **Business Partner Generator**: This agent creates business partners.
-    - **Product Generator**: This agent creates products.
-    - **Physical Inventory Generator**: This agent creates physical inventories to add stock to the products.
-    - **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc.
+##### Data Initialization Supervisor
 
-- **Order Expert**: This agent is a supervisor agent that delegates and orchestrates the creation of purchase and sales orders. 
-    ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/order-expert-graph.png)
+This is a supervisor agent that delegates and orchestrates initialization tasks for the client (creation of initial business partners, products, etc.).
+![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/client-initialization-graph.png)
+This supervisor has the following agents:
 
-    This supervisor has the following agents:
+- **Business Partner Generator**: This agent creates business partners.
+- **Product Generator**: This agent creates products.
+- **Physical Inventory Generator**: This agent creates physical inventories to add stock to the products.
+- **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc.
 
-    - **Purchase Order Expert**: This agent creates purchase orders.
-    - **Sales Order Expert**: This agent creates sales orders.
+##### Invoice Supervisor
+
+The Invoice Supervisor is an orchestration agent responsible for managing the creation of purchase invoices in Etendo. This supervisor decides how to route incoming data (ZIP files, individual files, or user input) to the appropriate agents. 
+    
+![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/invoice-expert-graph.png)
+
+- Manage the creation of individual or bulk purchase invoices.
+- Extract and validate invoice data.
+- Delegate task creation for batch processing.
+
+This supervisor has the following agents:
+
+- **Bulk Task Creator**: Bulk task creator for iterating over ZIP or Excel/CSV files, used when receiving a ZIP file with multiple invoices.
+- **Purchase Invoice Expert**: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.
+
+
+##### Order Expert
+
+This agent is a supervisor agent that delegates and orchestrates the creation of purchase and sales orders. 
+    
+![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/order-expert-graph.png)
+
+This supervisor has the following agents:
+
+- **Purchase Order Expert**: This agent creates purchase orders.
+- **Sales Order Expert**: This agent creates sales orders.
+
+##### Zip Reader
+
+This agent reads a zip file and returns the paths of the files inside the zip. It's useful to add to a supervisor agent to chain the unzip result to other agents.  
 
 !!! info
-    This sub-agents presented can be used individually if needed.
-
-- **Invoice Supervisor**: The Invoice Supervisor is an orchestration agent responsible for managing the creation of purchase invoices in Etendo. This supervisor decides how to route incoming data (ZIP files, individual files, or user input) to the appropriate agents. 
-    ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/invoice-expert-graph.png)
-
-    🧠 Responsibilities
-
-    - Manage the creation of individual or bulk purchase invoices.
-
-    - Extract and validate invoice data.
-
-    - Delegate task creation for batch processing.
-
-    This supervisor has the following agents:
-
-    - **Bulk Task Creator**: Bulk task creator for iterating over ZIP or Excel/CSV files, used when receiving a ZIP file with multiple invoices.
-    - **Purchase Invoice Expert**: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.
+    All the sub-agents presented can be used individually if needed.
 
 ### Etendo Copilot Toolpack
 
@@ -93,9 +105,14 @@ The **Etendo Copilot Toolpack** is a collection of tools that help to **develope
     For more information, visit the [Toolpack - Developer Guide](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack), where you will find a detailed list of the available tools, instructions on how to use them, and a guide for developing new tools.
 
 
-Additionally, the Toolpack includes the following agents:
+#### Agents
 
-- [SQL Expert](sql-expert.md): This agent is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. In order to preserve the security of the database, the query is pre-processed with filters to only retrieve data accessible by the user.    
+##### SQL Expert
+
+This agent is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. In order to preserve the security of the database, the query is pre-processed with filters to only retrieve data accessible by the user.
+
+!!!info
+    For more information, visit [SQL Expert](sql-expert.md).
 
 
 
