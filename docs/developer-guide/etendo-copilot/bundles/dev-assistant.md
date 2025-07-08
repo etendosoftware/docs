@@ -32,7 +32,7 @@ The Development Agent streamlines workflow management for developers by offering
 
 **Functionality**
 
-The Development Agent acts as a built-in assistant that automates and accelerates repetitive tasks in an application's lifecycle, allowing you to focus on business logic and user experience. Its primary function is to eliminate "plumbing" and repetitive code: it automatically generates and configures your interface elements, binds event logic, builds reports, and orchestrates background processes, all without you having to manually write dozens of files or parameters. By integrating directly into your development environment, it ensures that each component complies with your project's conventions and minimizes configuration errors, thus optimizing your productivity and code quality. The Development Agent acts as a built-in assistant that automates and accelerates repetitive tasks in an application's lifecycle, allowing you to focus on business logic and user experience. Its primary function is to eliminate "plumbing" and repetitive code: it automatically generates and configures your interface elements, binds event logic, builds reports, and orchestrates background processes, all without you having to manually write dozens of files or parameters. By integrating directly into your development environment, it ensures that each component complies with your project's conventions and minimizes configuration errors, thus optimizing your productivity and code quality.
+The Development Agent acts as a built-in assistant that automates and accelerates repetitive tasks in an application's lifecycle, allowing you to focus on business logic and user experience. Its primary function is to eliminate "plumbing" and repetitive code: it automatically generates and configures your interface elements, binds event logic, builds reports, and orchestrates background processes, all without you having to manually write dozens of files or parameters. By integrating directly into your development environment, it ensures that each component complies with your project's conventions and minimizes configuration errors, thus optimizing your productivity and code quality.
 
 **Team Members**
 
@@ -229,7 +229,7 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
 
 With this agent it is possible to ask **code development questions** and based on Etendo code indexed, the agent will give possible code suggestions or solutions. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
 
-This assistant is useful for avoiding the need to manually review all files. Also, multiple files can be configured if neccesary.
+This assistant is useful for avoiding the need to manually review all files. Also, multiple files can be configured if necessary.
 
 
 **Usage Example** 
@@ -656,7 +656,7 @@ It is possible to give an input with all the necessary information, or the agent
     - **Elements**: The elements will be created automatically, sharing the name of the columns, but replacing the *"_"* with spaces. The help and description fields will also be added automatically.
     - **Menu**: A menu entry is automatically created, the developer must manually place it in the desired position.
 
- - Ask the **Tables, Windows and Tabs Creator** for a window to add in the system and the module database prefix where the table will be exported. The agent will then register in the system the table and create it in database, including the mandatory columns. At this stage the agent checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the agent checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
+ - Ask the **Tables, Windows and Tabs Creator** for a window to add in the system and the module database prefix where the table will be exported. The agent will then register in the system the table and create it in database, including the mandatory columns. At this stage the agent checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionally, the agent checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
 
 - The agent will ask to the user for information to add, like columns, data types, help and description, etc.
 

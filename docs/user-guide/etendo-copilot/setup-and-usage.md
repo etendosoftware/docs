@@ -188,7 +188,7 @@ Fields to note:
     
     === "Code Index"
 
-        This type allows the agents to access, query and generate a `zip` with code files that will be indexed to the knowledge base. It allows the configuration of paths and regular expressions to filter files, which are defined in the File Path tab.
+        This type allows the agents to access, query and generate a `ZIP` with code files that will be indexed to the knowledge base. It allows the configuration of paths and regular expressions to filter files, which are defined in the File Path tab.
 
         !!! warning
             This type is only available as `System Administrator` role , as access to the source code is required.
