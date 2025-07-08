@@ -503,6 +503,7 @@ nav:
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
         - Etendo Testing Plugin: developer-guide/etendo-classic/developer-tools/etendo-testing-plugin.md
+        - Etendo Database Extended Module: developer-guide/etendo-classic/developer-tools/etendo-database-extended-module.md
       - Bundles:
         - Platform Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
