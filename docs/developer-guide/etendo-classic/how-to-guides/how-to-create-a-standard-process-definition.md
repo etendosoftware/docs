@@ -512,13 +512,6 @@ A standard process can be defined as multi record process to be able to execute 
 
 ###  Uploading files
 
-:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
-
-This section describes the Etendo **Upload File module** included in the Platform Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
-
 The **File reference** enhances the Etendo Classic capabilities by enabling file uploads directly within process definitions. 
 
 This functionality, which can be used in processes as well as in windows, introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing which is then used by the system as specified in the process definition.
