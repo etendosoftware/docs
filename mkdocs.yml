@@ -251,6 +251,7 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
             - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
             - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
+            - Task: user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md
           - Warehouse Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
             - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
@@ -506,11 +507,12 @@ nav:
       - Bundles:
         - Platform Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
-          - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
           - Docker Management: developer-guide/etendo-classic/bundles/platform/docker-management.md
           - Dockerized Tomcat Service: developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md
           - Dynamic App: developer-guide/etendo-classic/bundles/platform/dynamic-app.md
           - Etendo RX: developer-guide/etendo-classic/bundles/platform/etendo-rx.md
+          - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
+          - Task: developer-guide/etendo-classic/bundles/platform/task.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
@@ -543,16 +545,20 @@ nav:
         - API Call Tool: developer-guide/etendo-copilot/available-tools/api-call-tool.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
+        - Client Initial Setup: developer-guide/etendo-copilot/available-tools/client-init-tool.md
         - Codbar Tool: developer-guide/etendo-copilot/available-tools/codbar-tool.md
         - Docker Tool: developer-guide/etendo-copilot/available-tools/docker-tool.md
         - File Copy Tool: developer-guide/etendo-copilot/available-tools/file-copy-tool.md
         - File Downloader Tool: developer-guide/etendo-copilot/available-tools/file-downloader-tool.md
+        - Jasper Tool: developer-guide/etendo-copilot/available-tools/process-definition-jasper-tool.md
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
+        - Organization Initial Setup Tool: developer-guide/etendo-copilot/available-tools/org-init-tool.md
         - PDF to Images Tool: developer-guide/etendo-copilot/available-tools/pdf-to-images-tool.md
         - Print Directory Tool: developer-guide/etendo-copilot/available-tools/print-directory-tool.md
         - Read File Tool: developer-guide/etendo-copilot/available-tools/read-file-tool.md
         - Send Email Tool: developer-guide/etendo-copilot/available-tools/send-email-tool.md
         - Task Creator Tool: developer-guide/etendo-copilot/available-tools/task-creator-tool.md
+        - Task Management for Supervisors: developer-guide/etendo-copilot/available-tools/task-management-tool.md
         - Tavily Tool: developer-guide/etendo-copilot/available-tools/tavily-tool.md
         - Template Tool: developer-guide/etendo-copilot/available-tools/template-tool.md
         - Test Run Tool: developer-guide/etendo-copilot/available-tools/test-run-tool.md
@@ -560,6 +566,7 @@ nav:
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
+        
       - How to Guides:
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
