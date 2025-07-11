@@ -1,5 +1,5 @@
 ---
-title: Task
+title: Task - Developer Guide
 tags:
 
   - Task
@@ -14,9 +14,9 @@ tags:
 :octicons-package-16: Javapackage: `com.etendoerp.task`
 
 ## Overview
-This page explains how to configure and manage asynchronous and configurable tasks in Etendo Platform. Tasks can automatically triggered based on database events (such as `INSERT` or `UPDATE` database event), and can execute a sequence of defined actions such as validations, notifications, or assignments. These tasks are dynamically managed through a set of configuration windows.
+This page explains how to configure and manage asynchronous and configurable tasks in Etendo Platform. Tasks can be automatically triggered based on database events (such as `INSERT` or `UPDATE`), and can execute a sequence of defined actions such as validations, notifications, or assignments. These tasks are dynamically managed through a set of configuration windows.
 
-The system processes tasks in response to events that occur within Etendo, such as the creation of an order or an incident. Based on these events, tasks are generated automatically, assigned, and processed through a predefined sequence of statuss and actions.
+The system processes tasks in response to events that occur within Etendo, such as the creation of an order or an incident. Based on these events, tasks are generated automatically, assigned, and processed through a predefined sequence of statuses and actions.
 
 ## Initial Configuration
 
@@ -32,7 +32,7 @@ These commands prepare the PostgreSQL database to work with **Debezium**, a tool
 !!! warning "**PostgreSQL service must be restarted** after applying this change" 
 
 | Command                 | Description                                                                                                                                      |
-|-------------------------|---------------  -----------------------------------------------------------------------------------------------------------------------------------|
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | `wal_level = logical`   | Sets the Write-Ahead Logging (WAL) level to `logical`. This is required for Debezium to stream logical changes from the database.                |
 | `REPLICA IDENTITY FULL` | Enables full replica identity on the `etask_task` table, allowing Debezium to access the previous values of rows when `UPDATE` operations occur. |
 
@@ -154,8 +154,8 @@ In addition, optional filters (JEXL) associated to the table fields or even adva
 - **Active**: Checkbox to enable or disable this table trigger.
 
 ### Status Tab
-Defines the lifecycle of the task by listing the possible status (e.g., Pending, In Progress, Closed) in a specific sequence. 
-When a task is created it is assigned the **first status** of the sequence. Assigning or changing the status of a task, triggers the **events** defined in the following subtab.
+Defines the lifecycle of the task by listing the possible statuses (e.g., Pending, In Progress, Closed) in a specific sequence. 
+When a task is created it is assigned the **first status** of the sequence. Assigning or changing the status of a task triggers the **events** defined in the following subtab.
 
 ![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png)
 
@@ -179,7 +179,7 @@ This tab defines asynchronous jobs that are automatically executed when the task
 ## Task Status Window
 :material-menu: `Application` > `General Setup` > `Task Management` > `Task Status`
 
-This window allows you to create reusable statuses for task types. Default values include `Pending`, `In Progress`, `Completed`, and `Closed`. Developers with `System Administrator` role can add custom statuses and export them in a development module. statuss in the Task Type window are linked to these statuses, enabling the workflow engine to track and trigger status transitions and associated events (including Kafka notifications).
+This window allows you to create reusable statuses for task types. Default values include `Pending`, `In Progress`, `Completed`, and `Closed`. Developers with `System Administrator` role can add custom statuses and export them in a development module. In the Task Type window these statuses are used, enabling the workflow engine to track and trigger status transitions and associated events (including Kafka notifications).
 
 ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png)
 
@@ -211,20 +211,20 @@ It only needed to define a name and the Java path where the implementation of th
 
 ## Example Workflow
 
-If you review the documentation of the different windows, you can see that an example of the use of tasks is being followed.
-The idea is that once this **task type** is configured, when the first sales order of a busines partner of the **International** category is completed, a new task is created in pending status and is automatically associated to a user.
+If you review the documentation of the different windows, you can see that an example of how to use tasks is being followed.
+The idea is that once this task type is configured, when the first sales order of a business partner with the International checkbox marked is completed, a new task is created in pending status. It is automatically associated to a user using the defined algorithm.
 When the task is created, the Event associated to the initial status of the task **pending** is triggered, this event launches a job in charge of marking the customer as associated to the loyalty program.  
-Then, assuming that the user assigned to follow up this customer (sales agent) determines that the customer has already invoiced enough, he can move the task to **in progress** status and automatically mark it as a **Gold** customer.
+Then, assuming that the user assigned to follow up this customer (sales agent) determines that the customer has already invoiced enough, he can move the task to **in progress** status and the automation automatically mark it as a **Gold** customer.
 
 Now we will go through the settings:
 
-1. In the example configuration shown in this documentation we defined a new task type called `Business Partner Management` and assigned the `Round-Robin Algorithm` for user assignment.
+1. In the example configuration shown in this documentation, we defined a new task type called `Business Partner Management` and assigned the `Round-Robin Algorithm` for user assignment.
 2. As we can see in the **Table** tab, it is configured to detect the `UPDATE` action on the `c_order` table filtering only when a **sales order** is **completed**.
-3. Two statuses are configured, pending and inprogress in that order, which means that when a new task is created it will be automatically assigned the `Pending` status.
-4. Two jobs are selected in the **Events** subtab, **Set Business Partner As Loyalty Program** when the task is `pending`, and **Set Business Partner As Gold** wen the task is `In Progress` respectively.
+3. Two statuses are configured, **Pending** and **In progress** in that order, which means that when a new task is created it will be automatically assigned the `Pending` status.
+4. Two jobs are selected in the **Events** subtab, **Set Business Partner As Loyalty Program** when the task is `pending`, and **Set Business Partner As Gold** when the task is `In Progress` respectively.
 
 !!! info
-    In the [Task - User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md) section you can see how tasks are automatically created, assigned users and change their status from the window with the same name.
+    In the [Task - User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md) section you can see how tasks are automatically created, assigned users and how to change their status from the window with the same name.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
