@@ -1,4 +1,5 @@
 ---
+title: Task
 tags:
 
   - Task
@@ -15,46 +16,25 @@ tags:
 ## Overview
 This page explains how to configure and manage asynchronous and configurable tasks in Etendo Platform. Tasks can automatically triggered based on database events (such as `INSERT` or `UPDATE` database event), and can execute a sequence of defined actions such as validations, notifications, or assignments. These tasks are dynamically managed through a set of configuration windows.
 
-The system processes tasks in response to events that occur within Etendo, such as the creation of an order or an incident. Based on these events, tasks are generated, assigned, and processed through a predefined sequence of statuss and actions.
+The system processes tasks in response to events that occur within Etendo, such as the creation of an order or an incident. Based on these events, tasks are generated automatically, assigned, and processed through a predefined sequence of statuss and actions.
 
 ## Initial Configuration
 
-This module adds **rule-based task creation**, **status transitions**, and **Kafka messaging** capabilities to Etendo Platform.
+### PostgreSQL Configuration for Debezium Use
 
-
-**What `TaskTypeMatchJob` Does**
-
-
-Debezium Event ──► TaskTypeMatchJob ──► ETASK_Task + Kafka Topics
-            (rules • filters • status)
-
-
-#### Stages & Behavior
-
-| Stage                 | Behavior                                                                                                                                                      |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Normalise          | Extracts table, verb (create / update ), and before/after JSON.                                                                                       |
-| 2. Table `ETASK_Task` | • `Create` (created_automatically = N) → triggers events of the initial status. <br> • `Update` (status changes) → triggers events of the new status.           |
-| 3. Other Tables       | For each matching Task Type:<br>• Pass JEXL filter + advanced logic.<br>• Create task (stores full JSON in `event_jsoninfo`).<br>• Fire initial status events. |
-| 4. Output             | Returns JSON: <br>`json { "next": ["topicA", …], "message": {…}, "tasks": [{"task": "…", "status": "…"}, …] }`                                                 |
-
-### PostgreSQL Configuration for Debezium
-
-```sql
-ALTER SYSTEM SET wal_level = logical;        -- restart PostgreSQL
-ALTER TABLE etask_task REPLICA IDENTITY FULL;  -- enables BEFORE image
+```sql title="PostgreSQL"
+ALTER SYSTEM SET wal_level = logical;
+ALTER TABLE etask_task REPLICA IDENTITY FULL;
 ```
 
 These commands prepare the PostgreSQL database to work with **Debezium**, a tool for capturing changes in tables.
 
-- `ALTER SYSTEM SET wal_level = logical;`  
-  Sets the Write-Ahead Logging (WAL) level to `logical`.  
-  This is required for Debezium to stream logical changes from the database.  
-  
-  !!! warning  "**PostgreSQL must be restarted** after applying this change"
+!!! warning "**PostgreSQL service must be restarted** after applying this change" 
 
-- `ALTER TABLE etask_task REPLICA IDENTITY FULL;`  
-  Enables full replica identity on the `etask_task` table, allowing Debezium to access the previous values of rows when `UPDATE` operations occur.
+| Command                 | Description                                                                                                                                      |
+|-------------------------|---------------  -----------------------------------------------------------------------------------------------------------------------------------|
+| `wal_level = logical`   | Sets the Write-Ahead Logging (WAL) level to `logical`. This is required for Debezium to stream logical changes from the database.                |
+| `REPLICA IDENTITY FULL` | Enables full replica identity on the `etask_task` table, allowing Debezium to access the previous values of rows when `UPDATE` operations occur. |
 
 These commands are **mandatory prerequisites** for Debezium to detect and propagate events to Kafka, which in turn triggers task processing in Etendo.
 
@@ -137,55 +117,71 @@ curl -X POST http://localhost:8083/connectors \
 
 
 ## Task Type Window
-:material-menu: `Application` > `General Setup` > `Tasks` > `Task Type`
+:material-menu: `Application` > `General Setup` > `Task Management` > `Task Type`
 
-In this window, Task Types are defined, in this component the database events that automatically create a new task, the sequence of states it must follow and the actions to be executed in each state are defined. A developer, with the role of System Administrator, must define the task types, states and events, and they must be exported in a module under development.
+In this window, Task Types are defined, in this component the database events that automatically create a new task, the sequence of states it must follow and the actions to be executed in each state are defined. 
 
-![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/TaskTypeHeader.png)
+A developer, with the `System Administrator` role, must define the task types, states and events, and they must be exported in a module under development.
+
+![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type.png)
 
 **Fields to note:**
 
 - **Organization**: Defines the organization scope.
 - **Module**: The module where this component will be exported.
-- **Search Key**: A unique identifier.
-- **Name**: A human-readable name for the task type.
+- **Search Key**: A unique identifier of the task type.
+- **Name**: Readable name for the task type.
 - **Active**: Checkbox to enable or disable this task type.
+- **User Algorithm**: Drop-down to select the automatic task assignment algorithm. These algorithms are configured in the [Available User Algorithm](#available-user-algorithm-windows) window. The default options are:
 
-#### Table Tab
+    - **Round-Robin Algorithm**: Distributes tasks equally in sequence, without considering workload. Use when the tasks and resources are similar.
+    - **Round-Robin By Workload Algorithm**: Assigns tasks to the resource with the lightest current load. Use when the task sizes or resource capacities vary.
+
+### Table Tab
 In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task. 
-In addition, optional filters (JEXL) associated to the table fields or even advanced filters defined as actions can be defined. In case multiple tables or filters are defined, the task will be created on the first match, generating a single task per event occurred.
+In addition, optional filters (JEXL) associated to the table fields or even advanced filters defined as actions can be defined. 
+
+!!!warning
+    In case multiple tables or filters are defined, it must be ensured that they are mutually exclusive because more than one task could be created per event occurred.
+
+**Fields to note:**
 
 - **Module**: The module where this component will be exported.
 - **Table**: The monitored database table (must be included in Debezium's `table.include.list`).
 - **Action**: The database action that triggers the task (`INSERT` or `UPDATE`).
 - **Filter**: A dynamic [JEXL Expression](https://commons.apache.org/proper/commons-jexl/reference/syntax.html){target="\_blank"} to narrow down the triggering conditions.
 - **Filter Action**: Optional advanced validation implemented as filter [Action](../../how-to-guides/how-to-create-jobs-and-actions.md).
-- **Active**: Checkbox to enable or disable this table.
+- **Active**: Checkbox to enable or disable this table trigger.
 
-#### Status Tab
-Defines the lifecycle of the task by listing the possible status (e.g., Pending, In Progress, Closed) in a specific sequence. When a task is defined it is assigned the first status of the sequence.
-Assigning or changing the status of a task, triggers the Events defined in the corresponding tab.
+### Status Tab
+Defines the lifecycle of the task by listing the possible status (e.g., Pending, In Progress, Closed) in a specific sequence. 
+When a task is created it is assigned the **first status** of the sequence. Assigning or changing the status of a task, triggers the **events** defined in the following subtab.
+
+![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png)
+
+**Fields to note:**
 
 - **Module**: The module where this component will be exported.
-- **Line No.**: It is used to determine the status order  and to determine which is the initial state when tasks are created.
+- **Line No.**: It is used to determine the status order and to determine which is the initial state when tasks are created.
 - **Status**: Dropdown of reusable status defined in [Task Status](#task-status-window) window.
 - **Active**: Checkbox to enable or disable this status.
 
-##### Events
+#### Events Subtab
+
 This tab defines asynchronous jobs that are automatically executed when the task enters a specific status. Jobs can post messages to Kafka topics as part of the workflow.
 
 - **Module**: The module where this component will be exported.
 - **Line No.**: It determines the queuing order, although as they are asynchronous processes they can be executed in parallel.
-- **Job**: Reference to the job to be executed (should be set up as asynchronous), for more information visit [Jobs]() documentation.
+- **Job**: Reference to the job to be executed (should be set up as asynchronous), for more information visit [Async Jobs]() documentation.
 - **Active**: Checkbox to enable or disable this event.
 
 
 ## Task Status Window
-:material-menu: `Application` > `General Setup` > `Tasks` > `Task Status`
+:material-menu: `Application` > `General Setup` > `Task Management` > `Task Status`
 
 This window allows you to create reusable statuses for task types. Default values include `Pending`, `In Progress`, `Completed`, and `Closed`. Developers with `System Administrator` role can add custom statuses and export them in a development module. statuss in the Task Type window are linked to these statuses, enabling the workflow engine to track and trigger status transitions and associated events (including Kafka notifications).
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/TaskStatus.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png)
 
 **Fields to note:**
 
@@ -193,73 +189,49 @@ This window allows you to create reusable statuses for task types. Default value
 - **Search Key**: A unique identifier for the status.
 - **Name**: The display name that will be shown when using this status.
 - **Description**: Optional description of the status.
+- **Active**: Checkbox to enable or disable this status.
+
+
+## Available User Algorithm Windows
+:material-menu: `Application` > `General Setup` > `Task Management` > `Available User Algorithm`
+
+In this window, you can configure the different algorithms that allow determining the availability of users to the task's assignment.
+
+It only needed to define a name and the Java path where the implementation of the algorithm is located. This implementation must extend the `UserAvailabilityStrategy` interface.
+
+![available-user-algorithm](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/available-user-algorithm.png)
+
+**Fields to note:**
+
+- **Module**: The module where this component will be exported.
+- **Name**: The display name that will be shown when using this algorithm.
+- **Java Implementation**: Path of the Java file where the algorithm implementation is located, this implementation must extend `UserAvailabilityStrategy` interface.
+- **Active**: Checkbox to enable or disable this algorithm.
 
 
 ## Example Workflow
 
-En este ejemplo definiremos un nuevo tipo de tarea, la idea es que al completarse la primer orden de venta  de un  busines partners de la categoria "Internacional", se cree una tarea en estado pending lo que dispara una accion que asocia al cliente al programa de fidelizacion y luego si esa tarea se mueve a estado in progress  automaticamente se mueve a ese cliente a la categoria inicial "Gold".
+If you review the documentation of the different windows, you can see that an example of the use of tasks is being followed.
+The idea is that once this **task type** is configured, when the first sales order of a busines partner of the **International** category is completed, a new task is created in pending status and is automatically associated to a user.
+When the task is created, the Event associated to the initial status of the task **pending** is triggered, this event launches a job in charge of marking the customer as associated to the loyalty program.  
+Then, assuming that the user assigned to follow up this customer (sales agent) determines that the customer has already invoiced enough, he can move the task to **in progress** status and automatically mark it as a **Gold** customer.
 
-1. As `System Administrator` user creates a task type *Automatic Loyalty Program Management** 
+Now we will go through the settings:
 
-- **Table**: `C_Order`
-- **Event**: `UPDATE`
-- **Filter**: `docstatus == 'CO' and doctype =='SO'`
-- **Filter Action**: `Is An International Business Partner`
+1. In the example configuration shown in this documentation we defined a new task type called `Business Partner Management` and assigned the `Round-Robin Algorithm` for user assignment.
+2. As we can see in the **Table** tab, it is configured to detect the `UPDATE` action on the `c_order` table filtering only when a **sales order** is **completed**.
+3. Two statuses are configured, pending and inprogress in that order, which means that when a new task is created it will be automatically assigned the `Pending` status.
+4. Two jobs are selected in the **Events** subtab, **Set Business Partner As Loyalty Program** when the task is `pending`, and **Set Business Partner As Gold** wen the task is `In Progress` respectively.
 
+!!! info
+    In the [Task - User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md) section you can see how tasks are automatically created, assigned users and change their status from the window with the same name.
 
-**status**
-
-    - Define status in order (via Sequence No)
-    - Link each to a `Status`
-
-**Events**
-
-    - Set Sequence No
-    - Reference a `Jobs Job` (async process)
-    - The `Action` must return:
-    
-    ```json
-        { "topic": "my.kafka.topic" }
-    ```
-
-    This topic is collected by `TaskTypeMatchJob` and added to the `next` array in the output.
-
-2. When triggered, the task is created with the status `Pending`. A job named `Set Business Partner As International` runs, marking the BP as international.
-
-    ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/image-20250603-165543.png)
-
-3. Next, log in as a Sales role (not System). Create and edit a Sales Order in `Draft` status.
-
-4. Check the **Task** window to verify that the task has been created:
-
-    ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/image-20250603-165754.png)
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
 
 
 
 
 
-## Job Window
-:material-menu: `Application` > `General Setup` > `Jobs`
-
-Used to view and manage jobs. The default `TaskTypeMatchJob` is created when the Task module is installed and is responsible for processing Debezium events, matching them to task types, and orchestrating task creation, status transitions, and Kafka messaging. Users with the `System Administrator` role may create custom jobs, which can participate in the workflow by being referenced in status events and configured for asynchronous execution and Kafka topic subscription.
-
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/image-20250604-125328.png)
-
-**Key configuration:**
-
-- **Organization**
-- **Name**
-- **Description**
-- **Initial and Error Topics**: Kafka topics for job communication.
-- **Asynchronous**, **RegExp**: For Kafka-based async job processing (`Is Async` = `Y`, `Topics are RegExp` = `Y`).
-- **Active**
-- **Lines Tab**: Defines actions and result topics. Actions should return a JSON with the next Kafka topic to notify.
-
-Jobs referenced in events should be set up as asynchronous and configured to listen to the appropriate Kafka topics.
-
-!!! warning
-    When jobs are added or changed, Tomcat must be restarted to regenerate Kafka listeners and ensure all async processes are active.
 
 
-- **Parameters**: Additional configuration for the job.
-- **Action**: Must return a JSON with a Kafka topic, e.g. `{ "topic": "my.kafka.topic" }`.

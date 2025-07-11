@@ -251,6 +251,7 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
             - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
             - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
+            - Task: user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md
           - Warehouse Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
             - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md

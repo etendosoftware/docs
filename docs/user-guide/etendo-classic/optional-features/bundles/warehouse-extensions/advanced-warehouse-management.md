@@ -1,4 +1,5 @@
 ---
+title: Advanced Warehouse Management
 tags:
     - Warehouse Management
     - Advanced
@@ -215,3 +216,6 @@ The **Relocate** function allows you to relocate inventory by following the step
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/mobile14.jpg)
 
 The result of this process is reflected both in the mobile application, where the inventory location is updated, and in the Etendo Stock Report, ensuring traceability and visibility of the relocation in both platforms.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
