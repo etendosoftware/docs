@@ -181,3 +181,14 @@ In addition, there are other **optional** variables to configure certain aspects
 | COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
 | COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
 
+### How to debug Etendo Copilot
+There are multiple ways to debug the Etendo Copilot, depending on the configuration you are using.
+- **Pycharm Locally**: If you are running the copilot locally, you can use the PyCharm debugger to debug the code. You can set breakpoints in the code and run the debugger to see the execution flow.
+- **Dockerized Copilot**: If you are running the copilot in a docker container, there is included a VSCode launch.json file that contains the configuration to debug the copilot when is running in a docker container. You can use the VSCode debugger to debug the code:
+    1. Ensure that VSCode is installed and the Python extension is installed and enabled.
+    2. Open the build/copilot directory inside the Etendo Classic project. Its very important to open the correct directory, because this directory contains the tools code, so the debugger will be able to find the code to debug.
+    ![alt text](../../assets/developer-guide/etendo-copilot/how-to-debug-when-dockerized.png)
+    3. Go to the Run and Debug section in VSCode and it will show the available configurations to debug the copilot called "Copilot Remote Debug" and Click on the green play button to start debugging.
+    ![alt text](../../assets/developer-guide/etendo-copilot/how-to-debug-when-dockerized-1.png)
+    4. Once the debugger is started, you can set breakpoints in the code and run the copilot to see the execution flow. The debugger will stop at the breakpoints and you can inspect the variables and the execution flow.
+    ![alt text](../../assets/developer-guide/etendo-copilot/how-to-debug-when-dockerized-2.png)
