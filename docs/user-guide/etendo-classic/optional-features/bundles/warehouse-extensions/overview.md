@@ -27,7 +27,7 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 The **Advanced Warehouse Management** module extends the standard capabilities of Etendo to offer comprehensive, flexible, and automated inventory management, adding integration with mobile devices. Every action performed from the Etendo Mobile is automatically synchronized with Etendo, ensuring complete traceability and consistent updates in the corresponding system windows.
 
 !!! info
-    For more information, visit [Advanced Warehouse Management](../warehouse-extensions/advanced-warehouse-management.md).
+    For more information, visit [Advanced Warehouse Management](./advanced-warehouse-management.md).
 
 ### Automated Warehouse Reservation
 
