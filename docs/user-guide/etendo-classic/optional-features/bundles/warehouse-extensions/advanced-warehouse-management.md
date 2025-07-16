@@ -160,7 +160,7 @@ Fields to note:
 
 Barcode functionality is key for logistic operations. Storage bins and products with generated codes will be available to be scanned and managed both from Etendo Mobile and from Etendo, but it requires a previous configuration in Etendo.
 
-- The `Advanced Warehouse Management` must be loaded.
+- The `Advanced Warehouse Management` dataset must be loaded.
 - From the **Advanced Warehouse Configuration** window, you can define which barcode will be used by default.
 
 It is possible to generate these unique codes for storage bins in the **Warehouse and Storage Bins** and **Product** windows:
@@ -188,9 +188,15 @@ It is possible to generate these unique codes for storage bins in the **Warehous
     3. The generated code is displayed in the Advanced Warehouse Management section of the product. It can also be loaded manually or modified.
         
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/barcode4.png)
+    
+    !!! info 
+        In the **Product** window, there is a tab called Barcode, where various barcodes associated with the product, such as supplier codes, are listed. These codes are loaded manually.
+        
+        To configure how the system searches for barcodes:
+        
+        - In the **Advanced Warehouse Configuration** window, there is a checkbox labeled `Search Related Barcode`
+        - If the checkbox is enabled, when scanning a product from Etendo Mobile, the system will search for matches on all codes listed in the Barcode tab, in addition to the header code.
 
-    !!! Info
-        In addition, in the **Product** window, there is a tab called Barcode, where the various barcodes associated with the product, such as supplier codes, are listed. These codes are loaded manually. In order for the system to consider whether or not to search for the product by one of these codes, in the **Advanced Warehouse Configuration** window there is a Search Related Barcode checkbox. If enabled, when scanning a product from Etendo Mobile, the system will search for matches on all codes listed in the Barcode tab in addition to the header code. If disabled, only the code listed in the product header will be searched for a match.
 
 ## Using Etendo Mobile
 
@@ -235,7 +241,7 @@ This screen contains:
 - A list of cards with tasks. 
 
 !!! Note
-    As explained above in the Tasks section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `fromDateCompleted`. This allows the user to define the number of days backwards,from the current date, to be used as a criterion for displaying tasks in Completed status.
+    As explained above in the Tasks section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `fromDateCompleted`. This allows the user to define the number of days backwards, from the current date, to be used as a criterion for displaying tasks in Completed status.
 
 <br><br><br><br><br><br>
 
@@ -331,7 +337,7 @@ This screen contains:
 
 - Refresh and Back buttons.
 - A search field to filter tasks.
-- Quick filters that limit between `Pending`, `In Progress` or `Completed` tasks. By default it shows the `Pending` filter selected and, in the case of tasks in `Completed` status, there is a preference where it is defined from which day it will bring completed tasks.
+- Quick filters that limit between `Pending`, `In Progress` or `Completed` tasks. By default it shows the `Pending` filter selected, and in the case of tasks in `Completed` status, there is a preference where it is defined from which day it will bring completed tasks.
 - A list of cards, where each card represents a packing task and includes the following information:
 
     - Packing as title: The document reference is shown.
