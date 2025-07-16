@@ -18,7 +18,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
 2. This project depends on the following tools:
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
-    - [Python 3](https://www.python.org/downloads/){target="_blank"} version `3.10`or higher.
+    - [Python 3](https://www.python.org/downloads/){target="_blank"} version `3.10` or higher.
 
 !!!info
     The [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
@@ -53,9 +53,9 @@ The simplest configuration we are going to follow as an example is to mount Copi
 
     | **Environment Variable**   | **Default**  | **Info** |
     | -------------------------- | -------------| -------- |
-    | OPENAI_API_KEY         | `****` | **Optinal** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
+    | OPENAI_API_KEY         | `****` | **Optional** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
     |ANTHROPIC_API_KEY      | `****` | **Optional** You can use an [ANTHROPIC API Key](https://docs.anthropic.com/en/api/getting-started){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use Anthropic AI Models. |
-    |DEEPSEEK_API_KEY      | `****` | **Optional** You can use an [DEEPSEEK API Key](https://deepseek.ai/){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use DeepSeek AI Models. |
+    |DEEPSEEK_API_KEY      | `****` | **Optional** You can use a [DEEPSEEK API Key](https://deepseek.ai/){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use DeepSeek AI Models. |
     | ETENDO_HOST            |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
     | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
     | COPILOT_HOST           | `localhost` | **Optional** The copilot host can be defined by the user. By default use `localhost` |
@@ -68,6 +68,12 @@ The simplest configuration we are going to follow as an example is to mount Copi
     !!! warning 
         If you are using docker via console, the `ETENDO_HOST_DOCKER` variable should be `http://172.17.0.1:8080/etendo`
    
+    !!! warning
+        In versions before 3.3.0, if you suffers from errors related to missing poetry, you can use the legacy docker image, with the tag `poetry`. To do that, you need to add the following variable to your `gradle.properties` file:
+        ```groovy title="gradle.properties"
+        COPILOT_IMAGE_TAG=poetry
+        ```
+        This will use the legacy docker image with poetry installed, instead of the new one with uv as the package manager installed.
 
 2.  Once the Copilot Extensions Bundle dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:
 
@@ -80,7 +86,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
     ./gradlew resources.up
     ```
 
-    And then recomplile the environment: 
+    And then recompile the environment: 
 
     ``` bash title="Terminal"
     ./gradlew update.database compile.complete smartbuild --info
@@ -97,7 +103,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
     ./gradlew resources.stop
     ```
 
-    Everytime a new tool is added or the enviorement variables change, it's necessary to delete and create the Copilot container again. Execute the following command to delete the container: 
+    Everytime a new tool is added or the environment variables change, it's necessary to delete and create the Copilot container again. Execute the following command to delete the container: 
     ``` bash title="Terminal"
     ./gradlew resources.down
     ```
@@ -115,7 +121,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
     The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
     Follow the [Dockerized Tomcat Service](../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
 
-    When using both services in docker, the enviorement variables should look like this:
+    When using both services in docker, the environment variables should look like this:
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
@@ -135,9 +141,9 @@ The simplest configuration we are going to follow as an example is to mount Copi
     
     - [Python](https://www.python.org/downloads/){target="_blank"} 3.10 or 3.11
     
-    - [Poetry](https://pypi.org/project/poetry/){target="_blank"}
+    - [uv](https://docs.astral.sh/uv/){target="_blank"}
 
-    We recommend usign PyCharm to run copilot locally. Download and install here [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/){target="_blank"}
+    We recommend using PyCharm to run copilot locally. Download and install here [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/){target="_blank"}
 
     1. Open PyCharm, search for the copilot module and open it.
     ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_1.png)
@@ -153,16 +159,17 @@ The simplest configuration we are going to follow as an example is to mount Copi
     ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_5.png)
 
 
-    4. Select the interpreter created before, in the script field select the `run.py` file and .env field select the `gradle.properties`
+    4. Select the interpreter created before. In the script field, select the `run.py` file, and in the .env field, select the `gradle.properties` file.
     ![](../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_6.png)
     
     
     5. Once done, open the PyCharm terminal and execute the following commands:
     ``` bash title="terminal"
     source venv/bin/activate
-    poetry install
+    uv sync
     ```
-
+    !!! warning
+        In versions before 3.3.0, the package manager used by Copilot was `poetry`, so the command to run is `poetry install` instead of `uv sync`.
     6. Execute `Run.py` from PyCharm
     
 ### Developer Environment Variables
