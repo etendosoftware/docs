@@ -45,6 +45,9 @@ These commands are **mandatory prerequisites** for Debezium to detect and propag
     ```groovy title="Gradle.properties"
     docker_com.etendoerp.etendorx=true
     docker_com.etendoerp.etendorx_async=true
+    kafka.enable=true
+
+    authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
     ```
 
 2. Start the Dockerized services
