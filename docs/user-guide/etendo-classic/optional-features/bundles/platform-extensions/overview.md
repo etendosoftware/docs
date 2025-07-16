@@ -134,6 +134,14 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 !!! info
     For more information, visit [Clear Report Cache user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
+### Task
+
+:octicons-package-16: Javapackage: `com.etendoerp.task`
+
+The **Task** module in Etendo provides a flexible framework for creating, assigning, and automating tasks based on business events. This module allows organizations to define task types, user assignment algorithms, and automated actions triggered by database changes or user interactions. It is ideal for automating workflows such as order follow-ups, incident management, or customer engagement processes.
+
+!!! info
+    For more information, refer to the [Task - User Guide](./task.md) for functional usage and the [Task - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/task.md) for configuration and customization.
 
 ### Webhook Events
 

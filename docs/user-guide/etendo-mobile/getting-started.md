@@ -19,10 +19,12 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
 
 ## Quick Start - Demo Try 
 
-### Checklist
+**Checklist**
  
-:octicons-check-circle-16: Download Etendo App. <br>
-:octicons-check-circle-16: Use the **Demo Try** Button to Access Official Sub-Apps. <br>
+- [x] Download Etendo App.
+- [x] Use the **Demo Try** Button to Access Official Sub-Apps.
+
+---
 
 1. ### Download the Etendo App 
 
@@ -53,14 +55,13 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
 
 ## Client Environment Setup
 
-### Checklist
+**Checklist**
 
-:octicons-check-circle-16: Etendo Classic:Install Required Sub-Applications by developer. <br>
-:octicons-check-circle-16: Etendo Classic: Configure Dynamic Sub-Applications. <br>
-:octicons-check-circle-16: Etendo Mobile: Configure Server URL. <br>
-:octicons-check-circle-16: Etendo Mobile: Log In and Use the Apps. <br>
-
-
+- [x] Etendo Classic: Install Required Sub-Applications (developer).
+- [x] Etendo Classic: Configure Dynamic Sub-Applications to the corresponding role.
+- [x] Etendo Mobile: Configure Server URL.
+- [x] Etendo Mobile: Log In and Use the Apps.
+---
 1. ### Install Subapps in Etendo Classic
 
     !!! warning
@@ -70,18 +71,44 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
 
     You can find the sub-applications distributed by Etendo, available for installation and their documentation below.
 
-    - [Etendo Classic Subapp](./bundles/mobile-extensions/etendo-classic-subapp.md) provides users with an efficient way to access the system's key window information, ensuring read-mode access, based on their role. 
+    - [Etendo Classic Subapp](./bundles/mobile-extensions/etendo-classic-subapp.md)
+        
+        Provides users with an efficient way to access the system's key window information, ensuring read-mode access, based on their role. 
     
-    - [Documents Manager Subapp](./bundles/mobile-extensions/overview.md#documents-manager-subapp) is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
+    - [Documents Manager Subapp](./bundles/mobile-extensions/overview.md#documents-manager-subapp) 
+    
+        Is a sample sub-application implementation capable of receiving external files and rendering them within Etendo Mobile.
 
-    - [Etendo Copilot Subapp](../etendo-copilot/bundles/overview.md#etendo-copilot-subapp) designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. 
+    - [Etendo Copilot Subapp](../etendo-copilot/bundles/overview.md#etendo-copilot-subapp)
+    
+        Designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices.
+
+    - [Advanced Warehouse Management Subapp](../etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md)
+    
+        Extends Etendo’s standard warehouse capabilities by enabling efficient, automated, and mobile-driven inventory management. It allows users to manage stock, perform adjustments, execute picking and packing, and ensure real-time synchronization and traceability through barcode scanning, all from Etendo Mobile.
+
 
     !!!info
-        To configure dynamic sub-applications, you must install the corresponding bundle: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"} or [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}.
+        To configure dynamic sub-applications, you must install the corresponding bundle: 
+        
+        - [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}
+        - [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}
+        - [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="\_blank"}
 
+2. ### Client Access Token
+    :material-menu: `Application` > `General Setup` > `Client` > `Client`
 
+    A one-time encryption token must be configured for authentication. This token is required for **Etendo Mobile** to start a session.
 
-2. ### Configure Roles and Dynamic Subapps
+    1. Access Etendo Classic as a `System Administrator`.
+    2. Navigate to `Client` > `Secure Web Service Configuration` tab.
+    3. Click the **Generate Key** button to create a token. The expiration time is measured in minutes, if set to 0 the token does not expire.
+    ![alt text](../../assets/developer-guide/etendo-mobile/getting-started/token.png)
+
+    !!! info
+        This token doesn’t require any action; it just needs to be generated for the authentication process to work properly.
+
+3. ### Configure Roles and Dynamic Subapps
     :material-menu: `Application` > `General Setup` > `Security` > `Role`
 
     1. Open the **Role** window.
@@ -99,7 +126,7 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
         ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-3.png)
 
 
-3. ### Configure the Server URL in Etendo Mobile
+4. ### Configure the Server URL in Etendo Mobile
 
     1. Open the Etendo  app.
     2. Click the gear icon on the welcome screen to open Settings.
@@ -110,7 +137,7 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
     !!!info
         You can add multiple server URLs, modify or remove them as needed.
 
-4. ### Log In to the App
+5. ### Log In to the App
 
     ![alt text](../../assets/user-guide/etendo-mobile/getting-started/getting-started-mobile-2.jpg){ width="250" align="left" }
 
