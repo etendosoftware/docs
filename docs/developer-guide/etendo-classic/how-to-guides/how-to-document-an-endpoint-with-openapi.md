@@ -144,10 +144,10 @@ To ensure an OpenAPI Request appears in Swagger documentation, it must be linked
 
 ## Check Swagger
 
-The new endpoint documentation should now be visible at the Swagger UI URL. The URL might vary depending on your deployment but typically follows the format:
+The new endpoint documentation should now be visible at the Swagger UI URL. Execute the "Open Swagger" button to open the Swagger in a new tab.
 
 
-[http://localhost:8080/etendo/web/com.etendoerp.openapi/#/](http://localhost:8080/etendo/web/com.etendoerp.openapi/#/)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_Button.png)
 
 
 Verify that the new endpoint appears under the defined tag and displays the correct request and response schemas.
