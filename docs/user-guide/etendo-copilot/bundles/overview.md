@@ -59,7 +59,10 @@ This supervisor has the following agents:
 - **Business Partner Generator**: This agent creates business partners.
 - **Product Generator**: This agent creates products.
 - **Physical Inventory Generator**: This agent creates physical inventories to add stock to the products.
-- **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc.
+- **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
+
+    !!! info
+        For more information you can read [How to Create a Spreadsheet Tasks Agent](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
 
 ##### Invoice Supervisor
 
@@ -73,7 +76,11 @@ The Invoice Supervisor is an orchestration agent responsible for managing the cr
 
 This supervisor has the following agents:
 
-- **Bulk Task Creator**: Bulk task creator for iterating over ZIP or Excel/CSV files, used when receiving a ZIP file with multiple invoices.
+- **Bulk Task Creator**: Bulk task creator to iterate over ZIP or Excel/CSV files, used when receiving a ZIP file with multiple invoices. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
+    
+    !!! info
+        For more information you can read [How to Create a Spreadsheet Tasks Agent](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
+
 - **Purchase Invoice Expert**: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.
 
 
@@ -143,3 +150,7 @@ The **Dev Assistant** is a set of assistants that helps to perform tasks related
 
 !!!info
     For more information, visit: [Dev Assistant](../../../developer-guide/etendo-copilot/bundles/dev-assistant.md) developer guide.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

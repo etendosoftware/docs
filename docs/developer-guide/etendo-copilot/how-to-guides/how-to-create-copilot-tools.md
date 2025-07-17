@@ -271,3 +271,6 @@ The above tool leverages utilities provided by Copilot Core:
 - `get_etendo_host()`: This function returns the URL of the Etendo Classic instance, which is required to trigger the WebHook. This host URL is configured as `ETENDO_HOST` in the `gradle.properties` configuration file.
 
 - `call_webhook(url:String, webhook_name:String, access_token:String, body_params:Dict)`: This function triggers the WebHook, passing the Etendo Classic URL, the WebHook name, the authentication token, and the parameters needed by the WebHook.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
