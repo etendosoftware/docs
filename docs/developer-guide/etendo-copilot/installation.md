@@ -181,3 +181,31 @@ In addition, there are other **optional** variables to configure certain aspects
 | COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
 | COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
 
+### How to Debug Etendo Copilot
+
+There are two main ways to debug Etendo Copilot, depending on your setup.
+
+- **Using PyCharm (Local Mode)**  
+    
+    If you are running Copilot locally, you can use PyCharm’s built-in debugger. Simply set breakpoints in the code and run the debugger to inspect the execution flow step by step.
+
+- **Using VSCode (Dockerized Copilot)**
+    
+    If Copilot is running in a Docker container, you can debug it with VSCode using the provided `launch.json` configuration:  
+
+    1. Make sure **VSCode** and the **Python extension** are installed and enabled.  
+    2. Open the `build/copilot` directory inside the *Etendo project*.
+        
+        !!! note Important
+            This is the directory containing the tools’ code, which is required for the debugger to locate the source files.
+        
+        ![alt text](../../assets/developer-guide/etendo-copilot/getting-started/how-to-debug-when-dockerized.png)  
+    3. Go to the **Run and Debug** section in VSCode. You will see a configuration named **Copilot Remote Debug**. Click the green play button to start debugging.
+        
+        ![alt text](../../assets/developer-guide/etendo-copilot/getting-started/how-to-debug-when-dockerized-1.png)  
+    4. Once the debugger is running, set breakpoints as needed and execute Copilot. The debugger will pause at your breakpoints, allowing you to inspect variables and analyze the execution flow.
+        
+        ![alt text](../../assets/developer-guide/etendo-copilot/getting-started/how-to-debug-when-dockerized-2.png)
+    
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

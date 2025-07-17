@@ -158,3 +158,6 @@ After executing the request, we can see that the file name is now in snake_case 
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-20.gif)
 
 If the result is not consistent, we can keep iterating on the prompt until we get the expected result.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

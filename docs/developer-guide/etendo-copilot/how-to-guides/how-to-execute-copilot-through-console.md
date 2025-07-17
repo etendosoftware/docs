@@ -36,3 +36,6 @@ This article explains how to execute Copilot through the console. This is useful
 !!! warning
     - The parameters ```username``` and ```password``` are mandatory.
     - If not provided, the script will ask for them. This is to avoid storing sensitive information in the command history.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
