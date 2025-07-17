@@ -1,8 +1,17 @@
-:octicons-package-16: Class: `GoogleSpreadsheetsTool`
+---
+tags:
+    - Copilot
+    - IA
+    - Tool
+    - Google Spreadsheets
+---
+
+# Google Spreadsheets Tool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
 ## Overview
 
-The **Google Spreadsheets Tool** is a powerful utility for interacting directly with Google Sheets. It allows the assistant to manage spreadsheets programmatically through the Google Drive and Google Sheets APIs.
+The **Google Spreadsheets** tool is a powerful utility for interacting directly with Google Sheets. It allows the assistant to manage spreadsheets programmatically through the **Google Drive and Google Sheets APIs**.
 
 The tool operates using five distinct modes:
 
@@ -14,7 +23,7 @@ The tool operates using five distinct modes:
 
 ## Setup & Authentication
 
-Like other Google service tools, this tool requires a pre-configured Google OAuth token identified by an `alias`. This `alias` must be provided in every request to authenticate with Google's services.
+This tool requires a pre-configured **Google OAuth** token identified by an `alias`. This `alias` must be provided in every request to authenticate with Google's services.
 
 ## Parameters
 
@@ -28,15 +37,22 @@ The tool's functionality is determined by the `mode` parameter. The required and
 ### Mode-Specific Parameters
 
   - `name` (string): The name for a spreadsheet.
-      - **Required for `create` mode.**
+
+      - Required for `create` mode.
       - Optional for `upload` mode (if not provided, defaults to the name of the uploaded CSV file).
+
   - `file_id` (string): The unique ID of the target spreadsheet (found in its URL).
-      - **Required for `read` and `download` modes.**
+
+      - Required for `read` and `download` modes.
+
   - `range` (string, optional): The cell range to operate on (e.g., `Sheet1!A1:B10`).
+
       - Used in `read` and `download` modes.
-      - If not provided, it **defaults to `A1:Z1000`**.
+      - If not provided, it defaults to `A1:Z1000`.
+
   - `file_path` (string): The local path to a `.csv` file.
-      - **Required for `upload` mode.**
+
+      - Required for `upload` mode.
 
 ## Modes of Operation
 
@@ -135,3 +151,6 @@ Downloads a sheet (or a specific range) and saves it as a CSV file in a temporar
     ```
     ✅ CSV file downloaded at: /tmp/copilotAttachedFiles/some-uuid/sheet_data.csv
     ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

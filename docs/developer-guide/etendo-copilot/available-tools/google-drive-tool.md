@@ -1,4 +1,13 @@
-:octicons-package-16: Class: `GoogleDriveTool`
+---
+tags:
+    - Copilot
+    - IA
+    - Tool
+    - Google Drive
+---
+
+# Google Drive Tool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
 ## Overview
 
@@ -11,7 +20,7 @@ This tool is essential for workflows that require reading from or writing files 
 
 ## Setup & Authentication
 
-To use this tool, a Google OAuth token must be pre-configured and identified by an `alias`. This `alias` is a mandatory parameter for every request, as it is used to securely authenticate with the Google Drive API.
+To use this tool, a **Google OAuth** token must be pre-configured and identified by an `alias`. This `alias` is a mandatory parameter for every request, as it is used to securely authenticate with the **Google Drive API**.
 
 ## Parameters
 
@@ -92,3 +101,6 @@ The tool will return a `ToolOutputError` if:
   - An unsupported `mode` is provided.
   - A required parameter for a specific mode is missing (e.g., `file_path` for `upload` mode).
   - Any other exception occurs during the process, such as an authentication failure or file not found error.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

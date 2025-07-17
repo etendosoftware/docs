@@ -1,10 +1,19 @@
-:octicons-package-16: Class: `LoadOAuthTokenTool`
+---
+tags:
+    - Copilot
+    - IA
+    - Tool
+    - Load OAuth Token 
+---
+
+# Load OAuth Token Tool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
 ## Overview
 
-The **Load OAuth Token Tool** is a crucial security and session management utility. Its primary function is to securely fetch a pre-configured OAuth token from the Etendo backend and load it into the current conversation's memory.
+The **Load OAuth Token Tool** is a crucial security and session management utility. Its primary function is to securely fetch a pre-configured **OAuth Token** from the Etendo backend and load it into the current conversation's memory.
 
-This tool does not perform an action on its own but acts as a necessary first step for any workflow requiring OAuth2 authentication (e.g., accessing Google Drive or Google Sheets). By loading the token and returning only an `alias`, it allows other tools to use the credential without ever exposing the sensitive token value to the AI model or the user.
+This tool does not perform an action on its own but acts as a necessary first step for any workflow requiring **OAuth2 authentication** (e.g., accessing Google Drive or Google Sheets). By loading the token and returning only an `alias`, it allows other tools to use the credential without ever exposing the sensitive token value to the AI model or the user.
 
 ## Intended Workflow
 
@@ -81,3 +90,6 @@ Here is how an assistant would use this tool in practice to list files from Goog
 
       - **Tool Call:** `GoogleDriveTool(alias="TOKEN_a1b2...", mode="list")`
       - **Result:** The `GoogleDriveTool` successfully lists the files because it could access the token using the provided alias.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

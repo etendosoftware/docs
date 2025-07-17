@@ -48,3 +48,6 @@ After the model is installed, you must create a record in the [AI Model](../../.
 
 ### Using the Model in Copilot
 - Finally you can use the model in Copilot by selecting the record created in the model selector in the [Assistant](../../../user-guide/etendo-copilot/setup-and-usage.md#assistant-window) window.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

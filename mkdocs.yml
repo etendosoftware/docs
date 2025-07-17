@@ -551,9 +551,9 @@ nav:
         - File Copy Tool: developer-guide/etendo-copilot/available-tools/file-copy-tool.md
         - File Downloader Tool: developer-guide/etendo-copilot/available-tools/file-downloader-tool.md
         - Google Drive Tool: developer-guide/etendo-copilot/available-tools/google-drive-tool.md
-        - Google Spreadsheet Tool: developer-guide/etendo-copilot/available-tools/google-spreadsheet-tool.md
+        - Google Spreadsheets Tool: developer-guide/etendo-copilot/available-tools/google-spreadsheet-tool.md
         - Jasper Tool: developer-guide/etendo-copilot/available-tools/process-definition-jasper-tool.md
-        - Load oAuth Token: developer-guide/etendo-copilot/available-tools/load-oauth-token-tool.md
+        - Load OAuth Token: developer-guide/etendo-copilot/available-tools/load-oauth-token-tool.md
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
         - Organization Initial Setup Tool: developer-guide/etendo-copilot/available-tools/org-init-tool.md
         - PDF to Images Tool: developer-guide/etendo-copilot/available-tools/pdf-to-images-tool.md
@@ -569,7 +569,6 @@ nav:
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
-       
       - How to Guides:
         - How to Create a Spreadsheet and tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
