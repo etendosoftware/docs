@@ -5,16 +5,16 @@ tags:
     - Install
     - IA
     - Infrastructure
-    - Assistants
+    - Agents
 ---
 
 ## Overview
 
-This guide provides detailed instructions on how to get started with Etendo Copilot, an API that allows interaction with a bot capable of selecting the appropriate tools to respond to user queries. It includes the necessary requirements, instructions for adding dependencies, environment variable configurations, and steps to run Copilot on an Etendo Classic project. Additionally, it covers optional configurations to customize Copilot's behavior and provides links to detailed installation guides for required software.
+This guide provides detailed instructions on how to get started with Etendo Copilot, an API that allows interaction with a bot capable of selecting the appropriate tools to respond to user queries. It includes the necessary requirements, instructions for adding dependencies, environment variable configurations, and steps to run Copilot on an Etendo project. Additionally, it covers optional configurations to customize Copilot's behavior and provides links to detailed installation guides for required software.
 
 ## Requirements
 
-1. Install Etendo Classic. For this, follow the [Etendo Installation Guide](../../getting-started/installation.md){target="_blank"}.
+1. Install Etendo. For this, follow the [Etendo Installation Guide](../../getting-started/installation.md){target="_blank"}.
 2. This project depends on the following tools:
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
@@ -24,7 +24,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
     The [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
 
 ## Installation 
-Etendo Copilot is distributed within the Copilot Extensions bundle, which in addition to including the Copilot Core functionality and infrastructure, includes default assistants and tools that can be used directly or compose their use in new wizards.  
+Etendo Copilot is distributed within the Copilot Extensions bundle, which in addition to including the Copilot Core functionality and infrastructure, includes default agents and tools that can be used directly or compose their use in new wizards.  
 
 !!! info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -37,7 +37,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
 1. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
 
     !!!info
-        From Etendo Classic version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) onwards the variables `ETENDO_HOST`, `COPILOT_HOST` and `ETENDO_HOST_DOCKER` are optional, in case they are defined they will overwrite the automatically generated variables.
+        From Etendo version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) onwards the variables `ETENDO_HOST`, `COPILOT_HOST` and `ETENDO_HOST_DOCKER` are optional, in case they are defined they will overwrite the automatically generated variables.
 
     ```groovy title="gradle.properties"
     OPENAI_API_KEY= ****
@@ -111,14 +111,14 @@ The simplest configuration we are going to follow as an example is to mount Copi
     !!! warning 
         Be aware that resources.stop and resources.down will also affect other services configured in the etendo container
 
-4. Try Copilot in your Etendo instance. To configure an assistant to use Etendo Copilot, follow the [Copilot Setup and Usage](../../user-guide/etendo-copilot/setup-and-usage.md){target="_blank"} guide.
+4. Try Copilot in your Etendo instance. To configure an agent to use Etendo Copilot, follow the [Copilot Setup and Usage](../../user-guide/etendo-copilot/setup-and-usage.md){target="_blank"} guide.
 
 
 ## Advanced Configurations 
 
 === "Copilot & Tomcat Dockerized"
 
-    The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo Classic. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
+    The `com.etendoerp.tomcat` module enables the Dockerization of Tomcat within Etendo. This module modifies Gradle tasks to automatically deploy the `WAR` file into the container when executing the `smartbuild` task.
     Follow the [Dockerized Tomcat Service](../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md) documentation to learn how to configure it.
 
     When using both services in docker, the environment variables should look like this:
