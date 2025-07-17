@@ -425,6 +425,18 @@
          <lastmod>2025-07-17</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/available-tools/google-drive-tool/</loc>
+         <lastmod>2025-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/available-tools/google-spreadsheet-tool/</loc>
+         <lastmod>2025-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/available-tools/load-oauth-token-tool/</loc>
+         <lastmod>2025-07-17</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/available-tools/ocr-tool/</loc>
          <lastmod>2025-07-17</lastmod>
     </url>
@@ -498,6 +510,10 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/</loc>
+         <lastmod>2025-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent/</loc>
          <lastmod>2025-07-17</lastmod>
     </url>
     <url>
