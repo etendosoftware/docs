@@ -24,7 +24,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
     The [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
 
 ## Installation 
-Etendo Copilot is distributed within the Copilot Extensions bundle, which in addition to including the Copilot Core functionality and infrastructure, includes default agents and tools that can be used directly or compose their use in new wizards.  
+Etendo Copilot is distributed within the Copilot Extensions bundle, which in addition to including the Copilot Core functionality and infrastructure, includes default assistants and tools that can be used directly or compose their use in new agents.  
 
 !!! info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -34,65 +34,97 @@ Etendo Copilot is distributed within the Copilot Extensions bundle, which in add
 
 The simplest configuration we are going to follow as an example is to mount Copilot Dockerized and Tomcat running as a local service. Other configurations are detailed in the section, [Advanced Configurations](#advanced-configurations).
 
-1. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
+In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
+### Configuration Variables (`gradle.properties`)
 
-    !!!info
-        From Etendo version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md) onwards the variables `ETENDO_HOST`, `COPILOT_HOST` and `ETENDO_HOST_DOCKER` are optional, in case they are defined they will overwrite the automatically generated variables.
+Add the following environment variables to your `gradle.properties` file:
 
+``` groovy title="gradle.properties"
+OPENAI_API_KEY= ****
+ANTHROPIC_API_KEY= ****
+DEEPSEEK_API_KEY= ****
+ETENDO_HOST=https://<Etendo URL>/<Context Path>
+ETENDO_HOST_DOCKER=http://host.docker.internal:<Tomcat Port>/<Context Path>
+COPILOT_HOST=<Copilot URL>
+COPILOT_PORT=<Copilot Port>
+
+docker_com.etendoerp.copilot=true
+```
+
+| **Environment Variable**         | **Default**     | **Required**            | **Info** |
+| -------------------------------- | --------------- | ------------------------| -------- |
+| `OPENAI_API_KEY`                 | `****`          | ✅ If using OpenAI       | API key for [OpenAI](https://platform.openai.com/account/api-keys). Contact Etendo or use your own. |
+| `ANTHROPIC_API_KEY`              | `****`          | ✅ If using Anthropic    | API key for [Anthropic](https://docs.anthropic.com/en/api/getting-started). Only needed if using Anthropic models. |
+| `DEEPSEEK_API_KEY`               | `****`          | ✅ If using DeepSeek     | API key for [DeepSeek](https://deepseek.ai/). Only needed if using DeepSeek models. |
+| `ETENDO_HOST`                    | *(none)*        | ✅                       | URL where Copilot sends requests to communicate with the Etendo system. |
+| `ETENDO_HOST_DOCKER`             | *(none)*        | ✅                       | Used when Copilot runs in Docker and Etendo is not accessible from a domain. |
+| `COPILOT_HOST`                   | `localhost`     | ✅                       | Host for Copilot. |
+| `COPILOT_PORT`                   | `5005`          | ✅                       | Port used by Copilot. |
+| `docker_com.etendoerp.copilot`   | `true`          | ✅                       | Enables Etendo Copilot container. |
+| `COPILOT_DEBUG`                  | `false`         | ❌ (Optional)            | Enables verbose Copilot logs in the console. |
+| `COPILOT_MAX_ITERATIONS`         | `100`           | ❌ (Optional)            | Max number of agent interaction steps. |
+| `COPILOT_EXECUTION_TIMEOUT`      | `0`             | ❌ (Optional)            | Timeout in seconds for agent execution (`0` = unlimited). |
+| `COPILOT_STREAM_DEBUG`           | `false`         | ❌ (Optional)            | Enables real-time response log in Copilot pop-up. |
+| `CONFIGURED_TOOLS_FILENAME`      | `tools_config.json` | ❌ (Optional)        | File that defines which tools are enabled. |
+| `DEPENDENCIES_TOOLS_FILENAME`    | `tools_deps.toml`   | ❌ (Optional)        | File that defines dependencies between tools. |
+| `COPILOT_PULL_IMAGE`             | `true`          | ❌ (Optional)            | If true, pulls Docker image from Docker Hub; if false, uses local image. |
+| `COPILOT_IMAGE_TAG`              | `master`        | ❌ (Optional)            | Docker image tag to use. |
+| `COPILOT_PORT_DEBUG`             | `5100`          | ❌ (Optional)            | Port for debugging Copilot (if enabled). |
+
+!!! info
+    From Etendo Classic version [24.4.0](../../whats-new/release-notes/etendo-classic/release-notes.md), the variables `ETENDO_HOST`, `COPILOT_HOST`, and `ETENDO_HOST_DOCKER` are required for communication. If they are defined, they override automatically generated values.
+
+
+!!! warning
+    In versions before 3.3.0, if you suffers from errors related to missing poetry, you can use the legacy docker image, with the tag `poetry`. To do that, you need to add the following variable to your `gradle.properties` file:
     ```groovy title="gradle.properties"
-    OPENAI_API_KEY= ****
-    ANTHROPIC_API_KEY= ****
-    DEEPSEEK_API_KEY= ****
-    ETENDO_HOST=https://<Etendo URL>/<Context Path>
-    ETENDO_HOST_DOCKER=http://host.docker.internal:<Tomcat Port>/<Context Path>
-    COPILOT_HOST=<Copilot URL>
-    COPILOT_PORT=<Copilot Port>
-
-    docker_com.etendoerp.copilot=true
+    COPILOT_IMAGE_TAG=poetry
     ```
 
-    | **Environment Variable**   | **Default**  | **Info** |
-    | -------------------------- | -------------| -------- |
-    | OPENAI_API_KEY         | `****` | **Optional** You can use an [OPEN AI API Key](https://platform.openai.com/account/api-keys){target="_blank"} of your own, or you can contact the Etendo support team to obtain one.|
-    |ANTHROPIC_API_KEY      | `****` | **Optional** You can use an [ANTHROPIC API Key](https://docs.anthropic.com/en/api/getting-started){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use Anthropic AI Models. |
-    |DEEPSEEK_API_KEY      | `****` | **Optional** You can use a [DEEPSEEK API Key](https://deepseek.ai/){target="_blank"} of your own, or you can contact the Etendo support team to obtain one. Remember, its only necessary if you want to use DeepSeek AI Models. |
-    | ETENDO_HOST            |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. E.g: https://demo.etendo.cloud/etendo or http://localhost:8080/etendo |
-    | ETENDO_HOST_DOCKER     |  | **Optional** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. This variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. |
-    | COPILOT_HOST           | `localhost` | **Optional** The copilot host can be defined by the user. By default use `localhost` |
-    | COPILOT_PORT           | `5005` | **Required** The copilot port can be defined by the user. By default use `5005` |
-    | docker_com.etendoerp.copilot | `true` | **Required** Configuration variable for the Etendo Copilot container to be launched. |
+    This will use the legacy docker image with poetry installed, instead of the new one with uv as the package manager installed.
 
-    !!! info
-        The `ETENDO_HOST_DOCKER` variable is used when the copilot is running in a docker container and the Etendo Instance is not accessible from a domain. This is important because the copilot needs to communicate with the Etendo system to perform the necessary actions. For example, if Copilot is running into a docker container and the Etendo Instance is running locally, the `ETENDO_HOST` variable should be `http://localhost:8080/etendo` and the `ETENDO_HOST_DOCKER` variable should be `http://host.docker.internal:8080/etendo` if you are using Docker Desktop.
+1. Add to `gradle.properties` the variable `docker_com.etendoerp.copilot=true` to enable the Copilot Docker container. This variable is required to run the Copilot container.
+
+2. The `gradle.properties` variables `ETENDO_HOST`,`ETENDO_HOST_DOCKER`, `COPILOT_HOST`, and `COPILOT_PORT` are used to configure the connection between Copilot and Etendo, so depending on your environment, you may need to adjust them. Etendo Copilot provides a gradle task to automatically set these variables based on your Etendo instance configuration. To do this, execute the following command in the terminal:
+
+    ``` bash title="Terminal"
+    ./gradlew copilot.variables.setup  --console=plain
+    ```
+    ![copilot.setup.variables](../../assets/developer-guide/etendo-copilot/copilot.setup.variables.png)
     
-    !!! warning 
-        If you are using docker via console, the `ETENDO_HOST_DOCKER` variable should be `http://172.17.0.1:8080/etendo`
-   
-    !!! warning
-        In versions before 3.3.0, if you suffers from errors related to missing poetry, you can use the legacy docker image, with the tag `poetry`. To do that, you need to add the following variable to your `gradle.properties` file:
-        ```groovy title="gradle.properties"
-        COPILOT_IMAGE_TAG=poetry
-        ```
-        This will use the legacy docker image with poetry installed, instead of the new one with uv as the package manager installed.
+    This command asks for charecteristics of your Etendo instance. And based on your answers, it will print the values. Copy the printed values and paste them into your `gradle.properties` file, replacing the existing values for `ETENDO_HOST`, `ETENDO_HOST_DOCKER`, `COPILOT_HOST`, and `COPILOT_PORT`.
 
-2.  Once the Copilot Extensions Bundle dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:
+3. The gradle.properties file should now look like this:
+
+    ```groovy title="gradle.properties"
+    docker_com.etendoerp.copilot=true
+    OPENAI_API_KEY= ****. // If you are using OpenAI
+    ANTHROPIC_API_KEY= **** // If you are using Anthropic
+    DEEPSEEK_API_KEY= **** // If you are using DeepSeek
+    ETENDO_HOST=http://localhost:8080/etendo
+    ETENDO_HOST_DOCKER=http://host.docker.internal:8080/etendo
+    COPILOT_HOST=copilot
+    COPILOT_PORT=5005
+
+    ```
+4.  Once the Copilot Extensions Bundle dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:
 
     ``` bash title="Terminal"
     ./gradlew setup
     ```
 
-    Then, the copilot container needs to be created:
+    Then, the copilot container needs to be created/recreated:
     ``` bash title="Terminal"
     ./gradlew resources.up
     ```
 
-    And then recompile the environment: 
+    And then recompile the environment, to ensure that the changes are applied and deployed correctly:
 
     ``` bash title="Terminal"
     ./gradlew update.database compile.complete smartbuild --info
     ```
     
-3. To start the copilot Docker image, execute:
+5. To start the copilot Docker image, execute:
 
     ``` bash title="Terminal"
     ./gradlew resources.up
@@ -109,7 +141,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
     ```
 
     !!! warning 
-        Be aware that resources.stop and resources.down will also affect other services configured in the etendo container
+        Be aware that resources.stop and resources.down will also affect other services configured in the etendo container.
 
 4. Try Copilot in your Etendo instance. To configure an agent to use Etendo Copilot, follow the [Copilot Setup and Usage](../../user-guide/etendo-copilot/setup-and-usage.md){target="_blank"} guide.
 
@@ -172,21 +204,7 @@ The simplest configuration we are going to follow as an example is to mount Copi
         In versions before 3.3.0, the package manager used by Copilot was `poetry`, so the command to run is `poetry install` instead of `uv sync`.
     6. Execute `Run.py` from PyCharm
     
-### Developer Environment Variables
 
-In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
-    
-| **Environment Variable**    | **Options**  | **Default**  | **Info** |
-| ----------------------------| -------------| -------------| -------- |
-| COPILOT_DEBUG | `Boolean` | `false` | **Optional** If true, copilot will log additional messages in the console. |
-| COPILOT_MAX_ITERATIONS | `Integer` | `100` | **Optional** Maximum number of interactions of agents. |
-| COPILOT_EXECUTION_TIMEOUT | `Integer` | `0` | **Optional** Defines a timeout in the execution of an agent in seconds, by default 0 represents unlimited time. |
-| COPILOT_STREAM_DEBUG | `Boolean` | `false` | **Optional** Enable debug mode in the copilot pop-up, to see the log while the response is being generated. |
-| CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | **Optional** The name of the file that contains the configuration of the enabled tools. |
-| DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | **Optional** The name of the file that contains the configuration of the dependencies of the tools. |
-| COPILOT_PULL_IMAGE | `Boolean` | `true` | **Optional** If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
-| COPILOT_IMAGE_TAG | `String` | `master` | **Optional** The tag of the copilot docker image that will be used. |
-| COPILOT_PORT_DEBUG | `String` | `5100` | **Optional** The copilot debug port can be defined by the user. |
 
 ### How to Debug Etendo Copilot
 
