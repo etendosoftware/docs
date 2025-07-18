@@ -42,6 +42,7 @@ This guide covers requirements, configuration, and usage for partitioning and un
 ## Requirements
 
 The following requirements must be met before using the module:
+
 - **Etendo 25** or higher.
 - **[Python 3](https://docs.python.org/3.13/)** – latest release of version 3.
 - **[PostgreSQL](https://www.postgresql.org/docs/16/index.html)** – version 16 or higher.
