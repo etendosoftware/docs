@@ -501,8 +501,9 @@ nav:
 #        - QA Sampledata Export: developer-guide/etendo-classic/how-to-guides/QA_Sampledata_Export.md
 #        - XML REST Web Services: developer-guide/etendo-classic/how-to-guides/XML_REST_Web_Services.md
       - Developer Tools:
-        - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
+        - Etendo Database Extended Module: developer-guide/etendo-classic/developer-tools/etendo-database-extended-module.md
+        - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Testing Plugin: developer-guide/etendo-classic/developer-tools/etendo-testing-plugin.md
       - Bundles:
         - Platform Extensions Bundle:
