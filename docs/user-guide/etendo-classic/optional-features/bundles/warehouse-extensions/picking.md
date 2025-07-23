@@ -1,16 +1,16 @@
 ---
-title: Picking
+title: Picking List
 tags: 
-    - Picking lists
-    - Direct picking
-    - Pick shipments
-    - Outbound picking
+    - Picking Lists
+    - Direct Picking
+    - Pick Shipments
+    - Outbound Picking
     - Warehouse
     - Stock
 
 ---
 
-# Picking
+# Picking List
 
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
