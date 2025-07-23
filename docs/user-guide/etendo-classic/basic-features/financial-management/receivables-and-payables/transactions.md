@@ -986,19 +986,24 @@ Those two transaction types can be created in three ways:
 
 ![Transaction tab](../../../../../assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
 
-- Fields to note in transaction tab:
-  - **Transaction Type:** The Transaction Type indicates the type of transaction to be submitted. The transaction tab also allows the user to create a "Deposit" or a "Withdrawal" transactions based on a "G/L Item" transaction type or on a "Payment".
+- Fields to note in the transaction tab:
+    - **Transaction Type:** The Transaction Type indicates the type of transaction to be submitted. The transaction tab also allows the user to create a "Deposit" or a "Withdrawal" transactions based on a "G/L Item" transaction type or on a "Payment".
     - Bank fee
     - BP Deposit
     - BP Withdrawal
-  - **Transaction Date:** The Transaction Date field defines the date of the transaction being processed.
-  - **Accounting Date:** The date this transaction is recorded for in the general ledger.
-  - **Payment:** Payment selector
-  - **G/L Item:** General ledger item selector
-  - **Currency:** Indicates the currency to be used when processing this document
-  - **Deposit Amount:** amount in the case of receiving a payment
-  - **Withdrawal Amount:** amount in the case of make a payment
-  - **Accounting Dimensions**
+    - **Transaction Date:** The Transaction Date field defines the date of the transaction being processed.
+    - **Accounting Date:** The date this transaction is recorded for in the general ledger.
+    - **Payment:** Payment selector.
+    - **G/L Item:** General ledger item selector.
+    - **Currency:** Indicates the currency to be used when processing this document.
+    - **Deposit Amount:** amount in the case of receiving a payment.
+    - **Withdrawal Amount:** amount in the case of make a payment.
+    - **Dimensions:** Organization, Business partner and Project information.
+    - **Foreign Amount** - Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
+    - **Foreign Currency** - Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
+
+        !!! info
+            It is possible to allow the user **either to receive or make payments in multiple currencies** (foreign currency), while configuring the payment methods assigned to a given financial account. For more information about this option, visit [Payment Method](../../financial-management/receivables-and-payables/setup.md#payment-method-configuration).
 
 If creating a "Bank Fee" is necessary, select "Bank Fee" in "Transaction Type" combo, enter a transaction and accounting date and the amount either received in or paid out.
 
@@ -1053,11 +1058,6 @@ Payment selector has applied an explicit filter (current financial account)
 It is possible to add payments for alternative financial accounts by clicking the funnel icon to clear the filters.
 
 ![Payment without filter](../../../../../assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
-
-- **Foreign Amount** - this field/column is populated if the payment was received or made in a currency different from the financial account currency. ???
-
-!!! info
-    It is possible to allow the user **either to receive or make payments in multiple currencies** (foreign currency), while configuring the payment methods assigned to a given financial account.
 
 ###### Exchange Rates
 
