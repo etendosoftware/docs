@@ -63,7 +63,7 @@ Each agent is configured with a set of instructions called a **Prompt**, a knowl
 Agents can be organized into modules or created directly within your Etendo environments, offering flexibility in how you structure your AI-powered workflows.
 
 !!! info 
-    For more information, visit the [Agent](../etendo-copilot/setup-and-usage.md#assistant-window) window documentation.
+    For more information, visit the [Agent](../etendo-copilot/setup-and-usage.md#agent-window) window documentation.
 
 
 ### Skill/Tool

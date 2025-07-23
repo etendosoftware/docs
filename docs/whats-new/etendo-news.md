@@ -559,7 +559,7 @@ With this agent, you will be allowed to **formulate questions** in natural langu
 
 ### Copilot Extensions
 
-[:material-robot: **Purchase Expert Agent**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+[:material-robot: **Purchase Expert Agent**](../user-guide/etendo-copilot/bundles/overview.md#order-expert)
 
 In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Agent has been included.
 Your purchase orders are made easier with the new Copilot agent. Interact via **text or by uploading images or PDFs** with the purchase order data, and the agents will automatically generate a draft.

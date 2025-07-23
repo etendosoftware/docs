@@ -117,7 +117,7 @@ Fields to note:
 - **File**: The file selected as knowledge base.
 - **Behaviour**: The way in which the agent will use the file. It has multiple available options:
 
-    - **[Agent] Add to the agent as Knowledge Base**: Suitable for large files. The agent uses a a default `Knowledge Base Search tool` to retrieve information during execution. Requires synchronization using the [Sync Agent](#sync-assistant-button) button.
+    - **[Agent] Add to the agent as Knowledge Base**: Suitable for large files. The agent uses a a default `Knowledge Base Search tool` to retrieve information during execution. Requires synchronization using the [Sync Agent](#buttons) button.
     - **[Agent] Append the file content to the prompt**: Recommended for small files with essential data. The file content is inserted into the prompt at each @alias@ or appended at the end if no alias is defined.
     - **[Agent] SPEC: Add as agent specification**: Used for `OpenAPI Specification` type files. Automatically generates tools for each method and endpoint, allowing the agent to interact with APIs.
     - **[User question] Append content to each question**: Best when file content changes frequently. The file is appended to each user message, ensuring the agent always receives updated data.
@@ -151,7 +151,7 @@ Fields to note:
 - **Member**: The user can select one or more agents for the manager. 
 
     !!! warning
-        Remember that you can only select agents to which you have defined access in the [Agent Access window](#assistant-access-window).
+        Remember that you can only select agents to which you have defined access in the [Agent Access window](#agent-access-window).
 
 - **Description**:  Read-only field. It shows the description of the agent, used by the manager to choose the appropriate agent for each case.
 

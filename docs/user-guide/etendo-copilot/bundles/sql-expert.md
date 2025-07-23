@@ -48,7 +48,7 @@ The SQL Expert Agent is composed of the following components:
 
 5. Restart Docker image using `./gradlew resources.up` tasks.
 
-6. Configure access to the agent from the [Agent Access](../../etendo-copilot/setup-and-usage.md#assistant-access-window) window.
+6. Configure access to the agent from the [Agent Access](../../etendo-copilot/setup-and-usage.md#agent-access-window) window.
 
 7. You can use the **SQL Expert** agent as a **System Administrator**
 
