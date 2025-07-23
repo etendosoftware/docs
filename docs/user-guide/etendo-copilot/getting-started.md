@@ -27,7 +27,7 @@ Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, 
 
 ## What is Etendo Copilot?
 
-At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Assistant* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
+At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
 <br clear="all"> 
 
@@ -56,14 +56,14 @@ Agents are intelligent entities that make real-time decisions about which Tool i
 
 Each agent is configured with a set of instructions called a **Prompt**, a knowledge base (referred to in Etendo as **KnowledgeBase File**), and a collection of **Skills or Tools**.
 
-- When you ask a question, the assistant evaluates your request and selects the most appropriate knowledge base or tool to provide a relevant answer.
+- When you ask a question, the agent evaluates your request and selects the most appropriate knowledge base or tool to provide a relevant answer.
 - In addition, LangGraph type agents act as **managers**, able to delegate queries to other specialized agents and coordinate responses among them. This allows for assertive and collaborative answers. 
 - There are also **Multi-Model Assistants**, which can handle specific tasks or workflows using multiple AI models.
 
 Agents can be organized into modules or created directly within your Etendo environments, offering flexibility in how you structure your AI-powered workflows.
 
 !!! info 
-    For more information, visit the [Assistant](../etendo-copilot/setup-and-usage.md#assistant-window) window documentation.
+    For more information, visit the [Agent](../etendo-copilot/setup-and-usage.md#assistant-window) window documentation.
 
 
 ### Skill/Tool

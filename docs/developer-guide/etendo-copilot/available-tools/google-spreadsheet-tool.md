@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-The **Google Spreadsheets** tool is a powerful utility for interacting directly with Google Sheets. It allows the assistant to manage spreadsheets programmatically through the **Google Drive and Google Sheets APIs**.
+The **Google Spreadsheets** tool is a powerful utility for interacting directly with Google Sheets. It allows the agent to manage spreadsheets programmatically through the **Google Drive and Google Sheets APIs**.
 
 The tool operates using five distinct modes:
 

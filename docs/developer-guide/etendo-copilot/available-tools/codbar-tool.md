@@ -19,7 +19,7 @@ The **CodbarTool** is a tool that reads barcodes from image files. It accepts an
 
 ## Functionality
 
-This tool allows assistants to **read barcodes from multiple images**, which can then be applied in inventory management, product tracking, and document processing among other areas.
+This tool allows agents to **read barcodes from multiple images**, which can then be applied in inventory management, product tracking, and document processing among other areas.
 
 Using this tool consists of the following actions: 
 

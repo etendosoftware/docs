@@ -55,7 +55,7 @@ Ensure you restart Copilot to set environment variables in the container.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-3.png)
 2. Upon receiving a response, if you want to evaluate internal processes or investigate issues, view the trace in LangSmith. 
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-4.png)
-3. The most recent entry will be the last request made to the assistant. Access it to see detailed information:
+3. The most recent entry will be the last request made to the agent. Access it to see detailed information:
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-5.png)
     - On the left, view all checkpoints from user interaction to response.
         ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-6.png)
@@ -75,7 +75,7 @@ Accessing the Playground lets you experiment, test, and debug prompt chains and 
 - Error and inefficiency detection for optimization and improvement of Copilot.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-10.png)
 
-- You can test different prompts or user interactions without returning to the assistant. For instance, if you want to see how an assistant responds with a prefix like "ETHRT":
+- You can test different prompts or user interactions without returning to the agent. For instance, if you want to see how an agent responds with a prefix like "ETHRT":
 
 - Find the user query section in the Playground and modify the prefix.
 
@@ -92,7 +92,7 @@ Accessing the Playground lets you experiment, test, and debug prompt chains and 
 - Instantly, observe the trace executing with the prefix **ETHRT**.
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-14.png)
 
-- To run multiple interactions to test assistant consistency:
+- To run multiple interactions to test agent consistency:
 
     - Click the arrow next to **Start**.
     - Deselect **Enable streaming**.
@@ -105,7 +105,7 @@ This feature is crucial for testing various requests and modifying prompts to me
 
 ## System Prompt Debugging
 The playground allows you to debug the prompt used in the agent. This is useful to improve the behavior of the agent in case of unexpected results.
-As we have seen above, in Langsmith you can see the execution of tools and other actions performed by the assistant, which are indicated by the LLM. That is, the decision or reasoning comes from the LLM and it is at these points that we can use it. 
+As we have seen above, in Langsmith you can see the execution of tools and other actions performed by the agent, which are indicated by the LLM. That is, the decision or reasoning comes from the LLM and it is at these points that we can use it. 
 
 When loading the playground we will see:
 

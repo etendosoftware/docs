@@ -33,7 +33,7 @@ In both options, the requirements are the same:
 - **Execution Group**: Optional group. If not set, it uses the conversation ID. Its use to identify the tasks that belong to the same group.
 - **Task Type**: Optional task type ID. If not set, it auto-creates one named "Copilot". Its use to identify the type of task.
 - **Status**: Optional status ID. Defaults to "Pending". Its use to identify the status of the task. After the task is processed, the status will be updated to `Completed`.
-- **Agent**: The agent that will process the tasks. If the agent is not specified, will be selected the assistant that used the tool. For the case of the agent `Bulk task creator`, it will be selected the supervisor agent that contains it.
+- **Agent**: The agent that will process the tasks. If the agent is not specified, will be selected the agent that used the tool. For the case of the agent `Bulk task creator`, it will be selected the supervisor agent that contains it.
 
 !!! info
     When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files, one per file in the case of ZIP files, and one per file in the case of other files.

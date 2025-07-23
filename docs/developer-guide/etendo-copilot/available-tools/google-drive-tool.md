@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-The **Google Drive Tool** provides a direct interface to interact with a user's Google Drive. It enables the assistant to perform file operations in two primary modes:
+The **Google Drive Tool** provides a direct interface to interact with a user's Google Drive. It enables the agent to perform file operations in two primary modes:
 
   - **`list`**: Searches for and lists files of a specific type that are accessible via the provided credentials.
   - **`upload`**: Uploads a local file from the system to the user's Google Drive.

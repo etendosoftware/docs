@@ -5,7 +5,7 @@ tags:
     - Agent
     - Create
     - LLM
-    - Assistant
+    - Agent
 ---
 
 # How to Create an Agent
@@ -17,9 +17,9 @@ This article explains how to create a new agent in Etendo Copilot from scratch. 
 The complete explanation of the windows used in this guide can be found in the [Setup and Usage](../../../user-guide/etendo-copilot/setup-and-usage.md) article.
 
 ## Creating a Basic Response Agent
-:material-menu: `Application` > `Service` > `Copilot` > `Assistant`
+:material-menu: `Application` > `Service` > `Copilot` > `Agent`
 
-The Assistant window allows you to define and configure assistants.
+The Agent window allows you to define and configure Agents.
 
 Some of the main fields to be completed are: 
 
@@ -130,7 +130,7 @@ LLMs are the brains behind the agent and these come by default with knowledge ga
 The most crucial is to determine:
 
 - Knowledge Base File Type: Basically it is the origin or how Etendo can get that file. This is configured in the `Knowledge Base File` Window.
-- Knowledge Base File behavior: Which is the way this file is integrated in the agent or in the conversation. This is configured in the `Knowledge` tab of the `Assistant` window.
+- Knowledge Base File behavior: Which is the way this file is integrated in the agent or in the conversation. This is configured in the `Knowledge` tab of the `Agent` window.
 
 ### Knowledge Base File Type
 
@@ -159,10 +159,10 @@ In the Knowledge Base File window, there is an advanced settings section that al
 
 | Behavior | When to Use It | Functionality | Limitations |
 |--|--|------|--|
-|**[Assistant] Append the file content to the prompt**| Its recommended when the volume of the file content can be handled by the model or the information its crucial for the agent work.| When the prompt is builded, the content of the file will be inserted in every @alias@ ocurrence inside the prompt. If the alias was not defined, the content of the file is appended at the final of the prompt.| The length of the file directly impacts the length of the system prompt, which has a limit in each module. In addition, a very large prompt can slow down the agent's responses.|
-|**[Assistant] Add to the assistant as Knowledge Base**| Its recommended to use when the volume of information is larger than the limit of tokens that the model can handle as 'prompt'. | The agent will not "know" the content of the knowledge base file from the beginning of the execution, but will be equipped with a `Knowledge base Search` tool to search for information in the knowledge base, working as a search engine. This is so because the information is indexed in a database of vectors, proper of the agent and the search tool is the one that allows to search in it by "Meaning". | The agent will not be able to use the information in the knowledge base to generate responses without using the `Knowledge base Search` tool. The tool will return an array of results, which can be used to generate a response. The quantity of results returned can be [configured](#advanced-settings) in the agent configuration. The agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.|
+|**[Agent] Append the file content to the prompt**| Its recommended when the volume of the file content can be handled by the model or the information its crucial for the agent work.| When the prompt is builded, the content of the file will be inserted in every @alias@ ocurrence inside the prompt. If the alias was not defined, the content of the file is appended at the final of the prompt.| The length of the file directly impacts the length of the system prompt, which has a limit in each module. In addition, a very large prompt can slow down the agent's responses.|
+|**[Agent] Add to the agent as Knowledge Base**| Its recommended to use when the volume of information is larger than the limit of tokens that the model can handle as 'prompt'. | The agent will not "know" the content of the knowledge base file from the beginning of the execution, but will be equipped with a `Knowledge base Search` tool to search for information in the knowledge base, working as a search engine. This is so because the information is indexed in a database of vectors, proper of the agent and the search tool is the one that allows to search in it by "Meaning". | The agent will not be able to use the information in the knowledge base to generate responses without using the `Knowledge base Search` tool. The tool will return an array of results, which can be used to generate a response. The quantity of results returned can be [configured](#advanced-settings) in the agent configuration. The agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.|
 |**[User question] Append content to each question**| It is recommended when data changes very frequently and you need to have the data at the time of each question. The content of the file should be as short as possible.|Add the content of the file at the end of each message.| It has a direct impact on the length of messages, which have character limits. It can also slow down the agent's responses if the message is very large.|
-|**[Assistant] SPEC: Add as assistant specification**| Can be used when the file content is an OpenAPI Specification| The specification is not added to the request, but is sent to Copilot. When the agent is built, the specification is processed and tools are generated automatically (for each method and each endpoint), which are then added to the agent. In this way, the assistant has tools to be able to use the Call Tool API without the need to use the Call Tool API and have all the OpenAPI Spec at the prompt.| It is currently in the experimental phase.|
+|**[Agent] SPEC: Add as agent specification**| Can be used when the file content is an OpenAPI Specification| The specification is not added to the request, but is sent to Copilot. When the agent is built, the specification is processed and tools are generated automatically (for each method and each endpoint), which are then added to the agent. In this way, the agent has tools to be able to use the Call Tool API without the need to use the Call Tool API and have all the OpenAPI Spec at the prompt.| It is currently in the experimental phase.|
 
 !!! info
     More information about this window can be found in the [Knowledge Tab](../../../user-guide/etendo-copilot/setup-and-usage.md#knowledge-tab) section.
@@ -174,7 +174,7 @@ In the Knowledge Base File window, there is an advanced settings section that al
 ### Add a Knowledge Base Example
 
 We got the example of the default Copilot agent `Bastian` that has a knowledge base file based in the Etendo Documentation from it GitHub repository. Copilot supports `.zip` format for the knowledge base file behavior, automatically extracting it and indexing the files inside.
-In this case, the `ZIP` file contains the Etendo Documentation in markdown format. The agent has the knowledge base file configured as `Remote File` and the behavior as `Add to the assistant as Knowledge Base`. The agent has the following configuration:
+In this case, the `ZIP` file contains the Etendo Documentation in markdown format. The agent has the knowledge base file configured as `Remote File` and the behavior as `Add to the agent as Knowledge Base`. The agent has the following configuration:
 
 - Setting the Knowledge Base File:
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-1.png)
@@ -218,7 +218,7 @@ In this case, the `ZIP` file contains the Etendo Documentation in markdown forma
 
 
 ## Add Tools
-When creating an agent, it is possible to add tools to it. Tools are functionalities that allow the agent to perform specific tasks. These tools can be used to interact with external systems, manipulate files, or perform other actions. The tools are added in the `Skills and Tools` tab of the `Assistant` window.
+When creating an agent, it is possible to add tools to it. Tools are functionalities that allow the agent to perform specific tasks. These tools can be used to interact with external systems, manipulate files, or perform other actions. The tools are added in the `Skills and Tools` tab of the `Agent` window.
 
 !!! info "Available Tools"
     The following tools are available in Etendo Copilot there listed in the [Etendo Copilot - ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack) module documentation. In the module **Etendo Copilot Toolpack** the are a set of tools that can be used to assist in multiple cases.
@@ -227,7 +227,7 @@ When creating an agent, it is possible to add tools to it. Tools are functionali
 
 To add a tool to an agent, follow these steps:
 
-1. Open the `Assistant` window.
+1. Open the `Agent` window.
 2. Go to the `Skills and Tools` tab.
 3. Add the tool by creating a record in the `Skills and Tools` tab.
 
@@ -246,7 +246,7 @@ The most powerful and useful feature of Etendo Copilot is the ability to interac
 
 ### External API
 The most usual way is based on a combination of an OpenAPI Specification and a tool that allows to make requests to that API. To do this, the following steps are needed:
-- **Add the OpenAPI Specification**: The OpenAPI Specification is a standard way to describe an API. This specification is added as a Knowledge Base File. And configure it as `[Assistant] Append the file content to the prompt`. This will allow the agent to know the endpoints and methods of the API.
+- **Add the OpenAPI Specification**: The OpenAPI Specification is a standard way to describe an API. This specification is added as a Knowledge Base File. And configure it as `[Agent] Append the file content to the prompt`. This will allow the agent to know the endpoints and methods of the API.
 - **Add the API Call Tool**: The API Call Tool is a tool that allows to make requests to an API. This tool is added as a tool in the agent. The agent can use this tool to make requests to the API.
 
 ### Etendo Classic  
@@ -254,11 +254,11 @@ For Etendo Classic, the process is a bit different. The main difference is that 
 To know more about how to create a flow in Etendo Classic, check the [How to Document an Endpoint with OpenAPI](../../etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md) guide.
 The steps to allow an agent to interact with Etendo Classic are:
 
-- **Add the OpenAPI Specification**: This specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`. When this type is selected, a selector with the available flows is shown, to select the flow that we want to use. The behavior of this file can be `[Assistant] Append the file content to the prompt`. This will allow the agent to know the endpoints and methods of the API.
+- **Add the OpenAPI Specification**: This specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`. When this type is selected, a selector with the available flows is shown, to select the flow that we want to use. The behavior of this file can be `[Agent] Append the file content to the prompt`. This will allow the agent to know the endpoints and methods of the API.
 - **Add the API Call Tool**: The API Call Tool is a tool that allows to make requests to an API. This tool is added as a tool in the agent. The agent can use this tool to make requests to the API.
 
 !!!warning
-    If the behavior of the Knowledge Base File is `[Assistant] Add to the assistant as Knowledge Base`, the agent will not be able to use the information in the knowledge base file to generate responses without using the `Knowledge base Search` tool. So the agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.
+    If the behavior of the Knowledge Base File is `[Agent] Add to the agent as Knowledge Base`, the agent will not be able to use the information in the knowledge base file to generate responses without using the `Knowledge base Search` tool. So the agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.
 
 #### Auto Generation of Tools
 

@@ -207,12 +207,12 @@ In this example, you will create a tool that performs a **ping** to a specified 
     ./gradlew export.database
     ```
 
-7. Once the **Copilot Tool** is defined, this tool must be associated to the assistant(s), to do so, a record must be created in the *tools* tab of the **Assistant** window, this record will allow us to activate or deactivate the tool.
+7. Once the **Copilot Tool** is defined, this tool must be associated to the agent(s), to do so, a record must be created in the *tools* tab of the **Agent** window, this record will allow us to activate or deactivate the tool.
 
     ![how-to-create-copilot-tools-2.png](../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
 
     !!! note
-        Remember to execute `Sync Assistant` process after linking the tool, if not, the tool will not be available in the agent.
+        Remember to execute `Sync Agent` process after linking the tool, if not, the tool will not be available in the agent.
 
 
 8. To test the developed tool, you can ask an agent that has the tool associated with it to perform the required action, the agent will run the tool and return the result.
