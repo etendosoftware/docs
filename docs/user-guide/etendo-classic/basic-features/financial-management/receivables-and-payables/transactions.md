@@ -940,29 +940,24 @@ This should not be the standard procedure, as there should be an exercise of rev
 
 The Funds Transfer functionality in the Financial Account window enables the movement of money between two different financial accounts within an organization. This action is typically used for internal transfers, such as moving funds from a bank account to a petty cash account, or between different currency accounts.
 
+![Funds transfer](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/funds-transfer.png)
+
 Fields to note:
 
-- **Transaction date**:
-    - It is mandatory
-    - This date is used for the records that this process creates. Transaction and accounting date
-- **Deposit to**: This combo box is displayed with all the financial accounts that belong to the organization tree of the financial account that is selected and that have the Funds Transfer flag enabled
-- **G/L item**: Default value is set from **Default G/L Item for Funds Transfer** configured in Financial Account's organization or its parent organization. The user can overwrite this parameter. This combo box is displayed with all the G/L Items that belong to the org tree of the financial account that is selected.
-- **Deposit amount**: Mandatory
-- **Currency from**: Not editable. Currency of the financial account selected
-- **Currency to**: Not editable. Currency of the financial account to
-- **Multiple Rate By**: The conversion rate from one currency to other
+- **Transaction date**: It is mandatory. This date is used for the records that this process creates. Transaction and accounting date
+- **Deposit to**: This dropdown displays all the financial accounts that belong to the organization tree of the financial account that is selected and that have the **Funds Transfer** flag enabled.
+- **G/L item**: Default value is set from **Default G/L Item for Funds Transfer** configured in Financial Account's organization or its parent organization. The user can overwrite this parameter. This dropdown is displayed with all the G/L Items that belong to the org tree of the financial account that is selected.
+- **Deposit amount**: Mandatory.
+- **Currency from**: Not editable. Currency of the financial account selected.
+- **Currency to**: Not editable. Currency of the financial account to.
+- **Multiple Rate By**: The conversion rate from one currency to another:
     - It is null by default
     - It is shown just when currencies are different
     - In case the user leaves this value as null the system uses the [conversion rate](../../general-setup/application.md#conversion-rates) configured in the system for that date. If there is nothing defined then an error is shown.
-- **Bank fee**: The fee charged by the bank from/to where the transation originated/was received.
-    - Not marked by default.
-    - When checked, two more fields are shown:
-        - Bank fee from: To enter the corresponding fee amount.
-        - Bank fee to: To enter the corresponding fee amount.
-- **Description**:
-    - Description is set as "Funds Transfer Transaction" by default. The user can overwrite the description if needed.
-
-![Funds transfer](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/funds-transfer.png)
+- **Bank fee**: The fee charged by the bank from/to where the transaction originated/was received. Not marked by default. When checked, two more fields are shown:
+    - Bank fee from: To enter the corresponding fee amount.
+    - Bank fee to: To enter the corresponding fee amount.
+- **Description**: Description is set as **Funds Transfer Transaction** by default. The user can overwrite the description if needed.
 
 #### Tabs
 
@@ -988,38 +983,40 @@ Those two transaction types can be created in three ways:
 
 - Fields to note in the transaction tab:
     - **Transaction Type:** The Transaction Type indicates the type of transaction to be submitted. The transaction tab also allows the user to create a "Deposit" or a "Withdrawal" transactions based on a "G/L Item" transaction type or on a "Payment".
-    - Bank fee
-    - BP Deposit
-    - BP Withdrawal
+        - Bank fee
+        - BP Deposit
+        - BP Withdrawal
     - **Transaction Date:** The Transaction Date field defines the date of the transaction being processed.
     - **Accounting Date:** The date this transaction is recorded for in the general ledger.
     - **Payment:** Payment selector.
     - **G/L Item:** General ledger item selector.
     - **Currency:** Indicates the currency to be used when processing this document.
     - **Deposit Amount:** amount in the case of receiving a payment.
-    - **Withdrawal Amount:** amount in the case of make a payment.
+    - **Withdrawal Amount:** amount in the case of making a payment.
     - **Dimensions:** Organization, Business partner and Project information.
-    - **Foreign Amount** - Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
-    - **Foreign Currency** - Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
+    - **Foreign Amount**: Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
+    - **Foreign Currency**: Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
 
         !!! info
             It is possible to allow the user **either to receive or make payments in multiple currencies** (foreign currency), while configuring the payment methods assigned to a given financial account. For more information about this option, visit [Payment Method](../../financial-management/receivables-and-payables/setup.md#payment-method-configuration).
 
-If creating a "Bank Fee" is necessary, select "Bank Fee" in "Transaction Type" combo, enter a transaction and accounting date and the amount either received in or paid out.
-
-Then save and process the transaction.
 
 ![Bank fee](../../../../../assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
 
-To create a new G/L item transaction, select "BP Deposit" or "BP Withdrawal" in transaction type and select the "**G/L Item**" in the G/L item combo, enter a transaction and accounting date, select a G/L Item, enter the amount either **received in** or **paid out** and save and process the transaction.
+1. If creating a **Bank Fee** is necessary, select **Bank Fee** in Transaction Type dropdown, enter a transaction and accounting date and the amount either received in or paid out.
+
+2. Then save and process the transaction.
+
 
 ![GL Item](../../../../../assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
+
+To create a new G/L item transaction, select `BP Deposit` or `BP Withdrawal` in transaction type and select the **G/L Item** in the G/L item dropdown, enter a transaction and accounting date, select a G/L Item, enter the amount either **received in** or **paid out** and save and process the transaction.
 
 If the user needs to create a new payment transaction, it is allowed to select a created payment or create a new payment from the payment selector.
 
 - If the payment is created, the user should choose the payment in the payment selector.
 
-![Payment selector](../../../../../assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
+    ![Payment selector](../../../../../assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
 
 Description and amount fields in the transaction tab will be automatically filled and to complete the transaction it is necessary to save and process.
 
