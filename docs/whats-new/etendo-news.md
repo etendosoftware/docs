@@ -28,6 +28,8 @@ tags:
 <div class="grid cards" markdown>
 
 - :material-robot: **New Invoice Supervisor agent: Uploading purchase invoices to Etendo has never been easier**
+
+    ![alt text](../assets/whats-new/etendo-news/invoice-supervisor.png)
     
     In version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the [Invoice Supervisor](../user-guide/etendo-copilot/bundles/overview.md#invoice-supervisor) agent is added to automatically create **purchase invoices** by processing multiple PDFs or images packed in a ZIP. Thanks to OCR, it extracts supplier, invoice number, currency, items, quantities, and totals, then drafts them in Etendo for review.
 
