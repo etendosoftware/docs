@@ -12,17 +12,87 @@ tags:
 
 #
 
-## May 2025
+## July 2025
 
-### Etendo Classic
+### Etendo
+
+<div class="grid cards" markdown>
+- :octicons-rocket-24: **New Etendo release: Version 25.2 Now Available!**
+
+    The latest version [25.2.x](./release-notes/etendo-classic/release-notes.md) of Etendo is here! All supported modules have been updated for full integration.  
+
+</div>
+
+### Copilot Extensions
 
 <div class="grid cards" markdown>
 
-- :octicons-rocket-24: **New Etendo Classic Release: Version 25.1.x Now Available!**
+- :material-robot: **New Invoice Supervisor agent: Uploading purchase invoices to Etendo has never been easier**
+    
+    In version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the [Invoice Supervisor](../user-guide/etendo-copilot/bundles/overview.md#invoice-supervisor) agent is added to automatically create **purchase invoices** by processing multiple PDFs or images packed in a ZIP. Thanks to OCR, it extracts supplier, invoice number, currency, items, quantities, and totals, then drafts them in Etendo for review.
+
+- :material-robot: **Bulk data uploads are a thing of the past: Google Drive and Sheets integration in Copilot**
+
+    In version [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the new feature is added to connect Copilot to **Google Drive** and **Google Sheets** and use agents to create **products** or **business partners** in bulk from a spreadsheet via the **Task** module. Ideal for large-scale data imports.
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Unleash team productivity: Meet the new Task module**
+    
+    In version [2.14.0](./release-notes/etendo-copilot/bundles/release-notes.md) and [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Platform Extensions bundle, the [Task](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md) module was added. Allowing you to organize, automate, and track workflows. Perfect for teams and agents needing structured task management.
+
+- :octicons-package-16: **Etendo SSO: Log in without passwords** 
+
+    ![alt text](../assets/whats-new/etendo-news/sso-login.png)
+    
+    In version [2.14.0](./release-notes/etendo-copilot/bundles/release-notes.md) and [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Platform Extensions bundle, the [Etendo SSO Login](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login) was added enabling **Single Sign-On** authentication, simplifying user login and enhancing security using external identity providers, such as Google, Microsoft, LinkedIn, GitHub and Facebook.
+
+</div>
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-view-list: **Picking List: Fulfillment accuracy that scales**
+
+    Boost your accuracy and speed with the [Picking List](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md) module, included in the [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) version of Warehouse Extensions bundle. Reserve stock instantly as picking lists are generated, eliminating conflicts and streamlining workflows. Choose between efficient Outbound Picking or simplified Direct Picking to Customer, either way, your warehouse team gains structured visibility and control over pending orders. It’s precision, planning, and performance, all in one, to accelerate delivery and customer satisfaction.
+
+- :fontawesome-solid-boxes-packing: **Packing: Streamlined packing, error-free Shipments**
+
+    In version [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of Warehouse Extensions bundle, the [Packing](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md) module is added, designed to bring structure and speed to goods shipment. Once a goods shipment document is processed, warehouse staff can select the optimal handling unit (box) for each item, ensuring every product is properly packed and ready for dispatch. This module minimizes handling errors and boosts shipment organization, giving your warehouse the polished finish every order deserves.
+
+</div>
+
+<div class="grid cards" markdown>
+
+- :octicons-device-mobile-16: **Advanced Warehouse Management: Mobile-powered inventory**
+
+    In version [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of Warehouse Extensions bundle, unlock seamless warehouse operations with [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md) module, a feature-packed mobile sub-app that integrates deeply with Etendo Mobile to deliver full traceability and automated warehouse operations.
+    
+    - Scan barcodes. 
+    - Execute **stock adjustments**.
+    - Apply **relocation** and automated rules. 
+    - Supercharges your **picking** and **packing** flows.
+        
+    All from your mobile device. Every action synchronizes in real time with Etendo, say goodbye to bottlenecks and ensuring consistent data across your entire operation.
+
+</div>
+
+## May 2025
+
+### Etendo
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Release: Version 25.1 Now Available!**
 
     ---
-    The latest version [25.1.x](./release-notes/etendo-classic/release-notes.md) of Etendo Classic is here! This release brings compatibility updates with **Java 17**, **PostgreSQL 16**, **Tomcat 9** and third-party dependencies, ensuring a modern and robust tech stack. All supported modules have been updated for full integration.  
-    Want to know more? Check out the [developer updating guide](../developer-guide/etendo-classic/eveloper-changelog/apichanges.md).
+    The latest version [25.1.x](./release-notes/etendo-classic/release-notes.md) of Etendo is here! This release brings compatibility updates with **Java 17**, **PostgreSQL 16**, **Tomcat 9** and third-party dependencies, ensuring a modern and robust tech stack. All supported modules have been updated for full integration.  
+    Want to know more? Check out the [developer updating guide](../developer-guide/etendo-classic/developer-changelog/apichanges.md).
 
     ---
 
@@ -58,15 +128,15 @@ tags:
 
 ## April 2025
 
-### Etendo Classic
+### Etendo
 
 <div class="grid cards" markdown>
 
-- :octicons-rocket-24: **Remember: You can simplify the calculation of commissions with Etendo Classic**
+- :octicons-rocket-24: **Remember: You can simplify the calculation of commissions with Etendo**
 
     ---
 
-    With **Etendo Classic**, managing [sales commissions](../user-guide/etendo-classic/basic-features/sales-management/setup.md#commission) is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using diffrent criteria and filters such as quantities sold or amounts invoiced: 
+    With **Etendo**, managing [sales commissions](../user-guide/etendo-classic/basic-features/sales-management/setup.md#commission) is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using different criteria and filters such as quantities sold or amounts invoiced: 
 
     ![Commission Criteria](../assets/whats-new/etendo-news/commission-criteria.png)
 
@@ -137,13 +207,13 @@ tags:
 
 </div>
 
-### Etendo Classic
+### Etendo
 
 <div class="grid cards" markdown>
 
 - :octicons-rocket-24: **25.1 Release Candidate Now Available!**
 
-    The new version [25.1](./release-notes/etendo-classic/release-notes.md) of Etendo Classic introduces the latest stack enhancements. While this version is currently in Release Candidate (RC) status, you can already explore the detailed [API changelog](../developer-guide/etendo-classic/developer-changelog/apichanges.md) to review the changes and improvements included in this release.
+    The new version [25.1](./release-notes/etendo-classic/release-notes.md) of Etendo introduces the latest stack enhancements. While this version is currently in Release Candidate (RC) status, you can already explore the detailed [API changelog](../developer-guide/etendo-classic/developer-changelog/apichanges.md) to review the changes and improvements included in this release.
 
 - :material-trending-up: **Fixed Issue**
     
@@ -269,13 +339,13 @@ tags:
 
 ## December 2024
 
-### Etendo Classic
+### Etendo
 
 <div class="grid cards" markdown>
 
-- :octicons-rocket-24: **New Etendo Classic Release Available!**
+- :octicons-rocket-24: **New Etendo Release: Version 24.4 Now Available!**
 
-    Version [24.4.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+    Version [24.4.0](./release-notes/etendo-classic/release-notes.md) of Etendo has been released for the last quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 - **The document completion process allows the use of Credit Payment as a payment method again.** 
 
@@ -371,7 +441,7 @@ New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bun
 -  **Boost Your Development Workflow with the New Dev Assistant!**
 
     ---
-    The [Dev Assistant](../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo Classic. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
+    The [Dev Assistant](../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
 
     This assistants are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
 </div>
@@ -388,16 +458,16 @@ New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bun
 :octicons-package-16: **Managing Etendo modules and dependencies has never been so easy**
 ![](../assets/whats-new/etendo-news/devassistant.png)
 
-The [Dependency Manager](../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo Classic interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
+The [Dependency Manager](../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) module allows users to access all published packages in Etendo Software repositories directly from the Etendo interface. With the Dependency Management window, you can browse available bundles, check version details and dependencies, and easily install new packages. The module also supports updating, removing, and modifying installed modules, giving you full control over your environment.
 
 
 ## September 2024
 
-### Etendo Classic
+### Etendo
 
-:octicons-rocket-24: **New Etendo Classic Release Available!**
+:octicons-rocket-24: **New Etendo Release: Version 24.3 Now Available!**
 
-Version [24.3.0](./release-notes/etendo-classic/release-notes.md) of Etendo Classic has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
+Version [24.3.0](./release-notes/etendo-classic/release-notes.md) of Etendo has been released for the third quarter of the year. All packages have been updated to ensure integration with this new release.  In addition this release includes all bugs resolved in the quarter.
 
 
 ### Copilot Extensions
@@ -520,11 +590,11 @@ In version [1.16.1](./release-notes/etendo-classic/bundles/financial-extensions/
 
 ## June 2024
 
-### Etendo Classic
+### Etendo
 
 :octicons-rocket-24: **New Release Available!**
 
-Etendo Classic version [24.2.0](./release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
+Etendo version [24.2.0](./release-notes/etendo-classic/release-notes.md) has been released, corresponding to the second quarter of the year. All bundles have been updated to ensure seamless integration with this new version.
 
 :material-bug: **Fixed Issues**
 
@@ -576,7 +646,7 @@ To take advantage of these enhancements, when upgrading to version [1.9.4](./rel
 
 ## March 2024
 
-### Etendo Classic
+### Etendo
 
 :material-trending-up: **Optimizations**
 
