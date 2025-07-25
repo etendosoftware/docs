@@ -45,7 +45,7 @@ This module includes **Bastian**, an agent equipped with the Etendo Documentatio
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.agents`
 
-The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks with interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the agents and Knowledge base, they can be replicated and customized agents can be created very easily.
+The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks by interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the agents and Knowledge base, they can be replicated and customized agents can be created very easily.
 
 
 #### Agents

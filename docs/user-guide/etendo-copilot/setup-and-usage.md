@@ -50,7 +50,7 @@ Fields to note:
 
 - **Name**: Agent name
 - **Description**: Agent description
-- **Description**: The description of the agents so that the manager can choose the appropriate agents for each case.
+- **Description**: The description of the agent so that the manager can choose the appropriate agent for each case.
 - **App Type**:
 
     - **Multi-Model Agent**

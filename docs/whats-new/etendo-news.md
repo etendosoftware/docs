@@ -443,9 +443,9 @@ New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bun
 -  **Boost Your Development Workflow with the New Dev Assistant!**
 
     ---
-    The [Dev Assistant](../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo Classic. With specialized agents, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
+    The [Dev Assistant](../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo. With specialized agents, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
 
-    This agents are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
+    These agent are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
 </div>
 
 <div class="grid cards" markdown>
