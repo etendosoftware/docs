@@ -137,11 +137,11 @@ This call registers the process in the system and attaches the necessary paramet
 
 The process and the button will be automatically registered, and the user will be notified.
 
-![ButtonProcess.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess.png)
+![ButtonProcess.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/button-process-1.png)
 
 At this point, we will have the Java class of the button created along with the registered process.
 
-![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
+![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/button-process-2.png)
 
 
 #### Code Run
@@ -193,7 +193,7 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
 
 3. Example interaction and result:
 
-    ![code-run-example.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/Code-Run-Example.png)
+    ![code-run-example.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/code-run-example.png)
 
     **Input:**
 
@@ -278,11 +278,11 @@ This agent is capable of creating **Event Handlers** in Etendo Classic. You only
 
 2. Open Copilot and select Event Handler Creator, then ask to the agent what you need to create.
 
-    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH1.png)
+    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/event-handler-creator-1.png)
 
 3. Then, this is the result given by the agent.
 
-    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH2.png)
+    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/event-handler-creator-2.png)
 
 
 #### Jasper Report Creator
@@ -348,7 +348,7 @@ The agent also allows editing existing reports. Available actions include:
 
 **Report Creation**
 
-![CreateReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/CreateReport.png)
+![CreateReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-report.png)
 
 
 **Report Registration**
@@ -373,7 +373,7 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 **Report Editing**
 
-![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
+![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/edit-report.png)
 
 
 #### Message Creator
@@ -430,14 +430,14 @@ Notes:
     - Message Type: `E`
     - Message Text: `"The input provided is not valid."`
 
-    ![MessageCreator_1.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_1.png)
+    ![MessageCreator_1.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/message-creator-1.png)
 
 2. The agent validates and sends the request to the webhook.
 
 3. Upon successful creation, the system will confirm:
     - Message created with the key: `MODPREFIX_InvalidInput`.
 
-    ![MessageCreator_2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_2.png)
+    ![MessageCreator_2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/message-creator-2.png)
 
 4. The message is ready for use in Java:
     ```java
@@ -505,19 +505,19 @@ body_params = {
 
 2. Open Copilot and select Module Creator, then ask to the agent what you need to create.
 
-![ModuleCreation.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation.png)
+![ModuleCreation.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator.png)
 
 If we go to the **Module** window we can find the created record.
 
-![ModuleCreation2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation2.png)
+![ModuleCreation2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-2.png)
 
 The module will also have the dependency, in this case **Core** with the prefix and data package mentioned by the user.
 
-![ModuleCreation3.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation3.png)
+![ModuleCreation3.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-3.png)
 
-![ModuleCreation4.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation4.png)
+![ModuleCreation4.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-4.png)
 
-![ModuleCreation5.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation5.png)
+![ModuleCreation5.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-5.png)
 
 Once the webhook has been called, it will automatically:
 
@@ -572,12 +572,11 @@ Then, provide the path to the translation module to the agent (e.g., `/modules/c
 4. The previous step will generate XML files for all modules in the `attachments/lang/es_ES` folder. Locate the module you want to translate and copy the files to the translation module in the `modules/<JAVAPACKAGE.OF.THE.MODULE>/referencedata/translation/es_ES` folder.
 ![](../../../assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
 
-
 5. Now, to use this agent it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Module Translation Creator and synchronize it. Then, go to the **Agent Access** window and give access to the role.
 
 
 6. Open Copilot and select Module Translation Creator, then ask to the agent to translate the files in your module (e.g., `/modules/<JAVAPACKAGE.OF.YOUR.MODULE>`).
-![alt text](../../../assets/developer-guide/etendo-copilot/ModuleTranslation_1.png)
+![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-translation.png)
 
 
 7. To apply the changes, execute these commands:
@@ -607,17 +606,17 @@ The **Reference Creator** is designed to facilitate the creation of references, 
 
 2. Open Copilot and select Reference Creator
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-references-0.png)
 
 3. Ask the agent which reference type you need to create
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references1.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-references1.png)
 
 4. The Create References Tool will process these parameters, verify the access token, build the request body and call the Etendo webhook to create the reference.
 
     In the Reference window, Etendo shows all the fields with the corresponding information generated and in the List Reference tab, it is possible to see the new list reference created. 
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-2.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-references-2.png)
 
 
 5. Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
@@ -715,13 +714,13 @@ This agent simplifies webhook creation by automatically generating the necessary
 
 2. Open Copilot and select Webhook Creator, then ask to the agent what you need to create.
 
-	![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH1.png)
+	![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-1.png)
 
 3. Then, this is the result given by the agent.
 
-    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH2.png)
+    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-2.png)
 
-    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
+    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-3.png)
 
 
 ### Test Supervisor

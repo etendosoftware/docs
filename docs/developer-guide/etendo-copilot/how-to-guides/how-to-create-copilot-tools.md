@@ -199,7 +199,7 @@ In this example, you will create a tool that performs a **ping** to a specified 
     !!! Warning Before Sync Tool Structure
         It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
 
-    ![how-to-create-copilot-tools.png](../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+    ![how-to-create-copilot-tools.png](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools/how-to-create-copilot-tools.png)
 
 6. After defining the tool, export the configurations to the module:
     
@@ -209,7 +209,7 @@ In this example, you will create a tool that performs a **ping** to a specified 
 
 7. Once the **Copilot Tool** is defined, this tool must be associated to the agent(s), to do so, a record must be created in the *tools* tab of the **Agent** window, this record will allow us to activate or deactivate the tool.
 
-    ![how-to-create-copilot-tools-2.png](../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+    ![how-to-create-copilot-tools-2.png](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools/how-to-create-copilot-tools-2.png)
 
     !!! note
         Remember to execute `Sync Agent` process after linking the tool, if not, the tool will not be available in the agent.

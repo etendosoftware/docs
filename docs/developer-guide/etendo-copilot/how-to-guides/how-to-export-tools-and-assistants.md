@@ -29,7 +29,7 @@ Agents must be exported as a dataset, in case optional installation is required 
 
     
     <figure markdown="span">
-    ![](../../../assets/developer-guide/etendo-copilot/exportcopilot1.png)
+    ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot1.png)
   <figcaption>Agent example with complete tabs.</figcaption>
 </figure>
 
@@ -64,7 +64,7 @@ Agents must be exported as a dataset, in case optional installation is required 
     ```
     
     <figure markdown="span">
-    ![](../../../assets/developer-guide/etendo-copilot/exportcopilot2.png)
+    ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot2.png)
     <figcaption>Dataset window configuration example in the module Copilot Purchase Expert</figcaption>
     </figure>
 
@@ -79,14 +79,14 @@ Agents must be exported as a dataset, in case optional installation is required 
     - Check the **Include Reference Data** checkbox in the module definition and add a description to the dataset referring to the exported agent.
 
     <figure markdown="span">
-    ![](../../../assets/developer-guide/etendo-copilot/exportcopilot3.png)
+    ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot3.png)
     <figcaption>Configuration example in the module Copilot Purchase Expert</figcaption>
     </figure>
 
     - When the module is installed, the dataset will be available for application in the **Enterprise Module Management** window.
 
     <figure markdown="span">
-    ![](../../../assets/developer-guide/etendo-copilot/exportcopilot4.png)
+    ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot4.png)
     <figcaption>Distributed datasets example</figcaption>
     </figure>
 
@@ -102,7 +102,7 @@ When exporting agents that need to be pre-configured in a module installation, t
     - If the agent should be restricted to System Administrator use only, check the **System App** checkbox. Otherwise, leave it unchecked to allow execution across all data access levels.
 
     <figure markdown="span">
-    ![](../../../assets/developer-guide/etendo-copilot/exportcopilot5.png)
+    ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot5.png)
     <figcaption>Exported agent example and available only as System Administrator</figcaption>
     </figure>
 
@@ -114,7 +114,7 @@ When exporting agents that need to be pre-configured in a module installation, t
 **Tool configuration**: When defining a tool, select the module (under development) in the **Module** field, and run `./gradlew export.database` command to export the tool together with the module.
 
 <figure markdown="span">
-![](../../../assets/developer-guide/etendo-copilot/exportcopilot6.png)
+![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot6.png)
 <figcaption>Tool configuration example</figcaption>
 </figure>
 

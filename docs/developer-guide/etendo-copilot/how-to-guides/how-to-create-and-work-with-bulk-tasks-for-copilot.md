@@ -76,10 +76,10 @@ And the objetive is to insert these products in Etendo. For this example we will
     4. Set an identifier for the **Execution Group**. For example, `Product Load 01/04/2025`. This can be used to identify the tasks that belong to the same group.
     5. Set an **Element separator**. This is the character that will be used to separate the data from the file CSV. For example, `,` or  `;`.
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot.png)
 
 3. Click on `Done` button. And the tasks will be created.
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png)
 
 #### Using the `Task Creator Tool` in an agent
 
@@ -100,7 +100,7 @@ And the objetive is to insert these products in Etendo. For this example we will
     This use of the `Task Creator Tool` is an example, the agent can have assumptions or simplifications that can change the way to use it. This can be done customizing the agent prompt.
 
 5. The agent will create the tasks based on the file data using the `Task Creator Tool`.
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
+![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
 
 #### Using the `Bulk Task Creator` agent
 This agent know to use the `Task Creator Tool` strategically, converting the request in singular tasks. The steps to create the bulk tasks are:
@@ -114,7 +114,7 @@ This agent know to use the `Task Creator Tool` strategically, converting the req
     Create the products in the attached file.
     ```
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-3.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-3.png)
 
 5. The supervisor agent will delegate the task to the `Bulk Task Creator` agent that will create the tasks based on the file data and then process it.
 
@@ -134,22 +134,22 @@ For example, we will process few tasks created in the previous example, in the m
 1. Go to the `Tasks` window.
 2. Select the tasks to be processed.
 3. Click on the `EXECUTE TASK WITH COPILOT` button.
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-4.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-4.png)
 4. The tasks will be processed and the status will be updated to `Completed`.
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-5.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-5.png)
 5. In the field `Response` will be shown the result of the task.
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-6.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-6.png)
 
 For the remaining tasks, we will schedule the background process to process them.
 
 1. Go to the `Process Request` window.
 2. Create a record selecting the `Execute Copilot Bulk Tasks` process. It is recommended to schedule the process to be executed from time to time, depending on the specific need. For this case, we will do it every 10 minutes.
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-7.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-7.png)
 3. Click in the button `Schedule Process`.
 4. The process will be scheduled and will process the tasks in the background.
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-8.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-8.png)
 5. The tasks selected are the tasks executed:
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-and-work-with-bulk-tasks-for-copilot-9.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-9.png)
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

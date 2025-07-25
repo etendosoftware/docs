@@ -61,7 +61,7 @@ Suppose you have an image at `/home/user/invoice.png` and you want to extract te
 
 The following is an example image of an invoice:
 
-![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
+![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool-2.png)
 
 
 - Use the tool as follows:

@@ -56,7 +56,7 @@ Using this tool consists of the following actions:
 
 The following is an example image of a goods receipt: 
 
-![alt text](../../../assets/developer-guide/etendo-copilot/available-tools/codbar-tool-0.jpg)
+![alt text](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool-1.jpg)
 
 - The tool will be used as follows: 
 

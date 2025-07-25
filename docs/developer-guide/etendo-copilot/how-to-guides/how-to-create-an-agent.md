@@ -89,7 +89,7 @@ For example, to create a new agent called **Task Definition Agent** to help user
 
 After saving the agent, the system will automatically grant access to it. Open the Copilot Chat with the button `✨Copilot` and select the agent `Task Definition Agent`. You can start interacting with the agent.
 
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/basic-agent.png)
+![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent.png)
 
 !!! tip
     From the most basic agent, its behavior is determined by its system prompt. Therefore, in case of an undesired operation, it is important to verify that the failure is not in an incorrect, inefficient or unclear prompt. It is possible to debug LLM calls with Langsmith. Read the [How to debug an agent prompt with Langsmith](./how-to-debug-an-agent-prompt-with-langsmith.md) article for more information.
@@ -114,7 +114,7 @@ Etendo Copilot provides a Window where you can see the available models and thei
 
 ### Image Input
 
-![Image Input](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/image-input-screenshot.png){align=right width=250}
+![Image Input](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-11.png){align=right width=250}
 
 Models that support image inputs can work with images attached to the conversation. If the model does not support image inputs, it's possible to fix this by adding to the agent the `OCR Tool` that allows extracting text from images.
 
@@ -148,7 +148,7 @@ The most crucial is to determine:
 
 ### Advanced settings
 In the Knowledge Base File window, there is an advanced settings section that allows you to configure the following options in the splitting algorithm of the content of the file: 
-![Advanced features](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/knowledge-base-advanced-settings.png)
+![Advanced features](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-12.png)
 
 - **Skip Splitting**: Retrieves the entire document as one chunk, which is useful for small files.
 - **Max. Chunk Size**: This option allows to set the maximum size (tokens) of the chunks that will be created when the content is split. This is useful to avoid very large chunks that can cause performance issues. Depending on the file types, the splitting algorithm checks for **separators** to split the content semantically. For example, in markdown files, the splitting is done by headers, so each chunk will contain the content of a header and its subheaders. Or in the case of Java files, the splitting is done by classes, so each chunk will contain the content of a class and its methods. When the chunk size is reached, the content is split into a new chunk in the next separator found. This is useful to avoid very large chunks that can cause problems with the token limit of the model.  
