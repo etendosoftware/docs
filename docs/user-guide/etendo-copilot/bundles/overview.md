@@ -66,6 +66,8 @@ This supervisor has the following agents:
 
 ##### Invoice Supervisor
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/65PPI9PN7f4?si=G7tS_GO1HKWRztQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The Invoice Supervisor is an orchestration agent responsible for managing the creation of purchase invoices in Etendo. This supervisor decides how to route incoming data (ZIP files, individual files, or user input) to the appropriate agents. 
     
 ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/invoice-expert-graph.png)
