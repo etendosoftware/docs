@@ -9021,7 +9021,7 @@
   
   
   <span class="md-ellipsis">
-    How to Export Tools and Assistants
+    How to Export Tools and Agents
     
   </span>
   
@@ -10901,10 +10901,10 @@
 <h2 id="intended-workflow">Intended Workflow</h2>
 <p>This tool is designed to be the first call in a multi-step process. The typical workflow is as follows:</p>
 <ol>
-<li>A user asks the assistant to perform an action that requires an external authenticated service (like Google Drive).</li>
-<li>The assistant first calls the <code>LoadOAuthTokenTool</code>.</li>
+<li>A user asks the agent to perform an action that requires an external authenticated service (like Google Drive).</li>
+<li>The agent first calls the <code>LoadOAuthTokenTool</code>.</li>
 <li>This tool fetches the OAuth token from Etendo and stores it in the conversation's memory, returning a safe <code>alias</code>.</li>
-<li>The assistant then calls the required tool (e.g., <code>GoogleDriveTool</code>) and passes the <code>alias</code> it just received.</li>
+<li>The agent then calls the required tool (e.g., <code>GoogleDriveTool</code>) and passes the <code>alias</code> it just received.</li>
 <li>The <code>GoogleDriveTool</code> uses the <code>alias</code> to retrieve the actual token from the conversation's memory and completes the user's request.</li>
 </ol>
 <h2 id="parameters">Parameters</h2>
@@ -10922,7 +10922,7 @@
 <li><strong>Determines the Alias</strong>: It uses the user-provided <code>al</code> or generates a new one if it's absent.</li>
 <li><strong>Fetches the Token</strong>: It makes a secure, server-side call to an Etendo webhook (<code>/webhooks/ReadOAuthToken</code>) to retrieve the pre-configured OAuth token. An organization's administrator must have configured this token in the Etendo backend beforehand.</li>
 <li><strong>Stores the Token</strong>: It stores the fetched token in the current conversation's context (<code>ThreadContext</code>) in a dictionary, using the alias as the key.</li>
-<li><strong>Returns the Alias</strong>: It returns a success message to the assistant, confirming that the token is loaded and ready for use via the returned alias.</li>
+<li><strong>Returns the Alias</strong>: It returns a success message to the agent, confirming that the token is loaded and ready for use via the returned alias.</li>
 </ol>
 <h2 id="usage-examples">Usage Examples</h2>
 <h3 id="example-1-loading-a-token-with-a-generated-alias">Example 1: Loading a Token with a Generated Alias</h3>
@@ -10944,13 +10944,13 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>OAuth token loaded successfully with alias: my_work_google_account. You can now use this alias to access the token.
 </span></code></pre></div>
 <h3 id="example-3-conceptual-two-step-workflow">Example 3: Conceptual Two-Step Workflow</h3>
-<p>Here is how an assistant would use this tool in practice to list files from Google Drive.</p>
+<p>Here is how an agent would use this tool in practice to list files from Google Drive.</p>
 <ul>
 <li>
 <p><strong>Step 1: Load the token</strong></p>
 <ul>
 <li><strong>Tool Call:</strong> <code>LoadOAuthTokenTool()</code></li>
-<li><strong>Result:</strong> The assistant receives the message: "OAuth token loaded successfully with alias: <code>TOKEN_a1b2...</code>"</li>
+<li><strong>Result:</strong> The agent receives the message: "OAuth token loaded successfully with alias: <code>TOKEN_a1b2...</code>"</li>
 </ul>
 </li>
 <li>

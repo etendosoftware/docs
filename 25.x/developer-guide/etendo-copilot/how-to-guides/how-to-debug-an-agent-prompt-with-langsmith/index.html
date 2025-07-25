@@ -9027,7 +9027,7 @@
   
   
   <span class="md-ellipsis">
-    How to Export Tools and Assistants
+    How to Export Tools and Agents
     
   </span>
   
@@ -10931,32 +10931,32 @@ This tutorial guides you through setting up the observability SDK to track Copil
 <h2 id="viewing-from-langsmith">Viewing From LangSmith</h2>
 <ul>
 <li>Once in LangSmith, access to your organization's projects is available.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith.png" /></a></li>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith.png" /></a></li>
 <li>In <em>Tracing Projects</em>, the name set in the <code>LANGCHAIN_PROJECT</code> variable should appear. This is the project where all traces will be stored.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-1.png" /></a></li>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-1.png" /></a></li>
 <li>Selecting your project allows you to view the trace of queries made in Copilot and evaluate responses.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-2.png" /></a></li>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-2.png" /></a></li>
 </ul>
 <h2 id="usage-example">Usage Example</h2>
 <ol>
 <li>Make a request to any Copilot agent.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-3.png" /></a></li>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-3.png" /></a></li>
 <li>Upon receiving a response, if you want to evaluate internal processes or investigate issues, view the trace in LangSmith. 
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-4.png" /></a></li>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-4.png" /></a></li>
 <li>
-<p>The most recent entry will be the last request made to the assistant. Access it to see detailed information:
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-5.png" /></a></p>
+<p>The most recent entry will be the last request made to the agent. Access it to see detailed information:
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-5.png" /></a></p>
 <ul>
 <li>On the left, view all checkpoints from user interaction to response.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-6.png" /></a></li>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-6.png" /></a></li>
 <li>
 <p>Access each endpoint, webhook, or tool to see how queries are formed.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-7.png" /></a>
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-8.png" /></a></p>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-7.png" /></a>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-8.png" /></a></p>
 </li>
 <li>
 <p>For interactions with OpenAI, an option called <strong>Playground</strong> is available.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-9.png" /></a></p>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-9.png" /></a></p>
 </li>
 </ul>
 </li>
@@ -10968,49 +10968,49 @@ This tutorial guides you through setting up the observability SDK to track Copil
 <li>Model performance analysis.</li>
 <li>
 <p>Error and inefficiency detection for optimization and improvement of Copilot.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-10.png" /></a></p>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-10.png" /></a></p>
 </li>
 <li>
-<p>You can test different prompts or user interactions without returning to the assistant. For instance, if you want to see how an assistant responds with a prefix like "ETHRT":</p>
+<p>You can test different prompts or user interactions without returning to the agent. For instance, if you want to see how an agent responds with a prefix like "ETHRT":</p>
 </li>
 <li>
 <p>Find the user query section in the Playground and modify the prefix.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">BEFORE</label><label for="__tabbed_1_2">NOW</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-11.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-11.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-12.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-12.png" /></a></p>
 </div>
 </div>
 </div>
 </li>
 <li>
 <p>Select <strong>Start</strong> to rerun with the prefix.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-13.png" /></a></p>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-13.png" /></a></p>
 </li>
 <li>
 <p>Instantly, observe the trace executing with the prefix <strong>ETHRT</strong>.
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-14.png" /></a></p>
+<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-14.png" /></a></p>
 </li>
 <li>
-<p>To run multiple interactions to test assistant consistency:</p>
+<p>To run multiple interactions to test agent consistency:</p>
 <ul>
 <li>Click the arrow next to <strong>Start</strong>.</li>
 <li>Deselect <strong>Enable streaming</strong>.</li>
 <li>Adjust the <strong>Repetitions</strong> to your desired count, such as three times.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-15.png" /></a>
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-16.png" /></a></li>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-15.png" /></a>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-16.png" /></a></li>
 <li>Press <strong>Start</strong> again. The query will execute thrice.
-    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt=" alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-17.png" /></a>
+    <a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt=" alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-17.png" /></a>
 This feature is crucial for testing various requests and modifying prompts to meet requirements.</li>
 </ul>
 </li>
 </ul>
 <h2 id="system-prompt-debugging">System Prompt Debugging</h2>
 <p>The playground allows you to debug the prompt used in the agent. This is useful to improve the behavior of the agent in case of unexpected results.
-As we have seen above, in Langsmith you can see the execution of tools and other actions performed by the assistant, which are indicated by the LLM. That is, the decision or reasoning comes from the LLM and it is at these points that we can use it. </p>
+As we have seen above, in Langsmith you can see the execution of tools and other actions performed by the agent, which are indicated by the LLM. That is, the decision or reasoning comes from the LLM and it is at these points that we can use it. </p>
 <p>When loading the playground we will see:</p>
 <ul>
 <li>The system prompt.</li>
@@ -11032,7 +11032,7 @@ The request is:
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>content: call to my boss, tomorrow
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>override: false
 </span></code></pre></div>
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-18.png" /></a></p>
+<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-18.png" /></a></p>
 <p>So, suppose we want to change the agent name the file to use SnakeCase, and the format of the note to be more formal and structured.
 We can open the playground and see the system prompt and change it to:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>You task is to write notes.
@@ -11043,10 +11043,10 @@ We can open the playground and see the system prompt and change it to:
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>DATE: 
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>DESCRIPTION:
 </span></code></pre></div>
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-19.png" /></a></p>
+<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-19.png" /></a></p>
 <p>So, to see if the change was effective, we can execute the request again and see the result. For better results, we can execute the request multiple times to see if the result is consistent.</p>
 <p>After executing the request, we can see that the file name is now in snake_case and the format of the note is more structured with the requirements we set in the prompt.
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-20.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-debug-an-agent-prompt-with-langsmith-20.gif" /></a></p>
+<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-20.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-20.gif" /></a></p>
 <p>If the result is not consistent, we can keep iterating on the prompt until we get the expected result.</p>
 <hr />
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M314.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H299c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-101.5-63.7c0-23.3 11.5-35 34.5-35s34.5 11.7 34.5 35q0 34.5-34.5 34.5c-34.5 0-34.5-11.5-34.5-34.5M247.6 8C389.4 8 496 118.1 496 256c0 147.1-118.5 248-248.4 248C113.6 504 0 394.5 0 256 0 123.1 104.7 8 247.6 8m.8 44.7C130.2 52.7 44.7 150.6 44.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M247.6 8C389.4 8 496 118.1 496 256c0 147.1-118.5 248-248.4 248C113.6 504 0 394.5 0 256 0 123.1 104.7 8 247.6 8m.8 44.7C130.2 52.7 44.7 150.6 44.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M137.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"/></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L.</a>.</p>

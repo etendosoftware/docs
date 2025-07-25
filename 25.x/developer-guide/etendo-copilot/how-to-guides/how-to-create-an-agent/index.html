@@ -9150,7 +9150,7 @@
   
   
   <span class="md-ellipsis">
-    How to Export Tools and Assistants
+    How to Export Tools and Agents
     
   </span>
   
@@ -11129,12 +11129,6 @@
       
       
       
-        <span class="md-tag">Assistant</span>
-      
-    
-      
-      
-      
         <span class="md-tag">Create</span>
       
     
@@ -11168,8 +11162,8 @@
 <p>This article explains how to create a new agent in Etendo Copilot from scratch. The agent will be able to interact with the user and provide responses based on the user's input. This article will guide you through the process of creating a new agent, adding a knowledge base, and selecting a model.</p>
 <p>The complete explanation of the windows used in this guide can be found in the <a href="../../../../user-guide/etendo-copilot/setup-and-usage/">Setup and Usage</a> article.</p>
 <h2 id="creating-a-basic-response-agent">Creating a Basic Response Agent</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Service</code> &gt; <code>Copilot</code> &gt; <code>Assistant</code></p>
-<p>The Assistant window allows you to define and configure assistants.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Service</code> &gt; <code>Copilot</code> &gt; <code>Agent</code></p>
+<p>The Agent window allows you to define and configure Agents.</p>
 <p>Some of the main fields to be completed are: </p>
 <ul>
 <li><strong>Name</strong></li>
@@ -11242,7 +11236,7 @@ These variables will be replaced with the values defined in the properties.</p>
 </li>
 </ul>
 <p>After saving the agent, the system will automatically grant access to it. Open the Copilot Chat with the button <code>✨Copilot</code> and select the agent <code>Task Definition Agent</code>. You can start interacting with the agent.</p>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/basic-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/basic-agent.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>From the most basic agent, its behavior is determined by its system prompt. Therefore, in case of an undesired operation, it is important to verify that the failure is not in an incorrect, inefficient or unclear prompt. It is possible to debug LLM calls with Langsmith. Read the <a href="../how-to-debug-an-agent-prompt-with-langsmith/">How to debug an agent prompt with Langsmith</a> article for more information.</p>
@@ -11264,7 +11258,7 @@ These variables will be replaced with the values defined in the properties.</p>
 <p>More information here <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#ai-models">AI Models</a></p>
 </div>
 <h3 id="image-input">Image Input</h3>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/image-input-screenshot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Image Input" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/image-input-screenshot.png" width="250" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Image Input" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-11.png" width="250" /></a></p>
 <p>Models that support image inputs can work with images attached to the conversation. If the model does not support image inputs, it's possible to fix this by adding to the agent the <code>OCR Tool</code> that allows extracting text from images.</p>
 <p>This tool is available in the <a href="../../bundles/overview/#etendo-copilot-toolpack">Etendo Copilot ToolPack</a> module.</p>
 <p>The OCR Tool is a tool that allows extracting text and information from images. Maybe it's necessary to <strong>explain</strong> to the agent how to use it in the prompt.</p>
@@ -11274,7 +11268,7 @@ These variables will be replaced with the values defined in the properties.</p>
 <p>The most crucial is to determine:</p>
 <ul>
 <li>Knowledge Base File Type: Basically it is the origin or how Etendo can get that file. This is configured in the <code>Knowledge Base File</code> Window.</li>
-<li>Knowledge Base File behavior: Which is the way this file is integrated in the agent or in the conversation. This is configured in the <code>Knowledge</code> tab of the <code>Assistant</code> window.</li>
+<li>Knowledge Base File behavior: Which is the way this file is integrated in the agent or in the conversation. This is configured in the <code>Knowledge</code> tab of the <code>Agent</code> window.</li>
 </ul>
 <h3 id="knowledge-base-file-type">Knowledge Base File Type</h3>
 <table>
@@ -11324,7 +11318,7 @@ These variables will be replaced with the values defined in the properties.</p>
 </div>
 <h3 id="advanced-settings">Advanced settings</h3>
 <p>In the Knowledge Base File window, there is an advanced settings section that allows you to configure the following options in the splitting algorithm of the content of the file: 
-<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/knowledge-base-advanced-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced features" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/knowledge-base-advanced-settings.png" /></a></p>
+<a class="glightbox" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced features" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-12.png" /></a></p>
 <ul>
 <li><strong>Skip Splitting</strong>: Retrieves the entire document as one chunk, which is useful for small files.</li>
 <li><strong>Max. Chunk Size</strong>: This option allows to set the maximum size (tokens) of the chunks that will be created when the content is split. This is useful to avoid very large chunks that can cause performance issues. Depending on the file types, the splitting algorithm checks for <strong>separators</strong> to split the content semantically. For example, in markdown files, the splitting is done by headers, so each chunk will contain the content of a header and its subheaders. Or in the case of Java files, the splitting is done by classes, so each chunk will contain the content of a class and its methods. When the chunk size is reached, the content is split into a new chunk in the next separator found. This is useful to avoid very large chunks that can cause problems with the token limit of the model.  </li>
@@ -11342,13 +11336,13 @@ These variables will be replaced with the values defined in the properties.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>[Assistant] Append the file content to the prompt</strong></td>
+<td><strong>[Agent] Append the file content to the prompt</strong></td>
 <td>Its recommended when the volume of the file content can be handled by the model or the information its crucial for the agent work.</td>
 <td>When the prompt is builded, the content of the file will be inserted in every @alias@ ocurrence inside the prompt. If the alias was not defined, the content of the file is appended at the final of the prompt.</td>
 <td>The length of the file directly impacts the length of the system prompt, which has a limit in each module. In addition, a very large prompt can slow down the agent's responses.</td>
 </tr>
 <tr>
-<td><strong>[Assistant] Add to the assistant as Knowledge Base</strong></td>
+<td><strong>[Agent] Add to the agent as Knowledge Base</strong></td>
 <td>Its recommended to use when the volume of information is larger than the limit of tokens that the model can handle as 'prompt'.</td>
 <td>The agent will not "know" the content of the knowledge base file from the beginning of the execution, but will be equipped with a <code>Knowledge base Search</code> tool to search for information in the knowledge base, working as a search engine. This is so because the information is indexed in a database of vectors, proper of the agent and the search tool is the one that allows to search in it by "Meaning".</td>
 <td>The agent will not be able to use the information in the knowledge base to generate responses without using the <code>Knowledge base Search</code> tool. The tool will return an array of results, which can be used to generate a response. The quantity of results returned can be <a href="#advanced-settings">configured</a> in the agent configuration. The agent needs to <strong>search</strong> in the knowledge base file to find the information. This is not recommended due to the performance of the agent.</td>
@@ -11360,9 +11354,9 @@ These variables will be replaced with the values defined in the properties.</p>
 <td>It has a direct impact on the length of messages, which have character limits. It can also slow down the agent's responses if the message is very large.</td>
 </tr>
 <tr>
-<td><strong>[Assistant] SPEC: Add as assistant specification</strong></td>
+<td><strong>[Agent] SPEC: Add as agent specification</strong></td>
 <td>Can be used when the file content is an OpenAPI Specification</td>
-<td>The specification is not added to the request, but is sent to Copilot. When the agent is built, the specification is processed and tools are generated automatically (for each method and each endpoint), which are then added to the agent. In this way, the assistant has tools to be able to use the Call Tool API without the need to use the Call Tool API and have all the OpenAPI Spec at the prompt.</td>
+<td>The specification is not added to the request, but is sent to Copilot. When the agent is built, the specification is processed and tools are generated automatically (for each method and each endpoint), which are then added to the agent. In this way, the agent has tools to be able to use the Call Tool API without the need to use the Call Tool API and have all the OpenAPI Spec at the prompt.</td>
 <td>It is currently in the experimental phase.</td>
 </tr>
 </tbody>
@@ -11380,7 +11374,7 @@ These variables will be replaced with the values defined in the properties.</p>
 </div>
 <h3 id="add-a-knowledge-base-example">Add a Knowledge Base Example</h3>
 <p>We got the example of the default Copilot agent <code>Bastian</code> that has a knowledge base file based in the Etendo Documentation from it GitHub repository. Copilot supports <code>.zip</code> format for the knowledge base file behavior, automatically extracting it and indexing the files inside.
-In this case, the <code>ZIP</code> file contains the Etendo Documentation in markdown format. The agent has the knowledge base file configured as <code>Remote File</code> and the behavior as <code>Add to the assistant as Knowledge Base</code>. The agent has the following configuration:</p>
+In this case, the <code>ZIP</code> file contains the Etendo Documentation in markdown format. The agent has the knowledge base file configured as <code>Remote File</code> and the behavior as <code>Add to the agent as Knowledge Base</code>. The agent has the following configuration:</p>
 <ul>
 <li>
 <p>Setting the Knowledge Base File:
@@ -11423,7 +11417,7 @@ In this case, the <code>ZIP</code> file contains the Etendo Documentation in mar
 <p>Remember, explain in the prompt that the agent must search in the knowledge base file to find the information. This will help to the agent to know how to work with the knowledge base file.</p>
 </div>
 <h2 id="add-tools">Add Tools</h2>
-<p>When creating an agent, it is possible to add tools to it. Tools are functionalities that allow the agent to perform specific tasks. These tools can be used to interact with external systems, manipulate files, or perform other actions. The tools are added in the <code>Skills and Tools</code> tab of the <code>Assistant</code> window.</p>
+<p>When creating an agent, it is possible to add tools to it. Tools are functionalities that allow the agent to perform specific tasks. These tools can be used to interact with external systems, manipulate files, or perform other actions. The tools are added in the <code>Skills and Tools</code> tab of the <code>Agent</code> window.</p>
 <div class="admonition info">
 <p class="admonition-title">Available Tools</p>
 <p>The following tools are available in Etendo Copilot there listed in the <a href="../../bundles/overview/#etendo-copilot-toolpack">Etendo Copilot - ToolPack</a> module documentation. In the module <strong>Etendo Copilot Toolpack</strong> the are a set of tools that can be used to assist in multiple cases.</p>
@@ -11431,7 +11425,7 @@ In this case, the <code>ZIP</code> file contains the Etendo Documentation in mar
 <h3 id="adding-a-tool-example">Adding a Tool Example</h3>
 <p>To add a tool to an agent, follow these steps:</p>
 <ol>
-<li>Open the <code>Assistant</code> window.</li>
+<li>Open the <code>Agent</code> window.</li>
 <li>Go to the <code>Skills and Tools</code> tab.</li>
 <li>Add the tool by creating a record in the <code>Skills and Tools</code> tab.</li>
 </ol>
@@ -11445,19 +11439,19 @@ In this case, the <code>ZIP</code> file contains the Etendo Documentation in mar
 <p>The most powerful and useful feature of Etendo Copilot is the ability to interact with APIs (including Etendo Classi)c. Currently the paradigm of AI agents is to automate and/or reuse what is <strong>already done</strong>. In other words, the utility arises from the fact that AI agents can use all the business logic that is already available.</p>
 <h3 id="external-api">External API</h3>
 <p>The most usual way is based on a combination of an OpenAPI Specification and a tool that allows to make requests to that API. To do this, the following steps are needed:
-- <strong>Add the OpenAPI Specification</strong>: The OpenAPI Specification is a standard way to describe an API. This specification is added as a Knowledge Base File. And configure it as <code>[Assistant] Append the file content to the prompt</code>. This will allow the agent to know the endpoints and methods of the API.
+- <strong>Add the OpenAPI Specification</strong>: The OpenAPI Specification is a standard way to describe an API. This specification is added as a Knowledge Base File. And configure it as <code>[Agent] Append the file content to the prompt</code>. This will allow the agent to know the endpoints and methods of the API.
 - <strong>Add the API Call Tool</strong>: The API Call Tool is a tool that allows to make requests to an API. This tool is added as a tool in the agent. The agent can use this tool to make requests to the API.</p>
 <h3 id="etendo-classic">Etendo Classic</h3>
 <p>For Etendo Classic, the process is a bit different. The main difference is that we can take advantage of the OpenAPI Specification automatically generated by the <code>Flows</code>, where we can define a set of endpoints to which we want to give access to our agent.
 To know more about how to create a flow in Etendo Classic, check the <a href="../../../etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/">How to Document an Endpoint with OpenAPI</a> guide.
 The steps to allow an agent to interact with Etendo Classic are:</p>
 <ul>
-<li><strong>Add the OpenAPI Specification</strong>: This specification is added as a Knowledge Base File of type <code>OpenAPI Flow Specification</code>. When this type is selected, a selector with the available flows is shown, to select the flow that we want to use. The behavior of this file can be <code>[Assistant] Append the file content to the prompt</code>. This will allow the agent to know the endpoints and methods of the API.</li>
+<li><strong>Add the OpenAPI Specification</strong>: This specification is added as a Knowledge Base File of type <code>OpenAPI Flow Specification</code>. When this type is selected, a selector with the available flows is shown, to select the flow that we want to use. The behavior of this file can be <code>[Agent] Append the file content to the prompt</code>. This will allow the agent to know the endpoints and methods of the API.</li>
 <li><strong>Add the API Call Tool</strong>: The API Call Tool is a tool that allows to make requests to an API. This tool is added as a tool in the agent. The agent can use this tool to make requests to the API.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If the behavior of the Knowledge Base File is <code>[Assistant] Add to the assistant as Knowledge Base</code>, the agent will not be able to use the information in the knowledge base file to generate responses without using the <code>Knowledge base Search</code> tool. So the agent needs to <strong>search</strong> in the knowledge base file to find the information. This is not recommended due to the performance of the agent.</p>
+<p>If the behavior of the Knowledge Base File is <code>[Agent] Add to the agent as Knowledge Base</code>, the agent will not be able to use the information in the knowledge base file to generate responses without using the <code>Knowledge base Search</code> tool. So the agent needs to <strong>search</strong> in the knowledge base file to find the information. This is not recommended due to the performance of the agent.</p>
 </div>
 <h4 id="auto-generation-of-tools">Auto Generation of Tools</h4>
 <p>When the OpenAPI Specification is added as a Knowledge Base File of type <code>OpenAPI Flow Specification</code>, the agent will automatically generate tools for each method and endpoint of the API. These tools can be used to make requests to the API without the need to configure the API Call Tool. The agent will have a tool for each method and endpoint of the API. This functionality is currently in the experimental phase.</p>

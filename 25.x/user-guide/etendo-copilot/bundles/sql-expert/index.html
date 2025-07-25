@@ -4395,9 +4395,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#assistant-setup" class="md-nav__link">
+  <a href="#agent-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Assistant Setup
+      Agent Setup
     </span>
   </a>
   
@@ -9005,7 +9005,7 @@
   
   
   <span class="md-ellipsis">
-    How to Export Tools and Assistants
+    How to Export Tools and Agents
     
   </span>
   
@@ -10768,9 +10768,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#assistant-setup" class="md-nav__link">
+  <a href="#agent-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Assistant Setup
+      Agent Setup
     </span>
   </a>
   
@@ -10828,7 +10828,7 @@
       
       
       
-        <span class="md-tag">Assistant Features</span>
+        <span class="md-tag">Agent Features</span>
       
     
       
@@ -10865,24 +10865,24 @@
 <h1 id="sql-expert">SQL Expert</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.copilot.toolpack</code></p>
 <h2 id="overview">Overview</h2>
-<p>This Assistant is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. Use a webhook to get the necessary information to generate the SQL query. The user can ask questions about the database, and the Assistant will determine whether to return a SQL query or execute the query and return the obtained result.</p>
+<p>This Agent is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. Use a webhook to get the necessary information to generate the SQL query. The user can ask questions about the database, and the Agent will determine whether to return a SQL query or execute the query and return the obtained result.</p>
 <h2 id="components">Components</h2>
-<p>The SQL Expert Assistant is composed of the following components:</p>
+<p>The SQL Expert Agent is composed of the following components:</p>
 <ul>
 <li>
 <p><a href="../available-tools/openapi-tool.md">API Call Tool</a></p>
 </li>
 <li>
-<p><strong>DBQueryExec - Webhook</strong>: This Webhook allows the Assistant to execute SQL queries in the database. The assistant call the Webhook to execute the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.</p>
+<p><strong>DBQueryExec - Webhook</strong>: This Webhook allows the Agent to execute SQL queries in the database. The agent call the Webhook to execute the query in the database and returns the result to the Agent. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.</p>
 </li>
 </ul>
-<h2 id="assistant-setup">Assistant Setup</h2>
+<h2 id="agent-setup">Agent Setup</h2>
 <ol>
 <li>
 <p>This module is included in the Copilot Extensions Bundle</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">Copilot Extensions - Release notes</a>.</p>
+<p>To be able to include this agent, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">Copilot Extensions - Release notes</a>.</p>
 </div>
 </li>
 <li>
@@ -10895,22 +10895,22 @@
 </div>
 </li>
 <li>
-<p>A new assistant named <strong>SQL Expert</strong> has been created in the <code>Application</code> &gt; <code>Service</code> &gt; <code>Copilot</code> &gt; <code>Assistant</code> window.</p>
+<p>A new agent named <strong>SQL Expert</strong> has been created in the <code>Application</code> &gt; <code>Service</code> &gt; <code>Copilot</code> &gt; <code>Agent</code> window.</p>
 </li>
 <li>
-<p>Run <strong>Sync Assistant</strong> process, loged as System Administrator role.</p>
+<p>Run <strong>Sync Agent</strong> process, loged as System Administrator role.</p>
 </li>
 <li>
 <p>Restart Docker image using <code>./gradlew resources.up</code> tasks.</p>
 </li>
 <li>
-<p>Configure access to the agent from the <a href="../../setup-and-usage/#assistant-access-window">Assistant Access</a> window.</p>
+<p>Configure access to the agent from the <a href="../../setup-and-usage/#agent-access-window">Agent Access</a> window.</p>
 </li>
 <li>
-<p>You can use the <strong>SQL Expert</strong> assistant as a <strong>System Administrator</strong></p>
+<p>You can use the <strong>SQL Expert</strong> agent as a <strong>System Administrator</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>In case of using this assistant with other roles: </p>
+<p>In case of using this agent with other roles: </p>
 <ol>
 <li>
 <p>It must be verified that the role has webhooks execution enabled: 
