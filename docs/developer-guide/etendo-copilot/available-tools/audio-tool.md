@@ -12,7 +12,7 @@ tags:
 
 ## Overview
 
-The Audio Tool is a tool that recognizes text from audio files. It can be used in Assistants to extract information from audio files, such as transcribing interviews, meetings, or podcasts. The tool accepts an audio file path as input and returns the text extracted from the audio.
+The Audio Tool is a tool that recognizes text from audio files. It can be used in Agents to extract information from audio files, such as transcribing interviews, meetings, or podcasts. The tool accepts an audio file path as input and returns the text extracted from the audio.
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).

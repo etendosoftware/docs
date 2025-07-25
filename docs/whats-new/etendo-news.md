@@ -187,7 +187,7 @@ tags:
     A new feature has been added to Etendo Mobile to streamline integration with external applications. With the new [Share files](../user-guide/etendo-mobile/) option, you can now receive files from outside apps and use them directly in subapplications like:
 
     - **Documents Manager**, where you can view files right in Etendo Mobile.
-    - **Copilot**, where specialized assistants can extract information from images, transform audios into sales orders, and much more.
+    - **Copilot**, where specialized agents can extract information from images, transform audios into sales orders, and much more.
 
     This feature improves data flow and efficiency across your platform.
 
@@ -423,12 +423,12 @@ tags:
 New Copilot Extensions bundle version [1.8.0](./release-notes/etendo-copilot/bundles/release-notes.md) 
 
 <div class="grid cards" markdown>
--  **Improve your Python Tools development with the Code Run assistant**
+-  **Improve your Python Tools development with the Code Run agent**
 
     ---
-    The [Code Run](../developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) assistant combined with the [Docker Tool](../developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
+    The [Code Run](../developer-guide/etendo-copilot/bundles/dev-assistant.md#code-run) agent combined with the [Docker Tool](../developer-guide/etendo-copilot/available-tools/docker-tool.md) introduces a safe and efficient way to run Python and Bash code inside isolated Docker containers. This tool revolutionizes the way coding tasks are handled. The wizard specializes in managing Docker containers to execute Python scripts, ensuring a reliable and isolated environment.
 
-    Equipped with advanced capabilities, the assistant prioritizes Python for troubleshooting, manages library installations dynamically, integrates Bash commands for flexible operations and handles file processing with precision. Whether you are troubleshooting, automating tasks or testing scripts, this tool ensures efficiency and security. Transform your development workflow with this powerful addition to Etendo.
+    Equipped with advanced capabilities, the agent prioritizes Python for troubleshooting, manages library installations dynamically, integrates Bash commands for flexible operations and handles file processing with precision. Whether you are troubleshooting, automating tasks or testing scripts, this tool ensures efficiency and security. Transform your development workflow with this powerful addition to Etendo.
 </div>
 
 ## October 2024
@@ -443,16 +443,16 @@ New Copilot Extensions bundle version [1.7.0](./release-notes/etendo-copilot/bun
 -  **Boost Your Development Workflow with the New Dev Assistant!**
 
     ---
-    The [Dev Assistant](../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo. With specialized assistants, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
+    The [Dev Assistant](../developer-guide/etendo-copilot/bundles/dev-assistant.md) module streamlines and accelerates your development workflow in Etendo. With specialized agents, you can now easily create buttons, windows, tabs, tables, event controllers, Jasper reports, and background processes. 
 
-    This assistants are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
+    These agent are designed to enhance productivity and reduce complexity, enabling efficient management and construction of all components within Etendo. Take your development process to the next level!
 </div>
 
 <div class="grid cards" markdown>
 -  **Copilot in Mobile: Try Copilot on Your Mobile Devices and Tablets!**
 
     ---
-    The new [Etendo Copilot sub-application](../user-guide/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) enables you to interact with AI-powered assistants from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
+    The new [Etendo Copilot sub-application](../user-guide/etendo-copilot/bundles/overview.md#etendo-copilot-subapp) enables you to interact with AI-powered agents from anywhere. Now, you can attach files, access role-specific windows, and receive real-time, personalized assistance directly on your mobile or tablet. Enjoy seamless integration with all the familiar features of Etendo, right from your fingertips!
 
 </div>
 
@@ -479,13 +479,13 @@ Version [24.3.0](./release-notes/etendo-classic/release-notes.md) of Etendo has 
 New Copilot Extensions bundle version [1.5.0](./release-notes/etendo-copilot/bundles/release-notes.md)  
 
 <div class="grid cards" markdown>
-- **New Feature Update: Zip File Support for LangChain Assistants**
+- **New Feature Update: Zip File Support for LangChain Agents**
     
     ![](../assets/whats-new/etendo-news/LangChain.png)
 
-    We are excited to announce a new functionality in LangChain assistants: the ability to upload `.zip` files directly into the knowledge base! These `.zip ` files can contain a variety of file formats, including `.txt`, `.pdf`, `.md`, `.py`, `.java`, and `.js`.
-    This enhancement allows developers to train assistants with example source code.
-    Boost your assistant’s capabilities with this powerful new feature!
+    We are excited to announce a new functionality in LangChain agents: the ability to upload `.zip` files directly into the knowledge base! These `.zip ` files can contain a variety of file formats, including `.txt`, `.pdf`, `.md`, `.py`, `.java`, and `.js`.
+    This enhancement allows developers to train agents with example source code.
+    Boost your agent’s capabilities with this powerful new feature!
 
 </div>
 
@@ -505,14 +505,14 @@ The newest version [1.4.0](./release-notes/etendo-copilot/bundles/release-notes.
     
     ---
     - **Database Queries:** Use system database queries as knowledge bases to automate tasks under specific conditions.
-    -  **Copilot Stream:** Track in real-time which assistant or tool is working.
-    -  **Improved UX:** The chat now retains the last assistant used for seamless interaction.
+    -  **Copilot Stream:** Track in real-time which agent or tool is working.
+    -  **Improved UX:** The chat now retains the last agent used for seamless interaction.
 
--   **Assistants Updates:**
+-   **Agents Updates:**
     
     ---
-    -  **Langchain Assistants:** Now manage local knowledge bases, keeping your data secure.
-    -  **LangGraph Assistants:** Manage a team of assistants, delegating tasks efficiently. 
+    -  **Langchain Agents:** Now manage local knowledge bases, keeping your data secure.
+    -  **LangGraph Agents:** Manage a team of agents, delegating tasks efficiently. 
      
 </div>
 
@@ -556,7 +556,7 @@ In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     ---
     
-    The Tool Pack module, available from version [1.3.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot assistants. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the assistants.
+    The Tool Pack module, available from version [1.3.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Etendo Copilot bundle, includes a collection of tools designed to enhance the capabilities of Etendo Copilot agents. This module enables functionalities such as file reading and writing, directory navigation, and email sending, thereby significantly expanding the operational scope of the agents.
 
 -   [:material-tools: **OCR Tool**](../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
@@ -574,7 +574,7 @@ In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     ---
 
-    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Reference Creator](../developer-guide/etendo-copilot/bundles/dev-assistant.md#reference-creator) assistant was included, capable of creating list type references to be used in the development process.
+    From version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) onwards, the [Reference Creator](../developer-guide/etendo-copilot/bundles/dev-assistant.md#reference-creator) agent was included, capable of creating list type references to be used in the development process.
 
 </div>
 
@@ -623,7 +623,7 @@ Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-
 [:material-robot: **SQL Expert**](../user-guide/etendo-copilot/bundles/sql-expert.md)
 
 In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the SQL Expert has been included.
-With this assistant, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
+With this agent, you will be allowed to **formulate questions** in natural language, and the system will automatically generate the necessary SQL query to return data in code or natural language.
 
 ---
 
@@ -631,10 +631,10 @@ With this assistant, you will be allowed to **formulate questions** in natural l
 
 ### Copilot Extensions
 
-[:material-robot: **Purchase Expert Assistant**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+[:material-robot: **Purchase Expert Agent**](../user-guide/etendo-copilot/bundles/overview.md#order-expert)
 
-In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Assistant has been included.
-Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
+In the version [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the Purchase Expert Agent has been included.
+Your purchase orders are made easier with the new Copilot agent. Interact via **text or by uploading images or PDFs** with the purchase order data, and the agent will automatically generate a draft.
 
 ### Spanish Localization
 

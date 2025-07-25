@@ -13,7 +13,7 @@ tags:
 
 ## Overview
 
-The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Assistants to extract information from images or pdfs that are uploaded to the chat.
+The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Agents to extract information from images or pdfs that are uploaded to the chat.
 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
@@ -61,7 +61,7 @@ Suppose you have an image at `/home/user/invoice.png` and you want to extract te
 
 The following is an example image of an invoice:
 
-![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
+![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool-2.png)
 
 
 - Use the tool as follows:
