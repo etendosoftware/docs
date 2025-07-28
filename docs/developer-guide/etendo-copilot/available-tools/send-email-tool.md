@@ -19,7 +19,7 @@ The **Send Email Tool** is designed to send emails. This tool facilitates sendin
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-This tool provides the assistant with:
+This tool provides the agent with:
 
 - Automation: It automates the sending of emails in web applications and systems.
 - Flexibility: It allows selecting between different sending methods (Resend or SMTP), depending on the environment configuration.
@@ -83,7 +83,7 @@ This process consists of the following actions:
 
 ## Usage Example
 
-Imagine you want to send a notification email. The input parameters for the assistant would be:
+Imagine you want to send a notification email. The input parameters for the agent would be:
 
 - `subject`: Account update
 - `mailto`: user@example.com

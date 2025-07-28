@@ -20,7 +20,7 @@ This guide explains how to use Etendo Copilot's context-aware features to enhanc
 !!! info
     The Copilot button is available across all Etendo windows, making it easy to access assistance wherever you are.
     
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how -to-use-context-features/context.png)
+![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features/context.png)
 
 ## Understanding Context in Copilot
 

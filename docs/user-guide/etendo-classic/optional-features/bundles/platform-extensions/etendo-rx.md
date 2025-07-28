@@ -13,6 +13,8 @@ tags:
 
 ## Etendo SSO Login
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S0bn2S7V07g?si=uK2sm_Nfn_W1RwxK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Etendo allows you to authenticate using these external provider accounts: **Google**, **Microsoft**, **LinkedIn**, **GitHub** and **Facebook**. Using the Single Sign-On protocol is possible due to the integration with the **EtendoAuth** service or Auth0 custom implementation.
 
 !!! info

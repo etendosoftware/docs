@@ -3,7 +3,7 @@ title: Copilot Extensions Bundle
 tags: 
     - Copilot Extensions
     - AI Tools
-    - Assistant Features
+    - Agent Features
     - Etendo Modules
     - Integration Guide
 ---
@@ -45,7 +45,7 @@ This module includes **Bastian**, an agent equipped with the Etendo Documentatio
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.agents`
 
-The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks with interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the assistants and Knowledge base, they can be replicated and customized agents can be created very easily.
+The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks by interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the agents and Knowledge base, they can be replicated and customized agents can be created very easily.
 
 
 #### Agents
@@ -65,6 +65,8 @@ This supervisor has the following agents:
         For more information you can read [How to Create a Spreadsheet Tasks Agent](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
 
 ##### Invoice Supervisor
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/65PPI9PN7f4?si=G7tS_GO1HKWRztQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 The Invoice Supervisor is an orchestration agent responsible for managing the creation of purchase invoices in Etendo. This supervisor decides how to route incoming data (ZIP files, individual files, or user input) to the appropriate agents. 
     
@@ -129,7 +131,7 @@ This agent is designed to help users read information from the database. It allo
 
 The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot agents directly from their mobile devices, enhancing productivity and accessibility on the go.
 
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot agents, and access specific data** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot agents, and access specific data** based on the user’s role. The agents dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
 
 With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot agents, facilitating smoother workflows across different devices.
 
@@ -146,7 +148,7 @@ With compatibility for both mobile phones and tablets, this subapplication ensur
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is a set of assistants that helps to perform tasks related to development in Etendo Classic, like creating a new window, creating a new module, creating processes, etc.
+The **Dev Assistant** is a set of agents that helps to perform tasks related to development in Etendo Classic, like creating a new window, creating a new module, creating processes, etc.
 
 !!!info
     For more information, visit: [Dev Assistant](../../../developer-guide/etendo-copilot/bundles/dev-assistant.md) developer guide.

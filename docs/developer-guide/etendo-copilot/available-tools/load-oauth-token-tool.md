@@ -19,10 +19,10 @@ This tool does not perform an action on its own but acts as a necessary first st
 
 This tool is designed to be the first call in a multi-step process. The typical workflow is as follows:
 
-1.  A user asks the assistant to perform an action that requires an external authenticated service (like Google Drive).
-2.  The assistant first calls the `LoadOAuthTokenTool`.
+1.  A user asks the agent to perform an action that requires an external authenticated service (like Google Drive).
+2.  The agent first calls the `LoadOAuthTokenTool`.
 3.  This tool fetches the OAuth token from Etendo and stores it in the conversation's memory, returning a safe `alias`.
-4.  The assistant then calls the required tool (e.g., `GoogleDriveTool`) and passes the `alias` it just received.
+4.  The agent then calls the required tool (e.g., `GoogleDriveTool`) and passes the `alias` it just received.
 5.  The `GoogleDriveTool` uses the `alias` to retrieve the actual token from the conversation's memory and completes the user's request.
 
 ## Parameters
@@ -39,7 +39,7 @@ The tool executes the following steps:
 1.  **Determines the Alias**: It uses the user-provided `al` or generates a new one if it's absent.
 2.  **Fetches the Token**: It makes a secure, server-side call to an Etendo webhook (`/webhooks/ReadOAuthToken`) to retrieve the pre-configured OAuth token. An organization's administrator must have configured this token in the Etendo backend beforehand.
 3.  **Stores the Token**: It stores the fetched token in the current conversation's context (`ThreadContext`) in a dictionary, using the alias as the key.
-4.  **Returns the Alias**: It returns a success message to the assistant, confirming that the token is loaded and ready for use via the returned alias.
+4.  **Returns the Alias**: It returns a success message to the agent, confirming that the token is loaded and ready for use via the returned alias.
 
 ## Usage Examples
 
@@ -79,12 +79,12 @@ OAuth token loaded successfully with alias: my_work_google_account. You can now 
 
 ### Example 3: Conceptual Two-Step Workflow
 
-Here is how an assistant would use this tool in practice to list files from Google Drive.
+Here is how an agent would use this tool in practice to list files from Google Drive.
 
   - **Step 1: Load the token**
 
       - **Tool Call:** `LoadOAuthTokenTool()`
-      - **Result:** The assistant receives the message: "OAuth token loaded successfully with alias: `TOKEN_a1b2...`"
+      - **Result:** The agent receives the message: "OAuth token loaded successfully with alias: `TOKEN_a1b2...`"
 
   - **Step 2: Use the alias in the target tool**
 
