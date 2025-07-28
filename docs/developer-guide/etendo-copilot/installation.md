@@ -78,7 +78,7 @@ All possible configuration variables are listed below, however, the step-by-step
     ``` bash title="Terminal"
     ./gradlew copilot.variables.setup  --console=plain
     ```
-    ![copilot.setup.variables](../../assets/developer-guide/etendo-copilot/copilot.setup.variables.png)
+    ![copilot.setup.variables](../../assets/developer-guide/etendo-copilot/getting-started/copilot-setup-variables.png)
     
     This command asks for characteristics of your Etendo instance. And based on your answers, it will print the values.
     

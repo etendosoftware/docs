@@ -2,7 +2,7 @@
 tags: 
  - Etendo Copilot
  - Configuration Guide
- - Assistant Management
+ - Agent Management
  - AI Tools Setup
  - User Instructions
 ---
@@ -20,18 +20,18 @@ In order to use Copilot, the user must access the Etendo Classic under the role 
 
 ![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 
-## How to Set up Assistants
+## How to Set up Agents
 
 With Etendo Copilot, it is possible to:
 
-1. *Create your own Assistant*: Use the Assistant window to set up a new assistant with all the specific necessary characteristics.
-2. *Install a module with a pre-configured assistant*: Some modules come with pre-configured assistants, which can be used as is or modified to suit your needs. For more information visit, [Copilot Extensions](./bundles/overview.md) bundle.
+1. *Create your own Agent*: Use the Agent window to set up a new Agent with all the specific necessary characteristics.
+2. *Install a module with a pre-configured Agent*: Some modules come with pre-configured agents, which can be used as is or modified to suit your needs. For more information visit, [Copilot Extensions](./bundles/overview.md) bundle.
 
-## Assistant Window
+## Agent Window
 
-:material-menu: `Application` > `Service` > `Copilot` > `Assistant`
+:material-menu: `Application` > `Service` > `Copilot` > `Agent`
 
-The Assistant window allows you to define and configure assistants. The capabilities of an agent are:
+The Agent window allows you to define and configure agents. The capabilities of an agent are:
 
 - **Text Generation**: The agent can answer questions or retrieve results from his knowledge base from the LLM model (general knowledge). Those models are able to generate text based on the input prompt.
 - **Retrieval**: The agent can be configured with a custom knowledge base, which can be used to retrieve information. Its useful when there is documentation or information that the agent can use to answer questions.
@@ -44,44 +44,44 @@ The Assistant window allows you to define and configure assistants. The capabili
 
 ### Header
 
-![assistant-window](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
+![agents-window](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
 
 Fields to note:
 
-- **Name**: Assistant name
-- **Description**: Assistant description
-- **Description**: The description of the assistant so that the manager can choose the appropriate assistant for each case.
+- **Name**: Agent name
+- **Description**: Agent description
+- **Description**: The description of the agent so that the manager can choose the appropriate agent for each case.
 - **App Type**:
 
     - **Multi-Model Agent**
-        This type of assistant can use multiple models of different providers, such as OpenAI, Anthropic, etc. 
+        This type of agents can use multiple models of different providers, such as OpenAI, Anthropic, etc. 
         This is the most recommended option to define a simple agent. The Agents can have a knowledge base filled with files, and can use tools to do specific tasks. The agent will strategically use the tools and knowledge base to provide the best possible response.
 
     -  **LangGraph**
 
-        This option works as a manager of other assistants and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the assistants is 50, though a different amount can be configured. 
+        This option works as a manager of other agents and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the agents is 50, though a different amount can be configured. 
     
     !!! info
         If the **App type**  `Multi-Model Agent` are chosen, the tabs shows are [knowledge](#knowledge-tab) and  [Skill and Tools](#skills-and-tools-tab). If the `LangGraph` option is chosen, the [Skill and Tools](#skills-and-tools-tab) and [Team Members](#team-members-tab) tabs are shown.
 
 - **Sync Status**: This read-only field indicates the current status of the agent.
     - `Pending synchronization` the agent will switch to this status at any change, either in the header or in the tabs.
-    - `Synchronized`, it is necessary to synchronize the agent using the “Synchronize Assistant” button.
+    - `Synchronized`, it is necessary to synchronize the agent using the “Synchronize Agent" button.
 
 - **Module**: Module in which the agent and all its configurations will be exported. This field is only available with the `System Administrator` role.
 - **Active**: Checkbox to activate or not the agent.
 - **SystemApp**: Checkbox to limit the use of certain agents only under the `system administrator` role and not available to end users.
-- **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish.
+- **Prompt**: Specific instructions of the agents. These instructions can be written in English or Spanish.
     
     !!!info
         The **Prompt** field can have the following dynamic variables: `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@`. These variables will be replaced with the values defined in the `gradle.properties`file.
 
-- **Graph Preview**:  In case of defining an **LangGraph** type app, it shows the tree of assistants under a certain manager.
+- **Graph Preview**:  In case of defining an **LangGraph** type app, it shows the tree of agents under a certain manager.
 
 
 ### Advanced Settings
 
-- **Model**: Drop-down list of available models, from the [AI Models](#ai-models-window) window. If left empty when running the `Sync Assistant` button, the default model is used.
+- **Model**: Drop-down list of available models, from the [AI Models](#ai-models-window) window. If left empty when running the `Sync Agent` button, the default model is used.
 - **Code Execution**: This check enables the experimental feature of code execution in **Multi-model** type agents.
 - **Search Result Qty.**: This option allows you to set the number of search results in the knowledge base on which the agent will base its response. The default value is 4, but it can be changed to any value. This value is useful when the agent has a large knowledge base, and you want to increase/decrease the number of results returned by the agent.
 - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
@@ -91,18 +91,18 @@ Fields to note:
 
 ![](../../assets/user-guide/etendo-copilot/setup/clone-agent.png)
 
-- **Sync Assistant**: This process takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
+- **Sync Agent**: This process takes care of updating or creating a new agent, in case it does not exist. In addition to creating the agent based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
 
 - **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
 - **Check hosts**: This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
 
-- **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a assistant is cloned in, the name `Copy of` is added. 
+- **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a agent is cloned in, the name `Copy of` is added. 
 
 
 ### Knowledge Tab
 
-In this tab, you can setup the files that will be used by the assistant as knowledge base, in prompts or questions.
+In this tab, you can setup the files that will be used by the agent as knowledge base, in prompts or questions.
 
 !!!info
     To load new files, you must do it from the [Knowledge base file](#knowledge-base-file-window) window, first you define the files and then from this tab you configure how the file will be used.
@@ -115,27 +115,27 @@ In this tab, you can setup the files that will be used by the assistant as knowl
 Fields to note:
 
 - **File**: The file selected as knowledge base.
-- **Behaviour**: The way in which the assistant will use the file. It has multiple available options:
+- **Behaviour**: The way in which the agent will use the file. It has multiple available options:
 
-    - **[Assistant] Add to the assistant as Knowledge Base**: Suitable for large files. The assistant uses a a default `Knowledge Base Search tool` to retrieve information during execution. Requires synchronization using the [Sync Assistant](#sync-assistant-button) button.
-    - **[Assistant] Append the file content to the prompt**: Recommended for small files with essential data. The file content is inserted into the prompt at each @alias@ or appended at the end if no alias is defined.
-    - **[Assistant] SPEC: Add as assistant specification**: Used for `OpenAPI Specification` type files. Automatically generates tools for each method and endpoint, allowing the assistant to interact with APIs.
-    - **[User question] Append content to each question**: Best when file content changes frequently. The file is appended to each user message, ensuring the assistant always receives updated data.
+    - **[Agent] Add to the agent as Knowledge Base**: Suitable for large files. The agent uses a a default `Knowledge Base Search tool` to retrieve information during execution. Requires synchronization using the [Sync Agent](#buttons) button.
+    - **[Agent] Append the file content to the prompt**: Recommended for small files with essential data. The file content is inserted into the prompt at each @alias@ or appended at the end if no alias is defined.
+    - **[Agent] SPEC: Add as agent specification**: Used for `OpenAPI Specification` type files. Automatically generates tools for each method and endpoint, allowing the agent to interact with APIs.
+    - **[User question] Append content to each question**: Best when file content changes frequently. The file is appended to each user message, ensuring the agent always receives updated data.
 
 - **Active**: checkbox to activate the knowledge base file.
 - **Type**: read-only field showing the type of file selected in the [Knowledge Base File window](#knowledge-base-file-window).
-- **Alias** In case you select behaviour, `[Assistant] Append the file content to the prompt`, by default it adds the file content dynamically to the end of the prompt, the alias can be used to replace the file content inside the prompt, using the wildcard @<alias>@, with the alias you define in this field. 
+- **Alias** In case you select behaviour, `[Agent] Append the file content to the prompt`, by default it adds the file content dynamically to the end of the prompt, the alias can be used to replace the file content inside the prompt, using the wildcard @<alias>@, with the alias you define in this field. 
 
 ### Skills and Tools Tab
 
-In this tab, you can define the tools to be used by the assistant.
+In this tab, you can define the tools to be used by the agent.
 
 ![](../../assets/user-guide/etendo-copilot/setup/skills-and-tools-tab.png)
 
 Fields to note:
 
 - **Skill/Tool**: The user can select any of the options available in this field, as many as necessary but one at the time.
-- **Description**: Read-only field. It shows the description of the tool, used by the assistant to choose the appropriate tool for each case.
+- **Description**: Read-only field. It shows the description of the tool, used by the agent to choose the appropriate tool for each case.
 - **Active**: checkbox to activate the tool.
 
 !!!info
@@ -148,15 +148,15 @@ In this tab you define the agents' members of the team, only present if you sele
 
 Fields to note:
 
-- **Member**: The user can select one or more assistants for the manager. 
+- **Member**: The user can select one or more agents for the manager. 
 
     !!! warning
-        Remember that you can only select assistants to which you have defined access in the [Assistant Access window](#assistant-access-window).
+        Remember that you can only select agents to which you have defined access in the [Agent Access window](#agent-access-window).
 
-- **Description**:  Read-only field. It shows the description of the assistant, used by the manager to choose the appropriate assistant for each case.
+- **Description**:  Read-only field. It shows the description of the agent, used by the manager to choose the appropriate agent for each case.
 
     !!! warning
-        Remember that it is not possible to select an assistant without a description.
+        Remember that it is not possible to select an agent without a description.
 
 - **Active**: Checkbox to activate the team member.
 
@@ -165,7 +165,7 @@ Fields to note:
 
 :material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
 
-In the Knowledge Base File window, you can define the files with which the assistants can interact.
+In the Knowledge Base File window, you can define the files with which the agents can interact.
 
 ### Header
 
@@ -183,7 +183,7 @@ Fields to note:
 
     === "Attached File"
 
-        This type allows you to upload files directly into Copilot for later use during interactions with the assistants.
+        This type allows you to upload files directly into Copilot for later use during interactions with the agents.
         ![attach-file.png](../../assets/user-guide/etendo-copilot/setup/attach-file.png)
     
     === "Code Index"
@@ -199,7 +199,7 @@ Fields to note:
         
         Fields to note:
 
-        - **Path File**: Specify the path where the code files you need the assistant to read are located. 
+        - **Path File**: Specify the path where the code files you need the agent to read are located. 
 
         !!!info
             It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
@@ -315,7 +315,7 @@ Fields to note:
 
 :material-menu: `Application`>`Service`>`Copilot`>`Skill/Tool`
 
-In this window , the user can find [available tools](../../developer-guide/etendo-copilot/available-tools/overview.md), distributed in the Copilot bundle, to be used in Copilot assistants.
+In this window , the user can find [available tools](../../developer-guide/etendo-copilot/available-tools/overview.md), distributed in the Copilot bundle, to be used in Copilot agents.
 
 ![](../../assets/user-guide/etendo-copilot/setup/skill-tool-window.png)
 
@@ -325,11 +325,11 @@ Some tools require to communicate with Etendo through WebHooks. Their configurat
     In case you want to define new tools, visit [How to Create Copilot Tools](../../developer-guide/etendo-copilot/how-to-create-copilot-tools.md).
 
 
-## Assistant Access Window
+## Agent Access Window
 
-:material-menu: `Application`>`Service`>`Copilot`>`Assistant Access`
+:material-menu: `Application`>`Service`>`Copilot`>`Agent Access`
 
-In this window, it is possible to configure access roles for each Assistant. This means you can control who has permission to interact with each assistant. This feature is useful for ensuring that users only have access to functions relevant to their responsibilities. This possibility depends on the role level you have.
+In this window, it is possible to configure access roles for each Agent. This means you can control who has permission to interact with each agent. This feature is useful for ensuring that users only have access to functions relevant to their responsibilities. This possibility depends on the role level you have.
 
 ![](../../assets/user-guide/etendo-copilot/setup/assistant-access-window.png)
 
@@ -337,21 +337,21 @@ In this window, it is possible to configure access roles for each Assistant. Thi
     This configuration is also possible from the Role window.
 
 !!!note
-    In case of deleting an assistant, the related assistant access records are also deleted.
+    In case of deleting an agent, the related agent access records are also deleted.
 
 ## Process Request Window
 
 :material-menu: `Application`>`General Setup`>`Process Scheduling`>`Process Request`
 
-In this window, the user can schedule Etendo Copilot background processes by selecting the `Assistants Schedule` option in the **Process** field and using all the provided options such as timing, start date, frequency, etc.
+In this window, the user can schedule Etendo Copilot background processes by selecting the `Agents Schedule` option in the **Process** field and using all the provided options such as timing, start date, frequency, etc.
 
 !!!info
     For more information, visit [Process Request](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
 
-### Assistant Tab 
+### Agent Tab 
 
 !!! Info
-    This tab is only visible when an **Assistants Schedule** process is selected.
+    This tab is only visible when an **Agents Schedule** process is selected.
 
 In this tab, the process to be scheduled can be configured. 
 
@@ -360,7 +360,7 @@ In this tab, the process to be scheduled can be configured.
 Fields to note:
 
 - **Name**: Name description.
-- **Assistant**: Corresponding assistant for the process.
+- **Agent**: Corresponding agent for the process.
 - **Prompt**: Instruction for the process.
 - **Active**: Checkbox to select if this tool is active or not.
 
@@ -368,7 +368,7 @@ Fields to note:
 
 :material-menu: `Application`>`Service`>`Copilot`>`Conversations`
 
-In this window, the user can find and access all interactions had with Copilot. These records show specific information about these conversations, such as user, creation date and assistant.
+In this window, the user can find and access all interactions had with Copilot. These records show specific information about these conversations, such as user, creation date and agent.
 
 ![](../../assets/user-guide/etendo-copilot/setup/conversations-window.png)
 
@@ -379,7 +379,7 @@ Fields to note:
 - **Creation Date**: The date of the conversation
 - **Visible**: Checkbox to mark to make the record visible
 - **Last Message**: Date of the last message of the conversation
-- **Assistant**: Assistant selected to interact
+- **Agent**: Agent selected to interact
 
 ### Messages Tab
 
@@ -396,10 +396,10 @@ Fields to note:
 
 :material-menu: `Application`>`Service`>`Copilot`>`AI Models`
 
-In this window, the user can find and add AI models to be used by the assistants, Available in the drop-down list of models
+In this window, the user can find and add AI models to be used by the agents, Available in the drop-down list of models
 
 !!!info 
-    - Automatically, the window will be populated with the Etendo default distributed models, after the first assistant synchronization.
+    - Automatically, the window will be populated with the Etendo default distributed models, after the first agent synchronization.
     - Also diffrent models and providers must be entered manually.
 
 ![](../../assets/user-guide/etendo-copilot/setup/ai-models-window.png)
