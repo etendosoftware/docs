@@ -22,7 +22,7 @@ The **Task Creator Tool** automates the creation of tasks based on the content o
 !!! tip
     To know when is the best time to use this tool or how there are executed this tasks, check the [How to create bulk tasks for Copilot](../how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md) guide.
 
-This tool provides the assistant with:
+This tool provides the agent with:
 
   - Bulk Task Creation: Automatically generate multiple tasks from one file.
   - Multi-format Support: Works with `.zip`, `.csv`, `.xls`, and `.xlsx`.
@@ -54,7 +54,7 @@ The tool follows these main steps:
       - `group_id`: Optional group ID. If not set, it uses the conversation ID.
       - `task_type_id`: Optional task type ID. If not provided, it uses the default "Copilot" task type (ID: `A83E397389DB42559B2D7719A442168F`).
       - `status_id`: Optional status ID. If not provided, it uses the default "Pending" status (ID: `D0FCC72902F84486A890B70C1EB10C9C`).
-      - `agent_id`: Optional ID of the agent to process the task. If not provided, it uses the current main assistant's ID.
+      - `agent_id`: Optional ID of the agent to process the task. If not provided, it uses the current main agent's ID.
 
   - **File Extraction**
 
