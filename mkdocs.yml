@@ -356,6 +356,7 @@ nav:
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
 #        - Java Coding Conventions: developer-guide/etendo-classic/concepts/Java_Coding_Conventions.md
 #        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/javascript-coding-conventions.md
+        - Jobs: developer-guide/etendo-classic/concepts/jobs.md
 #        - JSON REST Web Services: developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md
 #        - Main Development Concepts: developer-guide/etendo-classic/concepts/Main_Development_Concepts.md
 #        - Merging Modules: developer-guide/etendo-classic/concepts/Merging_Modules.md

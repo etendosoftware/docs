@@ -8,10 +8,7 @@ tags:
 
 ## Overview
 
-Etendo introduces the concept of Jobs which is about one or more Actions executed in sequence. These Actions are standard processes which enable the user to create and store Jobs for later usage. Jira Automations and iOS Shortcuts are similar concepts.
-
-!!! note
-    The GUI to create and execute jobs is coming soon to a newer version of Etendo. At present, it is only possible to define Actions which act as standard processes available in the existing UI nevertheless, they will also support the newer UI when released.
+Etendo introduces the concept of [Jobs](../concepts/jobs.md) which is about one or more Actions executed in sequence. These Actions are standard processes which enable the user to create and store Jobs for later usage. Jira Automations and iOS Shortcuts are similar concepts.
 
 ## Create an Action
 
