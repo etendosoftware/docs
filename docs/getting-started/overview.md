@@ -21,20 +21,20 @@ Welcome to the first step in understanding **Enterprise Resource Planning (ERP)*
 
 This section helps you grasp what an ERP is, how it works, and why it’s essential for organizations of all sizes.
 
-An **Enterprise Resource Planning (ERP)** system is a comprehensive software solution that integrates and optimizes an organization’s key processes in a single, unified platform. It connects departments, streamlines workflows, and gives leaders real-time insights to make informed decisions.
+An **Enterprise Resource Planning (ERP)** system, as **Etendo**, is a comprehensive software solution that integrates and optimizes an organization’s key processes in a single, unified platform. It connects departments, streamlines workflows, and gives leaders real-time insights to make informed decisions.
 
 # How Does an ERP Work?
 
 From a technical standpoint, an ERP is made up of **interconnected modules** or **functional areas**. Each module focuses on a specific part of the business, but they **communicate in real-time**, keeping everything in sync.
 
-In the case of Etendo, you can find functionalities such as:
+In the case of **Etendo**, you can find functionalities such as:
 
 <div class="grid cards" markdown>
 
 -   :material-sale:{ .lg .middle } __[Sales Management](../user-guide/etendo-classic/basic-features/sales-management/getting-started.md)__
 
     ---
-    - Starts the process with orders.  
+    - Starts the process with orders, includes invoices and even manages returns.  
     - Triggers **Production**, **Warehouse**, and **Finance** actions.
 
 -   :material-shopping:{ .lg .middle } __[Procurement Management](../user-guide/etendo-classic/basic-features/procurement-management/getting-started.md)__
@@ -78,17 +78,17 @@ In the case of Etendo, you can find functionalities such as:
 
 # Why Use an ERP?
 
-Here are some of the **key benefits** of using an ERP:
+Here are some of the **key benefits** of using **Etendo**:
 
 - **Centralized Information**: All your critical data in one place.  
 - **Informed Decision-Making**: Dashboards and reports help leaders act quickly.  
 - **Process Automation**: Reduces manual tasks, saving time and effort.  
 - **Scalability**: Grows with your business.  
-- **Regulatory Compliance**: Many ERPs help meet local and international standards.
+- **Regulatory Compliance**: Etendo helps meet local and international standards.
 
 # Best Practices for Working with an ERP
 
-An ERP isn’t just software—it reflects how your business operates. To use it effectively:
+**Etendo** isn’t just software—it reflects how your business operates. To use it effectively:
 
 -  **Understand Business Processes**: Know what needs to be managed before configuring the system.  
 -  **Collaborate Across Departments**: Align needs and expectations.  
