@@ -6,6 +6,7 @@ tags:
     - Versions
     - New UI
     - Etendo Core
+status: beta
 ---
 
 # New UI - Release Notes
