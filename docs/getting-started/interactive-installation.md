@@ -1,5 +1,5 @@
 ---
-title: Install Etendo Classic
+title: Install Etendo Classic - Interactive Guide
 
 tags:
     - Etendo Installation
@@ -324,7 +324,7 @@ For troubleshooting, enable debug output:
 
 ### Using with Custom Modules
 
-If your project includes custom modules with `config.gradle` files, they will automatically appear in the configuration groups. See the [Etendo Interactive Configuration](../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md) guide for details on adding configuration to custom modules.
+If your project includes custom modules with `config.gradle` files, they will automatically appear in the configuration groups. The new system preserves property names exactly as written and supports custom gradle.properties keys through the optional `name` field. See the [Etendo Interactive Configuration](../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md) guide for details on adding configuration to custom modules.
 
 ## Troubleshooting
 
