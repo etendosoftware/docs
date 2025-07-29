@@ -64,6 +64,10 @@ extra_css:
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
 
+extra:
+  status:
+    beta: Beta Version
+
 
 markdown_extensions:
 
@@ -185,7 +189,7 @@ nav:
       - Grid and Forms: getting-started/user-interface/grid-and-forms.md
   - User Guide:
     - Overview: user-guide/overview.md
-    - Etendo Classic:
+    - Etendo:
       - Basic Features:
         - General Setup: 
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
@@ -309,13 +313,14 @@ nav:
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
-    - Etendo Classic: 
+    - Etendo: 
       - ✨ Getting Started:
         - Installation :
           - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
           - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
-          - Install Modules in Etendo Classic: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
-          - Install Translation Bundles in Etendo Classic: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
+          - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
+          - Install Translation Bundles in Etendo: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
+          - Install New Etendo UI: developer-guide/etendo-classic/getting-started/installation/install-new-etendo-ui.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
           - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
         - Migration from Openbravo:
@@ -594,8 +599,9 @@ nav:
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://etendo.software"
     - Release Notes:
-      - Etendo Classic:
+      - Etendo:
         - Release Notes: whats-new/release-notes/etendo-classic/release-notes.md
+        - New UI: whats-new/release-notes/etendo-classic/new-ui.md
         - Plugins:
           - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md
           - Etendo Backup and Restore: whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md
