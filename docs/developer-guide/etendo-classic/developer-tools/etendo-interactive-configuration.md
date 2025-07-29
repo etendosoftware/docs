@@ -151,6 +151,16 @@ api {
         required = false
         group = "API Configuration"
     }
+    
+    // Example using custom name field for specific gradle.properties key
+    customEndpoint {
+        description = "Custom API endpoint URL"
+        value = ""
+        name = "custom.api.endpoint"  // Maps to custom.api.endpoint in gradle.properties
+        sensitive = false
+        required = false
+        group = "API Configuration"
+    }
 }
 
 // Feature Settings
@@ -198,15 +208,35 @@ Each property in your `config.gradle` file supports the following metadata:
 
 ### Property Naming and Mapping
 
-Properties are automatically mapped from the ConfigSlurper structure to `gradle.properties` format:
+The system preserves property names exactly as written, with optional custom naming:
 
 ```groovy
-// config.gradle structure → gradle.properties key
-api.baseUrl → api.base.url
-api.apiKey → api.api.key
-features.enableAdvancedReporting → features.enable.advanced.reporting
-database.connectionPool → database.connection.pool
+// Default mapping (names preserved exactly as written)
+api.baseUrl → api.baseUrl
+api.apiKey → api.apiKey
+features.enableAdvancedReporting → features.enableAdvancedReporting
+database.connectionPool → database.connectionPool
+
+// Custom mapping using name field
+api {
+    baseUrl {
+        name = "api.base.url"  // Custom gradle.properties key
+        // Other properties...
+    }
+    
+    // Property names are NOT automatically transformed
+    myCustomAPIKey {
+        description = "My custom API key"
+        value = ""
+        // Results in gradle.properties key: api.myCustomAPIKey (no transformation)
+    }
+}
 ```
+
+**Important Changes:**
+- **No automatic transformation**: Property names like `systemUser` remain as `systemUser` (not transformed to `system.user`)
+- **Preserved naming**: All property names are kept exactly as written in the config.gradle file
+- **Optional custom mapping**: Use the `name` field when you need specific gradle.properties keys for compatibility
 
 ### Sensitive Property Handling
 
@@ -261,12 +291,13 @@ After running interactive setup, verify that properties are correctly written to
 
 ```bash
 # Check that your module's properties appear in gradle.properties
-cat gradle.properties | grep "com.yourcompany.yourmodule"
+cat gradle.properties | grep "api\."
 
-# Example output:
-# api.base.url=https://api.example.com
-# api.api.key=your_secret_key
-# features.enable.advanced.reporting=true
+# Example output with preserved naming:
+# api.baseUrl=https://api.example.com
+# api.apiKey=your_secret_key
+# api.customEndpoint=custom_value
+# custom.api.endpoint=value_with_custom_name
 ```
 
 ### Test Interactive Configuration
@@ -293,19 +324,26 @@ You should see your module's property groups in the configuration menu and be ab
 
 ### Naming Conventions
 
-1. **Use camelCase**: Property names should use camelCase convention
+1. **Property names are preserved exactly**: Use any naming convention you prefer - names are not transformed
 2. **Be Descriptive**: Use clear, descriptive property names
 3. **Avoid Reserved Words**: Don't use Gradle or Java reserved keywords
+4. **Use name field for legacy compatibility**: When you need specific gradle.properties keys
 
 ```groovy
-// Good examples
+// Good examples - names preserved as written
 api {
-    baseUrl { /* ... */ }
-    connectionTimeout { /* ... */ }
-    retryAttempts { /* ... */ }
+    baseUrl { /* ... */ }           // → api.baseUrl
+    connectionTimeout { /* ... */ }  // → api.connectionTimeout
+    retryAttempts { /* ... */ }      // → api.retryAttempts
+    
+    // Legacy compatibility example
+    systemUser {
+        name = "api.system.user"  // → api.system.user (custom mapping)
+        /* ... */
+    }
 }
 
-// Avoid
+// Still avoid
 api {
     url { /* too generic */ }
     timeout { /* unclear which timeout */ }
