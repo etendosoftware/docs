@@ -5,6 +5,7 @@ tags:
   - PostgreSQL
   - Table Partitioning
   - Table
+status: beta
 ---
 
 # Extended Database Utilities (BETA)
