@@ -52,88 +52,83 @@ This section describes the windows that are necessary to configure the accountin
 
 ### Overview
 
-Open/Close Period Control feature manages the periods of an organization. This feature applies to organizations for which the "Period Control" feature is enabled.
+The Open/Close Period Control feature manages the accounting periods of an organization. This feature applies to organizations for which the Period Control feature is enabled, that means, with the [Allow Period Control](../../general-setup/enterprise-model.md#organization-1) checkbox selected.
 
-The Period Control feature allows the user to assign a Fiscal Calendar containing years and periods (normally months) to an organization.
+This feature allows the user to assign a [Fiscal Calendar](#fiscal-calendar) containing years and periods, normally months, to an organization.
 
-Overall, the "**Period Control**" and the "**End Year Close**" processes can be executed in Etendo by following the steps recommended below:
+Overall, the **Period Control** and the **End Year Close** processes can be executed in Etendo by following the steps recommended below:
 
--   The **creation** of the Years and the Periods (i.e. monthly periods) in the "Fiscal Calendar" window
--   The **opening of all the period/s**, that means including the "13th Period" or adjustment period, in this window
--   The **closing of the standard period/s**, that means excluding the "13th Period" or adjustment period, in this window.
+1.   The **creation** of the [Years](#year) and the [Periods](#period) (i.e. monthly periods) in the [Fiscal Calendar](#fiscal-calendar) window.
+2.   The **opening of all the period/s**, that means including the "13th Period" or adjustment period, in this window.
+3.   The **closing of the standard period/s**, that means excluding the "13th Period" or adjustment period, in this window. This step can be done once the corresponding transactions have been posted to the ledger within a "standard" period.
 
-This step can be done once the corresponding transactions have been posted to the ledger within a "standard" period.
-
-!!! info
-    It is not mandatory to close the standard periods of a given year before running the Close Year process.
+    !!! info
+        It is not mandatory to close the standard periods of a given year before running the [Close Year](../accounting/transactions.md#end-year-close) process.
 
 
-Closing the standard periods helps to track the periods which have been already reviewed and adjusted if required, and therefore closed in order not to allow any further posting within those periods.
+    Closing the standard periods helps track the periods which have been already reviewed and adjusted if required, and therefore closed in order not to allow any further posting within those periods.
 
--   The **posting of the accounting adjustments** to the ledger if any, in the "13th Period" by using a G/L Journal/s.
--   The **execution** of the Close Year process in the "End Year Close" window.  
-    This process generates the closing accounting entries such as the P&L closing entry, and also closes the standard and adjustment periods if those are still open. After the Closing of the Year, all its Periods will be in **Permanently Closed** status. A Period in Permanently Closed can not be reopened, it is necessary to Undo the Closing of the Year first.
+4.   The **posting of the accounting adjustments** to the ledger if any, in the "13th Period" by using a G/L Journal/s.
+5.   The **execution** of the [Close Year](../accounting/transactions.md#end-year-close) process in the "End Year Close" window.  
+    This process generates the closing accounting entries such as the P&L closing entry, and also closes the standard and adjustment periods if those are still open. After the Closing of the Year, all its Periods will be in **Permanently Closed** status. 
+    !!!warning
+        A Period in Permanently Closed can not be reopened, it is necessary to Undo the Closing of the Year first.
 
-Additionally, the Undo Close Year process undoes all what has been done and therefore accounted for by the close year process. Besides, this process opens all the periods which were closed.
+    Additionally, the [Undo Close Year](../accounting/transactions.md#undo-close-year) process undoes all that has been done and therefore accounted for by the close year process. Besides, this process opens all the periods which were closed. This is done to allow that the corresponding changes can be posted to the ledger as required in a standard period.
 
-This is done to allow that the corresponding changes can be posted to the ledger as required in a standard period.
-
-Once the corresponding changes have been accounted for, the "Close Year" process can be run once again. This process generates the closing accounting entries and closes all the periods again.
+    Once the corresponding changes have been accounted for, the "Close Year" process can be run once again. This process generates the closing accounting entries and closes all the periods again.
 
 As already mentioned:
 
-It is not possible to create years and periods directly on this window, use the Fiscal Calendar window to create new years and periods.
+- It is not possible to create years and periods directly on this window, use the Fiscal Calendar window to create new years and periods.
 
-It is not possible to generate the closing accounting entries directly on this window, use the Close Year process which can be found in the End Year Close Window.
+- It is not possible to generate the closing accounting entries directly on this window, use the Close Year process which can be found in the End Year Close Window.
 
-Finally, it is also possible to check the "Status" of a given period is to navigate to the Period Control tab of the Organization window.
+!!!info
+    Finally, it is also possible to check the "Status" of a given period in the [Period Control](../../general-setup/enterprise-model.md#period-control) tab of the Organization window.
 
 #### **Period Control**
 
-In **Open/Close Period Control window** all the Periods previously created in the Fiscal Calendar window are shown.
+In the **Open/Close Period Control window** all the Periods previously created in the [Fiscal Calendar](#fiscal-calendar) window are shown.
 
 However, the records are filtered by their "Status" and "Organization", by showing only the Periods which are not in **Closed** Status and belong to the Organization in which the User is logged in. These filters can be removed by clicking on the funnel icon.
 
-This window shows two Tabs. The first Tab shows all the existing Periods. Once selected a record in this Tab, the lower one shows all the Document Types and their Status in that Period. With this layout, it is possible to easily manage the status of a Period as a whole as well as the status of a particular Document Type inside a specific Period.
+This window shows two tabs. The Open/Close Period Control tab shows all the existing periods. Once a record in this tab is selected, the Documents subtab shows all the Document Types and their Status in that Period. With this layout, it is possible to easily manage the status of a Period as a whole as well as the status of a particular Document Type inside a specific Period.
 
-The way to manage the Opening/Closing of a Period is:
+The way to manage the **Opening/Closing of a Period** is:
 
--   Use the filters of the grid to show the desired Periods.
--   Select the Periods for which the action is going to be performed.
--   Click on the Open/Close Period, select the action to perform, and click OK.
+1. Use the filters of the grid to show the corresponding Periods.
+2. Select the Periods for which the action is going to be performed.
+3. Click on the Open/Close Period, select the action to perform, and click OK.
 
-Once done, Etendo informs that the process has been completed successfully.
+The way to manage the **Opening/Closing of a particular Document Type for a specific Period** is similar:
 
-The way to manage the Opening/Closing of a particular Document Type for a specific Period is similar:
-
--   Use the filters of the grid to show the desired Document Type.
--   Select the Document Types for which the action is going to be performed.
--   Click on the Open/Close Period, select the action to perform, and click OK.
-
-Once done, Etendo informs that the process has been completed successfully.
+1. Use the filters of the grid to show the desired Document Type.
+2. Select the Document Types for which the action is going to be performed.
+3. Click on the Open/Close Period, select the action to perform, and click OK.
 
 ![](../../../../../assets/drive/1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt.png)
 
-As shown in the image above the main fields in this window are:
+As shown in the image above, the main fields in this window are:
 
--   the *Status*. It is split in two columns. One that represents the Status with a color code, making it easier to understand the situation at a quick glance. The other one represents the Status by its name, making it possible to filter the records shown. The possible Status values are:
+-   **Status**: It is split in two columns. One that represents the Status with a color code, making it easier to understand the situation at a quick glance. The other one represents the Status by its name, making it possible to filter the records shown. The possible Status values are:
     -   All Never Opened, colored in gray. Recently created Periods.
     -   All Opened, colored in green. All the Document Types are open for this Period.
     -   All Closed, colored in red. All the Document Types are closed for this Period.
-    -   Mixed, colored in orange. Not all the Document Types have the same Status value in this Period. For more information, refer to the Documents Tab below.
+    -   Mixed, colored in orange. Not all the Document Types have the same Status value in this Period. For more information, refer to the [Documents Tab](#documents) below.
     -   All Permanently Closed, colored in red. All the Document Types are Permanently Closed for this Period.
--   the *Calendar*
+-   **Calendar**
     -   Etendo automatically displays the calendar of the organization, as an organization can only have one calendar assigned. In fact, this field is a read-only field
--   the *Organization*
--   the *Year*
--   the *Period No.*
--   the *Name* of the Period
--   the *Starting Date* of the Period
--   the *Ending Date* of the Period
+-   **Organization**
+-   **Year**
+-   **Period No.**
+-   **Name** of the Period
+-   **Starting Date** of the Period
+-   **Ending Date** of the Period
 
-These fields can be used as filters to show the desired records. For example, filtering by a Calendar, and Organization and a Year it is an easy way to show all the Periods of a particular Year.
+These fields can be used as filters to show the necessary records. For example, filtering by a Calendar, and Organization and a Year is an easy way to show all the Periods of a particular Year.
 
-Then it is possible to select all records shown and Open or Close all of them at once.
+Then, it is possible to select all records shown and Open or Close all of them at once.
 
 -   The *Period Actions* available are:
     -   *Open Period*
@@ -175,17 +170,15 @@ unless:
 
 #### **Documents**
 
-When a Period is created in the Fiscal Calendar Window, it is possible to Open or Close it in this Window. Performing these actions directly for that Period affects all the associated Document Types at once.
+When a Period is created in the [Fiscal Calendar](#fiscal-calendar) window, it is possible to Open or Close it in this Window. Performing these actions directly for that Period affects all the associated [Document Types](#document-type) at once.
 
-For example, opening a Period results in opening all the Document Types for that Period, making it possible to post transactions of any type within that given Period.
-
-But it is also possible to Open or Close each Document Type in the same Period.
+For example, opening a Period results in opening all the Document Types for that Period, making it possible to post transactions of any type within that given Period. But it is also possible to Open or Close each Document Type in the same Period.
 
 Once a Period is selected in the Periods Tab of this Window, all the available Document Types are shown in the Documents Tab, making it possible to select any of them and Open or Close it.
 
 The way to manage the Opening/Closing of a particular Document Type for a specific Period is:
 
--   Use the filters of the grid to show the desired Document Type.
+-   Use the filters of the grid to show the required Document Type.
 -   Select the Document Types for which the action is going to be performed.
 -   Click on the Open/Close Period, select the action to perform, and click OK.
 
@@ -204,6 +197,157 @@ Notice that:
 -   13th Period has **only one Document Type**, GL Journal, since in the Adjustment Period only GL Journal Transactions can be posted.
 -   If a period is open for all document types but it is closed for a given document type, for instance AP Invoice, it will be possible to post transactions of any type within that given period but AP Invoice transactions.
 -   If not all the Document Types of that Period have the same value, for example some are Closed and some are Open, then the Status of the Period is *Mixed.*
+
+## Open/Close Period Control (AI version)
+
+:material-menu: `Application > Financial Management > Accounting > Setup > Open/Close Period Control`
+
+### Overview
+
+The **Open/Close Period Control** window allows you to manage the accounting periods of an organization. This functionality is available for organizations where the **Period Control** feature is enabled.
+
+Before using this window, ensure that:
+
+- Your organization has a **Fiscal Calendar** defined.
+- The fiscal calendar contains **Years** and **Periods** (typically monthly).
+- The organization's type is **Legal with Accounting** and has **Allow Period Control** enabled.
+
+### When and Why Use Period Control
+
+Using period control helps the user:
+
+- Track financial activity by controlling which periods are open for posting.
+- Prevent unwanted changes to closed periods.
+- Manage closing entries during year-end processes.
+
+A typical **fiscal year workflow** has the following steps:
+
+1. Create years and periods in the *Fiscal Calendar* window.
+2. Open all periods (including the 13th Adjustment Period) in the Open/Close Period Control window.
+3. Post transactions in each open period.
+4. Close standard periods (except 13th) once all entries are finalized.
+5. Post final adjustments using G/L Journals in the 13th Period.
+6. Run **Close Year** from the [End Year Close](../accounting/transactions.md#end-year-close) window:
+   - Posts P&L closing entries.
+   - Closes remaining open periods.
+   - Permanently locks all periods for the year.
+7. If necessary, in the same window, run **Undo Close Year** to reopen the periods and reverse closing entries.
+
+!!!note
+    Closing standard periods before running Close Year is recommended but not required.
+
+### Period Status
+
+Each period has a status to indicate its current state:
+
+| Status                  | Color  | Meaning                                      |
+|-------------------------|--------|----------------------------------------------|
+| Never Opened            | Gray   | Newly created, not yet opened                |
+| All Opened              | Green  | All document types are open for posting      |
+| All Closed              | Red    | All document types are closed                |
+| Mixed                   | Orange | Some document types are open, others closed  |
+| All Permanently Closed  | Red    | Locked — can only be reopened by Undo Year   |
+
+### How to Use the Open/Close Period Control Window
+
+#### Open/Close Period Control Tab
+
+This tab lists all periods from the *Fiscal Calendar* window. By default, it only displays:
+
+- Periods **not in closed status**
+- Periods from the logged-in user's organization
+
+!!!info
+    Remember you can remove filters by clicking the funnel icon.
+
+#### Available Actions
+
+- **Open Period**: Enables posting.
+- **Close Period**: Disables posting (reversible).
+- **Permanently Closed**: Set by *Close Year*, not reversible directly.
+
+!!!info
+    It is possible to select multiple records to open or close periods in bulk.
+
+#### Filtering Options
+
+Use the following fields to filter periods:
+
+- **Calendar**
+- **Organization**
+- **Year**
+- **Period No.**
+- **Name**
+- **Start Date**
+- **End Date**
+
+### Documents Tab
+
+After selecting a period, this subtab displays the **document types** (e.g., Sales Invoice, AP Invoice, G/L Journal) for that period.
+
+Each document type can be opened or closed individually.
+
+#### Document Status
+
+| Status             | Color  | Description                                                             |
+|--------------------|--------|-------------------------------------------------------------------------|
+| Never Opened       | Gray   | Not yet opened                                                          |
+| Open               | Green  | Posting allowed                                                         |
+| Closed             | Red    | Posting blocked                                                         |
+| Permanently Closed | Red    | Locked, can only be reopened by Undo Close Year                        |
+
+!!!info
+    - If not all document types share the same status, the period appears as **Mixed**.
+    - The 13th Period **only allows G/L Journal entries**.
+
+### Example: Closing Standard Periods Before Year-End
+
+An organization created and opened all periods for 2019, including the 13th period. To close the standard periods before running the *Close Year* process:
+
+1. Go to **Open/Close Period Control**.
+2. Filter by:
+    - Calendar
+    - Organization
+    - Year = `2019`
+3. Select all periods **except** the 13th.
+4. Click **Open/Close Period**, choose **Close Period**, and click **OK**.
+
+Result:
+
+- All standard periods are closed.
+- Only G/L Journals can be posted in the 13th Period.
+- Closing entries can still be posted by the *Close Year* process.
+
+### Summary of Actions
+
+| Action             | Description                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| **Open Period**     | Allows posting in selected period(s)                                       |
+| **Close Period**    | Blocks posting in selected period(s); can be reopened                      |
+| **Permanently Close** | Executed by *Close Year*; periods are locked and cannot be reopened directly |
+| **Undo Close Year** | Reopens periods and reverses closing entries                              |
+
+
+### Additional Notes
+
+- You **cannot create** years or periods in this window — for this, use the *Fiscal Calendar* window.
+- You **cannot post closing entries** here — use the *End Year Close* window.
+- To check a period’s status, go to the **Period Control** tab in the *Organization* window.
+
+
+### How to Open/Close a Specific Document Type
+
+You can also control the status of individual document types per period following these steps:
+
+1. Select a Period in the **Open/Close Period Control Tab**.
+2. Go to the **Documents Subtab**.
+3. Use filters to find required document types.
+4. Select the document types.
+5. Click **Open/Close Period**, choose the action, and click OK.
+
+!!!example
+    If the Document Type AP Invoice is closed but all others are open, only AP Invoice postings will be blocked.
+
 
 ## Financial Type
 
