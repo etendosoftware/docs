@@ -52,6 +52,8 @@ The **Copilot Agents** module  is a collection of agents that can be used to do 
 
 ##### Data Initialization Supervisor
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cn__oNPH5X0?si=yPiVW3to9X7UOsG6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 This is a supervisor agent that delegates and orchestrates initialization tasks for the client (creation of initial business partners, products, etc.).
 ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/client-initialization-graph.png)
 This supervisor has the following agents:
