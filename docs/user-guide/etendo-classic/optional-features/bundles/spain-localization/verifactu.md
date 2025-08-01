@@ -7,8 +7,6 @@ tags:
 title: Veri*Factu
 ---
 
-## Javapackages
-
 :octicons-package-16: Javapackage: `com.etendoerp.verifactu`
 
 :octicons-package-16: Javapackage: `com.etendoerp.verifactu.template`
@@ -64,11 +62,9 @@ La implementación cubre:
 
 ### Certificado Digital
 
-Para poder emitir facturas electrónicas a través del sistema VeriFactu, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío.
+Para poder emitir facturas electrónicas a través del sistema VeriFactu, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío. Siga los siguientes pasos para configurar correctamente su Certificado Digital:
 
-#### Configuración del Certificado Digital
-
-1. **Acceder a la ventana Organización**.
+1. **Acceder a la ventana Organización**: :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización`
 2. **Seleccionar la Organización Legal**: Elige la organización legal que será responsable de emitir las facturas electrónicas.
 3. **Añadir el Certificado Digital**: Haz clic en el botón **Añadir Certificado Digital**.
 4. **Subir el Certificado**: En el proceso, podrás cargar tu certificado digital, ingresar la clave correspondiente y especificar la fecha de validez del certificado.
@@ -78,7 +74,7 @@ Una vez completados estos pasos, el certificado digital estará correctamente co
 
 ### Rango Impuesto
 
-En la ventana **Rango de Impuesto** se deben completar los campos correspondientes:
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Rango Impuesto` se deben completar los campos correspondientes:
 
 - Para IVA: `Régimen Especial IVA`  
 - Para IGIC: `Régimen Especial IGIC`  
@@ -91,7 +87,7 @@ En la ventana **Rango de Impuesto** se deben completar los campos correspondient
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa_no_sujecion.png)
 
 
-## Ajustes para Facturas Rectificativas por Sustitución o F3
+### Ajustes para Facturas Rectificativas por Sustitución o F3
 
 ### Ajustes contables
 
@@ -105,16 +101,17 @@ Para ello, se ha desarrollado una plantilla contable que:
 
 ### Configuración de la plantilla contable
 
-1. En la ventana **Plantilla de Contabilidad**, crear un registro con los siguientes valores:
-   - **Entidad**: Cliente actual
-   - **Organización**: Organización raíz
-   - **Tabla**: `C_Invoice`
-   - **Nombre**: `Plantilla Contabilidad Verifactu`
-   - **Clase Java**: `com.etendoerp.verifactu.accounting.DocInvoiceVerifactu`
+1. :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Plantillas de Contabilidad`, crear un registro con los siguientes valores:
 
-   ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/plantilla_contabilidad.png)
+    - **Entidad**: Cliente actual
+    - **Organización**: Organización raíz
+    - **Tabla**: `C_Invoice`
+    - **Nombre**: `Plantilla Contabilidad Verifactu`
+    - **Clase Java**: `com.etendoerp.verifactu.accounting.DocInvoiceVerifactu`
 
-2. En la ventana **Esquema Contable**, solapa **Tablas a Contabilizar**, localizar la tabla `Invoice` y vincularle la plantilla creada en el campo **Plantilla Contabilidad** (el campo puede estar oculto por lógica de aplicación).
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/plantilla_contabilidad.png)
+
+2. :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Esquema Contable`, solapa **Tablas a Contabilizar**, localizar la tabla `Invoice` y vincularle la plantilla creada en el campo **Plantilla Contabilidad** (el campo puede estar oculto por lógica de aplicación).
 
    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/esquema_contable.png)
 
@@ -174,9 +171,9 @@ WHERE p.created >= v.created
 
 ## Proceso de Envío de Factura
 
-### 1. Creación de Factura de Venta
+### Creación de Factura de Venta
 
-Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana **Configuración Verifactu**.
+Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Verifactu` > `Configuración Verifactu`.
 
 Debe completar los siguientes campos obligatorios:
 
@@ -193,7 +190,7 @@ Opcionalmente, puede completar:
 
 ---
 
-### 2. Completar Factura de Venta
+### Completar Factura de Venta
 
 Al completar la factura:
 
@@ -209,7 +206,7 @@ Al completar la factura:
 
 ---
 
-## Proceso de Anulación de Factura
+### Proceso de Anulación de Factura
 
 Existe una funcionalidad para **anular una factura** ya enviada a Verifactu, aunque **solo está disponible en entornos de desarrollo**.
 
@@ -217,13 +214,13 @@ Esto se debe a que cualquier factura emitida en un entorno productivo será envi
 
 ---
 
-## Tratamiento de Errores en Facturación
+### Tratamiento de Errores en Facturación
 
 Esta sección describe cómo actuar ante errores durante la emisión de facturas o registros de facturación (RF), conforme al RD 1619/2012 y al RD 1007/2023.
 
 ---
 
-## Tipos de Tratamiento de Errores
+### Tipos de Tratamiento de Errores
 
 ### Subsanación (sin factura rectificativa)
 
@@ -231,13 +228,13 @@ Debe utilizarse cuando:
 
 - El error afecta únicamente al XML (registro de facturación) y **no** al contenido de la factura original.
 
-#### Ejemplos comunes:
+**Ejemplos comunes:**
 
 - Hash incorrecto
 - NIF no censado
 - Error en el campo `ImporteTotal`
 
-#### Acción:
+**Acción:**
 
 1. Marcar el **check de Subsanación** en la factura.
 2. Corregir los datos que ocasionaron el rechazo o se acepto con errores.
@@ -249,7 +246,7 @@ Debe utilizarse cuando:
 > **Importante:** No debe aplicarse subsanación si el error requiere una **factura rectificativa**, conforme al Reglamento de Facturación (ROF).
 
 
-## Rectificación (con factura rectificativa)
+### Rectificación (con factura rectificativa)
 
 Se utiliza cuando:
 
@@ -315,15 +312,12 @@ Al imprimir una factura, se incorpora un **código QR** diseñado para facilitar
 - **Verificación por el receptor:** permite comprobar si la factura ha sido efectivamente enviada a la AEAT a través del sistema VERI*FACTU.
 - **Transparencia fiscal:** incrementa la confianza del cliente y contribuye a la prevención del fraude.
 - **Integridad documental:** garantiza la inalterabilidad y trazabilidad de las facturas una vez emitidas.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr_factura.png)
+  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr_factura.png)
 
 ### Resultados posibles al escanear el QR
 
 - **Factura encontrada en AEAT:**
-
   ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr_alta.png)
 
 - **Factura no encontrada en AEAT:**
-
   ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr_baja.png)
