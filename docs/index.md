@@ -22,8 +22,9 @@ Etendo is a highly adaptable and scalable software platform designed for non-ret
 
     ---
 
-    Learn about Etendo user interface.
+    Learn about Etendo essentials.
 
+    - [What is an ERP?](./getting-started/overview.md)
     - [Workspace](./getting-started/user-interface/workspace.md)
     - [Navigation](./getting-started/user-interface/navigation.md)
     - [Grid and Forms](./getting-started/user-interface/grid-and-forms.md)
