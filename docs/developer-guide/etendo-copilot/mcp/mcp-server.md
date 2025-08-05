@@ -1,5 +1,6 @@
 ---
 title: Developer Guide - MCP Server
+status: beta
 tags:
     - Copilot
     - MCP

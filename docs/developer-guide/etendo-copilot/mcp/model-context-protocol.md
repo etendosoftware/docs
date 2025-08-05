@@ -1,5 +1,6 @@
 ---
 title: Developer Guide - Model Context Protocol (MCP)
+status: beta
 tags:
     - Copilot
     - MCP
