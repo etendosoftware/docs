@@ -35,6 +35,7 @@ tags:
 
 - :material-robot: **Bulk data uploads are a thing of the past: Google Drive and Sheets integration in Copilot**
 
+    ![alt text](../assets/whats-new/etendo-news/copilot-drive.png)
     In version [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the new feature is added to connect Copilot to **Google Drive** and **Google Sheets** and use agents to create **products** or **business partners** in bulk from a spreadsheet via the **Task** module. Ideal for large-scale data imports.
 
 </div>
