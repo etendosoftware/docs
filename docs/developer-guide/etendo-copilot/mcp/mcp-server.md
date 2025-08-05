@@ -77,7 +77,7 @@ The MCP server uses token-based authentication via the `etendo-token` header. Yo
 
 To connect Gemini CLI to an Etendo Copilot agent, create or update your Gemini CLI configuration file:
 
-[SCREENSHOT DE GEMINI CLI CONFIG FILE]
+<!-- SCREENSHOT: Gemini CLI config file -->
 
 ```json
 {
@@ -100,7 +100,7 @@ Then run Gemini CLI with the MCP server:
 gemini-cli --mcp-server etendo-copilot
 ```
 
-[SCREENSHOT DE GEMINI CLI CONECTANDO]
+<!-- SCREENSHOT: Gemini CLI connecting -->
 
 ### Claude Desktop Configuration
 
@@ -124,7 +124,7 @@ For Claude Desktop, add the configuration to your `claude_desktop_config.json` f
 }
 ```
 
-[SCREENSHOT DE CLAUDE DESKTOP CONFIG]
+<!-- SCREENSHOT DE CLAUDE DESKTOP CONFIG -->
 
 ### Cursor IDE Configuration
 
@@ -145,7 +145,7 @@ In Cursor IDE, configure the MCP server in your `.cursorrules` or MCP settings:
 }
 ```
 
-[SCREENSHOT DE CURSOR CONFIG]
+<!-- SCREENSHOT DE CURSOR CONFIG -->
 
 ## Available Tools and Capabilities
 
