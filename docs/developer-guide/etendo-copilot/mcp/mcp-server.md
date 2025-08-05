@@ -149,263 +149,137 @@ In Cursor IDE, configure the MCP server in your `.cursorrules` or MCP settings:
 
 ## Available Tools and Capabilities
 
-The MCP server exposes all tools available to the specific Etendo Copilot agent. Common categories include:
+The MCP server exposes a comprehensive set of tools that enable interaction with Etendo Copilot agents. These tools are divided into three main categories:
 
-### Database Tools
-- **Query Execution**: Run read-only queries on Etendo database
-- **Schema Inspection**: Access table schemas and relationships
-- **Data Analysis**: Aggregate and analyze business data
+### 1. Agent-Specific Tools
 
-### Business Process Tools
-- **Document Management**: Create, read, update documents
-- **Workflow Operations**: Trigger and monitor business processes
-- **Reporting**: Generate custom reports and analytics
+These are the tools that belong to each individual agent, automatically loaded from the agent configuration stored in Etendo Classic. When you connect to an agent's MCP server, you get access to all the tools that have been configured for that specific agent in the Agent window.
 
-### Integration Tools
-- **API Calls**: Execute external API requests
-- **Data Synchronization**: Sync data with external systems
-- **Notification Services**: Send alerts and messages
+**Types of Agent Tools:**
 
-### Analysis Tools
-- **Financial Calculations**: Perform accounting and financial operations
-- **Statistical Analysis**: Run statistical computations on data
-- **Forecasting**: Generate predictions based on historical data
+- **Business Logic Tools**: Tools configured for the agent via the Skills & Tools tab in the Agent window
+- **API Integration Tools**: Automatically generated tools from OpenAPI specifications when Knowledge Base files are configured with the behavior `[Agent] SPEC: Add as agent specification`
+- **Knowledge Base Search Tool**: Automatically included when the agent has a Knowledge Base configured, allowing semantic search through the agent's knowledge
 
-[SCREENSHOT DE TOOLS LIST EN MCP CLIENT]
+**Examples of Common Agent Tools:**
 
-## Discovering Available Tools
+- **API Call Tool**: Enables HTTP requests to external APIs and Etendo Classic endpoints
+- **Read File Tool**: Reads the contents of files from the local filesystem  
+- **Write File Tool**: Creates and modifies files with backup functionality
+- **Docker Tool**: Executes Python or Bash code in isolated Docker containers
+- **OCR Tool**: Extracts text and information from images
+- **XLS Tool**: Processes Excel and CSV files
+- **Task Management Tool**: Creates and manages background tasks in Etendo
+- **Database Query Tools**: Executes controlled database queries (when configured)
 
-To see what tools are available from an agent's MCP server, you can use the MCP Inspector:
+### 2. Server-Level Extra Tools
 
-```bash
-npx @modelcontextprotocol/inspector --cli http://localhost:5005/my-agent-id/mcp/ \
-  --headers "etendo-token: Bearer your-token" \
-  --method tools/list
-```
+These are additional tools provided by the MCP server itself, regardless of the specific agent configuration:
 
-This will return a list of all available tools with their descriptions and parameters:
+#### `ask_agent`
+**Purpose**: Allows MCP clients to send questions directly to the connected Etendo Copilot agent. It behaviour its the same as the Etendo Classic pop-up.
 
+**Parameters:**
+- `question` (string): The question to ask the agent
+- `conversation_id` (optional string): Conversation ID to maintain context across multiple interactions
+
+**Functionality:**
+- Forwards the question to the Etendo Copilot agent using the authenticated user's token
+- Maintains conversation context when conversation_id is provided
+- Returns the agent's response along with status information
+- Handles authentication and error scenarios
+
+**Example Usage:**
 ```json
 {
-  "tools": [
-    {
-      "name": "query_database",
-      "description": "Execute read-only SQL queries on Etendo database",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": "string",
-            "description": "SQL query to execute"
-          }
-        },
-        "required": ["query"]
-      }
-    },
-    {
-      "name": "create_sales_order",
-      "description": "Create a new sales order in Etendo",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "customer_id": {
-            "type": "string",
-            "description": "Customer identifier"
-          },
-          "products": {
-            "type": "array",
-            "description": "List of products to order"
-          }
-        },
-        "required": ["customer_id", "products"]
-      }
-    }
-  ]
+  "question": "What are the latest sales reports?",
+  "conversation_id": "conv_123"
 }
 ```
 
-[SCREENSHOT DE TOOLS DISCOVERY]
-
-## Using MCP Tools in Practice
-
-### Example: Querying Business Data
-
-```bash
-# Using MCP Inspector to call a tool
-npx @modelcontextprotocol/inspector --cli http://localhost:5005/sales-agent/mcp/ \
-  --headers "etendo-token: Bearer your-token" \
-  --method tools/call \
-  --tool-name query_database \
-  --tool-arg query="SELECT COUNT(*) FROM c_order WHERE created >= '2024-01-01'"
-```
-
-### Example: Python Client
-
-```python
-import asyncio
-from mcp.client.streamable_http import streamablehttp_client
-from mcp import ClientSession
-
-async def main():
-    # Connect to Etendo Copilot MCP server
-    headers = {"etendo-token": "Bearer your-sws-token-here"}
-    
-    async with streamablehttp_client(
-        "http://localhost:5005/my-agent-id/mcp/",
-        headers=headers
-    ) as (read_stream, write_stream, _):
-        async with ClientSession(read_stream, write_stream) as session:
-            # Initialize the connection
-            await session.initialize()
-            
-            # List available tools
-            tools = await session.list_tools()
-            print(f"Available tools: {[tool.name for tool in tools.tools]}")
-            
-            # Call a specific tool
-            result = await session.call_tool(
-                "query_database",
-                {"query": "SELECT name FROM ad_client WHERE isactive='Y'"}
-            )
-            print(f"Query result: {result.content}")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-```
-
-[SCREENSHOT DE PYTHON CLIENT EXECUTION]
-
-## Advanced Configuration
-
-### Custom Transport Settings
-
-For production environments or specific network configurations, you can customize transport settings:
-
+**Response Format:**
 ```json
 {
-  "transport_type": "streamable_http",
-  "url": "https://your-domain.com/copilot/agent-id/mcp/",
-  "headers": {
-    "etendo-token": "Bearer your-token",
-    "User-Agent": "MyApp/1.0"
+  "success": true,
+  "answer": {
+    "response": "Here are the latest sales reports...",
+    "conversation_id": "conv_123"
   },
-  "timeout": 120,
-  "retry_attempts": 3,
-  "retry_delay": 5
+  "status_code": 200
 }
 ```
 
-### SSL/TLS Configuration
+#### `get_agent_prompt`
+**Purpose**: Retrieves the system prompt and configuration of the connected agent
 
-For secure connections, ensure your MCP client supports HTTPS and proper certificate validation:
+**Parameters:** None
 
+**Functionality:**
+- Returns the agent's system prompt (the instructions that define the agent's behavior)
+- Provides agent metadata like name and description
+- Useful for understanding how the agent is configured and what it can do
+
+**Response Format:**
 ```json
 {
-  "url": "https://secure.etendo.com/copilot/agent-id/mcp/",
-  "ssl_verify": true,
-  "ssl_cert_path": "/path/to/client.crt",
-  "ssl_key_path": "/path/to/client.key"
+  "success": true,
+  "agent_name": "Sales Assistant",
+  "agent_prompt": "You are a sales assistant that helps users analyze sales data and generate reports..."
 }
 ```
 
-[SCREENSHOT DE HTTPS CONNECTION]
+### 3. Basic Utility Tools
 
-## Troubleshooting
+These are general-purpose tools for testing and server information:
 
-### Common Connection Issues
+#### `ping`
+**Purpose**: Simple connectivity test tool
 
-1. **401 Unauthorized**: Check your SWS token validity and user permissions
-2. **404 Not Found**: Verify the agent ID and MCP endpoint URL
-3. **Connection Timeout**: Check network connectivity and firewall settings
-4. **SSL Certificate Errors**: Verify certificate configuration for HTTPS connections
+**Response**: Returns "pong" to confirm MCP connectivity
 
-### Debug Mode
+#### `hello_world`  
+**Purpose**: Welcome message with server information
 
-Enable debug logging to troubleshoot connection issues:
+**Response**: Returns a greeting message including the agent identifier
 
-```bash
-# Set environment variable for debug logging
-export MCP_DEBUG=true
+#### `server_info`
+**Purpose**: Provides basic information about the MCP server
 
-# Run your MCP client with verbose output
-npx @modelcontextprotocol/inspector --cli http://localhost:5005/agent/mcp/ \
-  --headers "etendo-token: Bearer token" \
-  --debug
-```
-
-### Checking Agent Status
-
-Verify that your Etendo Copilot agent is running and accessible:
-
-```bash
-# Check agent health endpoint
-curl -H "etendo-token: Bearer your-token" \
-  http://localhost:5005/my-agent-id/health
-```
-
-[SCREENSHOT DE TROUBLESHOOTING PANEL]
-
-## Best Practices
-
-### Security
-- Always use HTTPS in production
-- Rotate SWS tokens regularly
-- Implement proper access controls
-- Monitor and log MCP server access
-
-### Performance
-- Use connection pooling for multiple requests
-- Implement request timeouts
-- Cache frequently accessed data
-- Monitor server performance metrics
-
-### Development
-- Test MCP connections before deploying
-- Use MCP Inspector for development and debugging
-- Document your custom tools and their parameters
-- Implement proper error handling in client applications
-
-## Integration Examples
-
-### Node.js Application
-
-```javascript
-import { Client } from '@modelcontextprotocol/sdk/client/index.js';
-import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
-
-class EtendoCopilotClient {
-  constructor(agentId, token) {
-    this.baseUrl = `http://localhost:5005/${agentId}/mcp/`;
-    this.headers = { 'etendo-token': `Bearer ${token}` };
-  }
-
-  async connect() {
-    const transport = new StreamableHTTPClientTransport(
-      new URL(this.baseUrl),
-      { headers: this.headers }
-    );
-
-    this.client = new Client({
-      name: 'etendo-mcp-client',
-      version: '1.0.0'
-    });
-
-    await this.client.connect(transport);
-    return this.client;
-  }
-
-  async executeQuery(sql) {
-    const result = await this.client.callTool('query_database', { query: sql });
-    return result.content;
-  }
+**Response Format:**
+```json
+{
+  "name": "etendo-copilot-mcp",
+  "version": "0.1.0", 
+  "description": "Etendo Copilot MCP Server with HTTP streaming",
+  "transport": "http-streaming",
+  "status": "running"
 }
 ```
 
-### Integration with Business Intelligence Tools
+### Tool Discovery and Usage
 
-The MCP server can be integrated with BI tools that support custom data connectors, enabling real-time access to Etendo data through natural language queries.
+When connecting to an Etendo Copilot MCP server, clients can:
 
-[SCREENSHOT DE BI INTEGRATION]
+1. **List Available Tools**: Use the MCP `list_tools` operation to see all available tools
+2. **Inspect Tool Schemas**: Each tool includes detailed parameter schemas and descriptions
+3. **Execute Tools**: Call tools using the standard MCP tool execution protocol
+4. **Access Agent Capabilities**: Use `ask_agent` to leverage the full conversational capabilities of the agent
 
----
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+### Authentication and Security
+
+All tools respect the authentication provided via the `etendo-token` header:
+
+- **User Context**: Tools execute with the permissions of the authenticated user
+- **Data Access**: Database and API access is filtered according to user roles and permissions  
+- **Security**: Sensitive operations require appropriate user privileges
+
+### Dynamic Tool Loading
+
+The MCP server dynamically loads tools based on:
+
+- **Agent Configuration**: Tools are loaded from the agent's configuration in Etendo Classic
+- **User Permissions**: Only tools the user has access to are exposed
+- **Module Dependencies**: Tools are available based on installed Etendo modules
+
+This dynamic approach ensures that each user sees only the tools they're authorized to use, and the tool set reflects the current state of the agent configuration in Etendo Classic. 
+
