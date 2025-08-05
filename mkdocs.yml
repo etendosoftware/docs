@@ -576,7 +576,7 @@ nav:
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
-      - Model Context Protocol(MCP):
+      - Model Context Protocol (MCP):
         - Overview: developer-guide/etendo-copilot/mcp/model-context-protocol.md
         - MCP Server: developer-guide/etendo-copilot/mcp/mcp-server.md
       - How to Guides:
