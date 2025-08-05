@@ -29,4 +29,16 @@
     font-weight: bold;
 }
 
+:root {
+  --md-status--beta: url('./beta.svg');
+}
 
+
+.md-status--beta::after {
+  content: '';
+  display: inline-block;
+  width:  1.2rem; 
+  height: 1.2rem; 
+  mask-image: var(--md-status--beta);
+  -webkit-mask-image: var(--md-status--beta);
+}
