@@ -55,6 +55,7 @@ This document provides a comprehensive list of all available tools in the Etendo
 
 | Tool Name | Description | Key Features |
 |-----------|-------------|--------------|
+| [Etendo SQL to CSV Tool](etendo-sql-to-csv-tool.md) | Execute SQL queries in Etendo and export results to CSV | Database queries, CSV export, security validation |
 | [Google Drive Tool](google-drive-tool.md) | Interact with Google Drive services | Cloud storage, file management |
 | [Google Spreadsheet Tool](google-spreadsheet-tool.md) | Manage Google Sheets documents | Spreadsheet operations, data manipulation |
 | [Template Tool](template-tool.md) | Generate documents from templates | Template processing, document generation |
@@ -97,6 +98,7 @@ This document provides a comprehensive list of all available tools in the Etendo
 - Use **OCR Tool** for extracting text from images
 - Use **Audio Tool** for speech and audio analysis
 - Use **Tavily Tool** for web search and information gathering
+- Use **Etendo SQL to CSV Tool** for database queries and data export from Etendo
 
 #### For Integration
 - Use **API Call Tool** for REST API interactions
