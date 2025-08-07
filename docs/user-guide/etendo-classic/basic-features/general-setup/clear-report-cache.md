@@ -12,3 +12,6 @@ After clicking it, a success message will be shown indicating the completion of 
 
 !!! info
     For more information, visit [Platform Extensions Bundle developer guide](../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

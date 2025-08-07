@@ -348,5 +348,6 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         `https://<Public server IP>/<context.name>` or in case that you run in local environment [`http://localhost:8080/etendo`](http://localhost:8080/etendo){target="_blank"}
 
 
-
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
 

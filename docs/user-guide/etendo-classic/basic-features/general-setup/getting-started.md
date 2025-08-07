@@ -137,3 +137,6 @@ This business setup flow goes from the Generic setup and Master Data areas to th
 If you want to know more about the basic setup of the business configurations in Etendo, please review the different articles in the General Setup section.
 
 By following this setup flow you should be able to have your own version of Etendo ready to execute the basic Business Flows.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

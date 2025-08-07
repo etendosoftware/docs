@@ -57,3 +57,6 @@ Either PostgreSQL should also be supported by your target system
 | :simple-postgresql:  PostgreSQL | 14.x, 16.x Amazon RDS | Latest 16.x | [Postgres Instalation Guide ](https://www.postgresql.org/download/){target="_blank"} |
 | :simple-apachetomcat:  Apache Tomcat | 9.0.x | Latest 9.0.x | [Tomcat Instalation Guide](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
 | :material-database:  Oracle | 19c (LTS) | 19c (LTS) |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

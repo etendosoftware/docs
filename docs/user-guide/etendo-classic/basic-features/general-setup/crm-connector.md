@@ -27,3 +27,6 @@ It allows the user to define options accepted by the parent filter.
 ### Address Mapping
 
 In this tab, the user can define addresses and determine the properties that should be used for each location column mapping.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

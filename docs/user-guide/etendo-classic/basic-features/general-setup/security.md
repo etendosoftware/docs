@@ -493,3 +493,6 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 
 !!! info
     For more information, visit the [Etendo Advanced Security module User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md).
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

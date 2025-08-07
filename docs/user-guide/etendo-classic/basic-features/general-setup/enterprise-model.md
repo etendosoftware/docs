@@ -504,3 +504,6 @@ To reactivate intercompany documents, both documents should not have an associat
 
 !!! info
     Note: This process is only allowed for source documents.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
