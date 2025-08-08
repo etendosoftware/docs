@@ -578,6 +578,7 @@ nav:
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides:
+        - How to Configure MCP servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
         - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Create a Spreadsheet and tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
