@@ -4,14 +4,16 @@ tags:
 - Veri*Factu
 - Verifactu
 - Facturación Electrónica
+
 title: Veri*Factu
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.verifactu`
-
 :octicons-package-16: Javapackage: `com.etendoerp.verifactu.template`
 
 ## Introducción
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bOCK7A1cFms?si=VAfNntVPqse58GnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Las funcionalidades de **VERI*FACTU** en Etendo proporcionan una solución integral para el cumplimiento de los nuevos requisitos establecidos por la Agencia Tributaria Española en materia de facturación. Su objetivo es garantizar la transparencia, prevenir el fraude fiscal y asegurar la integridad y trazabilidad de las facturas emitidas por empresas y profesionales.
 
