@@ -585,10 +585,6 @@
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
-         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code/</loc>
-         <lastmod>2025-08-08</lastmod>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/25.x/developer-guide/etendo-rx/how-to-guides/how-to-change-date-format/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
@@ -598,6 +594,14 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/25.x/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
