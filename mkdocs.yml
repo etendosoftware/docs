@@ -545,8 +545,9 @@ nav:
         - How to Use OpenTelemetry: developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry.md
     - Etendo Copilot:
       - ✨ Getting Started: developer-guide/etendo-copilot/installation.md
-      - Bundles: 
-        - Copilot Extensions:
+      - Concepts: 
+        - Model Context Protocol (MCP): developer-guide/etendo-copilot/concepts/model-context-protocol.md
+      - Copilot Extensions:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
@@ -578,6 +579,8 @@ nav:
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides:
+        - How to Configure MCP servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
+        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Create a Spreadsheet and tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
