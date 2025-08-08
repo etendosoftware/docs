@@ -517,6 +517,14 @@
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/concepts/model-context-protocol/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
@@ -542,6 +550,10 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/25.x/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
