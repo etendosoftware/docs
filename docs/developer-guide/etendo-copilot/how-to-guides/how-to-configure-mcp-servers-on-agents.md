@@ -13,6 +13,9 @@ tags:
 
 ## Overview
 
+!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+
 This guide provides step-by-step instructions to help you create and configure **Model Context Protocol (MCP) Servers** for **Etendo Copilot**. 
 
 MCP Servers extend agent functionality by providing external tools and resources that can be dynamically loaded and used during agent interactions.
