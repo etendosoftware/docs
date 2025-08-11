@@ -12,6 +12,9 @@ tags:
 
 ## Overview
 
+!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+
 The **Model Context Protocol (MCP)** is an open protocol developed by Anthropic that standardizes how AI applications provide context to Large Language Models (LLMs). MCP acts as a "USB-C port for AI applications," enabling models to connect uniformly with external data sources, tools, and services.
 
 This guide provides a comprehensive introduction to MCP concepts, architecture, and its implementation within the Etendo Copilot ecosystem, helping developers understand how to leverage this protocol for building scalable and secure AI integrations.

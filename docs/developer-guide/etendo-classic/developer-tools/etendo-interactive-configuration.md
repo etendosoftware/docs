@@ -17,6 +17,9 @@ status: beta
 
 ## Overview
 
+!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+
 The Etendo Interactive Configuration system provides a user-friendly command-line wizard for configuring Etendo projects. Built into the Etendo Gradle Plugin, it guides developers through property configuration with intelligent defaults, secure handling of sensitive data, and organized presentation of configuration options.
 
 ## Quick Start
@@ -55,7 +58,7 @@ The Etendo Interactive Configuration system provides a user-friendly command-lin
 
 ## Configuration Interface
 
-### Main Menu Options
+**Main Menu Options**
 
 The interactive setup presents three main configuration modes:
 
@@ -76,7 +79,7 @@ The interactive setup presents three main configuration modes:
 🎯 Select an option:
 ```
 
-### Property Configuration
+**Property Configuration**
 
 When configuring properties, the system provides rich context:
 
@@ -95,7 +98,7 @@ When configuring properties, the system provides rich context:
 🔐 New value (hidden): [Password input is hidden]
 ```
 
-### Configuration Summary
+**Configuration Summary**
 
 Before applying changes, you'll see a complete summary:
 
@@ -250,7 +253,7 @@ api {
 
 **Important Changes:**
 - **No automatic transformation**: Property names like `systemUser` remain as `systemUser` (not transformed to `system.user`)
-- **Preserved naming**: All property names are kept exactly as written in the config.gradle file
+- **Preserved naming**: All property names are kept exactly as written in the `config.gradle` file
 - **Optional custom mapping**: Use the `name` field when you need specific gradle.properties keys for compatibility
 
 ### Sensitive Property Handling
@@ -418,6 +421,7 @@ api {
 The Etendo Interactive Configuration system provides a powerful, user-friendly way to configure Etendo projects and custom modules. By creating `config.gradle` files with structured metadata, you can provide users with guided configuration experiences while maintaining the flexibility and power of Gradle-based builds.
 
 Key benefits for module developers:
+
 - **Easy Integration**: Simply add a `config.gradle` file to your module
 - **Rich Metadata**: Provide descriptions, defaults, and security markers
 - **Automatic Discovery**: Properties are automatically discovered and presented

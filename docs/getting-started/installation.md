@@ -30,7 +30,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
 Etendo now includes an **Interactive Configuration System** that guides you through the setup process with an intuitive wizard. Instead of manually editing `gradle.properties`, you can use the interactive mode to configure your project step by step.
 
-**📖 For a complete step-by-step interactive installation guide, see: [Interactive Installation Guide](interactive-installation.md)**
+**For a complete step-by-step interactive installation guide, see: [Interactive Installation Guide](interactive-installation.md)**
 
 ## Install Etendo 
 === ":material-language-java: JAR Format"
