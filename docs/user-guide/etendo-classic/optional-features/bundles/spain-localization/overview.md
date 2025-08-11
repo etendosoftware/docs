@@ -26,6 +26,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - [Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md)
 - [Configuración de Impuestos para Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
 - [TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md)
+- [Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md)
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -434,3 +435,12 @@ Este módulo permite cumplir con las normativas fiscales del País Vasco, automa
 
 !!! info
     Para más información, visite la [Guía de usuario TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md).
+
+## Veri*Factu
+
+:octicons-package-16: Javapackage: `com.etendoerp.verifactu`
+
+Este módulo automatiza el proceso de emisión y envío de facturas electrónicas conforme a los requisitos de la Agencia Tributaria Española (AEAT). Facilita la generación de archivos XML para el registro de facturación, su envío en tiempo real a la AEAT y la recepción de respuestas. Asegura la autenticidad de las facturas mediante certificados digitales y códigos QR, y permite la trazabilidad de las transacciones.
+
+!!! info
+    Para más información, visite la [Guía de usuario Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md).

@@ -64,6 +64,10 @@ extra_css:
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
 
+extra:
+  status:
+    beta: Beta Version
+
 
 markdown_extensions:
 
@@ -186,7 +190,7 @@ nav:
       - Grid and Forms: getting-started/user-interface/grid-and-forms.md
   - User Guide:
     - Overview: user-guide/overview.md
-    - Etendo Classic:
+    - Etendo:
       - Basic Features:
         - General Setup: 
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
@@ -279,6 +283,7 @@ nav:
             - Modelo 390: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
             - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
             - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
+            - Veri*Factu: user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md
           - Etendo BI Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
@@ -310,13 +315,14 @@ nav:
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
-    - Etendo Classic: 
+    - Etendo: 
       - ✨ Getting Started:
         - Installation :
           - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
           - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
-          - Install Modules in Etendo Classic: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
-          - Install Translation Bundles in Etendo Classic: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
+          - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
+          - Install Translation Bundles in Etendo: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
+          - Install New Etendo UI: developer-guide/etendo-classic/getting-started/installation/install-new-etendo-ui.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
           - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
         - Migration from Openbravo:
@@ -534,14 +540,16 @@ nav:
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to Guides:
-        - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
-        - How to start RX as service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code.md
-        - How to change date format: developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
-        - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
+        - How to Change Date Format: developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
+        - How to Filter any Request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
+        - How to Give Public Access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
+        - How to Start RX as Service: developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code.md
+        - How to Use OpenTelemetry: developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry.md
     - Etendo Copilot:
       - ✨ Getting Started: developer-guide/etendo-copilot/installation.md
-      - Bundles: 
-        - Copilot Extensions:
+      - Concepts: 
+        - Model Context Protocol (MCP): developer-guide/etendo-copilot/concepts/model-context-protocol.md
+      - Copilot Extensions:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
@@ -573,6 +581,8 @@ nav:
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides:
+        - How to Configure MCP servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
+        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Create a Spreadsheet and tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
@@ -596,8 +606,9 @@ nav:
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://etendo.software"
     - Release Notes:
-      - Etendo Classic:
+      - Etendo:
         - Release Notes: whats-new/release-notes/etendo-classic/release-notes.md
+        - New UI: whats-new/release-notes/etendo-classic/new-ui.md
         - Plugins:
           - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md
           - Etendo Backup and Restore: whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md
