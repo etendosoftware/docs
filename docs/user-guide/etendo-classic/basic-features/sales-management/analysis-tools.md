@@ -261,3 +261,7 @@ At the top of the report, the secondary filters are now shown.
 Also, this report now shows the total of cost, profit, margin-% and quantity.
 
 At the end of the report, there is a new table showing the number of documents per document type.
+
+---
+
+This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

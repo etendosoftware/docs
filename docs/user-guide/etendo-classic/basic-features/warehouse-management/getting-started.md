@@ -89,3 +89,7 @@ Warehouse Management has a connection with other application areas:
 - [Procurement Management](../../../../user-guide/etendo-classic/basic-features/procurement-management/getting-started.md) as goods received change stock quantity and its value.
 - [Sales Management](../../../../user-guide/etendo-classic/basic-features/sales-management/getting-started.md) as shipment changes stock quantity and its value.
 - *Production Management* because raw materials are taken out of warehouse and produced goods are sent back to the stock during production process.
+
+---
+
+This work is a derivative of [Warehouse Management](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

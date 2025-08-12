@@ -62,3 +62,6 @@ tags:
 | [1.1.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.1){target="_blank"}   | 21/05/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.0){target="_blank"}   | 20/05/2024 | 23.4.0 | * | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.0.0){target="_blank"}   | 29/04/2024 | 23.4.0 | * | C | :white_check_mark: |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

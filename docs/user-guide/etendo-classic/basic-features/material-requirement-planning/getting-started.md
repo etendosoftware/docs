@@ -89,3 +89,7 @@ The MRP interacts with the following modules:
 - [Production Management](../production-management/getting-started.md):
     - the [Process Plan](../production-management/setup.md#process-plan) is used for the calculation of the Manufacturing Plan
     - [Work Requirements](../production-management/transactions.md#work-requirement) are created from the Manufacturing Plan
+
+---
+
+- This work is a derivative of [Material_Requirement_Planning](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} by [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, licensed under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.

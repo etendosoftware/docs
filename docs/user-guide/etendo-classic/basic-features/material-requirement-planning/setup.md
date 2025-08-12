@@ -84,3 +84,7 @@ An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is
 Define the planner in charge of managing the purchase or production of specific products.
 
 ![](../../../../assets/drive/2IK-YKaAHZYtnh4V1r_P9QgY4oU3-wDlu73TD8YZffxiibZ-JWkhjD_fCnJLzntBSgBhJSLbMx3IOsYOPFoDahYodIPGEq1P8LytGAg9aCEylB2iknxNfhnwCH8MgxgF1F6CYXVQxBPfF7KuArrucc4.png)
+
+---
+
+- This work is a derivative of [Material_Requirement_Planning](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} by [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, licensed under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.

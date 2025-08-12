@@ -61,3 +61,6 @@ tags:
 | [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | |
 | [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \* | C | |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \* | C | |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

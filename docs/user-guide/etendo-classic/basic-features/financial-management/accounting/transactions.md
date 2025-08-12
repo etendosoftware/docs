@@ -973,3 +973,6 @@ As you can see, this development greatly facilitates the management of documents
 
 The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the **Accounting Server Process** or the **G/L Posting by DB Tables** process. The manual changes done for the accounting entries description will obviously be lost after running this process.
 
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
