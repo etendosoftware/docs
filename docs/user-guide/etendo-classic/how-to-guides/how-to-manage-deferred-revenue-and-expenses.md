@@ -191,3 +191,7 @@ Regardless of how the invoice is created - manually or automatically - when it i
 
 - The first accounting entry, dated on the accounting date of the invoice, debits deferred expenses and credits account payables.
 - For each period, an additional accounting entry is created debiting the product expense account and crediting the deferred expense account.
+
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/How_To){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

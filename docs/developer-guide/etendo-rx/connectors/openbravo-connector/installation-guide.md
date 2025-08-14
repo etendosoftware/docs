@@ -550,3 +550,7 @@ In the Openbravo environment, logged in as `System Administrator`, it is necessa
 
 7. Finally, in the External ID Mapping window you can see the external record IDs and the mapping to local records:
     ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/external-id-mappings.png)
+
+---
+
+This work is a derivative of [Openbravo](https://wiki.openbravo.com/wiki/Main_Page){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

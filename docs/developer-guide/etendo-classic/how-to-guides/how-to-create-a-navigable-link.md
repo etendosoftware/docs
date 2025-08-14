@@ -248,3 +248,7 @@ The last step is to add the implementation in the field where the functionality 
 As seen below, using the created link, you can directly open the linked sales order in the Sales Order window.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/createinvoicesfromorders.gif)
+
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/Category:HowTo){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

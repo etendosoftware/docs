@@ -84,3 +84,5 @@ Suppose you have an Excel file at `/home/user/data.xls` and you want to extract 
 !!!note
     The result of the tool can be used as input for other processes. For instance, the extracted customer data can be utilized to generate personalized marketing campaigns or invoices.
 
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

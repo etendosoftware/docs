@@ -34,3 +34,7 @@ GET /OBMAPBusinessPartner/2C4C71BC828B47A0AF2A79855FD3BA7A?_dateFormat=yyyy-MM-d
 ```
 
 In this example, the date format is set to `"yyyy-MM-dd"` and the time zone is set to `"America/New_York"`.
+
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/Category:HowTo){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

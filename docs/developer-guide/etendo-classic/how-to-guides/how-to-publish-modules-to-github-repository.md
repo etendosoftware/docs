@@ -173,3 +173,7 @@ Add to the **beans.xml**
 
 !!! success
     Once Gradle finishes the deployment, your module is ready to be used as a dependency.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
