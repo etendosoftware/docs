@@ -15,10 +15,11 @@ status: beta
 ---
 # Interactive Installation Guide
 
-!!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
-
 ## Overview
+
+!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments. 
+
 This guide demonstrates how to install Etendo Classic using the **Interactive Configuration System** - an intuitive wizard that guides you through the setup process step by step.
 
 ## Why Use Interactive Installation?
@@ -39,6 +40,7 @@ Before starting, ensure you have:
 - [System requirements](../getting-started/requirements.md) met
 - [PostgreSQL properly configured](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
 - GitHub credentials ready ([setup guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md))
+- Etendo Gradle Plugin [2.1.0](../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) or higher. For more information, visit [Etendo Gradle Plugin](../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin#etendo-plugin).
 
 ## Interactive Installation Process
 
