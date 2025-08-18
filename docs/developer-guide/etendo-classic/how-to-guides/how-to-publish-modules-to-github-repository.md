@@ -106,7 +106,8 @@ repositories {
 * Ex: implementation "com.sun.mail:javax.mail:1.6.2"
 */
 dependencies {
-		implementation(com.myrepo:dependency.test:1.0.0)
+    
+    implementation('com.myrepo:dependency.test:1.0.0')
     
    	implementation('com.etendoerp.platform:etendo-core:[22.1.0, x.y.z)')
 }
