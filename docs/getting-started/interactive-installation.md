@@ -1,5 +1,5 @@
 ---
-title: Install Etendo Classic - Interactive Guide
+title: Install Etendo - Interactive Guide
 
 tags:
     - Etendo Installation
@@ -13,7 +13,7 @@ tags:
 
 status: beta
 ---
-# Interactive Installation Guide
+# Install Etendo - Interactive Guide
 
 ## Overview
 
@@ -121,7 +121,7 @@ Choose your installation format and prepare the base files:
     4. Add Platform Extensions bundle dependency:
         ```groovy title="build.gradle"
         dependencies {
-            implementation ('com.etendoerp:platform.extensions:2.6.0')
+            implementation ('com.etendoerp:platform.extensions:2.6.0') // 2.6.0 or higher.
         }
         ```
 
@@ -135,7 +135,7 @@ Choose your installation format and prepare the base files:
 Launch the interactive configuration wizard:
 
 ```bash title="Terminal"
-./gradlew setup --interactive --console=plain
+./gradlew setup -Pinteractive=true --console=plain
 ```
 
 ### Step 3: Navigate the Configuration Menu
@@ -318,7 +318,7 @@ Open your browser and navigate to:
 You can run the interactive configuration again at any time:
 
 ```bash title="Terminal"
-./gradlew setup --interactive --console=plain
+./gradlew setup -Pinteractive=true --console=plain
 ```
 
 This will:
@@ -332,7 +332,7 @@ This will:
 For troubleshooting, enable debug output:
 
 ```bash title="Terminal"
-./gradlew setup --interactive --debug --console=plain
+./gradlew setup -Pinteractive=true --debug --console=plain
 ```
 
 ### Using with Custom Modules
@@ -350,11 +350,11 @@ If your project includes custom modules with `config.gradle` files, they will au
 
 ```bash
 # Ensure you're using the correct flags
-./gradlew setup --interactive --console=plain
+./gradlew setup -Pinteractive=true --console=plain
 
 # If issues persist, stop Gradle daemon and retry
 ./gradlew --stop
-./gradlew setup --interactive --console=plain
+./gradlew setup -Pinteractive=true --console=plain
 ```
 
 **Password Input Visible**

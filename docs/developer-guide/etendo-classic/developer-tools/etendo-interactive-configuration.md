@@ -1,5 +1,5 @@
 ---
-title: Etendo Interactive Configuration
+title: Etendo Interactive Setup
 
 tags:
     - Etendo Installation
@@ -13,7 +13,7 @@ tags:
 
 status: beta
 ---
-# Etendo Interactive Configuration
+# Etendo Interactive Setup
 
 ## Overview
 
@@ -32,7 +32,7 @@ The Etendo Interactive Configuration system provides a user-friendly command-lin
 
 ```bash
 # Run interactive configuration (recommended)
-./gradlew setup --interactive --console=plain
+./gradlew setup -Pinteractive=true --console=plain
 
 # Standard setup
 ./gradlew setup
@@ -300,7 +300,7 @@ Test that your `config.gradle` file is properly discovered:
 
 ```bash
 # Run with debug output to see property scanning
-./gradlew setup --interactive --debug --console=plain | grep "config.gradle"
+./gradlew setup -Pinteractive=true --debug --console=plain | grep "config.gradle"
 
 # Expected output:
 # DEBUG - ✓ Processing config.gradle in modules/com.yourcompany.yourmodule
@@ -327,7 +327,7 @@ cat gradle.properties | grep "api\."
 Run the interactive setup and verify your module's properties appear:
 
 ```bash
-./gradlew setup --interactive --console=plain
+./gradlew setup -Pinteractive=true --console=plain
 ```
 
 You should see your module's property groups in the configuration menu and be able to configure them individually or as part of "all groups" configuration.
