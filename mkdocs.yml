@@ -183,6 +183,7 @@ nav:
     - Overview: getting-started/overview.md
     - Requirements: getting-started/requirements.md
     - Installation: getting-started/installation.md
+    - Interactive Installation: getting-started/interactive-installation.md
     - User interface:
       - Workspace: getting-started/user-interface/workspace.md
       - Navigation: getting-started/user-interface/navigation.md
@@ -510,6 +511,7 @@ nav:
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
         - Etendo Database Extended Module: developer-guide/etendo-classic/developer-tools/etendo-database-extended-module.md
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
+        - Etendo Interactive Setup: developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md
         - Etendo Testing Plugin: developer-guide/etendo-classic/developer-tools/etendo-testing-plugin.md
       - Bundles:
         - Platform Extensions Bundle:
