@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
@@ -11359,7 +11359,8 @@
 <h3 id="from-the-sales-order-window">From the Sales Order window</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Transactions</code> &gt; <code>Sales Order</code></p>
 <p>From the <a href="../../../../basic-features/sales-management/transactions/#sales-order">Sales Order</a> window, the Generate Picking List button supports multiple selection and is visible when all selected orders are booked  and not completely shipped. Using this process <strong>both types of Picking Lists can be created</strong>: Direct Picking Lists and Outbound Picking Lists.</p>
-<p>When installing this module, in the Sales Order Header a flag <strong>In Picking List</strong> is added. This is checked when one of the lines of the sales order is present in a Picking List that is not closed. Using this flag and the Delivery Status and Delivery Date fields, it is possible to filter the Sales Order window to identify the Sales Orders needed to be included in a Picking List.</p>
+<p>When installing this module, in the Sales Order Header a flag <strong>Pending Picking List</strong> is added. This is checked when one of the lines of the sales order is present in a Picking List that is not closed. Using this flag and the Delivery Status and Delivery Date fields, it is possible to filter the Sales Order window to identify the Sales Orders needed to be included in a Picking List.</p>
+<p>The Sales Order Header also includes the flag <strong>Exclude from Picking List</strong>. If this flag is set to Yes, the Generate Picking List button will not be displayed for that order.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The module does not support the creation of Picking Lists for the same Sales Order for <strong>multiple warehouses</strong>. Since the Sales Order has already a Warehouse assigned in the header, the Picking List will be created against this Warehouse only.</p>
@@ -11785,10 +11786,10 @@ In this window, the Process Movement button ends the process.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../../../../../assets/javascripts/feedback.js"></script>
       

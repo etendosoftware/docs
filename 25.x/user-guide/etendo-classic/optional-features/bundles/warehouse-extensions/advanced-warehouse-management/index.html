@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
@@ -11530,7 +11530,7 @@
 <p><strong>System Preferences</strong>:</p>
 <ul>
 <li>
-<p><code>IsTaskInstalled</code>: This preference by default "Y" (Yes) to enable the task module and allow automatic generation of picking tasks when creating the Picking List. If set to "N" (No), no tasks will be automatically generated and the assignment option will not be available when creating the picking.</p>
+<p><code>CreateWarehouseTask</code>: This preference is set to "Y" (Yes) by default to enable automatic generation of warehouse tasks, such as picking tasks, when creating the Picking List. If set to "N" (No), tasks will not be generated automatically and the assignment option will not be available during picking creation.</p>
 </li>
 <li>
 <p><code>fromDateCompleted</code>: Defines the number of days backward from the current date to display tasks with Completed status in Etendo Mobile. By default, the value is 1 and  will show the tasks completed the previous day.</p>
@@ -11686,18 +11686,29 @@
 <p>Once picking is started, a new window opens with the following items:</p>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-4.png" width="300" /></a></p>
 <ul>
-<li>Scan Barcode: activates the camera of the mobile device.</li>
-<li>Scan or type barcode: allows to enter the barcode manually.</li>
-<li>Quantity with <code>+</code> and <code>-</code> buttons: allows manual loading of the quantity to be scanned.</li>
+<li><strong>Scan Barcode:</strong> activates the camera of the mobile device.</li>
+<li><strong>Type barcode:</strong> allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.</li>
+<li><strong>Quantity with: <code>+</code> and <code>-</code> buttons</strong> allows manual loading of the quantity to be scanned.</li>
 <li>
-<p>List of products (N): list of cards with product information, where (N) is the total quantity of products. </p>
+<p><strong>List of products (N):</strong> list of cards with product information, where (N) is the total quantity of products. </p>
 <ul>
 <li>Product</li>
-<li>Status</li>
+<li>Status:<ul>
+<li><span style="padding:4px;background-color:#F5F5F5;color:#BDBDBD;border-radius:4px;"> 
+    Unscanned
+</span></li>
+<li><span style="padding:4px;background-color:#fba643ff;color:white;border-radius:4px;"> 
+    Partially Scanned
+</span></li>
+<li><span style="padding:4px;background-color:#00B34C;color:white;border-radius:4px;"> 
+    Scanned
+</span></li>
+</ul>
+</li>
 <li>Barcode</li>
 <li>Locator</li>
-<li>Movement Quantity: total quantity to be collected</li>
-<li>Counted Quantity with buttons <code>+</code> and <code>-</code> : that allow to add or subtract one by one the quantity manually.</li>
+<li>Movement Quantity: total quantity to be collected.</li>
+<li>Counted Quantity with buttons <code>+</code> and <code>-</code>: that allow to add or subtract one by one the quantity manually.</li>
 </ul>
 </li>
 </ul>
@@ -11721,13 +11732,14 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png" width="250" /></a></p>
 <p>Possible error scenarios:</p>
 <ul>
 <li>If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.   <br><br></li>
-<li>If an attempt is made to enter a quantity greater than required, the system will charge the maximum defined in the product card. Once the quantity is completed and the product code is re-scanned or reloaded, the system does not add quantity to the product.  <br><br></li>
+<li>If an attempt is made to enter a quantity greater than required, the system will charge the maximum defined in the product card. Once the quantity is completed and the product code is re-scanned or reloaded, the system does not add quantity to the product.
+Additionally, if a quantity greater than the allowed maximum is entered, a popup will be displayed with the message: "Maximum quantity reached for product [ProductName]". <br><br></li>
 <li>If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.</li>
 </ul>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png" /></a></p>
 </div>
 <h4 id="picking-completion">Picking Completion</h4>
 <p>Once at least one unit of any product is registered, the <strong>End Picking</strong> button becomes active. This allows partial picking, meaning only part of the requested quantity can be picked, which is useful when products are missing or unsuitable for use.</p>
@@ -11737,6 +11749,8 @@
 <p>For partial picking, the task is closed, and no new task is automatically created for the missing products. Any remaining quantities must be handled manually.</p>
 </div>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-6.png" /></a></p>
+<p>Once completed, the task will appear in the Completed Tasks section, where it is possible to review the validated products and quantities for that specific picking task.</p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-7.png" /></a></p>
 <h3 id="packing">Packing</h3>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-1.png" /></a></p>
 <p>The packing process allows the operator to pack the products efficiently using Etendo Mobile. The complete process flow is detailed below.</p>
@@ -11768,7 +11782,6 @@
 </li>
 </ul>
 <h4 id="product-packing">Product Packing</h4>
-<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png" /></a></p>
 <ol>
 <li>
 <p>The warehouse operator must <strong>select a task</strong>. To select the task, scroll or enter key data in the search engine.</p>
@@ -11777,21 +11790,36 @@
 <p>When selecting a task, a screen opens with the packing list number and the <strong>Start Packing</strong> button.</p>
 </li>
 <li>
-<p>When pressing <strong>Start Packing</strong>, the status of the task changes to <code>In Progress</code> in both Etendo Mobile and Etendo. The window has the following elements:</p>
+<p>When pressing <strong>Start Packing</strong>, the status of the task changes to <code>In Progress</code> in both Etendo Mobile and Etendo. </p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png" /></a></p>
+</li>
+<li>
+<p>The window has the following elements:</p>
 <ul>
 <li><strong>Scan Barcode</strong> button to activate the device camera and scan.</li>
-<li><strong>Type barcode</strong> field for manual entry.</li>
+<li><strong>Type barcode</strong> allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.</li>
 <li><strong>Select Box</strong> field to select the destination box when scanning the product.</li>
 <li><strong>Quantity</strong> field that acts as a multiplier to load the quantity when scanning the product.</li>
 <li><strong>+ Add Box</strong> button that allows you to add new boxes.</li>
 <li>
 <p>A list of <strong>Product</strong> cards, each showing:</p>
 <ul>
-<li>Product name</li>
-<li>Status</li>
+<li>Product</li>
+<li>Status:<ul>
+<li><span style="padding:4px;background-color:#F5F5F5;color:#BDBDBD;border-radius:4px;"> 
+    Unscanned
+</span></li>
+<li><span style="padding:4px;background-color:#fba643ff;color:white;border-radius:4px;"> 
+    Scanning
+</span></li>
+<li><span style="padding:4px;background-color:#00B34C;color:white;border-radius:4px;"> 
+    Scanned
+</span></li>
+</ul>
+</li>
 <li>Barcode</li>
 <li>Quantity</li>
-<li>Packed Quantity</li>
+<li>Packed Quantity with buttons <code>+</code> and <code>-</code>: that allow to add or subtract one by one the quantity manually.</li>
 </ul>
 </li>
 <li>
@@ -11802,6 +11830,7 @@
 </ul>
 </li>
 </ul>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png" /></a></p>
 <p>The view selectors by <strong>Product</strong> or by <strong>Box</strong> allow:</p>
 <ul>
 <li>
@@ -11811,6 +11840,7 @@
 <p>In the <strong>Boxes</strong> view, when entering a box, the detailed contents are displayed with the possibility of browsing box by box to check which products are contained in each box.</p>
 </li>
 </ul>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-5.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>In both views, it is possible to modify the quantities loaded and add boxes if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: </p>
@@ -11825,6 +11855,11 @@
 <li>Each packed product is registered under a specific box.</li>
 <li>You can switch between boxes to distribute products as needed.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Newly created boxes cannot be deleted manually. However, if a box is left empty (no products added), it will be automatically removed at the end of the process. Only boxes with packed products will be saved and displayed.</p>
+</div>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-6.png" /></a></p>
 </li>
 </ol>
 <h4 id="loading-options">Loading Options</h4>
@@ -11837,7 +11872,7 @@
 <p>Load the amount manually in the Quantity field and then Scan the product. </p>
 </li>
 <li>
-<p>Enter both quantity and code manually.</p>
+<p>Enter both quantity and code manually, and then press the Validate button to confirm the entry.</p>
 </li>
 <li>
 <p>Enter the quantity manually from the <strong>Product</strong> view or from the <strong>Boxes</strong> view.</p>
@@ -11847,9 +11882,11 @@
 <p class="admonition-title">Warning</p>
 <p>Possible error scenarios:</p>
 <ul>
-<li>If an incorrect code is scanned (does not match any product in the task), a message is displayed indicating that the product is invalid.</li>
-<li>If an attempt is made to enter more than the required quantity, an error message is also displayed.</li>
+<li>If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.</li>
+<li>If an attempt is made to enter more than the required quantity, an error message is also displayed "Packing for product [ProductName] is already complete.".</li>
+<li>If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.</li>
 </ul>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-7.png" /></a></p>
 </div>
 <h4 id="packing-completion">Packing Completion</h4>
 <p>Once the products have been packed: </p>
@@ -11863,8 +11900,17 @@
 <li>
 <p>At the end, you can choose to calculate the weight of the boxes.</p>
 </li>
+<li>
+<p>After confirmation, the task is marked as Completed.</p>
+</li>
 </ul>
-<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png" /></a></p>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-8.png" /></a></p>
+<p>Once completed, the task will appear in the Completed Tasks section. From there, it is possible to review all validated information for that packing task, including:</p>
+<ul>
+<li>In the Product view: which boxes each product was packed into.</li>
+<li>In the Box view: which products were packed into each box.</li>
+</ul>
+<p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-9.png" /></a></p>
 <h3 id="all-tasks">All Tasks</h3>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/all-tasks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/all-tasks.png" /></a></p>
 <p>From this window you can view and work with all types of tasks, both Picking and Packing.</p>
@@ -12175,10 +12221,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../../../../../assets/javascripts/feedback.js"></script>
       
