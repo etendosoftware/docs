@@ -14,10 +14,8 @@ tags:
 
 This guide explains how to upgrade your Etendo environment to any version you want. 
 
-Only if you are upgrading from *Etendo 21* is it necessary to follow the guide [Upgrading from Etendo 21 to Any Version](#upgrading-from-etendo-21-to-any-version). In all other cases simply follow the guide [Upgrade Etendo](#upgrade-etendo)
-
-!!! tip
-    Keep in mind that there are special stack considerations depending on the Etendo version you are upgrading to.
+!!! info
+    Only if you are upgrading from *Etendo 21* is it necessary to follow the guide [Upgrading from Etendo 21 to Any Version](#upgrading-from-etendo-21-to-any-version). In all other cases simply follow the current guide. 
 
 **Checklist**
 
@@ -50,15 +48,19 @@ Only if you are upgrading from *Etendo 21* is it necessary to follow the guide [
 - If you are upgrading to **Etendo 25**, update Gradle by running:
   
     ```bash title="Terminal"
-    ./gradlew wrapper --gradle-version 8.3.12
+    ./gradlew wrapper --gradle-version 8.12.1
     ```
 
 **Full Stack Upgrade**
 
-The required technology stack depends on the target version. For Etendo versions prior to **Etendo 25**, the initial stack remains unchanged.  
+The required technology stack depends on the target version.
 
-If you are migrating to **Etendo 25**, you must first update the **entire technology stack** (Java SE, PostgreSQL, Apache Tomcat, Gradle).  
-The [Developer Changelog](../../developer-changelog/apichanges.md) guide provides details about the required stack and possible changes needed in custom modules. 
+- For Etendo versions prior to **Etendo 25**, the initial stack remains unchanged, For more information, visit: [Etendo 24 and Earlier - Software Stack](../../../../getting-started/requirements.md#etendo-24-and-earlier)
+
+- If you are migrating to **Etendo 25**, you must first update the **entire technology stack** (Java SE, PostgreSQL, Apache Tomcat). For more information, visit: [Etendo 25 - Software Stack](../../../../getting-started/requirements.md#etendo-25)
+   
+    !!!tip 
+        The [Developer Changelog](../../developer-changelog/apichanges.md) guide provides details about the required stack and possible changes needed in custom modules. 
 
 ### Etendo Upgrade
 
