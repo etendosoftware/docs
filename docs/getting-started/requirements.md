@@ -49,11 +49,25 @@ Solaris and more.  <br>
 x86, x86\_64, IA64, Sparc, PowerPC, AIX.  
 Either PostgreSQL should also be supported by your target system
 
-## Server: software stack
+## Software Stack
 
-| Stack component | Supported versions | Recommended version | Instalation Guide |
+### Etendo 25
+
+| Stack component | Supported versions | Recommended version | Installation Guide |
 | :--- | :--- | :--- | :--- |
-| :fontawesome-brands-java:  Java SE | 17  | Latest 17.x | [Java Instalation Guide](https://www.oracle.com/java/technologies/downloads/#java17){target="_blank"} |
-| :simple-postgresql:  PostgreSQL | 14.x, 16.x Amazon RDS | Latest 16.x | [Postgres Instalation Guide ](https://www.postgresql.org/download/){target="_blank"} |
-| :simple-apachetomcat:  Apache Tomcat | 9.0.x | Latest 9.0.x | [Tomcat Instalation Guide](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
+| :fontawesome-brands-java:  Java SE | 17  | Latest 17.x | [Java Installation Guide](https://www.oracle.com/java/technologies/downloads/#java17){target="_blank"} |
+| :simple-postgresql:  PostgreSQL | 14.x, 16.x Amazon RDS | Latest 16.x | [Postgres Installation Guide ](https://www.postgresql.org/download/){target="_blank"} |
+| :simple-apachetomcat:  Apache Tomcat | 9.0.x | Latest 9.0.x | [Tomcat Installation Guide](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
+| :simple-gradle:  Gradle | 8.12.1 | 8.12.1 | [Gradle Docs](https://docs.gradle.org/8.12.1){target="_blank"} |
 | :material-database:  Oracle | 19c (LTS) | 19c (LTS) |
+
+### Etendo 24 and earlier
+
+| Stack component | Supported versions | Recommended version | Installation Guide |
+| :--- | :--- | :--- | :--- |
+| :fontawesome-brands-java:  Java SE | 11  | Latest 11.x | [Java Installation Guide](https://www.java.com/en/download/manual.jsp){target="_blank"} |
+| :simple-postgresql:  PostgreSQL | 10.x, 11.x, 12.x, 13.x, Amazon RDS | Latest 14.x | [Postgres Installation Guide ](https://www.postgresql.org/download/){target="_blank"} |
+| :simple-apachetomcat:  Apache Tomcat | 8.5.x (x >= 24) | Latest 8.5.x | [Tomcat Installation Guide](https://tomcat.apache.org/download-80.cgi){target="_blank"} |
+| :simple-gradle:  Gradle | 7.3.2 | 7.3.2 | [Gradle Docs](https://docs.gradle.org/7.3.2){target="_blank"} |
+| :material-database:  Oracle | 19c (LTS) | 19c (LTS) | |
+
