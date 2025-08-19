@@ -7,16 +7,24 @@ tags:
 
 # API Change Documentation 
 
+## Overview
+
+This document provides detailed information about API and stack changes introduced in the latest Etendo releases.  
+It serves as a reference for developers and system administrators to understand which components have been updated, deprecated, or removed, and how these changes may impact custom developments.  
+
+If you are planning to upgrade your environment, make sure to also review the official upgrade guide: [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
+
 ## March 2025
 
 - [Etendo - Release 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
 - [Etendo - Release 25.1.1](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.1)
 - [Etendo - Release 25.1.2](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.2)
 
+[Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
+
 ### Etendo Platform Stack Upgrade
 
-
-#### :material-language-java:Java SE
+#### :material-language-java: Java SE
 
 - New Version Supported: `17.0.14`
 - Release Notes:
@@ -135,7 +143,7 @@ tags:
 
         </div>
     
-#### :simple-apachetomcat:Apache Tomcat
+#### :simple-apachetomcat: Apache Tomcat
 
 - New Version Supported: `9.0.98`
 - Release Notes: [Apache Tomcat 9](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html){target="\_blank"}
@@ -145,7 +153,7 @@ tags:
 
 #### :octicons-file-code-24: Etendo Gradle Plugin
 
-- New Version Supported: `2.0.0` or higer
+- New Version Supported: `2.0.0` or higher
 - Release Notes:
 
     - [Etendo Gradle Plugin - Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)

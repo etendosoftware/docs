@@ -66,9 +66,9 @@ The required technology stack depends on the target version.
 
 Etendo can be installed or upgraded using two formats: Source or JAR. The Source format is the most common and allows you to modify the application code. The JAR format is more efficient, as it uses precompiled classes, but does not allow code changes.
 
-#### Etendo in Source Format (most used)
+#### Etendo in Source Format (Most Used)
     
-1. Verify the **Etendo** core version inside `build.gradle`, it is recommended to set a fixed version. You can find the list of versions and their statuses in the [Etendo - Release Notes](../../../../whats-new/release-notes/etendo-classic/release-notes.md). It is recommend always updating to the latest *Confirmed Stable (CS)* version available. 
+1. Verify the **Etendo** core version inside `build.gradle`, it is recommended to set a fixed version. You can find the list of versions and their statuses in the [Etendo - Release Notes](../../../../whats-new/release-notes/etendo-classic/release-notes.md). It is recommended always updating to the latest *Confirmed Stable (CS)* version available. 
 
   
     ```groovy title="build.gradle"
@@ -137,9 +137,9 @@ Etendo can be installed or upgraded using two formats: Source or JAR. The Source
      
 
 
-#### Etendo in JAR format (recommended for less customized and dynamic environments)
+#### Etendo in JAR format (Recommended for Less Customized and Dynamic Environments)
 
-1. Verify the **Etendo** target version inside `build.gradle`, it is recommended to set a fixed version. You can find the list of versions and their statuses in the [Etendo - Release Notes](../../../../whats-new/release-notes/etendo-classic/release-notes.md). We recommend always updating to the latest *Confirmed Stable (CS)* version available. 
+1. Verify the **Etendo** target version inside `build.gradle`, it is recommended to set a fixed version. You can find the list of versions and their statuses in the [Etendo - Release Notes](../../../../whats-new/release-notes/etendo-classic/release-notes.md). It is recommended always updating to the latest *Confirmed Stable (CS)* version available. 
 
     ```groovy title="build.gradle"
     dependencies {
@@ -243,7 +243,7 @@ To work with this plugin you need to specify in the root project from where the 
     rootProject.name = "etendo"
     ```
 
-2. Add in the `build.gradle` file the latest confirmed stable (CS) **Etendo Gradle Plugin** version compatible with the  Etendo version you are upgrading to. For mare information visit [Etendo Gradle Plugin - Release Notes](../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+2. Add in the `build.gradle` file the latest confirmed stable (CS) **Etendo Gradle Plugin** version compatible with the  Etendo version you are upgrading to. For more information visit [Etendo Gradle Plugin - Release Notes](../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
     
     ```groovy title="build.gradle"
     plugins {
