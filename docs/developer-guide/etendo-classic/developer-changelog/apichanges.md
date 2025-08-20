@@ -2,6 +2,10 @@
 tags: 
     - API Changes
     - Updating Guide
+    - Migrate to Etendo 25
+    - Etendo 25
+    - Update Etendo
+    - Developer Changelog
     
 ---
 
