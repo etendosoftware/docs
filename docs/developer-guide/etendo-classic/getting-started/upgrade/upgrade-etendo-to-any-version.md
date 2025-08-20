@@ -257,4 +257,4 @@ To work with this plugin you need to specify in the root project from where the 
     apply from: 'https://repo.futit.cloud/repository/static-public-releases/com/etendo/etendo/latest/etendo-latest.gradle'
 
     ```
-4.  Continue with the [Upgrade Etendo](#upgrade-etendo) section.
+4.  Continue with the [Etendo Upgrade](#etendo-upgrade) section.
