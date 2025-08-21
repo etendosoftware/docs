@@ -347,9 +347,6 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
     
         `https://<Public server IP>/<context.name>` or in case that you run in local environment [`http://localhost:8080/etendo`](http://localhost:8080/etendo){target="_blank"}
 
----
-
-This work is a derivative of [Getting Started with Openbravo](https://wiki.openbravo.com/wiki/Getting_started_with_Openbravo){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
