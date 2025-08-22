@@ -1,4 +1,6 @@
 ---
+title: How to Install Etendo Main UI
+status: beta
 tags:
   - Development
   - Installation
@@ -11,20 +13,35 @@ tags:
 
 ## Overview
 
-**IMPORTANT: THIS IS A BETA VERSION**
-
-It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+!!!warning "Beta Version"
+    **IMPORTANT: THIS IS A BETA VERSION**
+    
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
 
 This guide provides instructions to install and run the Etendo Main UI, a modern React/TypeScript-based user interface that provides a new frontend experience for EtendoERP. The Main UI runs as a containerized service alongside your Etendo Classic instance.
 
-## Prerequisites
+## Requirements
 
-- **Etendo Classic** project properly set up
-- **Docker** and **Docker Compose** installed
-- **Java** properly configured for Gradle tasks
-- **Git** for version control
+1. **Etendo Classic** project properly set up
+2. This project depends on the following tools:
+    - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher
+    - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher
+3. **Java** properly configured for Gradle tasks
+4. **Git** for version control
 
-## Installation Steps
+!!!info
+    The [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
+
+## Installation
+
+Etendo Main UI is distributed within the [Platform Extensions](./bundles/overview.md) bundle, which includes the **Main UI Infrastructure** and all required backend modules for the new interface.
+
+!!!info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=PLATFORM_BUNDLE_ID){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../whats-new/release-notes/etendo-platform/bundles/release-notes.md).
+
+## Running Etendo Main UI
+
+The simplest configuration we are going to follow as an example is to mount Main UI Dockerized and Tomcat running as a local service. Other configurations are detailed in the section, [Advanced Configurations](#advanced-development-setup).
 
 ### 1. Clone the Repository
 
@@ -32,31 +49,10 @@ Clone the module into the `modules` directory of your Etendo Classic project:
 
 ```bash
 cd modules
-git clone git@github.com:etendosoftware/com.etendoerp.mainui.git
+git clone <repository_url>
 ```
 
-### 2. Install Required Modules
-
-Install the following modules in your Etendo Classic project:
-
-- `com.etendoerp.etendorx`
-- `com.etendoerp.metadata` 
-- `com.etendoerp.metadata.template`
-
-```bash
-cd modules
-git clone git@github.com:etendosoftware/com.etendoerp.etendorx.git
-git clone git@github.com:etendosoftware/com.etendoerp.metadata.git
-git clone git@github.com:etendosoftware/com.etendoerp.metadata.template.git
-```
-
-After installing `com.etendoerp.etendorx`, configure the authentication manager by adding the following line to your `Openbravo.properties` file:
-
-```properties
-authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
-```
-
-### 3. Configure Services
+### 2. Configure Services
 
 Add the following lines to your `gradle.properties` file:
 
@@ -76,7 +72,7 @@ docker_com.etendoerp.docker_db=true
 docker_com.etendoerp.tomcat=true
 ```
 
-### 4. Set Up the Module
+### 3. Set Up the Module
 
 Run the following commands to set up the module and update resources:
 
@@ -85,7 +81,7 @@ Run the following commands to set up the module and update resources:
 ./gradlew resources.up
 ```
 
-### 5. Start Services
+### 4. Start Services
 
 Start the Docker services:
 
@@ -95,7 +91,7 @@ Start the Docker services:
 
 This will start the Main UI container along with any other configured Docker services.
 
-### 6. (If Running in Docker) Set Up the Database
+### 5. (If Running in Docker) Set Up the Database
 
 If this is your first time running Etendo Classic via Docker, install the database:
 
@@ -119,16 +115,19 @@ The exact URL may vary depending on your Docker configuration.
 ### Common Issues
 
 **Services not starting:**
+
 - Ensure Docker and Docker Compose are properly installed and running
 - Check that required ports are not already in use
 - Verify your `gradle.properties` configuration
 
 **Authentication issues:**
-- Confirm the authentication manager is properly configured in `Openbravo.properties`
-- Verify that all required modules are installed and active
+
+- Confirm that the Platform Extensions Bundle is properly installed
+- Verify that all required modules are active
 - Check that the `ETENDO_CLASSIC_URL` points to your running Etendo Classic instance
 
 **Database connection problems:**
+
 - Ensure the database service is running if using Docker
 - Verify database credentials and connection settings
 - Check Docker logs for specific error messages
@@ -138,9 +137,9 @@ The exact URL may vary depending on your Docker configuration.
 If you encounter issues during installation:
 
 1. Check the Docker logs: `docker-compose logs`
-2. Verify all prerequisites are met
-3. Ensure all required modules are properly installed
-4. Review the configuration in `gradle.properties` and `Openbravo.properties`
+2. Verify all requirements are met
+3. Ensure the Platform Extensions Bundle is properly installed
+4. Review the configuration in `gradle.properties`
 
 ## Advanced Configuration
 
@@ -152,11 +151,42 @@ For developers who need to set up a development environment to work directly on 
 
 This section is for developers who want to contribute to or customize the Main UI codebase directly.
 
-## Prerequisites for Development
+## Requirements for Development
 
-- **Node.js** version ^18.0.0 or higher
-- **pnpm** version ^9.15.2 (package manager)
-- All prerequisites from the basic installation above
+1. **Node.js** version ^18.0.0 or higher
+2. **pnpm** version ^9.15.2 (package manager)
+3. All requirements from the basic installation above
+
+## Manual Module Installation (Development Only)
+
+For development environments, you may need to install the required modules manually:
+
+- `com.etendoerp.openapi`
+- `com.etendoerp.etendorx`
+- `com.etendoerp.metadata`
+- `com.etendoerp.metadata.template`
+
+### Quick Clone Commands
+
+```bash
+cd modules
+
+# Clone required modules for development
+git clone git@github.com:etendosoftware/com.etendoerp.etendorx.git
+git clone git@github.com:etendosoftware/com.etendoerp.metadata.git
+git clone git@github.com:etendosoftware/com.etendoerp.metadata.template.git
+```
+
+!!!note "OpenAPI Module"
+    The `com.etendoerp.openapi` module should be installed through the standard Etendo module installation process.
+
+### Development Configuration
+
+After installing `com.etendoerp.etendorx`, configure the authentication manager by adding the following line to your `Openbravo.properties` file:
+
+```properties
+authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+```
 
 ## Development Project Structure
 
@@ -315,6 +345,7 @@ pnpm format:fix
 ### API Client (`@workspaceui/api-client`)
 
 Contains TypeScript definitions and API functions for communicating with the EtendoERP backend. Provides:
+
 - Authentication APIs
 - Metadata APIs
 - Datasource APIs
@@ -323,6 +354,7 @@ Contains TypeScript definitions and API functions for communicating with the Ete
 ### Component Library (`@workspaceui/componentlibrary`)
 
 A collection of reusable React components built with Material-UI. Includes:
+
 - Form components (inputs, selectors, etc.)
 - Navigation components
 - Modal and dialog components
@@ -331,6 +363,7 @@ A collection of reusable React components built with Material-UI. Includes:
 ### Main UI (`@workspaceui/mainui`)
 
 The main Next.js application that provides the complete user interface. Features:
+
 - Modern React/TypeScript architecture
 - Server-side rendering with Next.js
 - Material-UI theme integration
@@ -341,19 +374,23 @@ The main Next.js application that provides the complete user interface. Features
 ### Common Development Issues
 
 **Dependencies not installing properly:**
+
 - Ensure you're using pnpm version ^9.15.2
 - Clear node_modules and reinstall: `rm -rf node_modules && pnpm install`
 
 **Build failures:**
+
 - Make sure to build packages in the correct order (api-client first, then component-library)
 - Check that all peer dependencies are satisfied
 
 **Backend connection issues:**
+
 - Verify your `.env.local` configuration
 - Ensure the EtendoERP backend is running and accessible
 - Check that the required backend modules are installed and active
 
 **Authentication problems:**
+
 - Confirm the authentication manager is properly configured in `Openbravo.properties`
 - Verify that the metadata module is installed and active
 
