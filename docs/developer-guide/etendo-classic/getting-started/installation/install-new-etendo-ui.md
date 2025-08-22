@@ -30,29 +30,26 @@ This guide provides instructions to install and run the Etendo Main UI, a modern
 4. **Git** for version control
 
 !!!info
-    The [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
+    The [Docker Management](../../../etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
 
 ## Installation
 
-Etendo Main UI is distributed within the [Platform Extensions](./bundles/overview.md) bundle, which includes the **Main UI Infrastructure** and all required backend modules for the new interface.
+Etendo Main UI is distributed within the [Platform Extensions](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) bundle, which includes the **Main UI Infrastructure** and all required backend modules for the new interface.
 
 !!!info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=PLATFORM_BUNDLE_ID){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../whats-new/release-notes/etendo-platform/bundles/release-notes.md).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../etendo-classic/bundles/platform/overview.md).
 
 ## Running Etendo Main UI
 
 The simplest configuration we are going to follow as an example is to mount Main UI Dockerized and Tomcat running as a local service. Other configurations are detailed in the section, [Advanced Configurations](#advanced-development-setup).
 
-### 1. Clone the Repository
-
-Clone the module into the `modules` directory of your Etendo Classic project:
 
 ```bash
 cd modules
 git clone <repository_url>
 ```
 
-### 2. Configure Services
+### 1. Configure Services
 
 Add the following lines to your `gradle.properties` file:
 
@@ -72,7 +69,7 @@ docker_com.etendoerp.docker_db=true
 docker_com.etendoerp.tomcat=true
 ```
 
-### 3. Set Up the Module
+### 2. Set Up the Module
 
 Run the following commands to set up the module and update resources:
 
@@ -81,17 +78,17 @@ Run the following commands to set up the module and update resources:
 ./gradlew resources.up
 ```
 
-### 4. Start Services
+### 3. Start Services
 
 Start the Docker services:
 
 ```bash
-./gradlew docker.up
+./gradlew resources.up
 ```
 
 This will start the Main UI container along with any other configured Docker services.
 
-### 5. (If Running in Docker) Set Up the Database
+### 4. (If Running in Docker) Set Up the Database
 
 If this is your first time running Etendo Classic via Docker, install the database:
 
