@@ -167,6 +167,10 @@ Another difference to take into account is that, in this case, the buttons View,
 
 ![](../../../../../assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
 
+An example of the output of the report is:
+
+![](../../../../../assets/drive/P&L-adv-3.png)
+
 ## Trial Balance
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Trial Balance`
