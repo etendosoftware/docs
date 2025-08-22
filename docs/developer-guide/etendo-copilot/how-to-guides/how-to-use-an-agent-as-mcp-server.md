@@ -31,6 +31,40 @@ Each Etendo Copilot agent automatically exposes an MCP server endpoint that prov
 
 The MCP server runs alongside the agent and communicates using HTTP transport with optional Server-Sent Events (SSE) for streaming responses.
 
+## Summary: Agent Types and Connection Modes
+
+### Quick Reference Matrix
+
+| Agent Type | Simple Mode | Direct Mode |
+|------------|-------------|-------------|
+| **Multi-Model Agent** | `ask_agent` → Communicate with the agent | All agent tools + `get_agent_prompt` → Use tools directly + adopt agent personality |
+| **LangGraph Agent** | `ask_agent_supervisor` → Talk to supervisor | `ask_agent_<MemberName>` for each team member + `get_agent_prompt` → Direct team access |
+
+### Key Differences by Agent Type
+
+#### Multi-Model Agent
+- **Purpose**: Single intelligent agent that can use multiple AI models and tools
+- **Simple Mode**: Delivers `ask_agent` tool for natural conversation with automatic tool selection
+- **Direct Mode**: Delivers all agent tools directly + `get_agent_prompt` to understand the agent's personality and instructions
+- **Best for**: General-purpose tasks, knowledge-based queries, automated workflows
+
+#### LangGraph Agent
+- **Purpose**: Supervisor agent that coordinates a team of specialized sub-agents
+- **Simple Mode**: Delivers `ask_agent_supervisor` tool to talk with the supervisor who routes tasks to team members
+- **Direct Mode**: Delivers individual `ask_agent_<MemberName>` tools for each team member + `get_agent_prompt` for supervisor insights
+- **Best for**: Complex multi-step tasks requiring different areas of expertise
+
+### Choosing the Right Combination
+
+| Use Case | Recommended Setup |
+|----------|-------------------|
+| **User-facing chat interface** | Any Agent Type + Simple Mode |
+| **Automated business workflows** | Multi-Model Agent + Direct Mode |
+| **Complex analysis requiring multiple skills** | LangGraph Agent + Simple Mode |
+| **Development and debugging** | Any Agent Type + Direct Mode |
+| **API integrations** | Multi-Model Agent + Direct Mode |
+| **Multi-domain problem solving** | LangGraph Agent + Simple Mode |
+
 ## Connecting to Etendo Copilot MCP Server
 
 ### Token-Based Authentication
@@ -49,6 +83,8 @@ Where:
   - `youruser` is the username of the Etendo user account you want to use for authentication.
   - `yourpass` is the password of the Etendo user account you want to use for authentication.
   - `mode` is the connection mode (optional): `simple` or `direct`. If not specified, defaults to `simple` mode.
+    - **`simple`**: Delivers conversation tools (`ask_agent` or `ask_agent_supervisor`)
+    - **`direct`**: Delivers direct tool access + `get_agent_prompt` for personality adoption
 
 ## Connection Modes
 
@@ -91,7 +127,23 @@ Direct mode exposes all agent tools for direct execution from the MCP client.
 - You're building integrations that require precise tool control
 - You want to bypass the conversational interface for specific workflows
 
-### Mode Selection
+### Mode Selection by Agent Type
+
+The available connection modes depend on the **Agent Type** configured in Etendo Classic:
+
+#### Multi-Model Agent
+
+Multi-Model Agents support both connection modes:
+
+- **Simple Mode** ✅ - Recommended for conversational interaction
+- **Direct Mode** ✅ - For direct tool execution and system prompt access
+
+#### LangGraph Agent
+
+LangGraph Agents (supervisor/team-based) have specific mode behavior:
+
+- **Simple Mode** ✅ - Talk to the supervisor agent who will coordinate team members
+- **Direct Mode** ✅ - Access supervisor tools and view the orchestration prompt
 
 When running the configuration task, you'll be prompted to select a mode:
 
@@ -254,104 +306,47 @@ Add this to your VS Code MCP config file. See [VS Code MCP docs](https://code.vi
 
 ## Available Tools and Capabilities
 
-The MCP server exposes different sets of tools depending on the connection mode selected:
+The MCP server exposes different sets of tools depending on the agent type and connection mode selected:
 
-### Simple Mode Tools
+### What MCP Delivers in Each Case
 
-In simple mode, the following tools are available:
+#### Multi-Model Agent + Simple Mode
+**Tools delivered:**
+- ✅ `ask_agent` - Send questions directly to the agent using natural language
+- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
 
-#### ask_agent
-  **Purpose**: Allows MCP clients to send questions directly to the connected Etendo Copilot agent. Its behavior is the same as the Etendo Classic pop-up.
+**How it works:** The agent receives your question and internally uses all its configured tools (API tools, file operations, knowledge base search, etc.) to provide a complete response.
 
-  **Parameters:**
+#### Multi-Model Agent + Direct Mode  
+**Tools delivered:**
+- ✅ All agent's configured tools directly (API tools, file tools, knowledge base search, etc.)
+- ✅ `get_agent_prompt` - Read the agent's system prompt and personality
+- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
+- ❌ NO `ask_agent` tool
 
-    - `question` (string): The question to ask the agent
-    - `conversation_id` (optional string): Conversation ID to maintain context across multiple interactions
+**How it works:** You execute the agent's tools directly. Use `get_agent_prompt` to understand the agent's personality and follow the same instructions while using its tools.
 
-  **Functionality:**
+#### LangGraph Agent + Simple Mode
+**Tools delivered:**
+- ✅ `ask_agent_supervisor` - Send questions to the supervisor agent
+- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
 
-    - Forwards the question to the Etendo Copilot agent using the authenticated user's token.
-    - Maintains conversation context when conversation_id is provided.
-    - Returns the agent's response along with status information.
-    - Handles authentication and error scenarios.
-    - The agent internally uses its configured tools to answer your question.
+**How it works:** The supervisor receives your question and coordinates with team members to provide comprehensive responses.
 
-  **Example Usage:**
-  ```json
-  {
-    "question": "What are the latest sales reports?",
-    "conversation_id": "conv_123"
-  }
-  ```
+#### LangGraph Agent + Direct Mode
+**Tools delivered:**
+- ✅ `ask_agent_<MemberName>` - Individual tools for each team member (e.g., `ask_agent_DataAnalyst`, `ask_agent_ReportGenerator`)
+- ✅ `get_agent_prompt` - Read the supervisor's orchestration prompt
+- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
+- ❌ NO `ask_agent_supervisor` tool
 
-  **Response Format:**
-  ```json
-  {
-    "success": true,
-    "answer": {
-      "response": "Here are the latest sales reports...",
-      "conversation_id": "conv_123"
-    },
-    "status_code": 200
-  }
-  ```
+**How it works:** You can communicate directly with specific team members through their individual `ask_agent_<MemberName>` tools, bypassing the supervisor coordination.
 
-#### Basic Utility Tools (Simple Mode)
-- **ping**: Simple connectivity test tool
-- **hello_world**: Welcome message with server information  
-- **server_info**: Provides basic information about the MCP server
+### Tool Discovery and Usage
 
-### Direct Mode Tools
+When connecting to an Etendo Copilot MCP server, clients can:
 
-In direct mode, the following tools are available:
-
-#### All Agent-Specific Tools
-
-These are the tools that belong to each individual agent, automatically loaded from the agent configuration stored in Etendo Classic. When you connect to an agent's MCP server in direct mode, you get access to all the tools that have been configured for that specific agent in the Agent window.
-
-**Types of Agent Tools:**
-
-  - **Business Logic Tools**: Tools configured for the agent via the Skills & Tools tab in the Agent window
-  - **API Integration Tools**: Automatically generated tools from OpenAPI specifications when Knowledge Base files are configured with the behavior `[Agent] SPEC: Add as agent specification`
-  - **Knowledge Base Search Tool**: Automatically included when the agent has a Knowledge Base configured, allowing semantic search through the agent's knowledge
-
-**Examples of Common Agent Tools:**
-
-  - **API Call Tool**: Enables HTTP requests to external APIs and Etendo Classic endpoints
-  - **Read File Tool**: Reads the contents of files from the local filesystem  
-  - **Write File Tool**: Creates and modifies files with backup functionality
-  - **Docker Tool**: Executes Python or Bash code in isolated Docker containers
-  - **OCR Tool**: Extracts text and information from images
-  - **XLS Tool**: Processes Excel and CSV files
-  - **Task Management Tool**: Creates and manages background tasks in Etendo
-  - **Database Query Tools**: Executes controlled database queries (when configured)
-
-#### get_agent_prompt
-  **Purpose**: Retrieves the system prompt and configuration of the connected agent
-
-  **Parameters:** None
-
-  **Functionality:**
-
-    - Returns the agent's system prompt (the instructions that define the agent's behavior)
-    - Provides agent metadata like name and description
-    - Useful for understanding how the agent is configured and what it can do
-
-  **Response Format:**
-  ```json
-  {
-    "success": true,
-    "agent_name": "Sales Assistant",
-    "agent_prompt": "You are a sales assistant that helps users analyze sales data and generate reports..."
-  }
-  ```
-
-#### Basic Utility Tools (Direct Mode)
-- **ping**: Simple connectivity test tool
-- **hello_world**: Welcome message with server information (shows "Direct Mode")
-- **server_info**: Provides basic information about the MCP server (includes mode indicator)
-
-### Tool Comparison by Mode
+### Tool Comparison by Mode and Agent Type
 
 | Feature | Simple Mode | Direct Mode |
 |---------|-------------|-------------|
@@ -362,6 +357,26 @@ These are the tools that belong to each individual agent, automatically loaded f
 | **Use case** | Talk to agent naturally | Execute tools directly |
 | **Control level** | Agent handles tools | You choose tools |
 | **Complexity** | Simple | Advanced |
+
+#### Multi-Model Agent Behavior
+
+| Mode | Tools Delivered | Description |
+|------|-----------------|-------------|
+| **Simple** | `ask_agent` + basic tools | Send questions to the agent using natural language. The agent uses its configured tools internally to provide responses. |
+| **Direct** | All agent tools + `get_agent_prompt` + basic tools | Direct access to all tools configured for the agent (API tools, file tools, knowledge base search, etc.) plus ability to read the agent's system prompt. This allows the MCP client to see and adopt the agent's personality and follow the same instructions while using its tools. |
+
+#### LangGraph Agent Behavior
+
+| Mode | Tools Delivered | Description |
+|------|-----------------|-------------|
+| **Simple** | `ask_agent_supervisor` + basic tools | Send questions to the supervisor agent who will coordinate with team members to provide comprehensive responses. |
+| **Direct** | `ask_agent` tools for each team member + `get_agent_prompt` + basic tools | Direct access to individual team member agents through separate `ask_agent_<MemberName>` tools, allowing direct communication with specific team members plus access to the supervisor's orchestration prompt. |
+
+!!! note "Agent Type Identification"
+    You can identify the agent type in the Agent window in Etendo Classic:
+    
+    - **Multi-Model Agent**: Shows "Knowledge" and "Skills & Tools" tabs
+    - **LangGraph**: Shows "Skills & Tools" and "Team Members" tabs
 ### Tool Discovery and Usage
 
 When connecting to an Etendo Copilot MCP server, clients can:
@@ -373,21 +388,39 @@ When connecting to an Etendo Copilot MCP server, clients can:
    - In **Simple Mode**: Use `ask_agent` to leverage the full conversational capabilities of the agent
    - In **Direct Mode**: Execute specific agent tools directly and use `get_agent_prompt` to understand agent behavior
 
-### Mode Selection Guidelines
+### Mode Selection Guidelines by Agent Type
+
+#### For Multi-Model Agents
 
 **Choose Simple Mode when:**
 - You want to interact with the agent conversationally
 - You prefer natural language queries over technical tool execution
-- You want the agent to handle tool selection and orchestration
+- You want the agent to handle tool selection and orchestration automatically
 - You're building user-facing applications that need conversational interfaces
-- You want to leverage the agent's full reasoning capabilities
+- You want to leverage the agent's full reasoning capabilities with its knowledge base
 
 **Choose Direct Mode when:**
-- You need precise control over tool execution
+- You need precise control over specific tool execution
 - You're building developer tools or integrations
 - You want to understand the agent's system prompt and configuration
-- You need to execute specific tools without conversational overhead
+- You need to execute specific tools (API calls, file operations, etc.) without conversational overhead
 - You're creating workflows that require deterministic tool execution
+
+#### For LangGraph Agents
+
+**Choose Simple Mode when:**
+- You want to leverage the full power of the supervisor-team coordination
+- You prefer natural language queries that allow the supervisor to route to appropriate team members
+- You want the supervisor to handle team member selection and task orchestration
+- You're building user-facing applications that benefit from multi-agent collaboration
+- You want comprehensive responses that combine expertise from multiple specialized agents
+
+**Choose Direct Mode when:**
+- You need to understand how the supervisor coordinates team members
+- You want to access supervisor-level orchestration tools directly
+- You're debugging or optimizing multi-agent workflows
+- You need to see the supervisor's decision-making prompt and logic
+- You're building integrations that require precise control over team coordination
 
 ### Authentication and Security
 
