@@ -119,6 +119,107 @@ Enables servers to initiate autonomous behaviors and recursive LLM interactions,
   - Recursive LLM interactions
   - Requests for additional model completions
 
+## Supported MCP Input Types for Etendo Copilot
+
+To accommodate configurations coming from different editors/clients (which often use different structures and field names), **Etendo Copilot** includes a configuration normalizer called **`MCPConfigNormalizer`**. This class accepts *any* MCP server JSON, converts it into a **unified schema**, and applies sensible defaults and lightweight validations so integrations remain consistent and reliable.
+
+### Accepted input formats
+
+Multiple shapes and nestings are recognized:
+
+- `mcpServers: { <name>: { ... } }`
+- `mcp.servers` as an **array** or a **map**
+- `servers` at the root level (**array** or **map**)
+- `context_servers` (the **Zed** format)
+- Wrappers such as `{ mcp: { ... } }`, `{ server: { ... } }`
+
+### Accepted property aliases
+
+Common aliases are recognized and mapped to the standard schema:
+
+- **URL**: `url` | `uri` | `endpoint` | `baseUrl` | `serverUrl` | `httpUrl`
+- **Command**: `command` | `cmd` | `bin` | `executable` | `path`
+- **Args**: `args` | `argv` | `arguments` | `cmdArgs`
+- **Headers**: `headers` | `httpHeaders`
+- **Other**: `cwd` | `workingDir` | `workdir`, `env` | `environment` | `envVars`
+
+### Transport detection and normalization
+
+All sources are normalized to the set supported by the Python client:
+
+- `stdio`, `sse`, `websocket`, `streamable_http`
+
+Recognized aliases:
+
+- `http`/`https` → **`streamable_http`** (avoids “Unsupported transport: http”)
+- `ws` → **`websocket`**
+
+If `transport` is omitted, it is **inferred** from the available fields:
+
+- Presence of `command` ⇒ `stdio`
+- `ws://` or `wss://` ⇒ `websocket`
+- URL containing `/sse` ⇒ `sse`
+- `host`/`port` ⇒ `streamable_http`
+- Last resort ⇒ `stdio`
+
+### Unified output schema
+
+The result always includes a **`name`** (from the DB record). If the source used a subkey (e.g., `context7`), the name is **namespaced** as `DBName::context7`.
+
+- **STDIO**
+  ```json
+  {
+    "name": "DBName[::subkey]",
+    "transport": "stdio",
+    "command": "…",
+    "args": ["…"],
+    "env": { "…": "…" },
+    "cwd": "…"
+  }
+  ```
+
+- **SSE / WebSocket / Streamable HTTP**
+  ```json
+  {
+    "name": "DBName[::subkey]",
+    "transport": "sse | websocket | streamable_http",
+    "url": "https://…",
+    "headers": { "Authorization": "…" },
+    "timeoutMs": 120000
+  }
+  ```
+
+### Normalization example
+
+Input (VS Code / remote):
+```json
+{
+  "mcp": {
+    "servers": {
+      "context7": {
+        "type": "http",
+        "url": "https://mcp.context7.com/mcp"
+      }
+    }
+  }
+}
+```
+
+Normalized output:
+```json
+{
+  "name": "DBName::context7",
+  "transport": "streamable_http",
+  "url": "https://mcp.context7.com/mcp"
+}
+```
+
+### Guarantees and behavior
+
+- `getMCPConfigurations()` returns **uniform and reliable** configurations, regardless of the original format.
+- Names are **preserved**, sensible **defaults** are applied, and invalid entries **do not break** the rest.
+- Basic parameters are validated, and “unsupported transport” errors are mitigated via aliases and inference.
+
 ## Security and Authorization
 
 MCP includes multiple security mechanisms to ensure safe interactions:
