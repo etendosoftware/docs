@@ -261,6 +261,7 @@ nav:
             - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
             - Packing: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md
             - Picking List: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md
+            - Stock Logistic Unit: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Financial Extensions Bundle: 
