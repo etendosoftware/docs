@@ -178,3 +178,7 @@ In the case of transfer of funds between financial accounts of different organiz
 - Bank B balance of the organization B is increased in 100,00 USD
 
 Above scenario would somehow mean an expense in Organization A and a revenue in Organization B.
+
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/How_To){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

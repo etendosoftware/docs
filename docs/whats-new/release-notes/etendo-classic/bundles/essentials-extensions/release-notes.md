@@ -26,3 +26,6 @@ tags:
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C  | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.1.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C  | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.0.0){target="_blank"} | 10/05/2023 | 22.1.0 | 23.1.5 | C  | :white_check_mark: |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

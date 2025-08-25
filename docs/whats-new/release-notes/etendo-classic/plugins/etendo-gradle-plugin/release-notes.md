@@ -33,3 +33,7 @@ tags:
 | [1.1.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.1.2){target="_blank"} | 31/07/2023 | 22.1.0 | 24.4.x | C |
 | [1.1.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.1.1){target="_blank"} | 10/07/2023 | 22.1.0 | 24.4.x | C |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.1.0){target="_blank"} | 30/05/2023 | 22.1.0 | 24.4.x | C |
+
+---
+
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

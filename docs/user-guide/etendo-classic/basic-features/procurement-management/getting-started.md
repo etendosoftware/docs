@@ -193,3 +193,7 @@ Procurement Management has a relationship with other application areas:
 - [Warehouse Management](../warehouse-management/getting-started.md) as Goods Receipts changes items quantity on hand and its value.
 - [Financial Management](../financial-management/getting-started.md) in terms of managing account payable payments.
 - [MRP Management](../material-requirement-planning/getting-started.md) as purchase planning allows the creation of purchase orders based on material needs.
+
+---
+
+This work is a derivative of [Procurement Management](http://wiki.openbravo.com/wiki/Procurement_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

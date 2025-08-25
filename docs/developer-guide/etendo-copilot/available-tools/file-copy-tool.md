@@ -55,3 +55,6 @@ If you have a file in `/home/user/file.txt` and you want to copy it to the `/hom
 ```
 {"file_path": "/home/user/destination_directory/file.txt"}
 ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

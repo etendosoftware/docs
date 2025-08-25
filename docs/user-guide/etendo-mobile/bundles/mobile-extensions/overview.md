@@ -50,3 +50,5 @@ The **Documents Manager Subapp** is a sample sub-application implementation capa
     For more technical information, visit [Create New Subapplication - Receiving Shared Files from Etendo Mobile](../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#receiving-shared-files-from-etendo-mobile).
 
 
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
