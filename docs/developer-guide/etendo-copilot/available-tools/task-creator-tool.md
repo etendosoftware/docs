@@ -102,3 +102,6 @@ You have a `.csv` file with a list of customer feedback. Each row should become 
 The Task Creator Tool will process each row and generate a task with the base question + the row's data. If a parameter is not set, the tool uses its default value.
 
 This helps you automate large-scale task generation in just one step, saving time and avoiding manual entry.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

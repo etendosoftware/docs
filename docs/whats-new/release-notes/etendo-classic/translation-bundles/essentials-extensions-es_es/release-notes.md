@@ -19,3 +19,6 @@ tags:
 | Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

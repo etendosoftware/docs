@@ -303,3 +303,7 @@ Una vez que hemos generado todas las declaraciones del año, es momento de confi
 ![](../../../../../assets/drive/QeFYekMn3a3rRGcEFIkw2MgQ2UNf5EfrCuJM8iaLCP6WqeyL6-0HRqUgzimJiyEkn-vT6XRvDUsNkw2VhlJYRdoo5kgTPOdCa5r1EnNBj8k6CQ45xq-7R2LS4b0Yn8MwpQ2cgLoWrgeZYvCn9NhJNoIFNt6ZuzvNE82NJDn7JL4TtbIoU-OuQWHm4Q.png)
 
 El proceso comprobará que haya procesado todas las declaraciones del presente año y, en ese caso, creará un nuevo registro copiando toda la información de configuración del presente año junto al nuevo importe límite de declaración de Intrastat.
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

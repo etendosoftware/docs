@@ -61,7 +61,7 @@ This project depends on the following tools:
 
     Example:
     ``` groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat_port=8080
+    docker_com.etendoerp.tomcat_debug=8009
     ``` 
     !!!note
         In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
@@ -133,3 +133,7 @@ In this module a Postgres database service is included, this allows to use the d
 
 4. Finally, using this service it is possible to run `./gradlew install` to install the database from scratch, or it is possible to restore a backup and start using the new dockerized database service. 
 
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

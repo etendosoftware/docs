@@ -28,3 +28,6 @@ tags:
 | [1.4.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.2){target="_blank"} | 07/12/2023 | [1.11.3, 1.13.0] | C | :white_check_mark: |
 | [1.4.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.1){target="_blank"} | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.0){target="_blank"} | 23/10/2023 | [1.0.0, 1.11.1] | C | :white_check_mark: |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

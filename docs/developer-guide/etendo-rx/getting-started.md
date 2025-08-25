@@ -203,3 +203,4 @@ Currently, the bulk of Etendo RX services rely on Docker images named dynamic�
 | `DEBUG_MODE`                                                | Enable debug mode for the application                                                                                        | boolean  | `true`, `false`                                                     | `false`                                      | —                                                                                                                                                            |
 
 ---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

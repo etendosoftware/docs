@@ -134,3 +134,6 @@ All the Etendo development tasks used with the core in sources should still be w
 
 !!! info
     Etendo Core, (**Sources** and **Jar**), allows the user to work with  modules in both formats.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
