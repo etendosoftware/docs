@@ -46,7 +46,7 @@ Etendo Copilot module include a set of windows where you can create, manage, and
 **Tools Included**
 
 !!!info
-    You can see the complete list of tools in the [Tools](../available-tools/api-call-tool.md) section.
+    You can see the complete list of tools in the [Tools](../available-tools/tool-full-list.md) section.
     
 !!! note
     For more information visit, [How to Create Copilot Tools](../how-to-guides/how-to-create-copilot-tools.md) guide.
