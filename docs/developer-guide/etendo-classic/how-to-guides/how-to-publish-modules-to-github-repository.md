@@ -20,15 +20,17 @@ Using dependencies alongside with Gradle in an Etendo environment can remove the
 Partners will have access to Etendo’s public and commercial repositories to download standard modules, in addition to this, it is possible to use their own repositories where they can privately store their modules for internal or commercial usage.
 
 !!! info "Requirements"
+    
     - GitHub user and token, with access to read and write packages.
     - A module to be distributed.
 
 !!! success
-    It is recommended to use [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="_blank"} to manage work flow, versions and tags.
+    It is recommended to use [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="_blank"} to manage work flow, versions and tags.
 
 ## Deployment
 
 !!! info
+    
     The module version, group and artifact that will deploy are those declared in the file `src-db/database/sourcedata/AD_MODULE.xml` file
 
 
@@ -45,14 +47,14 @@ Example:
 ```
 
 !!! warning "Important"
-        - If the module depends on other modules or libraries, they need to be specified in the build.gradle file using the implementation configuration.
-        Before adding an Etendo module dependency, they have to be published in the repository.
-        - You need to make sure those dependencies are also published.
-        - Add the dependencies manually in `build.gradle` file.
-        - Add Core dependency to define the range of versions the module is compatible with.
+    - If the module depends on other modules or libraries, they need to be specified in the build.gradle file using the implementation configuration.
+    Before adding an Etendo module dependency, they have to be published in the repository.
+    - You need to make sure those dependencies are also published.
+    - Add the dependencies manually in `build.gradle` file.
+    - Add Core dependency to define the range of versions the module is compatible with.
 
 !!! info
-     To make use of the dependencies resolution approach, you should declare in the modules dependencies which version of the core your module depends on.
+    To make use of the dependencies resolution approach, you should declare in the modules dependencies which version of the core your module depends on.
     If the Etendo Core dependency is omitted, the module can be installed on any version of Etendo, even if there are inconsistencies in the compilation.
 
 
@@ -106,7 +108,8 @@ repositories {
 * Ex: implementation "com.sun.mail:javax.mail:1.6.2"
 */
 dependencies {
-		implementation(com.myrepo:dependency.test:1.0.0)
+
+    implementation('com.myrepo:dependency.test:1.0.0')
     
    	implementation('com.etendoerp.platform:etendo-core:[22.1.0, x.y.z)')
 }

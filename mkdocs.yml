@@ -183,6 +183,7 @@ nav:
     - Overview: getting-started/overview.md
     - Requirements: getting-started/requirements.md
     - Installation: getting-started/installation.md
+    - Interactive Installation: getting-started/interactive-installation.md
     - User interface:
       - Workspace: getting-started/user-interface/workspace.md
       - Navigation: getting-started/user-interface/navigation.md
@@ -510,6 +511,7 @@ nav:
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
         - Etendo Database Extended Module: developer-guide/etendo-classic/developer-tools/etendo-database-extended-module.md
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
+        - Etendo Interactive Setup: developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md
         - Etendo Testing Plugin: developer-guide/etendo-classic/developer-tools/etendo-testing-plugin.md
       - Bundles:
         - Platform Extensions Bundle:
@@ -538,14 +540,16 @@ nav:
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to Guides:
-        - How to Filter any Request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
-        - How to Start RX as Service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code.md
         - How to Change Date Format: developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
+        - How to Filter any Request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
         - How to Give Public Access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
+        - How to Start RX as Service: developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code.md
+        - How to Use OpenTelemetry: developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry.md
     - Etendo Copilot:
       - ✨ Getting Started: developer-guide/etendo-copilot/installation.md
-      - Bundles: 
-        - Copilot Extensions:
+      - Concepts: 
+        - Model Context Protocol (MCP): developer-guide/etendo-copilot/concepts/model-context-protocol.md
+      - Copilot Extensions:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
@@ -574,9 +578,12 @@ nav:
         - Test Run Tool: developer-guide/etendo-copilot/available-tools/test-run-tool.md
         - Uncompress Tool: developer-guide/etendo-copilot/available-tools/uncompress-tool.md
         - Write File Tool: developer-guide/etendo-copilot/available-tools/write-file-tool.md
+        - XLS OCR Tool: developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides:
+        - How to Configure MCP servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
+        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Create a Spreadsheet and tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
