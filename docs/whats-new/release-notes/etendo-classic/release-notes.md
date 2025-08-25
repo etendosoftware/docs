@@ -129,3 +129,7 @@ tags:
 | [21Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.2){target="_blank"} | 10/03/2022 | 21.4.2 | C |  | |
 | [21Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.1){target="_blank"} | 17/12/2021 | 21.4.1 | C |  | |
 | [21Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.0){target="_blank"} | 13/12/2021 | 21.4.0 | C |  | |
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

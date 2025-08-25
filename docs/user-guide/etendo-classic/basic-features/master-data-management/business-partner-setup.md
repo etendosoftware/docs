@@ -499,3 +499,7 @@ When selecting the option “only those defined” in the fields “include prod
 >
 !!! warning
     When selecting the option “All excluding defined” in the “Include product categories” field and the option “Only those defined” in the “include products” field, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “sparkling water”, the rappel will not include the product “sparkling water” despite what is defined in the “product” tab, since the priority is in the defined “product category”.
+
+---
+
+This work is a derivative of [Master Data Management](https://wiki.openbravo.com/wiki/Master_Data_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

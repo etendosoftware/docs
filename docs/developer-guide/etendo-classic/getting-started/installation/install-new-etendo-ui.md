@@ -411,6 +411,4 @@ pnpm build
 The development environment is now ready for building and customizing the Etendo Main UI.
 
 ---
-
-!!!warning "Beta Version Notice"
-    Remember that this is a beta version under active development. Features may change, and the API is not yet stable. Always backup your work and test thoroughly before deploying any customizations.
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

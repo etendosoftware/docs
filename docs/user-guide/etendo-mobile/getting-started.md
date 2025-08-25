@@ -167,3 +167,7 @@ Etendo Mobile supports **receiving files** from external applications to be used
 
 !!!info
     For more technical details, see the [Create New Sub-application](../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md) guide.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

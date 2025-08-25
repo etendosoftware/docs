@@ -71,3 +71,6 @@ This tool automates the **client provisioning** process in Etendo by:
 
 !!!note
     After successful creation, instruct the user to log in with the newly created administrator credentials, configure wizard access for the client, and proceed with organization setup.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

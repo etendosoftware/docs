@@ -122,3 +122,6 @@ Imagine you want to send a POST request to an external API for creating a new us
 - `token`: YOUR_BEARER_TOKEN
 
 The API Call Tool will format and send the request with the appropriate headers and body, and return the result including the response status code and body content.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

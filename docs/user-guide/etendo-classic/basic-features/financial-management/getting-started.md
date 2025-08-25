@@ -433,3 +433,7 @@ Financial Management has a connection with other application areas, as there are
 - [Sales Management](../sales-management/getting-started.md) as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.
 - [Warehouse Management](../warehouse-management/getting-started.md) as Physical Inventory is posted there.
 - Production Management as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.
+
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

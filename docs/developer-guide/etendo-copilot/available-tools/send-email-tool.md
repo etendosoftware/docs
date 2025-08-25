@@ -96,3 +96,6 @@ Imagine you want to send a notification email. The input parameters for the agen
 
 
 The Send Email Tool will process these parameters and select the configured sending method. It will then send the mail and return a message indicating whether the mail was sent successfully.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -35,3 +35,7 @@ Fields to note:
 - **Is Development**: This check defines that this version is in development and can be deployed locally.
 - **Active**: To select if this application version is active or not.
 - **Receive External Files** Identifies sub-applications that allow receiving shared files from external applications and are capable of handling them.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

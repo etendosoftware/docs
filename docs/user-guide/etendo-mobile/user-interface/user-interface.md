@@ -50,3 +50,7 @@ In case the user has a picture, it will be shown both in this window and in the 
 
 !!!note
     The role can only be modified from Etendo Classic, so each user will enter with their default role setup.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

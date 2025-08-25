@@ -386,3 +386,7 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Servicios a Canarias, Ceuta y Melilla (%R=>0%)
 - Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
 - Servicios prestados exentos con derecho a deducción
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

@@ -30,7 +30,7 @@ To enable and configure the Tomcat service, the following configuration variable
 
 - **Configure Tomcat Port** (Optional)
     ```groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat_port=<port>
+    tomcat.port=<port>
     ```
     This variable sets the port for the Tomcat service. The default port is `8080`
 
@@ -101,3 +101,7 @@ Execute the following command to apply the configuration changes:
     sudo systemctl restart postgresql
     ```
 
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
