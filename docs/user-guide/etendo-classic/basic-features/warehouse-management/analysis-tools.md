@@ -232,3 +232,7 @@ This functionality **centralizes of all the transactions** associated with the p
 This centralization facilitates the analysis and a complete understanding of the product operation performance.
 
 ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
+
+---
+
+This work is a derivative of [Warehouse Management](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

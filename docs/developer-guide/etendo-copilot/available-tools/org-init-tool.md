@@ -69,3 +69,6 @@ This tool automates the **organization provisioning** process in Etendo by:
 
 !!!note
     After successful creation, instruct the user to log in with the administrator credentials to continue setting up the organization.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

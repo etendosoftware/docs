@@ -311,3 +311,6 @@ This affects the current environments, to fix this we have to:
     Remember, Nexus will still be available until March 2024, so you have time to make this transition 🕑. We hope you find this guide useful.
 
 If you find any issues or need additional help, do not hesitate to reach out to our [support service](http://support.etendo.software){target="_blank"}🚑.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

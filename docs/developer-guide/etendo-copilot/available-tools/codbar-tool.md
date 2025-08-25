@@ -73,3 +73,6 @@ The following is an example image of a goods receipt:
         `{"message": ['ALV-4066905', '871000003252']}`
 
         ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

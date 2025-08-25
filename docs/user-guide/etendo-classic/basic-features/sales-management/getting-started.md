@@ -181,3 +181,7 @@ Sales Management has a connection with other application areas:
 - [Warehouse Management](../../../../user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md) as shipment changes stock quantity and its value.
 - [Financial Management](../../../../user-guide/etendo-classic/basic-features/financial-management/getting-started.md) in terms of managing payments.
 - [Material Requirement Planning](../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md) (MRP) because pending sales orders are one of the inputs for the production process.
+
+---
+
+This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

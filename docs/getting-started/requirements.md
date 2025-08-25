@@ -71,3 +71,6 @@ Either PostgreSQL should also be supported by your target system
 | :simple-gradle:  Gradle | 7.3.2 | 7.3.2 | [Gradle Docs](https://docs.gradle.org/7.3.2){target="_blank"} |
 | :material-database:  Oracle | 19c (LTS) | 19c (LTS) | |
 
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+

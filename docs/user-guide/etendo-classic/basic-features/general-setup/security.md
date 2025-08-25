@@ -493,3 +493,7 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 
 !!! info
     For more information, visit the [Etendo Advanced Security module User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md).
+
+---
+
+This work is a derivative of [General Setup](https://wiki.openbravo.com/wiki/General_Setup){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

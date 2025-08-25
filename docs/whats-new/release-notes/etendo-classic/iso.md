@@ -80,3 +80,6 @@ New ISO with Etendo Classsic version 23.1.0
 
 ## 22.4.5
 First ISO version with Etendo Classsic version 22.4.5 :sparkles:
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

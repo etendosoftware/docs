@@ -80,3 +80,6 @@ Imagine we want to write *Hello World* in the file `/tmp/test.txt`, overwriting 
 - lineno: 1
 
 The Write File Tool will process these parameters, write *Hello World* to the first line of the `/tmp/test.txt` file and return a message indicating that the operation completed successfully and whether a backup was created.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

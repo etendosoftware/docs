@@ -102,3 +102,7 @@ An ERP system, like **Etendo**, is more than a tool— it's a **strategic asset*
 [:material-order-bool-ascending-variant: Requirements](../getting-started/requirements.md){ .md-button .md-button--primary .md-button .md-button--primary--primary }
 [:material-tools: Install Etendo](../getting-started/installation.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
 [:material-page-previous-outline: Navigating the Interface](../getting-started/user-interface/workspace.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

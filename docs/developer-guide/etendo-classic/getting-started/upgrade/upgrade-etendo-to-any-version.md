@@ -258,3 +258,6 @@ To work with this plugin you need to specify in the root project from where the 
 
     ```
 4.  Continue with the [Etendo Upgrade](#etendo-upgrade) section.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
