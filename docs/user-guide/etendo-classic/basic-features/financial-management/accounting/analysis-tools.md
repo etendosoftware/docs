@@ -153,16 +153,23 @@ the following were added:
 
 In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
 
-In the comparative year section, the fields From Reference Date, To Reference Date were added to select a specific period from the selected year apart from the Select Template field. 
+In the **Compare To** section, the fields **From Reference Date** and **To Reference Date** have been added to allow you to select a specific period of the 
+chosen year, in addition to the **Select Template** field. At the same time, it is now possible to compare up to four years simultaneously, and for each selected year, the dates From reference date, From reference date, and To reference date can be defined, providing greater flexibility in the analysis.  
  
+![](../../../../../assets/drive/P&L-adv-2.png)
+
 In each filter, more than one option can be selected:
  
-![](../../../../../assets/drive/1t-N2QU-2fbhu2ElbxNvlhGrcIyMuW3tO.png)
+![](../../../../../assets/drive/P&L-adv-1.png)
 
 
 Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
 
 ![](../../../../../assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
+
+An example of the output of the report is:
+
+![](../../../../../assets/drive/P&L-adv-3.png)
 
 ## Trial Balance
 
