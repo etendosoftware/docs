@@ -124,6 +124,34 @@ For example, you can attach a purchase order in PDF format and ask the agent to 
 
 ### Visualization Mode
 
+#### Conversation Management
+
+Etendo Copilot provides intuitive conversation management features to help you organize and navigate your interactions:
+
+**Conversation Selector**
+
+In the left sidebar of the Copilot interface, you'll find a conversation selector that displays all your previous conversations. This allows you to:
+- Quickly switch between different conversation topics
+- Review previous interactions with agents
+- Maintain context across multiple sessions
+
+**New Conversation Button**
+
+The "New Conversation" button enables you to start fresh conversations whenever needed. This is particularly useful when you want to:
+- Begin a new topic or task
+- Clear the current context
+- Start working with a different agent or approach
+
+**Automatic Title Generation**
+
+Etendo Copilot automatically generates meaningful titles for your conversations to help you identify and organize them efficiently. Titles are generated:
+- When switching between conversations
+- When creating a new conversation and moving to it
+- After a sufficient number of messages have been exchanged to provide enough context for a relevant title
+
+This automatic titling system ensures that each conversation is easily identifiable, making it simple to return to specific topics or discussions later.
+
+#### Display Modes
 
 <figure markdown>
 ![](../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=300}
@@ -135,7 +163,7 @@ By default, Copilot operates as a pop-up window, providing convenient access as 
 <figure markdown>
 **Full Screen** <br>
 Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.
-![](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
+![Full Screen Chat](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
 </figure>
 
 <figure markdown>
