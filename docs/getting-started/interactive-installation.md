@@ -309,7 +309,7 @@ Open your browser and navigate to:
 
 - `docker_com.etendoerp.tomcat` - Enable Dockerized Tomcat
 - `docker_com.etendoerp.docker_db` - Enable Dockerized PostgreSQL
-- `docker_com.etendoerp.tomcat_port` - Tomcat port (default: 8080)
+- `tomcat.port` - Tomcat port (default: 8080)
 
 ## Advanced Features
 

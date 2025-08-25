@@ -30,7 +30,7 @@ To enable and configure the Tomcat service, the following configuration variable
 
 - **Configure Tomcat Port** (Optional)
     ```groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat_port=<port>
+    tomcat.port=<port>
     ```
     This variable sets the port for the Tomcat service. The default port is `8080`
 

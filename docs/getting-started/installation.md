@@ -323,7 +323,7 @@ Etendo now includes an **Interactive Configuration System** that guides you thro
         !!! info
             The dockerized database service will run on the port defined in the `bbdd.port` variable, we suggest using port `5434` to avoid conflict if you have a local Postgres instance using the default port.
 
-            By default the Tomcat service will be up on port `8080`, in case that port is busy you can use the variable `docker_com.etendoerp.tomcat_port=<port>`.
+            By default the Tomcat service will be up on port `8080`, in case that port is busy you can use the variable `tomcat.port=<port>`.
 
 
     8. Launching Dockerized Tomcat and Database services
