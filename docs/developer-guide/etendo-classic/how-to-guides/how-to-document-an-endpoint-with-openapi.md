@@ -68,10 +68,15 @@ This class specifies a POST endpoint for uploading images. It defines the endpoi
 An OpenAPI Request record represents a single API endpoint in your application. OpenAPI Requests are defined in the window `OpenAPI Request`.
 
 1. **Type**: Set the type to `Default`.
-2. **Description**: Add the endpoint description.
+2. **Description**: Add the endpoint general description. This description is appended to the OpenAPI main description.
 3. **Java Class**: Specify the Java class created that extends the `OpenAPIDefaultRequest` class.
+4. **GET Description**: Provide a description for the GET method of the endpoint. This description is used if the endpoint supports the GET method.
+5. **GET by ID Description**: Provide a description for the GET by ID method of the endpoint. This description is used if the endpoint supports the GET by ID method.
+6. **POST Description**: Provide a description for the POST method of the endpoint. This description is used if the endpoint supports the POST method.
+7. **PUT Description**: Provide a description for the PUT method of the endpoint. This description is used if the endpoint supports the PUT method.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-0.png)
+![OpenAPI Request window showing fields and options](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.png)
+
 
 
 An **OpenAPI Flow** groups related API endpoints under a single category or _flow_. These flows make it easier to organize and navigate the API documentation.
@@ -82,7 +87,7 @@ Each OpenAPI Flow record can:
 - Include one or more OpenAPI Requests through the `Endpoints` tab.
 - Specify which HTTP methods (GET, GET by ID, POST, PUT) the endpoints support using the `Endpoints` tab fields. When these fields are checked, they generate the corresponding endpoint methods documentation.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/how-to-document-an-endpoint-with-openapi-1.png)
+![OpenAPI Flow window listing related endpoints](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi-1.png)
 
 To ensure an OpenAPI Request appears in Swagger documentation, it must be linked to an OpenAPI Flow. This ensures logical grouping and visibility.
 
@@ -97,10 +102,15 @@ To ensure an OpenAPI Request appears in Swagger documentation, it must be linked
     1. **Create a New Record in the `OpenAPI Request` Window**:
 
         - **Type**: Set the type to _Tab_.
-        - **Description**: Provide a description of the endpoint.
+        - **Description**: Provide a description of the endpoint, including its purpose and functionality.
         - **Tabs**: A new window tab will be visible. Add a new record and select the desired window tab from the tab selector.
+        - **Get description**: Provide a description for the GET method of the endpoint. Its recommended to include details about the expected request parameters and response format.
+        - **Get by ID description**: Provide a description for the GET by ID method of the endpoint. Its recommended to include details about the expected request parameters and response format.
+        - **Post description**: Provide a description for the POST method of the endpoint. Its recommended to include details about the expected request parameters and response format.
+        - **Put description**: Provide a description for the PUT method of the endpoint. Its recommended to include details about the expected request parameters and response format.
 
-        ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Tab_OpenAPI_Request.png)
+
+    ![Configure a Tab OpenAPI Request showing tab selector and settings](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi-2.png)
 
     2. **Link the Request to an OpenAPI Flow**:
 
@@ -126,8 +136,9 @@ To ensure an OpenAPI Request appears in Swagger documentation, it must be linked
         - **Type**: Set the type to _Webhook_.
         - **Description**: Provide a description of the webhook.
         - **Webhook Tab**: A new window tab will be visible. Add a new record and select the desired webhook from the selector.
+        - **POST description**: Provide a description for the POST method of the webhook. Its recommended to include details about the expected request parameters and response format. This only method description is required, due to the nature of webhooks that are only POST.
 
-        ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Webhook_OpenAPI_Request.png)
+    ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi-3.png)
 
     2. **Link the Request to an OpenAPI Flow**:
      
@@ -147,13 +158,13 @@ To ensure an OpenAPI Request appears in Swagger documentation, it must be linked
 The new endpoint documentation should now be visible at the Swagger UI URL. Execute the "Open Swagger" button to open the Swagger in a new tab.
 
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_Button.png)
+![Open Swagger button in the Etendo interface](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_Button.png)
 
 
 Verify that the new endpoint appears under the defined tag and displays the correct request and response schemas.
 
 It will look like this:
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_Flow_Example.png)
+![Swagger UI showing the new endpoint under the defined flow/tag](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_Flow_Example.png)
 
 ## Key Components of OpenAPI Integration
 
@@ -182,4 +193,4 @@ This interface ensures consistent API endpoint behavior by defining methods such
 
 For example, the `ImageUploadOpenAPI` class implements these methods to validate tags and add endpoint definitions to the OpenAPI object.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_ImageUpload_Example.png)
+![Swagger example for the Image Upload endpoint with request and response schemas](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/Swagger_ImageUpload_Example.png)
