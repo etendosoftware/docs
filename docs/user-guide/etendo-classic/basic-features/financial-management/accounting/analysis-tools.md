@@ -125,7 +125,7 @@ Under the *"Primary Filters"* section, it is possible to specify:
 
 The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../assets/drive/1yP5IthEhrtJWbj_xZg9dpUAMpCwTB_oJ.png)
+![](../../../../../assets/drive/Balance_Sheet_And_PL_Structure_Advanced.png)
 
 In addition to the previous basic filters: 
 
@@ -148,7 +148,8 @@ the following were added:
 - Project 
 - Activity    
 - Sales Region    
-- Sales Campaign  
+- Sales Campaign
+- Cost Center
 
 In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
 

@@ -105,7 +105,7 @@ To start using this module correctly, the following installation and configurati
      
     - **System Preferences**:
 
-        - `IsTaskInstalled`: This preference by default "Y" (Yes) to enable the task module and allow automatic generation of picking tasks when creating the Picking List. If set to "N" (No), no tasks will be automatically generated and the assignment option will not be available when creating the picking.
+        - `CreateWarehouseTask`: This preference is set to "Y" (Yes) by default to enable automatic generation of warehouse tasks, such as picking tasks, when creating the Picking List. If set to "N" (No), tasks will not be generated automatically and the assignment option will not be available during picking creation.
 
         - `fromDateCompleted`: Defines the number of days backward from the current date to display tasks with Completed status in Etendo Mobile. By default, the value is 1 and  will show the tasks completed the previous day.
 
@@ -259,17 +259,26 @@ This screen contains:
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-4.png){align=right width=300}
 
 
-    - Scan Barcode: activates the camera of the mobile device.
-    - Scan or type barcode: allows to enter the barcode manually.
-    - Quantity with `+` and `-` buttons: allows manual loading of the quantity to be scanned.
-    - List of products (N): list of cards with product information, where (N) is the total quantity of products. 
+    - **Scan Barcode:** activates the camera of the mobile device.
+    - **Type barcode:** allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.
+    - **Quantity with: `+` and `-` buttons** allows manual loading of the quantity to be scanned.
+    - **List of products (N):** list of cards with product information, where (N) is the total quantity of products. 
 
         - Product
-        - Status
+        - Status:
+            - <span style="padding:4px;background-color:#F5F5F5;color:#BDBDBD;border-radius:4px;"> 
+                Unscanned
+            </span>
+            - <span style="padding:4px;background-color:#fba643ff;color:white;border-radius:4px;"> 
+                Partially Scanned
+            </span>
+            - <span style="padding:4px;background-color:#00B34C;color:white;border-radius:4px;"> 
+                Scanned
+            </span>
         - Barcode
         - Locator
-        - Movement Quantity: total quantity to be collected
-        - Counted Quantity with buttons `+` and `-` : that allow to add or subtract one by one the quantity manually.
+        - Movement Quantity: total quantity to be collected.
+        - Counted Quantity with buttons `+` and `-`: that allow to add or subtract one by one the quantity manually.
 
 #### Picking Methods
 
@@ -288,15 +297,15 @@ The system allows flexibility in the mode of operation:
 
 
 !!! Warning
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png){align=right width=250}
     
     Possible error scenarios:
 
     - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.   <br><br>
-    - If an attempt is made to enter a quantity greater than required, the system will charge the maximum defined in the product card. Once the quantity is completed and the product code is re-scanned or reloaded, the system does not add quantity to the product.  <br><br>
+    - If an attempt is made to enter a quantity greater than required, the system will charge the maximum defined in the product card. Once the quantity is completed and the product code is re-scanned or reloaded, the system does not add quantity to the product.
+    Additionally, if a quantity greater than the allowed maximum is entered, a popup will be displayed with the message: "Maximum quantity reached for product [ProductName]". <br><br>
     - If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
 
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png)
     
 
 #### Picking Completion
@@ -309,6 +318,11 @@ After confirmation, the task is marked as Completed.
     For partial picking, the task is closed, and no new task is automatically created for the missing products. Any remaining quantities must be handled manually.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-6.png)
+
+Once completed, the task will appear in the Completed Tasks section, where it is possible to review the validated products and quantities for that specific picking task.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-7.png)
+
 
 ### Packing
 
@@ -346,32 +360,45 @@ This screen contains:
 
 #### Product Packing
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png)
-
-
 1. The warehouse operator must **select a task**. To select the task, scroll or enter key data in the search engine.
 
 2. When selecting a task, a screen opens with the packing list number and the **Start Packing** button.
 
-3. When pressing **Start Packing**, the status of the task changes to `In Progress` in both Etendo Mobile and Etendo. The window has the following elements:
+3. When pressing **Start Packing**, the status of the task changes to `In Progress` in both Etendo Mobile and Etendo. 
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png)
+
+4. The window has the following elements:
 
     - **Scan Barcode** button to activate the device camera and scan.
-    - **Type barcode** field for manual entry.
+    - **Type barcode** allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.
     - **Select Box** field to select the destination box when scanning the product.
     - **Quantity** field that acts as a multiplier to load the quantity when scanning the product.
     - **+ Add Box** button that allows you to add new boxes.
     - A list of **Product** cards, each showing:
 
-        - Product name
-        - Status
+        - Product
+        - Status:
+            - <span style="padding:4px;background-color:#F5F5F5;color:#BDBDBD;border-radius:4px;"> 
+                Unscanned
+            </span>
+            - <span style="padding:4px;background-color:#fba643ff;color:white;border-radius:4px;"> 
+                Scanning
+            </span>
+            - <span style="padding:4px;background-color:#00B34C;color:white;border-radius:4px;"> 
+                Scanned
+            </span>
         - Barcode
         - Quantity
-        - Packed Quantity
+        - Packed Quantity with buttons `+` and `-`: that allow to add or subtract one by one the quantity manually.
 
     - A list of **Boxes**, showing:
 
         - Box name (or number)
         - Products and their quantities
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png)
+
 
     The view selectors by **Product** or by **Box** allow:
 
@@ -379,15 +406,22 @@ This screen contains:
 
     - In the **Boxes** view, when entering a box, the detailed contents are displayed with the possibility of browsing box by box to check which products are contained in each box.
 
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-5.png)
+
     !!! tip 
         In both views, it is possible to modify the quantities loaded and add boxes if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: 
 
         - The total load of products has not yet been completed, or previously assigned quantities are modified (decreased) to allow their relocation to the new box.
 
-4. Once packing is started, the user selects or creates a box and starts loading products by scanning or manually entering data.
+5. Once packing is started, the user selects or creates a box and starts loading products by scanning or manually entering data.
 
     - Each packed product is registered under a specific box.
     - You can switch between boxes to distribute products as needed.
+
+    !!!Info
+        Newly created boxes cannot be deleted manually. However, if a box is left empty (no products added), it will be automatically removed at the end of the process. Only boxes with packed products will be saved and displayed.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-6.png)
 
 
 #### Loading Options
@@ -398,15 +432,18 @@ The system allows flexibility in mode of operation:
 
 - Load the amount manually in the Quantity field and then Scan the product. 
 
-- Enter both quantity and code manually.
+- Enter both quantity and code manually, and then press the Validate button to confirm the entry.
 
 - Enter the quantity manually from the **Product** view or from the **Boxes** view.
 
 !!! Warning
     Possible error scenarios:
 
-    - If an incorrect code is scanned (does not match any product in the task), a message is displayed indicating that the product is invalid.
-    - If an attempt is made to enter more than the required quantity, an error message is also displayed.
+    - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.
+    - If an attempt is made to enter more than the required quantity, an error message is also displayed "Packing for product [ProductName] is already complete.".
+    - If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-7.png)
 
 #### Packing Completion
 
@@ -418,7 +455,17 @@ Once the products have been packed:
 
 - At the end, you can choose to calculate the weight of the boxes.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png)
+- After confirmation, the task is marked as Completed.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-8.png)
+
+Once completed, the task will appear in the Completed Tasks section. From there, it is possible to review all validated information for that packing task, including:
+
+- In the Product view: which boxes each product was packed into.
+- In the Box view: which products were packed into each box.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-9.png)
+
 
 ### All Tasks
 
