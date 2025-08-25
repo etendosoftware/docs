@@ -322,7 +322,7 @@ nav:
           - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
           - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
           - Install Translation Bundles in Etendo: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
-          - Install New Etendo UI: developer-guide/etendo-classic/getting-started/installation/install-new-etendo-ui.md
+          - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
           - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
         - Migration from Openbravo:
