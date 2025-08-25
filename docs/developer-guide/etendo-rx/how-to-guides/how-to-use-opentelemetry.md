@@ -10,7 +10,7 @@ status: beta
 ---
 # How to Use OpenTelemetry (BETA)
 
-!!! warning  "IMPORTANT:THIS IS A BETA VERSION"
+!!! example  "IMPORTANT:THIS IS A BETA VERSION"
     - It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**, especially in production environments.
     - It should be used with **caution**, and you should always **validate backups** before executing any critical operation.
 
