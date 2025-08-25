@@ -38,7 +38,7 @@ Etendo Main UI is distributed within the [Platform Extensions](../../../../whats
 
 ## Running Etendo Main UI
 
-The simplest configuration we are going to follow as an example is to mount **Main UI Dockerize**d** and **Tomcat** running as a local service. Other configurations are detailed in the section, [Advanced Configurations](#advanced-development-setup).
+The simplest configuration we are going to follow as an example is to mount **Main UI Dockerized** and **Tomcat** running as a local service. Other configurations are detailed in the section, [Advanced Configurations](#advanced-configuration).
 
 
 ### 1. Configure Services
@@ -313,7 +313,7 @@ The main Next.js application that provides the complete user interface. Features
 - Responsive design
 
 
-###Run Tests
+### Run Tests
 
 Execute the test suites to ensure everything works correctly
 
