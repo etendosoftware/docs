@@ -8360,6 +8360,75 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-mcp-input-types-for-etendo-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported MCP Input Types for Etendo Copilot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported MCP Input Types for Etendo Copilot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accepted-input-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accepted input formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accepted-property-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accepted property aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-detection-and-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transport detection and normalization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-output-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unified output schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalization-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalization example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guarantees-and-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guarantees and behavior
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#security-and-authorization" class="md-nav__link">
     <span class="md-ellipsis">
       Security and Authorization
@@ -11560,6 +11629,75 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-mcp-input-types-for-etendo-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported MCP Input Types for Etendo Copilot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported MCP Input Types for Etendo Copilot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accepted-input-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accepted input formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accepted-property-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accepted property aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-detection-and-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transport detection and normalization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-output-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unified output schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalization-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalization example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guarantees-and-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guarantees and behavior
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#security-and-authorization" class="md-nav__link">
     <span class="md-ellipsis">
       Security and Authorization
@@ -11864,6 +12002,97 @@
 <li>Server-initiated agent behaviors</li>
 <li>Recursive LLM interactions</li>
 <li>Requests for additional model completions</li>
+</ul>
+<h2 id="supported-mcp-input-types-for-etendo-copilot">Supported MCP Input Types for Etendo Copilot</h2>
+<p>To accommodate configurations coming from different editors/clients (which often use different structures and field names), <strong>Etendo Copilot</strong> includes a configuration normalizer called <strong><code>MCPConfigNormalizer</code></strong>. This class accepts <em>any</em> MCP server JSON, converts it into a <strong>unified schema</strong>, and applies sensible defaults and lightweight validations so integrations remain consistent and reliable.</p>
+<h3 id="accepted-input-formats">Accepted input formats</h3>
+<p>Multiple shapes and nestings are recognized:</p>
+<ul>
+<li><code>mcpServers: { &lt;name&gt;: { ... } }</code></li>
+<li><code>mcp.servers</code> as an <strong>array</strong> or a <strong>map</strong></li>
+<li><code>servers</code> at the root level (<strong>array</strong> or <strong>map</strong>)</li>
+<li><code>context_servers</code> (the <strong>Zed</strong> format)</li>
+<li>Wrappers such as <code>{ mcp: { ... } }</code>, <code>{ server: { ... } }</code></li>
+</ul>
+<h3 id="accepted-property-aliases">Accepted property aliases</h3>
+<p>Common aliases are recognized and mapped to the standard schema:</p>
+<ul>
+<li><strong>URL</strong>: <code>url</code> | <code>uri</code> | <code>endpoint</code> | <code>baseUrl</code> | <code>serverUrl</code> | <code>httpUrl</code></li>
+<li><strong>Command</strong>: <code>command</code> | <code>cmd</code> | <code>bin</code> | <code>executable</code> | <code>path</code></li>
+<li><strong>Args</strong>: <code>args</code> | <code>argv</code> | <code>arguments</code> | <code>cmdArgs</code></li>
+<li><strong>Headers</strong>: <code>headers</code> | <code>httpHeaders</code></li>
+<li><strong>Other</strong>: <code>cwd</code> | <code>workingDir</code> | <code>workdir</code>, <code>env</code> | <code>environment</code> | <code>envVars</code></li>
+</ul>
+<h3 id="transport-detection-and-normalization">Transport detection and normalization</h3>
+<p>All sources are normalized to the set supported by the Python client:</p>
+<ul>
+<li><code>stdio</code>, <code>sse</code>, <code>websocket</code>, <code>streamable_http</code></li>
+</ul>
+<p>Recognized aliases:</p>
+<ul>
+<li><code>http</code>/<code>https</code> → <strong><code>streamable_http</code></strong> (avoids “Unsupported transport: http”)</li>
+<li><code>ws</code> → <strong><code>websocket</code></strong></li>
+</ul>
+<p>If <code>transport</code> is omitted, it is <strong>inferred</strong> from the available fields:</p>
+<ul>
+<li>Presence of <code>command</code> ⇒ <code>stdio</code></li>
+<li><code>ws://</code> or <code>wss://</code> ⇒ <code>websocket</code></li>
+<li>URL containing <code>/sse</code> ⇒ <code>sse</code></li>
+<li><code>host</code>/<code>port</code> ⇒ <code>streamable_http</code></li>
+<li>Last resort ⇒ <code>stdio</code></li>
+</ul>
+<h3 id="unified-output-schema">Unified output schema</h3>
+<p>The result always includes a <strong><code>name</code></strong> (from the DB record). If the source used a subkey (e.g., <code>context7</code>), the name is <strong>namespaced</strong> as <code>DBName::context7</code>.</p>
+<ul>
+<li>
+<p><strong>STDIO</strong>
+  <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DBName[::subkey]&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;transport&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;stdio&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;…&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;…&quot;</span><span class="p">],</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;…&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;…&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;…&quot;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>SSE / WebSocket / Streamable HTTP</strong>
+  <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DBName[::subkey]&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;transport&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sse | websocket | streamable_http&quot;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://…&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;headers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;Authorization&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;…&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&quot;timeoutMs&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">120000</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+<h3 id="normalization-example">Normalization example</h3>
+<p>Input (VS Code / remote):
+<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;mcp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;servers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nt">&quot;context7&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mcp.context7.com/mcp&quot;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Normalized output:
+<div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DBName::context7&quot;</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;transport&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;streamable_http&quot;</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mcp.context7.com/mcp&quot;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="guarantees-and-behavior">Guarantees and behavior</h3>
+<ul>
+<li><code>getMCPConfigurations()</code> returns <strong>uniform and reliable</strong> configurations, regardless of the original format.</li>
+<li>Names are <strong>preserved</strong>, sensible <strong>defaults</strong> are applied, and invalid entries <strong>do not break</strong> the rest.</li>
+<li>Basic parameters are validated, and “unsupported transport” errors are mitigated via aliases and inference.</li>
 </ul>
 <h2 id="security-and-authorization">Security and Authorization</h2>
 <p>MCP includes multiple security mechanisms to ensure safe interactions:</p>
