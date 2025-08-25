@@ -61,7 +61,7 @@ This project depends on the following tools:
 
     Example:
     ``` groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat_port=8080
+    docker_com.etendoerp.tomcat_debug=8009
     ``` 
     !!!note
         In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
