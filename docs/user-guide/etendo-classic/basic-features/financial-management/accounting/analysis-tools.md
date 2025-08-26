@@ -54,7 +54,7 @@ Etendo has an integrated accounting system that combines financial and analytica
 
 Etendo allows the user to post transactions to the ledger only if the financial dimensions and the mandatory analytical dimensions are specified, while there is always the option to specify the optional analytical ones.
 
-#### **Header**
+### Header
 
 This report lists every transaction posted to the ledger by showing every accounting dimension specified.
 
@@ -63,7 +63,6 @@ This report lists every transaction posted to the ledger by showing every accoun
 Column Filters allow the user to filter the information to be shown by any of the accounting dimensions.
 
 ## Balance Sheet and P&L Structure
-
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure`
 
 ### Overview
@@ -72,74 +71,79 @@ The Balance sheet and P&L structure report engine allows the user to launch the 
 
 The Balance Sheet report is a quantitative summary of an organization's financial condition at a specific point in time. This report shows a summary of the assets and liabilities & Owner's Equity balances.
 
-Profit and Loss report shows earnings, expenses and the net profit of an organization
+Profit and Loss report shows earnings, expenses and the net profit of an organization.
 
-These reports need to be configured prior to be launched in the Balance Sheet and P&L Structure setup window.
+These reports need to be configured prior to be launched in the [Balance Sheet and P&L Structure Setup](../accounting/setup.md#balance-sheet-and-pl-structure-setup) window.
+
+### Header
 
 ![](../../../../../assets/drive/1RuYrg1NFpQZz9FOuNnPR47hpQCTwgzjv.png)
 
 As shown in the image above, data to fill in is:
 
--   the *"General Ledger"* from which the accounting information needs to be obtained
--   the *"Accounting Report"* to launch.  
-    This field lists the reports created and configured in the Balance Sheet and P&L structure setup window
--   the *"Organization"*.  
-    This field lists the organization for which the report has been configured in the Balance Sheet and P&L structure setup window
-    -   if the report is configured for a "Legal with Accounting" organization type, only that one is shown in this field. The account's balances shown in the report will be a roll-up of the organizations which belong to it, if any.
-    -   if the report is configured for a "Generic" organization type, the organizations shown in this field are at least the generic organization and the legal with accounting organization type it belongs to, all of them linked to the general ledger selected.
--   the *"Account Level"* which defines up to which detail level is going to be shown in the report, the options available are the same as the account tree element levels:
-    -   Heading, only "heading" elements are shown including summarized accounting information up to that level
-        -   Account, in this case "heading" and "account" elements are shown including summarized accounting information up to each of those levels
-            -   Breakdown, in this case "heading", "account" and "breakdown" elements are shown including summarized accounting information up to each of those levels
-                -   Subaccount, in this case "heading", "account", "breakdown" and "subaccount" elements are shown including summarized accounting information up to each of those levels.  
-                    It is important to recall that accounting entries are booked at subaccount level.
--   *"Show only accounts with value"* flag allows the user to see that the report does not show account elements having a *zero* amount balance, but elements defined as Title which are always shown regardless of its balance amount.
--   *Show Account codes* flag allows the user to make the report show the Element Level Search Key or not.
+- The **General Ledger** from which the accounting information needs to be obtained.
+- The **Accounting Report** to launch. This field lists the reports created and configured in the [Balance Sheet and P&L structure Setup](./setup.md#balance-sheet-and-pl-structure-setup) window.
+- The **Organization**. This field lists the organization for which the report has been configured in the Balance Sheet and P&L structure setup window.
 
-Under the *"Primary Filters"* section, it is possible to specify:
+    - If the report is configured for a "Legal with Accounting" organization type, only that one is shown in this field. The account's balances shown in the report will be a roll-up of the organizations which belong to it, if any.
+    - If the report is configured for a "Generic" organization type, the organizations shown in this field are at least the generic organization and the legal with accounting organization type it belongs to, all of them linked to the general ledger selected.
 
--   an *Initial page number* for the report, in case the report needs to be integrated.  
-    This one is useful in case the report must be integrated as a part of a bigger report or document.
--   a *"Year"* and a *"Reference Year"* in order to get a comparative report normally between the current "Year" and the previous one entered as "Reference Year". The report has a filter *"Compare To"*, so it can be launched just for a concrete year, without forcing to compare it with another year.
--   and finally *"As of Date"* (Date To) and *"As of Reference Date"* (Date From filters can be entered, these filters behave differently depending on the report:
+- The **Account Level** which defines up to which detail level is going to be shown in the report, the options available are the same as the account tree element levels:
+
+    - Heading, only "heading" elements are shown including summarized accounting information up to that level.
+        - Account, in this case "heading" and "account" elements are shown including summarized accounting information up to each of those levels.
+            - Breakdown, in this case "heading", "account" and "breakdown" elements are shown including summarized accounting information up to each of those levels.
+                - Subaccount, in this case "heading", "account", "breakdown" and "subaccount" elements are shown including summarized accounting information up to each of those levels. It is important to recall that accounting entries are booked at subaccount level.
+
+- **Show only accounts with value** flag allows the user to see that the report does not show account elements having a *zero* amount balance, but elements defined as Title which are always shown regardless of its balance amount.
+- **Show Account codes** flag allows the user to make the report show the Element Level Search Key or not.
+
+Under the **Primary Filters** section, it is possible to specify:
+
+- An **Initial page number** for the report, in case the report needs to be integrated. This one is useful in case the report must be integrated as a part of a bigger report or document.
+- A **Year** and a **Reference Year** in order to get a comparative report normally between the current "Year" and the previous one entered as "Reference Year". The report has a filter **Compare To**, so it can be launched just for a concrete year, without forcing to compare it with another year.
+- And finally **As of Date** (Date To) and **As of Reference Date** (Date From filters can be entered, these filters behave differently depending on the report:
     -   In the case of Balance Sheet report, a "Date To" value can be entered to get that the report shows account balance information up to that date to.
     -   In the case of P&L report a "Date To" and a "Date From" can be entered to make the report show accounting information within that period of time (a year, a quarter, a month, etc).
 
-#### Balance Sheet Report Example
+**Balance Sheet Report Example**
 
 !!! info
     Please note that the word "Provisional" (en\_US) \[or "Provisional" (es\_ES)\] is shown whenever at least one of the periods for which the report has been launched for it is not closed yet.
 
 ![](../../../../../assets/drive/1JYmJT5MghrfjqL3Y_qbNopzLK1GeXrFK.png)
 
-#### P&L Report Example
+**P&L Report Example**
  
 ![](../../../../../assets/drive/1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6.png)
 
 ## Balance Sheet and P&L Structure Advanced
-
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure Advanced`
+
+### Overview 
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+The **Balance Sheet and P&L Structure Advanced** report is an enhanced version of the previous [Balance Sheet and P&L Structure](#balance-sheet-and-pl-structure). Its purpose is to expand the filtering criteria, including all available accounting dimensions and the ability to compare multiple years or periods.
 
-![](../../../../../assets/drive/Balance_Sheet_And_PL_Structure_Advanced.png)
+### Header
 
-In addition to the previous basic filters: 
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-1.png)
+
+Fields to note:
+
+In addition to the previous **Report Options**: 
 
 - General Ledger
-- Accounting Report
+- General Accounting Report
 - Organization
 - Account level
-- Year
-- As of Date
-- Compare to (check)
-- Reference Year
-- As of Reference Date
+- Show Only Account With Value (check)
+- Show Account Codes (check)
+- Show Landscape Mode (check)
 
-the following were added:    
+The following dimension were added:    
 
 - Business Partner  
 - Product   
@@ -151,25 +155,37 @@ the following were added:
 - Sales Campaign
 - Cost Center
 
-In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
+!!! info
+    In each dimension filter, more than one option can be selected.
 
-In the **Compare To** section, the fields **From Reference Date** and **To Reference Date** have been added to allow you to select a specific period of the 
-chosen year, in addition to the **Select Template** field. At the same time, it is now possible to compare up to four years simultaneously, and for each selected year, the dates From reference date, From reference date, and To reference date can be defined, providing greater flexibility in the analysis.  
+Also, in addition to the previous **Primary Filters**: 
+
+- Year
+- As of Date (Only for Balance Sheet)
+- Starting Date (Only for Profit & Loss)
+- Ending Date (Only for Profit & Loss)
+- Compare to (check)
+- Reference Year
+- As of Reference Date (Only for Balance Sheet)
+- From Reference Date (Only for Profit & Loss)
+- To Reference Date (Only for Profit & Loss)
+- Initial page number, printed in the report.
+
+
+!!! info 
+    - It is now possible to compare up to **four years** simultaneously.
+    - In addition, **new fields** have been added to allow the selection of specific dates and periods according to the needs of each report, providing greater flexibility in the analysis.
  
-![](../../../../../assets/drive/P&L-adv-2.png)
 
-In each filter, more than one option can be selected:
- 
-![](../../../../../assets/drive/P&L-adv-1.png)
+### Buttons
 
-
-Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
+In this report, the **View**, **Export to PDF**, and **Export to Excel** buttons are added to the top bar, allowing you to either view the information directly or export it in different formats as needed.
 
 ![](../../../../../assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
 
-An example of the output of the report is:
+**P&L Report Example**
 
-![](../../../../../assets/drive/P&L-adv-3.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-2.png)
 
 ## Trial Balance
 
