@@ -24,7 +24,7 @@ status: beta
     This feature is available from the Etendo Gradle Plugin [2.1.0](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md). For more information, visit [Etendo Gradle Plugin](../developer-tools/etendo-gradle-plugin#etendo-plugin).
     
 
-The Etendo Interactive Configuration system provides a user-friendly command-line wizard for configuring Etendo projects. Built into the Etendo Gradle Plugin, it guides developers through property configuration with intelligent defaults, secure handling of sensitive data, and organized presentation of configuration options.
+The **Etendo Interactive Configuration** system provides a user-friendly command-line wizard for configuring Etendo projects. Built into the Etendo Gradle Plugin, it guides developers through property configuration with intelligent defaults, secure handling of sensitive data, and organized presentation of configuration options.
 
 ## Quick Start
 
@@ -294,41 +294,35 @@ security {
 
 ## Testing Your Configuration
 
-### Validate Configuration Discovery
+1. Test that your `config.gradle` file is properly discovered:
 
-Test that your `config.gradle` file is properly discovered:
+    ```bash
+    # Run with debug output to see property scanning
+    ./gradlew setup -Pinteractive=true --debug --console=plain | grep "config.gradle"
 
-```bash
-# Run with debug output to see property scanning
-./gradlew setup -Pinteractive=true --debug --console=plain | grep "config.gradle"
+    # Expected output:
+    # DEBUG - ✓ Processing config.gradle in modules/com.yourcompany.yourmodule
+    # DEBUG - Loaded 5 properties from modules/com.yourcompany.yourmodule/config.gradle
+    ```
 
-# Expected output:
-# DEBUG - ✓ Processing config.gradle in modules/com.yourcompany.yourmodule
-# DEBUG - Loaded 5 properties from modules/com.yourcompany.yourmodule/config.gradle
-```
+2. After running interactive setup, verify that properties are correctly written to `gradle.properties`:
 
-### Verify Property Mapping
+    ```bash
+    # Check that your module's properties appear in gradle.properties
+    cat gradle.properties | grep "api\."
 
-After running interactive setup, verify that properties are correctly written to `gradle.properties`:
+    # Example output with preserved naming:
+    # api.baseUrl=https://api.example.com
+    # api.apiKey=your_secret_key
+    # api.customEndpoint=custom_value
+    # custom.api.endpoint=value_with_custom_name
+    ```
 
-```bash
-# Check that your module's properties appear in gradle.properties
-cat gradle.properties | grep "api\."
+3. Run the interactive setup and verify your module's properties appear:
 
-# Example output with preserved naming:
-# api.baseUrl=https://api.example.com
-# api.apiKey=your_secret_key
-# api.customEndpoint=custom_value
-# custom.api.endpoint=value_with_custom_name
-```
-
-### Test Interactive Configuration
-
-Run the interactive setup and verify your module's properties appear:
-
-```bash
-./gradlew setup -Pinteractive=true --console=plain
-```
+    ```bash
+    ./gradlew setup -Pinteractive=true --console=plain
+    ```
 
 You should see your module's property groups in the configuration menu and be able to configure them individually or as part of "all groups" configuration.
 
@@ -346,10 +340,10 @@ You should see your module's property groups in the configuration menu and be ab
 
 ### Naming Conventions
 
-1. **Property names are preserved exactly**: Use any naming convention you prefer - names are not transformed
-2. **Be Descriptive**: Use clear, descriptive property names
-3. **Avoid Reserved Words**: Don't use Gradle or Java reserved keywords
-4. **Use name field for legacy compatibility**: When you need specific gradle.properties keys
+- **Property names are preserved exactly**: Use any naming convention you prefer - names are not transformed
+- **Be Descriptive**: Use clear, descriptive property names
+- **Avoid Reserved Words**: Don't use Gradle or Java reserved keywords
+- **Use name field for legacy compatibility**: When you need specific gradle.properties keys
 
 ```groovy
 // Good examples - names preserved as written
@@ -399,7 +393,7 @@ If properties don't appear correctly in `gradle.properties`:
 ### Common Syntax Errors
 
 ```groovy
-// ❌ Wrong: Missing required fields
+// Wrong: Missing required fields
 api {
     baseUrl {
         value = "https://api.example.com"
@@ -407,7 +401,7 @@ api {
     }
 }
 
-// ✅ Correct: All required fields present
+// Correct: All required fields present
 api {
     baseUrl {
         description = "API base URL for external service"
@@ -419,15 +413,5 @@ api {
 }
 ```
 
-
-## Summary
-
-The Etendo Interactive Configuration system provides a powerful, user-friendly way to configure Etendo projects and custom modules. By creating `config.gradle` files with structured metadata, you can provide users with guided configuration experiences while maintaining the flexibility and power of Gradle-based builds.
-
-Key benefits for module developers:
-
-- **Easy Integration**: Simply add a `config.gradle` file to your module
-- **Rich Metadata**: Provide descriptions, defaults, and security markers
-- **Automatic Discovery**: Properties are automatically discovered and presented
-- **Secure Handling**: Sensitive data is automatically protected
-- **Backward Compatible**: Existing setup processes remain unchanged
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
