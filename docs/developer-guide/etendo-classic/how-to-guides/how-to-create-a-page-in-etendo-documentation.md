@@ -33,7 +33,6 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     pip install mkdocs-material
     pip install pillow cairosvg
     pip install mkdocs-glightbox
-    pip install mike
     pip install mkdocs-rss-plugin
     pip install beautifulsoup4
     pip install algoliasearch
