@@ -84,7 +84,7 @@ Por otra parte, es importante señalar que hay ciertas operaciones que quedan ex
 
 El IVA de Caja es una funcionalidad oculta de manera predeterminada en Etendo.
 
-Para habilitarla, es necesario [instalar manualmente el módulo de IVA de Caja](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Datasets/#importing-reference-data-on-organization-level), que se encuentra bajo Licencia Pública de Etendo.
+Para habilitarla, es necesario [instalar manualmente el módulo de IVA de Caja](../../../../../developer-guide/etendo-classic/concepts/datasets.md#importing-reference-data-on-organization-level), que se encuentra bajo Licencia Pública de Etendo.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/dataset-cashvat.png)
 
