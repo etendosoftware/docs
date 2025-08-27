@@ -136,9 +136,6 @@ plugins:
         utm_medium: 'RSS'
         utm_campaign: 'feed-syndication'
 extra:
-  version:
-    provider: mike
-    default: stable
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/etendosoftware
