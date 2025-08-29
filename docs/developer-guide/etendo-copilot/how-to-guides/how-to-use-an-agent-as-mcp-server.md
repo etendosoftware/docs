@@ -73,19 +73,43 @@ The MCP server runs alongside the agent and communicates using HTTP transport wi
 ### Token-Based Authentication
 
 The MCP server uses token-based authentication via the `etendo-token` header, using the SWS (Secure Web Service) token of the user. This token can be obtained through the Etendo Classic `/sws/login` endpoint.
-A quick way to get the basic config of the MCP server can be get using the Gradle task called `copilot.mcp.config`.
+A quick way to obtain the MCP configuration used to be via a Gradle task, but the module now provides a UI action directly
+from the Agents screen which is easier to use. To generate the MCP JSON configuration for an agent:
 
-``` bash
-./gradlew copilot.mcp.config -Pusername=youruser -Ppassword=yourpass [-Prole=yourrole] -PagentId=YOUR_AGENT_ID [-Pmode=simple|direct]
-```
+  - Open the Agents window in the Etendo UI and select the agent you want to configure.
+  - Click the "Server MCP Config" (or similar) button in the toolbar. A small dialog will open with the configuration options.
 
-Where:
+Dialog parameters (fields shown in the dialog)
 
-  - `YOUR_AGENT_ID` is the unique identifier of the Etendo Copilot agent you want to connect to.
-  - `yourrole` is the role you want to assume when connecting to the agent (optional). If not specified, the default role will be used.
-  - `youruser` is the username of the Etendo user account you want to use for authentication.
-  - `yourpass` is the password of the Etendo user account you want to use for authentication.
-  - `mode` is the connection mode (optional): `simple` or `direct`. If not specified, defaults to `simple` mode.
+  - Direct Mode (checkbox): when checked the generated endpoint URL will use the `/direct/mcp` path; when unchecked it will use `/mcp` (simple mode).
+  - MCP-remote compatibility mode (checkbox): when checked the generated configuration will be the "remote example" form (suitable for `npx mcp-remote ...`) which renders a JSON object with a `command: "npx"` entry and an `args` array. When unchecked a standard HTTP MCP server configuration is produced (with `url`, `type` and `headers`).
+  - Custom values (collapsible section): optional overrides for the generated configuration
+    - Custom name (text): a human-friendly display name to use in the MCP configuration. If provided it replaces the agent name in the generated `name` field. 
+    - Custom URL (text): when provided, this URL is used as the base `contextUrl` for the MCP configuration instead of deriving it from system properties. Use this when the Copilot host is reachable under a different public address.
+
+{ADD SNAPSHOT}
+
+Behavior after accepting the dialog
+
+  When you click Done/OK the process generates the configuration and shows a small pop-up with everything you need to get started.
+
+  {ADD SNAPSHOT}
+  - What you'll see:
+    - A short explanation of what the snippet is for and how to use it.
+    - A clear notice if the generated address is local-only (e.g. starts with "localhost") so you know it won't be reachable from other machines.
+    - A button to import or install the configuration into VS Code (when available).
+    - A nicely formatted, copyable JSON snippet you can paste into any MCP client.
+
+  - Two simple options are offered depending on the selected mode:
+    - Standard: a ready-to-use HTTP configuration you can paste into client settings.
+    - mcp-remote compatibility layer : Using the library `mcp-remote` to add compatibility for MCP clients that do not handle correctly the `streamable-http` transport with authentication with headers. Try to use this by default, but if you encounter issues, you may need to switch to the standard mode.
+
+  - Quick tips:
+    - If you entered a Custom URL the snippet will use that address.
+    - If you see the local-only notice, update your Copilot host settings if you need external access.
+
+  This UI flow replaces the need to run the Gradle task manually in most cases and is the recommended approach for interactive use.
+
     - **`simple`**: Delivers conversation tools (`ask_agent` or `ask_agent_supervisor`)
     - **`direct`**: Delivers direct tool access + `get_agent_prompt` for personality adoption
 
@@ -148,24 +172,11 @@ LangGraph Agents (supervisor/team-based) have specific mode behavior:
 - **Simple Mode** ✅ - Talk to the supervisor agent who will coordinate team members
 - **Direct Mode** ✅ - Access supervisor tools and view the orchestration prompt
 
-When running the configuration task, you'll be prompted to select a mode:
+Selecting the connection mode is now done through the Agents UI dialog (see above). Choose "Direct Mode" in the dialog to
+generate a direct-mode configuration (URL pattern ending in `/direct/mcp`) or leave it unchecked for simple mode (`/mcp`).
 
-```
-🔧 Select connection mode:
-  1. Simple mode - Exposes a single tool to talk to the Copilot agent (recommended)
-  2. Direct mode - Exposes all agent tools for direct execution + prompt reader
-Please enter mode (1 for simple, 2 for direct) [default: 1]:
-```
-
-You can also specify the mode directly via command line parameter:
-
-```bash
-# Simple mode (default)
-./gradlew copilot.mcp.config -PagentId=MY_AGENT -Pmode=simple
-
-# Direct mode  
-./gradlew copilot.mcp.config -PagentId=MY_AGENT -Pmode=direct
-```
+For automation or headless environments you can still use the Gradle task if needed, but the UI is the preferred path
+for interactive configuration inside Etendo.
 
 ### Connection Configuration
 
