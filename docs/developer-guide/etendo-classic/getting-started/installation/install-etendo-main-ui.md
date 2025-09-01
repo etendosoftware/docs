@@ -26,8 +26,8 @@ This guide provides instructions to install and run the Etendo Main UI, a modern
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher
 
-!!! info
-    The [Docker Management](../../bundles/platform/docker-management.md) module, included as a dependency, allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
+    !!! info
+        The [Docker Management](../../bundles/platform/docker-management.md) module, included as a dependency, allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
 
 ## Installation
 
@@ -38,7 +38,7 @@ Etendo Main UI is distributed within the [Platform Extensions](../../../../whats
 
 ## Running Etendo Main UI
 
-The simplest configuration we are going to follow as an example is to mount **Main UI Dockerized** and **Tomcat** running as a local service. Other configurations are detailed in the section, [Advanced Configurations](#advanced-configuration).
+The simplest configuration we are going to follow as an example is to mount **Main UI Dockerized** and **Tomcat** running as a local service. Other configurations are detailed in the section [Advanced Configurations](#advanced-configuration).
 
 1. Add the following lines to the `gradle.properties` file:
 
@@ -83,17 +83,6 @@ Once all services are running, the Main UI will be available at:
 !!!info
     The exact URL may vary depending on your Docker configuration.
 
-
-## Getting Help
-
-If you encounter issues during installation:
-
-1. Check the Docker container logs.
-2. Verify all requirements are met.
-3. Ensure the Platform Extensions Bundle is properly installed.
-4. Review the configuration in `gradle.properties`.
-
-
 ## Advanced Configuration
 
 This section is for developers who want to contribute to or customize the **Main UI** codebase directly.
@@ -106,7 +95,7 @@ This section is for developers who want to contribute to or customize the **Main
 
 ### Manual Module Installation (Development Only)
 
-For development environments, you may need to install the required modules manually:
+For development environments, you need to install the required modules manually:
 
 - `com.etendoerp.openapi`
 - `com.etendoerp.etendorx`
@@ -127,7 +116,7 @@ git clone git@github.com:etendosoftware/com.etendoerp.metadata.template.git
 
 ### Development Project Structure
 
-The workspace is organized as a monorepo with multiple packages:
+The workspace is organized as a unique environment with multiple packages:
 
 ```
 com.etendorx.workspace-ui/
@@ -149,7 +138,7 @@ com.etendorx.workspace-ui/
     cd com.etendorx.workspace-ui
     ```
 
-2. Install all project dependencies using pnpm:
+2. Install all project dependencies using `pnpm`:
 
     ```bash
     pnpm install
@@ -170,10 +159,10 @@ com.etendorx.workspace-ui/
     NEXT_PUBLIC_BACKEND_URL=http://localhost:8080/etendo
     NEXT_PUBLIC_API_BASE_URL=http://localhost:8080/etendo
     ```
+    !!!info
+        Replace the URLs with your actual Etendo backend URLs.
 
-5. Replace the URLs with your actual EtendoERP backend URLs.
-
-6. Build the required packages in the correct order:
+5. Build the required packages in the correct order:
 
     ```bash
     # Build API Client first (dependency for other packages)
@@ -183,17 +172,17 @@ com.etendorx.workspace-ui/
     pnpm --filter @workspaceui/componentlibrary build
     ```
 
-7. Launch the development server for the Main UI:
+6. Launch the development server for the Main UI:
 
     ```bash
     pnpm dev
     ```
 
-    The application will be available at `http://localhost:3000` by default.
+    The application will be available at [http://localhost:3000](http://localhost:3000) by default.
 
 ### Development Workflow
 
-#### Root-Level Commands (Recommended)
+**Root-Level Commands (Recommended)**
 
 The workspace provides convenient aliases at the root level for common tasks:
 
@@ -226,7 +215,7 @@ pnpm clean
 pnpm install
 ```
 
-#### Individual Package Commands
+**Individual Package Commands**
 
 Each package can also be run independently using pnpm workspace commands:
 
@@ -247,7 +236,7 @@ pnpm --filter @workspaceui/api-client test
 pnpm --filter @workspaceui/mainui lint
 ```
 
-#### Linting and Formatting
+**Linting and Formatting**
 
 The project uses Biome for linting and formatting across all packages:
 
@@ -267,7 +256,7 @@ pnpm format:fix
 
 ### Package Details
 
-#### API Client (`@workspaceui/api-client`)
+**API Client (`@workspaceui/api-client`)**
 
 Contains TypeScript definitions and API functions for communicating with the Etendo backend. Provides:
 
@@ -276,7 +265,7 @@ Contains TypeScript definitions and API functions for communicating with the Ete
 - Datasource APIs
 - Copilot integration APIs
 
-#### Component Library (`@workspaceui/componentlibrary`)
+**Component Library (`@workspaceui/componentlibrary`)**
 
 A collection of reusable React components built with Material-UI. Includes:
 
@@ -285,7 +274,7 @@ A collection of reusable React components built with Material-UI. Includes:
 - Modal and dialog components
 - Data display components
 
-#### Main UI (`@workspaceui/mainui`)
+**Main UI (`@workspaceui/mainui`)**
 
 The main Next.js application that provides the complete user interface. Features:
 

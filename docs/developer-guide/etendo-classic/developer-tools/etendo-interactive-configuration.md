@@ -41,51 +41,43 @@ The **Etendo Interactive Configuration** system provides a user-friendly command
 ### What the Interactive Setup Does
 
 1. **Scans** your project for configurable properties from:
-   - **Existing `gradle.properties` file**: Reads current property values and identifies configurable settings
-   - **Module `config.gradle` files**: Discovers module-specific configuration with metadata including descriptions, default values, and security settings
+    - **Existing `gradle.properties` file**: Reads current property values and identifies configurable settings
+    - **Module `config.gradle` files**: Discovers module-specific configuration with metadata including descriptions, default values, and security settings
 
 2. **Guides** you through configuration with:
-   - **Clear documentation for each property**: Shows descriptive help text explaining what each property does and its purpose
-   - **Current/default values shown in prompts**: Displays existing values in parentheses, allowing you to press Enter to keep them or type new values
-   - **Secure input for sensitive properties**: Automatically detects passwords, tokens, and secrets, hiding input during typing
-   - **Properties organized by logical groups**: Groups related settings (Database, Security, API, etc.) for easier navigation
+    - **Clear documentation for each property**: Shows descriptive help text explaining what each property does and its purpose
+    - **Current/default values shown in prompts**: Displays existing values in parentheses, allowing you to press Enter to keep them or type new values
+    - **Secure input for sensitive properties**: Automatically detects passwords, tokens, and secrets, hiding input during typing
+    - **Properties organized by logical groups**: Groups related settings (Database, Security, API, etc.) for easier navigation
 
 3. **Confirms** your configuration with:
-   - **Complete summary of all settings**: Shows a comprehensive overview of all configured properties organized by group
-   - **Sensitive values masked for security**: Displays sensitive properties as asterisks (********) to protect credentials
-   - **Ability to review before applying changes**: Requires explicit confirmation (Y/N) before writing any changes to files
+    - **Complete summary of all settings**: Shows a comprehensive overview of all configured properties organized by group
+    - **Sensitive values masked for security**: Displays sensitive properties as asterisks (********) to protect credentials
+    - **Ability to review before applying changes**: Requires explicit confirmation (Y/N) before writing any changes to files
 
 4. **Applies** configuration by:
-   - **Writing to `gradle.properties` with automatic backup**: Creates timestamped backup files before making changes
-   - **Preserving existing comments and structure**: Maintains file formatting, comments, and organization while updating values
-   - **Continuing with normal setup process**: Seamlessly integrates with existing Etendo setup workflow
+    - **Writing to `gradle.properties` with automatic backup**: Creates timestamped backup files before making changes
+    - **Preserving existing comments and structure**: Maintains file formatting, comments, and organization while updating values
+    - **Continuing with normal setup process**: Seamlessly integrates with existing Etendo setup workflow
 
 ## Configuration Interface
 
-**Main Menu Options**
+**Choose the main configuration mode**
 
 The interactive setup presents three main configuration modes:
 
-```
-🎛️  Interactive Setup - Main Menu
-============================================================
+- Default configuration (use current/default values)
+- Group configuration:
 
-📋 Choose configuration option:
+    a. All - Configure all groups
+    b. Database Configuration
+    c. Security Settings
+    d. Application Settings
+- Exit without saving
 
-1️⃣  Default configuration (use current/default values)
-2️⃣  Group configuration:
-   📦 a. all - Configure all groups
-   📋 b. Database Configuration
-   📋 c. Security Settings
-   📋 d. Application Settings
-3️⃣  Exit without saving
+**Configure properties**
 
-🎯 Select an option:
-```
-
-**Property Configuration**
-
-When configuring properties, the system provides rich context:
+When configuring properties, the system provides rich context. For example:
 
 ```
 📋 Database Configuration
@@ -102,7 +94,7 @@ When configuring properties, the system provides rich context:
 🔐 New value (hidden): [Password input is hidden]
 ```
 
-**Configuration Summary**
+**Confirm configuration**
 
 Before applying changes, you'll see a complete summary:
 
@@ -125,19 +117,19 @@ Before applying changes, you'll see a complete summary:
 
 ## Adding Configuration to Custom Modules
 
-### Creating a config.gradle File
+**Creating a config.gradle File**
 
 To add interactive configuration support to your custom module, create a `config.gradle` file in your module's root directory:
 
-```
-modules/
-├── com.yourcompany.yourmodule/
-│   ├── config.gradle          ← Configuration file
-│   ├── src/
-│   └── build.gradle
+``` title="config.gradle"
+    modules/
+    ├── com.yourcompany.yourmodule/
+    │   ├── config.gradle          ← Configuration file
+    │   ├── src/
+    │   └── build.gradle
 ```
 
-### Configuration File Structure
+**Configuration File Structure**
 
 The `config.gradle` file uses Groovy's ConfigSlurper format, providing structured, type-safe configuration:
 
@@ -145,8 +137,8 @@ The `config.gradle` file uses Groovy's ConfigSlurper format, providing structure
 // modules/com.yourcompany.yourmodule/config.gradle
 
 /**
- * Interactive configuration for Your Custom Module
- */
+* Interactive configuration for Your Custom Module
+*/
 
 // API Configuration
 api {
@@ -216,7 +208,7 @@ database {
 }
 ```
 
-### Configuration Properties Reference
+**Configuration Properties Reference**
 
 Each property in your `config.gradle` file supports the following metadata:
 
@@ -228,7 +220,7 @@ Each property in your `config.gradle` file supports the following metadata:
 | `required` | Boolean | No | `true` for mandatory properties (default: `false`) |
 | `group` | String | No | Display group name (default: auto-generated from block name) |
 
-### Property Naming and Mapping
+**Property Naming and Mapping**
 
 The system preserves property names exactly as written, with optional custom naming:
 
@@ -255,19 +247,18 @@ api {
 }
 ```
 
-**Important Changes:**
-- **No automatic transformation**: Property names like `systemUser` remain as `systemUser` (not transformed to `system.user`)
-- **Preserved naming**: All property names are kept exactly as written in the `config.gradle` file
-- **Optional custom mapping**: Use the `name` field when you need specific gradle.properties keys for compatibility
+!!! Important "Important Changes"
 
-### Sensitive Property Handling
+    - **No automatic transformation**: Property names like `systemUser` remain as `systemUser` (not transformed to `system.user`).
+    - **Preserved naming**: All property names are kept exactly as written in the `config.gradle` file.
+    - **Optional custom mapping**: Use the `name` field when you need specific `gradle.properties` keys for compatibility.
+
+**Sensitive Property Handling**
 
 The system automatically detects sensitive properties based on:
 
-1. **Explicit marking**: `sensitive = true` in configuration
-2. **Pattern detection**: Properties containing keywords like:
-   - `password`, `secret`, `token`, `key`
-   - `credential`, `auth`, `private`, `secure`
+- **Explicit marking**: `sensitive = true` in configuration
+- **Pattern detection**: Properties containing keywords like: `password`, `secret`, `token`, `key`, `credential`, `auth`, `private`, `secure`
 
 Example of sensitive property configuration:
 
@@ -325,93 +316,6 @@ security {
     ```
 
 You should see your module's property groups in the configuration menu and be able to configure them individually or as part of "all groups" configuration.
-
-## Best Practices
-
-### Property Organization
-
-1. **Group Related Properties**: Use logical groups like "API Configuration", "Database Settings", "Security Settings"
-
-2. **Clear Descriptions**: Write descriptive help text that explains the property's purpose and any constraints
-
-3. **Sensible Defaults**: Provide reasonable default values that work for most users
-
-4. **Mark Sensitive Data**: Always mark credentials, passwords, and tokens as sensitive
-
-### Naming Conventions
-
-- **Property names are preserved exactly**: Use any naming convention you prefer - names are not transformed
-- **Be Descriptive**: Use clear, descriptive property names
-- **Avoid Reserved Words**: Don't use Gradle or Java reserved keywords
-- **Use name field for legacy compatibility**: When you need specific gradle.properties keys
-
-```groovy
-// Good examples - names preserved as written
-api {
-    baseUrl { /* ... */ }           // → api.baseUrl
-    connectionTimeout { /* ... */ }  // → api.connectionTimeout
-    retryAttempts { /* ... */ }      // → api.retryAttempts
-    
-    // Legacy compatibility example
-    systemUser {
-        name = "api.system.user"  // → api.system.user (custom mapping)
-        /* ... */
-    }
-}
-
-// Still avoid
-api {
-    url { /* too generic */ }
-    timeout { /* unclear which timeout */ }
-    class { /* reserved word */ }
-}
-```
-
-### Configuration Validation
-
-The system provides type safety through ConfigSlurper's structured format. All properties are validated for proper syntax and required fields during the scanning process.
-
-## Troubleshooting
-
-### Configuration Not Appearing
-
-If your module's configuration doesn't appear in the interactive setup:
-
-1. **Check File Location**: Ensure `config.gradle` is in your module's root directory
-2. **Validate Syntax**: Run `groovy -c modules/yourmodule/config.gradle` to check syntax
-3. **Enable Debug**: Use `--debug` flag to see scanning details
-4. **Check Module Structure**: Verify your module follows standard Etendo structure
-
-### Properties Not Mapping Correctly
-
-If properties don't appear correctly in `gradle.properties`:
-
-1. **Check Naming**: Ensure property names follow camelCase convention
-2. **Verify Structure**: Make sure your ConfigSlurper structure is valid
-3. **Test Mapping**: Use debug mode to see property mapping process
-
-### Common Syntax Errors
-
-```groovy
-// Wrong: Missing required fields
-api {
-    baseUrl {
-        value = "https://api.example.com"
-        // Missing description - will cause issues
-    }
-}
-
-// Correct: All required fields present
-api {
-    baseUrl {
-        description = "API base URL for external service"
-        value = "https://api.example.com"
-        sensitive = false
-        required = true
-        group = "API Configuration"
-    }
-}
-```
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
