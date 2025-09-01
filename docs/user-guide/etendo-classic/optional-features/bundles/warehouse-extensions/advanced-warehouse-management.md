@@ -476,6 +476,8 @@ From this window you can view and work with all types of tasks, both Picking and
 
 ### Inventory Management
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nBElvaejJMQ?si=A-a4-IDvPVHJ9S_t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management1.png)
 
 The flow of inventory management and statuses, involves the functionalities from Etendo Mobile of:
