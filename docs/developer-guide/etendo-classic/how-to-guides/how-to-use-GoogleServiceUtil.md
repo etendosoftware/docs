@@ -5,7 +5,7 @@ tags:
   - Middleware
 ---
 
-# GoogleServiceUtil – Technical Documentation
+# How to Use GoogleServiceUtil
 
 > :octicons-package-16: **Package**: `com.etendoerp.etendorx.utils`  
 > :octicons-search-24: **Class**: `GoogleServiceUtil` (all-static utility)
@@ -35,27 +35,27 @@ tags:
 
 - A valid row in `ETRXTokenInfo` (issued by the middleware).
 - **Scopes**:
-  - By default, tokens are minted with **`https://www.googleapis.com/auth/drive.file`**.  
+    - By default, tokens are minted with **`https://www.googleapis.com/auth/drive.file`**.  
     This scope is enough to:
-    - Use the **Sheets API** (read/write) on files the **app created** or the **user explicitly selected/shared** with the app.
-    - Use the **Drive API** for those files and basic metadata.
-  - If you need to access **arbitrary user files** (beyond app-created/selected):
-    - Read-only: `https://www.googleapis.com/auth/drive.readonly` **or** `https://www.googleapis.com/auth/spreadsheets.readonly`
-    - Read/write: `https://www.googleapis.com/auth/drive` **or** `https://www.googleapis.com/auth/spreadsheets`
-  - Optional (metadata-only listing): `https://www.googleapis.com/auth/drive.metadata.readonly`
+        - Use the **Sheets API** (read/write) on files the **app created** or the **user explicitly selected/shared** with the app.
+        - Use the **Drive API** for those files and basic metadata.
+    - If you need to access **arbitrary user files** (beyond app-created/selected):
+        - Read-only: `https://www.googleapis.com/auth/drive.readonly` **or** `https://www.googleapis.com/auth/spreadsheets.readonly`
+        - Read/write: `https://www.googleapis.com/auth/drive` **or** `https://www.googleapis.com/auth/spreadsheets`
+    - Optional (metadata-only listing): `https://www.googleapis.com/auth/drive.metadata.readonly`
 - Property **`sso.middleware.url`** configured in **`gradle.properties`**.
 
-### Minimal example: read a range
+### Minimal Example: Read a Range
 
 ```java
 ETRXTokenInfo token = GoogleServiceUtil.getMiddlewareToken(provider, "drive", user, org);
 String accountId = SystemInfo.getSystemIdentifier();
 
 List<List<Object>> values =
-  GoogleServiceUtil.readSheet(token, accountId, "<FILE_ID>", "Sheet1!A1:C10");
+    GoogleServiceUtil.readSheet(token, accountId, "<FILE_ID>", "Sheet1!A1:C10");
 
 for (List<Object> row : values) {
-  System.out.println(row);
+    System.out.println(row);
 }
 ```
 
@@ -63,19 +63,19 @@ for (List<Object> row : values) {
 
 ```java
 JSONArray pdfs =
-  GoogleServiceUtil.listAccessibleFiles(GoogleServiceUtil.PDF, token, accountId);
+    GoogleServiceUtil.listAccessibleFiles(GoogleServiceUtil.PDF, token, accountId);
 ```
 
-### Update cells (RAW)
+### Update Cells (RAW)
 
 ```java
 List<List<Object>> rows = List.of(
-  List.of("SKU", "Qty"),
-  List.of("ABC-001", 10)
+    List.of("SKU", "Qty"),
+    List.of("ABC-001", 10)
 );
 
 JSONObject result =
-  GoogleServiceUtil.updateSpreadsheetValues("<FILE_ID>", token, accountId, "Sheet1!A1:B2", rows);
+    GoogleServiceUtil.updateSpreadsheetValues("<FILE_ID>", token, accountId, "Sheet1!A1:B2", rows);
 // => updatedRange, updatedRows, updatedColumns, updatedCells
 ```
 
@@ -89,7 +89,7 @@ sso.middleware.url=https://sso.etendo.cloud
 sso.middleware.redirectUri=http://your-domain/oauth/secureApp/LoginHandler.html
 ```
 
-### Token storage & retrieval
+### Token Storage & Retrieval
 
 `ETRXTokenInfo getMiddlewareToken(ETRXoAuthProvider provider, String scope, User user, Organization org)`  
 Looks up a token by `(provider / scope / user / org)` (the `scope` matches the **middleware provider** case-insensitively), gets `accountId` from `SystemInfo`, and returns a **valid** token (refreshing if required).
@@ -98,7 +98,7 @@ Looks up a token by `(provider / scope / user / org)` (the `scope` matches the *
 
 ## Usage
 
-### 1) Authenticated clients
+- Authenticated Clients
 
 ```java
 Sheets sheets = GoogleServiceUtil.getSheetsService(accessTokenString);
@@ -109,18 +109,18 @@ Drive  drive  = GoogleServiceUtil.getDriveService(accessTokenString);
 - **Connect timeout**: 20s, **read timeout**: 60s
 - **Exponential backoff** on HTTP 429/5xx
 
-### 2) Extract a Google Sheets file ID safely
+- Extract a Google Sheets file ID safely
 
 ```java
 String fileId = GoogleServiceUtil.extractSheetIdFromUrl(
-  "https://docs.google.com/spreadsheets/d/FILE_ID/edit"
+    "https://docs.google.com/spreadsheets/d/FILE_ID/edit"
 );
 ```
 
 Supports canonical `docs.google.com/spreadsheets/d/...` (and the `a/<domain>/spreadsheets` variant) and `drive.google.com/open?id=...`.  
 Invalid formats → `OBException(ETRX_WrongSheetURL)`.
 
-### 3) Read tab name by index
+- Read tab name by index
 
 ```java
 String title = GoogleServiceUtil.getTabName(0, fileId, token, accountId);
@@ -130,40 +130,40 @@ String title = GoogleServiceUtil.getTabName(0, fileId, token, accountId);
 - Index out of range → localized `ETRX_WrongTabNumber`
 - Errors are logged; the method ultimately throws `OBException`.
 
-### 4) Find a tab by name (case-insensitive) and read its rows
+- Find a tab by name (case-insensitive) and read its rows
 
 ```java
 List<List<Object>> rows =
-  GoogleServiceUtil.findSpreadsheetAndTab(fileId, "My Tab", token, accountId);
+    GoogleServiceUtil.findSpreadsheetAndTab(fileId, "My Tab", token, accountId);
 ```
 
 - Missing tab → `OBException(ETRX_TabNotFound)` (localized)
 - Existing but empty → returns `List.of()` and logs a WARN
 
-### 5) Read an arbitrary range (A1 notation)
+- Read an arbitrary range (A1 notation)
 
 ```java
 List<List<Object>> rows =
-  GoogleServiceUtil.readSheet(token, accountId, fileId, "Sheet1!A1:Z100");
+    GoogleServiceUtil.readSheet(token, accountId, fileId, "Sheet1!A1:Z100");
 ```
 
 Blank/`null` `range` → defaults to **`A1:Z1000`**.
 
-### 6) Update a range (RAW)
+- Update a range (RAW)
 
 ```java
 JSONObject resp =
-  GoogleServiceUtil.updateSpreadsheetValues(fileId, token, accountId, "Sheet1!A1:B2", rows);
+    GoogleServiceUtil.updateSpreadsheetValues(fileId, token, accountId, "Sheet1!A1:B2", rows);
 // Keys: updatedRange, updatedRows, updatedColumns, updatedCells
 ```
 
 Uses `valueInputOption=RAW` to preserve values as provided.
 
-### 7) Drive: list by friendly type
+- Drive: list by friendly type
 
 ```java
 JSONArray sheets =
-  GoogleServiceUtil.listAccessibleFiles(GoogleServiceUtil.SPREADSHEET, token, accountId);
+    GoogleServiceUtil.listAccessibleFiles(GoogleServiceUtil.SPREADSHEET, token, accountId);
 ```
 
 **Keyword → MIME map:**
@@ -176,34 +176,33 @@ JSONArray sheets =
 Includes **My Drive + Shared Drives** via:
 `supportsAllDrives=true`, `includeItemsFromAllDrives=true`, `corpora=allDrives`, `pageSize=100`.
 
-### 8) Drive: create a Google Workspace file
+- Drive: create a Google Workspace file
 
 ```java
 JSONObject created = GoogleServiceUtil.createDriveFile(
-  "My Report",
-  GoogleServiceUtil.MIMETYPE_SPREADSHEET,
-  token, accountId
+    "My Report",
+    GoogleServiceUtil.MIMETYPE_SPREADSHEET,
+    token, accountId
 );
 ```
 
-> **Important:** Only **Google Workspace** MIME types (`application/vnd.google-apps.*`) are accepted.  
-> Non-Google MIME (e.g., `application/pdf`) requires **media upload**, and this method throws `OBException(ETRX_FailedToCreateFile)`.
+!!!important
+    Only **Google Workspace** MIME types (`application/vnd.google-apps.*`) are accepted.  
+    Non-Google MIME (e.g., `application/pdf`) requires **media upload**, and this method throws `OBException(ETRX_FailedToCreateFile)`.
 
-### 9) Token validation & refresh
+- Token validation & refresh
 
 `ETRXTokenInfo getValidAccessTokenOrRefresh(ETRXTokenInfo token, String accountId)`:
 
 1. If `validUntil` is **> now + 2 minutes** (clock skew), reuses current token.
 2. Otherwise:
-   - Logs `ETRX_RefreshingToken`
-   - Calls middleware: `GET {sso.middleware.url}/oauth-integrations/refresh-token?account_id=<accountId>`
-   - Sets the returned access token
-   - Sets `validUntil = now + 58 minutes` (fixed window)
-   - Persists with `OBDal.save`
+    - Logs `ETRX_RefreshingToken`
+    - Calls middleware: `GET {sso.middleware.url}/oauth-integrations/refresh-token?account_id=<accountId>`
+    - Sets the returned access token
+    - Sets `validUntil = now + 58 minutes` (fixed window)
+    - Persists with `OBDal.save`
 
-Explicit validation:
-
-```java
+```java title="Explicit Validation"
 GoogleServiceUtil.validateAccessToken(accessTokenString); // throws ETRX_ExpiredToken when status != 200
 ```
 
@@ -211,39 +210,39 @@ GoogleServiceUtil.validateAccessToken(accessTokenString); // throws ETRX_Expired
 
 ## API Reference (public surface)
 
-### Constants (subset)
+**Constants (subset)**
 
 - Headers: `BEARER`, `AUTHORIZATION`, `ACCEPT`, `APPLICATION_JSON`
 - Friendly types: `SPREADSHEET`, `DOC`, `SLIDES`, `PDF`, `PDFS`
 - MIMEs: `MIMETYPE_SPREADSHEET`, `MIMETYPE_DOC`, `MIMETYPE_SLIDES`, `MIMETYPE_PDF`
 
-### Services
+**Services**
 
 - `static Sheets getSheetsService(String accessToken)`
 - `static Drive  getDriveService(String accessToken)`
 
-### Sheets
+**Sheets**
 
 - `static String getTabName(int index, String sheetId, ETRXTokenInfo token, String accountID)`
 - `static List<List<Object>> findSpreadsheetAndTab(String sheetId, String tabName, ETRXTokenInfo token, String accountID)`
 - `static List<List<Object>> readSheet(ETRXTokenInfo token, String accountID, String fileId, String range)`
 - `static String getCellValue(List<Object> row, int index)`  
-  Returns `""` if the index is out of bounds.
+    Returns `""` if the index is out of bounds.
 
-### Drive
+**Drive**
 
 - `static JSONArray listAccessibleFiles(String type, ETRXTokenInfo token, String accountID)`
 - `static JSONObject createDriveFile(String name, String mimeType, ETRXTokenInfo token, String accountID)`
 - *(protected)* `static JSONArray listAccessibleFilesByMimeType(String mimeType, ETRXTokenInfo token, String accountID)`
 
-### Tokens
+**Tokens**
 
 - `static ETRXTokenInfo getMiddlewareToken(ETRXoAuthProvider provider, String scope, User user, Organization org)`
 - `static ETRXTokenInfo getValidAccessTokenOrRefresh(ETRXTokenInfo token, String accountId)`
 - `static void validateAccessToken(String accessToken)`
 - `static String refreshAccessToken(String accountId)`
 
-### Utilities
+**Utilities**
 
 - `static String extractSheetIdFromUrl(String url)`
 
@@ -262,7 +261,7 @@ GoogleServiceUtil.validateAccessToken(accessTokenString); // throws ETRX_Expired
 - `ETRX_ErrorRefreshingAccessToken`
 - *(optional)* `ETRX_FailedToUpdateSheet`
 
-!!!note "Notes:"
+!!!note
     - `getTabName` composes localized messages for out-of-range/empty-sheet, and errors are ultimately thrown as `OBException`.
     - Other methods throw localized `OBException` or `IllegalArgumentException` as indicated.
 
@@ -280,7 +279,7 @@ GoogleServiceUtil.validateAccessToken(accessTokenString); // throws ETRX_Expired
 
 ---
 
-## Implementation notes
+## Implementation
 
 - **Timeouts/Backoff:** 20s connect / 60s read, plus `HttpBackOffUnsuccessfulResponseHandler(new ExponentialBackOff())`.
 - **Shared Drives:** Listing uses `supportsAllDrives=true`, `includeItemsFromAllDrives=true`, `corpora=allDrives`.
