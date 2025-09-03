@@ -93,15 +93,6 @@ This module guarantees an authentication method which allows users to securely a
 !!!info
     For more information, visit [Etendo RX user guide](../platform-extensions/etendo-rx.md).
 
-### Javax XML SOAP API
-
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
-
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
-
-!!! info
-    For more information, visit the [Javax XML SOAP API developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
-
 
 ### Number To Word (English)
 
