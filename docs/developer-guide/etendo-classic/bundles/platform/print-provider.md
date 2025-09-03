@@ -7,17 +7,22 @@ tags:
   - PrintNode register
   - Print Provider register
   - Register a Print Provider
+status: beta
 ---
 
 # Print Provider
+
+!!!example "IMPORTANT:THIS IS A BETA VERSION"
+    - It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**, especially in production environments.
+    - It should be used with **caution**, and you should always **validate backups** before executing any critical operation.
 
 ## Register a new Print Provider
 
 This guide explains how to extend the Print Provider module to integrate an external print provider (e.g., PrintNode, Bartender, Hardware Manager, etc.). The goal is for any module to be able to register its own connector without duplicating common logic and only create buttons pointing to the Send Print Job Action for sending print jobs, which will also automatically resolve the list of available printers and the corresponding print template.
 
-### Architecture
+## Architecture
 
-Main components of the Print Provider module
+The **main components of the Print Provider module** are:
 
 - **PrintProviderStrategy** (Service Provider Interface): Contract to be implemented by each provider. It exposes three operations
 
@@ -61,103 +66,102 @@ Main components of the Print Provider module
 
     \- TemplateLine — Variante de plantilla (ruta .jrxml/.jasper, “default”, orden/lineNo).
 
-### Steps to create a new supplier
+## How to Create a New Supplier
 
-**Create the strategy class**: Create a class in the module that extends PrintProviderStrategy. 
+1. **Create the strategy class**: Create a class in the module that extends `PrintProviderStrategy`. 
 
-Skeleton example
 
-```
-public class MyProviderStrategy extends PrintProviderStrategy {
- // (optional) constants for timeouts, MIME, etc.
+    ``` title="Skeleton Example"
+    public class MyProviderStrategy extends PrintProviderStrategy {
+     // (optional) constants for timeouts, MIME, etc.
 
- @Override
+     @Override
 
- public List<PrinterDTO> fetchPrinters(Provider provider) throws PrintProviderException {
-   // 1) Validate provider and required params
+     public List<PrinterDTO> fetchPrinters(Provider provider) throws PrintProviderException {
+       // 1) Validate provider and required params
 
-   final ProviderParam printersUrl = PrinterUtils.getRequiredParam(provider, "printersurl");
+       final ProviderParam printersUrl = PrinterUtils.getRequiredParam(provider, "printersurl");
 
-   PrinterUtils.providerParamContentCheck(printersUrl, "printersurl");
-   // 2) Build HTTP client/request
-   // 3) Send and handle InterruptedException (re-set interrupt + rethrow with context)
-   // 4) Validate statusCode and parse JSON → List<PrinterDTO>
-   // 5) Return list
- }
- @Override
+       PrinterUtils.providerParamContentCheck(printersUrl, "printersurl");
+       // 2) Build HTTP client/request
+       // 3) Send and handle InterruptedException (re-set interrupt + rethrow with context)
+       // 4) Validate statusCode and parse JSON → List<PrinterDTO>
+       // 5) Return list
+     }
+     @Override
 
- public File generateLabel(Provider provider, Table table, String recordId,
+     public File generateLabel(Provider provider, Table table, String recordId,
 
- TemplateLine templateRef, JSONObject params) throws PrintProviderException {
-   // Use PrinterUtils.resolveTemplateFile + loadOrCompileJasperReport
-   // Fill report (DOCUMENT_ID, SUBREPORT_DIR)
-   // Export PDF to a temp file and return it
- }
+     TemplateLine templateRef, JSONObject params) throws PrintProviderException {
+       // Use PrinterUtils.resolveTemplateFile + loadOrCompileJasperReport
+       // Fill report (DOCUMENT_ID, SUBREPORT_DIR)
+       // Export PDF to a temp file and return it
+     }
 
- @Override
+     @Override
 
- public String sendToPrinter(Provider provider, Printer printer, int numberOfCopies, File labelFile)
+     public String sendToPrinter(Provider provider, Printer printer, int numberOfCopies, File labelFile)
 
-     throws PrintProviderException {
-   // 1) Validate inputs (provider/printer/file)
-   // 2) Read required ProviderParams (e.g., printjoburl, apikey)
-   // 3) Prepare request body (e.g., base64, title, source)
-   // 4) POST; validate response; extract jobId (if available)
- }
+         throws PrintProviderException {
+       // 1) Validate inputs (provider/printer/file)
+       // 2) Read required ProviderParams (e.g., printjoburl, apikey)
+       // 3) Prepare request body (e.g., base64, title, source)
+       // 4) POST; validate response; extract jobId (if available)
+     }
 
- @Override
+     @Override
 
- public File generateLabel(Provider provider, Table table, String recordId,
+     public File generateLabel(Provider provider, Table table, String recordId,
 
-                           TemplateLine templateRef, JSONObject params) throws PrintProviderException {
-   // Use PrinterUtils.resolveTemplateFile + loadOrCompileJasperReport
-   // Fill report (DOCUMENT_ID, SUBREPORT_DIR)
-   // Export PDF to a temp file and return it
- }
+                               TemplateLine templateRef, JSONObject params) throws PrintProviderException {
+       // Use PrinterUtils.resolveTemplateFile + loadOrCompileJasperReport
+       // Fill report (DOCUMENT_ID, SUBREPORT_DIR)
+       // Export PDF to a temp file and return it
+     }
 
- @Override
+     @Override
 
- public String sendToPrinter(Provider provider, Printer printer, int numberOfCopies, File labelFile)
+     public String sendToPrinter(Provider provider, Printer printer, int numberOfCopies, File labelFile)
 
-     throws PrintProviderException {
-   // 1) Validate inputs (provider/printer/file)
-   // 2) Read required ProviderParams (e.g., printjoburl, apikey)
-   // 3) Prepare request body (e.g., base64, title, source)
-   // 4) POST; validate response; extract jobId (if available)
+         throws PrintProviderException {
+       // 1) Validate inputs (provider/printer/file)
+       // 2) Read required ProviderParams (e.g., printjoburl, apikey)
+       // 3) Prepare request body (e.g., base64, title, source)
+       // 4) POST; validate response; extract jobId (if available)
 
- }
-}
-```
+     }
+    }
+    ```
 
-**Contractual conventions**
+    **Contractual conventions**
 
-- Printer.value stores the external ID of the printer (key for “upsert”).
+    - Printer.value stores the external ID of the printer (key for “upsert”).
 
-- Throw PrintProviderException (extends OBException) for functional/integration failures.
+    - Throw PrintProviderException (extends OBException) for functional/integration failures.
 
-- Do not log secrets (API keys); log context (statusCode, truncated bodies).
+    - Do not log secrets (API keys); log context (statusCode, truncated bodies).
 
-**Register the implementation**
+2. **Register the implementation**
 
-- **AD → Provider Implementation**
+    - **AD → Provider Implementation**
 
-    \- Java Implementation: com.mi.modulo.print.MyProviderStrategy
+        \- Java Implementation: com.mi.modulo.print.MyProviderStrategy
 
-- **AD → Print Provider**
+    - **AD → Print Provider**
 
-    \- Reference to the previous implementation.
+        \- Reference to the previous implementation.
 
-- **AD → Provider Param**
+    - **AD → Provider Param**
 
-    \- Define the keys (reuse if applicable): printersurl, printjoburl, apikey, etc.
+        \- Define the keys (reuse if applicable): printersurl, printjoburl, apikey, etc.
 
-    \- Save values (e.g., your API URLs).
+        \- Save values (e.g., your API URLs).
 
-### Steps to register labels (Jasper)
+## How to Register Labels (Jasper)
 
-- Create a new record in the Print Templates window, indicating the table to which it applies.
+1. Create a new record in the **Print Templates** window, indicating the table to which it applies.
 
-- Indicate the location of your template in the lines tab. TemplateLine.templateLocation accepts:
+2. Indicate the location of your template in the lines tab. `TemplateLine.templateLocation` accepts:
 
     \- @basedesign@/...
 
@@ -173,13 +177,13 @@ public class MyProviderStrategy extends PrintProviderStrategy {
 
 - PrinterUtils.loadOrCompileJasperReport supports .jrxml (compile) and .jasper (load).
 
-- Recommended parameters:
+!!! note "Recommended parameters"
 
     \- DOCUMENT_ID = recordId
 
     \- SUBREPORT_DIR = template directory (for subreports)
 
-### Printer update
+### Printer Update
 
 - The process calls strategy.fetchPrinters(provider) and performs an upsert on Printer:
 
@@ -191,7 +195,8 @@ public class MyProviderStrategy extends PrintProviderStrategy {
 
 - Printer.value = external ID; Printer.name is user-friendly; Printer.default marks “default.”
 
-**Recommendation**: if the provider's API does not return a single field that can serve as a stable key, one can be composed (e.g.,  < accountId >:< remotePrinterId >).
+!!!note "Recommendation"
+    If the provider's API does not return a single field that can serve as a stable key, one can be composed (e.g.,  < accountId >:< remotePrinterId >).
 
 ### Errors
 
@@ -199,12 +204,12 @@ public class MyProviderStrategy extends PrintProviderStrategy {
 
 - Log the messages you need in AD_MESSAGE. You can access these messages using the String.format and OBMessageUtils.getI18NMessage formatting utilities.
 
-### Workflow and Configuration
+## Workflow and Configuration
 
 !!! Note 
     Remember that the initial configuration must be performed only once, as the system administrator. Provider parameters such as printersurl and apikey must be defined correctly to avoid connection or printer synchronization failures.
 
-1. Config (one-time)
+1. **Configuration** (one-time)
 
     - As System administrator, create a record in Providers Implementation indicating the path of your strategy class.
 
@@ -212,21 +217,21 @@ public class MyProviderStrategy extends PrintProviderStrategy {
 
     - In the Provider Params tab, define the required parameters (URLs, API key, etc.).
 
-2. Discover printers
+2. **Discover Printers**
 
     - UpdatePrinters (Action executed from the Printers window) → use fetchPrinters from the strategy and synchronize Printer.
 
-3. Generate label
+3. **Generate Label**
 
     - SendGeneratedLabelToPrinter (Action executed from the button in the desired window) resolves TemplateLine from the table associated with the button window (e.g., button in Product window will resolve table M_Product). This action compiles/loads Jasper and produces the temporary PDF.
 
-4. Send to printer
+4. **Send to printer**
 
     - sendToPrinter makes the necessary HTTP/SDK call and returns jobId (when available).
 
 ### Basic Example
 
-- In the module, create com.my.module.print.MyProviderStrategy (extends PrintProviderStrategy).
+- In the module, create `com.my.module.print.MyProviderStrategy` (extends PrintProviderStrategy).
 
 - Configuration per window
     
@@ -246,9 +251,9 @@ public class MyProviderStrategy extends PrintProviderStrategy {
 
         \- apikey: Key for authenticating with the middleware.
 
-- Run Update Printers from the Printers window. The Action delegates responsibility for updating printers to the fetchPrinters implementation.
+- Run **Update Printers** from the **Printers** window. The Action delegates responsibility for updating printers to the fetchPrinters implementation.
 
-- Execute “Send label to printer” from the button that has been registered in the desired window. The Action SendGeneratedLabelToPrinter delegates the responsibility of:
+- Execute **Send label to printer** from the button that has been registered in the desired window. The Action `SendGeneratedLabelToPrinter` delegates the responsibility of:
 
     \- Generating the printout to your generateLabel implementation.
 
