@@ -521,6 +521,7 @@ nav:
           - Etendo RX: developer-guide/etendo-classic/bundles/platform/etendo-rx.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
           - Task: developer-guide/etendo-classic/bundles/platform/task.md
+          - Print Provider: developer-guide/etendo-classic/bundles/platform/print-provider.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
