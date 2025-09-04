@@ -609,7 +609,6 @@ nav:
     - Release Notes:
       - Etendo:
         - Release Notes: whats-new/release-notes/etendo-classic/release-notes.md
-        - New UI: whats-new/release-notes/etendo-classic/new-ui.md
         - Plugins:
           - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md
           - Etendo Backup and Restore: whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md
