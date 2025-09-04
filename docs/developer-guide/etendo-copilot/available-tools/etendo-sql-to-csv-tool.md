@@ -42,6 +42,7 @@ Using this tool consists of the following actions:
 - **Query Validation**
 
     The tool validates the SQL query for security:
+
     - Only SELECT statements are allowed
     - Dangerous keywords (DROP, DELETE, UPDATE, etc.) are blocked
     - Must follow Etendo's requirement that all tables have aliases
@@ -49,6 +50,7 @@ Using this tool consists of the following actions:
 - **Database Execution**
 
     Connects to Etendo using the DBQueryExec webhook:
+
     - Automatically retrieves authentication token and host configuration
     - Executes the query with Etendo's built-in security filters
     - Returns structured JSON data with columns and rows
@@ -56,12 +58,14 @@ Using this tool consists of the following actions:
 - **CSV Conversion**
 
     Converts the JSON response to CSV format:
+
     - Extracts column names and data rows from the webhook response
     - Handles optional header inclusion
     - Writes the CSV file with proper encoding (UTF-8)
 
 - **Result Reporting**
     Returns detailed information about the operation:
+
     ```
     ✅ SQL query executed successfully!
     📊 Result: 150 rows exported
@@ -86,12 +90,14 @@ The Etendo SQL to CSV Tool implements multiple security layers:
 All SQL queries must follow Etendo's security standards:
 
 ### Required Format
+
 - **SELECT Only**: Only SELECT statements are allowed
 - **Table Aliases**: All tables must have aliases (e.g., `FROM ad_user u`, not `FROM ad_user`)
 - **Accessible Tables**: Only tables accessible to the current user can be queried
 - **Security Filters**: Etendo automatically applies organization and client security filters
 
 ### Examples of Valid Queries
+
 ```sql
 -- Query active users
 SELECT u.name, u.email, u.created 
@@ -114,6 +120,7 @@ WHERE so.issotrx = 'Y'
 ```
 
 ### Examples of Invalid Queries
+
 ```sql
 -- Missing table alias
 SELECT name FROM ad_user WHERE isactive = 'Y'
@@ -134,6 +141,7 @@ Imagine we want to export active users with their roles to a CSV file for analys
 - **include_headers**: true
 
 The Etendo SQL to CSV Tool will:
+
 1. Validate the query meets security requirements
 2. Execute the query through the DBQueryExec webhook
 3. Convert the JSON results to CSV format
@@ -149,32 +157,3 @@ The tool provides comprehensive error handling for common scenarios:
 - **Permission Errors**: Indicates when tables or data are not accessible to the user
 - **File System Issues**: Reports problems with CSV file creation or writing
 - **Empty Results**: Handles queries that return no data gracefully
-
-## Integration with Etendo
-
-This tool leverages Etendo's built-in security and data access features:
-
-- **Multi-tenant Security**: Automatically respects client and organization boundaries
-- **Role-based Access**: Only returns data accessible to the current user's role
-- **Data Filters**: Applies Etendo's standard security filters automatically
-- **Audit Trail**: Query execution is logged through Etendo's standard audit mechanisms
-
-## Best Practices
-
-### Query Optimization
-- Use appropriate WHERE clauses to limit result sets
-- Include only necessary columns in SELECT statements
-- Consider using LIMIT clauses for large datasets
-- Test queries in Etendo's SQL console first for validation
-
-### File Management
-- Specify output file paths in appropriate directories
-- Consider file naming conventions for organized data exports
-- Monitor file sizes for large result sets
-- Clean up temporary files after use
-
-### Security Considerations
-- Never hardcode sensitive data in queries
-- Use parameterized approaches when possible
-- Validate query results before sharing or processing
-- Follow your organization's data export policies

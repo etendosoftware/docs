@@ -458,7 +458,7 @@ nav:
 #        - How to Create Your Own Import Process with IDL: developer-guide/etendo-classic/how-to-guides/How_to_Create_Your_Own_Import_Process_with_IDL.md
         - How to Define a Table as a Tree: developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree.md
 #        - How to define an on Create Default: developer-guide/etendo-classic/how-to-guides/How_to_define_an_on_Create_Default.md
-        - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
+        - How to Define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
 #        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/How_To_Define_Display_Logic_For_Tabs.md
 #        - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/How_to_Define_the_Timeout_of_a_Query.md
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process.md
@@ -550,7 +550,7 @@ nav:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
-        - Available Tools - Complete List: developer-guide/etendo-copilot/available-tools/tool-full-list.md
+        - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - API Call Tool: developer-guide/etendo-copilot/available-tools/api-call-tool.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
