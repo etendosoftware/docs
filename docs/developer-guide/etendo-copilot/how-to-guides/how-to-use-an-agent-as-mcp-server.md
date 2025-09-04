@@ -15,13 +15,9 @@ tags:
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
     It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
 
-This guide provides detailed instructions on how to connect to and use the **Model Context Protocol (MCP) Server** provided by Etendo Copilot agents. MCP is an open protocol developed by Anthropic that standardizes how AI applications connect to external data sources and tools, enabling composable, secure, and extensible AI workflows.
+This guide provides detailed instructions on how to connect to and use the [Model Context Protocol (MCP)](../concepts/model-context-protocol.md) Server provided by Etendo Copilot agents. MCP is an open protocol developed by Anthropic that standardizes how AI applications connect to external data sources and tools, enabling composable, secure, and extensible AI workflows.
 
 The MCP Server in Etendo Copilot exposes the tools and capabilities of each agent through a standardized interface, allowing you to integrate Copilot agents with various MCP-compatible clients like Claude Desktop, Gemini CLI, Cursor IDE, and custom applications.
-
-## What is Model Context Protocol (MCP)?
-
-Model Context Protocol (MCP) is an open-source protocol that enables seamless integration between Large Language Models (LLMs) and external tools, data sources, and services. More information can be found in the [Model Context Protocol (MCP)](../concepts/model-context-protocol.md) concept page.
 
 ## MCP Server Architecture in Etendo Copilot
 
@@ -34,45 +30,43 @@ Each Etendo Copilot agent automatically exposes an MCP server endpoint that prov
 
 The MCP server runs alongside the agent and communicates using HTTP transport with optional Server-Sent Events (SSE) for streaming responses.
 
-## Summary: Agent Types and Connection Modes
+## Agent Types and Connection Modes
 
-### Quick Reference Matrix
+Etendo Copilot supports two kinds of agents, each with two connection modes. The agent type defines the role, and the mode defines how you interact with it.
 
-| Agent Type | Simple Mode | Direct Mode |
-|------------|-------------|-------------|
-| **Multi-Model Agent** | `ask_agent` → Communicate with the agent | All agent tools + `get_agent_prompt` → Use tools directly + adopt agent personality |
-| **LangGraph Agent** | `ask_agent_supervisor` → Talk to supervisor | `ask_agent_<MemberName>` for each team member + `get_agent_prompt` → Direct team access |
+| Agent Type        | Simple Mode (Talk)                            | Direct Mode (Control)                                      |
+|-------------------|-----------------------------------------------|-----------------------------------------------------------|
+| **Multi-Model**   | Use `ask_agent` to chat naturally              | Access all tools directly + `get_agent_prompt` for setup   |
+| **LangGraph**     | Use `ask_agent_supervisor` to talk to supervisor | Use `ask_agent_<MemberName>` for team members + `get_agent_prompt` |
 
-### Key Differences by Agent Type
+**Multi-Model Agent**
 
-#### Multi-Model Agent
-- **Purpose**: Single intelligent agent that can use multiple AI models and tools
-- **Simple Mode**: Delivers `ask_agent` tool for natural conversation with automatic tool selection
-- **Direct Mode**: Delivers all agent tools directly + `get_agent_prompt` to understand the agent's personality and instructions
-- **Best for**: General-purpose tasks, knowledge-based queries, automated workflows
+- **What it is**: A single agent that combines multiple AI models and tools.  
+- **Simple Mode**: Best for natural conversations. The agent picks the right tools automatically.  
+- **Direct Mode**: Best for workflows or integrations. You run tools yourself and can read the agent’s instructions.  
 
-#### LangGraph Agent
-- **Purpose**: Supervisor agent that coordinates a team of specialized sub-agents
-- **Simple Mode**: Delivers `ask_agent_supervisor` tool to talk with the supervisor who routes tasks to team members
-- **Direct Mode**: Delivers individual `ask_agent_<MemberName>` tools for each team member + `get_agent_prompt` for supervisor insights
-- **Best for**: Complex multi-step tasks requiring different areas of expertise
+**LangGraph Agent**
 
-### Choosing the Right Combination
+- **What it is**: A supervisor that manages a team of specialized agents.  
+- **Simple Mode**: Talk to the supervisor, who delegates tasks to the right team members.  
+- **Direct Mode**: Talk directly to individual team members and see how the supervisor organizes them.  
 
-| Use Case | Recommended Setup |
-|----------|-------------------|
-| **User-facing chat interface** | Any Agent Type + Simple Mode |
-| **Automated business workflows** | Multi-Model Agent + Direct Mode |
-| **Complex analysis requiring multiple skills** | LangGraph Agent + Simple Mode |
-| **Development and debugging** | Any Agent Type + Direct Mode |
-| **API integrations** | Multi-Model Agent + Direct Mode |
-| **Multi-domain problem solving** | LangGraph Agent + Simple Mode |
+**Choosing the Right Setup**
+
+| Use Case                          | Recommended Setup             |
+|-----------------------------------|-------------------------------|
+| Conversational chat interface     | Any Agent + Simple Mode       |
+| Automated business workflows      | Multi-Model + Direct Mode     |
+| Complex, multi-skill analysis     | LangGraph + Simple Mode       |
+| Development and debugging         | Any Agent + Direct Mode       |
+| API integrations                  | Multi-Model + Direct Mode     |
+| Multi-domain problem solving      | LangGraph + Simple Mode       |
 
 ## Connecting to Etendo Copilot MCP Server
 
 ### Token-Based Authentication
 
-The MCP server uses token-based authentication via the `etendo-token` header, using the SWS (Secure Web Service) token of the user. This token can be obtained through the Etendo Classic `/sws/login` endpoint.
+The MCP server uses token-based authentication via the `etendo-token` header, using the SWS (Secure Web Service) token of the user. This token can be obtained through the Etendo `/sws/login` endpoint.
 
 Previously, the MCP configuration was obtained via a Gradle task, but the module now provides a UI action directly from the Agents screen, which is much easier to use. To generate the MCP JSON configuration for an agent:
 
@@ -114,7 +108,7 @@ This UI flow replaces the need to run the Gradle task manually in most cases and
     - **`simple`**: Delivers conversation tools (`ask_agent` or `ask_agent_supervisor`)
     - **`direct`**: Delivers direct tool access + `get_agent_prompt` for personality adoption
 
-## Connection Modes
+### Connection Modes
 
 The Etendo Copilot MCP server supports two distinct connection modes, each designed for different use cases:
 
@@ -157,7 +151,7 @@ Direct mode exposes all agent tools for direct execution from the MCP client.
 
 ### Mode Selection by Agent Type
 
-The available connection modes depend on the **Agent Type** configured in Etendo Classic:
+The available connection modes depend on the **Agent Type** configured in Etendo:
 
 #### Multi-Model Agent
 
@@ -227,6 +221,7 @@ The MCP server uses token-based authentication via the `etendo-token` header. Yo
 
 !!! warning "Security"
     Always use HTTPS in production environments and keep your SWS tokens secure. Never expose tokens in client-side code or public repositories.
+
 
 ## Configuring MCP Clients
 
@@ -429,7 +424,7 @@ When connecting to an Etendo Copilot MCP server, clients can:
 | **Direct** | `ask_agent` tools for each team member + `get_agent_prompt` + basic tools | Direct access to individual team member agents through separate `ask_agent_<MemberName>` tools, allowing direct communication with specific team members plus access to the supervisor's orchestration prompt. |
 
 !!! note "Agent Type Identification"
-    You can identify the agent type in the Agent window in Etendo Classic:
+    You can identify the agent type in the Agent window in Etendo:
     
     - **Multi-Model Agent**: Shows "Knowledge" and "Skills & Tools" tabs
     - **LangGraph**: Shows "Skills & Tools" and "Team Members" tabs
@@ -491,10 +486,10 @@ All tools respect the authentication provided via the `etendo-token` header:
 
 The MCP server dynamically loads tools based on:
 
-- **Agent Configuration**: Tools are loaded from the agent's configuration in Etendo Classic
+- **Agent Configuration**: Tools are loaded from the agent's configuration in Etendo
 - **User Permissions**: Only tools the user has access to are exposed
 - **Module Dependencies**: Tools are available based on installed Etendo modules
 - **Connection Mode**: Tool set varies between Simple and Direct modes
 
-This dynamic approach ensures that each user sees only the tools they're authorized to use, and the tool set reflects the current state of the agent configuration in Etendo Classic.
+This dynamic approach ensures that each user sees only the tools they're authorized to use, and the tool set reflects the current state of the agent configuration in Etendo.
 
