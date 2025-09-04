@@ -138,24 +138,28 @@ To remove a specific memory:
 
 ### Vector Database
 The tool uses Chroma as the vector database backend, configured with:
+
 - Persistent storage in user-specific directories
 - Embedding functions for semantic search
 - Automatic document vectorization
 
 ### User Isolation
 Memories are isolated by user through:
+
 - User-specific vector store collections (`{assistant_id}_memories`)
 - Metadata filtering based on `user_id` from thread context
 - Secure access control ensuring users can only access their own memories
 
 ### Context Variables
 The tool requires the following context variables:
+
 - `assistant_id`: Unique identifier for the assistant instance
 - `ad_user_id`: User identifier from Active Directory
 
 ## Error Handling
 
 The tool includes comprehensive error handling for:
+
 - Invalid operation modes
 - Missing required parameters
 - Context variable validation
@@ -163,6 +167,7 @@ The tool includes comprehensive error handling for:
 - User permission verification
 
 Common error responses:
+
 - `"Invalid mode 'xyz'. Use 'add', 'search', 'update', or 'delete'."`
 - `"The 'memory' parameter is required for 'add' mode."`
 - `"No memory found with memory_id xyz for user_id user123"`

@@ -553,7 +553,7 @@ nav:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
-        - Available Tools - Complete List: developer-guide/etendo-copilot/available-tools/tool-full-list.md
+        - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - API Call Tool: developer-guide/etendo-copilot/available-tools/api-call-tool.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
