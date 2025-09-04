@@ -6494,7 +6494,7 @@
   
   
   <span class="md-ellipsis">
-    How to define Display Logic Evaluated at Server Level
+    How to Define Display Logic Evaluated at Server Level
     
   </span>
   
@@ -8281,12 +8281,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../tool-full-list/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Available Tools - Complete List
+    Overview
     
   </span>
   
@@ -11514,31 +11514,41 @@
 </span></code></pre></div><p></p>
 <h2 id="technical-implementation">Technical Implementation</h2>
 <h3 id="vector-database">Vector Database</h3>
-<p>The tool uses Chroma as the vector database backend, configured with:
-- Persistent storage in user-specific directories
-- Embedding functions for semantic search
-- Automatic document vectorization</p>
+<p>The tool uses Chroma as the vector database backend, configured with:</p>
+<ul>
+<li>Persistent storage in user-specific directories</li>
+<li>Embedding functions for semantic search</li>
+<li>Automatic document vectorization</li>
+</ul>
 <h3 id="user-isolation">User Isolation</h3>
-<p>Memories are isolated by user through:
-- User-specific vector store collections (<code>{assistant_id}_memories</code>)
-- Metadata filtering based on <code>user_id</code> from thread context
-- Secure access control ensuring users can only access their own memories</p>
+<p>Memories are isolated by user through:</p>
+<ul>
+<li>User-specific vector store collections (<code>{assistant_id}_memories</code>)</li>
+<li>Metadata filtering based on <code>user_id</code> from thread context</li>
+<li>Secure access control ensuring users can only access their own memories</li>
+</ul>
 <h3 id="context-variables">Context Variables</h3>
-<p>The tool requires the following context variables:
-- <code>assistant_id</code>: Unique identifier for the assistant instance
-- <code>ad_user_id</code>: User identifier from Active Directory</p>
+<p>The tool requires the following context variables:</p>
+<ul>
+<li><code>assistant_id</code>: Unique identifier for the assistant instance</li>
+<li><code>ad_user_id</code>: User identifier from Active Directory</li>
+</ul>
 <h2 id="error-handling">Error Handling</h2>
-<p>The tool includes comprehensive error handling for:
-- Invalid operation modes
-- Missing required parameters
-- Context variable validation
-- Database operation failures
-- User permission verification</p>
-<p>Common error responses:
-- <code>"Invalid mode 'xyz'. Use 'add', 'search', 'update', or 'delete'."</code>
-- <code>"The 'memory' parameter is required for 'add' mode."</code>
-- <code>"No memory found with memory_id xyz for user_id user123"</code>
-- <code>"assistant_id or ad_user_id not found in Payload."</code></p>
+<p>The tool includes comprehensive error handling for:</p>
+<ul>
+<li>Invalid operation modes</li>
+<li>Missing required parameters</li>
+<li>Context variable validation</li>
+<li>Database operation failures</li>
+<li>User permission verification</li>
+</ul>
+<p>Common error responses:</p>
+<ul>
+<li><code>"Invalid mode 'xyz'. Use 'add', 'search', 'update', or 'delete'."</code></li>
+<li><code>"The 'memory' parameter is required for 'add' mode."</code></li>
+<li><code>"No memory found with memory_id xyz for user_id user123"</code></li>
+<li><code>"assistant_id or ad_user_id not found in Payload."</code></li>
+</ul>
 
 
 

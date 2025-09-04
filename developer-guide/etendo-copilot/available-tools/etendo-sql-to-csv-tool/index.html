@@ -6494,7 +6494,7 @@
   
   
   <span class="md-ellipsis">
-    How to define Display Logic Evaluated at Server Level
+    How to Define Display Logic Evaluated at Server Level
     
   </span>
   
@@ -8281,12 +8281,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../tool-full-list/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Available Tools - Complete List
+    Overview
     
   </span>
   
@@ -8577,57 +8577,6 @@
       Error Handling
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-with-etendo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration with Etendo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#query-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Optimization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#file-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Management
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Considerations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -11241,57 +11190,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#integration-with-etendo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration with Etendo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#query-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Optimization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#file-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Management
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Considerations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -11381,35 +11279,41 @@
 </li>
 <li>
 <p><strong>Query Validation</strong></p>
-<p>The tool validates the SQL query for security:
-- Only SELECT statements are allowed
-- Dangerous keywords (DROP, DELETE, UPDATE, etc.) are blocked
-- Must follow Etendo's requirement that all tables have aliases</p>
+<p>The tool validates the SQL query for security:</p>
+<ul>
+<li>Only SELECT statements are allowed</li>
+<li>Dangerous keywords (DROP, DELETE, UPDATE, etc.) are blocked</li>
+<li>Must follow Etendo's requirement that all tables have aliases</li>
+</ul>
 </li>
 <li>
 <p><strong>Database Execution</strong></p>
-<p>Connects to Etendo using the DBQueryExec webhook:
-- Automatically retrieves authentication token and host configuration
-- Executes the query with Etendo's built-in security filters
-- Returns structured JSON data with columns and rows</p>
+<p>Connects to Etendo using the DBQueryExec webhook:</p>
+<ul>
+<li>Automatically retrieves authentication token and host configuration</li>
+<li>Executes the query with Etendo's built-in security filters</li>
+<li>Returns structured JSON data with columns and rows</li>
+</ul>
 </li>
 <li>
 <p><strong>CSV Conversion</strong></p>
-<p>Converts the JSON response to CSV format:
-- Extracts column names and data rows from the webhook response
-- Handles optional header inclusion
-- Writes the CSV file with proper encoding (UTF-8)</p>
+<p>Converts the JSON response to CSV format:</p>
+<ul>
+<li>Extracts column names and data rows from the webhook response</li>
+<li>Handles optional header inclusion</li>
+<li>Writes the CSV file with proper encoding (UTF-8)</li>
+</ul>
 </li>
 <li>
 <p><strong>Result Reporting</strong>
-    Returns detailed information about the operation:
-    </p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>✅ SQL query executed successfully!
+    Returns detailed information about the operation:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>✅ SQL query executed successfully!
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>📊 Result: 150 rows exported
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>📁 CSV file saved at: /tmp/etendo_query_result_12345.csv
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>📏 File size: 0.25 MB
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>🔗 Webhook: DBQueryExec
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>🔍 Query: SELECT u.name, u.email FROM ad_user u WHERE...
-</span></code></pre></div><p></p>
+</span></code></pre></div>
 </li>
 </ul>
 <h2 id="security-features">Security Features</h2>
@@ -11467,12 +11371,14 @@
 <li><strong>output_file</strong>: <code>/tmp/active_users_with_roles.csv</code></li>
 <li><strong>include_headers</strong>: true</li>
 </ul>
-<p>The Etendo SQL to CSV Tool will:
-1. Validate the query meets security requirements
-2. Execute the query through the DBQueryExec webhook
-3. Convert the JSON results to CSV format
-4. Save the file with headers included
-5. Return a success message with operation details</p>
+<p>The Etendo SQL to CSV Tool will:</p>
+<ol>
+<li>Validate the query meets security requirements</li>
+<li>Execute the query through the DBQueryExec webhook</li>
+<li>Convert the JSON results to CSV format</li>
+<li>Save the file with headers included</li>
+<li>Return a success message with operation details</li>
+</ol>
 <h2 id="error-handling">Error Handling</h2>
 <p>The tool provides comprehensive error handling for common scenarios:</p>
 <ul>
@@ -11481,36 +11387,6 @@
 <li><strong>Permission Errors</strong>: Indicates when tables or data are not accessible to the user</li>
 <li><strong>File System Issues</strong>: Reports problems with CSV file creation or writing</li>
 <li><strong>Empty Results</strong>: Handles queries that return no data gracefully</li>
-</ul>
-<h2 id="integration-with-etendo">Integration with Etendo</h2>
-<p>This tool leverages Etendo's built-in security and data access features:</p>
-<ul>
-<li><strong>Multi-tenant Security</strong>: Automatically respects client and organization boundaries</li>
-<li><strong>Role-based Access</strong>: Only returns data accessible to the current user's role</li>
-<li><strong>Data Filters</strong>: Applies Etendo's standard security filters automatically</li>
-<li><strong>Audit Trail</strong>: Query execution is logged through Etendo's standard audit mechanisms</li>
-</ul>
-<h2 id="best-practices">Best Practices</h2>
-<h3 id="query-optimization">Query Optimization</h3>
-<ul>
-<li>Use appropriate WHERE clauses to limit result sets</li>
-<li>Include only necessary columns in SELECT statements</li>
-<li>Consider using LIMIT clauses for large datasets</li>
-<li>Test queries in Etendo's SQL console first for validation</li>
-</ul>
-<h3 id="file-management">File Management</h3>
-<ul>
-<li>Specify output file paths in appropriate directories</li>
-<li>Consider file naming conventions for organized data exports</li>
-<li>Monitor file sizes for large result sets</li>
-<li>Clean up temporary files after use</li>
-</ul>
-<h3 id="security-considerations">Security Considerations</h3>
-<ul>
-<li>Never hardcode sensitive data in queries</li>
-<li>Use parameterized approaches when possible</li>
-<li>Validate query results before sharing or processing</li>
-<li>Follow your organization's data export policies</li>
 </ul>
 
 
