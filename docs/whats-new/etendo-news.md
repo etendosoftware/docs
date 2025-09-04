@@ -12,6 +12,83 @@ tags:
 
 #
 
+## August 2025
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+- :material-chart-bar: **Balance Sheet and P&L Report Advanced: more powerful reporting**
+
+    ![alt text](../assets/whats-new/etendo-news/balance-sheet-advanced.png)
+
+    In version [3.3.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) gains new capabilities:
+
+    - Adds support for additional accounting dimensions.
+    - Enables side-by-side comparisons across up to four years.
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-new-box: **Try the Alpha of Etendo Main UI, the new Etendo interface**
+
+    In version [3.7.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Platform Extensions bundle, we introduced the Alpha release of the Etendo Main UI. Early builds include 0.2.0, 0.4.0, 0.4.1 and 0.5.0.
+
+    Discover a sleek, modern experience designed to boost productivity and simplify daily tasks:
+
+    - Fresh visual identity that modernizes the platform.
+    - Enhanced workflows to amplify everything you already do in Etendo.
+    - Contemporary, intuitive design for faster navigation and clarity.
+    - More functional and easier to use.
+
+    !!! example
+        [Try the Alpha](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+</div>
+
+<div class="grid cards" markdown>
+- :octicons-package-16: **Supercharge observability with OpenTelemetry in your Dockerized services 🚀**
+
+    In version [3.7.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, OpenTelemetry has been integrated to provide unified observability for Dockerized services. Collect metrics, traces, and logs in one place to detect latency spikes, bottlenecks, and communication errors before they affect users. Supports common exporters and backends to fit your monitoring stack.
+
+    More information: [How to Use OpenTelemetry](../developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry.md)
+
+- :octicons-package-16: **Webhooks make integrations easier than ever 🚀**
+    
+    From version [3.7.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, [Webhooks](../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md) can now use **POST**. This means Etendo can automatically send information to other apps or services in real time, making your integrations faster and smoother, without technical hassle.
+
+</div>
+   
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Etendo Copilot 3.5.0: Smarter, faster, and easier to use 🚀**
+
+    With version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Copilot takes a big step forward. Here’s what’s new:
+
+    -  **More powerful conversations** A new full-screen chat with conversation selector makes it easier to switch and keep track of different tasks.  
+    - **Smarter tools**: New tools like [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (read data from images of spreadsheets) and [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) help you work faster with complex data.  
+    - **Better integrations**: The new MCP Server support lets you connect and manage external tools and APIs in a easy way.  
+
+</div>
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-view-list: **All-in-one Warehouse Power: Picking, Packing & Mobile App now in Etendo 25 🚀**
+
+    ![alt text](../assets/whats-new/etendo-news/packing.png)
+
+    With version [3.2.2](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, you get the complete package: smarter picking, faster packing, and a mobile app to take control from anywhere. 
+    Streamline your warehouse operations and deliver with speed and accuracy — all included in Etendo 25.
+
+</div>
+
+
+
 ## July 2025
 
 ### Etendo
@@ -46,13 +123,13 @@ tags:
 
 - :octicons-package-16: **Unleash team productivity: Meet the new Task module**
     
-    In version [2.14.0](./release-notes/etendo-copilot/bundles/release-notes.md) and [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Platform Extensions bundle, the [Task](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md) module was added. Allowing you to organize, automate, and track workflows. Perfect for teams and agents needing structured task management.
+    In version [2.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) and [3.2.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the [Task](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md) module was added. Allowing you to organize, automate, and track workflows. Perfect for teams and agents needing structured task management.
 
 - :octicons-package-16: **Etendo SSO: Log in without passwords** 
 
     ![alt text](../assets/whats-new/etendo-news/sso-login.png)
     
-    In version [2.14.0](./release-notes/etendo-copilot/bundles/release-notes.md) and [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Platform Extensions bundle, the [Etendo SSO Login](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login) was added enabling **Single Sign-On** authentication, simplifying user login and enhancing security using external identity providers, such as Google, Microsoft, LinkedIn, GitHub and Facebook.
+    In version [2.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) and [3.2.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the [Etendo SSO Login](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login) was added enabling **Single Sign-On** authentication, simplifying user login and enhancing security using external identity providers, such as Google, Microsoft, LinkedIn, GitHub and Facebook.
 
 </div>
 
@@ -73,6 +150,8 @@ tags:
 <div class="grid cards" markdown>
 
 - :octicons-device-mobile-16: **Advanced Warehouse Management: Mobile-powered inventory**
+
+    ![alt text](../assets/whats-new/etendo-news/packing.png)
 
     In version [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of Warehouse Extensions bundle, unlock seamless warehouse operations with [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md) module, a feature-packed mobile sub-app that integrates deeply with Etendo Mobile to deliver full traceability and automated warehouse operations.
     

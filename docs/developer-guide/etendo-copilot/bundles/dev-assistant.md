@@ -533,7 +533,7 @@ You can confirm that the module has been created by navigating to the `Module` w
 
 
 !!!info
-    For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
+    For further customization and development, refer to the official [Etendo Developer Guide](../../etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md) for more detailed steps.
 
 
 #### Module Translation Creator

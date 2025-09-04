@@ -65,9 +65,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - Advanced Payables and Receivables - Spanish Translation
 - User Interface Application Translation Spanish Spain (es_ES)
 - Alerts: Accounting
-- SOAP with Attachments API for Java Implementation
 - Payment Method Type
-- Javax XML SOAP API
 - HTML Widget Translation Spanish Spain (es_ES)
 - OpenID Service Integration Translation Spanish Spain
 - Integration with Google APIs Translation Spanish Spain
