@@ -55,7 +55,7 @@ Jaeger is an open-source distributed tracing system originally developed by Uber
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 
-## Configure Jaeguer Service
+## Configure Jaeger Service
 
 1. **Enable Utils Services**: Enable the necessary util service modules.In the `gradle.properties` file, add the following variable:
 
