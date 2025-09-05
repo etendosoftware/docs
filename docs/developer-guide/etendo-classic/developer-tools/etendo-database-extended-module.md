@@ -23,11 +23,6 @@ The **Extended Database Utilities** module adds advanced PostgreSQL tools to Ete
 
 This guide covers requirements, configuration, and usage for partitioning and unpartitioning tables.
 
-### Key Features
-
-- **Partition** and **Unpartition** PostgreSQL tables  
-- Manage table structures and metadata  
-
 ### Why Partition?
 
 - **Faster queries** by scanning only relevant partitions.  
@@ -44,9 +39,9 @@ This guide covers requirements, configuration, and usage for partitioning and un
 
 The following requirements must be met before using the module:
 
-- **Etendo 25** or higher.
-- **[Python 3](https://docs.python.org/3.13/)** – latest release of version 3.
-- **[PostgreSQL](https://www.postgresql.org/docs/16/index.html)** – version 16 or higher.
+- **[Etendo 25](../../../whats-new/release-notes/etendo-classic/release-notes.md)** or higher.
+- **[Python 3](https://docs.python.org/3.13/){target="_blank"}** – latest release of version 3.
+- **[PostgreSQL](https://www.postgresql.org/docs/16/index.html){target="_blank"}** – version 16 or higher.
 - **Etendo DBSM (Database Source Manager)** – version **1.2.0-beta**, configured in the `artifacts.list.COMPILATION.gradle` file into the Etendo environment. 
 
 ## Installing the module

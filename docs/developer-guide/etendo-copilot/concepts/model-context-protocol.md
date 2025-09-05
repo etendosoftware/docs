@@ -15,15 +15,13 @@ tags:
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
     It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
 
-The **Model Context Protocol (MCP)** is an open protocol developed by Anthropic that standardizes how AI applications provide context to Large Language Models (LLMs). MCP acts as a "USB-C port for AI applications," enabling models to connect uniformly with external data sources, tools, and services.
+The **Model Context Protocol (MCP)** is an open protocol developed by Anthropic that standardizes how AI applications provide context to Large Language Models (LLMs). MCP acts as a USB-C port for AI applications, enabling models to connect uniformly with external data sources, tools, and services.
 
 This guide provides a comprehensive introduction to MCP concepts, architecture, and its implementation within the Etendo Copilot ecosystem, helping developers understand how to leverage this protocol for building scalable and secure AI integrations.
 
 ## What is MCP?
 
-MCP is a protocol that solves the fragmentation problem in the AI ecosystem, where each application required custom integrations to connect with different data sources and tools. With MCP, both developers and organizations can create reusable connectors that work across multiple applications and platforms.
-
-### Key Features
+MCP is a protocol that solves the fragmentation problem in the AI ecosystem, where each application required custom integrations to connect with different data sources and tools. With MCP, both developers and organizations can create reusable connectors that work across multiple applications and platforms. Key features include:
 
 - **Open Protocol**: Available to the entire developer community
 - **Standardization**: Uniform interface for context and tool integration
@@ -37,7 +35,7 @@ MCP uses a client-server architecture that facilitates communication between AI 
 
 ### Core Components
 
-#### 1. Hosts
+**Hosts**
 Hosts are the primary applications through which users interact with the protocol:
 - **Function**: Execute AI models and manage user interface.
 
@@ -47,7 +45,7 @@ Hosts are the primary applications through which users interact with the protoco
     - Manage conversation flow.
     - Handle user consent for data sharing.
 
-#### 2. Clients
+**Clients**
 Clients act as intermediaries between hosts and MCP servers:
 
 - **Function**: Facilitate communication between hosts and servers.
@@ -58,7 +56,7 @@ Clients act as intermediaries between hosts and MCP servers:
     - Manage tool execution requests.
     - Process and display responses to users.
 
-#### 3. Servers
+**Servers**
 MCP servers provide access to specific tools, resources, and data:
 
 - **Function**: Handle client requests and provide appropriate responses.
@@ -88,42 +86,39 @@ MCP servers provide access to specific tools, resources, and data:
 
 ### Server Features
 
-#### Resources
-Resources represent contextual data and information sources available to models:
+**Resources** represent contextual data and information sources available to models:
 
-  - Local files (`file://log.txt`)
-  - Database schemas (`database://schema`)
-  - External APIs
-  - Knowledge bases
+- Local files (`file://log.txt`)
+- Database schemas (`database://schema`)
+- External APIs
+- Knowledge bases
 
-#### Tools
-Tools enable models to perform specific actions:
+**Tools** enable models to perform specific actions:
 
-  - Web searches
-  - Mathematical calculations
-  - Database access
-  - File system operations
+- Web searches
+- Mathematical calculations
+- Database access
+- File system operations
 
-#### Prompts
-Prompts are predefined templates that streamline workflows:
+**Prompts** are predefined templates that streamline workflows:
+
 ```markdown
 Generate a product slogan based on the following {{product}} with the following {{keywords}}
 ```
 
 ### Client Features
 
-#### Sampling
-Enables servers to initiate autonomous behaviors and recursive LLM interactions, allowing:
+**Sampling** enables servers to initiate autonomous behaviors and recursive LLM interactions, allowing:
 
-  - Server-initiated agent behaviors
-  - Recursive LLM interactions
-  - Requests for additional model completions
+- Server-initiated agent behaviors
+- Recursive LLM interactions
+- Requests for additional model completions
 
 ## Supported MCP Input Types for Etendo Copilot
 
-To accommodate configurations coming from different editors/clients (which often use different structures and field names), **Etendo Copilot** includes a configuration normalizer called **`MCPConfigNormalizer`**. This class accepts *any* MCP server JSON, converts it into a **unified schema**, and applies sensible defaults and lightweight validations so integrations remain consistent and reliable.
+To accommodate configurations coming from different editors/clients (which often use different structures and field names), **Etendo Copilot** includes a configuration normalizer called **`MCPConfigNormalizer`**. This class accepts *any* MCP server `JSON`, converts it into a **unified schema**, and applies sensible defaults and lightweight validations so integrations remain consistent and reliable.
 
-### Accepted input formats
+**Accepted Input Formats**
 
 Multiple shapes and nestings are recognized:
 
@@ -133,7 +128,7 @@ Multiple shapes and nestings are recognized:
 - `context_servers` (the **Zed** format)
 - Wrappers such as `{ mcp: { ... } }`, `{ server: { ... } }`
 
-### Accepted property aliases
+**Accepted Property Aliases**
 
 Common aliases are recognized and mapped to the standard schema:
 
@@ -143,7 +138,7 @@ Common aliases are recognized and mapped to the standard schema:
 - **Headers**: `headers` | `httpHeaders`
 - **Other**: `cwd` | `workingDir` | `workdir`, `env` | `environment` | `envVars`
 
-### Transport detection and normalization
+**Transport Detection and Normalization**
 
 All sources are normalized to the set supported by the Python client:
 
@@ -162,7 +157,7 @@ If `transport` is omitted, it is **inferred** from the available fields:
 - `host`/`port` ⇒ `streamable_http`
 - Last resort ⇒ `stdio`
 
-### Unified output schema
+**Unified Output Schema**
 
 The result always includes a **`name`** (from the DB record). If the source used a subkey (e.g., `context7`), the name is **namespaced** as `DBName::context7`.
 
@@ -189,7 +184,7 @@ The result always includes a **`name`** (from the DB record). If the source used
   }
   ```
 
-### Normalization example
+**Normalization Example**
 
 Input (VS Code / remote):
 ```json
@@ -214,7 +209,7 @@ Normalized output:
 }
 ```
 
-### Guarantees and behavior
+**Guarantees and Behavior**
 
 - `getMCPConfigurations()` returns **uniform and reliable** configurations, regardless of the original format.
 - Names are **preserved**, sensible **defaults** are applied, and invalid entries **do not break** the rest.
@@ -224,29 +219,29 @@ Normalized output:
 
 MCP includes multiple security mechanisms to ensure safe interactions:
 
-### Tool Permission Control
+**Tool Permission Control**
 
-  - Clients can specify which tools a model is allowed to use during a session
-  - Dynamically configurable permissions based on organizational policies
-  - Reduced risk of unintended or unsafe operations
+- Clients can specify which tools a model is allowed to use during a session.
+- Dynamically configurable permissions based on organizational policies.
+- Reduced risk of unintended or unsafe operations.
 
-### Authentication
+**Authentication**
 
-  - Servers can require authentication before granting access
-  - Support for API keys, OAuth tokens, and other authentication schemes
-  - Ensuring only trusted clients and users can invoke server-side capabilities
+- Servers can require authentication before granting access.
+- Support for API keys, OAuth tokens, and other authentication schemes.
+- Ensuring only trusted clients and users can invoke server-side capabilities.
 
-### Parameter Validation
+**Parameter Validation**
 
-  - Enforced validation for all tool invocations
-  - Each tool defines expected types, formats, and constraints for its parameters
-  - Prevention of malformed or malicious input
+- Enforced validation for all tool invocations.
+- Each tool defines expected types, formats, and constraints for its parameters.
+- Prevention of malformed or malicious input.
 
-### Rate Limiting
+**Rate Limiting**
 
-  - Implementation of rate limits for tool calls and resource access
-  - Limits applicable per user, per session, or globally
-  - Protection against denial-of-service attacks
+- Implementation of rate limits for tool calls and resource access.
+- Limits applicable per user, per session, or globally.
+- Protection against denial-of-service attacks.
 
 ## Use Cases
 
@@ -259,44 +254,14 @@ MCP in Etendo Copilot allows agents to access in a standardized way:
 - **Files**: Documents, logs, and system configurations
 - **Custom Tools**: Etendo-specific functionalities
 
-### Benefits for Developers
-
-1. **Reusability**: Create connectors once and use them across multiple applications
-2. **Interoperability**: Compatibility between different AI tools and platforms
-3. **Simplified Maintenance**: Centralized updates instead of multiple integrations
-4. **Scalability**: Easy addition of new capabilities without modifying existing applications
-
-## Implementation
-
-### Supported Languages
-
-MCP has official SDKs for multiple programming languages:
-
-  - **TypeScript/JavaScript**
-  - **Python**
-  - **C#/.NET**
-  - **Java**
-  - **Kotlin**
-  - **Swift**
-  - **Rust**
-  - **Go**
-
-### Transport Types
-
-MCP supports various communication methods:
-
-  - **STDIO**: For command-line tools and local integrations
-  - **Server-Sent Events (SSE)**: For web applications with server-to-client streaming
-  - **WebSockets**: For bidirectional real-time communication
-
-## Conclusion
-
-The Model Context Protocol represents a significant advancement in AI integration standardization. By providing a common framework for language models to access external data and tools, MCP facilitates the development of more robust, scalable, and maintainable AI applications.
-
 In the context of Etendo Copilot, MCP enables smoother integration between AI agents and enterprise systems, providing standardized access to Etendo data and functionalities while maintaining the security and control necessary for enterprise environments.
 
-## Additional Resources
+!!!info
+    For more information about the MCP, visit:
 
-  - [Official MCP Documentation](https://modelcontextprotocol.io/){target="_blank"}
-  - [MCP Specification Repository](https://github.com/modelcontextprotocol/specification){target="_blank"}
-  - [MCP Server Guide](../concepts/model-context-protocol.md){target="_blank"}
+    - [Official MCP Documentation](https://modelcontextprotocol.io/){target="_blank"}
+    - [MCP Specification Repository](https://github.com/modelcontextprotocol/specification){target="_blank"}
+    - [MCP Server Guide](../concepts/model-context-protocol.md){target="_blank"}
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
