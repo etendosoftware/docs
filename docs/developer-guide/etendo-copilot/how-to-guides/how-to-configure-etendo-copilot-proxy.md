@@ -51,11 +51,12 @@ A convenient option is LiteLLM Proxy, which simplifies handling different LLM pr
 
     This command starts a container that exposes the proxy on port `4000` of the host server.
 
-> **Note:** The example above shows a simple passthrough configuration. For advanced usage (caching, access control, rate limiting, etc.) consult the LiteLLM Proxy documentation: https://docs.litellm.ai/docs/simple_proxy
+!!!note
+    The example above shows a simple passthrough configuration. For advanced usage (caching, access control, rate limiting, etc.) consult the LiteLLM Proxy documentation: [LiteLLM Proxy documentation](https://docs.litellm.ai/docs/simple_proxy){target="_blank"}
 
 ---
 
-## 2. Configure Etendo Copilot 🤝
+## 2. Configure Etendo Copilot
 
 After the proxy is running, configure Etendo Copilot to send its LLM requests through the proxy URL.
 
@@ -70,7 +71,7 @@ After the proxy is running, configure Etendo Copilot to send its LLM requests th
 ---
 
 
-## 3. Apply the changes and restart the service 🚀
+## 3. Apply the changes and restart the service
 
 To make the configuration effective you must rebuild, deploy the configuration to Etendo Classic and restart the relevant services. Perform the steps in the order below:
 
@@ -92,7 +93,11 @@ To make the configuration effective you must rebuild, deploy the configuration t
 
 3.  **Move the configuration**: Copy the `COPILOT_PROXY_URL` property from `gradle.properties` into the `config` folder so the setting persists in the deployed configuration.
 
-4.  **Restart Tomcat**: Restart your Tomcat application server so  Etendo Classic pick up the new configuration. The exact restart method depends on your OS and Tomcat installation.
+4.  **Restart Tomcat**: Restart your Tomcat application server so Etendo Classic picks up the new configuration. The exact restart method depends on your OS and Tomcat installation.
 
-That’s it! 🎉 After completing these steps Etendo Copilot will send LLM requests through the configured proxy (useful for network isolation, centralized routing/load balancing, policy enforcement, or auditing).
+After completing these steps, Etendo Copilot will send LLM requests through the configured proxy. This is useful for network isolation, centralized routing or load balancing, policy enforcement, and auditing.
+
+---
+
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}. 
 
