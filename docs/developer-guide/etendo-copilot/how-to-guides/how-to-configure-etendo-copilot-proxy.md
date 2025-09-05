@@ -91,9 +91,7 @@ To make the configuration effective you must rebuild, deploy the configuration t
 
     These tasks prepare and deploy the updated configuration and resources into the Etendo Classic runtime so the platform uses the new `COPILOT_PROXY_URL` at the application level.
 
-3.  **Move the configuration**: Copy the `COPILOT_PROXY_URL` property from `gradle.properties` into the `config` folder so the setting persists in the deployed configuration.
-
-4.  **Restart Tomcat**: Restart your Tomcat application server so Etendo Classic picks up the new configuration. The exact restart method depends on your OS and Tomcat installation.
+3.  **Restart Tomcat**: Restart your Tomcat application server so Etendo Classic picks up the new configuration. The exact restart method depends on your OS and Tomcat installation.
 
 After completing these steps, Etendo Copilot will send LLM requests through the configured proxy. This is useful for network isolation, centralized routing or load balancing, policy enforcement, and auditing.
 
