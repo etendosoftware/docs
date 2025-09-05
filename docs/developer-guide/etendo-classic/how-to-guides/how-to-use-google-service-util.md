@@ -5,16 +5,15 @@ tags:
   - Middleware
 ---
 
-# How to Use GoogleServiceUtil
+# How to Use Google Service Util
 
-> :octicons-package-16: **Package**: `com.etendoerp.etendorx.utils`  
-> :octicons-search-24: **Class**: `GoogleServiceUtil` (all-static utility)
+:octicons-package-16: **Package**: `com.etendoerp.etendorx.utils`
 
 ## Overview
 
 `GoogleServiceUtil` is a **stateless** Java helper that centralizes authenticated access to **Google Sheets** and **Google Drive** using an OAuth2 **Bearer** token stored in `ETRXTokenInfo` and refreshed through **Etendo Middleware**. It sets sensible **timeouts** and **exponential backoff**, validates/refreshes tokens, and provides small convenience methods.
 
-### Key capabilities
+### Key Features
 
 - Build authenticated **Sheets** and **Drive** clients (20s connect / 60s read, **backoff** on 429/5xx).
 - Read sheet/tab names and A1 ranges in Sheets.
@@ -26,8 +25,6 @@ tags:
 
 !!!note  
     The class is **static and concurrency-safe**. It injects `Authorization: Bearer …`, applies timeouts, and enables exponential backoff for transient HTTP errors.
-
----
 
 ## Quickstart
 
@@ -45,7 +42,7 @@ tags:
     - Optional (metadata-only listing): `https://www.googleapis.com/auth/drive.metadata.readonly`
 - Property **`sso.middleware.url`** configured in **`gradle.properties`**.
 
-### Minimal Example: Read a Range
+### Read a Range
 
 ```java
 ETRXTokenInfo token = GoogleServiceUtil.getMiddlewareToken(provider, "drive", user, org);
@@ -79,8 +76,6 @@ JSONObject result =
 // => updatedRange, updatedRows, updatedColumns, updatedCells
 ```
 
----
-
 ## Configuration
 
 ```properties title="gradle.properties"
@@ -94,7 +89,6 @@ sso.middleware.redirectUri=http://your-domain/oauth/secureApp/LoginHandler.html
 `ETRXTokenInfo getMiddlewareToken(ETRXoAuthProvider provider, String scope, User user, Organization org)`  
 Looks up a token by `(provider / scope / user / org)` (the `scope` matches the **middleware provider** case-insensitively), gets `accountId` from `SystemInfo`, and returns a **valid** token (refreshing if required).
 
----
 
 ## Usage
 
@@ -206,7 +200,6 @@ JSONObject created = GoogleServiceUtil.createDriveFile(
 GoogleServiceUtil.validateAccessToken(accessTokenString); // throws ETRX_ExpiredToken when status != 200
 ```
 
----
 
 ## API Reference (public surface)
 
@@ -265,7 +258,6 @@ GoogleServiceUtil.validateAccessToken(accessTokenString); // throws ETRX_Expired
     - `getTabName` composes localized messages for out-of-range/empty-sheet, and errors are ultimately thrown as `OBException`.
     - Other methods throw localized `OBException` or `IllegalArgumentException` as indicated.
 
----
 
 ## Troubleshooting
 
