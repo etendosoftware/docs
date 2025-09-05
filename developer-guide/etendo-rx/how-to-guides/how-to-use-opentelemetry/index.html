@@ -8017,9 +8017,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Key Concepts
@@ -8027,31 +8028,27 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#why-use-opentelemetry" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#sending-traces-to-opentelemetry-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Use OpenTelemetry
+      Sending Traces to OpenTelemetry Service
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-traces-to-a-back-end" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sending Traces to a Back End
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#jaeger-distributed-tracing-back-end" class="md-nav__link">
     <span class="md-ellipsis">
       Jaeger: Distributed Tracing Back End
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8065,26 +8062,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-configure-jaeguer-service" class="md-nav__link">
+  <a href="#configure-jaeger-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Configure Jaeguer Service
+      Configure Jaeger Service
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Step 1: Configure Jaeguer Service">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -11108,9 +11090,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Key Concepts
@@ -11118,31 +11101,27 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#why-use-opentelemetry" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#sending-traces-to-opentelemetry-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Use OpenTelemetry
+      Sending Traces to OpenTelemetry Service
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-traces-to-a-back-end" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sending Traces to a Back End
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#jaeger-distributed-tracing-back-end" class="md-nav__link">
     <span class="md-ellipsis">
       Jaeger: Distributed Tracing Back End
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -11156,26 +11135,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-configure-jaeguer-service" class="md-nav__link">
+  <a href="#configure-jaeger-service" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Configure Jaeguer Service
+      Configure Jaeger Service
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Step 1: Configure Jaeguer Service">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -11248,39 +11212,37 @@
 </div>
 <h2 id="overview">Overview</h2>
 <p>OpenTelemetry is an open-source observability framework that defines a set of vendor-neutral APIs, SDKs, and instrumentation libraries for generating, collecting, and exporting telemetry data—namely <strong>traces</strong>, <strong>metrics</strong>, and <strong>logs</strong>. It provides a consistent programming model across applications and services, enabling you to capture detailed runtime behavior without coupling to any specific back end.</p>
-<h2 id="key-concepts">Key Concepts</h2>
+<p>OpenTelemetry and Jaeger together form a powerful observability stack for Etendo Rx microservices. By instrumenting your reactive pipelines with OpenTelemetry, you capture detailed spans and traces across asynchronous boundaries. Exporting this telemetry to Jaeger’s collector and UI gives you real-time visibility into request flows, enabling rapid identification of errors, latency hotspots, and service dependencies. As a result, developers can accelerate feature delivery, improve system reliability, and proactively troubleshoot performance issues in complex distributed environments.</p>
+<h3 id="key-concepts">Key Concepts</h3>
 <ul>
 <li><strong>Span</strong>: A single unit of work or operation, such as a database query or an HTTP request.</li>
 <li><strong>Trace</strong>: A tree of spans representing an end-to-end request flow through multiple services.</li>
 <li><strong>Context Propagation</strong>: The mechanism by which trace context (trace ID, span ID, baggage) is passed along asynchronous or remote calls.</li>
 </ul>
-<h2 id="why-use-opentelemetry">Why Use OpenTelemetry</h2>
-<ul>
-<li><strong>Standardization</strong>: Write instrumentation once; switch or combine back-ends at will.</li>
-<li><strong>End-to-End Visibility</strong>: Correlate distributed operations across microservices, threads, and async boundaries.</li>
-<li><strong>Performance Analysis</strong>: Identify latency hotspots, error rates, and service dependencies.</li>
-<li><strong>Extensibility</strong>: Plug in custom exporters, processors, and samplers to fit your needs.</li>
-</ul>
-<h2 id="sending-traces-to-a-back-end">Sending Traces to a Back End</h2>
+<h3 id="sending-traces-to-opentelemetry-service">Sending Traces to OpenTelemetry Service</h3>
 <ol>
-<li><strong>Instrument Your Code</strong></li>
-<li>Add the OpenTelemetry Java SDK (or auto-injection agent) to your Rx-based services.</li>
 <li>
-<p>Create spans around critical operations (e.g., upstream requests, reactive pipelines like <code>Flux</code>/<code>Mono</code>).</p>
+<p><strong>Instrument Your Code</strong></p>
+<ul>
+<li>Add the OpenTelemetry Java SDK (or auto-injection agent) to your Rx-based services.</li>
+<li>Create spans around critical operations (e.g., upstream requests, reactive pipelines like <code>Flux</code>/<code>Mono</code>).</li>
+</ul>
 </li>
 <li>
 <p><strong>Configure an Exporter</strong></p>
-</li>
-<li>Use the <strong>Jaeger exporter</strong> provided by OpenTelemetry to batch and send spans over UDP or HTTP.</li>
-<li>
-<p>Point the exporter at your Jaeger collector’s address and port.</p>
+<ul>
+<li>Use the <strong>Jaeger exporter</strong> provided by OpenTelemetry to batch and send spans over <code>UDP</code> or <code>HTTP</code>.</li>
+<li>Point the exporter at your Jaeger collector’s address and port.</li>
+</ul>
 </li>
 <li>
 <p><strong>Propagate Context</strong></p>
-</li>
+<ul>
 <li>Ensure that each downstream call carries the current trace context so that spans nest correctly.</li>
+</ul>
+</li>
 </ol>
-<h2 id="jaeger-distributed-tracing-back-end">Jaeger: Distributed Tracing Back End</h2>
+<h3 id="jaeger-distributed-tracing-back-end">Jaeger: Distributed Tracing Back End</h3>
 <p>Jaeger is an open-source distributed tracing system originally developed by Uber. It provides:</p>
 <ul>
 <li><strong>Collector</strong>: Receives spans from instrumented applications.</li>
@@ -11297,21 +11259,21 @@
 </ul>
 </li>
 </ol>
-<h2 id="step-1-configure-jaeguer-service">Step 1: Configure Jaeguer Service</h2>
+<h2 id="configure-jaeger-service">Configure Jaeger Service</h2>
 <ol>
-<li><strong>Enable Utils Services</strong>: Enable the necessary util service modules.In the <code>gradle.properties</code> file, add the following variable:</li>
-</ol>
+<li>
+<p><strong>Enable Utils Services</strong>: Enable the necessary util service modules.In the <code>gradle.properties</code> file, add the following variable:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx_utils</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
 <p>Once the Rx utils service is enabled, execute the following command in your terminal:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
-<p>This will launch the Docker container running Jaeger. To access the Jaeger UI, navigate to <code>http://localhost:16686</code></p>
+<p>This will launch the Docker container running Jaeger. To access the <strong>Jaeger UI</strong>, navigate to <a href="http://localhost:16686">http://localhost:16686</a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-rx.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-rx.png"></a></p>
 <p>Initially, there will be no services exporting data to Jaeger. In the next step, we will cover how to enable trace export to Jaeger.</p>
-<ol>
-<li><strong>Dynamic Das Services</strong>: Services based on the Dynamic Das Docker image; currently, the only service using this image is <code>das</code>. To enable and configure trace export to Jaeger, edit the <code>gradle.properties</code> file adding the following variable:</li>
-</ol>
+</li>
+<li>
+<p><strong>Dynamic Das Services</strong>: Services based on the Dynamic Das Docker image; currently, the only service using this image is <code>das</code>. To enable and configure trace export to Jaeger, edit the <code>gradle.properties</code> file adding the following variable:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">otel</span><span class="o">.</span><span class="na">das</span><span class="o">.</span><span class="na">enable</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
 <p>Optionally, you can add additional properties to the <code>gradle.properties</code> file to further configure the OpenTelemetry agent in the DAS service.</p>
@@ -11388,18 +11350,16 @@
 <p>Once OpenTelemetry is enabled in the Das service, execute the following command in your terminal:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
-<ul>
-<li>This configuration enables trace export from the Das service to the Jaeger back end. Now, in the Jaeger UI, this service will be selectable.</li>
-</ul>
+<p>This configuration enables trace export from the Das service to the Jaeger back end. Now, in the Jaeger UI, this service will be selectable.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-das.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-das.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This functionality is only available starting from the <code>etendo/dynamic-das:1.1.0</code> image. For more information, see <a href="../../getting-started/#dynamic-das-v110">Dynamic DAS v1.1.0</a>.</p>
 </div>
-<ol>
-<li><strong>Dynamic Gradle Services</strong>:Services based on the Dynamic Gradle Docker image currently are <code>config</code>, <code>edge</code>, <code>auth</code>, <code>asyncprocess</code>, <code>obconnsrv</code> and <code>worker</code>.
-To enable and configure trace export to Jaeger, add whichever variables you consider necessary to the <code>gradle.properties</code> file:</li>
-</ol>
+</li>
+<li>
+<p><strong>Dynamic Gradle Services</strong>: Services based on the Dynamic Gradle Docker image currently are <code>config</code>,    <code>edge</code>, <code>auth</code>, <code>asyncprocess</code>, <code>obconnsrv</code> and <code>worker</code>.
+    To enable and configure trace export to Jaeger, add whichever variables you consider necessary to the <code>gradle.properties</code> file:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">otel</span><span class="o">.</span><span class="na">config</span><span class="o">.</span><span class="na">enable</span><span class="o">=</span><span class="kc">true</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">otel</span><span class="o">.</span><span class="na">edge</span><span class="o">.</span><span class="na">enable</span><span class="o">=</span><span class="kc">true</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">otel</span><span class="o">.</span><span class="na">auth</span><span class="o">.</span><span class="na">enable</span><span class="o">=</span><span class="kc">true</span>
@@ -11761,17 +11721,15 @@ To enable and configure trace export to Jaeger, add whichever variables you cons
 <p>Once OpenTelemetry is enabled on any of these services, execute the following command in your terminal:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
-<ul>
-<li>This configuration enables trace export from these services to the Jaeger back end. Now, in the Jaeger UI, these services will be selectable.</li>
-</ul>
+<p>This configuration enables trace export from these services to the Jaeger back end. Now, in the Jaeger UI, these services will be selectable.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-edge.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-edge.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This functionality is only available starting from the <code>etendo/dynamic-gradle:1.1.0</code> image. For more information, see <a href="../../getting-started/#dynamic-gradle-v110">Dynamic Gradle v1.1.0</a>.</p>
 </div>
-<ol>
-<li><strong>Tomcat</strong>:The Tomcat service can be configured to send traces to Jaeger. In the <code>gradle.properties</code> file, add the following variable:</li>
-</ol>
+</li>
+<li>
+<p><strong>Tomcat</strong>: The Tomcat service can be configured to send traces to Jaeger. In the <code>gradle.properties</code> file, add the following variable:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">otel</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">enable</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
 <p>Optionally, you can add additional properties to the <code>gradle.properties</code> file to further configure the OpenTelemetry agent in the Tomcat service.</p>
@@ -11848,12 +11806,12 @@ To enable and configure trace export to Jaeger, add whichever variables you cons
 <p>Once OpenTelemetry is enabled in the Tomcat service, execute the following command in your terminal:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
-<ul>
-<li>This configuration enables trace export from the Tomcat service to the Jaeger back end. Now, in the Jaeger UI, this service will be selectable.</li>
-</ul>
+<p>This configuration enables trace export from the Tomcat service to the Jaeger back end. Now, in the Jaeger UI, this service will be selectable.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-tomcat.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/jaeger-tomcat.png"></a></p>
-<h3 id="conclusion">Conclusion</h3>
-<p>OpenTelemetry and Jaeger together form a powerful observability stack for Etendo Rx microservices. By instrumenting your reactive pipelines with OpenTelemetry, you capture detailed spans and traces across asynchronous boundaries. Exporting this telemetry to Jaeger’s collector and UI gives you real-time visibility into request flows, enabling rapid identification of errors, latency hotspots, and service dependencies. As a result, developers can accelerate feature delivery, improve system reliability, and proactively troubleshoot performance issues in complex distributed environments.</p>
+</li>
+</ol>
+<hr>
+<p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L</a>.</p>
 
 
 
