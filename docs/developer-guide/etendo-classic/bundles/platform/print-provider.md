@@ -26,45 +26,45 @@ The **main components of the Print Provider module** are:
 
 - **PrintProviderStrategy** (Service Provider Interface): Contract to be implemented by each provider. It exposes three operations
 
-    \- fetchPrinters (Provider) → list of printers (PrinterDTO).
+    - `fetchPrinters` (Provider): list of printers (PrinterDTO).
 
-    \- generateLabel (Provider, Table, recordId, TemplateLine, params) → File (PDF).
+    - `generateLabel` (Provider, Table, recordId, TemplateLine, params): File (PDF).
 
-    \- sendToPrinter (Provider, Printer, copies, labelFile) → String (jobId).
+    - `sendToPrinter` (Provider, Printer, copies, labelFile): String (jobId).
 
-- **Resolve ProviderStrategyResolver**:  Given a Provider (registered in the Print Providers window), find its ProvidersImplementation (Provider Implementation window), load the class (java Implementation), and return an instance of the strategy.
+- **Resolve ProviderStrategyResolver**:  Given a Provider (registered in the [Print Providers](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md#print-providers) window), find its ProvidersImplementation ([Provider Implementation](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md#provider-implementation) window), load the class (java Implementation), and return an instance of the strategy.
 
-- **PrinterUtils utilities**: Cross-functional helpers 
+    **PrinterUtils utilities**: Cross-functional helpers
 
-    \- Carga/validación de entidades (requireProvider, requirePrinter, requireTableByName, resolveTemplateLineFor).
+    - Entity loading/validation (requireProvider, requirePrinter, requireTableByName, resolveTemplateLineFor).
 
-    \- Parámetros de proceso/JSON (requireParam, requireJSONArray, requirePositiveInt).
+    - Process/JSON parameters (requireParam, requireJSONArray, requirePositiveInt).
 
-    \- Parámetros de proveedor (getRequiredParam, providerParamContentCheck).
+    - Provider parameters (getRequiredParam, providerParamContentCheck).
 
-    \- Plantillas Jasper (resolveTemplateFile, loadOrCompileJasperReport).
+    - Jasper templates (resolveTemplateFile, loadOrCompileJasperReport).
 
-    \- Helpers de resultados de proceso (fail, warning).
+    - Process result helpers (fail, warning).
 
 - **Actions**, ready to use
 
-    \- UpdatePrinters → sincroniza catálogo de impresoras del proveedor (alta/actualiza/inhabilita).
+    - UpdatePrinters: synchronizes the supplier's printer catalog (add/update/disable).
 
-    \- SendGeneratedLabelToPrinter → genera la etiqueta (Jasper) y la envía a la impresora elegida.
+    - SendGeneratedLabelToPrinter: generates the label (Jasper) and sends it to the selected printer.
 
-- **Modelo de datos clave**
+- **Key data model**
 
-    \- Provider — Configuración del proveedor de impresión (enlaza implementación, parámetros e impresoras).
+    - Provider: Print provider configuration (links implementation, parameters, and printers).
 
-    \- ProvidersImplementation — Define la clase Java (FQN) de la estrategia/SPI a usar por el proveedor.
+    - ProvidersImplementation: Defines the Java class (FQN) of the strategy/SPI to be used by the provider.
 
-    \- ProviderParam — Parámetros clave/valor del proveedor (p. ej., apikey, printersurl, printjoburl).
+    - ProviderParam: Provider key/value parameters (e.g., apikey, printersurl, printjoburl).
 
-    \- Printer — Impresora registrada localmente para un proveedor (ID externo, nombre, “default”, activo).
+    - Printer: Locally registered printer for a provider (external ID, name, “default,” active).
 
-    \- Template — Cabecera de plantilla asociada a una tabla; agrupa sus líneas.
+    - Template: Template header associated with a table; groups its lines.
 
-    \- TemplateLine — Variante de plantilla (ruta .jrxml/.jasper, “default”, orden/lineNo).
+    - TemplateLine: Template variant (.jrxml/.jasper path, “default”, order/lineNo).
 
 ## How to Create a New Supplier
 
@@ -143,19 +143,19 @@ The **main components of the Print Provider module** are:
 
 2. **Register the implementation**
 
-    - **AD → Provider Implementation**
+    - **AD: Provider Implementation**
 
-        \- Java Implementation: com.mi.modulo.print.MyProviderStrategy
+        - Java Implementation: com.mi.modulo.print.MyProviderStrategy
 
-    - **AD → Print Provider**
+    - **AD: Print Provider**
 
-        \- Reference to the previous implementation.
+        - Reference to the previous implementation.
 
-    - **AD → Provider Param**
+    - **AD: Provider Param**
 
-        \- Define the keys (reuse if applicable): printersurl, printjoburl, apikey, etc.
+        - Define the keys (reuse if applicable): printersurl, printjoburl, apikey, etc.
 
-        \- Save values (e.g., your API URLs).
+        - Save values (e.g., your API URLs).
 
 ## How to Register Labels (Jasper)
 
@@ -163,19 +163,19 @@ The **main components of the Print Provider module** are:
 
 2. Indicate the location of your template in the lines tab. `TemplateLine.templateLocation` accepts:
 
-    \- @basedesign@/...
+    - @basedesign@/...
 
-    \- @<módulo>@/...
+    - @<módulo>@/...
 
-    \- Rutas relativas a basedesign
+    - Paths related to basedesign
 
 **Technical Details**
 
 - The priority applies to the “Default” check; otherwise, you will get the one with the lowest sequence number.
 
-- PrinterUtils.resolveTemplateFile resolves locations in src-loc/design and web.
+- `PrinterUtils.resolveTemplateFile` resolves locations in `src-loc/design` and web.
 
-- PrinterUtils.loadOrCompileJasperReport supports .jrxml (compile) and .jasper (load).
+- `PrinterUtils.loadOrCompileJasperReport` supports `.jrxml` (compile) and `.jasper` (load).
 
 !!! note "Recommended parameters"
 
@@ -187,11 +187,11 @@ The **main components of the Print Provider module** are:
 
 - The process calls strategy.fetchPrinters(provider) and performs an upsert on Printer:
 
-    \- **Create** if it does not exist (provider, value=externalId).
+    - **Create** if it does not exist (provider, value=externalId).
 
-    \- **Update** name/default if it already exists.
+    - **Update** name/default if it already exists.
 
-    \- **Deactivate** printers from the provider that were not included in this synchronization.
+    - **Deactivate** printers from the provider that were not included in this synchronization.
 
 - Printer.value = external ID; Printer.name is user-friendly; Printer.default marks “default.”
 
@@ -200,9 +200,9 @@ The **main components of the Print Provider module** are:
 
 ### Errors
 
-- Use PrintProviderException for exception handling.
+- Use `PrintProviderException` for exception handling.
 
-- Log the messages you need in AD_MESSAGE. You can access these messages using the String.format and OBMessageUtils.getI18NMessage formatting utilities.
+- Log the messages you need in AD_MESSAGE. You can access these messages using the `String.format` and `OBMessageUtils.getI18NMessage` formatting utilities.
 
 ## Workflow and Configuration
 
@@ -219,46 +219,45 @@ The **main components of the Print Provider module** are:
 
 2. **Discover Printers**
 
-    - UpdatePrinters (Action executed from the Printers window) → use fetchPrinters from the strategy and synchronize Printer.
+    - UpdatePrinters (Action executed from the Printers window): use fetchPrinters from the strategy and synchronize Printer.
 
 3. **Generate Label**
 
-    - SendGeneratedLabelToPrinter (Action executed from the button in the desired window) resolves TemplateLine from the table associated with the button window (e.g., button in Product window will resolve table M_Product). This action compiles/loads Jasper and produces the temporary PDF.
+    - `SendGeneratedLabelToPrinter` (Action executed from the button in the desired window) resolves TemplateLine from the table associated with the button window (e.g., button in Product window will resolve table M_Product). This action compiles/loads Jasper and produces the temporary PDF.
 
 4. **Send to printer**
 
-    - sendToPrinter makes the necessary HTTP/SDK call and returns jobId (when available).
+    - `sendToPrinter` makes the necessary HTTP/SDK call and returns jobId (when available).
 
 ### Basic Example
 
-- In the module, create `com.my.module.print.MyProviderStrategy` (extends PrintProviderStrategy).
+- In the module, create `com.my.module.print.MyProviderStrategy` (extends `PrintProviderStrategy`).
 
 - Configuration per window
     
     - Provider Implementation:
 
-        \- specify javaImplementation = com.my.module.print.MyProviderStrategy
+        - specify javaImplementation = com.my.module.print.MyProviderStrategy
 
     - Print Provider:
 
-        \- specify the previously registered provider in providers implementation.
+        - specify the previously registered provider in providers implementation.
 
     - ProviderParam:
 
-        \- printersurl: URL for obtaining printers.
+        - printersurl: URL for obtaining printers.
 
-        \- printjoburl: URL for sending print jobs.
+        - printjoburl: URL for sending print jobs.
 
-        \- apikey: Key for authenticating with the middleware.
+        - apikey: Key for authenticating with the middleware.
 
 - Run **Update Printers** from the **Printers** window. The Action delegates responsibility for updating printers to the fetchPrinters implementation.
 
 - Execute **Send label to printer** from the button that has been registered in the desired window. The Action `SendGeneratedLabelToPrinter` delegates the responsibility of:
 
-    \- Generating the printout to your generateLabel implementation.
+    - Generating the printout to your generateLabel implementation.
 
-- Sending the previous print job to your sendToPrinter implementation.
-
+    - Sending the previous print job to your sendToPrinter implementation.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
