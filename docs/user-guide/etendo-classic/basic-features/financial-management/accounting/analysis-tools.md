@@ -168,6 +168,12 @@ Another difference to take into account is that, in this case, the buttons View,
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Trial Balance`
 
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+!!! Warning
+    If you do not have the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, the report will remain in a legacy version with limited functionality. You will not be able to navigate directly to the General Ledger from the Business Partner when the report is grouped by this dimension, and the interface improvements and improved options for exporting the report to Excel and PDF will not be available.
+
 ### Overview
 
 The trial balance helps to check that the total amount of debits is equal to the total amount of credits.
@@ -176,37 +182,38 @@ This report is commonly launched at the end of the period prior to the preparati
 
 In Etendo terms, the "Trial Balance" shows for a given Organization and General Ledger:
 
-- the account balance as of a given date from
-- the account total sum of debits within a given period of time
-- the account total sum of credits within a given period of time
-- and finally the account balance as of a given date to
+- The account balance as of a given date from
+- The account total sum of debits within a given period of time
+- The account total sum of credits within a given period of time
+- The account balance as of a given date to.
 
 At the end of the report, the total sum of debits must be equal to the total sum of credits.
 
-![](../../../../../assets/drive/1Khc4yKHg-WQAjZBTFfNegete-k0l0qhX.png)
+![](../../../../../assets/drive/trial-balance-window-1.png)
 
 
 As shown in the screen above, it is possible to enter below data before launching the Trial Balance.
 
 Under the **Primary Filters** section, it is possible to specify:
-- the *"From"* date when the account balance is going to be taken
-- the *"To"* date when the account balance is going to be calculated by following the formula below:
+
+- The *"From"* date when the account balance is going to be taken
+- The *"To"* date when the account balance is going to be calculated by following the formula below:
     - *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
-- the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
+- The *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
     - "Legal with Accounting" type organizations
     - "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
         - It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
     - "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
         - Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
-- and finally the "General Ledger".
+- And finally the "General Ledger".
 
 **Advanced filters** is a collapsible section which can be shown by clicking on it. Under this section, it is possible to specify:
 
-- the Account Level to show. The options available are from top to bottom:
+- The Account Level to show. The options available are from top to bottom:
     - **Heading**
     - **Account**
     - **Breakdown**
-    - and **Subaccount**.
+    - **Subaccount**.
 
 These are the Account Tree Elements.
 
@@ -216,33 +223,41 @@ This is due to the fact that a subaccount is the element which helps to check th
 
 Also, the selection of this value allows the user to:
 
-1\. select other "**Dimensions**", such as the "Business Partner", the "Product" and the "Project". These dimensions are recorded while posting transaction to the ledger and the transactions can be posted to the ledger through the subaccounts.
+1\. Select other "**Dimensions**", such as the "Business Partner", the "Product" and the "Project". These dimensions are recorded while posting transaction to the ledger and the transactions can be posted to the ledger through the subaccounts.
 
-2\. Select “Group By” value to have more information about that option. Values are "Business Partner", "Product", "Project" and “Cost Center”
+2\. Select “Group By” value to have more information about that option. Values are "Business Partner", "Product", "Project" and “Cost Center”.
+When the value of Group By is Business Partner, the report will be displayed accordingly, allowing navigation to the General Ledger of the particular Business Partner directly from the report result.
 
-3\. select "**Include Zero Figures**" flag which allows the user to display all subaccounts even those which hold zero figures.
+3\. Select "**Include Zero Figures**" flag which allows the user to display all subaccounts even those which hold zero figures.
 
 - It is possible to enter the **initial page number** of the trial report if required
 - Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.
     This checkbox allows the user to configure if the "Opening" account balance (dated i.e. 1st January 2021) is shown separately in the first column "Balance As Of" or either in the "Debit" or in the "Credit" column.  
     In other words:
-    - the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
-    - the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
+    - The negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
+    - The positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
         This check only applies if the "From" date entered while launching the report is the same as the "Opening" Accounting date (i.e. 1st January 2021), otherwise the "Opening" account balance is always shown in the "Balance As Of" column.
 
-Once all the data above has been properly filled in, the "Search" process button shows the results in the same window.
+Once all of the above data has been entered correctly, the “View” button displays the results in a separate window. Additionally, from the report results, it is possible to navigate to the General Ledger:
+
+- By clicking on the Account No. of each subaccount.
+- Or, when the report is grouped by Business Partner, by clicking on the Business Partner to access its General Ledger view.
 
 An example of the output of the report is:
 
-![](../../../../../assets/drive/1h503JiqJg9EGZ_3IhlNJ6XHTOsgHPesf.png)
+![](../../../../../assets/drive/trial-balance-report-1.png)
 
-This report can also be shown in:
+An example of the output of the report group by Business Partner is:
 
-- a *PDF format* by pressing the "Print" action icon of the Toolbar.
-    - the PDF file can be printed or archived for later reviews.
-    - the PDF file has the same grouping rules as the search button.
-- and in *excel format*:
-- the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
+![](../../../../../assets/drive/trial-balance-report-2.png)
+
+The images show the links to **navigate to the General Ledger** from the Account, and if it is grouped by Business Partner, you will see the link to the Business Partner's General Ledger.
+
+This report can also be viewed in the following formats:
+
+- PDF: by clicking the Export to PDF button. The resulting file can be printed or archived for later review. It also maintains the same grouping rules as the search option.
+
+- Excel: by clicking the Export to Excel button. The generated file also respects the same grouping rules as the search.
 
 ## General Ledger Report
 
