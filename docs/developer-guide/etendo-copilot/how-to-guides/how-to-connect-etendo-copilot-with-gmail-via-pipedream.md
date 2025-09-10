@@ -11,6 +11,8 @@ status: beta
 
 ## Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/taAPYMPWpLM?si=_xZf1LQUnPAmQcHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Imagine a department manager working with Etendo Copilot who suddenly needs to check their email to review the latest client messages before making a decision.  
 
 In the past, this required switching tabs, searching for the Gmail thread, and then returning to Copilot — a typical flow interruption.  
