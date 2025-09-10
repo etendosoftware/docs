@@ -47,21 +47,24 @@ In the Currency Converters window, the necessary Apilayer data has to be configu
 
 Business partner master data window is the place where the user can easily organize and centralize business partner data.
 
-Nowadays, organizations deal with many third parties such as customers, suppliers, creditors, etc., therefore it is recommended to _import large number of business partners_ instead of creating them one by one using the Import Data module.
+!!!info
+    Nowadays, organizations deal with many third parties such as customers, suppliers, creditors, etc., therefore it is recommended to import large number of business partners instead of creating them one by one using the Import Data module ?.
 
-Etendo allows the user to enter business partner master data information whenever it is needed as the business takes place, therefore the procedure described within this section explains how to set up a single business partner of any type.
+Etendo allows the user to enter business partner master data information whenever it is needed as the business takes place, therefore the procedure described below explains how to set up a single business partner of any type.
 
-### **Business Partner**
+### Header
 
-There are many business partner types such as customers, suppliers and employees you can define and configure.
-
-There is one key field in the business partner header window, which is the *Business Partner Category*.
-
-The user should select a category which the business partner is going to belong to.
-
-To learn more about *Business Partner Category*, visit the Business Partner Category section.
+Here, the user can define and configure business partners to be later used in transactions.
 
 ![](../../../../assets/drive/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw.png)
+
+There is one key field in the business partner header window, which is the **[Business Partner Category](../master-data-management/business-partner-setup.md#business-partner-category)**.
+
+The user should select a category which the business partner is going to belong to, under the following types:
+
+- Customers
+- Suppliers
+- Employees
 
 The rest of fields at header level are common fields which require to enter basic business partner information such as:
 
@@ -75,31 +78,34 @@ The rest of fields at header level are common fields which require to enter basi
   To learn more about that process, visit Sales Order and Purchase Order sections.
 - and finally ***Credit Line Limit***. Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
 
-A new check named Consent for Customer Data Processing has been created in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization.
+A new check named Consent for Customer Data Processing has been created in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization. ?
 
-It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why *Business Partner* window has three main tabs and therefore sub-tabs which allow you to set up each main business partner type separately:
+### Tabs and Subtabs
 
-- **Customer** tab
-  - **Customer Accounting** sub-tab
-- **Vendor** tab
-  - **Vendor Accounting** sub-tab
-- **Employee** tab
-  - **Employee Accounting** sub-tab
+It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why the Business Partner window has three main tabs and therefore sub-tabs which allow you to set up each main business partner type separately:
+
+- **Customer** 
+    - Customer Accounting
+- **Vendor**
+    - Vendor Accounting
+- **Employee**
+    - Employee Accounting
 
 The tabs and sub-tabs mentioned above are described in the next chapters of this section.
 
-Finally, it is very important to remark that there could be other types of business partners which require to be set up as business partners in this window; business partners which have nothing to do with either a customer, or a supplier/creditor or an employee.
+!!!Important
+    There could be other types of business partners which require to be set up as business partners in this window; business partners which have nothing to do with either a customer, or a supplier/creditor or an employee.
 
-That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the *Remittance* financial workflow.
+    That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the *Remittance* financial workflow.
 
-!!! info
-    To learn more about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+    !!! info
+        To learn more about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 
 #### **Set New Currency**
 
-*Set New Currency* process allows the user to change business' partner currency.
+This button allows the user to change business partners' currency.
 
-Business partner currency is automatically filled in with the currency of the *Price List* assigned to the business partner. Once filled in, it can be changed if required by running *Set New Currency* process.
+Business partner currency is automatically filled in with the currency of the Price List assigned to the business partner. Once filled in, it can be changed if required by using the **Set New Currency** process.
 
 Normally, business partner currency is the same as the currency of the price list assigned to it. However, it can happen that a business partner having, for instance, an EUR price list assigned, might have USD as its by default currency.
 
