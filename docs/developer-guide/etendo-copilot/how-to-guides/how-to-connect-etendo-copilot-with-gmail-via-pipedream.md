@@ -19,8 +19,8 @@ With the **Gmail integration** via [Pipedream](https://pipedream.com){target="_b
 
 - *“List my recent Gmail emails”*
 - *“Summarize all unread emails and order them by relevance”*
-- *“Search sent emails to `client@etendo.software` and list their latest purchases”*
-- *“Send an email to `client@etendo.software` with the most recent price list”*
+- *“Search sent emails to `client@example.com` and list their latest purchases”*
+- *“Send an email to `client@example.com` with the most recent price list”*
 
 The agent connects securely to your **Gmail** account (with your prior authorization), retrieves the messages, and responds inline in the chat. All without leaving Copilot.
 
