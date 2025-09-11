@@ -264,59 +264,49 @@ As shown in the image above, the main fields in this Window are:
 
 ### Overview
 
-An account tree is the way Etendo captures the **chart of accounts** (CoA) of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger (assets, income, expenses, etc.).
+An account tree is the way Etendo captures the **chart of accounts** (CoA) of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger (assets, liabilities, income, expenses, etc.).
 
 Etendo offers different ways to configure a CoA for an organization. Also, CoA can be created based on the accounting requirements of each country and can be translated into the language according to the organization's needs. 
+
+The Account Tree window allows the user to **review and maintain** the chart of accounts imported through a chart of accounts module, as well as to create new ones from scratch.
 
 ### Account Tree Configuration
 
 Etendo offers different options for CoAs configuration: 
 
-- **Install a location module or a generic plan**: available in the initial configuration of the customer or organization.
+- **Install a location module or a generic plan**: Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In the case of Spain, Etendo provides a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) which includes the Statutory Chart of Accounts.
 
-- **Import a CSV file with the plan structure**: during customer or organization creation, by checking Include Accounting.
+    For instance, the Spanish Localization Bundle includes:
+
+    -   the [General Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
+    -   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
+
+    Some countries such as the USA do not require that specific level of detail.
+
+    Each organization can **define the chart of accounts that best suits their practices**. In that case, Etendo provides a **Generic Chart of Accounts module** which delivers a standard list of accounts which can be evolved for the organization's needs. After installation, the generic Chart of Accounts is available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+
+
+- **Import a CSV file with the account tree structure**: During customer or organization creation,as explained in [How to Create a Chart of Accounts Module](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md) guide, a **chart of accounts module** basically includes a **CSV file** which contains the account tree structure.
+
+    In Etendo, that creates:
+
+    -   the organization's **Account Tree** or Chart of Accounts.
+    -   and besides a defaulted [General Ledger configuration](#general-ledger-configuration).
+
+    !!!note
+        It is important to remark that it is not possible to apply a Chart of Accounts in the [Enterprise Module Management](../../../../etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window because a Chart of Account is not a dataset but a CSV file.
+
+
+    Additionally, a CSV file can be imported while running the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or while running the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup) if the checkbox **Include Accounting** is checked, therefore the CSV file or accounting file can be selected.
+
+    !!!info
+        After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+
 
 - **Create the CoA manually**: a chart of accounts can also be [created manually](#account-tree-creation), if this is the case, it is recommended to start from a sample CoAs like the generic one and evolve it for the company’s needs rather than starting from scratch.
 
 
-Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In the case of Spain, Etendo provides a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) which includes the Statutory Chart of Accounts.
-
-For instance, the Spanish Localization Bundle includes:
-
--   the [General Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
--   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
-
-On the other hand, some countries such as the USA do not require that specific level of detail.
-
-!!! info
-    Each organization can define the chart of accounts that best suits their practices.
-
-
-In that case, Etendo provides a **Generic Chart of Accounts module** which delivers a standard list of accounts which can be evolved for the organization's needs. After installation, the generic Chart of Accounts is available for selection during the Initial Client Setup and the Initial Organization setup.
-
-As explained in [How to Create a Chart of Accounts Module](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md) guide, a **chart of accounts module** basically includes a **CSV file** which contains the account tree structure.
-
-In Etendo, that creates:
-
--   the organization's **Account Tree** or Chart of Accounts.
--   and besides a defaulted [General Ledger configuration](#general-ledger-configuration).
-
-!!!note
-    It is important to remark that it is not possible to apply a Chart of Accounts in the [Enterprise Module Management](../../../../etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window because a Chart of Account is not a dataset but a CSV file.
-
-
-Additionally, a CSV file can be imported while running the Initial Client Setup or while running the Initial Organization Setup if the checkbox **Include Accounting** is checked, therefore the CSV file or accounting file can be selected.
-
-
-
-After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
-
-
-#### Element
-
-The Account Tree window allows the user to **review and maintain** the chart of accounts imported through a chart of accounts module, as well as to create new ones from scratch.
-
-If a Chart of Accounts module or an accounting CSV file is installed and selected at *client* level through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, the chart of accounts automatically created can be shared by any organization available in the client, as it is assigned to the organization (\*).
+If a Chart of Accounts module or an accounting CSV file is installed and selected at **client level** through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, the chart of accounts automatically created can be shared by any organization available in the client, as it is assigned to the organization (\*).
 
 !!!note
     This is not the preferred method but to install it at organization level, see next paragraph.
@@ -327,25 +317,34 @@ If a Chart of Accounts module is installed and then selected at **organization l
 
 The **Element value** tab lists every chart of account elements from the chart of accounts headings to the subaccounts.
 
-Every Chart of Accounts in Etendo contains different types of elements. There are four types of elements:
+Every CoAs in Etendo contains different types of elements organized into the following hierarchy:
 
 -   **Heading**, **Breakdown** and **Account** elements help to structure the CoAs in a way that the financial reports can be produced based upon that structure.
+
+    - Heading: Main heading (e.g., Balance Sheet, Assets).
+
+    - Breakdown: Groups within a heading (e.g., Current Assets).
+
+    - Account: General account (e.g., Cash, Customers).
+
 -   **Subaccount** element allows the user to post the transactions to the ledger.
+
+    - Subaccount: Lowest level, where transactions are recorded (e.g., Petty Cash, Bank X).
 
 Besides, it is well-known that every account, subaccount in Etendo terms, needs to be included in a financial statement:
 
 -   **Asset**, **Liability** and **Owner's Equity** account types need to be included in the Balance Sheet
 -   while **Expense** and **Revenue** account types need to be included in the Profit & Loss.
 
-The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar.
+The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar once the user is in the Element Value tab.
 
-The Tree icon opens a new window which shows one tree branch per financial statement:
+The Tree icon opens a new window which shows one **tree branch** per financial statement:
 
 -   Balance Sheet
 -   Profit & Loss
 -   and Temporary default accounts. This branch of the account tree gathers temporary defaults accounts which are not ledger accounts.
 
-![](../../../../../assets/drive/12A_jeX7hjVBb97LZZW_nK85hx6Esp59a.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree1.png)
 
 Besides, each tree branch contains several elements inside structured in a hierarchical way, for instance:
 
@@ -353,7 +352,8 @@ Besides, each tree branch contains several elements inside structured in a hiera
     -   Assets
     -   Liabilities and Owner's Equity
 
-![](../../../../../assets/drive/1HiiXjkkZf5e0VsVbgldchqqwS8WrspJG.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree2.png)
+
 
 As shown in the image above **Assets** is also split into:
 
@@ -365,7 +365,8 @@ Same way **Equity** is also split into several accounts, in Etendo terms **subac
 
 Back to the **Element Value** tab, there are several **basic fields** which help to define each chart of account element:
 
-![](../../../../../assets/drive/1pTNoLOD4-8sKE5F5VMC-loqlMklPTmv6.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree3.png)
+
 
 -   the **Search Key** and the **Name** identifies the chart of account element.
     -   The search key can either be a single letter, a word or a number, however it is important to be aware that the Search key field is the field that Etendo uses while helping the user to create an [account tree element](#balance-sheet-elements).
@@ -407,7 +408,7 @@ Additionally, there are other advanced fields which also help to configure more 
 
 #### Customized Elements
 
-The customized elements tab allows the user to get an account tree element as a combination of a given list of existing elements.
+The **Customized Elements** tab allows the user to get an account tree element as a combination of a given list of existing elements.
 
 Once the account tree elements have been selected in a new record and in the correct sequence order, it is not required to specify a sign but just the elements which are going to be included. The customized elements need to be elements located at the same level within the account tree, otherwise a **recursive** calculation may happen.
 
@@ -419,11 +420,13 @@ For instance, the element 1900-Total Assets is the sum up of three customized el
 
 as shown in the image below.
 
-![](../../../../../assets/drive/1fwBuS2sV-ufKxTap5X_O02nkVrMJOD_i.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree4.png)
 
 #### Translation
 
-Account elements can be translated to any language required.
+In the **Translation** tab, account elements can be translated to any language required.
+
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree5.png)
 
 #### Account Tree creation
 
@@ -765,14 +768,14 @@ However, temporary default accounts need to be created in the account tree under
 
 Therefore, a new **Heading** and **Summary** element needs to be created in the **Element Level** tab, that element can be named **Temporary Accounts**.
 
-![](../../../../../assets/drive/16EDV3UALuhdBZvS9RlBN0-4jF1WdCJbG.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree6.png)
 
 Once created, the accounts below (subaccounts) can be created and move underneath it:
 
 -   Suspense Balancing account
 -   Suspense Error account
 
-![](../../../../../assets/drive/1a2sIjZMYnytbKtZw8g42pCYzy9EfSb2M.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree7.png)
 
 ## General Ledger Configuration
 
