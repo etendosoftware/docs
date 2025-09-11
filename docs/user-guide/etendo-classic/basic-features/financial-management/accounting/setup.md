@@ -264,17 +264,27 @@ As shown in the image above, the main fields in this Window are:
 
 ### Overview
 
-An account tree is the way Etendo captures the **chart of accounts** of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger.
+An account tree is the way Etendo captures the **chart of accounts** (CoA) of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger (assets, income, expenses, etc.).
 
-Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In that case, Etendo provides a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) which includes the Statutory Chart of Accounts.
+Etendo offers different ways to configure a CoA for an organization. Also, CoA can be created based on the accounting requirements of each country and can be translated into the language according to the organization's needs. 
+
+### Account Tree Configuration
+
+Etendo offers different options for CoAs configuration: 
+
+- **Install a location module or a generic plan**: available in the initial configuration of the customer or organization.
+
+- **Import a CSV file with the plan structure**: during customer or organization creation, by checking Include Accounting.
+
+- **Create the CoA manually**: a chart of accounts can also be [created manually](#account-tree-creation), if this is the case, it is recommended to start from a sample CoAs like the generic one and evolve it for the company’s needs rather than starting from scratch.
+
+
+Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In the case of Spain, Etendo provides a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) which includes the Statutory Chart of Accounts.
 
 For instance, the Spanish Localization Bundle includes:
 
--   the General Spanish CoA
--   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/).
--   and the Abreviado Spanish CoA.
-
-After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+-   the [General Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
+-   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
 
 On the other hand, some countries such as the USA do not require that specific level of detail.
 
@@ -294,18 +304,19 @@ In Etendo, that creates:
 !!!note
     It is important to remark that it is not possible to apply a Chart of Accounts in the [Enterprise Module Management](../../../../etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window because a Chart of Account is not a dataset but a CSV file.
 
-!!!info
-    If the legal entity has already been created, the CoA can be imported by using the **Import Data module**, this module allows importing products, business partners and accounts among others.
 
 Additionally, a CSV file can be imported while running the Initial Client Setup or while running the Initial Organization Setup if the checkbox **Include Accounting** is checked, therefore the CSV file or accounting file can be selected.
 
-Finally, a chart of accounts can also be [created manually](#account-tree-creation), regardless it is recommended to start from a sample COAs like the generic one and evolve it for the company’s needs rather than starting from scratch.
+
+
+After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+
 
 #### Element
 
 The Account Tree window allows the user to **review and maintain** the chart of accounts imported through a chart of accounts module, as well as to create new ones from scratch.
 
-If a Chart of Accounts module or an accounting CSV file is installed and selected at *client* level through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, the chart of accounts automatically created can be shared by any organization available in the client, as it is assigned to the organization (\*)
+If a Chart of Accounts module or an accounting CSV file is installed and selected at *client* level through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, the chart of accounts automatically created can be shared by any organization available in the client, as it is assigned to the organization (\*).
 
 !!!note
     This is not the preferred method but to install it at organization level, see next paragraph.
@@ -398,7 +409,7 @@ Additionally, there are other advanced fields which also help to configure more 
 
 The customized elements tab allows the user to get an account tree element as a combination of a given list of existing elements.
 
-Once the account tree elements have been selected in a new record and in the correct sequence order, it is not required to specify a sign but just the elements which are going to be included. The customized elements need to be elements located at the same level within the account tree, otherwise a "recursive" calculation may happen.
+Once the account tree elements have been selected in a new record and in the correct sequence order, it is not required to specify a sign but just the elements which are going to be included. The customized elements need to be elements located at the same level within the account tree, otherwise a **recursive** calculation may happen.
 
 For instance, the element 1900-Total Assets is the sum up of three customized elements:
 

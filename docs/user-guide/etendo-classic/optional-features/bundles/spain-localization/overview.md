@@ -45,8 +45,8 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - Spanish Tax Module Improvements
 - Nueva versión del módulo de Impuestos de España
 - Condiciones de pago
-- Chart of accounts: PGC 2007 General
-- Chart of accounts: PGC 2007 PYMEs
+- [Chart of accounts: PGC 2007 General](#chart-of-accounts-pgc-2007-general)
+- [Chart of accounts: PGC 2007 PYMEs](#chart-of-accounts-pgc-2007-pymes)
 - Professional Localization pack Spain (España)
 - Localization pack Spain (España)
 - Traducción al español del módulo 'Default Jobs'
