@@ -904,19 +904,15 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 ### Overview
 
-With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
-
-The “Not Posted Documents” window, allows to centralize all documents pending posting in a single interface. This functionality allows users to quickly identify unposted documents and manage them efficiently from the same place.
-
-When the window is opened, a series of filters are displayed to facilitate document search and classification. In addition, there is the option to perform bulk actions, such as posting multiple documents at once. The results grid displays the relevant document information in a clear and orderly manner, facilitating review and posting.
+The Not Posted Documents window, part of the Bulk Posting module, centralizes all unposted documents in one place. It allows users to quickly find, review, and post multiple documents at once. Filters help refine searches, and bulk posting actions streamline processing, making document management more efficient.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-1.png)
 
 ### Filters
 
-- **Organization**: Allows you to select the organization for which you want to view documents. The default organization is the one associated with the login.
+- **Organization**: Filter documents according to the organization to which they belong. By default, the session organization is set.
 
-- **Document**: Optional field where you can enter the name or type of document to search for. The possible document types are:
+- **Document**: (Optional) Type of document that the user is searching. The listed options are:
 
     - Amortization
     - Bank Statements 
@@ -942,19 +938,17 @@ When the window is opened, a series of filters are displayed to facilitate docum
     - Transaction
     - Work Effort
 
-- **Accounting Status**: Shows the possible statuses of accounting documents. Allows multiple selections. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+- **Accounting Status**: (Mandatory) Shows the possible statuses of accounting documents. Allows multiple selections. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
  
-- **Accounting Date** (From/To): Filters to define a search period.
+- **Accounting Date (From/To)**: Filters to define a search period.
 
 ### Buttons
 
 #### Search button
 
-The **Search** button uses filters to specify the documents to be searched. 
+Clicking the Search button applies the selected filters and displays the matching documents in the results grid. From the results you can navigate to a document by clicking its Accounting Date, inspect details, and select records for bulk posting.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png)
-
-The search result allows you to **navigate** from the Accounting Date field to the selected document. In the image above, you can see the link in the Accounting Date column.
 
 #### Bulk Posting button
 
