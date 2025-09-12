@@ -467,91 +467,153 @@ Once completed, the task will appear in the Completed Tasks section. From there,
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-9.png)
 
 
-### All Tasks
+### Inventory Tasks
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/all-tasks.png)
+Two types of inventory tasks enable these actions: Inventory Adjustment and Inventory Relocation. Tasks are created and assigned directly from the ERP and are available in the mobile app from the Inventory Tasks menu.
 
-From this window you can view and work with all types of tasks, both Picking and Packing.
+**Workflow**
+
+The process begins with the creation of Tasks from the ERP and their assignment to a warehouse operator. In the mobile application, each operator only sees the tasks that have been assigned to them. They can view the tasks in the All Tasks menu or in the Inventory Management menu. When starting a task, the application displays the information necessary to perform the requested action according to the type of task. Using the button, they can either modify existing quantities, relocate products between locations, or register inventory to record stock in a location for products that are currently out of stock, and then complete the task. These actions are reflected in the ERP both in the task statuses and in the inventory update.
+
+#### Process Start (Etendo)
+
+The process begins with the creation of Tasks within Etendo, using the Task window in the Task module.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-task-window-1.png)
+
+**Header**
+
+With the installation of the Advanced Warehouse module, new specific actions are incorporated that expand the possibilities of logistics management. The header retains the basic fields for a task and adds options in the Task Type field, which determine the type of action to be performed:
+
+- **Inventory Adjustment**: allows you to plan stock counting or adjustment tasks. It can be used to update existing quantities or to record stock for products that did not previously have inventory.
+
+- **Inventory Relocation**: allows you to plan tasks for relocating products between warehouses or locations.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-task-window-2.png)
+
+This window includes the following fields:
+
+- **Product**: (required) product on which the task will be performed. When you select a product, other related fields are automatically filled in.
+
+- **Storage bin**: (read-only) displays the current location of the selected product. It is automatically completed when the product is uploaded.
+
+- **Attribute Set Value**: (read-only) indicates the defined attributes of the product (e.g., lot, series). It is automatically completed when the product is uploaded.
+
+- **Quantity**: (read-only) reflects the current quantity available in the storage bin corresponding to the product. It is automatically completed when the product is uploaded.
+
+- **UOM**: (read-only) displays the unit of measure in which the product is managed. It is automatically completed when the product is uploaded.
+
+- **Creation Date**: (read-only) records the date and time the task was created.
 
 
-### Inventory Management
+#### Access to Packing Tasks (Etendo Mobile)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nBElvaejJMQ?si=A-a4-IDvPVHJ9S_t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+When accessing Etendo Mobile into the Inventory Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management1.png)
+#### **Inventory Adjustment** 
 
-The flow of inventory management and statuses, involves the functionalities from Etendo Mobile of:
+Allows you to plan counting or stock adjustment tasks. It can be used to update existing quantities or to record stock for products that did not have previous inventory.
 
-- Physical inventory.
-- Change of status.
-- Relocation.
-
-!!!Important 
-    These actions are possible through the use of the [movement rules](#movement-rules-configuration-window) functionality and the creation/use of [custom statuses](#creating-inventory-statuses) in Etendo, explained above.
-
-#### Physical Inventory and Change of Status
+This corresponds to the same operation performed in the ERP Physical Inventory: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none. If the inventory status changes during the adjustment, the system automatically moves the product to the storage bin associated with that new status, reflecting the current stock condition.
 
 !!!Info
     For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
 
-The Physical Inventory functionality from Etendo Mobile can be done with the following steps:
 
-1. Enter the **Inventory Management** menu.
+!!!Important 
+    These actions are possible through the use of the [movement rules](#movement-rules-configuration-window) functionality and the creation/use of [custom statuses](#creating-inventory-statuses) in Etendo, explained above.
 
-2. Search and select the product from the list or by the search engine. It is possible to unselect each selected product with the button ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/remove.png).
+The inventory adjustment and status change screen displays the selected product along with its search key in the title. The available fields are listed below:
 
-3. When selecting a product, the action buttons are enabled. Click on **Adjust**.
+- **Book Quantity** (read-only): indicates the current quantity recorded for the product.
 
-4. Enter the quantity counted in the **Quantity Count** field.
+- **Attribute Set** (read-only): shows the attribute associated with the product (e.g., batch, series).
 
-5. Confirm by pressing **Process**.
+- **UOM** (read-only): indicates the unit of measure for the product.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management2.png)
+- **Locator** (read-only): shows the current location of the product in the warehouse.
 
-Once the adjustment has been processed, the result is reflected in real time in the same product list in Etendo Mobile, showing the updated quantity. Likewise, this information will also be seen in Etendo through the Stock Report, ensuring synchronization between both environments.
+- **Quantity Count**: allows you to enter the counted quantity (in case of adjustment) or the quantity whose status you want to change.
 
-The **To Status** field, present in this screen, allows you to change the status of the selected inventory. Thus, by adding one more step, the status can be changed:
+- **To Status**: allows you to select the new status to which the product will be moved.
+        
+To **Adjust** inventory:
 
-1. Enter the **Inventory Management** menu of Etendo Mobile.
+- Enter the **Inventory Tasks** menu. There, tasks are divided by status: Pending, In Progress, and Completed.
 
-2. Search and select the product from the list or by the search engine. 
+- Search and select the task from the list or by the search engine.
 
-3. Press the **Adjust** button.
+- When a card is selected, a screen with the task information opens. 
 
-4. Enter the quantity to change the status in the **Quantity Count** field.
+- Press **Continue** button
 
-5. Select the status from the **To Status** field. 
+- Complete **Quantity Count** field.
 
-6. Confirm by pressing **Process**.
+- Confirm by pressing **Process** button.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management3.png)
 
-Thus, the **Adjust** button allows two functions, physical inventory and status change.
+To change inventory **Status**:
 
-#### Inventory Relocation
+- Enter the **Inventory Tasks** menu. There, tasks are divided by status: Pending, In Progress, and Completed.
+
+- Search and select the task from the list or by the search engine. 
+
+- When a card is selected, a screen with the task information opens. 
+
+- Press **Continue** button
+
+- Complete **Quantity Count** field.
+
+- Change the inventory Status in **To Staus** field. 
+    The Status options are: Undefined, Blocked, Available, Quality-Control, Quarentine, Damage among others.
+
+- Confirm by pressing **Process** button.
+
+#### **Inventory Relocation**
+
+Allows inventory to be moved between storages bin.
+
+This process corresponds to the same operation performed in the ERP using a Goods Movement: transferring stock from one state or location to another, without changing the total quantity available.
 
 !!!Info
+
     For more information about how to use this functionality in Etendo, visit [Goods Movement](../../../basic-features/warehouse-management/transactions.md#goods-movement).
 
-The **Relocate** function allows you to relocate inventory by following the steps:
+The inventory relocation screen displays the selected product along with its search key in the title. The available fields are listed below:
 
-1. Enter the **Inventory Management** menu of Etendo Mobile.
+- **Book Quantity** (read-only): indicates the current quantity recorded for the product.
 
-2. Search and select the product from the list or by the search engine.
+- **Attribute Set** (read-only): shows the attribute associated with the product (e.g., batch, series).
 
-3. Press the **Relocate** button.
+- **UOM** (read-only): indicates the unit of measure for the product.
 
-4. Enter the quantity to move in the **Quantity to Relocate** field.
+- **Quantity Count**: allows you to enter the counted quantity (in case of adjustment) or the quantity whose status you want to modify.
 
-5. Select the destination location in the **To Locator** field.
+- **To Locator**: allows you to select the new location to which the product will be moved.
 
-6. Confirm with **Process**.
+To **Relocate** inventory:
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management4.png)
+- Enter the **Inventory Tasks** menu. There, tasks are divided by status: Pending, In Progress, and Completed.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/mobile14.jpg)
+- Search and select the task from the list or by the search engine. 
 
-The result of this process is reflected both in Etendo Mobile, where the inventory location is updated, and in the Etendo Stock Report, ensuring traceability and visibility of the relocation in both platforms.
+- When a card is selected, a screen with the task information opens. 
+
+- Press **Continue** button
+
+- Complete **Quantity Count** field.
+
+- Complete **To Locator** field.
+
+- Confirm by pressing **Process** button.
+
+
+### All Tasks
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/all-tasks.png)
+
+From this window you can view and work with all types of tasks, like Picking, Packing and Inventory Tasks.
+
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
