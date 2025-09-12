@@ -71,12 +71,28 @@ To start using this module correctly, the following installation and configurati
     - **Barcode Algorithm**: The default barcode algorithm that allows interpretation according to any of the standards defined by international organizations. The options to select are:
 
         - EAN 128
-        - SimpleBarcode (Recommended)
+        - SimpleBarcode
 
-    - **AI Configuration**: A set of Application Identifiers  defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
-    
-        - GS1-128
-        - Direct String Match (Recommended)
+    - **AI Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
+
+        === ":material-playlist-plus: EAN 128"
+
+            The GS1-128 standard is a barcode format designed to encode structured information using Application Identifiers (AI). Each AI defines the type of data contained in the label, allowing not only products to be identified, but also additional information that is key to logistics. It configuration allows for the recognition of different Application Identifiers (AI) used in warehouse processes. Some common examples are:
+                
+            - **(00)**: SSCC (Serial Shipping Container Code): uniquely identifies a logistics unit (pallet, box).
+            - **(01)**: GTIN (Global Trade Item Number): globally identifies a commercial product using a 14-digit code.
+            - **(10)**: Batch/Lot Number: batch number to ensure traceability in manufacturing and distribution processes.
+            - **(17)**: Expiration Date: product expiration date.
+            - **(21)**: Serial Number: unique serial number of an item.
+            - **(91)**: Locator Code: identifies the specific location within the warehouse.
+            - **(37)**: Quantity of items: indicates the quantity contained in the logistics unit.
+
+            Thanks to this configuration, when scanning a GS1-128 barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, when reading an SSCC (00), it associates it with an AUOM (box or pallet) and so on with the other identifiers.
+
+        === ":material-playlist-plus: SimpleBarcode"
+
+            This configuration allows the system to recognize exactly the value read from the barcode and search for it in the ERP as a direct match.
+
 
     - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
 
@@ -196,6 +212,153 @@ It is possible to generate these unique codes for storage bins in the **Warehous
         
         - In the **Advanced Warehouse Configuration** window, there is a checkbox labeled `Search Related Barcode`
         - If the checkbox is enabled, when scanning a product from Etendo Mobile, the system will search for matches on all codes listed in the Barcode tab, in addition to the header code.
+
+## Inbound Receipt
+
+### Overview
+
+The Referenced Inventory (RI) functionality in Etendo has been expanded to allow the management of physical logistics units, such as pallets and boxes, linked directly to the Alternative Units of Measure (AUOM) for each product. With this, users can define specific equivalencies and operate these units as unique and traceable entities within all warehouse processes.
+
+With the installation of the [Stock Logistic Unit](stock-logistic-unit.md) module, new units of measure and reference inventory types are introduced. In the Units of Measure window of Etendo Core, the UOM Box is added, while in Reference Inventory the options Box and Pallet are included. This allows the user to configure specific equivalencies for each product from the AUOM tab in the Products window, defining the relationship between the logistics unit and the product’s base unit.
+
+Once the equivalence of an AUOM has been defined, it cannot be modified or reused with another conversion. In such cases, a new AUOM must be created with a distinctive name and assigned the corresponding equivalence. For example, if Box = 12 units was configured, and a box equivalent to 10 units is also needed, it will be necessary to create a new UOM, for example Small Box, and set its equivalence to 10 units from the Units of Measure window.
+
+The system thus allows products and quantities to be grouped within the same logistics unit, optimizing their handling in warehouse operations. 
+
+During the receiving process, the system can automatically generate Referenced Inventory records for each logistics unit received, whether it is a pallet or a box. Each record retains detailed product information, its exact quantity in the base unit of measure, and specific attributes such as batch, serial number, expiration date, or other data relevant to traceability. This allows each logistics unit to be identified and registered in the ERP as a unique item from the moment the merchandise enters the warehouse, facilitating its location, tracking, and management in the processes.
+
+!!! info
+    The preference “Generate logistics unit automatically” defines whether or not the system automatically generates the Reference Inventory when the purchase delivery note is generated, upon registration in the reception window.
+
+Also optimizes stock reservation functionality. Product reservations are made based on the unit defined in the sales order through the AUOM field, which allows you to select whether the product will be sold in its base unit or in one of its alternative units (for example, to sell juice by individual bottle or by box of 12 bottles). The system always attempts to reserve in the selected unit; if there is not enough stock in that unit, it takes what is available and tries to complete the quantity in other units. If it manages to cover the entire quantity, the reservation is generated in full; otherwise, it is still generated, but only partially with what is available. For example, if there are 5 individual units and a box of 10, and the sale is for 10 units, only 5 units are reserved because the box cannot be split. On the other hand, if there are 100 units and also a box of 10, and the sale is for 110 units, the reservation is completed with the total, combining units and box. Finally, if there is no stock in the unit defined in the order, the system will still attempt to make the reservation using the other available units.
+
+!!! info
+    To manage reservations, you must enable the “Enable Stock Reservations” preference. And in the Sales Order, the Stock Reservation field must be set to “Automatic.”
+
+The logistics units can be viewed and managed directly from the ERP, identified by scanning barcodes, and treated as separate stock.
+
+The system supports barcode scanning to directly identify logistics units, respecting the equivalencies defined in the Alternate UOM tab. In this way, the scan is not interpreted as “single units,” but as the quantity corresponding to the configured AUOM. When scanning a code associated with an AUOM (for example, an SSCC representing a pallet or box) the system automatically recognizes the entire logistics unit thanks to the relationship with the Referenced Inventory.
+
+### Workflow
+
+**Receipt Flow**: In the receipt flow, the user has a Purchase Order that includes product lines configured with an Alternative Unit of Measure (AUOM) of the Box or Pallet type, with its equivalence previously defined in the product window (for example, 1 Pallet = 100 units). From the Inbound Receipt window, the user creates a new receipt record using the Create Lines From Order button, selecting the Purchase Order as the reference document. The system incorporates the order data, such as the product, quantity (in AUOM), attributes (batch, series), and other associated information. When the Complete button is pressed, the system sequentially generates and completes the Goods Receipt and creates a record in Referenced Inventory (RI) for each logistics unit received (Box or Pallet), respecting the equivalencies defined in AUOM. The RI is linked to the quantity received, the product, and its corresponding attributes. As a result, the stock is updated in the inventory, increasing the number of units in the defined location and enabling traceability through the generated RI.
+
+**Partial Receipt Flow**: The partial receipt process begins when there is a Purchase Order that contains a product line configured with an AUOM, for example, 1 box of pineapple juice equivalent to 12 units. From the Inbound Receipt window, the user initiates a new receipt record using the Create Lines From Order button and selects the Purchase Order as a reference. The system automatically loads the order lines, including the product and expected quantity, such as 1 box.
+
+Then, in the receipt line, the user modifies the quantity to reflect the partial receipt; for example, if the order is for 1 box (12 units) but only 6 units are received, the user changes the quantity to 6 and, if necessary, adjusts the unit of measure to units instead of “box.” Once the actual quantity received has been adjusted, the user completes the receipt by pressing the “Complete” button in the Inbound Receipts window.
+
+At that point, the system generates and completes the delivery note, reflecting the partial quantity actually received. The inventory is updated with the quantity received. The Purchase Order will show the percentage received in the status bar.
+
+**Reservation Flow**: In the reservation flow with AUOM and logistics units, the process begins when the user creates a Sales Order and adds product lines that can be configured with an Alternative Unit of Measure (AUOM), with its equivalence defined in the product window (for example, 1 Box = 12 Units). In each line, the Stock Reservation field is set to Automatic so that the system attempts to reserve stock when registering and confirming (Booking) the sales order.
+
+When the reservation is executed, the system follows the following logic:
+
+- The reservation is always made in the unit defined in the order line (AUOM field).
+
+- If there is sufficient stock in that unit, a complete reservation is generated.
+
+- If there is insufficient stock in that unit, the system takes what is available and tries to complete the quantity with other equivalent units.
+
+- If it manages to reach the total, a complete reservation is generated.
+
+- If not, the reservation is still generated, but only partially with what is available.
+
+**Picking/Packing Flow**: In the picking and packing processes, once a barcode has been validated, the system can identify not only the product, but also its alternative unit of measure (AUOM) and associated attributes, such as batch or expiration date.
+
+During picking, when the code is scanned, the system interprets the structured information it contains (product, batch, expiration date, etc.) and compares it with the reservation, directly recording the corresponding quantity. This ensures that the stock output matches the actual product to be prepared.
+
+In packing, the same validation is used when packaging products. The system recognizes what product it is, in what presentation and with what attributes, and assigns it to the corresponding box. This ensures that the shipment reflects exactly what was picked, maintaining complete traceability.
+
+In this way, the system ensures that a single scan comprehensively recognizes the product that is leaving or will leave, taking into account its alternative measurements and attributes, and avoiding errors throughout the chain from order to dispatch.
+
+!!! Example
+    Example of barcode with attributes: Identifier + Product Code + Identifier + Batch Number + Identifier + Expiration Date = 01BX10002410L021170220303712 
+
+    where:
+
+    - 01 = product identifier
+    - BX100024 = product code
+    - 10 = batch identifier
+    - L021 = batch
+    - 17 = expiration identifier
+    - 022030 = expiration date
+    - 37 = quantity identifier
+    - 12 = quantity
+
+### Inbound Receipt Window  
+
+:material-menu: `Application` > `Warehouse Management` > `Transaction` > `Inbound Receipt`
+
+The Inbound Receipt window presents an evolution in the goods receipt process. It introduces an intermediate step between the order and the delivery note, providing greater flexibility, automation, and control over the process. Its design allows for the centralized management of multiple orders, even from different business partners, in a single operation. Within this flexibility, it also offers the possibility of working with alternative units of measure to accurately reflect the physical reality of what enters the warehouse, as well as regrouping the receipt lines into a diferent unit or container.
+
+It allows you to view and manage receipts based on purchase orders. You cannot create a receipt manually without loading the lines from the associated purchase order. These lines inherit the attributes of the order, such as product, quantities, lot, location, and others, with the possibility of editing the quantity and unit before completing the process. This allows you to record partial receipts or receipts in a unit other than the one indicated in the purchase order, ensuring that the delivery note reflects what was physically received and that the order updates the percentage.
+
+The window supports the simultaneous management of multiple orders, even from different suppliers, automatically generating the corresponding delivery notes according to the selected orders. This makes it possible to receive several orders in a single operation, regardless of their origin, and to create delivery notes in line with what actually arrives at the warehouse. This streamlines operations and avoids the need to process each order individually, adapting the documentation generated to the reality of the physical inflow.
+
+!!! info 
+     It is possible to manage the receipt of multiple orders from different suppliers in a single operation. The system will generate separate delivery notes as appropriate.
+
+When a receipt includes a product line with an AUOM configured as Pallet or Box, and is processed from the Inbound Receipt window, the system recognizes this condition and executes a process that generates a Referenced Inventory (RI) record associated with the corresponding line. This RI represents the physical logistics unit (pallet or box) and is linked to the receipt data, ensuring complete traceability of the contents.
+
+The automatic creation of RI depends on the “Generate logistics unit automatically” preference being enabled. Also, if the “Enable UOM Management” preference is not set to ‘Y’, the user will not be able to manage AUOM from the Product window, and therefore will not be able to define equivalencies for pallets and boxes, which is a prerequisite for this functionality to work correctly.
+
+#### Header
+
+The header displays the general fields for basic receipts such as Organization, Activation Check, Document No., and certain specific fields such as:
+
+- Document Type: Field that is loaded by default with “Inbound Receipt.”
+- Movement Date: This is the date on which the movement is created and, by default, is the current date. 
+- Accounting Date: Date on which the movement is accounted for.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-1.png)
+
+#### Line Tab
+
+The Tab Lines allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones:
+
+- Ordered Quantity: Quantity received expressed in the product's base unit of measure.
+- UOM: Product's base unit of measure.
+- Operative Quantity: Quantity received expressed in the product's alternative unit of measure. It matches the Ordered Quantity if the product does not have an AUOM defined. If there is an AUOM, it indicates the number of pallets or boxes received for that product.
+- Alternative UOM: Alternative unit of measure for the product. If there is no AUOM defined, it matches the UOM. This field is used to record the receipt of products on pallets or in boxes.
+- Storage Bin: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same purchase order or different ones.
+- Grouped by: Displays the identifier of the grouping to which the line belongs. This value is generated when using the Group button and allows you to identify which lines are part of the same container or packaging unit.
+- Reference Inventory Type: Displays the referenced inventory type associated with the grouping.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-2.png)
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-3.png)
+
+#### Buttons
+
+**Create Lines From Order**: Allows you to extract product lines based on the selected order. When clicked, a pop-up window opens showing the list of products available for receipt, including items from more than one Purchase Order. From this window, you can select one or more lines to add to the Lines tab. The fields in this pop-up window are:
+
+- Storage Bin: Storage location assigned to the product.
+- Document No: Number of the original Purchase Order. 
+- Order Date: Date of the Purchase Order.
+- Line No: Line number within the order.
+- Product: Product.
+- Quantity: Quantity available to receive in the base unit.
+- UOM: Base unit of measure for the product.
+- Operative Quantity: Quantity available to receive in the alternative unit.
+- Alternative UOM: Alternative unit of measure for the product.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-button-1.png)
+
+**Group By AUOM**: this button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.
+
+To group: 
+
+- In the Lines tab, select the product lines you want to group.
+- When you click the Group By AUOM button, the system prompts you to choose the Reference Inventory Type that defines the type of grouping (for example: Box, Pallet).
+- The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1 if grouped on a pallet). 
+
+!!! info:
+    If the merchandise enters in an alternative unit (e.g., boxes), it can be grouped, but the system interprets it as total units. Example: 2 boxes of wine (20 units) + 100 loose units = 1 grouping of 120 units.  Each time you want to create a different grouping, you must repeat the action with the corresponding lines. This allows you to generate several independent groupings (e.g., Box-1, Box-2, Box-3...). If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
+
+**Clear Group By** button allows you to remove a line from your grouping without affecting the rest of the lines in the group.
+
+**Complete Receipt**: Finishes the receipt, generating and completing the corresponding delivery notes. In addition, if the receipt includes products with AUOM (pallet or box), the associated Inventory Reference record is automatically created.
+
 
 
 ## Using Etendo Mobile
