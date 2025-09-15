@@ -506,9 +506,11 @@ This window includes the following fields:
 - **Creation Date**: (read-only) records the date and time the task was created.
 
 
-#### Access to Packing Tasks (Etendo Mobile)
+#### Access to Inventory Tasks (Etendo Mobile)
 
 When accessing Etendo Mobile into the Inventory Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile.png)
 
 #### **Inventory Adjustment** 
 
@@ -536,7 +538,7 @@ The inventory adjustment and status change screen displays the selected product 
 - **Quantity Count**: allows you to enter the counted quantity (in case of adjustment) or the quantity whose status you want to change.
 
 - **To Status**: allows you to select the new status to which the product will be moved.
-        
+    
 To **Adjust** inventory:
 
 - Enter the **Inventory Tasks** menu. There, tasks are divided by status: Pending, In Progress, and Completed.
@@ -551,6 +553,7 @@ To **Adjust** inventory:
 
 - Confirm by pressing **Process** button.
 
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile-adjust-1.png)
 
 To change inventory **Status**:
 
@@ -568,6 +571,8 @@ To change inventory **Status**:
     The Status options are: Undefined, Blocked, Available, Quality-Control, Quarentine, Damage among others.
 
 - Confirm by pressing **Process** button.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile-adjust-2.png)
 
 #### **Inventory Relocation**
 
@@ -606,6 +611,8 @@ To **Relocate** inventory:
 - Complete **To Locator** field.
 
 - Confirm by pressing **Process** button.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile-relocate-1.png)
 
 
 ### All Tasks
