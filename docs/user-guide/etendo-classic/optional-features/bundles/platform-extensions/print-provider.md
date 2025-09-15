@@ -27,54 +27,12 @@ It allows each organization to configure its print provider credentials, manage 
 
 The system offers a simple one-click printing workflow, in which the user selects the printer and template, and Etendo generates the label in the corresponding format (PDF, PNG, or ZPL) and sends it directly to the print provider for immediate printing.
 
-In addition, it exposes reusable backend services that can be consumed by different modules, including real-time barcode validation for GS1/EAN codes and a public API for printing from custom developments.
+In addition, it exposes reusable backend services that can be consumed by different modules and a public API for printing from custom developments.
 
 ## Initial Setup
 
-To start using this module correctly, the following installation and configuration steps must be completed:
+Before you start using the Print Provider module, you need to perform some initial configuration to ensure the connection between Etendo and the selected printing service. This process includes registering the provider's technical implementation, registering them as a provider, searching for and synchronizing available printers, and managing the associated print templates. Once these steps are complete, the system is ready to execute prints centrally and securely.
 
-- [x] **Integrating PrintNode with Etendo**
-
-The system allows integration with different print providers. However, it is essential that at least one print provider is configured to ensure the proper functioning of the print module within the system.
-
-!!!Note
-    PrintNode is presented as an example of integration, but its use is not mandatory.
-
-The following are the steps required to integrate PrintNode with Etendo, which will allow administrators to configure and connect printers within the platform.
-
-1. **Go to the PrintNode website**: Go to [the official PrintNode website](https://www.printnode.com){target="_blank"}.
-
-2. **Create an account on PrintNode**: If you do not have an account, register with PrintNode. Complete the required information to create a new user account. 
-
-3. **Download the installation file**: Once registration is complete, download the file corresponding to your operating system (Windows, macOS, Linux, etc.) from the PrintNode download page.
-
-4. **Install the downloaded file**: Run the downloaded file to start the installation process. Follow the wizard's instructions until the installation is complete.
-
-5. **Log in to PrintNode**: Once the application is installed, open it and log in with the credentials used during registration (username and password).
-
-6. **Perform a test print** (optional): Optionally, perform a test print to verify that the printer is configured correctly. You can also fill in your personal details in the corresponding section of the application.
-
-7. **Select the appropriate version**: PrintNode offers different versions of the service. If a free option is required, the free version can be used, which is limited to 50 prints per month and a single connected device. For companies that need a higher volume of prints or devices, it is necessary to purchase a paid plan.
-
-8. **Generate an API Key in PrintNode**: Generate an API Key by following these steps:
-
-    - Access the API Keys menu within the PrintNode platform.
-    - Enter the password to continue with the creation of the API key.
-    - Assign a name to the API key.
-    - Click the Create button to generate the key.
-
-9. **Upload the API Key to Etendo**: Once the API Key has been generated, it must be uploaded to Etendo to complete the integration
-
-    - Go to the Print Providers window in Etendo.
-    - In the Provider Params section, locate the Param Content field.
-    - Copy and paste the generated API Key into this field and save the changes.
-
-
-## Workflow
-
-The process begins with the [initial setup](#initial-setup), carried out by the system administrator, following the steps explained above. The administrator can then view the printers by provider and launch an update process to synchronize the printer list from the provider API, ensuring that all active printers are reflected in Etendo in the [Check and Register Printers](#check-and-register-printers-window) window.
-
-Once the system has been configured, users can print labels from relevant windows, depending on the module being used. For example, with the warehouse module, labels can be printed from windows such as Product, Packing, or Locator by clicking the **Print Label** button. Then, the backend generates the label in PDF, PNG, or ZPL format and sends the job to the print provider via its API, providing the operator with immediate feedback on the success or failure of the process.
 
 ### Provider Implementation
 :material-menu: `General Setup` > `Print Provider Configuration` > `Provider Implementation`
@@ -185,6 +143,19 @@ The pop-up allows you to select a previously configured print provider, assign t
 
 !!! Important
     The Print Providers module acts as a bridge between Etendo and the printer. It is important to note that printer operational issues, such as low paper, low ink, or network connectivity problems, cannot be managed through this system.
+
+
+- [x] **Integrating PrintNode with Etendo**
+
+PrintNode is presented as an example of integration, but its use is not mandatory. See the [the official PrintNode website](https://www.printnode.com){target="_blank"}.
+
+Integration with PrintNode requires following the vendor's official documentation. In general terms, you must create an account, install the agent on the printing device, generate an API Key, and upload it to Etendo to complete the connection.
+
+## Workflow
+
+The process begins with the [initial setup](#initial-setup), carried out by the system administrator, following the steps explained above. The administrator can then view the printers by provider and launch an update process to synchronize the printer list from the provider API, ensuring that all active printers are reflected in Etendo in the [Check and Register Printers](#check-and-register-printers-window) window.
+
+Once the system has been configured, users can print labels from relevant windows, depending on the module being used. For example, with the warehouse module, labels can be printed from windows such as Product, Packing, or Locator by clicking the **Print Label** button. Then, the backend generates the label in PDF, PNG, or ZPL format and sends the job to the print provider via its API, providing the operator with immediate feedback on the success or failure of the process.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
