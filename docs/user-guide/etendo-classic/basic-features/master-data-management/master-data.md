@@ -331,6 +331,29 @@ This functionality introduces the possibility to mark a bank account as Default 
 !!! warning
     Only one bank account can be selected as default for each business partner.
 
+### **Document Type**
+
+It allows to define, specifically for each business partner, the types of documents that will be used in associated transactions.
+
+With this functionality, no depend only on the standard document type configured at the organization level, but can customize the assignment based on the customer or supplier. That is, when the user creates an order, invoice, or shipment document associated with a Business Partner, the system checks the Document Type tab for that Business Partner to determine which configuration to apply. If there is a record configured for the Business Partner and the transaction in progress, the document type defined in that tab is applied; if there is no record, the standard document type configured at the organization level is inherited.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-1.png)
+
+In this tab, it is possible to create records with the following fields:
+
+- **Document Category**: This can be Order, Invoice and Shipment
+- **Sales Transaction**: When checked, this corresponds to sales documents (sales orders, sales invoices, and good shipment), while when unchecked, it corresponds to purchasing documents (purchase orders, purchase invoices, and goods receipt).
+- **Document Type**: Only the document types available for the selected category and sales transaction are displayed. The options are:
+
+    - for purchase orders: Purchase order and RTV order.
+    - for sales orders: POS order, quote, RFC order, standard order, and warehouse order.
+    - for purchase invoices: AP invoice and canceled purchase invoice.
+    - for sales invoices: AR invoice and canceled sales invoice.
+    - for goods shipments: MM shipment and RTV shipment.
+    - for Goods Receipt: MM Receipt and RFC Receipt.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-2.png)
+
 ### **Location/Address**
 
 Business partner locations and full address details can be set up in this tab.
