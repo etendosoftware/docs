@@ -295,7 +295,7 @@ As we can see in the query, it receives the`:name` parameter of String type that
 Restart the Das RX service to recognize the projections and mappings.
 
 ```bash title="Terminal"
-./gradlew rx.das.restart
+./gradlew resources.build
 ```
 
 !!! info 

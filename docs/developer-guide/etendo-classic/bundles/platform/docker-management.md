@@ -98,6 +98,15 @@ This command will stop the containers.
 ```
 This command will stop and remove the containers.
 
+### Build
+
+``` bash title="Terminal"
+./gradlew resources.build
+```
+This command forces services that use a Dockerfile to rebuild their own Docker image.
+
+!!! info
+    This command must be executed when the projection or mapping have been modified due to user changes or module management updates to these tables. The command forces the DAS service to recompile and generate new classes before starting the service.
 
 ## Verifying the Status
 

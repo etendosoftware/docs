@@ -538,6 +538,7 @@ nav:
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to Guides:
         - How to Change Date Format: developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
+        - How to Configure Memory Limits in Docker Containers: developer-guide/etendo-rx/how-to-guides/how-to-configure-memory-limits-in-docker-containers.md
         - How to Filter any Request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
         - How to Give Public Access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
         - How to Start RX as Service: developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code.md
