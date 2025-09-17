@@ -54,9 +54,9 @@ The **Open/Close Period Control** feature allows the user to manage which accoun
 
 Before using this window, ensure that:
 
-- Your organization has a **[Fiscal Calendar](#fiscal-calendar)** defined.
-- The fiscal calendar contains **Years** and **Periods** (typically monthly).
-- The organization's type is **Legal with Accounting** and has **[Allow Period Control](../../general-setup/enterprise-model.md#organization-1)** enabled.
+- [x] Your organization has a **[Fiscal Calendar](#fiscal-calendar)** defined.
+- [x] The fiscal calendar contains **Years** and **Periods** (typically monthly).
+- [x] The organization's type is **Legal with Accounting** and has **[Allow Period Control](../../general-setup/enterprise-model.md#organization-1)** enabled.
 
 Here’s how the process works in Etendo:
 
@@ -80,7 +80,7 @@ Here’s how the process works in Etendo:
     - You can’t generate closing entries here—use the End Year Close window.
     - You can also check the status of any period in the [Period Control](../../general-setup/enterprise-model.md#period-control) tab of the Organization.
 
-#### Why Using this Feature?
+#### Why Use this Feature?
 
 Using period control helps the user:
 
@@ -90,34 +90,7 @@ Using period control helps the user:
 
 ### Period Control
 
-The **Open/Close Period Control** window allows the user revise and manage all accounting periods created in the [Fiscal Calendar](#fiscal-calendar). You can **open**, **close**, or **permanently close** periods as needed for your organization.
-
-**Default Filters:** 
-
-By default, this window only shows periods that:
-
-- Are **not** closed.
-- Belong to the organization you’re logged into.
-
-!!!info
-    Remember you can remove these filters by clicking the funnel icon.
-
-**Tabs in this window:**
-
-- **Open/Close Period Control:** Lists all periods.
-- **Documents:** Shows all document types and their status for the selected period.
-
-**How to Open or Close a Period:**
-
-1. Use filters to find the periods you want.
-2. Select the periods.
-3. Click **Open/Close Period**, choose the action (Open or Close), and click OK.
-
-**How to Open or Close a Document Type in a Period:**
-
-1. Use filters to find the document types you want.
-2. Select the document types.
-3. Click **Open/Close Period**, choose the action, and click OK.
+The **Open/Close Period Control** window allows the user to revise and manage all accounting periods created in the [Fiscal Calendar](#fiscal-calendar). You can **open**, **close**, or **permanently close** periods as needed for your organization.
 
 ![Open/Close Period Control window](../../../../../assets/drive/1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt.png)
 
@@ -139,19 +112,30 @@ By default, this window only shows periods that:
 
 You can use these fields to filter and find the periods you need. For example, filter by calendar, organization, and year to see all periods for a specific year.
 
-!!!info
-    It is possible to select multiple records to open or close periods in bulk.
+**Default Filters:** 
+
+By default, this window only shows periods that:
+
+- Are **not** closed.
+- Belong to the organization you’re logged into.
+
+    !!!info
+        Remember you can remove these filters by clicking the funnel icon.
 
 **Available Buttons:**
 
 - **Open Period:** Allows posting in the period(s).
 - **Close Period:** Blocks posting in the period(s). You can reopen a closed period if needed.
 
-!!!important 
-    - Only periods for "Legal with Accounting" organizations with "Allow Period Control" enabled can be opened or closed. 
-    - If a period is open for all document types except one (e.g., AP Invoice), you can post all transactions except for that document type in that period.
+    !!!info
+        It is possible to select multiple records to open or close periods in bulk.
 
-#### **Period Control Example**
+    !!!important 
+        - Only periods for "Legal with Accounting" organizations with "Allow Period Control" enabled can be opened or closed. 
+        - If a period is open for all document types except one (e.g., AP Invoice), you can post all transactions except for that document type in that period.
+
+
+#### Period Control Example
 
 Here’s a simple example of how period control works:
 
@@ -179,7 +163,7 @@ After this, all standard periods for 2019 are closed. You can only:
 !!!important
     If you need to make changes in a closed period, you must reopen it, which is only possible if the year is not permanently closed; otherwise, run Undo Close Year first.
 
-### **Documents**
+### Documents Tab
 
 Each accounting period in Etendo can be opened or closed for all document types at once, or for specific document types.
 
@@ -187,16 +171,6 @@ Each accounting period in Etendo can be opened or closed for all document types 
 - You can also open or close individual document types (like AP Invoice or G/L Journal) within a period.
 
 This is useful in case the user needs to prevent the creation of further documents of a certain type for a specific period.
-
-**How to open or close a document type in a period:**
-
-1. Select a period in the Periods tab.
-2. Go to the Documents tab to see all document types for that period.
-3. Use filters to find the document types you want.
-4. Select the document types.
-5. Click **Open/Close Period**, choose the action, and click OK.
-
-Etendo will confirm when the process is complete.
 
 ![](../../../../../assets/drive/18LHnWB8IGtMlKvBlGEkFcvMl4MtUzfWD.png)
 
@@ -211,6 +185,17 @@ Each document type shows its status with a color and a name:
 !!!important
     - The 13th Period only allows G/L Journal entries.
     - If a period is open for all document types except one (for example, AP Invoice), you can post all transactions except for that type.
+
+
+**How to open or close a document type in a period:**
+
+1. Select a period in the Periods tab.
+2. Go to the Documents tab to see all document types for that period.
+3. Use filters to find the document types you want.
+4. Select the document types.
+5. Click **Open/Close Period**, choose the action, and click OK.
+
+Etendo will confirm when the process is complete.
 
 ## Financial Type
 
