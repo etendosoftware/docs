@@ -262,62 +262,62 @@ As shown in the image above, the main fields in this Window are:
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Account Tree`
 
-### Overview
+### Overview  
 
-An account tree is the way Etendo captures the **chart of accounts** (CoA) of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger (assets, liabilities, income, expenses, etc.).
+An **account tree** represents the **Chart of Accounts (CoA)** of an organization. The CoA is the list of accounts used in the general ledger, including assets, liabilities, income, and expenses.  
 
-Etendo offers different ways to configure a CoA for an organization. Also, CoA can be created based on the accounting requirements of each country and can be translated into the language according to the organization's needs. 
+Etendo provides several ways to configure a CoA based on the organization’s accounting needs. CoAs can follow country-specific requirements, be translated into different languages, and adapted to fit the company’s practices.  
 
-The Account Tree window allows the user to **review and maintain** the chart of accounts imported through a chart of accounts module, as well as to create new ones from scratch.
+The **Account Tree window** lets users:  
+
+- **Review and manage** a chart of accounts imported from a CoA module.  
+- **Create and customize** a new chart of accounts from scratch if needed.  
 
 ### Account Tree Configuration
 
 Etendo offers different options for CoAs configuration: 
 
-- **Install a location module or a generic plan**: Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In the case of Spain, Etendo provides a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) which includes the Statutory Chart of Accounts.
+- **Install a location module or a generic plan**: Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In other hand, some countries such as the USA do not require that specific level of detail.
 
-    For instance, the Spanish Localization Bundle includes:
 
-    -   the [General Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
-    -   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
+    !!!info 
+        In the case of Spain, Etendo provides a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) which includes the Statutory Chart of Accounts.
 
-    Some countries such as the USA do not require that specific level of detail.
+        For instance, the Spanish Localization Bundle includes:
+
+        -   the [General Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
+        -   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
+
 
     Each organization can **define the chart of accounts that best suits their practices**. In that case, Etendo provides a **Generic Chart of Accounts module** which delivers a standard list of accounts which can be evolved for the organization's needs. After installation, the generic Chart of Accounts is available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
 
 
-- **Import a CSV file with the account tree structure**: During customer or organization creation,as explained in [How to Create a Chart of Accounts Module](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md) guide, a **chart of accounts module** basically includes a **CSV file** which contains the account tree structure.
+- **Import a CSV file with the account tree structure**: You can import a CSV file that defines the account tree structure during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup) if the **Include Accounting** checkbox is selected. In that case, you will be prompted to choose the CSV file (accounting file).   
 
-    In Etendo, that creates:
+    This process creates:
 
-    -   the organization's **Account Tree** or Chart of Accounts.
-    -   and besides a defaulted [General Ledger configuration](#general-ledger-configuration).
+    - The organization’s **Account Tree** (Chart of Accounts).
+    -  Default [General Ledger configuration](#general-ledger-configuration).  
 
-    !!!note
-        It is important to remark that it is not possible to apply a Chart of Accounts in the [Enterprise Module Management](../../../../etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window because a Chart of Account is not a dataset but a CSV file.
-
-
-    Additionally, a CSV file can be imported while running the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or while running the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup) if the checkbox **Include Accounting** is checked, therefore the CSV file or accounting file can be selected.
-
-    !!!info
-        After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+    !!! info
+        As explained in the [How to Create a Chart of Accounts Module](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md) guide, a **Chart of Accounts module** basically contains the **CSV file** with the account tree structure.
 
 
 - **Create the CoA manually**: a chart of accounts can also be [created manually](#account-tree-creation), if this is the case, it is recommended to start from a sample CoAs like the generic one and evolve it for the company’s needs rather than starting from scratch.
 
+    !!! tip
+        
+        - If a Chart of Accounts module or an accounting CSV file is installed and selected at **Client Level** through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, it can be shared by any organization available in the client.
+        
+        - If a Chart of Accounts module is installed and then selected at **organization level** through the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup) process, the chart of accounts automatically created is linked to the organization being created.
 
-If a Chart of Accounts module or an accounting CSV file is installed and selected at **client level** through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, the chart of accounts automatically created can be shared by any organization available in the client, as it is assigned to the organization (\*).
-
-!!!note
-    This is not the preferred method but to install it at organization level, see next paragraph.
-
-If a Chart of Accounts module is installed and then selected at **organization level** through the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup) process, the chart of accounts automatically created is linked to the organization being created.
-
-#### Element Value
+#### Element Value Tab
 
 The **Element value** tab lists every chart of account elements from the chart of accounts headings to the subaccounts.
 
-Every CoAs in Etendo contains different types of elements organized into the following hierarchy:
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-0.png)
+
+Every **Chart of Accounts** in Etendo contains different types of elements organized into the following hierarchy:
 
 -   **Heading**, **Breakdown** and **Account** elements help to structure the CoAs in a way that the financial reports can be produced based upon that structure.
 
@@ -334,17 +334,18 @@ Every CoAs in Etendo contains different types of elements organized into the fol
 Besides, it is well-known that every account, subaccount in Etendo terms, needs to be included in a financial statement:
 
 -   **Asset**, **Liability** and **Owner's Equity** account types need to be included in the Balance Sheet
--   while **Expense** and **Revenue** account types need to be included in the Profit & Loss.
+-   **Expense** and **Revenue** account types need to be included in the Profit & Loss.
 
-The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar once the user is in the Element Value tab.
+!!! tip
+    The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar once the user is in the Element Value tab.
 
 The Tree icon opens a new window which shows one **tree branch** per financial statement:
 
 -   Balance Sheet
 -   Profit & Loss
--   and Temporary default accounts. This branch of the account tree gathers temporary defaults accounts which are not ledger accounts.
+-   Temporary default accounts: This branch of the account tree gathers temporary defaults accounts which are not ledger accounts.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree1.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-1.png)
 
 Besides, each tree branch contains several elements inside structured in a hierarchical way, for instance:
 
@@ -352,30 +353,30 @@ Besides, each tree branch contains several elements inside structured in a hiera
     -   Assets
     -   Liabilities and Owner's Equity
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree2.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-2.png)
 
 
 As shown in the image above **Assets** is also split into:
 
 -   Current Assets
 -   Long term Assets
--   and Accumulated Depreciation
+-   Accumulated Depreciation
 
 Same way **Equity** is also split into several accounts, in Etendo terms **subaccounts**, such as **Capital Stock** or **Retained Earnings**.
 
 Back to the **Element Value** tab, there are several **basic fields** which help to define each chart of account element:
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree3.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-3.png)
 
 
--   the **Search Key** and the **Name** identifies the chart of account element.
+-   The **Search Key** and the **Name** identifies the chart of account element.
     -   The search key can either be a single letter, a word or a number, however it is important to be aware that the Search key field is the field that Etendo uses while helping the user to create an [account tree element](#balance-sheet-elements).
--   the **Account Sign** field is only shown and therefore editable if the general ledger configuration linked to the account tree is [NOT set as Centrally Maintained](#general-ledger-configuration).  
+-   The **Account Sign** field is only shown and therefore editable if the general ledger configuration linked to the account tree is [NOT set as Centrally Maintained](#general-ledger-configuration).  
     In that case, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements:
-    -   if the account sign of an account tree element is **Debit**, the balance of that account will then be shown as **(Debit - Credit)**.
+    -   If the account sign of an account tree element is **Debit**, the balance of that account will then be shown as **(Debit - Credit)**.
         -   **Asset** accounts type are normally set as **Debit**, therefore its debit balance is shown as **positive** in the Balance Sheet.  
             In the same way, its credit balance is then shown as negative in the Balance Sheet.
-    -   if the account sign of an account tree element is **Credit**, the balance of that account will then be shown as **(Credit - Debit)**.
+    -   If the account sign of an account tree element is **Credit**, the balance of that account will then be shown as **(Credit - Debit)**.
         -   **Liability** account types are normally set as **Credit**, therefore its credit balance is shown as **positive** in the Balance Sheet. Same applies to the **Owner's Equity** account type.
         -   **Revenue** account types are set as **Credit**, therefore its Credit balance is shown as **positive** in the P&L report.
         -   **Expense** account types are set as **Credit**, therefore its Debit balance is shown as **negative** in the P&L report.
@@ -392,21 +393,21 @@ Back to the **Element Value** tab, there are several **basic fields** which help
     **Asset**, **Liability** and **Owner's equity** account types are included in the Balance Sheet as well as in the balance sheet closing entry as described in the [Close Year](#fiscal-calendar) article.  
     **Revenue** and **Expense** account types are included in the Income Statement as well as in the P&L closing entry as described in the [Close Year](#fiscal-calendar) article.
 -   **Summary Level** defines if an account tree element groups other levels underneath or not, therefore heading, account and breakdown levels can be marked as summary levels while subaccount should not. There can be heading elements which group other elements underneath, for instance the element 1000-Assets while there can be heading elements which do not need to group other elements underneath but [Customize Elements](#customized-elements), for instance the element 1900-Total Assets. The first type needs to be configured as **Summary Level**, the second type does not need to. Moreover:
-    -   the amounts displayed in financial reports such as the Balance Sheet and the Income statement for a non-summary element is the sum of the debit and credit amounts posted to that account (subaccount).  
+    -   The amounts displayed in financial reports such as the Balance Sheet and the Income statement for a non-summary element is the sum of the debit and credit amounts posted to that account (subaccount).  
         The balance of that particular subaccount will then be shown as either positive or negative depending on its account sign or depending on what is centrally configured in the [General Ledger configuration](#general-ledger-configuration)
-    -   the amounts displayed in financial reports such as the Balance Sheet and the Income statement for a summary element is the sum of the amounts of the elements underneath.  
+    -   The amounts displayed in financial reports such as the Balance Sheet and the Income statement for a summary element is the sum of the amounts of the elements underneath.  
         The balance of that summary element will then be shown as either positive or negative depending on its account sign or depending on what is centrally configured in the [General Ledger configuration](#general-ledger-configuration).
 
 Additionally, there are other advanced fields which also help to configure more unusual scenarios. Those fields are:
 
--   the **Show Value Condition** field defines if a chart of account element balance is going to be shown and taken into account in financial reports or not. The options available are:
+-   The **Show Value Condition** field defines if a chart of account element balance is going to be shown and taken into account in financial reports or not. The options available are:
     -   **Algebraic**, the chart of account element will be shown anyway regardless of the sign of its balance. This is the most commonly used.
     -   **Negative Only**, it will be shown only in case its balance is negative
     -   **Positive Only**, same as the previous one but just in case its balance is positive.
 -   **Element Shown** defines if an account tree element is going to be shown in the financial reports or not. This one can be used for elements used to execute calculations which do not need to be shown in a report.
 -   **Title Node** defines if an account tree element is going to be shown in the financial reports just as a **Title** without including its balance. This option works for heading account tree elements which balance is not 100% accurate for whatever kind of reason as there is another element which gets the correct balance value by using operations or [Customize Elements](#customized-elements) between a set of given elements.
 
-#### Customized Elements
+#### Customized Elements Tab
 
 The **Customized Elements** tab allows the user to get an account tree element as a combination of a given list of existing elements.
 
@@ -420,13 +421,13 @@ For instance, the element 1900-Total Assets is the sum up of three customized el
 
 as shown in the image below.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree4.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-4.png)
 
-#### Translation
+#### Translation Tab
 
 In the **Translation** tab, account elements can be translated to any language required.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree5.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-5.png)
 
 #### Account Tree creation
 
@@ -768,14 +769,14 @@ However, temporary default accounts need to be created in the account tree under
 
 Therefore, a new **Heading** and **Summary** element needs to be created in the **Element Level** tab, that element can be named **Temporary Accounts**.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree6.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-6.png)
 
 Once created, the accounts below (subaccounts) can be created and move underneath it:
 
 -   Suspense Balancing account
 -   Suspense Error account
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounttree7.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-7.png)
 
 ## General Ledger Configuration
 
