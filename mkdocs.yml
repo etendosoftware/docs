@@ -582,6 +582,7 @@ nav:
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides:
+        - How to Configure API Tokens: developer-guide/etendo-copilot/how-to-guides/how-to-configure-api-tokens.md
         - How to Configure Etendo Copilot to Use a Proxy: developer-guide/etendo-copilot/how-to-guides/how-to-configure-etendo-copilot-proxy.md
         - How to Configure MCP servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
         - How to Connect Etendo Copilot with Gmail via Pipedream: developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream.md
