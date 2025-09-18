@@ -760,48 +760,53 @@ Once created, the accounts below (subaccounts) can be created and move underneat
 
 ### Overview
 
-The general ledger configuration indicates the way that the organization's financial transactions are going to be posted to the ledger.
+The **General Ledger (GL) Configuration** defines how an organization's financial transactions are posted to the ledger.
 
-A general ledger configuration is created whenever an accounting CSV file or "Chart of Accounts" module reference data is selected while running the Initial Client Setup process or the Initial Organization Setup process.
+A GL configuration is created whenever an accounting **CSV file or a Chart of Accounts (CoA)** reference module is selected during the [Initial Client Setup](../../general-setup/getting-started.md#initial-client-setup) process or the [Initial Organization Setup](../../general-setup/enterprise-model.md#initial-organization-setup) processes.
+
 
 The general ledger configuration created by default can afterwards be customized to meet the organization's needs.
 
-If the *accounting CSV file* or *reference data* is selected at **client** level, the general ledger configuration is assigned to the organization(\*) therefore it is available to any organization within the client.
+- If configured at **Client level**, the GL is assigned to the organization (\*) and available to all organizations within that client.
 
-If the *accounting CSV file* or *reference data* is selected at **organization** level, the general ledger configuration is assigned to the organization making it available to that organization and any of its descendants.
+- If configured at **Organization level**, the GL is available only to that organization and its descendants.
 
-Besides a general ledger configuration, those accounting files also create:
+!!!info
+    Besides a general ledger configuration, those accounting files also create the organization's Account Tree or Chart of Accounts and the general ledger default accounts. 
 
--   the organization's Account Tree or Chart of Accounts
--   and the general ledger default accounts
+!!!info
+    Etendo delivers accounting files through the Chart of Accounts modules contained in a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) if available for your country.
 
-Etendo delivers accounting files through:
 
--   the "Chart of Accounts" modules contained in a Localization Bundle if available for your country
--   and the Generic Chart of Accounts module
+Additionally, a general ledger configuration can also be created **manually**, but once the corresponding Account Tree has been created.
 
-Additionally, a general ledger configuration can also be created manually, but once the corresponding Account Tree has been created.
-
-Finally, it is important to remark that the organization's general ledger configuration and the organization's account tree (or chart of accounts) are linked to each other because "Account" is a mandatory dimension of the general ledger configuration.
+Finally, it is important to remark that the GL configuration and the CoA are linked, since **Account** is a mandatory dimension of the GL.
 
 #### General Ledger Configuration
 
 The General Ledger Configuration window allows the user to review and maintain defaulted general ledger configurations and to create new ones if needed.
 
-![](../../../../../assets/drive/1CzhjGyPX0yBre7l8Icc2Oh1BZY8rJASo.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration1.png) 
 
-A general ledger configuration created by default can be changed to meet the organization's needs by changing the features below:
+A general ledger configuration created by **default** can be changed to meet the organization's needs by changing the features below:
 
-1\. The **Currency** to use while posting transactions or journal entries to the ledger.
+1\. The **Currency** field: 
 
--   The currency shown at first is taken from the currency entered either in the Initial Client Setup process or in the Initial Organization Setup process. This currency can be changed if needed before doing any posting.
+- The Default currency comes from Client/Organization Setup.
 
-An organization can have two general ledgers assigned, one inherited from its parent in a given currency (i.e. USD) and its own one which can be defined in a different currency (i.e. EUR).  
-That is, for instance, the configuration of the F&B España organization of the F&B sample client. This means that every time that an F&B España transaction is posted to the ledger Etendo will show two "Journal Entries Report" windows one for each general ledger, as shown in the images below:
+- Can be changed before posting starts.
 
-2\. The **Allow Negative** checkbox defines if negative posting is allowed or not while posting transactions to the general ledger.
+- An organization can have **multiple GLs in different currencies**.
 
-Negative posting not allowed implies that a negative debit posting would turn into a credit posting and a negative credit posting would turn into a debit posting.
+    - Example: F&B España posts in both USD (inherited) and EUR (own GL).
+
+    - Result: Two Journal Entry Reports, one per ledger.
+
+2\. The **Allow Negative** checkbox: Defines whether negative postings are allowed.
+
+- Enabled: reversals post with negative amounts.
+
+- Disabled: reversals are re-posted with opposite debit/credit signs.
 
 For instance, a purchase invoice generates the posting below:
 
@@ -812,27 +817,32 @@ For instance, a purchase invoice generates the posting below:
 | Tax Credit | Tax Amount |     | One per tax line |
 | Vendor Liability |     | Total Gross Amount | One per invoice |
 
-If that purchase invoice needs to be totally or partially voided or reversed, the posting will look like:
+When voided:
 
--   in case of "Allow Negative" checkbox enabled
+- Allow Negative = YES (postings appear as negative values).
 
-|     |     |     |     |
-| --- | --- | --- | --- |
-| Account | Debit | Credit | Comments |
-| Product Expense | (-) Line Net Amount |     | One per invoice line |
-| Tax Credit | (-) Tax Amount |     | One per tax line |
-| Vendor Liability |     | (-) Total Gross Amount | One per invoice |
+- Allow Negative = NO (postings are reclassified: debit ↔ credit).
 
--   in case of "Allow Negative" checkbox disabled
 
-|     |     |     |     |
-| --- | --- | --- | --- |
-| Account | Debit | Credit | Credit |
-| Product Expense |     | Line Net Amount | One per invoice line |
-| Tax Credit |     | Tax Amount | One per tax line |
-| Vendor Liability | Total Gross Amount |     | One per invoice |
+3\. The **Centrally Maintenance** checkbook: 
 
-3\. The general ledger can be set as "**Centrally Maintained**" or not in relation to the way that the Account Tree elements are going to be shown in the **Balance Sheet** and in the **Income Statement**
+- **Centrally Maintained** = YES: Account Sign is hidden in Account Tree.
+
+    - It is possible to define at general ledger level whether the balances of any account type are going to be shown as **Positive** or **Negative** in the financial statements.  
+
+        - Assets (Debit balances) → Positive
+
+        - Liabilities & Equity (Credit balances) → Positive
+
+        - Expenses (Debit balances) → Positive
+
+        - Revenues (Credit balances) → Positive
+
+Options can be overridden (e.g., showing Expenses as negative).
+
+
+
+or not in relation to the way that the Account Tree elements are going to be shown in the **Balance Sheet** and in the **Income Statement**
 
 -   If a general ledger is set as "Centrally Maintained":
     -   The field "Account Sign" is hidden in the Element Value tab of the Account Tree window
