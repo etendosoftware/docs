@@ -32,6 +32,23 @@ The **main components of the Print Provider module** are:
 
     - `sendToPrinter` (Provider, Printer, copies, labelFile): String (jobId).
 
+
+### Provider Implementation
+:material-menu: `General Setup` > `Print Provider Configuration` > `Provider Implementation`
+
+!!! info
+    Access to this window is restricted to users with the System Administrator (Sys) role. Operational users will not be able to modify these settings.
+
+This window allows to register third-party print providers such as PrintNode. Here you can configure credentials, endpoint URLs, and the specific Java implementation that complies with the PrintProviderStrategy contract. Each organization can maintain its own print providers.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/provider-implementation-window-1.png)
+
+Fields to note:
+
+- **Module**: Indicates the module used by the Print Provider module.
+- **Name**: Descriptive name of the provider.
+- **Java Implementation**: Path to the Java file where the provider implementation is located. This must comply with the established contract, defining how printers are displayed, how the printout is generated, and how it is sent to the printer.
+
 - **Resolve ProviderStrategyResolver**:  Given a Provider (registered in the [Print Providers](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md#print-providers) window), find its ProvidersImplementation ([Provider Implementation](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md#provider-implementation) window), load the class (java Implementation), and return an instance of the strategy.
 
     **PrinterUtils utilities**: Cross-functional helpers

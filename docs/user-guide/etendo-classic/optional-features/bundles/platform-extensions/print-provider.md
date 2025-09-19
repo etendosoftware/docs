@@ -18,37 +18,44 @@ status: beta
 
 ## Overview
 
-The **Print Provider** module connects Etendo ERP with printing platforms, offering a unified solution for creating and printing barcode labels directly from different areas of the system.
+The **Print Provider** module connects Etendo with printing platforms, offering a unified solution for creating printable directly from different areas of the system.
 
-It allows each organization to configure its print provider credentials, manage and synchronize the catalog of available printers, administer print templates, and execute on-demand printing from specific windows.
+It allows each organization to configure its print provider, manage and synchronize the catalog of available printers, administer print templates, and execute on-demand printing from specific windows.
 
-!!! info
-    Each organization must register and maintain its own API key. Sharing credentials between companies is not recommended, as it would affect traceability and security.
+The system offers a simple one-click printing workflow, in which the user selects the printer and template, and Etendo generates the printable in the corresponding format and sends it directly to the print provider for immediate printing.
 
-The system offers a simple one-click printing workflow, in which the user selects the printer and template, and Etendo generates the label in the corresponding format (PDF, PNG, or ZPL) and sends it directly to the print provider for immediate printing.
+!!! info 
+    This module includes by default the implementation of a specific print provider [Print Node](https://www.printnode.com/){target="_blank"}, and all configuration and usage examples are based on this provider. This service includes a free plan, although if you require large print volumes, you should consult the [service pricing](https://www.printnode.com/pricing){target="_blank"}.    
 
-In addition, it exposes reusable backend services that can be consumed by different modules and a public API for printing from custom developments.
+
+!!! tip
+    In addition, this module enables the implementation of custom print providers, exposes reusable back-end services that can be consumed by different modules, and a public API for printing from custom developments. For more information, visit: [Print Provider - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
+
 
 ## Initial Setup
 
-Before you start using the Print Provider module, you need to perform some initial configuration to ensure the connection between Etendo and the selected printing service. This process includes registering the provider's technical implementation, registering them as a provider, searching for and synchronizing available printers, and managing the associated print templates. Once these steps are complete, the system is ready to execute prints centrally and securely.
+Before start using the **Print Provider** module, it is needed  to perform the initial configuration to ensure the connection between Etendo and the selected printing service.
+
+In the following example, the **PrintNode** service will be integrated with Etendo as a specific case, which is distributed within the module, but its use is not mandatory.
+
+Integration with PrintNode requires following the [official provider documentation](https://www.printnode.com/docs). In general terms, you must create an account, install the management software on the device responsible for printing, and generate an API key that we will then use from Etendo to connect to the service.
+
+This process includes:
+
+- [x] Create **PrintNode** account and get the **API key**.
+- [x] Install the **provider settings** and **print templates** in Etendo.
+- [x] Configure **provider access**.
+- [x] Searching for and synchronizing available printers. 
+ 
+Once these steps are complete, the system will be ready to execute prints centrally and securely.
 
 
-### Provider Implementation
-:material-menu: `General Setup` > `Print Provider Configuration` > `Provider Implementation`
+### Install Providers and Print Templates
 
-!!! info
-    Access to this window is restricted to users with the System Administrator (Sys) role. Operational users will not be able to modify these settings.
+:material-menu: `Application`>`General Setup` > `Enterprise Model` > `Enterprise Module Management`
 
-This window allows to register third-party print providers such as PrintNode. Here you can configure credentials, endpoint URLs, and the specific Java implementation that complies with the PrintProviderStrategy contract. Each organization can maintain its own print providers.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/provider-implementation-window-1.png)
 
-Fields to note:
-
-- **Module**: Indicates the module used by the Print Provider module.
-- **Name**: Descriptive name of the provider.
-- **Java Implementation**: Path to the Java file where the provider implementation is located. This must comply with the established contract, defining how printers are displayed, how the printout is generated, and how it is sent to the printer.
 
 ### Print Providers
 
@@ -61,6 +68,9 @@ This window is used to register a provider, taking the information from the reco
 Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the [Provider Implementation](#provider-implementation) window.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/print-provider-tab-1.png)
+
+!!! info
+    Each organization must register and maintain its own API key. Sharing credentials between companies is not recommended, as it would affect traceability and security.
 
 **Provider Params**: This tab is designed to set the configuration values necessary for integration with a printing provider. This configuration is essential for the system to communicate correctly with your services.
 
@@ -75,6 +85,7 @@ In the PrintNode example, the parameters that need to be configured are:
    - **apikey**: value provided by the printing provider.
    - **printersurl**: path to access the provider's printers.
    - **printjoburl**: path used to send print jobs.
+
 
 ### Check and Register Printers
 
@@ -143,13 +154,6 @@ The pop-up allows you to select a previously configured print provider, assign t
 
 !!! Important
     The Print Providers module acts as a bridge between Etendo and the printer. It is important to note that printer operational issues, such as low paper, low ink, or network connectivity problems, cannot be managed through this system.
-
-
-- [x] **Integrating PrintNode with Etendo**
-
-PrintNode is presented as an example of integration, but its use is not mandatory. See the [the official PrintNode website](https://www.printnode.com){target="_blank"}.
-
-Integration with PrintNode requires following the vendor's official documentation. In general terms, you must create an account, install the agent on the printing device, generate an API Key, and upload it to Etendo to complete the connection.
 
 ## Workflow
 
