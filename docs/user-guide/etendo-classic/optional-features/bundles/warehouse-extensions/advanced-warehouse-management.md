@@ -70,38 +70,56 @@ To start using this module correctly, the following installation and configurati
     - **Active**: is checked or unchecked to enable or disable the configuration.
     - **Barcode Algorithm**: The default barcode algorithm that allows interpretation according to any of the standards defined by international organizations. The options to select are:
 
-        - EAN 128
+        - GS1 128
         - SimpleBarcode
 
     - **AI Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
 
-        === ":material-playlist-plus: EAN 128"
-
-            The GS1-128 standard is a barcode format designed to encode structured information using Application Identifiers (AI). Each AI defines the type of data contained in the label, allowing not only products to be identified, but also additional information that is key to logistics. It configuration allows for the recognition of different Application Identifiers (AI) used in warehouse processes. Some common examples are:
-                
-            - **(00)**: SSCC (Serial Shipping Container Code): uniquely identifies a logistics unit (pallet, box).
-            - **(01)**: GTIN (Global Trade Item Number): globally identifies a commercial product using a 14-digit code.
-            - **(10)**: Batch/Lot Number: batch number to ensure traceability in manufacturing and distribution processes.
-            - **(17)**: Expiration Date: product expiration date.
-            - **(21)**: Serial Number: unique serial number of an item.
-            - **(91)**: Locator Code: identifies the specific location within the warehouse.
-            - **(37)**: Quantity of items: indicates the quantity contained in the logistics unit.
-
-            Thanks to this configuration, when scanning a GS1-128 barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, when reading an SSCC (00), it associates it with an AUOM (box or pallet) and so on with the other identifiers.
-
-        === ":material-playlist-plus: SimpleBarcode"
-
-            This configuration allows the system to recognize exactly the value read from the barcode and search for it in the ERP as a direct match.
-
-
     - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
 
-    !!! warning
-        It is mandatory to create a configuration for the organization you are working with.
-    
+6. **AI Configuration** Window    
 
+This window is part of the advanced barcode settings in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
 
-6. **Task** infrastructure:
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-window-1.png)
+
+This section covers two main methods for code recognition:
+
+=== ":material-playlist-plus: GS1 128"
+    This is a standard code type used globally to encode structured data, such as product identifiers, batch numbers, expiration dates, and other relevant information. GS1-128 uses Application Identifiers (AIs) to define what type of data it is encoding, allowing for a more detailed reading of product information.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-gs1128-1.png)
+
+    Through this window, it is possible to configure and add these types of codes, or even others, as needed. The fields in the table allow you to configure details such as the “AI” (application identifier), the length of the code, and the reading priority of each one. This is crucial to ensure that the system can correctly process barcodes, according to specific business requirements.
+   
+    The GS1-128 standard is a barcode format designed to encode structured information using **Application Identifiers** (AIs). Each AI defines the type of data contained in the label, allowing not only products to be identified, but also key logistics information. For more informatio, see the [GS1 128 Oficial Documentation](https://www.gs1.org/standards/barcodes){target="\_blank"}
+
+    Etendo recognizes and validates only the identifiers shown in the list below. Any modification or inclusion of new identifiers, even those specific to the standard, requires additional development for interpretation; if an identifier that is not on the list is used, the system does not generate an error, but it will also not be able to validate its content.
+
+    As indicated in the standard, when using a variable-length identifier, a separator must be added, which can be defined in the AI Configuration window. The value declared by the standard is **FNC1**
+                        
+    It configuration allows for the recognition of different Application Identifiers (AI) used in warehouse processes. Some common examples are:
+                
+    - **(92)**: Container Code: uniquely identifies a logistics unit (pallet, box).
+    - **(01)**: GTIN (Global Trade Item Number): globally identifies a commercial product using a 14-digit code.
+    - **(10)**: Batch/Lot Number: batch number to ensure traceability in manufacturing and distribution processes.
+    - **(17)**: Expiration Date: product expiration date (YYMMDD).
+    - **(21)**: Serial Number: uanique serial number of an item.
+    - **(91)**: Locator Code: identifies the specific location within the warehouse.
+    - **(37)**: Quantity of items: indicates the quantity contained in the logistics unit.
+
+    Thanks to this configuration, when scanning a GS1-128 barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, when reading an SSCC (00), it associates it with an AUOM (box or pallet) and so on with the other identifiers.
+
+=== ":material-playlist-plus: SimpleBarcode"
+
+    This method allows the system to read the code and compare it exactly with the codes of the products stored in the system. The comparison is direct and strict, without taking into account any additional structure in the code.    
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-direct-1.png)
+
+!!! warning
+    It is mandatory to create a configuration for the organization you are working with.
+
+7. **Task** infrastructure:
 
     The [Task](../platform-extensions/task.md) module, automatically installed as a dependency of this module, enables event management and triggering tasks creation and actions execution after dynamic changes, allowing automation of flows.
 
@@ -257,7 +275,7 @@ When the reservation is executed, the system follows the following logic:
 
 - If there is sufficient stock in that unit, a complete reservation is generated.
 
-- If there is insufficient stock in that unit, the system takes what is available and tries to complete the quantity with other equivalent units.
+- If there is insufficient stock in that unit, the system takes whatever is available in that unit, then attempts to supplement with stock from other AUOMs, and finally with units.
 
 - If it manages to reach the total, a complete reservation is generated.
 
@@ -276,12 +294,14 @@ In this way, the system ensures that a single scan comprehensively recognizes th
 
     where:
 
+    - 92 = logistic unit identifier
+    - BX100024 = logistic unit code
     - 01 = product identifier
-    - BX100024 = product code
-    - 10 = batch identifier
-    - L021 = batch
+    - 12345678912345 = product code
+    - 10 = lot identifier
+    - L021 = lot
     - 17 = expiration identifier
-    - 022030 = expiration date
+    - 260710 = expiration date (YYMMDD)
     - 37 = quantity identifier
     - 12 = quantity
 
@@ -302,6 +322,8 @@ When a receipt includes a product line with an AUOM configured as Pallet or Box,
 
 The automatic creation of RI depends on the “Generate logistics unit automatically” preference being enabled. Also, if the “Enable UOM Management” preference is not set to ‘Y’, the user will not be able to manage AUOM from the Product window, and therefore will not be able to define equivalencies for pallets and boxes, which is a prerequisite for this functionality to work correctly.
 
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-1.png)
+
 #### Header
 
 The header displays the general fields for basic receipts such as Organization, Activation Check, Document No., and certain specific fields such as:
@@ -310,7 +332,7 @@ The header displays the general fields for basic receipts such as Organization, 
 - Movement Date: This is the date on which the movement is created and, by default, is the current date. 
 - Accounting Date: Date on which the movement is accounted for.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-1b.png)
 
 #### Line Tab
 
@@ -323,10 +345,6 @@ The Tab Lines allows you to add and modify individual products from one or more 
 - Storage Bin: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same purchase order or different ones.
 - Grouped by: Displays the identifier of the grouping to which the line belongs. This value is generated when using the Group button and allows you to identify which lines are part of the same container or packaging unit.
 - Reference Inventory Type: Displays the referenced inventory type associated with the grouping.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-2.png)
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-3.png)
 
 #### Buttons
 
@@ -346,14 +364,24 @@ The Tab Lines allows you to add and modify individual products from one or more 
 
 **Group By AUOM**: this button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.
 
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-button-group-1.png)
+
 To group: 
 
 - In the Lines tab, select the product lines you want to group.
 - When you click the Group By AUOM button, the system prompts you to choose the Reference Inventory Type that defines the type of grouping (for example: Box, Pallet).
 - The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1 if grouped on a pallet). 
 
-!!! info:
-    If the merchandise enters in an alternative unit (e.g., boxes), it can be grouped, but the system interprets it as total units. Example: 2 boxes of wine (20 units) + 100 loose units = 1 grouping of 120 units.  Each time you want to create a different grouping, you must repeat the action with the corresponding lines. This allows you to generate several independent groupings (e.g., Box-1, Box-2, Box-3...). If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-button-group-2.png)
+
+!!! info
+     Only lines from the same Sales Order can be grouped.
+     
+     If the products enters in an logistic unit (e.g., boxes), it can be grouped, but the system interprets it as total units. Example: 2 boxes of wine (20 units) + 100 loose units = 1 grouping of 120 units.  
+        
+     Each time a different grouping is created, you must repeat the action with the corresponding lines. This allows to generate several independent groupings (for example, Box-1, Box-2, Box-3...).    
+
+     If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
 
 **Clear Group By** button allows you to remove a line from your grouping without affecting the rest of the lines in the group.
 
@@ -436,9 +464,12 @@ This screen contains:
 
 #### Picking Methods
 
-The system allows flexibility in the mode of operation:
+In the picking process, the operator has flexibility in both what to pick and how to do it. On the one hand, even if the system requests a specific code (for example, box BX100020), it is possible to replace it with another equivalent unit (such as BX100023) as long as the product and quantity match, or to adapt to stock availability (for example, delivering 10 individual units instead of a box of 10). These variations are automatically recorded in the reservation and on the delivery note.
+
+On the other hand, the system also allows flexibility in the mode of operation through different selection methods:
 
 - Scan the product the requested number of times (ex: 10 scans for 10 units).
+- Scan a logistics unit, which automatically loads the requested quantity along with its equivalent in units according to the conversion rate.    
 - Manually load "10" in the quantity field and scan once.
 - Enter both code and quantity manually.
 - Manually enter only the quantity in the Quantity field within a product card, using the + and - buttons or by entering the number from the keypad.
@@ -553,16 +584,15 @@ This screen contains:
     - You can switch between boxes to distribute products as needed.
 
 
-#### Loading Options
+#### Packing Methods
 
-The system allows flexibility in mode of operation:
+During the packing process, the operator must strictly adhere to what is to be picked, i.e., they can only scan the barcodes listed on the packing document. It is not permitted to substitute boxes for others or change logistics units, as the products have already been reserved during picking and the packing must reflect exactly what was requested.
+
+In terms of how to perform packing, the system offers flexibility in operating methods:
 
 - Scan the product the exact number of times (ex: 10 scans for 10 units).
-
 - Load the amount manually in the Quantity field and then Scan the product. 
-
 - Enter both quantity and code manually.
-
 - Enter the quantity manually from the **Product** view or from the **Boxes** view.
 
 !!! Warning
