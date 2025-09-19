@@ -58,7 +58,7 @@ Fields to note:
         This option works as a manager of other agents and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the agents is 50, though a different amount can be configured. 
     
     !!! info
-        If the **App type**  `Multi-Model Agent` are chosen, the tabs shows are [knowledge](#knowledge-tab) and  [Skill and Tools](#skills-and-tools-tab). If the `LangGraph` option is chosen, the [Skill and Tools](#skills-and-tools-tab) and [Team Members](#team-members-tab) tabs are shown.
+        If the **App type**  `Multi-Model Agent` are chosen, the tabs shows are [Knowledge](#knowledge-tab), [Skills and Tools](#skills-and-tools-tab) and [MCP Servers](#mcp-servers-tab). If the `LangGraph` option is chosen, the [Skills and Tools](#skills-and-tools-tab), [Team Members](#team-members-tab) and [MCP Servers](#mcp-servers-tab) tabs are shown.
 
 - **Sync Status**: This read-only field indicates the current status of the agent.
     - `Pending synchronization` the agent will switch to this status at any change, either in the header or in the tabs.
@@ -155,6 +155,20 @@ Fields to note:
         Remember that it is not possible to select an agent without a description.
 
 - **Active**: Checkbox to activate the team member.
+
+
+### MCP Servers Tab
+
+In this tab you can configure **Model Context Protocol (MCP) Servers** that extend your agent's capabilities by providing external tools and resources. MCP Servers are external processes that agents can communicate with to access specialized functionality.
+
+Fields to note:
+
+- **MCP Server**: The user can select from available MCP servers configured in the system. Multiple MCP servers can be added to extend the agent's capabilities.
+- **Description**: Read-only field displaying the description of the selected MCP server, helping users understand what functionality it provides.
+- **Active**: Checkbox to activate or deactivate the MCP server for this agent.
+
+!!!tip
+    For detailed instructions on creating and configuring MCP servers, see [How to configure MCP servers on Etendo agents](../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md).
 
 
 ## Knowledge Base File Window

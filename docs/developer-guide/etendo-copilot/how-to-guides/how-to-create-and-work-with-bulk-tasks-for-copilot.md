@@ -64,14 +64,14 @@ SKU,Description,Category,Price
 33600337,PIANO MUSIC BOX,Decoration,12000
 ```
 
-And the objetive is to insert these products in Etendo. For this example we will use the  `Client Initialization Supervisor` agent that contains the `Product Generator` agent that can create products in Etendo. The steps to create the bulk tasks are:
+And the objetive is to insert these products in Etendo. For this example we will use the  `Data Initialization Supervisor` agent that contains the `Product Generator` agent that can create products in Etendo. The steps to create the bulk tasks are:
 
 #### Using the `Add Copilot Task` button
 
 1. Go to the `Tasks` window.
 2. Click on the `Add Copilot Task` button. That will open a window to set the parameters for the bulk tasks.
     1. Set the **Question** parameter with the description of the task, in singular form, that will be used as the task base. For example, `Create product with this data:`.
-    2. Select the **Agent**. In this case, select the `Client Initialization Supervisor` agent.
+    2. Select the **Agent**. In this case, select the `Data Initialization Supervisor` agent.
     3. Select the **File** to be processed. In this case, select the CSV file with the products data.
     4. Set an identifier for the **Execution Group**. For example, `Product Load 01/04/2025`. This can be used to identify the tasks that belong to the same group.
     5. Set an **Element separator**. This is the character that will be used to separate the data from the file CSV. For example, `,` or  `;`.
@@ -105,7 +105,7 @@ And the objetive is to insert these products in Etendo. For this example we will
 #### Using the `Bulk Task Creator` agent
 This agent know to use the `Task Creator Tool` strategically, converting the request in singular tasks. The steps to create the bulk tasks are:
 
-1. Add the `Bulk Task Creator` agent to a supervisor agent. In this case, we will use the `Client Initialization Supervisor` agent that contains the `Product Generator` agent.
+1. Add the `Bulk Task Creator` agent to a supervisor agent. In this case, we will use the `Data Initialization Supervisor` agent that contains the `Product Generator` agent.
 2. Open a conversation with the supervisor agent.
 3. Attach in the conversation the CSV file with the products data.
 4. Send some request like: 
