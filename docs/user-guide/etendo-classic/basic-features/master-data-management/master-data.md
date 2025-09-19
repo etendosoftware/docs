@@ -32,12 +32,12 @@ The “Advanced Business Partner” module allows the user to have a general vie
 In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
 
 - Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
-- URL: http://apilayer.net/api/
+- URL: https://api.apilayer.com/currency_data/
 - Token
 - User
 - Password
 
-![](../../../../assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
+![](../../../../assets/drive/apilayerConfiguration.png)
 
 ## Business Partner
 

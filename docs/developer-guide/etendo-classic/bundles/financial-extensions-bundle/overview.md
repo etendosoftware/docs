@@ -16,7 +16,7 @@ In this section, the user can find technical information about the Financial Ext
 In the Currency Converters window, the necessary Apilayer data has to be configured:
 
 -   Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
--   URL: [http://apilayer.net/api/](http://apilayer.net/api/)
+-   URL: [https://api.apilayer.com/currency_data/](https://api.apilayer.com/currency_data/)
 -   Token
 -   User
 -   Password
