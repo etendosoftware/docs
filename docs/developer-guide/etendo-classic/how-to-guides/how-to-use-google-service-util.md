@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-`GoogleServiceUtil` is a **stateless** Java helper that centralizes authenticated access to **[Google Sheets](https://developers.google.com/workspace/sheets/api/reference/rest)** and **[Google Drive](https://developers.google.com/workspace/drive/api/guides/about-sdk)** using an OAuth2 **Bearer** token stored in `ETRXTokenInfo` and refreshed through **Etendo Middleware**. It injects the `Authorization` header, validates/refreshes tokens, and provides convenience methods to read ranges/tabs in Sheets, list Drive files by type, and create Google Workspace files.
+`GoogleServiceUtil` is a **stateless** Java helper that centralizes authenticated access to [Google Sheets](https://developers.google.com/workspace/sheets/api/reference/rest){target="_blank"} and [Google Drive](https://developers.google.com/workspace/drive/api/guides/about-sdk){target="_blank"} APIs using OAuth2 **Bearer** token stored in `ETRXTokenInfo` and refreshed through **Etendo Middleware**. It injects the `Authorization` header, validates/refreshes tokens, and provides convenience methods to read ranges/tabs in Sheets, list Drive files by type, and create Google Workspace files.
 
 ### Key Features
 
@@ -20,7 +20,7 @@ tags:
 - Find a tab by name (**case-insensitive**) and read all its rows.
 - List Drive files by **friendly type** (`spreadsheet`, `doc`, `slides`, `pdf/pdfs`) with **Shared Drives** support (first 100).
 - Create **Google Workspace** files (Sheets/Docs/Slides).
-- Update cell ranges in Sheets using [`valueInputOption=RAW`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption).
+- Update cell ranges in Sheets using [`valueInputOption=RAW`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption){target="_blank"}.
 - Validate and **refresh** tokens via Etendo Middleware, persisting `validUntil` (+1 hour).
 
 !!!note
@@ -37,7 +37,7 @@ tags:
 
 - A valid row in `ETRXTokenInfo` (issued by the middleware).
 - **Scopes**:
-    - By default, tokens are minted with **`https://www.googleapis.com/auth/drive.file`**.  
+    - By default, tokens are minted with `https://www.googleapis.com/auth/drive.file`.  
     This scope is enough to:
         - Use the **Sheets API** (read/write) on files the **app created** or the **user explicitly selected/shared** with the app.
         - Use the **Drive API** for those files and basic metadata.
@@ -196,11 +196,13 @@ public static String refreshAccessToken(String accountId) throws OBException
     public static List<List<Object>> readSheet(ETRXTokenInfo accessToken, String accountID, String fileId, String range)
         throws IOException
     ```
+
 - Behavior:
-  - Fetches a **fresh/valid** token internally.
-  - Builds a Sheets client with app name `"Etendo Google Picker Integration"` (note this differs from the other builders).
-  - Blank/`null` `range` → defaults to **`"A1:Z1000"`**.
-  - Returns a `List<List<Object>>` with the values (may be `null` if the range has no values).
+
+    - Fetches a **fresh/valid** token internally.
+    - Builds a Sheets client with app name `"Etendo Google Picker Integration"` (note this differs from the other builders).
+    - Blank/`null` `range` → defaults to **`"A1:Z1000"`**.
+    - Returns a `List<List<Object>>` with the values (may be `null` if the range has no values).
 
 - Example:
 
@@ -339,12 +341,13 @@ public static String refreshAccessToken(String accountId) throws OBException
     ```
 
 - Behavior:
-  - Checks if a sheet title matches `tabName` **ignoring case**.
-  - Missing tab → `OBException(ETRX_TabNotFound)` (localized) — includes the missing name.
-  - If found, calls `spreadsheets().values().get(sheetId, tabName)`.
-  - If the tab has no data, returns `List.of()` and logs a **WARN**.
 
-#### Retrive a value from a Sheet
+    - Checks if a sheet title matches `tabName` **ignoring case**.
+    - Missing tab → `OBException(ETRX_TabNotFound)` (localized) — includes the missing name.
+    - If found, calls `spreadsheets().values().get(sheetId, tabName)`.
+    - If the tab has no data, returns `List.of()` and logs a **WARN**.
+
+#### Retrieve a value from a Sheet
 
 ```java
 /**
@@ -358,8 +361,6 @@ public static String refreshAccessToken(String accountId) throws OBException
  */
 public static String getCellValue(List<Object> row, int index)
 ```
-
----
 
 ### Drive
 
@@ -407,15 +408,18 @@ public static String getCellValue(List<Object> row, int index)
     ```
 
 - **Keyword → MIME map:**
-  - `spreadsheet` → `application/vnd.google-apps.spreadsheet`
-  - `doc` → `application/vnd.google-apps.document`
-  - `slides` → `application/vnd.google-apps.presentation`
-  - `pdf` / `pdfs` → `application/pdf`
+
+    - `spreadsheet` → `application/vnd.google-apps.spreadsheet`
+    - `doc` → `application/vnd.google-apps.document`
+    - `slides` → `application/vnd.google-apps.presentation`
+    - `pdf` / `pdfs` → `application/pdf`
+
 - Internals:
-  - Uses `listAccessibleFilesByMimeType(...)` hitting Drive `files.list` with:
+
+    - Uses `listAccessibleFilesByMimeType(...)` hitting Drive `files.list` with:
     `supportsAllDrives=true`, `includeItemsFromAllDrives=true`, `corpora=allDrives`, `pageSize=100`.
-  - Response fields: **`files(id,name,mimeType)`** (no `nextPageToken` exposed by this method).
-  - Non-200 → localized `ETRX_ErrorGettingAccessFiles` with HTTP status/message.
+    - Response fields: **`files(id,name,mimeType)`** (no `nextPageToken` exposed by this method).
+    - Non-200 → localized `ETRX_ErrorGettingAccessFiles` with HTTP status/message.
 
 #### Create a Google Workspace file
 
@@ -509,37 +513,43 @@ public static String getCellValue(List<Object> row, int index)
 ## API Reference (public surface)
 
 - **Constants (subset)**
-  - Headers: `BEARER`, `AUTHORIZATION`, `ACCEPT`, `APPLICATION_JSON`
-  - Friendly types: `SPREADSHEET`, `DOC`, `SLIDES`, `PDF`, `PDFS`
+
+    - Headers: `BEARER`, `AUTHORIZATION`, `ACCEPT`, `APPLICATION_JSON`
+    - Friendly types: `SPREADSHEET`, `DOC`, `SLIDES`, `PDF`, `PDFS`
 
 - **Services**
-  - `static Sheets getSheetsService(String accessToken)`
-  - `static Drive  getDriveService(String accessToken)`
+
+    - `static Sheets getSheetsService(String accessToken)`
+    - `static Drive  getDriveService(String accessToken)`
 
 - **Tokens**
-  - `static ETRXTokenInfo getMiddlewareToken(ETRXoAuthProvider provider, String scope, User user, Organization org)`
-  - `static ETRXTokenInfo getValidAccessTokenOrRefresh(ETRXTokenInfo token, String accountId)`
-  - `static void validateAccessToken(String accessToken)`
-  - `static String refreshAccessToken(String accountId)`
+
+    - `static ETRXTokenInfo getMiddlewareToken(ETRXoAuthProvider provider, String scope, User user, Organization org)`
+    - `static ETRXTokenInfo getValidAccessTokenOrRefresh(ETRXTokenInfo token, String accountId)`
+    - `static void validateAccessToken(String accessToken)`
+    - `static String refreshAccessToken(String accountId)`
 
 - **Sheets**
-  - `static String getTabName(int index, String sheetId, ETRXTokenInfo token, String accountID)`
-  - `static List<List<Object>> findSpreadsheetAndTab(String sheetId, String tabName, ETRXTokenInfo token, String accountID)`
-  - `static List<List<Object>> readSheet(ETRXTokenInfo token, String accountID, String fileId, String range)`
-  - `static String getCellValue(List<Object> row, int index)`
+
+    - `static String getTabName(int index, String sheetId, ETRXTokenInfo token, String accountID)`
+    - `static List<List<Object>> findSpreadsheetAndTab(String sheetId, String tabName, ETRXTokenInfo token, String accountID)`
+    - `static List<List<Object>> readSheet(ETRXTokenInfo token, String accountID, String fileId, String range)`
+    - `static String getCellValue(List<Object> row, int index)`
 
 - **Drive**
-  - `static JSONArray listAccessibleFiles(String type, ETRXTokenInfo token, String accountID)`
-  - `static JSONObject createDriveFile(String name, String mimeType, ETRXTokenInfo token, String accountID)`
-  - *(protected)* `static JSONArray listAccessibleFilesByMimeType(String mimeType, ETRXTokenInfo token, String accountID)`
+
+    - `static JSONArray listAccessibleFiles(String type, ETRXTokenInfo token, String accountID)`
+    - `static JSONObject createDriveFile(String name, String mimeType, ETRXTokenInfo token, String accountID)`
+    - *(protected)* `static JSONArray listAccessibleFilesByMimeType(String mimeType, ETRXTokenInfo token, String accountID)`
 
 - **Utilities**
-  - `static String extractSheetIdFromUrl(String url)`
 
-!!!note
-    You can see the full implementation in the repository file: [GoogleServiceUtil](https://github.com/etendosoftware/com.etendoerp.etendorx/blob/main/src/com/etendoerp/etendorx/utils/GoogleServiceUtil.java)
+    - `static String extractSheetIdFromUrl(String url)`
 
----
+    !!!note
+        You can see the full implementation in the repository file: [GoogleServiceUtil](https://github.com/etendosoftware/com.etendoerp.etendorx/blob/main/src/com/etendoerp/etendorx/utils/GoogleServiceUtil.java){target="_blank"}
+
+
 
 ## I18N message keys
 
