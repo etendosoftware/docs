@@ -278,25 +278,27 @@ Run the following command to compile and set up the environment:
 - Select the newly created middleware.
 - Click on **Get Middleware Token**.
 
-![Get Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png)
+    ![Get Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png)
 
 - Choose the desired **Google Drive scope**:
 
-  ![Select Provider Scope](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png)
+    ![Select Provider Scope](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png)
 
-  - **Google Drive – Full Access**  
-    Grants the app permission to **create, update, delete, and manage** files created through the ERP.  
+    - **Google Drive – Full Access**
     
-    !!!warning
-        With this scope, the app can only manage files that were created from the ERP or explicitly opened with it.
+        Grants the app permission to **create, update, delete, and manage** files created through the Etendo.  
+    
+        !!!warning
+            With this scope, the app can only manage files that were created from Etendo or explicitly opened with it.
 
-  - **Google Drive – Read Only**  
-    Grants the app permission to **read existing files** in the user’s account (including files not created by the ERP).  
-    No modifications are allowed — only reading file information or content.
+    - **Google Drive – Read Only**
+
+        Grants the app permission to **read existing files** in the user’s account (including files not created by Etendo).  
+        No modifications are allowed — only reading file information or content.
 
 - Accept Google’s consent screen.
 
-![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
+    ![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
 
 #### Token Created in the Token Info Tab
 
