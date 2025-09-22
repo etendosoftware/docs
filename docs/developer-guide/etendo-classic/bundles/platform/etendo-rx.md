@@ -249,8 +249,6 @@ Add the following properties to the `gradle.properties` file:
 ## Middleware Configs
 sso.middleware.url=https://sso.etendo.cloud
 sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
-sso.google.api.key=AIzaSyAiJGP3Tnlg7-PgZyHrwtAID4i7NuBUbRo
-sso.google.api.id=743458387087
 ```
 !!!note
     During development, you can use `localhost`. However, for production, set your actual domain.
