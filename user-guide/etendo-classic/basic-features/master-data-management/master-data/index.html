@@ -1408,6 +1408,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#document-type-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Type Tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#locationaddress" class="md-nav__link">
     <span class="md-ellipsis">
       Location/Address
@@ -11811,6 +11820,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#document-type-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Type Tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#locationaddress" class="md-nav__link">
     <span class="md-ellipsis">
       Location/Address
@@ -12496,6 +12514,28 @@ To learn more, visit <a href="../../sales-management/transactions/#sales-invoice
 <p class="admonition-title">Warning</p>
 <p>Only one bank account can be selected as default for each business partner.</p>
 </div>
+<h3 id="document-type-tab"><strong>Document Type Tab</strong></h3>
+<p>It allows to define, specifically for each business partner, the types of documents that will be used in associated transactions.</p>
+<p>With this functionality, it no longer depends only on the standard document type configured at the organization level, but can customize the assignment based on the customer or supplier. That is, when the user creates an order, invoice, or shipment document associated with a Business Partner, the system checks the Document Type tab for that Business Partner to determine which configuration to apply. If there is a record configured for the Business Partner and the transaction in progress, the document type defined in that tab is applied; if there is no record, the standard document type configured at the organization level is inherited.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-1.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-1.png"></a></p>
+<p>In this tab, it is possible to create records with the following fields:</p>
+<ul>
+<li><strong>Organization</strong>: Organization to which this rule applies. If a document is created in a child organization, it will search for the configuration throughout the entire organization tree. If no document type configuration exists, it will use the configuration at the organization level.</li>
+<li><strong>Document Category</strong>: This can be Order, Invoice, and Shipment/Receipt.</li>
+<li><strong>Sales Transaction</strong>: When checked, this corresponds to sales documents (sales orders, sales invoices, and good shipment), while when unchecked, it corresponds to purchasing documents (purchase orders, purchase invoices, and goods receipt).</li>
+<li>
+<p><strong>Document Type</strong>: Only the document types available for the selected category and sales transaction are displayed. The default options are:</p>
+<ul>
+<li>For Purchase Orders: Purchase order and RTV order.</li>
+<li>For Sales Orders: POS order, quote, RFC order, standard order, and warehouse order.</li>
+<li>For Purchase Invoices: AP invoice and canceled purchase invoice.</li>
+<li>For Sales Invoices: AR invoice and canceled sales invoice.</li>
+<li>For Goods Shipments: MM shipment and RTV shipment.</li>
+<li>For Goods Receipt: MM Receipt and RFC Receipt.</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-2.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-2.png"></a></p>
 <h3 id="locationaddress"><strong>Location/Address</strong></h3>
 <p>Business partner locations and full address details can be set up in this tab.</p>
 <p>Business partners might have different address details depending on location/address used for either <em>Goods Receipts/Shipments</em> purposes or location/address used for <em>Invoices</em> purposes.</p>
