@@ -547,13 +547,13 @@ To **Adjust** inventory:
 
 - When a card is selected, a screen with the task information opens. 
 
-- Press **Continue** button
+- Press **Start Adjustment** button
 
 - Complete **Quantity Count** field.
 
 - Confirm by pressing **Process** button.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile-adjust-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-adjust-1.png)
 
 To change inventory **Status**:
 
@@ -563,7 +563,7 @@ To change inventory **Status**:
 
 - When a card is selected, a screen with the task information opens. 
 
-- Press **Continue** button
+- Press **Start Adjustment** button
 
 - Complete **Quantity Count** field.
 
@@ -572,7 +572,7 @@ To change inventory **Status**:
 
 - Confirm by pressing **Process** button.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile-adjust-2.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-status-1.png)
 
 #### **Inventory Relocation**
 
@@ -604,7 +604,7 @@ To **Relocate** inventory:
 
 - When a card is selected, a screen with the task information opens. 
 
-- Press **Continue** button
+- Press **Start Relocation** button
 
 - Complete **Quantity Count** field.
 
@@ -612,7 +612,7 @@ To **Relocate** inventory:
 
 - Confirm by pressing **Process** button.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile-relocate-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-relocate-1.png)
 
 
 ### All Tasks
