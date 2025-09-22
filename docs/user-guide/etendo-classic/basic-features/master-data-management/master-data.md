@@ -29,15 +29,11 @@ The “Advanced Business Partner” module allows the user to have a general vie
 
 :material-menu: `Application` > `Master Data Management` > `Currency Converters`
 
-In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-- Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
-- URL: https://api.apilayer.com/currency_data/
-- Token
-- User
-- Password
+In this window, you can configure the access settings for the currency API configuration. For more information, visit: [Currency API Configuration - Developer Guide](../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#currency-api-configuration)
 
-![](../../../../assets/drive/apilayerConfiguration.png)
 
 ## Business Partner
 
