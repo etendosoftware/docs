@@ -26,11 +26,10 @@ Model Context Protocol (MCP) is an open-source protocol that enables seamless in
 
 ## Step-by-Step Guide
 
-### 1. Create MCP Server Configuration
+### Create MCP Server Configuration
+:material-menu: `Application` > `Service` > `Copilot` > `MCP Servers Configuration`
 
-1. **Open the MCP window** in **Etendo Classic** (System Administrator role):
-   - Navigate to **Service** → **Copilot** → **MCP Servers Configuration**
-
+1. **Open the MCP window** in **Etendo** (System Administrator role)
 2. **Create a new record** with the following information:
 
    ![MCP Server Configuration](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/mcp-server-configuration.png)
@@ -39,7 +38,7 @@ Model Context Protocol (MCP) is an open-source protocol that enables seamless in
    - **Description**: A brief description of what the MCP server provides
    - **JSON Structure**: The configuration JSON for the MCP server
 
-### 2. Configure JSON Structure
+### Configure JSON Structure
 
 The **JSON Structure** field contains the MCP server configuration. Paste only the JSON for a single MCP server (the inner object). Do NOT include wrapping keys like mcp, servers, or the server name.
 
