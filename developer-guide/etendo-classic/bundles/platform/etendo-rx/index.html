@@ -7429,15 +7429,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#allowing-etendo-to-access-a-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allowing Etendo to access a Document
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -11616,15 +11607,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#allowing-etendo-to-access-a-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allowing Etendo to access a Document
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -12009,39 +11991,42 @@
 <h4 id="get-access-token">Get Access Token</h4>
 <ul>
 <li>Select the newly created middleware.</li>
-<li>Click on <strong>Get Middleware Token</strong>.</li>
-</ul>
+<li>
+<p>Click on <strong>Get Middleware Token</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png" data-desc-position="bottom"><img alt="Get Middleware Token" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png"></a></p>
+</li>
+<li>
+<p>Choose the desired <strong>Google Drive scope</strong>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png" data-desc-position="bottom"><img alt="Select Provider Scope" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png"></a></p>
 <ul>
-<li>Choose <strong>Drive File</strong> as the scope.</li>
+<li>
+<p><strong>Google Drive – Full Access</strong></p>
+<p>Grants the app permission to <strong>create, update, delete, and manage</strong> files created through the Etendo.  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>With this scope, the app can only manage files that were created from Etendo or explicitly opened with it.</p>
+</div>
+</li>
+<li>
+<p><strong>Google Drive – Read Only</strong></p>
+<p>Grants the app permission to <strong>read existing files</strong> in the user’s account (including files not created by Etendo).<br>
+No modifications are allowed — only reading file information or content.</p>
+</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveFileScope.png" data-desc-position="bottom"><img alt="Drive File Scope" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveFileScope.png"></a></p>
-<ul>
-<li>Accept Google’s consent screen.</li>
-</ul>
+</li>
+<li>
+<p>Accept Google’s consent screen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png" data-desc-position="bottom"><img alt="Provider Consent" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png"></a></p>
+</li>
+</ul>
 <h4 id="token-created-in-the-token-info-tab">Token Created in the Token Info Tab</h4>
-<p>Once the flow is completed, an access token will be generated and can be viewed in the <strong>Token Info</strong> tab.</p>
+<p>Once the flow is completed, an <strong>access token</strong> will be generated and can be viewed in the <strong>Token Info</strong> tab.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Tokens obtained via <strong>Etendo Middleware</strong> have a default validity period of <strong>1 hour</strong>. Once expired, a new token must be requested in order to maintain access to the associated third-party services.</p>
+<p>Tokens obtained through <strong>Etendo Middleware</strong> are valid for <strong>1 hour</strong>.<br>
+After expiration, a new token must be requested to maintain access to the connected third-party services.</p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewMiddlewareToken.png" data-desc-position="bottom"><img alt="New Middleware Token" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewMiddlewareToken.png"></a></p>
-<h4 id="allowing-etendo-to-access-a-document">Allowing Etendo to access a Document</h4>
-<p>When the token was created on the <strong>Token Info</strong> tab, if you select it, the button will show up: <strong>Approve Google Doc</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApproveGoogleDoc.png" data-desc-position="bottom"><img alt="Approve Google Doc" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApproveGoogleDoc.png"></a></p>
-<p>Clicking this button opens a pop-up window listing all documents from the Google Drive linked to the account selected during the token authorization process.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GooglePicker.png" data-desc-position="bottom"><img alt="Google Picker" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GooglePicker.png"></a></p>
-<p>When you select a document, the process will authorize Etendo to access that document.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApprovedDoc.png" data-desc-position="bottom"><img alt="Approved Doc" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApprovedDoc.png"></a></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Both the token and the granted permission can be used by other functionalities within the Etendo platform.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>To revoke access, simply delete the token record. Once removed, the connection to the third-party service will no longer be valid.</p>
-</div>
 <h3 id="manually-configure-a-provider-optional">Manually Configure a Provider (Optional)</h3>
 <p>This method is intended for users who prefer to register a custom OAuth provider without using EtendoMiddleware. It provides full control over registration, authorization, and token handling parameters.</p>
 <div class="admonition warning">
