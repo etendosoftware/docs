@@ -9068,6 +9068,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-configure-api-tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Configure API Tokens
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-configure-etendo-copilot-proxy/" class="md-nav__link">
         
   
@@ -9192,18 +9222,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-create-mcp-server-configuration" class="md-nav__link">
+  <a href="#create-mcp-server-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Create MCP Server Configuration
+      Create MCP Server Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-configure-json-structure" class="md-nav__link">
+  <a href="#configure-json-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Configure JSON Structure
+      Configure JSON Structure
     </span>
   </a>
   
@@ -11246,18 +11276,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-create-mcp-server-configuration" class="md-nav__link">
+  <a href="#create-mcp-server-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Create MCP Server Configuration
+      Create MCP Server Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-configure-json-structure" class="md-nav__link">
+  <a href="#configure-json-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Configure JSON Structure
+      Configure JSON Structure
     </span>
   </a>
   
@@ -11392,15 +11422,11 @@
 <h2 id="what-is-model-context-protocol-mcp">What is Model Context Protocol (MCP)?</h2>
 <p>Model Context Protocol (MCP) is an open-source protocol that enables seamless integration between Large Language Models (LLMs) and external tools, data sources, and services. More information can be found in the <a href="../../concepts/model-context-protocol/">Model Context Protocol (MCP)</a> concept page.</p>
 <h2 id="step-by-step-guide">Step-by-Step Guide</h2>
-<h3 id="1-create-mcp-server-configuration">1. Create MCP Server Configuration</h3>
+<h3 id="create-mcp-server-configuration">Create MCP Server Configuration</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Service</code> &gt; <code>Copilot</code> &gt; <code>MCP Servers Configuration</code></p>
 <ol>
-<li><strong>Open the MCP window</strong> in <strong>Etendo Classic</strong> (System Administrator role):</li>
-<li>
-<p>Navigate to <strong>Service</strong> → <strong>Copilot</strong> → <strong>MCP Servers Configuration</strong></p>
-</li>
-<li>
-<p><strong>Create a new record</strong> with the following information:</p>
-</li>
+<li><strong>Open the MCP window</strong> in <strong>Etendo</strong> (System Administrator role)</li>
+<li><strong>Create a new record</strong> with the following information:</li>
 </ol>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/mcp-server-configuration.png" data-desc-position="bottom"><img alt="MCP Server Configuration" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/mcp-server-configuration.png"></a></p>
 <ul>
@@ -11408,7 +11434,7 @@
 <li><strong>Description</strong>: A brief description of what the MCP server provides</li>
 <li><strong>JSON Structure</strong>: The configuration JSON for the MCP server</li>
 </ul>
-<h3 id="2-configure-json-structure">2. Configure JSON Structure</h3>
+<h3 id="configure-json-structure">Configure JSON Structure</h3>
 <p>The <strong>JSON Structure</strong> field contains the MCP server configuration. Paste only the JSON for a single MCP server (the inner object). Do NOT include wrapping keys like mcp, servers, or the server name.</p>
 <p>Example full config elsewhere:
 </p><div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
