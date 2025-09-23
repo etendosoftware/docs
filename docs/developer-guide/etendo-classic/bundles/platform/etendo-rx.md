@@ -249,8 +249,6 @@ Add the following properties to the `gradle.properties` file:
 ## Middleware Configs
 sso.middleware.url=https://sso.etendo.cloud
 sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
-sso.google.api.key=AIzaSyAiJGP3Tnlg7-PgZyHrwtAID4i7NuBUbRo
-sso.google.api.id=743458387087
 ```
 !!!note
     During development, you can use `localhost`. However, for production, set your actual domain.
@@ -280,46 +278,38 @@ Run the following command to compile and set up the environment:
 - Select the newly created middleware.
 - Click on **Get Middleware Token**.
 
-![Get Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png)
+    ![Get Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png)
 
-- Choose **Drive File** as the scope.
+- Choose the desired **Google Drive scope**:
 
-![Drive File Scope](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveFileScope.png)
+    ![Select Provider Scope](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png)
+
+    - **Google Drive – Full Access**
+    
+        Grants the app permission to **create, update, delete, and manage** files created through the Etendo.  
+    
+        !!!warning
+            With this scope, the app can only manage files that were created from Etendo or explicitly opened with it.
+
+    - **Google Drive – Read Only**
+
+        Grants the app permission to **read existing files** in the user’s account (including files not created by Etendo).  
+        No modifications are allowed — only reading file information or content.
 
 - Accept Google’s consent screen.
 
-![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
+    ![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
 
 #### Token Created in the Token Info Tab
 
-Once the flow is completed, an access token will be generated and can be viewed in the **Token Info** tab.
+Once the flow is completed, an **access token** will be generated and can be viewed in the **Token Info** tab.
 
 !!! info
-    Tokens obtained via **Etendo Middleware** have a default validity period of **1 hour**. Once expired, a new token must be requested in order to maintain access to the associated third-party services.
+    Tokens obtained through **Etendo Middleware** are valid for **1 hour**.  
+    After expiration, a new token must be requested to maintain access to the connected third-party services.
 
 
 ![New Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewMiddlewareToken.png)
-
-#### Allowing Etendo to access a Document
-
-When the token was created on the **Token Info** tab, if you select it, the button will show up: **Approve Google Doc**.
-
-![Approve Google Doc](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApproveGoogleDoc.png)
-
-Clicking this button opens a pop-up window listing all documents from the Google Drive linked to the account selected during the token authorization process.
-
-![Google Picker](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GooglePicker.png)
-
-When you select a document, the process will authorize Etendo to access that document.
-
-![Approved Doc](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApprovedDoc.png)
-
-!!! info
-    Both the token and the granted permission can be used by other functionalities within the Etendo platform.
-
-!!! info
-    To revoke access, simply delete the token record. Once removed, the connection to the third-party service will no longer be valid.
-
 
 ### Manually Configure a Provider (Optional)
 

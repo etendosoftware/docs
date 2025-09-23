@@ -12,6 +12,9 @@ tags:
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
 ## Overview
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7AtGyQ62FHs?si=HisPbmd0KzblSq0O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 This section describes the Advanced Bank Account Management module included in the Etendo Financial Extensions bundle.
 
 !!! info
