@@ -56,9 +56,6 @@ Fields to note:
     -  **LangGraph**
 
         This option works as a manager of other agents and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the agents is 50, though a different amount can be configured. 
-    
-    !!! info
-        If the **App type**  `Multi-Model Agent` are chosen, the tabs shows are [Knowledge](#knowledge-tab), [Skills and Tools](#skills-and-tools-tab) and [MCP Servers](#mcp-servers-tab). If the `LangGraph` option is chosen, the [Skills and Tools](#skills-and-tools-tab), [Team Members](#team-members-tab) and [MCP Servers](#mcp-servers-tab) tabs are shown.
 
 - **Sync Status**: This read-only field indicates the current status of the agent.
     - `Pending synchronization` the agent will switch to this status at any change, either in the header or in the tabs.
@@ -159,7 +156,9 @@ Fields to note:
 
 ### MCP Servers Tab
 
-In this tab you can configure **Model Context Protocol (MCP) Servers** that extend your agent's capabilities by providing external tools and resources. MCP Servers are external processes that agents can communicate with to access specialized functionality.
+This tab allows the configuration of **Model Context Protocol (MCP) Servers**, which extend the capabilities of the agent by integrating external tools and resources. [MCP Servers](../../developer-guide/etendo-copilot/concepts/model-context-protocol.md) operate as external processes with which agents establish communication to access specialized functionalities.
+
+![mcp-config-tab](../../assets/user-guide/etendo-copilot/setup/mcp-config-tab.png)
 
 Fields to note:
 

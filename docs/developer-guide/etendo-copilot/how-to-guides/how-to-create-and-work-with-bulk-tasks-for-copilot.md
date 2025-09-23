@@ -12,7 +12,7 @@ tags:
 
 This article explains how to create and work with bulk tasks for Copilot. This is useful when you want to create multiple tasks at once and execute in background with Copilot
 
-## Concept and Use Cases
+### Concept and Use Cases
 When you need to make use of an AI agent to perform tasks with a high volume of iterations, it will be limited in the amount it can handle and its speed. Then the concept of Bulk tasks is born, which consists of storing requests in a window of the `Tasks` module. 
 
 !!!warning
@@ -20,7 +20,7 @@ When you need to make use of an AI agent to perform tasks with a high volume of 
 
 These requests can be executed manually or be processed in a background process already included in the Copilot module.
 
-## How to Add Copilot Tasks
+## Add Copilot Tasks
 The Etendo Copilot module includes:
 
 - **Add Copilot Task Button**: This button in the `Tasks` window allows you sent a CSV/XLSX/ZIP file to create bulk tasks.
@@ -36,22 +36,10 @@ In both options, the requirements are the same:
 - **Agent**: The agent that will process the tasks. If the agent is not specified, will be selected the agent that used the tool. For the case of the agent `Bulk task creator`, it will be selected the supervisor agent that contains it.
 
 !!! info
-    When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files, one per file in the case of ZIP files, and one per file in the case of other files.
-    The task request will be the following format: ```BASE_TASK - [FILE_NAME/ROW DATA]```
+    When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files, one per file in the case of ZIP files, and one per file in the case of other files. The task request will be the following format: ```BASE_TASK - [FILE_NAME/ROW DATA]```
 
 ### Example
 For example, if you have a CSV file with the following data:
-
-| SKU       | Description           | Category   | Price |
-|-----------|------------------------|------------|--------|
-| 33601251  | FAN 38*30 NATURAL FIBER| Others     | 6100   |
-| 33600292  | BOTTLE OPENER          | Others     | 10500  |
-| 33600139  | RUBBER BATH MAT        | Decoration | 3900   |
-| 33600228  | TREE                   | Plants     | 11500  |
-| 33600739  | ROUND METAL BUCKET     | Others     | 9000   |
-| 33600356  | BAG 14X7X15            | Others     | 1000   |
-| 33600337  | PIANO MUSIC BOX        | Decoration | 12000  |
-
 
 ```csv title="products.csv"
 SKU,Description,Category,Price
@@ -64,20 +52,20 @@ SKU,Description,Category,Price
 33600337,PIANO MUSIC BOX,Decoration,12000
 ```
 
-And the objetive is to insert these products in Etendo. For this example we will use the  `Data Initialization Supervisor` agent that contains the `Product Generator` agent that can create products in Etendo. The steps to create the bulk tasks are:
+And the objective is to insert these products in Etendo. For this example we will use the  `Data Initialization Supervisor` agent that contains the `Product Generator` agent that can create products in Etendo. The steps to create the bulk tasks are:
 
 #### Using the `Add Copilot Task` button
 
-1. Go to the `Tasks` window.
+1. Go to the **Tasks** window.
 2. Click on the `Add Copilot Task` button. That will open a window to set the parameters for the bulk tasks.
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot.png)
+
     1. Set the **Question** parameter with the description of the task, in singular form, that will be used as the task base. For example, `Create product with this data:`.
     2. Select the **Agent**. In this case, select the `Data Initialization Supervisor` agent.
     3. Select the **File** to be processed. In this case, select the CSV file with the products data.
     4. Set an identifier for the **Execution Group**. For example, `Product Load 01/04/2025`. This can be used to identify the tasks that belong to the same group.
     5. Set an **Element separator**. This is the character that will be used to separate the data from the file CSV. For example, `,` or  `;`.
-
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot.png)
-
+  
 3. Click on `Done` button. And the tasks will be created.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png)
 
@@ -92,14 +80,15 @@ And the objetive is to insert these products in Etendo. For this example we will
     Create bulk tasks for the attached file.
     - Question/request: "Create product with this data:".
     - The group id is 'Product Load 01/04/2025'. 
-    -The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'. 
+    - The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'. 
     - Not indicate task type and status, to use the defaults.
     ```
 
     !!! info
-    This use of the `Task Creator Tool` is an example, the agent can have assumptions or simplifications that can change the way to use it. This can be done customizing the agent prompt.
+        This use of the `Task Creator Tool` is an example, the agent can have assumptions or simplifications that can change the way to use it. This can be done customizing the agent prompt.
 
 5. The agent will create the tasks based on the file data using the `Task Creator Tool`.
+
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
 
 #### Using the `Bulk Task Creator` agent
