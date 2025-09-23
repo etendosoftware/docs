@@ -9133,7 +9133,7 @@
   
   
   <span class="md-ellipsis">
-    How to Configure MCP servers on a Etendo Agent
+    How to Configure MCP Servers on a Etendo Agent
     
   </span>
   
@@ -9216,7 +9216,7 @@
   
   
   <span class="md-ellipsis">
-    How to Create a Spreadsheet and tasks Agent
+    How to Create a Spreadsheet and Tasks Agent
     
   </span>
   
@@ -9292,9 +9292,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#concept-and-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
       Concept and Use Cases
@@ -9302,15 +9303,20 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#how-to-add-copilot-tasks" class="md-nav__link">
+  <a href="#add-copilot-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Add Copilot Tasks
+      Add Copilot Tasks
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to Add Copilot Tasks">
+    <nav class="md-nav" aria-label="Add Copilot Tasks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -11235,9 +11241,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#concept-and-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
       Concept and Use Cases
@@ -11245,15 +11252,20 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#how-to-add-copilot-tasks" class="md-nav__link">
+  <a href="#add-copilot-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Add Copilot Tasks
+      Add Copilot Tasks
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to Add Copilot Tasks">
+    <nav class="md-nav" aria-label="Add Copilot Tasks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -11377,14 +11389,14 @@
 <h1 id="how-to-create-and-work-with-bulk-tasks-for-copilot">How to create and work with bulk tasks for Copilot</h1>
 <h2 id="overview">Overview</h2>
 <p>This article explains how to create and work with bulk tasks for Copilot. This is useful when you want to create multiple tasks at once and execute in background with Copilot</p>
-<h2 id="concept-and-use-cases">Concept and Use Cases</h2>
+<h3 id="concept-and-use-cases">Concept and Use Cases</h3>
 <p>When you need to make use of an AI agent to perform tasks with a high volume of iterations, it will be limited in the amount it can handle and its speed. Then the concept of Bulk tasks is born, which consists of storing requests in a window of the <code>Tasks</code> module. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It is necessary to consider that these tasks must be <em>isolated</em> from each other. That is, they do not need information from each other. For example, when loading data from an excel file, each row will be executed separately.</p>
 </div>
 <p>These requests can be executed manually or be processed in a background process already included in the Copilot module.</p>
-<h2 id="how-to-add-copilot-tasks">How to Add Copilot Tasks</h2>
+<h2 id="add-copilot-tasks">Add Copilot Tasks</h2>
 <p>The Etendo Copilot module includes:</p>
 <ul>
 <li><strong>Add Copilot Task Button</strong>: This button in the <code>Tasks</code> window allows you sent a CSV/XLSX/ZIP file to create bulk tasks.</li>
@@ -11401,65 +11413,10 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files, one per file in the case of ZIP files, and one per file in the case of other files.
-The task request will be the following format: <code>BASE_TASK - [FILE_NAME/ROW DATA]</code></p>
+<p>When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files, one per file in the case of ZIP files, and one per file in the case of other files. The task request will be the following format: <code>BASE_TASK - [FILE_NAME/ROW DATA]</code></p>
 </div>
 <h3 id="example">Example</h3>
 <p>For example, if you have a CSV file with the following data:</p>
-<table>
-<thead>
-<tr>
-<th>SKU</th>
-<th>Description</th>
-<th>Category</th>
-<th>Price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>33601251</td>
-<td>FAN 38*30 NATURAL FIBER</td>
-<td>Others</td>
-<td>6100</td>
-</tr>
-<tr>
-<td>33600292</td>
-<td>BOTTLE OPENER</td>
-<td>Others</td>
-<td>10500</td>
-</tr>
-<tr>
-<td>33600139</td>
-<td>RUBBER BATH MAT</td>
-<td>Decoration</td>
-<td>3900</td>
-</tr>
-<tr>
-<td>33600228</td>
-<td>TREE</td>
-<td>Plants</td>
-<td>11500</td>
-</tr>
-<tr>
-<td>33600739</td>
-<td>ROUND METAL BUCKET</td>
-<td>Others</td>
-<td>9000</td>
-</tr>
-<tr>
-<td>33600356</td>
-<td>BAG 14X7X15</td>
-<td>Others</td>
-<td>1000</td>
-</tr>
-<tr>
-<td>33600337</td>
-<td>PIANO MUSIC BOX</td>
-<td>Decoration</td>
-<td>12000</td>
-</tr>
-</tbody>
-</table>
 <div class="language-text highlight"><span class="filename">products.csv</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SKU,Description,Category,Price
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>33601251,FAN 38*30 NATURAL FIBER,Others,6100
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>33600292,BOTTLE OPENER,Others,10500
@@ -11469,20 +11426,20 @@ The task request will be the following format: <code>BASE_TASK - [FILE_NAME/ROW 
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>33600356,BAG 14X7X15,Others,1000
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>33600337,PIANO MUSIC BOX,Decoration,12000
 </span></code></pre></div>
-<p>And the objetive is to insert these products in Etendo. For this example we will use the  <code>Client Initialization Supervisor</code> agent that contains the <code>Product Generator</code> agent that can create products in Etendo. The steps to create the bulk tasks are:</p>
+<p>And the objective is to insert these products in Etendo. For this example we will use the  <code>Data Initialization Supervisor</code> agent that contains the <code>Product Generator</code> agent that can create products in Etendo. The steps to create the bulk tasks are:</p>
 <h4 id="using-the-add-copilot-task-button">Using the <code>Add Copilot Task</code> button</h4>
 <ol>
-<li>Go to the <code>Tasks</code> window.</li>
+<li>Go to the <strong>Tasks</strong> window.</li>
 <li>
-<p>Click on the <code>Add Copilot Task</code> button. That will open a window to set the parameters for the bulk tasks.</p>
+<p>Click on the <code>Add Copilot Task</code> button. That will open a window to set the parameters for the bulk tasks.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot.png"></a></p>
 <ol>
 <li>Set the <strong>Question</strong> parameter with the description of the task, in singular form, that will be used as the task base. For example, <code>Create product with this data:</code>.</li>
-<li>Select the <strong>Agent</strong>. In this case, select the <code>Client Initialization Supervisor</code> agent.</li>
+<li>Select the <strong>Agent</strong>. In this case, select the <code>Data Initialization Supervisor</code> agent.</li>
 <li>Select the <strong>File</strong> to be processed. In this case, select the CSV file with the products data.</li>
 <li>Set an identifier for the <strong>Execution Group</strong>. For example, <code>Product Load 01/04/2025</code>. This can be used to identify the tasks that belong to the same group.</li>
 <li>Set an <strong>Element separator</strong>. This is the character that will be used to separate the data from the file CSV. For example, <code>,</code> or  <code>;</code>.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot.png"></a></p>
 </li>
 <li>
 <p>Click on <code>Done</code> button. And the tasks will be created.
@@ -11499,23 +11456,23 @@ The task request will be the following format: <code>BASE_TASK - [FILE_NAME/ROW 
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Create bulk tasks for the attached file.
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>- Question/request: "Create product with this data:".
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>- The group id is 'Product Load 01/04/2025'. 
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>-The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'. 
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>- The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'. 
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>- Not indicate task type and status, to use the defaults.
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>This use of the <code>Task Creator Tool</code> is an example, the agent can have assumptions or simplifications that can change the way to use it. This can be done customizing the agent prompt.</p>
+</div>
 </li>
 <li>
-<p>The agent will create the tasks based on the file data using the <code>Task Creator Tool</code>.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png"></a></p>
+<p>The agent will create the tasks based on the file data using the <code>Task Creator Tool</code>.</p>
 </li>
 </ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png"></a></p>
 <h4 id="using-the-bulk-task-creator-agent">Using the <code>Bulk Task Creator</code> agent</h4>
 <p>This agent know to use the <code>Task Creator Tool</code> strategically, converting the request in singular tasks. The steps to create the bulk tasks are:</p>
 <ol>
-<li>Add the <code>Bulk Task Creator</code> agent to a supervisor agent. In this case, we will use the <code>Client Initialization Supervisor</code> agent that contains the <code>Product Generator</code> agent.</li>
+<li>Add the <code>Bulk Task Creator</code> agent to a supervisor agent. In this case, we will use the <code>Data Initialization Supervisor</code> agent that contains the <code>Product Generator</code> agent.</li>
 <li>Open a conversation with the supervisor agent.</li>
 <li>Attach in the conversation the CSV file with the products data.</li>
 <li>

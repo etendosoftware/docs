@@ -4369,6 +4369,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mcp-servers-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP Servers Tab
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -9394,7 +9403,7 @@
   
   
   <span class="md-ellipsis">
-    How to Configure MCP servers on a Etendo Agent
+    How to Configure MCP Servers on a Etendo Agent
     
   </span>
   
@@ -9477,7 +9486,7 @@
   
   
   <span class="md-ellipsis">
-    How to Create a Spreadsheet and tasks Agent
+    How to Create a Spreadsheet and Tasks Agent
     
   </span>
   
@@ -11425,6 +11434,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mcp-servers-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP Servers Tab
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -11660,10 +11678,6 @@
 <p>This option works as a manager of other agents and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the agents is 50, though a different amount can be configured. </p>
 </li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If the <strong>App type</strong>  <code>Multi-Model Agent</code> are chosen, the tabs shows are <a href="#knowledge-tab">knowledge</a> and  <a href="#skills-and-tools-tab">Skill and Tools</a>. If the <code>LangGraph</code> option is chosen, the <a href="#skills-and-tools-tab">Skill and Tools</a> and <a href="#team-members-tab">Team Members</a> tabs are shown.</p>
-</div>
 </li>
 <li>
 <p><strong>Sync Status</strong>: This read-only field indicates the current status of the agent.</p>
@@ -11776,6 +11790,19 @@
 <p><strong>Active</strong>: Checkbox to activate the team member.</p>
 </li>
 </ul>
+<h3 id="mcp-servers-tab">MCP Servers Tab</h3>
+<p>This tab allows the configuration of <strong>Model Context Protocol (MCP) Servers</strong>, which extend the capabilities of the agent by integrating external tools and resources. <a href="../../../developer-guide/etendo-copilot/concepts/model-context-protocol/">MCP Servers</a> operate as external processes with which agents establish communication to access specialized functionalities.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/mcp-config-tab.png" data-desc-position="bottom"><img alt="mcp-config-tab" src="../../../assets/user-guide/etendo-copilot/setup/mcp-config-tab.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>MCP Server</strong>: The user can select from available MCP servers configured in the system. Multiple MCP servers can be added to extend the agent's capabilities.</li>
+<li><strong>Description</strong>: Read-only field displaying the description of the selected MCP server, helping users understand what functionality it provides.</li>
+<li><strong>Active</strong>: Checkbox to activate or deactivate the MCP server for this agent.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For detailed instructions on creating and configuring MCP servers, see <a href="../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/">How to configure MCP servers on Etendo agents</a>.</p>
+</div>
 <h2 id="knowledge-base-file-window">Knowledge Base File Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code>&gt;<code>Service</code>&gt;<code>Copilot</code>&gt;<code>Knowledge Base File</code></p>
 <p>In the Knowledge Base File window, you can define the files with which the agents can interact.</p>
