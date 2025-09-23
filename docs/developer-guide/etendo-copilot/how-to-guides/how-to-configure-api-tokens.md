@@ -45,13 +45,13 @@ This ensures that the most contextually appropriate token is always used.
 
 :material-menu: `Application` > `Service` > `Copilot API Tokens`
 
-Open Etendo with the role you want to add the key.
+Etendo must be opened using the role to which the key is to be added. Access is typically restricted to the configuration window for administrators; however, this may vary depending on the access level and configuration assigned to each role.
 
 ![API Token Configuration](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-configure-api-tokens/api-token-configuration.png)
 
 Create a new record with these fields:
 
-- **Organization (Required)**: Scope of the token in the organization.
+- **Organization (Required)**: The organization that will have access to this token.
 - **Alias (Required)**: Name used to reference the token in prompts/configs. Unique name for the token (e.g., `OPENAI_API`, `GITHUB_TOKEN`).
 - **Token (Required)**: The API key or token value. (e.g., `sk-abc123...`)
 - **User/Contact (Optional)**: User with access to the token. Assign to a specific user (leave empty for wider scope).
