@@ -59,7 +59,7 @@ La implementación cubre:
 
 - **Organización**: entidad legal emisora.
 - **Impuesto de Aplicación**: IVA, IPSI o IGIC.
-- **QR por Defecto**: si se marca, se utilizará una implementación predefinida. En caso contrario, deberá personalizarse el reporte siguiendo [esta especificación](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/DetalleEspecificacTecnCodigoQRfactura.pdf).
+- **QR por Defecto**: si se marca, se utilizará una implementación predefinida. En caso contrario, deberá personalizarse el reporte siguiendo [esta especificación](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/DetalleEspecificacTecnCodigoQRfactura.pdf){target="_blank"}.
 - **Descripción por Defecto** y **Referencia Externa por Defecto**: valores opcionales que se completarán automáticamente al crear una factura.
 
 ### Certificado Digital
