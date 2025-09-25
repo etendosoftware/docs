@@ -10,7 +10,7 @@ tags:
 
 ## Introducción
 
-Este documento describe la funcionalidad del **IVA de Caja**, disponible en Etendo Classic.
+Este documento describe la funcionalidad del **IVA de Caja**, disponible en Etendo.
 
 El objetivo de esta funcionalidad es **reconocer contablemente el IVA y declararlo/liquidarlo** con la Agencia Tributaria correspondiente, al realizarse el **cobro/pago** de las factura de venta/compra.
 

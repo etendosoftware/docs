@@ -12,7 +12,7 @@ tags:
 ## Initial Configuration
 :material-menu: `Application` > `General Setup` > `Client` > `Client` 
 
-In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
+In order to use Copilot, the user must access the Etendo under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
 
 ![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 
@@ -56,9 +56,6 @@ Fields to note:
     -  **LangGraph**
 
         This option works as a manager of other agents and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the agents is 50, though a different amount can be configured. 
-    
-    !!! info
-        If the **App type**  `Multi-Model Agent` are chosen, the tabs shows are [knowledge](#knowledge-tab) and  [Skill and Tools](#skills-and-tools-tab). If the `LangGraph` option is chosen, the [Skill and Tools](#skills-and-tools-tab) and [Team Members](#team-members-tab) tabs are shown.
 
 - **Sync Status**: This read-only field indicates the current status of the agent.
     - `Pending synchronization` the agent will switch to this status at any change, either in the header or in the tabs.
@@ -91,7 +88,7 @@ Fields to note:
 
 - **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
-- **Check hosts**: This button check the configuration of Etendo Classic and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
+- **Check hosts**: This button check the configuration of Etendo and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
 
 - **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a agent is cloned in, the name `Copy of` is added. 
 
@@ -157,6 +154,22 @@ Fields to note:
 - **Active**: Checkbox to activate the team member.
 
 
+### MCP Servers Tab
+
+This tab allows the configuration of **Model Context Protocol (MCP) Servers**, which extend the capabilities of the agent by integrating external tools and resources. [MCP Servers](../../developer-guide/etendo-copilot/concepts/model-context-protocol.md) operate as external processes with which agents establish communication to access specialized functionalities.
+
+![mcp-config-tab](../../assets/user-guide/etendo-copilot/setup/mcp-config-tab.png)
+
+Fields to note:
+
+- **MCP Server**: The user can select from available MCP servers configured in the system. Multiple MCP servers can be added to extend the agent's capabilities.
+- **Description**: Read-only field displaying the description of the selected MCP server, helping users understand what functionality it provides.
+- **Active**: Checkbox to activate or deactivate the MCP server for this agent.
+
+!!!tip
+    For detailed instructions on creating and configuring MCP servers, see [How to configure MCP servers on Etendo agents](../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md).
+
+
 ## Knowledge Base File Window
 
 :material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
@@ -201,7 +214,7 @@ Fields to note:
             It is also possible to use other variables such as `@source.path@:` so that the system automatically replaces it with the path where EtendoERP is installed. Besides, wildcards like `*` can be used to access all files of the same type in a directory (e.g., `test/*.java` will access all Java files in the `test` folder), and this one `**`, to include subdirectories (e.g., `test/**/*.java` will access all Java files within `test` and its subdirectories).
         
         !!!warning
-            As access to the source code is required, both modules and Etendo Classic must be installed in source format.  
+            As access to the source code is required, both modules and Etendo must be installed in source format.  
         
         !!! warning
             It is mandatory to define in the **File name** field a file with extension `.zip`, because when synchronizing the agent using this file a `ZIP` will be generated with the filtered files.

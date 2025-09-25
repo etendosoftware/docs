@@ -290,10 +290,12 @@ nav:
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
+          - How to Create an Account Tree: user-guide/etendo-classic/how-to-guides/how-to-create-an-account-tree.md
           - How to Manage Deferred Revenue and Expenses: user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md
           - How to Manage Prepaid Invoices in Payables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md
           - How to Manage Prepaid Invoices in Receivables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md
-          - How to Transfer Funds between Financial Accounts: user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts.md
+          - How to Transfer Funds Between Financial Accounts: user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts.md
+          
     - Etendo Mobile: 
       - ✨ Getting Started: user-guide/etendo-mobile/getting-started.md
       - User interface: user-guide/etendo-mobile/user-interface/user-interface.md
@@ -458,7 +460,7 @@ nav:
 #        - How to Create Your Own Import Process with IDL: developer-guide/etendo-classic/how-to-guides/How_to_Create_Your_Own_Import_Process_with_IDL.md
         - How to Define a Table as a Tree: developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree.md
 #        - How to define an on Create Default: developer-guide/etendo-classic/how-to-guides/How_to_define_an_on_Create_Default.md
-        - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
+        - How to Define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
 #        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/How_To_Define_Display_Logic_For_Tabs.md
 #        - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/How_to_Define_the_Timeout_of_a_Query.md
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process.md
@@ -498,6 +500,7 @@ nav:
         - How to Use Advanced Sequences: developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md
 #        - How to use an Extension Point: developer-guide/etendo-classic/how-to-guides/How_to_use_an_Extension_Point.md
 #        - How to Use an External Connection Pool: developer-guide/etendo-classic/how-to-guides/How_to_Use_an_External_Connection_Pool.md
+        - How to Use Google Service Util: developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util.md
         - How to Use Property Fields: developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields.md
         - How to Use Secure Web Services: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
 #        - JSON REST Web Services: developer-guide/etendo-classic/how-to-guides/JSON_REST_Web_Services.md
@@ -551,7 +554,7 @@ nav:
           - Overview: developer-guide/etendo-copilot/bundles/overview.md
           - Dev Assistant: developer-guide/etendo-copilot/bundles/dev-assistant.md
       - Tools:
-        - Available Tools - Complete List: developer-guide/etendo-copilot/available-tools/tool-full-list.md
+        - Overview: developer-guide/etendo-copilot/available-tools/overview.md
         - API Call Tool: developer-guide/etendo-copilot/available-tools/api-call-tool.md
         - Attach File Tool: developer-guide/etendo-copilot/available-tools/attach-file-tool.md
         - Audio Tool: developer-guide/etendo-copilot/available-tools/audio-tool.md
@@ -583,18 +586,21 @@ nav:
         - XLS Tool: developer-guide/etendo-copilot/available-tools/xls-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
       - How to Guides:
-        - How to Configure MCP servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
-        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
-        - How to Create a Spreadsheet and tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
+        - How to Configure API Tokens: developer-guide/etendo-copilot/how-to-guides/how-to-configure-api-tokens.md
+        - How to Configure Etendo Copilot to Use a Proxy: developer-guide/etendo-copilot/how-to-guides/how-to-configure-etendo-copilot-proxy.md
+        - How to Configure MCP Servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
+        - How to Connect Etendo Copilot with Gmail via Pipedream: developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream.md
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
+        - How to Create a Spreadsheet and Tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
         - How to Debug an Agent Prompt with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith.md
-        - How to Export Tools and Agents: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
+        - How to Export Tools and Agents: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
         - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
-    
+       
     - Etendo Mobile:
       - ✨ Getting Started: developer-guide/etendo-mobile/getting-started.md
       - Concepts: 

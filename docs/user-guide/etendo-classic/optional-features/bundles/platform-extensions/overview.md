@@ -33,7 +33,7 @@ The user can have access to all the available dependencies to add, configure the
 
 :octicons-package-16: Javapackage: `com.etendoerp.docker`
 
-This module enables the use of Dockerized containers in Etendo Classic.
+This module enables the use of Dockerized containers in Etendo.
 
 !!!info
     For more information visit, [Docker Management developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/docker-management.md). 
@@ -42,7 +42,7 @@ This module enables the use of Dockerized containers in Etendo Classic.
 
 :octicons-package-16: Javapackage: `com.etendoerp.tomcat`
 
-This module enables the Dockerization of Tomcat within Etendo Classic.
+This module enables the Dockerization of Tomcat within Etendo.
 
 !!!info
     For more information visit, [Dockerized Tomcat Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md).
