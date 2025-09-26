@@ -63,8 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Dynamic link building
             let finalUrl = hit.url;
             if (finalUrl) {
-                const dynamicSuffix = `?h=${encodeURIComponent(query)}`;
-                finalUrl += dynamicSuffix;
+                if (!finalUrl.startsWith("http")) {
+                    const dynamicSuffix = `?h=${encodeURIComponent(query)}`;
+                    finalUrl += dynamicSuffix;
+                }
             }
             a.href = finalUrl;
             a.className = "md-search-result__link";
