@@ -179,7 +179,7 @@ nav:
   - Getting Started:
     - Overview: getting-started/overview.md
     - Requirements: getting-started/requirements.md
-    - Installation: getting-started/installation.md
+    - Install Etendo: getting-started/installation.md
     - Interactive Installation: getting-started/interactive-installation.md
     - User interface:
       - Workspace: getting-started/user-interface/workspace.md
@@ -317,7 +317,8 @@ nav:
     - Etendo: 
       - ✨ Getting Started:
         - Installation :
-          - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
+          - Install Etendo: getting-started/installation.md
+          - Install Etendo - Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
           - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
           - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
           - Install Translation Bundles in Etendo: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md

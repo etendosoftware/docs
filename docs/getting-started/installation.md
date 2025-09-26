@@ -1,5 +1,5 @@
 ---
-title: Install Etendo Classic
+title: Install Etendo
 
 tags:
     - Etendo Installation
@@ -10,6 +10,9 @@ tags:
     - Install
     - Etendo Install
 ---
+
+# Install Etendo
+
 ## Overview
 This section explains how to install a new Etendo environment. It includes:
 
