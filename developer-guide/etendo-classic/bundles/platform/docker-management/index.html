@@ -7244,6 +7244,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8053,6 +8062,29 @@
   
   <span class="md-ellipsis">
     How to Change Date Format
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-rx/how-to-guides/how-to-configure-memory-limits-in-docker-containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Configure Memory Limits in Docker Containers
     
   </span>
   
@@ -11335,6 +11367,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -11473,6 +11514,14 @@ This command will stop the containers.<p></p>
 <p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>resources.down
 </span></code></pre></div>
 This command will stop and remove the containers.<p></p>
+<h3 id="build">Build</h3>
+<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>resources.build
+</span></code></pre></div>
+This command forces services that use a Dockerfile to rebuild their own Docker image.<p></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This command must be executed when the projection or mapping have been modified due to user changes or module management updates to these tables. The command forces the DAS service to recompile and generate new classes before starting the service.</p>
+</div>
 <h2 id="verifying-the-status">Verifying the Status</h2>
 <p>To verify the status of the resources started by Docker Compose, you can use the following Docker commands:</p>
 <p><code>docker ps</code></p>
@@ -11485,7 +11534,7 @@ This command will stop and remove the containers.<p></p>
 <ol>
 <li>
 <p>Once the <code>com.etendoerp.docker</code> module is installed, it is necessary to add a configuration variable in the <code>gradle.properties</code> to enable the use of the service:</p>
-<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">docker_db</span><span class="o">=</span><span class="kc">true</span>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">docker_db</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
 </li>
 <li>
