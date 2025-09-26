@@ -62,6 +62,17 @@ The packing process can be initiated from the **Packing** window and/or from the
 !!! info
     If the process is initiated from the Goods Shipment window, it is possible to just do the packing for **one specific shipment**. When doing the packing through the Packing window, it is possible to select **more than one shipment to pack**, since several documents are grouped to be packed all at once or individually. 
 
+The system runs automatic background processes that varies depending on the configuration. In certain situations, some of these processes can fail without the user noticing immediately.
+
+In order to provide greater visibility, the system displays a **warning message** at different stages of the process, such as when creating a Pack, completing it, or reactivating it that includes a link to the Task window. From there, the user can check the details of each process executed and review the corresponding logs, ensuring better control over the correct completion of operations.
+
+- For a **Packing tasks**:
+
+    - Process Packing
+    - Process Packing Header
+    - Complete Packing from Shipment
+    - Complete Packing from Packing
+
 ### Header
 
 ![packing9](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing9.png)

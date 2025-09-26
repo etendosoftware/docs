@@ -68,14 +68,24 @@ To start using this module correctly, the following installation and configurati
     - **Organization**: allows you to manage which organization will apply the configuration.
     - **Warehouse**: is a non-mandatory field that can be used to apply the configuration to a specific warehouse or to all warehouses in the organization.
     - **Active**: is checked or unchecked to enable or disable the configuration.
-    - **Barcode Algorithm**: The default barcode algorithm that allows interpretation according to any of the standards defined by international organizations. The options to select are:
+    - **Barcode Condiguration**
 
-        - GS1 128
-        - SimpleBarcode
+        - **Barcode Algorithm**: The default barcode algorithm that allows interpretation according to any of the standards defined by international organizations. The options to select are:
 
-    - **AI Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
+            - GS1 128
+            - SimpleBarcode
 
-    - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
+        - **AI Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
+
+        - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
+
+    - **Picking Configuration**
+
+        - **Exact Attribute Validation**: Checkbox, defines the validation level that the system will apply during the picking process.
+
+            - Active: The system requires an exact match between the scanned code and the code defined in the Picking List, including product, attributes, and locator. Default value.
+
+            - Inactive: The system only validates the product, without requiring a strict match in attributes or locator.
 
 6. **AI Configuration** Window    
 
