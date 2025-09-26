@@ -1,199 +1,241 @@
 ---
+title: How to Manage Memory Limits for Etendo Docker Containers
 tags:
-  - Etendo Rx
+  - Etendo
   - Docker
   - Memory
   - Tomcat
   - CPU
-status: beta
+  - Containers
 ---
-# How to Manage Memory Limits for Etendo RX Docker Containers (BETA)
 
-!!! example  "IMPORTANT:THIS IS A BETA VERSION"
-    - It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**, especially in production environments.
-    - It should be used with **caution**, and you should always **validate backups** before executing any critical operation.
+# How to Manage Memory Limits for Etendo Docker Containers
+
+!!! warning
+    This guide assumes a working knowledge of **Java development environments**, including **Gradle build commands**, **Java application deployment**, and **Docker container management**. It is intended for developers with intermediate to advanced technical skills in software development and system administration.
 
 ## Overview
 
-This document explains **how users can set memory limits** for each Etendo RX service either by:
+This guide explains how to configure memory and CPU limits for Etendo services running in Docker containers.
+It introduces three configuration levels for both memory and CPU usage:
 
-1. Defining **per-service properties** in `gradle.properties`, or  
-2. using **base properties with multipliers** that auto-calculate the `BASE_*_MEMORY_LIMIT` and  `BASE_*_CPU_LIMIT` variables.
+1. **Service Limits**: Direct values set per service in `gradle.properties` file.
+2. **Base Service Limits**: A base value with predefined multipliers that adjust resources dynamically across services.
+3. **Default Values**: Preconfigured minimums that ensure services can run when no limits are defined.
 
-> **How it works from end to end**
->
-> - You declare properties in `gradle.properties`.
-> - When you run:
->   ```bash
->   ./gradlew resources.up
->   ```
->   Gradle reads those properties and writes the resolved variables to a `.env` file (e.g., `BASE_CONFIG_MEMORY_LIMIT`, `BASE_CONFIG_CPU_LIMIT`, etc.).
-> - `docker-compose` then consumes `.env` and applies the limits via:
->   ```yaml
-    limits:
-        cpus: "${SERVICE_CPU_LIMIT:-${BASE_SERVICE_CPU_LIMIT:-<hard default>}}"
->       memory: ${SERVICE_MEMORY_LIMIT:-${BASE_SERVICE_MEMORY_LIMIT:-<hard default>}}
->   ```
+Each level has a defined precedence, with direct service limits overriding base limits, and base limits overriding defaults.
+The document also provides detailed reference tables listing all available variables for Etendo services across different Docker Compose files.
 
----
 
-## Resolution order (per service)
+## Memory Management
+Etendo allows memory limits to be configured at three different levels.  
+Each level takes precedence over the previous one:
 
-### Memory Limit
-1. **`SERVICE_MEMORY_LIMIT`** — generated from `gradle.properties` (e.g., `config.memory.limit=512M`).  
-2. **`BASE_SERVICE_MEMORY_LIMIT`** — calculated from the **base property in MB** (e.g., `rx.base.memory.mb`) × the **service factor**.  
-3. **Hard default** — the last fallback defined in the compose file if the above are not present.
+1. **Service Memory Limit**  
+   A direct limit can be set for each service in `gradle.properties`.  
+   Example:  
+   ```properties title="gradle.properties"
+   <service>.memory.limit=512M
+   ```  
+   Values can be expressed in megabytes (`M`) or gigabytes (`G`). This configuration has the highest precedence.
 
-> 📏 **Units**  
-> - Base properties are **MB** (e.g., `512`).  
-> - Generated env vars are written with `M` (e.g., `1024M`). Values equal to `1024MB` are effectively **1G**.
+2. **Base Service Memory Limit**  
+    In this case, a base memory size (only in `MB`, integer value) is defined for all services. Each service in the Docker Compose configuration includes a predefined multiplier.  
 
-### CPU Limit
-1. **`SERVICE_CPU_LIMIT`** — generated from `gradle.properties` (e.g., `config.cpu.limit=2`).  
-2. **`BASE_SERVICE_CPU_LIMIT`** — calculated from the **base property** (e.g., `rx.base.cpu`) × the **service factor**.  
-3. **Hard default** — the last fallback defined in the compose file if the above are not present.
+    Example:  
+    ```properties title="gradle.properties"
+    <compose>.base.memory.mb=512
+    ```  
+    When executing:
 
-> 📏 **Units**  
-> - Base properties are **logic CPU cores** (e.g., `1.0` → full access to one logical CPU. `0.5` → the container can use at most 50% of a single logical CPU).  
----
+    ```bash title="Terminal"
+    ./gradlew resources.up
+    ```  
+    Gradle calculates the effective memory limit for each service using the base size multiplied by the service factor. These multipliers were determined based on prior performance analysis.
 
-## Quick examples
+    ``` title=".env file generated"
+        BASE_<SERVICE1>_MEMORY_LIMIT=512M
+        BASE_<SERVICE2>_MEMORY_LIMIT=1024M
+        BASE_<SERVICE3>_MEMORY_LIMIT=2048M 
+    ```
 
-### A) Set a service limit explicitly
-In `gradle.properties`:
-```properties
-config.memory.limit=512M
-das.memory.limit=1024M
-```
+    This approach is useful when system memory is limited, as it allows setting a minimum base size for each service while letting the multipliers adjust resource distribution according to service demand.
 
-Run:
+3. **Default Values**  
+    If no variables are defined, each service uses preconfigured default values.  
+    These defaults guarantee the minimum required memory for the service to operate.
 
-```bash
-./gradlew resources.up
-```
+    !!! info
+        If multiple variables are defined, the order of precedence is:  
+        
+        1. **Service Memory Limit**  
+        2. **Base Service Memory Limit**  
+        3. **Default Values**
 
-.env gets:
 
-```.env
-CONFIG_MEMORY_LIMIT=512M
-DAS_MEMORY_LIMIT=1024M
-```
-### B) Set base properties with multipliers
+## CPU Configuration
 
-In `gradle.properties`:
-```properties
-rx.base.memory.mb=512
-rx.base.cpu=2.0
+The logic for CPU allocation is similar to memory limits.  
 
-```
-Run:
+!!!info 
+    CPU limits are expressed as logical CPU cores, where:   
 
-```bash
-./gradlew resources.up
-```
+    - `1.0` = 100% of one logical CPU  
+    - `0.5` = up to 50% of one logical CPU  
 
-.env gets:
+1. **Service CPU Limit**  
+    A direct limit can be set for each service in `gradle.properties`.  
+    Example:  
+    ```properties title="gradle.properties"
+    <service>.cpu.limit=1.0
+    ```
 
-```.env
-BASE_CONFIG_MEMORY_LIMIT=512M
-BASE_CONFIG_CPU_LIMIT=2.0
-BASE_DAS_MEMORY_LIMIT=1024M
-BASE_DAS_CPU_LIMIT=2.0
-BASE_AUTH_MEMORY_LIMIT=512M
-BASE_AUTH_CPU_LIMIT=2.0
-BASE_EDGE_MEMORY_LIMIT=512M
-BASE_EDGE_CPU_LIMIT=2.0
-```
+2. **Base Service CPU Limit**  
+    In this case, a base logical CPU cores (float value) is defined for all services. Each service in the Docker Compose configuration includes a predefined multiplier.  
 
-### C) Using default values
+    Example:  
+    ```properties title="gradle.properties"
+    <compose>.base.cpu=1.0
+    ```
 
-If you do not set any variable in `gradle.properties` and run:
-
-```bash
-./gradlew resources.up
-```
-For example, in the `com.etendoerp.etendorx.yml` file:
-
-The Config service will be used:
-
-```com.etendoerp.etendorx.yml
-resources:
-limits:
-    cpus: 1
-    memory:256M
-```
-The Das service will be used:
-
-```com.etendoerp.etendorx.yml
-resources:
-limits:
-    cpus: 1
-    memory:512M
-```
-The Auth service will be used:
-
-```com.etendoerp.etendorx.yml
-resources:
-limits:
-    cpus: 1
-    memory:256M
-```
-The Edge service will be used:
-
-```com.etendoerp.etendorx.yml
-resources:
-limits:
-    cpus: 1
-    memory:256M
-```
-
-## All properties to manage Docker containers resources:
-
-### Memory Management
-
-| File                           | Base Memory Property in MB | Service       | Direct Service `gradle.properties` Property        | Multiplier | Generated Base Memory .env Property     | Default Value |
-|--------------------------------|----------------------------|---------------|--------------------------------|------------|-----------------------------------|---------------|
-| com.etendoerp.etendorx.yml      | rx.base.memory.mb          | Config        | config.memory.limit            | 1.0        | BASE_CONFIG_MEMORY_LIMIT          | 256M          |
-|                                |                            | Das           | das.memory.limit               | 8.0        | BASE_DAS_MEMORY_LIMIT             | 2048M          |
-|                                |                            | Auth          | auth.memory.limit              | 1.0        | BASE_AUTH_MEMORY_LIMIT            | 256M          |
-|                                |                            | Edge          | edge.memory.limit              | 1.0        | BASE_EDGE_MEMORY_LIMIT            | 256M          |
-| com.etendoerp.etendorx_connector.yml | connector.base.memory.mb | Obconnsrv     | obconnsrv.memory.limit         | 1.0        | BASE_OBCONNSRV_MEMORY_LIMIT       | 256M          |
-|                                |                            | Worker        | worker.memory.limit            | 2.0        | BASE_WORKER_MEMORY_LIMIT          | 512M          |
-|                                |                            | Kafka         | kafka.memory.limit             | 4.0        | BASE_KAFKA_MEMORY_LIMIT           | 1024M            |
-|                                |                            | Connect       | connect.memory.limit           | 2.0        | BASE_CONNECT_MEMORY_LIMIT         | 512M            |
-| com.etendoerp.etendorx_async.yml | async.base.memory.mb       | Asyncprocess  | asyncprocess.memory.limit      | 1.0        | BASE_ASYNCPROCESS_MEMORY_LIMIT    | 256M          |
-| com.etendoerp.etendorx_utils.yml | utils.base.memory.mb       | Kafka-ui      | kafka.ui.memory.limit          | 0.5        | BASE_KAFKA_UI_MEMORY_LIMIT        | 128M          |
-|                                |                            | Jaeger        | jaeger.memory.limit            | 1.0        | BASE_JAEGER_MEMORY_LIMIT          | 256M          |
-|                                |                            | Jaeger-health | jaeger.health.memory.limit     | 0.25       | BASE_JAEGER_HEALTH_MEMORY_LIMIT   | 64M           |
-| com.etendoerp.tomcat.yml        | tomcat.base.memory.mb      | Tomcat        | tomcat.memory.limit            | 4.0        | BASE_TOMCAT_MEMORY_LIMIT          | 1024M          |
-| com.etendoerp.docker_db.yml     | db.base.memory.mb          | Db            | db.memory.limit                | 1.0        | BASE_DB_MEMORY_LIMIT              | 256M          |
-
----
-
-### CPU Management
-
-| File                           | Base CPU Property in logic CPU cores| Service       | Direct Service `gradle.properties` Property        | Multiplier | Generated Base CPU .env Property     | Default Value |
-|--------------------------------|-------------------|---------------|--------------------------------|------------|-----------------------------------|---------------|
-| com.etendoerp.etendorx.yml      | rx.base.cpu       | Config        | config.cpu.limit               | 1.0        | BASE_CONFIG_CPU_LIMIT             | 1.0           |
-|                                |                   | Das           | das.cpu.limit                  | 1.0        | BASE_DAS_CPU_LIMIT                | 1.0           |
-|                                |                   | Auth          | auth.cpu.limit                 | 1.0        | BASE_AUTH_CPU_LIMIT               | 1.0           |
-|                                |                   | Edge          | edge.cpu.limit                 | 1.0        | BASE_EDGE_CPU_LIMIT               | 1.0           |
-| com.etendoerp.etendorx_connector.yml | connector.base.cpu | Obconnsrv     | obconnsrv.cpu.limit            | 1.0        | BASE_OBCONNSRV_CPU_LIMIT          | 1.0           |
-|                                |                   | Worker        | worker.cpu.limit               | 1.0        | BASE_WORKER_CPU_LIMIT             | 1.0           |
-|                                |                   | Kafka         | kafka.cpu.limit                | 1.0        | BASE_KAFKA_CPU_LIMIT              | 1.0           |
-|                                |                   | Connect       | connect.cpu.limit              | 1.0        | BASE_CONNECT_CPU_LIMIT            | 1.0           |
-| com.etendoerp.etendorx_async.yml | async.base.cpu    | Asyncprocess  | asyncprocess.cpu.limit         | 1.0        | BASE_ASYNCPROCESS_CPU_LIMIT       | 1.0           |
-| com.etendoerp.etendorx_utils.yml | utils.base.cpu    | Kafka-ui      | kafka.ui.cpu.limit             | 1.0        | BASE_KAFKA_UI_CPU_LIMIT           | 1.0           |
-|                                |                   | Jaeger        | jaeger.cpu.limit               | 1.0        | BASE_JAEGER_CPU_LIMIT             | 1.0           |
-|                                |                   | Jaeger-health | jaeger.health.cpu.limit        | 1.0        | BASE_JAEGER_HEALTH_CPU_LIMIT      | 1.0           |
-| com.etendoerp.tomcat.yml        | tomcat.base.cpu   | Tomcat        | tomcat.cpu.limit               | 1.0        | BASE_TOMCAT_CPU_LIMIT             | 1.0           |
-| com.etendoerp.docker_db.yml     | db.base.cpu       | Db            | db.cpu.limit                   | 1.0        | BASE_DB_CPU_LIMIT                 | 1.0           |
+3. **Default Values**  
+    If no variables are defined, each service uses preconfigured default values.  
 
 
 
-### Disclaimer: Advanced Knowledge Required
+## All Services and Variables 
 
-This guide assumes a fundamental understanding of Java development environments, including familiarity with Gradle build commands and Java application deployment. It is intended for users with intermediate to advanced technical skills in software development and system administration. New users or those unfamiliar with the concepts discussed may need additional resources or assistance. 
+The following tables provide detailed references for all memory and CPU configuration variables.
+
+
+### Etendo RX Services
+
+:material-docker: Docker Compose File: `com.etendoerp.etendorx.yml`
+
+**Memory**
+
+| Service | Direct Variable     | Base Memory Property in MB | Multiplier | Base Memory `.env` Property Generated | Default Value |
+|---------|---------------------|----------------------------|------------|---------------------------------------|---------------|
+|         |                     | rx.base.memory.mb          |            |                                       |               |
+| Config  | config.memory.limit |                            | 1.0        | BASE_CONFIG_MEMORY_LIMIT              | 256M          |
+| Das     | das.memory.limit    |                            | 8.0        | BASE_DAS_MEMORY_LIMIT                 | 2048M         |
+| Auth    | auth.memory.limit   |                            | 1.0        | BASE_AUTH_MEMORY_LIMIT                | 256M          |
+| Edge    | edge.memory.limit   |                            | 1.0        | BASE_EDGE_MEMORY_LIMIT                | 256M          |
+
+**CPU**
+
+| Service | Direct Variable  | Base CPU Property in logic CPU | Multiplier | Base CPU `.env` Property Generated | Default Value |
+|---------|------------------|------------------------------- |------------|---------------------------------------|------------|
+|         |                  | rx.base.cpu                    |            |                                       |            |
+| Config  | config.cpu.limit |                                | 1.0        | BASE_CONFIG_CPU_LIMIT                 | 1.0        |
+| Das     | das.cpu.limit    |                                | 1.0        | BASE_DAS_CPU_LIMIT                 | 1.0        |
+| Auth    | auth.cpu.limit   |                                | 1.0        | BASE_AUTH_CPU_LIMIT                | 1.0        |
+| Edge    | edge.cpu.limit   |                                | 1.0        | BASE_EDGE_CPU_LIMIT                | 1.0        |
+
+
+### Connector Services
+
+**Memory**
+
+:material-docker: Docker compose File: `com.etendoerp.etendorx_connector.yml`
+
+| Service   | Direct Variable        | Base Memory Property in MB | Multiplier | Base Memory `.env` Property Generated | Default Value |
+|-----------|------------------------|----------------------------|------------|---------------------------------------|---------------|
+|           |                        | connector.base.memory.mb   |            |                                       |               |
+| Obconnsrv | obconnsrv.memory.limit |                            | 1.0        | BASE_OBCONNSRV_MEMORY_LIMIT           | 256M          |
+| Worker    | worker.memory.limit    |                            | 2.0        | BASE_WORKER_MEMORY_LIMIT              | 512M          |
+| Kafka     | kafka.memory.limit     |                            | 4.0        | BASE_KAFKA_MEMORY_LIMIT               | 1024M         |
+| Connect   | connect.memory.limit   |                            | 2.0        | BASE_CONNECT_MEMORY_LIMIT             | 512M          |
+
+**CPU**
+
+| Service   | Direct Variable      | Base CPU Property in logic CPU | Multiplier | Base CPU `.env` Property Generated | Default Value |
+|-----------|----------------------|--------------------------------|------------|------------------------------------|---------------|
+|           |                      | connector.base.cpu             |            |                                    |               |
+| Obconnsrv | obconnsrv.cpu.limit  |                                | 1.0        | BASE_OBCONNSRV_CPU_LIMIT           | 1.0           |
+| Worker    | worker.cpu.limit     |                                | 1.0        | BASE_WORKER_CPU_LIMIT              | 1.0           |
+| Kafka     | kafka.cpu.limit      |                                | 1.0        | BASE_KAFKA_CPU_LIMIT               | 1.0           |
+| Connect   | connect.cpu.limit    |                                | 1.0        | BASE_CONNECT_CPU_LIMIT             | 1.0           |
+
+
+### Utils Services
+
+:material-docker: Docker compose File: `com.etendoerp.etendorx_utils.yml`
+
+**Memory**
+
+| Service       | Direct Variable            | Base Memory Property in MB | Multiplier | Base Memory `.env` Property Generated | Default Value |
+|---------------|----------------------------|----------------------------|------------|---------------------------------------|---------------|
+|               |                            | utils.base.memory.mb       |            |                                       |               |
+| Kafka-ui      | kafka.ui.memory.limit      |                            | 0.5        | BASE_KAFKA_UI_MEMORY_LIMIT            | 128M          |
+| Jaeger        | jaeger.memory.limit        |                            | 1.0        | BASE_JAEGER_MEMORY_LIMIT              | 256M          |
+| Jaeger-health | jaeger.health.memory.limit |                            | 0.25       | BASE_JAEGER_HEALTH_MEMORY_LIMIT       | 64M           |
+
+**CPU**
+
+| Service       | Direct Variable         | Base CPU Property in logic CPU | Multiplier | Base CPU `.env` Property Generated | Default Value |
+|-------------- |------------------------ |--------------------------------|------------|------------------------------------|---------------|
+|               |                         | utils.base.cpu                 |            |                                    |               |
+| Kafka-ui      | kafka.ui.cpu.limit      |                                | 1.0        | BASE_KAFKA_UI_CPU_LIMIT            | 1.0           |
+| Jaeger        | jaeger.cpu.limit        |                                | 1.0        | BASE_JAEGER_CPU_LIMIT              | 1.0           |
+| Jaeger-health | jaeger.health.cpu.limit |                                | 1.0        | BASE_JAEGER_HEALTH_CPU_LIMIT       | 1.0           |
+
+
+
+
+### Connector Services
+:material-docker: Docker compose File: `com.etendoerp.etendorx_async.yml`
+
+**Memory**
+
+| Service       | Direct Variable            | Base Memory Property in MB | Multiplier | Base Memory `.env` Property Generated | Default Value |
+|---------------|----------------------------|----------------------------|------------|---------------------------------------|---------------|
+|               |                            | async.base.memory.mb       |            |                                       |               |
+| Asyncprocess  | asyncprocess.memory.limit  |                            | 1.0        | BASE_ASYNCPROCESS_MEMORY_LIMIT        | 256M          |
+
+
+**CPU**
+
+| Service       | Direct Variable         | Base CPU Property in logic CPU | Multiplier | Base CPU `.env` Property Generated | Default Value |
+|-------------- |------------------------ |--------------------------------|------------|------------------------------------|---------------|
+|               |                         | async.base.cpu                 |            |                                    |               |
+| Asyncprocess  | asyncprocess.cpu.limit  |                                | 1.0        | BASE_ASYNCPROCESS_CPU_LIMIT        | 1.0           |
+
+
+
+### Tomcat Services
+:material-docker: Docker compose File: `com.etendoerp.tomcat.yml`
+
+**Memory**
+
+| Service | Direct Variable     | Base Memory Property in MB | Multiplier | Base Memory `.env` Property Generated | Default Value |
+|---------|---------------------|----------------------------|------------|---------------------------------------|---------------|
+|         |                     | tomcat.base.memory.mb      |            |                                       |               |
+| Tomcat  | tomcat.memory.limit |                            | 4.0        | BASE_TOMCAT_MEMORY_LIMIT              | 1024M         |
+
+**CPU**
+
+| Service | Direct Variable  | Base CPU Property in logic CPU | Multiplier | Base CPU `.env` Property Generated | Default Value |
+|---------|------------------|--------------------------------|------------|------------------------------------|---------------|
+|         |                  | tomcat.base.cpu                |            |                                    |               |
+| Tomcat  | tomcat.cpu.limit |                                | 1.0        | BASE_TOMCAT_CPU_LIMIT              | 1.0           |
+
+### Database Services
+:material-docker: Docker compose File: `com.etendoerp.docker_db.yml`  
+
+**Memory**
+
+| Service | Direct Variable | Base Memory Property in MB | Multiplier | Base Memory `.env` Property Generated | Default Value |
+|---------|-----------------|----------------------------|------------|---------------------------------------|---------------|
+|         |                 | db.base.memory.mb          |            |                                       |               |
+| Db      | db.memory.limit |                            | 1.0        | BASE_DB_MEMORY_LIMIT                  | 256M          |
+
+**CPU**
+
+| Service | Direct Variable | Base CPU Property in logic CPU | Multiplier | Base CPU `.env` Property Generated | Default Value |
+|---------|-----------------|--------------------------------|------------|------------------------------------|---------------|
+|         |                 | db.base.cpu                    |            |                                    |               |
+| Db      | db.cpu.limit    |                                | 1.0        | BASE_DB_CPU_LIMIT                  | 1.0           |
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
