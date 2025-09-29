@@ -87,6 +87,8 @@ To start using this module correctly, the following installation and configurati
 
             - Inactive: The system only validates the product, without requiring a strict match in attributes or locator.
 
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/exact-attribute-1.png)
+
 6. **AI Configuration** Window    
 
 This window is part of the advanced barcode settings in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
@@ -110,13 +112,12 @@ This section covers two main methods for code recognition:
                         
     It configuration allows for the recognition of different Application Identifiers (AI) used in warehouse processes. Some common examples are:
                 
-    - **(92)**: Container Code: uniquely identifies a logistics unit (pallet, box).
     - **(01)**: GTIN (Global Trade Item Number): globally identifies a commercial product using a 14-digit code.
     - **(10)**: Batch/Lot Number: batch number to ensure traceability in manufacturing and distribution processes.
     - **(17)**: Expiration Date: product expiration date (YYMMDD).
     - **(21)**: Serial Number: uanique serial number of an item.
     - **(91)**: Locator Code: identifies the specific location within the warehouse.
-    - **(37)**: Quantity of items: indicates the quantity contained in the logistics unit.
+    - **(92)**: Logistics unit (pallet, box).
 
     Thanks to this configuration, when scanning a GS1-128 barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, when reading an SSCC (00), it associates it with an AUOM (box or pallet) and so on with the other identifiers.
 
@@ -300,20 +301,19 @@ In packing, the same validation is used when packaging products. The system reco
 In this way, the system ensures that a single scan comprehensively recognizes the product that is leaving or will leave, taking into account its alternative measurements and attributes, and avoiding errors throughout the chain from order to dispatch.
 
 !!! Example
-    Example of barcode with attributes: Identifier + Product Code + Identifier + Batch Number + Identifier + Expiration Date = 01BX10002410L021170220303712 
+    Example of barcode with attributes: **01** 95012345678930 **\x1D** **10**L101 **\x1D** **17** 260910 **91** Rn-0-0-0
 
     where:
 
-    - 92 = logistic unit identifier
-    - BX100024 = logistic unit code
+    - \x1D = separator for variable values
     - 01 = product identifier
-    - 12345678912345 = product code
+    - 95012345678930 = id product
     - 10 = lot identifier
-    - L021 = lot
+    - L101 = lot
     - 17 = expiration identifier
-    - 260710 = expiration date (YYMMDD)
-    - 37 = quantity identifier
-    - 12 = quantity
+    - 260910 = expiration date (YYMMDD)
+    - 91 = locator identifier
+    - Rn-0-0-0 = logistic unit code
 
 ### Inbound Receipt Window  
 
@@ -330,7 +330,7 @@ The window supports the simultaneous management of multiple orders, even from di
 
 When a receipt includes a product line with an AUOM configured as Pallet or Box, and is processed from the Inbound Receipt window, the system recognizes this condition and executes a process that generates a Referenced Inventory (RI) record associated with the corresponding line. This RI represents the physical logistics unit (pallet or box) and is linked to the receipt data, ensuring complete traceability of the contents.
 
-The automatic creation of RI depends on the “Generate logistics unit automatically” preference being enabled. Also, if the “Enable UOM Management” preference is not set to ‘Y’, the user will not be able to manage AUOM from the Product window, and therefore will not be able to define equivalencies for pallets and boxes, which is a prerequisite for this functionality to work correctly.
+The automatic creation of RI depends on the **Generate logistics unit automatically** preference being enabled. Also, if the **Enable UOM Management** preference is not set to ‘Y’, the user will not be able to manage AUOM from the Product window, and therefore will not be able to define equivalencies for pallets and boxes, which is a prerequisite for this functionality to work correctly.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inbound-receipt/inbound-receipt-window-1.png)
 
