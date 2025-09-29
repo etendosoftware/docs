@@ -51,7 +51,7 @@ Once these steps are complete, the system will be ready to execute prints centra
 
 Open the **Enterprise Module Management** window and install the **Etendo Print Provider** reference data included in the module; this will set up the configurations with the PrintNode provider and the sample print templates.
 
-![alt text](../../../../../assets/user-guide/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/install-dataset.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/install-dataset.png)
 
 ### Print Providers
 
@@ -61,14 +61,14 @@ This window is used to register print providers. In this case, the **PrintNode**
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-window.png)
 
-Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the **Provider Implementation** window. For more information on how to create a print provider, visit [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
+Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the Provider Implementation window. For more information on how to create a print provider, visit [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 #### Provider Params
 
 This tab defines the configuration values required for integration with a printing provider. This configuration is essential for the system to communicate correctly with your services.
 
-![](../../../../../assets/user-guide/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-tab-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-tab.png)
 
 The system allows the user to create any parameter that the printing provider requires, adapting to their needs. To add a new parameter, use the following fields:
 
@@ -78,7 +78,7 @@ The system allows the user to create any parameter that the printing provider re
 
 In the **PrintNode** example, the **apiKey** parameter must be configured with the corresponding key to establish communication with the provider.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/api-key-param.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/api-key-param.png)
 
 !!! info
     Each organization must register and maintain its own API key. Sharing credentials between companies is not recommended, as it would affect traceability and security.
@@ -90,7 +90,7 @@ In the **PrintNode** example, the **apiKey** parameter must be configured with t
 
 This process type window searches for and refreshes the list of printers available for a specific provider.
 
-![](../../../../../assets/user-guide/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/check-and-register-printers-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/check-and-register-printers.png)
 
 - **Provider**: drop-down menu listing all printer providers that have been previously configured in the system. The field is always loaded with a default value, but the user has the option to modify it.
 
@@ -140,7 +140,7 @@ For example, the **Print Provider** module integrates this button into the **Pro
 
 The pop-up allows you to select a previously configured print provider, assign the corresponding printer from the list of available devices, and specify the number of copies. Multiple selections are allowed.
 
-![alt text](image-5.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/generate-printable-popup.png)
 
    - **Provider**: Select the previously configured print provider.
    - **Printers**: Only displays printers associated with the selected provider. Loads the default printer, if available.

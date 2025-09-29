@@ -317,3 +317,7 @@ Es necesario presentar una declaración sustitutiva cuando dicha declaración te
 Para ello el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar una nueva declaración 349 como fichero indicando en este caso que la nueva declaración que se presenta es sustitutiva de una anterior, e indicando además el número de la declaración original a la que sustituye, tal y como se muestra en la siguiente pantalla:
 
 ![](../../../../../assets/drive/iSU9FGfN3pSTIsHPTAKpZsKZsCB7C0BhZa1RBDpzcJQ8uaOHAUmMPFuYQkhQbrQ2izd9kDfZ0TCiEHdGvHIE7iHOc-uDNoBEhDS5cF9x__Bf2rQgvz47h3U88ViVeZimkAUXctFTFhF9gZYbywo3Nb23iqRQ0Tfq03VSTqcEOcsQQnYJVi6MGxDajA.png)
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

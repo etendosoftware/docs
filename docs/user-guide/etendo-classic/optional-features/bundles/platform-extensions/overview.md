@@ -33,7 +33,7 @@ The user can have access to all the available dependencies to add, configure the
 
 :octicons-package-16: Javapackage: `com.etendoerp.docker`
 
-This module enables the use of Dockerized containers in Etendo Classic.
+This module enables the use of Dockerized containers in Etendo.
 
 !!!info
     For more information visit, [Docker Management developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/docker-management.md). 
@@ -42,7 +42,7 @@ This module enables the use of Dockerized containers in Etendo Classic.
 
 :octicons-package-16: Javapackage: `com.etendoerp.tomcat`
 
-This module enables the Dockerization of Tomcat within Etendo Classic.
+This module enables the Dockerization of Tomcat within Etendo.
 
 !!!info
     For more information visit, [Dockerized Tomcat Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md).
@@ -93,15 +93,6 @@ This module guarantees an authentication method which allows users to securely a
 !!!info
     For more information, visit [Etendo RX user guide](../platform-extensions/etendo-rx.md).
 
-### Javax XML SOAP API
-
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
-
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
-
-!!! info
-    For more information, visit the [Javax XML SOAP API developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
-
 
 ### Number To Word (English)
 
@@ -151,3 +142,6 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
 
 !!! info
     For more information, visit the [Webhook Events developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).  
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

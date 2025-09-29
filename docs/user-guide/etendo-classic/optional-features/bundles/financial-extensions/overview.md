@@ -26,6 +26,8 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1a1UNCnNNcI?si=DbicgZnWjtmkScDh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
 
 !!! info
@@ -46,6 +48,8 @@ This module allows setting a non deductible tax's amount to a specified financia
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7AtGyQ62FHs?si=HisPbmd0KzblSq0O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
 
@@ -133,7 +137,7 @@ This feature allows entering in the system all the financings the company has. I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the Not Posted Documents window, which allows users to identify and post all pending transactions directly from one window. 
+This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the **Not Posted Documents** window, which allows users to identify and post all pending transactions directly from one window. 
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
@@ -179,16 +183,19 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+:octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced.template`
 
-The Balance Sheet and P&L Structure Advanced, General Ledger Report Advanced and Journal Entries Report Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The **Balance Sheet and P&L Structure Advanced**, **General Ledger Report Advanced**, **Journal Entries Report Advanced** and **Trial Balance** reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
     For more information, visit:
     
-    - [Balance Sheet and P&L Structure Advanced ](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
-    - [General Ledger Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
-    - [Journal Entries Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
+    - [Balance Sheet and P&L Structure Advanced ](../../../basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
+    - [General Ledger Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
+    - [Journal Entries Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
+    - [Trial Balance](../../../basic-features/financial-management/accounting/analysis-tools.md#trial-balance) user guide.
 
 ### G/L Journal Clone
 
@@ -275,3 +282,5 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
 !!!info
     For more information, visit the [VAT Regularization User Guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
 
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

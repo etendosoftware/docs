@@ -21,7 +21,7 @@ The `com.etendoerp.docker` module enables the use of Dockerized containers in Et
 Additionally, the infrastructure could be extended, and allows other modules to include in it their own specific containers.
 
 !!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 ## Requirements
 
@@ -61,7 +61,7 @@ This project depends on the following tools:
 
     Example:
     ``` groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat_port=8080
+    docker_com.etendoerp.tomcat_debug=8009
     ``` 
     !!!note
         In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
@@ -98,6 +98,15 @@ This command will stop the containers.
 ```
 This command will stop and remove the containers.
 
+### Build
+
+``` bash title="Terminal"
+./gradlew resources.build
+```
+This command forces services that use a Dockerfile to rebuild their own Docker image.
+
+!!! info
+    This command must be executed when the projection or mapping have been modified due to user changes or module management updates to these tables. The command forces the DAS service to recompile and generate new classes before starting the service.
 
 ## Verifying the Status
 
@@ -133,3 +142,7 @@ In this module a Postgres database service is included, this allows to use the d
 
 4. Finally, using this service it is possible to run `./gradlew install` to install the database from scratch, or it is possible to restore a backup and start using the new dockerized database service. 
 
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

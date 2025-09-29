@@ -1999,3 +1999,7 @@ Para poder efectuar la consulta, será obligatorio completar los campos: _Libro 
 Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado según los filtros establecidos anteriormente, ya que una organización acogida a SII podrá consultar los datos enviados (Libros registro declarados) desde la ventana "Consultas Facturas SII"
 
 ![](../../../../../assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

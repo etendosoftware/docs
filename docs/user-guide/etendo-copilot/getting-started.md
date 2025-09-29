@@ -14,7 +14,7 @@ tags:
 
 ## Overview
 
-Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, or accessible via API, that provides an efficient way to interact with agents and use tools developed to solve specific problems. It is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the main features of Etendo Copilot.
+Etendo Copilot is a powerful tool integrated into the Etendo interface, or accessible via API, that provides an efficient way to interact with agents and use tools developed to solve specific problems. It is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the main features of Etendo Copilot.
 
 !!! info
     To install Etendo copilot, you can read the [Copilot Installation](../../developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
@@ -39,7 +39,7 @@ At its core, Etendo Copilot is a groundbreaking initiative that redefines how de
 - **LangGraph Agent**: This kind of agent works as a manager of other agents and allows you to create work teams.
 - **Multi-Model Assistant**: These agents can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. This type of agent can be used with multi-vendor models such as *Anthropic*, *Gemini* or *OpenAI* models, among others.
 - **Attach Files**: Etendo Copilot allows users to attach one or multiple files in the conversation.
-- **Context Sharing**: Etendo Copilot can automatically capture and share the context of your current Etendo Classic session, such as selected records or active windows. This eliminates the need to manually input information, streamlining workflows and improving efficiency.
+- **Context Sharing**: Etendo Copilot can automatically capture and share the context of your current Etendo session, such as selected records or active windows. This eliminates the need to manually input information, streamlining workflows and improving efficiency.
 
 
 
@@ -71,7 +71,7 @@ Agents can be organized into modules or created directly within your Etendo envi
 Each tool represents a dedicated and self-contained project, designed to excel at specialized tasks. Whether it involves translation, text analysis, or data manipulation, the diverse suite of tools operates in seamless coordination.  
 
 !!! info 
-    For an overview of the available tools and their technical details, please refer to the [Copilot Tools](../../developer-guide/etendo-copilot/available-tools/api-call-tool.md) in the Developer Guide section.
+    For an overview of the available tools and their technical details, please refer to the [Copilot Tools](../../developer-guide/etendo-copilot/available-tools/overview.md) in the Developer Guide section.
 
 ### Knowledge Base
 
@@ -85,7 +85,7 @@ In many cases, we need the agent to have specific information that the model doe
 
 ### Navigation Bar
 
-In the main Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
+In the main Etendo navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 Here, you can select an agent and engage in a conversation with it. Copilot facilitates communication with `Langchain Agent` or `Multi-Model Assistant` types.
 !!!note
@@ -95,13 +95,13 @@ Here, you can select an agent and engage in a conversation with it. Copilot faci
 
 ### Toolbar
 
-In any Etendo Classic window, click the Copilot button in the toolbar to open the chat. Copilot will automatically receive the context of your current tab or selected records, so you don't need to enter details manually.
+In any Etendo window, click the Copilot button in the toolbar to open the chat. Copilot will automatically receive the context of your current tab or selected records, so you don't need to enter details manually.
 
 ![Toolbar](../../assets/user-guide/etendo-copilot/getting-started/toolbar.png)
 
 **Context awareness**
 
-Etendo Copilot can take advantage of the context of the currently active window or record in Etendo Classic. Clicking the toolbar button updates the current context automatically.
+Etendo Copilot can take advantage of the context of the currently active window or record in Etendo. Clicking the toolbar button updates the current context automatically.
 
 - **Form Context**: If you have a form open (for example, a sales order or a customer record), Copilot retrieves the key fields and any unsaved edits, offering you real-time suggestions or validations.
 - **Grid context**: When a row is selected in a grid, Copilot captures the details of those specific records, sending Copilot all relevant information so you can receive relevant AI-based recommendations.
@@ -125,6 +125,8 @@ For example, you can attach a purchase order in PDF format and ask the agent to 
 ### Visualization Mode
 
 
+#### Display Modes
+
 <figure markdown>
 ![](../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=300}
 <br><br>
@@ -134,8 +136,10 @@ By default, Copilot operates as a pop-up window, providing convenient access as 
 
 <figure markdown>
 **Full Screen** <br>
-Use full screen mode for a more comfortable experience during long conversations when viewing Etendo Classic is not necessary.
-![](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
+Use full screen mode for a more comfortable experience during long conversations when viewing Etendo is not necessary.
+
+Etendo Copilot offers conversation management through a **conversation selector** to review and switch between past interactions, a **New Conversation** button to start fresh topics or tasks, and **automatic conversation title generation** that creates meaningful titles for easy identification and organization of dialogues.
+![Full Screen Chat](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
 </figure>
 
 <figure markdown>
@@ -143,3 +147,6 @@ Use full screen mode for a more comfortable experience during long conversations
 **Minimized** <br>
 Copilot's interface can also be minimized. In this case, a Copilot bubble will be active at the bottom right of the screen.
 </figure>
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

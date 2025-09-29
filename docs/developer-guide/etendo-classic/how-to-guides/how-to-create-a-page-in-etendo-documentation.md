@@ -33,7 +33,6 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     pip install mkdocs-material
     pip install pillow cairosvg
     pip install mkdocs-glightbox
-    pip install mike
     pip install mkdocs-rss-plugin
     pip install beautifulsoup4
     pip install algoliasearch
@@ -127,11 +126,12 @@ tags:
 ### Subtitle
 ```
 !!!note
-    If the page was extracted from OB wiki, for copyright reasons, add the following footer editing the title and the link of the original page:
+    Add the following license statement as a footer on all pages of the Etendo documentation produced internally:
     ```
     ---
     
-    This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+    This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}. 
+
     ```
 
 ### Useful References

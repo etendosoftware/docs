@@ -893,7 +893,7 @@ In order to enable an account to be part of the VAT regularization process, it i
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization8.png)
 
 !!!info
-    With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
+    With this module, from Etendo, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
 
 ## Not Posted Documents
 
@@ -904,16 +904,16 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 ### Overview
 
-With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
+The Not Posted Documents window, part of the Bulk Posting module, centralizes all unposted documents in one place. It allows users to quickly find, review, and post multiple documents at once. Filters help refine searches, and bulk posting actions streamline processing, making document management more efficient.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-1.png)
 
-### Search button
+### Filters
 
-With the **Search** button, the following fields are used to specify the documents to search. 
+- **Organization**: Filter documents according to the organization to which they belong. By default, the session organization is set.
 
-- Organization: The corresponding organization of the search.
-- Document: Type of document that the user is searching. This is the only field that is optional. The listed options are:
+- **Document**: (Optional) Type of document that the user is searching. The listed options are:
+
     - Amortization
     - Bank Statements 
     - Bill of Materials Production
@@ -938,9 +938,29 @@ With the **Search** button, the following fields are used to specify the documen
     - Transaction
     - Work Effort
 
-- Accounting Status: the corresponding accounting status of the search. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+- **Accounting Status**: (Mandatory) Shows the possible statuses of accounting documents. Allows multiple selections. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+ 
+- **Accounting Date (From/To)**: Filters to define a search period.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents2.png)
+### Buttons
+
+#### Search button
+
+Clicking the Search button applies the selected filters and displays the matching documents in the results grid. From the results you can navigate to a document by clicking its Accounting Date, inspect details, and select records for bulk posting.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png)
+
+#### Bulk Posting button
+
+Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-2.png)
+
+As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
+
+!!! info
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ### Grid filtering
 
@@ -951,19 +971,6 @@ In the grid where documents are displayed after the search, users can filter the
 - Document Description
 - Accounting Date
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents3.png)
-
-### Bulk Posting button
-
-Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
-
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents4.png)
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents5.png)
-
-As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
-
-!!! info
-    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Reset Accounting
 
@@ -973,3 +980,6 @@ As you can see, this development greatly facilitates the management of documents
 
 The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the **Accounting Server Process** or the **G/L Posting by DB Tables** process. The manual changes done for the accounting entries description will obviously be lost after running this process.
 
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

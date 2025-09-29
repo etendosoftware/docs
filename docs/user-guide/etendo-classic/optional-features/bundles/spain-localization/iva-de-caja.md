@@ -10,7 +10,7 @@ tags:
 
 ## Introducción
 
-Este documento describe la funcionalidad del **IVA de Caja**, disponible en Etendo Classic.
+Este documento describe la funcionalidad del **IVA de Caja**, disponible en Etendo.
 
 El objetivo de esta funcionalidad es **reconocer contablemente el IVA y declararlo/liquidarlo** con la Agencia Tributaria correspondiente, al realizarse el **cobro/pago** de las factura de venta/compra.
 
@@ -84,7 +84,7 @@ Por otra parte, es importante señalar que hay ciertas operaciones que quedan ex
 
 El IVA de Caja es una funcionalidad oculta de manera predeterminada en Etendo.
 
-Para habilitarla, es necesario [instalar manualmente el módulo de IVA de Caja](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Datasets/#importing-reference-data-on-organization-level), que se encuentra bajo Licencia Pública de Etendo.
+Para habilitarla, es necesario [instalar manualmente el módulo de IVA de Caja](../../../../../developer-guide/etendo-classic/concepts/datasets.md#importing-reference-data-on-organization-level), que se encuentra bajo Licencia Pública de Etendo.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/cashvat/dataset-cashvat.png)
 
@@ -365,3 +365,7 @@ Recuerde activar la tabla "OBCVAT_ManualSettlement" en la ventana "Esquema conta
 ### Liquidación del IVA de Caja
 
 En el ejemplo mencionado anteriormente, es con fecha, 31 de Diciembre de 2024, cuando se puede liquidar/declarar ese IVA de Caja a las autoridades fiscales correspondientes. En el caso de España, este IVA de Caja se tendrá que incluir para su liquidación en el Modelo 303 del último periodo (Diciembre 2024/Último Trimestre 2024), así como en el Modelo 390 de 2024.
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

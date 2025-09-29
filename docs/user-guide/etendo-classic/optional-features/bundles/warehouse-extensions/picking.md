@@ -115,7 +115,9 @@ Example of logs with errors
 
     From the [Sales Order](../../../basic-features/sales-management/transactions.md#sales-order) window, the Generate Picking List button supports multiple selection and is visible when all selected orders are booked  and not completely shipped. Using this process **both types of Picking Lists can be created**: Direct Picking Lists and Outbound Picking Lists.
 
-    When installing this module, in the Sales Order Header a flag **In Picking List** is added. This is checked when one of the lines of the sales order is present in a Picking List that is not closed. Using this flag and the Delivery Status and Delivery Date fields, it is possible to filter the Sales Order window to identify the Sales Orders needed to be included in a Picking List.
+    When installing this module, in the Sales Order Header a flag **Pending Picking List** is added. This is checked when one of the lines of the sales order is present in a Picking List that is not closed. Using this flag and the Delivery Status and Delivery Date fields, it is possible to filter the Sales Order window to identify the Sales Orders needed to be included in a Picking List.
+
+    The Sales Order Header also includes the flag **Exclude from Picking List**. If this flag is set to Yes, the Generate Picking List button will not be displayed for that order.
 
     !!!info
         The module does not support the creation of Picking Lists for the same Sales Order for **multiple warehouses**. Since the Sales Order has already a Warehouse assigned in the header, the Picking List will be created against this Warehouse only.

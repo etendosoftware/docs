@@ -13,7 +13,7 @@ status: beta
 :octicons-package-16: Javapackage: `com.etendoerp.db.extended`
 
 
-!!! warning  "IMPORTANT:THIS IS A BETA VERSION"
+!!! example  "IMPORTANT:THIS IS A BETA VERSION"
     - It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**, especially in production environments.
     - It should be used with **caution**, and you should always **validate backups** before executing any critical operation.
 
@@ -22,11 +22,6 @@ status: beta
 The **Extended Database Utilities** module adds advanced PostgreSQL tools to Etendo for managing **partitioned tables**. Partitioning divides large datasets into smaller segments, improving performance, scalability, and maintainability.
 
 This guide covers requirements, configuration, and usage for partitioning and unpartitioning tables.
-
-### Key Features
-
-- **Partition** and **Unpartition** PostgreSQL tables  
-- Manage table structures and metadata  
 
 ### Why Partition?
 
@@ -44,9 +39,9 @@ This guide covers requirements, configuration, and usage for partitioning and un
 
 The following requirements must be met before using the module:
 
-- **Etendo 25** or higher.
-- **[Python 3](https://docs.python.org/3.13/)** – latest release of version 3.
-- **[PostgreSQL](https://www.postgresql.org/docs/16/index.html)** – version 16 or higher.
+- **[Etendo 25](../../../whats-new/release-notes/etendo-classic/release-notes.md)** or higher.
+- **[Python 3](https://docs.python.org/3.13/){target="_blank"}** – latest release of version 3.
+- **[PostgreSQL](https://www.postgresql.org/docs/16/index.html){target="_blank"}** – version 16 or higher.
 - **Etendo DBSM (Database Source Manager)** – version **1.2.0-beta**, configured in the `artifacts.list.COMPILATION.gradle` file into the Etendo environment. 
 
 ## Installing the module

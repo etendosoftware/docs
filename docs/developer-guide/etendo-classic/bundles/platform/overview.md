@@ -116,14 +116,6 @@ It allows you to execute actions via a URL call, providing a powerful way to int
 !!! info
     For more information, visit the [Etendo Webhooks developer guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
 
-## Javax XML SOAP API
-
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
-
-
-### Technical Aspects
-
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 ## Number To Word (English)
 
@@ -308,3 +300,5 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 
 
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

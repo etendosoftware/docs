@@ -30,3 +30,6 @@ This functionality is useful when the user needs to reactivate a work effort.
 
 !!! info
     For more information, visit the [Advanced Work Effort user guide](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-work-efforts).
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

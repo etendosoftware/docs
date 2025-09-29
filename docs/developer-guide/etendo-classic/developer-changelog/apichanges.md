@@ -2,10 +2,21 @@
 tags: 
     - API Changes
     - Updating Guide
+    - Migrate to Etendo 25
+    - Etendo 25
+    - Update Etendo
+    - Developer Changelog
     
 ---
 
 # API Change Documentation 
+
+## Overview
+
+This document provides detailed information about API and stack changes introduced in the latest Etendo releases.  
+It serves as a reference for developers and system administrators to understand which components have been updated, deprecated, or removed, and how these changes may impact custom developments.  
+
+If you are planning to upgrade your environment, make sure to also review the official upgrade guide: [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
 
 ## March 2025
 
@@ -13,165 +24,162 @@ tags:
 - [Etendo - Release 25.1.1](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.1)
 - [Etendo - Release 25.1.2](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.2)
 
+[Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
+
 ### Etendo Platform Stack Upgrade
 
-=== ":material-language-java: Java SE"
+#### :material-language-java: Java SE
+
+- New Version Supported: `17.0.14`
+- Release Notes:
     
-    #### Java SE
+    <div class="grid cards" markdown>
 
-    - New Version Supported: `17.0.14`
-    - Release Notes:
-        
-        <div class="grid cards" markdown>
+    - Java SE 12.x
 
-        - Java SE 12.x
+        - [Java SE 12.0.2](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html){target="\_blank"}
+        - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html){target="\_blank"}
 
-            - [Java SE 12.0.2](https://www.oracle.com/java/technologies/javase/12-0-2-relnotes.html){target="\_blank"}
-            - [All Java 12 Updates](https://www.oracle.com/java/technologies/javase/12all-relnotes.html){target="\_blank"}
+    - Java SE 13.x
 
-        - Java SE 13.x
+        - [Java SE 13.0.2](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html){target="\_blank"}
+        - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html){target="\_blank"}
 
-            - [Java SE 13.0.2](https://www.oracle.com/java/technologies/javase/13-0-2-relnotes.html){target="\_blank"}
-            - [All Java 13 Updates](https://www.oracle.com/java/technologies/javase/13all-relnotes.html){target="\_blank"}
+    - Java SE 14.x
 
-        - Java SE 14.x
+        - [Java SE 14.0.2](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html){target="\_blank"}
+        - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html){target="\_blank"}
 
-            - [Java SE 14.0.2](https://www.oracle.com/java/technologies/javase/14-0-2-relnotes.html){target="\_blank"}
-            - [All Java 14 Updates](https://www.oracle.com/java/technologies/javase/14all-relnotes.html){target="\_blank"}
+    - Java SE 15.x
 
-        - Java SE 15.x
+        - [Java SE 15.0.2](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html){target="\_blank"}
+        - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html){target="\_blank"}
 
-            - [Java SE 15.0.2](https://www.oracle.com/java/technologies/javase/15-0-2-relnotes.html){target="\_blank"}
-            - [All Java 15 Updates](https://www.oracle.com/java/technologies/javase/15all-relnotes.html){target="\_blank"}
+    - Java SE 16.x
 
-        - Java SE 16.x
+        - [Java SE 16.0.2](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html){target="\_blank"}
+        - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html){target="\_blank"}
 
-            - [Java SE 16.0.2](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html){target="\_blank"}
-            - [All Java 16 Updates](https://www.oracle.com/java/technologies/javase/16all-relnotes.html){target="\_blank"}
+    - Java SE 17 (LTS)
 
-        - Java SE 17 (LTS)
+        - [Java SE 17.0.14(Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html){target="\_blank"}
+        - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
 
-            - [Java SE 17.0.14(Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html){target="\_blank"}
-            - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
+    </div>
+
+
+    
+#### :simple-postgresql: PostgreSQL
+
+- New Version Supported: `16.8.1`
+- Release Notes:
+
+    <div class="grid cards" markdown>
+
+    - PostgreSQL 16.x
+        - [PostgreSQL 16.8](https://www.postgresql.org/docs/release/16.8/){target="\_blank"}
+        - [PostgreSQL 16.7](https://www.postgresql.org/docs/release/16.7/){target="\_blank"}
+        - [PostgreSQL 16.6](https://www.postgresql.org/docs/release/16.6/){target="\_blank"}
+        - [PostgreSQL 16.5](https://www.postgresql.org/docs/release/16.5/){target="\_blank"}
+        - [PostgreSQL 16.4](https://www.postgresql.org/docs/release/16.4/){target="\_blank"}
+        - [PostgreSQL 16.3](https://www.postgresql.org/docs/release/16.3/){target="\_blank"}
+        - [PostgreSQL 16.2](https://www.postgresql.org/docs/release/16.2/){target="\_blank"}
+        - [PostgreSQL 16.1](https://www.postgresql.org/docs/release/16.1/){target="\_blank"}
+        - [PostgreSQL 16.0](https://www.postgresql.org/docs/release/16.0/){target="\_blank"}
+
+    - PostgreSQL 15.x
+        - [PostgreSQL 15.10](https://www.postgresql.org/docs/release/15.10/){target="\_blank"}
+        - [PostgreSQL 15.9](https://www.postgresql.org/docs/release/15.9/){target="\_blank"}
+        - [PostgreSQL 15.8](https://www.postgresql.org/docs/release/15.8/){target="\_blank"}
+        - [PostgreSQL 15.7](https://www.postgresql.org/docs/release/15.7/){target="\_blank"}
+        - [PostgreSQL 15.6](https://www.postgresql.org/docs/release/15.6/){target="\_blank"}
+        - [PostgreSQL 15.5](https://www.postgresql.org/docs/release/15.5/){target="\_blank"}
+        - [PostgreSQL 15.4](https://www.postgresql.org/docs/release/15.4/){target="\_blank"}
+        - [PostgreSQL 15.3](https://www.postgresql.org/docs/release/15.3/){target="\_blank"}
+        - [PostgreSQL 15.2](https://www.postgresql.org/docs/release/15.2/){target="\_blank"}
+        - [PostgreSQL 15.1](https://www.postgresql.org/docs/release/15.1/){target="\_blank"}
+        - [PostgreSQL 15.0](https://www.postgresql.org/docs/release/15.0/){target="\_blank"}
 
         </div>
 
-=== ":simple-postgresql: PostgreSQL"
+
+
+#### :simple-gradle: Gradle
+
+!!! warning
+    To update the Gradle wrapper in an existing environment , you must run:
     
-    #### PostgreSQL
+    ``` bash title="Terminal"
+        ./gradlew wrapper --gradle-version 8.12.1 
+    ```
 
-    - New Version Supported: `16.8.1`
-    - Release Notes:
+    For more detailed migration guidelines, refer to [Upgrading Gradle Wrapper](https://docs.gradle.org/8.12.1/userguide/gradle_wrapper.html#sec:upgrading_wrapper){target="\_blank"}
 
-        <div class="grid cards" markdown>
+- New Version Supported: `8.12.1`
+- Release Notes:
 
-        - PostgreSQL 16.x
-            - [PostgreSQL 16.8](https://www.postgresql.org/docs/release/16.8/){target="\_blank"}
-            - [PostgreSQL 16.7](https://www.postgresql.org/docs/release/16.7/){target="\_blank"}
-            - [PostgreSQL 16.6](https://www.postgresql.org/docs/release/16.6/){target="\_blank"}
-            - [PostgreSQL 16.5](https://www.postgresql.org/docs/release/16.5/){target="\_blank"}
-            - [PostgreSQL 16.4](https://www.postgresql.org/docs/release/16.4/){target="\_blank"}
-            - [PostgreSQL 16.3](https://www.postgresql.org/docs/release/16.3/){target="\_blank"}
-            - [PostgreSQL 16.2](https://www.postgresql.org/docs/release/16.2/){target="\_blank"}
-            - [PostgreSQL 16.1](https://www.postgresql.org/docs/release/16.1/){target="\_blank"}
-            - [PostgreSQL 16.0](https://www.postgresql.org/docs/release/16.0/){target="\_blank"}
+    <div class="grid cards" markdown>
+    
+    - Gradle 8.x
+        - [Gradle 8.12.1](https://docs.gradle.org/8.12.1/release-notes.html){target="\_blank"}
+        - [Gradle 8.12](https://docs.gradle.org/8.12/release-notes.html){target="\_blank"}
+        - [Gradle 8.11](https://docs.gradle.org/8.11/release-notes.html){target="\_blank"}
+        - [Gradle 8.10](https://docs.gradle.org/8.10/release-notes.html){target="\_blank"}
+        - [Gradle 8.9](https://docs.gradle.org/8.9/release-notes.html){target="\_blank"}
+        - [Gradle 8.8](https://docs.gradle.org/8.8/release-notes.html){target="\_blank"}
+        - [Gradle 8.7](https://docs.gradle.org/8.7/release-notes.html){target="\_blank"}
+        - [Gradle 8.6](https://docs.gradle.org/8.6/release-notes.html){target="\_blank"}
+        - [Gradle 8.5](https://docs.gradle.org/8.5/release-notes.html){target="\_blank"}
+        - [Gradle 8.4](https://docs.gradle.org/8.4/release-notes.html){target="\_blank"}
+        - [Gradle 8.3](https://docs.gradle.org/8.3/release-notes.html){target="\_blank"}
+        - [Gradle 8.2](https://docs.gradle.org/8.2/release-notes.html){target="\_blank"}
+        - [Gradle 8.1](https://docs.gradle.org/8.1/release-notes.html){target="\_blank"}
+        - [Gradle 8.0](https://docs.gradle.org/8.0/release-notes.html){target="\_blank"}
 
-        - PostgreSQL 15.x
-            - [PostgreSQL 15.10](https://www.postgresql.org/docs/release/15.10/){target="\_blank"}
-            - [PostgreSQL 15.9](https://www.postgresql.org/docs/release/15.9/){target="\_blank"}
-            - [PostgreSQL 15.8](https://www.postgresql.org/docs/release/15.8/){target="\_blank"}
-            - [PostgreSQL 15.7](https://www.postgresql.org/docs/release/15.7/){target="\_blank"}
-            - [PostgreSQL 15.6](https://www.postgresql.org/docs/release/15.6/){target="\_blank"}
-            - [PostgreSQL 15.5](https://www.postgresql.org/docs/release/15.5/){target="\_blank"}
-            - [PostgreSQL 15.4](https://www.postgresql.org/docs/release/15.4/){target="\_blank"}
-            - [PostgreSQL 15.3](https://www.postgresql.org/docs/release/15.3/){target="\_blank"}
-            - [PostgreSQL 15.2](https://www.postgresql.org/docs/release/15.2/){target="\_blank"}
-            - [PostgreSQL 15.1](https://www.postgresql.org/docs/release/15.1/){target="\_blank"}
-            - [PostgreSQL 15.0](https://www.postgresql.org/docs/release/15.0/){target="\_blank"}
+    - Gradle 7.x
+        - [Gradle 7.6](https://docs.gradle.org/7.6/release-notes.html){target="\_blank"}
+        - [Gradle 7.5.1](https://docs.gradle.org/7.5.1/release-notes.html){target="\_blank"}
+        - [Gradle 7.5](https://docs.gradle.org/7.5/release-notes.html){target="\_blank"}
+        - [Gradle 7.4.2](https://docs.gradle.org/7.4.2/release-notes.html){target="\_blank"}
+        - [Gradle 7.4.1](https://docs.gradle.org/7.4.1/release-notes.html){target="\_blank"}
+        - [Gradle 7.4](https://docs.gradle.org/7.4/release-notes.html){target="\_blank"}
+        - [Gradle 7.3.3](https://docs.gradle.org/7.3.3/release-notes.html){target="\_blank"}
 
-         </div>
+        </div>
+    
+#### :simple-apachetomcat: Apache Tomcat
 
-=== ":simple-gradle: Gradle"
+- New Version Supported: `9.0.98`
+- Release Notes: [Apache Tomcat 9](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html){target="\_blank"}
 
-    #### Gradle
 
-    !!! warning
-        To update the Gradle wrapper in an existing environment , you must run:
-        
+
+
+#### :octicons-file-code-24: Etendo Gradle Plugin
+
+- New Version Supported: `2.0.0` or higher
+- Release Notes:
+
+    - [Etendo Gradle Plugin - Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+    - New Gradle Plugin Task: 
+
         ``` bash title="Terminal"
-            ./gradlew wrapper --gradle-version 8.12.1 
+        ./gradlew cleanExpandCore
         ```
+        This new task deletes directories created by the `expandCore` task.
 
-        For more detailed migration guidelines, refer to [Upgrading Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper){target="\_blank"}
+    - Compatibility Flag
 
-    - New Version Supported: `8.12.1`
-    - Release Notes:
+        ``` bash title="Terminal"
+        -Pjava.version=11
+        ```
+        This new flag forces the use of Java 11 with version 25Q1.
 
-        <div class="grid cards" markdown>
-        
-        - Gradle 8.x
-            - [Gradle 8.12.1](https://docs.gradle.org/8.12.1/release-notes.html){target="\_blank"}
-            - [Gradle 8.12](https://docs.gradle.org/8.12/release-notes.html){target="\_blank"}
-            - [Gradle 8.11](https://docs.gradle.org/8.11/release-notes.html){target="\_blank"}
-            - [Gradle 8.10](https://docs.gradle.org/8.10/release-notes.html){target="\_blank"}
-            - [Gradle 8.9](https://docs.gradle.org/8.9/release-notes.html){target="\_blank"}
-            - [Gradle 8.8](https://docs.gradle.org/8.8/release-notes.html){target="\_blank"}
-            - [Gradle 8.7](https://docs.gradle.org/8.7/release-notes.html){target="\_blank"}
-            - [Gradle 8.6](https://docs.gradle.org/8.6/release-notes.html){target="\_blank"}
-            - [Gradle 8.5](https://docs.gradle.org/8.5/release-notes.html){target="\_blank"}
-            - [Gradle 8.4](https://docs.gradle.org/8.4/release-notes.html){target="\_blank"}
-            - [Gradle 8.3](https://docs.gradle.org/8.3/release-notes.html){target="\_blank"}
-            - [Gradle 8.2](https://docs.gradle.org/8.2/release-notes.html){target="\_blank"}
-            - [Gradle 8.1](https://docs.gradle.org/8.1/release-notes.html){target="\_blank"}
-            - [Gradle 8.0](https://docs.gradle.org/8.0/release-notes.html){target="\_blank"}
-
-        - Gradle 7.x
-            - [Gradle 7.6](https://docs.gradle.org/7.6/release-notes.html){target="\_blank"}
-            - [Gradle 7.5.1](https://docs.gradle.org/7.5.1/release-notes.html){target="\_blank"}
-            - [Gradle 7.5](https://docs.gradle.org/7.5/release-notes.html){target="\_blank"}
-            - [Gradle 7.4.2](https://docs.gradle.org/7.4.2/release-notes.html){target="\_blank"}
-            - [Gradle 7.4.1](https://docs.gradle.org/7.4.1/release-notes.html){target="\_blank"}
-            - [Gradle 7.4](https://docs.gradle.org/7.4/release-notes.html){target="\_blank"}
-            - [Gradle 7.3.3](https://docs.gradle.org/7.3.3/release-notes.html){target="\_blank"}
-
-         </div>
-
-=== ":simple-apachetomcat: Apache Tomcat"
-    
-    #### Apache Tomcat
-
-    - New Version Supported: `9.0.98`
-    - Release Notes: [Apache Tomcat 9](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html){target="\_blank"}
-
-=== ":octicons-file-code-24: Etendo Gradle Plugin"
-
-    ####Etendo gradle Plugin
-
-    - New Version Supported: `2.0.0`
-    - Release Notes:
-
-        - [Etendo Gradle Plugin 2.0.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.0.0){target="\_blank"}
-        - New Gradle Plugin Task: 
-
-            ``` bash title="Terminal"
-            ./gradlew cleanExpandCore
-            ```
-            This new task deletes directories created by the `expandCore` task.
-
-        - Compatibility Flag
-
-            ``` bash title="Terminal"
-            -Pjava.version=11
-            ```
-            This new flag forces the use of Java 11 with version 25Q1.
-
-=== ":octicons-issue-opened-24: Etendo ISO"
-
-    #### Etendo ISO
+#### :octicons-issue-opened-24: Etendo ISO
        
-    !!!note 
-        The Etendo 25.x ISOs are currently based on Ubuntu Live Server `22.04.5` amd64 image. <br>
-        For more information, visit [Etendo ISO Release Notes](../../../whats-new/release-notes/etendo-classic/iso.md).
+!!!note 
+    The **Etendo 25** ISOs are currently based on Ubuntu Live Server `22.04.5` amd64 image. <br>
+    For more information, visit [Etendo ISO Release Notes](../../../whats-new/release-notes/etendo-classic/iso.md).
 
 
 
@@ -519,3 +527,8 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
 - `itextpdf-5.5.0.jar`
 - `jcommon-1.0.15.jar`
 - `jxl-2.6.10.jar`
+
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
