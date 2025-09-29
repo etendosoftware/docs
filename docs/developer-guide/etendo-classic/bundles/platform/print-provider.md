@@ -1,20 +1,14 @@
 ---
 title: Print Provider - Developer Guide
 tags:
-
   - Print
   - Print Provider
   - PrintNode register
   - Print Provider register
   - Register a Print Provider
-status: beta
 ---
 
 # Print Provider
-
-!!!example "IMPORTANT:THIS IS A BETA VERSION"
-    - It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**, especially in production environments.
-    - It should be used with **caution**, and you should always **validate backups** before executing any critical operation.
 
 ## Register a new Print Provider
 
@@ -41,11 +35,11 @@ The **main components of the Print Provider module** are:
 
 This window allows to register third-party print providers such as PrintNode. Here you can configure credentials, endpoint URLs, and the specific Java implementation that complies with the PrintProviderStrategy contract. Each organization can maintain its own print providers.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/provider-implementation-window-1.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/print-provider/provider-implementation-window-1.png)
 
 Fields to note:
 
-- **Module**: Indicates the module used by the Print Provider module.
+- **Module**: Indicates the module where the Print Provider configuration will be exported.
 - **Name**: Descriptive name of the provider.
 - **Java Implementation**: Path to the Java file where the provider implementation is located. This must comply with the established contract, defining how printers are displayed, how the printout is generated, and how it is sent to the printer.
 
@@ -54,33 +48,23 @@ Fields to note:
     **PrinterUtils utilities**: Cross-functional helpers
 
     - Entity loading/validation (requireProvider, requirePrinter, requireTableByName, resolveTemplateLineFor).
-
     - Process/JSON parameters (requireParam, requireJSONArray, requirePositiveInt).
-
     - Provider parameters (getRequiredParam, providerParamContentCheck).
-
     - Jasper templates (resolveTemplateFile, loadOrCompileJasperReport).
-
     - Process result helpers (fail, warning).
 
 - **Actions**, ready to use
 
     - UpdatePrinters: synchronizes the supplier's printer catalog (add/update/disable).
-
     - SendGeneratedLabelToPrinter: generates the label (Jasper) and sends it to the selected printer.
 
 - **Key data model**
 
     - Provider: Print provider configuration (links implementation, parameters, and printers).
-
     - ProvidersImplementation: Defines the Java class (FQN) of the strategy/SPI to be used by the provider.
-
     - ProviderParam: Provider key/value parameters (e.g., apikey, printersurl, printjoburl).
-
     - Printer: Locally registered printer for a provider (external ID, name, “default,” active).
-
     - Template: Template header associated with a table; groups its lines.
-
     - TemplateLine: Template variant (.jrxml/.jasper path, “default”, order/lineNo).
 
 ## How to Create a New Supplier
@@ -88,7 +72,7 @@ Fields to note:
 1. **Create the strategy class**: Create a class in the module that extends `PrintProviderStrategy`. 
 
 
-    ``` title="Skeleton Example"
+    ``` title=" MyProviderStrategy.java - Skeleton Example"
     public class MyProviderStrategy extends PrintProviderStrategy {
      // (optional) constants for timeouts, MIME, etc.
 
@@ -153,9 +137,7 @@ Fields to note:
     **Contractual conventions**
 
     - Printer.value stores the external ID of the printer (key for “upsert”).
-
     - Throw PrintProviderException (extends OBException) for functional/integration failures.
-
     - Do not log secrets (API keys); log context (statusCode, truncated bodies).
 
 2. **Register the implementation**
@@ -171,7 +153,6 @@ Fields to note:
     - **AD: Provider Param**
 
         - Define the keys (reuse if applicable): printersurl, printjoburl, apikey, etc.
-
         - Save values (e.g., your API URLs).
 
 ## How to Register Labels (Jasper)
@@ -181,44 +162,35 @@ Fields to note:
 2. Indicate the location of your template in the lines tab. `TemplateLine.templateLocation` accepts:
 
     - @basedesign@/...
-
     - @<módulo>@/...
-
     - Paths related to basedesign
 
 **Technical Details**
 
 - The priority applies to the “Default” check; otherwise, you will get the one with the lowest sequence number.
-
 - `PrinterUtils.resolveTemplateFile` resolves locations in `src-loc/design` and web.
-
 - `PrinterUtils.loadOrCompileJasperReport` supports `.jrxml` (compile) and `.jasper` (load).
 
 !!! note "Recommended parameters"
-
-    \- DOCUMENT_ID = recordId
-
-    \- SUBREPORT_DIR = template directory (for subreports)
+    - DOCUMENT_ID = recordId
+    - SUBREPORT_DIR = template directory (for subreports)
 
 ### Printer Update
 
 - The process calls strategy.fetchPrinters(provider) and performs an upsert on Printer:
 
     - **Create** if it does not exist (provider, value=externalId).
-
     - **Update** name/default if it already exists.
-
     - **Deactivate** printers from the provider that were not included in this synchronization.
 
 - Printer.value = external ID; Printer.name is user-friendly; Printer.default marks “default.”
 
-!!!note "Recommendation"
-    If the provider's API does not return a single field that can serve as a stable key, one can be composed (e.g.,  < accountId >:< remotePrinterId >).
+    !!!note "Recommendation"
+        If the provider's API does not return a single field that can serve as a stable key, one can be composed (e.g.,  < accountId >:< remotePrinterId >).
 
 ### Errors
 
 - Use `PrintProviderException` for exception handling.
-
 - Log the messages you need in AD_MESSAGE. You can access these messages using the `String.format` and `OBMessageUtils.getI18NMessage` formatting utilities.
 
 ## Workflow and Configuration
@@ -229,9 +201,7 @@ Fields to note:
 1. **Configuration** (one-time)
 
     - As System administrator, create a record in Providers Implementation indicating the path of your strategy class.
-
     - As administrator, create a Provider that references the implementation defined in the previous step.
-
     - In the Provider Params tab, define the required parameters (URLs, API key, etc.).
 
 2. **Discover Printers**
@@ -251,7 +221,6 @@ Fields to note:
 - In the module, create `com.my.module.print.MyProviderStrategy` (extends `PrintProviderStrategy`).
 
 - Configuration per window
-    
     - Provider Implementation:
 
         - specify javaImplementation = com.my.module.print.MyProviderStrategy
@@ -263,17 +232,14 @@ Fields to note:
     - ProviderParam:
 
         - printersurl: URL for obtaining printers.
-
         - printjoburl: URL for sending print jobs.
-
         - apikey: Key for authenticating with the middleware.
 
 - Run **Update Printers** from the **Printers** window. The Action delegates responsibility for updating printers to the fetchPrinters implementation.
 
-- Execute **Send label to printer** from the button that has been registered in the desired window. The Action `SendGeneratedLabelToPrinter` delegates the responsibility of:
+- Execute **Generate Printable** from the button that has been registered in the desired window. The Action `SendGeneratedLabelToPrinter` delegates the responsibility of:
 
     - Generating the printout to your generateLabel implementation.
-
     - Sending the previous print job to your sendToPrinter implementation.
 
 ---

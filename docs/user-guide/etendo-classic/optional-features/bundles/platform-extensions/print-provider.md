@@ -6,39 +6,34 @@ tags:
     - Print
     - Stock
     - PrintNode
-status: beta
 ---
 
 # Print Provider
 :octicons-package-16: Javapackage: `com.etendoerp.print.provider`
 
-!!!example "IMPORTANT:THIS IS A BETA VERSION"
-    - It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**, especially in production environments.
-    - It should be used with **caution**, and you should always **validate backups** before executing any critical operation.
-
 ## Overview
 
-The **Print Provider** module connects Etendo with printing platforms, offering a unified solution for creating printable directly from different areas of the system.
+The **Print Provider** module connects Etendo with printing platforms, offering a unified solution for generating printables directly from different areas of the system.
 
 It allows each organization to configure its print provider, manage and synchronize the catalog of available printers, administer print templates, and execute on-demand printing from specific windows.
 
-The system offers a simple one-click printing workflow, in which the user selects the printer and template, and Etendo generates the printable in the corresponding format and sends it directly to the print provider for immediate printing.
+The system provides a simple one-click printing workflow: the user selects the printer and template, and Etendo generates the document in the required format and sends it directly to the print provider.
 
 !!! info 
     This module includes by default the implementation of a specific print provider [Print Node](https://www.printnode.com/){target="_blank"}, and all configuration and usage examples are based on this provider. This service includes a free plan, although if you require large print volumes, you should consult the [service pricing](https://www.printnode.com/pricing){target="_blank"}.    
 
 
 !!! tip
-    In addition, this module enables the implementation of custom print providers, exposes reusable back-end services that can be consumed by different modules, and a public API for printing from custom developments. For more information, visit: [Print Provider - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
+    In addition, this module enables the implementation of custom print providers, exposes reusable back-end services that can be consumed by different modules, and a public API for printing from custom developments. For more information, visit: [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 ## Initial Setup
 
-Before start using the **Print Provider** module, it is needed  to perform the initial configuration to ensure the connection between Etendo and the selected printing service.
+Before using the **Print Provider** module, an initial configuration must be completed to establish the connection between Etendo and the selected printing service.
 
-In the following example, the **PrintNode** service will be integrated with Etendo as a specific case, which is distributed within the module, but its use is not mandatory.
+The following example integrates the **PrintNode** service with Etendo. This provider is included with the module, but its use is optional.
 
-Integration with PrintNode requires following the [official provider documentation](https://www.printnode.com/docs). In general terms, you must create an account, install the management software on the device responsible for printing, and generate an API key that we will then use from Etendo to connect to the service.
+Integration with PrintNode requires following the [official documentation](https://www.printnode.com/docs){target="_blank"}. In general terms, you must create an account, install the management software on the device responsible for printing, and generate an API key that we will then use from Etendo to connect to the service.
 
 This process includes:
 
@@ -50,29 +45,30 @@ This process includes:
 Once these steps are complete, the system will be ready to execute prints centrally and securely.
 
 
-### Install Providers and Print Templates
+### Install Provider and Print Templates
 
 :material-menu: `Application`>`General Setup` > `Enterprise Model` > `Enterprise Module Management`
 
+Open the **Enterprise Module Management** window and install the **Etendo Print Provider** reference data included in the module; this will set up the configurations with the PrintNode provider and the sample print templates.
 
-
+![alt text](../../../../../assets/user-guide/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/install-dataset.png)
 
 ### Print Providers
 
 :material-menu: `General Setup` > `Print Provider Configuration` > `Print Providers`
 
-This window is used to register a provider, taking the information from the record created in the Provider Implementation window. From here, provider data management is centralized, ensuring consistency with the defined technical configuration.
+This window is used to register print providers. In this case, the **PrintNode** provider configuration is already created with the installation of the data set.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/print-provider-window-1.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-window.png)
 
-Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the [Provider Implementation](#provider-implementation) window.
+Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the **Provider Implementation** window. For more information on how to create a print provider, visit [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/print-provider-tab-1.png)
 
-!!! info
-    Each organization must register and maintain its own API key. Sharing credentials between companies is not recommended, as it would affect traceability and security.
+#### Provider Params
 
-**Provider Params**: This tab is designed to set the configuration values necessary for integration with a printing provider. This configuration is essential for the system to communicate correctly with your services.
+This tab defines the configuration values required for integration with a printing provider. This configuration is essential for the system to communicate correctly with your services.
+
+![](../../../../../assets/user-guide/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-tab-1.png)
 
 The system allows the user to create any parameter that the printing provider requires, adapting to their needs. To add a new parameter, use the following fields:
 
@@ -80,20 +76,21 @@ The system allows the user to create any parameter that the printing provider re
    - **Param Content**: The value or information required for the parameter.
    - **Description**: A brief explanation of the parameter's function.
 
-In the PrintNode example, the parameters that need to be configured are:
+In the **PrintNode** example, the **apiKey** parameter must be configured with the corresponding key to establish communication with the provider.
 
-   - **apikey**: value provided by the printing provider.
-   - **printersurl**: path to access the provider's printers.
-   - **printjoburl**: path used to send print jobs.
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/api-key-param.png)
+
+!!! info
+    Each organization must register and maintain its own API key. Sharing credentials between companies is not recommended, as it would affect traceability and security.
 
 
 ### Check and Register Printers
 
 :material-menu: `General Setup` > `Print Provider Configuration` > `Check and Register Printers`
 
-This window allows the user to search and refresh the list of printers enabled for a specific provider.
+This process type window searches for and refreshes the list of printers available for a specific provider.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/check-and-register-printers-1.png)
+![](../../../../../assets/user-guide/assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/check-and-register-printers-1.png)
 
 - **Provider**: drop-down menu listing all printer providers that have been previously configured in the system. The field is always loaded with a default value, but the user has the option to modify it.
 
@@ -105,11 +102,9 @@ This window allows the user to search and refresh the list of printers enabled f
 
 This window provides a view of the printers available by provider and allows you to update the list directly from the corresponding API, ensuring that you always work with active and synchronized devices.
 
-The printer registry is read-only, with the exception of the **Active** and **Default** fields, which are editable. Only one printer marked as Default is allowed but if no printer is designated as such, the system will automatically select one.
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/printers-window.png)
 
-When an Etendo module uses the printing functionality, it typically incorporates a set of configurations that include the dataset, APIs, and addresses needed to send documents to the printing provider, along with the contract and additional integration parameters.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/printers-window-1.png)
+The printer registry is read-only, except for the **Active** and **Default** fields. Only one printer can be set as Default. If none is designated, the system selects one automatically.
 
 The header displays general information such as **Search Key**, **Name**, and **Provider**, based on previously defined records. 
 
@@ -119,47 +114,40 @@ The header displays general information such as **Search Key**, **Name**, and **
 
 :material-menu: `General Setup` > `Print Provider Configuration` > `Print Templates`
 
-It allows the user to manage print templates and, optionally, link a set of them to a specific supplier. This is particularly useful as different suppliers may require different formats (e.g., `ZPL` or `PDF`) or specific templates. The information in this window is loaded through the dataset of the module that uses this functionality.
+This window manages print templates. These templates are associated with the related table from which the information to generate the printable will be obtained. By default, the module includes a template to generate a printable from the **Product** window, using the *m_product* table.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/print-templates-window-1.png)
+This configurations are automatically distributed and installed with the dataset.
+
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-template-window.png)
 
 Fields to note:
 
-- **Table**: associated reference table.
-- **Name**: name of the template. 
+- **Table**: Associated table, from which information will be obtained to generate the printable document.
+- **Name**: Print template name. 
 - **Template Line**: Template location.
 
-**Locator Label Printing Example**:
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/locator-label-example-1.png){width=300}
+## Generate Printables
 
+This **button** is a reusable component of the print provider module that can be configured in Etendo windows according to business needs. It allows multiple selection of records to be printed, and when the button is pressed, a pop-up window opens allowing the supplier, desired printer, and number of copies to be selected. Once confirmed, the system generates the printable using the selected template and sends the print job to the configured provider.
 
-### Print Label
+!!!info 
+    When selecting multiple records to print, the Number of Copies field indicates the number of copies of each selected record.
 
-This button is a reusable component of the print module that can be configured in specific Etendo windows according to business needs. It allows multiple selection of records to be printed, and when the button is pressed, a pop-up window opens allowing the supplier, desired printer, and number of copies to be selected. Once the selection is confirmed, the system generates the label according to the corresponding template and sends the print job to the configured supplier.
+For example, the **Print Provider** module integrates this button into the **Product** window, generating a barcode label for the product.
 
-When selecting multiple records to print, the Number of Copies field indicates the number of copies of each selected record.
-
-As an example of use, the Warehouse module integrates this button into the **Product**, **Packing**, and **Warehouse and Storage Bin** windows. In this context, barcode validation services are also reused, allowing specific attributes of GS1/EAN codes to be verified in real time, facilitating the identification of errors before printing.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/product-window-1.png)
+![generate-printable](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/generate-printable.png)
 
 The pop-up allows you to select a previously configured print provider, assign the corresponding printer from the list of available devices, and specify the number of copies. Multiple selections are allowed.
+
+![alt text](image-5.png)
 
    - **Provider**: Select the previously configured print provider.
    - **Printers**: Only displays printers associated with the selected provider. Loads the default printer, if available.
    - **Number of Copies**: Number of copies to be printed.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/print-provider/print-label-popup-1.png)
-
-!!! Important
-    The Print Providers module acts as a bridge between Etendo and the printer. It is important to note that printer operational issues, such as low paper, low ink, or network connectivity problems, cannot be managed through this system.
-
-## Workflow
-
-The process begins with the [initial setup](#initial-setup), carried out by the system administrator, following the steps explained above. The administrator can then view the printers by provider and launch an update process to synchronize the printer list from the provider API, ensuring that all active printers are reflected in Etendo in the [Check and Register Printers](#check-and-register-printers-window) window.
-
-Once the system has been configured, users can print labels from relevant windows, depending on the module being used. For example, with the warehouse module, labels can be printed from windows such as Product, Packing, or Locator by clicking the **Print Label** button. Then, the backend generates the label in PDF, PNG, or ZPL format and sends the job to the print provider via its API, providing the operator with immediate feedback on the success or failure of the process.
+!!! Warning
+    The Print Providers module acts as a bridge between Etendo and the printer. Printer operational issues, such as low paper, low ink, or network connectivity problems, are not managed by this system.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
