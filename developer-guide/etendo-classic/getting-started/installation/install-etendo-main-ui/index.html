@@ -11545,7 +11545,12 @@
 <div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker_com.etendoerp.mainui=true
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ETENDO_CLASSIC_URL=http://your.etendo.instance/etendo
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>ws.maxInactiveInterval=seconds-number
 </span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>ws.maxInactiveInterval</code> variable accepts numeric values representing the seconds a session will last before expiring in the new Main UI interface. Note that this configuration is also used by Secure Web Services and does not affect session expiration in the classic Etendo interface. The recommended value is 3600, representing one hour, but you can modify the value as needed.</p>
+</div>
 </li>
 <li>
 <p>Replace <code>your.etendo.instance</code> with your actual Etendo URL.</p>
@@ -11553,6 +11558,7 @@
 <div class="language-text highlight"><span class="filename">Etendo URL</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker_com.etendoerp.mainui=true
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ETENDO_CLASSIC_URL=http://localhost:8080/etendo
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ws.maxInactiveInterval=3600
 </span></code></pre></div>
 </li>
 <li>
