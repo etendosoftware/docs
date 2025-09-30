@@ -2746,9 +2746,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#calendar" class="md-nav__link">
+  <a href="#fiscal-calendar-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Calendar
+      Fiscal Calendar Window
     </span>
   </a>
   
@@ -12618,9 +12618,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#calendar" class="md-nav__link">
+  <a href="#fiscal-calendar-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Calendar
+      Fiscal Calendar Window
     </span>
   </a>
   
@@ -14245,54 +14245,88 @@ That is, for instance, the configuration of the F&amp;B España organization of 
 <h2 id="fiscal-calendar">Fiscal Calendar</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Fiscal Calendar</code></p>
 <h3 id="overview_6">Overview</h3>
-<p>"Legal entities with accounting" organization types must have a fiscal calendar assigned, while the rest of organization types can inherit it from its parent.</p>
-<p>A calendar contains years and the periods of each year required to get an accurate organization's accounting practice.</p>
-<h4 id="calendar">Calendar</h4>
-<p>The fiscal calendar window allows the user to create and maintain the organization's fiscal calendar.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/14LKmlXTMNBiFaMeCMoQbvMtX2_jk8gri.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/14LKmlXTMNBiFaMeCMoQbvMtX2_jk8gri.png"></a></p>
-<p>A fiscal calendar is a collection of years to be created on demand as time goes by.</p>
-<p>Each organization requiring a calendar needs to have one calendar assigned to it and only one therefore it is clearly known which calendar is going to be used while posting transactions and while opening and closing the accounting cycle. The procedure to do that is:</p>
+<p>Organizations of type <strong>Legal Entity with Accounting</strong> must have a fiscal calendar assigned. Other organization types can inherit the fiscal calendar from their parent organization.</p>
+<p>A fiscal calendar defines the <strong>years</strong> and their <strong>periods</strong> to ensure accurate accounting and proper control of the financial cycle. Each organization can only have <strong>one fiscal calendar</strong> assigned, which is used for posting transactions and managing the opening and closing of periods.</p>
+<h4 id="fiscal-calendar-window">Fiscal Calendar Window</h4>
+<p>The <strong>fiscal calendar window</strong> allows the user to create and maintain the organization's fiscal calendar. Each organization requiring a calendar needs to have one calendar assigned to it and <strong>only one</strong> therefore it is clearly known which calendar is going to be used while posting transactions and while opening and closing the accounting cycle.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar1.png" data-desc-position="bottom"><img alt="fiscal calendar 1" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar1.png"></a></p>
 <ul>
-<li>Once the calendar is properly created in this window, it needs to be linked to the "legal with accounting organization" type by selecting it after enabling the checkbox "Allow Period Control".<br>
-    All of the above is done in the Organization window.</li>
-</ul>
-<p>Etendo automatically proposes the organization as * while creating a fiscal calendar:</p>
+<li>
+<p>When creating a calendar, Etendo proposes <code>*</code> as the default organization:</p>
 <ul>
-<li>Accepting this default means that this calendar will be maintained at the client level and will therefore be available to all another organizations created within this client.</li>
-<li>Changing this default to other organization means that this calendar will only be available to that organization.</li>
+<li>
+<p>Keeping <code>*</code> means the calendar is defined at the <strong>client level</strong> and can be used by all organizations under that client.</p>
+</li>
+<li>
+<p>Changing it to a specific organization means the calendar will be available <strong>only for that organization</strong>.</p>
+</li>
 </ul>
+</li>
+</ul>
+<p>Once the calendar is created, it must be linked to the corresponding organization in the <a href="../../../general-setup/enterprise-model/#organization">Organization</a> window, by:</p>
+<ul>
+<li>
+<p>Enabling the <strong>Allow Period Control</strong> checkbox.</p>
+</li>
+<li>
+<p>Selecting <strong>legal with accounting organizations</strong> type.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar2.png" data-desc-position="bottom"><img alt="fiscal calendar 2" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar2.png"></a></p>
 <h4 id="year">Year</h4>
-<p>Year tab allows the user to create as many fiscal years as required within a fiscal calendar.</p>
-<p>A Fiscal Year is an accounting year which normally includes the twelve consecutive months over which a company determines earnings and profits.</p>
-<p>The button "<strong>Create Periods</strong>" allows the user to create the twelve consecutive months starting from "<strong>January, 1st</strong>" to "<strong>December, 31st</strong>" as "<strong>Standard Calendar Period</strong>" Types.</p>
-<p>This process also allows the user to create the "<strong>13th Period</strong>" which is a period that can be used to make accounting adjustments and get them posted to the ledger by using G/L Journals.</p>
-<p>The "<strong>13th Period</strong>" is an "<strong>Adjustment Period</strong>" that is the last date of the last standard calendar period (i.e 31-12-2012).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1IGnqS8kOPXzV58VxzGjD3sBTUBWmgOtj.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1IGnqS8kOPXzV58VxzGjD3sBTUBWmgOtj.png"></a></p>
-<p>Once created, all the periods need to be <strong>opened</strong> in the Open/Close Period Control window.</p>
-<p>The periods of an organization's fiscal calendar can be reviewed in the Period Control tab of the <strong>Organization</strong> windows. Note that:</p>
+<p>The <strong>Year</strong> tab is used to define as many <strong>fiscal years</strong> as required within a calendar.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar5.png" data-desc-position="bottom"><img alt="fiscal calendar 5" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar5.png"></a></p>
 <ul>
-<li><strong>"Standard Calendar Periods"</strong> are opened for <strong>every "Document Category"</strong>, which means that Etendo obviously allows the user to post any document type to the ledger within a standard calendar period open.</li>
-<li>while the "<strong>Adjustment Period</strong>" is only open for <strong>G/L Journal</strong> document category, which means that Etendo allows to post only G/L journals within the adjustment period.</li>
-</ul>
-<p>Additionally, it is possible to <strong>manually</strong> create the accounting periods of a year. That action requires to enter the data below:</p>
+<li>
+<p>A Fiscal Year usually covers <strong>12 consecutive months</strong>.</p>
+</li>
+<li>
+<p>Use the <strong>Create Periods</strong> button to automatically generate:</p>
 <ul>
-<li>A consecutive <em>period number</em>: this number will be later on used to open/close consequent accounting periods at a time.</li>
-<li>A <em>period name.</em></li>
-<li>The <em>starting date</em> of the period.</li>
-<li>The <em>ending date</em> of the period.</li>
-<li>The <em>period type</em> as "Standard Calendar Period Type" or "Adjustment Period" as required.</li>
+<li>
+<p><strong>12 Standard Calendar Periods</strong> (January 1st – December 31st).</p>
+</li>
+<li>
+<p>An optional <strong>13th Adjustment Period</strong>, dated the last day of the last standard period (e.g., 31-12-2025), used for accounting adjustments via G/L Journals.</p>
+</li>
 </ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar3.png" data-desc-position="bottom"><img alt="fiscal calendar 3" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar3.png"></a></p>
+<p>Once created, all the periods need to be <strong>opened</strong> in the <a href="#openclose-period-control">Open/Close Period Control</a> window.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The periods of an organization's fiscal calendar can be reviewed in the <strong>Period Control</strong> tab of the <a href="../../../general-setup/enterprise-model/#organization">Organization</a> window. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><strong>Standard Calendar Periods</strong> are opened for <strong>every Document Category</strong>, which means that Etendo  allows the user to post any document type to the ledger within a standard calendar period open.</li>
+<li>The <strong>Adjustment Period</strong> is only open for <strong>G/L Journal</strong> document category, which means that Etendo allows to post only G/L journals within the adjustment period.</li>
+</ul>
+</div>
+<h4 id="period"><strong>Period</strong></h4>
+<p>The <strong>Period</strong> tab lists all the periods of a year. Also, it is possible to <strong>manually</strong> create the accounting periods of a year. That action requires to enter some information:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar4.png" data-desc-position="bottom"><img alt="fiscal calendar 4" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar4.png"></a></p>
+<p>The fields to note are:</p>
+<ul>
+<li>A consecutive <strong>period number</strong>: this number will be later on used to open/close consequent accounting periods at a time.</li>
+<li>A <strong>period name</strong>.</li>
+<li>The <strong>starting date</strong> of the period.</li>
+<li>The <strong>ending date</strong> of the period.</li>
+<li>The <strong>period type</strong> as Standard Calendar Period Type or Adjustment Period as required.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The values of a Period can be manually modified also, but only while this Period is in a <strong>Never Opened</strong> Status, once it has been open it will no longer be possible.</p>
+</div>
 <p>Etendo checks if another period with the same starting and ending date is already registered in the system, and it also checks if the date of a period overlaps the date of another period.</p>
 <p>Finally, a year can be:</p>
 <ul>
-<li><strong>"closed"</strong></li>
+<li><strong>closed</strong></li>
 <li>and <strong>re-opened</strong></li>
 </ul>
-<p>Both actions are performed in the End Year Close window.</p>
-<h4 id="period"><strong>Period</strong></h4>
-<p>The period tab lists all the periods of a year.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1He-55aAYDSVEVm8vWy9_ER_h0k2qSIK5.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1He-55aAYDSVEVm8vWy9_ER_h0k2qSIK5.png"></a></p>
+<p>Both actions are performed in the <a href="../transactions/#end-year-close">End Year Close</a> window.</p>
 <h2 id="account-combination">Account Combination</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Account Combination</code></p>
 <h3 id="overview_7">Overview</h3>
