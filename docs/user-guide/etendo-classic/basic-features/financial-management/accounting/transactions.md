@@ -774,21 +774,75 @@ This process can be launched whenever it is required:
 
 ### Overview
 
-Etendo creates and edits budgets to be used for informative purposes allowing the user to access the data about budget versus actual. 
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+It allows create and manage budgets for reporting purposes, offering users the possibility to compare budgeted values with actual values.
+
+!!! example
+    A budget can be defined, for example, by assigning an expected expenditure of EUR 1,000,000 in salaries for the month of October. At the end of the period, users can verify the actual value and analyze the difference with respect to the defined budget.
+
+The actual values considered include both accounting entries and manual entries (G/L Item), ensuring a comprehensive view of budget execution.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-window-1.png)
 
 ### Header
 
-These are the actions which can be executed from the header in order to create budgets for a selected year to be used for informative purposes: 
- 
-**Export Budget to Excel:**  exports budget to an Excel document.
-**Copy Budget:** copy budget already created. 
-**Check Export Actual Data:** when checked, actual quantities will be exported to Excel in addition to the budgeted quantities. 
+The header defines the main data for each budget:
 
-![](../../../../../assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png)
+- **Organization**: organization to which the budget belongs.
+- **Name**: identifying name of the budget.
+- **Year**: fiscal year to which the budget applies.
+- **Description**: additional or explanatory information about the budget.
+- **Active**: checkbox that enables or disables the budget. 
+- **Export Actual Data**: check box, when checked, actual quantities will be exported to Excel in addition to the budgeted quantities.
 
 ### Lines
 
-The user is able to add budget lines. Each line may refer to a specified period, business partner, product, etc.
+In the Lines tab, the user can add budget lines. Each line can refer to a specific period, business partner, product, etc. Accounting dimensions are available as filters, selectable one value at a time, in the Dimensions section. 
+
+The fields that must be completed in each line are:
+
+- **Sequence Number**: sequence number of the line.
+- **General Ledger**: associated accounting ledger.
+- **Account Element**: linked accounting account.
+- **Currency**: currency in which the budget is expressed.
+- **Period**: accounting period to which the line corresponds.
+- **Amount**: budgeted amount.
+- **Actual Amount**: actual amount recorded.
+- **Quantity**: budgeted quantity.
+- **Net Unit Price**: net unit price.
+- **Description**: additional information about the line.
+- **Active**: checkbox that enables or disables the line.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-window-line.png)
+
+### Buttons
+
+**Export Budget to Excel**: generates an Excel document as a Report with budget information.
+
+**Copy Budget**: duplicates lines from previously created budgets.
+
+### Report
+
+The budget report allows a comparison between the budgeted and actual amounts. It also includes a Difference column, which shows the result of subtracting the actual value from the budgeted value, thus facilitating the analysis of deviations.
+
+The fields presented in the report are:
+
+- **Qty**: budgeted quantity.
+- **Price**: unit price.
+- **Amount**: budgeted amount.
+- **Actual**: actual amount recorded.
+- **Difference**: difference between budgeted and actual amounts.
+- **Period**: corresponding accounting period.
+- **Accounting dimensions**: filters applied by dimensions (e.g., business partner, cost center, product, project, etc.).
+- **Organization**: organization to which the budget corresponds.
+- **Description**: additional information about the line.
+- **Currency**: currency in which the budget is expressed.
+
+Example of report results:
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-report-1.png)
 
 ## Create Budget Reports in Excel
 
