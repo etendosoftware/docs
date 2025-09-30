@@ -6,6 +6,7 @@ tags:
   - PostgreSQL
   - Performance
   - Etendo
+status: beta
 ---
 
 # How to Partition Tables with Etendo Database Extended Module
@@ -76,18 +77,22 @@ $ ./gradlew update.database -Dforce=yes smartbuild
 ## Internal Operation of migrate.py (Step by Step)
 
 ### 1. Configuration & Connection
+
 - Reads database credentials from Etendo environment.
 - Reads `Partitioned Table Config` AD entries.
 
 ### 2. Pre-Validations
+
 - Ensures table exists and is not already partitioned.
 - Validates the partition column exists and is of type `date` or `timestamp`.
 - Collects dependent objects (indexes, triggers, foreign keys, views).
 
 ### 3. Related Tables Preparation (If Needed)
+
 - Adds missing auxiliary date columns in related tables (when required to maintain referential/temporal integrity).
 
 ### 4. Transformation
+
 - Starts a transaction (safe rollback on failure).
 - Creates partitioned parent table (mirrors original structure).
 - Pre-creates yearly RANGE partitions (e.g. `FOR VALUES FROM ('2023-01-01') TO ('2024-01-01')`).
@@ -95,18 +100,21 @@ $ ./gradlew update.database -Dforce=yes smartbuild
 - Swaps names so the new parent table retains the original logical table name.
 
 ### 5. Dependency Re-Attachment
+
 - Recreates indexes.
 - Rebuilds triggers.
 - Rebinds foreign keys to the new parent.
 - Ensures views remain valid.
 
 ### 6. Finalization
+
 - Commits on success (rollback otherwise, original table preserved).
 - Requires: `./gradlew update.database -Dforce=yes smartbuild` afterward.
 
 ## Operational Procedure
 
 ### 1. Prepare Environment
+
 ```bash
 ./gradlew update.database smartbuild
 python3 -m venv modules/com.etendoerp.db.extended/.venv
@@ -115,6 +123,7 @@ pip3 install pyyaml psycopg2-binary
 ```
 
 ### 2. Configure Partition Definition in AD
+
 `Application`>`Partition`>`Partitioned Table Config`
 
 Select:
@@ -122,6 +131,7 @@ Select:
 - Date/Timestamp Column (high cardinality, e.g. `dateordered`, `created`)
 
 ### 3. Execute Partitioning
+
 ```bash
 # 1) Stop Tomcat (recommended)
 # 2) Run migration
@@ -131,15 +141,18 @@ python3 modules/com.etendoerp.db.extended/tool/migrate.py
 ```
 
 ## ModuleScript: PartitionedConstraintsHandling.java
+
 This ModuleScript runs during `./gradlew update.database ...` and automates constraint adjustments when a table is partitioned or reverted.
 
 ### Purpose
+
 - Creates safety backups in schema `etarc_backups` (`<table>_backup_<timestamp>`).
 - Maintains `backup_metadata` (auto cleans old backups: retention ~7 days / max 5 per table).
 - Rebuilds Primary Key (PK): composite `(id, <partition_column>)` if partitioned; simple `id` if not.
 - Recreates Foreign Keys (FKs) in child tables, adding helper column `etarc_<partition_column>__<fkname>` when needed for composite references.
 
 ### Process Outline
+
 - Detects partition state via `pg_partitioned_table`.
 - Reads XML model definitions for PK/FK metadata.
 - Performs controlled DROP / ADD of PK and FKs.
@@ -147,12 +160,14 @@ This ModuleScript runs during `./gradlew update.database ...` and automates cons
 - Generates detailed, sectioned logs for traceability.
 
 ### Log Signals to Look For
+
 - Banner separators: `=======================================================`
 - Titles: `Partitioning process info`, `Partitioning processing summary (ms)`
 - Backup messages: creation & cleanup details
 - Constraint messages: `Recreating constraints for <table>`, `Added helper column ...`
 
 ### Common Issues
+
 - Missing PK definition in XML → verify entity XML.
 - Permission errors creating `etarc_backups` schema.
 - Unexpected FK naming or multi-column FKs.
@@ -168,12 +183,14 @@ python3 modules/com.etendoerp.db.extended/tool/unpartition.py "c_order,c_invoice
 ```
 
 ### Internal Steps of unpartition.py
+
 - Creates a non-partitioned replacement table.
 - Copies data from parent + partitions.
 - Recreates indexes / FKs / triggers.
 - Drops partition hierarchy and leaves a flat table with the original logical name.
 
 ## Best Practices & Warnings
+
 - Always test in staging first (BETA module).
 - Choose a partition key with good distribution and frequent range predicates.
 - Plan creation of future yearly partitions proactively.
@@ -183,18 +200,21 @@ python3 modules/com.etendoerp.db.extended/tool/unpartition.py "c_order,c_invoice
 - Validate business logic can infer the partition key for child rows.
 
 ## Quick Success Checklist
+
 - `\d+ <table>` in `psql` shows `Partitioned table` with yearly partitions (e.g. 2023, 2024 ...).
 - Range queries read fewer blocks (partition pruning visible in `EXPLAIN`).
 - `./gradlew update.database -Dforce=yes smartbuild` finishes without errors.
 - Application operates transparently against the same logical table name.
 
 ## Executive Flow Summary
+
 1. Define partition in AD (table + date column).
 2. Run `migrate.py` (validates, creates parent, yearly partitions, migrates data, re‑attaches dependencies).
 3. Run `update.database` to sync model.
 4. (Optional) Run `unpartition.py` + `update.database` to revert.
 
 ## Verification Queries (Examples)
+
 ```sql
 -- Check partitioned status
 SELECT relname FROM pg_partitioned_table pt
@@ -211,5 +231,9 @@ EXPLAIN ANALYZE SELECT * FROM c_order WHERE dateordered >= '2024-01-01' AND date
 ```
 
 ## Related Documentation
+
 - [Etendo Database Extended Module](../developer-tools/etendo-database-extended-module.md)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
 

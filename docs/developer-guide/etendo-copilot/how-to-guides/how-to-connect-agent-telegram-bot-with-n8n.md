@@ -77,6 +77,7 @@ Field description:
 Purpose: Capture inbound messages.
 
 Configuration:
+
 - Resource: `Message`
 - Operation: `On Update` (default new messages)
 - Credentials: Your Telegram Bot credential (e.g. `Telegram account 2`).
@@ -89,12 +90,14 @@ No custom parameters are required for a basic text flow.
 Purpose: Send the user's message to the Copilot Agent.
 
 Configuration:
+
 - **Method**: `POST`
 - **URL**: `ETENDO_INSTANCE_URL/etendo/sws/copilot/question`
 - **Authentication**: HTTP Bearer (supply the Etendo token)
 - **Response Format**: `JSON`
 - **Body Content Type**: `JSON / Application JSON`
 - **JSON Body** (expressions enabled):
+
   - `question`: `={{ $json["message"]["text"] }}`
   - `app_id`: Hardcode your Agent ID (e.g. `1234567890`) or use an environment variable.
   - `conversation_id`: `={{ $json["message"]["chat"]["id"] }}`
@@ -116,6 +119,7 @@ Example raw body (with expressions):
 Purpose: Deliver the Copilot response back to the user.
 
 Configuration:
+
 - **Chat ID**: `={{ $json["message"]["chat"]["id"] }}` (or from the first node depending on connections)
 - **Text**: `={{ $json["response"] }}` (assuming the Copilot service returns `{ "response": "..." }`).
 
@@ -124,6 +128,7 @@ If the HTTP Request node output structure nests the JSON (e.g. in `data`), adjus
 ### 4. (Optional) Rate Limiting / Moderation
 
 Insert a Function or Code node to:
+
 - Throttle requests (avoid abuse)
 - Filter empty / command‑only messages
 - Enforce a maximum message length
@@ -204,3 +209,6 @@ Replace placeholders before importing.
    - Response JSON contains a `response` field
 4. Validate that the bot replies in the same chat.
 5. Send multiple messages to confirm conversation continuity (context reuse via `conversation_id`).
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

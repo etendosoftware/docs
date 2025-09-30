@@ -48,6 +48,7 @@ Use it when development, support or operations teams manage their backlog in Jir
 2. Create a new token (label it for Etendo Copilot usage).
 3. Copy the token.
 4. In Etendo open :material-menu: `Application` > `Service` > `Copilot API Tokens` and create a record:
+
    - Organization: Select proper scope.
    - Alias: `JIRA_TOKEN`.
    - Token: Paste the copied value.
@@ -130,3 +131,6 @@ Link issue ERP-789 to epic ERP-22.
 - User: `jira_get_user_profile`
 
 Disable unused tools by removing them from the `--enabled-tools` list to reduce surface area and noise.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

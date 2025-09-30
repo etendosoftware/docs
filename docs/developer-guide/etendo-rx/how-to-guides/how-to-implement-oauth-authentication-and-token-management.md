@@ -7,6 +7,7 @@ tags:
   - SSO
   - Google
   - Token Management
+status: beta
 ---
 
 # How to Implement OAuth Authentication and Token Management in Etendo RX
@@ -85,6 +86,7 @@ Transparent Refresh:
 ### `ETRX_OAUTH_PROVIDER`
 
 Key fields:
+
 - `AUTHORIZATION_URI`, `TOKEN_URI`, `USER_INFO_URI`, `JWKSETURI`
 - `CLIENT_ID`, `CLIENT_SECRET`, `REDIRECT_URI`
 - `AUTHORIZATION_GRANT_TYPE` (e.g. `authorization_code`)
@@ -96,6 +98,7 @@ Key fields:
 
 ### `ETRX_TOKEN_INFO`
 Stores:
+
 - `AD_USER_ID`, `ETRX_OAUTH_PROVIDER_ID`
 - `TOKEN` (access token), `VALID_UNTIL`
 - `MIDDLEWARE_PROVIDER` (e.g. `google - drive.file`)
@@ -103,6 +106,7 @@ Stores:
 
 ### `ETRX_INSTANCE_CONNECTOR`
 Registers:
+
 - Middleware base URL
 - Authorization type and credentials (token / basic user & password)
 
@@ -125,6 +129,7 @@ Registers:
 
 - Structured log prefixes: `[LOGIN]`, `[CALLBACK]`, `[AUTHORIZE]`, `[GOOGLE]`.
 - Common errors:
+
   - Missing `state` → 400
   - Missing `refresh_token` and none cached → 400
   - Token exchange failure → 500 (`token_exchange_failed`)
@@ -139,6 +144,7 @@ Registers:
 ## 7. Implementation Best Practices
 
 Security:
+
 - Enforce HTTPS end-to-end.
 - Keep `refresh_token` only in Middleware (not exposed to ERP UI). Provide only access tokens when strictly required.
 - Validate `iss`, `aud`, `exp`, `iat` of ID Tokens.
@@ -148,28 +154,33 @@ Security:
 - Configure strict CORS and secure cookies.
 
 Reliability:
+
 - Replace in-memory token store with encrypted persistent storage in production.
 - Synchronize clocks (avoid premature expiry rejections).
 - Implement retry with backoff for transient network errors to Google / Auth0.
 
 Observability:
+
 - Correlate logs using a request ID propagated from ERP → Middleware.
 - Mask sensitive values (tokens, client secrets) in logs.
 
 ## 8. Operational Procedure (Step-by-Step)
 
 ### A. Register OAuth Provider in ERP
+
 1. Create record in `ETRX_OAUTH_PROVIDER` with IdP endpoints and credentials.
 2. Set `REDIRECT_URI` to the ERP servlet endpoint handling token return (e.g. `/etendorx/SaveTokenFromMiddleware`).
 3. Enable `GET_MIDDLEWARE_TOKEN` if delegating token acquisition to Middleware.
 4. (Optional) Set `JWKSETURI` for direct JWT validation.
 
 ### B. Test SSO (Auth0)
+
 1. Trigger ERP SSO action → calls Middleware `/login`.
 2. Authenticate via Auth0 → returns to Middleware `/callback` → redirects ERP.
 3. Confirm ERP session created and user mapped by `email` or `sub`.
 
 ### C. Obtain Google Token (Drive Example)
+
 1. In ERP invoke action "Get Middleware Token" selecting scope (e.g. `drive.file`).
 2. Flow: `/oauth/google/start` → Google consent → `/oauth/google/callback` → ERP redirect.
 3. Validate new entry in `ETRX_TOKEN_INFO` with correct `MIDDLEWARE_PROVIDER` value and expiry.
@@ -178,14 +189,17 @@ Observability:
 ## 9. Code References
 
 ### ERP (Etendo RX)
+
 - Servlet: `src/com/etendoerp/etendorx/SaveTokenFromMiddleware.java`
 - Tables:
+
   - `src-db/database/model/tables/ETRX_OAUTH_PROVIDER.xml`
   - `src-db/database/model/tables/ETRX_TOKEN_INFO.xml`
   - `src-db/database/model/tables/ETRX_TOKEN_USER.xml`
   - `src-db/database/model/tables/ETRX_INSTANCE_CONNECTOR.xml`
 
 ### Middleware (EtendoAuth)
+
 - Auth0 Routes: `src/routes/login.ts`, `src/routes/callback.ts`, `src/routes/authorize.ts`
 - Auth0 Service: `src/services/auth0.ts` (authorize URL, token exchange, JWT validation)
 - Google Routes: `src/routes/oauth_google.ts`
@@ -208,3 +222,6 @@ Observability:
 ## Summary
 
 This document centralizes the steps and structures required to implement secure OAuth SSO and Google token management in Etendo RX using a dedicated Middleware layer. Follow best practices to ensure security, reliability, and maintainability.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

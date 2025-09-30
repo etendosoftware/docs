@@ -1,5 +1,5 @@
 ---
-title: Developer Guide - Explore Etendo Data with Postgres and Chart MCP
+title: How to Explore Etendo Data with Postgres and Chart MCP
 status: beta
 tags:
   - How to
@@ -180,4 +180,7 @@ Monthly sales grew steadily Q1–Q2, plateaued in July, and dipped 8% in August 
 
 - Concept: [Model Context Protocol (MCP)](../concepts/model-context-protocol.md)
 - How to Configure MCP Servers: [How to Configure MCP servers on a Etendo Agent](how-to-configure-mcp-servers-on-agents.md)
-- GitHub MCP Servers: https://github.com/modelcontextprotocol/servers
+- [GitHub MCP Servers](https://github.com/modelcontextprotocol/servers){target="_blank"}
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

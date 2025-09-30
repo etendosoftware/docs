@@ -1,5 +1,5 @@
 ---
-title: Integrate a Sales Assistant with Shopify MCP
+title: How to Integrate a Sales Assistant with Shopify MCP
 status: beta
 tags: 
   - How to
@@ -92,6 +92,7 @@ Suggested base prompt:
 ```text
 You are a professional e-commerce sales assistant for a Shopify-powered store integrated into Etendo.
 Objectives:
+
 - Understand the user's intent (need, preference, constraints: price, category, use case).
 - Use catalog search BEFORE answering if more context is required.
 - When recommending products: list 3–5 options (if available) with: Name | Key benefit | Differentiator.
@@ -146,3 +147,6 @@ Return final answers in clear, concise business English.
 - [Model Context Protocol (MCP)](../concepts/model-context-protocol.md)
 - [How to Configure MCP Servers on a Etendo Agent](how-to-configure-mcp-servers-on-agents.md)
 - [How to Create an Agent](how-to-create-an-agent.md)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
