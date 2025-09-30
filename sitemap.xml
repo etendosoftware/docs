@@ -373,6 +373,10 @@
          <lastmod>2025-09-30</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended/</loc>
+         <lastmod>2025-09-30</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/</loc>
          <lastmod>2025-09-30</lastmod>
     </url>
@@ -557,6 +561,10 @@
          <lastmod>2025-09-30</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/how-to-guides/how-to-connect-agent-telegram-bot-with-n8n/</loc>
+         <lastmod>2025-09-30</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/</loc>
          <lastmod>2025-09-30</lastmod>
     </url>
@@ -585,7 +593,19 @@
          <lastmod>2025-09-30</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp/</loc>
+         <lastmod>2025-09-30</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/</loc>
+         <lastmod>2025-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp/</loc>
+         <lastmod>2025-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp/</loc>
          <lastmod>2025-09-30</lastmod>
     </url>
     <url>
@@ -646,6 +666,10 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/</loc>
+         <lastmod>2025-09-30</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-implement-oauth-authentication-and-token-management/</loc>
          <lastmod>2025-09-30</lastmod>
     </url>
     <url>
