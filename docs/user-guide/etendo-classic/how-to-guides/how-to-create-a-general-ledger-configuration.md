@@ -55,7 +55,7 @@ From the [General Ledger Configuration](../basic-features/financial-management/a
         To review the tables which are going to generate accounting, visit the [Active Tables](../basic-features/financial-management/accounting/setup.md#active-tables) tab. It is possible to enable accounting for the ones not active for accounting.
 
 
-- Configuring the mandatory [General Accounts](../basic-features/financial-management/accounting/setup.md#general-accounts) from the General Accounts tab as well as the accounts to use in case of suspense balancing or suspense error among others. Those accounts need to be previously created as described in the [Account Tree](../basic-features/financial-management/accounting/setup.md#account-tree) section.
+- Configuring the mandatory [General Accounts](../basic-features/financial-management/accounting/setup.md#general-accounts) from the General Accounts tab as well as the accounts to use in case of Suspense Balancing or Suspense Error among others. Those accounts need to be previously created as described in the [Account Tree](../basic-features/financial-management/accounting/setup.md#account-tree) section.
 
 - Establishing the [Default Accounts](../basic-features/financial-management/accounting/setup.md#defaults) from the Default tab which needs to be copied to other accounting configuration tab such as:
 

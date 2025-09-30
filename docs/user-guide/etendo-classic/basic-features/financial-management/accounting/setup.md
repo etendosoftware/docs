@@ -778,9 +778,9 @@ The general ledger configuration created by default can afterwards be customized
     Etendo delivers accounting files through the Chart of Accounts modules contained in a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) if available for your country.
 
 
-Additionally, a general ledger configuration can also be created **manually**, but once the corresponding Account Tree has been created.
+Additionally, a general ledger configuration can also be created **manually**, but once the corresponding [Account Tree](#account-tree) has been created.
 
-Finally, it is important to remark that the GL configuration and the CoA are linked, since **Account** is a mandatory dimension of the GL.
+Lastly, it is important to remark that the GL configuration and the CoA are linked, since **Account** is a mandatory dimension of the GL.
 
 #### General Ledger Configuration
 
@@ -828,7 +828,7 @@ When voided:
 
 3\. The **Centrally Maintenance** checkbook: 
 
-- **Centrally Maintained**: When YES, the **Account Sign** field is hidden in Element Value tab of the [Account Tree](#account-tree) window. 
+- **Centrally Maintained**: When YES, the **Account Sign** field is hidden in the Element Value tab of the [Account Tree](#account-tree) window. 
 
     - It is possible to define at general ledger level whether the balances of any account type are going to be shown as **Positive** or **Negative** in the financial statements if the checkbox Central Maintenance is selected:
 
@@ -845,6 +845,7 @@ When voided:
     !!!info
         It is possible to uncheck any of the checkboxes listed above showing any of the balances as negartive. 
 
+    ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration7.png)
 
 -   **Centrally Maintained**: When NO, the **Account Sign** field is not hidden in the Element Value tab of the [Account Tree](#account-tree) window. Therefore, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements.
 
@@ -853,20 +854,20 @@ When voided:
 
 #### Dimension
 
-**Dimension** tab allows the user to configure the organization's general ledger dimensions or to add additional accounting dimensions **not centrally maintained** in the client.
+The **Dimension** tab allows the user to configure the organization's general ledger dimensions or to add additional accounting dimensions **not centrally maintained** in the client.
 
 Etendo allows the user to manage mandatory and not mandatory accounting dimensions to be entered in the Dimensions section of the documents, which can be posted to the ledger.
 
 Mandatory dimensions can be filled in or not depending on the document category being created. For instance, **Business Partner** and **Product** are mandatory dimensions that need to be filled in a purchase invoice but can be filled or not in a G/L Journal.
 
-There are **two mandatory dimensions** at the organization's general ledger configuration level are:
+There are **two mandatory dimensions** at the organization's general ledger configuration level, those are:
 
 -   The **Account** as any document/transaction posted to the ledger needs to be posted in a ledger account (or subaccount in Etendo terms) of a given account tree or chart of accounts.
 -   The **Organization**, as any document/transaction posted to the ledger, needs to be posted in an organization's general ledger.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration2.png)
 
-Besides, if an organization belongs to a Client which centrally maintains the accounting dimensions, it is possible to add in this tab other dimensions such as the ones listed below which can even set as **mandatory** for the organization:
+Besides, if an organization belongs to a Client which centrally maintains the accounting dimensions, it is possible to add in this tab other dimensions such as the ones listed below which can be even set as **mandatory** for the organization:
 
 -   Activity
 -   Asset
@@ -893,7 +894,7 @@ The configuration above means that every time that a transaction of any kind (pu
 
 #### Active Tables
 
-The **Active Tables** tab allows the user to define which tables and therefore transactions are going to be posted to the ledger and which ones not.
+The **Active Tables** tab allows the user to define which tables and therefore transactions are going to be posted to the ledger and which ones are not.
 
 The tables listed below are the tables **suitable to be posted**:
 
@@ -974,7 +975,7 @@ The **mandatory Default** accounts are populated by default as part of the [gene
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration4.png)
 
-**Copy Accounts** button allows selecting accounts defaulted to every [Business Partner Category](../../master-data-management/business-partner-setup.md#business-partner-category) or [Product Category](../../master-data-management/product-setup.md#product-category).
+The **Copy Accounts** button allows selecting accounts defaulted to every [Business Partner Category](../../master-data-management/business-partner-setup.md#business-partner-category) or [Product Category](../../master-data-management/product-setup.md#product-category).
 
 !!!info
     The accounts defaulted to every business partner category, for instance, can be as well defaulted to every vendor or customer by using the action button **Copy Accounts**, this time from the [Business Partner Category](../../master-data-management/business-partner-setup.md#business-partner-category) window.
