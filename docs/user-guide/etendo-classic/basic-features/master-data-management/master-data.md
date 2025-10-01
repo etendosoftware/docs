@@ -43,9 +43,6 @@ In this window, you can configure the access settings for the currency API confi
 
 Business partner master data window is the place where the user can easily organize and centralize business partner data.
 
-!!!info
-    Nowadays, organizations deal with many third parties such as customers, suppliers, creditors, etc., therefore it is recommended to import large number of business partners instead of creating them one by one using the Import Data module ?.
-
 Etendo allows the user to enter business partner master data information whenever it is needed as the business takes place, therefore the procedure described below explains how to set up a single business partner of any type.
 
 ### Header
@@ -102,7 +99,7 @@ Additionally, a business partner might have **available credit in a given curren
 This process automatically creates three new payments, in case business partner has available credit:
 
 - a **GL Item payment** in EUR, that moves credit amount to the ledger account defined in the selected G/L Item, in the CREDIT.
-- a **refunded payment** in EUR, that moves credit amount to a prepayment account in the DEBIT
+- a **refunded payment** in EUR, that moves credit amount to a prepayment account in the DEBIT.
 - and a **Zero** amount payment that is a credit payment in USD (new currency). This credit payment moves the credit amount to a prepayment account in the CREDIT.
 
 !!!Example
@@ -191,7 +188,7 @@ Fields to note:
     - **Customer Schedule after Delivery**: The invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
     If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.
 
-    !!!info 
+        !!!info 
         For more information, visit [Invoice Schedule](../master-data-management/business-partner-setup.md#invoice-schedule).
 
 - **Credit Line limit**: If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
@@ -212,7 +209,7 @@ Fields to note:
     - **Sales invoice:** Blocked
     - **Payment In:** Not blocked
 
-Above defaulted configuration means that it is not possible to complete either a sales order, a goods shipment or a sales invoice for the customer but to receive a payment.
+    Above defaulted configuration means that it is not possible to complete either a sales order, a goods shipment or a sales invoice for the customer, only receiving a payment is possible.
 
 **Customer Accounting**
 
@@ -289,9 +286,9 @@ As shown in the image above, there is a list of relevant data to be entered for 
     - **Purchase Invoice:** Blocked
     - **Payment Out:** Blocked
 
-Above defaulted configuration means that it is not possible to complete either a purchase order, a purchase invoice or to make a payment but to receive goods sent by the vendor.
+    Above defaulted configuration means that it is not possible to complete either a purchase order, a purchase invoice or to make a payment but to receive goods sent by the vendor.
 
-As already mentioned if a business partner of any type is blocked, it is not possible to Complete (or book) some document types. However, it is always possible to Void them. Etendo shows an error message stating that it is not possible to complete a document for a business partner set as **on hold**.
+    As already mentioned if a business partner of any type is blocked, it is not possible to Complete (or book) some document types. However, it is always possible to Void them. Etendo shows an error message stating that it is not possible to complete a document for a business partner set as **on hold**.
 
 **Vendor Accounting**
 
@@ -346,13 +343,19 @@ An employee can be:
 
 **Employee Accounting**
 
-The ledger accounts to be used while posting employee related transactions such as payroll accounting could be added in this tab.
+In this tab, the user can add the ledger accounts to be used while posting employee related transactions such as payroll accounting.
 
-![](../../../../assets/drive/7kuCcxhGxEGWIpNYq-d8j3hysWa9ru8o2SoKJnxq9Cvkf3G-j1W0M5KDMw4Wq7IiNtKftE3U8GFbFZYUHDBompw3guyv-yamRyKg6-gUoNb1wibWRp0AAj1KQg3S1FGeiPmyyIJnUJOBSE4WQw.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-accounting.png)
 
 As you can see in the image above, nowadays there is no ledger account required to be defined for employee accounting. This is due to the fact that there is no transaction susceptible of being posted for employees.
 
 Anyway, this is the place where *Human Resources* related modules or features should point to while defining the accounts to be used in any employee transaction susceptible of being posted.
+
+**Cost Salary Category**
+
+In this tab, the user can set up the salary category of the employee by selecting one of the options which were previously defined in the [Salary Category](../master-data-management/business-partner-setup.md#salary-category) window.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-cost-salary-category.png)
 
 #### **Bank Account**
 
@@ -370,7 +373,7 @@ Fields to note:
 - **Bank Name**
 - **Active** flag: It is recommended to set only one bank account as *Active*, if possible, in order to avoid errors; otherwise you should revise the right bank account is used.
 - **Country**: Here, the user can select a country from the list to specify if the bank account is a domestic bank account or a foreign bank account.
-- **User/Contact**: In case you want to associate a contact for this bank account
+- **User/Contact**: In case you want to associate a contact for this bank account.
 - **Bank Account Format**: List that contains all the possible values for generating the Displayed Account Number, which will be later on used by other reports or processes to get the account identifier. Possible  values are: 
     - _Use Generic Account No._
     - _Use IBAN_
@@ -401,31 +404,45 @@ This functionality introduces the possibility to mark a bank account as Default 
 !!! warning
     Only one bank account can be selected as default for each business partner.
 
-#### **Document Type Tab**
 
-It allows to define, specifically for each business partner, the types of documents that will be used in associated transactions.
+#### **Document Type**
 
-With this functionality, it no longer depends only on the standard document type configured at the organization level, but can customize the assignment based on the customer or supplier. That is, when the user creates an order, invoice, or shipment document associated with a Business Partner, the system checks the Document Type tab for that Business Partner to determine which configuration to apply. If there is a record configured for the Business Partner and the transaction in progress, the document type defined in that tab is applied; if there is no record, the standard document type configured at the organization level is inherited.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8-MOprz-4FI?si=rc5geP_xaKmKvjsK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-1.png)
+!!!info
+    This feature is available in Etendo 25.3 or later versions.
 
-In this tab, it is possible to create records with the following fields:
+This tab introduces flexibility by customizing document type assignments to invoices, orders, shipments and receipts, specifically based on the business partner.
 
-- **Organization**: Organization to which this rule applies. If a document is created in a child organization, it will search for the configuration throughout the entire organization tree. If no document type configuration exists, it will use the configuration at the organization level.
-- **Document Category**: This can be Order, Invoice, and Shipment/Receipt.
-- **Sales Transaction**: When checked, this corresponds to sales documents (sales orders, sales invoices, and good shipment), while when unchecked, it corresponds to purchasing documents (purchase orders, purchase invoices, and goods receipt).
-- **Document Type**: Only the document types available for the selected category and sales transaction are displayed. The default options are:
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/document-type.png)
 
-    - For Purchase Orders: Purchase order and RTV order.
-    - For Sales Orders: POS order, quote, RFC order, standard order, and warehouse order.
-    - For Purchase Invoices: AP invoice and canceled purchase invoice.
-    - For Sales Invoices: AR invoice and canceled sales invoice.
-    - For Goods Shipments: MM shipment and RTV shipment.
-    - For Goods Receipt: MM Receipt and RFC Receipt.
+This functionality provides granular control over assigning transactional documents, overriding the default document type configured at the organization level. This is useful since each country, region, and even each company may use different types of documents with their respective printable and even personalized sequence numbers.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-2.png)
+When a transaction document (order, invoice, shipment or receipt) is created and linked to a business partner, the system first checks the Document Type Tab for the correct configuration. This setup can significantly enhance the user experience when documents are created repeatedly.
 
-### **Location/Address**
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/document-type2.png)
+
+Fields to note:
+
+1. **Organization**: Specifies the organization to which this specific document assignment rule applies (e.g., F&B US Inc.).
+2. **Document Category**: Select the type of transaction document, such as order, invoice, or shipment/receipt.
+3. **Sales Transaction**: Checkbox used to distinguish document direction.
+
+    - Checked: Corresponds to sales documents (e.g., sales orders, sales invoices, good shipments).
+    - Unchecked: Corresponds to purchasing documents (e.g., purchase orders, purchase invoices, goods receipts).
+
+4. **Document Type**: Select the specific document type available for the chosen category and transaction direction.
+
+**Document Type Selection Priority**
+
+1. Exact Match: Etendo searches for a direct rule defined for the business partner and the specific organization.
+2. Organizational Tree: If no exact match is found, Etendo navigates up the organizational tree to find a match.
+3. Default: If no rule exists, Etendo uses the default document type configured for the organization.
+
+!!!warning
+     This functionality is not available for documents created with a background/button process such as “Generate Invoice from Shipment” in the Goods Shipment window. In this case, the document type to be used is the one defined at organization level, instead of the one defined at Document Type tab level.
+
+#### **Location/Address**
 
 Business partner locations and full address details can be set up in this tab.
 
