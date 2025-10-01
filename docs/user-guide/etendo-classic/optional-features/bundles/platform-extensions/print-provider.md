@@ -45,7 +45,7 @@ This process includes:
 Once these steps are complete, the system will be ready to execute prints centrally and securely.
 
 
-### Install Provider and Print Templates
+### Install Provider and Print Template Dataset
 
 :material-menu: `Application`>`General Setup` > `Enterprise Model` > `Enterprise Module Management`
 
@@ -140,7 +140,7 @@ For example, the **Print Provider** module integrates this button into the **Pro
 
 The pop-up allows you to select a previously configured print provider, assign the corresponding printer from the list of available devices, and specify the number of copies. Multiple selections are allowed.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/generate-printable-popup.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/generate-printable-popup.png)
 
    - **Provider**: Select the previously configured print provider.
    - **Printers**: Only displays printers associated with the selected provider. Loads the default printer, if available.
@@ -149,5 +149,8 @@ The pop-up allows you to select a previously configured print provider, assign t
 !!! Warning
     The Print Providers module acts as a bridge between Etendo and the printer. Printer operational issues, such as low paper, low ink, or network connectivity problems, are not managed by this system.
 
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/send-impresion.png)
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/barcode.png)
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
