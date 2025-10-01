@@ -29,15 +29,11 @@ The “Advanced Business Partner” module allows the user to have a general vie
 
 :material-menu: `Application` > `Master Data Management` > `Currency Converters`
 
-In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-- Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
-- URL: http://apilayer.net/api/
-- Token
-- User
-- Password
+In this window, you can configure the access settings for the currency API configuration. For more information, visit: [Currency API Configuration - Developer Guide](../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#currency-api-configuration)
 
-![](../../../../assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
 
 ## Business Partner
 
@@ -405,7 +401,31 @@ This functionality introduces the possibility to mark a bank account as Default 
 !!! warning
     Only one bank account can be selected as default for each business partner.
 
-#### **Location/Address**
+#### **Document Type Tab**
+
+It allows to define, specifically for each business partner, the types of documents that will be used in associated transactions.
+
+With this functionality, it no longer depends only on the standard document type configured at the organization level, but can customize the assignment based on the customer or supplier. That is, when the user creates an order, invoice, or shipment document associated with a Business Partner, the system checks the Document Type tab for that Business Partner to determine which configuration to apply. If there is a record configured for the Business Partner and the transaction in progress, the document type defined in that tab is applied; if there is no record, the standard document type configured at the organization level is inherited.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-1.png)
+
+In this tab, it is possible to create records with the following fields:
+
+- **Organization**: Organization to which this rule applies. If a document is created in a child organization, it will search for the configuration throughout the entire organization tree. If no document type configuration exists, it will use the configuration at the organization level.
+- **Document Category**: This can be Order, Invoice, and Shipment/Receipt.
+- **Sales Transaction**: When checked, this corresponds to sales documents (sales orders, sales invoices, and good shipment), while when unchecked, it corresponds to purchasing documents (purchase orders, purchase invoices, and goods receipt).
+- **Document Type**: Only the document types available for the selected category and sales transaction are displayed. The default options are:
+
+    - For Purchase Orders: Purchase order and RTV order.
+    - For Sales Orders: POS order, quote, RFC order, standard order, and warehouse order.
+    - For Purchase Invoices: AP invoice and canceled purchase invoice.
+    - For Sales Invoices: AR invoice and canceled sales invoice.
+    - For Goods Shipments: MM shipment and RTV shipment.
+    - For Goods Receipt: MM Receipt and RFC Receipt.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-2.png)
+
+### **Location/Address**
 
 Business partner locations and full address details can be set up in this tab.
 
