@@ -46,7 +46,11 @@ The simplest configuration we are going to follow as an example is to mount **Ma
     docker_com.etendoerp.mainui=true
     ETENDO_CLASSIC_URL=http://your.etendo.instance/etendo
     authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+    ws.maxInactiveInterval=seconds-number
     ```
+
+    !!! warning
+        The `ws.maxInactiveInterval` variable accepts numeric values representing the seconds a session will last before expiring in the new Main UI interface. Note that this configuration is also used by Secure Web Services and does not affect session expiration in the classic Etendo interface. The recommended value is 3600, representing one hour, but you can modify the value as needed.
 
 2. Replace `your.etendo.instance` with your actual Etendo URL.
 
@@ -56,6 +60,7 @@ The simplest configuration we are going to follow as an example is to mount **Ma
     docker_com.etendoerp.mainui=true
     ETENDO_CLASSIC_URL=http://localhost:8080/etendo
     authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+    ws.maxInactiveInterval=3600
     ```
 
 3. Run the following commands to set up the module and update resources:
