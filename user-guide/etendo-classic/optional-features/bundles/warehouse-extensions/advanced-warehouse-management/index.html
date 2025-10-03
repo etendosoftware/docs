@@ -3233,28 +3233,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#all-tasks" class="md-nav__link">
+  <a href="#inventory-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      All Tasks
+      Inventory Tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-start-etendo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Start (Etendo)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#inventory-management" class="md-nav__link">
+  <a href="#access-to-inventory-tasks-etendo-mobile" class="md-nav__link">
     <span class="md-ellipsis">
-      Inventory Management
+      Access to Inventory Tasks (Etendo Mobile)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Inventory Management">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#physical-inventory-and-change-of-status" class="md-nav__link">
+  <a href="#inventory-adjustment" class="md-nav__link">
     <span class="md-ellipsis">
-      Physical Inventory and Change of Status
+      Inventory Adjustment
     </span>
   </a>
   
@@ -3271,6 +3280,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Tasks
+    </span>
+  </a>
   
 </li>
         
@@ -12110,28 +12128,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#all-tasks" class="md-nav__link">
+  <a href="#inventory-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      All Tasks
+      Inventory Tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-start-etendo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Start (Etendo)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#inventory-management" class="md-nav__link">
+  <a href="#access-to-inventory-tasks-etendo-mobile" class="md-nav__link">
     <span class="md-ellipsis">
-      Inventory Management
+      Access to Inventory Tasks (Etendo Mobile)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Inventory Management">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#physical-inventory-and-change-of-status" class="md-nav__link">
+  <a href="#inventory-adjustment" class="md-nav__link">
     <span class="md-ellipsis">
-      Physical Inventory and Change of Status
+      Inventory Adjustment
     </span>
   </a>
   
@@ -12148,6 +12175,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Tasks
+    </span>
+  </a>
   
 </li>
         
@@ -12440,7 +12476,7 @@
 <p class="admonition-title">Info</p>
 <p>For more information on how to setup inventory statuses, visit <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/">Inventory Status</a>.</p>
 </div>
-<p>The new status will be available in <strong>Etendo Mobile</strong> to be assigned to new or existing locators using the <strong>Adjust</strong> or <strong>Relocate</strong> options. In the latter case, the rules defined in the <code>Movement Rules Configuration</code> window, described below, are used.</p>
+<p>The new status will be available in <strong>Etendo Mobile</strong> to be assigned to new or existing locators using the <strong>Adjust</strong> or <strong>Relocate</strong> task options. In the latter case, the rules defined in the <code>Movement Rules Configuration</code> window, described below, are used.</p>
 <h3 id="movement-rules-configuration-window">Movement Rules Configuration Window</h3>
 <p><code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Movement Rules Configuration</code></p>
 <p>Movement rules allow you to automate the relocation or status change of inventory based on the action being performed. The purpose of this functionality is to automate inventory movements when they change status, exclude certain locations from operations such as picking or reservations due to their status, avoid errors in product handling, manage special products (<em>Damaged</em>, <em>Blocked</em>, etc.), and automatically handle virtual locations when there is no defined destination.</p>
@@ -12453,13 +12489,13 @@
 <p>The application of these rules can be seen from two features of Etendo Mobile:</p>
 <ul>
 <li>
-<p>From the <strong>Relocate</strong> option, once you have selected the location defined in a rule, this will move the inventory to the new location and, according to the configured rule, change the inventory status.</p>
+<p>From the <strong>Relocate</strong> tasks, once you have selected the location defined in a rule, this will move the inventory to the new location and, according to the configured rule, change the inventory status.</p>
 </li>
 <li>
-<p>From the <strong>Adjust</strong> option, when you select the new status, this will update the status and, depending on the configured rule, move the inventory to the defined location.</p>
+<p>From the <strong>Adjust</strong> tasks, when you select the new status, this will update the status and, depending on the configured rule, move the inventory to the defined location.</p>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/movement-rules-config.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/movement-rules-config.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/movement-rules-config.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/movement-rules-config.png"></a></p>
 <p>Fields to note: </p>
 <ul>
 <li><strong>From Locator</strong>: Source location.</li>
@@ -12674,7 +12710,7 @@
 <li><a href="#inventory-management">Inventory Management</a></li>
 </ul>
 <h3 id="picking">Picking</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png"></a></p>
 <p>The picking process allows the operator to pick the products required for an order efficiently using Etendo Mobile. The complete process flow is detailed below. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -12688,7 +12724,7 @@
 </div>
 <h4 id="access-to-picking-tasks-etendo-mobile">Access to Picking Tasks (Etendo Mobile)</h4>
 <p>When accessing <strong>Etendo Mobile</strong> into the <strong>Picking</strong> section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-2.jpg" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-2.jpg" width="300"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.jpg" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.jpg" width="300"></a></p>
 <p>This screen contains:</p>
 <ul>
 <li>Refresh and Back buttons.</li>
@@ -12711,11 +12747,11 @@
 </li>
 <li>
 <p>To start the process, click on the <strong>Start Picking</strong> button located at the top; once this is done, the task goes to the <code>In Progress</code> status.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-3.png"></a></p>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-3.png"></a></p>
 </li>
 <li>
 <p>Once picking is started, a new window opens with the following items:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-4.png" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-4.png" width="300"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-4.png" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-4.png" width="300"></a></p>
 <ul>
 <li><strong>Scan Barcode:</strong> activates the camera of the mobile device.</li>
 <li><strong>Type barcode:</strong> allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.</li>
@@ -12772,7 +12808,7 @@
 Additionally, if a quantity greater than the allowed maximum is entered, a popup will be displayed with the message: "Maximum quantity reached for product [ProductName]". <br><br></li>
 <li>If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png"></a></p>
 </div>
 <h4 id="picking-completion">Picking Completion</h4>
 <p>Once at least one unit of any product is registered, the <strong>End Picking</strong> button becomes active. This allows partial picking, meaning only part of the requested quantity can be picked, which is useful when products are missing or unsuitable for use.</p>
@@ -12781,11 +12817,11 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 <p class="admonition-title">Warning</p>
 <p>For partial picking, the task is closed, and no new task is automatically created for the missing products. Any remaining quantities must be handled manually.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-6.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-6.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-6.png"></a></p>
 <p>Once completed, the task will appear in the Completed Tasks section, where it is possible to review the validated products and quantities for that specific picking task.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-7.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-7.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png"></a></p>
 <h3 id="packing">Packing</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png"></a></p>
 <p>The packing process allows the operator to pack the products efficiently using Etendo Mobile. The complete process flow is detailed below.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -12798,7 +12834,7 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 <li>From the <strong>Packing</strong> window of Etendo when adding at least one sales order to a new Packing.</li>
 </ul>
 <h4 id="access-to-packing-tasks-etendo-mobile">Access to Packing Tasks (Etendo Mobile)</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-2.jpg" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-2.jpg" width="300"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.jpg" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.jpg" width="300"></a></p>
 <p>When accessing Etendo Mobile and selecting the <strong>Packing</strong> menu, the packing main screen with the number of available <code>Packing</code> tasks to the current user. </p>
 <p>This screen contains:</p>
 <ul>
@@ -12824,7 +12860,7 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 </li>
 <li>
 <p>When pressing <strong>Start Packing</strong>, the status of the task changes to <code>In Progress</code> in both Etendo Mobile and Etendo. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-3.png"></a></p>
 </li>
 <li>
 <p>The window has the following elements:</p>
@@ -12863,7 +12899,7 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-4.png"></a></p>
 <p>The view selectors by <strong>Product</strong> or by <strong>Box</strong> allow:</p>
 <ul>
 <li>
@@ -12873,7 +12909,7 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 <p>In the <strong>Boxes</strong> view, when entering a box, the detailed contents are displayed with the possibility of browsing box by box to check which products are contained in each box.</p>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-5.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-5.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-5.png"></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>In both views, it is possible to modify the quantities loaded and add boxes if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: </p>
@@ -12892,7 +12928,7 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 <p class="admonition-title">Info</p>
 <p>Newly created boxes cannot be deleted manually. However, if a box is left empty (no products added), it will be automatically removed at the end of the process. Only boxes with packed products will be saved and displayed.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-6.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-moblie-6.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-moblie-6.png"></a></p>
 </li>
 </ol>
 <h4 id="packing-methods">Packing Methods</h4>
@@ -12918,7 +12954,7 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 <li>If an attempt is made to enter more than the required quantity, an error message is also displayed "Packing for product [ProductName] is already complete.".</li>
 <li>If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-7.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-7.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png"></a></p>
 </div>
 <h4 id="packing-completion">Packing Completion</h4>
 <p>Once the products have been packed: </p>
@@ -12936,107 +12972,87 @@ Additionally, if a quantity greater than the allowed maximum is entered, a popup
 <p>After confirmation, the task is marked as Completed.</p>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-8.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-8.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-8.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-8.png"></a></p>
 <p>Once completed, the task will appear in the Completed Tasks section. From there, it is possible to review all validated information for that packing task, including:</p>
 <ul>
 <li>In the Product view: which boxes each product was packed into.</li>
 <li>In the Box view: which products were packed into each box.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-9.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-9.png"></a></p>
-<h3 id="all-tasks">All Tasks</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/all-tasks.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/all-tasks.png"></a></p>
-<p>From this window you can view and work with all types of tasks, both Picking and Packing.</p>
-<h3 id="inventory-management">Inventory Management</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nBElvaejJMQ?si=A-a4-IDvPVHJ9S_t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management1.png"></a></p>
-<p>The flow of inventory management and statuses, involves the functionalities from Etendo Mobile of:</p>
-<ul>
-<li>Physical inventory.</li>
-<li>Change of status.</li>
-<li>Relocation.</li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>These actions are possible through the use of the <a href="#movement-rules-configuration-window">movement rules</a> functionality and the creation/use of <a href="#creating-inventory-statuses">custom statuses</a> in Etendo, explained above.</p>
-</div>
-<h4 id="physical-inventory-and-change-of-status">Physical Inventory and Change of Status</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png"></a></p>
+<h3 id="inventory-tasks">Inventory Tasks</h3>
+<p>Two types of tasks have been added:  <strong>Inventory Adjustment</strong> and <strong>Inventory Relocation</strong>.  These tasks are created and assigned directly from Etendo and are available in Etendo Mobile from the <strong>Inventory Tasks</strong> menu for the operator to execute.</p>
+<p><strong>Inventory Adjustment</strong>
+Allows you to plan counting or stock adjustment tasks. It can be used to update existing quantities or to record stock for products that did not have previous inventory.</p>
+<p>This corresponds to the same operation performed in Etendo <strong>Physical Inventory</strong> window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none. If the inventory status changes during the adjustment, the system automatically moves the product to the storage bin associated with that new status, reflecting the current stock condition.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information about how to use this functionality in Etendo, visit <a href="../../../../basic-features/warehouse-management/transactions/#physical-inventory">Physical Inventory</a>.</p>
 </div>
-<p>The Physical Inventory functionality from Etendo Mobile can be done with the following steps:</p>
-<ol>
-<li>
-<p>Enter the <strong>Inventory Management</strong> menu.</p>
-</li>
-<li>
-<p>Search and select the product from the list or by the search engine. It is possible to unselect each selected product with the button <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/remove.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/remove.png"></a>.</p>
-</li>
-<li>
-<p>When selecting a product, the action buttons are enabled. Click on <strong>Adjust</strong>.</p>
-</li>
-<li>
-<p>Enter the quantity counted in the <strong>Quantity Count</strong> field.</p>
-</li>
-<li>
-<p>Confirm by pressing <strong>Process</strong>.</p>
-</li>
-</ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management2.png"></a></p>
-<p>Once the adjustment has been processed, the result is reflected in real time in the same product list in Etendo Mobile, showing the updated quantity. Likewise, this information will also be seen in Etendo through the Stock Report, ensuring synchronization between both environments.</p>
-<p>The <strong>To Status</strong> field, present in this screen, allows you to change the status of the selected inventory. Thus, by adding one more step, the status can be changed:</p>
-<ol>
-<li>
-<p>Enter the <strong>Inventory Management</strong> menu of Etendo Mobile.</p>
-</li>
-<li>
-<p>Search and select the product from the list or by the search engine. </p>
-</li>
-<li>
-<p>Press the <strong>Adjust</strong> button.</p>
-</li>
-<li>
-<p>Enter the quantity to change the status in the <strong>Quantity Count</strong> field.</p>
-</li>
-<li>
-<p>Select the status from the <strong>To Status</strong> field. </p>
-</li>
-<li>
-<p>Confirm by pressing <strong>Process</strong>.</p>
-</li>
-</ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management3.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management3.png"></a></p>
-<p>Thus, the <strong>Adjust</strong> button allows two functions, physical inventory and status change.</p>
-<h4 id="inventory-relocation">Inventory Relocation</h4>
+<p><strong>Inventory Relocation</strong></p>
+<p>Allows inventory to be moved between storages bin. This process corresponds to the same operation performed in the Etendo using a <strong>Goods Movement</strong> windows: transferring stock from one state or location to another, without changing the total quantity available.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information about how to use this functionality in Etendo, visit <a href="../../../../basic-features/warehouse-management/transactions/#goods-movement">Goods Movement</a>.</p>
 </div>
-<p>The <strong>Relocate</strong> function allows you to relocate inventory by following the steps:</p>
-<ol>
-<li>
-<p>Enter the <strong>Inventory Management</strong> menu of Etendo Mobile.</p>
-</li>
-<li>
-<p>Search and select the product from the list or by the search engine.</p>
-</li>
-<li>
-<p>Press the <strong>Relocate</strong> button.</p>
-</li>
-<li>
-<p>Enter the quantity to move in the <strong>Quantity to Relocate</strong> field.</p>
-</li>
-<li>
-<p>Select the destination location in the <strong>To Locator</strong> field.</p>
-</li>
-<li>
-<p>Confirm with <strong>Process</strong>.</p>
-</li>
-</ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management4.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management4.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/mobile14.jpg" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/mobile14.jpg"></a></p>
-<p>The result of this process is reflected both in Etendo Mobile, where the inventory location is updated, and in the Etendo Stock Report, ensuring traceability and visibility of the relocation in both platforms.</p>
+<h4 id="process-start-etendo_2">Process Start (Etendo)</h4>
+<p>The process begins with the creation of <strong>Tasks</strong> within Etendo, using the Task window.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png"></a></p>
+<p><strong>Header</strong></p>
+<p>With the installation of the <strong>Advanced Warehouse Management</strong> module, new specific tasks are incorporated that expand the possibilities of logistics management. The header retains the basic fields for a task and adds options in the <em>Task Type</em> field, which determine the type of action to be performed:</p>
+<ul>
+<li><strong>Inventory Adjustment</strong>: Used to plan stock counting or adjustment tasks. It can update existing quantities or register stock for products that previously had no inventory.</li>
+<li><strong>Inventory Relocation</strong>: Used to plan tasks for moving products between warehouses or storage locations.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-2.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Product</strong>: (required) Product on which the task will be performed. When you select a product, other related fields are automatically filled in.</li>
+<li><strong>Storage bin</strong>: (read-only) displays the current location of the selected product. It is automatically completed when the product is uploaded.</li>
+<li><strong>Attribute Set Value</strong>: (read-only) indicates the defined attributes of the product (e.g., lot, series). It is automatically completed when the product is uploaded.</li>
+<li><strong>Quantity</strong>: (read-only) reflects the current quantity available in the storage bin corresponding to the product. It is automatically completed when the product is uploaded.</li>
+<li><strong>UOM</strong>: (read-only) displays the unit of measure in which the product is managed. It is automatically completed when the product is uploaded.</li>
+<li><strong>Creation Date</strong>: (read-only) records the date and time the task was created.</li>
+</ul>
+<h4 id="access-to-inventory-tasks-etendo-mobile">Access to Inventory Tasks (Etendo Mobile)</h4>
+<p>When accessing Etendo Mobile into the Inventory Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png"></a></p>
+<h4 id="inventory-adjustment">Inventory Adjustment</h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>These actions are possible through the use of the <a href="#movement-rules-configuration-window">movement rules</a> functionality and the creation/use of <a href="#creating-inventory-statuses">custom statuses</a> in Etendo, explained above.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-adjust-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-adjust-1.png"></a></p>
+<p>To <strong>Adjust</strong> inventory:</p>
+<ul>
+<li>Enter the <strong>Inventory Tasks</strong> menu. There, tasks are divided by status: <em>Pending</em>, <em>In Progress</em>, and <em>Completed</em>.</li>
+<li>Search and select the task from the list or by the search engine.</li>
+<li>When a card is selected, a screen with the task information opens. </li>
+<li>Press <strong>Start Adjustment</strong> button</li>
+<li>Complete <strong>Quantity Count</strong> field.</li>
+<li>Confirm by pressing <strong>Process</strong> button.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png"></a></p>
+<p>To change inventory <strong>Status</strong>:</p>
+<ul>
+<li>Change the inventory Status in <strong>To Status</strong> field. </li>
+<li>The Default status options are: <em>Undefined</em>, <em>Blocked</em>, <em>Available</em>, <em>Quality-Control</em>, <em>Quarantine</em>, <em>Damage</em>, but each company can define its own statuses</li>
+<li>Confirm by pressing <strong>Process</strong> button.</li>
+</ul>
+<h4 id="inventory-relocation">Inventory Relocation</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-relocate-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-relocate-1.png"></a></p>
+<p>To <strong>Relocate</strong> inventory:</p>
+<ul>
+<li>Enter the <strong>Inventory Tasks</strong> menu. There, tasks are divided by status: <em>Pending</em>, <em>In Progress</em>, and <em>Completed</em>.</li>
+<li>Search and select the task from the list or by the search engine. </li>
+<li>When a card is selected, a screen with the task information opens. </li>
+<li>Press <strong>Start Relocation</strong> button</li>
+<li>Complete <strong>Quantity Count</strong> field.</li>
+<li>Complete <strong>To Locator</strong> field.</li>
+<li>Confirm by pressing <strong>Process</strong> button.</li>
+</ul>
+<h3 id="all-tasks">All Tasks</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/all-tasks.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/all-tasks.png"></a></p>
+<p>From this window you can view and work with all types of tasks, like Picking, Packing and Inventory Tasks.</p>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L.</a>.</p>
 
