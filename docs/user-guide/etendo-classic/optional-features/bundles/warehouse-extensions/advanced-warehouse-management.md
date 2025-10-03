@@ -197,7 +197,7 @@ Inventory statuses allow the user to classify and manage stock units according t
 !!!info
     For more information on how to setup inventory statuses, visit [Inventory Status](../../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
 
-The new status will be available in **Etendo Mobile** to be assigned to new or existing locators using the **Adjust** or **Relocate** options. In the latter case, the rules defined in the `Movement Rules Configuration` window, described below, are used.
+The new status will be available in **Etendo Mobile** to be assigned to new or existing locators using the **Adjust** or **Relocate** task options. In the latter case, the rules defined in the `Movement Rules Configuration` window, described below, are used.
 
 ### Movement Rules Configuration Window
 
@@ -214,11 +214,11 @@ This allows the user to maintain inventory traceability and consistency, even if
 
 The application of these rules can be seen from two features of Etendo Mobile:
 
-- From the **Relocate** option, once you have selected the location defined in a rule, this will move the inventory to the new location and, according to the configured rule, change the inventory status.
+- From the **Relocate** tasks, once you have selected the location defined in a rule, this will move the inventory to the new location and, according to the configured rule, change the inventory status.
 
-- From the **Adjust** option, when you select the new status, this will update the status and, depending on the configured rule, move the inventory to the defined location.
+- From the **Adjust** tasks, when you select the new status, this will update the status and, depending on the configured rule, move the inventory to the defined location.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/movement-rules-config.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/movement-rules-config.png)
 
 Fields to note: 
 
@@ -462,7 +462,7 @@ As seen above, the Advanced Warehouse Management option includes the following m
 
 ### Picking
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png)
 
 The picking process allows the operator to pick the products required for an order efficiently using Etendo Mobile. The complete process flow is detailed below. 
 
@@ -480,7 +480,7 @@ The process is started in Etendo when a [Picking List](../../../../optional-feat
 
 When accessing **Etendo Mobile** into the **Picking** section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-2.jpg){align=right width=300}
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.jpg){align=right width=300}
  
 This screen contains:
 
@@ -501,11 +501,11 @@ This screen contains:
 2. Once the task is selected, a window opens with the list of products to be picked.
 
 3. To start the process, click on the **Start Picking** button located at the top; once this is done, the task goes to the `In Progress` status.
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-3.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-3.png)
 
 4. Once picking is started, a new window opens with the following items:
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-4.png){align=right width=300}
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-4.png){align=right width=300}
 
 
     - **Scan Barcode:** activates the camera of the mobile device.
@@ -557,7 +557,7 @@ On the other hand, the system also allows flexibility in the mode of operation t
     Additionally, if a quantity greater than the allowed maximum is entered, a popup will be displayed with the message: "Maximum quantity reached for product [ProductName]". <br><br>
     - If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-5.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png)
     
 
 #### Picking Completion
@@ -569,16 +569,16 @@ After confirmation, the task is marked as Completed.
 !!!warning
     For partial picking, the task is closed, and no new task is automatically created for the missing products. Any remaining quantities must be handled manually.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-6.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-6.png)
 
 Once completed, the task will appear in the Completed Tasks section, where it is possible to review the validated products and quantities for that specific picking task.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking-7.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png)
 
 
 ### Packing
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png)
 
 The packing process allows the operator to pack the products efficiently using Etendo Mobile. The complete process flow is detailed below.
 
@@ -594,7 +594,7 @@ Packing tasks are linked to a record in the **Packing** window.  The creation of
 
 #### Access to Packing Tasks (Etendo Mobile)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-2.jpg){align=right width=300}
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.jpg){align=right width=300}
 
 
 When accessing Etendo Mobile and selecting the **Packing** menu, the packing main screen with the number of available `Packing` tasks to the current user. 
@@ -618,7 +618,7 @@ This screen contains:
 
 3. When pressing **Start Packing**, the status of the task changes to `In Progress` in both Etendo Mobile and Etendo. 
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-3.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-3.png)
 
 4. The window has the following elements:
 
@@ -649,7 +649,7 @@ This screen contains:
         - Box name (or number)
         - Products and their quantities
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-4.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-4.png)
 
 
     The view selectors by **Product** or by **Box** allow:
@@ -658,7 +658,7 @@ This screen contains:
 
     - In the **Boxes** view, when entering a box, the detailed contents are displayed with the possibility of browsing box by box to check which products are contained in each box.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-5.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-5.png)
 
     !!! tip 
         In both views, it is possible to modify the quantities loaded and add boxes if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: 
@@ -673,7 +673,7 @@ This screen contains:
     !!!Info
         Newly created boxes cannot be deleted manually. However, if a box is left empty (no products added), it will be automatically removed at the end of the process. Only boxes with packed products will be saved and displayed.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-6.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-moblie-6.png)
 
 
 #### Packing Methods
@@ -696,7 +696,7 @@ In terms of how to perform packing, the system offers flexibility in operating m
     - If an attempt is made to enter more than the required quantity, an error message is also displayed "Packing for product [ProductName] is already complete.".
     - If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-7.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png)
 
 #### Packing Completion
 
@@ -710,167 +710,109 @@ Once the products have been packed:
 
 - After confirmation, the task is marked as Completed.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-8.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-8.png)
 
 Once completed, the task will appear in the Completed Tasks section. From there, it is possible to review all validated information for that packing task, including:
 
 - In the Product view: which boxes each product was packed into.
 - In the Box view: which products were packed into each box.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing-9.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
 
 
 ### Inventory Tasks
 
-Two types of inventory tasks enable these actions: Inventory Adjustment and Inventory Relocation. Tasks are created and assigned directly from the ERP and are available in the mobile app from the Inventory Tasks menu.
+Two types of tasks have been added:  **Inventory Adjustment** and **Inventory Relocation**.  These tasks are created and assigned directly from Etendo and are available in Etendo Mobile from the **Inventory Tasks** menu for the operator to execute.
 
-**Workflow**
+**Inventory Adjustment**
+Allows you to plan counting or stock adjustment tasks. It can be used to update existing quantities or to record stock for products that did not have previous inventory.
 
-The process begins with the creation of Tasks from the ERP and their assignment to a warehouse operator. In the mobile application, each operator only sees the tasks that have been assigned to them. They can view the tasks in the All Tasks menu or in the Inventory Management menu. When starting a task, the application displays the information necessary to perform the requested action according to the type of task. Using the button, they can either modify existing quantities, relocate products between locations, or register inventory to record stock in a location for products that are currently out of stock, and then complete the task. These actions are reflected in the ERP both in the task statuses and in the inventory update.
+This corresponds to the same operation performed in Etendo **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none. If the inventory status changes during the adjustment, the system automatically moves the product to the storage bin associated with that new status, reflecting the current stock condition.
+
+!!!Info
+    For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
+
+**Inventory Relocation**
+
+Allows inventory to be moved between storages bin. This process corresponds to the same operation performed in the Etendo using a **Goods Movement** windows: transferring stock from one state or location to another, without changing the total quantity available.
+
+!!!Info
+    For more information about how to use this functionality in Etendo, visit [Goods Movement](../../../basic-features/warehouse-management/transactions.md#goods-movement).
+
 
 #### Process Start (Etendo)
 
-The process begins with the creation of Tasks within Etendo, using the Task window in the Task module.
+The process begins with the creation of **Tasks** within Etendo, using the Task window.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-task-window-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
 
 **Header**
 
-With the installation of the Advanced Warehouse module, new specific actions are incorporated that expand the possibilities of logistics management. The header retains the basic fields for a task and adds options in the Task Type field, which determine the type of action to be performed:
+With the installation of the **Advanced Warehouse Management** module, new specific tasks are incorporated that expand the possibilities of logistics management. The header retains the basic fields for a task and adds options in the *Task Type* field, which determine the type of action to be performed:
 
-- **Inventory Adjustment**: allows you to plan stock counting or adjustment tasks. It can be used to update existing quantities or to record stock for products that did not previously have inventory.
+- **Inventory Adjustment**: Used to plan stock counting or adjustment tasks. It can update existing quantities or register stock for products that previously had no inventory.
+- **Inventory Relocation**: Used to plan tasks for moving products between warehouses or storage locations.
 
-- **Inventory Relocation**: allows you to plan tasks for relocating products between warehouses or locations.
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-2.png)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-task-window-2.png)
+Fields to note:
 
-This window includes the following fields:
-
-- **Product**: (required) product on which the task will be performed. When you select a product, other related fields are automatically filled in.
-
+- **Product**: (required) Product on which the task will be performed. When you select a product, other related fields are automatically filled in.
 - **Storage bin**: (read-only) displays the current location of the selected product. It is automatically completed when the product is uploaded.
-
 - **Attribute Set Value**: (read-only) indicates the defined attributes of the product (e.g., lot, series). It is automatically completed when the product is uploaded.
-
 - **Quantity**: (read-only) reflects the current quantity available in the storage bin corresponding to the product. It is automatically completed when the product is uploaded.
-
 - **UOM**: (read-only) displays the unit of measure in which the product is managed. It is automatically completed when the product is uploaded.
-
 - **Creation Date**: (read-only) records the date and time the task was created.
-
 
 #### Access to Inventory Tasks (Etendo Mobile)
 
 When accessing Etendo Mobile into the Inventory Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-mobile.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png)
 
-#### **Inventory Adjustment** 
-
-Allows you to plan counting or stock adjustment tasks. It can be used to update existing quantities or to record stock for products that did not have previous inventory.
-
-This corresponds to the same operation performed in the ERP Physical Inventory: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none. If the inventory status changes during the adjustment, the system automatically moves the product to the storage bin associated with that new status, reflecting the current stock condition.
-
-!!!Info
-    For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
-
+#### Inventory Adjustment 
 
 !!!Important 
     These actions are possible through the use of the [movement rules](#movement-rules-configuration-window) functionality and the creation/use of [custom statuses](#creating-inventory-statuses) in Etendo, explained above.
 
-The inventory adjustment and status change screen displays the selected product along with its search key in the title. The available fields are listed below:
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-adjust-1.png)
 
-- **Book Quantity** (read-only): indicates the current quantity recorded for the product.
-
-- **Attribute Set** (read-only): shows the attribute associated with the product (e.g., batch, series).
-
-- **UOM** (read-only): indicates the unit of measure for the product.
-
-- **Locator** (read-only): shows the current location of the product in the warehouse.
-
-- **Quantity Count**: allows you to enter the counted quantity (in case of adjustment) or the quantity whose status you want to change.
-
-- **To Status**: allows you to select the new status to which the product will be moved.
-    
 To **Adjust** inventory:
 
-- Enter the **Inventory Tasks** menu. There, tasks are divided by status: Pending, In Progress, and Completed.
-
+- Enter the **Inventory Tasks** menu. There, tasks are divided by status: *Pending*, *In Progress*, and *Completed*.
 - Search and select the task from the list or by the search engine.
-
 - When a card is selected, a screen with the task information opens. 
-
 - Press **Start Adjustment** button
-
 - Complete **Quantity Count** field.
-
 - Confirm by pressing **Process** button.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-adjust-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
 
 To change inventory **Status**:
 
-- Enter the **Inventory Tasks** menu. There, tasks are divided by status: Pending, In Progress, and Completed.
-
-- Search and select the task from the list or by the search engine. 
-
-- When a card is selected, a screen with the task information opens. 
-
-- Press **Start Adjustment** button
-
-- Complete **Quantity Count** field.
-
-- Change the inventory Status in **To Staus** field. 
-    The Status options are: Undefined, Blocked, Available, Quality-Control, Quarentine, Damage among others.
-
+- Change the inventory Status in **To Status** field. 
+- The Default status options are: *Undefined*, *Blocked*, *Available*, *Quality-Control*, *Quarantine*, *Damage*, but each company can define its own statuses
 - Confirm by pressing **Process** button.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-status-1.png)
 
-#### **Inventory Relocation**
+#### Inventory Relocation
 
-Allows inventory to be moved between storages bin.
-
-This process corresponds to the same operation performed in the ERP using a Goods Movement: transferring stock from one state or location to another, without changing the total quantity available.
-
-!!!Info
-
-    For more information about how to use this functionality in Etendo, visit [Goods Movement](../../../basic-features/warehouse-management/transactions.md#goods-movement).
-
-The inventory relocation screen displays the selected product along with its search key in the title. The available fields are listed below:
-
-- **Book Quantity** (read-only): indicates the current quantity recorded for the product.
-
-- **Attribute Set** (read-only): shows the attribute associated with the product (e.g., batch, series).
-
-- **UOM** (read-only): indicates the unit of measure for the product.
-
-- **Quantity Count**: allows you to enter the counted quantity (in case of adjustment) or the quantity whose status you want to modify.
-
-- **To Locator**: allows you to select the new location to which the product will be moved.
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-relocate-1.png)
 
 To **Relocate** inventory:
 
-- Enter the **Inventory Tasks** menu. There, tasks are divided by status: Pending, In Progress, and Completed.
-
+- Enter the **Inventory Tasks** menu. There, tasks are divided by status: *Pending*, *In Progress*, and *Completed*.
 - Search and select the task from the list or by the search engine. 
-
 - When a card is selected, a screen with the task information opens. 
-
 - Press **Start Relocation** button
-
 - Complete **Quantity Count** field.
-
 - Complete **To Locator** field.
-
 - Confirm by pressing **Process** button.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/inventory-tasks/inventory-tasks-relocate-1.png)
 
 
 ### All Tasks
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/all-tasks.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/all-tasks.png)
 
 From this window you can view and work with all types of tasks, like Picking, Packing and Inventory Tasks.
 
