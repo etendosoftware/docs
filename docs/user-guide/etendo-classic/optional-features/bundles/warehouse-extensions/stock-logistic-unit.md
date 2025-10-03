@@ -22,7 +22,8 @@ Its objective is to integrate **Alternative Units of Measure (AUOM)** with the *
 
 Also, incorporates **advanced stock reservation logic** that prioritizes complete logistics units over individual units. This means that when processing a sales order with automatic quantity reservation in AUOM, the system prioritizes this condition and only completes the reservation with individual units if the required quantity is not reached. This priority rule ensures more efficient stock management and ensures that operations respect the original condition of the sale by AUOM, while maintaining traceability at the logistics unit level. Enable the Enable UOM Management preference to view and manage alternative UOMs.
 
-Resume: 
+In summary:
+
 - Adds the UOM **Box** and **Palet** unit of measure. These are available in the system to configure product AUOMs. 
 - Aggregates the referenced inventory types **Box** and **Pallet** with their corresponding sequences.
 - Each AUOM should be linked to a **referenced inventory type**, through the *Logistic Unit Type* field, ensuring that stock creation in **Referenced Inventory** windows, complies with the defined logistics unit.
