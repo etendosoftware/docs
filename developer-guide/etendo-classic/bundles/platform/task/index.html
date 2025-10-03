@@ -11,7 +11,7 @@
         <link rel="prev" href="../etendo-webhooks/">
       
       
-        <link rel="next" href="../../warehouse-extensions-bundle/">
+        <link rel="next" href="../print-provider/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -2754,6 +2754,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Print Provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2887,6 +2910,29 @@
   
   <span class="md-ellipsis">
     Picking List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stock Logistic Unit
     
   </span>
   
@@ -7353,9 +7399,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#postgresql-configuration-for-debezium-use" class="md-nav__link">
+  <a href="#postgresql-configuration-for-connect-debezium-use" class="md-nav__link">
     <span class="md-ellipsis">
-      PostgreSQL Configuration for Debezium Use
+      PostgreSQL Configuration for Connect (Debezium) Use
     </span>
   </a>
   
@@ -7364,25 +7410,16 @@
           <li class="md-nav__item">
   <a href="#start-rx-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Start RX services
+      Start RX Services
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#register-the-debezium-connector" class="md-nav__link">
+  <a href="#compile-the-environment-and-start-tomcat" class="md-nav__link">
     <span class="md-ellipsis">
-      Register the Debezium Connector
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compilation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compilation
+      Compile the Environment and Start Tomcat
     </span>
   </a>
   
@@ -7472,6 +7509,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print-provider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Print Provider
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -11535,9 +11595,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#postgresql-configuration-for-debezium-use" class="md-nav__link">
+  <a href="#postgresql-configuration-for-connect-debezium-use" class="md-nav__link">
     <span class="md-ellipsis">
-      PostgreSQL Configuration for Debezium Use
+      PostgreSQL Configuration for Connect (Debezium) Use
     </span>
   </a>
   
@@ -11546,25 +11606,16 @@
           <li class="md-nav__item">
   <a href="#start-rx-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Start RX services
+      Start RX Services
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#register-the-debezium-connector" class="md-nav__link">
+  <a href="#compile-the-environment-and-start-tomcat" class="md-nav__link">
     <span class="md-ellipsis">
-      Register the Debezium Connector
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compilation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compilation
+      Compile the Environment and Start Tomcat
     </span>
   </a>
   
@@ -11715,7 +11766,7 @@
 <p>This page explains how to configure and manage asynchronous and configurable tasks in Etendo Platform. Tasks can be automatically triggered based on database events (such as <code>INSERT</code> or <code>UPDATE</code>), and can execute a sequence of defined actions such as validations, notifications, or assignments. These tasks are dynamically managed through a set of configuration windows.</p>
 <p>The system processes tasks in response to events that occur within Etendo, such as the creation of an order or an incident. Based on these events, tasks are generated automatically, assigned, and processed through a predefined sequence of statuses and actions.</p>
 <h2 id="initial-configuration">Initial Configuration</h2>
-<h3 id="postgresql-configuration-for-debezium-use">PostgreSQL Configuration for Debezium Use</h3>
+<h3 id="postgresql-configuration-for-connect-debezium-use">PostgreSQL Configuration for Connect (Debezium) Use</h3>
 <div class="language-sql highlight"><span class="filename">PostgreSQL</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">SYSTEM</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">wal_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logical</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">etask_task</span><span class="w"> </span><span class="n">REPLICA</span><span class="w"> </span><span class="k">IDENTITY</span><span class="w"> </span><span class="k">FULL</span><span class="p">;</span>
 </span></code></pre></div>
@@ -11742,88 +11793,50 @@
 </tbody>
 </table>
 <p>These commands are <strong>mandatory prerequisites</strong> for Debezium to detect and propagate events to Kafka, which in turn triggers task processing in Etendo.</p>
-<h3 id="start-rx-services">Start RX services</h3>
+<h3 id="start-rx-services">Start RX Services</h3>
 <ol>
 <li>
-<p>Set the following configuration variables to enable and start the required services:</p>
+<p>Configure the following variables in <code>Gradle.properties</code> to enable and start the required services:</p>
 <div class="language-groovy highlight"><span class="filename">Gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">=</span><span class="kc">true</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx_async</span><span class="o">=</span><span class="kc">true</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">kafka</span><span class="o">.</span><span class="na">enable</span><span class="o">=</span><span class="kc">true</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">authentication</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">.</span><span class="na">auth</span><span class="o">.</span><span class="na">SWSAuthenticationManager</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>Start the Dockerized services</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>resources.up
-</span></code></pre></div>
-</li>
-</ol>
-<h3 id="register-the-debezium-connector">Register the Debezium Connector</h3>
-<p>This command registers a new Debezium connector in Kafka Connect. The connector listens to changes in the <code>etask_task</code> table (and any additional listed tables) and publishes them to Kafka topics. This enables the Etendo task processing engine to react to database changes in real time.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8083/connectors<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s1">        "name": "default",</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s1">        "config": {</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s1">          "connector.class": "io.debezium.connector.postgresql.PostgresConnector",</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s1">          "topic.prefix":   "default",</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="s1">          "database.hostname": "&lt;postgres_host&gt;",</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="s1">          "database.dbname":   "&lt;database_name&gt;",</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="s1">          "database.user":     "postgres",</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s1">          "database.password": "syspass",</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s1">          "plugin.name": "pgoutput",</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="s1">          "table.include.list": "public.etask_task", "public.&lt;table&gt;"</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="s1">          "key.converter":   "org.apache.kafka.connect.json.JsonConverter",</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="s1">          "value.converter": "org.apache.kafka.connect.json.JsonConverter",</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="s1">          "key.converter.schemas.enable":   "false",</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="s1">          "value.converter.schemas.enable": "false"</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="s1">        }</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="s1">      }'</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">kafka</span><span class="o">.</span><span class="na">connect</span><span class="o">.</span><span class="na">bbdd</span><span class="o">.</span><span class="na">host</span><span class="o">=</span><span class="n">host</span><span class="o">.</span><span class="na">docker</span><span class="o">.</span><span class="na">internal</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">kafka</span><span class="o">.</span><span class="na">connect</span><span class="o">.</span><span class="na">host</span><span class="o">=</span><span class="n">kafka</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">kafka</span><span class="o">.</span><span class="na">connect</span><span class="o">.</span><span class="na">tables</span><span class="o">=</span><span class="kd">public</span><span class="o">.</span><span class="na">etask_task</span><span class="o">,</span><span class="kd">public</span><span class="o">.&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">authentication</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">.</span><span class="na">auth</span><span class="o">.</span><span class="na">SWSAuthenticationManager</span>
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Important Notes</p>
 <ul>
-<li>
-<p><code>postgres_host</code>: This variable refers to the hostname or IP address that allows the connector to access the PostgreSQL database outside the container. Its value depends on the Docker setup:</p>
-<ul>
-<li>
-<p>If using <strong>Docker Desktop</strong> (macOS, Windows, or Linux), you can use <code>host.docker.internal</code> to access the host machine from inside a container.</p>
-</li>
-<li>
-<p>If using <strong>native Docker</strong>, the alias <code>host.docker.internal</code> is not available. Instead, run:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ip<span class="w"> </span>route<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>default
-</span></code></pre></div>
-<p>Use the IP address shown after <code>default via</code> (e.g., <code>172.17.0.1</code>) as the host address.</p>
-</li>
-<li>
-<p>If PostgreSQL is running dockerized in the same network, you can use the container name <code>db</code> as the hostname, thanks to Docker's internal DNS resolution.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>database.name</code>: The name of the PostgreSQL database to connect to.</p>
-</li>
-<li>
-<p><code>table.include.list</code>: Comma-separated list of tables to monitor. <code>public.etask_task</code> is <strong>mandatory</strong>. </p>
-</li>
+<li><code>docker_com.etendoerp.etendorx</code>: Enables RX services.  </li>
+<li><code>docker_com.etendoerp.etendorx_async</code>: Enables Kafka and Connect services.  </li>
+<li><code>kafka.enable</code>: Activates the Kafka service.  </li>
+<li><code>kafka.connect.bbdd.host</code>: PostgreSQL host. By default <code>host.docker.internal</code>. If PostgreSQL runs in a Docker container on the same network, you can use the container name (e.g., <code>db</code>) thanks to Docker's internal DNS.  </li>
+<li><code>kafka.connect.host</code>: Kafka host. By default <code>kafka</code> when running in Docker. In other environments, specify the correct host.  </li>
+<li><code>kafka.connect.tables</code>: Comma-separated list of tables to monitor. <code>public.etask_task</code> is <strong>mandatory</strong>. Add any additional tables you need to track.  </li>
+<li><code>authentication.class</code>: Class used to obtain the SWS token required for authentication.  </li>
 </ul>
 </div>
-<h3 id="compilation">Compilation</h3>
-<ol>
+</li>
 <li>
-<p>Compile the environment</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild
+<p>Apply the configuration by running the Gradle setup task:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>--info<span class="w"> </span>
 </span></code></pre></div>
 </li>
 <li>
-<p>Then start Tomcat</p>
+<p>Start the Docker services:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>resources.up
+</span></code></pre></div>
+</li>
+<li>
+<p>Create the connection between Connect and Kafka by running:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>kafkaConnectSetup<span class="w"> </span>--info
+</span></code></pre></div>
 </li>
 </ol>
+<h3 id="compile-the-environment-and-start-tomcat">Compile the Environment and Start Tomcat</h3>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info<span class="w"> </span>
+</span></code></pre></div>
 <h2 id="task-type-window">Task Type Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Task Management</code> &gt; <code>Task Type</code></p>
 <p>In this window, Task Types are defined, in this component the database events that automatically create a new task, the sequence of states it must follow and the actions to be executed in each state are defined. </p>
