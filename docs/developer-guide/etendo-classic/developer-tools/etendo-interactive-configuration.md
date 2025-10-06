@@ -21,7 +21,7 @@ status: beta
     It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
 
 !!! info
-    This feature is available from the Etendo Gradle Plugin [2.1.0](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md). For more information, visit [Etendo Gradle Plugin](../developer-tools/etendo-gradle-plugin).
+    This feature is available from the Etendo Gradle Plugin [2.1.0](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md). For more information, visit [Etendo Gradle Plugin](./etendo-gradle-plugin.md).
     
 
 The **Etendo Interactive Configuration** system provides a user-friendly command-line wizard for configuring Etendo projects. Built into the Etendo Gradle Plugin, it guides developers through property configuration with intelligent defaults, secure handling of sensitive data, and organized presentation of configuration options.
@@ -41,27 +41,31 @@ The **Etendo Interactive Configuration** system provides a user-friendly command
 ### What the Interactive Setup Does
 
 1. **Scans** your project for configurable properties from:
-   - **Existing `gradle.properties` file**: Reads current property values and identifies configurable settings
-   - **Module `config.gradle` files**: Discovers module-specific configuration with metadata including descriptions, default values, security settings, and process properties
+
+    - **Existing `gradle.properties` file**: Reads current property values and identifies configurable settings
+    - **Module `config.gradle` files**: Discovers module-specific configuration with metadata including descriptions, default values, security settings, and process properties
 
 2. **Guides** you through configuration with:
-   - **Clear documentation for each property**: Shows descriptive help text explaining what each property does and its purpose
-   - **Current/default values shown in prompts**: Displays existing values in parentheses, allowing you to press Enter to keep them or type new values
-   - **Secure input for sensitive properties**: Automatically detects passwords, tokens, and secrets, hiding input during typing
-   - **Process property execution**: Offers to execute Gradle tasks for automated configuration of complex settings
-   - **Properties organized by logical groups**: Groups related settings (Database, Security, API, etc.) for easier navigation
+
+    - **Clear documentation for each property**: Shows descriptive help text explaining what each property does and its purpose
+    - **Current/default values shown in prompts**: Displays existing values in parentheses, allowing you to press Enter to keep them or type new values
+    - **Secure input for sensitive properties**: Automatically detects passwords, tokens, and secrets, hiding input during typing
+    - **Process property execution**: Offers to execute Gradle tasks for automated configuration of complex settings
+    - **Properties organized by logical groups**: Groups related settings (Database, Security, API, etc.) for easier navigation
 
 3. **Confirms** your configuration with:
-   - **Complete summary of all settings**: Shows a comprehensive overview of all configured properties organized by group
-   - **Process execution results**: Displays properties automatically configured by process executions
-   - **Sensitive values masked for security**: Displays sensitive properties as asterisks (********) to protect credentials
-   - **Ability to review before applying changes**: Requires explicit confirmation (Y/N) before writing any changes to files
+
+    - **Complete summary of all settings**: Shows a comprehensive overview of all configured properties organized by group
+    - **Process execution results**: Displays properties automatically configured by process executions
+    - **Sensitive values masked for security**: Displays sensitive properties as asterisks (********) to protect credentials
+    - **Ability to review before applying changes**: Requires explicit confirmation (Y/N) before writing any changes to files
 
 4. **Applies** configuration by:
-   - **Writing to `gradle.properties` with automatic backup**: Creates timestamped backup files before making changes
-   - **Preserving existing comments and structure**: Maintains file formatting, comments, and organization while updating values
-   - **Marking executed processes**: Adds `EXECUTED:` markers to process properties that have been run
-   - **Continuing with normal setup process**: Seamlessly integrates with existing Etendo setup workflow
+
+    - **Writing to `gradle.properties` with automatic backup**: Creates timestamped backup files before making changes
+    - **Preserving existing comments and structure**: Maintains file formatting, comments, and organization while updating values
+    - **Marking executed processes**: Adds `EXECUTED:` markers to process properties that have been run
+    - **Continuing with normal setup process**: Seamlessly integrates with existing Etendo setup workflow
 
 ## Configuration Interface
 
@@ -72,11 +76,12 @@ The interactive setup presents three main configuration modes:
 - Default configuration (use current/default values)
 - Group configuration:
 
-    a. All - Configure all groups
-    b. Database Configuration
-    c. Security Settings
-    d. Application Settings
-- Exit without saving
+    1. All - Configure all groups
+    2. Database Configuration
+    3. Security Settings
+    4. Application Settings
+    
+- Exit without saving.
 
 **Configure properties**
 
@@ -274,6 +279,7 @@ Each property in your `config.gradle` file supports the following metadata:
 | `order` | Integer | No | Display order within group (recommended: 10, 20, 30...) |
 | `name` | String | No | Variable name for gradle.properties OR task name for process properties |
 
+
 ### Property Display Order
 
 Properties are displayed in the interactive setup following these rules:
@@ -312,7 +318,7 @@ database {
 
 The `name` field has different purposes depending on the property type:
 
-#### For Regular Properties
+**For Regular Properties**
 Use the `name` field to specify the exact variable name that will be written to `gradle.properties`:
 
 ```groovy
@@ -336,7 +342,7 @@ myModule {
 MYMODULE_DEBUG=false
 ```
 
-#### For Process Properties
+**For Process Properties**
 Use the `name` field to specify the exact Gradle task name to execute:
 
 ```groovy
@@ -353,7 +359,7 @@ automation {
 }
 ```
 
-#### Default vs Custom Naming
+**Default vs Custom Naming**
 
 ```groovy
 api {
@@ -386,6 +392,7 @@ automation {
 ```
 
 **Results:**
+
 ```properties
 # Regular properties in gradle.properties
 api.baseUrl=https://api.example.com
@@ -396,9 +403,10 @@ API_TOKEN=
 # automation.customSetup → executes task "my.custom.task"
 ```
 
-    - **No automatic transformation**: Property names like `systemUser` remain as `systemUser` (not transformed to `system.user`).
-    - **Preserved naming**: All property names are kept exactly as written in the `config.gradle` file.
-    - **Optional custom mapping**: Use the `name` field when you need specific `gradle.properties` keys for compatibility.
+- **No automatic transformation**: Property names like `systemUser` remain as `systemUser` (not transformed to `system.user`).
+- **Preserved naming**: All property names are kept exactly as written in the `config.gradle` file.
+- **Optional custom mapping**: Use the `name` field when you need specific `gradle.properties` keys for compatibility.
+
 
 **Sensitive Property Handling**
 
@@ -473,9 +481,10 @@ myModule.variables.setup = "EXECUTED:3_properties_configured"
 
 ### Creating Process Properties
 
-#### Basic Process Property Configuration
+**Basic Process Property Configuration**
 
-**Important**: The property name (key) in the configuration **must match the Gradle task name** that will be executed. The system automatically maps the property key to the corresponding Gradle task.
+!!! info 
+    The property name (key) in the configuration **must match the Gradle task name** that will be executed. The system automatically maps the property key to the corresponding Gradle task.
 
 ```groovy
 // Process property that executes automated configuration
@@ -522,17 +531,18 @@ databaseMigration {
 }
 ```
 
-#### Task Naming Convention
+!!! info "Task Naming Convention"
 
-- **Property key = Task name**: `myModule.variables.setup` → executes task `myModule.variables.setup`
-- **Hierarchical properties**: `database.setup` → executes task `database.setup`  
-- **Simple names**: `databaseMigration` → executes task `databaseMigration`
+    - **Property key = Task name**: `myModule.variables.setup` → executes task `myModule.variables.setup`
+    - **Hierarchical properties**: `database.setup` → executes task `database.setup`  
+    - **Simple names**: `databaseMigration` → executes task `databaseMigration`
 
 ### Task Implementation for Process Properties
 
-Process properties require corresponding Gradle tasks that follow this pattern:
+Process properties require corresponding **Gradle** tasks that follow this pattern:
 
-#### Required Task Features
+
+**Required Task Features**
 
 1. **Must accept output parameter**: Tasks **must** receive an `output` parameter that specifies where to write results
 2. **Use writeResultsForInteractiveSetup utility**: Use the provided utility method to write results
@@ -542,7 +552,7 @@ Process properties require corresponding Gradle tasks that follow this pattern:
 !!!warning "Critical Requirement"
     Process property tasks **must** accept an `output` parameter. This is where the task writes its configuration results that will be applied to gradle.properties.
 
-#### Using writeResultsForInteractiveSetup Utility
+**Using writeResultsForInteractiveSetup Utility**
 
 The Interactive Setup system provides a utility method `writeResultsForInteractiveSetup` to standardize how tasks communicate their configuration results back to the setup process.
 
@@ -602,7 +612,7 @@ task 'myModule.variables.setup' {
 }
 ```
 
-#### writeResultsForInteractiveSetup Method Signature
+**writeResultsForInteractiveSetup Method Signature**
 
 ```groovy
 /**
@@ -620,26 +630,13 @@ static boolean writeResultsForInteractiveSetup(
 )
 ```
 
-#### Benefits of Using the Utility
-
-- **Standardized output format**: Ensures consistent JSON structure
-- **Automatic file handling**: Creates directories and manages file paths
-- **Error handling**: Graceful handling of write failures
-- **Debug logging**: Automatic logging of results for troubleshooting
-- **Path resolution**: Automatically uses the `output` parameter from the interactive setup
-
 ### Process Property Best Practices
 
 1. **Task Naming**: Task names should match the property key (e.g., `myModule.variables.setup` → `myModule.variables.setup`)
-
 2. **Accept output parameter**: Tasks **must** accept an `output` parameter to specify where results are written
-
 3. **JSON Output**: Always write results as JSON to the output file specified by `output` parameter
-
 4. **Error Handling**: Provide meaningful error messages when processes fail
-
 5. **User Feedback**: Include progress messages to inform users what's happening
-
 6. **Result Validation**: Ensure all generated properties are valid and properly formatted
 
 ### Process Property Example in Interactive Setup
@@ -676,13 +673,9 @@ When users encounter process properties in the interactive setup:
 ### Property Organization
 
 1. **Group Related Properties**: Use logical groups like "API Configuration", "Database Settings", "Security Settings"
-
 2. **Clear Descriptions**: Write descriptive help text that explains the property's purpose and any constraints
-
 3. **Sensible Defaults**: Provide reasonable default values that work for most users
-
 4. **Use Order Field**: Always specify `order` values in increments of 10 (10, 20, 30...) to allow insertion of new properties
-
 5. **Mark Sensitive Data**: Always mark credentials, passwords, and tokens as sensitive
 
 ### Naming Conventions
@@ -735,29 +728,6 @@ api {
 
 The system provides type safety through ConfigSlurper's structured format. All properties are validated for proper syntax and required fields during the scanning process.
 
-## Summary
-
-The Etendo Interactive Configuration system provides a powerful, user-friendly way to configure Etendo projects and custom modules. By creating `config.gradle` files with structured metadata, you can provide users with guided configuration experiences while maintaining the flexibility and power of Gradle-based builds.
-
-Key benefits for module developers:
-
-- **Easy Integration**: Simply add a `config.gradle` file to your module
-- **Rich Metadata**: Provide descriptions, defaults, security markers, and help text
-- **Process Properties**: Enable automated configuration through Gradle task execution
-- **Automatic Discovery**: Properties are automatically discovered and presented
-- **Secure Handling**: Sensitive data is automatically protected
-- **Order Preservation**: Properties maintain their definition order
-- **Backward Compatible**: Existing setup processes remain unchanged
-
-### Property Types Supported
-
-1. **Regular Properties**: Standard configuration values entered by users
-2. **Sensitive Properties**: Secure values with hidden input (passwords, tokens, keys)
-3. **Required Properties**: Properties that must have values before setup completes
-4. **Process Properties**: Automated configuration executors that run Gradle tasks
-5. **Help-Enhanced Properties**: Properties with extended help text and usage examples
-
-The system automatically handles all property types, providing appropriate prompts, validation, and security measures for each type.
 
 ## Testing Your Configuration
 
