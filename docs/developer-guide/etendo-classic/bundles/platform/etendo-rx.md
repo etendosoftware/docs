@@ -47,7 +47,7 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
         ./gradlew setup -Pinteractive=true --console=plain
         ```
 
-    The wizard will guide you step by step through the setup process.
+        Select **SSO Configuration** and the wizard will guide you step by step through the setup process.
 
     - **Manual Configuration**
 
@@ -80,7 +80,7 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
                 To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
 
     !!! info
-        For more information about the use of the SSO Login functionality, visit the [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
+        For more information about the use of the SSO Login functionality, visit [SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
 
 ### How to Integrate your own Auth0 Login Provider with Etendo (Optional)
 
