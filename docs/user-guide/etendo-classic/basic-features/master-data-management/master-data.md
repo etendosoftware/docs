@@ -49,7 +49,7 @@ Etendo allows the user to enter business partner master data information wheneve
 
 Here, the user can define and configure business partners to be later used in transactions.
 
-![](../../../../assets/drive/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/bp-header.png)
 
 Fields to note:
 
@@ -146,7 +146,7 @@ The tabs and subtabs mentioned above are described in the next chapters of this 
 !!!note
     Customer related data can be entered and configured once the **Customer** checkbox is enabled.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/customertab.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/customer-tab.png)
 
 As shown above, there is a list of relevant data to be entered for customers together with current customer balance information. You could either select any data such as Price List from a previously created list of values, or, if necessary, create it by navigating to the corresponding window, and then select it.
 
@@ -215,7 +215,7 @@ Fields to note:
 
 The Customer Accounting tab allows the user to configure the ledger accounts to be used while posting customer related transactions such as customer receivables and customer advances to the general ledger.
 
-![](../../../../assets/drive/609fyigYTKbQyThG3K-Cd8GKw2Z-Y_02gsIaYELEwALpv3XCRgCgWeEXZqKvgYrhJWv1xDKvQ9zOTYRiF_ozw9D3xjh6OQIUt2vl1V17dfi8bHY2GoKLs7aXuZXVv3FALP8lA3Mqh6LFdfskaQ.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/customer-accounting-tab.png)
 
 As shown above, you can configure, for each customer and general ledger, the accounts to be used in:
 
@@ -236,7 +236,7 @@ At first, these accounts are inherited from the Defaults accounts of the organiz
 !!!note
     Vendor or Creditor related data can be entered and configured once the **Vendor** checkbox is enabled.
 
-![](../../../../assets/drive/ZyKWCq0lO9Z1oggC86Qw1sYw6EACIoC7WNSXCgMczxoJFp9uppOasgk0YlwMWVjxCBSHouebT0uSxObUKBBd9A0TwRj-957-_D37S4p3-xrOMZlqI33LOXr18EDJBwBI0Z36Hxp0hmgQ4tcp-g.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/vendor-tab.png)
 
 As shown in the image above, there is a list of relevant data to be entered for suppliers or creditors, also known as vendors:
 
@@ -294,7 +294,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
 
 Vendor accounting tab allows the user to configure the ledger accounts to be used while posting vendor related transactions such as vendor liabilities and vendor advance payments to the general ledger.
 
-![](../../../../assets/drive/9Z371emBdqUmHgSvKroREH9tZsP4bV-9Eh6T9I-DOkp9x8n4iCFvpI_wOp3copFLr0lNnuogVezfXzQuQV4U6cukoVQJ6oYp1GLt3oxL-iE1TU1LhXIC0rghK_ctPI89l3Lg0u9Shcbj4Q8Aiw.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/vendor-accounting-tab.png)
 
 The user can configure for each supplier or creditor and available accounting schema, the ledger accounts to be used in:
 
@@ -318,7 +318,7 @@ At first, these accounts are inherited from the Defaults accounts of the Account
 !!!note
     A business partner can be set up as employee once the checkbox **Employee** is enabled.
 
-![](../../../../assets/drive/lK2uSNpu3BHtkn7SCCaLztxheUiyHyDOjL26IGC2vvpvkmfMuvGZ7mC6_L3smeTuyRm5utpzQTNkFhutczZfjAzkauQbxrw9h_6kWjS08dkDYHBP3qiHznt9ybDDoy5YB9dheypb-Gtt_O9y-Xgr-w.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-tab.png)
 
 Employee tab allows the user to set which of your business partners are *Employees*.
 
@@ -345,7 +345,7 @@ An employee can be:
 
 In this tab, the user can add the ledger accounts to be used while posting employee related transactions such as payroll accounting.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-accounting.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-accounting-tab.png)
 
 As you can see in the image above, nowadays there is no ledger account required to be defined for employee accounting. This is due to the fact that there is no transaction susceptible of being posted for employees.
 
@@ -355,7 +355,7 @@ Anyway, this is the place where *Human Resources* related modules or features sh
 
 In this tab, the user can set up the salary category of the employee by selecting one of the options which were previously defined in the [Salary Category](../master-data-management/business-partner-setup.md#salary-category) window.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-cost-salary-category.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/cost-salary-category.png)
 
 #### **Bank Account**
 
@@ -366,7 +366,7 @@ It is possible to configure and properly set up business partner bank accounts t
 !!!important
     It is strongly recommended for the user to properly set up bank accounts as those will be used by Etendo as required within Etendo payment management processes.
 
-![](../../../../assets/drive/XzJTDeFWNJTAq361dyKR7owq_NSU41d06F7NgoVmM6MLjHaSxUc-M2q19MuXNkz90__zk-C6KFFYTIWyuh_D8d5KzJ9R1rGraYBU_y1LJj3uczO0V5DLgUtLQbqitNkiC_E8_Iyp89-X8EnhoA.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/bank-account-tab.png)
 
 Fields to note:
 
@@ -396,7 +396,7 @@ Fields to note:
 
 This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/advanced-bank-account-tab.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
@@ -448,7 +448,7 @@ Business partner locations and full address details can be set up in this tab.
 
 Business partners might have different address details depending on location/address used for either *Goods Receipts/Shipments* purposes or location/address used for *Invoices* purposes.
 
-![](../../../../assets/drive/ZC4Jc3vlmJB6aVN4fG94bMjafw4pv7IYzCE40ZEhZxA0JPkN2AwFK942M4o-fXhEliP9jHCKO_WSdNBNY8NWi6MyqLM00BmX2YsjHjUPs8B3SNg2UfGAAQETAczHpvwV-Ng93qjIvj3X2zVtyA.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address.png)
 
 Fields to note:
 
@@ -481,7 +481,7 @@ The Advanced Bank Account Management field is introduced in the Location/Address
 
 Contact tab allows the user to add and configure the business partner contacts you deal with.
 
-![](../../../../assets/drive/Hy8AxFtV7E5iAuum7OaH5J2uRp3T6WeI-AjoxfZQKr0R1VyPJ-Br_PvqEJZ3ps8HuwJDDlFJZW6s1P4_h-U36j583nFJR86R3Qu7DqqaPcOl_8AgjtZAR2iCq_FHNt_HMFc3cqhF2l2Y1YLBUg.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/contact.png)
 
 Fields to note:
 
@@ -497,7 +497,7 @@ Fields to note:
 
 Basic Discount tab allows the user to add and configure business partner Basic Discounts.
 
-![](../../../../assets/drive/2xUfGNVKL2MuKaMd8-0-MAdpaJiPFnOlExD6jrfVaicmThNDW7WV_C3Ve31HTwTENiUJ2TxGKnDRm9__SGlVoDralznQ9o0EfTxYl4xIKcTOhQpRU_pkeP1a-g_jrvcixL2FvJsM-MwK0_2EQQ.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/basic-discount.png)
 
 It is possible to enter as many **Discounts** as agreed with your business partners, by filling in the information below:
 
