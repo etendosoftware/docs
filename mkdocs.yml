@@ -254,11 +254,13 @@ nav:
             - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
             - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
             - Task: user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md
+            - Print Provider: user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md
           - Warehouse Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
             - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
             - Packing: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md
             - Picking List: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md
+            - Stock Logistic Unit: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Financial Extensions Bundle: 
@@ -473,6 +475,7 @@ nav:
         - How to Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler.md
+        - How to Partition Tables with Etendo Database Extended Module: developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
 #        - How to implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors.md
@@ -523,6 +526,7 @@ nav:
           - Etendo RX: developer-guide/etendo-classic/bundles/platform/etendo-rx.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
           - Task: developer-guide/etendo-classic/bundles/platform/task.md
+          - Print Provider: developer-guide/etendo-classic/bundles/platform/print-provider.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: 
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
@@ -545,6 +549,7 @@ nav:
         - How to Configure Memory Limits in Docker Containers: developer-guide/etendo-rx/how-to-guides/how-to-configure-memory-limits-in-docker-containers.md
         - How to Filter any Request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
         - How to Give Public Access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
+        - How to Implement OAuth Authentication and Token Management in Etendo RX: developer-guide/etendo-rx/how-to-guides/how-to-implement-oauth-authentication-and-token-management.md
         - How to Start RX as Service: developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code.md
         - How to Use OpenTelemetry: developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry.md
     - Etendo Copilot:
@@ -591,13 +596,17 @@ nav:
         - How to Configure Etendo Copilot to Use a Proxy: developer-guide/etendo-copilot/how-to-guides/how-to-configure-etendo-copilot-proxy.md
         - How to Configure MCP Servers on a Etendo Agent: developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md
         - How to Connect Etendo Copilot with Gmail via Pipedream: developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream.md
+        - How to Connect an Etendo Copilot Agent to a Telegram Bot with n8n: developer-guide/etendo-copilot/how-to-guides/how-to-connect-agent-telegram-bot-with-n8n.md
         - How to Create an Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md
         - How to Create a Spreadsheet and Tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
         - How to Debug an Agent Prompt with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith.md
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
+        - How to Explore ERP Data with MCP: developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp.md
         - How to Export Tools and Agents: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
+        - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
         - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
         - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md

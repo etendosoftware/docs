@@ -20,7 +20,7 @@ The system processes tasks in response to events that occur within Etendo, such 
 
 ## Initial Configuration
 
-### PostgreSQL Configuration for Debezium Use
+### PostgreSQL Configuration for Connect (Debezium) Use
 
 ```sql title="PostgreSQL"
 ALTER SYSTEM SET wal_level = logical;
@@ -38,85 +38,55 @@ These commands prepare the PostgreSQL database to work with **Debezium**, a tool
 
 These commands are **mandatory prerequisites** for Debezium to detect and propagate events to Kafka, which in turn triggers task processing in Etendo.
 
-###  Start RX services
+### Start RX Services
 
-1. Set the following configuration variables to enable and start the required services:
+1. Configure the following variables in `Gradle.properties` to enable and start the required services:
 
     ```groovy title="Gradle.properties"
     docker_com.etendoerp.etendorx=true
     docker_com.etendoerp.etendorx_async=true
     kafka.enable=true
-
+    kafka.connect.bbdd.host=host.docker.internal
+    kafka.connect.host=kafka
+    kafka.connect.tables=public.etask_task,public.<table>
     authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
     ```
 
-2. Start the Dockerized services
+    !!! info "Important Notes"
+
+        - `docker_com.etendoerp.etendorx`: Enables RX services.  
+        - `docker_com.etendoerp.etendorx_async`: Enables Kafka and Connect services.  
+        - `kafka.enable`: Activates the Kafka service.  
+        - `kafka.connect.bbdd.host`: PostgreSQL host. By default `host.docker.internal`. If PostgreSQL runs in a Docker container on the same network, you can use the container name (e.g., `db`) thanks to Docker's internal DNS.  
+        - `kafka.connect.host`: Kafka host. By default `kafka` when running in Docker. In other environments, specify the correct host.  
+        - `kafka.connect.tables`: Comma-separated list of tables to monitor. `public.etask_task` is **mandatory**. Add any additional tables you need to track.  
+        - `authentication.class`: Class used to obtain the SWS token required for authentication.  
+
+2. Apply the configuration by running the Gradle setup task:
+
+    ```bash title="Terminal"
+    ./gradlew setup --info 
+    ```
+
+3. Start the Docker services:
 
     ```bash title="Terminal"
     ./gradlew resources.up
     ```
 
-### Register the Debezium Connector
+4. Create the connection between Connect and Kafka by running:
 
-This command registers a new Debezium connector in Kafka Connect. The connector listens to changes in the `etask_task` table (and any additional listed tables) and publishes them to Kafka topics. This enables the Etendo task processing engine to react to database changes in real time.
+    ```bash title="Terminal"
+    ./gradlew kafkaConnectSetup --info
+    ```
+
+### Compile the Environment and Start Tomcat
 
 
 ```bash title="Terminal"
-curl -X POST http://localhost:8083/connectors \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "name": "default",
-        "config": {
-          "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
-          "topic.prefix":   "default",
-
-          "database.hostname": "<postgres_host>",
-          "database.dbname":   "<database_name>",
-          "database.user":     "postgres",
-          "database.password": "syspass",
-
-          "plugin.name": "pgoutput",
-
-          "table.include.list": "public.etask_task", "public.<table>"
-
-          "key.converter":   "org.apache.kafka.connect.json.JsonConverter",
-          "value.converter": "org.apache.kafka.connect.json.JsonConverter",
-          "key.converter.schemas.enable":   "false",
-          "value.converter.schemas.enable": "false"
-        }
-      }'
+./gradlew update.database compile.complete smartbuild --info 
 ```
 
-!!! info "Important Notes"
-
-    - `postgres_host`: This variable refers to the hostname or IP address that allows the connector to access the PostgreSQL database outside the container. Its value depends on the Docker setup:
-
-        - If using **Docker Desktop** (macOS, Windows, or Linux), you can use `host.docker.internal` to access the host machine from inside a container.
-
-        - If using **native Docker**, the alias `host.docker.internal` is not available. Instead, run:
-
-            ```bash title="Terminal"
-            ip route | grep default
-            ```
-
-            Use the IP address shown after `default via` (e.g., `172.17.0.1`) as the host address.
-
-        - If PostgreSQL is running dockerized in the same network, you can use the container name `db` as the hostname, thanks to Docker's internal DNS resolution.
-
-    - `database.name`: The name of the PostgreSQL database to connect to.
-
-    - `table.include.list`: Comma-separated list of tables to monitor. `public.etask_task` is **mandatory**. 
-
-
-### Compilation
-
-1. Compile the environment
-
-    ```bash title="Terminal"
-    ./gradlew update.database compile.complete smartbuild
-    ```
-
-2. Then start Tomcat
 
 
 ## Task Type Window

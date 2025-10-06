@@ -774,73 +774,83 @@ Finally, navigate to the Defaults tab to configure the default accounts which ne
 
 ### Overview
 
-"Legal entities with accounting" organization types must have a fiscal calendar assigned, while the rest of organization types can inherit it from its parent.
+Organizations of type **Legal Entity with Accounting** must have a fiscal calendar assigned. Other organization types can inherit the fiscal calendar from their parent organization.
 
-A calendar contains years and the periods of each year required to get an accurate organization's accounting practice.
+A fiscal calendar defines the **years** and their **periods** to ensure accurate accounting and proper control of the financial cycle. Each organization can only have **one fiscal calendar** assigned, which is used for posting transactions and managing the opening and closing of periods.
 
-#### Calendar
+#### Fiscal Calendar Window
 
-The fiscal calendar window allows the user to create and maintain the organization's fiscal calendar.
+The **fiscal calendar window** allows the user to create and maintain the organization's fiscal calendar. Each organization requiring a calendar needs to have one calendar assigned to it and **only one** therefore it is clearly known which calendar is going to be used while posting transactions and while opening and closing the accounting cycle.
 
-![](../../../../../assets/drive/14LKmlXTMNBiFaMeCMoQbvMtX2_jk8gri.png)
+![fiscal calendar 1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar1.png)
 
-A fiscal calendar is a collection of years to be created on demand as time goes by.
+- When creating a calendar, Etendo proposes `*` as the default organization:
 
-Each organization requiring a calendar needs to have one calendar assigned to it and only one therefore it is clearly known which calendar is going to be used while posting transactions and while opening and closing the accounting cycle. The procedure to do that is:
+    - Keeping `*` means the calendar is defined at the **client level** and can be used by all organizations under that client.
 
--   Once the calendar is properly created in this window, it needs to be linked to the "legal with accounting organization" type by selecting it after enabling the checkbox "Allow Period Control".  
-    All of the above is done in the Organization window.
+    - Changing it to a specific organization means the calendar will be available **only for that organization**.
 
-Etendo automatically proposes the organization as \* while creating a fiscal calendar:
+Once the calendar is created, it must be linked to the corresponding organization in the [Organization](../../general-setup/enterprise-model.md#organization) window, by:
 
--   Accepting this default means that this calendar will be maintained at the client level and will therefore be available to all another organizations created within this client.
--   Changing this default to other organization means that this calendar will only be available to that organization.
+- Enabling the **Allow Period Control** checkbox.
+
+- Selecting **legal with accounting organizations** type.
+
+![fiscal calendar 2](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar2.png)
 
 #### Year
 
-Year tab allows the user to create as many fiscal years as required within a fiscal calendar.
+The **Year** tab is used to define as many **fiscal years** as required within a calendar.
 
-A Fiscal Year is an accounting year which normally includes the twelve consecutive months over which a company determines earnings and profits.
+![fiscal calendar 5](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar5.png)
 
-The button "**Create Periods**" allows the user to create the twelve consecutive months starting from "**January, 1st**" to "**December, 31st**" as "**Standard Calendar Period**" Types.
+- A Fiscal Year usually covers **12 consecutive months**.
 
-This process also allows the user to create the "**13th Period**" which is a period that can be used to make accounting adjustments and get them posted to the ledger by using G/L Journals.
+- Use the **Create Periods** button to automatically generate:
 
-The "**13th Period**" is an "**Adjustment Period**" that is the last date of the last standard calendar period (i.e 31-12-2012).
+    - **12 Standard Calendar Periods** (January 1st – December 31st).
 
-![](../../../../../assets/drive/1IGnqS8kOPXzV58VxzGjD3sBTUBWmgOtj.png)
+    - An optional **13th Adjustment Period**, dated the last day of the last standard period (e.g., 31-12-2025), used for accounting adjustments via G/L Journals.
 
-Once created, all the periods need to be **opened** in the Open/Close Period Control window.
+![fiscal calendar 3](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar3.png)
 
-The periods of an organization's fiscal calendar can be reviewed in the Period Control tab of the **Organization** windows. Note that:
 
--   **"Standard Calendar Periods"** are opened for **every "Document Category"**, which means that Etendo obviously allows the user to post any document type to the ledger within a standard calendar period open.
--   while the "**Adjustment Period**" is only open for **G/L Journal** document category, which means that Etendo allows to post only G/L journals within the adjustment period.
+Once created, all the periods need to be **opened** in the [Open/Close Period Control](#openclose-period-control) window.
 
-Additionally, it is possible to **manually** create the accounting periods of a year. That action requires to enter the data below:
+!!!info
+    The periods of an organization's fiscal calendar can be reviewed in the **Period Control** tab of the [Organization](../../general-setup/enterprise-model.md#organization) window. 
 
--   A consecutive *period number*: this number will be later on used to open/close consequent accounting periods at a time.
--   A *period name.*
--   The *starting date* of the period.
--   The *ending date* of the period.
--   The *period type* as "Standard Calendar Period Type" or "Adjustment Period" as required.
 
-The values of a Period can be manually modified also, but only while this Period is in a **Never Opened** Status, once it has been open it will no longer be possible.
+!!!note
+    -   **Standard Calendar Periods** are opened for **every Document Category**, which means that Etendo  allows the user to post any document type to the ledger within a standard calendar period open.
+    -   The **Adjustment Period** is only open for **G/L Journal** document category, which means that Etendo allows to post only G/L journals within the adjustment period.
+
+
+#### **Period**
+
+The **Period** tab lists all the periods of a year. Also, it is possible to **manually** create the accounting periods of a year. That action requires to enter some information:
+
+![fiscal calendar 4](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar4.png)
+
+The fields to note are:
+
+-   A consecutive **period number**: this number will be later on used to open/close consequent accounting periods at a time.
+-   A **period name**.
+-   The **starting date** of the period.
+-   The **ending date** of the period.
+-   The **period type** as Standard Calendar Period Type or Adjustment Period as required.
+
+!!!note
+    The values of a Period can be manually modified also, but only while this Period is in a **Never Opened** Status, once it has been open it will no longer be possible.
 
 Etendo checks if another period with the same starting and ending date is already registered in the system, and it also checks if the date of a period overlaps the date of another period.
 
 Finally, a year can be:
 
--   **"closed"**
+-   **closed**
 -   and **re-opened**
 
-Both actions are performed in the End Year Close window.
-
-#### **Period**
-
-The period tab lists all the periods of a year.
-
-![](../../../../../assets/drive/1He-55aAYDSVEVm8vWy9_ER_h0k2qSIK5.png)
+Both actions are performed in the [End Year Close](../accounting/transactions.md#end-year-close) window.
 
 ## Account Combination
 
