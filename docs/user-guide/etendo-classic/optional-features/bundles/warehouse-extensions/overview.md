@@ -94,7 +94,18 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 This module provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+    For more information, visit [Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+
+### Stock Logistic Unit
+
+:octicons-package-16: Javapackage: `com.etendoerp.stock.logisticunit`
+
+The **Stock Logistic Unit** module extends Etendo’s standard warehouse management functionality by integrating Alternative Units of Measure (AUOM) with the Referenced Inventory model. It introduces new logistic unit types such as **Box** and **Pallet**, enabling traceability and efficient stock control in all warehouse operations.  
+This module also enhances stock reservation logic, prioritizing complete logistics units (Boxes or Pallets) over individual units to optimize stock allocation and maintain consistency with sales order conditions.  
+
+!!! info
+    For more information, visit the [Stock Logistic Unit user guide](./stock-logistic-unit.md).
+
 
 ## Uninstall bundle
 
