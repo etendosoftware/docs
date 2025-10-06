@@ -12106,15 +12106,25 @@
 </li>
 <li>
 <h4 id="configure-etendoauth-middleware-integration">Configure EtendoAuth Middleware Integration</h4>
+<ul>
+<li>
+<p><strong>Interactive Setup</strong></p>
+<p>You can quickly configure Single Sign-On using the <a href="../../../developer-tools/etendo-interactive-configuration/">Interactive Setup</a>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>-Pinteractive<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--console<span class="o">=</span>plain
+</span></code></pre></div>
+<p>Select <strong>SSO Configuration</strong> and the wizard will guide you step by step through the setup process.</p>
+</li>
+<li>
+<p><strong>Manual Configuration</strong></p>
 <p>To authenticate via the <strong>EtendoAuth Middleware</strong>, follow these steps:</p>
 <ol>
 <li>Open the <code>gradle.properties</code> file</li>
 <li>
 <p>Add the following properties:</p>
-<div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sso.auth.type=Middleware
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sso.middleware.url=https://sso.etendo.cloud
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+<div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sso.auth.type=Middleware
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sso.middleware.url=https://sso.etendo.cloud
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -12134,11 +12144,13 @@
 </li>
 </ol>
 </li>
-</ol>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about the use of the SSO Login functionality, visit <a href="../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx/#etendo-sso-login">the SSO Login User Guide</a>.</p>
+<p>For more information about the use of the SSO Login functionality, visit <a href="../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx/#etendo-sso-login">SSO Login User Guide</a>.</p>
 </div>
+</li>
+</ol>
 <h3 id="how-to-integrate-your-own-auth0-login-provider-with-etendo-optional">How to Integrate your own Auth0 Login Provider with Etendo (Optional)</h3>
 <p>This option is recommended only if you need to implement your own authentication service and cannot use the EtendoAuth Middleware service. Follow this guide to configure an Auth0 application and enable social login in Etendo.</p>
 <ol>
@@ -12216,11 +12228,11 @@
 </li>
 <li>
 <p>Add them to the <code>gradle.properties</code> file in the following format:</p>
-<div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sso.domain.url=your-domain.auth0.com
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sso.client.id=your-client-id
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>sso.client.secret=your-client-secret
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sso.auth.type=Auth0
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+<div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sso.domain.url=your-domain.auth0.com
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sso.client.id=your-client-id
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>sso.client.secret=your-client-secret
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>sso.auth.type=Auth0
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -12236,16 +12248,16 @@
 <li>
 <p><strong>Allowed Callback URLs:</strong></p>
 <p>The URLs Auth0 redirects to after a successful login.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>http://localhost:8080/etendo/secureApp/LoginHandler.html,
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>http://localhost:8080/etendo,
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>http://localhost:8080/etendo/web/com.etendoerp.etendorx/LinkAuth0Account.html
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>http://localhost:8080/etendo/secureApp/LoginHandler.html,
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>http://localhost:8080/etendo,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>http://localhost:8080/etendo/web/com.etendoerp.etendorx/LinkAuth0Account.html
 </span></code></pre></div>
 </li>
 <li>
 <p><strong>Allowed Logout URLs:</strong></p>
 <p>The URLs Auth0 redirects to after the user logs out.
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>http://localhost:8080/etendo,
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>http://localhost:8080/etendo/web/com.etendoerp.etendorx/resources/logout-auth0.html
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>http://localhost:8080/etendo,
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>http://localhost:8080/etendo/web/com.etendoerp.etendorx/resources/logout-auth0.html
 </span></code></pre></div><p></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/AllowedURIs.png" data-desc-position="bottom"><img alt="Application URIs" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/AllowedURIs.png"></a></p>
 </li>
@@ -12258,13 +12270,13 @@
 <li>
 <h4 id="set-the-callback-url">Set the Callback URL</h4>
 <p>Add the callback URL to the <code>gradle.properties</code>:</p>
-<div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sso.callback.url=http://localhost:8080/etendo/secureApp/LoginHandler.html
+<div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sso.callback.url=http://localhost:8080/etendo/secureApp/LoginHandler.html
 </span></code></pre></div>
 </li>
 <li>
 <h4 id="compile-the-project">Compile the Project</h4>
 <p>Once all properties are configured, compile the project:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>smartbuild
 </span></code></pre></div>
 </li>
 <li>
@@ -12311,9 +12323,9 @@
 <h3 id="etendo-middleware-setup-recommended">Etendo Middleware Setup (Recommended)</h3>
 <h4 id="configuration-variables">Configuration Variables</h4>
 <p>Add the following properties to the <code>gradle.properties</code> file:</p>
-<div class="language-properties highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">## Middleware Configs</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="na">sso.middleware.url</span><span class="o">=</span><span class="s">https://sso.etendo.cloud</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="na">sso.middleware.redirectUri</span><span class="o">=</span><span class="s">http://localhost:8080/etendo/secureApp/LoginHandler.html</span>
+<div class="language-properties highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">## Middleware Configs</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">sso.middleware.url</span><span class="o">=</span><span class="s">https://sso.etendo.cloud</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="na">sso.middleware.redirectUri</span><span class="o">=</span><span class="s">http://localhost:8080/etendo/secureApp/LoginHandler.html</span>
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12321,7 +12333,7 @@
 </div>
 <h4 id="compile-environment">Compile Environment</h4>
 <p>Run the following command to compile and set up the environment:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <h4 id="create-the-connection-with-etendo-middleware">Create the Connection with Etendo Middleware</h4>
 <ul>
