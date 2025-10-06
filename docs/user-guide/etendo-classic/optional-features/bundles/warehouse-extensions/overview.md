@@ -24,7 +24,9 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.warehouse.management`
 
-The **Advanced Warehouse Management** module extends the standard capabilities of Etendo to offer comprehensive, flexible, and automated inventory management, adding integration with mobile devices. Every action performed from the Etendo Mobile is automatically synchronized with Etendo, ensuring complete traceability and consistent updates in the corresponding system windows.
+Extends Etendo with comprehensive, flexible, and automated inventory management fully synchronized with Etendo Mobile for real-time traceability. It supports configurable inventory statuses, automatic movement rules (including virtual bins), AUOM-based reservations that respect boxes/pallets and conversions, and an Inbound Receipt flow that creates Referenced Inventory per logistics unit.  
+
+Barcode handling includes GS1-128 AIs (e.g., GTIN, lot, expiry, locator, logistics unit) and related-code search. A task engine enables auto-generation and assignment of warehouse tasks, and from mobile users can manage Picking, Packing, and Inventory Tasks—specifically Inventory Adjustment and Inventory Relocation—with scan-based validation, strict quantity control, and exact fulfillment of reservations for faster, error-resistant operations and end-to-end traceability.  
 
 !!! info
     For more information, visit [Advanced Warehouse Management](./advanced-warehouse-management.md).
