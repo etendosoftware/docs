@@ -197,6 +197,15 @@ The **Balance Sheet and P&L Structure Advanced**, **General Ledger Report Advanc
     - [Journal Entries Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
     - [Trial Balance](../../../basic-features/financial-management/accounting/analysis-tools.md#trial-balance) user guide.
 
+### Financial Report Budget
+
+:octicons-package-16: Javapackage: `com.etendoerp.financial.report.budget`
+
+This functionality allows creating and managing budgets for reporting purposes, offering users the possibility to compare budgeted values with actual values posted in the corresponding General Ledger.
+
+!!! info
+    For more information, visit the [Financial Report Budget guide](../../../basic-features/financial-management/accounting/transactions.md#budget).
+
 ### G/L Journal Clone
 
 :octicons-package-16: Javapackage: `com.etendoerp.gljournal.clone`

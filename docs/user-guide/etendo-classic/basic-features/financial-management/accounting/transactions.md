@@ -777,14 +777,23 @@ This process can be launched whenever it is required:
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-It allows create and manage budgets for reporting purposes, offering users the possibility to compare budgeted values with actual values.
+!!! warning
+    If you do not have the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, this window will remain in a legacy version with limited functionality. You will not be able to include G/L items in the actual values considered in the budget report, the report will not have the difference column and the dimensions to filter the report will not include all the accounting dimensions as in this case.
+
+It allows creating and managing budgets for reporting purposes, offering users the possibility to compare budgeted values with actual values posted in the corresponding General Ledger.
 
 !!! example
-    A budget can be defined, for example, by assigning an expected expenditure of EUR 1,000,000 in salaries for the month of October. At the end of the period, users can verify the actual value and analyze the difference with respect to the defined budget.
+    A budget can be defined, for example, by assigning an expected expenditure of EUR 400,000 in salaries and $2,000 in Internet services for the month of September. 
+    
+    ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-example.png)
+    
+    At the end of the period, users can verify the actual value and analyze the difference with respect to the defined budget.
+
+    VA
 
 The actual values considered include both accounting entries and manual entries (G/L Item), ensuring a comprehensive view of budget execution.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-window-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-window-1.png) DELETE?
 
 ### Header
 
@@ -808,10 +817,10 @@ The fields that must be completed in each line are:
 - **Account Element**: linked accounting account.
 - **Currency**: currency in which the budget is expressed.
 - **Period**: accounting period to which the line corresponds.
-- **Amount**: budgeted amount.
+- **Amount**: budgeted amount. This is the number to be considered when expressing the difference between the budgeted amount and the actual amount in the generated budget report.
 - **Actual Amount**: actual amount recorded.
-- **Quantity**: budgeted quantity.
-- **Net Unit Price**: net unit price.
+- **Quantity**: budgeted quantity. This is an optional value.
+- **Net Unit Price**: net unit price. This is an optional value.
 - **Description**: additional information about the line.
 - **Active**: checkbox that enables or disables the line.
 
@@ -825,7 +834,7 @@ The fields that must be completed in each line are:
 
 ### Report
 
-The budget report allows a comparison between the budgeted and actual amounts. It also includes a Difference column, which shows the result of subtracting the actual value from the budgeted value, thus facilitating the analysis of deviations.
+The budget report allows a comparison between the budgeted and actual amounts. It includes a Difference column, which shows the result of subtracting the actual value from the budgeted value, thus facilitating the analysis of deviations.
 
 The fields presented in the report are:
 
@@ -842,7 +851,7 @@ The fields presented in the report are:
 
 Example of report results:
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-report-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-report.png)
 
 ## Create Budget Reports in Excel
 
