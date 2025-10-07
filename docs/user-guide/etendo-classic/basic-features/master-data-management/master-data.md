@@ -54,13 +54,14 @@ Here, the user can define and configure business partners to be later used in tr
 Fields to note:
 
 - **[Business Partner Category](../master-data-management/business-partner-setup.md#business-partner-category)**: Key field for the user to select a category which the business partner is going to belong to, under the following types:
+
     - Customers
     - Suppliers
     - Employees
 
 - **Search Key**: or short name which will help you to identify and search a given business partner
 - **Commercial Name**
-- **Fiscal Name,**: if known. If it is known, it is the one used in official documents such as invoices and tax reports, otherwise the commercial name will be used instead.
+- **Fiscal Name**: if known. If it is known, it is the one used in official documents such as invoices and tax reports, otherwise the commercial name will be used instead.
 - **Description**:  used to describe the business partner, if needed.
 - **URL**: The business partner URL, if known.
 - **Reference No**: which can be used as an additional way to identify a business partner.
@@ -72,7 +73,9 @@ Fields to note:
 - **Credit Line Limit**: Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
 - **Consent for Customer Data Processing**: Checkbox in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization. 
 
-#### **Set New Currency**
+### Buttons
+
+**Set New Currency**
 
 Business partner currency is automatically filled in with the currency of the Price List assigned to the business partner. Once filled in, it can be changed, if required, by using the **Set New Currency** button.
 
@@ -84,7 +87,7 @@ The **Set New Currency** process allows defining:
 - a new currency for the business partner
 - as well as the currency conversion rate to be used to exchange customer balance to the new currency.
 
-![](../../../../assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
+    ![](../../../../assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
 
 At first, the currency shown in the Set New Currency window is business partner price list currency, in our example *USD*.
 
@@ -104,7 +107,6 @@ This process automatically creates three new payments, in case business partner 
 
 !!!Example
     Let us take as an **example** a business partner having a price list in EUR.
-
     - This business partner has a current balance of 306.00 EUR and a generated credit of 100.00 EUR, which decreases its balance to 206.00 EUR.
     - After that, **Set New Currency** process is run for this business partner, because its currency needs to change to USD
     - **Set New Currency** process informs us that there is available credit for the business partner in the old currency (EUR). That available credit needs to be exchanged to the new currency (USD), therefore a conversion rate needs to be used. In this example, system conversion rate is used, that is 1.13 EUR to USD.
@@ -120,6 +122,7 @@ This process automatically creates three new payments, in case business partner 
 
     ![](../../../../assets/drive/fAiMfanae3I2XAvLdbf3yFYkZhAbN8Me-A2kv3uSF62Q3HaBTz9wyfXBL-22RDXeKgdrNxTLeLDnECldDFwjhkEG-m4Uzgc-JNUrtasuWPvrKKGeTmlRg-Lrc9wqtQDG17R-trrmm8EbG70bgg.png)
 
+
 ### Tabs and Subtabs
 
 It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why the Business Partner window has three main tabs and therefore subtabs which allow you to set up each main business partner type separately:
@@ -133,13 +136,13 @@ It is not the same to enter and configure a customer than a supplier/creditor or
 
 The tabs and subtabs mentioned above are described in the next chapters of this section.
 
-!!!Important
+!!! Important
+    
     There could be other types of business partners which require to be set up as business partners in this window; business partners which have nothing to do with either a customer, or a supplier/creditor or an employee.
 
     That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the [Remittance](../financial-management/receivables-and-payables/transactions.md#remittance) financial workflow.
 
-    !!! info
-        For more information about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+    For more information about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 
 #### **Customer**
 
@@ -185,11 +188,10 @@ Fields to note:
     - **After Delivery**: The goods of the sales order will be automatically invoiced as they are shipped, even if there are partial shipments
     - **Do not invoice**: No invoice will be generated automatically
     - **Immediate**: The invoice will be generated on the next run of the Generate Invoices process.
-    - **Customer Schedule after Delivery**: The invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
-    If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.
+    - **Customer Schedule after Delivery**: The invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.
 
         !!!info 
-        For more information, visit [Invoice Schedule](../master-data-management/business-partner-setup.md#invoice-schedule).
+            For more information, visit [Invoice Schedule](../master-data-management/business-partner-setup.md#invoice-schedule).
 
 - **Credit Line limit**: If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
 
@@ -507,21 +509,20 @@ It is possible to enter as many **Discounts** as agreed with your business partn
 - **Apply in Order:** this checkbox must be selected in case the discount can be applied in sales or purchase orders as applicable.
 - **Cascade** calculation of the discount. For instance, if first discount is 10% and second one is 5%, a cascade calculation of the total discount won’t be 15% but 14.5%.
 
-A discount not applied in Cascade means that it affects the full quantity of the Document Line. A Discount applied in Cascade means that affects the quantity of the Document Line that remains after applying all the discounts that come before it.
+    A discount not applied in Cascade means that it affects the full quantity of the Document Line. A Discount applied in Cascade means that affects the quantity of the Document Line that remains after applying all the discounts that come before it.
 
-!!! example
-    An example to explain the difference between a Cascade and not Cascade Discount is the following one:
+    !!! example
+        An example to explain the difference between a Cascade and not Cascade Discount is the following one:
 
-    Three Discounts, each one of 10%, the first two ones are defined as not Cascade and the third one as Cascade. Over an Invoice Line of 1.000 USD
+        Three Discounts, each one of 10%, the first two ones are defined as not Cascade and the third one as Cascade. Over an Invoice Line of 1.000 USD
 
-    - The first discount will create a line of -100 USD (10% of 1.000 USD)
-    - The second discount will also create a line of -100 USD (10% of 1.000 USD)
-    - The third one, however, will create a discount based on applying the previous discounts on cascade, so:
-    - 1.000 USD - 10% = 900 USD (applying the 1st discount on Cascade)
-    - 900 USD - 10% = 810 USD (applying the 2nd discount on Cascade)
-    - 10% of 810 USD = 81 USD. So the third discount will be -81 USD.
-
-    In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
+        - The first discount will create a line of -100 USD (10% of 1.000 USD)
+        - The second discount will also create a line of -100 USD (10% of 1.000 USD)
+        - The third one, however, will create a discount based on applying the previous discounts on cascade, so:
+        - 1.000 USD - 10% = 900 USD (applying the 1st discount on Cascade)
+        - 900 USD - 10% = 810 USD (applying the 2nd discount on Cascade)
+        - 10% of 810 USD = 81 USD. So the third discount will be -81 USD.
+        - In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
 
 #### Rappel Configuration
@@ -553,6 +554,7 @@ Each time a rappel is granted to a business partner, a new sales invoice is auto
 
 !!! info
     For more information, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
+
 
 ## Business Partner Info
 
