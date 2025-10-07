@@ -24,7 +24,9 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.warehouse.management`
 
-The **Advanced Warehouse Management** module extends the standard capabilities of Etendo to offer comprehensive, flexible, and automated inventory management, adding integration with mobile devices. Every action performed from the Etendo Mobile is automatically synchronized with Etendo, ensuring complete traceability and consistent updates in the corresponding system windows.
+Extends Etendo with comprehensive, flexible, and automated inventory management fully synchronized with Etendo Mobile for real-time traceability. It supports configurable inventory statuses, automatic movement rules (including virtual bins), AUOM-based reservations that respect boxes/pallets and conversions, and an Inbound Receipt flow that creates Referenced Inventory per logistics unit.  
+
+Barcode handling includes GS1-128 AIs (e.g., GTIN, lot, expiry, locator, logistics unit) and related-code search. A task engine enables auto-generation and assignment of warehouse tasks, and from mobile users can manage Picking, Packing, and Inventory Tasks—specifically Inventory Adjustment and Inventory Relocation—with scan-based validation, strict quantity control, and exact fulfillment of reservations for faster, error-resistant operations and end-to-end traceability.  
 
 !!! info
     For more information, visit [Advanced Warehouse Management](./advanced-warehouse-management.md).
@@ -94,7 +96,18 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 This module provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+    For more information, visit [Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+
+### Stock Logistic Unit
+
+:octicons-package-16: Javapackage: `com.etendoerp.stock.logisticunit`
+
+The **Stock Logistic Unit** module extends Etendo’s standard warehouse management functionality by integrating Alternative Units of Measure (AUOM) with the Referenced Inventory model. It introduces new logistic unit types such as **Box** and **Pallet**, enabling traceability and efficient stock control in all warehouse operations.  
+This module also enhances stock reservation logic, prioritizing complete logistics units (Boxes or Pallets) over individual units to optimize stock allocation and maintain consistency with sales order conditions.  
+
+!!! info
+    For more information, visit the [Stock Logistic Unit user guide](./stock-logistic-unit.md).
+
 
 ## Uninstall bundle
 
