@@ -39,37 +39,48 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
 
 2. #### Configure EtendoAuth Middleware Integration
 
-    To authenticate via the **EtendoAuth Middleware**, follow these steps:
+    - **Interactive Setup**
 
-    1. Open the `gradle.properties` file
-    2. Add the following properties:
+        You can quickly configure Single Sign-On using the [Interactive Setup](../../../../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md):
 
-        ```title="gradle.properties"
-        sso.auth.type=Middleware
-        sso.middleware.url=https://sso.etendo.cloud
-        sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
-        authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+        ```bash
+        ./gradlew setup -Pinteractive=true --console=plain
         ```
 
-        !!! warning
-            This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property. 
+        Select **SSO Configuration** and the wizard will guide you step by step through the setup process.
 
-        !!!note
-            During development, you can use `localhost`. However, for production, set your actual domain.
+    - **Manual Configuration**
 
-        With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
+        To authenticate via the **EtendoAuth Middleware**, follow these steps:
 
-        !!! warning "Potential SSO Configuration Mismatch"
+        1. Open the `gradle.properties` file
+        2. Add the following properties:
 
-            ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
-        
-            If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
+            ```title="gradle.properties"
+            sso.auth.type=Middleware
+            sso.middleware.url=https://sso.etendo.cloud
+            sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
+            authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+            ```
 
-            To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
+            !!! warning
+                This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property. 
 
-!!! info
-    For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
+            !!!note
+                During development, you can use `localhost`. However, for production, set your actual domain.
 
+            With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
+
+            !!! warning "Potential SSO Configuration Mismatch"
+
+                ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
+            
+                If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
+
+                To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
+
+    !!! info
+        For more information about the use of the SSO Login functionality, visit [SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
 
 ### How to Integrate your own Auth0 Login Provider with Etendo (Optional)
 
