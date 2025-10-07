@@ -5325,52 +5325,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#main-concepts" class="md-nav__link">
+  <a href="#dataset-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Main Concepts
+      Dataset Window
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Main Concepts">
+    <nav class="md-nav" aria-label="Dataset Window">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dataset" class="md-nav__link">
+  <a href="#table-tab" class="md-nav__link">
     <span class="md-ellipsis">
-      Dataset
+      Table Tab
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#datasettable" class="md-nav__link">
+  <a href="#columns-tab" class="md-nav__link">
     <span class="md-ellipsis">
-      DatasetTable
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DatasetTable">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#datasettable-where-clause" class="md-nav__link">
-    <span class="md-ellipsis">
-      DatasetTable where clause
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#datasetcolumns" class="md-nav__link">
-    <span class="md-ellipsis">
-      DatasetColumns
+      Columns Tab
     </span>
   </a>
   
@@ -11550,52 +11526,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#main-concepts" class="md-nav__link">
+  <a href="#dataset-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Main Concepts
+      Dataset Window
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Main Concepts">
+    <nav class="md-nav" aria-label="Dataset Window">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dataset" class="md-nav__link">
+  <a href="#table-tab" class="md-nav__link">
     <span class="md-ellipsis">
-      Dataset
+      Table Tab
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#datasettable" class="md-nav__link">
+  <a href="#columns-tab" class="md-nav__link">
     <span class="md-ellipsis">
-      DatasetTable
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DatasetTable">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#datasettable-where-clause" class="md-nav__link">
-    <span class="md-ellipsis">
-      DatasetTable where clause
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#datasetcolumns" class="md-nav__link">
-    <span class="md-ellipsis">
-      DatasetColumns
+      Columns Tab
     </span>
   </a>
   
@@ -11688,36 +11640,24 @@
 
 <h1 id="datasets">Datasets</h1>
 <h2 id="overview">Overview</h2>
-<p>The Dataset concept allows you to define sets of data from different tables and export this data in one step. Datasets are especially useful for managing reference data for a module, for example tax rates or default data in new
-tables added by a module. The reference data is published, distributed and
+<p>The Dataset concept allows you to define <strong>sets of data</strong> from different tables and export this data in one step. Datasets are especially useful for managing reference data for a module, for example tax rates or default data in new tables added by a module. The reference data is published, distributed and
 installed together with the program code implementing the module.</p>
-<p>The content of a Dataset is defined by its Dataset Tables and Dataset Columns.
-The first defines which tables are exported, the second one which columns from
-those tables are exported.</p>
-<p>Datasets can be defined at System, Organization, or Client/Organization
-levels. System-level datasets are applied when the module containing them is
-installed in the system. Their data is system-level.</p>
-<p>Organization-level datasets can be applied in <code>Initial Organization Setup</code> (when
-creating a new organization), or can also be applied to an existing
-organization using the <code>Enterprise Module Management</code> window. They contain
-Organization level information.</p>
-<p>Client/Organization-level datasets work like Organization-level datasets, but
-can also be applied on <a href="../../how-to-guides/how-to-run-an-initial-client-setup-process/">Initial Client Setup</a> when creating a new client. They
-contain Organization/Client level information.</p>
-<h2 id="main-concepts">Main Concepts</h2>
-<h3 id="dataset">Dataset</h3>
-<p>A Dataset is a grouping of different tables (entities) which are exported
-together. Datasets are defined through the <code>Dataset</code> menu in the Application
-Dictionary. Below there is an example of a Dataset.</p>
+<p>The content of a Dataset is defined by its <strong>Dataset Tables</strong> and <strong>Dataset Columns</strong>. The first defines which tables are exported, the second one which columns from those tables are exported.</p>
+<p>Datasets can be defined at <strong>System, Organization, or Client/Organization</strong> levels. System-level datasets are applied when the module containing them is installed in the system. Their data is system-level.</p>
+<ul>
+<li>Organization-level datasets can be applied in <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup">Initial Organization Setup</a> (when creating a new organization), or can also be applied to an existing organization using the <strong>Enterprise Module Management</strong> window. They contain <strong>Organization level information</strong>.</li>
+<li>Client/Organization-level datasets work like Organization-level datasets, but can also be applied on <a href="../../how-to-guides/how-to-run-an-initial-client-setup-process/">Initial Client Setup</a> when creating a new client. They contain <strong>Organization/Client level information</strong>.</li>
+</ul>
+<h2 id="dataset-window">Dataset Window</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Dataset</code></p>
+<p>A Dataset is a grouping of different tables (entities) which are exported together. Datasets are defined through the <strong>Dataset</strong> window. Below there is an example of a Dataset.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/concepts/datasets-0.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/datasets-0.png"></a></p>
 <p>Some important things to note:</p>
 <ul>
-<li>A Dataset belongs to a module, so modules can add new datasets to an Etendo instance. </li>
-<li>Data Access Level: filter the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set.</li>
+<li>A <strong>Dataset</strong> belongs to a module, so modules can add new datasets to an Etendo instance. </li>
+<li><strong>Data Access Level</strong>: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set.</li>
 </ul>
-<p>If the <code>export allowed</code> column is flagged, then an <code>export</code> button is displayed.
-When clicking this button the data is exported to the modules directory of the
-module to which the Dataset belongs:</p>
+<p>If the <strong>export allowed</strong> column is flagged, then an <strong>Export Reference Data</strong> button is displayed. When clicking this button the data is exported to the modules directory of the module to which the Dataset belongs:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>modules
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└── org.openbravo.localization.spain.referencedata.taxes
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    └── referencedata 
@@ -11725,9 +11665,8 @@ module to which the Dataset belongs:</p>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            ├── Impuestos_ES.xml
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            └── Spanish_Tax_Alerts.xml
 </span></code></pre></div>
-<h3 id="datasettable">DatasetTable</h3>
-<p>The DatasetTable defines which data of one table is to be exported. It defines
-both the records (through a where clause) and the columns per record. </p>
+<h3 id="table-tab">Table Tab</h3>
+<p>The Table tab defines which data of <strong>one table is to be exported</strong>. It defines both the records (through a where clause) and the columns per record. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A Dataset should have one or more Dataset Tables, a Dataset Table always belongs to exactly one Dataset.</p>
@@ -11735,26 +11674,23 @@ both the records (through a where clause) and the columns per record. </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/concepts/dataset-2.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/dataset-2.png"></a></p>
 <p>Some important aspects:</p>
 <ul>
-<li>A Dataset Table has a module, so you can add a new Dataset Table to an existing Dataset (of another module). </li>
-<li>The HQL where clause is an <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/queryhql.html" target="_blank">HQL</a> where Clause. The properties which can be used in the clause are the properties of the table <strong>entity</strong> of the DatasetTable. </li>
-<li><code>Include all columns</code>: if flagged, all columns are exported, except the ones excluded in the DataSet Column, if not flagged then the DatasetColumn definition is used. </li>
-<li><code>Exclude Audit Info</code>: only relevant if include all columns is flagged, in that case this field can be used to exclude audit info. In most situations, <em>it makes sense to activate this flag</em> , as audit info (information about which user created and updated every record, and in which date this happened) is most of the times irrelevant, when exporting business data to a dataset which is meant to be generic and used in several different systems. </li>
-<li><code>IsBusinessObject</code>: if flagged then also the 'child-records' of the table are exported, for example if the Dataset Table is defined for the <code>C_Order</code> table and this field is flagged then also the related <code>C_OrderLines</code> are exported. </li>
+<li>A Dataset Table has a module, so the user can add a new Dataset Table to an existing Dataset (of another module).</li>
+<li>The HQL where clause is an <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/queryhql.html" target="_blank">HQL</a> where Clause. The properties which can be used in the clause are the properties of the table <strong>entity</strong> of the DatasetTable.</li>
+<li><strong>Include all columns</strong>: if flagged, all columns are exported, except the ones excluded in the DataSet Column, if not flagged then the Column tab definition is used. </li>
+<li><strong>Exclude Audit Info</strong>: only relevant if include all columns is flagged, in that case this field can be used to exclude audit info. In most situations, <em>it makes sense to activate this flag</em> , as audit info (information about which user created and updated every record, and in which date this happened) is most of the times irrelevant, when exporting business data to a dataset which is meant to be generic and used in several different systems.</li>
+<li><strong>IsBusinessObject</strong>: if flagged then also the <strong>child-records</strong> of the table are exported, for example if the Table is defined for the <code>C_Order</code> table and this field is flagged then also the related <code>C_OrderLines</code> are exported. </li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information read how <a href="../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#etendo-business-objects">Business Object</a> structures are defined. </p>
+<p>For more information about how structures are defined visit, <a href="../data-access-layer/#business-object">Business Object</a>. </p>
 </div>
-<h4 id="datasettable-where-clause">DatasetTable where clause</h4>
-<p>To select specific objects from the table to be included in the data set, it is possible to define a where clause in the DatasetTable. The HQL where clause is an <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/queryhql.html" target="_blank">HQL</a> where Clause. The properties which can be used in the clause are the
-properties of the table <strong>entity</strong> of the DatasetTable. The entity and
-property names give an overview of all properties by their entity. There are two standard parameters which can be used in the HQL clause:</p>
+<p><strong>Table where clause</strong></p>
+<p>To select specific objects from the table to be included in the data set, it is possible to define a <strong>where clause in the DatasetTable</strong>. The HQL where clause is an <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/queryhql.html" target="_blank">HQL</a> where Clause. The properties which can be used in the clause are the properties of the table <strong>entity</strong> of the DatasetTable. The entity and property names give an overview of all properties by their entity. There are two standard parameters which can be used in the HQL clause:</p>
 <ul>
-<li><code>ClientID</code>: denoting the current client of the user exporting the data </li>
-<li><code>moduleid</code>: the id of the module for which data is exported </li>
+<li><code>ClientID</code>: denoting the current client of the user exporting the data. </li>
+<li><code>moduleid</code>: the id of the module for which data is exported. </li>
 </ul>
-<p>The syntax of using these parameters in the where-clause is the same as for
-named parameters in HQL in general.</p>
+<p>The syntax of using these parameters in the where-clause is the same as for named parameters in HQL in general.</p>
 <p>Here are some examples of where clauses:</p>
 <ul>
 <li><code>client.id = :ClientID</code>, export all objects from the current client </li>
@@ -11763,53 +11699,56 @@ named parameters in HQL in general.</p>
 <li><code>client.id in ('0', '1000000')</code>, select all objects with a client '0' or '1000000' </li>
 <li><code>name like '%Product%'</code>, select objects with a name which contains the string Product </li>
 </ul>
-<p>The clause can contain inner-selects and other more advanced HQL features.
-However, <strong>order-by, group-by and having clauses are not supported</strong>, so the
-content of this field should just be the where-clause and nothing more.</p>
-<h3 id="datasetcolumns">DatasetColumns</h3>
-<p>The Dataset Columns defines the columns/properties which are exported for a
-certain business object. A Dataset Column always belongs to
-one Dataset Table, and a Dataset Table can have zero or more Dataset Columns.
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The clause can contain inner-selects and other more advanced HQL features. However, <strong>order-by, group-by and having clauses are not supported</strong>, so the content of this field should just be the where-clause and nothing more.</p>
+</div>
+<h3 id="columns-tab">Columns Tab</h3>
+<p>The Dataset Columns defines the <strong>columns/properties</strong> which are exported for a certain business object. A Dataset Column always belongs to one Dataset Table, and a Dataset Table can have zero or more Dataset Columns.
 The Dataset Column concept can be used in two ways:</p>
 <ul>
-<li>Check the <code>Include all columns</code> in the Dataset Table and define exclusions in the Dataset Column </li>
-<li>Do not check the <code>Include All Columns</code> in the Dataset Table and define the exact Columns to export in the Dataset Column </li>
+<li>Check the <strong>Include all columns</strong> in the Dataset Table and define exclusions in the Dataset Column. </li>
+<li>Do not check the <strong>Include All Columns</strong> in the Dataset Table and define the exact Columns to export in the Dataset Column.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/concepts/dataset-3.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/dataset-3.png"></a></p>
 <p>The main fields:</p>
 <ul>
-<li>A Dataset Column has a module, so you can add a new Dataset Column to an existing Dataset Table (of another module). </li>
-<li>Excluded: if flagged then this column is defined to not be exported. </li>
+<li>A Dataset <strong>Column</strong> has a module, so the user can add a new Dataset Column to an existing Dataset Table (of another module). </li>
+<li><strong>Excluded</strong>: if flagged then this column is defined to not be exported. </li>
 </ul>
 <h2 id="usage-of-datasets">Usage of Datasets</h2>
-<p>The main purpose of Datasets is to define <em>reference data</em> for modules. </p>
+<p>The main purpose of Datasets is to define <strong>reference data</strong> for modules. </p>
 <p>To export a dataset, it is very important to follow these steps:</p>
 <ul>
-<li>First click on the <code>Export Reference Data</code> button in the <code>Dataset</code> window. This will export the dataset contents to an xml file, and will also generate the checksum of this dataset. </li>
+<li>First click on the <strong>Export Reference Data</strong> button in the <strong>Dataset</strong> window. This will export the dataset contents to an <code>XML</code> file, and will also generate the checksum of this dataset. </li>
 <li>Then, execute <code>./gradlew export.database</code> to export the checksum information to the module source data. </li>
 </ul>
-<p>After this, you can <a href="../../../how-to-guides/how-to-publish-modules-to-github-repository.md">publish your module</a>, which now will include the contents of the dataset. </p>
+<p>After this, <strong>the module can be published</strong> which now will include the contents of the dataset.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information visit, <a href="../../how-to-guides/how-to-publish-modules-to-github-repository/">How to Publish modules to Github Repository</a>.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The reference data is inserted when a module is applied (built and installed). Or can be imported separately.</p>
 </div>
 <h2 id="data-ownership">Data ownership</h2>
-<p>Data defined by a dataset is owned by this dataset. This means when there is
-an update of this dataset, any change on this data will be overwritten again to match the definition in the new version of the dataset.</p>
-<p>It is possible to mark a dataset as <code>Default Values Data Set</code> . Having this flag makes the dataset not to take ownership of the data it inserts, but moving this ownership to the instance. So, new records provided by the dataset are inserted, even in newer versions of this dataset, but any changes done in the instance will be preserved. </p>
+<p>Data defined by a dataset is <strong>owned by this dataset</strong>. This means when there is an update of this dataset, any change on this data will be overwritten again to match the definition in the new version of the dataset.</p>
+<p>It is possible to mark a dataset as <strong>Default Values Data Set</strong> . Having this flag makes the dataset not to take ownership of the data it inserts, but moving this ownership to the instance. So, new records provided by the dataset are inserted, even in newer versions of this dataset, but any changes done in the instance will be preserved. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In case a record provided by one of these datasets is deleted from the instance, it will be recovered back in the next update, the correct way of getting rid of undesired records is by marking them as inactive.</p>
 </div>
 <h2 id="importing-reference-data-on-organization-level">Importing Reference Data on Organization level</h2>
-<p>The module reference data can be imported into an organization using the <code>Enterprise Module Management</code> function. It is available in the menu here: <code>General Setup &gt; Enterprise &gt; Enterprise module management &gt; Enterprise module management</code>.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Enterprise Model</code> &gt; <code>Enterprise module management</code></p>
+<p>The module reference data can be imported into an organization using the <strong>Enterprise Module Management</strong> window.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/concepts/datasets-4.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/datasets-4.png"></a></p>
-<p>In this list, only the relevant modules containing datasets will be shown. This means that if a dataset has not changed from the last time it was applied to the selected organization, it will not be shown.</p>
-<p>Select the organization and the module from which to import the reference data into the organization. Then press ok. After a while the result page is displayed:</p>
+<p>In this list, only the <strong>relevant modules</strong> containing datasets will be shown. This means that if a dataset has not changed from the last time it was applied to the selected organization, it will not be shown.</p>
+<p>Select the organization and the module from which to import the reference data into the organization. Then press <strong>ok</strong>. After a while the result page is displayed:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/concepts/datasets-5.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/datasets-5.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If a dataset is defined as Organization/Client level, then it can also be imported when using the <a href="../../how-to-guides/how-to-run-an-initial-client-setup-process/">Initial Client Setup</a> utility to create a new client.</p>
+<p>If a dataset is defined as <em>Organization/Client</em> level, then it can also be imported when using the <a href="../../how-to-guides/how-to-run-an-initial-client-setup-process/">Initial Client Setup</a> utility to create a new client.</p>
 </div>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Datasets" target="_blank">Datasets</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
