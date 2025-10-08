@@ -806,7 +806,7 @@ The header defines the main data for each budget:
 
 ### Lines
 
-In the Lines tab, the user can add budget lines. Each line can refer to a specific period, business partner, product, etc. Accounting dimensions are available as filters, selectable one value at a time, in the Dimensions section. 
+In the Lines tab, the user can add budget lines. Each line can refer to a specific period, projecting and comparing expenses/income according to the selected accounting account. The accounting dimensions are available as filters, selectable one at a time, in the Dimensions section (business partner, product, etc.)
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-lines.png)
 
