@@ -93,6 +93,10 @@ At first, the currency shown in the Set New Currency window is business partner 
 
 Business partner's new currency can be entered in the field *Currency*, for instance *EUR*.
 
+DO WE KEEP THIS FORMAT? OR DO WE MAKE A LIST OF FIELDS?
+
+[+] Then, with the **Set amount** checkbox, you can                                                                                                                                                                  
+
 The checkbox **Use default conversion rate** uses the conversion rate defined in [Conversion Rates](../general-setup/application.md#conversion-rates) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
 
 Additionally, a business partner might have **available credit in a given currency**. If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
@@ -108,7 +112,7 @@ This process automatically creates three new payments, in case business partner 
 !!!Example
     Let us take as an **example** a business partner having a price list in EUR.
     - This business partner has a current balance of 306.00 EUR and a generated credit of 100.00 EUR, which decreases its balance to 206.00 EUR.
-    - After that, **Set New Currency** process is run for this business partner, because its currency needs to change to USD
+    - After that, **Set New Currency** process is run for this business partner, because its currency needs to change to USD.
     - **Set New Currency** process informs us that there is available credit for the business partner in the old currency (EUR). That available credit needs to be exchanged to the new currency (USD), therefore a conversion rate needs to be used. In this example, system conversion rate is used, that is 1.13 EUR to USD.
     - Once **Set New Currency** process ends, business partner:
 
