@@ -2956,6 +2956,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3098,7 +3116,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buttons" class="md-nav__link">
+  <a href="#buttons_1" class="md-nav__link">
     <span class="md-ellipsis">
       Buttons
     </span>
@@ -12832,6 +12850,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12974,7 +13010,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buttons" class="md-nav__link">
+  <a href="#buttons_1" class="md-nav__link">
     <span class="md-ellipsis">
       Buttons
     </span>
@@ -13643,15 +13679,70 @@ The process to create a journal entry from the beginning and duplicate it later 
 <h2 id="budget">Budget</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Transactions</code> &gt; <code>Budget</code></p>
 <h3 id="overview_6">Overview</h3>
-<p>Etendo creates and edits budgets to be used for informative purposes allowing the user to access the data about budget versus actual. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you do not have the <strong>Financial Report Budget</strong> module from the <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>, this window will remain in a legacy version with limited functionality. You will not be able to include G/L items in the actual values considered in the budget report, the report will not have the difference column and the dimensions to filter the report will not include all the accounting dimensions as in this case.</p>
+</div>
+<p>It allows creating and managing budgets, both for income and expenditures, for reporting purposes, offering users the possibility to compare budgeted values with actual values posted in the corresponding General Ledger.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>A budget can be defined, for example, by assigning an expected expenditure of EUR 400,000 in salaries and $2,000 in Internet services for the month of September 2025. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-header.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-header.png"></a></p>
+<p>At the end of the period, users can verify the actual value and analyze the difference with respect to the defined budget.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png"></a></p>
+</div>
+<p>The actual values considered include both accounting entries and manual entries (G/L Item), ensuring a comprehensive view of budget execution.</p>
 <h3 id="header_3">Header</h3>
-<p>These are the actions which can be executed from the header in order to create budgets for a selected year to be used for informative purposes: </p>
-<p><strong>Export Budget to Excel:</strong>  exports budget to an Excel document.
-<strong>Copy Budget:</strong> copy budget already created. 
-<strong>Check Export Actual Data:</strong> when checked, actual quantities will be exported to Excel in addition to the budgeted quantities. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png"></a></p>
+<p>The header defines the main data for each budget:</p>
+<ul>
+<li><strong>Organization</strong>: organization to which the budget belongs.</li>
+<li><strong>Name</strong>: identifying name of the budget.</li>
+<li><strong>Year</strong>: fiscal year to which the budget applies.</li>
+<li><strong>Description</strong>: additional or explanatory information about the budget.</li>
+<li><strong>Active</strong>: checkbox that enables or disables the budget. </li>
+<li><strong>Export Actual Data</strong>: checkbox, when checked, actual quantities will be exported to Excel in addition to the budgeted quantities.</li>
+</ul>
 <h3 id="lines_3">Lines</h3>
-<p>The user is able to add budget lines. Each line may refer to a specified period, business partner, product, etc.</p>
+<p>In the Lines tab, the user can add budget lines. Each line can refer to a specific period, projecting and comparing expenses/income according to the selected accounting account. The accounting dimensions are available as filters, selectable one at a time, in the Dimensions section (business partner, product, etc.)</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-lines.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-lines.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Sequence Number</strong>: sequence number of the line.</li>
+<li><strong>General Ledger</strong>: associated accounting ledger.</li>
+<li><strong>Account Element</strong>: linked accounting account. This element is what determines if the budget refers to an income or an expenditure.</li>
+<li><strong>Currency</strong>: currency in which the budget is expressed.</li>
+<li><strong>Period</strong>: accounting period to which the line corresponds.</li>
+<li><strong>Amount</strong>: budgeted amount. This is the number to be considered when expressing the difference between the budgeted amount and the actual amount in the generated budget report.</li>
+<li><strong>Actual Amount</strong>: actual amount recorded. This information is updated once the report is generated, only if the Export Actual Data checkbox was selected.</li>
+<li><strong>Quantity</strong>: budgeted quantity. This is an optional value.</li>
+<li><strong>Net Unit Price</strong>: net unit price. This is an optional value.</li>
+<li><strong>Description</strong>: additional information about the line.</li>
+<li><strong>Active</strong>: checkbox that enables or disables the line.</li>
+</ul>
+<h3 id="buttons">Buttons</h3>
+<p><strong>Export Budget to Excel</strong>: generates an Excel document as a Report with budget information.</p>
+<p><strong>Copy Budget</strong>: duplicates lines from previously created budgets.</p>
+<h3 id="report">Report</h3>
+<p>The budget report allows a comparison between the budgeted and actual amounts. It includes a Difference column, which shows the result of subtracting the actual value from the budgeted value, thus facilitating the analysis of deviations.</p>
+<p>The fields presented in the report are:</p>
+<ul>
+<li><strong>Qty</strong>: budgeted quantity.</li>
+<li><strong>Price</strong>: unit price.</li>
+<li><strong>Amount</strong>: budgeted amount.</li>
+<li><strong>Actual</strong>: actual amount recorded.</li>
+<li><strong>Difference</strong>: difference between budgeted and actual amounts.</li>
+<li><strong>Period</strong>: corresponding accounting period.</li>
+<li><strong>Accounting dimensions</strong>: filters applied by dimensions (e.g., business partner, cost center, product, project, etc.).</li>
+<li><strong>Organization</strong>: organization to which the budget corresponds.</li>
+<li><strong>Description</strong>: additional information about the line.</li>
+<li><strong>Currency</strong>: currency in which the budget is expressed.</li>
+</ul>
+<p>Example of report results:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png"></a></p>
 <h2 id="create-budget-reports-in-excel">Create Budget Reports in Excel</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Transactions</code> &gt; <code>Create Budget Reports in Excel</code></p>
 <p>By using the necessary filters such as business partner, product, partner group, product category, etc, the user is able to generate budget reports in Excel to be used for specific purposes.  </p>
@@ -13796,7 +13887,7 @@ The process to create a journal entry from the beginning and duplicate it later 
 <p><strong>Accounting Date (From/To)</strong>: Filters to define a search period.</p>
 </li>
 </ul>
-<h3 id="buttons">Buttons</h3>
+<h3 id="buttons_1">Buttons</h3>
 <h4 id="search-button">Search button</h4>
 <p>Clicking the Search button applies the selected filters and displays the matching documents in the results grid. From the results you can navigate to a document by clicking its Accounting Date, inspect details, and select records for bulk posting.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png"></a></p>
