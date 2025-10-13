@@ -60,6 +60,12 @@ By default, the module includes three preconfigured preferences. These can be di
 
 ## Module Functionality
 
+### Workflow
+
+When a sales order is created that includes products configured with logistics units, the system uses the intelligent reservation logic built into the module to determine how to allocate stock. When completing the order, Etendo evaluates the available inventory and prioritizes the reservation of complete logistics units (e.g., whole boxes or pallets). If there is not enough complete stock to cover the requested quantity, the system supplements the reservation with individual units, always ensuring that the order is fulfilled as far as possible.
+
+In this way, the reservation process is automatically adjusted according to priorities and stock availability, optimizing inventory management and avoiding unnecessary fragmentation.
+
 The **Stock Logistic** Unit module affects several standard Etendo windows, as it introduces new logistic units and their integration with referenced inventory and alternative units of measure.
 
 ### Unit of Measure
@@ -75,8 +81,6 @@ These UOM serve as the basis for configuring products with alternative units, wh
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/referenced-inventory-type.png)
 
 In the Referenced Inventory Type window, the module adds the referenced inventory types **Box** and **Pallet**, each with its corresponding sequence. In this way, the referenced inventory retains traceability at the logistics unit level, ensuring consistency between the defined AUOMs and stock records. Reservations are updated using logic that allows alternative units of measurement to be taken into account.
-
-### Product
 
 ### Alternate UOM
 

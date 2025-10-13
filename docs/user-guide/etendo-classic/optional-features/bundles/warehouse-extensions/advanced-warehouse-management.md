@@ -250,16 +250,31 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
     3. The generated code is displayed in the storage bin. It can also be loaded manually or modified.
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png) 
+        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png)
+    
+    4. On the other hand, it can obtain a printout of the generated barcode by clicking on the Generate Printable button. You must select a supplier, the printer, and the number of copies.
+
+        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-1.png)
+
+    !!! info
+        To use the print option, you must have the Print Provider module. For details, see [Print Provider](../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
 
 === "From the **Product** window"
 
     1. Select the product.
-
+    
     2. Click on Generate Barcode and confirm with Done.
-    3. The generated code is displayed in the Advanced Warehouse Management section of the product. It can also be loaded manually or modified.
-        
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png)
+    
+    3. The generated code is displayed head of the product window. It can also be loaded manually or modified.
+
+        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png)
+    
+    4. It can obtain a printout of the generated barcode by clicking on the Generate Printable button. You must select a supplier, the printer, and the number of copies.
+    
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png)
+
+    !!! info
+        To use the print option, you must have the Print Provider module. For details, see [Print Provider](../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
     
     !!! info 
         In the **Product** window, there is a tab called **Barcode**, where various barcodes associated with the product, such as supplier codes, are listed. These codes are loaded manually, allowing you to specify the algorithm used to encrypt the code and the Application Identifier configuration.
@@ -268,7 +283,6 @@ It is possible to generate these unique codes for storage bins in the **Warehous
         
         - In the **Advanced Warehouse Configuration** window, there is a checkbox labeled `Search Related Barcode`
         - If the checkbox is enabled, when scanning a product from Etendo Mobile, the system will search for matches on all codes listed in the Barcode tab, in addition to the header code.
-
 
 ## Inbound Receipt
 
