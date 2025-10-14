@@ -293,19 +293,25 @@ Run the following command to compile and set up the environment:
 
 - Choose the desired **Google Drive scope**:
 
-    ![Select Provider Scope](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png)
+    ![Drive Scope Selection](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png)
 
-    - **Google Drive – Full Access**
+    - **Google Drive – Edit Access Level**
     
         Grants the app permission to **create, update, delete, and manage** files created through the Etendo.  
+
+        !!! warning 
+            Only files with **Edit** access level will be accessible.  
     
         !!!warning
             With this scope, the app can only manage files that were created from Etendo or explicitly opened with it.
 
-    - **Google Drive – Read Only**
+    - **Google Drive – Read Only Access Level**
 
         Grants the app permission to **read existing files** in the user’s account (including files not created by Etendo).  
         No modifications are allowed — only reading file information or content.
+
+        !!! warning 
+            Only files with **Read Only** access level will be accessible.
 
 - Accept Google’s consent screen.
 
