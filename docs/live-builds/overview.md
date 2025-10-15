@@ -35,7 +35,7 @@ hide:
 
     ---
 
-    [Etendo 24](https://livebuild-24.labs.etendo.cloud/etendo/security/Login){ target="blank"} <br>
+    [Etendo 24](https://demo24.etendo.cloud/etendo/security/Login){ target="blank"} <br>
     [Etendo 25](https://demo25.etendo.cloud/etendo/security/Login){ target="blank"} 
 
 </div>
