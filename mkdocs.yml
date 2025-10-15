@@ -290,6 +290,7 @@ nav:
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
+          - How to Create a General Ledger Configuration: user-guide/etendo-classic/how-to-guides/how-to-create-a-general-ledger-configuration.md
           - How to Manage Deferred Revenue and Expenses: user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md
           - How to Manage Prepaid Invoices in Payables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md
           - How to Manage Prepaid Invoices in Receivables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md
