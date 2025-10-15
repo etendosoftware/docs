@@ -33,11 +33,11 @@ Once done the newly created general ledger needs to be linked in the General Led
 
 From the [General Ledger Configuration](../basic-features/financial-management/accounting/setup.md#general-ledger-configuration) window, the remaining steps to take to properly configure the general ledger are:
 
-- Setting up [Dimensions](../basic-features/financial-management/accounting/setup.md#dimension) from the Dimention tab to add below listed mandatory dimensions:
+- Setting up [Dimensions](../basic-features/financial-management/accounting/setup.md#dimension) from the Dimension tab to add below listed mandatory dimensions:
 
     -   Create a new record and enter **Organization** in the field **Name**.
     -   Select **Organization** in the field **Type**.
-    -   Select F&B US Inc in the field **Trx Organization**.
+    -   Select {Your Organization} in the field **Trx Organization**.
     -   Select the checkbox **Balanced** and the checkbox **Mandatory**.
     -   Create a new record and enter **Account** in the field **Name**.
     -   Select **Account** in the field **Type**.

@@ -501,7 +501,7 @@ When voided:
 - Allow Negative = NO (postings are reclassified: debit ↔ credit).
 
 
-3\. The **Centrally Maintenance** checkbook: 
+3\. The **Centrally Maintenance** checkbox: 
 
 - **Centrally Maintained**: When YES, the **Account Sign** field is hidden in the Element Value tab of the [Account Tree](#account-tree) window. 
 
@@ -518,7 +518,7 @@ When voided:
         - **Revenues Credit** balances are shown as Positive in the Income Statement.
 
     !!!info
-        It is possible to uncheck any of the checkboxes listed above showing any of the balances as negartive. 
+        It is possible to uncheck any of the checkboxes listed above showing any of the balances as negative. 
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration7.png)
 
