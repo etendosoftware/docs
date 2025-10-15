@@ -7,22 +7,33 @@ title: Financial Extensions Bundle | Technical Documentation
 
 In this section, the user can find technical information about the Financial Extensions Bundle.
 
+## Currency API Configuration 
+:octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
+
+:material-menu: `Application` > `Master Data Management` > `Currency Converters`
+
+In the **Currency Converters** window, you must configure the necessary data for connecting to the  Conversion Download API.
+
+The following information must be configured:
+
+- Classname: `com.smf.currency.apiconfig.CurrencyLayerConverter`
+- URL: `https://api.apilayer.com/currency_data/`
+- Token
+- User
+- Password
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/financial/currency-api-configuration/currency-api-configuration.png)
+
 ## Conversion Rate Downloader
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
 
-### Technical Aspects
+:material-menu: `Application` > `General Setup` > `Conversion Rate Download Rule  `
 
-In the Currency Converters window, the necessary Apilayer data has to be configured:
+In the **Conversion Rate Download Rule** window, the configuration includes which conversions are required from which currency to which currency and what is the tolerance.  
 
--   Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
--   URL: [http://apilayer.net/api/](http://apilayer.net/api/)
--   Token
--   User
--   Password
+The **Conversion Rate Downloader** process request in the background also needs to be configured. This is the one that will obtain the conversion and automatically insert it in the **Conversion Rates** window.
 
-In the Conversion Rate Downloader Rule window, the configuration includes which conversions are required from which currency to which currency, what is the tolerance, etc.  
-The "Conversion Rate Downloader" process in the background also needs to be configured. This is the one that will obtain the conversion and insert it in the Conversion Rates window.
 
 ## Business Partner Settlement
 

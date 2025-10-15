@@ -29,15 +29,11 @@ The “Advanced Business Partner” module allows the user to have a general vie
 
 :material-menu: `Application` > `Master Data Management` > `Currency Converters`
 
-In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-- Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
-- URL: http://apilayer.net/api/
-- Token
-- User
-- Password
+In this window, you can configure the access settings for the currency API configuration. For more information, visit: [Currency API Configuration - Developer Guide](../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#currency-api-configuration)
 
-![](../../../../assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
 
 ## Business Partner
 
@@ -330,6 +326,30 @@ This functionality introduces the possibility to mark a bank account as Default 
 
 !!! warning
     Only one bank account can be selected as default for each business partner.
+
+### **Document Type Tab**
+
+It allows to define, specifically for each business partner, the types of documents that will be used in associated transactions.
+
+With this functionality, it no longer depends only on the standard document type configured at the organization level, but can customize the assignment based on the customer or supplier. That is, when the user creates an order, invoice, or shipment document associated with a Business Partner, the system checks the Document Type tab for that Business Partner to determine which configuration to apply. If there is a record configured for the Business Partner and the transaction in progress, the document type defined in that tab is applied; if there is no record, the standard document type configured at the organization level is inherited.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-1.png)
+
+In this tab, it is possible to create records with the following fields:
+
+- **Organization**: Organization to which this rule applies. If a document is created in a child organization, it will search for the configuration throughout the entire organization tree. If no document type configuration exists, it will use the configuration at the organization level.
+- **Document Category**: This can be Order, Invoice, and Shipment/Receipt.
+- **Sales Transaction**: When checked, this corresponds to sales documents (sales orders, sales invoices, and good shipment), while when unchecked, it corresponds to purchasing documents (purchase orders, purchase invoices, and goods receipt).
+- **Document Type**: Only the document types available for the selected category and sales transaction are displayed. The default options are:
+
+    - For Purchase Orders: Purchase order and RTV order.
+    - For Sales Orders: POS order, quote, RFC order, standard order, and warehouse order.
+    - For Purchase Invoices: AP invoice and canceled purchase invoice.
+    - For Sales Invoices: AR invoice and canceled sales invoice.
+    - For Goods Shipments: MM shipment and RTV shipment.
+    - For Goods Receipt: MM Receipt and RFC Receipt.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/document-type-tab-2.png)
 
 ### **Location/Address**
 
@@ -1122,28 +1142,27 @@ This tab is not editable, it is not possible to add records manually or edit the
 
 #### **Product Price Rule Version**
 
-#### **Alternate UOM**
+### Alternate UOM Tab
 
 !!! info
-    The user must enable this preference by entering the Preference window, checking the Property list checkbox, choosing “Enable UOM Management” in the Property field with value Y.
+    To enable this functionality the user must define the preference **Enable UOM Management** in the Property field with value Y.
 
 ![](../../../../assets/drive/zu1QFJc_LPSBeJOGOOGHLNMjKi-WsPgjKPEaD4-BnQJEKbvhU1jz0WXeW-RHyDOEXYAx67_-Z7F6SIGVxBkGdZT828fkrjzAeu35psYO4H_dSFcw8YosbJailPqSWhZyjhCsN01vu0kqIyTG1g.png)
 
 Fields to note:
 
-- **UOM**, that is the alternative unit of measure of the product, for instance *Pallet*.  
-  It is important to remark that any unit of measure needs to be created and configured in Unit of Measure window.
-- **Conversion Rate**, that is the conversion between product's alternative unit of measure (AUM) to product's unit of measure.  
-  For instance, if product's AUM conversion to product's UOM is 50; that means that 1 Pallet represents 50 Units.
+- **UOM**, that is the alternative unit of measure of the product, for instance *Pallet*. It is important to remark that any unit of measure needs to be created and configured in [Unit of Measure](./product-setup.md#unit-of-measure) window.
+- **Conversion Rate**, that is the conversion between product's alternative unit of measure (AUM) to product's unit of measure. For instance, if product's AUM conversion to product's UOM is 50; that means that 1 Pallet represents 50 Units.
 - **Gtin**, that is the *Global Trade Item Number* for the product defined in the corresponding AUM
 - **Sales**, **Purchase** and **Logistics**, those fields allow defining the use of product's AUM within Sales, Purchase and Inventory flows.  
   Values allowed are:
-  - **Primary**: Product's AUM defined in this tab is used as default unit of measure in the selected flow (Sales or Purchase), when creating a sales or purchase document such as an order or receipt/shipment.  
+  
+    - **Primary**: Product's AUM defined in this tab is used as default unit of measure in the selected flow (Sales or Purchase), when creating a sales or  purchase document such as an order or receipt/shipment.  
     Only one Primary AUM can be defined per Product and flow.  
     For instance, if *Pallet* is the primary AUM defined for a product within Purchase flow, that means that every time that a purchase document is created, *Pallet* will be the default unit of measure shown.
-  - **Secondary**. Product's AUM defined in this tab can be selected for the selected flow when creating a Document.  
+    - **Secondary**. Product's AUM defined in this tab can be selected for the selected flow when creating a Document.  
     For instance, if *Pallet* is the secondary AUM defined for a product within Sales flow, while *Pack* is primary one; that means that every time that a sales document is created, *Pack* will be the default unit of measure shown, but end-user can change it to *Pallet*.
-  - **Not Applicable**. The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
+    - **Not Applicable**. The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
     That is the option to select for *Logistics* as the use of alternative units of measure is currently implemented just for sales and purchase. Inventory transactions/documents always refer to the product's unit of measure.
 
 #### **Modify Taxes Categories**

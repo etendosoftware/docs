@@ -1,53 +1,73 @@
 ---
-title: How to use an agent as MCP Server
+title: How to use an Agent as MCP Server
 status: beta
 tags:
+    - How to
     - Copilot
-    - MCP
+    - MCP Server
     - Model Context Protocol
-    - Server
     - Tools
     - Agents
 ---
+
+# How to use an Agent as MCP Server
 
 ## Overview
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
     It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
 
-This guide provides detailed instructions on how to connect to and use the [Model Context Protocol (MCP)](../concepts/model-context-protocol.md) Server provided by Etendo Copilot agents. MCP is an open protocol developed by Anthropic that standardizes how AI applications connect to external data sources and tools, enabling composable, secure, and extensible AI workflows.
+This guide shows you how to connect to Etendo Copilot agents using the [Model Context Protocol (MCP)](../concepts/model-context-protocol.md). Each agent automatically exposes an MCP server that you can connect to from various MCP-compatible clients like Claude Desktop, VS Code, Gemini CLI, and custom applications.
 
-The MCP Server in Etendo Copilot exposes the tools and capabilities of each agent through a standardized interface, allowing you to integrate Copilot agents with various MCP-compatible clients like Claude Desktop, Gemini CLI, Cursor IDE, and custom applications.
+Each **Etendo Copilot** agent provides an MCP server endpoint that exposes:
 
-## MCP Server Architecture in Etendo Copilot
+- **Tools**: Agent capabilities (API calls, file operations, knowledge search).
+- **Prompts**: Pre-configured templates for common tasks.
+- **Resources**: Access to documents, configurations, and data.
+
+### Connection Modes
+
+There are two types of communication with the MCP server, both established through the API exposed by each agent:
+
+- **Simple Mode**: Provides access to the agent as an external "black box". The client interacts naturally with the agent, without visibility into its internal configuration, tools, or prompt.  
+- **Direct Mode**: Provides direct access to the agent’s prompt and tools. In this mode, the external client behaves as if it were an Etendo agent itself, with access to the same tools, data, and definitions available to the internal agent.
+
+Choose how you want to interact with the agent:
+
+| Mode | Description | Best for |
+|------|-------------|----------|
+| **Simple** | Chat naturally with the agent | Conversations, questions, general use |
+| **Direct** | Execute specific tools directly | Automation, workflows, development |
+
+
+### MCP Server Architecture in Etendo Copilot
 
 Each Etendo Copilot agent automatically exposes an MCP server endpoint that provides:
 
-  - **Interaction Tools**: Tools that facilitate communication between the agent and the MCP Client, like `ask_agent` for sending questions and receiving answers.
-  - **Agent Tools**: Functions that the agent can execute.
-  - **Resources**: Static or dynamic data that can be accessed (documents, configurations, logs, etc.).
-  - **Prompts**: Pre-configured prompt templates for common tasks.
+- **Interaction Tools**: Tools that facilitate communication between the agent and the MCP Client, like `ask_agent` for sending questions and receiving answers.
+- **Agent Tools**: Functions that the agent can execute.
+- **Resources**: Static or dynamic data that can be accessed (documents, configurations, logs, etc.).
+- **Prompts**: Pre-configured prompt templates for common tasks.
 
-The MCP server runs alongside the agent and communicates using HTTP transport with optional Server-Sent Events (SSE) for streaming responses.
+The MCP server runs alongside the agent and communicates using `HTTP` transport with optional `Server-Sent Events (SSE)` for streaming responses.
 
-## Agent Types and Connection Modes
+### Agent Types and Connection Modes
 
 Etendo Copilot supports two kinds of agents, each with two connection modes. The agent type defines the role, and the mode defines how you interact with it.
 
-| Agent Type        | Simple Mode (Talk)                            | Direct Mode (Control)                                      |
-|-------------------|-----------------------------------------------|-----------------------------------------------------------|
-| **Multi-Model**   | Use `ask_agent` to chat naturally              | Access all tools directly + `get_agent_prompt` for setup   |
+| Agent Type        | Simple Mode (Talk)                               | Direct Mode (Control)                                              |
+|-------------------|--------------------------------------------------|--------------------------------------------------------------------|
+| **Multi-Model**   | Use `ask_agent` to chat naturally                | Access all tools directly + `get_agent_prompt` for setup           |
 | **LangGraph**     | Use `ask_agent_supervisor` to talk to supervisor | Use `ask_agent_<MemberName>` for team members + `get_agent_prompt` |
 
-**Multi-Model Agent**
 
-- **What it is**: A single agent that combines multiple AI models and tools.  
+**Multi-Model Agent**: A single agent that combines multiple AI models and tools.
+
 - **Simple Mode**: Best for natural conversations. The agent picks the right tools automatically.  
 - **Direct Mode**: Best for workflows or integrations. You run tools yourself and can read the agent’s instructions.  
 
-**LangGraph Agent**
+**LangGraph Agent**: A supervisor that manages a team of specialized agents.
 
-- **What it is**: A supervisor that manages a team of specialized agents.  
 - **Simple Mode**: Talk to the supervisor, who delegates tasks to the right team members.  
 - **Direct Mode**: Talk directly to individual team members and see how the supervisor organizes them.  
 
@@ -62,434 +82,190 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
 | API integrations                  | Multi-Model + Direct Mode     |
 | Multi-domain problem solving      | LangGraph + Simple Mode       |
 
-## Connecting to Etendo Copilot MCP Server
 
-### Token-Based Authentication
+## Step-by-Step Guide
 
-The MCP server uses token-based authentication via the `etendo-token` header, using the SWS (Secure Web Service) token of the user. This token can be obtained through the Etendo `/sws/login` endpoint.
+###  Get MCP Configuration
+:material-menu: `Application` > `Service` > `Copilot` > `Agent`
 
-Previously, the MCP configuration was obtained via a Gradle task, but the module now provides a UI action directly from the Agents screen, which is much easier to use. To generate the MCP JSON configuration for an agent:
-
-1. Open the Agents window in the Etendo UI and select the agent you want to configure.
-2. Click the "Server MCP Config" button in the toolbar. A dialog will open with the configuration options.
-
-**Dialog Parameters:**
-
-- **Direct Mode** (checkbox): When checked, the generated endpoint URL will use the `/direct/mcp` path; when unchecked, it will use `/mcp` (simple mode).
-- **MCP-remote compatibility mode** (checkbox): When checked, the generated configuration will be in "remote example" format (suitable for `npx mcp-remote ...`) which renders a JSON object with a `command: "npx"` entry and an `args` array. When unchecked, a standard HTTP MCP server configuration is produced (with `url`, `type` and `headers`).
-- **Custom values** (collapsible section): Optional overrides for the generated configuration
-  - **Custom name** (text): A human-friendly display name to use in the MCP configuration. If provided, it replaces the agent name in the generated `name` field.
-  - **Custom URL** (text): When provided, this URL is used as the base `contextUrl` for the MCP configuration instead of deriving it from system properties. Use this when the Copilot host is reachable under a different public address.
-
-{ADD SNAPSHOT}
-
-**Behavior After Accepting the Dialog:**
-
-When you click Done/OK, the process generates the configuration and displays a pop-up with everything you need to get started.
-
-{ADD SNAPSHOT}
-
-**What You'll See:**
-- A short explanation of what the snippet is for and how to use it
-- A clear notice if the generated address is local-only (e.g., starts with "localhost") so you know it won't be reachable from other machines
-- A button to import or install the configuration into VS Code (when available)
-- A nicely formatted, copyable JSON snippet you can paste into any MCP client
-
-**Two Configuration Options:**
-- **Standard**: A ready-to-use HTTP configuration you can paste into client settings
-- **mcp-remote compatibility layer**: Uses the `mcp-remote` library to add compatibility for MCP clients that do not handle the `streamable-http` transport with authentication headers correctly. Try using this by default, but if you encounter issues, you may need to switch to the standard mode.
-
-**Quick Tips:**
-- If you entered a Custom URL, the snippet will use that address
-- If you see the local-only notice, update your Copilot host settings if you need external access
-
-This UI flow replaces the need to run the Gradle task manually in most cases and is the recommended approach for interactive use.
-
-    - **`simple`**: Delivers conversation tools (`ask_agent` or `ask_agent_supervisor`)
-    - **`direct`**: Delivers direct tool access + `get_agent_prompt` for personality adoption
-
-### Connection Modes
-
-The Etendo Copilot MCP server supports two distinct connection modes, each designed for different use cases:
-
-### Simple Mode (Recommended)
-
-**URL Pattern**: `http://{HOST}:{PORT}/{AGENT_ID}/mcp`
-
-Simple mode provides a straightforward interface for talking to the Copilot agent using natural language.
-
-**Features:**
-- ✅ **ask_agent tool**: Send questions directly to the Copilot agent using natural language
-- ✅ **Basic tools**: ping, hello_world, server_info for connectivity testing
-- ✅ **Simplified interface**: Just talk to the agent, it handles tool execution internally
-- 🎯 **Best for**: General users who want to interact with the agent conversationally
-
-**When to use Simple Mode:**
-- You want to ask questions and get answers from the agent
-- You prefer natural language interaction over direct tool execution
-- You want the agent to handle tool selection and execution automatically
-- You're integrating with clients that work better with conversational interfaces
-
-### Direct Mode (Advanced)
-
-**URL Pattern**: `http://{HOST}:{PORT}/{AGENT_ID}/direct/mcp`
-
-Direct mode exposes all agent tools for direct execution from the MCP client.
-
-**Features:**
-- ✅ **All agent-specific tools**: Direct access to every tool configured for the agent
-- ✅ **get_agent_prompt tool**: Read the agent's system prompt to understand how it works
-- ✅ **Basic tools**: ping, hello_world, server_info for connectivity testing
-- ❌ **NO ask_agent tool**: You execute tools directly instead of talking to the agent
-- 🎯 **Best for**: Advanced users and developers who need precise control
-
-**When to use Direct Mode:**
-- You want to execute specific agent tools directly
-- You need to understand the agent's configuration via the system prompt
-- You're building integrations that require precise tool control
-- You want to bypass the conversational interface for specific workflows
-
-### Mode Selection by Agent Type
-
-The available connection modes depend on the **Agent Type** configured in Etendo:
-
-#### Multi-Model Agent
-
-Multi-Model Agents support both connection modes:
-
-- **Simple Mode** ✅ - Recommended for conversational interaction
-- **Direct Mode** ✅ - For direct tool execution and system prompt access
-
-#### LangGraph Agent
-
-LangGraph Agents (supervisor/team-based) have specific mode behavior:
-
-- **Simple Mode** ✅ - Talk to the supervisor agent who will coordinate team members
-- **Direct Mode** ✅ - Access supervisor tools and view the orchestration prompt
-
-Selecting the connection mode is now done through the Agents UI dialog (see above). Choose "Direct Mode" in the dialog to generate a direct-mode configuration (URL pattern ending in `/direct/mcp`) or leave it unchecked for simple mode (`/mcp`).
-
-For automation or headless environments, you can still use the Gradle task if needed, but the UI is the preferred method for interactive configuration within Etendo.
-
-### Connection Configuration
-
-To connect to an Etendo Copilot agent's MCP server, you need the following configuration (if you used the `copilot.mcp.config` task, you will have this information):
-
-#### Simple Mode Configuration
-```json
-"etendoAgentSimple": {
-  "type": "http",
-  "httpUrl": "http://0.0.0.0:5006/ID/mcp/",
-  "note": "Simple mode - talk to the Copilot agent using natural language",
-  "mode": "Simple mode (talk to Copilot agent)",
-  "headers": {
-    "etendo-token": "Bearer token"
-  }
-}
-```
-
-#### Direct Mode Configuration
-```json
-"etendoAgentDirect": {
-  "type": "http", 
-  "httpUrl": "http://0.0.0.0:5006/ID/direct/mcp/",
-  "note": "Direct mode - execute agent tools directly + read system prompt",
-  "mode": "Direct mode (direct tool execution + prompt reader)",
-  "headers": {
-    "etendo-token": "Bearer token"
-  }
-}
-```
-
-**Parameters:**
-
-  - **etendoMCPName**: A unique name for this MCP server configuration, this can be any identifier you choose
-  - **ID**: The unique identifier of the Etendo Copilot agent
-  - **token**: The SWS (Secure Web Service) token of the user (without the "Bearer" prefix in the configuration)
-  - **httpUrl**: The MCP endpoint URL following the pattern:
-    - Simple mode: `http://{COPILOT_HOST}:{COPILOT_PORT}/{AGENT_ID}/mcp/`
-    - Direct mode: `http://{COPILOT_HOST}:{COPILOT_PORT}/{AGENT_ID}/direct/mcp/`
-  - The Copilot host will depend on your specific deployment and where the connection is being made from.
-
-### Authentication
-
-The MCP server uses token-based authentication via the `etendo-token` header. You need:
-
-1. A valid Etendo user account
-2. SWS token for that user
-3. Appropriate permissions to access the agent's tools
-
-!!! warning "Security"
-    Always use HTTPS in production environments and keep your SWS tokens secure. Never expose tokens in client-side code or public repositories.
-
-
-## Configuring MCP Clients
-
-### Gemini CLI Configuration
-
-To connect Gemini CLI to an Etendo Copilot agent, create or update your Gemini CLI configuration file:
-
-<!-- SCREENSHOT: Gemini CLI config file -->
-
-#### Simple Mode (Recommended)
-```json
-{
-  "mcpServers": {
-    "etendoAgent": {
-      "type": "http",
-      "httpUrl": "http://localhost:5006/11A747307CC543B48DC6A996DB4CAB37/mcp/",
-      "note": "Simple mode - talk to the Copilot agent using natural language",
-      "headers": {
-        "etendo-token": "Bearer <your-sws-token-here>"
-      }
-    }
-  }
-}
-```
-
-#### Direct Mode (Advanced)
-```json
-{
-  "mcpServers": {
-    "etendoAgentDirect": {
-      "type": "http",
-      "httpUrl": "http://localhost:5006/11A747307CC543B48DC6A996DB4CAB37/direct/mcp/",
-      "note": "Direct mode - execute agent tools directly + read system prompt",
-      "headers": {
-        "etendo-token": "Bearer <your-sws-token-here>"
-      }
-    }
-  }
-}
-```
-```
-
-Then run Gemini CLI and the client will connect automatically to the configured MCP server:
-
-```bash
-gemini
-```
-
-<!-- SCREENSHOT: Gemini CLI connecting -->
-
-
-
-### Visual Studio Code Configuration
-
-Add this to your VS Code MCP config file. See [VS Code MCP docs](https://code.visualstudio.com/docs/copilot/chat/mcp-servers) for more info.
-
-#### VS Code Simple Mode Configuration
-
-```json
-"mcp": {
-  "servers": {
-    "etendoAgent": {
-      "type": "http",
-      "url": "http://localhost:5006/11A747307CC543B48DC6A996DB4CAB37/mcp",
-      "headers": {
-        "etendo-token": "Bearer your-sws-token-here"
-      } 
-    }
-  }
-}
-```
-
-#### VS Code Direct Mode Configuration
-
-```json
-"mcp": {
-  "servers": {
-    "etendoAgentDirect": {
-      "type": "http",
-      "url": "http://localhost:5006/11A747307CC543B48DC6A996DB4CAB37/direct/mcp",
-      "headers": {
-        "etendo-token": "Bearer your-sws-token-here"
-      } 
-    }
-  }
-}
-```
-
-<!-- SCREENSHOT DE VSCode CONFIG -->
-
-#### Other IDEs with GitHub Copilot Chat Extension
-
-Follow the [official documentation](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/extend-copilot-chat-with-mcp?tool=vscode) to configure MCP in other IDEs with the GitHub Copilot Chat extension.
-
-**Note**: Some IDEs require the `requestInit` wrapper for headers instead of direct `headers` configuration.
-
-##### GitHub Copilot Chat Simple Mode Configuration
-
-```json
-"mcp": {
-  "servers": {
-    "etendoAgent": {
-      "type": "http",
-      "url": "http://localhost:5006/11A747307CC543B48DC6A996DB4CAB37/mcp",
-      "requestInit": {
-        "headers": {
-          "etendo-token": "Bearer your-sws-token-here"
-        }
-      }
-    }
-  }
-}
-```
-
-##### GitHub Copilot Chat Direct Mode Configuration
-
-```json
-"mcp": {
-  "servers": {
-    "etendoAgentDirect": {
-      "type": "http",
-      "url": "http://localhost:5006/11A747307CC543B48DC6A996DB4CAB37/direct/mcp",
-      "requestInit": {
-        "headers": {
-          "etendo-token": "Bearer your-sws-token-here"
-        }
-      }
-    }
-  }
-}
-```
-
-
-## Available Tools and Capabilities
-
-The MCP server exposes different sets of tools depending on the agent type and connection mode selected:
-
-### What MCP Delivers in Each Case
-
-#### Multi-Model Agent + Simple Mode
-**Tools delivered:**
-- ✅ `ask_agent` - Send questions directly to the agent using natural language
-- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
-
-**How it works:** The agent receives your question and internally uses all its configured tools (API tools, file operations, knowledge base search, etc.) to provide a complete response.
-
-#### Multi-Model Agent + Direct Mode  
-**Tools delivered:**
-- ✅ All agent's configured tools directly (API tools, file tools, knowledge base search, etc.)
-- ✅ `get_agent_prompt` - Read the agent's system prompt and personality
-- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
-- ❌ NO `ask_agent` tool
-
-**How it works:** You execute the agent's tools directly. Use `get_agent_prompt` to understand the agent's personality and follow the same instructions while using its tools.
-
-#### LangGraph Agent + Simple Mode
-**Tools delivered:**
-- ✅ `ask_agent_supervisor` - Send questions to the supervisor agent
-- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
-
-**How it works:** The supervisor receives your question and coordinates with team members to provide comprehensive responses.
-
-#### LangGraph Agent + Direct Mode
-**Tools delivered:**
-- ✅ `ask_agent_<MemberName>` - Individual tools for each team member (e.g., `ask_agent_DataAnalyst`, `ask_agent_ReportGenerator`)
-- ✅ `get_agent_prompt` - Read the supervisor's orchestration prompt
-- ✅ `ping`, `hello_world`, `server_info` - Basic connectivity tools
-- ❌ NO `ask_agent_supervisor` tool
-
-**How it works:** You can communicate directly with specific team members through their individual `ask_agent_<MemberName>` tools, bypassing the supervisor coordination.
-
-### Tool Discovery and Usage
-
-When connecting to an Etendo Copilot MCP server, clients can:
-
-### Tool Comparison by Mode and Agent Type
-
-| Feature | Simple Mode | Direct Mode |
-|---------|-------------|-------------|
-| **ask_agent tool** | ✅ Available | ❌ Not available |
-| **Agent-specific tools** | ❌ Not directly accessible | ✅ Full access |
-| **get_agent_prompt tool** | ❌ Not available | ✅ Available |
-| **Basic utility tools** | ✅ Available | ✅ Available |
-| **Use case** | Talk to agent naturally | Execute tools directly |
-| **Control level** | Agent handles tools | You choose tools |
-| **Complexity** | Simple | Advanced |
-
-#### Multi-Model Agent Behavior
-
-| Mode | Tools Delivered | Description |
-|------|-----------------|-------------|
-| **Simple** | `ask_agent` + basic tools | Send questions to the agent using natural language. The agent uses its configured tools internally to provide responses. |
-| **Direct** | All agent tools + `get_agent_prompt` + basic tools | Direct access to all tools configured for the agent (API tools, file tools, knowledge base search, etc.) plus ability to read the agent's system prompt. This allows the MCP client to see and adopt the agent's personality and follow the same instructions while using its tools. |
-
-#### LangGraph Agent Behavior
-
-| Mode | Tools Delivered | Description |
-|------|-----------------|-------------|
-| **Simple** | `ask_agent_supervisor` + basic tools | Send questions to the supervisor agent who will coordinate with team members to provide comprehensive responses. |
-| **Direct** | `ask_agent` tools for each team member + `get_agent_prompt` + basic tools | Direct access to individual team member agents through separate `ask_agent_<MemberName>` tools, allowing direct communication with specific team members plus access to the supervisor's orchestration prompt. |
-
-!!! note "Agent Type Identification"
-    You can identify the agent type in the Agent window in Etendo:
+1.  Open the Agent window in **Etendo**
+2.  **Select your agent** and click **"Server MCP Config"** button.
+3.  **Configure connection options**:
     
-    - **Multi-Model Agent**: Shows "Knowledge" and "Skills & Tools" tabs
-    - **LangGraph**: Shows "Skills & Tools" and "Team Members" tabs
-### Tool Discovery and Usage
+    ![MCP Configuration Dialog](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-config-dialog.png)
 
-When connecting to an Etendo Copilot MCP server, clients can:
+    - **Direct Mode**: Check for tool execution, uncheck for conversation.
+    - **MCP-remote compatibility**: Check for better client compatibility.
+    - **Custom values**: Optional URL and name overrides.
+    
+    !!! info "MCP-remote Compatibility Mode"
+    
+        **What it does**: Uses the `mcp-remote` library to add compatibility for MCP clients that don't handle `HTTP` transport with authentication headers correctly.
+        
+        **When to use**: 
+        
+        - Claude Desktop: Requires this mode for proper authentication.
+        - Some IDE extensions that have `HTTP` transport limitations.
+        
+        **Configuration difference**:
 
-1. **List Available Tools**: Use the MCP `list_tools` operation to see all available tools
-2. **Inspect Tool Schemas**: Each tool includes detailed parameter schemas and descriptions
-3. **Execute Tools**: Call tools using the standard MCP tool execution protocol
-4. **Access Agent Capabilities**: 
-   - In **Simple Mode**: Use `ask_agent` to leverage the full conversational capabilities of the agent
-   - In **Direct Mode**: Execute specific agent tools directly and use `get_agent_prompt` to understand agent behavior
+        - **Standard mode**: Direct HTTP configuration with headers.
+        - **Compatibility mode**: Uses `npx mcp-remote` wrapper command.
+    
 
-### Mode Selection Guidelines by Agent Type
+4.  **Copy the generated configuration** from the popup
 
-#### For Multi-Model Agents
+    ![MCP Generated Configuration](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-config.png)
 
-**Choose Simple Mode when:**
-- You want to interact with the agent conversationally
-- You prefer natural language queries over technical tool execution
-- You want the agent to handle tool selection and orchestration automatically
-- You're building user-facing applications that need conversational interfaces
-- You want to leverage the agent's full reasoning capabilities with its knowledge base
+    !!! warning "Localhost Development Warning"
+        
+        If you see this message: *"The MCP URL begins with `http://localhost`, which only works in development environments"*
+        
+        - **What it means**: The generated URL is only accessible from the same machine
+        - **For production use**: Configure the `context.url.copilot.mcp` property in Etendo to use your public domain instead of localhost
+        - **For external access**: Use the **Custom URL** field in the dialog to specify your public Copilot host address
 
-**Choose Direct Mode when:**
-- You need precise control over specific tool execution
-- You're building developer tools or integrations
-- You want to understand the agent's system prompt and configuration
-- You need to execute specific tools (API calls, file operations, etc.) without conversational overhead
-- You're creating workflows that require deterministic tool execution
+    !!! info "Example Configurations" 
 
-#### For LangGraph Agents
+        **VS Code Configuration**
 
-**Choose Simple Mode when:**
-- You want to leverage the full power of the supervisor-team coordination
-- You prefer natural language queries that allow the supervisor to route to appropriate team members
-- You want the supervisor to handle team member selection and task orchestration
-- You're building user-facing applications that benefit from multi-agent collaboration
-- You want comprehensive responses that combine expertise from multiple specialized agents
+        Add to your VS Code settings:
 
-**Choose Direct Mode when:**
-- You need to understand how the supervisor coordinates team members
-- You want to access supervisor-level orchestration tools directly
-- You're debugging or optimizing multi-agent workflows
-- You need to see the supervisor's decision-making prompt and logic
-- You're building integrations that require precise control over team coordination
+        ```json
+        "mcp": {
+        "servers": {
+            "etendoAgent": {
+            "type": "http",
+            "url": "http://localhost:5006/AGENT_ID/mcp",
+            "headers": {
+                "etendo-token": "Bearer your-token-here"
+            }
+            }
+        }
+        }
+        ```
 
-### Authentication and Security
+        **Gemini CLI Configuration**
 
-All tools respect the authentication provided via the `etendo-token` header:
+        Create or update your Gemini CLI config:
 
-- **User Context**: Tools execute with the permissions of the authenticated user
-- **Data Access**: Database and API access is filtered according to user roles and permissions  
-- **Security**: Sensitive operations require appropriate user privileges
-- **Mode Isolation**: Each connection mode maintains separate instances for security and resource management
+        ```json
+        {
+        "mcpServers": {
+            "etendoAgent": {
+            "type": "http", 
+            "httpUrl": "http://localhost:5006/AGENT_ID/mcp/",
+            "headers": {
+                "etendo-token": "Bearer your-token-here"
+            }
+            }
+        }
+        }
+        ```
 
-### Dynamic Tool Loading
+        **Claude Desktop Configuration**
 
-The MCP server dynamically loads tools based on:
+        Add to your Claude Desktop config:
 
-- **Agent Configuration**: Tools are loaded from the agent's configuration in Etendo
-- **User Permissions**: Only tools the user has access to are exposed
-- **Module Dependencies**: Tools are available based on installed Etendo modules
-- **Connection Mode**: Tool set varies between Simple and Direct modes
+        ```json
+        {
+        "mcpServers": {
+            "etendoAgent": {
+            "command": "npx",
+            "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp", "--headers", "etendo-token=Bearer your-token-here"]
+            }
+        }
+        }
+        ```
 
-This dynamic approach ensures that each user sees only the tools they're authorized to use, and the tool set reflects the current state of the agent configuration in Etendo.
+### Test the Connection
 
+1. **Start your MCP client** [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers){target="_blank"}, [Gemini CLI](https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server){target="_blank"}, [Claude Desktop](https://modelcontextprotocol.io/docs/develop/connect-local-servers){target="_blank"}, etc.
+
+2. **Test basic connectivity**:
+
+    ```
+    Use the ping tool to test connection
+    ```
+
+3. **Try agent interaction**:
+   
+    **Simple Mode**:
+    ```
+    Ask the agent: "What can you help me with?"
+    ```
+
+    **Direct Mode**:
+    ```
+    Use get_agent_prompt to see agent capabilities
+    Execute specific tools directly
+    ```
+
+## Connection Modes Explained
+
+### Simple Mode
+- **URL**: `http://HOST:PORT/AGENT_ID/mcp`
+- **Tools**: `ask_agent`, basic utilities.
+- **Use**: Natural conversation with the agent.
+
+### Direct Mode  
+- **URL**: `http://HOST:PORT/AGENT_ID/direct/mcp`
+- **Tools**: All agent tools + `get_agent_prompt`.
+- **Use**: Direct tool execution and system access.
+
+## Use Cases
+
+### Simple Chat Interface
+
+- **User**: *"What can you help me with?"*
+- **Agent**: *"I can help you with Etendo operations, data analysis, reporting, and more. What would you like to know?"*
+- **User**: *"Show me recent sales data"*
+- **Agent**: 
+    
+    [Uses internal tools] 
+    
+    *"Here's the recent sales data: [displays results]"*
+
+### Direct Tool Execution
+
+- **Developer**: 
+
+    *Uses `get_agent_prompt` tool*
+
+- **Result**: "I am an Etendo sales assistant with access to customer data and reporting tools..."*
+
+- **Developer**:
+    
+    *Uses `search_customers` tool directly*
+
+    *Parameters: {"query": "enterprise clients", "limit": 10}*
+
+- **Result**: *Returns list of enterprise customers without conversational wrapper*
+
+## Troubleshooting
+
+### Common Issues
+
+**Connection fails:**
+
+- Verify the Etendo token is valid.
+- Check the agent ID is correct.
+- Ensure Copilot service is running.
+
+**Tools not available:**
+
+- Check user permissions in Etendo.
+- Verify agent configuration includes required tools.
+- Confirm connection mode matches your needs.
+
+**Authentication errors:**
+
+- Regenerate SWS token via `/sws/login`.
+- Check token format includes "Bearer " prefix.
+- Verify user has agent access permissions.
+
+!!! warning "Security Note"
+    Always use HTTPS in production environments. Keep your SWS tokens secure and never expose them in client-side code or public repositories.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

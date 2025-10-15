@@ -39,37 +39,48 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
 
 2. #### Configure EtendoAuth Middleware Integration
 
-    To authenticate via the **EtendoAuth Middleware**, follow these steps:
+    - **Interactive Setup**
 
-    1. Open the `gradle.properties` file
-    2. Add the following properties:
+        You can quickly configure Single Sign-On using the [Interactive Setup](../../../../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md):
 
-        ```title="gradle.properties"
-        sso.auth.type=Middleware
-        sso.middleware.url=https://sso.etendo.cloud
-        sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
-        authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+        ```bash
+        ./gradlew setup -Pinteractive=true --console=plain
         ```
 
-        !!! warning
-            This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property. 
+        Select **SSO Configuration** and the wizard will guide you step by step through the setup process.
 
-        !!!note
-            During development, you can use `localhost`. However, for production, set your actual domain.
+    - **Manual Configuration**
 
-        With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
+        To authenticate via the **EtendoAuth Middleware**, follow these steps:
 
-        !!! warning "Potential SSO Configuration Mismatch"
+        1. Open the `gradle.properties` file
+        2. Add the following properties:
 
-            ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
-        
-            If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
+            ```title="gradle.properties"
+            sso.auth.type=Middleware
+            sso.middleware.url=https://sso.etendo.cloud
+            sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
+            authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+            ```
 
-            To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
+            !!! warning
+                This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property. 
 
-!!! info
-    For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
+            !!!note
+                During development, you can use `localhost`. However, for production, set your actual domain.
 
+            With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
+
+            !!! warning "Potential SSO Configuration Mismatch"
+
+                ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
+            
+                If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
+
+                To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
+
+    !!! info
+        For more information about the use of the SSO Login functionality, visit [SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
 
 ### How to Integrate your own Auth0 Login Provider with Etendo (Optional)
 
@@ -249,8 +260,6 @@ Add the following properties to the `gradle.properties` file:
 ## Middleware Configs
 sso.middleware.url=https://sso.etendo.cloud
 sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
-sso.google.api.key=AIzaSyAiJGP3Tnlg7-PgZyHrwtAID4i7NuBUbRo
-sso.google.api.id=743458387087
 ```
 !!!note
     During development, you can use `localhost`. However, for production, set your actual domain.
@@ -280,46 +289,44 @@ Run the following command to compile and set up the environment:
 - Select the newly created middleware.
 - Click on **Get Middleware Token**.
 
-![Get Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png)
+    ![Get Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png)
 
-- Choose **Drive File** as the scope.
+- Choose the desired **Google Drive scope**:
 
-![Drive File Scope](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveFileScope.png)
+    ![Drive Scope Selection](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png)
+
+    - **Google Drive – Edit Access Level**
+    
+        Grants the app permission to **create, update, delete, and manage** files created through the Etendo.  
+
+        !!! warning 
+            Only files with **Edit** access level will be accessible.  
+    
+        !!!warning
+            With this scope, the app can only manage files that were created from Etendo or explicitly opened with it.
+
+    - **Google Drive – Read Only Access Level**
+
+        Grants the app permission to **read existing files** in the user’s account (including files not created by Etendo).  
+        No modifications are allowed — only reading file information or content.
+
+        !!! warning 
+            Only files with **Read Only** access level will be accessible.
 
 - Accept Google’s consent screen.
 
-![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
+    ![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
 
 #### Token Created in the Token Info Tab
 
-Once the flow is completed, an access token will be generated and can be viewed in the **Token Info** tab.
+Once the flow is completed, an **access token** will be generated and can be viewed in the **Token Info** tab.
 
 !!! info
-    Tokens obtained via **Etendo Middleware** have a default validity period of **1 hour**. Once expired, a new token must be requested in order to maintain access to the associated third-party services.
+    Tokens obtained through **Etendo Middleware** are valid for **1 hour**.  
+    After expiration, a new token must be requested to maintain access to the connected third-party services.
 
 
 ![New Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewMiddlewareToken.png)
-
-#### Allowing Etendo to access a Document
-
-When the token was created on the **Token Info** tab, if you select it, the button will show up: **Approve Google Doc**.
-
-![Approve Google Doc](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApproveGoogleDoc.png)
-
-Clicking this button opens a pop-up window listing all documents from the Google Drive linked to the account selected during the token authorization process.
-
-![Google Picker](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GooglePicker.png)
-
-When you select a document, the process will authorize Etendo to access that document.
-
-![Approved Doc](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ApprovedDoc.png)
-
-!!! info
-    Both the token and the granted permission can be used by other functionalities within the Etendo platform.
-
-!!! info
-    To revoke access, simply delete the token record. Once removed, the connection to the third-party service will no longer be valid.
-
 
 ### Manually Configure a Provider (Optional)
 
