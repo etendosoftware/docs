@@ -89,15 +89,15 @@ The **Set New Currency** process allows defining:
 
     ![](../../../../assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
 
-At first, the currency shown in the Set New Currency window is business partner price list currency, in our example *USD*.
+Fields to note:
 
-Business partner's new currency can be entered in the field *Currency*, for instance *EUR*.
+- **Currency**: Business partner's new currency can be entered here, for instance *EUR*. At first, the currency shown in the Set New Currency window is business partner price list currency, in our example *USD*.
 
-DO WE KEEP THIS FORMAT? OR DO WE MAKE A LIST OF FIELDS?
+- **Set Amount**: Checkbox. If selected, Etendo will update the Business Partner’s balance with the amount entered in the Foreign Amount field, so they stay consistent with the new currency. 
 
-[+] Then, with the **Set amount** checkbox, you can                                                                                                                                                                  
+- **Foreign Amount**: Only shown if the **Set Amount** checkbox is selected. Here, Etendo allows the user to manually enter the equivalent amount in the new currency that will replace or update the Business Partner’s balance.
 
-The checkbox **Use default conversion rate** uses the conversion rate defined in [Conversion Rates](../general-setup/application.md#conversion-rates) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
+- **Use default conversion rate**: Checkbox. It uses the conversion rate defined in [Conversion Rates](../general-setup/application.md#conversion-rates) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
 
 Additionally, a business partner might have **available credit in a given currency**. If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
 
@@ -111,20 +111,49 @@ This process automatically creates three new payments, in case business partner 
 
 !!!Example
     Let us take as an **example** a business partner having a price list in EUR.
-    - This business partner has a current balance of 306.00 EUR and a generated credit of 100.00 EUR, which decreases its balance to 206.00 EUR.
-    - After that, **Set New Currency** process is run for this business partner, because its currency needs to change to USD.
-    - **Set New Currency** process informs us that there is available credit for the business partner in the old currency (EUR). That available credit needs to be exchanged to the new currency (USD), therefore a conversion rate needs to be used. In this example, system conversion rate is used, that is 1.13 EUR to USD.
-    - Once **Set New Currency** process ends, business partner:
 
-        - current balance shown changes to 232.78 USD (206.00 EUR \* 1.13 EUR/USD).
-        - currency shown is USD.
-        - and three new payments are created, as described above, to exchange available credit into the new currency.
+    - Price list currency: EUR
 
-    - After that, a new sales invoice is booked for the business partner in EUR, as the business partner price list is in EUR. Sales invoice total gross amount is 41.50 EUR.
-    - This new sales invoice, once booked, will change business partner balance to 279.68 USD, that is (sales invoice amount 41.50 EUR \* 1.13 EUR to USD) + 232.78 USD.
-    - After that, a new sales invoice for an amount of 100.00 USD is booked for the business partner. While completing this new sales invoice, a new window appears showing business partner USD credit available, in our case 100 EUR \* 1.13 EUR to USD = 113.00 USD.
+    - Current balance: 306.00 EUR
+
+    - Available credit: 100.00 EUR
+
+    Because the credit reduces the balance, the net balance is 206.00 EUR (306.00 – 100.00).
+
+    **Running Set New Currency**
+
+    The company decides that this Business Partner should now operate in USD, so the user runs the Set New Currency process and selects USD as the new currency.
+
+    Etendo detects that the partner still has available credit in EUR.
+    That credit must be converted into the new currency, so the system applies the conversion rate 1 EUR = 1.13 USD.
+
+    **What Etendo Does Automatically**
+
+    Once the process finishes:
+
+    - The Business Partner’s currency changes from EUR to USD.
+
+    - The current balance becomes 232.78 USD, calculated as 206.00 EUR × 1.13 = 232.78 USD
+
+    - Etendo also creates three automatic payments to properly move the available credit from EUR to USD, keeping accounting consistent.
+
+    **Future Transactions**
+
+    Now that the Business Partner’s currency is USD, let’s see what happens with new invoices:
+
+    - You create a new sales invoice in EUR (because the price list is still in EUR).
+
+        - Invoice total: 41.50 EUR
+
+        - Etendo converts it to USD: 41.50 × 1.13 = 46.90 USD
+
+    - The Business Partner’s new balance becomes: 232.78 + 46.90 = 279.68 USD
+
+    - Later, you create another sales invoice in USD for 100.00 USD. While completing it, Etendo shows that the partner has available credit in USD, converted from the old EUR credit: 100 EUR × 1.13 = 113.00 USD
 
     ![](../../../../assets/drive/fAiMfanae3I2XAvLdbf3yFYkZhAbN8Me-A2kv3uSF62Q3HaBTz9wyfXBL-22RDXeKgdrNxTLeLDnECldDFwjhkEG-m4Uzgc-JNUrtasuWPvrKKGeTmlRg-Lrc9wqtQDG17R-trrmm8EbG70bgg.png)
+
+    In short, the Set New Currency process updates the Business Partner’s currency and converts balances and credits to the new currency using the chosen rate, existing balances and available credit are recalculated so everything matches the new currency and future transactions, even if created in the old currency (EUR), will still be correctly converted and reflected in the Business Partner’s new currency (USD).
 
 
 ### Tabs and Subtabs
@@ -203,12 +232,6 @@ Fields to note:
 
 - **Sales Representative**: Here, the user can select a customer sales representative. A sales representative is an employee set as such.
 
-- **SO BP Tax Category**: This field can be found under the *More Information* section.  
-    You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
-    
-    !!!info
-        For more information, visit [Business Partner Tax Category](../financial-management/accounting/setup.md#business-partner-tax-category).
-
 - **On Hold**: This checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
     - **Sales Order:** Blocked
     - **Goods Shipment:** Blocked
@@ -216,6 +239,24 @@ Fields to note:
     - **Payment In:** Not blocked
 
     Above defaulted configuration means that it is not possible to complete either a sales order, a goods shipment or a sales invoice for the customer, only receiving a payment is possible.
+
+**More information** section
+
+- **SO BP Tax Category**: This field can be found under the *More Information* section.  
+    You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
+    
+    !!!info
+        For more information, visit [Business Partner Tax Category](../financial-management/accounting/setup.md#business-partner-tax-category).
+
+- **Maturity Date 1**: It indicates the day of the month, the first deadline, that invoices are due.
+
+- **Maturity Date 2**: It indicates the day of the month, the second deadline, that invoices are due.
+
+- **Maturity Date 3**: It indicates the day of the month, the third deadline, that invoices are due. 
+
+- **Birthdate**: Data about the customer.
+
+- **Birthplace**: Data about the customer.
 
 **Customer Accounting**
 
@@ -483,6 +524,8 @@ The Advanced Bank Account Management field is introduced in the Location/Address
 !!! warning
     In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address-abam.png)
+
 #### **Contact**
 
 Contact tab allows the user to add and configure the business partner contacts you deal with.
@@ -534,8 +577,9 @@ It is possible to enter as many **Discounts** as agreed with your business partn
 !!! info
     To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
+Rappels are discounts based on the volume of consumption of a business partner in a given period of time. This functionality allows the user to configure and grant rappels to business partners.
 
-With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button **Create Rappel**.
+With this functionality, the tab “Rappel Configurations” is shown in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button **Create Rappel**.
 
 ![bp_window.png](../../../../assets/legacy/bp_window.png)
 
@@ -557,7 +601,7 @@ When the rappel is created, a sales invoice is created automatically, as seen be
 Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. This invoice is in Draft status.
 
 !!! info
-    For more information, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
+    For more information, visit [Sales Invoice](../sales-management/transactions.md#advanced-rappels).
 
 
 ## Business Partner Info
