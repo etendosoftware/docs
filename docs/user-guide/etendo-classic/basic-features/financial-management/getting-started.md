@@ -50,7 +50,7 @@ Finally Etendo has an *integrated accounting system* that combines general accou
 In other words, Etendo allows to post transactions to the ledger which can include different dimensions:
 
 - Those dimensions can be centrally maintained in the [Client](../general-setup/client.md) therefore are available to all the organizations within that Client.
-Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](../financial-management/accounting/setup.md##glconfig).
+Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](../financial-management/accounting/setup.md#general-ledger-configuration).
 
 Those dimensions are then available just for that Organization.
 
@@ -216,7 +216,7 @@ Accounts such as balance sheet accounts (assets, liabilities and owner's equity)
 !!!Note 
     It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.
 
-- [General Ledger configuration](../financial-management/accounting/setup.md#glconfig)
+- [General Ledger configuration](../financial-management/accounting/setup.md#general-ledger-configuration)
 
 The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the *Currency* and the *Chart of Accounts* among others.
 
