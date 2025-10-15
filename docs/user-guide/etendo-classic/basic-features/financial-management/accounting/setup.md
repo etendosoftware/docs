@@ -455,9 +455,14 @@ The general ledger configuration created by default can afterwards be customized
 
 Additionally, a general ledger configuration can also be created **manually**, but once the corresponding [Account Tree](#account-tree) has been created.
 
+!!!info
+    For more information visit, [How to Create a General Ledger Configuration](../../../how-to-guides/how-to-create-a-general-ledger-configuration.md). 
+
+
+
 Lastly, it is important to remark that the GL configuration and the CoA are linked, since **Account** is a mandatory dimension of the GL.
 
-#### General Ledger Configuration
+#### General Ledger Configuration Window
 
 The General Ledger Configuration window allows the user to review and maintain defaulted general ledger configurations and to create new ones if needed.
 
@@ -467,67 +472,58 @@ Fields to note:
 
 A general ledger configuration created by **default** can be changed to meet the organization's needs by changing the features below:
 
-1\. The **Currency** field: 
+1. The **Currency** field: 
 
-- The Default currency comes from Client/Organization Setup.
+    - The Default currency comes from Client/Organization Setup.
+    - Can be changed before posting starts.
+    - An organization can have **multiple GLs in different currencies**.
 
-- Can be changed before posting starts.
+        - Example: F&B España posts in both USD (inherited) and EUR (own GL).
+        - Result: Two Journal Entry Reports, one per ledger.
 
-- An organization can have **multiple GLs in different currencies**.
+2. The **Allow Negative** checkbox: Defines whether negative postings are allowed.
 
-    - Example: F&B España posts in both USD (inherited) and EUR (own GL).
+    - Enabled: reversals post with negative amounts.
+    - Disabled: reversals are re-posted with opposite debit/credit signs.
 
-    - Result: Two Journal Entry Reports, one per ledger.
+        For instance, a purchase invoice generates the posting below:
 
-2\. The **Allow Negative** checkbox: Defines whether negative postings are allowed.
+        |     |     |     |     |
+        | --- | --- | --- | --- |
+        | Account | Debit | Credit | Comments |
+        | Product Expense | Line Net Amount |     | One per invoice line |
+        | Tax Credit | Tax Amount |     | One per tax line |
+        | Vendor Liability |     | Total Gross Amount | One per invoice |
 
-- Enabled: reversals post with negative amounts.
+        When voided:
 
-- Disabled: reversals are re-posted with opposite debit/credit signs.
-
-For instance, a purchase invoice generates the posting below:
-
-|     |     |     |     |
-| --- | --- | --- | --- |
-| Account | Debit | Credit | Comments |
-| Product Expense | Line Net Amount |     | One per invoice line |
-| Tax Credit | Tax Amount |     | One per tax line |
-| Vendor Liability |     | Total Gross Amount | One per invoice |
-
-When voided:
-
-- Allow Negative = YES (postings appear as negative values).
-
-- Allow Negative = NO (postings are reclassified: debit ↔ credit).
+        - Allow Negative = YES (postings appear as negative values).
+        - Allow Negative = NO (postings are reclassified: debit ↔ credit).
 
 
-3\. The **Centrally Maintenance** checkbox: 
+3. The **Centrally Maintenance** checkbox: 
 
-- **Centrally Maintained**: When YES, the **Account Sign** field is hidden in the Element Value tab of the [Account Tree](#account-tree) window. 
+    - **Centrally Maintained**: When YES, the **Account Sign** field is hidden in the Element Value tab of the [Account Tree](#account-tree) window. 
 
-    - It is possible to define at general ledger level whether the balances of any account type are going to be shown as **Positive** or **Negative** in the financial statements if the checkbox Central Maintenance is selected:
+        - It is possible to define at general ledger level whether the balances of any account type are going to be shown as **Positive** or **Negative** in the financial statements if the checkbox Central Maintenance is selected:
 
-        - **Assets Debit** balances are shown as Positive in the Balance Sheet.
+            - **Assets Debit** balances are shown as Positive in the Balance Sheet.
+            - **Liabilities Credit** balances are shown as Positive in the Balance Sheet. 
+            - **Owner's Equity Credit** balances are shown as Positive in the Balance Sheet.
+            - **Expenses Debit** balances are shown as Positive in the Income Statement.
+            - **Revenues Credit** balances are shown as Positive in the Income Statement.
 
-        - **Liabilities Credit** balances are shown as Positive in the Balance Sheet. 
+        !!!info
+            It is possible to uncheck any of the checkboxes listed above showing any of the balances as negative. 
 
-        - **Owner's Equity Credit** balances are shown as Positive in the Balance Sheet.
+        ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration7.png)
 
-        - **Expenses Debit** balances are shown as Positive in the Income Statement.
-
-        - **Revenues Credit** balances are shown as Positive in the Income Statement.
+    - **Centrally Maintained**: When NO, the **Account Sign** field is not hidden in the Element Value tab of the [Account Tree](#account-tree) window. Therefore, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements.
 
     !!!info
-        It is possible to uncheck any of the checkboxes listed above showing any of the balances as negative. 
+        It is important to remark that the **Central Maintenance** checkbox is **not selected by default** for the general ledgers created by default, as the corresponding accounting CSV files or reference data imported have their own configuration through the Account Sign.
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration7.png)
-
--   **Centrally Maintained**: When NO, the **Account Sign** field is not hidden in the Element Value tab of the [Account Tree](#account-tree) window. Therefore, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements.
-
-!!!info
-    It is important to remark that the **Central Maintenance** checkbox is **not selected by default** for the general ledgers created by default, as the corresponding accounting CSV files or reference data imported have their own configuration through the Account Sign.
-
-#### Dimension
+#### Dimension Tab
 
 The **Dimension** tab allows the user to configure the organization's general ledger dimensions or to add additional accounting dimensions **not centrally maintained** in the client.
 
@@ -567,7 +563,7 @@ The configuration above means that every time that a transaction of any kind (pu
     Some dimensions appear on some transactions and some do not. That depends on the document being created. For instance, the **Account** dimension always appears in the Lines tab of a G/L Journal, however it does not appear in the Lines tab of a purchase invoice as that data is automatically taken from the accounts (subaccounts) setup for the product, for the business partner and for the taxes, if any.
 
 
-#### Active Tables
+#### Active Tables Tab
 
 The **Active Tables** tab allows the user to define which tables and therefore transactions are going to be posted to the ledger and which ones are not.
 
@@ -604,7 +600,7 @@ For instance, the records of the table **FinancialMgmtAmortization** are the amo
 !!! info
     There is a flag named **Disable for Background** next to each table above, which allows that a given table is not taken by the Accounting Background Process. In other words, it is possible to configure that the transactions related to a given **Table**, for instance the Invoice table, are not taken by that process, therefore, they will not be automatically posted.
 
-##### Documents
+##### Documents Subtab
 
 The **Documents** tab allows the user to define which document types of a table allow negative posting and if they use a different accounting process than the default one based on a given accounting template.
 
@@ -639,7 +635,7 @@ Fields to note:
 
 - The **Reverse Permanent Account Balances** checkbox allows the user to include or not an entry to reverse the balance sheet accounts balances during the end year closing process.
 
-#### **Defaults**
+#### Defaults Tab
 
 The **Defaults** tab allows the user to maintain or to add a set of **default accounts** to use while posting a certain type of transactions.
 
@@ -699,9 +695,6 @@ The default accounts are:
 -   Tax Credit
 -   Depreciation
 -   Accumulated Depreciation
-
-!!!info
-    For more information visit, [How to Create a General Ledger Configuration](../../../how-to-guides/how-to-create-a-general-ledger-configuration.md). 
 
 
 ## Fiscal Calendar
