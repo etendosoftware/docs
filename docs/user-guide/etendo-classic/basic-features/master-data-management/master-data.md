@@ -39,7 +39,7 @@ In this window, you can configure the access settings for the currency API confi
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner`
 
-### **Overview**
+### Overview
 
 Business partner master data window is the place where the user can easily organize and centralize business partner data.
 
@@ -173,7 +173,7 @@ The tabs and subtabs mentioned above are described in the next chapters of this 
 
     For more information about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 
-#### **Customer**
+#### Customer
 
 !!! note
     Customer related data can be entered and configured once the **Customer** checkbox is enabled.
@@ -274,7 +274,7 @@ At first, these accounts are inherited from the Defaults accounts of the organiz
 !!! important
     It is possible to configure the creation of new correlative accounts for the business partners as described in the General Ledgers tab of the [Organization](../general-setup/enterprise-model.md#organization) window.
 
-#### **Vendor/Creditor**
+#### Vendor/Creditor
 
 !!! note
     Vendor or Creditor related data can be entered and configured once the **Vendor** checkbox is enabled.
@@ -356,7 +356,7 @@ At first, these accounts are inherited from the Defaults accounts of the Account
 !!! important
     It is possible to configure the creation of new correlative accounts for the business partners being created as described in the Org Schema tab of the [Organization](../general-setup/enterprise-model.md#organization) window.
 
-#### **Employee**
+#### Employee
 
 !!! note
     A business partner can be set up as employee once the checkbox **Employee** is enabled.
@@ -400,7 +400,7 @@ In this tab, the user can set up the salary category of the employee by selectin
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/cost-salary-category.png)
 
-#### **Bank Account**
+#### Bank Account
 
 The Bank Account tab allows the user to list and set up business partner bank accounts.
 
@@ -448,7 +448,7 @@ This functionality introduces the possibility to mark a bank account as Default 
     Only one bank account can be selected as default for each business partner.
 
 
-#### **Document Type**
+#### Document Type
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8-MOprz-4FI?si=rc5geP_xaKmKvjsK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -485,7 +485,7 @@ Fields to note:
 !!! warning
      This functionality is not available for documents created with a background/button process such as “Generate Invoice from Shipment” in the Goods Shipment window. In this case, the document type to be used is the one defined at organization level, instead of the one defined at Document Type tab level.
 
-#### **Location/Address**
+#### Location/Address
 
 Business partner locations and full address details can be set up in this tab.
 
@@ -522,7 +522,7 @@ The Advanced Bank Account Management field is introduced in the Location/Address
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address-abam.png)
 
-#### **Contact**
+#### Contact
 
 Contact tab allows the user to add and configure the business partner contacts you deal with.
 
@@ -538,7 +538,7 @@ Fields to note:
 - **Active** flag: to indicate if this contact is available for use or disabled. 
 - **Commercial Authorization**: This checkbox is selected to indicate or not whether customer wants or does not want to receive commercial information from the organization.
 
-#### **Basic Discount**
+#### Basic Discount
 
 Basic Discount tab allows the user to add and configure business partner Basic Discounts.
 
@@ -604,29 +604,29 @@ Each time a rappel is granted to a business partner, a new sales invoice is auto
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner Info`
 
-#### **Overview**
+#### Overview
 
 In this section, the user can view information related to business partner orders, receipts/shipments, invoices, and assets.
 
-### **Partner Selection**
+### Partner Selection
 
 The user can select a business partner to begin viewing related transactions.
 
 ![](../../../../assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ.png)
 
-#### **Partner Orders**
+#### Partner Orders
 
 The user can view orders related to a specific business partner.
 
 ![](../../../../assets/drive/pwcD_Hw4nDDMhW7FDa69spb3uNGrBrfB8AwS8Ni77RyIi6_uPAsIWmWPzkvPoCBe5IIcW_GeFmxgvB4KPxoI6TmwiK2nAsFyOKd7GvbMXzpAyt2DwTPDnyKijbLgejiWZYCnj28D9-y9hZNuDw.png)
 
-### **Partner Shipments**
+### Partner Shipments
 
 The user can view shipments related to a specific business partner.
 
 ![](../../../../assets/drive/DKEnqi6tY-_9PGf13-ntaqJCDwbfHlm8mJl2k4WwaIJ8dZibpai1E-LZhuf8DkUS4dSX2sm5eua0uzGLLdXreV-YW1KnyHvSI1zWRcJDHEjh0DJVslYgN3RBEuTiqjK0g5qpe02UP8ZUf24qyw.png)
 
-### **Partner Invoices**
+### Partner Invoices
 
 The user can view invoices related to a specific business partner.
 
@@ -637,7 +637,7 @@ The user can view invoices related to a specific business partner.
 
 :material-menu: `Application` > `Master Data Management` > `Product`
 
-#### **Overview**
+#### Overview
 
 Product master data window is the place where you can easily organize and centralize the key data of the items of any type you might manage as part of the organization processes and/or activities.
 
@@ -647,7 +647,7 @@ It is possible to load Product information into Etendo en masse using the Import
 
 This section describes how to set up Products individually.
 
-#### **Product**
+#### Product
 
 Product window allows the creation of items such as products, raw materials, resources, services, etc.
 
@@ -743,7 +743,7 @@ To learn more, visit the How to manage deferred revenue and expenses article.
 !!! info
     **Note**: If stocked is not checked and BOM is checked, the product price should be 0. Because in that special case, the product price is the sum of the prices of the bill of materials components it consists of. If promotion wanted to create, 'Discounts and Promotions' should be used.
 
-##### **Variants**
+##### Variants
 
 Product can be marked as **Is Generic**. This means that variants of this product will be created based on some characteristics such as colour, size, etc. The definition of these characteristics takes place in the generic product, so it can be said that a generic product is like a template where new variants will inherit all the attributes (taxes, prices, image) of this product. Due to this, a generic product cannot be used for transactions but its variants.
 
@@ -796,7 +796,7 @@ There is a preference **Show Product Characteristics Parents**: Values can be 1,
 
 New values of an existing characteristic can be added. For example, colour red when already having Blue and White. When it happens, this new value is automatically added to all generic products that already have the characteristic Color. This new value will be present in the configuration tab but deactivated. If the user wants to use it in a specific product in order to create new variants he can just activate the value and use the button *Manage Characteristics*
 
-##### **Modify Tax**
+##### Modify Tax
 
 - **Modify Tax**: This check allows services to modify the taxes of the product linked to. This allows modifying taxes calculation of a product depending on a service condition. For example, a new kitchen furniture is sold to a customer, the taxes applied to the furniture might change if the installation of the furniture is also provided by the seller of the furniture. Also, this functionality applies only to Orders. The documents that are created afterwards will take the information from the Order document.
 
@@ -816,7 +816,7 @@ To ease the configuration process, two components have been added:
 
 ![](../../../../assets/drive/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w.png)
 
-### **Price**
+### Price
 
 A product can be part of many Price List Versions which are valid for a given time period.
 
@@ -830,7 +830,7 @@ There are two ways in which the user can get a product to be part of a Price Lis
     As a consequence of that, the Price List as well as both *Net Unit Price* and *Net List Price* values will be automatically shown in the *Price List* tab of the product.  
     To learn more, visit Price List.
 
-#### **Price Rule Version**
+#### Price Rule Version
 
 This tab will only be available when field Is Price Rule Based is selected. This tab gives the possibility of adding Service Price Rules to the Service starting from a certain date.
 
@@ -846,7 +846,7 @@ For services of quantity rule: As per Product the quantity of the line does not 
 
 Also, if once a service (not yet delivered) has been added to the receipt, the price of the related product changes, a validation will be triggered, and in case the service no longer meets the tranche rules, it will be removed from the current receipt and a pop-up will be shown saying so.
 
-### **Accounting**
+### Accounting
 
 Accounting tab allows the user to configure the ledger accounts to be used while posting product related transactions such as product purchase or sales to the general ledger.
 
@@ -891,7 +891,7 @@ At first, these accounts are inherited from the Defaults accounts of the organiz
 !!! info
     Besides, it is important to remark that it is possible to configure the creation of new correlative accounts for the products as described in the General Ledgers tab of the Organization window.
 
-#### **Bill of Materials**
+#### Bill of Materials
 
 This tab allows editing the bill of materials components the selected product consists of.
 
@@ -903,7 +903,7 @@ If the product Tax_Category is flagged as **As per BOM**, this tab also provides
 
 ![](../../../../assets/drive/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw.png)
 
-### **Costing Rule**
+### Costing Rule
 
 Costing rule tab allows the user to review the costing rules that apply to the product within a given date range.
 
@@ -917,7 +917,7 @@ Currency used by the costing rule is the currency set for the organization.
 
 ![](../../../../assets/drive/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw.png)
 
-### **Costing**
+### Costing
 
 Costing tab collects and summarizes product cost related information as a result of every product transaction. Product's costs are valid during a fixed date range and can be calculated either by using an Average or a Standard costing algorithm.
 
@@ -978,7 +978,7 @@ Besides:
 !!! warning
     Note that you should not fill this field if the Costing Rule does not have the Warehouse Dimension field checked.
 
-### **Transactions**
+### Transactions
 
 Transaction tab is a summarized view of all the transactions of a product.
 
@@ -1057,7 +1057,7 @@ For instance the average cost of a product which transactions are listed below i
 - goods shipment for Movement Qty -50 for a Total cost of 1000
 - goods receipt for Movement Qty 100 for a Total cost of 2500
 
-##### **Manual Cost Adjustment**
+##### Manual Cost Adjustment
 
 Additionally, the cost of a transaction can be modified by clicking the Manual Cost Adjustment process button. After clicking this button, a new popup is opened:
 
@@ -1082,7 +1082,7 @@ This cost adjustment can be reviewed and posted to the ledger in the Cost Adjust
 
 In the same way, this cost adjustment can also be reviewed in the Transaction Cost tab.
 
-#### **Transaction Costs**
+#### Transaction Costs
 
 Transaction Costs records are automatically created by the Costing Background Process and then listed for the product in this tab.
 
@@ -1103,7 +1103,7 @@ Some relevant fields to note are:
 - **Unit Cost**: this field details whether the calculated cost is part of the unit cost of the product or not.
 - **Accounting Date**: that is the accounting date when the cost has been calculated and post to the ledger (i.e. accounting date of a goods receipt post to the ledger)
 
-### **Purchasing**
+### Purchasing
 
 Purchasing tab information is used for products that are planned by the purchasing plan.
 
@@ -1138,7 +1138,7 @@ Also, the Requisition process uses the Business Partner information for the auto
 - **Standard Quantity**: quantity that is taken into account in combination with the Quantity Type for the quantity value for the suggested purchase order.
 - **Capacity**: quantity per day the vendor is able to supply. Based on this field and the lead time, the purchase order date is calculated. The number of days is calculated as the max value of the lead time and the required quantity / capacity.
 
-### **Manufacturing**
+### Manufacturing
 
 Manufacturing tab is used for products that are planned by the manufacturing plan.
 
@@ -1167,7 +1167,7 @@ The information in this tab is mainly used by MRP to process the Manufacturing P
 
 - **Abc**: value used in warehouse management to indicate a combination of the stock level and the cost of a part. The value is calculated by running the Pareto Product Report.
 
-### **Translation**
+### Translation
 
 Product names can be translated to any language.
 
@@ -1176,7 +1176,7 @@ The way to get that is as simple as:
 - select first the language required
 - and then enter the product name translated into that language.
 
-#### **Characteristics**
+#### Characteristics
 
 Relation of characteristics assigned to the Product.
 
@@ -1211,7 +1211,7 @@ Fields to take into account:
 - **Unit price**: This field is displayed when the characteristic is marked as _Defines Price_. The aim of this field is to have different prices per value. For example, depending on the Sizes
 - **Image**: This field is displayed when the characteristic is marked as _Defines Image_. The aim of this field is to have different images per value. For example, depending on the colour.
 
-### **Stock**
+### Stock
 
 This Tab shows the available Stock for this Product in the application. It only shows Storage Bins for which the quantity available of the Product is not 0
 
@@ -1220,7 +1220,7 @@ For each not empty storage bin, it also shows information about the:
 - reserved quantity
 - and the allocated quantity
 
-### **Unit Cost**
+### Unit Cost
 
 Unit Cost Tab displays information about the actual *Unitary Cost* (Unit Cost) of the product.
 
@@ -1239,7 +1239,7 @@ In this Tab, there is going to be a record for:
 
 ![](../../../../assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
 
-#### **Product Categories**
+#### Product Categories
 
 The user can define if a product of a certain product category can be related to a product of 'Service' type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product belonging to included/excluded product categories.
 
@@ -1257,9 +1257,9 @@ This tab is not editable, it is not possible to add records manually or edit the
 
 ![](../../../../assets/drive/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ.png)
 
-#### **Category Price Rule Version**
+#### Category Price Rule Version
 
-#### **Products**
+#### Products
 
 The user can define if a product can be related to a product of 'Service' type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product included/excluded.
 
@@ -1280,7 +1280,7 @@ This tab is not editable, it is not possible to add records manually or edit the
 
 ![](../../../../assets/drive/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbRWsmbZj3ddYGqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqvFSgqwm3eW0fNIFxw.png)
 
-#### **Product Price Rule Version**
+#### Product Price Rule Version
 
 ### Alternate UOM Tab
 
@@ -1305,7 +1305,7 @@ Fields to note:
     - **Not Applicable**. The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
     That is the option to select for *Logistics* as the use of alternative units of measure is currently implemented just for sales and purchase. Inventory transactions/documents always refer to the product's unit of measure.
 
-#### **Modify Taxes Categories**
+#### Modify Taxes Categories
 
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
 

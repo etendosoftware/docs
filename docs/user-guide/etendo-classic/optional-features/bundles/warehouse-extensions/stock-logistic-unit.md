@@ -24,7 +24,7 @@ Also, incorporates **advanced stock reservation logic** that prioritizes complet
 
 In summary:
 
-- Adds the UOM **Box** and **Palet** unit of measure. These are available in the system to configure product AUOMs. 
+- Adds the UOM **Box** and **Pallet** unit of measure. These are available in the system to configure product AUOMs. 
 - Aggregates the referenced inventory types **Box** and **Pallet** with their corresponding sequences.
 - Each AUOM should be linked to a **referenced inventory type**, through the *Logistic Unit Type* field, ensuring that stock creation in **Referenced Inventory** windows, complies with the defined logistics unit.
 - Introduce smart reservation rules that respect the logic of logistic units (e.g: Boxes), and units, reducing stock allocation errors. With this logic, when a sales order is automatically reserved, the system attempts to fulfill the quantity requested in the order with complete logistics units if possible, before resorting to individual units.
@@ -66,7 +66,7 @@ The **Stock Logistic** Unit module affects several standard Etendo windows, as i
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/uom.png)
 
-In the Unit of Measure window, the module adds the units of measure **Box** and **Palets** to facilitate the management of logistics units within the system.
+In the Unit of Measure window, the module adds the units of measure **Box** and **Pallets** to facilitate the management of logistics units within the system.
 These UOM serve as the basis for configuring products with alternative units, while the user can create as many additional variants as needed based on the different box format used.
 
 

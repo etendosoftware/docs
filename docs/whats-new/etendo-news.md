@@ -12,6 +12,131 @@ tags:
 
 #
 
+## September 2025
+
+### Etendo
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo release: Version 25.3 Now Available!**
+
+    ![Document Type](../assets/whats-new/etendo-news/document-type.png)
+
+    ---
+
+    The latest version [25.3](./release-notes/etendo-classic/release-notes.md) of Etendo is here! All supported modules have been updated for full integration.
+    
+    In this latest release, a new feature was added: the ability to configure document types for invoices, orders, and shipments/receipts based on the selected business partner: 
+
+    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
+    - Blog: [Still Creating Invoices Manually? Discover How Etendo 25.3 Automates Document Type Selection per Customer](https://etendo.software/en/document-type-tab-etendo-25-3/){target="_blank"}
+
+</div>
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Gradle Plugin release: Version 2.2.0 Now Available!**
+
+    The latest version [2.2.0](./release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) of Etendo Gradle Plugin is here!
+    
+    Enjoy a brand-new interactive installation wizard that guides you through the Etendo setup—configure core system settings and module-specific variables for bundles with ease. Accelerate deployments, reduce configuration errors, and get up and running faster.
+
+    - Documentation: [Interactive Installation](../getting-started/interactive-installation.md)
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-package-16: **Need to generate printables using print providers? Meet the new module**
+    
+    In version [3.10.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the [Print Provider](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md) module was added.
+    
+    It allows you to use the **Print Node** service by default or extend the module to implement multiple services. It also enables you to create print templates that can be executed from different Etendo windows.
+</div>
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **All Control Over Unposted Documents: Easily identify, review, and post multiple pending documents in one place**
+
+    ![not-posted-documents](../assets/whats-new/etendo-news/not-posted-documents.png)
+
+    In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 25**, the **Not Posted Documents** window, part of the **Bulk Posting** module, introduces a smarter and more efficient way to manage accounting records. Users can now:  
+
+    - **Filter by multiple document types** to target exactly what they need.  
+    - **Quickly navigate** directly to any unposted document from the results grid.  
+    - **Execute bulk posting actions** for faster and more consistent processing.  
+    - **Refine searches** with advanced filters like organization, accounting date, and accounting status.
+    --- 
+    - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#not-posted-documents)
+    - Blog: [Ready for the Accounting Close? Discover Etendo’s Centralized Window for Not Posted Documents](https://etendo.software/en/not-posted-documents-window-etendo/){target="_blank"}
+
+</div>
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Advanced Trial Balance: Drill into Ledger Entries & Export to PDF and Excel**
+
+    ![trial-balance](../assets/whats-new/etendo-news/trial-balance.png)
+
+    In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the **Trial Balance** report gains new capabilities: Discover the revamped Trial Balance report, get instant, actionable insights with one-click navigation to General Ledger entries, full support for all accounting dimensions, and polished exports to Excel and PDF for sharing or audit. Faster analysis, clearer traceability, and professional output to power your financial workflows.
+
+    ---
+    - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#trial-balance)
+    - Blog: [Trial Balance in Etendo: Advanced Features for Superior Accounting Analysis](https://etendo.software/en/trial-balance-in-etendo/){target="_blank"}
+
+- :material-view-list: **Smarter Financial Planning with Budget (Projections)**
+
+    ![budget](../assets/whats-new/etendo-news/budget.png)
+    
+    In version [3.5.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) and [1.29.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 23** and above, the **Budget** window, part of the **Financial Report Budget** module, empowers organizations to plan ahead, control spending, and make data-driven financial decisions — all in one place.
+
+    With **Budget**, users can set income and expense targets, compare them against actual performance, and instantly visualize deviations. Multi-dimensional analysis by **Project**, **Cost Center**, **Business Partner**, or **Product**, combined with tools like **Export to Excel**, **Copy Budget**, and **Actual Data Comparison**, turns budgeting into a dynamic and strategic process.
+
+    - Build flexible budgets and track real-time variances.  
+    - Compare planned and actual results directly within accounting.
+    - Analyze by multiple dimensions for deeper insights.  
+    - Export, copy, and reuse budgets to accelerate financial planning. 
+    ---
+    - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#budget)
+
+</div>
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-view-list: **Smart Logistics Made Simple: Full Traceability with Pallet and Box Logistic Units**
+
+    With version [3.3.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions package, the **Stock Logistic Unit** module transforms the way warehouses track and manage goods. It introduces flexible containers such as **boxes**, **pallets**, or **custom handling units**, which keep every movement under control, from receiving to stock reservation in sales.
+
+    - Track products at every step with real-time traceability and the correct logistics unit.  
+    - Automatically create and manage product boxes and pallets during warehouse operations.
+    - Define logistics unit types and capacities to match the actual containers for each product.
+    - Prioritize reservations and sales by box or pallet
+
+    ---
+    - Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+
+- :material-view-list: **Next-Gen Warehouse Power: Smarter Receipts, Traceable Products, and Full Mobile Control**
+
+    In version [3.3.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, the **Advanced Warehouse Management** module evolves into a complete ecosystem for modern logistics — faster, more accurate, and fully traceable.  
+
+    **What’s new:**
+
+    - **GS1-128 barcode reading** to identify products, batches, and expiration dates in a single scan.  
+    - Full management of **expiration dates, lots, and logistic units** (boxes and pallets) for precise stock control.  
+    - A brand-new **Inbound Receipt** window to easily register incoming goods and assign them to pallets or boxes directly upon arrival.  
+    - Two new **mobile inventory tasks** — *Inventory Adjustment* and *Inventory Relocation* — that simplify warehouse corrections and internal movements in real time.
+    
+    ---
+    - Documentation: [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md)
+
+</div>
+
 ## August 2025
 
 ### Financial Extensions
@@ -21,10 +146,16 @@ tags:
 
     ![alt text](../assets/whats-new/etendo-news/balance-sheet-advanced.png)
 
-    In version [3.3.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) gains new capabilities:
+    In version [3.3.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the **Balance Sheet and P&L Report Advanced** gains new capabilities:
 
     - Adds support for additional accounting dimensions.
     - Enables side-by-side comparisons across up to four years.
+
+    ---
+
+    - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced)
+    - Blog: [Unlock the Power of Advanced Financial Analysis with Etendo!](https://etendo.software/en/unlock-the-power-of-advanced-financial-analysis-with-etendo/){target="_blank"}
+
 
 </div>
 
@@ -34,7 +165,9 @@ tags:
 
 - :material-new-box: **Try the Alpha of Etendo Main UI, the new Etendo interface**
 
-    In version [3.7.1](./release-notes/etendo-copilot/bundles/release-notes.md) of the Platform Extensions bundle, we introduced the Alpha release of the Etendo Main UI. Early builds include 0.2.0, 0.4.0, 0.4.1 and 0.5.0.
+    ![new-ui](../assets/whats-new/etendo-news/new-ui.png)
+    
+    In version [3.7.1](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, we introduced the Alpha release of the Etendo Main UI. Early builds include 0.2.0, 0.4.0, 0.4.1 and 0.5.0.
 
     Discover a sleek, modern experience designed to boost productivity and simplify daily tasks:
 
@@ -43,8 +176,11 @@ tags:
     - Contemporary, intuitive design for faster navigation and clarity.
     - More functional and easier to use.
 
-    !!! example
-        [Try the Alpha](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+    ---
+
+    - Try in demo environment: [Livebuilds](../live-builds/overview.md)
+    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+    - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 </div>
 
 <div class="grid cards" markdown>
@@ -66,12 +202,17 @@ tags:
 
 - :material-robot: **Etendo Copilot 3.5.0: Smarter, faster, and easier to use 🚀**
 
-    With version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Copilot takes a big step forward. Here’s what’s new:
+    ![](../assets/whats-new/etendo-news/mcp.png)
+    With version [3.5.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Copilot takes a big step forward. Here’s what’s new:
 
     -  **More powerful conversations** A new full-screen chat with conversation selector makes it easier to switch and keep track of different tasks.  
     - **Smarter tools**: New tools like [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (read data from images of spreadsheets) and [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) help you work faster with complex data.  
-    - **Better integrations**: The new MCP Server support lets you connect and manage external tools and APIs in a easy way.  
+    - **Better integrations**: The new MCP Server support lets you connect and manage external tools and APIs in an easy way.
+    ---
 
+    - Documentation: [How to Configure MCP Servers on Agents](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
+    - Blog: [Tired of slow and expensive integrations? Discover how MCP is changing the game](https://etendo.software/en/discover-how-mcp-is-changing-the-game/){target="_blank"}
+    - Blog: [Gmail at Your Fingertips with Etendo Copilot: Seamless Productivity](https://etendo.software/en/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
 </div>
 
 ### Warehouse Extensions
@@ -79,8 +220,6 @@ tags:
 <div class="grid cards" markdown>
 
 - :material-view-list: **All-in-one Warehouse Power: Picking, Packing & Mobile App now in Etendo 25 🚀**
-
-    ![alt text](../assets/whats-new/etendo-news/packing.png)
 
     With version [3.2.2](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions bundle, you get the complete package: smarter picking, faster packing, and a mobile app to take control from anywhere. 
     Streamline your warehouse operations and deliver with speed and accuracy — all included in Etendo 25.
@@ -108,12 +247,18 @@ tags:
 
     ![alt text](../assets/whats-new/etendo-news/invoice-supervisor.png)
     
-    In version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the [Invoice Supervisor](../user-guide/etendo-copilot/bundles/overview.md#invoice-supervisor) agent is added to automatically create **purchase invoices** by processing multiple PDFs or images packed in a ZIP. Thanks to OCR, it extracts supplier, invoice number, currency, items, quantities, and totals, then drafts them in Etendo for review.
+    In version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the **Invoice Supervisor** agent is added to automatically create **purchase invoices** by processing multiple PDFs or images packed in a ZIP. Thanks to OCR, it extracts supplier, invoice number, currency, items, quantities, and totals, then drafts them in Etendo for review.
+
+    - Documentation: [Invoice Supervisor](../user-guide/etendo-copilot/bundles/overview.md#invoice-supervisor)
+    - Blog: [How do I reduce the operational burden on my purchasing team? With Agent Invoice Supervisor!](https://etendo.software/en/how-do-i-reduce-the-operational-burden-on-my-purchasing-team-with-agent-invoice-supervisor/){target="_blank"}
 
 - :material-robot: **Bulk data uploads are a thing of the past: Google Drive and Sheets integration in Copilot**
 
     ![alt text](../assets/whats-new/etendo-news/copilot-drive.png)
     In version [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the new feature is added to connect Copilot to **Google Drive** and **Google Sheets** and use agents to create **products** or **business partners** in bulk from a spreadsheet via the **Task** module. Ideal for large-scale data imports.
+
+    - Documentation: [Data Initialization Supervisor](../user-guide/etendo-copilot/bundles/overview.md#data-initialization-supervisor)
+    - Blog: [Bulk Data Upload in Etendo with Google Sheets: Automate and Optimize with AI](https://etendo.software/en/bulk-data-upload-in-etendo-with-google-sheets-automate-and-optimize-with-ai/){target="_blank"}
 
 </div>
 
@@ -129,7 +274,10 @@ tags:
 
     ![alt text](../assets/whats-new/etendo-news/sso-login.png)
     
-    In version [2.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) and [3.2.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the [Etendo SSO Login](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login) was added enabling **Single Sign-On** authentication, simplifying user login and enhancing security using external identity providers, such as Google, Microsoft, LinkedIn, GitHub and Facebook.
+    In version [2.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) and [3.2.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the **Etendo SSO Login** was added enabling **Single Sign-On** authentication, simplifying user login and enhancing security using external identity providers, such as Google, Microsoft, LinkedIn, GitHub and Facebook.
+
+    - Documentation: [Etendo SSO Login](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login)
+    - Blog: [Etendo SSO: Log in without passwords and with complete security](https://etendo.software/en/etendo-sso-log-in-without-passwords-and-with-complete-security/)
 
 </div>
 
@@ -161,6 +309,8 @@ tags:
     - Supercharges your **picking** and **packing** flows.
         
     All from your mobile device. Every action synchronizes in real time with Etendo, say goodbye to bottlenecks and ensuring consistent data across your entire operation.
+
+    - Blog: [Perfect Orders in Minutes: the Change Your Warehouse Needs is Called Etendo Mobile](https://etendo.software/en/perfect-orders-in-minutes-the-change-your-warehouse-needs-is-called-etendo-mobile/){target="_blank"}
 
 </div>
 
