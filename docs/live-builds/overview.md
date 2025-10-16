@@ -25,9 +25,9 @@ hide:
 
     ---
 
-    [Etendo 24 + Bundles](https://demo-24.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [Etendo 25+ Bundles](https://demo-25.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [:material-new-box: Etendo 25+ Bundles + New UI](https://demo-25-mainui.etendo.cloud){ target="blank"}
+    [Etendo 24 + Bundles](https://demo24.bundles.etendo.cloud/etendo/security/Login){ target="blank"}<br>
+    [Etendo 25+ Bundles](https://demo25.etendo.cloud/etendo/security/Login){ target="blank"}<br>
+    [:material-new-box: Etendo 25+ Bundles + New UI](https://demo-backup-ui.lab.etendo.cloud/){ target="blank"}
 
 -   :material-test-tube:{ .lg .middle } **Etendo**
     
