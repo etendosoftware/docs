@@ -20,7 +20,7 @@ tags:
 
 - :octicons-rocket-24: **New Etendo release: Version 25.3 Now Available!**
 
-    ![alt text](../assets/whats-new/etendo-news/document-type.png)
+    ![Document Type](../assets/whats-new/etendo-news/document-type.png)
 
     ---
 
@@ -41,7 +41,7 @@ tags:
     
     Enjoy a brand-new interactive installation wizard that guides you through the Etendo setup—configure core system settings and module-specific variables for bundles with ease. Accelerate deployments, reduce configuration errors, and get up and running faster.
 
-    - Documentation: [Interactive Instalation](../getting-started/interactive-installation.md)
+    - Documentation: [Interactive Installation](../getting-started/interactive-installation.md)
 
 </div>
 
@@ -62,7 +62,7 @@ tags:
 
 - :material-chart-bar: **All Control Over Unposted Documents: Easily identify, review, and post multiple pending documents in one place**
 
-    ![alt text](../assets/whats-new/etendo-news/not-posted-documents.png)
+    ![not-posted-documents](../assets/whats-new/etendo-news/not-posted-documents.png)
 
     In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 25**, the **Not Posted Documents** window part of the **Bulk Posting** module, introduces a smarter and more efficient way to manage accounting records. Users can now:  
 
@@ -80,7 +80,7 @@ tags:
 
 - :material-chart-bar: **Advanced Trial Balance: Drill into Ledger Entries & Export to PDF and Excel**
 
-    ![alt text](../assets/whats-new/etendo-news/trial-balance.png)
+    ![trial-balance](../assets/whats-new/etendo-news/trial-balance.png)
 
     In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the **Trial Balance** report gains new capabilities: Discover the revamped Trial Balance report, get instant, actionable insights with one-click navigation to General Ledger entries, full support for all accounting dimensions, and polished exports to Excel and PDF for sharing or audit. Faster analysis, clearer traceability, and professional output to power your financial workflows.
 
@@ -90,7 +90,7 @@ tags:
 
 - :material-view-list: **Smarter Financial Planning with Budget (Projections)**
 
-    ![alt text](../assets/whats-new/etendo-news/budget.png)
+    ![budget](../assets/whats-new/etendo-news/budget.png)
     
     In version [3.5.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) and [1.29.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 23** and above, the **Budget** window, part of the **Financial Report Budget** module, empowers organizations to plan ahead, control spending, and make data-driven financial decisions — all in one place.
 
@@ -109,14 +109,14 @@ tags:
 
 <div class="grid cards" markdown>
 
-- :material-view-list: **Smart Logistics Made Simple: Full Traceability with Palet and Box Logistic Units**
+- :material-view-list: **Smart Logistics Made Simple: Full Traceability with Pallet and Box Logistic Units**
 
     With version [3.3.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the Warehouse Extensions package, the **Stock Logistic Unit** module transforms the way warehouses track and manage goods. It introduces flexible containers such as **boxes**, **pallets**, or **custom handling units**, which keep every movement under control, from receiving to stock reservation in sales.
 
     - Track products at every step with real-time traceability and the correct logistics unit.  
     - Automatically create and manage product boxes and pallets during warehouse operations.
     - Define logistics unit types and capacities to match the actual containers for each product.
-    - Prioritize reservations  and sales by box or pallet
+    - Prioritize reservations and sales by box or pallet
 
     ---
     Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
@@ -135,26 +135,6 @@ tags:
     ---
     Documentation: [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md)
 
-</div>
-
-### Copilot Extensions
-
-<div class="grid cards" markdown>
-
-- :material-robot: **Etendo Copilot 3.5.0: Smarter, faster, and easier to use 🚀**
-
-    ![](../assets/whats-new/etendo-news/mcp.png)
-    With version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Copilot takes a big step forward. Here’s what’s new:
-
-    -  **More powerful conversations** A new full-screen chat with conversation selector makes it easier to switch and keep track of different tasks.  
-    - **Smarter tools**: New tools like [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (read data from images of spreadsheets) and [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) help you work faster with complex data.  
-    - **Better integrations**: The new MCP Server support lets you connect and manage external tools and APIs in a easy way.
-    ---
-
-    Documentation: [How to Configure MCP Servers on Agents](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
-
-    - Blog: [Tired of slow and expensive integrations? Discover how MCP is changing the game](https://etendo.software/en/discover-how-mcp-is-changing-the-game/){target="_blank"}
-    - Blog: [Gmail at Your Fingertips with Etendo Copilot: Seamless Productivity](https://etendo.software/en/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
 </div>
 
 ## August 2025
@@ -199,7 +179,7 @@ tags:
     ---
 
     - Demo Try: [Livebuilds](../live-builds/overview.md)
-    - Documentation:[Install Etendo Maun UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+    - Documentation:[Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
     - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 </div>
 
@@ -223,15 +203,17 @@ tags:
 - :material-robot: **Etendo Copilot 3.5.0: Smarter, faster, and easier to use 🚀**
 
     ![](../assets/whats-new/etendo-news/mcp.png)
-    With version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Copilot takes a big step forward. Here’s what’s new:
+    With version [3.5.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Copilot takes a big step forward. Here’s what’s new:
 
     -  **More powerful conversations** A new full-screen chat with conversation selector makes it easier to switch and keep track of different tasks.  
     - **Smarter tools**: New tools like [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (read data from images of spreadsheets) and [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) help you work faster with complex data.  
     - **Better integrations**: The new MCP Server support lets you connect and manage external tools and APIs in a easy way.
     ---
 
-    - Blog: [Tired of slow and expensive integrations? Discover how MCP is changing the game](https://etendo.software/en/discover-how-mcp-is-changing-the-game/) 
+    Documentation: [How to Configure MCP Servers on Agents](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
 
+    - Blog: [Tired of slow and expensive integrations? Discover how MCP is changing the game](https://etendo.software/en/discover-how-mcp-is-changing-the-game/){target="_blank"}
+    - Blog: [Gmail at Your Fingertips with Etendo Copilot: Seamless Productivity](https://etendo.software/en/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
 </div>
 
 ### Warehouse Extensions
