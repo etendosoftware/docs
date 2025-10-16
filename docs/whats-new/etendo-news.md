@@ -53,7 +53,7 @@ tags:
     
     In version [3.10.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the [Print Provider](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md) module was added.
     
-    Allowing you to use the **Print Node** service by default or extend the module to implement multiple services. It also enables you to create print templates that can be executed from different Etendo windows.
+    It allows you to use the **Print Node** service by default or extend the module to implement multiple services. It also enables you to create print templates that can be executed from different Etendo windows.
 </div>
 
 ### Financial Extensions
@@ -64,7 +64,7 @@ tags:
 
     ![not-posted-documents](../assets/whats-new/etendo-news/not-posted-documents.png)
 
-    In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 25**, the **Not Posted Documents** window part of the **Bulk Posting** module, introduces a smarter and more efficient way to manage accounting records. Users can now:  
+    In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 25**, the **Not Posted Documents** window, part of the **Bulk Posting** module, introduces a smarter and more efficient way to manage accounting records. Users can now:  
 
     - **Filter by multiple document types** to target exactly what they need.  
     - **Quickly navigate** directly to any unposted document from the results grid.  
@@ -119,7 +119,7 @@ tags:
     - Prioritize reservations and sales by box or pallet
 
     ---
-    Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+    - Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
 
 - :material-view-list: **Next-Gen Warehouse Power: Smarter Receipts, Traceable Products, and Full Mobile Control**
 
@@ -133,7 +133,7 @@ tags:
     - Two new **mobile inventory tasks** — *Inventory Adjustment* and *Inventory Relocation* — that simplify warehouse corrections and internal movements in real time.
     
     ---
-    Documentation: [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md)
+    - Documentation: [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md)
 
 </div>
 
@@ -165,7 +165,7 @@ tags:
 
 - :material-new-box: **Try the Alpha of Etendo Main UI, the new Etendo interface**
 
-    ![alt text](../assets/whats-new/etendo-news/new-ui.png)
+    ![new-ui](../assets/whats-new/etendo-news/new-ui.png)
     
     In version [3.7.1](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, we introduced the Alpha release of the Etendo Main UI. Early builds include 0.2.0, 0.4.0, 0.4.1 and 0.5.0.
 
@@ -178,8 +178,8 @@ tags:
 
     ---
 
-    - Demo Try: [Livebuilds](../live-builds/overview.md)
-    - Documentation:[Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+    - Try in demo environment: [Livebuilds](../live-builds/overview.md)
+    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
     - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 </div>
 
@@ -207,11 +207,10 @@ tags:
 
     -  **More powerful conversations** A new full-screen chat with conversation selector makes it easier to switch and keep track of different tasks.  
     - **Smarter tools**: New tools like [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (read data from images of spreadsheets) and [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) help you work faster with complex data.  
-    - **Better integrations**: The new MCP Server support lets you connect and manage external tools and APIs in a easy way.
+    - **Better integrations**: The new MCP Server support lets you connect and manage external tools and APIs in an easy way.
     ---
 
-    Documentation: [How to Configure MCP Servers on Agents](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
-
+    - Documentation: [How to Configure MCP Servers on Agents](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
     - Blog: [Tired of slow and expensive integrations? Discover how MCP is changing the game](https://etendo.software/en/discover-how-mcp-is-changing-the-game/){target="_blank"}
     - Blog: [Gmail at Your Fingertips with Etendo Copilot: Seamless Productivity](https://etendo.software/en/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
 </div>
