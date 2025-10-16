@@ -9,7 +9,7 @@ tags:
 
 # How to Create JUnit Test Cases
 
-##  Overview
+## Overview
 
 This how-to will focus on creating a test case making use of the `OBBaseTest` and `WeldBaseTest` classes. The test case will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.
 
@@ -17,7 +17,7 @@ In computer programming, **unit testing** is a software design and development m
 
 All new developments must belong to a module that is not the _core_ module.
 
-##  Preparing development environment
+## Preparing development environment
 
 !!! info
     Make sure that in the root build.gradle you have included the plugin `com.etendoerp.testing.gradleplugin`. If you don't have it, consult the [Etendo Testing Plugin](../../developer-tools/etendo-testing-plugin.md#installation) documentation to install it and finally reload Gradle from your IntelliJ.
@@ -35,9 +35,9 @@ modules
 
 Now, you are ready to work with test cases.
 
-##  Creating the test case
+## Creating the test case
 
-###  Inheriting from OBBaseTest
+### Inheriting from OBBaseTest
 
 All the core test cases are subclasses from `OBBaseTest`. (org.openbravo.test.base.OBBaseTest). This class handles all the necessary steps to initialize the Data Access Layer, takes care of transaction handling and provides a set of utilities (methods) for working with the Openbravo context (OBContext).
 
@@ -46,25 +46,23 @@ All the core test cases are subclasses from `OBBaseTest`. (org.openbravo.test.ba
     `OBBaseTest` has limitations related to CDI, and it does not support certain features that are available when using WeldBaseTest tests. The latter is a subclass of `OBBaseTest` and provides access to the complete DAL infrastructure, making it more suitable for scenarios involving CDI and event observers.
     Make sure to use `WeldBaseTest` to leverage the full capabilities of dependency injection and DAL event observers in your test cases.
 
-
-###  Execution order of test methods
+### Execution order of test methods
 
 Until now, the methods were simply invoked in the order returned by the reflection API. However, using the JVM order is unwise since the Java platform does not specify any particular order. Of course, well-written test code would not assume any order, but some does, and a predictable failure is better than a random failure on certain platforms.
 
-###  Creating the Java class
+### Creating the Java class
 
   * Open your IntelliJ IDE. 
   * Create a new folder structure under the ``modules`` folder: ``modules/com.etendoerp.examples/src-test/src/com.etendoerp.example`` . 
   * Create a new Java class with the following content: 
 
-    
 ```java title="ExampleTest.java" 
 package com.etendoerp.example;
- 
+ 
 import static org.junit.Assert.assertTrue;
- 
+ 
 import java.util.List;
- 
+ 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -111,9 +109,8 @@ public class ExampleTest extends WeldBaseTest {
   }
 }
 ```
-     
 
-####  Understanding the class
+### Understanding the class
 
 You have just created a new class named Example that extends from the `WeldBaseTest` class.
 
@@ -177,7 +174,7 @@ System.out.println("Total of users with password: " + (userCount));
 
 Finally, we print a total of users with password just for the record.
 
-###  Transaction Handling
+## Transaction Handling
 
 A question which might pop-up when looking at the above code: where is the database transaction handling done? The answer is that this is handled by the `WeldBaseTest` class and the Etendo data access layer:
 
@@ -193,9 +190,9 @@ There are certainly cases whereby it makes sense to have more control over the d
   * `OBDal.getInstance().rollbackAndClose()`: rolls back and closes the transactions. A new session/transaction is automatically started at the next database access. 
 
 !!! info
-    DAL event observers  are not triggered within test cases extending `OBBaseTest` class. They to work require of test cases extending `WeldBaseTest`. 
+    DAL event observers are not triggered within test cases extending `OBBaseTest` class. They to work require of test cases extending `WeldBaseTest`. 
 
-###  Side-Effect Free
+## Side-Effect Free
 
 A test case will often change the data in the underlying database. Most of the time, it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
 
@@ -204,19 +201,77 @@ A test case will often change the data in the underlying database. Most of the t
 
 This last point is important because there can be always reasons why during a test the clean-up step is not performed. For example because the test run is stopped before the clean-up is done.
 
-###  Approach to features of JUnit
+## Run Tests
 
-####  Parameterized Tests
+Etendo has a number of ant tasks which run the test cases:
+
+  * `./gradlew test`: This suite contains all the test cases.
+  * `./gradlew test --tests "module-name.*"`: This suite contains all the test cases of a particular module. (e.g. `./gradlew test --tests "com.etendoerp.example.*"`)
+
+!!! info
+    If tests have been implemented or modified for [etendo_core](https://github.com/etendosoftware/etendo_core.git) and package belongs to org.openbravo, make sure that the class is included in the `StandaloneTestSuite` or `WebserviceTestSuite`.
+
+### The Result
+
+To be able to execute your test cases:
+
+  * Right click on the `ExampleTest` class. 
+  * Select Run `ExampleTest`. 
+
+![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png)
+
+  * You can check the result of the test case on the JUnit view and the output of your tests in the Console view: 
+
+![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
+
+Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
+
+``` 
+build
+└── reports
+    └── tests 
+        └── test
+            └── index.html
+```
+
+## Run Tests with Coverage
+
+To execute your tests and visualize the **code coverage** of your module:
+
+1. In **IntelliJ IDEA**, locate your test package (for example: `src-test/java/com.etendoerp.example`).
+2. Right click on the folder or test class.
+3. Select **Run Tests in 'com.etendoerp.example' with Coverage**.
+
+![Run with Coverage](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-8.png)
+
+### The Coverage Report
+
+Once the tests finish running, IntelliJ will display the **Coverage tool window**, showing the percentage of code covered by your tests.
+
+![Coverage Result](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-9.png)
+
+| Metric | Description |
+|---------|-------------|
+| **Class %** | Percentage of classes that have at least one test covering them. |
+| **Method %** | Percentage of methods executed during tests. |
+| **Line %** | Percentage of source code lines that were executed. |
+| **Branch %** | Coverage of conditional branches (`if`, `else`, `switch`, etc). |
+
+## Advanced Testing Features
+
+### Approach to features of JUnit
+
+#### Parameterized Tests
 
 !!! info
     For more information, visit:  [Parameterized-Test](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests){target="_blank"}.
 
-####  Extension
+#### Extension
 
 !!! info
     In JUnit 5, the Rules concept has been replaced by Extensions. For more information, visit:  [Extension](https://junit.org/junit5/docs/current/user-guide/#extensions){target="_blank"}.
 
-####  Assertions and Hamcrest 1.13
+#### Assertions and Hamcrest 1.13
 
 !!! info
     For more information, visit:  [Hamcrest](https://hamcrest.org/){target="_blank"}.
@@ -224,6 +279,102 @@ This last point is important because there can be always reasons why during a te
 Hamcrest is a framework for writing matcher objects allowing 'match' rules to be defined declaratively. There are a number of situations where matchers are invaluble, such as UI validation, or data filtering, but it is in the area of writing flexible tests that matchers are most commonly used.
 
 When writing tests it is sometimes difficult to get the balance right between overspecifying the test, and not specifying enough (making the test less valuable). Having a tool that allows you to pick out precisely the aspect under test and describe the values it should have, to a controlled level of precision, helps greatly in writing tests.
+
+### JSON Matchers
+  
+Etendo provides a set of matchers that can be useful when asserting JSONObjects or JSONArrays.
+
+#### equal
+
+Matches when the examined `JSONObject` has exactly the same number of properties with the same values as the expected one. The order of the keys is not taken into account. Supports matcher properties.
+
+```java  
+@Test
+public void testEqual() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json3 = new JSONObject(Map.of("p2", "abcd", "p1", 1));
+  JSONObject json4 = new JSONObject(Map.of("p1", 1, "p2", "efgh"));
+  JSONObject json5 = new JSONObject(Map.of("p1", 1));
+  JSONObject json6 = new JSONObject(Map.of("p1", greaterThan(0), "p2", startsWith("abc"))); // matcher properties
+ 
+  assertThat("JSON objects are equal", json1, equal(json2));
+  assertThat("JSON objects are equal", json1, equal(json3));
+  assertThat("JSON objects are not equal", json1, not(equal(json4)));
+  assertThat("JSON objects are not equal", json1, not(equal(json5)));
+  assertThat("JSON objects are equal", json1, equal(json6));
+}
+```
+
+#### matchesObject
+
+Matches when the examined JSONObject contains the properties with the same values of the expected one. The order of the keys is not taken into account. Supports matcher properties.
+
+```java
+@Test
+public void testMatchesObject() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json3 = new JSONObject(Map.of("p2", "abcd", "p1", 1));
+  JSONObject json4 = new JSONObject(Map.of("p1", 1, "p2", "efgh"));
+  JSONObject json5 = new JSONObject(Map.of("p1", 1));
+  JSONObject json6 = new JSONObject(Map.of("p1", 1, "p2", "abcd", "p3", "abcd"));
+  JSONObject json7 = new JSONObject(Map.of("p1", greaterThan(0), "p2", "abcd"));
+ 
+  assertThat("JSON object match", json1, matchesObject(json2));
+  assertThat("JSON object match", json1, matchesObject(json3));
+  assertThat("JSON object does not match", json1, not(matchesObject(json4)));
+  assertThat("JSON object match", json1, matchesObject(json5));
+  assertThat("JSON object does not match", json1, not(matchesObject(json6)));
+  assertThat("JSON object match", json1, matchesObject(json7));
+}
+```
+
+#### hasItems
+
+Used to match the items of a `JSONArray`. This matcher can be used with two different kind of arguments.
+
+If an array of objects is passed, then it matches when the examined `JSONArray` contains all the received objects. The order of the objects is not taken into account.
+
+```java   
+@Test
+public void testHasItems() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p2", 2, "p3", "efgh"));
+  JSONArray array = new JSONArray();
+  array.put(json1);
+  array.put(json2);
+  array.put(5);
+  JSONObject json3 = new JSONObject(Map.of("p2", 2, "p3", startsWith("e")));
+  JSONObject json4 = new JSONObject(Map.of("p2", 2, "p3", "ijkl"));
+ 
+  assertThat("JSON array has items", array, hasItems(5, json3));
+  assertThat("JSON array does not have items", array, not(hasItems(4, json3)));
+  assertThat("JSON array does not have items", array, not(hasItems(json4)));
+}
+```
+
+It also supports receiving an array of Hamcrest matchers. In that case, then it matches when the examined JSONArray matches with all the received matchers.
+
+```java
+@Test
+public void testHasItems() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p2", 2, "p3", "efgh"));
+  JSONArray array = new JSONArray();
+  array.put(json1);
+  array.put(json2);
+  array.put(5);
+  JSONObject json3 = new JSONObject(Map.of("p2", 2, "p3", startsWith("e")));
+  JSONObject json4 = new JSONObject(Map.of("p1", 1));
+  JSONObject json5 = new JSONObject(Map.of("p2", 2, "p3", "ijkl"));
+ 
+  assertThat("JSON array has items", array, hasItems(greaterThan(4), equal(json3)));
+  assertThat("JSON array has items", array, hasItems(greaterThan(4), matchesObject(json4)));
+  assertThat("JSON array does not have items", array, not(hasItems(greaterThan(5))));
+  assertThat("JSON array does not have items", array, not(hasItems(equal(json5))));
+}
+```
 
 ### Mocking with Mockito in JUnit
 
@@ -233,68 +384,68 @@ When writing unit tests, it's often necessary to simulate the behavior of extern
 
 There are two main approaches to creating mocks in Mockito:
 
-1. **Using Annotations**
+**1. Using Annotations**
 
-    The cleanest way is to use annotations:
+The cleanest way is to use annotations:
 
-    ```java
-    @ExtendWith(MockitoExtension.class)
-    class UserServiceTest {
-        
-        @Mock
-        private UserRepository userRepository;
-        
-        @InjectMocks
-        private UserService userService;
-        
-        @Test
-        void testGetUserById() {
-            // Arrange
-            String userId = "123";
-            User mockUser = new User(userId, "John Doe");
-            when(userRepository.findById(userId)).thenReturn(mockUser);
-            
-            // Act
-            User result = userService.getUserById(userId);
-            
-            // Assert
-            assertEquals(mockUser.getName(), result.getName());
-            verify(userRepository).findById(userId);
-        }
-    }
-    ```
-
-    In this example:
-    - `@ExtendWith(MockitoExtension.class)` integrates Mockito with JUnit 5
-    - `@Mock` creates a mock implementation of UserRepository
-    - `@InjectMocks` injects the created mocks into UserService
-
-2. Creating Mocks Manually
-
-    You can also create mocks manually:
-
-    ```java
+```java
+@ExtendWith(MockitoExtension.class)
+class UserServiceTest {
+    
+    @Mock
+    private UserRepository userRepository;
+    
+    @InjectMocks
+    private UserService userService;
+    
     @Test
-    void testUserServiceManualMocks() {
-        // Create mocks manually
-        UserRepository mockRepo = mock(UserRepository.class);
-        UserService service = new UserService(mockRepo);
+    void testGetUserById() {
+        // Arrange
+        String userId = "123";
+        User mockUser = new User(userId, "John Doe");
+        when(userRepository.findById(userId)).thenReturn(mockUser);
         
-        // Configure behavior
-        User mockUser = new User("123", "Jane Doe");
-        when(mockRepo.findById("123")).thenReturn(mockUser);
+        // Act
+        User result = userService.getUserById(userId);
         
-        // Execute and verify
-        User result = service.getUserById("123");
-        assertEquals("Jane Doe", result.getName());
+        // Assert
+        assertEquals(mockUser.getName(), result.getName());
+        verify(userRepository).findById(userId);
     }
-    ```
+}
+```
+
+In this example:
+- `@ExtendWith(MockitoExtension.class)` integrates Mockito with JUnit 5
+- `@Mock` creates a mock implementation of UserRepository
+- `@InjectMocks` injects the created mocks into UserService
+
+**2. Creating Mocks Manually**
+
+You can also create mocks manually:
+
+```java
+@Test
+void testUserServiceManualMocks() {
+    // Create mocks manually
+    UserRepository mockRepo = mock(UserRepository.class);
+    UserService service = new UserService(mockRepo);
+    
+    // Configure behavior
+    User mockUser = new User("123", "Jane Doe");
+    when(mockRepo.findById("123")).thenReturn(mockUser);
+    
+    // Execute and verify
+    User result = service.getUserById("123");
+    assertEquals("Jane Doe", result.getName());
+}
+```
 
 #### Mocking Static Methods
 
 To mock static methods, you must use `mockito-inline`. This allows you to simulate classes with static methods such as utilities or service facades.
 
-#### Example with MockedStatic
+**Example with MockedStatic:**
 
 ```java
 @Test
@@ -355,6 +506,7 @@ class PaymentProcessorTest {
     }
 }
 ```
+
 #### Mocking Best Practices
 
 1. **Close static mocks**: Static mocks must be closed to prevent memory leaks.
@@ -378,175 +530,44 @@ class PaymentProcessorTest {
    reset(mockObject);
    ```
 
-###  JSON Matchers
-  
-Etendo provides a set of matchers that can be useful when asserting JSONObjects or JSONArrays.
-
-####  equal
-
-Matches when the examined `JSONObject` has exactly the same number of properties with the same values as the expected one. The order of the keys is not taken into account. Supports matcher properties.
-
-```java  
-@Test
-public void testEqual() {
-  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
-  JSONObject json2 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
-  JSONObject json3 = new JSONObject(Map.of("p2", "abcd", "p1", 1));
-  JSONObject json4 = new JSONObject(Map.of("p1", 1, "p2", "efgh"));
-  JSONObject json5 = new JSONObject(Map.of("p1", 1));
-  JSONObject json6 = new JSONObject(Map.of("p1", greaterThan(0), "p2", startsWith("abc"))); // matcher properties
- 
-  assertThat("JSON objects are equal", json1, equal(json2));
-  assertThat("JSON objects are equal", json1, equal(json3));
-  assertThat("JSON objects are not equal", json1, not(equal(json4)));
-  assertThat("JSON objects are not equal", json1, not(equal(json5)));
-  assertThat("JSON objects are equal", json1, equal(json6));
-}
-```
-
-####  matchesObject
-
-Matches when the examined JSONObject contains the properties with the same values of the expected one. The order of the keys is not taken into account. Supports matcher properties.
-
-```java
- 
-@Test
-public void testMatchesObject() {
-  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
-  JSONObject json2 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
-  JSONObject json3 = new JSONObject(Map.of("p2", "abcd", "p1", 1));
-  JSONObject json4 = new JSONObject(Map.of("p1", 1, "p2", "efgh"));
-  JSONObject json5 = new JSONObject(Map.of("p1", 1));
-  JSONObject json6 = new JSONObject(Map.of("p1", 1, "p2", "abcd", "p3", "abcd"));
-  JSONObject json7 = new JSONObject(Map.of("p1", greaterThan(0), "p2", "abcd"));
- 
-  assertThat("JSON object match", json1, matchesObject(json2));
-  assertThat("JSON object match", json1, matchesObject(json3));
-  assertThat("JSON object does not match", json1, not(matchesObject(json4)));
-  assertThat("JSON object match", json1, matchesObject(json5));
-  assertThat("JSON object does not match", json1, not(matchesObject(json6)));
-  assertThat("JSON object match", json1, matchesObject(json7));
-}
-```
-
-####  hasItems
-
-Used to match the items of a `JSONArray`. This matcher can be used with two different kind of arguments.
-
-If an array of objects is passed, then it matches when the examined `JSONArray` contains all the received objects. The order of the objects is not taken into account.
-
-```java   
- 
-@Test
-public void testHasItems() {
-  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
-  JSONObject json2 = new JSONObject(Map.of("p2", 2, "p3", "efgh"));
-  JSONArray array = new JSONArray();
-  array.put(json1);
-  array.put(json2);
-  array.put(5);
-  JSONObject json3 = new JSONObject(Map.of("p2", 2, "p3", startsWith("e")));
-  JSONObject json4 = new JSONObject(Map.of("p2", 2, "p3", "ijkl"));
- 
-  assertThat("JSON array has items", array, hasItems(5, json3));
-  assertThat("JSON array does not have items", array, not(hasItems(4, json3)));
-  assertThat("JSON array does not have items", array, not(hasItems(json4)));
-}
-```
-
-It also supports receiving an array of  Hamcrest  matchers. In that case, then it matches when the examined JSONArray matches with all the received matchers.
-
-```java
- 
-@Test
-public void testHasItems() {
-  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
-  JSONObject json2 = new JSONObject(Map.of("p2", 2, "p3", "efgh"));
-  JSONArray array = new JSONArray();
-  array.put(json1);
-  array.put(json2);
-  array.put(5);
-  JSONObject json3 = new JSONObject(Map.of("p2", 2, "p3", startsWith("e")));
-  JSONObject json4 = new JSONObject(Map.of("p1", 1));
-  JSONObject json5 = new JSONObject(Map.of("p2", 2, "p3", "ijkl"));
- 
-  assertThat("JSON array has items", array, hasItems(greaterThan(4), equal(json3)));
-  assertThat("JSON array has items", array, hasItems(greaterThan(4), matchesObject(json4)));
-  assertThat("JSON array does not have items", array, not(hasItems(greaterThan(5))));
-  assertThat("JSON array does not have items", array, not(hasItems(equal(json5))));
-}
-```
-
-### Run Tests
-
-Etendo has a number of ant tasks which run the test cases:
-
-  * `./gradlew test`: This suite contains all the test cases.
-  * `./gradlew test --tests "module-name.*"`: This suite contains all the test cases of a particular module. (e.g. `./gradlew test --tests "com.etendoerp.example.*"`)
-
-!!! info
-    If tests have been implemented or modified for [etendo_core](https://github.com/etendosoftware/etendo_core.git) and package belongs to org.openbravo, make sure that the class is included in the `StandaloneTestSuite` or `WebserviceTestSuite`.
-
-###  The Result
-
-To be able to execute your test cases:
-
-  * Right click on the `ExampleTest` class. 
-  * Select Run `ExampleTest`. 
-
-![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png)
-
-  * You can check the result of the test case on the JUnit view and the output of your tests in the Console view: 
-
-![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
-
-Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
-``` 
-build
-└── reports
-    └── tests 
-        └── test
-            └── index.html
-```
-
-##  Testing Requests
+## Testing Requests
 
 In general unit tests don't require of an Etendo Classic instance running in Tomcat to be executed. But in some cases, how requests work is wanted to be tested. Depending on the request to be tested, different classes should be extended:
 
-  * _REST Webservices_ . ` BaseWSTest ` should be extended, it deals with authentication and provides methods to execute requests, parse xml results, etc. 
-  * _Other Requests_ (such as datasources). ` BaseDataSourceTestNoDal ` or ` BaseDataSourceTestDal ` classes can be extended (depending if the test case requires or not DAL). Similarly to webservices it provides authentication handling as well as utility methods to perform requests. 
+  * _REST Webservices_. `BaseWSTest` should be extended, it deals with authentication and provides methods to execute requests, parse xml results, etc. 
+  * _Other Requests_ (such as datasources). `BaseDataSourceTestNoDal` or `BaseDataSourceTestDal` classes can be extended (depending if the test case requires or not DAL). Similarly to webservices it provides authentication handling as well as utility methods to perform requests. 
 
-##  Testing CDI
+## Testing CDI
   
-Default test cases extending ` org.openbravo.test.base.OBBaseTest ` class cannot make use of dependency injection. In order to use it ` org.openbravo.base.weld.test.WeldBaseTest ` class needs to be extended instead. This is also a subclass of ` OBBaseTest ` , so it makes available all DAL infrastructure.
+Default test cases extending `org.openbravo.test.base.OBBaseTest` class cannot make use of dependency injection. In order to use it `org.openbravo.base.weld.test.WeldBaseTest` class needs to be extended instead. This is also a subclass of `OBBaseTest`, so it makes available all DAL infrastructure.
 
-` WeldBaseTest ` uses internally Weld SE containers for CDI support.
+`WeldBaseTest` uses internally Weld SE containers for CDI support.
 
 Example of a test case injecting dependencies:
 
 ```java
 public class CdiInfrastructure extends WeldBaseTest {
- 
-@Inject
-private ApplicationScopedBean applicationBean;
- 
-@Inject
-private SessionScopedBean sessionBean;
- 
-@Inject
-private RequestScopedBean requestBean;
- 
-/** beans are correctly injected */
-@Test
-public void beansAreInjected() {
-  assertNotNull(applicationBean, "application bean is injected");
-  assertNotNull(sessionBean, "session bean is injected");
-  assertNotNull(requestBean, "request bean is injected");
-}
+ 
+  @Inject
+  private ApplicationScopedBean applicationBean;
+ 
+  @Inject
+  private SessionScopedBean sessionBean;
+ 
+  @Inject
+  private RequestScopedBean requestBean;
+ 
+  /** beans are correctly injected */
+  @Test
+  public void beansAreInjected() {
+    assertNotNull(applicationBean, "application bean is injected");
+    assertNotNull(sessionBean, "session bean is injected");
+    assertNotNull(requestBean, "request bean is injected");
+  }
 }
 ```
 
-###  Scopes
+### Scopes
 
 Application and session scopes are shared among all test cases in the same class whereas a new request scope is created for each test case method. Application scope is reset for each new class.
 
@@ -574,7 +595,7 @@ public void applicationAndSessionShouldBeKept() {
 }
 ```
 
-###  Parameterization
+### Parameterization
 
 In JUnit 5, parameterized tests are natively supported via the `@ParameterizedTest` annotation, eliminating the need for special runners or rules:
 
@@ -612,15 +633,15 @@ public class ParameterizedCdi extends WeldBaseTest {
 }
 ```
 
-In this example ` test1 ` test case will be executed 3 times having ` parameter ` field "param1", "param2" and "param3" value in each of these executions.
+In this example `test1` test case will be executed 3 times having `parameter` field "param1", "param2" and "param3" value in each of these executions.
 
-Unlike when using ` Parameterized.class ` runner, all these 3 executions are seen as a single execution ( ` Parameterized.class ` would show 3 independent executions), this causes that if, for example, first execution fails the rest will not be run.
+Unlike when using `Parameterized.class` runner, all these 3 executions are seen as a single execution (`Parameterized.class` would show 3 independent executions), this causes that if, for example, first execution fails the rest will not be run.
 
-###  DAL event observers
+### DAL event observers
 
-Because  DAL event observers  make use of CDI to work, they are not executed in standard test cases extending ` OBBaseTest ` .
+Because DAL event observers make use of CDI to work, they are not executed in standard test cases extending `OBBaseTest`.
 
-This limitation does not apply when using ` WeldBaseTest ` tests.
+This limitation does not apply when using `WeldBaseTest` tests.
 
 ---
 
