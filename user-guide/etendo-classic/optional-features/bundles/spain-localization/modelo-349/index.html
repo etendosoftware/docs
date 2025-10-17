@@ -3578,6 +3578,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#edicion-de-numero-de-justificante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edición de Número de Justificante
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -11784,6 +11793,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#edicion-de-numero-de-justificante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edición de Número de Justificante
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12034,6 +12052,10 @@
 <p>Se incluyen 2 nuevos check que permiten generar el fichero con la parametrización correcta para poder realizar su presentación en Hacienda Navarra y Hacienda Guipúzcoa:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/yM3HJ5ASqiH4Qs-ZgFfKANQSIVTin-DqGq0zKSmvduihJS7WOddNRd448Wv5eni03bNiwWYjVCVtZU47t4sUIyIfF18hUY-JL-oA2B_0374_CXHpXvsPICoc0TtxcvEnrrJ_ZK6ezf1gUzdsvhxXdr8.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/yM3HJ5ASqiH4Qs-ZgFfKANQSIVTin-DqGq0zKSmvduihJS7WOddNRd448Wv5eni03bNiwWYjVCVtZU47t4sUIyIfF18hUY-JL-oA2B_0374_CXHpXvsPICoc0TtxcvEnrrJ_ZK6ezf1gUzdsvhxXdr8.png"></a></p>
 <p>Anteriormente, el fichero generado del modelo 349 sólo se podía presentar en AEAT. Con esta mejora, se permite la presentación tanto en Navarra como en Guipúzcoa en función del check que marquemos (si no se marca ninguno, el fichero se genera con la parametrización para la AEAT).</p>
+<h3 id="edicion-de-numero-de-justificante">Edición de Número de Justificante</h3>
+<p>Si la declaración se presentará a la AEAT utilizando la opción <strong>"Ejercicio 202X. Presentación mediante fichero"</strong>, se debe editar manualmente el fichero generado y modificar el dato de número de justificante insertando un número válido, ya que <strong>no se admiten justificantes que comiencen por el número de modelo y el resto de posiciones ceros</strong>. Para leer el fichero correctamente debería aparecer 1820000000001 o cualquier otra variación, por ejemplo, 1822024000001 para el ejercicio 2024.</p>
+<p>El campo "Número de justificante" se localiza siempre en el registro de tipo 1, Declarante, que coincide con la <strong>primera línea del fichero y normalmente entre las posiciones 108 y 120</strong>. </p>
+<p>Si la declaración se presentará utilizando la opción <strong>"Ejercicio 202X. Presentación (hasta 40.000 registros)"</strong>, entonces no es necesario cambiar el número de justificante.</p>
 <h2 id="casos-de-usuario"><strong>Casos de usuario</strong></h2>
 <h3 id="generacion-del-modelo-349-como-un-fichero-de-texto-valido"><strong>Generación del modelo 349 como un fichero de texto válido</strong></h3>
 <p>Esta funcionalidad permitirá a las empresas españolas generar el modelo 349 como un fichero de texto conforme a los requisitos establecidos por la normativa española, para un periodo determinado.</p>
