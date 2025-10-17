@@ -172,7 +172,7 @@ Anteriormente, el fichero generado del modelo 349 sólo se podía presentar en A
 
 ### Edición de Número de Justificante
 
-Si la declaración se presentará a la AEAT utilizando la opción **"Ejercicio 202X. Presentación mediante fichero"**. se debe editar manualmente el fichero generado y modificar el dato de número de justificante insertando un número válido, ya que **no se admiten justificantes que comiencen por el número de modelo y el resto de posiciones ceros**. Para leer el fichero correctamente debería aparecer 1820000000001 o cualquier otra variación, por ejemplo, 1822024000001 para el ejercicio 2024.
+Si la declaración se presentará a la AEAT utilizando la opción **"Ejercicio 202X. Presentación mediante fichero"**, se debe editar manualmente el fichero generado y modificar el dato de número de justificante insertando un número válido, ya que **no se admiten justificantes que comiencen por el número de modelo y el resto de posiciones ceros**. Para leer el fichero correctamente debería aparecer 1820000000001 o cualquier otra variación, por ejemplo, 1822024000001 para el ejercicio 2024.
 
 El campo "Número de justificante" se localiza siempre en el registro de tipo 1, Declarante, que coincide con la **primera línea del fichero y normalmente entre las posiciones 108 y 120**. 
 
