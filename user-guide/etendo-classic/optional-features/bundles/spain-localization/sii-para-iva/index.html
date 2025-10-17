@@ -12866,13 +12866,62 @@
 <ul>
 <li>sus datos de contacto (Nombre Comercial, Nombre Fiscal (Razón Social) o Nombre/Apellidos</li>
 <li>su "Clave NIF País" Residencia):</li>
-<li>1 - NIF</li>
-<li>2 - NOI</li>
-<li>3 - Pasaporte</li>
-<li>4 - Documento oficial de identificación expedido por el país</li>
-<li>5 - Certificado de residencia fiscal</li>
-<li>6 - Otro documento probatorio</li>
-<li>7 - No censado</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+<th>Cuándo se usa</th>
+<th>Ejemplo práctico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 - NIF</strong></td>
+<td>Número de Identificación Fiscal español</td>
+<td>Cuando el tercero <strong>tiene NIF español</strong> (empresa o persona física residente en España).</td>
+<td>Cliente nacional con CIF/NIF.</td>
+</tr>
+<tr>
+<td><strong>2 - NOI</strong></td>
+<td>Número de Operador Intracomunitario (número de IVA intracomunitario)</td>
+<td>Cuando el tercero es una <strong>empresa de la UE registrada como operador intracomunitario</strong>.</td>
+<td>Empresa francesa con VAT <code>FR123456789</code>.</td>
+</tr>
+<tr>
+<td><strong>3 - Pasaporte</strong></td>
+<td>Documento de identidad personal extranjero</td>
+<td>Para <strong>personas físicas extranjeras</strong> que no tienen NIF ni NIE, pero actúan en operaciones sujetas a IVA (casos poco comunes).</td>
+<td>Turista extranjero con factura de venta.</td>
+</tr>
+<tr>
+<td><strong>4 - Documento oficial de identificación expedido por el país</strong></td>
+<td>Documento fiscal o identificación nacional emitido por otro país</td>
+<td>Cuando el tercero <strong>no tiene NIF ni VAT</strong>, pero posee un documento oficial de identificación de su país.</td>
+<td>Empresa argentina con CUIT, o persona con DNI argentino.</td>
+</tr>
+<tr>
+<td><strong>5 - Certificado de residencia fiscal</strong></td>
+<td>Documento expedido por la administración tributaria extranjera</td>
+<td>Se usa en operaciones donde <strong>la residencia fiscal extranjera se acredita con certificado</strong>, por ejemplo, para aplicar convenios de doble imposición.</td>
+<td>Empresa con certificado fiscal mexicano.</td>
+</tr>
+<tr>
+<td><strong>6 - Otro documento probatorio</strong></td>
+<td>Cualquier otro documento válido para acreditar identidad fiscal</td>
+<td>Casos excepcionales donde los anteriores no aplican.</td>
+<td>Documentación de ONG u organismo sin identificación estándar.</td>
+</tr>
+<tr>
+<td><strong>7 - No censado</strong></td>
+<td>El tercero <strong>no figura en ningún censo fiscal</strong></td>
+<td>Puede usarse en casos de prueba, errores o entidades sin identificación fiscal conocida.</td>
+<td>Tercero genérico o error en datos.</td>
+</tr>
+</tbody>
+</table>
+<ul>
 <li>su número de Identificación fiscal, en el caso del NOI se debería incluir el código ISO de país (por ejemplo DE en el caso de Alemania o FR en el caso de Francia).</li>
 <li>la categoría de impuestos de tercero (por ejemplo: Servicios Profesionales Normal, Servicios Profesional Reducido, Autónomo, Recargo de Equivalencia, Revendedores, Régimen Agrario...)</li>
 <li>su localización (País, provincia, dirección).</li>
