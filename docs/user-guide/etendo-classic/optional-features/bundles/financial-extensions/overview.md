@@ -201,6 +201,8 @@ The **Balance Sheet and P&L Structure Advanced**, **General Ledger Report Advanc
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.report.budget`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2VFxpx8j8Sk?si=TuLZUdBGrOCSpXIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 This functionality allows creating and managing budgets for reporting purposes, offering users the possibility to compare budgeted values with actual values posted in the corresponding General Ledger.
 
 !!! info
