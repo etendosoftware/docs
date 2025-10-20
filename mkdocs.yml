@@ -194,10 +194,17 @@ nav:
           - Clear Report Cache: user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md
           - Attachments Configuration: user-guide/etendo-classic/basic-features/general-setup/attachments-configuration.md
           - Application: user-guide/etendo-classic/basic-features/general-setup/application.md
-          - Client: user-guide/etendo-classic/basic-features/general-setup/client.md
+          - Client:
+            - Client : user-guide/etendo-classic/basic-features/general-setup/client/client.md
           - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
-          - Enterprise Model: user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md
-          - Security: user-guide/etendo-classic/basic-features/general-setup/security.md
+          - Enterprise Model:
+            - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md
+            - Enterprise Module Management: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md
+            - Organization Type: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-type.md
+            - Organization: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization.md
+          - Security:
+            - User: user-guide/etendo-classic/basic-features/general-setup/security/user.md
+            - Role: user-guide/etendo-classic/basic-features/general-setup/security/role.md
           - Process Scheduling: user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md
         # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
         - Master Data Management: 

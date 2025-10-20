@@ -13,7 +13,7 @@ tags:
 ## Overview
 
 This section describes the steps that need to be performed first to configure Etendo.
-Etendo installations require at least a [Client](../../../../user-guide/etendo-classic/basic-features/general-setup/client.md) and an [Organization](../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#organization). Client and Organization are the two key concepts within the General Setup.
+Etendo installations require at least a [Client](../../../../user-guide/etendo-classic/basic-features/general-setup/client.md) and an [Organization](../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization.md). Client and Organization are the two key concepts within the General Setup.
 
 In other words, it is not possible to issue an invoice or to post a journal entry to the ledger in Etendo if there is no Client and Organization properly created and configured.
 
@@ -35,7 +35,7 @@ The language is automatically available once the localization bundle has been su
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or the [Initial Organization setup](../general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or the [Initial Organization setup](../general-setup/enterprise-model/initial-organization-setup.md), and even in the Enterprise Module Management window.
 
 #### Initial Client Setup
 
@@ -64,7 +64,7 @@ Organizations can be structured in a hierarchical way within a Client providing 
 There are different types of Organizations which can either be independent legal entities or not.
 Legal entities can either require accounting or not and Not Legal Entities can either allow transactional data or not.
 
-The [Initial Organization setup](../general-setup/enterprise-model.md#initial-organization-setup) is the **process** which creates Organizations in Etendo.
+The [Initial Organization setup](../general-setup/enterprise-model/initial-organization-setup.md) is the **process** which creates Organizations in Etendo.
 
 !!! info
     An Organization can be created once the Client it belongs to has been created.
@@ -81,7 +81,7 @@ This time the data, if applied to the Organization, will be available just for t
 #### Users and Roles setup
 
 Etendo security can be split into Functional and Data security.
-**Functional** security manage the access rights to Etendo entities such as Windows and Processes by properly setting up [users](../general-setup/security.md#user) and [roles](../general-setup/security.md#role):
+**Functional** security manage the access rights to Etendo entities such as Windows and Processes by properly setting up [users](../general-setup/security/user.md) and [roles](../general-setup/security/role.md):
 
 A **User** is an entity which can log into Etendo whenever it has a password and at least one role assigned.
 Each person accessing Etendo should have a different user assigned properly configured.
@@ -94,17 +94,17 @@ Etendo creates two users by default, the System user and the Admin user:
 - the **System** user is the owner of Etendo application data. It is not possible to log into Etendo as System user.
 - the **Admin** user is a **super** user which has access to any Etendo Client.
 
-The password assigned to this user is Etendo, however it can be changed if needed in the [user](../general-setup/security.md#user) window.
+The password assigned to this user is Etendo, however it can be changed if needed in the [user](../general-setup/security/user.md) window.
 
 This user is assigned to the System Administrator Role, a role with no access restrictions.
-**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](../general-setup/security.md#role-access) at table level and the [role](../general-setup/security.md#role):
+**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](../general-setup/security.md#role-access) at table level and the [role](../general-setup/security/role.md):
 
 !!! info
     Data Access level defines the client and/or the organization each record is going to be visible from.
 
 Every [table](../general-setup/security.md#role-access) in Etendo has a Data Access Level column.
 
-User Access Level allows limiting the records which will be accessible in entities such as Windows, Processes, Forms, Widget Classes and Views for a [role](../general-setup/security.md#role), or even limit the access to a given entity.
+User Access Level allows limiting the records which will be accessible in entities such as Windows, Processes, Forms, Widget Classes and Views for a [role](../general-setup/security/role.md), or even limit the access to a given entity.
 
 ### Basic Setup Diagram
 

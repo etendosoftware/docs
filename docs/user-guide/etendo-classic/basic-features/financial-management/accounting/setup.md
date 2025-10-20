@@ -56,7 +56,7 @@ Before using this window, ensure that:
 
 - [x] Your organization has a **[Fiscal Calendar](#fiscal-calendar)** defined.
 - [x] The fiscal calendar contains **Years** and **Periods** (typically monthly).
-- [x] The organization's type is **Legal with Accounting** and has **[Allow Period Control](../../general-setup/enterprise-model.md#organization-1)** enabled.
+- [x] The organization's type is **Legal with Accounting** and has **[Allow Period Control](../../general-setup/enterprise-model/organization.md#organization-1)** enabled.
 
 Here’s how the process works in Etendo:
 
@@ -281,10 +281,10 @@ Etendo offers different options for CoAs configuration:
         -   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
 
 
-    Each organization can **define the chart of accounts that best suits their practices**. In that case, Etendo provides a **Generic Chart of Accounts module** which delivers a standard list of accounts which can be evolved for the organization's needs. After installation, the generic Chart of Accounts is available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+    Each organization can **define the chart of accounts that best suits their practices**. In that case, Etendo provides a **Generic Chart of Accounts module** which delivers a standard list of accounts which can be evolved for the organization's needs. After installation, the generic Chart of Accounts is available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md).
 
 
-- **Import a CSV file with the account tree structure**: You can import a CSV file that defines the account tree structure during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup) if the **Include Accounting** checkbox is selected. In that case, you will be prompted to choose the CSV file (accounting file).   
+- **Import a CSV file with the account tree structure**: You can import a CSV file that defines the account tree structure during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md) if the **Include Accounting** checkbox is selected. In that case, you will be prompted to choose the CSV file (accounting file).   
 
     This process creates:
 
@@ -301,7 +301,7 @@ Etendo offers different options for CoAs configuration:
         
         - If a Chart of Accounts module or an accounting CSV file is installed and selected at **Client Level** through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, it can be shared by any organization available in the client.
         
-        - If a Chart of Accounts module is installed and then selected at **organization level** through the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model.md#initial-organization-setup) process, the chart of accounts automatically created is linked to the organization being created.
+        - If a Chart of Accounts module is installed and then selected at **organization level** through the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md) process, the chart of accounts automatically created is linked to the organization being created.
 
 ### Account Tree Window
 
@@ -437,7 +437,7 @@ In the **Translation** tab, account elements can be translated to any language r
 
 The **General Ledger (GL) Configuration** defines how an organization's financial transactions are posted to the ledger.
 
-A GL configuration is created whenever an accounting **CSV file or a Chart of Accounts (CoA)** reference module is selected during the [Initial Client Setup](../../general-setup/getting-started.md#initial-client-setup) process or the [Initial Organization Setup](../../general-setup/enterprise-model.md#initial-organization-setup) processes.
+A GL configuration is created whenever an accounting **CSV file or a Chart of Accounts (CoA)** reference module is selected during the [Initial Client Setup](../../general-setup/getting-started.md#initial-client-setup) process or the [Initial Organization Setup](../../general-setup/enterprise-model/initial-organization-setup.md) processes.
 
 
 The general ledger configuration created by default can afterwards be customized to meet the organization's needs.
@@ -642,7 +642,7 @@ The **Defaults** tab allows the user to maintain or to add a set of **default ac
 The **mandatory Default** accounts are populated by default as part of the [general ledger configuration](#general-ledger-configuration). Those accounts are part of the organization's chart of accounts.
 
 !!!info
-    If an accounting csv or reference data is not selected while running the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../general-setup/enterprise-model.md#initial-organization-setup) processes, these mandatory accounts need to be manually entered here once the [Account Tree](#account-tree) and therefore the corresponding subaccounts have been created.
+    If an accounting csv or reference data is not selected while running the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../general-setup/enterprise-model/initial-organization-setup.md) processes, these mandatory accounts need to be manually entered here once the [Account Tree](#account-tree) and therefore the corresponding subaccounts have been created.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration4.png)
 
@@ -719,7 +719,7 @@ The **fiscal calendar window** allows the user to create and maintain the organi
 
     - Changing it to a specific organization means the calendar will be available **only for that organization**.
 
-Once the calendar is created, it must be linked to the corresponding organization in the [Organization](../../general-setup/enterprise-model.md#organization) window, by:
+Once the calendar is created, it must be linked to the corresponding organization in the [Organization](../../general-setup/enterprise-model/organization.md) window, by:
 
 - Enabling the **Allow Period Control** checkbox.
 
@@ -747,7 +747,7 @@ The **Year** tab is used to define as many **fiscal years** as required within a
 Once created, all the periods need to be **opened** in the [Open/Close Period Control](#openclose-period-control) window.
 
 !!!info
-    The periods of an organization's fiscal calendar can be reviewed in the **Period Control** tab of the [Organization](../../general-setup/enterprise-model.md#organization) window. 
+    The periods of an organization's fiscal calendar can be reviewed in the **Period Control** tab of the [Organization](../../general-setup/enterprise-model/organization.md) window. 
 
 
 !!!note

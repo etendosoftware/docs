@@ -21,7 +21,7 @@ Normally, it is enough creating just one Client which hosts multiple organizatio
 - besides, each organization can also manage its own master data and have its own transactional data
 - finally, a Client cannot share any master data with another Client.
 
-Clients are created by running the [Initial Client setup process](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) available for the "System Administrator" role.
+Clients are created by running the [Initial Client setup process](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) available for the "System Administrator" role.
 
 Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.
 
@@ -29,7 +29,7 @@ Organizations are created by running the Initial Organization setup process avai
 
 The Client window allows the user to view and maintain the clients created by running the Initial Client Setup process.
 
-![](../../../../assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
+![](../../../../../assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
 
 !!! info
     The field "Days To Password expiration" allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes his password.
@@ -88,7 +88,7 @@ It is always possible to customize the defaulted configuration, for instance:
 
 Information tab allows the user to add, edit and maintain client generic information such as default units of measure and images.
 
-![](../../../../assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
+![](../../../../../assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
 
 Additional information allowed to be specified:
 
@@ -113,7 +113,7 @@ Additional information allowed to be specified:
 
 Documents such as orders or invoices can be sent out by email. Email configuration tab allows the user to configure the email server, account and password, variables which require to be properly set up prior to sending documents by email.
 
-![](../../../../assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
+![](../../../../../assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
 
 "Email Configuration" tab gathers the email configuration required for sending out documents such as orders or invoices.
 
@@ -151,7 +151,7 @@ This tab can be used to configure accounting dimensions availability at document
 
 For example, if a client needs to display project dimension in the header and lines in all documents less in amortization document, the client window should have the following configuration:
 
-![](../../../../assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
+![](../../../../../assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
 
 The configuration in dimensions tab is populated by the configuration that exists in the Dimension Mapping window.
 

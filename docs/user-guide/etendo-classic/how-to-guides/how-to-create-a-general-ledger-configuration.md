@@ -29,7 +29,7 @@ From the **General Ledger Configuration** window, the configuration process invo
 !!! info
     As every time that a transaction of any type is posted to the ledger, it is posted to the **two general ledgers** configured for the Organization.
 
-Once done the newly created general ledger needs to be linked in the General Ledgers field from the [Organization](../basic-features/general-setup/enterprise-model.md#organization) window. 
+Once done the newly created general ledger needs to be linked in the General Ledgers field from the [Organization](../basic-features/general-setup/enterprise-model/organization.md) window. 
 
 From the [General Ledger Configuration](../basic-features/financial-management/accounting/setup.md#general-ledger-configuration) window, the remaining steps to take to properly configure the general ledger are:
 

@@ -34,7 +34,7 @@ In Etendo, it is possible to calculate the **weight of the packing**. To do this
 
 - [**Unit of measure window**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure): This module adds a new field **Is weight**. Here it is possible to define the conversion between UoM, that is, between the UoM packing of the product and the UoM packing of the box.
 
-- [**Organization window**](../../../basic-features/general-setup/enterprise-model.md#organization): This module adds a new field UOM Packing. This UoM is the default one for every box. This is needed to make the conversion between the UOM Packing of the Product and the UOM Packing of the box. 
+- [**Organization window**](../../../basic-features/general-setup/enterprise-model/organization.md): This module adds a new field UOM Packing. This UoM is the default one for every box. This is needed to make the conversion between the UOM Packing of the Product and the UOM Packing of the box. 
 
 
 - Once the user is managing the packing of the products in the pop-up window which will be explained in the [Pack Button](#buttons) section, the **Calculate weight** checkbox allows calculating (or not) the weight for each of the boxes. This is configurable and the flag can be marked by default or not by using a preference. 

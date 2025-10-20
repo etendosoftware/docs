@@ -227,7 +227,7 @@ Having said that, the accounting configuration detailed in this section is the o
 - and a Fiscal Calendar
 
 Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the [Initial Organization Setup](../general-setup/enterprise-model.md#initial-organization-setup) and in the [Organization](../general-setup/enterprise-model.md#organization) section.
+Rest of the Organization types behave as explained in the [Initial Organization Setup](../general-setup/enterprise-model/initial-organization-setup.md) and in the [Organization](../general-setup/enterprise-model/organization.md) section.
 
 Very briefly:
 

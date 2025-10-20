@@ -40,7 +40,7 @@ In Etendo there are 2 types of picking lists available:
 
 In order to generate picking lists, some configuration is needed:
 
-- **Document type**: The Picking list document type must be defined for each organization. The module provides a dataset with basic document types that can be applied. Go to [Enterprise Module Management](../../../basic-features/general-setup/enterprise-model.md#enterprise-module-management) and apply the **Warehouse Picking List dataset** for each organization using Picking Lists. Once it is applied, the document types are created.
+- **Document type**: The Picking list document type must be defined for each organization. The module provides a dataset with basic document types that can be applied. Go to [Enterprise Module Management](../../../basic-features/general-setup/enterprise-model/enterprise-module-management.md) and apply the **Warehouse Picking List dataset** for each organization using Picking Lists. Once it is applied, the document types are created.
 
     ![picking1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking1.png)
 

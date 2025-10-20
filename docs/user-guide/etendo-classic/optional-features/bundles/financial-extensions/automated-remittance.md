@@ -27,7 +27,7 @@ This functionality allows the user to automatically process and protest remittan
 
 To be able to use this functionality, it is necessary to install the Automated Remittance dataset before using the Remittance window.
 
-For this, go to the [Enterprise Module Management](../../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
+For this, go to the [Enterprise Module Management](../../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md) window and select the corresponding dataset as shown below. This includes the necessary payment method to be used in the protest functionality, explained below.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
 

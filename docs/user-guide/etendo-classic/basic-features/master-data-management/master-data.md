@@ -272,7 +272,7 @@ As shown above, you can configure, for each customer and general ledger, the acc
 At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. The user can always change them.
 
 !!! important
-    It is possible to configure the creation of new correlative accounts for the business partners as described in the General Ledgers tab of the [Organization](../general-setup/enterprise-model.md#organization) window.
+    It is possible to configure the creation of new correlative accounts for the business partners as described in the General Ledgers tab of the [Organization](../general-setup/enterprise-model/organization.md) window.
 
 #### Vendor/Creditor
 
@@ -354,7 +354,7 @@ The user can configure for each supplier or creditor and available accounting sc
 At first, these accounts are inherited from the Defaults accounts of the Accounting Schema assigned to the Organization for which the business partner is being created. The user can always change them.
 
 !!! important
-    It is possible to configure the creation of new correlative accounts for the business partners being created as described in the Org Schema tab of the [Organization](../general-setup/enterprise-model.md#organization) window.
+    It is possible to configure the creation of new correlative accounts for the business partners being created as described in the Org Schema tab of the [Organization](../general-setup/enterprise-model/organization.md) window.
 
 #### Employee
 
