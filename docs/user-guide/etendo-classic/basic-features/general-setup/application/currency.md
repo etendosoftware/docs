@@ -39,7 +39,7 @@ Etendo allows the user to setup three types of currency precision:
 !!! warning
     Changes on currency precision can only be made at client level, therefore System Admin Role needs to be used.
 
-### Conversion Rates
+#### Conversion Rates
 
 Conversion rates tab lists the available conversion rates for a given currency.
 
@@ -58,7 +58,7 @@ This implies that a single currency might have several conversion rates dependin
 !!! note
     Etendo recommends conversion rates to be configured in the Conversion Rates window, as it is required to defined both the "Multiple Rate By" (USD - €) and the "Divide Rate By" (€ - USD) to properly defined the exchange of two currencies.
 
-### Translation
+#### Translation
 
 Currencies can be translated to any language if required.
 

@@ -50,11 +50,11 @@ Alerts are defined by entering below data:
 
 ![](../../../../../assets/drive/7FDlwrebuc8IysmRIryYm81mF7QPheC-khbM3NdpZUdAIlXzkhZMDvasxwUPYPDMEyJcP_oM5t16sfAW3ZOCyVNUmR8nE4WWZkLYexMWFuKDHaCb0j8Axa1AetNm9j5rEVq36Kri.png)
 
-### Translation
+#### Translation
 
 Alerts can be translated to any language required.
 
-### Alert Recipient
+#### Alert Recipient
 
 Alerts can be allocated to specific users or contact or to all of them.
 
@@ -65,7 +65,7 @@ Etendo supports alerts notification to user or roles by email:
 
 - for this, it is required to properly configure _e-mail_ server, account and password for the corresponding client in the header of the Client window, section "Request Management".
 
-### Alert
+#### Alert
 
 Alert tab list the events happening which generate the corresponding alert.
 
