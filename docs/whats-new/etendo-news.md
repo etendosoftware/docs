@@ -102,6 +102,7 @@ tags:
     - Export, copy, and reuse budgets to accelerate financial planning. 
     ---
     - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#budget)
+    - Blog: [How Budgets and Projections in Etendo Boost Profitability and Financial Control](https://etendo.software/en/budgets-in-etendo/){target="_blank"}
 
 </div>
 
