@@ -103,7 +103,7 @@ This module guarantees an authentication method which allows users to securely a
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-    For more information, visit [Number To Word Converter user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
+    For more information, visit [Number To Word Converter user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application/number-to-word-converter.md) and the [Number To Word Converter developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
 ### Print Document Web Service
 

@@ -189,10 +189,21 @@ nav:
     - Overview: user-guide/overview.md
     - Etendo:
       - Basic Features:
-        - General Setup: 
+        - General Setup:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
           - Clear Report Cache: user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md
           - Attachments Configuration: user-guide/etendo-classic/basic-features/general-setup/attachments-configuration.md
+          - Application:
+            - Create Sequences: user-guide/etendo-classic/basic-features/general-setup/application/create-sequences.md
+            - Conversion Rate Download Rule: user-guide/etendo-classic/basic-features/general-setup/application/conversion-rate-download-rule.md
+            - Currency: user-guide/etendo-classic/basic-features/general-setup/application/currency.md
+            - Conversion Rates: user-guide/etendo-classic/basic-features/general-setup/application/conversion-rates.md
+            - Country and Region: user-guide/etendo-classic/basic-features/general-setup/application/country-and-region.md
+            - Preference: user-guide/etendo-classic/basic-features/general-setup/application/preference.md
+            - Session Preferences: user-guide/etendo-classic/basic-features/general-setup/application/session-preferences.md
+            - Number to Word Conventer: user-guide/etendo-classic/basic-features/general-setup/application/number-to-word-converter.md
+            - Window Personalization: user-guide/etendo-classic/basic-features/general-setup/application/window-personalization.md
+            - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
           - Application: user-guide/etendo-classic/basic-features/general-setup/application.md
           - Client: user-guide/etendo-classic/basic-features/general-setup/client.md
           - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md

@@ -41,7 +41,7 @@ In Etendo, it is possible to calculate the **weight of the packing**. To do this
 
     To do so: 
 
-    1. Go to [Preference](../../../basic-features/general-setup/application.md#preference) window.
+    1. Go to [Preference](../../../basic-features/general-setup/application/preference.md) window.
     2. Select the Property `Calculate Weight Packing`. 
     3. Set the value `Y`
 
