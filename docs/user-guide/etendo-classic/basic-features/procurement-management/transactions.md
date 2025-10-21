@@ -661,6 +661,22 @@ Only processed Landed Cost documents will be shown in this Window. It allows you
 !!! warning
     Note that if the "Process Matching" check-box is not selected here, landed cost matching will have to be processed in the _landed cost_ window by using **Process Matching** button.
 
+#### **Line Tax**
+
+Line tax information is automatically populated for each purchase invoice line upon completion of the invoice.
+
+**Line Tax** read-only tab details tax information for each line of a purchase invoice based on its Tax field which is automatically pre-filled according to the Taxes Setup.
+
+#### **Tax**
+
+This section summarizes tax related information for the whole purchase invoice. It contains as many records as tax rates used in the invoice. 
+
+The Tax Amount field reflects the tax value calculated automatically based on the tax rate and tax base settings.
+
+When minor adjustments are necessary due to rounding differences, the user can manually modify the tax amount within a maximum margin of ±0.01 from the automatically calculated value.
+
+This correction applies only to the tax amount, without affecting the rate or tax base, and is used to maintain consistency between the recorded values and the actual amounts in tax or accounting documents.
+
 ### Buttons
 
 #### Post/Unpost

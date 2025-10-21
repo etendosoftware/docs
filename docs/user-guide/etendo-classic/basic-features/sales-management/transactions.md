@@ -1013,7 +1013,14 @@ Line tax information is automatically populated for each sales invoice line upon
 
 #### **Tax**
 
-This section summarizes tax related information for the whole sales invoice. It contains as many records as tax rates used in the invoice.
+This section summarizes tax related information for the whole sales invoice. It contains as many records as tax rates used in the invoice. 
+
+The Tax Amount field reflects the tax value calculated automatically based on the tax rate and tax base settings.
+
+When minor adjustments are necessary due to rounding differences, the user can manually modify the tax amount within a maximum margin of ±0.01 from the automatically calculated value.
+
+This correction applies only to the tax amount, without affecting the rate or tax base, and is used to maintain consistency between the recorded values and the actual amounts in tax or accounting documents.
+
 
 #### **Basic Discounts**
 
