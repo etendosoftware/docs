@@ -650,7 +650,7 @@ public class ParameterizedCdi extends WeldBaseTest {
 }
 ```
 
-In this example `test1` test case will be executed 3 times having `parameter` field `param1`, `param2` and `param3` value in each of these executions.
+In this example, the first test case (testWithParameters) will be executed 3 times, each time with the parameter values param1, param2, and param3.
 
 Unlike when using `Parameterized.class` runner, all these 3 executions are seen as a single execution (`Parameterized.class` would show 3 independent executions), this causes that if, for example, first execution fails the rest will not be run.
 
