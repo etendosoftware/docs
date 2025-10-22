@@ -23,6 +23,16 @@
     --font-size-tag: 0.65em;
 }
 
+.md-main__inner {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.md-main__inner.md-grid {
+    max-width: fit-content;
+}
+
 /* Results container – displayed only when there is a query */
 .md-search__output {
     height: 80vh;
