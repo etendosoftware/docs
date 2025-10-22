@@ -92,6 +92,9 @@ This functionality allows the user to create settlements for invoices, both sale
 
 This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
 
+!!! warning "Dependency Notice"
+    This module depends on the [**Bulk Completion**](../../optional-features/bundles/essentials-extensions/bulk-completion.md) module, as order processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy close/reactivate actions for orders will be hidden and these actions will only be available through the **Bulk Completion** button.
+
 !!! info
     For more information, visit:
 
