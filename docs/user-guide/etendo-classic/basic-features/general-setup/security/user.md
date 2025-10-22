@@ -6,6 +6,8 @@ tags:
     - Password
 ---
 
+# User
+
 :material-menu: `Application` > `General Setup` > `Security` > `User`
 
 ### Overview

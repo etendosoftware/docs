@@ -30,7 +30,7 @@ The process button *Post* can be found in the window used to create a given docu
 
 - To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](../financial-management/accounting/transactions.md#gl-posting-by-db-tables)
 
-- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](../general-setup/process-scheduling.md#process-request) window.
+- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](../general-setup/process-scheduling/process-request.md) window.
 
 Accounting activities such as:
 
@@ -370,7 +370,7 @@ Etendo allows to perform below detailed checks prior to the closing of the fisca
 
 - Run the [Not Posted Transaction](../financial-management/accounting/transactions.md#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
 - Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](../financial-management/accounting/setup.md#active-tables).
-- Unscheduled the [Accounting Server Process](../general-setup/process-scheduling.md#process-request) therefore an stable scene can be assured.
+- Unscheduled the [Accounting Server Process](../general-setup/process-scheduling/process-request.md) therefore an stable scene can be assured.
 - Check the [Financial Account/s](../financial-management/receivables-and-payables/transactions.md#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](../../how-to-guides/how-to-transfer-funds-between-financial-accounts.md).
 
 Before running the close year process the accounting periods can be [closed](../financial-management/accounting/setup.md#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.

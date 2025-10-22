@@ -539,7 +539,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md).
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -1293,7 +1293,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md).
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

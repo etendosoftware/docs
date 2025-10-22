@@ -205,7 +205,12 @@ nav:
           - Security:
             - User: user-guide/etendo-classic/basic-features/general-setup/security/user.md
             - Role: user-guide/etendo-classic/basic-features/general-setup/security/role.md
-          - Process Scheduling: user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md
+            - Role Access: user-guide/etendo-classic/basic-features/general-setup/security/role-access.md
+            - Audit Trail: user-guide/etendo-classic/basic-features/general-setup/security/audit-trail.md
+          - Process Scheduling:
+            - Process Request: user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md
+            - Process Monitor: user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-monitor.md
+            - Process Group: user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group.md
         # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
         - Master Data Management: 
           - Master Data: user-guide/etendo-classic/basic-features/master-data-management/master-data.md
@@ -275,6 +280,7 @@ nav:
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
             - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
+            - Intercompany: user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md

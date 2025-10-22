@@ -6,10 +6,11 @@ tags:
     - Admin
     - Permissions
 ---
+# Role
 
 :material-menu: `Application` > `General Setup` > `Security` > `Role`
 
-### Overview
+## Overview
 
 The aim of a role is to group user/s depending on what parts of Etendo they are allowed to access to and therefore to work in.
 
@@ -34,7 +35,7 @@ Having said that, Etendo allows the creation of as many new "Roles" as required 
 !!! info
     Roles group user/s depend on the tasks they do and therefore the parts of Etendo they should have access to parts such as windows, processes, forms, widgets and views.
 
-### Permissions Inheritance
+## Permissions Inheritance
 
 It is possible to configure roles to retrieve their access to the different Etendo elements automatically, by inheriting them from other "parent" roles. This configuration is possible thanks to a feature known as Role Inheritance.
 
@@ -71,7 +72,7 @@ This warning message is similar to the one shown below. It appears when creating
 
 ![](../../../../../assets/drive/ibtK-OMAXBsv2UVQXFaPN7YvQMlh2rgo41Vt21hwrkhk0Grj3gy0Y_7tYhGZU4JZaX7i75-eo6xHmT7P7bHhUWyy2xIpcK5VB8rC7PqSxERaqBP7HXaLXKSeiyNf_1Sj_ZXhxDzb.png)
 
-### Role
+## Role
 
 The Role window allows the user to review, create, configure and maintain the roles to use in a given client.
 
@@ -158,7 +159,7 @@ Having said that, if the "Manual" checkbox is selected, it will be required to _
 
 _Editable Field_ checkbox defines if the accessible data in a window can be edited by the role or not.
 
-### Tab Access
+#### Tab Access
 
 It defines whether a tab is editable or read-only for a concrete role.
 
@@ -168,7 +169,7 @@ If the window is editable (_Editable Field_ is checked), by default all its tabs
 
 In the same way, having a non-editable window, it is possible to define some of its tabs as editable by checking _Editable Tab_.
 
-### Field Access
+#### Field Access
 
 It defines whether a field is editable or read-only for a concrete role.
 

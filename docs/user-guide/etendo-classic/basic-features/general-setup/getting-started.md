@@ -97,12 +97,12 @@ Etendo creates two users by default, the System user and the Admin user:
 The password assigned to this user is Etendo, however it can be changed if needed in the [user](../general-setup/security/user.md) window.
 
 This user is assigned to the System Administrator Role, a role with no access restrictions.
-**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](../general-setup/security.md#role-access) at table level and the [role](../general-setup/security/role.md):
+**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](../general-setup/security/role-access.md) at table level and the [role](../general-setup/security/role.md):
 
 !!! info
     Data Access level defines the client and/or the organization each record is going to be visible from.
 
-Every [table](../general-setup/security.md#role-access) in Etendo has a Data Access Level column.
+Every [table](../general-setup/security/role-access.md) in Etendo has a Data Access Level column.
 
 User Access Level allows limiting the records which will be accessible in entities such as Windows, Processes, Forms, Widget Classes and Views for a [role](../general-setup/security/role.md), or even limit the access to a given entity.
 

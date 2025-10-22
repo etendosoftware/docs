@@ -226,7 +226,7 @@ This functionality allows the user to clone a G/L journal in the Simple G/L Jour
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany Module user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
+    For more information, visit [the Intercompany Module user guide](../../../optional-features/bundles/financial-extensions/intercompany.md).
 
 ### Payment Removal
 
