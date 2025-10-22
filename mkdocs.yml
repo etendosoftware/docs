@@ -189,11 +189,19 @@ nav:
     - Overview: user-guide/overview.md
     - Etendo:
       - Basic Features:
-        - General Setup: 
+        - General Setup:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
           - Clear Report Cache: user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md
           - Attachments Configuration: user-guide/etendo-classic/basic-features/general-setup/attachments-configuration.md
-          - Application: user-guide/etendo-classic/basic-features/general-setup/application.md
+          - Application:
+            - Create Sequences: user-guide/etendo-classic/basic-features/general-setup/application/create-sequences.md
+            - Currency: user-guide/etendo-classic/basic-features/general-setup/application/currency.md
+            - Conversion Rates: user-guide/etendo-classic/basic-features/general-setup/application/conversion-rates.md
+            - Country and Region: user-guide/etendo-classic/basic-features/general-setup/application/country-and-region.md
+            - Preference: user-guide/etendo-classic/basic-features/general-setup/application/preference.md
+            - Session Preferences: user-guide/etendo-classic/basic-features/general-setup/application/session-preferences.md
+            - Window Personalization: user-guide/etendo-classic/basic-features/general-setup/application/window-personalization.md
+            - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
           - Client:
             - Client : user-guide/etendo-classic/basic-features/general-setup/client/client.md
           - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
@@ -279,6 +287,7 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
             - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
+            - Conversion Rate Download Rule: user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-download-rule.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
             - Intercompany: user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md
           - Spanish Localization Bundle: 

@@ -69,7 +69,7 @@ In order to generate picking lists, some configuration is needed:
 
 - **Reservations Preference**: A preference needs to be configured in order to enable Stock Reservations feature.
 
-    As Client Admin, go to the [Preference window](../../../basic-features/general-setup/application.md#preference) and create a new one as shown below:
+    As Client Admin, go to the [Preference window](../../../basic-features/general-setup/application/preference.md) and create a new one as shown below:
 
     ![picking2](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking2.png)
 

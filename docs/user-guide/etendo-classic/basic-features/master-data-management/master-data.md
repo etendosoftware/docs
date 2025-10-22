@@ -97,7 +97,7 @@ Fields to note:
 
 - **Foreign Amount**: Only shown if the **Set Amount** checkbox is selected. Here, Etendo allows the user to manually enter the equivalent amount in the new currency that will replace or update the Business Partner’s balance.
 
-- **Use default conversion rate**: Checkbox. It uses the conversion rate defined in [Conversion Rates](../general-setup/application.md#conversion-rates) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
+- **Use default conversion rate**: Checkbox. It uses the conversion rate defined in [Conversion Rates](../general-setup/application/conversion-rates.md) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
 
 Additionally, a business partner might have **available credit in a given currency**. If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
 
@@ -190,7 +190,7 @@ Fields to note:
         For more information, visit [Price List](../master-data-management/pricing.md#price-list).
 
     Price lists are defined in a given currency, which could be the same as customer currency or not.  
-    In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the [Conversion Rates](../general-setup/application.md#conversion-rates) window or the one entered in the process **Set New Currency** which can be run to change the currency of a business partner.
+    In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the [Conversion Rates](../general-setup/application/conversion-rates.md) window or the one entered in the process **Set New Currency** which can be run to change the currency of a business partner.
 
 - **Payment Method**: The one selected will be the one applied while creating and managing the payments received from that customer.  
     If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.
