@@ -62,7 +62,7 @@ Apart from the [setup windows](./setup.md) in the Production module, additional 
     !!! info
         For more information about the configuration of business partners, please refer to the [Business Partner](../master-data-management/master-data.md#business-partner) section.
 
-3. Work Efforts can be posted to the [General Ledger Journal](../financial-management/accounting/transactions.md#gl-journal). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [Active Tables](../financial-management/accounting/setup.md#glconfig) tab of the General Ledger configuration.
+3. Work Efforts can be posted to the [General Ledger Journal](../financial-management/accounting/transactions.md#gl-journal). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [Active Tables](../financial-management/accounting/setup.md#general-ledger-configuration) tab of the General Ledger configuration.
 
 ## Execution
 

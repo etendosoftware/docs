@@ -23,17 +23,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const index = client.initIndex(algoliaConfig.indexName);
     const searchInput = document.querySelector("input.md-search__input");
 
+    // Store last search results
+    let lastQuery = "";
+    let lastHits = [];
+
     // Function to escape special characters in a string for regex
     function escapeRegExp(string) {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // Function to clear results (only hides, doesn't delete cache)
+    function hideResults() {
+        resultsContainer.style.display = "none";
+    }
+
+    // Function to clear results completely
+    function clearResults() {
+        resultsContainer.style.display = "none";
+        resultsContainer.innerHTML = "";
+        lastQuery = "";
+        lastHits = [];
     }
 
     // Function to update the visibility of results based on the query
     function updateResultsVisibility() {
         const query = searchInput.value.trim();
         if (query === "") {
-            resultsContainer.style.display = "none";
-            resultsContainer.innerHTML = "";
+            hideResults();
         } else {
             performSearch(query);
         }
@@ -63,8 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Dynamic link building
             let finalUrl = hit.url;
             if (finalUrl) {
-                const dynamicSuffix = `?h=${encodeURIComponent(query)}`;
-                finalUrl += dynamicSuffix;
+                if (!finalUrl.startsWith("http")) {
+                    const dynamicSuffix = `?h=${encodeURIComponent(query)}`;
+                    finalUrl += dynamicSuffix;
+                }
             }
             a.href = finalUrl;
             a.className = "md-search-result__link";
@@ -81,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const h1 = document.createElement("h1");
             if (hit.title) {
                 const escapedQuery = escapeRegExp(query);
-                // Regular expression to find the word containing the query (case-insensitive)
                 const regex = new RegExp(`\\b([^\\s]*${escapedQuery}[^\\s]*)\\b`, 'gi');
                 h1.innerHTML = hit.title.replace(regex, function(match, p1, offset) {
                     return offset > 0
@@ -150,6 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function performSearch(query) {
         index.search(query)
             .then(({ hits }) => {
+                lastQuery = query;
+                lastHits = hits;
                 renderResults(hits, query);
             })
             .catch(err => {
@@ -157,13 +176,56 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Update results on input and focus events
+    // Update results on input
     searchInput.addEventListener("input", updateResultsVisibility);
-    searchInput.addEventListener("focus", updateResultsVisibility);
+    
+    // Show cached results on focus
+    searchInput.addEventListener("focus", function() {
+        const query = searchInput.value.trim();
+
+        if (query !== "") {
+            setTimeout(() => {
+                if (lastQuery === query && lastHits.length > 0) {
+                    renderResults(lastHits, lastQuery);
+                } else {
+                    performSearch(query);
+                }
+            }, 100);
+        }
+    });
 
     // Initial state
     updateResultsVisibility();
 
+    // Detect when the search modal/container is closed
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                const searchIsActive = searchContainer.classList.contains('md-search--active') || 
+                                      searchContainer.parentElement.classList.contains('md-search--active');
+                
+                // ✅ Only hide results if the search was really closed
+                if (!searchIsActive && resultsContainer.style.display !== "none") {
+                    hideResults();
+                }
+            }
+        });
+    });
+
+    // Observe the search container and its parent for class changes
+    observer.observe(searchContainer, { attributes: true });
+    if (searchContainer.parentElement) {
+        observer.observe(searchContainer.parentElement, { attributes: true });
+    }
+
+    // Listen for clicks outside the search area
+    document.addEventListener('click', function(e) {
+        if (!searchContainer.contains(e.target) && !resultsContainer.contains(e.target)) {
+            hideResults();
+        }
+    });
+
+    // Optional filter dropdown
     if (searchContainer) {
         const sectionFilter = document.createElement("select");
         sectionFilter.id = "section-filter";
@@ -173,7 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <option value="developer-guide">Developer Guide</option>
         `;
         searchContainer.insertAdjacentElement("afterend", sectionFilter);
-        const resultsContainer = document.querySelector(".md-search__output");
 
         function applyFilter() {
             const filterValue = sectionFilter.value;
@@ -189,12 +250,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        const observer = new MutationObserver(() => {
+        const filterObserver = new MutationObserver(() => {
             applyFilter();
         });
 
         if (resultsContainer) {
-            observer.observe(resultsContainer, { childList: true, subtree: true });
+            filterObserver.observe(resultsContainer, { childList: true, subtree: true });
         }
 
         sectionFilter.addEventListener("change", function () {

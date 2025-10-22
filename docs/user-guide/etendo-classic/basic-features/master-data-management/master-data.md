@@ -29,301 +29,417 @@ The “Advanced Business Partner” module allows the user to have a general vie
 
 :material-menu: `Application` > `Master Data Management` > `Currency Converters`
 
-In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
+!!! info
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-- Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
-- URL: http://apilayer.net/api/
-- Token
-- User
-- Password
+In this window, you can configure the access settings for the currency API configuration. For more information, visit: [Currency API Configuration - Developer Guide](../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#currency-api-configuration)
 
-![](../../../../assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
 
 ## Business Partner
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner`
 
-### **Overview**
+### Overview
 
 Business partner master data window is the place where the user can easily organize and centralize business partner data.
 
-Nowadays, organizations deal with many third parties such as customers, suppliers, creditors, etc., therefore it is recommended to _import large number of business partners_ instead of creating them one by one using the Import Data module.
+Etendo allows the user to enter business partner master data information whenever it is needed as the business takes place, therefore the procedure described below explains how to set up a single business partner of any type.
 
-Etendo allows the user to enter business partner master data information whenever it is needed as the business takes place, therefore the procedure described within this section explains how to set up a single business partner of any type.
+### Header
 
-### **Business Partner**
+Here, the user can define and configure business partners to be later used in transactions.
 
-There are many business partner types such as customers, suppliers and employees you can define and configure.
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/bp-header.png)
 
-There is one key field in the business partner header window, which is the *Business Partner Category*.
+Fields to note:
 
-The user should select a category which the business partner is going to belong to.
+- **[Business Partner Category](../master-data-management/business-partner-setup.md#business-partner-category)**: Key field for the user to select a category which the business partner is going to belong to, under the following types:
 
-To learn more about *Business Partner Category*, visit the Business Partner Category section.
+    - Customers
+    - Suppliers
+    - Employees
 
-![](../../../../assets/drive/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw.png)
+- **Search Key**: or short name which will help you to identify and search a given business partner
+- **Commercial Name**
+- **Fiscal Name**: if known. If it is known, it is the one used in official documents such as invoices and tax reports, otherwise the commercial name will be used instead.
+- **Description**:  used to describe the business partner, if needed.
+- **URL**: The business partner URL, if known.
+- **Reference No**: which can be used as an additional way to identify a business partner.
+- **Consumption Days**: information which will be used while creating sales or purchase orders for that particular business partner, by using a process named *Copy Lines*.  
+    
+    !!! info
+        For more information about this process, visit [Sales Order](../sales-management/transactions.md#sales-order) and [Purchase Order](../procurement-management/transactions.md#purchase-order) sections.
 
-The rest of fields at header level are common fields which require to enter basic business partner information such as:
+- **Credit Line Limit**: Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
+- **Consent for Customer Data Processing**: Checkbox in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization. 
 
-- the **Search Key** or short name which will help you to identify and search a given business partner
-- the **Commercial Name**
-- the **Fiscal Name,** if known. If it is known, it is the one used in *official* documents such as invoices and tax reports, otherwise the commercial name will be used instead.
-- a brief **Description,** if needed
-- the business partner **URL,** if known
-- a **Reference No** which can be used as an additional way to identify a business partner
-- the **Consumption Days** information, which will be used while creating sales or purchase orders for that particular business partner, by using a process named *Copy Lines*.  
-  To learn more about that process, visit Sales Order and Purchase Order sections.
-- and finally ***Credit Line Limit***. Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
+### Buttons
 
-A new check named Consent for Customer Data Processing has been created in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization.
+**Set New Currency**
 
-It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why *Business Partner* window has three main tabs and therefore sub-tabs which allow you to set up each main business partner type separately:
+Business partner currency is automatically filled in with the currency of the Price List assigned to the business partner. Once filled in, it can be changed, if required, by using the **Set New Currency** button.
 
-- **Customer** tab
-  - **Customer Accounting** sub-tab
-- **Vendor** tab
-  - **Vendor Accounting** sub-tab
-- **Employee** tab
-  - **Employee Accounting** sub-tab
+!!! note
+    Normally, business partner currency is the same as the currency of the price list assigned to it. However, it can happen that a business partner having, for instance, an EUR price list assigned, might have USD as its by default currency. In that case, all the transactions booked in EUR for that business partner, will be exchanged to USD, therefore, the business partner balance is calculated in USD.
 
-The tabs and sub-tabs mentioned above are described in the next chapters of this section.
-
-Finally, it is very important to remark that there could be other types of business partners which require to be set up as business partners in this window; business partners which have nothing to do with either a customer, or a supplier/creditor or an employee.
-
-That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the *Remittance* financial workflow.
-
-!!! info
-    To learn more about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
-
-#### **Set New Currency**
-
-*Set New Currency* process allows the user to change business' partner currency.
-
-Business partner currency is automatically filled in with the currency of the *Price List* assigned to the business partner. Once filled in, it can be changed if required by running *Set New Currency* process.
-
-Normally, business partner currency is the same as the currency of the price list assigned to it. However, it can happen that a business partner having, for instance, an EUR price list assigned, might have USD as its by default currency.
-
-In that case, all the transactions booked in EUR for that business partner, will be exchanged to USD, therefore, the business partner balance is calculated in USD.
-
-Set New Currency process allows defining:
+The **Set New Currency** process allows defining:
 
 - a new currency for the business partner
 - as well as the currency conversion rate to be used to exchange customer balance to the new currency.
 
-![](../../../../assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
+    ![](../../../../assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
 
-At first, the currency shown in the *Set New Currency* window is business partner price list currency, in our example *USD*.
+Fields to note:
 
-Business partner's new currency can be entered in the field *Currency*, for instance *EUR*.
+- **Currency**: Business partner's new currency can be entered here, for instance *EUR*. At first, the currency shown in the Set New Currency window is business partner price list currency, in our example *USD*.
 
-Checkbox *Use default conversion rate* uses the conversion rate defined in Conversion Rates window, to recalculate business partner balance from USD to EUR, in our case.
+- **Set Amount**: Checkbox. If selected, Etendo will update the Business Partner’s balance with the amount entered in the Foreign Amount field, so they stay consistent with the new currency. 
 
-If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
+- **Foreign Amount**: Only shown if the **Set Amount** checkbox is selected. Here, Etendo allows the user to manually enter the equivalent amount in the new currency that will replace or update the Business Partner’s balance.
 
-Additionally, a business partner might have available credit in a given currency.
+- **Use default conversion rate**: Checkbox. It uses the conversion rate defined in [Conversion Rates](../general-setup/application/conversion-rates.md) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
 
-If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
+Additionally, a business partner might have **available credit in a given currency**. If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
 
-![](../../../../assets/drive/sYcrvJb1PKlU9FPBStEkFIPdTCVTXSXCUte3iY1-kwfVGSiu8Xwux1DvZRxu9tseG0neDLmagLfVpiec4qQaNTLiheq908gynQ9p8Dh7eUOU8MyZ_pGFHICKaAiZwl_5jE0aIHyOfbDb38EVSw.png)
+![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/set-new-currency.png)
 
 This process automatically creates three new payments, in case business partner has available credit:
 
-- a _GL Item payment_ in EUR, that moves credit amount to the ledger account defined in the selected *G/L Item*, in the CREDIT.
-- a _refunded payment_ in EUR, that moves credit amount to a prepayment account in the DEBIT
-- and a *Zero* amount payment that is a credit payment in USD (new currency). This credit payment moves the credit amount to a prepayment account in the CREDIT.
+- a **GL Item payment** in EUR, that moves credit amount to the ledger account defined in the selected G/L Item, in the *CREDIT*.
+- a **refunded payment** in EUR, that moves credit amount to a prepayment account in the *DEBIT*.
+- and a **Zero** amount payment that is a credit payment in USD (new currency). This credit payment moves the credit amount to a prepayment account in the *CREDIT*.
 
-Let us take as an example a business partner having a price list in EUR.
+!!! Example
+  
+    Let us take as an **example** a business partner having a price list in EUR
 
-- This business partner has a current balance of 306.00 EUR and a generated credit of 100.00 EUR, which decreases its balance to 206.00 EUR.
-- After that, *Set New Currency* process is run for this business partner, because its currency needs to change to USD
-- *Set New Currency* process informs us that there is available credit for the business partner in the old currency (EUR). That available credit needs to be exchanged to the new currency (USD), therefore a conversion rate needs to be used. In this example, system conversion rate is used, that is 1.13 EUR to USD.
-- Once *Set New Currency* process ends, business partner:
+    - Price list currency: EUR
+    - Current balance: 306.00 EUR
+    - Available credit: 100.00 EUR
 
-    - current balance shown changes to 232.78 USD (206.00 EUR \* 1.13 EUR/USD).
-    - currency shown is USD.
-    - and three new payments are created, as described above, to exchange available credit into the new currency.
+    Because the credit reduces the balance, the net balance is 206.00 EUR (306.00 – 100.00).
 
-- After that, a new sales invoice is booked for the business partner in EUR, as the business partner price list is in EUR. Sales invoice total gross amount is 41.50 EUR.
-- This new sales invoice, once booked, will change business partner balance to 279.68 USD, that is (sales invoice amount 41.50 EUR \* 1.13 EUR to USD) + 232.78 USD.
-- After that, a new sales invoice for an amount of 100.00 USD is booked for the business partner. While completing this new sales invoice, a new window appears showing business partner USD credit available, in our case 100 EUR \* 1.13 EUR to USD = 113.00 USD.
+    **Running Set New Currency**
 
-![](../../../../assets/drive/fAiMfanae3I2XAvLdbf3yFYkZhAbN8Me-A2kv3uSF62Q3HaBTz9wyfXBL-22RDXeKgdrNxTLeLDnECldDFwjhkEG-m4Uzgc-JNUrtasuWPvrKKGeTmlRg-Lrc9wqtQDG17R-trrmm8EbG70bgg.png)
+    The company decides that this Business Partner should now operate in USD, so the user runs the Set New Currency process and selects USD as the new currency.
 
-### **Customer**
+    Etendo detects that the partner still has available credit in EUR.
+    That credit must be converted into the new currency, so the system applies the conversion rate 1 EUR = 1.19 USD.
 
-!!! info
-    Customer related data can be entered and configured once the *Customer* checkbox is enabled.
+    **What Etendo Does Automatically**
 
-![](../../../../assets/drive/1gybs8XJw1B6pJZRr-mzWO9fEUm6ylwFr.png)
+    Once the process finishes:
 
-As shown in the image above, there is a list of relevant data to be entered for customers together with current _customer balance_ information:
+    - The Business Partner’s currency changes from EUR to USD.
+    - The current balance becomes 245.14 USD, calculated as 206.00 EUR × 1.19 = 245.14 USD
+    - Etendo also creates three automatic payments to properly move the available credit from EUR to USD, keeping accounting consistent.
 
-You could either select any data such as *Price List* from a previously created list of values, or create it *ad hoc* by navigating to the corresponding window, and then select it.
+    **Future Transactions**
 
-- **Price List** - the one selected will be the one applied while creating sales documents such as sales orders or sales invoices for that customer.  
-  To learn more, visit [Price List](../master-data-management/pricing.md#price-list).  
-  Price lists are defined in a given currency, which could be the same as customer currency or not.  
-  In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the Conversion Rates window or the one entered in the process ***Set New Currency*** which can be run to change the currency of a business partner.
-- **Payment method** - the one selected will be the one applied while creating and managing the payments received from that customer.  
-  If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.  
-  To learn more, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
-- **Payment Terms** - the one selected will be the one used while managing sales invoices payment plan.  
-  To learn more, visit [Payment Term](..//master-data-management/business-partner-setup.md#payment-term).
-- **Financial account** - the one selected will be the one use while collecting and reconciling the payments made by that customer.  
-  To learn more about *Financial Account*, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
-- **Invoice terms** - there are few invoice terms which can be used while generating sales invoices.  
-  To learn more, visit [Generate Invoices](../sales-management/transactions.md#generate-invoices).
-  - **After Order Delivered** - the invoice could be automatically generated once all the goods of the sales order have been shipped
-  - **After Delivery** - the goods of the sales order will be automatically invoiced as they are shipped, even if there are partial shipments
-  - **Do not invoice** - no invoice will be generated automatically
-  - **Immediate** - the invoice will be generated on the next run of the Generate Invoices process.
-  - **Customer Schedule after Delivery** - the invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
-    If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.  
-    To learn more, visit [Invoice Schedule](../master-data-management/business-partner-setup.md#invoice-schedule)
-- **Credit Line limit** - If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
-- A customer can be defined as *Tax Exempt* whenever applicable, therefore only those Tax rates also defined as exempt apply.
-- **Sales Representative** - you can select here a customer sales representative. A sales representative is an employee set as such.
-- **SO BP Tax Category** - this field can be found under the *More Information* section.  
-  You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Business Partner Tax Category](../financial-management/accounting/setup.md#business-partner-tax-category)
-- **On Hold** - this checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
-  - **Sales Order:** Blocked
-  - **Goods Shipment:** Blocked
-  - **Sales invoice:** Blocked
-  - **Payment In:** Not blocked
+    Now that the Business Partner’s currency is USD, let’s see what happens with new invoices:
 
-Above defaulted configuration means that it is not possible to complete either a sales order, a goods shipment or a sales invoice for the customer but to receive a payment.
+    - You create a new sales invoice in EUR (because the price list is still in EUR).
 
-### **Customer Accounting**
+        - Invoice total: 41.50 EUR
+        - Etendo converts it to USD: 41.50 × 1.19 = 49.38 USD
 
-Customer accounting tab allows the user to configure the ledger accounts to be used while posting customer related transactions such as customer receivables and customer advances to the general ledger.
+    - The Business Partner’s new balance becomes: 245.14 + 49.38 = 294.52 USD
 
-![](../../../../assets/drive/609fyigYTKbQyThG3K-Cd8GKw2Z-Y_02gsIaYELEwALpv3XCRgCgWeEXZqKvgYrhJWv1xDKvQ9zOTYRiF_ozw9D3xjh6OQIUt2vl1V17dfi8bHY2GoKLs7aXuZXVv3FALP8lA3Mqh6LFdfskaQ.png)
+    - Later, you create another sales invoice in USD for 100.00 USD. While completing it, Etendo shows that the partner has available credit in USD, converted from the old EUR credit: 100 EUR × 1.19 = 119.00 USD
 
-As shown in the screen above, you can configure for each customer and general ledger the accounts to be used in:
+    ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/credit-usd.png)
 
-- the **Customer Receivables** transactions such as sales invoices posting.  
-To learn more, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
+    In short, the Set New Currency process updates the Business Partner’s currency and converts balances and credits to the new currency using the chosen rate, existing balances and available credit are recalculated so everything matches the new currency and future transactions, even if created in the old currency (EUR), will still be correctly converted and reflected in the Business Partner’s new currency (USD).
+
+
+### Tabs and Subtabs
+
+It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why the Business Partner window has three main tabs and therefore subtabs which allow you to set up each main business partner type separately:
+
+- **Customer** 
+    - Customer Accounting
+- **Vendor**
+    - Vendor Accounting
+- **Employee**
+    - Employee Accounting
+
+The tabs and subtabs mentioned above are described in the next chapters of this section.
+
+!!! Important
+    
+    There could be other types of business partners which require to be set up as business partners in this window; business partners which have nothing to do with either a customer, or a supplier/creditor or an employee.
+
+    That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the [Remittance](../financial-management/receivables-and-payables/transactions.md#remittance) financial workflow.
+
+    For more information about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+
+#### Customer
+
+!!! note
+    Customer related data can be entered and configured once the **Customer** checkbox is enabled.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/customer-tab.png)
+
+As shown above, there is a list of relevant data to be entered for customers together with current customer balance information. You could either select any data such as Price List from a previously created list of values, or, if necessary, create it by navigating to the corresponding window, and then select it.
+
+Fields to note:
+
+- **Price List**: The one selected will be the one applied while creating sales documents such as sales    orders or sales invoices for that customer.  
+
+    !!! info
+        For more information, visit [Price List](../master-data-management/pricing.md#price-list).
+
+    Price lists are defined in a given currency, which could be the same as customer currency or not.  
+    In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the [Conversion Rates](../general-setup/application/conversion-rates.md) window or the one entered in the process **Set New Currency** which can be run to change the currency of a business partner.
+
+- **Payment Method**: The one selected will be the one applied while creating and managing the payments received from that customer.  
+    If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.
+
+    !!! info  
+        For more information, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
+
+- **Payment Terms**: The one selected will be the one used while managing sales invoices payment plan.
+
+    !!! info
+        For more information, visit [Payment Term](./business-partner-setup.md#payment-term).
+
+- **Financial Account**: The one selected will be the one used while collecting and reconciling the payments made by that customer. 
+
+    !!! info
+        For more information, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+
+- **Invoice Terms**: There are few invoice terms which can be used while generating sales invoices.
+
+    !!! info
+        For more information, visit [Generate Invoices](../sales-management/transactions.md#generate-invoices).
+
+    - **After Order Delivered**: The invoice could be automatically generated once all the goods of the sales order have been shipped
+    - **After Delivery**: The goods of the sales order will be automatically invoiced as they are shipped, even if there are partial shipments
+    - **Do not invoice**: No invoice will be generated automatically
+    - **Immediate**: The invoice will be generated on the next run of the Generate Invoices process.
+    - **Customer Schedule after Delivery**: The invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.
+
+        !!! info 
+            For more information, visit [Invoice Schedule](../master-data-management/business-partner-setup.md#invoice-schedule).
+
+- **Credit Line limit**: If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
+
+- **Tax Exempt**: To define a customer as Tax Exempt whenever applicable, therefore only those Tax rates also defined as exempt apply.
+
+- **Sales Representative**: Here, the user can select a customer sales representative. A sales representative is an employee set as such.
+
+- **On Hold**: This checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
+    - **Sales Order:** Blocked
+    - **Goods Shipment:** Blocked
+    - **Sales invoice:** Blocked
+    - **Payment In:** Not blocked
+
+    Above defaulted configuration means that it is not possible to complete either a sales order, a goods shipment or a sales invoice for the customer, only receiving a payment is possible.
+
+**More information** section
+
+- **SO BP Tax Category**: This field can be found under the *More Information* section.  
+    You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
+    
+    !!! info
+        For more information, visit [Business Partner Tax Category](../financial-management/accounting/setup.md#business-partner-tax-category).
+
+- **Maturity Date 1**: It indicates the day of the month, the first deadline, that invoices are due.
+
+- **Maturity Date 2**: It indicates the day of the month, the second deadline, that invoices are due.
+
+- **Maturity Date 3**: It indicates the day of the month, the third deadline, that invoices are due. 
+
+- **Birthdate**: Data about the customer.
+
+- **Birthplace**: Data about the customer.
+
+**Customer Accounting**
+
+The Customer Accounting tab allows the user to configure the ledger accounts to be used while posting customer related transactions such as customer receivables and customer advances to the general ledger.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/customer-accounting-tab.png)
+
+As shown above, you can configure, for each customer and general ledger, the accounts to be used in:
+
+- the **Customer Receivables** transactions such as sales invoices posting.
+
+    !!! info  
+        For more information, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 
 - the **Customer Prepayment** transactions, such as those cases when the company shipping the goods requires the customer to advance part or full amount of the debt.  
 
-At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. The end-user can always change them.
+At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. The user can always change them.
 
-Besides, it is important to remark that it is possible to configure the creation of new correlative accounts for the business partners as described in the General Ledgers tab of the Organization window.
+!!! important
+    It is possible to configure the creation of new correlative accounts for the business partners as described in the General Ledgers tab of the [Organization](../general-setup/enterprise-model.md#organization) window.
 
-### **Vendor/Creditor**
+#### Vendor/Creditor
 
-Vendor or Creditor related data can be entered and configured once the *Vendor* checkbox is enabled.
+!!! note
+    Vendor or Creditor related data can be entered and configured once the **Vendor** checkbox is enabled.
 
-![](../../../../assets/drive/ZyKWCq0lO9Z1oggC86Qw1sYw6EACIoC7WNSXCgMczxoJFp9uppOasgk0YlwMWVjxCBSHouebT0uSxObUKBBd9A0TwRj-957-_D37S4p3-xrOMZlqI33LOXr18EDJBwBI0Z36Hxp0hmgQ4tcp-g.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/vendor-tab.png)
 
 As shown in the image above, there is a list of relevant data to be entered for suppliers or creditors, also known as vendors:
 
-- **Purchase Price List** - the one selected will be the one applied while creating purchase documents such as purchase orders or invoices for that vendor.  
-  If a Business Partner has already generated Credit, it will not be possible to select a Price List in a different Currency from the generated Credit. In that case, it is possible to convert Credit to a different Currency.  
-  To learn more, visit [Price List](../master-data-management/pricing.md#price-list).
-- **Payment method** - the one selected will be the one applied while creating and managing the payments made to that vendor.  
-  If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
-  To learn more, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
-- **Payment Terms** - the one selected will be the one used while managing supplier invoices payment plans.  
-  To learn more, visit [Payment Term](../master-data-management/business-partner-setup.md#payment-term).
-- **PO Maturity Date 1** - as indicated in the Payment Term the PO Maturity Date is used in combination with the Fixed Due Date in the payment term to be set to Y and the Next Business Day set to N. The due date of the payment is based on the payment term defined in combination with the PO Maturity Date.
-  - For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
-- **PO Maturity Date 2** - a second PO Maturity Date can be set to be combined with the payment term and the first PO Maturity Date.
-  - For example, the payment term is 30 days, the PO Maturity Date 1 the value is 10, the PO Maturity Date 2 is 20. The example given in PO Maturity Date 1 will remain the same. However, if the invoice date is the 11th of the month, the payment due date will be the 20th of next month: the 30 days of the payment terms are taken into account and since the 10th of the month is passed the second maturity date of the 20th is taken into account.
-- **PO Maturity Date 3** - a third PO Maturity Date can be set to be combined with the payment term and the first and second PO Maturity Date.
-- **Financial account** - the one selected will be the one used while withdrawing and reconciling the payments made to a supplier.  
-  To learn more, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
-- **Tax Category** - you can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Tax Category](../financial-management/accounting/setup.md#tax-category).
-- **On Hold** - this checkbox allows blocking a vendor, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup which can obviously be changed as required:
-  - **Purchase Order:** Blocked
-  - **Goods Receipt:** Not blocked
-  - **Purchase Invoice:** Blocked
-  - **Payment Out:** Blocked
+- **Purchase Price List**: The one selected will be the one applied while creating purchase documents such as purchase orders or invoices for that vendor.  
+    If a Business Partner has already generated Credit, it will not be possible to select a Price List in a different Currency from the generated Credit. In that case, it is possible to convert Credit to a different Currency.  
+    
+    !!! info
+        For more information, visit [Price List](../master-data-management/pricing.md#price-list).
 
-Above defaulted configuration means that it is not possible to complete either a purchase order, a purchase invoice or to make a payment but to receive goods sent by the vendor.
+- **Payment method**: The one selected will be the one applied while creating and managing the payments    made to that vendor.  
+    If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
+  
+    !!! info
+        For more information, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
 
-As already mentioned if a business partner of any type is blocked it is not possible to Complete (or book) some document types however it is always possible to Void them.
+- **Payment Terms**: The one selected will be the one used while managing supplier invoices payment plans. 
 
-You will realize that Etendo shows an error message stating that it is not possible to complete a document for a business partner set as *on hold*.
+    !!! info
+        For more information, visit [Payment Term](../master-data-management/business-partner-setup.md#payment-term).
 
-#### **Vendor Accounting**
+- **PO Maturity Date 1**: As indicated in the Payment Term, the PO Maturity Date is used in combination with the Fixed Due Date in the payment term to be set to Y and the Next Business Day set to N. The due date of the payment is based on the payment term defined in combination with the PO Maturity Date.
+    
+    !!! example
+        For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
 
-Vendor accounting tab allows the user  to configure the ledger accounts to be used while posting vendor related transactions such as vendor liabilities and vendor advance payments to the general ledger.
+- **PO Maturity Date 2**: A second PO Maturity Date can be set to be combined with the payment term and the first PO Maturity Date.
+    
+    !!! example
+        For example, the payment term is 30 days, the PO Maturity Date 1 the value is 10, the PO Maturity Date 2 is 20. The example given in PO Maturity Date 1 will remain the same. However, if the invoice date is the 11th of the month, the payment due date will be the 20th of next month: the 30 days of the payment terms are taken into account and since the 10th of the month is passed the second maturity date of the 20th is taken into account.
 
-![](../../../../assets/drive/9Z371emBdqUmHgSvKroREH9tZsP4bV-9Eh6T9I-DOkp9x8n4iCFvpI_wOp3copFLr0lNnuogVezfXzQuQV4U6cukoVQJ6oYp1GLt3oxL-iE1TU1LhXIC0rghK_ctPI89l3Lg0u9Shcbj4Q8Aiw.png)
+- **PO Maturity Date 3**: A third PO Maturity Date can be set to be combined with the payment term and the first and second PO Maturity Date.
+
+- **Financial account**: The one selected will be the one used while withdrawing and reconciling the payments made to a supplier.
+
+    !!! info
+        For more information, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+
+- **Tax Category**: You can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
+    
+    !!! info
+        For more information, visit [Tax Category](../financial-management/accounting/setup.md#tax-category).
+
+- **On Hold**: This checkbox allows blocking a vendor, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup which can be changed as required:
+
+    - **Purchase Order:** Blocked
+    - **Goods Receipt:** Not blocked
+    - **Purchase Invoice:** Blocked
+    - **Payment Out:** Blocked
+
+    Above defaulted configuration means that it is not possible to complete either a purchase order, a purchase invoice or to make a payment but to receive goods sent by the vendor.
+
+    As already mentioned if a business partner of any type is blocked, it is not possible to Complete (or book) some document types. However, it is always possible to Void them. Etendo shows an error message stating that it is not possible to complete a document for a business partner set as **on hold**.
+
+**Vendor Accounting**
+
+Vendor accounting tab allows the user to configure the ledger accounts to be used while posting vendor related transactions such as vendor liabilities and vendor advance payments to the general ledger.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/vendor-accounting-tab.png)
 
 The user can configure for each supplier or creditor and available accounting schema, the ledger accounts to be used in:
 
 - the **Vendor Liability** transactions such as purchase invoices posting.  
-  To learn more, visit Purchase Invoice
+    
+    !!! info
+        For more information, visit [Purchase Invoice](../procurement-management/transactions.md#purchase-invoice).
+
 - the **Vendor Prepayment** transactions such as those cases when the supplier of the goods requires the company to pay in advance part or full amount of the debt.  
-  To learn more, visit Vendor Prepayments
+    
+    !!! info
+        For more information, visit [Vendor Prepayments](../financial-management/receivables-and-payables/transactions.md#payment-out).
 
-At first, these accounts are inherited from the Defaults accounts of the Accounting Schema assigned to the Organization for which the business partner is being created. The end-user can always change them.
+At first, these accounts are inherited from the Defaults accounts of the Accounting Schema assigned to the Organization for which the business partner is being created. The user can always change them.
 
-Besides, it is important to remark that it is possible to configure the creation of new correlative accounts for the business partners being created as described in the Org Schema tab of the Organization window.
+!!! important
+    It is possible to configure the creation of new correlative accounts for the business partners being created as described in the Org Schema tab of the [Organization](../general-setup/enterprise-model.md#organization) window.
 
-### **Employee**
+#### Employee
 
-A business partner can be set up as employee once the checkbox *Employee* is enabled.
+!!! note
+    A business partner can be set up as employee once the checkbox **Employee** is enabled.
 
-![](../../../../assets/drive/lK2uSNpu3BHtkn7SCCaLztxheUiyHyDOjL26IGC2vvpvkmfMuvGZ7mC6_L3smeTuyRm5utpzQTNkFhutczZfjAzkauQbxrw9h_6kWjS08dkDYHBP3qiHznt9ybDDoy5YB9dheypb-Gtt_O9y-Xgr-w.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-tab.png)
 
 Employee tab allows the user to set which of your business partners are *Employees*.
 
 An employee can be:
 
-- appointed as **sales representative** of a customer
+- appointed as **sales representative** of a customer.
+
 - defined as the **responsible of a company project/s**.  
-  To learn more, visit Projects and Services Management
+    
+    !!! info
+        For more information, visit [Projects and Services Management](../project-and-service-management/getting-started.md).
+
 - allocated to a **production process** as a resource.  
-  To learn more, visit Production Management
+    
+    !!! info
+        For more information, visit [Production Management](../production-management/getting-started.md).
+
 - and can **issue expense's sheets** as part of his/her involvement in a company project.  
-  To learn more, visit Expense Sheet
+    
+    !!! info
+        For more information, visit [Expense Sheet](../project-and-service-management/transactions.md#expense-sheet).
 
-#### **Employee Accounting**
+**Employee Accounting**
 
-The ledger accounts to be used while posting employee related transactions such as paryroll accounting could be added in this tab.
+In this tab, the user can add the ledger accounts to be used while posting employee related transactions such as payroll accounting.
 
-![](../../../../assets/drive/7kuCcxhGxEGWIpNYq-d8j3hysWa9ru8o2SoKJnxq9Cvkf3G-j1W0M5KDMw4Wq7IiNtKftE3U8GFbFZYUHDBompw3guyv-yamRyKg6-gUoNb1wibWRp0AAj1KQg3S1FGeiPmyyIJnUJOBSE4WQw.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-accounting-tab.png)
 
 As you can see in the image above, nowadays there is no ledger account required to be defined for employee accounting. This is due to the fact that there is no transaction susceptible of being posted for employees.
 
 Anyway, this is the place where *Human Resources* related modules or features should point to while defining the accounts to be used in any employee transaction susceptible of being posted.
 
-### **Bank Account**
+**Cost Salary Category**
 
-Bank account tab allows the user to list and set up business partner bank accounts.
+In this tab, the user can set up the salary category of the employee by selecting one of the options which were previously defined in the [Salary Category](../master-data-management/business-partner-setup.md#salary-category) window.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/cost-salary-category.png)
+
+#### Bank Account
+
+The Bank Account tab allows the user to list and set up business partner bank accounts.
 
 It is possible to configure and properly set up business partner bank accounts to be used while making or receiving business partner payments of any type.
 
-Therefore, we strongly recommend the user to properly set up bank accounts as those will be used by Etendo as required within Etendo payment management processes.
+!!! important
+    It is strongly recommended for the user to properly set up bank accounts as those will be used by Etendo as required within Etendo payment management processes.
 
-![](../../../../assets/drive/XzJTDeFWNJTAq361dyKR7owq_NSU41d06F7NgoVmM6MLjHaSxUc-M2q19MuXNkz90__zk-C6KFFYTIWyuh_D8d5KzJ9R1rGraYBU_y1LJj3uczO0V5DLgUtLQbqitNkiC_E8_Iyp89-X8EnhoA.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/bank-account-tab.png)
 
-The *bank account* related data you can enter is:
+Fields to note:
 
-- the **Bank Name**
-- **Active** flag - We recommend you to set as *Active* only one bank account, if possible, in order to avoid errors; otherwise you should keep an eye on the right bank account used.
-- **Country** - you can select a country from the list to specify if the bank account is a domestic bank account or a foreign bank account.
-- **User/Contact** - in case you want to associate a contact for this bank account
-- **Bank Account Format** - List that contains all the possible values for generating the Displayed Account Number, which will be later on used by other reports or processes to get the account identifier. Possible values are: _Use Generic Account No._, _Use IBAN_ or _Use SWIFT + Generic Account No._ Note: _Other options can be added by other modules that extend the supported Bank Account Format_.
-- **Generic Account No** - a generic account number to identify the bank account can be introduced here. This field must be mandatory filled in case either _Use Generic Account No._ or _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
-- **IBAN** - The International Bank Account Number (IBAN) is an international standard for numbering bank accounts.  
-  The IBAN consists of a two letter ISO 3166-1 country code, followed by two check digits, and up to thirty alphanumeric characters for the domestic bank account number, called the BBAN (Basic Bank Account Number). This field must be mandatory filled in case _Use IBAN_ is selected at the Bank Account Format field. The IBAN code will be automatically validated when inserting/updating the record taking into account the rules for the country bank defined.
-- **SWIFT Code** - Corresponds to the ISO 9362 international bank code identifier. It must be mandatory filled in case _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
+- **Bank Name**
+- **Active** flag: It is recommended to keep only one bank account Active to avoid errors; otherwise ensure the correct bank account is used.
+- **Country**: Here, the user can select a country from the list to specify if the bank account is a domestic bank account or a foreign bank account.
+- **User/Contact**: In case you want to associate a contact for this bank account.
+- **Bank Account Format**: List that contains all the possible values for generating the Displayed Account Number, which will be later on used by other reports or processes to get the account identifier. Possible  values are: 
+    - _Use Generic Account No._
+    - _Use IBAN_
+    - _Use SWIFT + Generic Account No._ 
+
+    !!! note 
+        Other options can be added by other modules that extend the supported Bank Account Format.
+
+- **Generic Account No**: A generic account number to identify the bank account can be introduced here. This field must be mandatory filled in case either _Use Generic Account No._ or _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
+
+- **IBAN**: The International Bank Account Number (IBAN) is an international standard for numbering bank accounts.  
+    The IBAN consists of a two letter ISO 3166-1 country code, followed by two check digits, and up to thirty alphanumeric characters for the domestic bank account number, called the BBAN (Basic Bank Account Number). This field must be mandatory filled in case _Use IBAN_ is selected at the Bank Account Format field. The IBAN code will be automatically validated when inserting/updating the record taking into account the rules for the country bank defined.
+- **SWIFT Code**: Corresponds to the ISO 9362 international bank code identifier. It must be mandatory filled in case _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
 - **Displayed Account**: It is automatically generated based on the value selected into the Bank Account Format. This field is read only, and it is used by other reports or processes.
 
-#### **Advanced Bank Account Management**
+**Advanced Bank Account Management**
 
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/businesspartnerda.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/advanced-bank-account-tab.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
@@ -331,102 +447,146 @@ This functionality introduces the possibility to mark a bank account as Default 
 !!! warning
     Only one bank account can be selected as default for each business partner.
 
-### **Location/Address**
+
+#### Document Type
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8-MOprz-4FI?si=rc5geP_xaKmKvjsK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+!!! info
+    This feature is available in Etendo 25.3 or later versions.
+
+This tab introduces flexibility by customizing document type assignments to invoices, orders, shipments and receipts, specifically based on the business partner.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/document-type.png)
+
+This functionality provides granular control over assigning transactional documents, overriding the default document type configured at the organization level. This is useful since each country, region, and even each company may use different types of documents with their respective printable and even personalized sequence numbers.
+
+When a transaction document (order, invoice, shipment or receipt) is created and linked to a business partner, the system first checks the Document Type Tab for the correct configuration. This setup can significantly enhance the user experience when documents are created repeatedly.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/document-type2.png)
+
+Fields to note:
+
+1. **Organization**: Specifies the organization to which this specific document assignment rule applies (e.g., F&B US Inc.).
+2. **Document Category**: Select the type of transaction document, such as order, invoice, or shipment/receipt.
+3. **Sales Transaction**: Checkbox used to distinguish document direction.
+
+    - Checked: Corresponds to sales documents (e.g., sales orders, sales invoices, good shipments).
+    - Unchecked: Corresponds to purchasing documents (e.g., purchase orders, purchase invoices, goods receipts).
+
+4. **Document Type**: Select the specific document type available for the chosen category and transaction direction.
+
+**Document Type Selection Priority**
+
+1. Exact Match: Etendo searches for a direct rule defined for the business partner and the specific organization.
+2. Organizational Tree: If no exact match is found, Etendo navigates up the organizational tree to find a match.
+3. Default: If no rule exists, Etendo uses the default document type configured for the organization.
+
+!!! warning
+     This functionality is not available for documents created with a background/button process such as “Generate Invoice from Shipment” in the Goods Shipment window. In this case, the document type to be used is the one defined at organization level, instead of the one defined at Document Type tab level.
+
+#### Location/Address
 
 Business partner locations and full address details can be set up in this tab.
 
 Business partners might have different address details depending on location/address used for either *Goods Receipts/Shipments* purposes or location/address used for *Invoices* purposes.
 
-![](../../../../assets/drive/ZC4Jc3vlmJB6aVN4fG94bMjafw4pv7IYzCE40ZEhZxA0JPkN2AwFK942M4o-fXhEliP9jHCKO_WSdNBNY8NWi6MyqLM00BmX2YsjHjUPs8B3SNg2UfGAAQETAczHpvwV-Ng93qjIvj3X2zVtyA.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address.png)
 
-Etendo allows the user to define any type of business partner address, by filling in the information below:
+Fields to note:
 
-- **Location/Address** - if you click in this field the location selector box opens, there you can enter the information below:
-  - the **address 1st line**
-  - the **address 2nd line**, if needed
-  - the **Postal Code**
-  - the **City**
-  - the **Country** - you can select one from the list, if any
-  - the **Region** - once the country is selected, you can select one region of the country selected, from the list, if any.
-    - Once the location entered is saved, it's listed in the *Location* window. To learn more, visit Location
-- the **Phone** number
-- an **Alternative Phone** number, if any
-- the address **Name** - this field is automatically filled in by Etendo, once the location / Address information has been configured. The user could change it as needed.
-- the **Fax** number
-- **Ship to Address** checkbox - the user should flag this one if the address being set up must be used for Goods Receipts/Shipments related transactions.
-- **Invoice to Address** checkbox - the user should flag this one if the address being setup must be used for sales or purchase invoices transactions.
+- **Location/Address**: If you click in this field, the location selector box opens, there you can enter the information below:
+    - the **address 1st line**
+    - the **address 2nd line**, if needed
+    - the **Postal Code**
+    - the **City**
+    - the **Country**: One from the list can be selected, if any
+    - the **Region**: Once the country is selected, you can select one region of the country selected, from the list, if any.
 
-#### **Advanced Bank Account Management**
+- **Phone**: The phone number to contact the business partner.
+- **Alternative Phone**: for an alternative phone, if any.
+- **Name**: Referred to the Address name. This field is automatically filled in by Etendo, once the Location/Address information has been configured. The user could change it as needed.
+- **Fax**: The fax number to contact the business partner.
+- **Ship to Address** checkbox: The user should flag this one if the address being set up must be used for Goods Receipts/Shipments related transactions.
+- **Invoice to Address** checkbox: The user should flag this one if the address being setup must be used for sales or purchase invoices transactions.
+
+**Advanced Bank Account Management**
 
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The Advanced Bank Account Management field is introduced in the Location/ Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
+The Advanced Bank Account Management field is introduced in the Location/Address tab of the Business Partners window to **associate specific bank accounts** to the different locations.  
 
 !!! warning
     In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
-### **Contact**
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address-abam.png)
+
+#### Contact
 
 Contact tab allows the user to add and configure the business partner contacts you deal with.
 
-![](../../../../assets/drive/Hy8AxFtV7E5iAuum7OaH5J2uRp3T6WeI-AjoxfZQKr0R1VyPJ-Br_PvqEJZ3ps8HuwJDDlFJZW6s1P4_h-U36j583nFJR86R3Qu7DqqaPcOl_8AgjtZAR2iCq_FHNt_HMFc3cqhF2l2Y1YLBUg.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/contact.png)
 
-As you can see in the image above, basic *Contact* data such as:
+Fields to note:
 
-- **First and Last Name** of the contact
-- as well as his/her **Position** in the business partner
+- **First** and **Last Name** of the contact.
+- **Email** of the contact.
+- **Phone** of the contact.
+- **Comments**: To enter additional information.
+- **Position** in the business partner.
+- **Active** flag: to indicate if this contact is available for use or disabled. 
+- **Commercial Authorization**: This checkbox is selected to indicate or not whether customer wants or does not want to receive commercial information from the organization.
 
-can be configured in this tab.
-
-### **Basic Discount**
+#### Basic Discount
 
 Basic Discount tab allows the user to add and configure business partner Basic Discounts.
 
-![](../../../../assets/drive/2xUfGNVKL2MuKaMd8-0-MAdpaJiPFnOlExD6jrfVaicmThNDW7WV_C3Ve31HTwTENiUJ2TxGKnDRm9__SGlVoDralznQ9o0EfTxYl4xIKcTOhQpRU_pkeP1a-g_jrvcixL2FvJsM-MwK0_2EQQ.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/basic-discount.png)
 
 It is possible to enter as many **Discounts** as agreed with your business partners, by filling in the information below:
 
-- the **Discount** to be applied while creating sales / purchase transactions for that business partner can be selected from the list (if any) or created by navigating to the **Discount** window.
-- **Customer:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Customer*
-- **Vendor:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Vendor*
-- **Apply in Order:** this check box must be selected in case the discount can be applied in sales or purchase orders as applicable.
-- **Cascade** calculation of the discount. For instance, if first discount is 10% and second one is 5%, a cascade calculation of the total discount won’t be 15% but 14.5%
+- the **Discount** to be applied while creating sales/purchase transactions for that business partner can be selected from the list (if any) or created by navigating to the **Discount** window.
+- **Customer:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Customer*.
+- **Vendor:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Vendor*.
+- **Apply in Order:** this checkbox must be selected in case the discount can be applied in sales or purchase orders as applicable.
+- **Cascade** calculation of the discount. For instance, if first discount is 10% and second one is 5%, a cascade calculation of the total discount won’t be 15% but 14.5%.
 
-A discount not applied in Cascade means that it affects the full quantity of the Document Line. A Discount applied in Cascade means that affects the quantity of the Document Line that remains after applying all the discounts that come before it.
+    A discount not applied in Cascade means that it affects the full quantity of the Document Line. A Discount applied in Cascade means that affects the quantity of the Document Line that remains after applying all the discounts that come before it.
 
-An example to explain the difference between a Cascade and not Cascade Discount is the following one:
+    !!! example
+        An example to explain the difference between a Cascade and not Cascade Discount is the following one:
 
-Three Discounts, each one of 10%, the first two ones are defined as not Cascade and the third one as Cascade. Over an Invoice Line of 1.000 USD
+        Three Discounts, each one of 10%, the first two ones are defined as not Cascade and the third one as Cascade. Over an Invoice Line of 1.000 USD
 
-- The first discount will create a line of -100 USD (10% of 1.000 USD)
-- The second discount will also create a line of -100 USD (10% of 1.000 USD)
-- The third one, however, will create a discount based on applying the previous discounts on cascade, so:
-  - 1.000 USD - 10% = 900 USD (applying the 1st discount on Cascade)
-  - 900 USD - 10% = 810 USD (applying the 2nd discount on Cascade)
-  - 10% of 810 USD = 81 USD. So the third discount will be -81 USD.
+        - The first discount will create a line of -100 USD (10% of 1.000 USD)
+        - The second discount will also create a line of -100 USD (10% of 1.000 USD)
+        - The third one, however, will create a discount based on applying the previous discounts on cascade, so:
+        - 1.000 USD - 10% = 900 USD (applying the 1st discount on Cascade)
+        - 900 USD - 10% = 810 USD (applying the 2nd discount on Cascade)
+        - 10% of 810 USD = 81 USD. So the third discount will be -81 USD.
+        - In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
-In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
-
-### Rappel Configuration
+#### Rappel Configuration
 
 !!! info
     To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
+Rappels are discounts based on the volume of consumption of a business partner in a given period of time. This functionality allows the user to configure and grant rappels to business partners.
 
-With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.
+With this functionality, the tab “Rappel Configurations” is shown in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button **Create Rappel**.
 
 ![bp_window.png](../../../../assets/legacy/bp_window.png)
 
-To be able to do this, it is necessary to configure certain aspects in the “Rappel Configurations” window.
+To be able to do this, it is necessary to configure certain aspects in the **Rappel Configurations** window.
 
 !!! info
     For more information, visit [Rappel Configurations](../master-data-management/business-partner-setup.md#rappel-configurations).
 
-The “Rappel configuration” tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
+The **Rappel configuration** tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
 
-To create a new rappel, the user must select one of the available configurations in this tab and click the ***Create Rappel*** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
+To create a new rappel, the user must select one of the available configurations in this tab and click the **Create Rappel** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
 
 ![bp_pop_up_new.png](../../../../assets/legacy/bp_pop_up_new.png)
 
@@ -434,39 +594,39 @@ When the rappel is created, a sales invoice is created automatically, as seen be
 
 ![created_rappel.png](../../../../assets/legacy/created_rappel.png)
 
-
-Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. The status of this invoice is “draft”.
+Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. This invoice is in Draft status.
 
 !!! info
-    For more information, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
+    For more information, visit [Sales Invoice](../sales-management/transactions.md#advanced-rappels).
+
 
 ## Business Partner Info
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner Info`
 
-#### **Overview**
+#### Overview
 
 In this section, the user can view information related to business partner orders, receipts/shipments, invoices, and assets.
 
-### **Partner Selection**
+### Partner Selection
 
 The user can select a business partner to begin viewing related transactions.
 
 ![](../../../../assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ.png)
 
-#### **Partner Orders**
+#### Partner Orders
 
 The user can view orders related to a specific business partner.
 
 ![](../../../../assets/drive/pwcD_Hw4nDDMhW7FDa69spb3uNGrBrfB8AwS8Ni77RyIi6_uPAsIWmWPzkvPoCBe5IIcW_GeFmxgvB4KPxoI6TmwiK2nAsFyOKd7GvbMXzpAyt2DwTPDnyKijbLgejiWZYCnj28D9-y9hZNuDw.png)
 
-### **Partner Shipments**
+### Partner Shipments
 
 The user can view shipments related to a specific business partner.
 
 ![](../../../../assets/drive/DKEnqi6tY-_9PGf13-ntaqJCDwbfHlm8mJl2k4WwaIJ8dZibpai1E-LZhuf8DkUS4dSX2sm5eua0uzGLLdXreV-YW1KnyHvSI1zWRcJDHEjh0DJVslYgN3RBEuTiqjK0g5qpe02UP8ZUf24qyw.png)
 
-### **Partner Invoices**
+### Partner Invoices
 
 The user can view invoices related to a specific business partner.
 
@@ -477,7 +637,7 @@ The user can view invoices related to a specific business partner.
 
 :material-menu: `Application` > `Master Data Management` > `Product`
 
-#### **Overview**
+#### Overview
 
 Product master data window is the place where you can easily organize and centralize the key data of the items of any type you might manage as part of the organization processes and/or activities.
 
@@ -487,7 +647,7 @@ It is possible to load Product information into Etendo en masse using the Import
 
 This section describes how to set up Products individually.
 
-#### **Product**
+#### Product
 
 Product window allows the creation of items such as products, raw materials, resources, services, etc.
 
@@ -583,7 +743,7 @@ To learn more, visit the How to manage deferred revenue and expenses article.
 !!! info
     **Note**: If stocked is not checked and BOM is checked, the product price should be 0. Because in that special case, the product price is the sum of the prices of the bill of materials components it consists of. If promotion wanted to create, 'Discounts and Promotions' should be used.
 
-##### **Variants**
+##### Variants
 
 Product can be marked as **Is Generic**. This means that variants of this product will be created based on some characteristics such as colour, size, etc. The definition of these characteristics takes place in the generic product, so it can be said that a generic product is like a template where new variants will inherit all the attributes (taxes, prices, image) of this product. Due to this, a generic product cannot be used for transactions but its variants.
 
@@ -636,7 +796,7 @@ There is a preference **Show Product Characteristics Parents**: Values can be 1,
 
 New values of an existing characteristic can be added. For example, colour red when already having Blue and White. When it happens, this new value is automatically added to all generic products that already have the characteristic Color. This new value will be present in the configuration tab but deactivated. If the user wants to use it in a specific product in order to create new variants he can just activate the value and use the button *Manage Characteristics*
 
-##### **Modify Tax**
+##### Modify Tax
 
 - **Modify Tax**: This check allows services to modify the taxes of the product linked to. This allows modifying taxes calculation of a product depending on a service condition. For example, a new kitchen furniture is sold to a customer, the taxes applied to the furniture might change if the installation of the furniture is also provided by the seller of the furniture. Also, this functionality applies only to Orders. The documents that are created afterwards will take the information from the Order document.
 
@@ -656,7 +816,7 @@ To ease the configuration process, two components have been added:
 
 ![](../../../../assets/drive/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w.png)
 
-### **Price**
+### Price
 
 A product can be part of many Price List Versions which are valid for a given time period.
 
@@ -670,7 +830,7 @@ There are two ways in which the user can get a product to be part of a Price Lis
     As a consequence of that, the Price List as well as both *Net Unit Price* and *Net List Price* values will be automatically shown in the *Price List* tab of the product.  
     To learn more, visit Price List.
 
-#### **Price Rule Version**
+#### Price Rule Version
 
 This tab will only be available when field Is Price Rule Based is selected. This tab gives the possibility of adding Service Price Rules to the Service starting from a certain date.
 
@@ -686,7 +846,7 @@ For services of quantity rule: As per Product the quantity of the line does not 
 
 Also, if once a service (not yet delivered) has been added to the receipt, the price of the related product changes, a validation will be triggered, and in case the service no longer meets the tranche rules, it will be removed from the current receipt and a pop-up will be shown saying so.
 
-### **Accounting**
+### Accounting
 
 Accounting tab allows the user to configure the ledger accounts to be used while posting product related transactions such as product purchase or sales to the general ledger.
 
@@ -731,7 +891,7 @@ At first, these accounts are inherited from the Defaults accounts of the organiz
 !!! info
     Besides, it is important to remark that it is possible to configure the creation of new correlative accounts for the products as described in the General Ledgers tab of the Organization window.
 
-#### **Bill of Materials**
+#### Bill of Materials
 
 This tab allows editing the bill of materials components the selected product consists of.
 
@@ -743,7 +903,7 @@ If the product Tax_Category is flagged as **As per BOM**, this tab also provides
 
 ![](../../../../assets/drive/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw.png)
 
-### **Costing Rule**
+### Costing Rule
 
 Costing rule tab allows the user to review the costing rules that apply to the product within a given date range.
 
@@ -757,7 +917,7 @@ Currency used by the costing rule is the currency set for the organization.
 
 ![](../../../../assets/drive/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw.png)
 
-### **Costing**
+### Costing
 
 Costing tab collects and summarizes product cost related information as a result of every product transaction. Product's costs are valid during a fixed date range and can be calculated either by using an Average or a Standard costing algorithm.
 
@@ -818,7 +978,7 @@ Besides:
 !!! warning
     Note that you should not fill this field if the Costing Rule does not have the Warehouse Dimension field checked.
 
-### **Transactions**
+### Transactions
 
 Transaction tab is a summarized view of all the transactions of a product.
 
@@ -897,7 +1057,7 @@ For instance the average cost of a product which transactions are listed below i
 - goods shipment for Movement Qty -50 for a Total cost of 1000
 - goods receipt for Movement Qty 100 for a Total cost of 2500
 
-##### **Manual Cost Adjustment**
+##### Manual Cost Adjustment
 
 Additionally, the cost of a transaction can be modified by clicking the Manual Cost Adjustment process button. After clicking this button, a new popup is opened:
 
@@ -922,7 +1082,7 @@ This cost adjustment can be reviewed and posted to the ledger in the Cost Adjust
 
 In the same way, this cost adjustment can also be reviewed in the Transaction Cost tab.
 
-#### **Transaction Costs**
+#### Transaction Costs
 
 Transaction Costs records are automatically created by the Costing Background Process and then listed for the product in this tab.
 
@@ -943,7 +1103,7 @@ Some relevant fields to note are:
 - **Unit Cost**: this field details whether the calculated cost is part of the unit cost of the product or not.
 - **Accounting Date**: that is the accounting date when the cost has been calculated and post to the ledger (i.e. accounting date of a goods receipt post to the ledger)
 
-### **Purchasing**
+### Purchasing
 
 Purchasing tab information is used for products that are planned by the purchasing plan.
 
@@ -978,7 +1138,7 @@ Also, the Requisition process uses the Business Partner information for the auto
 - **Standard Quantity**: quantity that is taken into account in combination with the Quantity Type for the quantity value for the suggested purchase order.
 - **Capacity**: quantity per day the vendor is able to supply. Based on this field and the lead time, the purchase order date is calculated. The number of days is calculated as the max value of the lead time and the required quantity / capacity.
 
-### **Manufacturing**
+### Manufacturing
 
 Manufacturing tab is used for products that are planned by the manufacturing plan.
 
@@ -1007,7 +1167,7 @@ The information in this tab is mainly used by MRP to process the Manufacturing P
 
 - **Abc**: value used in warehouse management to indicate a combination of the stock level and the cost of a part. The value is calculated by running the Pareto Product Report.
 
-### **Translation**
+### Translation
 
 Product names can be translated to any language.
 
@@ -1016,7 +1176,7 @@ The way to get that is as simple as:
 - select first the language required
 - and then enter the product name translated into that language.
 
-#### **Characteristics**
+#### Characteristics
 
 Relation of characteristics assigned to the Product.
 
@@ -1051,7 +1211,7 @@ Fields to take into account:
 - **Unit price**: This field is displayed when the characteristic is marked as _Defines Price_. The aim of this field is to have different prices per value. For example, depending on the Sizes
 - **Image**: This field is displayed when the characteristic is marked as _Defines Image_. The aim of this field is to have different images per value. For example, depending on the colour.
 
-### **Stock**
+### Stock
 
 This Tab shows the available Stock for this Product in the application. It only shows Storage Bins for which the quantity available of the Product is not 0
 
@@ -1060,7 +1220,7 @@ For each not empty storage bin, it also shows information about the:
 - reserved quantity
 - and the allocated quantity
 
-### **Unit Cost**
+### Unit Cost
 
 Unit Cost Tab displays information about the actual *Unitary Cost* (Unit Cost) of the product.
 
@@ -1079,7 +1239,7 @@ In this Tab, there is going to be a record for:
 
 ![](../../../../assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
 
-#### **Product Categories**
+#### Product Categories
 
 The user can define if a product of a certain product category can be related to a product of 'Service' type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product belonging to included/excluded product categories.
 
@@ -1097,9 +1257,9 @@ This tab is not editable, it is not possible to add records manually or edit the
 
 ![](../../../../assets/drive/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ.png)
 
-#### **Category Price Rule Version**
+#### Category Price Rule Version
 
-#### **Products**
+#### Products
 
 The user can define if a product can be related to a product of 'Service' type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product included/excluded.
 
@@ -1120,33 +1280,32 @@ This tab is not editable, it is not possible to add records manually or edit the
 
 ![](../../../../assets/drive/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbRWsmbZj3ddYGqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqvFSgqwm3eW0fNIFxw.png)
 
-#### **Product Price Rule Version**
+#### Product Price Rule Version
 
-#### **Alternate UOM**
+### Alternate UOM Tab
 
 !!! info
-    The user must enable this preference by entering the Preference window, checking the Property list checkbox, choosing “Enable UOM Management” in the Property field with value Y.
+    To enable this functionality the user must define the preference **Enable UOM Management** in the Property field with value Y.
 
 ![](../../../../assets/drive/zu1QFJc_LPSBeJOGOOGHLNMjKi-WsPgjKPEaD4-BnQJEKbvhU1jz0WXeW-RHyDOEXYAx67_-Z7F6SIGVxBkGdZT828fkrjzAeu35psYO4H_dSFcw8YosbJailPqSWhZyjhCsN01vu0kqIyTG1g.png)
 
 Fields to note:
 
-- **UOM**, that is the alternative unit of measure of the product, for instance *Pallet*.  
-  It is important to remark that any unit of measure needs to be created and configured in Unit of Measure window.
-- **Conversion Rate**, that is the conversion between product's alternative unit of measure (AUM) to product's unit of measure.  
-  For instance, if product's AUM conversion to product's UOM is 50; that means that 1 Pallet represents 50 Units.
+- **UOM**, that is the alternative unit of measure of the product, for instance *Pallet*. It is important to remark that any unit of measure needs to be created and configured in [Unit of Measure](./product-setup.md#unit-of-measure) window.
+- **Conversion Rate**, that is the conversion between product's alternative unit of measure (AUM) to product's unit of measure. For instance, if product's AUM conversion to product's UOM is 50; that means that 1 Pallet represents 50 Units.
 - **Gtin**, that is the *Global Trade Item Number* for the product defined in the corresponding AUM
 - **Sales**, **Purchase** and **Logistics**, those fields allow defining the use of product's AUM within Sales, Purchase and Inventory flows.  
   Values allowed are:
-  - **Primary**: Product's AUM defined in this tab is used as default unit of measure in the selected flow (Sales or Purchase), when creating a sales or purchase document such as an order or receipt/shipment.  
+  
+    - **Primary**: Product's AUM defined in this tab is used as default unit of measure in the selected flow (Sales or Purchase), when creating a sales or  purchase document such as an order or receipt/shipment.  
     Only one Primary AUM can be defined per Product and flow.  
     For instance, if *Pallet* is the primary AUM defined for a product within Purchase flow, that means that every time that a purchase document is created, *Pallet* will be the default unit of measure shown.
-  - **Secondary**. Product's AUM defined in this tab can be selected for the selected flow when creating a Document.  
+    - **Secondary**. Product's AUM defined in this tab can be selected for the selected flow when creating a Document.  
     For instance, if *Pallet* is the secondary AUM defined for a product within Sales flow, while *Pack* is primary one; that means that every time that a sales document is created, *Pack* will be the default unit of measure shown, but end-user can change it to *Pallet*.
-  - **Not Applicable**. The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
+    - **Not Applicable**. The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
     That is the option to select for *Logistics* as the use of alternative units of measure is currently implemented just for sales and purchase. Inventory transactions/documents always refer to the product's unit of measure.
 
-#### **Modify Taxes Categories**
+#### Modify Taxes Categories
 
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
 

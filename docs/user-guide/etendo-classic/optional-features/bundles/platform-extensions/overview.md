@@ -103,7 +103,7 @@ This module guarantees an authentication method which allows users to securely a
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-    For more information, visit [Number To Word Converter user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
+    For more information, visit [Number To Word Converter user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application/number-to-word-converter.md) and the [Number To Word Converter developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
 ### Print Document Web Service
 
@@ -115,6 +115,17 @@ It allows downloading a PDF from some transaction documents using a web service 
 
 !!! info
     For more information, visit the [Print Document Web Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
+
+
+### Print Provider
+:octicons-package-16: Javapackage: `com.etendoerp.print.provider`
+
+Connects Etendo with external printing platforms to enable centralized, one-click document generation and printing across the system. It allows each organization to configure its own print provider, manage printer catalogs and templates, and execute direct print jobs from specific windows. The module includes a default integration with PrintNode and supports custom providers through reusable backend services and a public API, ensuring flexible, secure, and automated printing management within Etendo.
+
+!!! info
+    - For more information, visit the [Print Provider - User Guide](./print-provider.md).
+    - For more information, visit the [Print Provider - Developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md).
+
 
 ### Report Cache Management
 
