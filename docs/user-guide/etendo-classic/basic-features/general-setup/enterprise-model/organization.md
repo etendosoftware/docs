@@ -5,17 +5,19 @@ tags:
     - Client
 ---
 
+# Organization
+
 :material-menu: `Application` > `General Setup` > `Enterprise Model` > `Organization`
 
-### Overview
+## Overview
 
-An organization is an enterprise of a Client. Each client must have at least one organization created by running the Initial Organization Setup process. The process of creating an organization ends after setting it as "Ready".
+An **organization** is an enterprise of a Client. Each client must have at least one organization created by running the Initial Organization Setup process. The process of creating an organization ends after setting it as **Ready**.
 
-In other words, the process of creating an organization ends after setting it as "Ready" since Etendo requires performing some checking which validates that the organization has been properly created and that the organization structure is valid. If an organization is not properly created, Etendo will display an error when trying to set it up as ready.
+In other words, the process of creating an organization ends after setting it as **Ready** since Etendo requires performing some checking which validates that the organization has been properly created and that the organization structure is valid. If an organization is not properly created, Etendo will display an error when trying to set it up as ready.
 
 Once an organization is set as ready, no changes can be made to the organization anymore. New organizations can be added, but cannot be placed above the current organization. They can be added underneath or at the same level.
 
-### Organization
+## Organization
 
 The Organization window allows the user to maintain the organizations created by the Initial Organization Setup process.
 
@@ -23,9 +25,9 @@ There are different types of data left to be entered or changed for an organizat
 
 - The Legal Name of the organization, this name, if any, will be the one used in the financial and tax reports.
 - The Summary level checkbox informs Etendo if an organization is going to be a parent organization or not.  
-  If an organization is set as summary, it could be selected as "Parent Organization" while running the Initial Organization Setup process.  
+  If an organization is set as summary, it could be selected as Parent Organization while running the Initial Organization Setup process.  
   This flag can always be changed regardless if the organization is already set as ready, as it is always possible to add organizations underneath an existing one.
-- The Allow Period Control checkbox is only shown for "legal with accounting" organizations.
+- The Allow Period Control checkbox is only shown for Legal with Accounting organizations.
 
 ![](../../../../../assets/drive/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ.png)
 
@@ -56,15 +58,15 @@ Above fields are automatically fetched and set with proper values when setting o
 An organization can have only one general ledger configuration assigned unless:
 
 1.  the organization has its own one and besides inherits another one from its parent organization
-2.  or if the _advanced general ledger configuration feature_ is enabled at system level.
+2.  or if the **advanced general ledger configuration feature** is enabled at system level.
 
 The way to allow an organization to have more than one general ledger configuration assigned is described below:
 
-- As System Administrator, set your own "template" as "In Development". Save.
-- Once done, navigate to the "Windows, Tabs, and Fields" window
-- Find the "Organization" window
-- Navigate to the "Tab" tab and double click on the "General Ledgers" tab
-- Set it as "Active". Save.
+- As System Administrator, set your own template as **In Development**. Save.
+- Once done, navigate to the **Windows, Tabs, and Fields** window
+- Find the **Organization** window
+- Navigate to the **Tab** tab and double click on the **General Ledgers** tab
+- Set it as **Active**. Save.
 - Above detailed steps shows the General Ledger tab, which allows assigning more than one general ledger configuration to an organization.
 
 Food & Beverage (F&B) sample client shipped with Etendo illustrates scenario 1 above:
@@ -75,7 +77,7 @@ Food & Beverage (F&B) sample client shipped with Etendo illustrates scenario 1 a
 
 ![](../../../../../assets/drive/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT.png)
 
-This general ledger configuration can also be shared by the organizations underneath, for instance "F&B US, Inc" and "F&B España S.A."
+This general ledger configuration can also be shared by the organizations underneath, for instance *F&B US, Inc* and *F&B España S.A.*.
 
 - Same way, an accounting CSV file was also selected while creating the "Legal with Accounting" organization "F&B España S.A." same way as EUR currency, therefore this organization has the "F&B España, S.A US/A/Euro" general ledger configuration assigned.  
   As a consequence, "F&B España S.A." has two general ledger configurations assigned, its own one and the inherited one.
@@ -103,7 +105,7 @@ Once an organization is set as ready:
 - The organization newly created can not be moved up or down within the enterprise tree and can not be deleted.
 - It is not possible to create new organizations up in the tree but underneath or at the same level.
 
-### Information
+## Information
 
 Information tab allows the user to add relevant information of an organization, information such as location and tax ID number.
 
@@ -130,7 +132,7 @@ That is the case of Organizations like Public Sector organizations for which tax
 
 The field Sales Tax Exempt Rate allows entering a by default exempt sales tax rate to be used in the sales invoices by the non-tax-deductible organizations.
 
-### Period Control
+## Period Control
 
 Period Control tab is a read-only tab which lists the fiscal calendar period status of an organization.
 
@@ -154,7 +156,7 @@ As shown in the image below, the period Feb-19 has a mixed status, meaning that 
 
 For more information, see Open/Close Period Control.
 
-### Documents
+## Documents
 
 Documents tab is a read-only tab which lists the Document Category status for a selected period of an organization.
 
@@ -162,13 +164,13 @@ Documents tab is a read-only tab which lists the Document Category status for a 
 
 For more information, see Documents in the Open/Close Period Control window.
 
-### Data Sets
+## Data Sets
 
 Data sets tab allows viewing the reference data applied to the organization and informs in case there is any update of a reference data applied available.
 
 ![](../../../../../assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png)
 
-### Warehouse
+## Warehouse
 
 Relation of prioritized on-hand warehouses of the Organization.
 

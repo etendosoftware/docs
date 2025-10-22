@@ -20,7 +20,7 @@ The information to fill in to schedule a background process is:
 
 1. Select the **Organization** for which the background process is going to be scheduled.
 
-2. Select a **Process** or a **Process Group** from the corresponding list. To schedule a Process Group, check the **Group** flag, this will enable the _Process Group_ field.
+2. Select a **Process** or a **Process Group** from the corresponding list. To schedule a Process Group, check the **Group** flag, this will enable the **Process Group** field.
 
     !!! info
         A Process Group is scheduled in the same way as a single process. However, you cannot schedule a Process Group and a single process at the same time. 

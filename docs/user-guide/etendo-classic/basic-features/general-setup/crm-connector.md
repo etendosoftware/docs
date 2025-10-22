@@ -1,6 +1,12 @@
 ---
 title: CRM Connector Configuration
+tags:
+    - CRM Connector
+    - Configuration
+    - API Property
 ---
+
+# CRM Connector Configuration
 
 :material-menu: `Application` > `General Setup` > `CRM Connector` > `CRM Connector Configuration`
 
