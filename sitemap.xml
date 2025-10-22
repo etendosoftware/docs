@@ -769,10 +769,6 @@
          <lastmod>2025-10-22</lastmod>
     </url>
     <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/</loc>
-         <lastmod>2025-10-22</lastmod>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration/</loc>
          <lastmod>2025-10-22</lastmod>
     </url>
@@ -802,6 +798,38 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/alert/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/conversion-rates/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/country-and-region/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/create-sequences/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/currency/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/preference/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/session-preferences/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/window-personalization/</loc>
          <lastmod>2025-10-22</lastmod>
     </url>
     <url>
@@ -958,6 +986,10 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-download-rule/</loc>
          <lastmod>2025-10-22</lastmod>
     </url>
     <url>

@@ -1008,9 +1008,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../general-setup/application/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1_4" id="__nav_3_2_1_1_4_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1019,7 +1035,203 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/create-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Sequences
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/currency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Currency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/conversion-rates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conversion Rates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/country-and-region/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Country and Region
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/preference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/session-preferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Preferences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/window-personalization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Window Personalization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/alert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3666,6 +3878,29 @@
   
   <span class="md-ellipsis">
     Automated Remittance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/financial-extensions/conversion-rate-download-rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conversion Rate Download Rule
     
   </span>
   
@@ -12601,7 +12836,7 @@
 <p><strong>Foreign Amount</strong>: Only shown if the <strong>Set Amount</strong> checkbox is selected. Here, Etendo allows the user to manually enter the equivalent amount in the new currency that will replace or update the Business Partner’s balance.</p>
 </li>
 <li>
-<p><strong>Use default conversion rate</strong>: Checkbox. It uses the conversion rate defined in <a href="../../general-setup/application/#conversion-rates">Conversion Rates</a> window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field <em>Rate</em> is shown to allow entering a specific conversion rate.</p>
+<p><strong>Use default conversion rate</strong>: Checkbox. It uses the conversion rate defined in <a href="../../general-setup/application/conversion-rates/">Conversion Rates</a> window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field <em>Rate</em> is shown to allow entering a specific conversion rate.</p>
 </li>
 </ul>
 <p>Additionally, a business partner might have <strong>available credit in a given currency</strong>. If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.</p>
@@ -12691,7 +12926,7 @@ That credit must be converted into the new currency, so the system applies the c
 <p>For more information, visit <a href="../pricing/#price-list">Price List</a>.</p>
 </div>
 <p>Price lists are defined in a given currency, which could be the same as customer currency or not.<br>
-In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the <a href="../../general-setup/application/#conversion-rates">Conversion Rates</a> window or the one entered in the process <strong>Set New Currency</strong> which can be run to change the currency of a business partner.</p>
+In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the <a href="../../general-setup/application/conversion-rates/">Conversion Rates</a> window or the one entered in the process <strong>Set New Currency</strong> which can be run to change the currency of a business partner.</p>
 </li>
 <li>
 <p><strong>Payment Method</strong>: The one selected will be the one applied while creating and managing the payments received from that customer.<br>
