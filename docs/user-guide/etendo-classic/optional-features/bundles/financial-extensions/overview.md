@@ -160,7 +160,7 @@ This module provides a new document where it is possible to settle debts or cred
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
 !!! info
-    For more information, visit the [Conversion Rate Downloader user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#conversion-rate-download-rule) and the [Conversion Rate Downloader developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#conversion-rate-downloader).
+    For more information, visit the [Conversion Rate Downloader -  User guide](./conversion-rate-download-rule.md) and the [Conversion Rate Downloader - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#conversion-rate-downloader).
 
 
 ### Currency API Configuration
