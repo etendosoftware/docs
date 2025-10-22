@@ -248,7 +248,7 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode1.png)
 
-    3. The generated code is displayed in the storage bin. It can also be loaded manually or modified.
+    3. The generated code is displayed in the storage bin in the **Barcode** field. It can also be loaded manually or modified.
 
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png)
     
@@ -265,16 +265,16 @@ It is possible to generate these unique codes for storage bins in the **Warehous
     
     2. Click on Generate Barcode and confirm with Done.
     
-    3. The generated code is displayed head of the product window. It can also be loaded manually or modified.
+    3. The generated code is displayed in the header of the product window in the **UPC/EAN** field. It can also be loaded manually or modified.
 
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png)
     
-    4. It can obtain a printout of the generated barcode by clicking on the Generate Printable button. You must select a supplier, the printer, and the number of copies.
+    4. It can obtain a printout of the generated barcode by clicking on the *Generate Printable* button. You must select a supplier, the printer, and the number of copies.
     
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png)
+        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png)
 
-    !!! info
-        To use the print option, you must have the Print Provider module. For details, see [Print Provider](../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
+        !!! info
+            To use the print option, you must have the Print Provider module. For details, see [Print Provider](../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
     
     !!! info 
         In the **Product** window, there is a tab called **Barcode**, where various barcodes associated with the product, such as supplier codes, are listed. These codes are loaded manually, allowing you to specify the algorithm used to encrypt the code and the Application Identifier configuration.
@@ -321,13 +321,14 @@ Fields to note:
 - **Movement Date**: Date on which the physical goods movement is recorded. By default, it is the current date.  
 - **Accounting Date**: Date on which the transaction is recognized for accounting purposes.  
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png)
-
-Fields to note:
 
 #### Lines Tab
 
-The Tab Lines allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones:
+The  Lines Tab allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones.
+
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png)
+
+Fields to note:
 
 - **Active**: Indicates whether the line is enabled for processing within the receipt.  
 - **Line No**: Sequential number automatically assigned to identify the line within the receipt.  
@@ -356,7 +357,7 @@ This button appears when at least one line is selected. It allows multiple/mixed
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
-The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1 if grouped on a pallet). 
+The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1). 
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
