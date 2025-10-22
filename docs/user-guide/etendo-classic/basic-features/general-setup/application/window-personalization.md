@@ -6,15 +6,17 @@ tags:
     - Settings
 ---
 
+# Window Personalization
+
 :material-menu: `Application` > `General Setup` > `Application` > `Window Personalization`
 
-Etendo allows the customization of grid and form views. Customize windows and form views are stored once saved in the Window Personalization window. Etendo windows can be shown in _Form View_ and in _Grid View_, both ways can be customized as required.
+Etendo allows the customization of grid and form views. Customize windows and form views are stored once saved in the Window Personalization window. Etendo windows can be shown in *Form View* and in *Grid View*, both ways can be customized as required.
 
-Window Personalization lists and maintains the customized form views.
+**Window Personalization** lists and maintains the customized form views.
 
 ![](../../../../../assets/drive/xS4tDlk0VJ49snDskpuJfugXl-ziE6vT8HMe7op-QkP_NzRwF-Rr7rgisAd3RnIXQLgaJ0h6hK07xGi2hbhGd37GcHr8q8zyW0zzZ4bOYdxQzByOqDjw202Qn0WoHMxu7WoIXCHU.png)
 
-Once a form has been customized, saved and listed in the _"Window Personalization"_ window, it is possible to configure the levels of visibility where that form personalization will apply.
+Once a form has been customized, saved and listed in the **Window Personalization**window, it is possible to configure the levels of visibility where that form personalization will apply.
 
 ---
 
