@@ -12,10 +12,9 @@ hide:
     - navigation
     - toc
 ---
-
 ![alt text](../assets/live-builds/overview/livebuilds.png){ width=250 align="right"}
 
-# Etendo Test Environments 
+# Etendo Test Environments  
 
 <div class="grid cards" markdown>
 
@@ -40,12 +39,12 @@ hide:
 
 </div>
 
-[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="blank"} _Here you can check the Etendo servers status._
+[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="blank"} *Here you can check the Etendo servers status.*
 
 !!! tip "Credentials"
     The default access credentials are: <br> 
-        **Username:** admin <br>
-        **Password:** admin <br>
+    **Username:** admin <br>
+    **Password:** admin <br>
 
 !!! note "These live builds are refreshed and reset every day at 9:00 PM UTC."
     
