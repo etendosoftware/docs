@@ -1,20 +1,20 @@
 ---
-tags:
-  - Builds
-  - Livebuilds
-  - Etendo
-  - Real-time Testing
-  - Postgres
-  - Oracle
-  - Environments
-
+title: Etendo Test Environments
 hide:
     - navigation
     - toc
+tags:
+    - Builds
+    - Livebuilds
+    - Etendo
+    - Postgres
+    - Oracle
+    - Environments
 ---
-![alt text](../assets/live-builds/overview/livebuilds.png){ width=250 align="right"}
 
-# Etendo Test Environments  
+# Etendo Test Environments
+
+This page provides quick access to Etendo live test environments that are always kept up to date, making them ideal for safely testing new features and reproducing issues without affecting production.
 
 <div class="grid cards" markdown>
 
@@ -29,7 +29,7 @@ hide:
     [:material-new-box: Etendo 25+ Bundles + New UI](https://demo25.bundles.newui.etendo.cloud){ target="blank"}
 
 -   :material-test-tube:{ .lg .middle } **Etendo**
-    
+
     Etendo environments supported without any modules installed.
 
     ---
