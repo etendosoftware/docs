@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const algoliaConfig = {
         appId: 'XMLZ1ZZEY7',
         apiKey: 'de992ae25d65509474690fe8761e2a21',
-        indexName: 'etendo_docs_index'
+        indexName: 'etendo_docs_index2'
     };
 
     // Select the search container
