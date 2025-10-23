@@ -14,7 +14,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
 
 
 ## Requirements
-- Python version ^3.10. To install it, follow [the Python installation guide](https://www.python.org/downloads/){target="\_blank"}.
+- Python version ^3.11. To install it, follow [the Python installation guide](https://www.python.org/downloads/){target="\_blank"}.
 
 
 ## Steps
@@ -30,12 +30,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     ```bash title="Terminal" 
     python3 -m venv venv
     source venv/bin/activate
-    pip install mkdocs-material
-    pip install pillow cairosvg
-    pip install mkdocs-glightbox
-    pip install mkdocs-rss-plugin
-    pip install beautifulsoup4
-    pip install algoliasearch
+    pip install -r requirements.txt
     ```
 
 3. Create a new branch with [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
