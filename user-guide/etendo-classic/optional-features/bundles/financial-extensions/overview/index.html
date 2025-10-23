@@ -12265,6 +12265,10 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p>This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Dependency Notice</p>
+<p>This module depends on the <a href="../../optional-features/bundles/essentials-extensions/bulk-completion.md"><strong>Bulk Completion</strong></a> module, as <strong>order</strong> processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy <strong>close/reactivate</strong> actions for orders will be hidden and these actions will only be available through the <strong>Bulk Completion</strong> button.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information, visit:</p>

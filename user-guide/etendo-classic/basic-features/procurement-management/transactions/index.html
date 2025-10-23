@@ -13393,6 +13393,10 @@ That way, during the time that the requisition lines are locked:</p>
 <p class="admonition-title">Info</p>
 <p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">marketplace</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Dependency Notice</p>
+<p>This module depends on the <a href="../../../optional-features/bundles/essentials-extensions/bulk-completion/"><strong>Bulk Completion</strong></a> module, as <strong>order</strong> processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy <strong>close/reactivate</strong> actions for orders will be hidden and these actions will only be available through the <strong>Bulk Completion</strong> button.</p>
+</div>
 <p>Etendo allows the user to reactivate closed purchase orders by selecting the needed one/s and clicking the Undo Close button.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1cyLa7pjnsNgXtnSEK2lZX9s35imhD2Kq.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/1cyLa7pjnsNgXtnSEK2lZX9s35imhD2Kq.png"></a></p>
 <p>Once the process is finished, the purchase order status turns to booked.</p>
