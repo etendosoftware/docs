@@ -191,7 +191,6 @@ nav:
       - Basic Features:
         - General Setup:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
-          - Clear Report Cache: user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md
           - Attachments Configuration: user-guide/etendo-classic/basic-features/general-setup/attachments-configuration.md
           - Application:
             - Create Sequences: user-guide/etendo-classic/basic-features/general-setup/application/create-sequences.md

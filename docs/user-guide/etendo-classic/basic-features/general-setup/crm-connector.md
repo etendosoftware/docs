@@ -14,7 +14,18 @@ tags:
 
 The concrete CRM connector must add a configuration in this window to enable it to connect to the external system and to define the properties and filters used by Etendo to map with the external system information.
 
-### API Property
+![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/crm-connector/crm-connector.png)
+
+Fields to note:
+
+- **Name**: Identifier of the connector.
+- **Description**: Additional information about the connector. 
+- **URL**: 	The URL defines an online address for this element.
+- **Username**: Name that identifies the user in the System.
+- **Password**: Indicates the Password for this User Id. Passwords are required to identify authorized users.
+- **Timeout**: Timeout is the value in seconds set by the user for the request to the defined service.
+
+## API Property
 
 An API property is like a Map which matches an external API key with an Etendo Message. It defines the data type and any other related configuration.
 
@@ -22,7 +33,7 @@ An API property is like a Map which matches an external API key with an Etendo M
 
 It allows the user to define options accepted by parent property.
 
-### Filter
+## Filter
 
 Filters for external business partner integration. The filter has a defined type and it is linked to one or many properties.
 

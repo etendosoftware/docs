@@ -14,23 +14,23 @@ tags:
 
 Audit Trail allows the user to monitor every data change done in any table or entity through the user interface.
 
-Audit trail feature monitors data changes such as:
+The Audit trail feature monitors data changes such as:
 
 - Insert
 - Update
 - Delete
 
-Audit trail feature must be enabled by the "System Administrator Role" in the Application Dictionary, as the first thing to do is to configure the table/s for which this feature is going to be enabled.
+This feature must be enabled by the System Administrator Role in the Application Dictionary, as the first thing to do is to configure the table/s for which this feature is going to be enabled.
 
-Once a change has been made in a table for which the audit trail feature has been enabled, it is possible to monitor that change through the user interface by using the action button "Audit Trail".
+Once a change has been made in a table for which the audit trail feature has been enabled, it is possible to monitor that change through the user interface by using the action button **Audit Trail**.
 
-![](../../../../assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png)
+![](../../../../../assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png)
 
 ## Audit Trail
 
 Audit Trail view displays read-only information about all the recorded data changes done in the tables for which the audit trail feature has been enabled.
 
-![](../../../../assets/drive/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4.png)
+![](../../../../../assets/drive/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4.png)
 
 The changes done in a given table, column and record are viewed by showing the corresponding record ID or UI of the records in the database.
 
@@ -38,26 +38,26 @@ The changes done in a given table, column and record are viewed by showing the c
 
 In order to track audit information, the system administrator needs to perform two tasks:
 
-- Enable the audit trail for one or more tables in the system
-- Run the 'Update Audit Trail infrastructure' process
+- **Enable the audit trail** for one or more tables in the system
+- Run the **Update Audit Trail infrastructure** process
 
 In the following sections, a step-by-step guide with more detailed information is provided.
 
-## Enabling audit trail for a table
+## Enabling Audit Trail for a Table
 
 Enabling/disabling the audit trail feature for a table is done in the Table definition in the Application Dictionary.
 
-- Switch to the System Administrator role
-- Go to Application Dictionary > Tables and Columns
-- Navigate to the table for which you want to enable the Audit Trail
-- Switch to Edit View
-- Mark the "Fully Audited" checkbox and save
+- Switch to the **System Administrator** role
+- Go to **Application Dictionary > Tables and Columns**
+- **Navigate to the table** for which you want to enable the Audit Trail
+- Switch to **Edit View**
+- Mark the **Fully Audited** checkbox and save
 
 ### Audit Inserts
 
-When a table is flagged as Fully Audited, the users can decide if they want to audit the insertions done in that table.
+When a table is flagged as **Fully Audited**, the users can decide if they want to audit the insertions done in that table.
 
-![](../../../../assets/drive/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und.png)
+![](../../../../../assets/drive/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und.png)
 
 If the Audit Inserts field is checked in a table, when a new row is inserted in that table several records will be inserted in the Audit Trail table, one for each column in the audited table. These records will contain the original value of the columns of the new row.
 
@@ -65,9 +65,9 @@ Usually, it is not necessary to store this information, because the original val
 
 ### Excluding columns
 
-By default, when a table is audited, modifications in any of its columns are audited. In some cases, it makes sense not to audit changes for some of them. This can be configured by setting the _Exclude Audit_ flag in _Tables and Columns > Table > Column_ tab.
+By default, when a table is audited, modifications in any of its columns are audited. In some cases, it makes sense not to audit changes for some of them. This can be configured by setting the **Exclude Audit** flag in `Tables and Columns` > `Table` > `Column` tab.
 
-![](../../../../assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png)
+![](../../../../../assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png)
 
 ## Running the System Compilation
 
@@ -80,14 +80,14 @@ These triggers need to be regenerated, when executing a system compilation, once
 
 ## The Audit Trail Popup
 
-For the set of tables for which the audit trail feature has been enabled, the button ![](../../../../assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png) is shown in the toolbar of the corresponding windows. It gives access to the Audit Trail Popup.
+For the set of tables for which the audit trail feature has been enabled, the button ![](../../../../../assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png) is shown in the toolbar of the corresponding windows. It gives access to the Audit Trail Popup.
 
 This popup allows examination of the history of the record which is currently shown in the window. It has two main view modes which allow examining the following data:
 
-- 'Record history' of a single record
-- 'Deleted records' of a single tab
+- **Record history** of a single record
+- **Deleted records** of a single tab
 
-## The 'Record History' view
+## Record History View
 
 This view is displayed when the popup is opened from an existing record via the new toolbar button.
 
@@ -102,15 +102,15 @@ The grid in the lower area shows all changes done to this record while the audit
 
 A row in this grid corresponds to a single changed field. For changes to an existing record, the number of grid entries shown correspond to the number of fields changed. For new record creations or record deletion, one row in the grid is shown per field of the inserted/deleted record.
 
-![](../../../../assets/drive/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL.png)
+![](../../../../../assets/drive/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL.png)
 
-Finally, a link just on top of the grid allows switching to the 'Deleted Records' view. Following that link will show deleted records for the tab from which the Audit Trail popup was opened.
+Finally, a link just on top of the grid allows switching to the Deleted Records view. Following that link will show deleted records for the tab from which the Audit Trail popup was opened.
 
-### Disable filtering by User
+### Disable Filtering by User
 
-The User filter can be removed from both the 'Record History' and the 'Deleted Records' view. This can be interesting for performance reasons when the number of users available is high. In order to do this, go to General Setup|Application|Preference and add the following preference: Show Audit Trail User filter with value Y.
+The User filter can be removed from both the **Record History** and the **Deleted Records** view. This can be interesting for performance reasons when the number of users available is high. In order to do this, go to `General Setup` > `Application` > `Preference` and add the following preference: Show Audit Trail User filter with value Y.
 
-## The 'Deleted Records' view
+## Deleted Records View
 
 This view allows examination of records which have been deleted from a tab and are otherwise no longer accessible in the user interface.
 
@@ -120,25 +120,27 @@ An info on the top shows a reference to the entity for which the deleted records
 
 Then a grid displays all deleted records belonging to this tab/entity. Here one row shown corresponds to a single deleted record and the columns shown are the same as the ones shown in the normal grid view of the same tab.
 
-![](../../../../assets/drive/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV.png)
+![](../../../../../assets/drive/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV.png)
 
-This view offers a number of navigation choices to view related or more detailed information.
+This view offers a number of **navigation choices** to view related or more detailed information.
 
-### Navigation: Back to history
+### Navigation Choices
 
-The first one is Back to history. Following this link, the view is just switched back to 'Record History' showing the same records as shown before going to the deleted records view.
+#### Back to History
 
-### Navigation: History of selected record
+The first one is Back to history. Following this link, the view is just switched back to Record History showing the same records as shown before going to the deleted records view.
+
+#### History of Selected Record
 
 The next one, View history of selected deleted record below, allows examining the detailed history of a deleted record, instead of the summary view which is shown here.
 
 This detailed history is displayed in the same 'Record History' view, however its top info area notes the fact that the history of a deleted record is displayed.
 
-The following screenshot shows an example of the history view of the same deleted 'Sales Order' entry. Compared with the previous example of this view, new history entries corresponding to the deletion are shown in addition to the older information about the record creation and modification.
+The following screenshot shows an example of the history view of the same deleted Sales Order entry. Compared with the previous example of this view, new history entries corresponding to the deletion are shown in addition to the older information about the record creation and modification.
 
-![](../../../../assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png)
+![](../../../../../assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png)
 
-### Navigation: Child Tabs
+#### Child Tabs
 
 As the last method of navigation, the popup allows filtering records based on a parent record. This can be useful to search for deleted lines belonging to a sales order.
 
@@ -146,19 +148,19 @@ There are two possible ways based on the status of the parent record: still exis
 
 If the parent record (i.e. a Sales Order) does still exist, then the following steps can be done two view its deleted lines:
 
-- Go to the lines tab of the Sales Order
-- Click the audit trail icon to open the record history view
-- Use the 'Deleted Records' links to switch to deleted records view
+1. Go to the lines tab of the Sales Order
+2. Click the audit trail icon to open the record history view
+3. Use the 'Deleted Records' links to switch to deleted records view
 
 As the lines tab is not a top level tab (it has a parent tab Sales Order) the deleted records view is automatically filtered to only show lines belonging to the current Sales Order. As visual information that the information shown is filtered, the top info area shows:
 
-![](../../../../assets/drive/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk.png)
+![](../../../../../assets/drive/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk.png)
 
 If the parent record (i.e. a Sales Order) does not exist anymore, then the same can be accomplished by using the following steps:
 
-- Go to the 'Deleted Records' view of the Sales Order tab
-- Search the Sales Order for which the deleted lines should be shown
-- Click the _Lines_ link just below the grid
+1. Go to the Deleted Records view of the Sales Order tab
+2. Search the Sales Order for which the deleted lines should be shown
+3. Click the Lines link just below the grid
 
 Then the deleted records view will show the deleted lines belonging to the selected (deleted) Sales Order.
 
@@ -170,7 +172,7 @@ It offers a raw view of the audit data, meaning that no translation of raw value
 
 Simultaneously, this window allows a much more flexible filtering/searching.
 
-![](../../../../assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png)
+![](../../../../../assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png)
 
 ## Limitations
 

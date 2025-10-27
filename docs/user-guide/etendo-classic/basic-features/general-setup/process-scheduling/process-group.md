@@ -1,5 +1,5 @@
 ---
-title: Process Request
+title: Process Group
 tags:
     - Process Group
     - Sequence
@@ -10,21 +10,21 @@ tags:
 
 :material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Group`
 
-A **Process Group** allows you to define and schedule a sequence of processes that will run one after another as a single batch. This is useful for automating workflows that require multiple processes to be executed in a specific order.
+A **Process Group** allows the user to define and schedule a sequence of processes that will run one after another as a single batch. This is useful for automating workflows that require multiple processes to be executed in a specific order.
 
 When a Process Group is scheduled:
 
 - A single entry appears in the **Process Request** and **Process Monitor** windows.
 - Each process within the group also appears separately in both windows with its own log and status, regardless of whether it succeeded or failed.
 
-![alt text](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group.png)
 
 Fields to note:
 
 - **Name**: Identifier of the process group.
 - **Description**: Additional information about the group.
-- **Prevent concurrent execution of the group**: When enabled, the system will check if another instance of the same process group is already running (for the same client and organization) before starting a new execution. If one is found, execution is canceled and an error message appears in the log: _Concurrent attempt to execute._
-- **Stop group execution if a process fails**: By default, if a process in the group fails, the following processes will still execute. When this option is selected, the entire group execution will stop immediately upon a process failure.
+- **Prevent concurrent executions**: When enabled, the system will check if another instance of the same process group is already running (for the same client and organization) before starting a new execution. If one is found, execution is canceled and an error message appears in the log: "Concurrent attempt to execute".
+- **Stop group execution when a process fails**: By default, if a process in the group fails, the following processes will still execute. When this option is selected, the entire group execution will stop immediately upon a process failure.
 
     !!! info
         This is useful when processes are dependent on each other.
@@ -32,8 +32,6 @@ Fields to note:
 ## Process Group List
 
 List of individual processes, each with an assigned sequence number that determines the execution order.
-
-
 
 !!! failure "Error Result"
     A process group will show an Error result if it has one or more Error results in the processes that conform the group.

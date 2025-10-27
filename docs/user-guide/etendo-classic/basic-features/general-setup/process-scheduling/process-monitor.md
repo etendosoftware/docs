@@ -14,23 +14,22 @@ Process monitor window allows **reviewing the status of processes** executed by 
 
 In other words, there are two types of processes which can be monitored in this window:
 
-- **Transactional** processes such as Generate Average Cost or Generate Invoices.
+- **Transactional** processes, such as Generate Average Cost or Generate Invoices.
 - **Background** processes scheduled in the process request.
 
 In any case, only the users having a role which have access to a given process/processes will be able to monitor it/them in this window.
 
 Besides, and as already explained, **Security Based on Role** definition at process request level will allow defining the users which will be able to monitor a given background process in this window.
 
+The Process Monitor window shows read-only information about individual process execution.
 
-Process Monitor window shows read-only information about individual process execution.
-
-![](../../../../assets/drive/1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb.png)
+![](../../../../../assets/drive/1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb.png)
 
 As shown in the image above, process monitor window provides the information below per each process executed:
 
 - Process
 - Process Group
-- User who run the process.
+- User who runs the process
 - Start and End time
 - Duration
 - Status
@@ -39,10 +38,11 @@ As shown in the image above, process monitor window provides the information bel
     - Process Scheduler: For background processes scheduled in the Process Request window.
 - Process Log
 
-## Processes in GrouP
+## Processes in Group
 
-In case the process executed is a process group, you will find here the information about the executions of the processes in the group. 
-![](../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
+In case the process executed is a process group, you will find here the information about the executions of the processes in the group.
+ 
+![](../../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
 ---
 

@@ -15,32 +15,33 @@ An **organization** is an enterprise of a Client. Each client must have at least
 
 In other words, the process of creating an organization ends after setting it as **Ready** since Etendo requires performing some checking which validates that the organization has been properly created and that the organization structure is valid. If an organization is not properly created, Etendo will display an error when trying to set it up as ready.
 
-Once an organization is set as ready, no changes can be made to the organization anymore. New organizations can be added, but cannot be placed above the current organization. They can be added underneath or at the same level.
+!!!warning
+    Once an organization is set as ready, no changes can be made to the organization anymore. New organizations can be added, but cannot be placed above the current organization. They can be added underneath or at the same level.
 
 ## Organization
 
-The Organization window allows the user to maintain the organizations created by the Initial Organization Setup process.
+The **Organization** window allows the user to maintain the organizations created by the Initial Organization Setup process.
 
 There are different types of data left to be entered or changed for an organization:
 
-- The Legal Name of the organization, this name, if any, will be the one used in the financial and tax reports.
-- The Summary level checkbox informs Etendo if an organization is going to be a parent organization or not.  
-  If an organization is set as summary, it could be selected as Parent Organization while running the Initial Organization Setup process.  
-  This flag can always be changed regardless if the organization is already set as ready, as it is always possible to add organizations underneath an existing one.
-- The Allow Period Control checkbox is only shown for Legal with Accounting organizations.
+- The **Legal Name** of the organization, this name, if any, will be the one used in the financial and tax reports.
+- The **Summary Level** checkbox informs Etendo if an organization is going to be a parent organization or not.  
+If an organization is set as summary, it could be selected as Parent Organization while running the Initial Organization Setup process.  
+This flag can always be changed regardless if the organization is already set as ready, as it is always possible to add organizations underneath an existing one.
+- The **Allow Period Control** checkbox is only shown for Legal with Accounting organizations.
 
-![](../../../../../assets/drive/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ.png)
+    ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-window.png)
 
-If enabled, it allows selecting a Fiscal Calendar for which the corresponding fiscal periods can be opened or closed in the Open/Close Period Control window.
+    If enabled, it allows selecting a Fiscal Calendar for which the corresponding fiscal periods can be opened or closed in the Open/Close Period Control window.
 
-- Opening & Closing periods process impacts to the organizations underneath the "legal entity with accounting" organization.
+- The **Opening & Closing periods** process impacts on the organizations underneath the Legal entity with accounting organization.
 - The organization's General Ledger.  
-  For instance, legal entities with accounting organizations need to record and post the financial transactions such as invoices and payments to the ledger.  
-  Etendo allows customizing the way that the financial transactions are posted to the ledger, that means customizing the General Ledger configuration to meet the organization's needs.  
-  This field is automatically defaulted by Etendo, which means that a general ledger is created by default, if :
-  - a Localization Pack containing a localized chart of accounts module
-  - or an accounting CSV file
-  - or the Generic Chart of Accounts Module is installed and then selected while creating the organization by running the Initial Organization Setup process.
+    For instance, legal entities with accounting organizations need to record and post the financial transactions such as invoices and payments to the ledger.  
+    Etendo allows customizing the way that the financial transactions are posted to the ledger, that means customizing the General Ledger configuration to meet the organization's needs.  
+    This field is automatically defaulted by Etendo, which means that a general ledger is created by default, if :
+    - a Localization Pack containing a localized chart of accounts module
+    - or an accounting CSV file
+    - or the Generic Chart of Accounts Module is installed and then selected while creating the organization by running the Initial Organization Setup process.
 - The Default G/L Item for Funds Transfer is used to set default value for G/L Item parameter in Funds Transfer Process from the Financial Account.
 
 **Inherited Information**
@@ -105,7 +106,7 @@ Once an organization is set as ready:
 - The organization newly created can not be moved up or down within the enterprise tree and can not be deleted.
 - It is not possible to create new organizations up in the tree but underneath or at the same level.
 
-## Information
+### Information
 
 Information tab allows the user to add relevant information of an organization, information such as location and tax ID number.
 
@@ -132,7 +133,7 @@ That is the case of Organizations like Public Sector organizations for which tax
 
 The field Sales Tax Exempt Rate allows entering a by default exempt sales tax rate to be used in the sales invoices by the non-tax-deductible organizations.
 
-## Period Control
+### Period Control
 
 Period Control tab is a read-only tab which lists the fiscal calendar period status of an organization.
 
@@ -156,7 +157,7 @@ As shown in the image below, the period Feb-19 has a mixed status, meaning that 
 
 For more information, see Open/Close Period Control.
 
-## Documents
+#### Documents
 
 Documents tab is a read-only tab which lists the Document Category status for a selected period of an organization.
 
@@ -164,13 +165,13 @@ Documents tab is a read-only tab which lists the Document Category status for a 
 
 For more information, see Documents in the Open/Close Period Control window.
 
-## Data Sets
+### Data Sets
 
 Data sets tab allows viewing the reference data applied to the organization and informs in case there is any update of a reference data applied available.
 
 ![](../../../../../assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png)
 
-## Warehouse
+### Warehouse
 
 Relation of prioritized on-hand warehouses of the Organization.
 
