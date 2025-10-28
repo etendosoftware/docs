@@ -3243,21 +3243,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Module Functionality
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Module Functionality">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#unit-of-measure" class="md-nav__link">
     <span class="md-ellipsis">
@@ -3277,18 +3262,42 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#product" class="md-nav__link">
+  <a href="#alternate-uom" class="md-nav__link">
     <span class="md-ellipsis">
-      Product
+      Alternate UOM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receipt-goods-receipt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receipt (Goods Receipt)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alternate-uom" class="md-nav__link">
+  <a href="#sales" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternate UOM
+      Sales
     </span>
   </a>
   
@@ -11836,21 +11845,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Module Functionality
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Module Functionality">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#unit-of-measure" class="md-nav__link">
     <span class="md-ellipsis">
@@ -11870,18 +11864,42 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#product" class="md-nav__link">
+  <a href="#alternate-uom" class="md-nav__link">
     <span class="md-ellipsis">
-      Product
+      Alternate UOM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receipt-goods-receipt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receipt (Goods Receipt)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alternate-uom" class="md-nav__link">
+  <a href="#sales" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternate UOM
+      Sales
     </span>
   </a>
   
@@ -11988,8 +12006,6 @@
 <p><strong>Enable UOM Management</strong>: Activates the management of Units of Measure (UOM). When enabled, users can assign Boxes or Pallets as units for products, configure conversions, and apply them across processes (sales, purchases, logistics). This preference is required to integrate Alternative Units of Measure with referenced inventory (Logistic Unit Type).</p>
 </li>
 </ul>
-<h2 id="module-functionality">Module Functionality</h2>
-<p>The <strong>Stock Logistic</strong> Unit module affects several standard Etendo windows, as it introduces new logistic units and their integration with referenced inventory and alternative units of measure.</p>
 <h3 id="unit-of-measure">Unit of Measure</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/uom.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/uom.png"></a></p>
 <p>In the Unit of Measure window, the module adds the units of measure <strong>Box</strong> and <strong>Pallets</strong> to facilitate the management of logistics units within the system.
@@ -11997,7 +12013,6 @@ These UOM serve as the basis for configuring products with alternative units, wh
 <h3 id="references-inventory-type">References Inventory Type</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/referenced-inventory-type.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/referenced-inventory-type.png"></a></p>
 <p>In the Referenced Inventory Type window, the module adds the referenced inventory types <strong>Box</strong> and <strong>Pallet</strong>, each with its corresponding sequence. In this way, the referenced inventory retains traceability at the logistics unit level, ensuring consistency between the defined AUOMs and stock records. Reservations are updated using logic that allows alternative units of measurement to be taken into account.</p>
-<h3 id="product">Product</h3>
 <h3 id="alternate-uom">Alternate UOM</h3>
 <p>In the <a href="../../../../basic-features/master-data-management/master-data/#alternate-uom-tab">Alternate UOM</a> tab of the <strong>Product window</strong>, enabling the <strong>Enable UOM Management</strong> preference allows users to assign <em>Box</em> or <em>Pallet</em> as <strong>alternative units of measure</strong></p>
 <div class="admonition warning">
@@ -12005,12 +12020,37 @@ These UOM serve as the basis for configuring products with alternative units, wh
 <p>Only one level of logistic units is supported. For example, products can be managed in pallets or in boxes, but pallets containing boxes of products are not yet supported.</p>
 </div>
 <p>Users can define conversion rates and specify in which processes (sales, purchasing, logistics) these conversions apply. Based on this configuration, stock reservation rules automatically prioritize full pallets and boxes before using individual units, optimizing inventory management.</p>
-<p>An additional feature introduced is greater granularity through the ability to select a <strong>Logistic Unit Type</strong>. For example, if the alternative unit is "Box," the system allows specifying whether it is a large, medium, or small box. This provides a higher level of control and accuracy in inventory management.</p>
+<p>An additional feature introduced is greater granularity through the ability to select a <strong>Logistic Unit Type</strong>. For example, if the alternative unit is <em>Box</em>, the system allows specifying whether it is a large, medium, or small box. This provides a higher level of control and accuracy in inventory management.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/alternate-uom.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/alternate-uom.png"></a></p>
 <p><strong>Fields to note:</strong></p>
 <ul>
 <li><strong>Logistic Unit Type</strong>: Dropdown linked to <a href="../../../../basic-features/warehouse-management/setup/#referenced-inventory-type">Referenced Inventory Type</a>, used when registering incoming and outgoing goods.</li>
 </ul>
+<h2 id="workflow">Workflow</h2>
+<p>The Stock Logistic Units module intervenes across the board in the processes of receiving, reserving, selling, and delivering products, providing comprehensive management based on alternative units of measure (AUOMs) and inventory references (IRs).
+Its functionality is enhanced when used in conjunction with other components of the Warehouse Extension Bundle.</p>
+<h3 id="receipt-goods-receipt">Receipt (Goods Receipt)</h3>
+<p>The Receiving flow begins in the Goods Receipt window, where product entries are recorded. When entering goods that use alternative units (such as <strong>Boxes</strong> or <strong>Pallets</strong>), the Stock Logistic Units module identifies these conditions thanks to its integration with AUOMs and the Referenced Inventory types it defines.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/goods-receipt.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/goods-receipt.png"></a></p>
+<p>When the receipt document is completed, using the <em>Bulk Completion</em> button, the system <strong>automatically generates the referenced inventory</strong> (RI) records associated with those logistics units.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To use <strong>automatic RI</strong> creation, you must have the <strong>Bulk Completion</strong> module. For details, see <a href="../../essentials-extensions/bulk-completion/">Bulk Completion</a></p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/reference-inventory-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/reference-inventory-1.png"></a></p>
+<p>The boxes received can be seen in the stock.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/stock-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/stock-1.png"></a></p>
+<p>In this way, the stock received is not interpreted as individual units, but as a traceable logistical entity (a box or a pallet), ensuring consistency between physical quantities and the system inventory, laying the foundations for subsequent processes—such as reservations, sales, or deliveries—to always respect the logistical structure in which the product was originally registered.</p>
+<h3 id="sales">Sales</h3>
+<p>The sales flow is combined with stock reservation logic, ensuring that logistics units remain consistent and traceable throughout the entire process.</p>
+<p>In the Sales Order, the user can select the product and define the alternative unit (AUOM) in which they wish to make the sale, such as a <strong>box</strong> or a <strong>pallet</strong>. This is where the <strong>module's reservation logic</strong> comes into play.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/sales-order-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/sales-order-1.png"></a></p>
+<p>Smart reservation rules <strong>prioritize the unit defined in the sales order</strong> and, in the case of logistics units, the system will first attempt to allocate complete alternative units (boxes or pallets) before resorting to individual units, optimizing stock usage and maintaining the traceability of each logistics unit.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/reserved-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/reserved-1.png"></a></p>
+<p>When an automatic reservation is generated from the sales order, the system compares the product, the AUOM, and the quantity requested, selecting the referenced units that best meet the demand.</p>
+<p>This logic ensures that, if the sale was made by an alternative unit, the reservation process maintains that condition and respects the original composition of the product.</p>
+<p>As a result, the sale is managed and executed in the defined alternative unit of measure, automatically transferring to subsequent logistics processes such as delivery, packaging, and other warehouse operations.</p>
+<p>The traceability of Alternate UOMs and Referenced Inventories is maintained at all stages of inventory management, ensuring that the logistics units used remain correctly identified from the sale until the product leaves the warehouse.</p>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L.</a>.</p>
 

@@ -12785,10 +12785,18 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode1.png"></a></p>
 </li>
 <li>
-<p>The generated code is displayed in the storage bin. It can also be loaded manually or modified.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png"></a> </p>
+<p>The generated code is displayed in the storage bin in the <strong>Barcode</strong> field. It can also be loaded manually or modified.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png"></a></p>
+</li>
+<li>
+<p>On the other hand, you can obtain a printout of the generated barcode by clicking on the Generate Printable button. You must select a supplier, the printer, and the number of copies.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-1.png"></a></p>
 </li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To use the print option, you must have the Print Provider module. For details, see <a href="../../platform-extensions/print-provider/">Print Provider</a></p>
+</div>
 </div>
 <div class="tabbed-block">
 <ol>
@@ -12798,9 +12806,19 @@
 <li>
 <p>Click on Generate Barcode and confirm with Done.</p>
 </li>
-<li>The generated code is displayed in the Advanced Warehouse Management section of the product. It can also be loaded manually or modified.</li>
-</ol>
+<li>
+<p>The generated code is displayed in the header of the product window in the <strong>UPC/EAN</strong> field. It can also be loaded manually or modified.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png"></a></p>
+</li>
+<li>
+<p>You can obtain a printout of the generated barcode by clicking on the <em>Generate Printable</em> button. You must select a supplier, the printer, and the number of copies.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To use the print option, you must have the Print Provider module. For details, see <a href="../../platform-extensions/print-provider/">Print Provider</a></p>
+</div>
+</li>
+</ol>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>In the <strong>Product</strong> window, there is a tab called <strong>Barcode</strong>, where various barcodes associated with the product, such as supplier codes, are listed. These codes are loaded manually, allowing you to specify the algorithm used to encrypt the code and the Application Identifier configuration.</p>
@@ -12839,10 +12857,10 @@
 <li><strong>Movement Date</strong>: Date on which the physical goods movement is recorded. By default, it is the current date.  </li>
 <li><strong>Accounting Date</strong>: Date on which the transaction is recognized for accounting purposes.  </li>
 </ul>
+<h4 id="lines-tab">Lines Tab</h4>
+<p>The Lines Tab allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png"></a></p>
 <p>Fields to note:</p>
-<h4 id="lines-tab">Lines Tab</h4>
-<p>The Tab Lines allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones:</p>
 <ul>
 <li><strong>Active</strong>: Indicates whether the line is enabled for processing within the receipt.  </li>
 <li><strong>Line No</strong>: Sequential number automatically assigned to identify the line within the receipt.  </li>
@@ -12860,18 +12878,16 @@
 <h4 id="buttons">Buttons</h4>
 <p><strong>Create Lines From Order</strong></p>
 <p>Extracts product lines from purchase orders. When clicked, a pop-up shows all available products, even from multiple purchase orders. You can select one or more lines to add to the Lines tab. If a storage bin is defined, it will be assigned to all selected lines; otherwise, it can be set individually per line.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-1.png"></a></p>
-<p><strong>Group By AUOM</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png"></a></p>
+<p><strong>Create Reference Inventory</strong></p>
 <p>This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png"></a></p>
-<p>The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1 if grouped on a pallet). </p>
+<p>The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1). </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>Only lines from the same Sales Order can be grouped.</li>
-<li>If the products enters in an logistic unit (e.g., boxes), it can be grouped, but the system interprets it as total units. Example: 2 boxes of wine (20 units) + 100 loose units = 1 grouping of 120 units.  </li>
-<li>Each time a different grouping is created, you must repeat the action with the corresponding lines. This allows to generate several independent groupings (for example, Box-1, Box-2, Box-3...).    </li>
+<li>Only lines from the same Sales Order can be grouped.  </li>
 <li>If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.</li>
 </ul>
 </div>
