@@ -362,8 +362,7 @@ The grouping is reflected in the Grouped by column of the selected lines (e.g., 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
-    - Only lines from the same Sales Order can be grouped. 
-    - Each time a different grouping is created, you must repeat the action with the corresponding lines. This allows to generate several independent groupings (for example, Box-1, Box-2, Box-3...).    
+    - Only lines from the same Sales Order can be grouped.  
     - If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
 
 **Clear Group By** 
