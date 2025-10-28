@@ -80,7 +80,8 @@ In the [Alternate UOM](../../../basic-features/master-data-management/master-dat
 
 Users can define conversion rates and specify in which processes (sales, purchasing, logistics) these conversions apply. Based on this configuration, stock reservation rules automatically prioritize full pallets and boxes before using individual units, optimizing inventory management.
 
-An additional feature introduced is greater granularity through the ability to select a **Logistic Unit Type**. For example, if the alternative unit is "Box," the system allows specifying whether it is a large, medium, or small box. This provides a higher level of control and accuracy in inventory management.
+An additional feature introduced is greater granularity through the ability to select a **Logistic Unit Type**. For example, if the alternative unit is *Box*, the system allows specifying whether it is a large, medium, or small box. This provides a higher level of control and accuracy in inventory management.
+
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/alternate-uom.png)
 
@@ -97,19 +98,18 @@ Its functionality is enhanced when used in conjunction with other components of 
 
 The Receiving flow begins in the Goods Receipt window, where product entries are recorded. When entering goods that use alternative units (such as **Boxes** or **Pallets**), the Stock Logistic Units module identifies these conditions thanks to its integration with AUOMs and the Referenced Inventory types it defines.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/goods-receipt-1.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/goods-receipt.png)
 
-When the receipt document is completed, and depending on the Bulk Completion module, the system **automatically generates the referenced inventory** (RI) records associated with those logistics units.
+When the receipt document is completed, using the *Bulk Completion* button, the system **automatically generates the referenced inventory** (RI) records associated with those logistics units.
 
 !!! info
-    
-    To use automatic RI creation, you must have the Bulk Completion module. For details, see [Bulk Completion](../../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md)
+    To use **automatic RI** creation, you must have the **Bulk Completion** module. For details, see [Bulk Completion](../../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/reference-inventory-1.png)
 
 The boxes received can be seen in the stock.
 
-[](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/stock-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/stock-1.png)
 
 In this way, the stock received is not interpreted as individual units, but as a traceable logistical entity (a box or a pallet), ensuring consistency between physical quantities and the system inventory, laying the foundations for subsequent processes—such as reservations, sales, or deliveries—to always respect the logistical structure in which the product was originally registered.
 
@@ -119,11 +119,11 @@ The sales flow is combined with stock reservation logic, ensuring that logistics
 
 In the Sales Order, the user can select the product and define the alternative unit (AUOM) in which they wish to make the sale, such as a **box** or a **pallet**. This is where the **module's reservation logic** comes into play.
 
-[](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/sales-order-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/sales-order-1.png)
 
 Smart reservation rules **prioritize the unit defined in the sales order** and, in the case of logistics units, the system will first attempt to allocate complete alternative units (boxes or pallets) before resorting to individual units, optimizing stock usage and maintaining the traceability of each logistics unit.
 
-[](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/reserved-1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/reserved-1.png)
 
 When an automatic reservation is generated from the sales order, the system compares the product, the AUOM, and the quantity requested, selecting the referenced units that best meet the demand.
 
@@ -131,7 +131,7 @@ This logic ensures that, if the sale was made by an alternative unit, the reserv
 
 As a result, the sale is managed and executed in the defined alternative unit of measure, automatically transferring to subsequent logistics processes such as delivery, packaging, and other warehouse operations.
 
-The traceability of AUOMs and RIs is maintained at all stages of inventory management, ensuring that the logistics units used remain correctly identified from the sale until the product leaves the warehouse.
+The traceability of Alternate UOMs and Referenced Inventories is maintained at all stages of inventory management, ensuring that the logistics units used remain correctly identified from the sale until the product leaves the warehouse.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

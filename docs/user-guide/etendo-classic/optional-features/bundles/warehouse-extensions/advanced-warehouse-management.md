@@ -252,7 +252,7 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png)
     
-    4. On the other hand, it can obtain a printout of the generated barcode by clicking on the Generate Printable button. You must select a supplier, the printer, and the number of copies.
+    4. On the other hand, you can obtain a printout of the generated barcode by clicking on the Generate Printable button. You must select a supplier, the printer, and the number of copies.
 
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-1.png)
 
@@ -269,7 +269,7 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png)
     
-    4. It can obtain a printout of the generated barcode by clicking on the *Generate Printable* button. You must select a supplier, the printer, and the number of copies.
+    4. You can obtain a printout of the generated barcode by clicking on the *Generate Printable* button. You must select a supplier, the printer, and the number of copies.
     
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png)
 
@@ -324,7 +324,7 @@ Fields to note:
 
 #### Lines Tab
 
-The  Lines Tab allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones.
+The Lines Tab allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png)
 
