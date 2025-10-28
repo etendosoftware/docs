@@ -154,13 +154,30 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_sequence.png)
 
+### Tipo de Documento para Facturas Rectificativas
+
+Para realizar facturas rectificativas a enviar a TicketBai, es necesario primero crear un tipo de documento que se utilizará específicamente para este tipo de facturas.
+
+- Acceder a la ventana "**Secuencia de Documento (Numeración)**". En esta ventana se deberá elegir una secuencia ya existente o crear una nueva. Es importante que en la secuencia creada/elegida se marque la casilla "**Es Rectificativo**", y que además se asigne un valor en el campo "**Prefijo**". El prefijo asignado debe cumplir con las siguientes reglas:
+    
+    * Debe ser menor a 20 caracteres.
+    * No debe contener minúsculas.
+    * No debe contener las letras I, Ñ, O, W.
+    * No debe utilizar acentos.
+    * Puede utilizarse el guión medio (-).
+
+    Si la secuencia creada/elegida es transaccional, debe tenerse en cuenta que el campo "**Prefijo**" seguirá las normas de formato del campo "**Mask**". Es decir, habrá caracteres reservados que cambiarán su valor cuando se asigne un número de documento a la factura.
+
+La documentación de [Secuencias](../../../basic-features/financial-management/accounting/setup.md#sequence-masking) de la wiki de Etendo muestra los distintos caracteres reservados y el valor por el que se reemplaza cada uno.
+
+- Acceder a la ventana "**Tipo de Documento**". En esta ventana se deberá crear un nuevo tipo o elegir uno existente, el cual será utilizado exclusivamente para facturas rectificativas. Se debe marcar la casilla "**Es Rectificativo**" en el tipo de documento creado/elegido para que el sistema permita usarlo en rectificaciones. Si no se utilizan secuencias transaccionales, se debe asignar en el campo "**Sec. Doc. (Numeración)**" la secuencia rectiicativa creada anteriormente. Esta secuencia sólo aparecerá si se ha marcado la casilla "**Es Rectificativo**" tanto en la secuencia como en el tipo de documento.
 
 ## Proceso de Envío de Factura
 
 === "TicketBai"
     1. Creación de Factura de Venta
         
-        Para iniciar el proceso, cree una factura de venta utilizando una organización que tenga configurada la opción de TicketBai. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema.
+        Para iniciar el proceso, cree una factura de venta utilizando una organización que tenga configurada la opción de TicketBai. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema. Si la factura a crear es rectificativa, se debe utilizar para la misma un tipo de documento marcado como Rectificativo, y una secuencia configurada con un prefijo.
 
     2.  Registro de Factura en TicketBai
 
@@ -195,7 +212,7 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 
     1. Creación de Factura de Compra
         
-        Para iniciar el proceso, cree una factura de compra utilizando una organización que tenga configurada el destino Bizkaia. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema.
+        Para iniciar el proceso, cree una factura de compra utilizando una organización que tenga configurada el destino Bizkaia. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema. Si la factura a crear es rectificativa, se debe utilizar para la misma un tipo de documento marcado como Rectificativo, y una secuencia configurada con un prefijo.
 
     2.  Registro de Factura en Batuz
 
