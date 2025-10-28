@@ -166,11 +166,15 @@ Para realizar facturas rectificativas a enviar a TicketBai, es necesario primero
     * No debe utilizar acentos.
     * Puede utilizarse el guión medio (-).
 
-    Si la secuencia creada/elegida es transaccional, debe tenerse en cuenta que el campo "**Prefijo**" seguirá las normas de formato del campo "**Mask**". Es decir, habrá caracteres reservados que cambiarán su valor cuando se asigne un número de documento a la factura.
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/rectificative_sequence.png)
 
-La documentación de [Secuencias](../../../basic-features/financial-management/accounting/setup.md#sequence-masking) de la wiki de Etendo muestra los distintos caracteres reservados y el valor por el que se reemplaza cada uno.
+    Si la secuencia creada/elegida es transaccional, debe tenerse en cuenta que el campo "**Prefijo**" seguirá las normas de formato del campo "**Mask**". Es decir, habrá caracteres reservados que cambiarán su valor cuando se asigne un número de documento a la factura. 
+    
+    La documentación de [Secuencias](../../../basic-features/financial-management/accounting/setup.md#sequence-masking) de Etendo muestra los distintos caracteres reservados y el valor por el que se reemplaza cada uno.
 
 - Acceder a la ventana "**Tipo de Documento**". En esta ventana se deberá crear un nuevo tipo o elegir uno existente, el cual será utilizado exclusivamente para facturas rectificativas. Se debe marcar la casilla "**Es Rectificativo**" en el tipo de documento creado/elegido para que el sistema permita usarlo en rectificaciones. Si no se utilizan secuencias transaccionales, se debe asignar en el campo "**Sec. Doc. (Numeración)**" la secuencia rectiicativa creada anteriormente. Esta secuencia sólo aparecerá si se ha marcado la casilla "**Es Rectificativo**" tanto en la secuencia como en el tipo de documento.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/rectificative_doctype.png)
 
 ## Proceso de Envío de Factura
 
