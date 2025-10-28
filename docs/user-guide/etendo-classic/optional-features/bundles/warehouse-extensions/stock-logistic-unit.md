@@ -16,7 +16,7 @@ tags:
     To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}.  For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 
-The **Stock Logistic Unit** module extends Etendo's standard functionality to manage logistics units within inventory, receiving, and stock reservation processes. Specifically, this module adds the [units of measure](../../../basic-features/master-data-management/product-setup.md#unit-of-measure) and the [reference inventory types](](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type)) **Box** and **Pallet**.
+The **Stock Logistic Unit** module extends Etendo's standard functionality to manage logistics units within inventory, receiving, and stock reservation processes. Specifically, this module adds the [units of measure](../../../basic-features/master-data-management/product-setup.md#unit-of-measure) and the [reference inventory types](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type) **Box** and **Pallet**.
 
 Its objective is to integrate **Alternative Units of Measure (AUOM)** with the **Referenced Inventory (RI)** model, so that logistics units are recognized, recorded, and managed as traceable entities in all warehouse operations.
 
@@ -24,7 +24,7 @@ Also, incorporates **advanced stock reservation logic** that prioritizes complet
 
 In summary:
 
-- Adds the UOM **Box** and **Palet** unit of measure. These are available in the system to configure product AUOMs. 
+- Adds the UOM **Box** and **Pallet** unit of measure. These are available in the system to configure product AUOMs. 
 - Aggregates the referenced inventory types **Box** and **Pallet** with their corresponding sequences.
 - Each AUOM should be linked to a **referenced inventory type**, through the *Logistic Unit Type* field, ensuring that stock creation in **Referenced Inventory** windows, complies with the defined logistics unit.
 - Introduce smart reservation rules that respect the logic of logistic units (e.g: Boxes), and units, reducing stock allocation errors. With this logic, when a sales order is automatically reserved, the system attempts to fulfill the quantity requested in the order with complete logistics units if possible, before resorting to individual units.
@@ -61,7 +61,7 @@ By default, the module includes three preconfigured preferences. These can be di
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/uom.png)
 
-In the Unit of Measure window, the module adds the units of measure **Box** and **Palets** to facilitate the management of logistics units within the system.
+In the Unit of Measure window, the module adds the units of measure **Box** and **Pallets** to facilitate the management of logistics units within the system.
 These UOM serve as the basis for configuring products with alternative units, while the user can create as many additional variants as needed based on the different box format used.
 
 

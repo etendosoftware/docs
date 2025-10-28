@@ -17,11 +17,6 @@ runs:
 
     - name: Install Dependencies
       run: |
-        pip install mkdocs-material
-        pip install pillow cairosvg
-        pip install mkdocs-glightbox
-        pip install mkdocs-rss-plugin
-        pip install beautifulsoup4
-        pip install algoliasearch
+        pip install -r requirements.txt
         
       shell: bash

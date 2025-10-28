@@ -92,6 +92,9 @@ This functionality allows the user to create settlements for invoices, both sale
 
 This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
 
+!!! warning "Dependency Notice"
+    This module depends on the [**Bulk Completion**](../../optional-features/bundles/essentials-extensions/bulk-completion.md) module, as **order** processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy **close/reactivate** actions for orders will be hidden and these actions will only be available through the **Bulk Completion** button.
+
 !!! info
     For more information, visit:
 
@@ -160,7 +163,7 @@ This module provides a new document where it is possible to settle debts or cred
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
 !!! info
-    For more information, visit the [Conversion Rate Downloader user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#conversion-rate-download-rule) and the [Conversion Rate Downloader developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#conversion-rate-downloader).
+    For more information, visit the [Conversion Rate Downloader -  User guide](./conversion-rate-download-rule.md) and the [Conversion Rate Downloader - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#conversion-rate-downloader).
 
 
 ### Currency API Configuration
@@ -200,6 +203,8 @@ The **Balance Sheet and P&L Structure Advanced**, **General Ledger Report Advanc
 ### Financial Report Budget
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.report.budget`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2VFxpx8j8Sk?si=TuLZUdBGrOCSpXIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This functionality allows creating and managing budgets for reporting purposes, offering users the possibility to compare budgeted values with actual values posted in the corresponding General Ledger.
 

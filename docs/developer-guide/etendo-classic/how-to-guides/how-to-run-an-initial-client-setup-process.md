@@ -47,7 +47,7 @@ To include this data, there is a checkbox named *Include Accounting* which oblig
 If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
 
   - a [Fiscal Calendar](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#fiscal-calendar) which can be shared by all the *Legal with Accounting* organizations types which belongs to that Client and 
-  - an [Account Tree](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-tree) or *Chart of Accounts* and a [General Ledger configuration](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#glconfig) which is shared by all the organizations created within the Client.
+  - an [Account Tree](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-tree) or *Chart of Accounts* and a [General Ledger configuration](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#general-ledger-configuration) which is shared by all the organizations created within the Client.
 
 The *General Ledger Configuration* and the *Chart of Accounts* created by default can be later on customized. 
 

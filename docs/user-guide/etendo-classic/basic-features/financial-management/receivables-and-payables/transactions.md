@@ -953,7 +953,7 @@ Fields to note:
 - **Multiple Rate By**: The conversion rate from one currency to another:
     - It is null by default
     - It is shown just when currencies are different
-    - In case the user leaves this value as null the system uses the [conversion rate](../../general-setup/application.md#conversion-rates) configured in the system for that date. If there is nothing defined then an error is shown.
+    - In case the user leaves this value as null the system uses the [conversion rate](../../general-setup/application/conversion-rates.md) configured in the system for that date. If there is nothing defined then an error is shown.
 - **Bank fee**: The fee charged by the bank from/to where the transaction originated/was received. Not marked by default. When checked, two more fields are shown:
     - Bank fee from: To enter the corresponding fee amount.
     - Bank fee to: To enter the corresponding fee amount.
