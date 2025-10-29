@@ -331,7 +331,7 @@ In this window , the user can find [available tools](../../developer-guide/etend
 Some tools require to communicate with Etendo through WebHooks. Their configuration can be found in the Webhooks tab.
 
 !!!info
-    In case you want to define new tools, visit [How to Create Copilot Tools](../../developer-guide/etendo-copilot/how-to-create-copilot-tools.md).
+    In case you want to define new tools, visit [How to Create Copilot Tools](../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
 
 
 ## Agent Access Window
