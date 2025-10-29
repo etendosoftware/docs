@@ -10,12 +10,16 @@ tags:
 
 :material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Group`
 
+## Overview
+
 A **Process Group** allows the user to define and schedule a sequence of processes that will run one after another as a single batch. This is useful for automating workflows that require multiple processes to be executed in a specific order.
 
 When a Process Group is scheduled:
 
 - A single entry appears in the **Process Request** and **Process Monitor** windows.
 - Each process within the group also appears separately in both windows with its own log and status, regardless of whether it succeeded or failed.
+
+## Process Group Window 
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group.png)
 
@@ -29,7 +33,7 @@ Fields to note:
     !!! info
         This is useful when processes are dependent on each other.
 
-## Process Group List
+### Process Group List
 
 List of individual processes, each with an assigned sequence number that determines the execution order.
 

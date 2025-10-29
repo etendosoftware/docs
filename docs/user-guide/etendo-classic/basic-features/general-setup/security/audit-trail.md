@@ -91,7 +91,7 @@ This popup allows examination of the history of the record which is currently sh
 
 This view is displayed when the popup is opened from an existing record via the new toolbar button.
 
-The top area always shows a reference to the entity (i.e. Sales Order) and the record "1000175 - 2016-04-03 00:00:00.0-0.00" for which the history is displayed.
+The top area always shows a reference to the entity (i.e. Sales Order) and the record *1000175 - 2016-04-03 00:00:00.0-0.00* for which the history is displayed.
 
 Then a number of filters are available which allow some restriction on the changes displayed to ease the use of records with many modifications.
 
@@ -194,7 +194,7 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 - Expiration Time (Autolock Password)
 
 !!! info
-    For more information, visit the [Etendo Advanced Security module User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md).
+    For more information, visit the [Etendo Advanced Security module User Guide](../../../optional-features/bundles/platform-extensions/etendo-advanced-security.md).
 
 ---
 

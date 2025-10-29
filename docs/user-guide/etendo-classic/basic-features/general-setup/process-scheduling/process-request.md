@@ -10,12 +10,17 @@ tags:
 
 :material-menu: `Application` > `General Setup` > `Process Scheduling` > `Process Request`
 
+## Overview
+
 A background process is a system action requested by the user, who must provide auxiliary parameter values to execute that action.
 
 The Process Request window allows the user to review and add background processes, which can be scheduled or unscheduled as required.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.gif)
 
+
+# Process Request Window
+
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.gif)
 
 The information to fill in to schedule a background process is:
 
@@ -61,14 +66,14 @@ The information to fill in to schedule a background process is:
         In both cases, it is required that the role have access to the process in the **Process Access** tab of the **Role** window.
 
 
-## Process Monitor
+### Process Monitor
 
 Process monitor is a read-only tab that allows reviewing the status of processes executed by the current request. 
 The information shown is the same as the [Process Monitor](../process-scheduling/process-monitor.md).
 
 ![](../../../../../assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
 
-### Processes in Group Tab
+### Processes in Group
 
 In case that the process executed by the process request is a **process group**, you will find here the information about the executions of the processes in the group for each process group execution.
 

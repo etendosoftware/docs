@@ -66,10 +66,10 @@ As shown in the image above, an organization can be created by providing the rel
         - This type of organization allows the creation and configuration of master data to be shared among a group of organizations of any type belonging to it, for instance Business Partners, Chart of Accounts, etc.
         - It does not require general ledger as it does not allow entering transactions, but it can have a given General Ledger configuration to be shared among the organizations underneath
         - The accounting periods can not be opened and closed independently at its level.
-        - And there could be as many organizations type "organization" in a branch as required.
+        - And there could be as many organizations type **organization** in a branch as required.
     - Legal with accounting - an independent legal entity with a unique Tax ID number which requires accounting, therefore:
         - This organization requires a General Ledger and therefore an Account Tree or Chart of Accounts, as well as a Fiscal Calendar because the accounting periods can and must be opened and closed at its level.
-        - This organization type allows the "consolidation" of the Balance Sheet and P&L reports only for the Chart of Accounts it has assigned.
+        - This organization type allows the **consolidation** of the Balance Sheet and P&L reports only for the Chart of Accounts it has assigned.
         - Transactions are allowed for this organization type.
         - And finally, there can only be one legal entity per tree branch, therefore the organizations underneath inherit the General Ledger configuration and the Fiscal Calendar of the legal with accounting organization.
     - Legal without accounting - an independent legal entity with a unique Tax ID number which does not require accounting because it is managed in a separated system, therefore:
@@ -80,34 +80,34 @@ As shown in the image above, an organization can be created by providing the rel
         - There could be as many generic organizations as required per tree branch, but always under a legal entity.
         - This organization type allows transactional data entry, it can have its own general ledger configuration and can inherit the general ledger configuration of the legal entity with accounting they belong to.
         - The accounting periods can not be opened and closed independently at its level.
-- the parent organization. While creating an organization, it is possible to select the organization to which the organization being created will belong to. The parent organization would need to be set as "Summary".
+- the parent organization. While creating an organization, it is possible to select the organization to which the organization being created will belong to. The parent organization would need to be set as **Summary**.
     - A generic organization can not be the parent organization of a legal entity organization, but the other way around.
 - the organization location/address
 - and the organization currency
 
 Besides:
 
-- There is a checkbox named "Include Accounting" which allows the user to select for an organization:
-    - an accounting CSV file in the field "Accounting File"
-    - or a Chart of Accounts module reference data in the section "Reference Data". Reference data coming from extensions modules is master data such as Taxes, Chart of Accounts, etc to be applied from the already installed modules.
+- There is a checkbox named **Include Accounting** which allows the user to select for an organization:
+    - an accounting CSV file in the field **Accounting File**
+    - or a Chart of Accounts module reference data in the section **Reference Data**. Reference data coming from extensions modules is master data such as Taxes, Chart of Accounts, etc to be applied from the already installed modules.
 
 This action creates:
 
 - a General Ledger configuration which is automatically linked to the Organization being created
 - and an Account Tree or Chart of Accounts which is also linked to the Organization being created
 
-This step does not create a Fiscal Calendar as the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
+This step does not create a Fiscal Calendar as the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process does, because Fiscal Calendars need to be created ad hoc for the **Legal with Accounting** Organizations for which **Allow Period Control** feature is going to be enabled.
 
 !!! note
     This step does not imply to manage accounting within an organization, but just to include an accounting file or an accounting reference data in an organization.
 
 Accounting management relies on the organization type being created.
 
-It is not mandatory to select "Include Accounting" checkbox while creating a legal entity with accounting organization for instance because:
+It is not mandatory to select **Include Accounting** checkbox while creating a legal entity with accounting organization for instance because:
 
 - a legal entity with accounting can inherit the client chart of accounts
 - or, later, both the Chart of Accounts and the General Ledger configuration can be created manually and be linked to the organization.
-- if the checkbox "Include Accounting" is selected, it is possible to select for the organization being created below dimensions to be used while posting the organization's documents to the ledger:
+- if the checkbox **Include Accounting** is selected, it is possible to select for the organization being created below dimensions to be used while posting the organization's documents to the ledger:
     - Mandatory accounting dimensions such as Business Partner and Product and not mandatory accounting dimensions such as Project and Sales Region while creating an Organization in a Client which does not centrally maintain the accounting dimensions.  
     In that case, the dimensions selected in here will all be listed in the dimensions tab of the organization's general ledger configuration, therefore will be available just for that organization.
     - Additional accounting dimensions such as Project or Campaign while creating an Organization in a Client which centrally maintains the accounting dimensions.  
@@ -170,7 +170,7 @@ Finally, it is important to remark that:
     - Organization Type = Generic
     - Include Accounting = Yes  
         If this organization requires its own accounting configuration besides the inherited one, otherwise include accounting = No
-    - Parent organization = should be a "Legal with Accounting" organization.
+    - Parent organization = should be a **Legal with Accounting** organization.
 
 3. **Enterprise Models examples**:
 

@@ -72,30 +72,30 @@ The way to allow an organization to have more than one general ledger configurat
 
 Food & Beverage (F&B) sample client shipped with Etendo illustrates scenario 1 above:
 
-- Every F&B sample client organization has been created by running the "Initial Organization Setup" process.
-- The "F&B International Group" is an "Organization" Organization Type.  
-  An Accounting CSV file was selected while it was created, in the same way as the "USD" currency, therefore this organization has the "F&B International Group US/A/Dollar" general ledger configuration assigned.
+- Every F&B sample client organization has been created by running the **Initial Organization Setup** process.
+- The *F&B International Group* is an **Organization** Organization Type.  
+  An Accounting CSV file was selected while it was created, in the same way as the *USD* currency, therefore this organization has the *F&B International Group US/A/Dollar* general ledger configuration assigned.
 
 ![](../../../../../assets/drive/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT.png)
 
 This general ledger configuration can also be shared by the organizations underneath, for instance *F&B US, Inc* and *F&B España S.A.*.
 
-- Same way, an accounting CSV file was also selected while creating the "Legal with Accounting" organization "F&B España S.A." same way as EUR currency, therefore this organization has the "F&B España, S.A US/A/Euro" general ledger configuration assigned.  
-  As a consequence, "F&B España S.A." has two general ledger configurations assigned, its own one and the inherited one.
+- Same way, an accounting CSV file was also selected while creating the **Legal with Accounting** organization *F&B España S.A.* same way as EUR currency, therefore this organization has the *F&B España, S.A US/A/Euro* general ledger configuration assigned.  
+  As a consequence, *F&B España S.A.* has two general ledger configurations assigned, its own one and the inherited one.
 - Besides, each of the general ledger configurations mentioned above are linked to a different account tree or chart of accounts.
-- Therefore, every time that an "F&B US Inc" transaction is posted to the ledger, Etendo opens a new window named "Journal Entries Report" which shows the journal entry created for the "F&B International Group US/A/Dollar" general ledger configuration in USD and in the corresponding accounts of a given Chart of Accounts.
-- Every time that an "F&B España S.A." transaction is posted to the ledger, Etendo opens two new windows, one per each general ledger configuration, one of them in USD and the other one in EUR, both of them in different accounts.
+- Therefore, every time that an *F&B US Inc* transaction is posted to the ledger, Etendo opens a new window named **Journal Entries Report** which shows the journal entry created for the *F&B International Group US/A/Dollar* general ledger configuration in USD and in the corresponding accounts of a given Chart of Accounts.
+- Every time that an *F&B España S.A.* transaction is posted to the ledger, Etendo opens two new windows, one per each general ledger configuration, one of them in USD and the other one in EUR, both of them in different accounts.
 
-The tree action button ![](../../../../../assets/drive/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX.png) allows dragging and dropping an organization within an enterprise model, whenever it is not "Set as Ready".
+The tree action button ![](../../../../../assets/drive/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX.png) allows dragging and dropping an organization within an enterprise model, whenever it is not **Set as Ready**.
 
-**"Set as Ready"** process takes into account the list of requirements below per organization type:
+**Set as Ready** process takes into account the list of requirements below per organization type:
 
 - _Organization type_:
     - No requirements
 - _Generic type_
-    - to have a "Legal Entity" organization type up in the enterprise model tree.
+    - to have a **Legal Entity** organization type up in the enterprise model tree.
 - _Legal without accounting_
-    - not to have another "Legal Entity" organization type up in the enterprise model tree.
+    - not to have another **Legal Entity** organization type up in the enterprise model tree.
 - Legal with accounting
     - to have its own general ledger configuration or an inherited one
     - to allow period control
@@ -119,8 +119,8 @@ Fields to fill in are:
 - the DUNS number, if any
 - the User who will act as the main organization Contact. This organization contact is used in some localized fiscal reports (Spanish fiscal reports), that requires a contact person.
 - The purchase invoice number which will be used for payments. There are two options available:
-    - "Invoice Document Number" (internal number)
-    - or "Supplier's Invoice Number"  
+    - **Invoice Document Number** (internal number)
+    - or **Supplier's Invoice Number**  
         - Any of the above will be included in the payment description field to inform about the invoice number being paid.  
         - This also changes what is going to be shown in several purchase windows such as _Add Payment_ button in purchase invoice or _Add details_ in Payment Out
 
@@ -151,7 +151,7 @@ It is split in two columns. One that represents the Status with a color code, ma
 
 This tab can be used for searching for a period (i.e. Jan-19) and get its current status.
 
-As shown in the image below, the period Feb-19 has a mixed status, meaning that not all the Document Types have the same Status value within the Organization "F&B España S.A." which has the "Calendario España" assigned.
+As shown in the image below, the period Feb-19 has a mixed status, meaning that not all the Document Types have the same Status value within the Organization *F&B España S.A.* which has the **Calendario España** assigned.
 
 ![](../../../../../assets/drive/cjahc3FYZMghn48UlTxGriply3wDhO6ZrX7BsdnjoN5X3rcwWWdLMoeiUbYQ-z--lNwxjsqgmI0d4-8dldLYHy4kY5CqUaj4n7ZAWfg0ML8NxMm9M5ykXpt9kzkh5O-sI2KEjpnz.png)
 

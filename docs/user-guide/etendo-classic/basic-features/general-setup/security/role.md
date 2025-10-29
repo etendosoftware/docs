@@ -2,7 +2,6 @@
 title: Role
 tags:
     - Role
-    - Access
     - Admin
     - Permissions
 ---
@@ -15,7 +14,7 @@ tags:
 The aim of a role is to group user/s depending on what parts of Etendo they are allowed to access to and therefore to work in.
 
 !!! info
-    Etendo comes with a "super" user named **admin** (password **admin**) which can be used to sign in for the first time.
+    Etendo comes with a **super** user named **admin** (password **admin**) which can be used to sign in for the first time.
 
 The admin user has several roles assigned:
 
@@ -72,7 +71,9 @@ This warning message is similar to the one shown below. It appears when creating
 
 ![](../../../../../assets/drive/ibtK-OMAXBsv2UVQXFaPN7YvQMlh2rgo41Vt21hwrkhk0Grj3gy0Y_7tYhGZU4JZaX7i75-eo6xHmT7P7bHhUWyy2xIpcK5VB8rC7PqSxERaqBP7HXaLXKSeiyNf_1Sj_ZXhxDzb.png)
 
-## Role
+## Role Window
+
+:material-menu: `Application` > `General Setup` > `Security` > `Role`
 
 The Role window allows the user to review, create, configure and maintain the roles to use in a given client.
 

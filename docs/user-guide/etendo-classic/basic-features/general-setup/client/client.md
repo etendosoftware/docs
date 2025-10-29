@@ -29,7 +29,7 @@ Organizations are created by running the Initial Organization setup process avai
 
 ## Client
 
-The Client window allows the user to view and maintain the clients created by running the Initial Client Setup process.
+The Client window allows the user to view and maintain the clients created by running the **Initial Client Setup** process.
 
 ![](../../../../../assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
 
@@ -51,9 +51,7 @@ New Clients created by running the Initial Client Setup process are created as C
 
 The organizations of the Client which require to have additional dimensions not listed in here, for instance Campaign or Sales Region, will have to configure them in the Dimension tab of the organization's general ledger configuration.
 
-Existing clients are not set as Central Maintained by default because the accounting dimensions which were set are the ones which were configured in the Dimension tab of the corresponding organization's general ledger configuration.
-
-It is now possible to change existing Clients as Centrally Maintained, this action overrides what is configured for the organization in relation to the accounting dimensions that can be centrally maintained in the Client, those dimensions are:
+It is now possible to change existing Clients as **Centrally Maintained**, this action overrides what is configured for the organization in relation to the accounting dimensions that can be centrally maintained in the Client, those dimensions are:
 
 - Mandatory dimensions:
     
@@ -74,18 +72,18 @@ Non mandatory dimensions can be filled in or not depending on what is needed and
 
 Above dimensions are then shown either in the header or/and in the lines of the documents to be posted to the ledger within a section named Dimensions.
 
-Besides, there is a financial report named Accounting Transaction Details which shows every ledger entry of an organization's general ledger detailing every dimension value entered.
+Besides, there is a financial report named **Accounting Transaction Details** which shows every ledger entry of an organization's general ledger detailing every dimension value entered.
 
 !!! info
     It is important to remark that the settings displayed in the client window in both the Accounting Dimensions section and in the Dimensions tab is the defaulted configuration provided by Etendo.
 
-This defaulted configuration is populated from the **Dimension Mapping** window.
+This defaulted configuration is populated from the **Dimension Mapping** window (System Administrator).
 
 It is always possible to customize the defaulted configuration, for instance:
 
-- if a client needs to show and therefore make available the organization dimension in the lines of the documents, below actions need to happen:
+- If a client needs to show and therefore make available the *organization* dimension in the lines of the documents, below actions need to happen:
 
-    - check the checkbox **Show in Lines** for the Organization dimension
+    - Check the checkbox **Show in Lines** for the Organization dimension
     - and delete or modify the records linked to the Organization accounting dimension in the Dimension tab as all those records are defaulted not to show Organization in any document category lines.
 
 ### Information

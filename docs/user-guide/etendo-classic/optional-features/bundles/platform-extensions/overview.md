@@ -134,7 +134,7 @@ Connects Etendo with external printing platforms to enable centralized, one-clic
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-    For more information, visit [Clear Report Cache user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
+    For more information, visit [Clear Report Cache - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
 ### Task
 

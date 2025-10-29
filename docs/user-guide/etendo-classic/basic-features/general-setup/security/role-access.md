@@ -10,14 +10,18 @@ tags:
 
 :material-menu: `Application` > `General Setup` > `Security` > `Role Access`
 
-This window defines access to DB /database tables and columns for selected roles.  
+## Overview
+This window defines access to database tables and columns for selected roles.  
 Here, the user can edit a role to give or withhold the necessary access to tables and columns tables.
 
-## Table Access
-
-It is possible to create or edit access to DB tables for a selected role. The user can give access to the needed information by selecting the options displayed in the table tab.
-
+## Role Access Window
 ![](../../../../../assets/drive/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg.png)
+
+### Table Access
+
+It is possible to create or edit access to database tables for a selected role. The user can give access to the needed information by selecting the options displayed in the table tab.
+
+
 
 ---
 

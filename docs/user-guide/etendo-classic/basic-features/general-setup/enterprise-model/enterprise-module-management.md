@@ -4,7 +4,8 @@ tags:
     - Enterprise
     - Module
     - Management
-    - Model
+    - Dataset
+    - Install
 ---
 
 # Enterprise Module Management
@@ -13,7 +14,7 @@ tags:
 
 Datasets allow the user to define reference data such as master data or configuration data for modules or even for Etendo core.
 
-Reference data can be imported or applied to organizations in the Enterprise Module Management window by just selecting the organization for which the reference data needs to be applied and the reference data to apply or to import.
+Reference data can be imported or applied to organizations in the **Enterprise Module Management** window by just selecting the organization for which the reference data needs to be applied and the reference data to apply or to import.
 
 ![](../../../../../assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png)
 

@@ -17,6 +17,8 @@ An **organization** can be a Legal Entity, a Business Unit or neither of both. I
 
 ### Organization Type
 
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-type.png)
+
 Etendo default Organization types are:
 
 - **Organization** - an organization which is not a legal entity and does not allow transactional data entering.

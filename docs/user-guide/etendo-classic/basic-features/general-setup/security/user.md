@@ -33,6 +33,10 @@ As shown in the image above, a user can be created by entering the basic informa
 
 ### User Roles
 
+
+![](../../../../../assets/drive/6lcpMBWvPHq9NQ2VCpAiYVfd_SBR-7j3aDTZ9c4QyqmQi7Nguuid_7y8TQNEXkh7pLH26YU7fKgqpdMEgi1L3aXyKnoyf6PTz-tutOmotGaFFhh7BG_2-QoafKz4JSrmS8mpXVzS.png)
+
+
 Roles are the connection between users and access rights. Each user can have more than one role assigned, however, a user can only log into Etendo by using just one role.
 
 ![](../../../../../assets/drive/IdpYeASr5qFi9zCa5EgsKRJfg54EoyBsxbVbj3d7DIbN-8XztHzj2QI35lguEXIKt6FxAmkozQnh7sGeMaKYD4m7-x5QSemv2M48ShmpCxhVWCLFwGa4e94oA1yl4K7-JprsrIcf.png)
@@ -44,8 +48,6 @@ Those roles will have to be configured to allow access to either sales, finance,
 Whenever there is a new member in the organization, a new user could be created and assigned to any of the existing roles instead of creating and configuring new users permissions every time.
 
 There can be a user having a given role set up as **Role Administrator**, that user will be able to add new users to that role.
-
-![](../../../../../assets/drive/6lcpMBWvPHq9NQ2VCpAiYVfd_SBR-7j3aDTZ9c4QyqmQi7Nguuid_7y8TQNEXkh7pLH26YU7fKgqpdMEgi1L3aXyKnoyf6PTz-tutOmotGaFFhh7BG_2-QoafKz4JSrmS8mpXVzS.png)
 
 ---
 

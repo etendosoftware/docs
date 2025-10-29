@@ -78,7 +78,7 @@ Here’s how the process works in Etendo:
 !!!important
     - You can’t create years or periods in the Open/Close Period Control window—use the Fiscal Calendar window for that.
     - You can’t generate closing entries here—use the End Year Close window.
-    - You can also check the status of any period in the [Period Control](../../general-setup/enterprise-model.md#period-control) tab of the Organization.
+    - You can also check the status of any period in the [Period Control](../../general-setup/enterprise-model/organization.md#period-control) tab of the Organization.
 
 #### Why Use this Feature?
 
