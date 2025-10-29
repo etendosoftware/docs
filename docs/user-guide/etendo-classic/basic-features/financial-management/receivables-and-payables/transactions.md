@@ -1639,7 +1639,7 @@ To be able to use this functionality, it is necessary to configure some aspects 
     ![emm.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/enterprise-module-management.png)
 
     !!! info
-        For more information, visit [Enterprise Module Management](../../general-setup/enterprise-model.md#enterprise-module-management).
+        For more information, visit [Enterprise Module Management](../../general-setup/enterprise-model/enterprise-module-management.md).
 
 - Remittance Type: It is necessary to define a remittance type with a certain payment method in the *Remittance Type* window.
 

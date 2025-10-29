@@ -355,7 +355,7 @@ In this window, it is possible to configure access roles for each Agent. This me
 In this window, the user can schedule Etendo Copilot background processes by selecting the `Agents Schedule` option in the **Process** field and using all the provided options such as timing, start date, frequency, etc.
 
 !!!info
-    For more information, visit [Process Request](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
+    For more information, visit [Process Request](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md).
 
 ### Agent Tab 
 

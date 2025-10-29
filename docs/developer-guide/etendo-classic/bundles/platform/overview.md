@@ -305,19 +305,19 @@ It is mandatory to insert the organization ID when you call the web service beca
 
 :octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
-This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
+This module allows changing or updating a **Jasper Report** in an Etendo environment without stopping the server.
 
 ### Technical Aspects
 
-This module allows clearing the cache for compiled reports in Tomcat.
+This module allows clearing the cache for compiled reports in Tomcat. The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
 
-The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
+Then, in the **Clear report cache** window, click *Done*:
 
-Then, in the "Clear report cache" window, click ’Done’:
+![Clear Report Cache](../../../../assets/developer-guide/etendo-classic/bundles/platform/overview/clear-report-cache.png)
 
-![Clear Report Cache](../../../../assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
-
-
+In this window, the user, in general a developer, can delete the report cache data by clicking the **Done button**. This has technical purposes.  
+After clicking it, a success message will be shown indicating the completion of the process.
 
 ---
+
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

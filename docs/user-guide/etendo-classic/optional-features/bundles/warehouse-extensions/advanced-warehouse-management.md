@@ -51,7 +51,7 @@ To start using this module correctly, the following installation and configurati
 
     :material-menu: `Application`>`General Setup` > `Enterprise Model` > `Enterprise Module Management`
     
-    From the [Enterprise Module Management](../../../basic-features/general-setup/enterprise-model.md#enterprise-module-management) window is required for all roles that will use this functionality.
+    From the [Enterprise Module Management](../../../basic-features/general-setup/enterprise-model/enterprise-module-management.md) window is required for all roles that will use this functionality.
 
     This reference data includes configurations necessary to use these modules. 
 

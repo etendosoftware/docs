@@ -19,7 +19,7 @@ The content of a Dataset is defined by its **Dataset Tables** and **Dataset Colu
 
 Datasets can be defined at **System, Organization, or Client/Organization** levels. System-level datasets are applied when the module containing them is installed in the system. Their data is system-level.
 
-- Organization-level datasets can be applied in [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#initial-organization-setup) (when creating a new organization), or can also be applied to an existing organization using the **Enterprise Module Management** window. They contain **Organization level information**.
+- Organization-level datasets can be applied in [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md) (when creating a new organization), or can also be applied to an existing organization using the **Enterprise Module Management** window. They contain **Organization level information**.
 - Client/Organization-level datasets work like Organization-level datasets, but can also be applied on [Initial Client Setup](../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) when creating a new client. They contain **Organization/Client level information**.
 
 ## Dataset Window

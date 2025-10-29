@@ -75,7 +75,7 @@ This new transaction is then shown in the *Transaction tab* of the *Financial Ac
 The next step is to post the withdrawal transaction. 
 
 !!!note
-        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
+        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md) window.
 
 The posting will look like:
 
@@ -123,7 +123,7 @@ The company in this example needs to:
 - and finally indicate the *Received In* amount, in this example 100,00 USD.
 
 This new transaction is then shown in the *Transaction* tab of the *Financial Account* window. Etendo clearly shows the Deposit Amount recorded.
-The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
+The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md) window.
 
 
 The posting will look like:
