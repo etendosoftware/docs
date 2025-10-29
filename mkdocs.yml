@@ -203,7 +203,7 @@ nav:
             - Window Personalization: user-guide/etendo-classic/basic-features/general-setup/application/window-personalization.md
             - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
           - Client:
-            - Client : user-guide/etendo-classic/basic-features/general-setup/client/client.md
+            - Client: user-guide/etendo-classic/basic-features/general-setup/client/client.md
           - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
           - Enterprise Model:
             - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md

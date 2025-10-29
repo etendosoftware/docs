@@ -11,11 +11,11 @@ tags:
 
 :material-menu: `Application` > `General Setup` > `Enterprise Model` > `Organization Type`
 
-### Overview
+## Overview
 
 An **organization** can be a Legal Entity, a Business Unit or neither of both. In this window, you can also select if transactions are allowed or not for this organization type.
 
-### Organization Type
+## Organization Type Window
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-type.png)
 
