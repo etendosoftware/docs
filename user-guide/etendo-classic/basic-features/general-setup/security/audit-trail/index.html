@@ -5,31 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/">
+        <link rel="canonical" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/">
       
       
-        <link rel="prev" href="../crm-connector/">
+        <link rel="prev" href="../role-access/">
       
       
-        <link rel="next" href="../security/">
+        <link rel="next" href="../../process-scheduling/process-request/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../../../images/favicon.png">
+      <link rel="icon" href="../../../../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
-        <title>Enterprise Model - Etendo Documentation</title>
+        <title>Audit Trail - Etendo Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/custom-styles.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/custom-styles.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     
@@ -60,7 +60,7 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,7 +77,7 @@
     
     
     
-  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#initial-organization-setup" class="md-skip">
+        <a href="#audit-trail" class="md-skip">
           Skip to content
         </a>
       
@@ -120,9 +120,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
       
-  <img src="../../../../../assets/logo.png" alt="logo">
+  <img src="../../../../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Enterprise Model
+              Audit Trail
             
           </span>
         </div>
@@ -257,7 +257,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../../../.." class="md-tabs__link">
         
   
   
@@ -278,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../getting-started/overview/" class="md-tabs__link">
+        <a href="../../../../../../getting-started/overview/" class="md-tabs__link">
           
   
   
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../overview/" class="md-tabs__link">
+        <a href="../../../../../overview/" class="md-tabs__link">
           
   
   
@@ -320,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../developer-guide/overview/" class="md-tabs__link">
+        <a href="../../../../../../developer-guide/overview/" class="md-tabs__link">
           
   
   
@@ -340,7 +340,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../whats-new/etendo-news/" class="md-tabs__link">
+        <a href="../../../../../../whats-new/etendo-news/" class="md-tabs__link">
           
   
   
@@ -358,7 +358,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../live-builds/overview/" class="md-tabs__link">
+      <a href="../../../../../../live-builds/overview/" class="md-tabs__link">
         
   
   
@@ -379,7 +379,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../help-and-support/overview/" class="md-tabs__link">
+        <a href="../../../../../../help-and-support/overview/" class="md-tabs__link">
           
   
   
@@ -413,9 +413,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
       
-  <img src="../../../../../assets/logo.png" alt="logo">
+  <img src="../../../../../../assets/logo.png" alt="logo">
 
     </a>
     Etendo Documentation
@@ -442,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../../../.." class="md-nav__link">
         
   
   
@@ -507,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/overview/" class="md-nav__link">
+      <a href="../../../../../../getting-started/overview/" class="md-nav__link">
         
   
   
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/requirements/" class="md-nav__link">
+      <a href="../../../../../../getting-started/requirements/" class="md-nav__link">
         
   
   
@@ -553,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/installation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -576,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/interactive-installation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/interactive-installation/" class="md-nav__link">
         
   
   
@@ -649,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+      <a href="../../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
         
   
   
@@ -672,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
         
   
   
@@ -695,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+      <a href="../../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
         
   
   
@@ -781,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../overview/" class="md-nav__link">
+      <a href="../../../../../overview/" class="md-nav__link">
         
   
   
@@ -942,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         
   
   
@@ -965,30 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../clear-report-cache/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Clear Report Cache
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../attachments-configuration/" class="md-nav__link">
+      <a href="../../attachments-configuration/" class="md-nav__link">
         
   
   
@@ -1024,10 +1001,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1_3">
         
           
-          <label class="md-nav__link" for="__nav_3_2_1_1_4" id="__nav_3_2_1_1_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2_1_1_3" id="__nav_3_2_1_1_3_label" tabindex="0">
             
   
   
@@ -1040,8 +1017,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_1_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_1_1_4">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_1_3">
             <span class="md-nav__icon md-icon"></span>
             Application
           </label>
@@ -1054,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/create-sequences/" class="md-nav__link">
+      <a href="../../application/create-sequences/" class="md-nav__link">
         
   
   
@@ -1077,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/currency/" class="md-nav__link">
+      <a href="../../application/currency/" class="md-nav__link">
         
   
   
@@ -1100,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/conversion-rates/" class="md-nav__link">
+      <a href="../../application/conversion-rates/" class="md-nav__link">
         
   
   
@@ -1123,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/country-and-region/" class="md-nav__link">
+      <a href="../../application/country-and-region/" class="md-nav__link">
         
   
   
@@ -1146,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/preference/" class="md-nav__link">
+      <a href="../../application/preference/" class="md-nav__link">
         
   
   
@@ -1169,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/session-preferences/" class="md-nav__link">
+      <a href="../../application/session-preferences/" class="md-nav__link">
         
   
   
@@ -1192,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/window-personalization/" class="md-nav__link">
+      <a href="../../application/window-personalization/" class="md-nav__link">
         
   
   
@@ -1215,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/alert/" class="md-nav__link">
+      <a href="../../application/alert/" class="md-nav__link">
         
   
   
@@ -1245,13 +1222,153 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1_4" id="__nav_3_2_1_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Client
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../client/" class="md-nav__link">
+      <a href="../../client/client/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../crm-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CRM Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1_6">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1_6" id="__nav_3_2_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Enterprise Model
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Enterprise Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enterprise-model/initial-organization-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Initial Organization Setup
     
   </span>
   
@@ -1269,12 +1386,180 @@
   
   
     <li class="md-nav__item">
-      <a href="../crm-connector/" class="md-nav__link">
+      <a href="../../enterprise-model/enterprise-module-management/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    CRM Connector
+    Enterprise Module Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enterprise-model/organization-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organization Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enterprise-model/organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1_7" id="__nav_3_2_1_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_1_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_1_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../role/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../role-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role Access
     
   </span>
   
@@ -1298,13 +1583,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Enterprise Model
+    Audit Trail
     
   </span>
   
@@ -1317,7 +1604,7 @@
   
   
   <span class="md-ellipsis">
-    Enterprise Model
+    Audit Trail
     
   </span>
   
@@ -1332,6 +1619,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1340,16 +1629,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#initial-organization-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Organization Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Organization Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
@@ -1357,20 +1636,48 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-trail_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Trail
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-audit-trail-for-a-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Audit Trail for a Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabling Audit Trail for a Table">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#initial-organization-setup_1" class="md-nav__link">
+  <a href="#audit-inserts" class="md-nav__link">
     <span class="md-ellipsis">
-      Initial Organization Setup
+      Audit Inserts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#excluding-columns" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Excluding columns
     </span>
   </a>
   
@@ -1382,19 +1689,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enterprise-module-management" class="md-nav__link">
+  <a href="#running-the-system-compilation" class="md-nav__link">
     <span class="md-ellipsis">
-      Enterprise Module Management
+      Running the System Compilation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Enterprise Module Management">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-audit-trail-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Audit Trail Popup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#record-history-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Record History View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Record History View">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#disable-filtering-by-user" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Disable Filtering by User
     </span>
   </a>
   
@@ -1406,30 +1731,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#organization-type" class="md-nav__link">
+  <a href="#deleted-records-view" class="md-nav__link">
     <span class="md-ellipsis">
-      Organization Type
+      Deleted Records View
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Organization Type">
+    <nav class="md-nav" aria-label="Deleted Records View">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_2" class="md-nav__link">
+  <a href="#navigation-choices" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Navigation Choices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation Choices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#back-to-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back to History
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#organization-type_1" class="md-nav__link">
+  <a href="#history-of-selected-record" class="md-nav__link">
     <span class="md-ellipsis">
-      Organization Type
+      History of Selected Record
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#child-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Child Tabs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1439,215 +1788,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#organization" class="md-nav__link">
+  <a href="#a-generated-audit-trail-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Organization
+      A generated Audit Trail Window
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Organization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organization_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Information
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#period-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Period Control
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-sets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Sets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Warehouse
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#intercompany" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Intercompany
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Intercompany">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
+      Limitations
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#etendo-advanced-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Description
+      Etendo Advanced Security
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Up
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organization-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organization Window
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Organization Window">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#business-partner-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      Business Partner Window
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invoices-and-orders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Invoices and Orders
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Invoices and Orders">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lines
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      Product Window
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complete-or-book-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Complete or book documents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reactivate-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reactivate documents
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1660,6 +1823,57 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1_8">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1_8" id="__nav_3_2_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Process Scheduling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Process Scheduling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -1667,12 +1881,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
+      <a href="../../process-scheduling/process-request/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Security
+    Process Request
     
   </span>
   
@@ -1690,17 +1904,48 @@
   
   
     <li class="md-nav__item">
-      <a href="../process-scheduling/" class="md-nav__link">
+      <a href="../../process-scheduling/process-monitor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Scheduling
+    Process Monitor
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-scheduling/process-group/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1764,7 +2009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/master-data/" class="md-nav__link">
+      <a href="../../../master-data-management/master-data/" class="md-nav__link">
         
   
   
@@ -1787,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/business-partner-setup/" class="md-nav__link">
+      <a href="../../../master-data-management/business-partner-setup/" class="md-nav__link">
         
   
   
@@ -1810,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/product-setup/" class="md-nav__link">
+      <a href="../../../master-data-management/product-setup/" class="md-nav__link">
         
   
   
@@ -1833,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/pricing/" class="md-nav__link">
+      <a href="../../../master-data-management/pricing/" class="md-nav__link">
         
   
   
@@ -1907,7 +2152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../procurement-management/getting-started/" class="md-nav__link">
+      <a href="../../../procurement-management/getting-started/" class="md-nav__link">
         
   
   
@@ -1930,7 +2175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../procurement-management/transactions/" class="md-nav__link">
+      <a href="../../../procurement-management/transactions/" class="md-nav__link">
         
   
   
@@ -1953,7 +2198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../procurement-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../procurement-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2027,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../warehouse-management/getting-started/" class="md-nav__link">
+      <a href="../../../warehouse-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2050,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../warehouse-management/transactions/" class="md-nav__link">
+      <a href="../../../warehouse-management/transactions/" class="md-nav__link">
         
   
   
@@ -2073,7 +2318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../warehouse-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../warehouse-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2096,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../warehouse-management/setup/" class="md-nav__link">
+      <a href="../../../warehouse-management/setup/" class="md-nav__link">
         
   
   
@@ -2170,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-management/getting-started/" class="md-nav__link">
+      <a href="../../../production-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2193,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-management/transactions/" class="md-nav__link">
+      <a href="../../../production-management/transactions/" class="md-nav__link">
         
   
   
@@ -2216,7 +2461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-management/setup/" class="md-nav__link">
+      <a href="../../../production-management/setup/" class="md-nav__link">
         
   
   
@@ -2290,7 +2535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material-requirement-planning/getting-started/" class="md-nav__link">
+      <a href="../../../material-requirement-planning/getting-started/" class="md-nav__link">
         
   
   
@@ -2313,7 +2558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material-requirement-planning/transactions/" class="md-nav__link">
+      <a href="../../../material-requirement-planning/transactions/" class="md-nav__link">
         
   
   
@@ -2336,7 +2581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material-requirement-planning/setup/" class="md-nav__link">
+      <a href="../../../material-requirement-planning/setup/" class="md-nav__link">
         
   
   
@@ -2410,7 +2655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/getting-started/" class="md-nav__link">
+      <a href="../../../sales-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2433,7 +2678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/transactions/" class="md-nav__link">
+      <a href="../../../sales-management/transactions/" class="md-nav__link">
         
   
   
@@ -2456,7 +2701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../sales-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2479,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/setup/" class="md-nav__link">
+      <a href="../../../sales-management/setup/" class="md-nav__link">
         
   
   
@@ -2553,7 +2798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/getting-started/" class="md-nav__link">
+      <a href="../../../project-and-service-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2576,7 +2821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/transactions/" class="md-nav__link">
+      <a href="../../../project-and-service-management/transactions/" class="md-nav__link">
         
   
   
@@ -2599,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../project-and-service-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2622,7 +2867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/setup/" class="md-nav__link">
+      <a href="../../../project-and-service-management/setup/" class="md-nav__link">
         
   
   
@@ -2696,7 +2941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/getting-started/" class="md-nav__link">
+      <a href="../../../financial-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2762,7 +3007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/receivables-and-payables/transactions/" class="md-nav__link">
+      <a href="../../../financial-management/receivables-and-payables/transactions/" class="md-nav__link">
         
   
   
@@ -2785,7 +3030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
+      <a href="../../../financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2808,7 +3053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/receivables-and-payables/setup/" class="md-nav__link">
+      <a href="../../../financial-management/receivables-and-payables/setup/" class="md-nav__link">
         
   
   
@@ -2882,7 +3127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/accounting/transactions/" class="md-nav__link">
+      <a href="../../../financial-management/accounting/transactions/" class="md-nav__link">
         
   
   
@@ -2905,7 +3150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/accounting/analysis-tools/" class="md-nav__link">
+      <a href="../../../financial-management/accounting/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2928,7 +3173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/accounting/setup/" class="md-nav__link">
+      <a href="../../../financial-management/accounting/setup/" class="md-nav__link">
         
   
   
@@ -2959,7 +3204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/assets/overview/" class="md-nav__link">
+      <a href="../../../financial-management/assets/overview/" class="md-nav__link">
         
   
   
@@ -3127,7 +3372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/essentials-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/essentials-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3150,7 +3395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/essentials-extensions/advanced-business-partner/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/essentials-extensions/advanced-business-partner/" class="md-nav__link">
         
   
   
@@ -3173,7 +3418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/essentials-extensions/bulk-completion/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/essentials-extensions/bulk-completion/" class="md-nav__link">
         
   
   
@@ -3247,7 +3492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/platform-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3270,7 +3515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/etendo-advanced-security/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/platform-extensions/etendo-advanced-security/" class="md-nav__link">
         
   
   
@@ -3293,7 +3538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/etendo-rx/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/platform-extensions/etendo-rx/" class="md-nav__link">
         
   
   
@@ -3316,7 +3561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/task/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/platform-extensions/task/" class="md-nav__link">
         
   
   
@@ -3339,7 +3584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/print-provider/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/platform-extensions/print-provider/" class="md-nav__link">
         
   
   
@@ -3413,7 +3658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/warehouse-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3436,7 +3681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/" class="md-nav__link">
         
   
   
@@ -3459,7 +3704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/packing/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/warehouse-extensions/packing/" class="md-nav__link">
         
   
   
@@ -3482,7 +3727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/picking/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/warehouse-extensions/picking/" class="md-nav__link">
         
   
   
@@ -3505,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit/" class="md-nav__link">
         
   
   
@@ -3536,7 +3781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/production-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/production-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3559,7 +3804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/sales-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/sales-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3625,7 +3870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/financial-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3648,7 +3893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/advanced-bank-account-management/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/financial-extensions/advanced-bank-account-management/" class="md-nav__link">
         
   
   
@@ -3671,7 +3916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/automated-remittance/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/financial-extensions/automated-remittance/" class="md-nav__link">
         
   
   
@@ -3694,7 +3939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/conversion-rate-download-rule/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/financial-extensions/conversion-rate-download-rule/" class="md-nav__link">
         
   
   
@@ -3717,12 +3962,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/bulk-posting/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/financial-extensions/bulk-posting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Bulk Posting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/financial-extensions/intercompany/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intercompany
     
   </span>
   
@@ -3791,7 +4059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/overview/" class="md-nav__link">
         
   
   
@@ -3814,7 +4082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/" class="md-nav__link">
         
   
   
@@ -3837,7 +4105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/impuestos-para-espa%C3%B1a/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/impuestos-para-espa%C3%B1a/" class="md-nav__link">
         
   
   
@@ -3860,7 +4128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/intrastat/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/intrastat/" class="md-nav__link">
         
   
   
@@ -3883,7 +4151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/iva-de-caja/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/iva-de-caja/" class="md-nav__link">
         
   
   
@@ -3906,7 +4174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/libro-de-facturas/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/libro-de-facturas/" class="md-nav__link">
         
   
   
@@ -3929,7 +4197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-190/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/modelo-190/" class="md-nav__link">
         
   
   
@@ -3952,7 +4220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-303/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/modelo-303/" class="md-nav__link">
         
   
   
@@ -3975,7 +4243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-347/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/modelo-347/" class="md-nav__link">
         
   
   
@@ -3998,7 +4266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-349/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/modelo-349/" class="md-nav__link">
         
   
   
@@ -4021,7 +4289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-390/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/modelo-390/" class="md-nav__link">
         
   
   
@@ -4044,7 +4312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/sii-para-iva/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/sii-para-iva/" class="md-nav__link">
         
   
   
@@ -4067,7 +4335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/ticketbai-batuz/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/ticketbai-batuz/" class="md-nav__link">
         
   
   
@@ -4090,7 +4358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/verifactu/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/spain-localization/verifactu/" class="md-nav__link">
         
   
   
@@ -4164,7 +4432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/etendobi-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/etendobi-extensions/overview/" class="md-nav__link">
         
   
   
@@ -4187,7 +4455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/" class="md-nav__link">
         
   
   
@@ -4261,7 +4529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/procurement-extensions/overview/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/procurement-extensions/overview/" class="md-nav__link">
         
   
   
@@ -4284,7 +4552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/procurement-extensions/purchase-invoice-validation/" class="md-nav__link">
+      <a href="../../../../optional-features/bundles/procurement-extensions/purchase-invoice-validation/" class="md-nav__link">
         
   
   
@@ -4366,7 +4634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/supported-modules/tax-report-launcher/" class="md-nav__link">
+      <a href="../../../../optional-features/supported-modules/tax-report-launcher/" class="md-nav__link">
         
   
   
@@ -4448,7 +4716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-a-general-ledger-configuration/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-create-a-general-ledger-configuration/" class="md-nav__link">
         
   
   
@@ -4471,7 +4739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-an-account-tree/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-create-an-account-tree/" class="md-nav__link">
         
   
   
@@ -4494,7 +4762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses/" class="md-nav__link">
         
   
   
@@ -4517,7 +4785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-manage-prepaid-invoices-in-payables/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-manage-prepaid-invoices-in-payables/" class="md-nav__link">
         
   
   
@@ -4540,7 +4808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-manage-prepaid-invoices-in-receivables/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-manage-prepaid-invoices-in-receivables/" class="md-nav__link">
         
   
   
@@ -4563,7 +4831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-transfer-funds-between-financial-accounts/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-transfer-funds-between-financial-accounts/" class="md-nav__link">
         
   
   
@@ -4648,7 +4916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/getting-started/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/getting-started/" class="md-nav__link">
         
   
   
@@ -4671,7 +4939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
         
   
   
@@ -4780,7 +5048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/bundles/mobile-extensions/overview/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/bundles/mobile-extensions/overview/" class="md-nav__link">
         
   
   
@@ -4803,7 +5071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp/" class="md-nav__link">
         
   
   
@@ -4896,7 +5164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/getting-started/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/getting-started/" class="md-nav__link">
         
   
   
@@ -4919,7 +5187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/setup-and-usage/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/setup-and-usage/" class="md-nav__link">
         
   
   
@@ -5028,7 +5296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/bundles/overview/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/bundles/overview/" class="md-nav__link">
         
   
   
@@ -5051,7 +5319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/bundles/sql-expert/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/bundles/sql-expert/" class="md-nav__link">
         
   
   
@@ -5148,7 +5416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/overview/" class="md-nav__link">
         
   
   
@@ -5300,7 +5568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/installation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -5323,7 +5591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
         
   
   
@@ -5346,7 +5614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
         
   
   
@@ -5369,7 +5637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
         
   
   
@@ -5392,7 +5660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
         
   
   
@@ -5415,7 +5683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/" class="md-nav__link">
         
   
   
@@ -5445,7 +5713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
         
   
   
@@ -5468,7 +5736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/" class="md-nav__link">
         
   
   
@@ -5542,7 +5810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
         
   
   
@@ -5565,7 +5833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
         
   
   
@@ -5639,7 +5907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
         
   
   
@@ -5662,7 +5930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
         
   
   
@@ -5685,7 +5953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
         
   
   
@@ -5767,7 +6035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/alerts/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/alerts/" class="md-nav__link">
         
   
   
@@ -5790,7 +6058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/application-menu/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/application-menu/" class="md-nav__link">
         
   
   
@@ -5813,7 +6081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/constraints/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/constraints/" class="md-nav__link">
         
   
   
@@ -5836,7 +6104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/data-access-layer/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/data-access-layer/" class="md-nav__link">
         
   
   
@@ -5859,7 +6127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/data-model/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/data-model/" class="md-nav__link">
         
   
   
@@ -5882,7 +6150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/datasets/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/datasets/" class="md-nav__link">
         
   
   
@@ -5905,7 +6173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/datasources/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/datasources/" class="md-nav__link">
         
   
   
@@ -5928,7 +6196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/development-build-tasks/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/development-build-tasks/" class="md-nav__link">
         
   
   
@@ -5951,7 +6219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/element-and-synchronize-terminology/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/element-and-synchronize-terminology/" class="md-nav__link">
         
   
   
@@ -5974,7 +6242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
         
   
   
@@ -5997,7 +6265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/format-xml/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/format-xml/" class="md-nav__link">
         
   
   
@@ -6020,7 +6288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
         
   
   
@@ -6043,7 +6311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
         
   
   
@@ -6066,7 +6334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/processes/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/processes/" class="md-nav__link">
         
   
   
@@ -6089,7 +6357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/selectors/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/selectors/" class="md-nav__link">
         
   
   
@@ -6112,7 +6380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/standard-windows/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/standard-windows/" class="md-nav__link">
         
   
   
@@ -6135,7 +6403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/tables/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/tables/" class="md-nav__link">
         
   
   
@@ -6209,7 +6477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar/" class="md-nav__link">
         
   
   
@@ -6232,7 +6500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid/" class="md-nav__link">
         
   
   
@@ -6255,7 +6523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab/" class="md-nav__link">
         
   
   
@@ -6278,7 +6546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column/" class="md-nav__link">
         
   
   
@@ -6301,7 +6569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table/" class="md-nav__link">
         
   
   
@@ -6324,7 +6592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window/" class="md-nav__link">
         
   
   
@@ -6347,7 +6615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/" class="md-nav__link">
         
   
   
@@ -6370,7 +6638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
         
   
   
@@ -6393,7 +6661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout/" class="md-nav__link">
         
   
   
@@ -6416,7 +6684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process/" class="md-nav__link">
         
   
   
@@ -6439,7 +6707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout/" class="md-nav__link">
         
   
   
@@ -6462,7 +6730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout/" class="md-nav__link">
         
   
   
@@ -6485,7 +6753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module/" class="md-nav__link">
         
   
   
@@ -6508,7 +6776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
         
   
   
@@ -6531,7 +6799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column/" class="md-nav__link">
         
   
   
@@ -6554,7 +6822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset/" class="md-nav__link">
         
   
   
@@ -6577,7 +6845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/" class="md-nav__link">
         
   
   
@@ -6600,7 +6868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table/" class="md-nav__link">
         
   
   
@@ -6623,7 +6891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module/" class="md-nav__link">
         
   
   
@@ -6646,7 +6914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
         
   
   
@@ -6669,7 +6937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link/" class="md-nav__link">
         
   
   
@@ -6692,7 +6960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component/" class="md-nav__link">
         
   
   
@@ -6715,7 +6983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process/" class="md-nav__link">
         
   
   
@@ -6738,7 +7006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report/" class="md-nav__link">
         
   
   
@@ -6761,7 +7029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/" class="md-nav__link">
         
   
   
@@ -6784,7 +7052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/" class="md-nav__link">
         
   
   
@@ -6807,7 +7075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure/" class="md-nav__link">
         
   
   
@@ -6830,7 +7098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-table/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-table/" class="md-nav__link">
         
   
   
@@ -6853,7 +7121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-window/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-window/" class="md-nav__link">
         
   
   
@@ -6876,7 +7144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files/" class="md-nav__link">
         
   
   
@@ -6899,7 +7167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert/" class="md-nav__link">
         
   
   
@@ -6922,7 +7190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services/" class="md-nav__link">
         
   
   
@@ -6945,7 +7213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
         
   
   
@@ -6968,7 +7236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/" class="md-nav__link">
         
   
   
@@ -6991,7 +7259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/" class="md-nav__link">
         
   
   
@@ -7014,7 +7282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/" class="md-nav__link">
         
   
   
@@ -7037,7 +7305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
         
   
   
@@ -7060,7 +7328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
         
   
   
@@ -7126,7 +7394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/" class="md-nav__link">
         
   
   
@@ -7149,7 +7417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases/" class="md-nav__link">
         
   
   
@@ -7180,7 +7448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree/" class="md-nav__link">
         
   
   
@@ -7203,7 +7471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level/" class="md-nav__link">
         
   
   
@@ -7226,7 +7494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process/" class="md-nav__link">
         
   
   
@@ -7249,7 +7517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/" class="md-nav__link">
         
   
   
@@ -7272,7 +7540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab/" class="md-nav__link">
         
   
   
@@ -7295,7 +7563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model/" class="md-nav__link">
         
   
   
@@ -7318,7 +7586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data/" class="md-nav__link">
         
   
   
@@ -7341,7 +7609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler/" class="md-nav__link">
         
   
   
@@ -7364,7 +7632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended/" class="md-nav__link">
         
   
   
@@ -7394,7 +7662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
         
   
   
@@ -7417,7 +7685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process/" class="md-nav__link">
         
   
   
@@ -7440,7 +7708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
         
   
   
@@ -7463,7 +7731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util/" class="md-nav__link">
         
   
   
@@ -7486,7 +7754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/" class="md-nav__link">
         
   
   
@@ -7509,7 +7777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
         
   
   
@@ -7583,7 +7851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
         
   
   
@@ -7606,7 +7874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-database-extended-module/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-database-extended-module/" class="md-nav__link">
         
   
   
@@ -7636,7 +7904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
         
   
   
@@ -7659,7 +7927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration/" class="md-nav__link">
         
   
   
@@ -7689,7 +7957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-testing-plugin/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-testing-plugin/" class="md-nav__link">
         
   
   
@@ -7806,7 +8074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/overview/" class="md-nav__link">
         
   
   
@@ -7829,7 +8097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/docker-management/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/docker-management/" class="md-nav__link">
         
   
   
@@ -7852,7 +8120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service/" class="md-nav__link">
         
   
   
@@ -7875,7 +8143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/dynamic-app/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/dynamic-app/" class="md-nav__link">
         
   
   
@@ -7898,7 +8166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx/" class="md-nav__link">
         
   
   
@@ -7921,7 +8189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks/" class="md-nav__link">
         
   
   
@@ -7944,7 +8212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/task/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/task/" class="md-nav__link">
         
   
   
@@ -7967,7 +8235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/print-provider/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/print-provider/" class="md-nav__link">
         
   
   
@@ -7998,7 +8266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
         
   
   
@@ -8064,7 +8332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview/" class="md-nav__link">
         
   
   
@@ -8095,7 +8363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/etendo-bi-extensions/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/etendo-bi-extensions/" class="md-nav__link">
         
   
   
@@ -8169,7 +8437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-changelog/apichanges/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-changelog/apichanges/" class="md-nav__link">
         
   
   
@@ -8251,7 +8519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
         
   
   
@@ -8317,7 +8585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/concepts/config-server/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/concepts/config-server/" class="md-nav__link">
         
   
   
@@ -8340,7 +8608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/concepts/edge-server/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/concepts/edge-server/" class="md-nav__link">
         
   
   
@@ -8363,7 +8631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/concepts/projections/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/concepts/projections/" class="md-nav__link">
         
   
   
@@ -8480,7 +8748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide/" class="md-nav__link">
         
   
   
@@ -8562,7 +8830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
         
   
   
@@ -8636,7 +8904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-change-date-format/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-change-date-format/" class="md-nav__link">
         
   
   
@@ -8659,7 +8927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-configure-memory-limits-in-docker-containers/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-configure-memory-limits-in-docker-containers/" class="md-nav__link">
         
   
   
@@ -8682,7 +8950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
         
   
   
@@ -8705,7 +8973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/" class="md-nav__link">
         
   
   
@@ -8728,7 +8996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-implement-oauth-authentication-and-token-management/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-implement-oauth-authentication-and-token-management/" class="md-nav__link">
         
   
   
@@ -8758,7 +9026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code/" class="md-nav__link">
         
   
   
@@ -8781,7 +9049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/" class="md-nav__link">
         
   
   
@@ -8870,7 +9138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/installation/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/installation/" class="md-nav__link">
         
   
   
@@ -8936,7 +9204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/concepts/model-context-protocol/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/concepts/model-context-protocol/" class="md-nav__link">
         
   
   
@@ -9017,7 +9285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/bundles/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/bundles/overview/" class="md-nav__link">
         
   
   
@@ -9040,7 +9308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/bundles/dev-assistant/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/bundles/dev-assistant/" class="md-nav__link">
         
   
   
@@ -9114,7 +9382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/overview/" class="md-nav__link">
         
   
   
@@ -9137,7 +9405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/api-call-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/api-call-tool/" class="md-nav__link">
         
   
   
@@ -9160,7 +9428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/attach-file-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/attach-file-tool/" class="md-nav__link">
         
   
   
@@ -9183,7 +9451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/audio-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/audio-tool/" class="md-nav__link">
         
   
   
@@ -9206,7 +9474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/client-init-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/client-init-tool/" class="md-nav__link">
         
   
   
@@ -9229,7 +9497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/codbar-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/codbar-tool/" class="md-nav__link">
         
   
   
@@ -9252,7 +9520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/docker-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/docker-tool/" class="md-nav__link">
         
   
   
@@ -9275,7 +9543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/etendo-sql-to-csv-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/etendo-sql-to-csv-tool/" class="md-nav__link">
         
   
   
@@ -9298,7 +9566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/file-copy-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/file-copy-tool/" class="md-nav__link">
         
   
   
@@ -9321,7 +9589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/file-downloader-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/file-downloader-tool/" class="md-nav__link">
         
   
   
@@ -9344,7 +9612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/google-drive-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/google-drive-tool/" class="md-nav__link">
         
   
   
@@ -9367,7 +9635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/google-spreadsheet-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/google-spreadsheet-tool/" class="md-nav__link">
         
   
   
@@ -9390,7 +9658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/process-definition-jasper-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/process-definition-jasper-tool/" class="md-nav__link">
         
   
   
@@ -9413,7 +9681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/load-oauth-token-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/load-oauth-token-tool/" class="md-nav__link">
         
   
   
@@ -9436,7 +9704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/memory-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/memory-tool/" class="md-nav__link">
         
   
   
@@ -9459,7 +9727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/ocr-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/ocr-tool/" class="md-nav__link">
         
   
   
@@ -9482,7 +9750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/org-init-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/org-init-tool/" class="md-nav__link">
         
   
   
@@ -9505,7 +9773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/pdf-to-images-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/pdf-to-images-tool/" class="md-nav__link">
         
   
   
@@ -9528,7 +9796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/print-directory-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/print-directory-tool/" class="md-nav__link">
         
   
   
@@ -9551,7 +9819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/read-file-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/read-file-tool/" class="md-nav__link">
         
   
   
@@ -9574,7 +9842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/send-email-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/send-email-tool/" class="md-nav__link">
         
   
   
@@ -9597,7 +9865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/task-creator-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/task-creator-tool/" class="md-nav__link">
         
   
   
@@ -9620,7 +9888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/task-management-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/task-management-tool/" class="md-nav__link">
         
   
   
@@ -9643,7 +9911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/tavily-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/tavily-tool/" class="md-nav__link">
         
   
   
@@ -9666,7 +9934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/template-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/template-tool/" class="md-nav__link">
         
   
   
@@ -9689,7 +9957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/test-run-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/test-run-tool/" class="md-nav__link">
         
   
   
@@ -9712,7 +9980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/uncompress-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/uncompress-tool/" class="md-nav__link">
         
   
   
@@ -9735,7 +10003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/write-file-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/write-file-tool/" class="md-nav__link">
         
   
   
@@ -9758,7 +10026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/xls-ocr-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/xls-ocr-tool/" class="md-nav__link">
         
   
   
@@ -9781,7 +10049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/xls-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/xls-tool/" class="md-nav__link">
         
   
   
@@ -9804,7 +10072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool/" class="md-nav__link">
         
   
   
@@ -9878,7 +10146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-api-tokens/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-api-tokens/" class="md-nav__link">
         
   
   
@@ -9908,7 +10176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-etendo-copilot-proxy/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-etendo-copilot-proxy/" class="md-nav__link">
         
   
   
@@ -9938,7 +10206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/" class="md-nav__link">
         
   
   
@@ -9968,7 +10236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/" class="md-nav__link">
         
   
   
@@ -9998,7 +10266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-agent-telegram-bot-with-n8n/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-agent-telegram-bot-with-n8n/" class="md-nav__link">
         
   
   
@@ -10028,7 +10296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/" class="md-nav__link">
         
   
   
@@ -10051,7 +10319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent/" class="md-nav__link">
         
   
   
@@ -10074,7 +10342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/" class="md-nav__link">
         
   
   
@@ -10097,7 +10365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools/" class="md-nav__link">
         
   
   
@@ -10120,7 +10388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/" class="md-nav__link">
         
   
   
@@ -10143,7 +10411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console/" class="md-nav__link">
         
   
   
@@ -10166,7 +10434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp/" class="md-nav__link">
         
   
   
@@ -10196,7 +10464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/" class="md-nav__link">
         
   
   
@@ -10219,7 +10487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp/" class="md-nav__link">
         
   
   
@@ -10249,7 +10517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp/" class="md-nav__link">
         
   
   
@@ -10279,7 +10547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/" class="md-nav__link">
         
   
   
@@ -10309,7 +10577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama/" class="md-nav__link">
         
   
   
@@ -10332,7 +10600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features/" class="md-nav__link">
         
   
   
@@ -10414,7 +10682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
         
   
   
@@ -10480,7 +10748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-mobile/concepts/subapp-structure/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-mobile/concepts/subapp-structure/" class="md-nav__link">
         
   
   
@@ -10554,7 +10822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
         
   
   
@@ -10666,7 +10934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/etendo-news/" class="md-nav__link">
+      <a href="../../../../../../whats-new/etendo-news/" class="md-nav__link">
         
   
   
@@ -10689,7 +10957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+      <a href="../../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
         
   
   
@@ -10821,7 +11089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/release-notes/" class="md-nav__link">
         
   
   
@@ -10887,7 +11155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes/" class="md-nav__link">
         
   
   
@@ -10910,7 +11178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/" class="md-nav__link">
         
   
   
@@ -10933,7 +11201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes/" class="md-nav__link">
         
   
   
@@ -11007,7 +11275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11030,7 +11298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11053,7 +11321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11076,7 +11344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11099,7 +11367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11122,7 +11390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11145,7 +11413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11168,7 +11436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11191,7 +11459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11265,7 +11533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11288,7 +11556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11311,7 +11579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11334,7 +11602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11357,7 +11625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11380,7 +11648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11403,7 +11671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11426,7 +11694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11457,7 +11725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/iso/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/iso/" class="md-nav__link">
         
   
   
@@ -11480,7 +11748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
         
   
   
@@ -11597,7 +11865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11722,7 +11990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/" class="md-nav__link">
         
   
   
@@ -11796,7 +12064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-copilot/translation-bundles/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-copilot/translation-bundles/release-notes/" class="md-nav__link">
         
   
   
@@ -11850,7 +12118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../live-builds/overview/" class="md-nav__link">
+      <a href="../../../../../../live-builds/overview/" class="md-nav__link">
         
   
   
@@ -11915,7 +12183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../help-and-support/overview/" class="md-nav__link">
+      <a href="../../../../../../help-and-support/overview/" class="md-nav__link">
         
   
   
@@ -11938,7 +12206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../help-and-support/support-service/" class="md-nav__link">
+      <a href="../../../../../../help-and-support/support-service/" class="md-nav__link">
         
   
   
@@ -11961,7 +12229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+      <a href="../../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
         
   
   
@@ -12003,6 +12271,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -12011,16 +12281,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#initial-organization-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Organization Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Organization Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
@@ -12028,20 +12288,48 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-trail_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Trail
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-audit-trail-for-a-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Audit Trail for a Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabling Audit Trail for a Table">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#initial-organization-setup_1" class="md-nav__link">
+  <a href="#audit-inserts" class="md-nav__link">
     <span class="md-ellipsis">
-      Initial Organization Setup
+      Audit Inserts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#excluding-columns" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Excluding columns
     </span>
   </a>
   
@@ -12053,19 +12341,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enterprise-module-management" class="md-nav__link">
+  <a href="#running-the-system-compilation" class="md-nav__link">
     <span class="md-ellipsis">
-      Enterprise Module Management
+      Running the System Compilation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Enterprise Module Management">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-audit-trail-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Audit Trail Popup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#record-history-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Record History View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Record History View">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#disable-filtering-by-user" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Disable Filtering by User
     </span>
   </a>
   
@@ -12077,30 +12383,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#organization-type" class="md-nav__link">
+  <a href="#deleted-records-view" class="md-nav__link">
     <span class="md-ellipsis">
-      Organization Type
+      Deleted Records View
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Organization Type">
+    <nav class="md-nav" aria-label="Deleted Records View">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_2" class="md-nav__link">
+  <a href="#navigation-choices" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Navigation Choices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation Choices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#back-to-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back to History
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#organization-type_1" class="md-nav__link">
+  <a href="#history-of-selected-record" class="md-nav__link">
     <span class="md-ellipsis">
-      Organization Type
+      History of Selected Record
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#child-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Child Tabs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -12110,215 +12440,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#organization" class="md-nav__link">
+  <a href="#a-generated-audit-trail-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Organization
+      A generated Audit Trail Window
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Organization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organization_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Information
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#period-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Period Control
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-sets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Sets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Warehouse
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#intercompany" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Intercompany
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Intercompany">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
+      Limitations
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#etendo-advanced-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Description
+      Etendo Advanced Security
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Up
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organization-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organization Window
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Organization Window">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#business-partner-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      Business Partner Window
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invoices-and-orders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Invoices and Orders
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Invoices and Orders">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lines
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      Product Window
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complete-or-book-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Complete or book documents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reactivate-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reactivate documents
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -12336,464 +12480,160 @@
                 
                   
 
+  <nav class="md-tags">
+    
+      
+      
+      
+        <span class="md-tag">Audit trail</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Monitor</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Security</span>
+      
+    
+  </nav>
+
 
   
   
 
 
-  <h1>Enterprise Model</h1>
-
-<p>Enterprise Model folder allows the user to create and model the Organizations which belong to a Client.</p>
-<h2 id="initial-organization-setup">Initial Organization Setup</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Enterprise Model</code> &gt; <code>Initial Organization Setup</code></p>
-<h3 id="overview">Overview</h3>
-<p>An Organization is an enterprise of a Client. A client can have at least one or even more than one organization as the way of configuring different types of enterprise models.</p>
-<p>Overall organizations can be:</p>
+<h1 id="audit-trail">Audit Trail</h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Security</code> &gt; <code>Audit Trail</code></p>
+<h2 id="overview">Overview</h2>
+<p>Audit Trail allows the user to monitor every data change done in any table or entity through the user interface.</p>
+<p>The Audit trail feature monitors data changes such as:</p>
 <ul>
-<li>independent legal entities with a different Tax ID number</li>
-<li>enterprise groups with the aim of getting aggregated figures for the group</li>
-<li>or business areas of the client such as departments</li>
+<li>Insert</li>
+<li>Update</li>
+<li>Delete</li>
 </ul>
-<p>Besides, organizations can be structured:</p>
+<p>This feature must be enabled by the System Administrator Role in the Application Dictionary, as the first thing to do is to configure the table/s for which this feature is going to be enabled.</p>
+<p>Once a change has been made in a table for which the audit trail feature has been enabled, it is possible to monitor that change through the user interface by using the action button <strong>Audit Trail</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png"></a></p>
+<h2 id="audit-trail_1">Audit Trail</h2>
+<p>Audit Trail view displays read-only information about all the recorded data changes done in the tables for which the audit trail feature has been enabled.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4.png"></a></p>
+<p>The changes done in a given table, column and record are viewed by showing the corresponding record ID or UI of the records in the database.</p>
+<h2 id="configuration">Configuration</h2>
+<p>In order to track audit information, the system administrator needs to perform two tasks:</p>
 <ul>
-<li>by <em>country or region</em></li>
-<li>by <em>area or function</em></li>
-<li>and so on, according to the enterprise model needs.</li>
+<li><strong>Enable the audit trail</strong> for one or more tables in the system</li>
+<li>Run the <strong>Update Audit Trail infrastructure</strong> process</li>
 </ul>
-<p>All of the above provides an insight about the different scenarios which need to be covered while modeling the enterprise.</p>
-<p>There could be organizations which require to share master data such as business partners and products while having its own chart of account, taxes, financial reporting and transactional data. That could be the case of independent legal entities belonging to the same enterprise group.</p>
-<p>There could be organizations sharing master data and even the same chart of accounts. That could be the case of divisions or departments within the same independent legal entity.</p>
-<p>There could be organizations created with the aim of just grouping data, for which its own transactional data is not required.</p>
-<p>All of the above is possible due to the fact that there are different types of Organizations, see the section below, and besides organizations can be structured in a hierarchical way:</p>
+<p>In the following sections, a step-by-step guide with more detailed information is provided.</p>
+<h2 id="enabling-audit-trail-for-a-table">Enabling Audit Trail for a Table</h2>
+<p>Enabling/disabling the audit trail feature for a table is done in the Table definition in the Application Dictionary.</p>
 <ul>
-<li>At the highest level of the tree, there is an organization named (*).<ul>
-<li>(*) organization is created at the same time that the <em>system client</em> is created, and it is shared among the different <em>client/s</em> in the system.</li>
-<li>Master data created at (*) organization level is accessible for all the organization beneath it</li>
-<li>(*) organization is not an independent legal entity, therefore transactional data is not allowed.</li>
-<li>Every organization created later on will be created below (*) organization.</li>
+<li>Switch to the <strong>System Administrator</strong> role</li>
+<li>Go to <strong>Application Dictionary &gt; Tables and Columns</strong></li>
+<li><strong>Navigate to the table</strong> for which you want to enable the Audit Trail</li>
+<li>Switch to <strong>Edit View</strong></li>
+<li>Mark the <strong>Fully Audited</strong> checkbox and save</li>
 </ul>
-</li>
-<li>At a lower level of the tree, there can be parent organization/s which can have child organization/s beneath it/them.<ul>
-<li>Master data such as business partners and products created at parent organization level is accessible for all the child organization/s beneath it.</li>
-</ul>
-</li>
-<li>At the lowest level of the tree, there can be child organization/s with no organizations beneath it/them.<ul>
-<li>Master data such as business partners and products created at child organization level will not be accessible for the rest of the child organizations, if any.</li>
-</ul>
-</li>
-</ul>
-<h3 id="initial-organization-setup_1">Initial Organization Setup</h3>
-<p>As already mentioned, Organizations are created by running the Initial Organization Setup process and not only that, once an organization has been created it must be set as "Ready" in the Organization window.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB.png"></a></p>
-<p>As shown in the image above, an organization can be created by providing the relevant data below:</p>
+<h3 id="audit-inserts">Audit Inserts</h3>
+<p>When a table is flagged as <strong>Fully Audited</strong>, the users can decide if they want to audit the insertions done in that table.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und.png"></a></p>
+<p>If the Audit Inserts field is checked in a table, when a new row is inserted in that table several records will be inserted in the Audit Trail table, one for each column in the audited table. These records will contain the original value of the columns of the new row.</p>
+<p>Usually, it is not necessary to store this information, because the original value of a column could be easily obtained by using the Old Value and New Value fields of the Audit Trial table that correspond with that column. If the Audit Inserts field is left unchecked, only one row will be inserted in the Audit Trial table for each record inserted in the audited table. At least this one record needs to be inserted in the Audit Trial table to be able to store which process was used to create the record in the audited table.</p>
+<h3 id="excluding-columns">Excluding columns</h3>
+<p>By default, when a table is audited, modifications in any of its columns are audited. In some cases, it makes sense not to audit changes for some of them. This can be configured by setting the <strong>Exclude Audit</strong> flag in <code>Tables and Columns</code> &gt; <code>Table</code> &gt; <code>Column</code> tab.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png"></a></p>
+<h2 id="running-the-system-compilation">Running the System Compilation</h2>
+<p>The audit trail system uses a number of generated triggers (one per table to be audited) to collect the audit data for all changes.</p>
+<p>These triggers need to be regenerated, when executing a system compilation, once the following actions have been performed:</p>
 <ul>
-<li>the name of the organization</li>
-<li>the name of the user of the organization<ul>
-<li>Etendo creates a new user and a new role which only has access to the newly created organization.<ul>
-<li>This user can be later on changed by assigning new roles to it.</li>
-<li>And the role can also be later on changed by assigning new organizations to it.</li>
+<li>The Audit Trail feature has been enabled or disabled for a table</li>
+<li>There has been any structural change to a table being audited (i.e. new columns, changed columns)</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>the organization type. The options available are:<ul>
-<li>Organization - an organization which is not a legal entity and does not allow transactional data entering.<ul>
-<li>This type of organization allows the creation and configuration of master data to be shared among a group of organizations of any type belonging to it, for instance Business Partners, Chart of Accounts, etc.</li>
-<li>It does not require general ledger as it does not allow entering transactions, but it can have a given General Ledger configuration to be shared among the organizations underneath</li>
-<li>The accounting periods can not be opened and closed independently at its level.</li>
-<li>And there could be as many organizations type "organization" in a branch as required.</li>
-</ul>
-</li>
-<li>Legal with accounting - an independent legal entity with a unique Tax ID number which requires accounting, therefore:<ul>
-<li>This organization requires a General Ledger and therefore an Account Tree or Chart of Accounts, as well as a Fiscal Calendar because the accounting periods can and must be opened and closed at its level.</li>
-<li>This organization type allows the "consolidation" of the Balance Sheet and P&amp;L reports only for the Chart of Accounts it has assigned.</li>
-<li>Transactions are allowed for this organization type.</li>
-<li>And finally, there can only be one legal entity per tree branch, therefore the organizations underneath inherit the General Ledger configuration and the Fiscal Calendar of the legal with accounting organization.</li>
-</ul>
-</li>
-<li>Legal without accounting - an independent legal entity with a unique Tax ID number which does not require accounting because it is managed in a separated system, therefore:<ul>
-<li>This organization type does not need a general ledger nor a chart of accounts and will not support financial reports at its level.</li>
-<li>Transactions are allowed for this organization type. Transactions which will not be posted to the ledger.</li>
-<li>It can not have another legal entity in an upper/lower level of the enterprise tree structure.</li>
-</ul>
-</li>
-<li>Generic - an organization which is not a legal entity but must belong to a legal entity placed at an upper level in the organization tree structure. For instance, departments or divisions within an organization or legal entity.<ul>
-<li>There could be as many generic organizations as required per tree branch, but always under a legal entity.</li>
-<li>This organization type allows transactional data entry, it can have its own general ledger configuration and can inherit the general ledger configuration of the legal entity with accounting they belong to.</li>
-<li>The accounting periods can not be opened and closed independently at its level.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>the parent organization. While creating an organization, it is possible to select the organization to which the organization being created will belong to. The parent organization would need to be set as "Summary".<ul>
-<li>A generic organization can not be the parent organization of a legal entity organization, but the other way around.</li>
-</ul>
-</li>
-<li>the organization location/address</li>
-<li>and the organization currency</li>
-</ul>
-<p>Besides:</p>
+<h2 id="the-audit-trail-popup">The Audit Trail Popup</h2>
+<p>For the set of tables for which the audit trail feature has been enabled, the button <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png"></a> is shown in the toolbar of the corresponding windows. It gives access to the Audit Trail Popup.</p>
+<p>This popup allows examination of the history of the record which is currently shown in the window. It has two main view modes which allow examining the following data:</p>
 <ul>
-<li>There is a checkbox named "Include Accounting" which allows the user to select for an organization:<ul>
-<li>an accounting CSV file in the field "Accounting File"</li>
-<li>or a Chart of Accounts module reference data in the section "Reference Data". Reference data coming from extensions modules is master data such as Taxes, Chart of Accounts, etc to be applied from the already installed modules.</li>
+<li><strong>Record history</strong> of a single record</li>
+<li><strong>Deleted records</strong> of a single tab</li>
 </ul>
-</li>
-</ul>
-<p>This action creates:</p>
-<ul>
-<li>a General Ledger configuration which is automatically linked to the Organization being created</li>
-<li>and an Account Tree or Chart of Accounts which is also linked to the Organization being created</li>
-</ul>
-<p>This step does not create a Fiscal Calendar as the <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process/">Initial Client Setup</a> process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This step does not imply to manage accounting within an organization, but just to include an accounting file or an accounting reference data in an organization.</p>
-</div>
-<p>Accounting management relies on the organization type being created.</p>
-<p>It is not mandatory to select "Include Accounting" checkbox while creating a legal entity with accounting organization for instance because:</p>
-<ul>
-<li>a legal entity with accounting can inherit the client chart of accounts</li>
-<li>or, later, both the Chart of Accounts and the General Ledger configuration can be created manually and be linked to the organization.</li>
-<li>if the checkbox "Include Accounting" is selected, it is possible to select for the organization being created below dimensions to be used while posting the organization's documents to the ledger:<ul>
-<li>Mandatory accounting dimensions such as "Business Partner" and "Product" and not mandatory accounting dimensions such as "Project" and "Sales Region" while creating an Organization in a "Client" which does not centrally maintain the accounting dimensions.<br>
-In that case, the dimensions selected in here will all be listed in the dimensions tab of the organization's general ledger configuration, therefore will be available just for that organization.</li>
-<li>Additional accounting dimensions such as "Project" or "Campaign" while creating an Organization in a "Client" which centrally maintains the accounting dimensions.<br>
-Once more, the dimensions selected in here will be listed in the dimensions tab of the organization's general ledger configuration, therefore will be available just for that organization.</li>
-</ul>
-</li>
-</ul>
-<p>It is possible to apply reference data such as:</p>
-<ul>
-<li>Document types and default algorithm for bank statements auto-matching, this one is similar to the previous one but for specific financial flows such as Payment Outs, Payment In and Financial Accounts.</li>
-<li>or reference data such as master data or configuration data (i.e. tax setup) created for Etendo extension modules.</li>
-</ul>
-<p>Finally, it is important to remark that:</p>
-<ul>
-<li>Each organization, of any type, can have its own general ledger configuration/s and currency/ies (apart from the one inherited from its parent) if it is configured to be that way for the Organization</li>
-<li>A calendar is mandatory just for the legal entities with accounting. This organization type is the only one which can have a calendar assigned, the rest can inherit it.</li>
-<li>Financial reports are run by general ledger configuration and therefore by currency, as each general ledger configuration has only one currency allowed.</li>
-<li>Financial Reports such as the Balance Sheet and the P&amp;L as well as Tax Reports can only be created at the level of Legal Entity with accounting.<ul>
-<li>Rest of reports such as sales, procurement and warehouse reports can be launched for any organization type.</li>
-</ul>
-</li>
-<li>A general ledger configuration should not be assigned to the (*) organization because that one will then be shared by all the organizations underneath.</li>
-</ul>
-<h3 id="examples">Examples</h3>
-<p><strong>1.</strong> Etendo Demo Data:</p>
-<p>Etendo includes demo data for demonstration purposes, which includes an "Enterprise Model" composed by a set of organizations.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/Vuf4G00AIK2uWFXjxHE733lf2QkM1WNhX1Eh29LCef9KNoZMGGnkD0O1vnkML26wZ7V_PHQHSgKtBgTxaB5Y3od9pFqzriF1nCYm7ysoMCJKrPf9-6jKp017i2QCIHKCBbV82bZn.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/Vuf4G00AIK2uWFXjxHE733lf2QkM1WNhX1Eh29LCef9KNoZMGGnkD0O1vnkML26wZ7V_PHQHSgKtBgTxaB5Y3od9pFqzriF1nCYm7ysoMCJKrPf9-6jKp017i2QCIHKCBbV82bZn.png"></a></p>
-<ul>
-<li>An organization type "Organization" named F&amp;B International Group.<ul>
-<li>This organization is not a legal entity and it does not allow transactions</li>
-<li>This organization allows the creation and configuration of master data to be shared among a group of organizations beneath it.</li>
-</ul>
-</li>
-<li>Two "legal entities with accounting" named "F&amp;B España" and "F&amp;B US" that belong to F&amp;B International Group.</li>
-<li>Below the legal entities with accounting organizations there are four "Generic" organizations, which are not legal entities but belong to a legal entity and besides allow transactional data entry:<ul>
-<li>F&amp;B US West Coast</li>
-<li>F&amp;B US East Coast</li>
-<li>F&amp;B España - Region Norte</li>
-<li>F&amp;B España - Region Sur</li>
-</ul>
-</li>
-</ul>
-<p><strong>2.</strong> How to create each Organization type:</p>
-<p>The basic variables to take into account while creating an organization of the type "Organization" are:</p>
-<ul>
-<li>Organization Type = Organization</li>
-<li>Include Accounting = Yes<br>
-    If the accounting configuration at this level needs to be shared by all the organizations underneath the one being created.</li>
-<li>Accounting Dimensions = Business Partner, Product and Project</li>
-</ul>
-<p>The basic variables to take into account while creating an organization of the type "Legal with accounting" are:</p>
-<ul>
-<li>Organization Type = Legal with accounting</li>
-<li>Include Accounting = Yes</li>
-<li>Accounting Dimensions = Business Partner, Product and Project</li>
-</ul>
-<p>The basic variables to take into account while creating an organization of the type "Legal without accounting" are:</p>
-<ul>
-<li>Organization Type = Legal without accounting</li>
-<li>Include Accounting = No</li>
-</ul>
-<p>The basic variables to take into account while creating an organization of the type "Generic" are:</p>
-<ul>
-<li>Organization Type = Generic</li>
-<li>Include Accounting = Yes<br>
-    If this organization requires its own accounting configuration besides the inherited one, otherwise include accounting = No</li>
-<li>Parent organization = should be a "Legal with Accounting" organization.</li>
-</ul>
-<p><strong>3.</strong> Enterprise Models examples:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/h9cS1Sgl07mpOdqMyrCNa-D3w4typy34vJcGl9wb5xk8vnpOkO4dPBwmBwY1JygGfPEeaQvh7katpn2-_fdTLWn5FyeIEPwZcNdkhkkKn0FUjTCTRLUosk2YcYwMoBegzLlVMzmCFCRzQztOKA.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/h9cS1Sgl07mpOdqMyrCNa-D3w4typy34vJcGl9wb5xk8vnpOkO4dPBwmBwY1JygGfPEeaQvh7katpn2-_fdTLWn5FyeIEPwZcNdkhkkKn0FUjTCTRLUosk2YcYwMoBegzLlVMzmCFCRzQztOKA.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/0mFr7Nl9jVy9ZVIfNVOl8pKVHpLv2h6waw6r0iGBnpjTs8A0P4wYIWAHFbYJKGrduahpu1QbmH4UXDq9n27_ffdvfgAcd8_plxvBEXx8cY7j7eWRjIvLBtByLU0-9Zw1iKsVttxtv3ecG9oNZA.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/0mFr7Nl9jVy9ZVIfNVOl8pKVHpLv2h6waw6r0iGBnpjTs8A0P4wYIWAHFbYJKGrduahpu1QbmH4UXDq9n27_ffdvfgAcd8_plxvBEXx8cY7j7eWRjIvLBtByLU0-9Zw1iKsVttxtv3ecG9oNZA.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/2IIoZGBxPH1gigLWVMWKxE0GxWoAtAFJX2yheNUuOYoy_orJdRJII2rVZUpGcA8j4aJavDIoRIi1WJDymLDxqAbg-r-u6z4E91SRafrj9bX-EK4M8nhpqUqM1ufnYsgBc51D3HXAxZDPuy7R5A.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/2IIoZGBxPH1gigLWVMWKxE0GxWoAtAFJX2yheNUuOYoy_orJdRJII2rVZUpGcA8j4aJavDIoRIi1WJDymLDxqAbg-r-u6z4E91SRafrj9bX-EK4M8nhpqUqM1ufnYsgBc51D3HXAxZDPuy7R5A.png"></a></p>
-<h2 id="enterprise-module-management">Enterprise Module Management</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Enterprise Model</code> &gt; <code>Enterprise Module Management</code></p>
-<h3 id="overview_1">Overview</h3>
-<p>Datasets allow the user to define reference data such as master data or configuration data for modules or even for Etendo core.</p>
-<p>Reference data can be imported or applied to organizations in the "Enterprise Module Management" window by just selecting the organization for which the reference data needs to be applied and the reference data to apply or to import.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png"></a></p>
-<ul>
-<li>If a reference data is applied at (*) organization, every organization in the system will have access to that data.</li>
-<li>If a reference data is applied at a parent organization, all the organizations which belong to it will have access to that data.</li>
-<li>If a reference data is only applied to an organization which does not have any organization underneath in the tree, only that organization will have access to that data.</li>
-</ul>
-<h2 id="organization-type">Organization Type</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Enterprise Model</code> &gt; <code>Organization Type</code></p>
-<h3 id="overview_2">Overview</h3>
-<p>An organization can be a Legal Entity, a Business Unit or neither of both. You can also select if transactions are allowed or not for this organization type.</p>
-<h3 id="organization-type_1">Organization Type</h3>
-<p>Etendo default Organization types are:</p>
-<p><strong>Organization</strong> - an organization which is not a legal entity and does not allow transactional data entering.</p>
-<ul>
-<li>This type of organization allows the creation and configuration of master data to be shared among a group of organizations of any type belonging to it, for instance Business Partners, Chart of Accounts, etc.</li>
-<li>It does not require a general ledger as it does not allow entering transactions but it can have a given General Ledger configuration to be shared among the organizations underneath.</li>
-<li>The accounting periods can not be opened and closed independently at its level.</li>
-<li>And there could be as many organizations type "organization" in a branch as required.</li>
-</ul>
-<p><strong>Legal with accounting</strong> - an independent legal entity with a unique Tax Id number which requires accounting, therefore:</p>
-<ul>
-<li>this organization requires General Ledger and therefore an Account Tree or Chart of Accounts, as well as a Fiscal Calendar because the accounting periods can and must be opened and closed at its level.</li>
-<li>This organization type allows the "consolidation" of the Balance Sheet and P&amp;L reports only for the Chart of Accounts it has assigned.</li>
-<li>Transactions are allowed for this organization type.</li>
-<li>And finally, there can only be one legal entity per tree branch, therefore the organizations underneath inherit the General Ledger configuration and the Fiscal Calendar of the legal with accounting organization.</li>
-</ul>
-<p><strong>Legal without accounting</strong>- an independent legal entity with a unique Tax Id number which does not require accounting because it is managed in a separated system, therefore:</p>
-<ul>
-<li>this organization type does not need a general ledger nor a chart of accounts and will not support financial reports at its level.</li>
-<li>Transactions are allowed for this organization type. Transactions which will not be posted to the ledger.</li>
-<li>It can not have another legal entity in an upper/lower level of the enterprise tree structure.</li>
-</ul>
-<p><strong>Generic</strong> - an organization which is not a legal entity but must belong to a legal entity placed at an upper level in the organization tree structure. For instance departments or divisions within an organization or legal entity.</p>
-<ul>
-<li>There could be as many generic organizations as required per tree branch but always under a legal entity.</li>
-<li>This organization type allows transactional data entry, can have its own general ledger configuration and can inherit the general ledger configuration of the legal entity with accounting they belong to.</li>
-<li>The accounting periods can not be opened and closed independently at its level.</li>
-</ul>
-<p>Additionally, an organization type can be configured as:<br>
-<strong>"Legal Entity"</strong><br>
-<strong>"Business Unit"</strong>
-<strong>"Legal Entity with Accounting"</strong><br>
-<strong>"Transactions Allowed"</strong></p>
+<h2 id="record-history-view">Record History View</h2>
+<p>This view is displayed when the popup is opened from an existing record via the new toolbar button.</p>
+<p>The top area always shows a reference to the entity (i.e. Sales Order) and the record <em>1000175 - 2016-04-03 00:00:00.0-0.00</em> for which the history is displayed.</p>
+<p>Then a number of filters are available which allow some restriction on the changes displayed to ease the use of records with many modifications.</p>
+<p>The grid in the lower area shows all changes done to this record while the audit trail feature was enabled. The changes are shown sorted from the most recent change back to earlier changes.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Note that any of Etendo Organization types are configured as "Business Unit".</p>
+<p>Only fields which are visible in the corresponding tab are shown here.</p>
 </div>
-<h2 id="organization">Organization</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Enterprise Model</code> &gt; <code>Organization</code></p>
-<h3 id="overview_3">Overview</h3>
-<p>An organization is an enterprise of a Client. Each client must have at least one organization created by running the Initial Organization Setup process. The process of creating an organization ends after setting it as "Ready".</p>
-<p>In other words, the process of creating an organization ends after setting it as "Ready" since Etendo requires performing some checking which validates that the organization has been properly created and that the organization structure is valid. If an organization is not properly created, Etendo will display an error when trying to set it up as ready.</p>
-<p>Once an organization is set as ready, no changes can be made to the organization anymore. New organizations can be added, but cannot be placed above the current organization. They can be added underneath or at the same level.</p>
-<h3 id="organization_1">Organization</h3>
-<p>The Organization window allows the user to maintain the organizations created by the Initial Organization Setup process.</p>
-<p>There are different types of data left to be entered or changed for an organization:</p>
-<ul>
-<li>The Legal Name of the organization, this name, if any, will be the one used in the financial and tax reports.</li>
-<li>The Summary level checkbox informs Etendo if an organization is going to be a parent organization or not.<br>
-  If an organization is set as summary, it could be selected as "Parent Organization" while running the Initial Organization Setup process.<br>
-  This flag can always be changed regardless if the organization is already set as ready, as it is always possible to add organizations underneath an existing one.</li>
-<li>The Allow Period Control checkbox is only shown for "legal with accounting" organizations.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ.png"></a></p>
-<p>If enabled, it allows selecting a Fiscal Calendar for which the corresponding fiscal periods can be opened or closed in the Open/Close Period Control window.</p>
-<ul>
-<li>Opening &amp; Closing periods process impacts to the organizations underneath the "legal entity with accounting" organization.</li>
-<li>The organization's General Ledger.<br>
-  For instance, legal entities with accounting organizations need to record and post the financial transactions such as invoices and payments to the ledger.<br>
-  Etendo allows customizing the way that the financial transactions are posted to the ledger, that means customizing the General Ledger configuration to meet the organization's needs.<br>
-  This field is automatically defaulted by Etendo, which means that a general ledger is created by default, if :</li>
-<li>a Localization Pack containing a localized chart of accounts module</li>
-<li>or an accounting CSV file</li>
-<li>or the Generic Chart of Accounts Module is installed and then selected while creating the organization by running the Initial Organization Setup process.</li>
-<li>The Default G/L Item for Funds Transfer is used to set default value for G/L Item parameter in Funds Transfer Process from the Financial Account.</li>
-</ul>
-<p><strong>Inherited Information</strong></p>
-<p>This field group is collapsed by default with the following read-only fields.</p>
-<ul>
-<li>the organization's <strong>Period Control Allowed Organization</strong>.</li>
-<li>the organization's <strong>Calendar Owner Organization</strong>.</li>
-<li>Calendar of the organization's <strong>Calendar Owner Organization</strong>.</li>
-<li>the organization's <strong>Legal Entity</strong>.</li>
-<li>the organization's <strong>Business Unit</strong>.</li>
-</ul>
-<p>Above fields are automatically fetched and set with proper values when setting organization as ready.</p>
-<p>An organization can have only one general ledger configuration assigned unless:</p>
+<p>A row in this grid corresponds to a single changed field. For changes to an existing record, the number of grid entries shown correspond to the number of fields changed. For new record creations or record deletion, one row in the grid is shown per field of the inserted/deleted record.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL.png"></a></p>
+<p>Finally, a link just on top of the grid allows switching to the Deleted Records view. Following that link will show deleted records for the tab from which the Audit Trail popup was opened.</p>
+<h3 id="disable-filtering-by-user">Disable Filtering by User</h3>
+<p>The User filter can be removed from both the <strong>Record History</strong> and the <strong>Deleted Records</strong> view. This can be interesting for performance reasons when the number of users available is high. In order to do this, go to <code>General Setup</code> &gt; <code>Application</code> &gt; <code>Preference</code> and add the following preference: Show Audit Trail User filter with value Y.</p>
+<h2 id="deleted-records-view">Deleted Records View</h2>
+<p>This view allows examination of records which have been deleted from a tab and are otherwise no longer accessible in the user interface.</p>
+<p>The general layout of the view is similar to the record history view.</p>
+<p>An info on the top shows a reference to the entity for which the deleted records are shown. Directly below, a number of filters is available to restrict the records shown.</p>
+<p>Then a grid displays all deleted records belonging to this tab/entity. Here one row shown corresponds to a single deleted record and the columns shown are the same as the ones shown in the normal grid view of the same tab.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV.png"></a></p>
+<p>This view offers a number of <strong>navigation choices</strong> to view related or more detailed information.</p>
+<h3 id="navigation-choices">Navigation Choices</h3>
+<h4 id="back-to-history">Back to History</h4>
+<p>The first one is Back to history. Following this link, the view is just switched back to Record History showing the same records as shown before going to the deleted records view.</p>
+<h4 id="history-of-selected-record">History of Selected Record</h4>
+<p>The next one, View history of selected deleted record below, allows examining the detailed history of a deleted record, instead of the summary view which is shown here.</p>
+<p>This detailed history is displayed in the same 'Record History' view, however its top info area notes the fact that the history of a deleted record is displayed.</p>
+<p>The following screenshot shows an example of the history view of the same deleted Sales Order entry. Compared with the previous example of this view, new history entries corresponding to the deletion are shown in addition to the older information about the record creation and modification.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png"></a></p>
+<h4 id="child-tabs">Child Tabs</h4>
+<p>As the last method of navigation, the popup allows filtering records based on a parent record. This can be useful to search for deleted lines belonging to a sales order.</p>
+<p>There are two possible ways based on the status of the parent record: still existent or already deleted.</p>
+<p>If the parent record (i.e. a Sales Order) does still exist, then the following steps can be done two view its deleted lines:</p>
 <ol>
-<li>the organization has its own one and besides inherits another one from its parent organization</li>
-<li>or if the <em>advanced general ledger configuration feature</em> is enabled at system level.</li>
+<li>Go to the lines tab of the Sales Order</li>
+<li>Click the audit trail icon to open the record history view</li>
+<li>Use the 'Deleted Records' links to switch to deleted records view</li>
 </ol>
-<p>The way to allow an organization to have more than one general ledger configuration assigned is described below:</p>
+<p>As the lines tab is not a top level tab (it has a parent tab Sales Order) the deleted records view is automatically filtered to only show lines belonging to the current Sales Order. As visual information that the information shown is filtered, the top info area shows:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk.png"></a></p>
+<p>If the parent record (i.e. a Sales Order) does not exist anymore, then the same can be accomplished by using the following steps:</p>
+<ol>
+<li>Go to the Deleted Records view of the Sales Order tab</li>
+<li>Search the Sales Order for which the deleted lines should be shown</li>
+<li>Click the Lines link just below the grid</li>
+</ol>
+<p>Then the deleted records view will show the deleted lines belonging to the selected (deleted) Sales Order.</p>
+<h2 id="a-generated-audit-trail-window">A generated Audit Trail Window</h2>
+<p>The second interface to view audit data is a normal generated window which is based on the AuditTrail entity, and allows browsing all audit information filtered by the currently active client. Open the Application menu and navigate to General Setup, Security and select Audit Trail.</p>
+<p>It offers a raw view of the audit data, meaning that no translation of raw values is done, but instead the raw column values of each change are displayed.</p>
+<p>Simultaneously, this window allows a much more flexible filtering/searching.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png"></a></p>
+<h2 id="limitations">Limitations</h2>
+<p>The audit trail feature will record all data changes (for the table for which it has been enabled) with the following exceptions:</p>
 <ul>
-<li>As System Administrator, set your own "template" as "In Development". Save.</li>
-<li>Once done, navigate to the "Windows, Tabs, and Fields" window</li>
-<li>Find the "Organization" window</li>
-<li>Navigate to the "Tab" tab and double click on the "General Ledgers" tab</li>
-<li>Set it as "Active". Save.</li>
-<li>Above detailed steps shows the General Ledger tab, which allows assigning more than one general ledger configuration to an organization.</li>
+<li>text fields of types (char,varchar) with a length &gt;= 4k will not be audited</li>
+<li>text fields of types (nchar,nvarchar) with a length &gt;= 2k will not be audited</li>
+<li>BLOB fields (binary stored inside the database) will not be audited</li>
 </ul>
-<p>Food &amp; Beverage (F&amp;B) sample client shipped with Etendo illustrates scenario 1 above:</p>
+<h2 id="etendo-advanced-security">Etendo Advanced Security</h2>
+<p>The <strong>Etendo Advanced Security</strong> module allows the user to customize several security features such as the following:</p>
 <ul>
-<li>Every F&amp;B sample client organization has been created by running the "Initial Organization Setup" process.</li>
-<li>The "F&amp;B International Group" is an "Organization" Organization Type.<br>
-  An Accounting CSV file was selected while it was created, in the same way as the "USD" currency, therefore this organization has the "F&amp;B International Group US/A/Dollar" general ledger configuration assigned.</li>
+<li>Password Security</li>
+<li>Password History</li>
+<li>User Lockout</li>
+<li>Multiple Session Verification</li>
+<li>Changing Password after Login</li>
+<li>Expiration Time (Autolock Password)</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT.png"></a></p>
-<p>This general ledger configuration can also be shared by the organizations underneath, for instance "F&amp;B US, Inc" and "F&amp;B España S.A."</p>
-<ul>
-<li>Same way, an accounting CSV file was also selected while creating the "Legal with Accounting" organization "F&amp;B España S.A." same way as EUR currency, therefore this organization has the "F&amp;B España, S.A US/A/Euro" general ledger configuration assigned.<br>
-  As a consequence, "F&amp;B España S.A." has two general ledger configurations assigned, its own one and the inherited one.</li>
-<li>Besides, each of the general ledger configurations mentioned above are linked to a different account tree or chart of accounts.</li>
-<li>Therefore, every time that an "F&amp;B US Inc" transaction is posted to the ledger, Etendo opens a new window named "Journal Entries Report" which shows the journal entry created for the "F&amp;B International Group US/A/Dollar" general ledger configuration in USD and in the corresponding accounts of a given Chart of Accounts.</li>
-<li>Every time that an "F&amp;B España S.A." transaction is posted to the ledger, Etendo opens two new windows, one per each general ledger configuration, one of them in USD and the other one in EUR, both of them in different accounts.</li>
-</ul>
-<p>The tree action button <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX.png"></a> allows dragging and dropping an organization within an enterprise model, whenever it is not "Set as Ready".</p>
-<p><strong>"Set as Ready"</strong> process takes into account the list of requirements below per organization type:</p>
-<ul>
-<li><em>Organization type</em>:<ul>
-<li>No requirements</li>
-</ul>
-</li>
-<li><em>Generic type</em><ul>
-<li>to have a "Legal Entity" organization type up in the enterprise model tree.</li>
-</ul>
-</li>
-<li><em>Legal without accounting</em><ul>
-<li>not to have another "Legal Entity" organization type up in the enterprise model tree.</li>
-</ul>
-</li>
-<li>Legal with accounting<ul>
-<li>to have its own general ledger configuration or an inherited one</li>
-<li>to allow period control</li>
-<li>to have a fiscal calendar assigned</li>
-</ul>
-</li>
-</ul>
-<p>Once an organization is set as ready:</p>
-<ul>
-<li>The organization newly created can not be moved up or down within the enterprise tree and can not be deleted.</li>
-<li>It is not possible to create new organizations up in the tree but underneath or at the same level.</li>
-</ul>
-<h3 id="information">Information</h3>
-<p>Information tab allows the user to add relevant information of an organization, information such as location and tax ID number.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/EsSwADTSSP7pJ1foh5fXjLZBaL1lb-u2MwMI9KFZaxpgC9ayM66e0NmIcdCOhXEzWLBG78RrjGI7VN_l1mdQg6COaMO0_lQhaXwafKPnSphAcus_1aqxM2Glbickzi645CuxqPVi.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/EsSwADTSSP7pJ1foh5fXjLZBaL1lb-u2MwMI9KFZaxpgC9ayM66e0NmIcdCOhXEzWLBG78RrjGI7VN_l1mdQg6COaMO0_lQhaXwafKPnSphAcus_1aqxM2Glbickzi645CuxqPVi.png"></a></p>
-<p>Fields to fill in are:</p>
-<ul>
-<li>the organization Location</li>
-<li>the Tax ID number, if required</li>
-<li>the DUNS number, if any</li>
-<li>the User who will act as the main organization Contact. This organization contact is used in some localized fiscal reports (Spanish fiscal reports), that requires a contact person.</li>
-<li>The purchase invoice number which will be used for payments. There are two options available:<ul>
-<li>"Invoice Document Number" (internal number)</li>
-<li>or "Supplier's Invoice Number"  <ul>
-<li>Any of the above will be included in the payment description field to inform about the invoice number being paid.  </li>
-<li>This also changes what is going to be shown in several purchase windows such as <em>Add Payment</em> button in purchase invoice or <em>Add details</em> in Payment Out</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Finally, the checkbox Tax Not Deductible allows configuring an Organization as a <em>non tax deductible organization,</em> if enabled.</p>
-<p>That is the case of Organizations like Public Sector organizations for which tax deduction is not allowed. In this case:</p>
-<ul>
-<li>the purchase tax is posted as an expense</li>
-<li>and the issued sales invoices are tax-exempt</li>
-</ul>
-<p>The field Sales Tax Exempt Rate allows entering a by default exempt sales tax rate to be used in the sales invoices by the non-tax-deductible organizations.</p>
-<h3 id="period-control">Period Control</h3>
-<p>Period Control tab is a read-only tab which lists the fiscal calendar period status of an organization.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/kwmxym70AykyaAYetGSTUoXl5ucDq29sJTt2mo3R0vCsxeSSnyIrP_1jtd36ENRoQHLrrHfFs3__qR6w2wn1hAbwEYbLmQtJ2SUoYa35ffgOHUiWFXUDDwnaL_Vt_ebrZIeAbDBo.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/kwmxym70AykyaAYetGSTUoXl5ucDq29sJTt2mo3R0vCsxeSSnyIrP_1jtd36ENRoQHLrrHfFs3__qR6w2wn1hAbwEYbLmQtJ2SUoYa35ffgOHUiWFXUDDwnaL_Vt_ebrZIeAbDBo.png"></a></p>
-<p><strong>The Status</strong></p>
-<p>It is split in two columns. One that represents the Status with a color code, making it easier to understand the situation at a quick glance. The other one represents the Status by its name, making it possible to filter the records shown. The possible Status values are:</p>
-<ul>
-<li>All Never Opened, colored in gray. Recently created Periods.</li>
-<li>All Opened, colored in green. All the Document Types are open for this Period.</li>
-<li>All Closed, colored in red. All the Document Types are closed for this Period.</li>
-<li>Mixed, colored in orange. Not all the Document Types have the same Status value in this Period. For more information refer to the Documents Tab below.</li>
-<li>All Permanently Closed, colored in red. All the Document Types are Permanently Closed for this Period.</li>
-</ul>
-<p>This tab can be used for searching for a period (i.e. Jan-19) and get its current status.</p>
-<p>As shown in the image below, the period Feb-19 has a mixed status, meaning that not all the Document Types have the same Status value within the Organization "F&amp;B España S.A." which has the "Calendario España" assigned.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/cjahc3FYZMghn48UlTxGriply3wDhO6ZrX7BsdnjoN5X3rcwWWdLMoeiUbYQ-z--lNwxjsqgmI0d4-8dldLYHy4kY5CqUaj4n7ZAWfg0ML8NxMm9M5ykXpt9kzkh5O-sI2KEjpnz.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/cjahc3FYZMghn48UlTxGriply3wDhO6ZrX7BsdnjoN5X3rcwWWdLMoeiUbYQ-z--lNwxjsqgmI0d4-8dldLYHy4kY5CqUaj4n7ZAWfg0ML8NxMm9M5ykXpt9kzkh5O-sI2KEjpnz.png"></a></p>
-<p>For more information, see Open/Close Period Control.</p>
-<h3 id="documents">Documents</h3>
-<p>Documents tab is a read-only tab which lists the Document Category status for a selected period of an organization.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/p2dQZKtljDS-XwNG0QoRVerVIGFhmR02mySLnF1RE_Cdjv1_jPAGhBCTccBupCha87MLhjnIjUOZGqEaJ1BndBl_sPUl2AGkTI23CJfcnbdB0fDJTRLXaN7oZ2EGhfHTa18bH_Ss.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/p2dQZKtljDS-XwNG0QoRVerVIGFhmR02mySLnF1RE_Cdjv1_jPAGhBCTccBupCha87MLhjnIjUOZGqEaJ1BndBl_sPUl2AGkTI23CJfcnbdB0fDJTRLXaN7oZ2EGhfHTa18bH_Ss.png"></a></p>
-<p>For more information, see Documents in the Open/Close Period Control window.</p>
-<h3 id="data-sets">Data Sets</h3>
-<p>Data sets tab allows viewing the reference data applied to the organization and informs in case there is any update of a reference data applied available.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png"></a></p>
-<h3 id="warehouse">Warehouse</h3>
-<p>Relation of prioritized on-hand warehouses of the Organization.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/6fsqpwBtDAXTJbyug4QSODfEv9-GzyhEMHMQQYgnsIufDr4S4GOCjrOOCSSeGz_u4GnkuVlaUPnOiH83pQbORHhsf2pLzKJKAaPERxaqCNXaHXgWRTz8-sIFqQzg4h_NTOJHKPmC.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/6fsqpwBtDAXTJbyug4QSODfEv9-GzyhEMHMQQYgnsIufDr4S4GOCjrOOCSSeGz_u4GnkuVlaUPnOiH83pQbORHhsf2pLzKJKAaPERxaqCNXaHXgWRTz8-sIFqQzg4h_NTOJHKPmC.png"></a></p>
-<p>In this tab, it is possible to define the organization's warehouse/s, that way the quantity on hand of an organization is the sum of the available stock of its warehouse/s.</p>
-<p>It is possible to define the priority of each organization's warehouse/s therefore Etendo proposes first the goods of the warehouse with a higher priority.</p>
-<h2 id="intercompany">Intercompany</h2>
-<h3 id="overview_4">Overview</h3>
-<p>This section describes the Intercompany module included in the Etendo Financial Extensions bundle.</p>
-<h3 id="description">Description</h3>
-<p>In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.&nbsp;</p>
-<p>For example, if Organization A makes a sales transaction to organization B, once the sales invoice is manually created by Organization A, this functionality will automatically create a purchase invoice for Organization B.</p>
-<h3 id="installation">Installation</h3>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558"><em>Financial Extensions Bundle</em></a>.</p>
-<h3 id="set-up">Set Up</h3>
-<h3 id="organization-window">Organization Window</h3>
-<p>It is required for each organization using this module to have one business partner assigned.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/PlutLfL7AlJBR18T2om4NqgG3qgdPhgtV7vE876GFmU80QIrKOSgJX2AScc0eWEB2TBUAOdVRFIdaOoMIiVZ3FM2IbIHsHSURbzG6sWX0BHArpvjqEk68iMCrwqirI3OD8I2PH3UnFQWiCYW3t5bDK5G8vtpRioFkYRiBab_zup8KCnjTzk6WAUwHw.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/PlutLfL7AlJBR18T2om4NqgG3qgdPhgtV7vE876GFmU80QIrKOSgJX2AScc0eWEB2TBUAOdVRFIdaOoMIiVZ3FM2IbIHsHSURbzG6sWX0BHArpvjqEk68iMCrwqirI3OD8I2PH3UnFQWiCYW3t5bDK5G8vtpRioFkYRiBab_zup8KCnjTzk6WAUwHw.png"></a></p>
-<h4 id="business-partner-window">Business Partner Window</h4>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When configuring a new Business Partner, take into account that this business partner should be visible in the inverse organization.&nbsp;</p>
-</div>
-<p>The Business Partner has to be configured as both vendor and customer, using the corresponding checkboxes.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/7bSIJF7R9TzP-VYXO5gkqySKt7G-7YEM5ZRdplKDfRLtoEfc0FUlhr-JctNSn3vItINYI7hiRVZX1l7BV2yoOydAPlu7K4lTb3oKuPdI-k6X5-4JKmDT-q24OQYAHo3FYxFMoB57JitDmgZ3w9Krhf9sXSkXevDHLO00EHXHOjC_zMSY3mgEse7YyA.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/7bSIJF7R9TzP-VYXO5gkqySKt7G-7YEM5ZRdplKDfRLtoEfc0FUlhr-JctNSn3vItINYI7hiRVZX1l7BV2yoOydAPlu7K4lTb3oKuPdI-k6X5-4JKmDT-q24OQYAHo3FYxFMoB57JitDmgZ3w9Krhf9sXSkXevDHLO00EHXHOjC_zMSY3mgEse7YyA.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/_S08VOtX0-6seijELCJ5kmLXfIJ93cNS9rIryuyqFFqOMeEC2Uq6zb_HCWjaeg8N-LtXuMRX074PBOERYCsZyV1xibJMiuZe4mde_uyxgvQJjPV9BdEsJK-w8YEeORUaQPXcPebVv3r4QhqCD-3D06jGhZM__U36rx0V2wYbN37w9fHG8o2NRrdYgw.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/_S08VOtX0-6seijELCJ5kmLXfIJ93cNS9rIryuyqFFqOMeEC2Uq6zb_HCWjaeg8N-LtXuMRX074PBOERYCsZyV1xibJMiuZe4mde_uyxgvQJjPV9BdEsJK-w8YEeORUaQPXcPebVv3r4QhqCD-3D06jGhZM__U36rx0V2wYbN37w9fHG8o2NRrdYgw.png"></a></p>
-<p>In the Intercompany Documents tab, it is necessary to select the required document types for this business partner.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>It is not mandatory to create new document types, but it is recommended.</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/VT8AxdS0bU_4bD7b8fEIrQF-HK9e2ngLCS5TFjlUBl9ee8W1sysEH9un6GgYTL418D4rvxpIuNOt5JUxLlT2KlJ2UgbXjAZVg4mx6-VexJIx9pwA7yFoY4P0YH1RRd2-hWgMEAnGjZnn9NX53631-9T7MBsxg_RCQP4g1dvj6HqAWMbaECgUfTDT1w.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/VT8AxdS0bU_4bD7b8fEIrQF-HK9e2ngLCS5TFjlUBl9ee8W1sysEH9un6GgYTL418D4rvxpIuNOt5JUxLlT2KlJ2UgbXjAZVg4mx6-VexJIx9pwA7yFoY4P0YH1RRd2-hWgMEAnGjZnn9NX53631-9T7MBsxg_RCQP4g1dvj6HqAWMbaECgUfTDT1w.png"></a></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Note: The information in both the source business partner and the target business partner should be the same.</p>
-</div>
-<h4 id="invoices-and-orders">Invoices and Orders</h4>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The following information can be applied not only to sales and purchase invoices, but also to sales and purchase orders.</p>
-</div>
-<h5 id="header">Header</h5>
-<p>The relevant fields are described below:</p>
-<ul>
-<li>Organization: it is necessary to select an organization configured to work as an intercompany organization (In the following example, the organization “F&amp;B US East Coast”).</li>
-<li>Business Partner: it is necessary to select a business partner configured to work as an intercompany business partner (In the following example, “Be Soft Drinker, Inc.”).</li>
-<li>Transaction document: it is necessary to select the document type defined in the intercompany document tab of the business partner (In the following example, the document type “AR Invoice Intercompany”).</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/CBJAHylu5avoOLB0cuF8RTZZUJFtzQYm24KaV3eRWOB_6H7njxPoJ4ujK_0ZcvPokD8O3q3NZ2B3P4rEASGLEjM9Dadp9YnTsO1hSFBzAMdea3A_OfAUO-T0-BxhX2zqRF_Mh0UsY9ujTx2Pbrjy1TOxp5kpd4QC8fklcmTtfsJMnfrVwUvT7CexMA.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/CBJAHylu5avoOLB0cuF8RTZZUJFtzQYm24KaV3eRWOB_6H7njxPoJ4ujK_0ZcvPokD8O3q3NZ2B3P4rEASGLEjM9Dadp9YnTsO1hSFBzAMdea3A_OfAUO-T0-BxhX2zqRF_Mh0UsY9ujTx2Pbrjy1TOxp5kpd4QC8fklcmTtfsJMnfrVwUvT7CexMA.png"></a></p>
-<h5 id="lines">Lines</h5>
-<p>The relevant fields are described below:</p>
-<ul>
-<li>Product: The product must be visible for both organizations (In the following example, “Lemonade”).&nbsp;</li>
-<li>G/L items: The necessary G/L items must be visible for both organizations.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/Q8Xn1rgR7uOHOSOr_h_l0ITlepOcHfRklfLTj8awb46t_jUCBKoV3-91JsVU5eGDQY2std_xbpvz0b-APJI11e2o9W4epq9rzioSoPB4XdWsnUpZhnCO2jkLmRinTSv4sPHUM3aODSmHiXfyQL320QR_lE8xpOD3whK6lYeLaMCafXC0G9UrVzZakA.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/Q8Xn1rgR7uOHOSOr_h_l0ITlepOcHfRklfLTj8awb46t_jUCBKoV3-91JsVU5eGDQY2std_xbpvz0b-APJI11e2o9W4epq9rzioSoPB4XdWsnUpZhnCO2jkLmRinTSv4sPHUM3aODSmHiXfyQL320QR_lE8xpOD3whK6lYeLaMCafXC0G9UrVzZakA.png"></a></p>
-<h5 id="product-window">Product Window</h5>
-<p>The relevant fields are described below:</p>
-<ul>
-<li>Price: The price must be equivalent and available in every price list.&nbsp;</li>
-<li>Currency: The currency must be the same for both organizations.</li>
-<li>Tax: The tax in each organization must be equivalent.</li>
-</ul>
-<h5 id="complete-or-book-documents">Complete or book documents</h5>
-<p>When you complete invoices or book orders, these processes generate the corresponding inverse document and complete or book both the source and the target documents.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/op4ZxMClAuIecT10AFiO_n2ecoldgryLCVCYAnyWtjFgkDTaghYPrLdZ6bnDxWnykm_HGTLSmG6SkKQOtp45GnOVk3AgLm2Tbud2Lf1zR0Hsie0HE74sD93Rvl1GDfnFOWEWQVKEAfiuVZzja68OrmqgedNsOCsQ2TbrxzB41wmakZZvGBAscWqiEA.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/op4ZxMClAuIecT10AFiO_n2ecoldgryLCVCYAnyWtjFgkDTaghYPrLdZ6bnDxWnykm_HGTLSmG6SkKQOtp45GnOVk3AgLm2Tbud2Lf1zR0Hsie0HE74sD93Rvl1GDfnFOWEWQVKEAfiuVZzja68OrmqgedNsOCsQ2TbrxzB41wmakZZvGBAscWqiEA.png"></a></p>
-<h5 id="reactivate-documents">Reactivate documents</h5>
-<p>To reactivate intercompany documents, both documents should not have an associated payment.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Note: This process is only allowed for source documents.</p>
+<p>For more information, visit the <a href="../../../../optional-features/bundles/platform-extensions/etendo-advanced-security/">Etendo Advanced Security module User Guide</a>.</p>
 </div>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/General_Setup" target="_blank">General Setup</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -13014,14 +12854,14 @@ Once more, the dimensions selected in here will be listed in the dimensions tab 
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
-        <script src="../../../../../assets/javascripts/feedback.js"></script>
+        <script src="../../../../../../assets/javascripts/feedback.js"></script>
       
-        <script src="../../../../../assets/javascripts/custom-search.js"></script>
+        <script src="../../../../../../assets/javascripts/custom-search.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
       

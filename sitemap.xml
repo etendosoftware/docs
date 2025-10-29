@@ -773,31 +773,11 @@
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/</loc>
-         <lastmod>2025-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client/</loc>
-         <lastmod>2025-10-29</lastmod>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/</loc>
-         <lastmod>2025-10-29</lastmod>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started/</loc>
-         <lastmod>2025-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/</loc>
-         <lastmod>2025-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
@@ -830,6 +810,54 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/window-personalization/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client/client/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-type/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-monitor/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/role-access/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/role/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/user/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
@@ -990,6 +1018,10 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-download-rule/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
