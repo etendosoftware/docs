@@ -5,31 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/setup/">
+        <link rel="canonical" href="https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/business-partner-settlement/">
       
       
-        <link rel="prev" href="../analysis-tools/">
+        <link rel="prev" href="../automated-remittance/">
       
       
-        <link rel="next" href="../../production-management/getting-started/">
+        <link rel="next" href="../conversion-rate-download-rule/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../../../images/favicon.png">
+      <link rel="icon" href="../../../../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
-        <title>Warehouse Management Setup - Etendo Documentation</title>
+        <title>Business Partner Settlement - Etendo Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/custom-styles.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/custom-styles.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     
@@ -60,7 +60,7 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,7 +77,7 @@
     
     
     
-  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#business-partner-settlement" class="md-skip">
           Skip to content
         </a>
       
@@ -120,9 +120,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
       
-  <img src="../../../../../assets/logo.png" alt="logo">
+  <img src="../../../../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Warehouse Management Setup
+              Business Partner Settlement
             
           </span>
         </div>
@@ -257,7 +257,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../../../.." class="md-tabs__link">
         
   
   
@@ -278,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../getting-started/overview/" class="md-tabs__link">
+        <a href="../../../../../../getting-started/overview/" class="md-tabs__link">
           
   
   
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../overview/" class="md-tabs__link">
+        <a href="../../../../../overview/" class="md-tabs__link">
           
   
   
@@ -320,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../developer-guide/overview/" class="md-tabs__link">
+        <a href="../../../../../../developer-guide/overview/" class="md-tabs__link">
           
   
   
@@ -340,7 +340,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../whats-new/etendo-news/" class="md-tabs__link">
+        <a href="../../../../../../whats-new/etendo-news/" class="md-tabs__link">
           
   
   
@@ -358,7 +358,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../live-builds/overview/" class="md-tabs__link">
+      <a href="../../../../../../live-builds/overview/" class="md-tabs__link">
         
   
   
@@ -379,7 +379,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../help-and-support/overview/" class="md-tabs__link">
+        <a href="../../../../../../help-and-support/overview/" class="md-tabs__link">
           
   
   
@@ -413,9 +413,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
       
-  <img src="../../../../../assets/logo.png" alt="logo">
+  <img src="../../../../../../assets/logo.png" alt="logo">
 
     </a>
     Etendo Documentation
@@ -442,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../../../.." class="md-nav__link">
         
   
   
@@ -507,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/overview/" class="md-nav__link">
+      <a href="../../../../../../getting-started/overview/" class="md-nav__link">
         
   
   
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/requirements/" class="md-nav__link">
+      <a href="../../../../../../getting-started/requirements/" class="md-nav__link">
         
   
   
@@ -553,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/installation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -576,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/interactive-installation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/interactive-installation/" class="md-nav__link">
         
   
   
@@ -649,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+      <a href="../../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
         
   
   
@@ -672,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
         
   
   
@@ -695,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+      <a href="../../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
         
   
   
@@ -781,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../overview/" class="md-nav__link">
+      <a href="../../../../../overview/" class="md-nav__link">
         
   
   
@@ -849,8 +849,6 @@
                 
   
   
-    
-  
   
   
     
@@ -863,11 +861,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1">
         
           
           <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
@@ -883,7 +881,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_1">
             <span class="md-nav__icon md-icon"></span>
             Basic Features
@@ -940,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/getting-started/" class="md-nav__link">
         
   
   
@@ -963,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/attachments-configuration/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/attachments-configuration/" class="md-nav__link">
         
   
   
@@ -1029,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/create-sequences/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/create-sequences/" class="md-nav__link">
         
   
   
@@ -1052,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/currency/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/currency/" class="md-nav__link">
         
   
   
@@ -1075,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/conversion-rates/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/conversion-rates/" class="md-nav__link">
         
   
   
@@ -1098,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/country-and-region/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/country-and-region/" class="md-nav__link">
         
   
   
@@ -1121,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/preference/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/preference/" class="md-nav__link">
         
   
   
@@ -1144,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/session-preferences/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/session-preferences/" class="md-nav__link">
         
   
   
@@ -1167,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/window-personalization/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/window-personalization/" class="md-nav__link">
         
   
   
@@ -1190,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/application/alert/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/application/alert/" class="md-nav__link">
         
   
   
@@ -1264,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/client/client/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/client/client/" class="md-nav__link">
         
   
   
@@ -1295,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/crm-connector/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/crm-connector/" class="md-nav__link">
         
   
   
@@ -1361,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/enterprise-model/initial-organization-setup/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/enterprise-model/initial-organization-setup/" class="md-nav__link">
         
   
   
@@ -1384,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/enterprise-model/enterprise-module-management/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/enterprise-model/enterprise-module-management/" class="md-nav__link">
         
   
   
@@ -1407,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/enterprise-model/organization-type/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/enterprise-model/organization-type/" class="md-nav__link">
         
   
   
@@ -1430,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/enterprise-model/organization/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/enterprise-model/organization/" class="md-nav__link">
         
   
   
@@ -1504,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/security/user/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/security/user/" class="md-nav__link">
         
   
   
@@ -1527,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/security/role/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/security/role/" class="md-nav__link">
         
   
   
@@ -1550,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/security/role-access/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/security/role-access/" class="md-nav__link">
         
   
   
@@ -1573,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/security/audit-trail/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/security/audit-trail/" class="md-nav__link">
         
   
   
@@ -1647,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/process-scheduling/process-request/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/process-scheduling/process-request/" class="md-nav__link">
         
   
   
@@ -1670,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/process-scheduling/process-monitor/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/process-scheduling/process-monitor/" class="md-nav__link">
         
   
   
@@ -1693,7 +1691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general-setup/process-scheduling/process-group/" class="md-nav__link">
+      <a href="../../../../basic-features/general-setup/process-scheduling/process-group/" class="md-nav__link">
         
   
   
@@ -1775,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/master-data/" class="md-nav__link">
+      <a href="../../../../basic-features/master-data-management/master-data/" class="md-nav__link">
         
   
   
@@ -1798,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/business-partner-setup/" class="md-nav__link">
+      <a href="../../../../basic-features/master-data-management/business-partner-setup/" class="md-nav__link">
         
   
   
@@ -1821,7 +1819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/product-setup/" class="md-nav__link">
+      <a href="../../../../basic-features/master-data-management/product-setup/" class="md-nav__link">
         
   
   
@@ -1844,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../master-data-management/pricing/" class="md-nav__link">
+      <a href="../../../../basic-features/master-data-management/pricing/" class="md-nav__link">
         
   
   
@@ -1918,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../procurement-management/getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/procurement-management/getting-started/" class="md-nav__link">
         
   
   
@@ -1941,7 +1939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../procurement-management/transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/procurement-management/transactions/" class="md-nav__link">
         
   
   
@@ -1964,7 +1962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../procurement-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../../basic-features/procurement-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -1992,8 +1990,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2006,11 +2002,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4">
         
           
           <label class="md-nav__link" for="__nav_3_2_1_4" id="__nav_3_2_1_4_label" tabindex="0">
@@ -2026,7 +2022,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_1_4">
             <span class="md-nav__icon md-icon"></span>
             Warehouse Management
@@ -2040,7 +2036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/warehouse-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2063,7 +2059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/warehouse-management/transactions/" class="md-nav__link">
         
   
   
@@ -2086,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis-tools/" class="md-nav__link">
+      <a href="../../../../basic-features/warehouse-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2106,30 +2102,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Setup
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/setup/" class="md-nav__link">
         
   
   
@@ -2140,359 +2116,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-price-difference-adjustment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Process Price Difference Adjustment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#warehouse-and-storage-bins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Warehouse and Storage Bins
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Warehouse and Storage Bins">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Warehouse
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#storage-bin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage Bin
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-transactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Product Transactions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bin-contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bin Contents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accounting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accounting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shipping-company" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shipping Company
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shipping Company">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#freight" class="md-nav__link">
-    <span class="md-ellipsis">
-      Freight
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#freight-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      Freight Category
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#costing-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Costing Rules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Costing Rules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#costing-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      Costing Rule
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Costing Rule">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fix-backdated-transactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fix Backdated Transactions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialization
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#costing-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Costing Algorithm
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Costing Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#landed-cost-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Landed Cost Type
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Landed Cost Type">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#header_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#warehouse-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Warehouse Rules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Warehouse Rules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rule
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referenced-inventory-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Referenced Inventory Type
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ean-128-type-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      EAN 128 Type Window
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="EAN 128 Type Window">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#header_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lines
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2556,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-management/getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/production-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2579,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-management/transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/production-management/transactions/" class="md-nav__link">
         
   
   
@@ -2602,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../production-management/setup/" class="md-nav__link">
+      <a href="../../../../basic-features/production-management/setup/" class="md-nav__link">
         
   
   
@@ -2676,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material-requirement-planning/getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/material-requirement-planning/getting-started/" class="md-nav__link">
         
   
   
@@ -2699,7 +2322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material-requirement-planning/transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/material-requirement-planning/transactions/" class="md-nav__link">
         
   
   
@@ -2722,7 +2345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material-requirement-planning/setup/" class="md-nav__link">
+      <a href="../../../../basic-features/material-requirement-planning/setup/" class="md-nav__link">
         
   
   
@@ -2796,7 +2419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/sales-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2819,7 +2442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/sales-management/transactions/" class="md-nav__link">
         
   
   
@@ -2842,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../../basic-features/sales-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -2865,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sales-management/setup/" class="md-nav__link">
+      <a href="../../../../basic-features/sales-management/setup/" class="md-nav__link">
         
   
   
@@ -2939,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/project-and-service-management/getting-started/" class="md-nav__link">
         
   
   
@@ -2962,7 +2585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/project-and-service-management/transactions/" class="md-nav__link">
         
   
   
@@ -2985,7 +2608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/analysis-tools/" class="md-nav__link">
+      <a href="../../../../basic-features/project-and-service-management/analysis-tools/" class="md-nav__link">
         
   
   
@@ -3008,7 +2631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-and-service-management/setup/" class="md-nav__link">
+      <a href="../../../../basic-features/project-and-service-management/setup/" class="md-nav__link">
         
   
   
@@ -3082,7 +2705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/getting-started/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/getting-started/" class="md-nav__link">
         
   
   
@@ -3148,7 +2771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/receivables-and-payables/transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/" class="md-nav__link">
         
   
   
@@ -3171,7 +2794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
         
   
   
@@ -3194,7 +2817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/receivables-and-payables/setup/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/receivables-and-payables/setup/" class="md-nav__link">
         
   
   
@@ -3268,7 +2891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/accounting/transactions/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/accounting/transactions/" class="md-nav__link">
         
   
   
@@ -3291,7 +2914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/accounting/analysis-tools/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/accounting/analysis-tools/" class="md-nav__link">
         
   
   
@@ -3314,7 +2937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/accounting/setup/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/accounting/setup/" class="md-nav__link">
         
   
   
@@ -3345,7 +2968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-management/assets/overview/" class="md-nav__link">
+      <a href="../../../../basic-features/financial-management/assets/overview/" class="md-nav__link">
         
   
   
@@ -3381,8 +3004,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -3393,11 +3018,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
@@ -3413,7 +3038,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_2">
             <span class="md-nav__icon md-icon"></span>
             Optional Features
@@ -3424,8 +3049,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -3436,11 +3063,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_2_1" id="__nav_3_2_2_1_label" tabindex="0">
@@ -3456,7 +3083,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             Bundles
@@ -3513,7 +3140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/essentials-extensions/overview/" class="md-nav__link">
+      <a href="../../essentials-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3536,7 +3163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/essentials-extensions/advanced-business-partner/" class="md-nav__link">
+      <a href="../../essentials-extensions/advanced-business-partner/" class="md-nav__link">
         
   
   
@@ -3559,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/essentials-extensions/bulk-completion/" class="md-nav__link">
+      <a href="../../essentials-extensions/bulk-completion/" class="md-nav__link">
         
   
   
@@ -3633,7 +3260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/overview/" class="md-nav__link">
+      <a href="../../platform-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3656,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/etendo-advanced-security/" class="md-nav__link">
+      <a href="../../platform-extensions/etendo-advanced-security/" class="md-nav__link">
         
   
   
@@ -3679,7 +3306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/etendo-rx/" class="md-nav__link">
+      <a href="../../platform-extensions/etendo-rx/" class="md-nav__link">
         
   
   
@@ -3702,7 +3329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/task/" class="md-nav__link">
+      <a href="../../platform-extensions/task/" class="md-nav__link">
         
   
   
@@ -3725,7 +3352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/platform-extensions/print-provider/" class="md-nav__link">
+      <a href="../../platform-extensions/print-provider/" class="md-nav__link">
         
   
   
@@ -3799,7 +3426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/overview/" class="md-nav__link">
+      <a href="../../warehouse-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3822,7 +3449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/" class="md-nav__link">
+      <a href="../../warehouse-extensions/advanced-warehouse-management/" class="md-nav__link">
         
   
   
@@ -3845,7 +3472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/packing/" class="md-nav__link">
+      <a href="../../warehouse-extensions/packing/" class="md-nav__link">
         
   
   
@@ -3868,7 +3495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/picking/" class="md-nav__link">
+      <a href="../../warehouse-extensions/picking/" class="md-nav__link">
         
   
   
@@ -3891,7 +3518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit/" class="md-nav__link">
+      <a href="../../warehouse-extensions/stock-logistic-unit/" class="md-nav__link">
         
   
   
@@ -3922,7 +3549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/production-extensions/overview/" class="md-nav__link">
+      <a href="../../production-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3945,7 +3572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/sales-extensions/overview/" class="md-nav__link">
+      <a href="../../sales-extensions/overview/" class="md-nav__link">
         
   
   
@@ -3965,8 +3592,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -3977,11 +3606,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1_6">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1_6" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_2_1_6" id="__nav_3_2_2_1_6_label" tabindex="0">
@@ -3997,7 +3626,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_2_1_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_2_1_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_2_1_6">
             <span class="md-nav__icon md-icon"></span>
             Financial Extensions Bundle
@@ -4011,7 +3640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -4034,7 +3663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/advanced-bank-account-management/" class="md-nav__link">
+      <a href="../advanced-bank-account-management/" class="md-nav__link">
         
   
   
@@ -4057,7 +3686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/automated-remittance/" class="md-nav__link">
+      <a href="../automated-remittance/" class="md-nav__link">
         
   
   
@@ -4077,10 +3706,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/business-partner-settlement/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Business Partner Settlement
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4091,6 +3742,112 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-partner-settlement-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Partner Settlement Window
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Partner Settlement Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buttons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credit-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credit settlement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoice-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invoice settlement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Settlement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-the-functionality-from-other-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Functionality from Other Windows.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4103,7 +3860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/conversion-rate-download-rule/" class="md-nav__link">
+      <a href="../conversion-rate-download-rule/" class="md-nav__link">
         
   
   
@@ -4126,7 +3883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/bulk-posting/" class="md-nav__link">
+      <a href="../bulk-posting/" class="md-nav__link">
         
   
   
@@ -4149,7 +3906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/financial-extensions/intercompany/" class="md-nav__link">
+      <a href="../intercompany/" class="md-nav__link">
         
   
   
@@ -4223,7 +3980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/overview/" class="md-nav__link">
+      <a href="../../spain-localization/overview/" class="md-nav__link">
         
   
   
@@ -4246,7 +4003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/" class="md-nav__link">
+      <a href="../../spain-localization/configuracion-de-impuestos-para-libro-de-facturas/" class="md-nav__link">
         
   
   
@@ -4269,7 +4026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/impuestos-para-espa%C3%B1a/" class="md-nav__link">
+      <a href="../../spain-localization/impuestos-para-espa%C3%B1a/" class="md-nav__link">
         
   
   
@@ -4292,7 +4049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/intrastat/" class="md-nav__link">
+      <a href="../../spain-localization/intrastat/" class="md-nav__link">
         
   
   
@@ -4315,7 +4072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/iva-de-caja/" class="md-nav__link">
+      <a href="../../spain-localization/iva-de-caja/" class="md-nav__link">
         
   
   
@@ -4338,7 +4095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/libro-de-facturas/" class="md-nav__link">
+      <a href="../../spain-localization/libro-de-facturas/" class="md-nav__link">
         
   
   
@@ -4361,7 +4118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-190/" class="md-nav__link">
+      <a href="../../spain-localization/modelo-190/" class="md-nav__link">
         
   
   
@@ -4384,7 +4141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-303/" class="md-nav__link">
+      <a href="../../spain-localization/modelo-303/" class="md-nav__link">
         
   
   
@@ -4407,7 +4164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-347/" class="md-nav__link">
+      <a href="../../spain-localization/modelo-347/" class="md-nav__link">
         
   
   
@@ -4430,7 +4187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-349/" class="md-nav__link">
+      <a href="../../spain-localization/modelo-349/" class="md-nav__link">
         
   
   
@@ -4453,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/modelo-390/" class="md-nav__link">
+      <a href="../../spain-localization/modelo-390/" class="md-nav__link">
         
   
   
@@ -4476,7 +4233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/sii-para-iva/" class="md-nav__link">
+      <a href="../../spain-localization/sii-para-iva/" class="md-nav__link">
         
   
   
@@ -4499,7 +4256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/ticketbai-batuz/" class="md-nav__link">
+      <a href="../../spain-localization/ticketbai-batuz/" class="md-nav__link">
         
   
   
@@ -4522,7 +4279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/spain-localization/verifactu/" class="md-nav__link">
+      <a href="../../spain-localization/verifactu/" class="md-nav__link">
         
   
   
@@ -4596,7 +4353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/etendobi-extensions/overview/" class="md-nav__link">
+      <a href="../../etendobi-extensions/overview/" class="md-nav__link">
         
   
   
@@ -4619,7 +4376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/" class="md-nav__link">
+      <a href="../../etendobi-extensions/inclusion-exclusion-configuration/" class="md-nav__link">
         
   
   
@@ -4693,7 +4450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/procurement-extensions/overview/" class="md-nav__link">
+      <a href="../../procurement-extensions/overview/" class="md-nav__link">
         
   
   
@@ -4716,7 +4473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/bundles/procurement-extensions/purchase-invoice-validation/" class="md-nav__link">
+      <a href="../../procurement-extensions/purchase-invoice-validation/" class="md-nav__link">
         
   
   
@@ -4798,7 +4555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../optional-features/supported-modules/tax-report-launcher/" class="md-nav__link">
+      <a href="../../../supported-modules/tax-report-launcher/" class="md-nav__link">
         
   
   
@@ -4880,7 +4637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-a-general-ledger-configuration/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-create-a-general-ledger-configuration/" class="md-nav__link">
         
   
   
@@ -4903,7 +4660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-an-account-tree/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-create-an-account-tree/" class="md-nav__link">
         
   
   
@@ -4926,7 +4683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses/" class="md-nav__link">
         
   
   
@@ -4949,7 +4706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-manage-prepaid-invoices-in-payables/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-manage-prepaid-invoices-in-payables/" class="md-nav__link">
         
   
   
@@ -4972,7 +4729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-manage-prepaid-invoices-in-receivables/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-manage-prepaid-invoices-in-receivables/" class="md-nav__link">
         
   
   
@@ -4995,7 +4752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-transfer-funds-between-financial-accounts/" class="md-nav__link">
+      <a href="../../../../how-to-guides/how-to-transfer-funds-between-financial-accounts/" class="md-nav__link">
         
   
   
@@ -5080,7 +4837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/getting-started/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/getting-started/" class="md-nav__link">
         
   
   
@@ -5103,7 +4860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
         
   
   
@@ -5212,7 +4969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/bundles/mobile-extensions/overview/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/bundles/mobile-extensions/overview/" class="md-nav__link">
         
   
   
@@ -5235,7 +4992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp/" class="md-nav__link">
+      <a href="../../../../../etendo-mobile/bundles/mobile-extensions/etendo-classic-subapp/" class="md-nav__link">
         
   
   
@@ -5328,7 +5085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/getting-started/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/getting-started/" class="md-nav__link">
         
   
   
@@ -5351,7 +5108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/setup-and-usage/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/setup-and-usage/" class="md-nav__link">
         
   
   
@@ -5460,7 +5217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/bundles/overview/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/bundles/overview/" class="md-nav__link">
         
   
   
@@ -5483,7 +5240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../etendo-copilot/bundles/sql-expert/" class="md-nav__link">
+      <a href="../../../../../etendo-copilot/bundles/sql-expert/" class="md-nav__link">
         
   
   
@@ -5580,7 +5337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/overview/" class="md-nav__link">
         
   
   
@@ -5732,7 +5489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-started/installation/" class="md-nav__link">
+      <a href="../../../../../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -5755,7 +5512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
         
   
   
@@ -5778,7 +5535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
         
   
   
@@ -5801,7 +5558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
         
   
   
@@ -5824,7 +5581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
         
   
   
@@ -5847,7 +5604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/" class="md-nav__link">
         
   
   
@@ -5877,7 +5634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
         
   
   
@@ -5900,7 +5657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/" class="md-nav__link">
         
   
   
@@ -5974,7 +5731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
         
   
   
@@ -5997,7 +5754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
         
   
   
@@ -6071,7 +5828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
         
   
   
@@ -6094,7 +5851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
         
   
   
@@ -6117,7 +5874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
         
   
   
@@ -6199,7 +5956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/alerts/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/alerts/" class="md-nav__link">
         
   
   
@@ -6222,7 +5979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/application-menu/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/application-menu/" class="md-nav__link">
         
   
   
@@ -6245,7 +6002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/constraints/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/constraints/" class="md-nav__link">
         
   
   
@@ -6268,7 +6025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/data-access-layer/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/data-access-layer/" class="md-nav__link">
         
   
   
@@ -6291,7 +6048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/data-model/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/data-model/" class="md-nav__link">
         
   
   
@@ -6314,7 +6071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/datasets/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/datasets/" class="md-nav__link">
         
   
   
@@ -6337,7 +6094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/datasources/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/datasources/" class="md-nav__link">
         
   
   
@@ -6360,7 +6117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/development-build-tasks/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/development-build-tasks/" class="md-nav__link">
         
   
   
@@ -6383,7 +6140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/element-and-synchronize-terminology/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/element-and-synchronize-terminology/" class="md-nav__link">
         
   
   
@@ -6406,7 +6163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
         
   
   
@@ -6429,7 +6186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/format-xml/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/format-xml/" class="md-nav__link">
         
   
   
@@ -6452,7 +6209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
         
   
   
@@ -6475,7 +6232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
         
   
   
@@ -6498,7 +6255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/processes/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/processes/" class="md-nav__link">
         
   
   
@@ -6521,7 +6278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/selectors/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/selectors/" class="md-nav__link">
         
   
   
@@ -6544,7 +6301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/standard-windows/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/standard-windows/" class="md-nav__link">
         
   
   
@@ -6567,7 +6324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/concepts/tables/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/tables/" class="md-nav__link">
         
   
   
@@ -6641,7 +6398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar/" class="md-nav__link">
         
   
   
@@ -6664,7 +6421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid/" class="md-nav__link">
         
   
   
@@ -6687,7 +6444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab/" class="md-nav__link">
         
   
   
@@ -6710,7 +6467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column/" class="md-nav__link">
         
   
   
@@ -6733,7 +6490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table/" class="md-nav__link">
         
   
   
@@ -6756,7 +6513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window/" class="md-nav__link">
         
   
   
@@ -6779,7 +6536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/" class="md-nav__link">
         
   
   
@@ -6802,7 +6559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
         
   
   
@@ -6825,7 +6582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout/" class="md-nav__link">
         
   
   
@@ -6848,7 +6605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process/" class="md-nav__link">
         
   
   
@@ -6871,7 +6628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout/" class="md-nav__link">
         
   
   
@@ -6894,7 +6651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout/" class="md-nav__link">
         
   
   
@@ -6917,7 +6674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module/" class="md-nav__link">
         
   
   
@@ -6940,7 +6697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
         
   
   
@@ -6963,7 +6720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column/" class="md-nav__link">
         
   
   
@@ -6986,7 +6743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset/" class="md-nav__link">
         
   
   
@@ -7009,7 +6766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/" class="md-nav__link">
         
   
   
@@ -7032,7 +6789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table/" class="md-nav__link">
         
   
   
@@ -7055,7 +6812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module/" class="md-nav__link">
         
   
   
@@ -7078,7 +6835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
         
   
   
@@ -7101,7 +6858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link/" class="md-nav__link">
         
   
   
@@ -7124,7 +6881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component/" class="md-nav__link">
         
   
   
@@ -7147,7 +6904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process/" class="md-nav__link">
         
   
   
@@ -7170,7 +6927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report/" class="md-nav__link">
         
   
   
@@ -7193,7 +6950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/" class="md-nav__link">
         
   
   
@@ -7216,7 +6973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/" class="md-nav__link">
         
   
   
@@ -7239,7 +6996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure/" class="md-nav__link">
         
   
   
@@ -7262,7 +7019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-table/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-table/" class="md-nav__link">
         
   
   
@@ -7285,7 +7042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-window/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-window/" class="md-nav__link">
         
   
   
@@ -7308,7 +7065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files/" class="md-nav__link">
         
   
   
@@ -7331,7 +7088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert/" class="md-nav__link">
         
   
   
@@ -7354,7 +7111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services/" class="md-nav__link">
         
   
   
@@ -7377,7 +7134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
         
   
   
@@ -7400,7 +7157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/" class="md-nav__link">
         
   
   
@@ -7423,7 +7180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/" class="md-nav__link">
         
   
   
@@ -7446,7 +7203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/" class="md-nav__link">
         
   
   
@@ -7469,7 +7226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
         
   
   
@@ -7492,7 +7249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
         
   
   
@@ -7558,7 +7315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/" class="md-nav__link">
         
   
   
@@ -7581,7 +7338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases/" class="md-nav__link">
         
   
   
@@ -7612,7 +7369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree/" class="md-nav__link">
         
   
   
@@ -7635,7 +7392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level/" class="md-nav__link">
         
   
   
@@ -7658,7 +7415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process/" class="md-nav__link">
         
   
   
@@ -7681,7 +7438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/" class="md-nav__link">
         
   
   
@@ -7704,7 +7461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab/" class="md-nav__link">
         
   
   
@@ -7727,7 +7484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model/" class="md-nav__link">
         
   
   
@@ -7750,7 +7507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data/" class="md-nav__link">
         
   
   
@@ -7773,7 +7530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler/" class="md-nav__link">
         
   
   
@@ -7796,7 +7553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended/" class="md-nav__link">
         
   
   
@@ -7826,7 +7583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
         
   
   
@@ -7849,7 +7606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process/" class="md-nav__link">
         
   
   
@@ -7872,7 +7629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
         
   
   
@@ -7895,7 +7652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util/" class="md-nav__link">
         
   
   
@@ -7918,7 +7675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/" class="md-nav__link">
         
   
   
@@ -7941,7 +7698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
         
   
   
@@ -8015,7 +7772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
         
   
   
@@ -8038,7 +7795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-database-extended-module/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-database-extended-module/" class="md-nav__link">
         
   
   
@@ -8068,7 +7825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
         
   
   
@@ -8091,7 +7848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration/" class="md-nav__link">
         
   
   
@@ -8121,7 +7878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-testing-plugin/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-testing-plugin/" class="md-nav__link">
         
   
   
@@ -8238,7 +7995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/overview/" class="md-nav__link">
         
   
   
@@ -8261,7 +8018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/docker-management/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/docker-management/" class="md-nav__link">
         
   
   
@@ -8284,7 +8041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service/" class="md-nav__link">
         
   
   
@@ -8307,7 +8064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/dynamic-app/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/dynamic-app/" class="md-nav__link">
         
   
   
@@ -8330,7 +8087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx/" class="md-nav__link">
         
   
   
@@ -8353,7 +8110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks/" class="md-nav__link">
         
   
   
@@ -8376,7 +8133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/task/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/task/" class="md-nav__link">
         
   
   
@@ -8399,7 +8156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/platform/print-provider/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/print-provider/" class="md-nav__link">
         
   
   
@@ -8430,7 +8187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
         
   
   
@@ -8496,7 +8253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview/" class="md-nav__link">
         
   
   
@@ -8527,7 +8284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/bundles/etendo-bi-extensions/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/etendo-bi-extensions/" class="md-nav__link">
         
   
   
@@ -8601,7 +8358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/developer-changelog/apichanges/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-changelog/apichanges/" class="md-nav__link">
         
   
   
@@ -8683,7 +8440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
         
   
   
@@ -8749,7 +8506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/concepts/config-server/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/concepts/config-server/" class="md-nav__link">
         
   
   
@@ -8772,7 +8529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/concepts/edge-server/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/concepts/edge-server/" class="md-nav__link">
         
   
   
@@ -8795,7 +8552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/concepts/projections/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/concepts/projections/" class="md-nav__link">
         
   
   
@@ -8912,7 +8669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/connectors/openbravo-connector/installation-guide/" class="md-nav__link">
         
   
   
@@ -8994,7 +8751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
         
   
   
@@ -9068,7 +8825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-change-date-format/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-change-date-format/" class="md-nav__link">
         
   
   
@@ -9091,7 +8848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-configure-memory-limits-in-docker-containers/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-configure-memory-limits-in-docker-containers/" class="md-nav__link">
         
   
   
@@ -9114,7 +8871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
         
   
   
@@ -9137,7 +8894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/" class="md-nav__link">
         
   
   
@@ -9160,7 +8917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-implement-oauth-authentication-and-token-management/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-implement-oauth-authentication-and-token-management/" class="md-nav__link">
         
   
   
@@ -9190,7 +8947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-start-rx-as-service-source-code/" class="md-nav__link">
         
   
   
@@ -9213,7 +8970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-use-opentelemetry/" class="md-nav__link">
         
   
   
@@ -9302,7 +9059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/installation/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/installation/" class="md-nav__link">
         
   
   
@@ -9368,7 +9125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/concepts/model-context-protocol/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/concepts/model-context-protocol/" class="md-nav__link">
         
   
   
@@ -9449,7 +9206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/bundles/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/bundles/overview/" class="md-nav__link">
         
   
   
@@ -9472,7 +9229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/bundles/dev-assistant/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/bundles/dev-assistant/" class="md-nav__link">
         
   
   
@@ -9546,7 +9303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/overview/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/overview/" class="md-nav__link">
         
   
   
@@ -9569,7 +9326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/api-call-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/api-call-tool/" class="md-nav__link">
         
   
   
@@ -9592,7 +9349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/attach-file-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/attach-file-tool/" class="md-nav__link">
         
   
   
@@ -9615,7 +9372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/audio-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/audio-tool/" class="md-nav__link">
         
   
   
@@ -9638,7 +9395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/client-init-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/client-init-tool/" class="md-nav__link">
         
   
   
@@ -9661,7 +9418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/codbar-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/codbar-tool/" class="md-nav__link">
         
   
   
@@ -9684,7 +9441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/docker-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/docker-tool/" class="md-nav__link">
         
   
   
@@ -9707,7 +9464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/etendo-sql-to-csv-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/etendo-sql-to-csv-tool/" class="md-nav__link">
         
   
   
@@ -9730,7 +9487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/file-copy-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/file-copy-tool/" class="md-nav__link">
         
   
   
@@ -9753,7 +9510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/file-downloader-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/file-downloader-tool/" class="md-nav__link">
         
   
   
@@ -9776,7 +9533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/google-drive-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/google-drive-tool/" class="md-nav__link">
         
   
   
@@ -9799,7 +9556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/google-spreadsheet-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/google-spreadsheet-tool/" class="md-nav__link">
         
   
   
@@ -9822,7 +9579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/process-definition-jasper-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/process-definition-jasper-tool/" class="md-nav__link">
         
   
   
@@ -9845,7 +9602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/load-oauth-token-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/load-oauth-token-tool/" class="md-nav__link">
         
   
   
@@ -9868,7 +9625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/memory-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/memory-tool/" class="md-nav__link">
         
   
   
@@ -9891,7 +9648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/ocr-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/ocr-tool/" class="md-nav__link">
         
   
   
@@ -9914,7 +9671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/org-init-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/org-init-tool/" class="md-nav__link">
         
   
   
@@ -9937,7 +9694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/pdf-to-images-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/pdf-to-images-tool/" class="md-nav__link">
         
   
   
@@ -9960,7 +9717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/print-directory-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/print-directory-tool/" class="md-nav__link">
         
   
   
@@ -9983,7 +9740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/read-file-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/read-file-tool/" class="md-nav__link">
         
   
   
@@ -10006,7 +9763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/send-email-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/send-email-tool/" class="md-nav__link">
         
   
   
@@ -10029,7 +9786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/task-creator-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/task-creator-tool/" class="md-nav__link">
         
   
   
@@ -10052,7 +9809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/task-management-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/task-management-tool/" class="md-nav__link">
         
   
   
@@ -10075,7 +9832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/tavily-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/tavily-tool/" class="md-nav__link">
         
   
   
@@ -10098,7 +9855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/template-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/template-tool/" class="md-nav__link">
         
   
   
@@ -10121,7 +9878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/test-run-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/test-run-tool/" class="md-nav__link">
         
   
   
@@ -10144,7 +9901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/uncompress-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/uncompress-tool/" class="md-nav__link">
         
   
   
@@ -10167,7 +9924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/write-file-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/write-file-tool/" class="md-nav__link">
         
   
   
@@ -10190,7 +9947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/xls-ocr-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/xls-ocr-tool/" class="md-nav__link">
         
   
   
@@ -10213,7 +9970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/xls-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/xls-tool/" class="md-nav__link">
         
   
   
@@ -10236,7 +9993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool/" class="md-nav__link">
         
   
   
@@ -10310,7 +10067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-api-tokens/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-api-tokens/" class="md-nav__link">
         
   
   
@@ -10340,7 +10097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-etendo-copilot-proxy/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-etendo-copilot-proxy/" class="md-nav__link">
         
   
   
@@ -10370,7 +10127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents/" class="md-nav__link">
         
   
   
@@ -10400,7 +10157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/" class="md-nav__link">
         
   
   
@@ -10430,7 +10187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-agent-telegram-bot-with-n8n/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-connect-agent-telegram-bot-with-n8n/" class="md-nav__link">
         
   
   
@@ -10460,7 +10217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/" class="md-nav__link">
         
   
   
@@ -10483,7 +10240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent/" class="md-nav__link">
         
   
   
@@ -10506,7 +10263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/" class="md-nav__link">
         
   
   
@@ -10529,7 +10286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools/" class="md-nav__link">
         
   
   
@@ -10552,7 +10309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/" class="md-nav__link">
         
   
   
@@ -10575,7 +10332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console/" class="md-nav__link">
         
   
   
@@ -10598,7 +10355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp/" class="md-nav__link">
         
   
   
@@ -10628,7 +10385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/" class="md-nav__link">
         
   
   
@@ -10651,7 +10408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp/" class="md-nav__link">
         
   
   
@@ -10681,7 +10438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp/" class="md-nav__link">
         
   
   
@@ -10711,7 +10468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/" class="md-nav__link">
         
   
   
@@ -10741,7 +10498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama/" class="md-nav__link">
         
   
   
@@ -10764,7 +10521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features/" class="md-nav__link">
         
   
   
@@ -10846,7 +10603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
         
   
   
@@ -10912,7 +10669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-mobile/concepts/subapp-structure/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-mobile/concepts/subapp-structure/" class="md-nav__link">
         
   
   
@@ -10986,7 +10743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
         
   
   
@@ -11098,7 +10855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/etendo-news/" class="md-nav__link">
+      <a href="../../../../../../whats-new/etendo-news/" class="md-nav__link">
         
   
   
@@ -11121,7 +10878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+      <a href="../../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
         
   
   
@@ -11253,7 +11010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/release-notes/" class="md-nav__link">
         
   
   
@@ -11319,7 +11076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes/" class="md-nav__link">
         
   
   
@@ -11342,7 +11099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes/" class="md-nav__link">
         
   
   
@@ -11365,7 +11122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes/" class="md-nav__link">
         
   
   
@@ -11439,7 +11196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11462,7 +11219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11485,7 +11242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11508,7 +11265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11531,7 +11288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11554,7 +11311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11577,7 +11334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11600,7 +11357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11623,7 +11380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -11697,7 +11454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11720,7 +11477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11743,7 +11500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11766,7 +11523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11789,7 +11546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11812,7 +11569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11835,7 +11592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11858,7 +11615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/" class="md-nav__link">
         
   
   
@@ -11889,7 +11646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/iso/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/iso/" class="md-nav__link">
         
   
   
@@ -11912,7 +11669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
         
   
   
@@ -12029,7 +11786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/" class="md-nav__link">
         
   
   
@@ -12154,7 +11911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/" class="md-nav__link">
         
   
   
@@ -12228,7 +11985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../whats-new/release-notes/etendo-copilot/translation-bundles/release-notes/" class="md-nav__link">
+      <a href="../../../../../../whats-new/release-notes/etendo-copilot/translation-bundles/release-notes/" class="md-nav__link">
         
   
   
@@ -12282,7 +12039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../live-builds/overview/" class="md-nav__link">
+      <a href="../../../../../../live-builds/overview/" class="md-nav__link">
         
   
   
@@ -12347,7 +12104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../help-and-support/overview/" class="md-nav__link">
+      <a href="../../../../../../help-and-support/overview/" class="md-nav__link">
         
   
   
@@ -12370,7 +12127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../help-and-support/support-service/" class="md-nav__link">
+      <a href="../../../../../../help-and-support/support-service/" class="md-nav__link">
         
   
   
@@ -12393,7 +12150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+      <a href="../../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
         
   
   
@@ -12435,6 +12192,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -12452,164 +12211,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#process-price-difference-adjustment" class="md-nav__link">
+  <a href="#initial-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Process Price Difference Adjustment
+      Initial Configuration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#warehouse-and-storage-bins" class="md-nav__link">
+  <a href="#business-partner-settlement-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Warehouse and Storage Bins
+      Business Partner Settlement Window
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Warehouse and Storage Bins">
+    <nav class="md-nav" aria-label="Business Partner Settlement Window">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Buttons
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Warehouse
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#storage-bin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage Bin
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-transactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Product Transactions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bin-contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bin Contents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accounting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accounting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shipping-company" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shipping Company
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shipping Company">
+    <nav class="md-nav" aria-label="Buttons">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#freight" class="md-nav__link">
+  <a href="#credit-settlement" class="md-nav__link">
     <span class="md-ellipsis">
-      Freight
+      Credit settlement
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#freight-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      Freight Category
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#costing-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Costing Rules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Costing Rules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#costing-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      Costing Rule
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Costing Rule">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fix-backdated-transactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fix Backdated Transactions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#initialization" class="md-nav__link">
+  <a href="#invoice-settlement" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialization
+      Invoice settlement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Settlement
     </span>
   </a>
   
@@ -12626,152 +12277,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#costing-algorithm" class="md-nav__link">
+  <a href="#use-the-functionality-from-other-windows" class="md-nav__link">
     <span class="md-ellipsis">
-      Costing Algorithm
+      Use the Functionality from Other Windows.
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Costing Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#landed-cost-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Landed Cost Type
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Landed Cost Type">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#header_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#warehouse-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Warehouse Rules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Warehouse Rules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rule
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referenced-inventory-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Referenced Inventory Type
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ean-128-type-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      EAN 128 Type Window
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="EAN 128 Type Window">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#header_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lines
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -12789,386 +12299,127 @@
                 
                   
 
+  <nav class="md-tags">
+    
+      
+      
+      
+        <span class="md-tag">Business Partner</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Payment</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Settlement</span>
+      
+    
+  </nav>
+
 
   
   
 
 
-  <h1>Setup</h1>
-
+<h1 id="business-partner-settlement">Business Partner Settlement</h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.advanced.bpsettlement</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>org.openbravo.financial.bpsettlement</code></p>
 <h2 id="overview">Overview</h2>
-<p>This section describes the steps that need to be performed to configure the warehouse management sections in Etendo. The corresponding windows are:</p>
-<p><a class="md-button md-button--primary" href="./#process-price-difference-adjustment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span>Process Price Difference Adjustment</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#warehouse-and-storage-bins"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Warehouse and Storage Bins</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#shipping-company"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Shipping Company</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#freight-category"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Freight Category</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#costing-rules"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Costing Rules</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#costing-algorithm"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Costing Algorithm</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#landed-cost-type"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Landed Cost Type</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#warehouse-rules"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Warehouse Rules</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#referenced-inventory-type"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span>Referenced Inventory Type</a> <br></p>
-<p><a class="md-button md-button--primary" href="./#ean-128-type"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span>EAN 128 Type</a> <br></p>
-<h2 id="process-price-difference-adjustment">Process Price Difference Adjustment</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Process Price Difference Adjustment</code></p>
-<p>Price difference adjustments can be performed "automatically" by scheduling the "Price Correction Background Process" or manually for a given product or set of products by running this process.</p>
-<h2 id="warehouse-and-storage-bins">Warehouse and Storage Bins</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Warehouse and Storage Bins</code></p>
-<h3 id="overview_1">Overview</h3>
-<p>The user can create warehouses and organize them using storage bins.</p>
-<p><strong>Warehouse</strong> represents the physical location of the stock in the application, and it is divided into <strong>Storage Bins</strong> in order to define a more exact location of goods inside the warehouse.</p>
-<p>This window allows the user to create and set up warehouses and get information about goods available in the warehouse as well as&nbsp; information related to transactions.</p>
-<h3 id="warehouse">Warehouse</h3>
-<p>The user can create warehouses for their organizations.</p>
-<p>It is important to have a previous overview before creating warehouses. <strong>Warehouse</strong> tab contains essential details of the warehouse, meaningful ones are <strong>Name</strong> and <strong>Location / Address.</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1vxTgfKhjgIIhpZbIFp7FC8y1X9mJOcrE.png" data-desc-position="bottom"><img alt="Warehouse" src="../../../../../assets/drive/1vxTgfKhjgIIhpZbIFp7FC8y1X9mJOcrE.png"></a></p>
-<p>Fields to note:</p>
-<ul>
-<li><strong>Search Key:</strong> It is important to define a proper search key to warehouses so they can be identified easily later from other windows and reports.</li>
-<li><strong>Returned Bin:</strong> Default value for the Return Material Receipt Lines <strong>Storage Bin</strong> field to which returned from customer products are placed.</li>
-<li><strong>Warehouse Rule:</strong> Definition of a&nbsp;Warehouse Rule to be applied when getting stock from the warehouse.</li>
-</ul>
-<h3 id="storage-bin">Storage Bin</h3>
-<p>The user can create storage bins for a selected warehouse.</p>
-<p>It defines <strong>Storage Bin</strong> position in the warehouse: <strong>Row (X)</strong>, <strong>Stack (Y)</strong> and <strong>Level (Z)</strong> fields and other parameters.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1AN5LR3kYTm3OhGshk_DUgJD75I1S5AxT.png" data-desc-position="bottom"><img alt="Storage Bin" src="../../../../../assets/drive/1AN5LR3kYTm3OhGshk_DUgJD75I1S5AxT.png"></a></p>
-<p>Other fields to note:</p>
-<ul>
-<li><strong>Relative priority:</strong> in terms of retrieving and taking out stock. Normal sequence of products shipment from the warehouse is <strong>first in first out</strong> (FIFO), but in this field a priority related to storage bins with the same product is indicated (0 = highest priority). The field is used by automatic processes that need to determine which storage bin to use, for example Create Shipments from Orders. It also defines sorting of storage bins in the Locator (Storage Bin) Selector.</li>
-<li><strong>Default:</strong> when selected, this storage bin appears by default in documents.</li>
-<li><strong>Barcode:</strong> There is no logic behind this field. It has been created in order to be used/implemented by other modules such as <strong>Etendo Mobile Application.</strong></li>
-<li><strong>Inventory Status:</strong> It is the current Inventory Status of the selected Storage Bin. It can be changed by clicking on <em>Change Status</em> button. 
-For more information, visit <a href="../../../../../developer-guide/etendo-classic/concepts/inventory-status/">Inventory Status</a>.</li>
-</ul>
-<h3 id="product-transactions">Product Transactions</h3>
-<p>The user can view all products transactions related to the selected warehouse and the history of transactions (materials receipt, shipment, used in production, etc.) that influence selected storage bin.</p>
-<p>The content of this tab is the same as of the Goods transaction window.</p>
-<h3 id="bin-contents">Bin Contents</h3>
-<p>The user can view the stored products of a selected storage bin.</p>
-<p><strong>Bin Contents</strong> read-only tab lists products stored in a particular storage bin.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1g3JvIz3nAMp_BxJLc13QyIFIRRRLfG_x.png" data-desc-position="bottom"><img alt="Bin Contents" src="../../../../../assets/drive/1g3JvIz3nAMp_BxJLc13QyIFIRRRLfG_x.png"></a></p>
-<p>Fields to note:</p>
-<ul>
-<li><strong>Attribute Set Value:</strong> This field is displayed if the product in the line has attributes (color, size, serial number or several of them together, etc).</li>
-<li><strong>Last Inventory Count Date</strong>: The last date this product was checked during Physical Inventory Count process.</li>
-<li><strong>Quantity on Hand:</strong> Current stock of the product.</li>
-<li><strong>Quantity in Draft Transactions:</strong> Product quantity that is in warehouse transactions (like Goods Receipt, Goods Shipment, Physical Inventory, Goods Movements) in Draft status.</li>
-</ul>
-<h3 id="accounting">Accounting</h3>
-<p>The user can create and edit G/L accounts to be used in transactions including a selected warehouse.</p>
-<p>This tab specifies the Warehouse Differences account for each organization's general ledger configuration.</p>
-<p>It is automatically populated when a new warehouse is created as it is taken from the corresponding account of the Defaults tab of the corresponding general ledger configuration.</p>
-<h2 id="shipping-company">Shipping Company</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Shipping Company</code></p>
-<p>The user can create shipping companies and define freight costs to be used in product logistics.</p>
-<p>Shippers to be used in other application transactions can also be created.</p>
-<h3 id="freight">Freight</h3>
-<p>The user can define freights to be used for a specified shipper.</p>
-<h2 id="freight-category">Freight Category</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Freight Category</code></p>
-<p>The user can define and create freight categories to be used by shippers.</p>
-<h2 id="costing-rules">Costing Rules</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Costing Rules</code></p>
-<h3 id="overview_2">Overview</h3>
-<p>A costing rule can be applied during cost calculation. Each costing rule requires a costing algorithm and a valid from date to properly calculate the cost of material's transactions. The "Warehouse" can be configured as a dimension to take into account while calculating costs.</p>
-<p>Costing rules can only be created for legal entities, that is either "legal with accounting" organizations or "legal without accounting" organizations.</p>
-<p>Product transactions costs can be calculated for both legal entities types, however only "legal with accounting" organizations support "perpetual" inventory posting as "legal without accounting" organizations do not support any type of posting.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A costing rule can be validated if a "Currency" is configured for the legal entity in the organization window, therefore costs are calculated in that given currency.</p>
+<p>This module provides a new document where it is possible to <strong>settle debts or credit</strong> of business partners that are both customers and providers. When a Business Partner is a Customer and a Provider, it is possible to have credit as both types. But it is not possible to consume a customer credit in a Payment Out document. In the same way, it is not possible to mix purchase or sales invoices on a single payment document. In some scenarios, when a business partner has sales and purchase invoices, it is desirable to cancel both debts without needing a financial transaction.</p>
+<p>In this document, you have to select the invoices or credit amount that is desired to settle. When the document is processed, a <em>Payment In</em> and a <em>Payment Out</em> are created. Both have a total amount of zero, so no financial transaction is created. The amount settled on each payment is compensated by a <em>GL Item</em> line. Both payments use the same GL Item, so the balance of it after the process is zero.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
-<p>A valid costing rule once created and validated for a legal entity organization will automatically be assigned to the products of that organization, therefore it can be reviewed in the Costing Rule tab of "Product" window.</p>
-<p>Costing rules allow the user to define whether backdated transactions booked for products on a later date need to be adjusted therefore corresponding "backdated transaction" cost adjustments are also created and booked to get the correct cost of those products.</p>
+<h2 id="initial-configuration">Initial Configuration</h2>
+<p>It is not required any specific configuration to work on with this module. It is expected that business partners are already completely defined as <strong>Customers</strong> and <strong>Vendors</strong> with their corresponding <strong>Financial Accounts</strong> and <strong>Currency</strong>.</p>
+<p>It is also required to have at least one <strong>GL Item</strong> defined for the Organizations where these settlements are needed.</p>
+<h2 id="business-partner-settlement-window">Business Partner Settlement Window</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Business Partner Settlement</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png" data-desc-position="bottom"><img alt="CS" src="../../../../../../assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png"></a></p>
+<p>In this window, all the settlements are registered. In a new one, you have to select:</p>
+<ul>
+<li><strong>Type</strong>: Credit or Invoice</li>
+<li><strong>Settlement date</strong></li>
+<li><strong>Business Partner</strong></li>
+<li><strong>GL Item</strong>: GL Item balance after the settlement process is not going to be affected, therefore a specific ledger account out of the account tree can be created and used for it.</li>
+</ul>
+<p>Depending on the settlement type, the selected process button on the top and child tabs below change accordingly to show either the credit payments or the invoices to be settled.</p>
+<h3 id="buttons">Buttons</h3>
+<h4 id="credit-settlement">Credit settlement</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png" data-desc-position="bottom"><img alt="CS" src="../../../../../../assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png"></a></p>
+<p>In credit settlements, you have to select the credit payments that are required to be settled. Clicking <strong>Add Credit Payments</strong> button, a popup is opened where you can select from 2 grids the <em>Credit In</em> and the <em>Credit Out</em> payments. In the Totals section, total amounts of the selected credit payments are calculated.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>"Costing Rules" is a feature implemented by the new Costing Engine, therefore a costing rule can be created and validated within an Etendo instance managing costs only if it has been migrated to the new "Costing Engine".</p>
+<p>You cannot close and add the credit payments until the total amounts of each grid are the same. This means that <em>Credit In Amount</em> and <em>Credit Out Amount</em> should be the same, therefore Credit Payment is 0.00</p>
 </div>
-<p>Etendo recommends to migrate instances using the "legacy" costing engine to the new costing engine.</p>
-<p>In order to create and validate a "Costing Rule", the user has to take into account that:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1xh1LMaTcJWuLXzNeqesDDY0niWC1VLv6.png" data-desc-position="bottom"><img alt="IS" src="../../../../../../assets/drive/1xh1LMaTcJWuLXzNeqesDDY0niWC1VLv6.png"></a></p>
+<h4 id="invoice-settlement">Invoice settlement</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/16rHvcenj5_bk5_qSmaiq55vc-DtdPa2x.png" data-desc-position="bottom"><img alt="IS" src="../../../../../../assets/drive/16rHvcenj5_bk5_qSmaiq55vc-DtdPa2x.png"></a></p>
+<p>As in credit settlements, by clicking <strong>Add Not Paid Invoices</strong> a popup is opened with 2 grids. The grids in this case show <em>not paid invoices</em>. Once more, it is not possible to create settlement payments until <strong>Pending Amount</strong> is 0.00, as shown in the image below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1_6G9sHyHAhvjBD4ktBmlwmj1E8QUivF7.png" data-desc-position="bottom"><img alt="IS" src="../../../../../../assets/drive/1_6G9sHyHAhvjBD4ktBmlwmj1E8QUivF7.png"></a></p>
+<h4 id="process-settlement">Process Settlement</h4>
+<p>Depending on the status of the Settlement different actions are available:</p>
 <ul>
-<li>First costing rule created does not allow entering any date in the field "Starting Date", which means that all existing product transactions are going to be cost calculated.<ul>
-<li>A blank date in the field "Starting Date" implies also a blank date in the field "Fix Backdated From" date unless a different date is entered in this field. "Fix Backdated From" date can be same or later than "Starting Date".</li>
-<li>Etendo will show an error in case there are product transactions whose costs need to be calculated with a movement date on a "Closed" period. In those cases, it will not be possible to post any cost transaction to the ledger unless the corresponding period is open for legal with accounting entities.</li>
+<li><strong>Draft</strong>: In this status it is only possible to Process the settlement.</li>
+<li><strong>Processed</strong>: In this status it is possible to <strong>Cancel</strong> or <strong>Reactivate</strong> the settlement.</li>
+<li><strong>Cancelled</strong>: In this status it is not possible to perform any action.</li>
 </ul>
-</li>
-<li>First costing rule created allows also specifying a date in the field "Starting Date", i.e. 01-01-2022:<ul>
-<li>In that case, all transactions with a transaction process date prior to that date will also be cost calculated at a zero cost.</li>
-<li>All transactions with a transaction process date on January 1st, 2022 and later on are going to be cost calculated at the corresponding cost.</li>
-</ul>
-</li>
-<li>Second costing rule does not allow entering a "Starting Date" as current date is taken by default, therefore first costing rule ends when second costing rule starts and so on.<ul>
-<li>Same applies to "Fix Backdated From" date defaulted to current date unless a specific date later than "current" date is entered.</li>
-</ul>
-</li>
-</ul>
-<h4 id="costing-rule"><strong>Costing Rule</strong></h4>
-<p>The costing rule window allows the user to define and validate costing rules.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1MxTiOhHzaaxhZQlKOMkF9jA6DKEbD-b5.png" data-desc-position="bottom"><img alt="Costing Rule" src="../../../../../assets/drive/1MxTiOhHzaaxhZQlKOMkF9jA6DKEbD-b5.png"></a></p>
-<p>As shown in the image above, a "Costing Rule" can be defined and assigned to an organization for which the cost of the transactions need to be calculated.</p>
-<p>There can only be one rule valid at a time for an organization which besides needs to be a "Legal Entity" organization type. The valid time period of the costing rule is set by the Starting Date entered.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Once assigned, the costing rule applies to every product transaction recorded on the <em>Legal Entity</em> and all its children.</p>
+<p><strong>Process</strong></p>
+<p>When the settlement is <strong>processed</strong>, a <em>Payment In</em> and a <em>Payment Out</em> are created. Each payment includes all the credit payments or invoices that were selected on the settlement.</p>
+<p>See images below in the case of settlement payments related to invoices.</p>
+<figure>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1jh-cvFM4r4uHBH11jspb2XVnp_GthyfW.png" data-desc-position="bottom"><img alt="IS" src="../../../../../../assets/drive/1jh-cvFM4r4uHBH11jspb2XVnp_GthyfW.png"></a>
+    <figcaption><strong>Payment In</strong></figcaption>
+</figure>
+<figure>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/15MCP7JSy_YEdnBeOB8CUgNSRmtc75VZR.png" data-desc-position="bottom"><img alt="IS" src="../../../../../../assets/drive/15MCP7JSy_YEdnBeOB8CUgNSRmtc75VZR.png"></a>
+    <figcaption><strong>Payment Out</strong></figcaption>
+</figure>
+<p>The generated payments are set on the <strong>Business Partner Settlement</strong> header, the invoices are inserted as <strong>Payment Lines</strong> while the credit payments are added to the payment as <em>Used Credit</em>.</p>
+<p>As the total amount of the settlement payment must be zero, an additional payment line is added using the <strong>selected GL Item</strong>.</p>
+<p>The amount in the lines related to the <em>GL Item</em> is the same in
+both payments, therefore the net effect on the GL item balance is null. In other words, the balance of the GL Item is not altered by the settlement process.</p>
+<div class="language-text highlight"><pre><span></span><code>Settlement Payment In posting:
+2722.50 GL Item ledger account (55500) DEBIT
+2722.50 Account Receivables (43000) CREDIT
+
+Settlement Payment Out posting:
+2722.50 Account Payables (40000) DEBIT
+2722.50 GL Item ledger account (55500) CREDIT
+</code></pre></div>
+<p>Finally, as the <strong>Settlement Payment Amount</strong> is zero, no <strong>Transaction</strong> is created in the Financial Account of the payment, therefore it will not be required to include it in any Reconciliation.</p>
+<p><strong>Reactivate</strong></p>
+<p>When a Settlement is reactivated, the generated payments are canceled creating a Reverse Payment. This process will restore the debt or credit so it is again available and the invoices are again not paid. The generated payments are removed from the header but the selection of credit or invoices is kept, so it is possible to add new items, remove some items and/or edit the settled amounts.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The settlement is left in Draft status so it is possible to process it again when needed.</p>
 </div>
-<p>The main property to set in a costing rule is the Costing Algorithm to used while calculating costs.</p>
-<p>The Standard and the Average algorithms are available by default. Additional algorithms such as FIFO, LIFO can be implemented by extension modules.</p>
-<p>Moreover, costs are calculated at organization level by default, however it is also possible to have the costs calculated for each Warehouse's organization.</p>
-<p>This can be achieved by using the Warehouse Dimension flag of the costing rule.</p>
-<p>Costing rules need to be validated to start using them. That is done by using the button "Validate Costing Rule".</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Once a Costing Rule is validated, it is not possible to modify or delete it.</p>
+<p><strong>Cancel</strong>
+As in the Reactivate process, the settlement payments are canceled by creating a Reverse Payment and the settled credit or invoices are again available or not paid. But, in this case, these payments are not removed from the settlement header and the status is changed to Canceled.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In this status, it is not possible to modify the settlement anymore.</p>
 </div>
-<p>If a costing rule needs to be changed, the user needs to create a new costing rule with the new setup required.</p>
-<p>Let us imagine that an organization requires a new costing algorithm to be used for cost calculation. In that case, a new costing rule needs to be created.</p>
-<p>The new rule overwrites the existing one, starting from a new and later "Starting Date".</p>
-<p>In this case:</p>
-<ul>
-<li>it is necessary to close the existing costing rule, that means to close the inventory valuated at the "old" rule</li>
-<li>and to initialize the inventory which will be valuated at the "new" costing rule starting from a given date</li>
-</ul>
-<p>The <strong>closing</strong> and <strong>initialization</strong> inventory balances are managed as Physical Inventories in the new costing engine.</p>
-<p>Two physical inventories are created for each organization and warehouse the costing rule applies to:</p>
-<ul>
-<li>the <strong>closing</strong> physical inventory empties the stock of products, therefore the Quantity Count is set to 0.<br>
-    The cost of the products is the one calculated using the costing rule configured so far, regardless it is not shown in the physical inventory.</li>
-<li>The <strong>opening</strong> inventory fills in again the stock, therefore the Quantity Count is once again set to the Quantity on-hand.<br>
-    The cost of the products is shown and it is the one calculated using the costing rule configured so far.<br>
-    Note that the cost of the new transactions of those products will be calculated by using the new costing rule.</li>
-</ul>
-<p>The <strong>costing rule validation</strong> process does several checks:</p>
-<ul>
-<li>for instances managing cost which have not been migrated to the new costing engine will not be able to validate costing rules</li>
-<li>for instances do not managing cost do not need to migrate therefore will be able to create and validate costing rules</li>
-<li>and finally, for instance already managing cost under the new costing engine infrastructure:<ul>
-<li>in the case of products included in transactions which were cost calculated using a rule, if a new rule is configured all their transactions need to be calculated first according to that previous rule.</li>
-<li>in the case of products included in transactions which were not cost calculated by any rule, if a new rule is configured all their transactions must not be cost calculated.</li>
-</ul>
-</li>
-</ul>
-<h5 id="fix-backdated-transactions"><strong>Fix Backdated Transactions</strong></h5>
-<p>As already described, a costing rule can also define whether backdated transactions booked for a product need to be fixed therefore the corresponding backdated transaction cost adjustment are created and booked for that product in order to get the correct cost of the product.</p>
-<p>To make this work, one of the following two actions can be taken:</p>
-<ol>
-<li>use an existing and validated Costing Rule.<br>
-    This way fix backdated transactions feature gets activated by using the process button "Fix Backdated Transactions".<br>
-    This option allows entering a "Fix Backdated From" date as starting date, before running the process.</li>
-</ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1dSn2VWGuwWybweNlYEgdtUImlXA8UihG.png" data-desc-position="bottom"><img alt="Fix Backdated Transactions" src="../../../../../assets/drive/1dSn2VWGuwWybweNlYEgdtUImlXA8UihG.png"></a>
-&nbsp;</p>
-<p>2. create and validate a new Costing Rule.<br>
-This way fix backdated transactions feature gets activated by checking Backdated Transactions Fixed check-box and filling in a Fix Backdated From date before validating the costing rule.</p>
-<p>Both ways:</p>
-<ul>
-<li>"Starting date" of the costing rule will be set as "Fix Backdated From" date whenever the end-user does not enter a "Fix Backdated From" date.</li>
-<li>"Fix Backdated From" date needs to be a valid date within an open period.</li>
-</ul>
-<h4 id="initialization"><strong>Initialization</strong></h4>
-<p>The initialization tab is a read-only tab which allows to review the "Closing" / "Opening" physical inventory created to validate a costing rule. Every time that a costing rule is validated a new record is created for each Organization and Warehouse. This record contains links to the physical inventories created.</p>
-<h2 id="costing-algorithm">Costing Algorithm</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Costing Algorithm</code></p>
-<h3 id="overview_3">Overview</h3>
-<p>A costing algorithm defines the method to use to calculate the cost of the transactions.</p>
-<p>Etendo delivers the Standard and the Average costing algorithms as part of the new Costing Engine.</p>
-<p>Each costing algorithm needs to contain and implement all what is required to calculate the costs and store them.</p>
-<h3 id="header">Header</h3>
-<p>The main feature of a costing algorithm is the java class which includes all what is required to implement it.</p>
-<p>The costing algorithms need to be loaded through a "System" dataset therefore can be available to every Client of the Etendo instance.</p>
-<p>The costing algorithms can then be listed in this window once the corresponding system dataset has been applied.</p>
-<p>It is recommended to apply this type of system datasets to the (* organization) therefore are available for every organization of the Client.</p>
-<p>If no record is shown in this window please contact your "System Administrator" to ensure that the "System" datasets have been properly applied by using the following "ant" command: <em>ant apply.module -DforceRefData=true</em></p>
-<h2 id="landed-cost-type">Landed Cost Type</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Landed Cost Type</code></p>
-<h3 id="overview_4">Overview</h3>
-<p>Landed Cost Types window allows the user to define different types of Landed Costs that can be assigned to Goods Receipts and therefore allocated to the products included in the receipts.</p>
-<p>Landed cost is the total cost of a landed shipment including purchase price, freight, insurance, custom duties and other costs up to the port of destination.</p>
-<p>Etendo handles landed costs not as part of the "unit cost" of a product but as a part of its total cost.</p>
-<h3 id="header_1">Header</h3>
-<p>Landed Cost Types can be defined either as a "Product" or as an "Account" (G/L Item). Besides that a distribution algorithm can be defined to configure the way landed costs are going to be allocated to products.</p>
-<p>Some fields to note are:</p>
-<ul>
-<li><strong>Name</strong>: that is the name of the landed cost type, for instance "Insurance", "Freight", "Duties" or "Taxes".</li>
-<li><strong>Landed Cost Distribution Algorithm</strong>: that is the algorithm to be used to distribute or allocate Landed Costs among all the receipt Lines related to that landed costs.</li>
-</ul>
-<p>Etendo delivers a "Landed Cost Distribution Algorithm" that is "Distribution by Amount" as part of the costing adjustment feature.</p>
-<p>This algorithm distributes landed costs to receipt lines proportionally by receipt line amount.</p>
-<p>The main feature of a landed cost distribution algorithm is the java class which includes all what's required to implement it.</p>
-<p>Landed cost distribution algorithm needs to be loaded through a "System" dataset therefore can be available to every Client of the Etendo instance.</p>
-<p>Once applied, "Distribution by Amount" costing algorithm is listed in this window.</p>
-<p>It is recommended to apply this type of system datasets to the (* organization) therefore are available for every organization of the Client.</p>
-<p>If no record is shown in this window please contact your "System Administrator" to ensure that the "System" datasets have been properly applied by using the following "ant" command: ant apply.module -DforceRefData=true</p>
-<p>A landed cost type can either be created as an "<strong>Account</strong>" or as a "<strong>Product</strong>".</p>
-<ul>
-<li>"<strong>Account</strong>" landed cost types requires a GL Item to be created, for instances "Duties".<ul>
-<li>G/L Item needs to be configured as "Enabled in Financial Invoices" and related to a tax category, therefore this type of landed costs can be booked through a purchase financial invoice.</li>
-<li>"Expense" type ledger account used while posting a purchase financial invoice including a landed cost of this type are the ones setup in the Accounting tab of the G/L Item.</li>
-</ul>
-</li>
-<li>"<strong>Product</strong>" landed cost types requires a Product to be created, for instance "Freight", therefore this type of landed costs can be booked through a purchase invoice.<ul>
-<li>"Expense" type ledger account used while posting purchase invoice including a landed cost of this type are the ones setup in the Accounting tab of the Product.</li>
-</ul>
-</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1RtueiqPAlE2jmnhvOF5o4nkkwutJL1e6.png" data-desc-position="bottom"><img alt="Landed Cost Type" src="../../../../../assets/drive/1RtueiqPAlE2jmnhvOF5o4nkkwutJL1e6.png"></a></p>
-<h2 id="warehouse-rules">Warehouse Rules</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Warehouse Rules</code></p>
-<h3 id="overview_5">Overview</h3>
-<p>Warehouse rules window allows the user to review the warehouse rules available.</p>
-<p>Warehouse rules are used to restrict the stock available in the warehouse.</p>
-<p>The rules are applied when the stock is retrieved automatically by processes like good shipment generation.</p>
-<h3 id="rule">Rule</h3>
-<p>New warehouse rules can only be applied by extension modules which must include a dataset with the definition of the rule and a procedure that implements it.</p>
-<p>Etendo ships three different rules by default:</p>
-<ul>
-<li><strong>Unique Attribute</strong>: All the stock proposed to be used must be of the same attribute set value. It returns the first attribute set value that is found with enough quantity to fulfill the requirement. If there is not any attribute set value with enough stock no stock is proposed. This is an excluding rule.</li>
-<li><strong>Unique Storage Bin</strong>: All the stock proposed must come from the same storage bin. It returns the stock from the first storage bin found with enough quantity. If there is no storage bin with enough quantity then the stock is obtained from any storage bin. This is a preference rule and not a excluding rule</li>
-<li>and <strong>Default Warehouse Rule</strong>: The default rule does not restrict anything and all the available stock from the on hand warehouses is returned. This rule can be used in Sales Orders whenever it is desired to overwrite a rule defined in the warehouse to not apply any rule.</li>
-</ul>
-<h2 id="referenced-inventory-type">Referenced Inventory Type</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Referenced Inventory Type</code></p>
-<p>This section defines different types of containers or boxes, which include any kind of object that can contain goods.</p>
-<p><strong>Referenced Inventory Type</strong> window fields</p>
-<ul>
-<li><strong>Organization</strong> : Organizational entity within client</li>
-<li><strong>Name</strong> : A non-unique identifier for a record/document often used as a search tool.</li>
-<li><strong>Shared</strong> : Shared or Unique References</li>
-<li><strong>Sequence</strong> : The order of records in a specified document.</li>
-<li><strong>Description</strong> : A space to write additional related information.</li>
-<li><strong>Active</strong> : A flag indicating whether this record is available for use or deactivated.</li>
-<li><strong>Referenced Inventory Type</strong></li>
-<li><strong>Client</strong> : Client for this installation.</li>
-</ul>
-<h2 id="ean-128-type-window">EAN 128 Type Window</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>EAN 128 Type</code></p>
-<p>In this window you can add different types of barcodes. They store information about the product in this code, either: Date, Product, Physical Inventory Line, and when you scanned, you can obtain this information from the barcode.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Type.png" data-desc-position="bottom"><img alt="EAN128 Type Window" src="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Type.png"></a></p>
-<h3 id="header_2">Header</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Header.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Header.png"></a></p>
+<h2 id="use-the-functionality-from-other-windows">Use the Functionality from Other Windows.</h2>
 <ul>
 <li>
-<p><strong>EAN 128 Type</strong> header fields:</p>
+<p><a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement-1">Payment In</a></p>
 </li>
 <li>
-<p><strong>Module</strong> : Module to export the data.</p>
+<p><a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement">Payment Out</a></p>
 </li>
 <li>
-<p><strong>Organization</strong> : Organizational entity within client.</p>
+<p><a href="../../../../basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement-2">Financial Account</a></p>
 </li>
-<li>
-<p><strong>Name</strong> : A non-unique identifier for a record/document often used as a search tool.</p>
-</li>
-<li>
-<p><strong>Description</strong> : A description describing the usefulness of this new type is placed here.</p>
-</li>
-<li>
-<p><strong>Default</strong> : When selected, this EAN 128 Type will appears by default.</p>
-</li>
-<li>
-<p><strong>Active</strong> : A flag indicating whether this record is available for use or deactivated.</p>
-</li>
-</ul>
-<h3 id="lines">Lines</h3>
-<p>In the lines you can add a record referring to the parent already created. Here you will create a data that will be received when scanning a barcode.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Lines.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Lines.png"></a></p>
-<ul>
-<li>
-<p><strong>EAN 128 Type</strong> lines fields:</p>
-</li>
-<li>
-<p><strong>Module</strong> : Module to export the data.</p>
-</li>
-<li>
-<p><strong>Organization</strong> : Organizational entity within client.</p>
-</li>
-<li>
-<p><strong>Active</strong> : A flag indicating whether this record is available for use or deactivated.</p>
-</li>
-<li>
-<p><strong>Content</strong> : Name of the line content.</p>
-</li>
-<li>
-<p><strong>Al</strong> : Application identifier, that refers to the extra numbers in the code.</p>
-</li>
-<li>
-<p><strong>Content Length</strong> : Longitude of the ean type content.</p>
-</li>
-<li>
-<p><strong>Data Type</strong> : Type of the EAN 128 type data.</p>
-</li>
-<li>
-<p><strong>Fixed Length</strong> : This check is set if the code only contains the data or not.</p>
-</li>
-<li>
-<p><strong>Lot</strong> : indicator that determines if the EAN code corresponds to a "lot" or "lot number".</p>
-</li>
-<li>
-<p><strong>Serial No.</strong> : A unique number of products.</p>
-</li>
-<li>
-<p><strong>Expiration Date</strong> : Determinants if is an expiration date.</p>
-</li>
-<li>
-<p><strong>Sequence Number</strong> : The order of records in a specified document. The Sequence indicates the order of records.</p>
-</li>
-<li>
-<p><strong>Attribute</strong>: An attribute to define an item.</p>
-</li>
-<li>
-<p><strong>Entity</strong>: The group the scanned item refers to.</p>
-</li>
-<li>
-<p><strong>Entity Field</strong> : Property of the entity that the value is obtained. Refears the HQL field of the entity.</p>
-</li>
-</ul>
-<h3 id="example">Example</h3>
-<p>For example we will see a record created here:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EANLineExample.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EANLineExample.png"></a></p>
-<ul>
-<li>
-<p><strong>Content</strong> : The name of this new type that is being created will be added here.</p>
-</li>
-<li>
-<p><strong>Al</strong> : AI gives a number of decimal places in the following value. The represented value is the following integer divided by 10X. For example, a net weight of 22.7 kg could be coded as 3101 000227, 3102 002270, 3103 022700, or 3104 227000. Registered AI should be 310X.</p>
-</li>
-<li>
-<p><strong>Content Length</strong> :This will be the length of the code, depending on what it will be used for, it can be longer or shorter.</p>
-</li>
-<li>
-<p><strong>Data Type</strong> : This refers to the type of data to be stored in the barcode. These can be: Date, String, Integer or Decimal.</p>
-</li>
-<li>
-<p><strong>Fixed Length</strong> : This check leaves only the relevant information in the scanned code.</p>
-</li>
-<li>
-<p><strong>Lot</strong> : the lot attribute appears to be a flag or indicator that determines whether the current content extracted from the EAN code corresponds to a "lot" or "lot number".</p>
-</li>
-<li>
-<p><strong>Serial No.</strong> : A unique number, this represents a serial number.</p>
-</li>
-<li>
-<p><strong>Expiration Date</strong> : This field defines that the value of the barcode is an expiration date.</p>
-</li>
-<li>
-<p><strong>Sequence Number</strong> : This field helps keep track of the sequence number for each entry. If there are multiple entries with the same entityFieldName, the code uses the sequence number to determine which has the most recent number and, based on that, decides whether or not to update the content stored in the object.</p>
-</li>
-<li>
-<p><strong>Entity</strong>: in this field you can assign the entity to which this value corresponds. it has 5 options:</p>
-</li>
-<li>
-<p><strong>Attribute</strong>: when this option is selected, the "Attribute" field will appear on the screen. If you do not have any created, you can go to this window and create it. An attribute is a characteristic that can be added to the scanned value, to have a better reference to it.</p>
-<ul>
-<li><strong>Order Line</strong>.</li>
-<li><strong>Physical Inventory Line.</strong></li>
-<li><strong>Product Line.</strong></li>
-<li><strong>Shipment/Receipt Line.</strong></li>
-</ul>
-</li>
-</ul>
-<p>These last 4 options show the Entity Field therefore by selecting one of these 4 options. </p>
-<ul>
-<li><strong>Entity Field</strong>: In this selector you can choose the specific field to the entity field that it references.</li>
 </ul>
 <hr>
-<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L</a>.</p>
 
 
 
@@ -13386,14 +12637,14 @@ This way fix backdated transactions feature gets activated by checking Backdated
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
-        <script src="../../../../../assets/javascripts/feedback.js"></script>
+        <script src="../../../../../../assets/javascripts/feedback.js"></script>
       
-        <script src="../../../../../assets/javascripts/custom-search.js"></script>
+        <script src="../../../../../../assets/javascripts/custom-search.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
       
