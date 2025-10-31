@@ -30,47 +30,48 @@ This project depends on the following tools:
 - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
 - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 
+
 ## Using Containers Distributed in Modules
 
-### Configuration Variables
+**Configuration Variables**
 
-  - It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
-    
-    `docker_<javapackage>=true`
-    
-    
-    Example:
-    ``` groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat=true
-    ```
+- It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
 
-  - In case you want to configure only one service belonging to a module, it is possible by adding a variable with the format:
+`docker_<javapackage>=true`
 
-    `docker_<javapackage>_<service>=true`
 
-    Example:
-    ``` groovy title="gradle.properties"
-    docker_com.etendoerp.docker_db=true
-    ```
-    !!!note
-        In this case, only the database service will be taken into account when raising and lowering services related to the `com.etendoerp.docker` module. 
-    
-  - It is also possible that some services may require configuration variables, in which case they should be added: 
+Example:
+``` groovy title="gradle.properties"
+docker_com.etendoerp.tomcat=true
+```
 
-    `docker_<javapackage>_<variable>=<value>`
+- In case you want to configure only one service belonging to a module, it is possible by adding a variable with the format:
 
-    Example:
-    ``` groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat_debug=8009
-    ``` 
-    !!!note
-        In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
+`docker_<javapackage>_<service>=true`
 
-  Finally, always to apply changes, execute 
+Example:
+``` groovy title="gradle.properties"
+docker_com.etendoerp.docker_db=true
+```
+!!!note
+    In this case, only the database service will be taken into account when raising and lowering services related to the `com.etendoerp.docker` module. 
 
-  ``` bash title="Terminal"
-  ./gradlew setup
-  ```
+- It is also possible that some services may require configuration variables, in which case they should be added: 
+
+`docker_<javapackage>_<variable>=<value>`
+
+Example:
+``` groovy title="gradle.properties"
+docker_com.etendoerp.tomcat_debug=8009
+``` 
+!!!note
+    In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
+
+Finally, always to apply changes, execute 
+
+``` bash title="Terminal"
+./gradlew setup
+```
 
 ## Gradle Tasks to Manage Containers
 Execute the following command to use the infrastructure:
@@ -81,6 +82,9 @@ Execute the following command to use the infrastructure:
 ./gradlew resources.up
 ```
 This command will search for all configured resources and start the containers.
+
+!!! info 
+    Before running the Gradle compilation tasks `./gradlew update.database compile.complete smartbuild`, you need to execute `./gradlew resources.up` to actually create and start the Docker containers. 
 
 !!! note 
     If you only have the base `com.etendoerp.docker` module installed and configured, this command will start a PostgreSQL database.
@@ -108,7 +112,7 @@ This command forces services that use a Dockerfile to rebuild their own Docker i
 !!! info
     This command must be executed when the projection or mapping have been modified due to user changes or module management updates to these tables. The command forces the DAS service to recompile and generate new classes before starting the service.
 
-## Verifying the Status
+### Verifying the Status
 
 To verify the status of the resources started by Docker Compose, you can use the following Docker commands:
 
@@ -120,7 +124,8 @@ This command lists all running Docker containers. You should see the containers 
 
 This command shows the logs of all the services defined in your Docker Compose configuration, which can help in troubleshooting and verifying that the services are running correctly.
 
-It is also possible to manage containers with tools such as [Lazydocker](https://github.com/jesseduffield/lazydocker#installation){target=_isblank} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
+!!! info 
+    It is also possible to manage containers with tools such as [Lazydocker](https://github.com/jesseduffield/lazydocker#installation){target=_isblank} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
 
 
 ## Postgres Database Service
