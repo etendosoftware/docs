@@ -40,41 +40,53 @@ Etendo Main UI is distributed within the [Platform Extensions](../../../../whats
 
 The simplest configuration we are going to follow as an example is to mount **Main UI Dockerized** and **Tomcat** running as a local service. Other configurations are detailed in the section [Advanced Configurations](#advanced-configuration).
 
-1. Add the following lines to the `gradle.properties` file:
+### Interactive Setup
 
-    ``` title="gradle.properties"
+You can configure Main UI interactively by running:
+```bash
+./gradlew setup -Pinteractive=true --console=plain
+```
+
+This will guide you through the configuration process for all required variables.
+
+### Manual Configuration
+
+1. Add the following lines to the `gradle.properties` file:
+``` title="gradle.properties"
     docker_com.etendoerp.mainui=true
     ETENDO_CLASSIC_URL=http://your.etendo.instance/etendo
     authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
     ws.maxInactiveInterval=seconds-number
-    ```
+    NEXT_PUBLIC_APP_URL=http://your.mainui.instance
+```
 
     !!! warning
         The `ws.maxInactiveInterval` variable accepts numeric values representing the seconds a session will last before expiring in the new Main UI interface. Note that this configuration is also used by Secure Web Services and does not affect session expiration in the classic Etendo interface. The recommended value is 3600, representing one hour, but you can modify the value as needed.
 
-2. Replace `your.etendo.instance` with your actual Etendo URL.
+    !!! info
+        The `NEXT_PUBLIC_APP_URL` variable should point to the public URL where your Main UI will be accessible. For local development, this is typically `http://localhost:3000`.
+
+2. Replace `your.etendo.instance` and `your.mainui.instance` with your actual URLs.
 
     For example: 
-
-    ``` title="Etendo URL"
+``` title="Etendo URL"
     docker_com.etendoerp.mainui=true
     ETENDO_CLASSIC_URL=http://localhost:8080/etendo
     authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
     ws.maxInactiveInterval=3600
-    ```
+    NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
 
 3. Run the following commands to set up the module and update resources:
-
-    ```bash
+```bash
     ./gradlew setup
     ./gradlew resources.up
-    ```
+```
 
 4. Start the Docker services:
-
-    ```bash
+```bash
     ./gradlew resources.up
-    ```
+```
 
 This will start the **Main UI** container along with any other configured Docker services.
 
