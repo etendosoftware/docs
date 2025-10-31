@@ -113,6 +113,43 @@ The boxes received can be seen in the stock.
 
 In this way, the stock received is not interpreted as individual units, but as a traceable logistical entity (a box or a pallet), ensuring consistency between physical quantities and the system inventory, laying the foundations for subsequent processes—such as reservations, sales, or deliveries—to always respect the logistical structure in which the product was originally registered.
 
+### Reference Inventory
+
+Referenced Inventory allows create nested logistics units, meaning that a referenced inventory (e.g., a pallet) can contain other referenced inventories (e.g., boxes). 
+
+This improvement allows create hierarchical logistics structures, such as boxes within pallets, while maintaining full compatibility with standard Box and Unbox processes. This way, when you perform the Unbox action on a pallet, you obtain the boxes it contains. In turn, you can perform the Unbox action on those boxes to obtain the individual units included in each one.
+
+!!! important
+    Restrictions for handling pallets and boxes: 
+
+    - Pallets can contain boxes and basic units.
+    - Pallets cannot contain pallets.
+    - Boxes can contain boxes and basic units.
+    - Each Logistics Unit can only be in one grouping at a time.
+    - Boxes cannot be moved between pallets. Once a box is on a pallet, it must remain there until an Unbox is performed to release it.
+    - The Unbox process applies the Storage Bin assigned to that grouping for the products it contains, replacing the original location.
+
+The user accesses the Referenced Inventory window and creates a new record by selecting the PALLET type. Once created, the pallet is available as a container logistics unit.
+
+Then, using the Box button, the user can select one or more existing boxes (of the BOX type) through the stock selector or basic units of one or more products. The system will only display those boxes and units that are not assigned to another grouping. Upon confirmation, the selection is linked to the pallet and its information is automatically updated.
+
+At any time, the user can consult the Content tab of the pallet to see the boxes it contains or use the Unbox button to release them, returning them to their original state.
+
+Box can contein Boxes and Basic Units example
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/box-box-units-1.png)
+
+
+Pallets can contein Boxes and Basic Units example
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/pallet-box-units-1.png)
+
+!!!example
+    A pallet with boxes of pineapple juice is received. The receipt is made from the Goods Receipt window.
+    Once the receipt is complete, the user must manually enter the Reference Inventory window to create a box for each box received.
+    Then, a new Pallet-type Reference Inventory must be created and the previously created boxes must be associated with it.
+    In this way, the product stock shows a Pallet whose contents are composed of boxes, rather than individual units of the product.
+
 ### Sales
 
 The sales flow is combined with stock reservation logic, ensuring that logistics units remain consistent and traceable throughout the entire process.
