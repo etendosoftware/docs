@@ -47,48 +47,51 @@ You can configure Main UI interactively by running:
 ./gradlew setup -Pinteractive=true --console=plain
 ```
 
-This will guide you through the configuration process for all required variables.
+This will guide you through the configuration process for all required variables. For more information visit [Interactive Instalation](../../../../getting-started/interactive-installation.md) guide. 
 
 ### Manual Configuration
 
 1. Add the following lines to the `gradle.properties` file:
-``` title="gradle.properties"
-    docker_com.etendoerp.mainui=true
-    ETENDO_CLASSIC_URL=http://your.etendo.instance/etendo
-    authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
-    ws.maxInactiveInterval=seconds-number
-    NEXT_PUBLIC_APP_URL=http://your.mainui.instance
-```
+
+    ``` title="gradle.properties"
+        docker_com.etendoerp.mainui=true
+        etendo.classic.url=http://your.etendo.instance/etendo
+        authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+        ws.maxInactiveInterval=seconds-number
+        next.public.app.url=http://your.mainui.instance
+    ```
 
     !!! warning
         The `ws.maxInactiveInterval` variable accepts numeric values representing the seconds a session will last before expiring in the new Main UI interface. Note that this configuration is also used by Secure Web Services and does not affect session expiration in the classic Etendo interface. The recommended value is 3600, representing one hour, but you can modify the value as needed.
 
     !!! info
-        The `NEXT_PUBLIC_APP_URL` variable should point to the public URL where your Main UI will be accessible. For local development, this is typically `http://localhost:3000`.
+        The `next.public.app.url` variable should point to the public URL where your Main UI will be accessible. For local development, this is typically `http://localhost:3000`.
 
 2. Replace `your.etendo.instance` and `your.mainui.instance` with your actual URLs.
 
     For example: 
-``` title="Etendo URL"
-    docker_com.etendoerp.mainui=true
-    ETENDO_CLASSIC_URL=http://localhost:8080/etendo
-    authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
-    ws.maxInactiveInterval=3600
-    NEXT_PUBLIC_APP_URL=http://localhost:3000
-```
 
-3. Run the following commands to set up the module and update resources:
-```bash
-    ./gradlew setup
-    ./gradlew resources.up
-```
+    ``` title="Etendo URL"
+        docker_com.etendoerp.mainui=true
+        etendo.classic.url=http://localhost:8080/etendo
+        authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+        ws.maxInactiveInterval=3600
+        next.public.app.url=http://localhost:3000
+    ```
+
+3. Run the following commands to setup the module and update resources:
+
+    ```bash title="Terminal"
+        ./gradlew setup
+    ```
 
 4. Start the Docker services:
-```bash
-    ./gradlew resources.up
-```
+    
+    ```bash title="Terminal"
+        ./gradlew resources.up
+    ```
 
-This will start the **Main UI** container along with any other configured Docker services.
+    This will start the **Main UI** container along with any other configured Docker services.
 
 
 ## Accessing the Main UI
