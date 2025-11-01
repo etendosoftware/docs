@@ -53,7 +53,7 @@ Example:
 ``` groovy title="gradle.properties"
 docker_com.etendoerp.docker_db=true
 ```
-!!!note
+!!! note
     In this case, only the database service will be taken into account when raising and lowering services related to the `com.etendoerp.docker` module. 
 
 - It is also possible that some services may require configuration variables, in which case they should be added: 
@@ -64,8 +64,19 @@ Example:
 ``` groovy title="gradle.properties"
 docker_com.etendoerp.tomcat_debug=8009
 ``` 
-!!!note
+!!! note
     In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
+
+- **Exclude Services**
+
+En el caso de que el compose incluya varios servicios, se puede excluir o customizar cuales se ejecutan y cuales no, 
+
+`docker.eclude=<service1>,<service2>`
+
+Example:
+``` groovy title="gradle.properties"
+docker.eclude=das,auth
+``` 
 
 Finally, always to apply changes, execute 
 

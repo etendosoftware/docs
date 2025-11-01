@@ -28,22 +28,6 @@ To enable and configure the Tomcat service, the following configuration variable
     ```
     This variable enables the Tomcat service.
 
-- **Exclude some Services**
-
-En el caso de que el compose incluya varios servicios, se puede excluir o customizar cuales se ejecutan y cuales no, 
-
- 1. On the execution services task, añadiendo una variable de configuracion listando los servicios que se deben excluir, esto solo los excluye de la ejecucion actual, por ejemplo: 
-
-```
-./gradlew -Pdocker.exclude=jaeger-health,jaeger,asyncprocess resources.up
-```
-
-2. Or in `gradle.properties` (project or user-level):
-
-docker.exclude=jaeger-health,jaeger,asyncprocess
-
-
-
 - **Configure Tomcat Port** (Optional)
     ```groovy title="gradle.properties"
     tomcat.port=<port>
@@ -61,8 +45,6 @@ docker.exclude=jaeger-health,jaeger,asyncprocess
         For debugging in IntelliJ, create a new configuration of type **Remote JVM Debug** and set the port to listen on.
 
         ![Debug-Mode.png](../../../../assets/developer-guide/etendo-classic/bundles/platform/tomcat-dockeridez-service/debug-mode.png)
-
-
 
 Execute the following command to apply the configuration changes:
 
