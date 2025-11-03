@@ -102,9 +102,9 @@ To start using this module correctly, the following installation and configurati
     
     :material-menu:`Application` > `Warehouse Management` > `Setup` > `Barcode Components Configuration`
 
-    This window is part of the advanced barcode settings in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
+    This window is part of the **advanced barcode settings** in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
 
-    It allows users to define, configure, and apply their own identifiers so that the system can read and associate different product attributes, such as color, packaging type, batch, or any other relevant data, directly from the GS1-128 codes used in logistics operations.
+    It allows users to define, configure, and apply their own identifiers so that the system can read and associate different **product attributes**, such as color, packaging type, batch, or any other relevant data, directly from the **GS1-128** codes used in logistics operations.
 
     !!! tip 
         The configurations shown below are predefined in the initial dataset, although they can be modified or new schemes or barcode types can be added.
@@ -112,7 +112,7 @@ To start using this module correctly, the following installation and configurati
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-win-1.png)
 
     !!! important
-        The system allows any application identifier (AI) to be freely configured to associate it with custom attributes or fields, providing flexibility to adapt to different internal coding schemes. The module is installed with a predefined configuration based on the GS1-128 standard, which ensures the correct interpretation of codes in accordance with international standards. Nevertheless, users can adjust or redefine identifiers according to their particular needs. In such cases, the system will interpret the codes according to the user-defined configuration, but will not interpret GS1-128 codes in the standard way.
+        The system allows any **application identifier (AI)** to be freely configured to associate it with custom attributes or fields, providing flexibility to adapt to different internal coding schemes. The module is installed with a predefined configuration based on the **GS1-128** standard, which ensures the correct interpretation of codes in accordance with international standards. Nevertheless, users can adjust or redefine identifiers according to their particular needs. In such cases, the system will interpret the codes according to the user-defined configuration, but will not interpret GS1-128 codes in the standard way.
 
     Fields to note:
 
@@ -121,38 +121,25 @@ To start using this module correctly, the following installation and configurati
     - **Name**: Descriptive name of the barcode configuration to easily identify it.  
     - **Description**: Additional details about the purpose or scope of this configuration.  
     - **Separator**: Character used to delimit variable-length fields in the code, typically **FNC1**.  
-    - **Apply to All Separators**: Checkbox indicating whether the defined separator applies globally to all variable-length identifiers in this configuration.  
-
+    - **Apply to All Separators**: Checkbox. If checked (Yes), the configured separator is appended to the end of every identifier — both fixed‑length and variable‑length AIs must end with the separator. If unchecked (No), the separator is applied only to variable‑length identifiers.
+    
     **Barcode Component Lines** tab
 
-    - **AI**: Application Identifier code defined by GS1 (e.g., 01 for GTIN, 17 for expiration date).  
-    - **Description**: Explanation of the information the AI represents (e.g., product identifier, batch number).  
-    - **Fixed Length**: Indicates if the data length is always fixed according to the GS1 standard for that AI.  
-    - **Length**: Number of characters expected if the AI is fixed length, or maximum length if it is variable.  
+    - **AI**: Application Identifier code defined by GS1 (e.g., 01 for GTIN, 17 for expiration date).
+    - **Description**: Explanation of the information the AI represents (e.g., product identifier, batch number).
+    - **Fixed Length**: Indicates if the data length is always fixed according to the *GS1 standard* for that AI.
+   - **Length**: (Mandatory) Expected number of characters for fixed-length AIs, or maximum length for variable-length AIs.
     - **Priority**: Defines the reading order when multiple identifiers are present, ensuring the system interprets the barcode correctly.  
-    - **Entity**: Type Entity selector. The options are: Attribute, Locator, Order Line, Physical Inventory Line, Product, Reference Inventory, Shipping/Receiving Line. 
-    If Product is selected, quick options are enabled via checkboxes to define Lot, Serial Number, or Expiration Date. In addition, a value can be defined from the Entity Field field, which lists the different attributes available for the product. Each of these options is unique and cannot be combined with the others..
+    - **Entity**: Type Entity selector. The options are: **Attribute, Locator, Order Line, Physical Inventory Line, Product, Reference Inventory, Shipping/Receiving Line**. 
+        
+        If **Product** is selected, default quick options are enabled via checkboxes to define *Lot*, *Serial Number*, or *Expiration Date*. In addition, a value can be defined from the *Entity Field*, which lists the different attributes available for the product. Each of these options is unique and cannot be combined with the others.
+
         - **Entity Field**: Selector of fields available for the entity selected to assign the barcode value. The options depend on what is entered in Entity.
         - **Lot**: Check to indicate that the attribute is of the lot type.
         - **Serial No.**: Check to indicate that the attribute is of the serial number type. 
         - **Expiration Date**: Check to indicate that the attribute is of the expiration date type.
-    
-    Entity Product Configuration example
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-attr-2.png)
-    
-    **Configuration restrictions and validations**
-    
-    - When creating or modifying identifiers (AI), the system applies a series of validations designed to maintain the consistency and uniqueness of configurations.
-    - Each AI must be unique. There cannot be more than one record with the same AI number, regardless of the entity or associated field.
-    - When an AI is associated with a specific type of information such as Lot, Expiration Date, or Serial Number, that type cannot be repeated within the same configuration.
-    - For Custom Attributes, when the selected type is Attribute and a predefined Entity Field is not used, the custom name of the attribute must be unique within the configuration and no other identifier can exist that uses the same attribute name.
-    - The system allows for the inclusion of custom attributes in barcodes. During scanning, these attributes are interpreted as additional product identifiers, along with standard values, allowing for the validation and distinction of a unique product.
-
-
-
-
-    By default, to installing the dataset, the module  includes two main methods for code recognition:
+    By default, when installing the dataset, the module **includes two main methods for code recognition**:
 
     === ":material-playlist-plus: GS1-128"
         
@@ -161,23 +148,42 @@ To start using this module correctly, the following installation and configurati
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-gs1128-1.png)
 
         !!! warning
-            Etendo recognizes and validates only the identifiers shown in the list below. Any modification or inclusion of new identifiers, even those specific to the standard, requires additional development for interpretation; if an identifier that is not on the list is used, the system does not generate an error, but it will also not be able to validate its content.
+            Etendo recognizes and validates only the identifiers shown in the list below. Identifiers 90–99 (GS1‑128) are reserved for company‑specific use and can be freely assigned and mapped; the system only includes support to define **custom product attributes** that are interpreted dynamically (for example, you can map a *color* attribute to AI 93). Any identifier not present in the configured list (other than the free-use 90–99 range) requires additional development to be interpreted. Using an unknown identifier will not produce an error, but its content will not be validated or applied by the system.    
         
         !!! info 
             As indicated in the standard, when using a variable-length identifier, a separator must be added. The value declared by the standard is **FNC1**
                             
         This configuration allows recognition of different Application Identifiers (AIs) used in warehouse processes. The main implemented codes are:
 
-        | AI Code | Description                          | Details                                                                 | Length Type     |
-        |---------|--------------------------------------|-------------------------------------------------------------------------|-----------------|
+        | AI Code  | Description                          | Details                                                                 | Length Type     |
+        |----------|--------------------------------------|-------------------------------------------------------------------------|-----------------|
         | **(01)** | GTIN (Global Trade Item Number)      | Globally identifies a commercial product using a 14-digit code.         | Fixed length    |
-        | **(10)** | Batch/Lot Number                     | Ensures traceability in manufacturing and distribution processes.        | Variable length |
-        | **(17)** | Expiration Date                      | Indicates product expiration date in format YYMMDD.                      | Fixed length    |
+        | **(10)** | Batch/Lot Number                     | Ensures traceability in manufacturing and distribution processes.       | Variable length |
+        | **(17)** | Expiration Date                      | Indicates product expiration date in format YYMMDD.                     | Fixed length    |
         | **(21)** | Serial Number                        | Unique serial number of an item.                                        | Variable length |
-        | **(91)** | Locator Code                         | Identifies the specific location within the warehouse.                   | Variable length |
-        | **(92)** | Logistics Unit                       | Identifies a logistics unit, such as a pallet or box.                    | Variable length |
+        | **(91)** | Locator Code                         | Identifies the specific location within the warehouse.                  | Variable length |
+        | **(92)** | Logistics Unit                       | Identifies a logistics unit, such as a pallet or box.                   | Variable length |
+        | **(93)** | Free Use                             | -                                                                       | -               |
+        | **(94)** | Free Use                             | -                                                                       | -               |
+        | **(95)** | Free Use                             | -                                                                       | -               |
+        | **(95)** | Free Use                             | -                                                                       | -               |
+        | **(97)** | Free Use                             | -                                                                       | -               |
+        | **(98)** | Free Use                             | -                                                                       | -               |
+        | **(99)** | Free Use                             | -                                                                       | -               |
 
-        Thanks to this configuration, when scanning a GS1-128 barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, When it reads an identifier 91, it associates it with a locator or when it reads an identifier 92, it associates it with a logistics unit
+        Thanks to this configuration, when scanning a *GS1-128* barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, When it reads an identifier 91, it associates it with a locator or when it reads an identifier 92, it associates it with a logistics unit
+
+        <figure markdown="span">
+            ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-attr-2.png)
+            <figcaption> Example: Custom Product Entity Configuration</figcaption>
+        </figure>
+    
+        !!! info "Configuration Restrictions and Validations"
+    
+            - When creating or modifying identifiers (AI), the system applies a series of validations designed to maintain the consistency and uniqueness of configurations.
+            - Each AI must be unique. There cannot be more than one record with the same AI number, regardless of the entity or associated field.
+            - When an AI is associated with a specific type of information such as Lot, Expiration Date, or Serial Number, that type cannot be repeated within the same configuration.
+            - The system allows for the inclusion of custom attributes in barcodes. During scanning, these attributes are interpreted dynamicaly as **additional product identifiers**, along with standard values, allowing for the validation and distinction of a unique product.
 
     === ":material-playlist-plus: Direct String Match"
 
