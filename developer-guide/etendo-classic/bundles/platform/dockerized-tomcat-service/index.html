@@ -12279,9 +12279,11 @@ This variable sets the debug port for the Tomcat service. The default debug port
 <ul>
 <li>
 <p>The first time Tomcat is used within a Docker environment, the setup must be compiled by executing:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
-<p>This command will update the database and recompile the java classes and deploy the <code>WAR</code> to the dockerized Tomcat service. </p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild
+</span></code></pre></div>
+<p>This command will update the database and recompile the java classes and deploy the <code>WAR</code> to the <em>dockerized Tomcat service</em>. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This module modifies <strong>Gradle tasks</strong>. Executing the <code>update.database</code> command will automatically stop the Tomcat service. The <code>smartbuild</code> task will then ensure that the <code>WAR</code> file is correctly deployed in the container. After the smartbuild execution, the service will automatically restart, enabling an automated compilation from the command line.</p>
@@ -12296,7 +12298,7 @@ This variable sets the debug port for the Tomcat service. The default debug port
 <li>
 <p>Listen on the Docker Network</p>
 <p>Create the <code>etendo.conf</code> file in the location <code>/etc/postgresql/&lt;your_pg_version&gt;/main/conf.d/etendo.conf</code> with the following content:</p>
-<div class="language-text highlight"><span class="filename">etendo.conf</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>listen_addresses = 'localhost,172.17.0.1'
+<div class="language-text highlight"><span class="filename">etendo.conf</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>listen_addresses = 'localhost,172.17.0.1'
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12306,7 +12308,7 @@ This variable sets the debug port for the Tomcat service. The default debug port
 <li>
 <p>Allow Access from the Docker Subnetwork</p>
 <p>Add the following line to the <code>/etc/postgresql/&lt;your_pg_version&gt;/main/pg_hba.conf</code> file:</p>
-<div class="language-text highlight"><span class="filename">pg_hba.conf</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>host all all 172.0.0.0/8 scram-sha-256
+<div class="language-text highlight"><span class="filename">pg_hba.conf</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>host all all 172.0.0.0/8 scram-sha-256
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12316,7 +12318,7 @@ This variable sets the debug port for the Tomcat service. The default debug port
 <li>Restart the PostgreSQL Service</li>
 </ol>
 <p>Finally, restart the PostgreSQL service by running the following command in the terminal:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>postgresql
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>postgresql
 </span></code></pre></div>
 </li>
 </ol>

@@ -7958,21 +7958,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using Containers Distributed in Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Variables
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -8021,17 +8006,17 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#verifying-the-status" class="md-nav__link">
     <span class="md-ellipsis">
       Verifying the Status
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -12254,21 +12239,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using Containers Distributed in Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Variables
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -12317,17 +12287,17 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#verifying-the-status" class="md-nav__link">
     <span class="md-ellipsis">
       Verifying the Status
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -12402,7 +12372,7 @@
 <li><a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>: version <code>2.26.0</code> or higher.</li>
 </ul>
 <h2 id="using-containers-distributed-in-modules">Using Containers Distributed in Modules</h2>
-<h3 id="configuration-variables">Configuration Variables</h3>
+<p><strong>Configuration Variables</strong></p>
 <ul>
 <li>
 <p>It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.</p>
@@ -12433,49 +12403,64 @@
 <p>In this example, this variable configures the <a href="./tomcat-dockerized-service.md">Dockerized Tomcat Service</a> module port, although the necessary configurations will be included in the documentation of each module.</p>
 </div>
 </li>
+<li>
+<p><strong>Exclude Services</strong></p>
+<p>If the Compose configuration includes multiple services, you can exclude or customize which services are started by listing their names in the following property:</p>
+<p><code>docker.exclude=&lt;service1&gt;,&lt;service2&gt;</code></p>
+<p>Example:
+</p><div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">docker</span><span class="o">.</span><span class="na">exclude</span><span class="o">=</span><span class="n">das</span><span class="o">,</span><span class="n">auth</span>
+</span></code></pre></div><p></p>
+</li>
 </ul>
 <p>Finally, always to apply changes, execute </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>setup
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>setup
 </span></code></pre></div>
 <h2 id="gradle-tasks-to-manage-containers">Gradle Tasks to Manage Containers</h2>
 <p>Execute the following command to use the infrastructure:</p>
 <h3 id="running">Running</h3>
-<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>resources.up
+<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
 This command will search for all configured resources and start the containers.<p></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Before running the Gradle compilation tasks <code>./gradlew update.database compile.complete smartbuild</code>, you need to execute <code>./gradlew resources.up</code> to actually create and start the Docker containers. </p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you only have the base <code>com.etendoerp.docker</code> module installed and configured, this command will start a PostgreSQL database.</p>
 </div>
 <h3 id="stopping">Stopping</h3>
-<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>resources.stop
+<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>resources.stop
 </span></code></pre></div>
 This command will stop the containers.<p></p>
 <h3 id="down">Down</h3>
-<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>resources.down
+<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>resources.down
 </span></code></pre></div>
 This command will stop and remove the containers.<p></p>
 <h3 id="build">Build</h3>
-<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>resources.build
+<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>resources.build
 </span></code></pre></div>
 This command forces services that use a Dockerfile to rebuild their own Docker image.<p></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This command must be executed when the projection or mapping have been modified due to user changes or module management updates to these tables. The command forces the DAS service to recompile and generate new classes before starting the service.</p>
 </div>
-<h2 id="verifying-the-status">Verifying the Status</h2>
+<h3 id="verifying-the-status">Verifying the Status</h3>
 <p>To verify the status of the resources started by Docker Compose, you can use the following Docker commands:</p>
 <p><code>docker ps</code></p>
 <p>This command lists all running Docker containers. You should see the containers related to Etendo</p>
 <p><code>docker compose logs</code></p>
 <p>This command shows the logs of all the services defined in your Docker Compose configuration, which can help in troubleshooting and verifying that the services are running correctly.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>It is also possible to manage containers with tools such as <a href="https://github.com/jesseduffield/lazydocker#installation" target="_isblank">Lazydocker</a> or <a href="https://www.docker.com/products/docker-desktop/" target="_isblank">Docker Desktop</a>.</p>
+</div>
 <h2 id="postgres-database-service">Postgres Database Service</h2>
 <p>In this module a Postgres database service is included, this allows to use the dockerized database in Etendo. To use it the following steps must be followed:</p>
 <ol>
 <li>
 <p>Once the <code>com.etendoerp.docker</code> module is installed, it is necessary to add a configuration variable in the <code>gradle.properties</code> to enable the use of the service:</p>
-<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">docker_db</span><span class="o">=</span><span class="kc">true</span>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">docker_db</span><span class="o">=</span><span class="kc">true</span>
 </span></code></pre></div>
 </li>
 <li>
