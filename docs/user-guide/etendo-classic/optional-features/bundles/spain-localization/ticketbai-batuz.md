@@ -5,6 +5,7 @@ tags:
 - Tbai
 - Batuz
 - Bizkaia
+- Álava
 - Factura
 - Gipuzkoa
 title: TicketBai y Batuz
@@ -18,7 +19,11 @@ title: TicketBai y Batuz
 
 Las funcionalidades de **TicketBai** y **Batuz** en Etendo ofrecen una solución integral para el cumplimiento de las normativas fiscales en el País Vasco, orientado a garantizar la **transparencia**, **reducir el fraude fiscal**, y **asegurar la correcta emisión de facturas** electrónicas certificadas.
 
-**TicketBai** es obligatorio para las empresas y profesionales que **operen en Gipuzkoa y estén sujetos al IVA o IAE**, mientras que **Batuz** se centra específicamente en **Bizkaia**, incluyendo además del sistema TicketBai, el Libro Registro de Operaciones Económicas (LROE).
+**TicketBai** es obligatorio para **todas las personas y entidades que realicen actividades económicas** en Álava, Bizkaia o Gipuzkoa (salvo algunas exoneraciones concretas). En Bizkaia, esta obligación forma parte del proyecto **Batuz**, que añade el Libro Registro de Operaciones Económicas (LROE) y la generación de borradores de IVA, Sociedades y Renta.
+
+!!! note "Diferencias territoriales"
+    - **TicketBai**: Obligatorio en Álava, Bizkaia y Gipuzkoa
+    - **Batuz (LROE)**: Exclusivo de Bizkaia
 
 A través de este módulo, Etendo facilita la **automatización de procesos** clave como la **emisión**, **validación** y **envío en tiempo real** de facturas a las haciendas forales. El sistema garantiza la trazabilidad de las transacciones mediante la firma electrónica de las facturas y la transmisión telemática a las autoridades fiscales.
 
@@ -26,7 +31,7 @@ A través de este módulo, Etendo facilita la **automatización de procesos** cl
 
 El módulo permite:
 
-- Enviar **automáticamente** los archivos XML con las facturas a las haciendas forales (Gipuzkoa o Bizkaia).
+- Enviar **automáticamente** los archivos XML con las facturas a las haciendas forales (Gipuzkoa, Bizkaia o Álava).
 - Recibir los XML de respuesta con la confirmación del envío de las facturas.
 
 La implementación cubre:
@@ -42,7 +47,7 @@ Al instalar este módulo, el usuario podrá comprobar que:
 
 1. Se crearán nuevas ventanas:
 
-    - **Configuración TBAI**, donde se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a **TicketBai/Batuz**, incluyendo los destinos **Gipuzkoa** y **Bizkaia**.
+    - **Configuración TBAI**, donde se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a **TicketBai/Batuz**, incluyendo los destinos **Gipuzkoa**, **Bizkaia** y **Álava**.
 
     - **TBAI Facturas Enviadas**, donde se podrá revisar el historial completo de todas las facturas enviadas tanto a **TicketBai** como a **Batuz**.
 
@@ -78,7 +83,7 @@ A continuación, si el proceso se ha ejecutado correctamente, el sistema mostrar
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/successful_dataset.png)
 
-Este dataset proveerá los datos necesarios para gestionar el envío de facturas a Gipuzkoa y Bizkaia.
+Este dataset proveerá los datos necesarios para gestionar el envío de facturas a Gipuzkoa, Bizkaia y Álava.
 
 ### Configuración TBAI
 
@@ -86,7 +91,7 @@ La ventana de Configuración TBAI le permitirá ajustar los parámetros necesari
 
 - **Organización**: Seleccione la organización o entidad legal que será responsable del envío de los registros de facturas.
 
-- **Destino**: Elija el destino Gipuzkoa o Bizkaia previamente creado por el dataset.
+- **Destino**: Elija el destino **Gipuzkoa**, **Bizkaia** o **Álava** previamente creado por el dataset.
 
 - **Fecha Acogido TBAI**: Especifique la fecha en la que la organización se acoge al sistema TBAI.
 
@@ -111,6 +116,9 @@ La ventana de Configuración TBAI le permitirá ajustar los parámetros necesari
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_conf.png)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_config_bizkaia.png)
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_config_alava.png)
+
 
 *No olvide adjuntar el certificado necesario.*
 
