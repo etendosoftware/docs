@@ -12,6 +12,10 @@ jobs:
     deploy-docs:
         runs-on: ubuntu-latest
         steps:
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.13"
             - name: Checkout repository
               uses: actions/checkout@v3
               with: 
