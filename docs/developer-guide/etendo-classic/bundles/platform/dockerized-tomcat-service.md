@@ -46,7 +46,6 @@ To enable and configure the Tomcat service, the following configuration variable
 
         ![Debug-Mode.png](../../../../assets/developer-guide/etendo-classic/bundles/platform/tomcat-dockeridez-service/debug-mode.png)
 
-
 Execute the following command to apply the configuration changes:
 
 ```groovy title="Terminal"
@@ -58,10 +57,14 @@ Execute the following command to apply the configuration changes:
 - The first time Tomcat is used within a Docker environment, the setup must be compiled by executing:
     
     ``` bash title="Terminal"
+    ./gradlew resources.up
+    ```
+
+    ``` bash title="Terminal"
     ./gradlew update.database compile.complete smartbuild
     ```
 
-    This command will update the database and recompile the java classes and deploy the `WAR` to the dockerized Tomcat service. 
+    This command will update the database and recompile the java classes and deploy the `WAR` to the *dockerized Tomcat service*. 
 
     !!! info
         This module modifies **Gradle tasks**. Executing the `update.database` command will automatically stop the Tomcat service. The `smartbuild` task will then ensure that the `WAR` file is correctly deployed in the container. After the smartbuild execution, the service will automatically restart, enabling an automated compilation from the command line.
