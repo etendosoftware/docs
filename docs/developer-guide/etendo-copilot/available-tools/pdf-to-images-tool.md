@@ -19,7 +19,7 @@ The **PDF to Images Tool** is a tool that converts a PDF file into an array of i
 
 ## Functionality
 
-This tool allows assistants to convert PDF documents into image formats. This is particularly useful for scenarios where individual pages of a PDF need to be processed as images, such as in digital archiving, document review, or further image analysis tasks.
+This tool allows agents to convert PDF documents into image formats. This is particularly useful for scenarios where individual pages of a PDF need to be processed as images, such as in digital archiving, document review, or further image analysis tasks.
 
 It is invaluable for any automated workflow that requires handling PDF contents as image data. It simplifies the process of converting PDF pages to images, ensuring each page is accurately rendered and saved as a high-quality image. This tool is essential in fields such as digital archiving, where documents need to be preserved in an easily accessible and viewable format, and in applications involving image analysis, where each page of a PDF document can be independently processed.
 
@@ -76,3 +76,6 @@ If you have a PDF file located at `/home/user/document.pdf` and you want to conv
   // paths for all pages
 ]
 ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

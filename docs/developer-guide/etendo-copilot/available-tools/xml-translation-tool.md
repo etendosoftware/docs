@@ -20,7 +20,7 @@ The XMLTranslationTool directly translates XML files’ content based on the spe
 
 ## Functionality
 
-The XMLTranslationTool allows assistants to translate the content of XML files from one language to another, as specified within the XML itself. This is particularly useful in scenarios where localized versions of XML content are required for different regions or languages.
+The XMLTranslationTool allows agents to translate the content of XML files from one language to another, as specified within the XML itself. This is particularly useful in scenarios where localized versions of XML content are required for different regions or languages.
 
 This tool is ideal for automated workflows that need to handle XML translations efficiently, enabling seamless adaptation of content for various languages. By directly translating XML content based on specified language attributes, it ensures accurate localization of text without manually editing individual files.
 
@@ -79,3 +79,6 @@ If you have XML files located at `/modules/com.etendoerp.webhookevents.es_es` th
   ]
 }
 ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

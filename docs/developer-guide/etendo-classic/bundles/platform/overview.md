@@ -116,26 +116,37 @@ It allows you to execute actions via a URL call, providing a powerful way to int
 !!! info
     For more information, visit the [Etendo Webhooks developer guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
 
-## Javax XML SOAP API
 
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
-
-
-### Technical Aspects
-
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
-
-## Number To Word (English)
+## Number To Word
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
-It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
+### Overview
+
+This module provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
+
+
+### Number to Word Converter Windows
+
+:material-menu: `Application` > `General Setup` > `Application` > `Number to Word Converter`
+
+Once installed, this module adds a new configuration window called **Number to Word Converter**, where you can specify, for each organization, the Java class responsible for converting numbers to words. The module `org.openbravo.numbertoword_en` provides the implementation of the class that performs the conversion to English.
+
+![](../../../../assets/drive/1YjGbvShn-Mwb6iNpbajKgNo77ukscR3n.png)
+
+Some fields to note are:
+
+**Organization** that is the legal entity which requires printing checks in a given language.  
+**Language** that is the language's words into which the amounts to pay needs to be converted.  
+**Javaclass** that is the route where the Javaclass that converts amounts into a given language is located.
+
+The **Javaclass** field is required but empty by default unless another module such as the Number to Word (Spanish) or the Number to Word (English) is installed and properly applied to the legal entity for which it is required to print checks. Additionally, the **Javaclass** can be filled in manually.
 
 ### Technical Aspects
 
-The NumberToWord module deploys an infrastructure to define Number to Word conversion modules so that different logics for different languages can be deployed.
+The NumberToWord module deploys an infrastructure to define **Number to Word** conversion modules so that different logics for different languages can be deployed.
 
 To introduce a different language (other than English and Spanish), follow this example to extend this Number to Word extend:
 
@@ -294,17 +305,19 @@ It is mandatory to insert the organization ID when you call the web service beca
 
 :octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
-This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
+This module allows changing or updating a **Jasper Report** in an Etendo environment without stopping the server.
 
 ### Technical Aspects
 
-This module allows clearing the cache for compiled reports in Tomcat.
+This module allows clearing the cache for compiled reports in Tomcat. The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
 
-The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
+Then, in the **Clear report cache** window, click *Done*:
 
-Then, in the "Clear report cache" window, click ’Done’:
+![Clear Report Cache](../../../../assets/developer-guide/etendo-classic/bundles/platform/overview/clear-report-cache.png)
 
-![Clear Report Cache](../../../../assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
+In this window, the user, in general a developer, can delete the report cache data by clicking the **Done button**. This has technical purposes.  
+After clicking it, a success message will be shown indicating the completion of the process.
 
+---
 
-
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

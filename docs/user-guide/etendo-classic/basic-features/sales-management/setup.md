@@ -57,7 +57,7 @@ To sum up, the overall flow is:
 Prior to use commissions, some **configurations** need to be done:
 
 -   Create a sales representative. The way to do that is:
-    -   First it is possible to create an [Etendo user](../../../etendo-classic/basic-features/general-setup/security.md#user), as the sales representative can be an Etendo user who logs in in Etendo and issues sales orders/invoices.
+    -   First it is possible to create an [Etendo user](../../../etendo-classic/basic-features/general-setup/security/user.md), as the sales representative can be an Etendo user who logs in in Etendo and issues sales orders/invoices.
     -   Then create a [Business Partner](../../../etendo-classic/basic-features/master-data-management/master-data.md#business-partner). It is required to create a business partner because the sales representative could be someone who is going to issue an invoice in order to get the commissions paid.  If that is the case,  that business partner should be marked as *Vendor* in the **Vendor tab** and have a *PO Payment Method*, a *PO Payment Term* and a *Purchase Pricelist* defined for it. Besides, it is required to mark the Business Partner as Sales Representative in the **Employee tab**.
     -   And finally if the user was created, link them both. The way to do that is to select the business partner just created in the field **Business Partner** of the **User** window. 
     - Create a [Product](../../../etendo-classic/basic-features/master-data-management/master-data.md#product) and get it part of a **Price List** without pricing information as part of the required concept when the commission purchase invoice is created. 
@@ -162,4 +162,5 @@ In this window, the user defines the reasons to reject quotations. These values 
 ![Reject reason window](../../../../assets/drive/1zSNCUs2uojZGChPlX77p57T5i3J5vwaD.png)
 
 ---
-This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+
+This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

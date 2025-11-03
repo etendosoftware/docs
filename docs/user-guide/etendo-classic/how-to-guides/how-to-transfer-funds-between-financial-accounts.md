@@ -75,7 +75,7 @@ This new transaction is then shown in the *Transaction tab* of the *Financial Ac
 The next step is to post the withdrawal transaction. 
 
 !!!note
-        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
+        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md) window.
 
 The posting will look like:
 
@@ -123,7 +123,7 @@ The company in this example needs to:
 - and finally indicate the *Received In* amount, in this example 100,00 USD.
 
 This new transaction is then shown in the *Transaction* tab of the *Financial Account* window. Etendo clearly shows the Deposit Amount recorded.
-The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
+The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md) window.
 
 
 The posting will look like:
@@ -178,3 +178,7 @@ In the case of transfer of funds between financial accounts of different organiz
 - Bank B balance of the organization B is increased in 100,00 USD
 
 Above scenario would somehow mean an expense in Organization A and a revenue in Organization B.
+
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/How_To){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

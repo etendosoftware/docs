@@ -18,7 +18,7 @@ The **API Call Tool** is designed to execute HTTP requests to external APIs. It 
 !!!info
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-This tool provides the assistant with:
+This tool provides the agent with:
 
 - Integration: It allows applications to consume external REST APIs easily.
 - Flexibility: Supports GET, POST, and PUT methods with customizable headers and payloads.
@@ -107,7 +107,7 @@ Example:
 
 ## Usage Example
 
-Imagine you want to send a POST request to an external API for creating a new user. The input parameters for the assistant would be:
+Imagine you want to send a POST request to an external API for creating a new user. The input parameters for the agent would be:
 
 - `url`: https://api.example.com
 - `endpoint`: /users/create
@@ -122,3 +122,6 @@ Imagine you want to send a POST request to an external API for creating a new us
 - `token`: YOUR_BEARER_TOKEN
 
 The API Call Tool will format and send the request with the appropriate headers and body, and return the result including the response status code and body content.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -15,7 +15,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [3.1.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/3.1.0){target="_blank"} | 03/07/2025 | 25.1.0 | 25.2.x | CS | :white_check_mark: |
+| [3.2.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/3.2.0){target="_blank"} | 03/10/2025 | 25.1.0 | 25.3.x | CS | :white_check_mark: |
+| [3.1.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/3.1.0){target="_blank"} | 03/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
 | [3.0.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/3.0.0){target="_blank"} | 27/05/2025 | 25.1.0 | 25.1.x | C | :white_check_mark: |
 | [1.11.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.11.0){target="_blank"} | 07/05/2025 | 23.2.0 | 24.4.x | CS | :white_check_mark:|
 | [1.10.1](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/1.10.1){target="_blank"} | 14/03/2025 | 23.2.0 | 24.4.x | C | :white_check_mark: |
@@ -30,3 +31,6 @@ tags:
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 23.2.0 | 23.3.x | C | :white_check_mark: | 
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.1.0){target="_blank"} | 14/09/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.0.0){target="_blank"} | 11/09/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

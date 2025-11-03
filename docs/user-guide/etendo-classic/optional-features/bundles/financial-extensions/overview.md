@@ -26,6 +26,8 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1a1UNCnNNcI?si=DbicgZnWjtmkScDh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The Accounting Dimensions Assets module improves asset management and amortization by allowing the user to specify all **available accounting dimensions** during asset creation and management. Also, the Amortization window guarantees more accurate assets tracking **grouped by periods** and more complete amortization calculations.
 
 !!! info
@@ -47,6 +49,8 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7AtGyQ62FHs?si=HisPbmd0KzblSq0O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 This module enhances the bank account management enabling greater customization and control over bank account selection associated with customers and vendors. Also, the Modify Payment Plan button is added for better payment management.
 
 !!! info
@@ -63,9 +67,11 @@ This module enhances the bank account management enabling greater customization 
     For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 
-### Advanced Business Partner Settlement
+### Business Partner Settlement
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
+
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -74,6 +80,7 @@ This functionality allows the user to create settlements for invoices, both sale
 !!! info
     For more information, visit:
 
+    - [Business Partner Settlement - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
     - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
     - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
     - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
@@ -87,6 +94,9 @@ This functionality allows the user to create settlements for invoices, both sale
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
+
+!!! warning "Dependency Notice"
+    This module depends on the [**Bulk Completion**](../../optional-features/bundles/essentials-extensions/bulk-completion.md) module, as **order** processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy **close/reactivate** actions for orders will be hidden and these actions will only be available through the **Bulk Completion** button.
 
 !!! info
     For more information, visit:
@@ -133,21 +143,10 @@ This feature allows entering in the system all the financings the company has. I
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the Not Posted Documents window, which allows users to identify and post all pending transactions directly from one window. 
+This functionality allows the user to post or unpost multiple records at the same time. Also included in this module is the **Not Posted Documents** window, which allows users to identify and post all pending transactions directly from one window. 
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-
-### Business Partner Settlement
-
-:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
-
-!!! info
-    For more information, visit the [Business Partner Settlement user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#business-partner-settlement) and the [Business Partner Settlement developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#business-partner-settlement).
 
 ### Conversion Rate Downloader
 
@@ -156,7 +155,7 @@ This module provides a new document where it is possible to settle debts or cred
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
 !!! info
-    For more information, visit the [Conversion Rate Downloader user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#conversion-rate-download-rule) and the [Conversion Rate Downloader developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#conversion-rate-downloader).
+    For more information, visit the [Conversion Rate Downloader -  User guide](./conversion-rate-download-rule.md) and the [Conversion Rate Downloader - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#conversion-rate-downloader).
 
 
 ### Currency API Configuration
@@ -179,16 +178,30 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+:octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced.template`
 
-The Balance Sheet and P&L Structure Advanced, General Ledger Report Advanced and Journal Entries Report Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The **Balance Sheet and P&L Structure Advanced**, **General Ledger Report Advanced**, **Journal Entries Report Advanced** and **Trial Balance** reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
     For more information, visit:
     
-    - [Balance Sheet and P&L Structure Advanced ](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
-    - [General Ledger Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
-    - [Journal Entries Report Advanced](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
+    - [Balance Sheet and P&L Structure Advanced ](../../../basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
+    - [General Ledger Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
+    - [Journal Entries Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced)user guide.
+    - [Trial Balance](../../../basic-features/financial-management/accounting/analysis-tools.md#trial-balance) user guide.
+
+### Financial Report Budget
+
+:octicons-package-16: Javapackage: `com.etendoerp.financial.report.budget`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2VFxpx8j8Sk?si=TuLZUdBGrOCSpXIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This functionality allows creating and managing budgets for reporting purposes, offering users the possibility to compare budgeted values with actual values posted in the corresponding General Ledger.
+
+!!! info
+    For more information, visit the [Financial Report Budget guide](../../../basic-features/financial-management/accounting/transactions.md#budget).
 
 ### G/L Journal Clone
 
@@ -208,7 +221,7 @@ This functionality allows the user to clone a G/L journal in the Simple G/L Jour
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany Module user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
+    For more information, visit [the Intercompany Module user guide](../../../optional-features/bundles/financial-extensions/intercompany.md).
 
 ### Payment Removal
 
@@ -275,3 +288,5 @@ This functionality enables the user to adjust accounts, ensuring the VAT balance
 !!!info
     For more information, visit the [VAT Regularization User Guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#vat-regularization).
 
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

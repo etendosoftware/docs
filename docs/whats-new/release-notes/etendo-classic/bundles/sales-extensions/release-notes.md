@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [3.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/3.1.0){target="_blank"} | 02/07/2025 | 25.1.0 | 25.2.x | CS | :white_check_mark: |
+| [3.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/3.2.0){target="_blank"} | 30/09/2025 | 25.1.0 | 25.3.x | CS | :white_check_mark: |
+| [3.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/3.1.0){target="_blank"} | 02/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
 | [3.0.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/3.0.0){target="_blank"} | 27/05/2025 | 25.1.0 | 25.1.x | C | :white_check_mark: |
 | [1.12.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.12.0){target="_blank"} | 06/05/2025 | 22.1.0 | 24.4.x | CS | :white_check_mark: |
 | [1.11.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.11.0){target="_blank"} | 19/12/2024 | 22.1.0 | 24.4.x | C  | :white_check_mark: |
@@ -40,3 +41,6 @@ tags:
 | 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
 | 1.0.100 | 06/01/2022 | 21.4.0 | 22.1.3 | C | |
 | 1.0.000 | 03/01/2022 | 21.4.0 | 22.1.3 | C | |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

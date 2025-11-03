@@ -356,3 +356,7 @@ On the other hand, this is the content of `FULL_Example.csv`:
 
 !!! warning
     Make sure to have the corresponding permissions to connect to Files, since an incorrect configuration can lead to an error.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

@@ -213,3 +213,7 @@ This completes the creation and processing of:
 
 - a partially prepaid order in Etendo. As a result, an invoice has been partially paid after registering a prepayment against the corresponding order.
 - a prepaid invoice in Etendo. As a result, the customer receivables are canceled at the time of registering and posting the invoice prepayment.
+
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/How_To){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

@@ -26,11 +26,11 @@ Accounting entries not directly related to [documents](../financial-management/a
 There are three ways of accounting in Etendo:
 
 - To manually post each document by using the process button *Post*.
-The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](../procurement-management/transactions.md#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](../general-setup/application.md#preference).
+The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](../procurement-management/transactions.md#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](../general-setup/application/preference.md).
 
 - To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](../financial-management/accounting/transactions.md#gl-posting-by-db-tables)
 
-- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](../general-setup/process-scheduling.md#process-request) window.
+- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](../general-setup/process-scheduling/process-request.md) window.
 
 Accounting activities such as:
 
@@ -50,7 +50,7 @@ Finally Etendo has an *integrated accounting system* that combines general accou
 In other words, Etendo allows to post transactions to the ledger which can include different dimensions:
 
 - Those dimensions can be centrally maintained in the [Client](../general-setup/client.md) therefore are available to all the organizations within that Client.
-Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](../financial-management/accounting/setup.md##glconfig).
+Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](../financial-management/accounting/setup.md#general-ledger-configuration).
 
 Those dimensions are then available just for that Organization.
 
@@ -216,7 +216,7 @@ Accounts such as balance sheet accounts (assets, liabilities and owner's equity)
 !!!Note 
     It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.
 
-- [General Ledger configuration](../financial-management/accounting/setup.md#glconfig)
+- [General Ledger configuration](../financial-management/accounting/setup.md#general-ledger-configuration)
 
 The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the *Currency* and the *Chart of Accounts* among others.
 
@@ -227,7 +227,7 @@ Having said that, the accounting configuration detailed in this section is the o
 - and a Fiscal Calendar
 
 Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the [Initial Organization Setup](../general-setup/enterprise-model.md#initial-organization-setup) and in the [Organization](../general-setup/enterprise-model.md#organization) section.
+Rest of the Organization types behave as explained in the [Initial Organization Setup](../general-setup/enterprise-model/initial-organization-setup.md) and in the [Organization](../general-setup/enterprise-model/organization.md) section.
 
 Very briefly:
 
@@ -370,7 +370,7 @@ Etendo allows to perform below detailed checks prior to the closing of the fisca
 
 - Run the [Not Posted Transaction](../financial-management/accounting/transactions.md#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
 - Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](../financial-management/accounting/setup.md#active-tables).
-- Unscheduled the [Accounting Server Process](../general-setup/process-scheduling.md#process-request) therefore an stable scene can be assured.
+- Unscheduled the [Accounting Server Process](../general-setup/process-scheduling/process-request.md) therefore an stable scene can be assured.
 - Check the [Financial Account/s](../financial-management/receivables-and-payables/transactions.md#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](../../how-to-guides/how-to-transfer-funds-between-financial-accounts.md).
 
 Before running the close year process the accounting periods can be [closed](../financial-management/accounting/setup.md#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
@@ -433,3 +433,7 @@ Financial Management has a connection with other application areas, as there are
 - [Sales Management](../sales-management/getting-started.md) as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.
 - [Warehouse Management](../warehouse-management/getting-started.md) as Physical Inventory is posted there.
 - Production Management as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.
+
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

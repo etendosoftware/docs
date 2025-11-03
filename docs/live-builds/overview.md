@@ -1,21 +1,20 @@
 ---
-tags:
-  - Builds
-  - Livebuilds
-  - Etendo
-  - Real-time Testing
-  - Postgres
-  - Oracle
-  - Environments
-
+title: Etendo Test Environments
 hide:
     - navigation
     - toc
+tags:
+    - Builds
+    - Livebuilds
+    - Etendo
+    - Postgres
+    - Oracle
+    - Environments
 ---
 
-![alt text](../assets/live-builds/overview/livebuilds.png){ width=250 align="right"}
+# Etendo Test Environments
 
-# Etendo Test Environments 
+This page provides quick access to Etendo live test environments that are always kept up to date, making them ideal for safely testing new features and reproducing issues without affecting production.
 
 <div class="grid cards" markdown>
 
@@ -25,26 +24,27 @@ hide:
 
     ---
 
-    - [Etendo 24.X + Bundles](https://demo-24.etendo.cloud/etendo/security/Login){ target="blank"} 
-    - [Etendo 25.X + Bundles](https://demo-25.etendo.cloud/etendo/security/Login){ target="blank"} 
+    [Etendo 24 + Bundles](https://demo24.bundles.etendo.cloud/etendo/security/Login){ target="blank"}<br>
+    [Etendo 25+ Bundles](https://demo25.bundles.etendo.cloud/etendo/security/Login){ target="blank"}<br>
+    [:material-new-box: Etendo 25+ Bundles + New UI](https://demo25.bundles.newui.etendo.cloud){ target="blank"}
 
 -   :material-test-tube:{ .lg .middle } **Etendo**
-    
+
     Etendo environments supported without any modules installed.
 
     ---
 
-    - [Etendo 24.X](https://livebuild-24.labs.etendo.cloud/etendo/security/Login){ target="blank"} 
-    - [Etendo 25.X](https://livebuild-25.labs.etendo.cloud/etendo/security/Login){ target="blank"} 
+    [Etendo 24](https://demo24.etendo.cloud/etendo/security/Login){ target="blank"} <br>
+    [Etendo 25](https://demo25.etendo.cloud/etendo/security/Login){ target="blank"} 
 
 </div>
 
-[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="blank"} _Here you can check the Etendo servers status._
+[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="blank"} *Here you can check the Etendo servers status.*
 
 !!! tip "Credentials"
     The default access credentials are: <br> 
-        **Username:** admin <br>
-        **Password:** admin <br>
+    **Username:** admin <br>
+    **Password:** admin <br>
 
 !!! note "These live builds are refreshed and reset every day at 9:00 PM UTC."
     

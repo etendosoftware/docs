@@ -3,7 +3,7 @@ title: Copilot Extensions Bundle
 tags: 
     - Copilot Extensions
     - AI Tools
-    - Assistant Features
+    - Agent Features
     - Etendo Modules
     - Integration Guide
 ---
@@ -45,12 +45,14 @@ This module includes **Bastian**, an agent equipped with the Etendo Documentatio
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.agents`
 
-The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks with interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the assistants and Knowledge base, they can be replicated and customized agents can be created very easily.
+The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks by interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the agents and Knowledge base, they can be replicated and customized agents can be created very easily.
 
 
 #### Agents
 
 ##### Data Initialization Supervisor
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cn__oNPH5X0?si=yPiVW3to9X7UOsG6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This is a supervisor agent that delegates and orchestrates initialization tasks for the client (creation of initial business partners, products, etc.).
 ![alt text](../../../assets/user-guide/etendo-copilot/bundles/overview/client-initialization-graph.png)
@@ -59,9 +61,14 @@ This supervisor has the following agents:
 - **Business Partner Generator**: This agent creates business partners.
 - **Product Generator**: This agent creates products.
 - **Physical Inventory Generator**: This agent creates physical inventories to add stock to the products.
-- **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc.
+- **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
+
+    !!! info
+        For more information you can read [How to Create a Spreadsheet Tasks Agent](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
 
 ##### Invoice Supervisor
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/65PPI9PN7f4?si=G7tS_GO1HKWRztQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 The Invoice Supervisor is an orchestration agent responsible for managing the creation of purchase invoices in Etendo. This supervisor decides how to route incoming data (ZIP files, individual files, or user input) to the appropriate agents. 
     
@@ -73,7 +80,11 @@ The Invoice Supervisor is an orchestration agent responsible for managing the cr
 
 This supervisor has the following agents:
 
-- **Bulk Task Creator**: Bulk task creator for iterating over ZIP or Excel/CSV files, used when receiving a ZIP file with multiple invoices.
+- **Bulk Task Creator**: Bulk task creator to iterate over ZIP or Excel/CSV files, used when receiving a ZIP file with multiple invoices. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
+    
+    !!! info
+        For more information you can read [How to Create a Spreadsheet Tasks Agent](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
+
 - **Purchase Invoice Expert**: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.
 
 
@@ -122,7 +133,7 @@ This agent is designed to help users read information from the database. It allo
 
 The **Etendo Copilot Subapp** is designed to integrate seamlessly with the existing features of Etendo Copilot, extending its functionality to mobile and tablet devices. This subapplication allows users to interact with AI-driven copilot agents directly from their mobile devices, enhancing productivity and accessibility on the go.
 
-The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot agents, and access specific data** based on the user’s role. The assistants dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
+The Etendo Copilot Subapp offers key features such as the ability to **attach files, interact with Copilot agents, and access specific data** based on the user’s role. The agents dynamically appear according to the user’s assigned role, ensuring a personalized experience tailored to their responsibilities within the system.
 
 With compatibility for both mobile phones and tablets, this subapplication ensures flexibility in how users can access and leverage the Copilot agents, facilitating smoother workflows across different devices.
 
@@ -139,7 +150,11 @@ With compatibility for both mobile phones and tablets, this subapplication ensur
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is a set of assistants that helps to perform tasks related to development in Etendo Classic, like creating a new window, creating a new module, creating processes, etc.
+The **Dev Assistant** is a set of agents that helps to perform tasks related to development in Etendo Classic, like creating a new window, creating a new module, creating processes, etc.
 
 !!!info
     For more information, visit: [Dev Assistant](../../../developer-guide/etendo-copilot/bundles/dev-assistant.md) developer guide.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

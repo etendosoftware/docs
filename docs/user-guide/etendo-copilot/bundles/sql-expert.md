@@ -4,7 +4,7 @@ tags:
     - SQL Queries
     - Database Access
     - Query Automation
-    - Assistant Features
+    - Agent Features
 ---
 
 # SQL Expert
@@ -13,23 +13,23 @@ tags:
 
 ## Overview
 
-This Assistant is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. Use a webhook to get the necessary information to generate the SQL query. The user can ask questions about the database, and the Assistant will determine whether to return a SQL query or execute the query and return the obtained result.
+This Agent is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. Use a webhook to get the necessary information to generate the SQL query. The user can ask questions about the database, and the Agent will determine whether to return a SQL query or execute the query and return the obtained result.
 
 ## Components
 
-The SQL Expert Assistant is composed of the following components:
+The SQL Expert Agent is composed of the following components:
 
 - [API Call Tool](../available-tools/openapi-tool.md)
 
-- **DBQueryExec - Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The assistant call the Webhook to execute the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
+- **DBQueryExec - Webhook**: This Webhook allows the Agent to execute SQL queries in the database. The agent call the Webhook to execute the query in the database and returns the result to the Agent. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
 
 
-## Assistant Setup 
+## Agent Setup 
 
 1. This module is included in the Copilot Extensions Bundle
 
     !!! info
-        To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+        To be able to include this agent, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 
 2. Check the necessary `ETENDO_HOST` variable in the `gradle.properties` file.
@@ -42,18 +42,18 @@ The SQL Expert Assistant is composed of the following components:
         Replace http://localhost:8080/etendo with the real url of the Etendo system.
 
 
-3.  A new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Assistant` window.
+3.  A new agent named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Agent` window.
 
-4. Run **Sync Assistant** process, loged as System Administrator role.
+4. Run **Sync Agent** process, loged as System Administrator role.
 
 5. Restart Docker image using `./gradlew resources.up` tasks.
 
-6. Configure access to the agent from the [Assistant Access](../../etendo-copilot/setup-and-usage.md#assistant-access-window) window.
+6. Configure access to the agent from the [Agent Access](../../etendo-copilot/setup-and-usage.md#agent-access-window) window.
 
-7. You can use the **SQL Expert** assistant as a **System Administrator**
+7. You can use the **SQL Expert** agent as a **System Administrator**
 
     !!!warning 
-        In case of using this assistant with other roles: 
+        In case of using this agent with other roles: 
         
         1. It must be verified that the role has webhooks execution enabled: 
             ![](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-service-enabled.png)
@@ -108,3 +108,6 @@ The SQL Expert Assistant is composed of the following components:
     <br>
     **Query to obtain which is the invoice with the highest registered amount?**
     </figure> 
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -15,7 +15,7 @@ tags:
 The Task Management Tool is a utility for managing tasks dynamically within a conversation state. It provides flexible task queue operations such as adding, retrieving, checking status, and marking tasks as completed. This tool is particularly useful in orchestrated workflows where multi-step task handling is required.
 
 !!!info
-    This tool is part of the Copilot Framework and is typically used inside multi-agent or workflow-based assistants.
+    This tool is part of the Copilot Framework and is typically used inside multi-agent or workflow-based agents.
 
 ## Functionality
 
@@ -27,7 +27,7 @@ This tool allows for **centralized task queue management** using different opera
 - `status`: Retrieves the current task queue status, including current, pending, and completed tasks.
 - `mark_done`: Marks the current task as completed and moves it to the finished list.
 
-The tool works by modifying and storing task-related data in the assistant's shared state, making it ideal for orchestrating step-by-step workflows in multi-agent systems.
+The tool works by modifying and storing task-related data in the agent's shared state, making it ideal for orchestrating step-by-step workflows in multi-agent systems.
 
 ### Parameters
 
@@ -62,3 +62,6 @@ The tool returns a **Command** object that includes:
 
 !!!note
     This tool should be used with LangGraph or other LangChain multi-step orchestration engines.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -295,7 +295,7 @@ As we can see in the query, it receives the`:name` parameter of String type that
 Restart the Das RX service to recognize the projections and mappings.
 
 ```bash title="Terminal"
-./gradlew rx.das.restart
+./gradlew resources.build
 ```
 
 !!! info 
@@ -656,3 +656,5 @@ In this example:
 
 By integrating this logging utility, developers can track application behavior and debug more effectively.
 
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

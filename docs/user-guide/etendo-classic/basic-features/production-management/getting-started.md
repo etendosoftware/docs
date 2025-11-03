@@ -62,7 +62,7 @@ Apart from the [setup windows](./setup.md) in the Production module, additional 
     !!! info
         For more information about the configuration of business partners, please refer to the [Business Partner](../master-data-management/master-data.md#business-partner) section.
 
-3. Work Efforts can be posted to the [General Ledger Journal](../financial-management/accounting/transactions.md#gl-journal). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [Active Tables](../financial-management/accounting/setup.md#glconfig) tab of the General Ledger configuration.
+3. Work Efforts can be posted to the [General Ledger Journal](../financial-management/accounting/transactions.md#gl-journal). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [Active Tables](../financial-management/accounting/setup.md#general-ledger-configuration) tab of the General Ledger configuration.
 
 ## Execution
 
@@ -107,6 +107,6 @@ Production Management interacts with the following modules:
 
 ---
 
-- This work is a derivative of ["Production Management"](http://wiki.openbravo.com/wiki/Production_Management){target="_blank"} by [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, licensed under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
+- This work is a derivative of [Production Management](http://wiki.openbravo.com/wiki/Production_Management){target="_blank"} by [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, licensed under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
 
-- This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+- This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

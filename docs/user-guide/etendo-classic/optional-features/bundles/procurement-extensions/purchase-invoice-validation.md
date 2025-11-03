@@ -35,7 +35,7 @@ A configurable system preference will be used to enable or disable the validatio
 From the Preference window, the user is able to create a new preference, choosing the corresponding property, which for this functionality will be Validate duplicated purchase invoices. In the Value field, it is necessary to add Y to enable the preference or N to disable it.
 
 !!!note
-    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information,  visit [preference](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference){target="_blank"}.
+    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information, visit [preference](../../../../../user-guide/etendo-classic/basic-features/general-setup/application/preference.md)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png)
 
@@ -44,3 +44,6 @@ From the Preference window, the user is able to create a new preference, choosin
 The validation will prevent the saving of a purchase invoice that is considered duplicated according to the established criteria. If the system detects that the invoice being saved is duplicated, the user will be informed through a message indicating the nature of the duplication as shown here:
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation3.png)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -285,7 +285,7 @@ The settlement record is registered in the **Business Partner Settlement** windo
 ![](../../../../../assets/drive/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
 
 !!! info
-    For more information, visit [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+    For more information, visit the [Business Partner Settlement Module - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
   
 ### Advanced Bank Account Management
 
@@ -322,7 +322,7 @@ The steps to follow are:
   - a payment can group separate orders/invoices to be paid for the same vendor into one payment
   - or group separate orders/invoices to be paid regardless the vendor into one payment.
 
-#### **Header**
+#### Header
 
 The payment proposal window allows the user to enter a set of selection criteria that help the user to make payments massively.
 
@@ -365,7 +365,7 @@ Once executed:
 - The Payment Out Plan and the Payment Monitor information of all the documents involved is updated.
 - Finally, the Payment Status changes to _Awaiting Execution_ when an _Automatic_ Execution Type is defined or to _Payment Made_ if the execution is _Manual_. If there is an execution process defined, it can be run by clicking the Execute Payment button.
 
-#### **Lines**
+#### Lines
 
 The lines tab shows the transactions (orders and/or invoices) included in the payment proposal.
 
@@ -385,7 +385,7 @@ The window offers another possibility of managing the same information which can
 
 The advantage of this window is that it offers a more immediate view of all the sales invoice payment plans which still have an outstanding amount to be paid.
 
-#### **Payment Plan**
+#### Payment Plan
 
 Sales invoice payment plan information is shown grouped in two sections.
 
@@ -695,7 +695,7 @@ The settlement record is registered in the **Business Partner Settlement** windo
 ![](../../../../../assets/drive/1hLhHQMEICTtf2nc-QF6lrolaOOnwIabv.png)
 
 !!! info
-    For more information, visit [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+    For more information, visit the [Business Partner Settlement Module - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
 
 ### Advanced Bank Account Management
 
@@ -722,9 +722,9 @@ Payment obligations and amounts due from customers are created in the Purchase a
 !!! warning
     It is very important to properly define every parameter of each Financial Account. During your Financial Account setup process, you will need information like: the bank account information, the payment methods allowed, the bank account currency/ies, the accounting information, etc.
 
-#### **Account**
+### Account
 
-The financial account window contains essential information such as the bank account number and allows the user to perform a set of processes such as to add deposit or withdrawal transactions to the financial account or to import and match a bank statement file.
+The Financial Account window contains essential information such as the bank account number and allows the user to perform a set of processes such as to add deposit or withdrawal transactions to the financial account or to import and match a bank statement file.
 
 ![Account](../../../../../assets/drive/1G1flRQCPZ_77ab9ntPfNwRfU9TwaaJDf.png)
 
@@ -758,7 +758,7 @@ The next section **Bank Account** is visible only for accounts of the type **Ban
   - or _Use SWIFT + Generic Account No._
 
 !!! info
-    _Note that other options can be added by other modules that extend the supported Bank Account Format_.
+    Note that other options can be added by other modules that extend the supported Bank Account Format.
 
 **More information** section can include information such as:
 
@@ -768,102 +768,14 @@ The next section **Bank Account** is visible only for accounts of the type **Ban
 - And the **Write-off Limit** Value for the Write-off limit in a payment. When the type selected is Amount, the value holds the amount on financial account currency.  
   This field is displayed when the "Write-off limit" property value is set to "Y" in the Preference window.
 
-Let's take for instance the setup of a "Write-off Limit" amount of 1,00 $ for a given financial account.
+    Let's take for instance the setup of a "Write-off Limit" amount of 1,00 $ for a given financial account.
 
-While registering a customer's payment in the Add Payment window, the system will not allow the user to write off an amount above the write-off limit amount defined.
+    While registering a customer's payment in the Add Payment window, the system will not allow the user to write off an amount above the write-off limit amount defined.
 
-The same applies to supplier's payments created by using the Add Payment window or the Payment Proposal feature.
+    The same applies to supplier's payments created by using the Add Payment window or the Payment Proposal feature.
 
-The financial account window allows the user to perform the actions listed below:
-
-##### **Transaction Tab**
-
-The transactions of a financial account can be of two types:
-
-- **Deposit** transactions in the case of receiving whatever document type (invoice, order, G/L item or fee) payment in
-- or **Withdrawal** transactions in the case of making a payment out of whatever document type (invoice, order, G/L item or fee)
-
-Those two transaction types can be created in three ways:
-
-- **automatically**, if the payment method used to pay a document (and assigned to a given financial account) is configured to get that:
-  - the supplier's payments once processed in the Payment Out window are automatically withdrawn from the financial account
-  - the customer's payments once processed in the Payment In window are automatically deposited in the financial account.
-  - or the "G/L Item Payments" once created in a G/L Journal are automatically either deposited to/withdrawn from the financial account.
-- **in a batch**, by adding several payments as transactions through the Add Multiple Payments process window
-
-or **manually**, by creating a new record in the transaction tab of the financial account window.
-
-![Transaction tab](../../../../../assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
-
-- Fields to note in transaction tab:
-  - **Transaction Type:** The Transaction Type indicates the type of transaction to be submitted. The transaction tab also allows the user to create a "Deposit" or a "Withdrawal" transactions based on a "G/L Item" transaction type or on a "Payment".
-    - Bank fee
-    - BP Deposit
-    - BP Withdrawal
-  - **Transaction Date:** The Transaction Date field defines the date of the transaction being processed.
-  - **Accounting Date:** The date this transaction is recorded for in the general ledger.
-  - **Payment:** Payment selector
-  - **G/L Item:** General ledger item selector
-  - **Currency:** Indicates the currency to be used when processing this document
-  - **Deposit Amount:** amount in the case of receiving a payment
-  - **Withdrawal Amount:** amount in the case of make a payment
-  - **Accounting Dimensions**
-
-If creating a "Bank Fee" is necessary, select "Bank Fee" in "Transaction Type" combo, enter a transaction and accounting date and the amount either received in or paid out.
-
-Then save and process the transaction.
-
-![Bank fee](../../../../../assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
-
-To create a new G/L item transaction, select "BP Deposit" or "BP Withdrawal" in transaction type and select the "**G/L Item**" in the G/L item combo, enter a transaction and accounting date, select a G/L Item, enter the amount either **received in** or **paid out** and save and process the transaction.
-
-![GL Item](../../../../../assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
-
-If the user needs to create a new payment transaction, it is allowed to select a created payment or create a new payment from the payment selector.
-
-- If the payment is created, the user should choose the payment in the payment selector.
-
-![Payment selector](../../../../../assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
-
-Description and amount fields in the transaction tab will be automatically filled and to complete the transaction it is necessary to save and process.
-
-If creating a payment deposit transaction is necessary, the user should click '+' button' in the payment selector and an add payment popup will be opened. "**Received In**" needs to be selected in the field "Document".  
-This window allows to:
-
-- select already created and processed payments
-  - use the field "Received From" to narrow down the searching of documents to pay
-- use the business partner's "Available Credit" if any, selecting the credit in credit grid
-- enter the "Actual Payment" amount received
-- enter a "Payment Date"
-- select the "Transaction Type" to pay
-- use some other filters such as the Order or Invoice "Document No." or the "Amount From/To"
-- and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
-  Last step is to process the just created payment and get it deposited in the financial account.
-
-![Payment deposit transaction](../../../../../assets/drive/1j47oaWj1O4_LLGPha7guEuKBccB3Rn0h.png)
-
-If creating a **payment withdrawal transaction** is necessary, the user should click '+' button' in the payment selector and an add payment popup will be opened. In the add payment popup, the option "**Paid Out**" needs to be selected in the field "Document". This window allows the user to:
-
-- select already created and processed payments
-- use the field "To Be Paid To" in order to narrow down the searching of documents to pay
-- use the business partner's "Available Credit" if any, selecting the credit in credit grid
-- enter a "Payment Date"
-- select the "Transaction Type" to pay
-- use some other filters such as the Order or Invoice "Document No." or the "Amount From/To"
-- and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
-  Last step is to process the just created payment and get it deposited in the financial account.
-
-![Payment withdrawal](../../../../../assets/drive/1DbaEJtPopUAIr5_S_L8g3mVOk3TQlqOT.png)
-
-Payment selector has applied an explicit filter (current financial account)
-
-![Payment filtered](../../../../../assets/drive/1DWBNx-RWSxny0gHyXIU2D-0cuKyKY5iA.png)
-
-It is possible to add payments for alternative financial accounts by clicking the funnel icon to clear the filters.
-
-![Payment without filter](../../../../../assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
-
-##### **Add Multiple Payments**
+#### Buttons
+##### Add Multiple Payments
 
 The "Add Multiple Payments" process button allows the user to create and process financial account transactions by selecting several payments at the same time.
 
@@ -884,7 +796,7 @@ in the "Transaction" tab of the Financial Account.
 
 All those new transactions are created as already "processed", therefore can either be "reactivated" if required or finally "post" to the ledger if applicable.
 
-##### **Reconcile**
+##### Reconcile
 
 The header process button "**Reconcile**" is shown for those financial accounts which do not have a matching algorithm assigned.
 
@@ -916,7 +828,7 @@ The "**Reconcile**" process button reconciles the transactions marked as cleared
 
 Finally, the "**Cancel**" process button just closes the reconciliation window and removes the ending balance entered, if any.
 
-##### **Import Statement**
+##### Import Statement
 
 The header process button **Import Statement** is shown for those financial accounts which have a matching algorithm assigned. This process button allows the user to import a bank statement which therefore is saved in the Imported Bank Statements tab of the financial account, and in the Bank Statement Lines sub-tab.
 
@@ -946,7 +858,7 @@ This window allows to:
 - select a **bank statement file**
 - and select the **file format** of the selected bank statement file to import.
 
-##### **Match Statement**
+##### Match Statement
 
 Once a bank statement file has been imported, the button "Match Statement" opens a new window where the imported bank statement lines and the existing financial transactions are displayed. By default, there is an implicit filter which hides the bank statement lines that are already matched.
 
@@ -1024,116 +936,139 @@ This should not be the standard procedure, as there should be an exercise of rev
 !!! info
     This process will impact starting and ending balance of subsequent documents whenever ending balance changes for the reconciliation being edited.
 
-##### **Funds transfer**
+##### Funds Transfer
 
-_Input fields:_
+The Funds Transfer functionality in the Financial Account window enables the movement of money between two different financial accounts within an organization. This action is typically used for internal transfers, such as moving funds from a bank account to a petty cash account, or between different currency accounts.
 
-- **Transaction date**:
-  - It is mandatory
-  - This date is used for the records that this process creates. Transaction and accounting date
-- **Deposit to**: This combo box is displayed with all the financial accounts that belong to the organization tree of the financial account that is selected and that have the Funds Transfer flag enabled
-- **G/L item**: Default value is set from **Default G/L Item for Funds Transfer** configured in Financial Account's organization or its parent organization. The user can overwrite this parameter. This combo box is displayed with all the G/L Items that belong to the org tree of the financial account that is selected.
-- **Deposit amount**: Mandatory
-- **Currency from**: Not editable. Currency of the financial account selected
-- **Currency to**: Not editable. Currency of the financial account to
-- **Rate**: The conversion rate from one currency to other
-  - It is null by default
-  - It is shown just when currencies are different
-  - In case the user leaves this value as null the system uses the conversion rate configured in the system for that date. If there is nothing defined then an error is raised
-- **Bank fee**:
-  - Not marked by default
-  - When being checked two more fields are shown
-    - Bank fee from and Bank free to
-- **Description**:
-  - Description is set as "Funds Transfer Transaction" by default. The user can overwrite the description if needed.
+![Funds transfer](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/funds-transfer.png)
 
-![Funds transfer](../../../../../assets/drive/12Q4Emkj5LA4t5Y7f16uy0IJWRKlJvkIo.png)
+Fields to note:
 
-_Process:_
+- **Transaction date**: It is mandatory. This date is used for the records that this process creates. Transaction and accounting date
+- **Deposit to**: This dropdown displays all the financial accounts that belong to the organization tree of the financial account that is selected and that have the **Funds Transfer** flag enabled.
+- **G/L item**: Default value is set from **Default G/L Item for Funds Transfer** configured in Financial Account's organization or its parent organization. The user can overwrite this parameter. This dropdown is displayed with all the G/L Items that belong to the org tree of the financial account that is selected.
+- **Deposit amount**: Mandatory.
+- **Currency from**: Not editable. Currency of the financial account selected.
+- **Currency to**: Not editable. Currency of the financial account to.
+- **Multiple Rate By**: The conversion rate from one currency to another:
+    - It is null by default
+    - It is shown just when currencies are different
+    - In case the user leaves this value as null the system uses the [conversion rate](../../general-setup/application/conversion-rates.md) configured in the system for that date. If there is nothing defined then an error is shown.
+- **Bank fee**: The fee charged by the bank from/to where the transaction originated/was received. Not marked by default. When checked, two more fields are shown:
+    - Bank fee from: To enter the corresponding fee amount.
+    - Bank fee to: To enter the corresponding fee amount.
+- **Description**: Description is set as **Funds Transfer Transaction** by default. The user can overwrite the description if needed.
 
-Being in the account tab and selecting the corresponding financial account:
+#### Tabs
 
-- It creates a new record in the transaction tab for that financial account:
-  - **Transaction type**: BP Withdrawal
-  - **Transaction date**: The one selected in the popup
-  - **Accounting date**: The one selected in the popup
-  - **G/L items**: The one selected in the button
-  - **Description**: G/L Item: the one selected in the popup
-  - **Currency**: The one of the financial account
-  - **Withdrawal Amount**: The amount entered in the button
-  - **Processed**: Y
-  - **Organization**: the same as the financial account
-  - **Status**: Withdrawn not cleared
-- If _Bank fee_ _from_ is filled, it will create another record in the transaction tab for that financial account:
-  - **Transaction type**: Bank fee
-  - **Transaction date**: the one selected in the popup
-  - **Accounting date**: the one selected in the popup
-  - **Currency**: The one of the financial account
-  - **Withdrawal Amount**: The amount entered (Bank fee from)
-  - **Processed**: Y
-  - **Organization**: the same as the financial account
-  - **Status**: Withdrawn not cleared
-- It creates a new record in the transaction tab for the **deposit to** financial account
-  - **Transaction type**: BP Deposit To
-  - **Transaction date**: The one selected in the button
-  - **Accounting date**: The one selected in the button
-  - **G/L Items**: The one selected in the button
-  - **Description**: G/L Item: the one selected in the button
-  - **Currency**: the one of the financial account
-  - **Deposit Amount**: The amount entered in the button
-  - **Processed**: Y
-  - **Organization**: The same as the financial account
-  - **Status**:Deposit not cleared
-  - **Origin financial account**: Point to the transaction created for the Financial Account selected to open the button
-- If _Bank fee to_ is filled, it creates another record in the transaction tab for that financial account
-  - **Transaction type**: Bank fee
-  - **Transaction date**: The one selected
-  - **Accounting date**: The one selected
-  - **Currency**: The one of the financial account
-  - **Withdrawal amount**: Bank fee to
-  - **Processed**:Y
-  - **Organization**: the same as the financial account
-  - **Status**: Withdrawn not cleared
-  - **Origin financial account**: It points to the financial transaction that triggered the transaction
+##### Transaction
 
-#### **Transaction**
+The transactions of a financial account can be of two types:
 
-This tab shows all the transactions of the financial account.
+- **Deposit** transactions in the case of receiving whatever document type (invoice, order, G/L item or fee) payment in
+- or **Withdrawal** transactions in the case of making a payment out of whatever document type (invoice, order, G/L item or fee)
 
-As already explained, those transactions can either be:
+Those two transaction types can be created in three ways:
 
-- "**Deposits**" coming from payments received in
-- or "**Withdrawals**" as a consequence of the payments made out
+- **automatically**, if the payment method used to pay a document (and assigned to a given financial account) is configured to get that:
+    - the supplier's payments once processed in the Payment Out window are automatically withdrawn from the financial account
+    - the customer's payments once processed in the Payment In window are automatically deposited in the financial account.
+    - or the "G/L Item Payments" once created in a G/L Journal are automatically either deposited to/withdrawn from the financial account.
 
-The transactions shown in this tab can be:
+- **in a batch**, by adding several payments as transactions through the Add Multiple Payments process window
 
-- manually created by adding a new record in this tab
-- created & processed as a batch by selecting several payments at the same time through the Add Multiple Payments process window
-- or automatically created whenever the actions listed below are taken while processing a payment in/out, either in the sales/purchase invoice windows or in the payment in/out windows.
-  - **Process Made Payment(s) and Withdrawal**
-  - **Process Received Payment(s) and Deposit**
+- or **manually**, by creating a new record in the transaction tab of the financial account window.
 
-Some fields to note are:
+![Transaction tab](../../../../../assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
 
-- **G/L item** - this field/column is populated if the payment is related to a G/L item payment
-- **Foreign Amount** - this field/column is populated if the payment was received or made in a currency different from the financial account currency.
+- Fields to note in the transaction tab:
+    - **Transaction Type:** The Transaction Type indicates the type of transaction to be submitted. The transaction tab also allows the user to create a "Deposit" or a "Withdrawal" transactions based on a "G/L Item" transaction type or on a "Payment".
+        - Bank fee
+        - BP Deposit
+        - BP Withdrawal
+    - **Transaction Date:** The Transaction Date field defines the date of the transaction being processed.
+    - **Accounting Date:** The date this transaction is recorded for in the general ledger.
+    - **Payment:** Payment selector.
+    - **G/L Item:** General ledger item selector.
+    - **Currency:** Indicates the currency to be used when processing this document.
+    - **Deposit Amount:** amount in the case of receiving a payment.
+    - **Withdrawal Amount:** amount in the case of making a payment.
+    - **Dimensions:** Organization, Business partner and Project information.
+    - **Foreign Amount**: Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
+    - **Foreign Currency**: Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
 
-!!! info
-    It is possible to allow the user **either to receive or make payments in multiple currencies** (foreign currency), while configuring the payment methods assigned to a given financial account.
+        !!! info
+            It is possible to allow the user **either to receive or make payments in multiple currencies** (foreign currency), while configuring the payment methods assigned to a given financial account. For more information about this option, visit [Payment Method](../../financial-management/receivables-and-payables/setup.md#payment-method-configuration).
 
-#### **Exchange rates**
 
-This tab allows the user to define an exchange rate to use while posting the financial account transaction to the ledger whenever the currency of the financial account is not the same as the general ledger currency.
+![Bank fee](../../../../../assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
 
-#### **Accounting History**
+1. If creating a **Bank Fee** is necessary, select **Bank Fee** in Transaction Type dropdown, enter a transaction and accounting date and the amount either received in or paid out.
 
-This tab shows the accounting history of a given transaction.
+2. Then save and process the transaction.
+
+
+![GL Item](../../../../../assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
+
+To create a new G/L item transaction, select `BP Deposit` or `BP Withdrawal` in transaction type and select the **G/L Item** in the G/L item dropdown, enter a transaction and accounting date, select a G/L Item, enter the amount either **received in** or **paid out** and save and process the transaction.
+
+If the user needs to create a new payment transaction, it is allowed to select a created payment or create a new payment from the payment selector.
+
+- If the payment is created, the user should choose the payment in the payment selector.
+
+    ![Payment selector](../../../../../assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
+
+Description and amount fields in the transaction tab will be automatically filled and to complete the transaction it is necessary to save and process.
+
+If creating a payment deposit transaction is necessary, the user should click '+' button' in the payment selector and an add payment popup will be opened. "**Received In**" needs to be selected in the field "Document".  
+This window allows to:
+
+- select already created and processed payments
+  - use the field "Received From" to narrow down the searching of documents to pay
+- use the business partner's "Available Credit" if any, selecting the credit in credit grid
+- enter the "Actual Payment" amount received
+- enter a "Payment Date"
+- select the "Transaction Type" to pay
+- use some other filters such as the Order or Invoice "Document No." or the "Amount From/To"
+- and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
+  Last step is to process the just created payment and get it deposited in the financial account.
+
+![Payment deposit transaction](../../../../../assets/drive/1j47oaWj1O4_LLGPha7guEuKBccB3Rn0h.png)
+
+If creating a **payment withdrawal transaction** is necessary, the user should click '+' button' in the payment selector and an add payment popup will be opened. In the add payment popup, the option "**Paid Out**" needs to be selected in the field "Document". This window allows the user to:
+
+- select already created and processed payments
+- use the field "To Be Paid To" in order to narrow down the searching of documents to pay
+- use the business partner's "Available Credit" if any, selecting the credit in credit grid
+- enter a "Payment Date"
+- select the "Transaction Type" to pay
+- use some other filters such as the Order or Invoice "Document No." or the "Amount From/To"
+- and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
+  Last step is to process the just created payment and get it deposited in the financial account.
+
+![Payment withdrawal](../../../../../assets/drive/1DbaEJtPopUAIr5_S_L8g3mVOk3TQlqOT.png)
+
+Payment selector has applied an explicit filter (current financial account)
+
+![Payment filtered](../../../../../assets/drive/1DWBNx-RWSxny0gHyXIU2D-0cuKyKY5iA.png)
+
+It is possible to add payments for alternative financial accounts by clicking the funnel icon to clear the filters.
+
+![Payment without filter](../../../../../assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
+
+###### Exchange Rates
+
+This subtab allows the user to define an exchange rate to use while posting the financial account transaction to the ledger whenever the currency of the financial account is not the same as the general ledger currency.
+
+###### Accounting History
+
+This subtab shows the accounting history of a given transaction.
 
 ![Accounting history](../../../../../assets/drive/1Bjg-OJiKl8bBeYN36lxwYnIUgtl1dbP3.png)
 
 As shown in the image above, this tab shows the general ledger entries created while posting/unposting a given transaction to the ledger.
 
-#### **Accounting Configuration**
+##### Accounting Configuration
 
 The accounting configuration tab is used to define the accounts of a General Ledger to use while posting transactions such as a bank fee or a deposit.
 
@@ -1199,7 +1134,7 @@ More in detail:
 - **Withdrawal Payment Account** - This is the account which would be used to post the second phase that is the "Withdrawal" of the payment in the Financial Account. The Payment Method used should have the value "Withdrawal Payment Account" defined in the field "Upon Withdrawal use".
 - **Cleared Payment Account** - This is the account which would be used to post the third step that is the reconciliation of the withdrawal. The Payment Method used should have the value "Cleared Payment Account" defined in the field "Upon Reconciliation use".
 
-#### **Payment Method**
+##### Payment Method
 
 This tab lists all the payment methods assigned to the financial account. A payment can either be deposited in or withdrawn from the financial account if the payment method used is assigned to the financial account.
 
@@ -1225,7 +1160,7 @@ This combo can be set at payment method level (payment in and payment out) in ea
 !!! info
     For additional information about payment method configuration, visit the [_Payment Method_](../../financial-management/receivables-and-payables/setup.md#payment-method) article.
 
-#### **Imported Bank Statements**
+##### Imported Bank Statements
 
 The tab lists the imported bank statement files as well as the bank statements created manually.
 
@@ -1251,7 +1186,7 @@ A Bank statement can be posted if that is enabled in the accounting configuratio
 !!! info
     If the user is not able to import a bank statement file, it is also possible to create bank statements and bank statement lines manually.
 
-#### **Bank Statement Lines**
+###### Bank Statement Lines
 
 This tab lists all the lines of a bank statement.
 
@@ -1266,17 +1201,17 @@ There are key fields to note:
 - **Financial Account Transaction:** that is the financial account transaction once matched with the bank statement line, it may be empty when no matching transaction has been found
 - **Matching type:** that can be "Manual" or "Automatic" depending on who did the math, either the matching algorithm used or the user.
 
-#### **Reconciliations**
+##### Reconciliations
 
 The reconciliation tab shows the reconciliations created manually if no matching algorithm is assigned to the financial account as well as the ones created while matching an imported bank statement file otherwise.
 
-##### **Manual Reconciliations**
+###### Manual Reconciliations
 
 - As already explained, the process button Reconcile allows the user to manually reconcile existing financial account transactions in the "Reconciliation" window.
 - Each reconciliation of that type once saved is also saved in this tab in "**Draft**" status until it is finally reconciled in the "**Reconciliation**" window therefore, its status changes to "**Completed**".
 - It is possible to "**Reactivate**" a reconciliation of that type, therefore it can be changed in the "**Reconciliation**" window and be reconciled from that window once more.
 
-##### **Automatic Reconciliations**
+###### Automatic Reconciliations
 
 - In the same way, once a bank statement file has been imported, the bank statement lines can be automatically reconciled in the "**Match using imported Bank Statement Lines**" window accessible from the process button Match Statement.
 - Each reconciliation of that type once saved is also saved in this tab in "**Draft**" status until it is finally reconciled in the "Match using imported Bank Statement Lines" window therefore, its status changes to "**Completed**".
@@ -1284,7 +1219,7 @@ The reconciliation tab shows the reconciliations created manually if no matching
 
 ![Reconciliations](../../../../../assets/drive/1ptaQQlAalghp30dTWFwNGupZaaGIhujf.png)
 
-##### **Reconciliations Posting**
+###### Reconciliations Posting
 
 A Reconciliation of any type can be posted if the Payment Method used while creating the payment to be reconciled allows the user to do so once assigned to the financial account. If that is not the case, Etendo shows a warning : "Document disabled for accounting".
 
@@ -1343,14 +1278,14 @@ c. if the Payment Made was posted in the **"Payment Out"** window or not and the
 | upon Withdrawal Use the "Withdrawal Account" (i.e)          | Payment amount |                |
 | Upon Reconciliation Use the "Cleared Payment Account" (i.e) |                | Payment amount |
 
-##### **Reconciliations Reporting**
+###### Reconciliations Reporting
 
 Additionally there are two reports which shows information about each reconciliation, those reports can be run from the process buttons:
 
 - Reconciliations Details
 - Reconciliation Summary
 
-#### **Cleared items**
+###### Cleared Items
 
 This tab shows the transactions cleared or set as matched in a reconciliation.
 
@@ -1365,7 +1300,7 @@ Cleared item sub-tab allows to see below information:
 - the **description** of the transaction reconciled for instance "Invoice No:..."
 - and either the **Deposit Amount** or the **Withdrawal Amount** of the cleared transaction.
 
-#### **Accounting**
+##### Accounting
 
 The accounting tab is a read-only tab which shows every financial account transaction posting.
 
@@ -1449,7 +1384,7 @@ The settlement record (payment in and payment out) is also registered in the **B
 ![](../../../../../assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
 
 !!! info
-    For more information, visit the [the Business Partner Settlement module user guide](../../financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
+    For more information, visit the [Business Partner Settlement Module - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
 
 ## Payment Execution
 
@@ -1493,118 +1428,13 @@ If that is the case, more than one payment for the same business partner can be 
 
 ### Overview
 
-This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers. When a Business Partner is a Customer and a Provider, it is possible to have credit as both types. But it is not possible to consume a customer credit in a Payment Out document. In the same way, it is not possible to mix purchase or sales invoices on a single payment document. In some scenarios, when a business partner has sales and purchase invoices, it is desirable to cancel both debts without needing a financial transaction.
-
-In this document, you have to select the invoices or credit amount that is desired to settle. When the document is processed, a Payment In and a Payment Out are created. Both have a total amount of zero, so no financial transaction is created. The amount settled on each payment is compensated by a GL Item line. Both payments use the same GL Item, so the balance of it after the process is zero.
-
-#### Configuration
-
-It is not required any specific configuration to work on with this module. It is expected that business partners are already completely defined as Customers and Vendors with their corresponding Financial Accounts and Currency.
-
-It is also required to have at least one GL Item defined for the Organizations where these settlements are needed.
-
-### Business Partner Settlement
-
-In this window, all the settlements are registered. In a new one, you have to select:
-
-- the type: Credit or Invoice
-- the settlement date
-- the Business Partner
-- and the GL Item.
-  GL Item balance after the settlement process is not going to be affected, therefore a specific ledger account out of the account tree can be created and used for it.
-
-Depending on the settlement type, the selected process button on the top and child tabs below change accordingly to show either the credit payments or the invoices to be settled.
-
-"Credit Settlement" type:
-
-![CS](../../../../../assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png)
-
-"Invoice Settlement" type:
-
-![IS](../../../../../assets/drive/16rHvcenj5_bk5_qSmaiq55vc-DtdPa2x.png)
-
-#### Credit settlement
-
-In credit settlements, you have to select the credit payments that are required to be settled.
-
-Clicking Add Credit Payments button, a popup is opened where you can select from 2 grids the Credit In and the Credit Out payments.
-
-In the Totals section, total amounts of the selected credit payments are calculated.
-
-!!! warning
-    You cannot close and add the credit payments until the total amounts of each grid are the same.
-
-The information above means that Credit In Amount and Credit Out Amount should be the same, therefore Credit Payment is 0.00
-
-![IS](../../../../../assets/drive/1xh1LMaTcJWuLXzNeqesDDY0niWC1VLv6.png)
-
-#### Invoice settlement
-
-As in credit settlements, by clicking Add Not Paid Invoices a popup is opened with 2 grids. The grids in this case show not paid invoices.
-
-Once more, it is not possible to create settlement payments until "Pending Amount" is 0.00, as shown in the image below:
-
-![IS](../../../../../assets/drive/1_6G9sHyHAhvjBD4ktBmlwmj1E8QUivF7.png)
-
-#### Process settlement
-
-Depending on the status of the Settlement different actions are available:
-
-Draft
-In this status it is only possible to Process the settlement.
-
-Processed
-In this status it is possible to Cancel or Reactivate the settlement.
-
-Cancelled
-In this status it is not possible to perform any action.
-
-#### Process
-
-When the settlement is processed, a Payment In and a Payment Out are created. Each payment includes all the credit payments or invoices that were selected on the settlement.
-
-See images below in the case of settlement payments related to invoices.
-
-**Payment In**
-
-![IS](../../../../../assets/drive/1jh-cvFM4r4uHBH11jspb2XVnp_GthyfW.png)
-
-**Payment Out**
-
-![IS](../../../../../assets/drive/15MCP7JSy_YEdnBeOB8CUgNSRmtc75VZR.png)
-
-The generated payments are set on the Business Partner Settlement header.
-
-The invoices are inserted as Payment Lines while the credit payments are added to the payment as Used Credit.
-
-As the total amount of the settlement payment must be zero, an additional payment line is added using the selected GL Item.
-
-The amount in the lines related to the GL Item is the same in
-both payments, therefore the net effect on the GL item balance is null. In other words, the balance of the GL Item is not altered by the settlement process.
-
-**Settlement Payment In posting:**
-2722.50 GL Item ledger account (55500) DEBIT
-2722.50 Account Receivables (43000) CREDIT
-
-**Settlement Payment Out posting:**
-2722.50 Account Payables (40000) DEBIT
-2722.50 GL Item ledger account (55500) CREDIT
-
-Finally, as the Settlement Payment amount is zero, no "Transaction" is created in the Financial Account of the payment, therefore it will not be required to include it in any Reconciliation.
-
-#### Reactivate
-
-When a Settlement is reactivated, the generated payments are canceled creating a Reverse Payment. This process will restore the debt or credit so it is again available and the invoices are again not paid. The generated payments are removed from the header but the selection of credit or invoices is kept, so it is possible to add new items, remove some items and/or edit the settled amounts.
+This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
 
 !!! info
-    The settlement is left in Draft status so it is possible to process it again when needed.
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-#### Cancel
-
-As in the Reactivate process, the settlement payments are canceled by creating a Reverse Payment and the settled credit or invoices are again available or not paid. But, in this case, these payments are not removed from the settlement header and the status is changed to Canceled.
-
-!!! info
-    In this status, it is not possible to modify the settlement anymore.
+!!! note
+    For more information, visit [Business Partner Settlement](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md)
 
 ## Tax Payment
 
@@ -1653,13 +1483,13 @@ The **Process** button process the tax payment and includes the tax settlement p
 
 The "**Unprocess**" button undoes the tax payment and deletes the G/L Journal created.
 
-#### **Tax Register Header**
+#### Tax Register Header
 
 Tax Register Header tab allows the user to see the calculated tax amount per each configured "Tax Register Type".
 
 ![Tax Register Header](../../../../../assets/drive/1WDw5E4PuOhtmQemNXGYCGt40woWtWUYO.png)
 
-#### **Lines**
+#### Lines
 
 The lines tab is a read-only tab which lists all the tax transactions related to the tax rates configured as part of a "Tax Register Type".
 
@@ -1704,7 +1534,7 @@ To be able to use this functionality, it is necessary to configure some aspects 
     ![emm.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/enterprise-module-management.png)
 
     !!! info
-        For more information, visit [Enterprise Module Management](../../general-setup/enterprise-model.md#enterprise-module-management).
+        For more information, visit [Enterprise Module Management](../../general-setup/enterprise-model/enterprise-module-management.md).
 
 - Remittance Type: It is necessary to define a remittance type with a certain payment method in the *Remittance Type* window.
 
@@ -2071,4 +1901,4 @@ In this tab, the previously selected records are shown. Afterwards, it will be n
 
 ---
 
-This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

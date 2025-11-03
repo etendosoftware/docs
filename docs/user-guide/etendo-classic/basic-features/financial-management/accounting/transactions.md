@@ -772,23 +772,86 @@ This process can be launched whenever it is required:
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Budget`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2VFxpx8j8Sk?si=TuLZUdBGrOCSpXIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Overview
 
-Etendo creates and edits budgets to be used for informative purposes allowing the user to access the data about budget versus actual. 
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+!!! warning
+    If you do not have the **Financial Report Budget** module from the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, this window will remain in a legacy version with limited functionality. You will not be able to include G/L items in the actual values considered in the budget report, the report will not have the difference column and the dimensions to filter the report will not include all the accounting dimensions as in this case.
+
+It allows creating and managing budgets, both for income and expenditures, for reporting purposes, offering users the possibility to compare budgeted values with actual values posted in the corresponding General Ledger.
+
+!!! example
+    A budget can be defined, for example, by assigning an expected expenditure of EUR 400,000 in salaries and $2,000 in Internet services for the month of September 2025. 
+    
+    ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-header.png)
+    
+    At the end of the period, users can verify the actual value and analyze the difference with respect to the defined budget.
+
+    ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png)
+
+The actual values considered include both accounting entries and manual entries (G/L Item), ensuring a comprehensive view of budget execution.
 
 ### Header
 
-These are the actions which can be executed from the header in order to create budgets for a selected year to be used for informative purposes: 
- 
-**Export Budget to Excel:**  exports budget to an Excel document.
-**Copy Budget:** copy budget already created. 
-**Check Export Actual Data:** when checked, actual quantities will be exported to Excel in addition to the budgeted quantities. 
+The header defines the main data for each budget:
 
-![](../../../../../assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png)
+- **Organization**: organization to which the budget belongs.
+- **Name**: identifying name of the budget.
+- **Year**: fiscal year to which the budget applies.
+- **Description**: additional or explanatory information about the budget.
+- **Active**: checkbox that enables or disables the budget. 
+- **Export Actual Data**: checkbox, when checked, actual quantities will be exported to Excel in addition to the budgeted quantities.
 
 ### Lines
 
-The user is able to add budget lines. Each line may refer to a specified period, business partner, product, etc.
+In the Lines tab, the user can add budget lines. Each line can refer to a specific period, projecting and comparing expenses/income according to the selected accounting account. The accounting dimensions are available as filters, selectable one at a time, in the Dimensions section (business partner, product, etc.)
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-lines.png)
+
+Fields to note:
+
+- **Sequence Number**: sequence number of the line.
+- **General Ledger**: associated accounting ledger.
+- **Account Element**: linked accounting account. This element is what determines if the budget refers to an income or an expenditure.
+- **Currency**: currency in which the budget is expressed.
+- **Period**: accounting period to which the line corresponds.
+- **Amount**: budgeted amount. This is the number to be considered when expressing the difference between the budgeted amount and the actual amount in the generated budget report.
+- **Actual Amount**: actual amount recorded. This information is updated once the report is generated, only if the Export Actual Data checkbox was selected.
+- **Quantity**: budgeted quantity. This is an optional value.
+- **Net Unit Price**: net unit price. This is an optional value.
+- **Description**: additional information about the line.
+- **Active**: checkbox that enables or disables the line.
+
+### Buttons
+
+**Export Budget to Excel**: generates an Excel document as a Report with budget information.
+
+**Copy Budget**: duplicates lines from previously created budgets.
+
+### Report
+
+The budget report allows a comparison between the budgeted and actual amounts. It includes a Difference column, which shows the result of subtracting the actual value from the budgeted value, thus facilitating the analysis of deviations.
+
+The fields presented in the report are:
+
+- **Qty**: budgeted quantity.
+- **Price**: unit price.
+- **Amount**: budgeted amount.
+- **Actual**: actual amount recorded.
+- **Difference**: difference between budgeted and actual amounts.
+- **Period**: corresponding accounting period.
+- **Accounting dimensions**: filters applied by dimensions (e.g., business partner, cost center, product, project, etc.).
+- **Organization**: organization to which the budget corresponds.
+- **Description**: additional information about the line.
+- **Currency**: currency in which the budget is expressed.
+
+Example of report results:
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png)
 
 ## Create Budget Reports in Excel
 
@@ -893,7 +956,7 @@ In order to enable an account to be part of the VAT regularization process, it i
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vatregularization8.png)
 
 !!!info
-    With this module, from Etendo Classic, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
+    With this module, from Etendo, version 24.2.0, and Financial Extensions Bundle, version 1.15.0, the field sorting has been modified so that GL journal entries are always sorted at the end of the day. This change ensures that, in the General Ledger report and in General Ledger Report Advanced, the manual journal entries of the day are displayed correctly sorted.
 
 ## Not Posted Documents
 
@@ -904,16 +967,16 @@ In order to enable an account to be part of the VAT regularization process, it i
 
 ### Overview
 
-With the Not Posted Documents functionality, part of the Bulk Posting module, the user can find all the not posted documents in the same window and can post them massively from there.
+The Not Posted Documents window, part of the Bulk Posting module, centralizes all unposted documents in one place. It allows users to quickly find, review, and post multiple documents at once. Filters help refine searches, and bulk posting actions streamline processing, making document management more efficient.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-1.png)
 
-### Search button
+### Filters
 
-With the **Search** button, the following fields are used to specify the documents to search. 
+- **Organization**: Filter documents according to the organization to which they belong. By default, the session organization is set.
 
-- Organization: The corresponding organization of the search.
-- Document: Type of document that the user is searching. This is the only field that is optional. The listed options are:
+- **Document**: (Optional) Type of document that the user is searching. The listed options are:
+
     - Amortization
     - Bank Statements 
     - Bill of Materials Production
@@ -938,9 +1001,29 @@ With the **Search** button, the following fields are used to specify the documen
     - Transaction
     - Work Effort
 
-- Accounting Status: the corresponding accounting status of the search. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+- **Accounting Status**: (Mandatory) Shows the possible statuses of accounting documents. Allows multiple selections. This is useful in cases where the document has already tried to be posted but failed, and its status is not **Unposted** but another, such as **Disabled for Accounting**. 
+ 
+- **Accounting Date (From/To)**: Filters to define a search period.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents2.png)
+### Buttons
+
+#### Search button
+
+Clicking the Search button applies the selected filters and displays the matching documents in the results grid. From the results you can navigate to a document by clicking its Accounting Date, inspect details, and select records for bulk posting.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png)
+
+#### Bulk Posting button
+
+Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-2.png)
+
+As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
+
+!!! info
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ### Grid filtering
 
@@ -951,19 +1034,6 @@ In the grid where documents are displayed after the search, users can filter the
 - Document Description
 - Accounting Date
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents3.png)
-
-### Bulk Posting button
-
-Once the fields are used to search for not posted documents, the user can massively select the necessary documents and use the **Bulk Posting** button to post multiple documents at once, as shown below. 
-
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents4.png)
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents5.png)
-
-As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
-
-!!! info
-    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Reset Accounting
 
@@ -973,3 +1043,6 @@ As you can see, this development greatly facilitates the management of documents
 
 The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the **Accounting Server Process** or the **G/L Posting by DB Tables** process. The manual changes done for the accounting entries description will obviously be lost after running this process.
 
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

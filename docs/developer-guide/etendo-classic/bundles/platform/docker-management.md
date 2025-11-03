@@ -21,7 +21,7 @@ The `com.etendoerp.docker` module enables the use of Dockerized containers in Et
 Additionally, the infrastructure could be extended, and allows other modules to include in it their own specific containers.
 
 !!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 ## Requirements
 
@@ -30,21 +30,22 @@ This project depends on the following tools:
 - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
 - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 
+
 ## Using Containers Distributed in Modules
 
-### Configuration Variables
+**Configuration Variables**
 
-  - It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
-    
+- It is necessary to include at least one configuration variable for each module to be launched, this variable enables all the services related to the module to be started.
+
     `docker_<javapackage>=true`
-    
-    
+
+
     Example:
     ``` groovy title="gradle.properties"
     docker_com.etendoerp.tomcat=true
     ```
 
-  - In case you want to configure only one service belonging to a module, it is possible by adding a variable with the format:
+- In case you want to configure only one service belonging to a module, it is possible by adding a variable with the format:
 
     `docker_<javapackage>_<service>=true`
 
@@ -52,25 +53,36 @@ This project depends on the following tools:
     ``` groovy title="gradle.properties"
     docker_com.etendoerp.docker_db=true
     ```
-    !!!note
+    !!! note
         In this case, only the database service will be taken into account when raising and lowering services related to the `com.etendoerp.docker` module. 
-    
-  - It is also possible that some services may require configuration variables, in which case they should be added: 
+
+- It is also possible that some services may require configuration variables, in which case they should be added: 
 
     `docker_<javapackage>_<variable>=<value>`
 
     Example:
     ``` groovy title="gradle.properties"
-    docker_com.etendoerp.tomcat_port=8080
+    docker_com.etendoerp.tomcat_debug=8009
     ``` 
-    !!!note
+    !!! note
         In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
 
-  Finally, always to apply changes, execute 
+- **Exclude Services**
 
-  ``` bash title="Terminal"
-  ./gradlew setup
-  ```
+    If the Compose configuration includes multiple services, you can exclude or customize which services are started by listing their names in the following property:
+
+    `docker.exclude=<service1>,<service2>`
+
+    Example:
+    ``` groovy title="gradle.properties"
+    docker.exclude=das,auth
+    ```
+
+Finally, always to apply changes, execute 
+
+``` bash title="Terminal"
+./gradlew setup
+```
 
 ## Gradle Tasks to Manage Containers
 Execute the following command to use the infrastructure:
@@ -82,10 +94,14 @@ Execute the following command to use the infrastructure:
 ```
 This command will search for all configured resources and start the containers.
 
+!!! info 
+    Before running the Gradle compilation tasks `./gradlew update.database compile.complete smartbuild`, you need to execute `./gradlew resources.up` to actually create and start the Docker containers. 
+
 !!! note 
     If you only have the base `com.etendoerp.docker` module installed and configured, this command will start a PostgreSQL database.
 
 ### Stopping
+
 ``` bash title="Terminal"
 ./gradlew resources.stop
 ```
@@ -98,8 +114,17 @@ This command will stop the containers.
 ```
 This command will stop and remove the containers.
 
+### Build
 
-## Verifying the Status
+``` bash title="Terminal"
+./gradlew resources.build
+```
+This command forces services that use a Dockerfile to rebuild their own Docker image.
+
+!!! info
+    This command must be executed when the projection or mapping have been modified due to user changes or module management updates to these tables. The command forces the DAS service to recompile and generate new classes before starting the service.
+
+### Verifying the Status
 
 To verify the status of the resources started by Docker Compose, you can use the following Docker commands:
 
@@ -111,7 +136,8 @@ This command lists all running Docker containers. You should see the containers 
 
 This command shows the logs of all the services defined in your Docker Compose configuration, which can help in troubleshooting and verifying that the services are running correctly.
 
-It is also possible to manage containers with tools such as [Lazydocker](https://github.com/jesseduffield/lazydocker#installation){target=_isblank} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
+!!! info 
+    It is also possible to manage containers with tools such as [Lazydocker](https://github.com/jesseduffield/lazydocker#installation){target=_isblank} or [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
 
 
 ## Postgres Database Service
@@ -133,3 +159,7 @@ In this module a Postgres database service is included, this allows to use the d
 
 4. Finally, using this service it is possible to run `./gradlew install` to install the database from scratch, or it is possible to restore a backup and start using the new dockerized database service. 
 
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

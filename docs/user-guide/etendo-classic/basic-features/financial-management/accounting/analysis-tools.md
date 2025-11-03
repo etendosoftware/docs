@@ -54,7 +54,7 @@ Etendo has an integrated accounting system that combines financial and analytica
 
 Etendo allows the user to post transactions to the ledger only if the financial dimensions and the mandatory analytical dimensions are specified, while there is always the option to specify the optional analytical ones.
 
-#### **Header**
+### Header
 
 This report lists every transaction posted to the ledger by showing every accounting dimension specified.
 
@@ -63,7 +63,6 @@ This report lists every transaction posted to the ledger by showing every accoun
 Column Filters allow the user to filter the information to be shown by any of the accounting dimensions.
 
 ## Balance Sheet and P&L Structure
-
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure`
 
 ### Overview
@@ -72,74 +71,81 @@ The Balance sheet and P&L structure report engine allows the user to launch the 
 
 The Balance Sheet report is a quantitative summary of an organization's financial condition at a specific point in time. This report shows a summary of the assets and liabilities & Owner's Equity balances.
 
-Profit and Loss report shows earnings, expenses and the net profit of an organization
+Profit and Loss report shows earnings, expenses and the net profit of an organization.
 
-These reports need to be configured prior to be launched in the Balance Sheet and P&L Structure setup window.
+These reports need to be configured prior to be launched in the [Balance Sheet and P&L Structure Setup](../accounting/setup.md#balance-sheet-and-pl-structure-setup) window.
+
+### Header
 
 ![](../../../../../assets/drive/1RuYrg1NFpQZz9FOuNnPR47hpQCTwgzjv.png)
 
 As shown in the image above, data to fill in is:
 
--   the *"General Ledger"* from which the accounting information needs to be obtained
--   the *"Accounting Report"* to launch.  
-    This field lists the reports created and configured in the Balance Sheet and P&L structure setup window
--   the *"Organization"*.  
-    This field lists the organization for which the report has been configured in the Balance Sheet and P&L structure setup window
-    -   if the report is configured for a "Legal with Accounting" organization type, only that one is shown in this field. The account's balances shown in the report will be a roll-up of the organizations which belong to it, if any.
-    -   if the report is configured for a "Generic" organization type, the organizations shown in this field are at least the generic organization and the legal with accounting organization type it belongs to, all of them linked to the general ledger selected.
--   the *"Account Level"* which defines up to which detail level is going to be shown in the report, the options available are the same as the account tree element levels:
-    -   Heading, only "heading" elements are shown including summarized accounting information up to that level
-        -   Account, in this case "heading" and "account" elements are shown including summarized accounting information up to each of those levels
-            -   Breakdown, in this case "heading", "account" and "breakdown" elements are shown including summarized accounting information up to each of those levels
-                -   Subaccount, in this case "heading", "account", "breakdown" and "subaccount" elements are shown including summarized accounting information up to each of those levels.  
-                    It is important to recall that accounting entries are booked at subaccount level.
--   *"Show only accounts with value"* flag allows the user to see that the report does not show account elements having a *zero* amount balance, but elements defined as Title which are always shown regardless of its balance amount.
--   *Show Account codes* flag allows the user to make the report show the Element Level Search Key or not.
+- The **General Ledger** from which the accounting information needs to be obtained.
+- The **Accounting Report** to launch. This field lists the reports created and configured in the [Balance Sheet and P&L structure Setup](./setup.md#balance-sheet-and-pl-structure-setup) window.
+- The **Organization**. This field lists the organization for which the report has been configured in the Balance Sheet and P&L structure setup window.
 
-Under the *"Primary Filters"* section, it is possible to specify:
+    - If the report is configured for a "Legal with Accounting" organization type, only that one is shown in this field. The account's balances shown in the report will be a roll-up of the organizations which belong to it, if any.
+    - If the report is configured for a "Generic" organization type, the organizations shown in this field are at least the generic organization and the legal with accounting organization type it belongs to, all of them linked to the general ledger selected.
 
--   an *Initial page number* for the report, in case the report needs to be integrated.  
-    This one is useful in case the report must be integrated as a part of a bigger report or document.
--   a *"Year"* and a *"Reference Year"* in order to get a comparative report normally between the current "Year" and the previous one entered as "Reference Year". The report has a filter *"Compare To"*, so it can be launched just for a concrete year, without forcing to compare it with another year.
--   and finally *"As of Date"* (Date To) and *"As of Reference Date"* (Date From filters can be entered, these filters behave differently depending on the report:
+- The **Account Level** which defines up to which detail level is going to be shown in the report, the options available are the same as the account tree element levels:
+
+    - Heading, only "heading" elements are shown including summarized accounting information up to that level.
+        - Account, in this case "heading" and "account" elements are shown including summarized accounting information up to each of those levels.
+            - Breakdown, in this case "heading", "account" and "breakdown" elements are shown including summarized accounting information up to each of those levels.
+                - Subaccount, in this case "heading", "account", "breakdown" and "subaccount" elements are shown including summarized accounting information up to each of those levels. It is important to recall that accounting entries are booked at subaccount level.
+
+- **Show only accounts with value** flag allows the user to see that the report does not show account elements having a *zero* amount balance, but elements defined as Title which are always shown regardless of its balance amount.
+- **Show Account codes** flag allows the user to make the report show the Element Level Search Key or not.
+
+Under the **Primary Filters** section, it is possible to specify:
+
+- An **Initial page number** for the report, in case the report needs to be integrated. This one is useful in case the report must be integrated as a part of a bigger report or document.
+- A **Year** and a **Reference Year** in order to get a comparative report normally between the current "Year" and the previous one entered as "Reference Year". The report has a filter **Compare To**, so it can be launched just for a concrete year, without forcing to compare it with another year.
+- And finally **As of Date** (Date To) and **As of Reference Date** (Date From filters can be entered, these filters behave differently depending on the report:
     -   In the case of Balance Sheet report, a "Date To" value can be entered to get that the report shows account balance information up to that date to.
     -   In the case of P&L report a "Date To" and a "Date From" can be entered to make the report show accounting information within that period of time (a year, a quarter, a month, etc).
 
-#### Balance Sheet Report Example
+**Balance Sheet Report Example**
 
 !!! info
     Please note that the word "Provisional" (en\_US) \[or "Provisional" (es\_ES)\] is shown whenever at least one of the periods for which the report has been launched for it is not closed yet.
 
 ![](../../../../../assets/drive/1JYmJT5MghrfjqL3Y_qbNopzLK1GeXrFK.png)
 
-#### P&L Report Example
+**P&L Report Example**
  
 ![](../../../../../assets/drive/1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6.png)
 
 ## Balance Sheet and P&L Structure Advanced
-
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure Advanced`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_vyLPYVFycU?si=WXJE2bGLZ_TMr9JX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Overview 
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
+The **Balance Sheet and P&L Structure Advanced** report is an enhanced version of the previous [Balance Sheet and P&L Structure](#balance-sheet-and-pl-structure). Its purpose is to expand the filtering criteria, including all available accounting dimensions and the ability to compare multiple years or periods.
 
-![](../../../../../assets/drive/1yP5IthEhrtJWbj_xZg9dpUAMpCwTB_oJ.png)
+### Header
 
-In addition to the previous basic filters: 
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-1.png)
+
+Fields to note:
+
+In addition to the previous **Report Options**: 
 
 - General Ledger
-- Accounting Report
+- General Accounting Report
 - Organization
 - Account level
-- Year
-- As of Date
-- Compare to (check)
-- Reference Year
-- As of Reference Date
+- Show Only Account With Value (check)
+- Show Account Codes (check)
+- Show Landscape Mode (check)
 
-the following were added:    
+The following dimension were added:    
 
 - Business Partner  
 - Product   
@@ -148,100 +154,150 @@ the following were added:
 - Project 
 - Activity    
 - Sales Region    
-- Sales Campaign  
+- Sales Campaign
+- Cost Center
 
-In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
+!!! info
+    In each dimension filter, more than one option can be selected.
 
-In the comparative year section, the fields From Reference Date, To Reference Date were added to select a specific period from the selected year apart from the Select Template field. 
+Also, in addition to the previous **Primary Filters**: 
+
+- Year
+- As of Date (Only for Balance Sheet)
+- Starting Date (Only for Profit & Loss)
+- Ending Date (Only for Profit & Loss)
+- Compare to (check)
+- Reference Year
+- As of Reference Date (Only for Balance Sheet)
+- From Reference Date (Only for Profit & Loss)
+- To Reference Date (Only for Profit & Loss)
+- Initial page number, printed in the report.
+
+
+!!! info 
+    - It is now possible to compare up to **four years** simultaneously.
+    - In addition, **new fields** have been added to allow the selection of specific dates and periods according to the needs of each report, providing greater flexibility in the analysis.
  
-In each filter, more than one option can be selected:
- 
-![](../../../../../assets/drive/1t-N2QU-2fbhu2ElbxNvlhGrcIyMuW3tO.png)
 
+### Buttons
 
-Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
+In this report, the **View**, **Export to PDF**, and **Export to Excel** buttons are added to the top bar, allowing you to either view the information directly or export it in different formats as needed.
 
 ![](../../../../../assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
+
+**P&L Report Example**
+
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-2.png)
 
 ## Trial Balance
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Trial Balance`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+!!! warning
+    If you do not have the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, the report will remain in a legacy version with limited functionality. You will not be able to navigate directly to the General Ledger from the Business Partner when the report is grouped by this dimension, and the interface improvements and improved options for exporting the report to Excel and PDF will not be available.
+
 ### Overview
 
-The trial balance helps to check that the total amount of debits is equal to the total amount of credits.
+The **Trial Balance** verifies that the total debits equal the total credits.
 
-This report is commonly launched at the end of the period prior to the preparation of the Balance Sheet and the Income Statement. However, Etendo allows the user to launch it at any point in time to check that debits equal credits.
+Although it is usually run at the end of a period before preparing the Balance Sheet and Income Statement, in Etendo it can be generated at any time.
 
-In Etendo terms, the "Trial Balance" shows for a given Organization and General Ledger:
+For a selected **Organization** and **General Ledger**, the report shows:
 
-- the account balance as of a given date from
-- the account total sum of debits within a given period of time
-- the account total sum of credits within a given period of time
-- and finally the account balance as of a given date to
+- The account balance at the starting date
+- The total debits within the selected period
+- The total credits within the selected period
+- The account balance at the ending date
 
-At the end of the report, the total sum of debits must be equal to the total sum of credits.
-
-![](../../../../../assets/drive/1Khc4yKHg-WQAjZBTFfNegete-k0l0qhX.png)
+At the bottom of the report, the **total debits must equal the total credits**.
 
 
-As shown in the screen above, it is possible to enter below data before launching the Trial Balance.
+### Header
 
-Under the **Primary Filters** section, it is possible to specify:
-- the *"From"* date when the account balance is going to be taken
-- the *"To"* date when the account balance is going to be calculated by following the formula below:
-    - *Balance as of to date = Balance as of from date + Sum of the Debit amounts - Sum of the Credit amounts*
-- the *"Organization"* for which the Trial Balance is required. It is important to remark that a Trial Balance can be launched for:
-    - "Legal with Accounting" type organizations
-    - "Generic" type organizations which must belong to a "Legal Entity with Accounting" organization.
-        - It is possible to enter and post transactions in this organization type as they inherit the general ledger of the legal entity with accounting they belong to.
-    - "Organization" type organizations, as this type can be linked to a general ledger to be shared by a set of organizations which belong to it.
-        - Regardless this organization type does not allow transaction posting, the Trial Balance obtained at this level summarizes the accounting information of all the organizations which belong to an organization of this type which share the same general ledger.
-- and finally the "General Ledger".
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance-window-1.png)
 
-**Advanced filters** is a collapsible section which can be shown by clicking on it. Under this section, it is possible to specify:
+Key fields to note:
 
-- the Account Level to show. The options available are from top to bottom:
+#### Primary Filters
+
+- **Starting Date**: The date from which the account balance is taken.
+- **Ending Date**: The date up to which the account balance is calculated, using the formula:  
+  `Balance as of Ending Date = Balance as of Starting Date + Total Debits − Total Credits`
+- **Organization**: The organization for which the Trial Balance is generated. It can be run for:
+    - **Legal with Accounting** organization type.
+    - **Generic** organization type, which must belong to a *Legal with Accounting* organization. These organizations inherit the general ledger of the legal entity they belong to and can post transactions.
+    - **Organization** type entities, which may share a general ledger across multiple organizations that belong to them. While this type cannot post transactions directly, the Trial Balance summarizes the accounting information of all related organizations that share the same general ledger.
+- **General Ledger**: The general ledger associated with the selected organization.
+
+#### Advanced Filters
+
+This section provides additional options to refine the Trial Balance report:
+
+- **Account Level**: Defines the level of detail to display in the report. Options include:
+
     - **Heading**
     - **Account**
     - **Breakdown**
-    - and **Subaccount**.
+    - **Subaccount** (default)
+    
+    !!! info 
+        By default, the report is generated at the **Subaccount** level. This ensures that for each subaccount in the account tree, the total debits equal the total credits.
 
-These are the Account Tree Elements.
+- **Initial Page Number**: Sets the page number where the report starts. Useful when integrating this report into larger documents.
 
-"**Subaccount**" is the value set by default, regardless it can be changed if required.
+- **Opening Entry Amount to Initial Balance**: This option is selected by default. It controls how the opening balance (e.g., January 1, 2021) is displayed in the report:
 
-This is due to the fact that a subaccount is the element which helps to check that the total amount of debits is equal to the total amount of credits for every subaccount of the account tree.
+    - For liability accounts with a negative opening balance, the amount can appear either in the **Balance As Of** column or in the **Credit** column.
+    - For asset accounts with a positive opening balance, the amount can appear either in the **Balance As Of** column or in the **Debit** column.
 
-Also, the selection of this value allows the user to:
+    !!! note
+        This setting only applies if the report’s **From Date** matches the opening accounting date (e.g., January 1, 2021). Otherwise, the opening balance is always shown in the **Balance As Of** column.
 
-1\. select other "**Dimensions**", such as the "Business Partner", the "Product" and the "Project". These dimensions are recorded while posting transaction to the ledger and the transactions can be posted to the ledger through the subaccounts.
+- **From Account / To Account**: Allows you to specify a range of subaccounts to include in the report (only available when the account level is set to *Subaccount*).
 
-2\. Select “Group By” value to have more information about that option. Values are "Business Partner", "Product", "Project" and “Cost Center”
+#### Dimensions
 
-3\. select "**Include Zero Figures**" flag which allows the user to display all subaccounts even those which hold zero figures.
+You can refine the Trial Balance report by selecting additional **Dimensions**, such as:
 
-- It is possible to enter the **initial page number** of the trial report if required
-- Also, the "**Opening Entry Amount to Initial Balance**" flag is marked by default.
-    This checkbox allows the user to configure if the "Opening" account balance (dated i.e. 1st January 2021) is shown separately in the first column "Balance As Of" or either in the "Debit" or in the "Credit" column.  
-    In other words:
-    - the negative "Opening" balance of a liability type account can be shown in the "Balance As Of" column or in the "Credit" column
-    - the positive "Opening" balance of an asset type account can be shown in the "Balance As Of" column or in the "Debit" column.  
-        This check only applies if the "From" date entered while launching the report is the same as the "Opening" Accounting date (i.e. 1st January 2021), otherwise the "Opening" account balance is always shown in the "Balance As Of" column.
+- **Business Partner**
+- **Product**
+- **Project**
 
-Once all the data above has been properly filled in, the "Search" process button shows the results in the same window.
+These dimensions are recorded when transactions are posted to the ledger. Transactions are always linked through subaccounts.
 
-An example of the output of the report is:
+- **Group By**: Lets you group the report by a specific dimension. Available options are *Business Partner*, *Product*, and *Project*.  
+  For example, if you select *Business Partner*, the report will display results grouped by each partner, and you can directly navigate to that partner’s General Ledger from the report.
 
-![](../../../../../assets/drive/1h503JiqJg9EGZ_3IhlNJ6XHTOsgHPesf.png)
+- **Include Zero Figures**: When enabled, the report displays all subaccounts, including those with zero balances.
 
-This report can also be shown in:
 
-- a *PDF format* by pressing the "Print" action icon of the Toolbar.
-    - the PDF file can be printed or archived for later reviews.
-    - the PDF file has the same grouping rules as the search button.
-- and in *excel format*:
-- the excel file has the same grouping rules as the search button. When the Trial Balance Report is launched at "Subaccount" level, this format shows the dimension selected in the combo group by, but when no grouping is selected in the combo, the report shows all dimensions.
+### Buttons
+
+- **View**: Opens the report results in a new window. From there, you can navigate directly to the General Ledger:
+  
+    - By clicking the Account Number of each subaccount.
+    - Or, if the report is grouped by Business Partner, by clicking the partner’s name to access their General Ledger view.
+
+    <figure markdown="span">
+        ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance-report-1.png)
+        <figcaption>Example of the report output not gruped</figcaption>
+    </figure>
+
+    <figure markdown="span">
+        ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance-report-2.png)
+        <figcaption> Example of the report grouped by Business Partner</figcaption>
+    </figure>
+
+    In both cases, links are available to **navigate directly to the General Ledger**.
+
+- **Export to PDF**: Generates a PDF version of the report. This file can be printed or stored for later review. The PDF output respects the same grouping rules applied in the search.
+
+- **Export to Excel**: Generates an Excel file of the report. The exported file also follows the same grouping rules applied in the search.
 
 ## General Ledger Report
 
@@ -292,6 +348,8 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 ## General Ledger Report Advanced
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `General Ledger Report Advanced`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -390,6 +448,8 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 ## Journal Entries Report Advanced
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Journal Entries Report Advanced`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -562,3 +622,7 @@ This window allows to print Reports previously defined by the user. In order to 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
 ![](../../../../../assets/drive/1eqmh8_yS9iZrrp0PpT70hpDlT5MhrACN.png)
+
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

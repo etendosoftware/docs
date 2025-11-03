@@ -133,3 +133,6 @@ Etendo UI Library is a library of UI components following the style and design o
     For more information, visit [Etendo UI Library - Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
 
     ![storybook.png](../../../assets/developer-guide/etendo-mobile/concepts/subapplication-structure/storybook.png)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

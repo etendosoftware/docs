@@ -14,10 +14,34 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [3.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.1.0){target="_blank"} | 02/07/2025 | 25.1.0 | 25.2.x | CS | :white_check_mark: |
+| [3.5.5](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.5.5){target="_blank"} | 28/10/2025 | 25.1.0 | 25.3.x | CS | :white_check_mark: |
+| [3.5.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.5.4){target="_blank"} | 24/10/2025 | 25.1.0 | 25.3.x | C | :white_check_mark: |
+| [3.5.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.5.3){target="_blank"} | 15/10/2025 | 25.1.0 | 25.3.x | C | :white_check_mark: |
+| [3.5.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.5.2){target="_blank"} | 09/10/2025 | 25.1.0 | 25.3.x | C | :white_check_mark: |
+| [3.5.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.5.1){target="_blank"} | 07/10/2025 | 25.1.0 | 25.3.x | C | :white_check_mark: |
+| [3.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.5.0){target="_blank"} | 03/10/2025 | 25.1.0 | 25.3.x | C | :white_check_mark: |
+| [3.4.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.4.1){target="_blank"} | 19/09/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.4.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.4.0){target="_blank"} | 10/09/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.3.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.3.0){target="_blank"} | 29/08/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.2.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.2.2){target="_blank"} | 25/08/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.2.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.2.1){target="_blank"} | 12/08/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.2.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.2.0){target="_blank"} | 05/08/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.1.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.1.1){target="_blank"} | 24/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.1.0){target="_blank"} | 02/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
 | [3.0.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.0.1){target="_blank"} | 24/06/2025 | 25.1.0 | 25.1.x | C | :white_check_mark: |
 | [3.0.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.0.0){target="_blank"} | 27/05/2025 | 25.1.0 | 25.1.x | C | :white_check_mark: |
-| [1.26.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.26.2){target="_blank"} | 06/06/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.29.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.29.3){target="_blank"} | 27/10/2025 | 23.1.4 | 24.4.x | CS | :white_check_mark: |
+| [1.29.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.29.2){target="_blank"} | 23/10/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.29.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.29.1){target="_blank"} | 15/10/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.29.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.29.0){target="_blank"} | 09/10/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.28.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.28.2){target="_blank"} | 07/10/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.28.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.28.1){target="_blank"} | 19/09/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.28.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.28.0){target="_blank"} | 29/08/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.27.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.27.2){target="_blank"} | 25/08/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.27.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.27.1){target="_blank"} | 12/08/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.27.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.27.0){target="_blank"} | 05/08/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.26.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.26.3){target="_blank"} | 24/07/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
+| [1.26.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.26.2){target="_blank"} | 06/06/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.26.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.26.1){target="_blank"} | 30/05/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.26.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.26.0){target="_blank"} | 06/05/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
 | [1.25.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.25.0){target="_blank"} | 21/04/2025 | 23.1.4 | 24.4.x | C | :white_check_mark: |
@@ -77,3 +101,6 @@ tags:
 | 1.0.200 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.100 | 06/01/2022 | 21.4.0 | 21.4.x | C | |
 | 1.0.000 | 04/01/2022 | 21.4.0 | 21.4.x | C | |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

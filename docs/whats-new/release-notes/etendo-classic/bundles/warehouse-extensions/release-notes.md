@@ -14,10 +14,25 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [3.1.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.1.0){target="_blank"} | 02/07/2025 | 25.1.0 | 25.2.x | CS | :white_check_mark: |
+| [3.3.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.3.1){target="_blank"} | 23/10/2025 | 25.3.0 | 25.3.x | CS | :white_check_mark: |
+| [3.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.3.0){target="_blank"} | 03/10/2025 | 25.3.0 | 25.3.x | C | :white_check_mark: |
+| [3.2.3](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.2.3){target="_blank"} | 18/09/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.2.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.2.2){target="_blank"} | 28/08/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.2.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.2.1){target="_blank"} | 25/08/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.2.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.2.0){target="_blank"} | 08/08/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
+| [3.1.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.1.0){target="_blank"} | 02/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
 | [3.0.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.0.1){target="_blank"} | 24/06/2025 | 25.1.0 | 25.1.x | C | :white_check_mark: |
 | [3.0.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.0.0){target="_blank"}   | 26/05/2025 | 25.1.0 | 25.1.x | C | :white_check_mark: |
-| [1.12.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.0){target="_blank"} | 07/07/2025 | 24.4.18 | 24.4.x | CS | :white_check_mark: |
+| [1.12.9](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.9){target="_blank"} | 22/10/2025 | 24.4.18 | 24.4.x | CS | :white_check_mark: |
+| [1.12.8](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.8){target="_blank"} | 02/10/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.7](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.7){target="_blank"} | 17/09/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.6](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.6){target="_blank"} | 28/08/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.5](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.5){target="_blank"} | 25/08/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.4](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.4){target="_blank"} | 08/08/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.3](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.3){target="_blank"} | 24/07/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.2){target="_blank"} | 17/07/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.1){target="_blank"} | 11/07/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.12.0){target="_blank"} | 07/07/2025 | 24.4.18 | 24.4.x | C | :white_check_mark: |
 | [1.11.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.11.1){target="_blank"} | 30/05/2025 | 24.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.11.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.11.0){target="_blank"} | 06/05/2025 | 24.4.0 | 24.4.x | C  | :white_check_mark: |
 | [1.10.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.10.1){target="_blank"} | 28/02/2025 | 24.4.0 | 24.4.x | C  | :white_check_mark: |
@@ -36,3 +51,6 @@ tags:
 | [1.0.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.2){target="_blank"}   | 25/01/2023 | 21.4.0 | 22.4.6 | C  | :white_check_mark: |
 | [1.0.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/v1.0.1){target="_blank"}  | 06/01/2023 | 21.4.0 | 22.4.6 | C  | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.0){target="_blank"}   | 30/09/2022 | 21.4.0 | 22.3.0 | C  | :white_check_mark: |
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

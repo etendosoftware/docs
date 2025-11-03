@@ -11,7 +11,7 @@ tags:
 :material-store: Etendo Marketplace:  [Bundle de Localizacion Española](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}
 
 ## Descripción
-El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo Classic a los requerimientos legales y/o fiscales españoles.
+El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo a los requerimientos legales y/o fiscales españoles.
 
 ## Módulos
 
@@ -26,6 +26,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - [Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md)
 - [Configuración de Impuestos para Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
 - [TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md)
+- [Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md)
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -44,8 +45,8 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - Spanish Tax Module Improvements
 - Nueva versión del módulo de Impuestos de España
 - Condiciones de pago
-- Chart of accounts: PGC 2007 General
-- Chart of accounts: PGC 2007 PYMEs
+- [Chart of accounts: PGC 2007 General](#chart-of-accounts-pgc-2007-general)
+- [Chart of accounts: PGC 2007 PYMEs](#chart-of-accounts-pgc-2007-pymes)
 - Professional Localization pack Spain (España)
 - Localization pack Spain (España)
 - Traducción al español del módulo 'Default Jobs'
@@ -64,9 +65,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - Advanced Payables and Receivables - Spanish Translation
 - User Interface Application Translation Spanish Spain (es_ES)
 - Alerts: Accounting
-- SOAP with Attachments API for Java Implementation
 - Payment Method Type
-- Javax XML SOAP API
 - HTML Widget Translation Spanish Spain (es_ES)
 - OpenID Service Integration Translation Spanish Spain
 - Integration with Google APIs Translation Spanish Spain
@@ -76,7 +75,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 :octicons-package-16: Javapackage: `org.openbravo.module.incoterms`
 
-Este módulo añade el listado de Incoterms a Etendo Classic.
+Este módulo añade el listado de Incoterms a Etendo.
 
 Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
 
@@ -90,7 +89,7 @@ Este módulo identifica qué países pertenecen a la Unión Europea.
 
 :octicons-package-16: Javapackage: `org.openbravo.spain.regions`
 
-Este módulo añade el listado de provincias españolas a Etendo Classic.
+Este módulo añade el listado de provincias españolas a Etendo.
 
 ## Legal Representative of the Organization
 
@@ -434,3 +433,19 @@ Este módulo permite cumplir con las normativas fiscales del País Vasco, automa
 
 !!! info
     Para más información, visite la [Guía de usuario TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md).
+
+## Veri*Factu
+
+:octicons-package-16: Javapackage: `com.etendoerp.verifactu`
+
+Este módulo automatiza el proceso de emisión y envío de facturas electrónicas conforme a los requisitos de la Agencia Tributaria Española (AEAT). Facilita la generación de archivos XML para el registro de facturación, su envío en tiempo real a la AEAT y la recepción de respuestas. Asegura la autenticidad de las facturas mediante certificados digitales y códigos QR, y permite la trazabilidad de las transacciones.
+
+!!! info
+    Para más información, visite la [Guía de usuario Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md).
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+- This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

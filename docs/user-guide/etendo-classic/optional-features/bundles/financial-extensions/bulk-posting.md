@@ -12,7 +12,7 @@ tags:
 This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 !!! warning
     Before using this functionality, remember that this module's background process can affect the performance of the system.
@@ -67,3 +67,6 @@ The Bulk Posting module includes the Not Posted Documents functionality. This is
 
 !!!info
     For more information, visit [Not Posted Documents](../../../basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

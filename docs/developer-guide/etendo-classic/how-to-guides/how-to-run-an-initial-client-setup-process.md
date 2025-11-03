@@ -37,7 +37,7 @@ To include this data, there is a checkbox named *Include Accounting* which oblig
 
 !!!info
     It is recommended to have the Include Accounting option checked if the user needs to apply the same chart of accounts to all of its organizations.
-    In case of entering a different chart of accounts for each specific organization, you should run this process without checking the checkbox and then configure the Chart of Accounts in the [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#initial-organization-setup) window.
+    In case of entering a different chart of accounts for each specific organization, you should run this process without checking the checkbox and then configure the Chart of Accounts in the [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md) window.
 
 !!!note
     In the Reference Data section, the existing datasets will depend on the localization installed, if any. 
@@ -47,7 +47,7 @@ To include this data, there is a checkbox named *Include Accounting* which oblig
 If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
 
   - a [Fiscal Calendar](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#fiscal-calendar) which can be shared by all the *Legal with Accounting* organizations types which belongs to that Client and 
-  - an [Account Tree](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-tree) or *Chart of Accounts* and a [General Ledger configuration](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#glconfig) which is shared by all the organizations created within the Client.
+  - an [Account Tree](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-tree) or *Chart of Accounts* and a [General Ledger configuration](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#general-ledger-configuration) which is shared by all the organizations created within the Client.
 
 The *General Ledger Configuration* and the *Chart of Accounts* created by default can be later on customized. 
 
@@ -88,7 +88,7 @@ These modules are useful as tax configurations generally apply to all organizati
 
 
 !!!info
-    Datasets Installation: additional modules can be added from the [Enterprise Module Management](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window within the system.
+    Datasets Installation: additional modules can be added from the [Enterprise Module Management](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md) window within the system.
 
 
 Every new [Client](../../../user-guide/etendo-classic/basic-features/general-setup/client.md) created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:

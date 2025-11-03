@@ -170,6 +170,14 @@ Se incluyen 2 nuevos check que permiten generar el fichero con la parametrizaci�
 
 Anteriormente, el fichero generado del modelo 349 sólo se podía presentar en AEAT. Con esta mejora, se permite la presentación tanto en Navarra como en Guipúzcoa en función del check que marquemos (si no se marca ninguno, el fichero se genera con la parametrización para la AEAT).
 
+### Edición de Número de Justificante
+
+Si la declaración se presentará a la AEAT utilizando la opción **"Ejercicio 202X. Presentación mediante fichero"**, se debe editar manualmente el fichero generado y modificar el dato de número de justificante insertando un número válido, ya que **no se admiten justificantes que comiencen por el número de modelo y el resto de posiciones ceros**. Para leer el fichero correctamente debería aparecer 1820000000001 o cualquier otra variación, por ejemplo, 1822024000001 para el ejercicio 2024.
+
+El campo "Número de justificante" se localiza siempre en el registro de tipo 1, Declarante, que coincide con la **primera línea del fichero y normalmente entre las posiciones 108 y 120**. 
+
+Si la declaración se presentará utilizando la opción **"Ejercicio 202X. Presentación (hasta 40.000 registros)"**, entonces no es necesario cambiar el número de justificante.
+
 ## **Casos de usuario**
 
 ### **Generación del modelo 349 como un fichero de texto válido**
@@ -317,3 +325,7 @@ Es necesario presentar una declaración sustitutiva cuando dicha declaración te
 Para ello el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar una nueva declaración 349 como fichero indicando en este caso que la nueva declaración que se presenta es sustitutiva de una anterior, e indicando además el número de la declaración original a la que sustituye, tal y como se muestra en la siguiente pantalla:
 
 ![](../../../../../assets/drive/iSU9FGfN3pSTIsHPTAKpZsKZsCB7C0BhZa1RBDpzcJQ8uaOHAUmMPFuYQkhQbrQ2izd9kDfZ0TCiEHdGvHIE7iHOc-uDNoBEhDS5cF9x__Bf2rQgvz47h3U88ViVeZimkAUXctFTFhF9gZYbywo3Nb23iqRQ0Tfq03VSTqcEOcsQQnYJVi6MGxDajA.png)
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

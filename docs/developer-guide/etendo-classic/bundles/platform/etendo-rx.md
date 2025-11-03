@@ -9,23 +9,6 @@ tags:
 # Etendo RX 
 :octicons-package-16: Javapackage: `com.etendoerp.etendorx`
 
-## oAuth Provider
-
-This section describes the oAuth Authentication module included in the Platform Extensions bundle.
-
-oAuth Authentication process facilitates the **provider type configuration** which allows users to **securely authenticate and authorize access** to their information using their preferred provider.
-
-oAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resources on behalf of their owner. This authentication will allow Etendo to get the necessary information to access to third party applications. 
-
-### oAuth Provider Window
-
-In the oAuth Provider window in :material-menu: `Application`> `Etendo RX`> `oAuth Provider`, set the preferred type provider by adding the user authentication URL in the **API oAuth URL field**. This URL can be found in the provider documentation API.  
-
-The other fields will be completed with data referring to the corresponding provider.
-
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauthprovider-1.png)
-
-
 ## Etendo SSO Login
 
 Etendo allows you to authenticate using these external provider accounts: **Google**, **Microsoft**, **LinkedIn**, **GitHub** and **Facebook**. Using the Single Sign-On (SSO) protocol is possible due to the integration through:
@@ -56,39 +39,50 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
 
 2. #### Configure EtendoAuth Middleware Integration
 
-    To authenticate via the **EtendoAuth Middleware**, follow these steps:
+    - **Interactive Setup**
 
-    1. Open the `gradle.properties` file
-    2. Add the following properties:
+        You can quickly configure Single Sign-On using the [Interactive Setup](../../../../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md):
 
-        ```title="gradle.properties"
-        sso.auth.type=Middleware
-        sso.middleware.url=https://sso.etendo.cloud
-        sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
-        authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+        ```bash
+        ./gradlew setup -Pinteractive=true --console=plain
         ```
 
-        !!! warning
-            This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property. 
+        Select **SSO Configuration** and the wizard will guide you step by step through the setup process.
 
-        !!!note
-            During development, you can use `localhost`. However, for production, set your actual domain.
+    - **Manual Configuration**
 
-        With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
+        To authenticate via the **EtendoAuth Middleware**, follow these steps:
 
-        !!! warning "Potential SSO Configuration Mismatch"
+        1. Open the `gradle.properties` file
+        2. Add the following properties:
 
-            ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
-        
-            If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
+            ```title="gradle.properties"
+            sso.auth.type=Middleware
+            sso.middleware.url=https://sso.etendo.cloud
+            sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
+            authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+            ```
 
-            To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
+            !!! warning
+                This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property. 
 
-!!! info
-    For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
+            !!!note
+                During development, you can use `localhost`. However, for production, set your actual domain.
 
+            With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
 
-### How to Integrate your own Auth0 Login Provider with Etendo
+            !!! warning "Potential SSO Configuration Mismatch"
+
+                ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
+            
+                If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
+
+                To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
+
+    !!! info
+        For more information about the use of the SSO Login functionality, visit [SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
+
+### How to Integrate your own Auth0 Login Provider with Etendo (Optional)
 
 This option is recommended only if you need to implement your own authentication service and cannot use the EtendoAuth Middleware service. Follow this guide to configure an Auth0 application and enable social login in Etendo.
 
@@ -221,7 +215,190 @@ This option is recommended only if you need to implement your own authentication
     !!!tip
         Customize the login screen in **Branding** > **Universal Login** in the Auth0 dashboard.
 
-        
-
 !!! info
     For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
+
+## OAuth Provider
+
+### Overview
+
+This section describes the **OAuth Authentication** service included in `Etendo RX` module.
+
+The OAuth authentication process facilitates the **provider type configuration**, allowing users to **securely authenticate and authorize access** to their information using their preferred provider.
+
+OAuth enables an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resources on behalf of their owner. This authentication allows **Etendo** to retrieve the necessary information to access **third-party applications**.
+
+### OAuth Provider Window
+
+:material-menu: `Application`> `Etendo RX`> `OAuth Provider`.
+
+This document explains how to configure an OAuth provider to request access tokens. In addition, the implementation to connect **Google Drive** with **Etendo** via Etendo Middleware is explained.
+
+You can choose between two methods:
+
+
+- [Etendo Middleware](#etendo-middleware-setup) 
+    
+    Use the preconfigured provider offered by **Etendo Middleware**, which simplifies the process (Recommended method).
+
+- [Custom Provider](#manually-configure-a-provider-optional)  
+    
+    Manually configure an external provider if you prefer not to use our middleware, giving you full control over the configuration.
+
+!!! warning
+    When using manual configurations, **EtendoRX** must be installed and properly configured, as it handles the communication with OAuth providers directly. For more information, visit [Etendo RX](../../../etendo-rx/getting-started.md)
+
+
+
+### Etendo Middleware Setup (Recommended)
+
+#### Configuration Variables
+
+Add the following properties to the `gradle.properties` file:
+
+```properties title="gradle.properties"
+## Middleware Configs
+sso.middleware.url=https://sso.etendo.cloud
+sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.html
+```
+!!!note
+    During development, you can use `localhost`. However, for production, set your actual domain.
+
+#### Compile Environment
+
+Run the following command to compile and set up the environment:
+
+```bash
+./gradlew setup smartbuild
+```
+
+#### Create the Connection with Etendo Middleware
+
+- Log in as **admin**.
+- Open the **oAuth Provider** window.
+- Use the toolbar button: **Create Etendo Middleware Provider**.
+  
+    ![Configure Middleware Provider](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/CreateMiddlewareConfigs.png)
+
+- After clicking the button, refresh the grid. A new record will appear, containing the default configuration to connect with **Etendo Middleware**.
+
+    ![Etendo Middleware Provider](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/EtendoMiddlewareConfigs.png)
+
+#### Get Access Token
+
+- Select the newly created middleware.
+- Click on **Get Middleware Token**.
+
+    ![Get Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/GetMiddlewareToken.png)
+
+- Choose the desired **Google Drive scope**:
+
+    ![Drive Scope Selection](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/DriveScopeSelection.png)
+
+    - **Google Drive – Edit Access Level**
+    
+        Grants the app permission to **create, update, delete, and manage** files created through the Etendo.  
+
+        !!! warning 
+            Only files with **Edit** access level will be accessible.  
+    
+        !!!warning
+            With this scope, the app can only manage files that were created from Etendo or explicitly opened with it.
+
+    - **Google Drive – Read Only Access Level**
+
+        Grants the app permission to **read existing files** in the user’s account (including files not created by Etendo).  
+        No modifications are allowed — only reading file information or content.
+
+        !!! warning 
+            Only files with **Read Only** access level will be accessible.
+
+- Accept Google’s consent screen.
+
+    ![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
+
+#### Token Created in the Token Info Tab
+
+Once the flow is completed, an **access token** will be generated and can be viewed in the **Token Info** tab.
+
+!!! info
+    Tokens obtained through **Etendo Middleware** are valid for **1 hour**.  
+    After expiration, a new token must be requested to maintain access to the connected third-party services.
+
+
+![New Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewMiddlewareToken.png)
+
+### Manually Configure a Provider (Optional)
+
+This method is intended for users who prefer to register a custom OAuth provider without using EtendoMiddleware. It provides full control over registration, authorization, and token handling parameters.
+
+!!! warning
+    Manual provider configuration requires **EtendoRX** to be installed and enabled. RX is responsible for managing the direct connection with external OAuth providers. For more information, visit [Etendo RX](../../../etendo-rx/getting-started.md)
+
+
+
+![OAuth Provider Window](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/oAuthProviderWindow.png)
+
+#### Header
+
+Fields to note:
+
+- **Organization**: Defines the organization scope for this provider.
+- **oAuth API URL**:  Base URL of the external OAuth API provider. It is used as the primary endpoint for communication with the provider’s authentication and token services. (optional)
+- **Active**: Checkbox to enable or disable this provider configuration.
+
+#### Section: Registration
+
+This section defines how your application is registered with the OAuth provider. It includes credentials, the authorization flow, requested scopes, and essential URLs for completing the authentication.
+
+Fields to note:
+
+- **Value:** Internal technical identifier for the provider.
+- **ID for Client:** `client_id` provided by the OAuth provider.
+- **Client Secret:** `client_secret` provided by the OAuth provider.
+- **Scope:** List of requested permissions (These scopes can be found in the provider documentation. e.g., openid, profile, email, https://www.googleapis.com/auth/drive).
+- **Client Name:** Display name for the client.
+- **Authorization Grant Type:** Flow type (e.g., authorization_code, client_credentials, password).
+- **Redirect URI:** Redirect URL to receive the authorization code or token. This should point to the RX Auth Service URL.
+- **Code Challenge Method:** PKCE method (S256 or plain).
+- **Client Authentication Method:** Method to send client credentials (e.g., client_secret_post, client_secret_basic).
+- **Token URI:** Endpoint to exchange authorization code for tokens (access_token and optional refresh_token).
+
+#### Section: Provider
+
+This section defines the OAuth provider's endpoints required for your app to connect and validate tokens properly.
+
+- **Authorization URI:** Endpoint to initiate the authorization flow.
+- **User Info URI:** Endpoint to fetch user details using the access_token.
+- **User Name Attribute:** Attribute used to identify the user (e.g., email, sub).
+- **Authorization Endpoint:** Endpoint used to request the provider token through the RX Auth Service.
+- **JWK Set URI:** URL where the provider publishes public keys to verify signed JWTs.
+
+
+### Token Info tab
+
+This tab stores the tokens generated through the ERP. While full tokens are not displayed for security reasons, the following information is available:
+
+- **User:** ERP user who generated the token.
+- **Provider:** The OAuth provider from which the token was issued.
+- **Valid Until:** Token expiration date and time.
+
+
+### Buttons
+
+- **Refresh Config**
+    
+    Restarts the services defined in **RX Config**, useful if configuration changes were made.
+
+- **Get Token:** 
+    Starts the authorization flow with the external OAuth provider.
+
+    If everything is properly configured, clicking **Get Token** and accepting the consent will generate the desired access token. 
+    
+    After refreshing the grid in the **Token Info** tab, a new record will appear.
+
+!!! info
+    To revoke access, simply delete the token record. Once removed, the connection to the third-party service will no longer be valid.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

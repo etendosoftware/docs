@@ -5,8 +5,6 @@ title: Set Up - Accounting
 
 This section describes the windows that are necessary to configure the accounting functionalities of Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Accounting Transaction Details](#accounting-transaction-details){ .md-button .md-button--primary } <br>
-
 [:material-file-document-outline: Open/Close Period Control](#openclose-period-control){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Financial Type](#financial-type){ .md-button .md-button--primary } <br>
@@ -15,7 +13,7 @@ This section describes the windows that are necessary to configure the accountin
 
 [:material-file-document-outline: Account Tree](#account-tree){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Configuration](#glconfig){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Configuration](#general-ledger-configuration){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Fiscal Calendar](#fiscal-calendar){ .md-button .md-button--primary } <br>
 
@@ -52,158 +50,152 @@ This section describes the windows that are necessary to configure the accountin
 
 ### Overview
 
-Open/Close Period Control feature manages the periods of an organization. This feature applies to organizations for which the "Period Control" feature is enabled.
+The **Open/Close Period Control** feature allows the user to manage which accounting periods are open or closed for a certain organization.
 
-The Period Control feature allows the user to assign a Fiscal Calendar containing years and periods (normally months) to an organization.
+Before using this window, ensure that:
 
-Overall, the "**Period Control**" and the "**End Year Close**" processes can be executed in Etendo by following the steps recommended below:
+- [x] Your organization has a **[Fiscal Calendar](#fiscal-calendar)** defined.
+- [x] The fiscal calendar contains **Years** and **Periods** (typically monthly).
+- [x] The organization's type is **Legal with Accounting** and has **[Allow Period Control](../../general-setup/enterprise-model/organization.md#organization-1)** enabled.
 
--   The **creation** of the Years and the Periods (i.e. monthly periods) in the "Fiscal Calendar" window
--   The **opening of all the period/s**, that means including the "13th Period" or adjustment period, in this window
--   The **closing of the standard period/s**, that means excluding the "13th Period" or adjustment period, in this window.
+Here’s how the process works in Etendo:
 
-This step can be done once the corresponding transactions have been posted to the ledger within a "standard" period.
+1. **Create years and periods** in the [Fiscal Calendar](#fiscal-calendar) window.
+2. **Open all periods** (including the "13th Period" for adjustments) in the Open/Close Period Control window.
+3. **Close standard periods** (except the 13th Period) once all transactions for those periods are posted.
 
-!!! info
-    It is not mandatory to close the standard periods of a given year before running the Close Year process.
+    !!!note
+        Closing standard periods before running [Close Year](../accounting/transactions.md#end-year-close) process is recommended for better monitoring but not required.
+
+4. **Post any final adjustments** in the 13th Period using G/L Journals.
+5. **Run the [Close Year](../accounting/transactions.md#end-year-close) process** in the End Year Close window. This creates closing entries and permanently closes all periods for the year.  
+
+    !!!warning
+        Permanently closed periods can’t be reopened unless you run Undo Close Year first.
+
+6. If needed, **run [Undo Close Year](../accounting/transactions.md#undo-close-year)** to reopen periods and allow further changes. After making changes, you can run Close Year again.
+
+!!!important
+    - You can’t create years or periods in the Open/Close Period Control window—use the Fiscal Calendar window for that.
+    - You can’t generate closing entries here—use the End Year Close window.
+    - You can also check the status of any period in the [Period Control](../../general-setup/enterprise-model/organization.md#period-control) tab of the Organization.
+
+#### Why Use this Feature?
+
+Using period control helps the user:
+
+- Track financial activity by controlling which periods are open for posting.
+- Prevent unwanted changes to closed periods.
+- Manage closing entries during year-end processes.
+
+### Period Control
+
+The **Open/Close Period Control** window allows the user to revise and manage all accounting periods created in the [Fiscal Calendar](#fiscal-calendar). You can **open**, **close**, or **permanently close** periods as needed for your organization.
+
+![Open/Close Period Control window](../../../../../assets/drive/1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt.png)
+
+**Fields to note:**
+
+- **Status:** Shown in two columns—one with a color code, one with the status name. Statuses include:
+    - *All Never Opened* (gray): Newly created periods.
+    - *All Opened* (green): All document types are open.
+    - *All Closed* (red): All document types are closed.
+    - *Mixed* (orange): Some document types are open, others are closed.
+    - *All Permanently Closed* (red): All document types are permanently closed.
+- **Calendar:** Shows the organization’s calendar (read-only).
+- **Organization**
+- **Year**
+- **Period No.**
+- **Name:** Name of the period.
+- **Starting Date:** When the period begins.
+- **Ending Date:** When the period ends.
+
+You can use these fields to filter and find the periods you need. For example, filter by calendar, organization, and year to see all periods for a specific year.
+
+**Default Filters:** 
+
+By default, this window only shows periods that:
+
+- Are **not** closed.
+- Belong to the organization you’re logged into.
+
+    !!!info
+        Remember you can remove these filters by clicking the funnel icon.
+
+**Available Buttons:**
+
+- **Open Period:** Allows posting in the period(s).
+- **Close Period:** Blocks posting in the period(s). You can reopen a closed period if needed.
+
+    !!!info
+        It is possible to select multiple records to open or close periods in bulk.
+
+    !!!important 
+        - Only periods for "Legal with Accounting" organizations with "Allow Period Control" enabled can be opened or closed. 
+        - If a period is open for all document types except one (e.g., AP Invoice), you can post all transactions except for that document type in that period.
 
 
-Closing the standard periods helps to track the periods which have been already reviewed and adjusted if required, and therefore closed in order not to allow any further posting within those periods.
+#### Period Control Example
 
--   The **posting of the accounting adjustments** to the ledger if any, in the "13th Period" by using a G/L Journal/s.
--   The **execution** of the Close Year process in the "End Year Close" window.  
-    This process generates the closing accounting entries such as the P&L closing entry, and also closes the standard and adjustment periods if those are still open. After the Closing of the Year, all its Periods will be in **Permanently Closed** status. A Period in Permanently Closed can not be reopened, it is necessary to Undo the Closing of the Year first.
+Here’s a simple example of how period control works:
 
-Additionally, the Undo Close Year process undoes all what has been done and therefore accounted for by the close year process. Besides, this process opens all the periods which were closed.
-
-This is done to allow that the corresponding changes can be posted to the ledger as required in a standard period.
-
-Once the corresponding changes have been accounted for, the "Close Year" process can be run once again. This process generates the closing accounting entries and closes all the periods again.
-
-As already mentioned:
-
-It is not possible to create years and periods directly on this window, use the Fiscal Calendar window to create new years and periods.
-
-It is not possible to generate the closing accounting entries directly on this window, use the Close Year process which can be found in the End Year Close Window.
-
-Finally, it is also possible to check the "Status" of a given period is to navigate to the Period Control tab of the Organization window.
-
-#### **Period Control**
-
-In **Open/Close Period Control window** all the Periods previously created in the Fiscal Calendar window are shown.
-
-However, the records are filtered by their "Status" and "Organization", by showing only the Periods which are not in **Closed** Status and belong to the Organization in which the User is logged in. These filters can be removed by clicking on the funnel icon.
-
-This window shows two Tabs. The first Tab shows all the existing Periods. Once selected a record in this Tab, the lower one shows all the Document Types and their Status in that Period. With this layout, it is possible to easily manage the status of a Period as a whole as well as the status of a particular Document Type inside a specific Period.
-
-The way to manage the Opening/Closing of a Period is:
-
--   Use the filters of the grid to show the desired Periods.
--   Select the Periods for which the action is going to be performed.
--   Click on the Open/Close Period, select the action to perform, and click OK.
-
-Once done, Etendo informs that the process has been completed successfully.
-
-The way to manage the Opening/Closing of a particular Document Type for a specific Period is similar:
-
--   Use the filters of the grid to show the desired Document Type.
--   Select the Document Types for which the action is going to be performed.
--   Click on the Open/Close Period, select the action to perform, and click OK.
-
-Once done, Etendo informs that the process has been completed successfully.
-
-![](../../../../../assets/drive/1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt.png)
-
-As shown in the image above the main fields in this window are:
-
--   the *Status*. It is split in two columns. One that represents the Status with a color code, making it easier to understand the situation at a quick glance. The other one represents the Status by its name, making it possible to filter the records shown. The possible Status values are:
-    -   All Never Opened, colored in gray. Recently created Periods.
-    -   All Opened, colored in green. All the Document Types are open for this Period.
-    -   All Closed, colored in red. All the Document Types are closed for this Period.
-    -   Mixed, colored in orange. Not all the Document Types have the same Status value in this Period. For more information, refer to the Documents Tab below.
-    -   All Permanently Closed, colored in red. All the Document Types are Permanently Closed for this Period.
--   the *Calendar*
-    -   Etendo automatically displays the calendar of the organization, as an organization can only have one calendar assigned. In fact, this field is a read-only field
--   the *Organization*
--   the *Year*
--   the *Period No.*
--   the *Name* of the Period
--   the *Starting Date* of the Period
--   the *Ending Date* of the Period
-
-These fields can be used as filters to show the desired records. For example, filtering by a Calendar, and Organization and a Year it is an easy way to show all the Periods of a particular Year.
-
-Then it is possible to select all records shown and Open or Close all of them at once.
-
--   The *Period Actions* available are:
-    -   *Open Period*
-        -   This action opens the period/s.
-    -   *Close Period*
-        -   This action closes the period/s.  
-            Once a period is closed, it is not possible to post or to undo the posting of any transaction in such period/s. A closed period/s can always be re-opened by just selecting it and executing the action "Open Period" for the period/s.
-    -   It is only possible to open and close the accounting periods of "Legal with Accounting" Organization types for which Allow Period Control check is enabled
--   If a period is open for all document types, but it is closed for a given document type, for instance AP Invoice, it will be possible to post transactions of any type within that given period but AP Invoice transactions.
-
-#### **Period Control Example**
-
-The organization in this example has created three consecutive years and has open all the periods including the "13th Period" as shown in the image below:
+An organization has created and opened all periods for three years, including the "13th Period" for adjustments.
 
 ![](../../../../../assets/drive/1dOWq4RquxSziuUbqVYpORdf9eA4Ts7g5.png)
 
-The configuration above means that the organization in this example can post any document to the ledger at any period within those 4 years. If the organization tried to post a sales invoice in Dec 2018, Etendo will show an error as that year/period does not exist.
+With the setup shown above, you can post any document to any period within those years. If you try to post to a period that doesn’t exist (like December 2018, in this example), Etendo will show an error.
 
-The organization in this example needs to close the year 2019.
+Imagine you want to close the year 2019. Before running the "Close Year" process, you should close all standard periods for 2019 (except the 13th Period) to prevent further postings. Here’s how:
 
-Before running the "Close Year" process for 2019, the organization in this example closes all the 2019 standard periods until Dec-19 in order not to allow any further accounting on any 2019 standard period. The process to do that is:
-
--   Move to **Open/Close Period Control** Window.
--   Use the filters of the grid to show the desired Periods. In this example, filter by Calendar, Organization and Year (i.e. 2019)
--   As the Year has all its Periods Open, including the Adjustment Period, the Window should show thirteen records.
--   Select all the periods except the 13th Period and click on the Close Period button and select the action "Close Period" (as this one allows the user to reopen the year/period if needed)
+1. Go to the **Open/Close Period Control** window.
+2. Filter by Calendar, Organization, and Year (e.g., 2019) to show the corresponding periods.
+3. You should see all 13 periods for the year.
+4. Select all periods except the 13th Period.
+5. Click **Close Period** and confirm.
 
 ![](../../../../../assets/drive/1AxEefqisj3SW_FqBBXGfF6Th0rWpaJrn.png)
 
-Above action closes all the 2021 standard periods until Dec-2021, therefore it is not possible to post any transaction to the ledger in any 2021 standard period anymore but:
+After this, all standard periods for 2019 are closed. You can only:
 
-- to post "G/L Journals" to the ledger in the "13th Period"
+- Post G/L Journals in the 13th Period.
+- Post closing entries created by the Close Year process.
 
-- and to post the "Closing" entries automatically created by the Close Year process to the ledger
+!!!important
+    If you need to make changes in a closed period, you must reopen it, which is only possible if the year is not permanently closed; otherwise, run Undo Close Year first.
 
-unless:
+### Documents Tab
 
--   the corresponding 2019 standard period/s is/are re-opened. That is only possible if the 2019 year is not closed, otherwise the Undo Close Year needs to be run.
+Each accounting period in Etendo can be opened or closed for all document types at once, or for specific document types.
 
-#### **Documents**
+- When you open a period, all document types for that period are opened, so you can post any kind of transaction.
+- You can also open or close individual document types (like AP Invoice or G/L Journal) within a period.
 
-When a Period is created in the Fiscal Calendar Window, it is possible to Open or Close it in this Window. Performing these actions directly for that Period affects all the associated Document Types at once.
-
-For example, opening a Period results in opening all the Document Types for that Period, making it possible to post transactions of any type within that given Period.
-
-But it is also possible to Open or Close each Document Type in the same Period.
-
-Once a Period is selected in the Periods Tab of this Window, all the available Document Types are shown in the Documents Tab, making it possible to select any of them and Open or Close it.
-
-The way to manage the Opening/Closing of a particular Document Type for a specific Period is:
-
--   Use the filters of the grid to show the desired Document Type.
--   Select the Document Types for which the action is going to be performed.
--   Click on the Open/Close Period, select the action to perform, and click OK.
-
-Once done, Etendo informs that the process has been completed successfully.
+This is useful in case the user needs to prevent the creation of further documents of a certain type for a specific period.
 
 ![](../../../../../assets/drive/18LHnWB8IGtMlKvBlGEkFcvMl4MtUzfWD.png)
 
--   As in the Periods tab, the *Status* is split in two columns. One that represents the Status with a color code, and one that represents it by its name. The possible Status values are:
-    -   Never Opened, colored in gray. It belongs to a recently created Period.
-    -   Open, colored in green.
-    -   Closed, colored in red.
-    -   Permanently Closed, colored in red. Document Permanently closed. Only by reopening a Year, it is possible to Open it again.
+**Status columns:**  
+Each document type shows its status with a color and a name:
 
-Notice that:
+- **Never Opened** (gray): Not yet opened.
+- **Open** (green): Posting is allowed.
+- **Closed** (red): Posting is blocked.
+- **Permanently Closed** (red): Locked; can only be reopened by undoing the year close.
 
--   13th Period has **only one Document Type**, GL Journal, since in the Adjustment Period only GL Journal Transactions can be posted.
--   If a period is open for all document types but it is closed for a given document type, for instance AP Invoice, it will be possible to post transactions of any type within that given period but AP Invoice transactions.
--   If not all the Document Types of that Period have the same value, for example some are Closed and some are Open, then the Status of the Period is *Mixed.*
+!!!important
+    - The 13th Period only allows G/L Journal entries.
+    - If a period is open for all document types except one (for example, AP Invoice), you can post all transactions except for that type.
+
+
+**How to open or close a document type in a period:**
+
+1. Select a period in the Periods tab.
+2. Go to the Documents tab to see all document types for that period.
+3. Use filters to find the document types you want.
+4. Select the document types.
+5. Click **Open/Close Period**, choose the action, and click OK.
+
+Etendo will confirm when the process is complete.
 
 ## Financial Type
 
@@ -262,78 +254,97 @@ As shown in the image above, the main fields in this Window are:
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Account Tree`
 
-### Overview
+### Overview  
 
-An account tree is the way Etendo captures the chart of accounts of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger.
+An **account tree** represents the **Chart of Accounts (CoA)** of an organization. The CoA is the list of accounts used in the general ledger, including assets, liabilities, income, and expenses.  
 
-Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In that case, Etendo provides a "Localization Bundle" which includes the Statutory Chart of Accounts.
+Etendo provides several ways to configure a CoA based on the organization’s accounting needs. CoAs can follow country-specific requirements, be translated into different languages, and adapted to fit the company’s practices.  
 
-For instance, the Spanish Localization Bundle includes
+The **Account Tree window** lets users:  
 
--   the General Spanish CoA
--   the PYMES Spanish CoA.
--   and the Abreviado Spanish CoA.
+- **Review and manage** a chart of accounts imported from a CoA module.  
+- **Create and customize** a new chart of accounts from scratch if needed.  
 
-After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the Initial Organization setup.
+### Account Tree Configuration
 
-On the other hand, some countries such as the USA do not require that specific level of detail.
+Etendo offers different options for CoAs configuration: 
 
-!!! info
-    Each organization can define the chart of accounts that best suits their practices.
+- **Install a location module or a generic plan**: Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In other hand, some countries such as the USA do not require that specific level of detail.
 
 
-In that case, Etendo provides a Generic Chart of Accounts module which delivers a standard list of accounts which can be evolved for the organization's needs. After installation, the generic Chart of Accounts is available for selection during the Initial Client Setup and the Initial Organization setup.
+    !!!info 
+        In the case of Spain, Etendo provides a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) which includes the Statutory Chart of Accounts.
 
-As explained in the Chart of Accounts Module article, a **chart of accounts module** basically includes a **CSV file** which contains the account tree structure.
+        For instance, the Spanish Localization Bundle includes:
 
-In Etendo, that creates:
+        -   the [General Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
+        -   the [PYMES Spanish CoA](../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
 
--   the organization's **Account Tree** or Chart of Accounts
--   and besides a defaulted General Ledger configuration.
 
-It is important to remark that it is not possible to apply a Chart of Accounts in the Enterprise Module Management window because a Chart of Account is not a dataset but a CSV file.
+    Each organization can **define the chart of accounts that best suits their practices**. In that case, Etendo provides a **Generic Chart of Accounts module** which delivers a standard list of accounts which can be evolved for the organization's needs. After installation, the generic Chart of Accounts is available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md).
 
-If the legal entity has already been created, the chart of accounts can be imported by using the Import Data module, this module allows importing products, business partners and accounts among others.
 
-Additionally, a CSV file can be imported while running the Initial Client Setup or while running the Initial Organization Setup if the checkbox "**Include Accounting**" is checked, therefore the CSV file or accounting file can be selected.
+- **Import a CSV file with the account tree structure**: You can import a CSV file that defines the account tree structure during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) or [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md) if the **Include Accounting** checkbox is selected. In that case, you will be prompted to choose the CSV file (accounting file).   
 
-Finally, a chart of accounts can also be created manually, regardless it is recommended to start from a sample chart of accounts like the generic one and evolve it for the company’s needs rather than starting from scratch.
+    This process creates:
 
-#### Element
+    - The organization’s **Account Tree** (Chart of Accounts).
+    -  Default [General Ledger configuration](#general-ledger-configuration).  
 
-The account tree window allows the user to review and maintain the chart of accounts imported through a chart of accounts module, as well as to create new ones from scratch.
+    !!! info
+        As explained in the [How to Create a Chart of Accounts Module](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md) guide, a **Chart of Accounts module** basically contains the **CSV file** with the account tree structure.
 
-If a *Chart of Accounts* module or an accounting CSV file is installed and selected at *client* level through the Initial Client Setup process:
 
--   the chart of accounts automatically created can be shared by any organization available in the client, as it is assigned to the organization (\*)
+- **Create the CoA manually**: a chart of accounts can also be [created manually](../../../how-to-guides/how-to-create-an-account-tree.md), if this is the case, it is recommended to start from a sample CoAs like the generic one and evolve it for the company’s needs rather than starting from scratch.
 
-As a side note, this is not the preferred method but to install it at organization level, see next paragraph.
+    !!! tip
+        
+        - If a Chart of Accounts module or an accounting CSV file is installed and selected at **Client Level** through the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) process, it can be shared by any organization available in the client.
+        
+        - If a Chart of Accounts module is installed and then selected at **organization level** through the [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md) process, the chart of accounts automatically created is linked to the organization being created.
 
-If a *Chart of Accounts* module is installed and then selected at *organization* level through the Initial Organization Setup process, the chart of accounts automatically created is linked to the organization being created.
+### Account Tree Window
 
-#### Element Value
+The Account Tree main header allows creating the organization's account type and then define the Chart of Accounts. 
 
-Element value tab lists every chart of account elements from the chart of accounts headings to the subaccounts.
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree8.png)
 
-Every Chart of Accounts in Etendo contains different types of elements. There are four types of elements:
 
--   "Heading", "Breakdown" and "Account" elements help to structure the chart of accounts in a way that the financial reports can be produced based upon that structure
--   "Subaccount" element allows the user to post the transactions to the ledger
+#### Element Value Tab
+
+The **Element value** tab lists every chart of account elements from the chart of accounts headings to the subaccounts.
+
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-0.png)
+
+Every **Chart of Accounts** in Etendo contains different types of elements organized into the following hierarchy:
+
+-   **Heading**, **Breakdown** and **Account** elements help to structure the CoAs in a way that the financial reports can be produced based upon that structure.
+
+    - Heading: Main heading (e.g., Balance Sheet, Assets).
+
+    - Breakdown: Groups within a heading (e.g., Current Assets).
+
+    - Account: General account (e.g., Cash, Customers).
+
+-   **Subaccount** element allows the user to post the transactions to the ledger.
+
+    - Subaccount: Lowest level, where transactions are recorded (e.g., Petty Cash, Bank X).
 
 Besides, it is well-known that every account, subaccount in Etendo terms, needs to be included in a financial statement:
 
--   "Asset", "Liability" and "Owner's Equity" account types need to be included in the Balance Sheet
--   while "Expense" and "Revenue" account types need to be included in the Profit & Loss.
+-   **Asset**, **Liability** and **Owner's Equity** account types need to be included in the Balance Sheet
+-   **Expense** and **Revenue** account types need to be included in the Profit & Loss.
 
-The best way to understand how a chart of accounts is captured in Etendo is by pressing the "Tree" icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar.
+!!! tip
+    The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar once the user is in the Element Value tab.
 
-Tree icon opens a new window which shows one tree branch per financial statement:
+The Tree icon opens a new window which shows one **tree branch** per financial statement:
 
 -   Balance Sheet
 -   Profit & Loss
--   and Temporary default accounts. This branch of the account tree gathers temporary defaults accounts which are not ledger accounts.
+-   Temporary default accounts: This branch of the account tree gathers temporary defaults accounts which are not ledger accounts.
 
-![](../../../../../assets/drive/12A_jeX7hjVBb97LZZW_nK85hx6Esp59a.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-1.png)
 
 Besides, each tree branch contains several elements inside structured in a hierarchical way, for instance:
 
@@ -341,65 +352,67 @@ Besides, each tree branch contains several elements inside structured in a hiera
     -   Assets
     -   Liabilities and Owner's Equity
 
-![](../../../../../assets/drive/1HiiXjkkZf5e0VsVbgldchqqwS8WrspJG.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-2.png)
 
-As shown in the image above "Assets" is also split into:
+
+As shown in the image above **Assets** is also split into:
 
 -   Current Assets
 -   Long term Assets
--   and Accumulated Depreciation
+-   Accumulated Depreciation
 
-Same way "Equity" is also split into several accounts, in Etendo terms "subaccounts", such as "Capital Stock" or "Retained Earnings".
+Same way **Equity** is also split into several accounts, in Etendo terms **subaccounts**, such as **Capital Stock** or **Retained Earnings**.
 
-Back to the "Element Value" tab, there are several **basic fields** which help to define each chart of account element:
+Back to the **Element Value** tab, there are several **basic fields** which help to define each chart of account element:
 
-![](../../../../../assets/drive/1pTNoLOD4-8sKE5F5VMC-loqlMklPTmv6.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-3.png)
 
--   the **"Search Key"** and the **"Name"** identifies the chart of account element.
-    -   The search key can either be a single letter, a word or a number, however it is important to be aware that the "Search key" field is the field that Etendo uses while helping the user to create an account tree element.
--   the **Account Sign** field is only shown and therefore editable if the general ledger configuration linked to the account tree is "NOT" set as "Centrally Maintained".  
+
+-   The **Search Key** and the **Name** identifies the chart of account element.
+    -   The search key can either be a single letter, a word or a number, however it is important to be aware that the Search key field is the field that Etendo uses while helping the user to create an [account tree element](#balance-sheet-elements).
+-   The **Account Sign** field is only shown and therefore editable if the general ledger configuration linked to the account tree is [NOT set as Centrally Maintained](#general-ledger-configuration).  
     In that case, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements:
-    -   if the account sign of an account tree element is "**Debit**", the balance of that account will then be shown as **(Debit - Credit)**.
-        -   "**Asset**" accounts type are normally set as **Debit**, therefore its debit balance is shown as **positive** in the Balance Sheet.  
+    -   If the account sign of an account tree element is **Debit**, the balance of that account will then be shown as **(Debit - Credit)**.
+        -   **Asset** accounts type are normally set as **Debit**, therefore its debit balance is shown as **positive** in the Balance Sheet.  
             In the same way, its credit balance is then shown as negative in the Balance Sheet.
-    -   if the account sign of an account tree element is "**Credit**", the balance of that account will then be shown as **(Credit - Debit)**.
-        -   "**Liability**" account types are normally set as **Credit**, therefore its credit balance is shown as **positive** in the Balance Sheet. Same applies to the "**Owner's Equity**" account type.
-        -   "**Revenue**" account types are set as **Credit**, therefore its Credit balance is shown as **positive** in the P&L report.
-        -   "**Expense**" account types are set as **Credit**, therefore its Debit balance is shown as **negative** in the P&L report.
--   **"Element Level"**. As already mentioned, there are four types of elements which help to structure a chart of accounts in a way that the financial reports can be produced right away based upon the chart of accounts structure.  
+    -   If the account sign of an account tree element is **Credit**, the balance of that account will then be shown as **(Credit - Debit)**.
+        -   **Liability** account types are normally set as **Credit**, therefore its credit balance is shown as **positive** in the Balance Sheet. Same applies to the **Owner's Equity** account type.
+        -   **Revenue** account types are set as **Credit**, therefore its Credit balance is shown as **positive** in the P&L report.
+        -   **Expense** account types are set as **Credit**, therefore its Debit balance is shown as **negative** in the P&L report.
+-   **Element Level**. As already mentioned, there are four types of elements which help to structure a chart of accounts in a way that the financial reports can be produced right away based upon the chart of accounts structure.  
     It is important to remark that it is not mandatory to use the four elements but just the ones which help us to properly structure the Chart of Accounts,  
-    having into account that the lowest one "Subaccount" is the only mandatory one because ledger entries are posted to the ledger through the subaccounts.  
+    having into account that the lowest one Subaccount is the only mandatory one because ledger entries are posted to the ledger through the subaccounts.  
     The four element types are:
-    -   **Heading** - the elements "B - Balance Sheet" and "1000-Assets" are heading type elements because those are at the top ones having other elements underneath.
-    -   **Breakdown** - the element "1100 - Current Assets" and "1500 - Long-term Assets" are a breakdown of the heading "1000-Assets".  
+    -   **Heading** - the elements B - Balance Sheet and 1000-Assets are heading type elements because those are at the top ones having other elements underneath.
+    -   **Breakdown** - the element 1100 - Current Assets and 1500 - Long-term Assets are a breakdown of the heading 1000-Assets.  
         Often, the assets and liabilities on a balance sheet are broken down into current assets and long-term assets. Breakdown element type helps us to define this kind of situations.
-    -   **Account** - this level would help to split the element "1100 - Current Assets" into "1110 - Cash", "1200 - Accounts Receivable", etc, as a way to distinguish between the different types of current assets.
-    -   **Subaccount** - this level is the lowest level of detail. For instance, the account element "1110 - Cash" can be split into the subaccounts "1120 - Checking Account" and "1140 - Petty Cash" subaccount to distinguish while posting to the ledger the transactions paid by check from the ones paid by petty cash.
--   **"Account Type"**. The options available are **Asset**, **Liability**, **Owner's equity**, **Revenue** and **Expense**.  
-    *Asset*, *Liability* and *Owner's equity* account types are included in the Balance Sheet as well as in the "balance sheet closing entry" as described in the Close Year article.  
-    *Revenue* and *Expense* account types are included in the Income Statement as well as in the "P&L closing entry" as described in the Close Year article.
--   **"Summary Level"** defines if an account tree element groups other levels underneath or not, therefore heading, account and breakdown levels can be marked as summary levels while subaccount should not. There can be heading elements which group other elements underneath, for instance the element "1000-Assets" while there can be heading elements which do not need to group other elements underneath but Customize Elements, for instance the element "1900-Total Assets". The first type needs to be configured as "Summary Level", the second type does not need to. Moreover:
-    -   the amounts displayed in financial reports such as the Balance Sheet and the Income statement for a non-summary element is the sum of the debit and credit amounts posted to that account (subaccount).  
-        The balance of that particular subaccount will then be shown as either positive or negative depending on its account sign or depending on what is centrally configured in the General Ledger Configuration
-    -   the amounts displayed in financial reports such as the Balance Sheet and the Income statement for a summary element is the sum of the amounts of the elements underneath.  
-        The balance of that summary element will then be shown as either positive or negative depending on its account sign or depending on what is centrally configured in the General Ledger Configuration.
+    -   **Account** - this level would help to split the element 1100 - Current Assets into 1110 - Cash, 1200 - Accounts Receivable, etc, as a way to distinguish between the different types of current assets.
+    -   **Subaccount** - this level is the lowest level of detail. For instance, the account element 1110 - Cash can be split into the subaccounts 1120 - Checking Account and 1140 - Petty Cash subaccount to distinguish while posting to the ledger the transactions paid by check from the ones paid by petty cash.
+-   **Account Type**. The options available are **Asset**, **Liability**, **Owner's equity**, **Revenue** and **Expense**.  
+    **Asset**, **Liability** and **Owner's equity** account types are included in the Balance Sheet as well as in the balance sheet closing entry as described in the [Close Year](#openclose-period-control) article.  
+    **Revenue** and **Expense** account types are included in the Income Statement as well as in the P&L closing entry as described in the [Close Year](#openclose-period-control) article.
+-   **Summary Level** defines if an account tree element groups other levels underneath or not, therefore heading, account and breakdown levels can be marked as summary levels while subaccount should not. There can be heading elements which group other elements underneath, for instance the element 1000-Assets while there can be heading elements which do not need to group other elements underneath but [Customize Elements](#customized-elements), for instance the element 1900-Total Assets. The first type needs to be configured as **Summary Level**, the second type does not need to. Moreover:
+    -   The amounts displayed in financial reports such as the Balance Sheet and the Income statement for a non-summary element is the sum of the debit and credit amounts posted to that account (subaccount).  
+        The balance of that particular subaccount will then be shown as either positive or negative depending on its account sign or depending on what is centrally configured in the [General Ledger configuration](#general-ledger-configuration)
+    -   The amounts displayed in financial reports such as the Balance Sheet and the Income statement for a summary element is the sum of the amounts of the elements underneath.  
+        The balance of that summary element will then be shown as either positive or negative depending on its account sign or depending on what is centrally configured in the [General Ledger configuration](#general-ledger-configuration).
 
 Additionally, there are other advanced fields which also help to configure more unusual scenarios. Those fields are:
 
--   the **"Show Value Condition"** field defines if a chart of account element balance is going to be shown and taken into account in financial reports or not. The options available are:
+-   The **Show Value Condition** field defines if a chart of account element balance is going to be shown and taken into account in financial reports or not. The options available are:
     -   **Algebraic**, the chart of account element will be shown anyway regardless of the sign of its balance. This is the most commonly used.
     -   **Negative Only**, it will be shown only in case its balance is negative
     -   **Positive Only**, same as the previous one but just in case its balance is positive.
--   **"Element Shown"** defines if an account tree element is going to be shown in the financial reports or not. This one can be used for elements used to execute calculations which do not need to be shown in a report.
--   **"Title Node"** defines if an account tree element is going to be shown in the financial reports just as a "Title" without including its balance. This option works for heading account tree elements which balance is not 100% accurate for whatever kind of reason as there is another element which gets the correct balance value by using operations or customized elements between a set of given elements.
+-   **Element Shown** defines if an account tree element is going to be shown in the financial reports or not. This one can be used for elements used to execute calculations which do not need to be shown in a report.
+-   **Title Node** defines if an account tree element is going to be shown in the financial reports just as a **Title** without including its balance. This option works for heading account tree elements which balance is not 100% accurate for whatever kind of reason as there is another element which gets the correct balance value by using operations or [Customize Elements](#customized-elements) between a set of given elements.
 
-#### Customized Elements
+#### Customized Elements Tab
 
-The customized elements tab allows the user to get an account tree element as a combination of a given list of existing elements.
+The **Customized Elements** tab allows the user to get an account tree element as a combination of a given list of existing elements.
 
-Once the account tree elements have been selected in a new record and in the correct sequence order, it is not required to specify a sign but just the elements which are going to be included. The customized elements need to be elements located at the same level within the account tree, otherwise a "recursive" calculation may happen.
+Once the account tree elements have been selected in a new record and in the correct sequence order, it is not required to specify a sign but just the elements which are going to be included. The customized elements need to be elements located at the same level within the account tree, otherwise a **recursive** calculation may happen.
 
-For instance, the element "1900-Total Assets" is the sum up of three customized elements:
+For instance, the element 1900-Total Assets is the sum up of three customized elements:
 
 -   current assets
 -   long-term assets
@@ -407,360 +420,14 @@ For instance, the element "1900-Total Assets" is the sum up of three customized 
 
 as shown in the image below.
 
-![](../../../../../assets/drive/1fwBuS2sV-ufKxTap5X_O02nkVrMJOD_i.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-4.png)
 
-#### Translation
+#### Translation Tab
 
-Account elements can be translated to any language required.
+In the **Translation** tab, account elements can be translated to any language required.
 
-#### Account Tree creation
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-5.png)
 
-A chart of accounts creation from scratch implies to create each chart of accounts element one by one:
-
--   Once created, the elements can be arranged in a hierarchical way according to the corresponding financial statement structure by using the "Drag & Drop" function of the Tree Structure feature.
--   Moreover, Etendo considers the elements created in an alphanumerical order as a sorted list and finds the position in that sorted list where the new element needs to be positioned.
-
-The steps to follow for the creation of a chart of accounts (CoA) are:
-
--   select the "**Organization**" for which the CoA is going to be used while posting to ledger, for example "F&B US Inc."
--   enter the "**Name**" of the Chart of Accounts, for example "Test CoA"
--   set it up as "**User Defined Type**" to distinguish it from the imported Chart of Accounts
--   select the **Tree** as "B&F International Group Element Value (Account, etc.).
-
-Move to "**Element Value**" tab.
-
-The first thing to do in this tab is to create all the "Heading" elements one per each financial statement, for instance "Balance Sheet" and "Income Statement".
-
-**Balance Sheet Node:**
-
--   create a new record
--   enter "**B**" value in the field "Search Key"
--   enter "**Balance Sheet**" value in the field "Name"
--   select "**Heading**" in the Element Level field
--   select "**Memo**" in the Account Type field
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   set the field "**Summary Level**" to "Yes"
-
-**Profit and Loss Node:**
-
--   create a new record
--   enter **"P&L"** value in the field "Search Key"
--   enter "**Profit and Loss**" value in the field "Name"
--   select "**Heading**" in the Element Level field
--   select "**Memo**" in the Account Type field
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-The next thing to do in this tab is to create one element value per each financial statement node:
-
--   Balance Sheet nodes are "Assets", "Liabilities" and "Owner's Equity"
--   Profit and Loss nodes are "Revenue" and "Cost of Goods Sold" among others
-
-##### Balance Sheet Elements
-
-Let us focus first on explaining the creation of the nodes/elements of a **Balance Sheet** financial statement.
-
-An organization's balance sheet shows its financial situation at a given point in time, the three sections of a balance sheet are:
-
--   **Assets**
--   **Liabilities**
--   and **Owner's equity**
-
-therefore the next step to take is to create one chart of account element per each balance sheet node:
-
-**Assets Node:**
-
-To create a new record, enter a value in the field "Search Key", this value could be a number for instance ("1000") or a name ("Assets").
-
-!!! info
-    It is recommended to use a number as that helps while creating a new chart of accounts elements. The following rule is considered while creating new chart of accounts elements:    
-        Etendo first considers the elements in an alphanumerical order as a sorted list, finds the position in that sorted list where the new element needs to be positioned, looks at the element that precedes it and if that element is a summary element and the current element is not a summary one, adds the element as a children of that node otherwise add the element as a sibling of that node.
-
--   enter "**Assets**" value in the field "Name"
--   select "**Heading**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-Once done, this node is dragged and dropped under the Balance Sheet node.
-
-**Liabilities Node:**
-
--   create a new record
--   enter the value ("2000") in the field "Search Key"
--   enter "**Liabilities**" value in the field "Name"
--   select "**Heading**" in the Element Level field
--   select the value "**Liability**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-**Owners Equity Node:**
-
--   create a new record
--   enter the value ("3000") in the field "Search Key"
--   enter "**Owner's Equity**" value in the field "Name"
--   select "**Heading**" in the Element Level field
--   select the value "**Owner's Equity**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-!!! info
-    This time there is no need to drag and drop these two last nodes as Etendo does it according to the rule explained above.
-
-
-Both the Liabilities Node and the Owner's Equity Node are summary nodes, therefore they are added as a sibling of the Asset Node (element that precedes them).
-
-It is very common to break down assets and liabilities into current assets (or liabilities) and long-term assets (or liabilities).
-
-Moreover, "Assets" can be split into "Cash", "Inventory" and "Accounts Receivable", "Liabilities" can be split into "Accounts Payable" and "Note Payable" and finally "Owner's Equity" can be split into "Common Stock" and "Retained Earnings" among others.
-
-All of the above guides the creation of the following sub-nodes at a lower level underneath the heading nodes.
-
-**Current Assets Node:**
-
--   create a new record
--   enter the value ("1100") in the field "Search Key"
--   enter "**Current Assets**" value in the field "Name"
--   select "**Breakdown**" in the Element Level field
--   select the value "**Assets**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-Once done, drag this node under the "1000-Assets" node.
-
-**Long-Term Assets Node:**
-
--   create a new record
--   enter the value ("1500") in the field "Search Key"
--   enter "**Long-term Assets**" value in the field "Name"
--   select "**Breakdown**" in the Element Level field
--   select the value "**Assets**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-!!! info
-    This time, there is no need to drag and drop this last node as Etendo does it according to the rule explained above.
-
-
-The Long-term Asset Node is a summary node, therefore it is added as a sibling of the Current Asset Node (element that precedes it).
-
-**Current Liabilities Node:**
-
--   create a new record
--   enter the value ("2100") in the field "Search Key"
--   enter "**Current Liabilities**" value in the field "Name"
--   select "**Breakdown**" in the Element Level field
--   select the value "**Liability**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-Once done, drag this node under the "2000-Liabilities" node.
-
-**Long-Term Liabilities Node:**
-
--   create a new record
--   enter the value ("2500") in the field "Search Key"
--   enter "**Long-term Liabilities**" value in the field "Name"
--   select "**Breakdown**" in the Element Level field
--   select the value "**Liability**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-!!! info
-    This time, there is no need to drag and drop this last node as Etendo does it according to the rule explained above.
-
-
-The Long-term Liabilities Node is a summary node, therefore it is added as a sibling of the Current Liabilities Node (element that precedes it).
-
-**Cash Node:**
-
--   create a new record
--   enter the value ("1110") in the field "Search Key"
--   enter "**Cash**" value in the field "Name"
--   select "**Account**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-Once done, drag this node under the "1100-Current Assets" node.
-
-**Accounts Receivable Node:**
-
--   create a new record
--   enter the value ("1120") in the field "Search Key"
--   enter "**Accounts Receivable**" value in the field "Name"
--   select "**Account**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   select the value "**Algebraic**" in the field "Show Value Condition"
--   and set the field "**Summary Level**" to "Yes"
-
-!!! info
-    This time, there is no need to drag and drop this last node as Etendo does it according to the rule explained above.
-
-
-The Accounts Receivable Node is a summary node, therefore it is added as a sibling of the Cash Node Node (element that precedes it).
-
-Cash Node needs to have subaccounts elements underneath, for instance:
-
-**111200 Checking Account**
-
--   create a new record
--   enter 111200 in the field "Search Key"
--   enter "**Checking Account**" value in the field "Name"
--   select "**Subaccount**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   and select the value "**Algebraic**" in the field "Show Value Condition"
-
-**111300 Checking In-Transfer**
-
--   create a new record
--   enter 111300 in the field "Search Key"
--   enter "**Checking In-Transfer**" value in the field "Name"
--   select "**Subaccount**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   and select the value "**Algebraic**" in the field "Show Value Condition"
-
-**111400 Petty Cash**
-
--   create a new record
--   enter 111400 in the field "Search Key"
--   enter "**Petty Cash**" value in the field "Name"
--   select "**Subaccount**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   and select the value "**Algebraic**" in the field "Show Value Condition"
-
-Above subaccounts are the ones used while posting ledger entries into the ledger.
-
-!!! info
-    There is no need to drag and drop the three subaccounts above into the corresponding node as Etendo does it.
-
-
-Accounts Receivable Node needs to have subaccounts elements underneath, for instance:
-
-**112100 Trade Receivable**
-
--   create a new record
--   enter 112100 in the field "Search Key"
--   enter "**Trade Receivable**" value in the field "Name"
--   select "**Subaccount**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   and select the value "**Algebraic**" in the field "Show Value Condition"
-
-**112200 Tax Receivables**
-
--   create a new record
--   enter 112200 in the field "Search Key"
--   enter "**Tax Receivables**" value in the field "Name"
--   select "**Subaccount**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   and select the value "**Algebraic**" in the field "Show Value Condition"
-
-Above subaccounts are the ones used while posting ledger entries into the ledger.
-
-There is no need to drag and drop the two subaccounts above into the corresponding node as Etendo does it as explained above.
-
-The same steps need to be followed for the creation of other "Account" and "Subaccount" node types under the nodes:
-
--   Long-term Assets
--   Current Liabilities
--   Long-term Liabilities
--   and Owner's Equity
-
-Last but not least, it is required to create a node which summarizes assets, another one which summarizes liabilities and the last one which summarized owner's equity.
-
-Let's take the creation of total assets node, for instance:
-
-**Total Assets Node**
-
--   create a new record
--   enter 1900 in the field "Search Key"
--   enter "**Total Assets**" value in the field "Name"
--   enter "1100+1500" in the field "Description" as a way to describe that this node sums up current assets and long-term assets.
--   select "**Heading**" in the Element Level field
--   select the value "**Asset**" in the field "Account Type"
--   and select the value "**Algebraic**" in the field "Show Value Condition"
--   navigate to Customized Element tab
--   create a new record
--   enter **"1"** in the field "Sign"
--   select the Account **"1100 - Current Assets"**
--   create a new record
--   enter **"1"** in the field "Sign"
--   select the Account **"1500 - Long-term Assets"**
-
-##### **Income Statement Elements**
-
-Now, let us briefly explain the creation of the nodes/elements of an **Income Statement**.
-
-An organization's income statement shows the company's financial performance over a period of time (usually one year), therefore it has two main sections:
-
--   the first section details the organization revenues
--   the second section details the organization expenses
-
-The income statement also takes into account the cost of the goods sold, therefore the gross profit refers to the sum of an organization's revenues minus the cost of goods sold.
-
-Besides, it is very common to separate the "Operating Expenses" from the "Non-Operating Expenses", therefore it is possible to calculate the operating income as the difference between the gross profit and the operating expenses while the net income is the difference between the operating income and the non-operating expenses.
-
-All of the above drives the creation of the nodes/ elements which once arranged will represent the structure of the organization's income statement.
-
-The nodes to create for instance can be:
-
--   The "**Revenue**" node:
-    -   this "Heading" and "Revenue" account type node can include all the revenue subaccounts.
--   The "**Total Revenue**" node:
-    -   this "Heading" and "Revenue" account type node can include a customized element of the "Revenue" node above.
--   The "**Cost of the Goods Sold**" node:
-    -   this "Heading" and "Expense" account type node needs can include all the cost of the goods sold related subaccounts.
--   The "**Total Cost of the Goods Sold**" node:
-    -   this "Heading" and "Expense" account type node can include a customized element of the "Cost of the Goods Sold" node above.
--   The "**Gross Margin**" node:
-    -   this "Heading" and "Revenue" account type node is a customized element of the "Revenue" node and the "Cost of the Goods Sold" node above.
--   the "**Operating Expenses**" node:
-    -   this "Heading" and "Expense" account type node can include all the operating expense related subaccounts.
--   The "**Total Operating Expense**" node:
-    -   this "Heading" and "Expense" account type node can include a customized element of the "Operating Expenses" node above.
--   The "**Operating Income**" node:
-    -   this "Heading" and "Revenue" account type node can include a customized element of the "Revenue" node, the "Cost of the Goods Sold" node and the "Operating Expenses" node.
--   The "**Non Operating Expense**" node:
-    -   this "Heading" and "Expense" account type node can include all the non operating expense related subaccounts.
--   The "**Total Non Operating Expenses**" node:
-    -   this "Heading" and "Expense" account type node can include a customized element of the "Non Operating Expense" node above.
--   and finally the "**Net Income**" node:
-    -   this "Heading" and "Revenue" account type node can include a customized element of the "Operating Income" node above and the "Total Non Operating Expense" node above.
-
-##### **Temporary Elements**
-
-As already explained, there is a close relationship between an **account tree** and the General Ledger configuration in Etendo, as the Account Tree is a Dimension of the General Ledger.
-
-The General Ledger configuration also includes a set of default accounts (or subaccounts in Etendo terms) to use while posting certain type of transactions. Those accounts need to be created in the account tree first and then be configured in the General Ledger Configuration tabs listed below:
-
--   General Accounts
--   Defaults
-
-Most of those defaults accounts are ledger accounts such as:
-
--   the "Income Summary" account
--   the "Retained Earnings" account
--   the "Vendor Liability" account
--   or the "Customer Receivables" account
-
-However, there are a few of these accounts which are not ledger accounts but what we can call "Temporary" accounts such as the "Suspense Balancing" account.
-
-!!! info
-    It is not necessary to create a default ledger account as those are created as part of the account tree.
-
-
-However, temporary default accounts need to be created in the account tree under a specific tree branch or node, in order to get that the balance of those temporary accounts is not taken while launching either the Balance Sheet or the Income Statement.
-
-Therefore, a new "Heading" and "Summary" element needs to be created in the "Element Level" tab, that element can be named "Temporary Accounts".
-
-![](../../../../../assets/drive/16EDV3UALuhdBZvS9RlBN0-4jF1WdCJbG.png)
-
-Once created, the accounts below (subaccounts) can be created and move underneath it:
-
--   Suspense Balancing account
--   Suspense Error account
-
-![](../../../../../assets/drive/1a2sIjZMYnytbKtZw8g42pCYzy9EfSb2M.png)
 
 ## General Ledger Configuration
 
@@ -768,112 +435,110 @@ Once created, the accounts below (subaccounts) can be created and move underneat
 
 ### Overview
 
-The general ledger configuration indicates the way that the organization's financial transactions are going to be posted to the ledger.
+The **General Ledger (GL) Configuration** defines how an organization's financial transactions are posted to the ledger.
 
-A general ledger configuration is created whenever an accounting CSV file or "Chart of Accounts" module reference data is selected while running the Initial Client Setup process or the Initial Organization Setup process.
+A GL configuration is created whenever an accounting **CSV file or a Chart of Accounts (CoA)** reference module is selected during the [Initial Client Setup](../../general-setup/getting-started.md#initial-client-setup) process or the [Initial Organization Setup](../../general-setup/enterprise-model/initial-organization-setup.md) processes.
+
 
 The general ledger configuration created by default can afterwards be customized to meet the organization's needs.
 
-If the *accounting CSV file* or *reference data* is selected at **client** level, the general ledger configuration is assigned to the organization(\*) therefore it is available to any organization within the client.
+- If configured at **Client level**, the GL is assigned to the organization (\*) and available to all organizations within that client.
 
-If the *accounting CSV file* or *reference data* is selected at **organization** level, the general ledger configuration is assigned to the organization making it available to that organization and any of its descendants.
+- If configured at **Organization level**, the GL is available only to that organization and its descendants.
 
-Besides a general ledger configuration, those accounting files also create:
+!!!info
+    Besides a general ledger configuration, those accounting files also create the organization's Account Tree or Chart of Accounts and the general ledger default accounts. 
 
--   the organization's Account Tree or Chart of Accounts
--   and the general ledger default accounts
+!!!info
+    Etendo delivers accounting files through the Chart of Accounts modules contained in a [Localization Bundle](../../../optional-features/bundles/spain-localization/overview.md) if available for your country.
 
-Etendo delivers accounting files through:
 
--   the "Chart of Accounts" modules contained in a Localization Bundle if available for your country
--   and the Generic Chart of Accounts module
+Additionally, a general ledger configuration can also be created **manually**, but once the corresponding [Account Tree](#account-tree) has been created.
 
-Additionally, a general ledger configuration can also be created manually, but once the corresponding Account Tree has been created.
+!!!info
+    For more information visit, [How to Create a General Ledger Configuration](../../../how-to-guides/how-to-create-a-general-ledger-configuration.md). 
 
-Finally, it is important to remark that the organization's general ledger configuration and the organization's account tree (or chart of accounts) are linked to each other because "Account" is a mandatory dimension of the general ledger configuration.
 
-#### General Ledger Configuration
+
+Lastly, it is important to remark that the GL configuration and the CoA are linked, since **Account** is a mandatory dimension of the GL.
+
+#### General Ledger Configuration Window
 
 The General Ledger Configuration window allows the user to review and maintain defaulted general ledger configurations and to create new ones if needed.
 
-![](../../../../../assets/drive/1CzhjGyPX0yBre7l8Icc2Oh1BZY8rJASo.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration1.png) 
 
-A general ledger configuration created by default can be changed to meet the organization's needs by changing the features below:
+Fields to note:
 
-1\. The **Currency** to use while posting transactions or journal entries to the ledger.
+A general ledger configuration created by **default** can be changed to meet the organization's needs by changing the features below:
 
--   The currency shown at first is taken from the currency entered either in the Initial Client Setup process or in the Initial Organization Setup process. This currency can be changed if needed before doing any posting.
+1. The **Currency** field: 
 
-An organization can have two general ledgers assigned, one inherited from its parent in a given currency (i.e. USD) and its own one which can be defined in a different currency (i.e. EUR).  
-That is, for instance, the configuration of the F&B España organization of the F&B sample client. This means that every time that an F&B España transaction is posted to the ledger Etendo will show two "Journal Entries Report" windows one for each general ledger, as shown in the images below:
+    - The Default currency comes from Client/Organization Setup.
+    - Can be changed before posting starts.
+    - An organization can have **multiple GLs in different currencies**.
 
-2\. The **Allow Negative** checkbox defines if negative posting is allowed or not while posting transactions to the general ledger.
+        - Example: F&B España posts in both USD (inherited) and EUR (own GL).
+        - Result: Two Journal Entry Reports, one per ledger.
 
-Negative posting not allowed implies that a negative debit posting would turn into a credit posting and a negative credit posting would turn into a debit posting.
+2. The **Allow Negative** checkbox: Defines whether negative postings are allowed.
 
-For instance, a purchase invoice generates the posting below:
+    - Enabled: reversals post with negative amounts.
+    - Disabled: reversals are re-posted with opposite debit/credit signs.
 
-|     |     |     |     |
-| --- | --- | --- | --- |
-| Account | Debit | Credit | Comments |
-| Product Expense | Line Net Amount |     | One per invoice line |
-| Tax Credit | Tax Amount |     | One per tax line |
-| Vendor Liability |     | Total Gross Amount | One per invoice |
+        For instance, a purchase invoice generates the posting below:
 
-If that purchase invoice needs to be totally or partially voided or reversed, the posting will look like:
+        |     |     |     |     |
+        | --- | --- | --- | --- |
+        | Account | Debit | Credit | Comments |
+        | Product Expense | Line Net Amount |     | One per invoice line |
+        | Tax Credit | Tax Amount |     | One per tax line |
+        | Vendor Liability |     | Total Gross Amount | One per invoice |
 
--   in case of "Allow Negative" checkbox enabled
+        When voided:
 
-|     |     |     |     |
-| --- | --- | --- | --- |
-| Account | Debit | Credit | Comments |
-| Product Expense | (-) Line Net Amount |     | One per invoice line |
-| Tax Credit | (-) Tax Amount |     | One per tax line |
-| Vendor Liability |     | (-) Total Gross Amount | One per invoice |
+        - Allow Negative = YES (postings appear as negative values).
+        - Allow Negative = NO (postings are reclassified: debit ↔ credit).
 
--   in case of "Allow Negative" checkbox disabled
 
-|     |     |     |     |
-| --- | --- | --- | --- |
-| Account | Debit | Credit | Credit |
-| Product Expense |     | Line Net Amount | One per invoice line |
-| Tax Credit |     | Tax Amount | One per tax line |
-| Vendor Liability | Total Gross Amount |     | One per invoice |
+3. The **Centrally Maintenance** checkbox: 
 
-3\. The general ledger can be set as "**Centrally Maintained**" or not in relation to the way that the Account Tree elements are going to be shown in the **Balance Sheet** and in the **Income Statement**
+    - **Centrally Maintained**: When YES, the **Account Sign** field is hidden in the Element Value tab of the [Account Tree](#account-tree) window. 
 
--   If a general ledger is set as "Centrally Maintained":
-    -   The field "Account Sign" is hidden in the Element Value tab of the Account Tree window
-    -   It is possible to define at general ledger level whether the balances of any account type are going to be shown as "Positive" or "Negative" in the financial statements.  
-        If the checkbox "Central Maintenance" is selected :
-        -   The Debit balances of the "Asset" account type will be shown as "Positive" in the Balance Sheet.  
-            As a consequence of that, if an "Asset" account type has a credit balance that will then be shown as "Negative" in the Balance Sheet.
-        -   The Credit balances of the "Liabilities" account type will be shown as "Positive" in the Balance Sheet. The same applies to "Owner's Equity" account types.
-        -   The Debit balances of the "Expense" account type will be shown as "Positive" in the Income Statement.
-        -   Finally, the Credit balances of the "Revenue" account type will be shown as "Positive" in the Income Statement.
+        - It is possible to define at general ledger level whether the balances of any account type are going to be shown as **Positive** or **Negative** in the financial statements if the checkbox Central Maintenance is selected:
 
-It is possible to uncheck any of the checkboxes listed above. For instance, an organization might want to show the Debit balances of the "Expense" account type as "Negative" in the Income Statement.
+            - **Assets Debit** balances are shown as Positive in the Balance Sheet.
+            - **Liabilities Credit** balances are shown as Positive in the Balance Sheet. 
+            - **Owner's Equity Credit** balances are shown as Positive in the Balance Sheet.
+            - **Expenses Debit** balances are shown as Positive in the Income Statement.
+            - **Revenues Credit** balances are shown as Positive in the Income Statement.
 
--   If the general ledger is NOT set as "Centrally Maintained":
-    -   The field "Account Sign" is not hidden in the Element Value tab of the Account Tree window.
-    -   Therefore, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements.
+        !!!info
+            It is possible to uncheck any of the checkboxes listed above showing any of the balances as negative. 
 
-Finally, it is important to remark that the "**Central Maintenance**" checkbox is not selected by default for the general ledgers created by default, as the corresponding accounting CSV files or reference data imported have their own configuration through the "Account Sign".
+        ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration7.png)
 
-#### Dimension
+    - **Centrally Maintained**: When NO, the **Account Sign** field is not hidden in the Element Value tab of the [Account Tree](#account-tree) window. Therefore, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements.
 
-Dimension tab allows the user to configure the organization's general ledger dimensions or to add additional accounting dimensions not centrally maintained in the client.
+    !!!info
+        It is important to remark that the **Central Maintenance** checkbox is **not selected by default** for the general ledgers created by default, as the corresponding accounting CSV files or reference data imported have their own configuration through the Account Sign.
+
+#### Dimension Tab
+
+The **Dimension** tab allows the user to configure the organization's general ledger dimensions or to add additional accounting dimensions **not centrally maintained** in the client.
 
 Etendo allows the user to manage mandatory and not mandatory accounting dimensions to be entered in the Dimensions section of the documents, which can be posted to the ledger.
 
-Mandatory dimensions can be filled in or not depending on the document category being created. For instance, "Business Partner" and "Product" are mandatory dimensions that need to be filled in a purchase invoice but can be filled or not in a G/L Journal.
+Mandatory dimensions can be filled in or not depending on the document category being created. For instance, **Business Partner** and **Product** are mandatory dimensions that need to be filled in a purchase invoice but can be filled or not in a G/L Journal.
 
-There are **two "mandatory" dimensions at the organization's general ledger configuration** level, which are:
+There are **two mandatory dimensions** at the organization's general ledger configuration level, those are:
 
--   The "**Account**" as any document/transaction posted to the ledger needs to be posted in a ledger account (or subaccount in Etendo terms) of a given account tree or chart of accounts.
--   The "**Organization**", as any document/transaction posted to the ledger, needs to be posted in an organization's general ledger.
+-   The **Account** as any document/transaction posted to the ledger needs to be posted in a ledger account (or subaccount in Etendo terms) of a given account tree or chart of accounts.
+-   The **Organization**, as any document/transaction posted to the ledger, needs to be posted in an organization's general ledger.
 
-Besides, if an organization belongs to a Client which centrally maintains the accounting dimensions, it is possible to add in this tab other dimensions such as the ones listed below which can even set as "mandatory" for the organization:
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration2.png)
+
+Besides, if an organization belongs to a Client which centrally maintains the accounting dimensions, it is possible to add in this tab other dimensions such as the ones listed below which can be even set as **mandatory** for the organization:
 
 -   Activity
 -   Asset
@@ -882,29 +547,27 @@ Besides, if an organization belongs to a Client which centrally maintains the ac
 -   Location To
 -   Sales Region
 
-On the other hand, let us take for instance an organization's general ledger for which the dimensions below have been selected in this tab because the organization belongs to a client which does not centrally maintain the accounting dimensions:
+The following is an example of an organization's general ledger for which the dimensions below have been selected in this tab because the organization belongs to a client which does not centrally maintain the accounting dimensions:
 
 -   Mandatory dimensions:
     -   Organization
     -   and Account
--   Non mandatory dimensions which are set as "mandatory" in here:
+-   Non mandatory dimensions which are set as **mandatory** in here:
     -   Business Partner, Product and Project
 -   Non mandatory dimension:
     -   Sales Region
 
 The configuration above means that every time that a transaction of any kind (purchase invoice, sales invoice, G/L Journal) is posted to the ledger, all the mandatory dimensions above must be entered while there is an option to enter sales region information if any.
 
-Moreover:
+!!!note
+    Some dimensions appear on some transactions and some do not. That depends on the document being created. For instance, the **Account** dimension always appears in the Lines tab of a G/L Journal, however it does not appear in the Lines tab of a purchase invoice as that data is automatically taken from the accounts (subaccounts) setup for the product, for the business partner and for the taxes, if any.
 
--   some dimensions appear on some transactions and some do not. That depends on the document being created. For instance:
-    -   The **Account** dimension always appears in the Lines tab of a G/L Journal, however it does not appear in the Lines tab of a purchase invoice as that data is automatically taken from the accounts (subaccounts) setup for the product, for the business partner and for the taxes, if any.
--   Some dimensions appear either in the header and/or in the lines of the documents. That defaulted configuration can be changed only in the clients which centrally maintain the accounting dimensions and for the centrally maintained dimensions.
 
-#### Active Tables
+#### Active Tables Tab
 
-Active Tables tab allows the user to define which tables and therefore transactions are going to be posted to the ledger and which ones not.
+The **Active Tables** tab allows the user to define which tables and therefore transactions are going to be posted to the ledger and which ones are not.
 
-The tables listed below are the tables suitable to be posted:
+The tables listed below are the tables **suitable to be posted**:
 
 |     |     |
 | --- | --- |
@@ -929,66 +592,69 @@ The tables listed below are the tables suitable to be posted:
 | FinancialMgmtDPManagement | Old payment flow - Debt-payment management   <br>  <br>Set to Active = No |
 | FinancialMgmtSettlement | Old payment flow - Settlements   <br>  <br>Set to Active = No |
 
-For instance, the records of the table "FinancialMgmtAmortization" are the amortization transactions which can be posted.
+For instance, the records of the table **FinancialMgmtAmortization** are the amortization transactions which can be posted.
+
+!!! note
+    The records of the tables above can be posted when the **Active** checkbox of these tables is set as **Yes**.
 
 !!! info
-    The records of the tables above can be posted when the "Active" checkbox of these tables is set as "Yes".
+    There is a flag named **Disable for Background** next to each table above, which allows that a given table is not taken by the Accounting Background Process. In other words, it is possible to configure that the transactions related to a given **Table**, for instance the Invoice table, are not taken by that process, therefore, they will not be automatically posted.
 
-There is a flag named "**Disable for Background**" next to each table above, which allows that a given table is not taken by the Accounting Background Process.
+##### Documents Subtab
 
-In other words, it is possible to configure that the transactions related to a given "Table", for instance the "Invoice" table, are not taken by that process, therefore, they will not be automatically posted.
+The **Documents** tab allows the user to define which document types of a table allow negative posting and if they use a different accounting process than the default one based on a given accounting template.
 
-#### Documents
-
-Documents tab allows the user to define which document types of a table allow negative posting and if they use a different accounting process than the default one based on a given accounting template.
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration5.png)
 
 #### General Accounts
 
-General accounts tab allows the user to define the accounts to be used in balancing entries and in the end-year closing process.
+The **General Accounts** tab allows the user to define the accounts to be used in balancing entries and in the end-year closing process.
 
-The mandatory "Income Summary" account is populated by default as part of the general ledger configuration. That account is obviously part of the organization's chart of accounts.
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration3.png)
 
-If an accounting CSV or reference data is not selected while running the Initial Client Setup process or the Initial Organization Setup process, this mandatory account needs to be manually entered here once the account tree and therefore the corresponding income summary (or net income) subaccount has been created.
+Fields to note:
 
-![](../../../../../assets/drive/1cpksFbMtBay1-6GdLI2NxEIDLUQk7ap0.png)
+- The mandatory **Income Summary** account is populated by default as part of the general ledger configuration. That account is part of the organization's chart of accounts.
 
-The Income Summary account is used by the Close Year process as the P&L closing entry resets all revenue and expense account type and posts the difference in this account.
+    !!!info
+        If an accounting CSV or reference data is not selected while running the Initial Client Setup process or the Initial Organization Setup process, this mandatory account needs to be manually entered here once the account tree and therefore the corresponding income summary (or net income) subaccount has been created.
 
-This tab also contains a set of "Suspense" accounts which needs to be created under a specific account tree branch as explained in the Account Tree creation article.
+    - The Income Summary account is used by the **Close Year process** as the P&L closing entry resets all revenue and expense account type and posts the difference in this account.
 
-Those accounts can also be provided by the accounting files, in fact the Generic CoA provides these accounts.
+    - It contains a set of **Suspense** accounts which needs to be created under a specific account tree branch as explained in the [Account Tree](#account-tree) window.
 
-The **Suspense Balancing** account is shown if the checkbox "Suspense Balancing Use" is selected. This account is used in those cases where an accounting entry can not be balanced while being posted. If there is no account in this field, Etendo shows an error.
+    - Those accounts can also be provided by the accounting files, in fact the Generic CoA provides these accounts.
 
-The **Suspense Error** account is shown if the checkbox "Suspense Error Use" is selected. This account is used in those cases where an exception or error happens, preventing an accounting entry to be posted. If there is not an account in this field, Etendo will show an error.
+- The **Suspense Balancing** account is shown if the checkbox **Suspense Balancing Use** is selected. This account is used in those cases where an accounting entry can not be balanced while being posted. If there is no account in this field, Etendo shows an error.
 
-Other accounts are:
+- The **Suspense Error** account is shown if the checkbox **Suspense Error Use** is selected. This account is used in those cases where an exception or error happens, preventing an accounting entry to be posted. If there is not an account in this field, Etendo will show an error.
 
-The **Retained Earning** account if any automatically gets the P&L closing balance of a given year. If there is no account in this field, nothing will be automatically moved from the **Income Summary** account to the **Retained Earning** account.
+- The **Retained Earning** account if any automatically gets the P&L closing balance of a given year. If there is no account in this field, nothing will be automatically moved from the **Income Summary** account to the **Retained Earning** account.
 
-The **Currency Balance** account is shown if the checkbox "Currency Balance Use" is selected. This account is used in those cases where there are currency rounding differences while posting a transaction. For instance, it could happen that the total invoice exchanged into a given currency does not 100% match with the sum of each invoice line exchanged into the same currency.
+- The **Currency Balance** account is shown if the checkbox **Currency Balance Use** is selected. This account is used in those cases where there are currency rounding differences while posting a transaction. For instance, it could happen that the total invoice exchanged into a given currency does not 100% match with the sum of each invoice line exchanged into the same currency.
 
-Finally, the **Reverse Permanent Account Balances** checkbox allows the user to include or not an entry to reverse the balance sheet accounts balances during the end year closing process.
+- The **Reverse Permanent Account Balances** checkbox allows the user to include or not an entry to reverse the balance sheet accounts balances during the end year closing process.
 
-#### **Defaults**
+#### Defaults Tab
 
-Defaults tab allows the user to maintain or to add a set of default accounts to use while posting a certain type of transactions.
+The **Defaults** tab allows the user to maintain or to add a set of **default accounts** to use while posting a certain type of transactions.
 
-The mandatory "Default" accounts are populated by default as part of the general ledger configuration. Those accounts are obviously part of the organization's chart of accounts.
+The **mandatory Default** accounts are populated by default as part of the [general ledger configuration](#general-ledger-configuration). Those accounts are part of the organization's chart of accounts.
 
-If an accounting csv or reference data is not selected while running the Initial Client Setup process or the Initial Organization Setup process, these mandatory accounts need to be manually entered here once the account tree and therefore the corresponding subaccounts have been created.
+!!!info
+    If an accounting csv or reference data is not selected while running the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../general-setup/enterprise-model/initial-organization-setup.md) processes, these mandatory accounts need to be manually entered here once the [Account Tree](#account-tree) and therefore the corresponding subaccounts have been created.
 
-The accounts selected here are defaulted to every Business Partner Category or Product Category, for instance, by using the action button "Copy Accounts".
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration4.png)
 
-The accounts defaulted to every business partner category, for instance, can be as well defaulted to every vendor or customer by using the action button "Copy Accounts", this time from the Business Partner Category window.
+The **Copy Accounts** button allows selecting accounts defaulted to every [Business Partner Category](../../master-data-management/business-partner-setup.md#business-partner-category) or [Product Category](../../master-data-management/product-setup.md#product-category).
 
-Finally, it is possible to override these defaults at business partner category level allowing vendor liabilities and customer receivables for different business partners to be posted to different accounts.
+!!!info
+    The accounts defaulted to every business partner category, for instance, can be as well defaulted to every vendor or customer by using the action button **Copy Accounts**, this time from the [Business Partner Category](../../master-data-management/business-partner-setup.md#business-partner-category) window.
 
-This last configuration change needs to be done in the vendor and/or customer windows.
+!!!note
+    It is possible to override these defaults at business partner category level allowing vendor liabilities and customer receivables for different business partners to be posted to different accounts. This last configuration change needs to be done in the vendor and/or customer tabs from the [Business Partner](../../master-data-management/master-data.md#business-partner) windows.
 
-![](../../../../../assets/drive/1q05Evh6w4UuSzH_ZIsB6OiymUn2Mh76U.png)
-
-As shown in the image above, "default" accounts are:
+The default accounts are:
 
 -   Customer Receivables
 -   Customer Prepayments
@@ -1013,15 +679,15 @@ As shown in the image above, "default" accounts are:
 -   Warehouse Differences
 -   Inventory Revaluation
 -   Work in Progress
--   The "Bank Asset" default account is populated as:
+-   The Bank Asset default account is populated as:
     -   the Deposit Account
     -   the Withdrawal Account
     -   the Cleared Payment Account (Payment In)
     -   the Cleared Payment Account (Payment Out)
--   The "Bank In Transit" default account is populated as:
+-   The Bank In Transit default account is populated as:
     -   the In Transit Payment IN Account
     -   the In Transit Payment OUT Account
--   The "Bank Expense" default account is populated as:
+-   The Bank Expense default account is populated as:
     -   the Bank Fee Account
 -   Bank Revaluation Gain Account
 -   Bank Revaluation Loss Account
@@ -1030,76 +696,6 @@ As shown in the image above, "default" accounts are:
 -   Depreciation
 -   Accumulated Depreciation
 
-#### **Creation of a General Ledger Configuration**
-
-An Organization might have as many different General Ledgers as required.
-
-By default, an organization can have only one general ledger assigned for simplicity reasons, unless:
-
--   The organization has its own general ledger and another one inherited from its parent, that is, for instance, the case of "F&B España" sample organization.
--   The advanced general ledger configuration is enabled at system level, as explained in the Organization article.
-
-!!! info
-    It is recommended to create a new general ledger configuration and link it to an organization once it has been created the Account Tree to use while posting transactions to that new general ledger.
-
-
-It is possible that an organization might require the same account tree but different general ledgers, one of them in USD and the other one in EUR.
-
-The steps to follow to configure a general ledger are:
-
--   Select the "**Organization**" for which the general ledger is going to be available, for instance "F&B US Inc.".
--   Enter the **"Name" of the General Ledger configuration**, for instance "EUR General Ledger".
--   Select the "**Accounting Standard**" for instance "US GAAP".  
-    In the United States, "Generally Accepted Accounting Principles" (GAAP) is the name for the framework of accounting rules used in the preparation of financial statements.  
-    This data is just informative without any business logic behind it.
--   Select the **"Currency"** to use for posting transactions to the ledger.  
-    In the case of the F&B US Inc organization, the currency can be "EUR" therefore the F&B US Inc organization can get a double posting one in "USD" and the other one in "EUR".
--   Select the check "**Allow Negative**" in case negative posting is allowed as already described or not.
-
-Once done, the newly created general ledger needs to be linked to F&B US Inc organization in the General Ledgers tab.
-
-The organization of the example has now two general ledgers assigned:
-
--   The inherited one (owned by its parent organization "F&B International Group") in "USD" currency.
--   The newly created one in "EUR" currency.
-
-Back to the General Ledger configuration window, the remaining steps to take to properly configure the general ledger are:
-
-Navigate to the Dimension tab to add below listed mandatory dimensions:
-
--   Create a new record and enter **Organization** in the field "**Name**".
--   Select "**Organization**" in the field "**Type**".
--   Select "F&B US Inc" in the field "**Trx Organization**".
--   Select the checkbox "**Balanced**" and the checkbox "**Mandatory**".
--   Create a new record and enter **Account** in the field "**Name**".
--   Select "**Account**" in the field "**Type**".
--   Select the already existing "**Account Tree**" in the field "**Account Tree**".
--   Select the checkbox "**Mandatory**".
-
-Non-mandatory dimensions can also be created as described below in case it is required to save additional information such as the business partner or the project while posting journal entries or any transaction type:
-
-\- create a new record and enter "Business Partner" in the field "Name"
-
-\- select "Business Partner" in the field "Type"
-
-\- create a new record and enter "Project" in the field "Name"
-
-\- select "Project" in the field "Type"
-
-Navigate to the Active Tables tab to review the tables which are going to generate accounting. It is possible to enable accounting for the ones do not active for accounting.
-
-Navigate to the General Accounts tab to configure the mandatory general account (Income Summary) as well as the accounts to use in case of suspense balancing or suspense error among others. Those accounts need to be previously created as described in the Account Tree creation article.
-
-Finally, navigate to the Defaults tab to configure the default accounts which needs to be copied to other accounting configuration tab such as:
-
--   the Product Accounting tab
--   the Financial Account Accounting Configuration tab
--   the Tax Rate Accounting tab
--   etc.
-
-!!! info
-    As every time that a transaction of any type is posted to the ledger, it is posted to the two general ledgers configured for the Organization.
-
 
 ## Fiscal Calendar
 
@@ -1107,73 +703,83 @@ Finally, navigate to the Defaults tab to configure the default accounts which ne
 
 ### Overview
 
-"Legal entities with accounting" organization types must have a fiscal calendar assigned, while the rest of organization types can inherit it from its parent.
+Organizations of type **Legal Entity with Accounting** must have a fiscal calendar assigned. Other organization types can inherit the fiscal calendar from their parent organization.
 
-A calendar contains years and the periods of each year required to get an accurate organization's accounting practice.
+A fiscal calendar defines the **years** and their **periods** to ensure accurate accounting and proper control of the financial cycle. Each organization can only have **one fiscal calendar** assigned, which is used for posting transactions and managing the opening and closing of periods.
 
-#### Calendar
+#### Fiscal Calendar Window
 
-The fiscal calendar window allows the user to create and maintain the organization's fiscal calendar.
+The **fiscal calendar window** allows the user to create and maintain the organization's fiscal calendar. Each organization requiring a calendar needs to have one calendar assigned to it and **only one** therefore it is clearly known which calendar is going to be used while posting transactions and while opening and closing the accounting cycle.
 
-![](../../../../../assets/drive/14LKmlXTMNBiFaMeCMoQbvMtX2_jk8gri.png)
+![fiscal calendar 1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar1.png)
 
-A fiscal calendar is a collection of years to be created on demand as time goes by.
+- When creating a calendar, Etendo proposes `*` as the default organization:
 
-Each organization requiring a calendar needs to have one calendar assigned to it and only one therefore it is clearly known which calendar is going to be used while posting transactions and while opening and closing the accounting cycle. The procedure to do that is:
+    - Keeping `*` means the calendar is defined at the **client level** and can be used by all organizations under that client.
 
--   Once the calendar is properly created in this window, it needs to be linked to the "legal with accounting organization" type by selecting it after enabling the checkbox "Allow Period Control".  
-    All of the above is done in the Organization window.
+    - Changing it to a specific organization means the calendar will be available **only for that organization**.
 
-Etendo automatically proposes the organization as \* while creating a fiscal calendar:
+Once the calendar is created, it must be linked to the corresponding organization in the [Organization](../../general-setup/enterprise-model/organization.md) window, by:
 
--   Accepting this default means that this calendar will be maintained at the client level and will therefore be available to all another organizations created within this client.
--   Changing this default to other organization means that this calendar will only be available to that organization.
+- Enabling the **Allow Period Control** checkbox.
+
+- Selecting **legal with accounting organizations** type.
+
+![fiscal calendar 2](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar2.png)
 
 #### Year
 
-Year tab allows the user to create as many fiscal years as required within a fiscal calendar.
+The **Year** tab is used to define as many **fiscal years** as required within a calendar.
 
-A Fiscal Year is an accounting year which normally includes the twelve consecutive months over which a company determines earnings and profits.
+![fiscal calendar 5](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar5.png)
 
-The button "**Create Periods**" allows the user to create the twelve consecutive months starting from "**January, 1st**" to "**December, 31st**" as "**Standard Calendar Period**" Types.
+- A Fiscal Year usually covers **12 consecutive months**.
 
-This process also allows the user to create the "**13th Period**" which is a period that can be used to make accounting adjustments and get them posted to the ledger by using G/L Journals.
+- Use the **Create Periods** button to automatically generate:
 
-The "**13th Period**" is an "**Adjustment Period**" that is the last date of the last standard calendar period (i.e 31-12-2012).
+    - **12 Standard Calendar Periods** (January 1st – December 31st).
 
-![](../../../../../assets/drive/1IGnqS8kOPXzV58VxzGjD3sBTUBWmgOtj.png)
+    - An optional **13th Adjustment Period**, dated the last day of the last standard period (e.g., 31-12-2025), used for accounting adjustments via G/L Journals.
 
-Once created, all the periods need to be **opened** in the Open/Close Period Control window.
+![fiscal calendar 3](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar3.png)
 
-The periods of an organization's fiscal calendar can be reviewed in the Period Control tab of the **Organization** windows. Note that:
 
--   **"Standard Calendar Periods"** are opened for **every "Document Category"**, which means that Etendo obviously allows the user to post any document type to the ledger within a standard calendar period open.
--   while the "**Adjustment Period**" is only open for **G/L Journal** document category, which means that Etendo allows to post only G/L journals within the adjustment period.
+Once created, all the periods need to be **opened** in the [Open/Close Period Control](#openclose-period-control) window.
 
-Additionally, it is possible to **manually** create the accounting periods of a year. That action requires to enter the data below:
+!!!info
+    The periods of an organization's fiscal calendar can be reviewed in the **Period Control** tab of the [Organization](../../general-setup/enterprise-model/organization.md) window. 
 
--   A consecutive *period number*: this number will be later on used to open/close consequent accounting periods at a time.
--   A *period name.*
--   The *starting date* of the period.
--   The *ending date* of the period.
--   The *period type* as "Standard Calendar Period Type" or "Adjustment Period" as required.
 
-The values of a Period can be manually modified also, but only while this Period is in a **Never Opened** Status, once it has been open it will no longer be possible.
+!!!note
+    -   **Standard Calendar Periods** are opened for **every Document Category**, which means that Etendo  allows the user to post any document type to the ledger within a standard calendar period open.
+    -   The **Adjustment Period** is only open for **G/L Journal** document category, which means that Etendo allows to post only G/L journals within the adjustment period.
+
+
+#### **Period**
+
+The **Period** tab lists all the periods of a year. Also, it is possible to **manually** create the accounting periods of a year. That action requires to enter some information:
+
+![fiscal calendar 4](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar4.png)
+
+The fields to note are:
+
+-   A consecutive **period number**: this number will be later on used to open/close consequent accounting periods at a time.
+-   A **period name**.
+-   The **starting date** of the period.
+-   The **ending date** of the period.
+-   The **period type** as Standard Calendar Period Type or Adjustment Period as required.
+
+!!!note
+    The values of a Period can be manually modified also, but only while this Period is in a **Never Opened** Status, once it has been open it will no longer be possible.
 
 Etendo checks if another period with the same starting and ending date is already registered in the system, and it also checks if the date of a period overlaps the date of another period.
 
 Finally, a year can be:
 
--   **"closed"**
+-   **closed**
 -   and **re-opened**
 
-Both actions are performed in the End Year Close window.
-
-#### **Period**
-
-The period tab lists all the periods of a year.
-
-![](../../../../../assets/drive/1He-55aAYDSVEVm8vWy9_ER_h0k2qSIK5.png)
+Both actions are performed in the [End Year Close](../accounting/transactions.md#end-year-close) window.
 
 ## Account Combination
 
@@ -2003,3 +1609,7 @@ An example for a Profit and Loss report would be:
         -   Node: Profit and Loss linked to the "Heading" Account Tree element which collects all the "Expenses" and "Revenue" account tree elements.
 
 Above node must be an Account Tree element properly configured.
+
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

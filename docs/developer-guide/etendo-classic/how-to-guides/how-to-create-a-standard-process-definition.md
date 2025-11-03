@@ -518,7 +518,7 @@ This functionality, which can be used in processes as well as in windows, introd
 
 !!!info
     The maximum file size users are allowed to upload are limited by default to 10MB. This is set in the preference `Maximum file upload size (MB)`. This file size check is performed both on the client's and on the server's side. 
-    For more information about preferences visit the [Preference section in the User Guide](../../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference).
+    For more information about preferences visit the [Preference section in the User Guide](../../../user-guide/etendo-classic/basic-features/general-setup/application/preference.md).
 
 
 #### Example in Process Definition

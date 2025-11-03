@@ -297,6 +297,9 @@ Displays the details of the payments (pre-payments or regular payments) made for
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
+!!! warning "Dependency Notice"
+    This module depends on the [**Bulk Completion**](../../optional-features/bundles/essentials-extensions/bulk-completion.md) module, as **order** processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy **close/reactivate** actions for orders will be hidden and these actions will only be available through the **Bulk Completion** button.
+
 Etendo allows the user to reactivate closed purchase orders by selecting the needed one/s and clicking the Undo Close button.
 
 ![](../../../../assets/drive/1cyLa7pjnsNgXtnSEK2lZX9s35imhD2Kq.png)
@@ -329,7 +332,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md).
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -777,7 +780,7 @@ The Advance Bank Account Management module adds a new field to the header of the
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md).
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -1304,4 +1307,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 ---
 
-This work is a derivative of ["Procurement Management"](http://wiki.openbravo.com/wiki/Procurement_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [Procurement Management](http://wiki.openbravo.com/wiki/Procurement_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
