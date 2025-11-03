@@ -822,6 +822,45 @@ To **Relocate** inventory:
 - Complete **To Locator** field.
 - Confirm by pressing **Process** button.
 
+### Reception Tasks
+
+It allows create and control receipts directly from the mobile application using receipt tasks, which reproduce the same behavior and process flow as the goods receipt and ticket receipt windows in the ERP.
+
+!!!Info
+    For more information about how to use this functionality in Etendo, visit [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#inbound-receipt).
+
+#### Process Start (Etendo)
+
+The process begins by clicking the “Generate Receiving Task” button in the Receiving window of the ERP.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-boton-task-1.png)
+
+There, the task is assigned and then reflected in the mobile application of the assigned operator.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+
+#### Access to Inventory Tasks (Etendo Mobile)
+
+When accessing Etendo Mobile in the Reception Tasks section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as Pending.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
+
+**Reception Tasks**
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1-a.png)
+
+To perform a **Reception**:
+
+- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Receipt** button.
+- **Scan** the products to stock them or **load** them manually.
+- Confirm the task with the **End Reception** button.
+- Confirm that you want to finish the task.
+- See **Success message**.
+
+
 
 ### All Tasks
 
