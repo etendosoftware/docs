@@ -367,7 +367,7 @@ nav:
 #        - Category:Concepts: developer-guide/etendo-classic/concepts/Category_Concepts.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
 #        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
-#        - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/Cluster_Development_Guidelines.md
+        - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/cluster-development-guidelines.md
 #        - Code Review Process: developer-guide/etendo-classic/concepts/Code_Review_Process.md
 #        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md
         - Constraints: developer-guide/etendo-classic/concepts/constraints.md
@@ -375,7 +375,7 @@ nav:
         - Data Model: developer-guide/etendo-classic/concepts/data-model.md
         - Datasets: developer-guide/etendo-classic/concepts/datasets.md
         - Datasources: developer-guide/etendo-classic/concepts/datasources.md
-#        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
+        - DBSourceManager: developer-guide/etendo-classic/concepts/dbsourcemanager.md
 #        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
         - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
 #        - Development Model: developer-guide/etendo-classic/concepts/Development_Model.md
