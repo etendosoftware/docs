@@ -233,3 +233,17 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 
     Tal y como sucede con otros procesos de Etendo, estos podrán configurarse para ser ejecutados de forma inmediata, planificada o programada con una cierta frecuencia, donde permitirán el alta masiva de facturas en Batuz con la cadencia de envío configurada.
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/process_request_batuz.png)
+
+## Para saber más puede consultar:
+
+### Gipuzkoa
+- [Portal principal](https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai)
+- [Documentación técnica](https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai/documentacion-y-normativa)
+
+### Bizkaia (Batuz)
+- [Portal principal de Batuz](https://www.batuz.eus/es/inicio)
+- [Documentación técnica de Batuz](https://www.batuz.eus/es/documentacion-tecnica)
+
+### Álava
+- [Portal principal](https://web.araba.eus/es/hacienda/ticketbai)
+- [Documentación técnica](https://web.araba.eus/es/hacienda/ticketbai/documentacion-tecnica)
