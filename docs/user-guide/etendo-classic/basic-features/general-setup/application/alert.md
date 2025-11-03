@@ -67,7 +67,7 @@ Alerts can be allocated to specific users or contact or to all of them.
 !!! warning
     If no *Role* or *User* is configured in the *Alert Recipient tab* of a given alert, that alert will apply to any Etendo user or role.
 
-Etendo supports alerts notification to user or roles by email: For this, it is required to properly configure **e-mail** server, account and password for the corresponding client in the header of the [Client](../client.md#email-configuration) window, *Email Configuration* section.
+Etendo supports alerts notification to user or roles by email: For this, it is required to properly configure **e-mail** server, account and password for the corresponding client in the header of the [Client](../client/client.md#email-configuration) window, *Email Configuration* section.
 
 ### Alert
 

@@ -104,7 +104,7 @@ Warehouse staff:
     - or by selecting a landed cost type and entering a landed cost amount already invoiced which will also be distributed among receipt lines.
 - Completes the receipts.
     - Completed receipts updates stock information (product levels increase) and can be [posted](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) to the ledger therefore product assets accounting is being increased.
-    - A Goods receipt can only be posted if the cost of the products being received has been calculated. To do so, the [Costing Background process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#costing-background-process) needs to be run.
+    - A Goods receipt can only be posted if the cost of the products being received has been calculated. To do so, the [Costing Background process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing) needs to be run.
 - [Matched Invoices](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#matched-invoices) window helps to manage and post the discrepancies, if any, between the accounting of the receipt and the accounting of the corresponding invoice later on, due to purchase price differences.
 - [Goods Receipts Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#goods-receipts-dimensional-report) is used to review past receipts of the Business Partner.
 

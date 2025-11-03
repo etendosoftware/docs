@@ -67,9 +67,11 @@ This module enhances the bank account management enabling greater customization 
     For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 
-### Advanced Business Partner Settlement
+### Business Partner Settlement
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
+
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -78,6 +80,7 @@ This functionality allows the user to create settlements for invoices, both sale
 !!! info
     For more information, visit:
 
+    - [Business Partner Settlement - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
     - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
     - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
     - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
@@ -144,17 +147,6 @@ This functionality allows the user to post or unpost multiple records at the sam
 
 !!! info
     For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-
-### Business Partner Settlement
-
-:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
-
-!!! info
-    For more information, visit the [Business Partner Settlement user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#business-partner-settlement) and the [Business Partner Settlement developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#business-partner-settlement).
 
 ### Conversion Rate Downloader
 
@@ -229,7 +221,7 @@ This functionality allows the user to clone a G/L journal in the Simple G/L Jour
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany Module user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
+    For more information, visit [the Intercompany Module user guide](../../../optional-features/bundles/financial-extensions/intercompany.md).
 
 ### Payment Removal
 
