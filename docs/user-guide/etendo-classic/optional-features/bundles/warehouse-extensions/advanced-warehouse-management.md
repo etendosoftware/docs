@@ -369,6 +369,18 @@ The grouping is reflected in the Grouped by column of the selected lines (e.g., 
 
 Button allows you to remove a line from your grouping without affecting the rest of the lines in the group.
 
+**Generate Reception Task** 
+
+Allows managing operational receptions from the mobile app through the creation of Reception Tasks. It is available when there is an Inbound Receipt that is not yet completed and has loaded lines.
+
+By pressing the button, a task linked to the selected document is generated and becomes visible in the mobile app and in the Task window of the ERP. 
+In the pop-up window, you can assign a user or enable automatic assignment. If multiple records are selected, one task will be created for each record, all assigned to the same user or role defined in the pop-up.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+
+!!!Info
+    For more information about how Reception Task, visit [Reception Tasks](../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#reception-tasks).
+
 **Complete Receipt**
 
 Finishes the receipt, generating and completing the corresponding **goods receipts**. In addition, if the receipt includes products with AUOM (pallet or box), the associated **Inventory Reference** record is automatically created.
