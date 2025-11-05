@@ -822,6 +822,37 @@ To **Relocate** inventory:
 - Complete **To Locator** field.
 - Confirm by pressing **Process** button.
 
+### Relocation Tasks
+
+Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.
+
+!!!Info
+    For more information about how to use this functionality in Etendo, visit [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement).
+
+#### Process Start (Etendo)
+
+The receiving process begins in the ERP from the **Generate Relocation Task** button in the Goods Movements window.
+
+#### Access to Inventory Tasks (Etendo Mobile)
+
+When accessing Etendo Mobile in the Relocation Tasks section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as Pending.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-1.png)
+
+To perform a **relocation**:
+
+- Access the **Relocation Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Relocation** button.
+- Complete **Counted Quantity** field.
+- Complete **To Locator** field. (Optional)
+- Confirm the task with the **End Relocation** button.
+- Confirm that you want to finish the task.
+- See Success message.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
+
 
 ### All Tasks
 
