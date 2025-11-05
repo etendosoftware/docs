@@ -16,25 +16,24 @@ status: beta
   
 ##  Overview
 
-The following guide is intended to describe the basic elements which need to be taken into account to ensure developments are supported in a clustered environment.
+The following section describes the basic elements which need to be taken into account to ensure developments are supported in a clustered environment.
 
-For the scope of this document, we consider that a clustered environment is an Etendo application distributed on multiple JVMs.
+For the scope of this document, we consider that a **clustered environment** is an Etendo application distributed on multiple JVMs.
 
 Clustered environments are intended to improve performance allowing to serve more process concurrently as well as high availability allowing the system to continue working, even if some of the nodes in the cluster are down.
-
-This section describes the topics that require an special attention.
 
 ##  Caches
 
 A **cache** is an object intended to store elements that are expensive to create and are frequently used, in this manner they are created just once and reused many times, saving their computation for subsequent uses.
 
-The main concern regarding caches in clustered environments is there will be as many cache instances as nodes in the cluster, this can lead to the possibility of having nodes with outdated information because of the fact of changing a value in one node without notifying the rest of the nodes about the change.
+The main concern regarding caches in clustered environments is there will be as many cache instances as nodes in the cluster. This can lead to the possibility of having nodes with outdated information because of the fact of changing a value in one node without notifying the rest of the nodes about the change.
 
 For clustered environments, we have to pay attention on the implementation of a cache when its life cycle is higher than request and also if it is keeping instance information.
 
 In that case, it is mandatory to have a mechanism which allows to refresh the cache contents on every node of the cluster.
 
-For example, if we currently have a class extending `EntityPersistenceEventObserver` (`@ApplicationScoped`) which takes care of updating some kind of cache when it detects a change on the JVM where it is running, this implementation itself is not enough for a clustered environment as the rest of the nodes will not be notified about the change.
+!!! example
+    If we currently have a class extending `EntityPersistenceEventObserver` (`@ApplicationScoped`) which takes care of updating some kind of cache when it detects a change on the JVM where it is running, this implementation itself is not enough for a clustered environment as the rest of the nodes will not be notified about the change.
 
 ###  Safe Caches
 
@@ -63,7 +62,7 @@ Even a class is not designed to be used as a cache, for the purpose of this disc
 
 ####  Singleton Classes
 
-A **singleton class** ensures there is a single instance per JVM of that class.
+A [singleton class](https://en.wikipedia.org/wiki/Singleton_pattern){target="\_blank"} ensures there is a single instance per JVM of that class.
 
 They can be considered as caches with the same criteria than `@ApplicationScoped` classes.
 
@@ -78,7 +77,7 @@ Only in the following cases, a static field can be considered safe in this regar
 
 ##  Synchronization at JVM
 
-Java synchronized blocks allows to define pieces of code that are guaranteed not to have parallel executions. But this synchronization occurs at JVM level, so we cannot ensure with a synchronized block not to have  parallel executions of this block among different nodes in the cluster.
+[Java synchronized blocks](https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html){target="\_blank"} allows to define pieces of code that are guaranteed not to have parallel executions. But this synchronization occurs at JVM level, so we cannot ensure with a synchronized block not to have  parallel executions of this block among different nodes in the cluster.
 
 So, on a clustered environment, synchronized blocks must not be used to synchronize utilities intended to be executed in a synchronized way at system level.
 
@@ -88,9 +87,9 @@ If we need to synchronize some kind of task at system level, then we have to use
 
 We must also take care when handling files in a clustered environment. In general, we have to:
 
-  * Avoid writing/reading files from the source path: clustered nodes shouldn’t require to have access to source directories. 
-  * Avoid writing files on `WebContent`
-  * Unify the usage of temporary files 
+* Avoid writing/reading files from the source path: clustered nodes shouldn’t require to have access to source directories. 
+* Avoid writing files on `WebContent`
+* Unify the usage of temporary files 
 
 ---
 

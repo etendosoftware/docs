@@ -376,10 +376,10 @@ nav:
         - Datasets: developer-guide/etendo-classic/concepts/datasets.md
         - Datasources: developer-guide/etendo-classic/concepts/datasources.md
         - DBSourceManager: developer-guide/etendo-classic/concepts/dbsourcemanager.md
-#        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
+        - Deep Linking: developer-guide/etendo-classic/concepts/deep-linking.md
         - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
-#        - Development Model: developer-guide/etendo-classic/concepts/Development_Model.md
-#        - Development Project Structure: developer-guide/etendo-classic/concepts/Development_Project_Structure.md
+        - Development Model: developer-guide/etendo-classic/concepts/development-model.md
+        - Development Project Structure: developer-guide/etendo-classic/concepts/development-project-structure.md
 #        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
         - Element and Synchronize Terminology: developer-guide/etendo-classic/concepts/element-and-synchronize-terminology.md
 #        - Etendo Architecture: developer-guide/etendo-classic/concepts/etendo-architecture.md
