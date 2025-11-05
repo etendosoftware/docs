@@ -681,7 +681,7 @@ The Tax Amount field reflects the tax value calculated automatically based on th
     
     For more information, visit: [Adjust Invoice Tax user guide](../../optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
     
-    This development is compatible from Etendo 23.
+    This functionality is compatible from Etendo 23.
 
 
 ### Buttons
