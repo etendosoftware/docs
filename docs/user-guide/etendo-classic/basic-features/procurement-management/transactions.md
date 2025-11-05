@@ -661,21 +661,28 @@ Only processed Landed Cost documents will be shown in this Window. It allows you
 !!! warning
     Note that if the "Process Matching" check-box is not selected here, landed cost matching will have to be processed in the _landed cost_ window by using **Process Matching** button.
 
-#### **Line Tax**
+#### Line Tax
 
 Line tax information is automatically populated for each purchase invoice line upon completion of the invoice.
 
 **Line Tax** read-only tab details tax information for each line of a purchase invoice based on its Tax field which is automatically pre-filled according to the Taxes Setup.
 
-#### **Tax**
+### Tax
 
 This section summarizes tax related information for the whole purchase invoice. It contains as many records as tax rates used in the invoice. 
 
 The Tax Amount field reflects the tax value calculated automatically based on the tax rate and tax base settings.
 
-When minor adjustments are necessary due to rounding differences, the user can manually modify the tax amount within a maximum margin of ±0.01 from the automatically calculated value.
+!!! info 
 
-This correction applies only to the tax amount, without affecting the rate or tax base, and is used to maintain consistency between the recorded values and the actual amounts in tax or accounting documents.
+    It is possible to add a feature that allows controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems or when invoices are submitted to **governmental entities**. It supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external, governmental, or regulatory requirements.
+    
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. 
+    
+    For more information, visit: [Adjust Invoice Tax user guide](../../optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
+    
+    This development is compatible from Etendo 23.
+
 
 ### Buttons
 

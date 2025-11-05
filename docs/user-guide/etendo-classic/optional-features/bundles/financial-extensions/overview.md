@@ -43,6 +43,19 @@ This module allows setting a non deductible tax's amount to a specified financia
 !!! info
     For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
+
+
+### Adjust Invoice Tax
+:octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
+
+
+This extension enables controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems; it supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external or regulatory requirements.
+
+!!! info
+    For more information, visit the [Adjust Invoice Tax user guide](./adjust-invoice-tax.md).
+
+
+
 ### Advanced Bank Account Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`

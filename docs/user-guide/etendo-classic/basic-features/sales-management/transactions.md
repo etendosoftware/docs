@@ -972,7 +972,7 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-### **Lines**
+### Lines
 
 **Lines** lists each product to be delivered and its characteristics.
 
@@ -1005,28 +1005,33 @@ If a revenue plan is configured, that implies a specific sales invoice accountin
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product is not already exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the invoice. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
-#### **Line Tax**
+#### Line Tax
 
 Line tax information is automatically populated for each sales invoice line upon completion of the invoice.
 
 **Line Tax** read-only tab details tax information for each line of a sales invoice based on its Tax field which is automatically pre-filled according to the Taxes Setup.
 
-#### **Tax**
+### Tax
 
 This section summarizes tax related information for the whole sales invoice. It contains as many records as tax rates used in the invoice. 
 
 The Tax Amount field reflects the tax value calculated automatically based on the tax rate and tax base settings.
 
-When minor adjustments are necessary due to rounding differences, the user can manually modify the tax amount within a maximum margin of ±0.01 from the automatically calculated value.
+!!! info 
 
-This correction applies only to the tax amount, without affecting the rate or tax base, and is used to maintain consistency between the recorded values and the actual amounts in tax or accounting documents.
+    It is possible to add a feature that allows controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems or when invoices are submitted to **governmental entities**. It supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external, governmental, or regulatory requirements.
+    
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. 
+    
+    For more information, visit: [Adjust Invoice Tax user guide](../../optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
+    
+    This development is compatible from Etendo 23.
 
-
-#### **Basic Discounts**
+### Basic Discounts
 
 This tab lists information about the discounts automatically applied based on the customer configuration and / or manually entered for the sales invoice.
 
-#### **Payment Plan**
+### Payment Plan
 
 The payment plan tab lists the scheduled payments expected against the invoice.
 
@@ -1035,32 +1040,11 @@ The payment plan of a non paid invoice can be changed:
 - the payment "**expected date**" can be directly changed if required in this tab
 - the payment "**expected date**", the "**payment method**" and the **"outstanding amount to be paid",** among others can be changed if required by using the Editable Payment Plan advanced feature.
 
-#### **Payment Details**
+#### Payment Details
 
-This tab displays the details of the payments made against the invoice.
+This subtab displays the details of the payments made against the invoice.
 
-#### **Reversed Invoices**
-
-This tabs allows the user to select the invoices (if any) being reversed by the invoice being created. When the user voids an existing invoice, the reverse invoice is automatically created by Etendo and linked to the original invoice being reversed. In case of creating a Reverse Sales Invoice which partially voids an existing invoice/s, the user must manually select the invoice/s being reversed in this tab.
-
-#### **Exchange Rates**
-
-The exchange rate tab allows the user to enter an exchange rate between the organization's general ledger currency and the currency of the customer's invoice to be used while posting the invoice to the ledger.
-
-Etendo allows the user to manage different currencies within an organization or business unit.
-
-Nowadays, it is very common for the organizations located in a country to make business with third parties located abroad, and even more, it could also happen that an organization needs to post the transactions to general ledgers configured in different currencies.
-
-Above described business scenario, implies the need of managing exchange rates between the organization's general ledger/s currency and the customer's invoice currency to be used while posting the customer's invoice to the ledger/s.
-
-This tab allows the user to enter:
-
-- either an exchange rate between the organization's general ledger/s currency and the customer's invoice currency
-- or the total foreign invoice amount/s, therefore Etendo can calculate the corresponding exchange rates.
-
-Additionally, Etendo has a "central" repository of exchange rates which are used in case there is not an exchange rate defined at document level.
-
-#### **Payment**
+#### Payment
 
 Payments can be received against a sales invoice by using the **Add Payment** button which opens the **Add Payment window.**
 
@@ -1167,7 +1151,29 @@ To do this, the payment method assigned to the financial account used to receive
 
     If the customer's payment is registered in the "Add Payment" window shown from this "Sales Invoice" window, Etendo allows the user to enter an exchange rate, therefore the "Actual Converted" amount to be paid in EUR can be changed if required.
 
-#### **Accounting**
+
+### Reversed Invoices
+
+This tabs allows the user to select the invoices (if any) being reversed by the invoice being created. When the user voids an existing invoice, the reverse invoice is automatically created by Etendo and linked to the original invoice being reversed. In case of creating a Reverse Sales Invoice which partially voids an existing invoice/s, the user must manually select the invoice/s being reversed in this tab.
+
+### Exchange Rates
+
+The exchange rate tab allows the user to enter an exchange rate between the organization's general ledger currency and the currency of the customer's invoice to be used while posting the invoice to the ledger.
+
+Etendo allows the user to manage different currencies within an organization or business unit.
+
+Nowadays, it is very common for the organizations located in a country to make business with third parties located abroad, and even more, it could also happen that an organization needs to post the transactions to general ledgers configured in different currencies.
+
+Above described business scenario, implies the need of managing exchange rates between the organization's general ledger/s currency and the customer's invoice currency to be used while posting the customer's invoice to the ledger/s.
+
+This tab allows the user to enter:
+
+- either an exchange rate between the organization's general ledger/s currency and the customer's invoice currency
+- or the total foreign invoice amount/s, therefore Etendo can calculate the corresponding exchange rates.
+
+Additionally, Etendo has a "central" repository of exchange rates which are used in case there is not an exchange rate defined at document level.
+
+#### Accounting
 
 Accounting information related to the sales invoice.
 
@@ -1177,13 +1183,13 @@ Sales Invoice posting creates the following accounting entries:
 
 Posting record date: Accounting Date.
 
-|                              |                        |                     |                                               |
-| ---------------------------- | ---------------------- | ------------------- | --------------------------------------------- |
+|                          |                    |                 |                                           |
+| -------------------------| ------------------ | --------------- | ----------------------------------------- |
 | Account                  | Debit              | Credit          | Comment                                   |
-| Customer Receivable      | Total Gross Amount |                     | One per Payment Plan Line (TB verified)   |
-| Discount Product Revenue | Discount Amount    |                     | One per Invoice Line (if discount exists) |
-| Product Revenue          |                        | Line Net Amount | One per Invoice Line                      |
-| Tax Due                  |                        | Tax Amount      | One per Tax Line                         |
+| Customer Receivable      | Total Gross Amount |                 | One per Payment Plan Line (TB verified)   |
+| Discount Product Revenue | Discount Amount    |                 | One per Invoice Line (if discount exists) |
+| Product Revenue          |                    | Line Net Amount | One per Invoice Line                      |
+| Tax Due                  |                    | Tax Amount      | One per Tax Line                          |
 
 Same way, a Sales Invoice including a sales invoice line with a revenue plan configured creates the following accounting entries.
 
@@ -1221,7 +1227,7 @@ Posting record date: Accounting Date.
 | Product Revenue Return or if not defined Product Revenue | Line Net Amount |                        | One per Invoice Line                    |
 | Tax Due                                                  | Tax Amount      |                        | One per Tax Line.                       |
 
-#### **Voiding**
+#### Voiding
 
 It is possible to totally void a sales invoice by using the header button "Reactivate" and then the action "Void", this action implies:
 
