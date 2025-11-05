@@ -40,7 +40,7 @@ The system enforces strict validations: the tax amount cannot be modified if the
 
 ## Sales Invoice
 
-In the *Tax* tab, Etendo groups one tax line for each tax type on the invoice. This feature allows adjusting each tax line by up to one cent (±0.01), modifying the rounding difference or the tax amount itself, but only when the sales invoice is in Draft status.
+In the **Tax** tab, Etendo groups one tax line for each tax type on the invoice. This feature allows adjusting each tax line by up to one cent (±0.01), modifying the rounding difference or the tax amount itself, but only when the sales invoice is in Draft status.
 
 The system enforces strict validations: the tax amount cannot be modified if the calculated **Tax Amount** is zero, if the **Tax Base** is zero, or if the adjustment exceeds the allowed ±0.01 range. These controls ensure that adjustments remain minimal, controlled, and consistent with regulatory requirements.
 
