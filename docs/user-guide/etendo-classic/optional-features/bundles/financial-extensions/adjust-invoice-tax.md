@@ -25,8 +25,8 @@ This module enables controlled adjustments to invoice tax amounts to reconcile s
     
     For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
     
-!!! test
-    This development is compatible from Etendo 23.
+!!! example "Compatibility"
+    This functionality is compatible from Etendo 23.
 
 
 ## Purchase Invoice
