@@ -61,7 +61,7 @@ Other configurations are detailed in the section [Advanced Configurations](#adva
 
 ---
 
-### 🧙‍♂️ Interactive Setup (Recommended)
+### Interactive Setup (Recommended)
 
 You can configure Main UI interactively by running:
 
