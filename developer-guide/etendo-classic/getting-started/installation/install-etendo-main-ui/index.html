@@ -5572,6 +5572,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-access-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Access Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5589,6 +5604,30 @@
       Running Etendo Main UI
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Running Etendo Main UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-setup-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Setup (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -12287,6 +12326,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-access-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Access Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -12304,6 +12358,30 @@
       Running Etendo Main UI
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Running Etendo Main UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-setup-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Setup (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -12471,50 +12549,119 @@
 <p>The <a href="../../../bundles/platform/docker-management/">Docker Management</a> module, included as a dependency, allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.</p>
 </div>
 </li>
+<li>
+<h3 id="client-access-token">Client Access Token</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
+<p>A one-time encryption token must be configured for authentication. This token is required for <strong>Etendo Main UI</strong> to start a session.</p>
+<ol>
+<li>Access Etendo Classic as a <code>System Administrator</code>.</li>
+<li>Navigate to <code>Client</code> &gt; <code>Secure Web Service Configuration</code> tab.</li>
+<li>Click the <strong>Generate Key</strong> button to create a token. The expiration time is measured in minutes, if set to 0 the token does not expire.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-mobile/getting-started/token.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../assets/developer-guide/etendo-mobile/getting-started/token.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This token doesn’t require any action; it just needs to be generated for the authentication process to work properly.</p>
+</div>
+</li>
 </ol>
 <h2 id="installation">Installation</h2>
 <p>Etendo Main UI is distributed within the <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/">Platform Extensions</a> bundle, which includes the <strong>Main UI Infrastructure</strong> and all required backend modules for the new interface.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_blank">Platform Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../bundles/platform/overview/">Platform Extensions - Release notes</a>.</p>
+<p>To be able to include this functionality, the Platform Extensions Bundle must be installed.<br>
+To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_blank">Platform Extensions Bundle</a>.<br>
+For more information about the available versions, core compatibility and new features, visit <a href="../../../bundles/platform/overview/">Platform Extensions - Release notes</a>.</p>
 </div>
 <h2 id="running-etendo-main-ui">Running Etendo Main UI</h2>
-<p>The simplest configuration we are going to follow as an example is to mount <strong>Main UI Dockerized</strong> and <strong>Tomcat</strong> running as a local service. Other configurations are detailed in the section <a href="#advanced-configuration">Advanced Configurations</a>.</p>
+<p>The simplest configuration example uses <strong>Main UI running in Docker</strong> and <strong>Tomcat</strong> running locally.<br>
+Other configurations are detailed in the section <a href="#advanced-configuration">Advanced Configurations</a>.</p>
+<h3 id="interactive-setup-recommended">Interactive Setup (Recommended)</h3>
+<ol>
+<li>
+<p>You can configure Main UI interactively by running:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>-Pinteractive<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--console<span class="o">=</span>plain
+</span></code></pre></div>
+<p>This will guide you through the configuration process for all required variables. For more information visit <a href="../../../../../getting-started/interactive-installation/">Interactive Instalation</a> guide.</p>
+</li>
+<li>
+<p>Start the Docker services:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span>./gradlew<span class="w"> </span>resources.up
+</span></code></pre></div>
+<p>This will start the <strong>Main UI</strong> container along with any other configured Docker services.</p>
+</li>
+</ol>
+<h3 id="manual-configuration">Manual Configuration</h3>
 <ol>
 <li>
 <p>Add the following lines to the <code>gradle.properties</code> file:</p>
-<div class="language-text highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker_com.etendoerp.mainui=true
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ETENDO_CLASSIC_URL=http://your.etendo.instance/etendo
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>ws.maxInactiveInterval=seconds-number
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">mainui</span><span class="o">=</span><span class="kc">true</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">etendo</span><span class="o">.</span><span class="na">classic</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">authentication</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">.</span><span class="na">auth</span><span class="o">.</span><span class="na">SWSAuthenticationManager</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">ws</span><span class="o">.</span><span class="na">maxInactiveInterval</span><span class="o">=</span><span class="mi">3600</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">next</span><span class="o">.</span><span class="na">public</span><span class="o">.</span><span class="na">app</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:3000</span>
 </span></code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code>ws.maxInactiveInterval</code> variable accepts numeric values representing the seconds a session will last before expiring in the new Main UI interface. Note that this configuration is also used by Secure Web Services and does not affect session expiration in the classic Etendo interface. The recommended value is 3600, representing one hour, but you can modify the value as needed.</p>
-</div>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Purpose (Simple Explanation)</th>
+<th>Notes</th>
+<th>Recommended Value (Local)</th>
+<th>Recommended Value (Production)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>docker_com.etendoerp.mainui</strong></td>
+<td>Enables the Main UI Docker service.</td>
+<td>Default value may vary depending on the environment.</td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><strong>etendo.classic.url</strong></td>
+<td>Backend URL used by the Main UI server to connect to Etendo Classic.</td>
+<td>If Main UI runs in Docker and Tomcat runs locally, <code>host.docker.internal</code> must be used.</td>
+<td><code>http://host.docker.internal:8080/etendo</code></td>
+<td><code>https://your.backend.etendo.cloud/etendo</code></td>
+</tr>
+<tr>
+<td><strong>authentication.class</strong></td>
+<td>Java class that manages authentication between the Main UI and Etendo Classic.</td>
+<td>Required for Secure Web Services authentication.</td>
+<td><code>com.etendoerp.etendorx.auth.SWSAuthenticationManager</code></td>
+<td><code>com.etendoerp.etendorx.auth.SWSAuthenticationManager</code></td>
+</tr>
+<tr>
+<td><strong>ws.maxInactiveInterval</strong></td>
+<td>Session duration (in seconds) for the Main UI WebSocket connection.</td>
+<td>Does <em>not</em> affect the session timeout of Etendo Classic. Recommended value is 3600 seconds (1 hour).</td>
+<td><code>3600</code></td>
+<td><code>3600</code></td>
+</tr>
+<tr>
+<td><strong>next.public.app.url</strong></td>
+<td>Public URL where users access the Main UI application.</td>
+<td>Must point to the reachable frontend URL; for local use, localhost is typical.</td>
+<td><code>http://localhost:3000</code></td>
+<td><code>https://your.frontend.etendo.cloud</code></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>Replace <code>your.etendo.instance</code> with your actual Etendo URL.</p>
-<p>For example: </p>
-<div class="language-text highlight"><span class="filename">Etendo URL</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker_com.etendoerp.mainui=true
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ETENDO_CLASSIC_URL=http://localhost:8080/etendo
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ws.maxInactiveInterval=3600
-</span></code></pre></div>
-</li>
-<li>
-<p>Run the following commands to set up the module and update resources:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>setup
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./gradlew<span class="w"> </span>resources.up
+<p>Run the following commands to setup the module and update resources:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>./gradlew<span class="w"> </span>setup
 </span></code></pre></div>
 </li>
 <li>
 <p>Start the Docker services:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>resources.up
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
+<p>This will start the <strong>Main UI</strong> container along with any other configured Docker services.</p>
 </li>
 </ol>
-<p>This will start the <strong>Main UI</strong> container along with any other configured Docker services.</p>
 <h2 id="accessing-the-main-ui">Accessing the Main UI</h2>
 <p>Once all services are running, the Main UI will be available at:</p>
 <p><a href="http://localhost:3000">http://localhost:3000</a> (default port)</p>
@@ -12539,49 +12686,48 @@
 <li><code>com.etendoerp.metadata.template</code></li>
 </ul>
 <p><strong>Quick Clone Commands</strong></p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>modules
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Clone required modules for development</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.etendorx.git
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.openapi.git<span class="w"> </span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.git
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.template.git
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>modules
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Clone required modules for development</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.etendorx.git
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.openapi.git<span class="w"> </span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.git
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.template.git
 </span></code></pre></div>
 <h3 id="development-project-structure">Development Project Structure</h3>
 <p>The workspace is organized as a unique environment with multiple packages:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>com.etendorx.workspace-ui/
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── packages/
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>│   ├── api-client/          # API client for backend communication
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>│   ├── ComponentLibrary/    # Reusable UI components
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>│   └── MainUI/             # Main application
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>├── package.json
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>├── pnpm-workspace.yaml
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>└── README.md
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>com.etendorx.workspace-ui/
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├── packages/
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   ├── api-client/          # API client for backend communication
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>│   ├── ComponentLibrary/    # Reusable UI components
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   └── MainUI/             # Main application
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>├── package.json
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>├── pnpm-workspace.yaml
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>└── README.md
 </span></code></pre></div>
 <h3 id="development-installation-steps">Development Installation Steps</h3>
 <ol>
 <li>
 <p>Clone the Main UI development repository:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/etendosoftware/com.etendorx.workspace-ui.git
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>com.etendorx.workspace-ui
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/etendosoftware/com.etendorx.workspace-ui.git
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">cd</span><span class="w"> </span>com.etendorx.workspace-ui
 </span></code></pre></div>
 </li>
 <li>
 <p>Install all project dependencies using <code>pnpm</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pnpm<span class="w"> </span>install
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pnpm<span class="w"> </span>install
 </span></code></pre></div>
 <p>This command will install dependencies for all packages in the workspace.</p>
 </li>
 <li>
 <p>Create a <code>.env.local</code> file in the <code>packages/MainUI</code> directory:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>packages/MainUI
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>touch<span class="w"> </span>.env.local
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>packages/MainUI
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>touch<span class="w"> </span>.env.local
 </span></code></pre></div>
 </li>
 <li>
 <p>Add your backend configuration:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>NEXT_PUBLIC_BACKEND_URL=http://localhost:8080/etendo
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>NEXT_PUBLIC_API_BASE_URL=http://localhost:8080/etendo
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ETENDO_CLASSIC_URL=http://localhost:8080/etendo
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -12590,16 +12736,16 @@
 </li>
 <li>
 <p>Build the required packages in the correct order:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Build API Client first (dependency for other packages)</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Build Component Library</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Build API Client first (dependency for other packages)</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Build Component Library</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
 </span></code></pre></div>
 </li>
 <li>
 <p>Launch the development server for the Main UI:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pnpm<span class="w"> </span>dev
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pnpm<span class="w"> </span>dev
 </span></code></pre></div>
 <p>The application will be available at <a href="http://localhost:3000">http://localhost:3000</a> by default.</p>
 </li>
@@ -12607,63 +12753,63 @@
 <h3 id="development-workflow">Development Workflow</h3>
 <p><strong>Root-Level Commands (Recommended)</strong></p>
 <p>The workspace provides convenient aliases at the root level for common tasks:</p>
-<div class="language-bash highlight"><span class="filename">Aliases</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Start Main UI development server</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>pnpm<span class="w"> </span>dev
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Build all packages</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>pnpm<span class="w"> </span>build
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># Run tests across all packages</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>pnpm<span class="w"> </span><span class="nb">test</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># Lint all packages</span>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>pnpm<span class="w"> </span>lint
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1"># Fix lint issues automatically</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>pnpm<span class="w"> </span>lint:fix
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c1"># Format code across all packages</span>
-</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>pnpm<span class="w"> </span>format
-</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
-</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="c1"># Auto-fix formatting issues</span>
-</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>pnpm<span class="w"> </span>format:fix
-</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
-</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="c1"># Clean all build artifacts</span>
-</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>pnpm<span class="w"> </span>clean
-</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>
-</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="c1"># Install dependencies</span>
-</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>pnpm<span class="w"> </span>install
+<div class="language-bash highlight"><span class="filename">Aliases</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Start Main UI development server</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>pnpm<span class="w"> </span>dev
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Build all packages</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>pnpm<span class="w"> </span>build
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Run tests across all packages</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>pnpm<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Lint all packages</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>pnpm<span class="w"> </span>lint
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1"># Fix lint issues automatically</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>pnpm<span class="w"> </span>lint:fix
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="c1"># Format code across all packages</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>pnpm<span class="w"> </span>format
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="c1"># Auto-fix formatting issues</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>pnpm<span class="w"> </span>format:fix
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="c1"># Clean all build artifacts</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>pnpm<span class="w"> </span>clean
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="c1"># Install dependencies</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>pnpm<span class="w"> </span>install
 </span></code></pre></div>
 <p><strong>Individual Package Commands</strong></p>
 <p>Each package can also be run independently using pnpm workspace commands:</p>
-<div class="language-bash highlight"><span class="filename">Commands</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Run MainUI development server</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>dev
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Build API Client</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Build Component Library</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Run tests for API Client</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span><span class="nb">test</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1"># Lint specific package</span>
-</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>lint
+<div class="language-bash highlight"><span class="filename">Commands</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Run MainUI development server</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>dev
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Build API Client</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1"># Build Component Library</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="c1"># Run tests for API Client</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1"># Lint specific package</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>lint
 </span></code></pre></div>
 <p><strong>Linting and Formatting</strong></p>
 <p>The project uses Biome for linting and formatting across all packages:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Lint all packages</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>pnpm<span class="w"> </span>lint
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Fix lint issues</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>pnpm<span class="w"> </span>lint:fix
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1"># Format code</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>pnpm<span class="w"> </span>format
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="c1"># Auto-fix formatting</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>pnpm<span class="w"> </span>format:fix
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Lint all packages</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>pnpm<span class="w"> </span>lint
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Fix lint issues</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>pnpm<span class="w"> </span>lint:fix
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># Format code</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>pnpm<span class="w"> </span>format
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="c1"># Auto-fix formatting</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>pnpm<span class="w"> </span>format:fix
 </span></code></pre></div>
 <h3 id="package-details">Package Details</h3>
 <p><strong>API Client (<code>@workspaceui/api-client</code>)</strong></p>
@@ -12692,11 +12838,11 @@
 </ul>
 <h3 id="run-tests">Run Tests</h3>
 <p>Execute the test suites to ensure everything works correctly</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Run all tests</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>pnpm<span class="w"> </span><span class="nb">test</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Build for production</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>pnpm<span class="w"> </span>build
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Run all tests</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>pnpm<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Build for production</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>pnpm<span class="w"> </span>build
 </span></code></pre></div>
 <p>The development environment is now ready for building and customizing the Etendo Main UI.</p>
 <hr>
