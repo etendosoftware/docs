@@ -23,60 +23,99 @@ This guide provides instructions to install and run the Etendo Main UI, a modern
 
 1. **Etendo** project properly set up.
 2. This project depends on the following tools:
+
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher
 
     !!! info
         The [Docker Management](../../bundles/platform/docker-management.md) module, included as a dependency, allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
 
+
+3. ### Client Access Token
+    
+    :material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+    A one-time encryption token must be configured for authentication. This token is required for **Etendo Main UI** to start a session.
+
+    1. Access Etendo Classic as a `System Administrator`.
+    2. Navigate to `Client` > `Secure Web Service Configuration` tab.
+    3. Click the **Generate Key** button to create a token. The expiration time is measured in minutes, if set to 0 the token does not expire.
+    
+    ![alt text](../../../../assets/developer-guide/etendo-mobile/getting-started/token.png)
+    
+    !!! info 
+        This token doesn’t require any action; it just needs to be generated for the authentication process to work properly.
+
+
 ## Installation
 
 Etendo Main UI is distributed within the [Platform Extensions](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) bundle, which includes the **Main UI Infrastructure** and all required backend modules for the new interface.
 
-!!!info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../bundles/platform/overview.md).
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed.  
+    To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.  
+    For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../bundles/platform/overview.md).
+
+
 
 ## Running Etendo Main UI
 
-The simplest configuration we are going to follow as an example is to mount **Main UI Dockerized** and **Tomcat** running as a local service. Other configurations are detailed in the section [Advanced Configurations](#advanced-configuration).
+The simplest configuration example uses **Main UI running in Docker** and **Tomcat** running locally.  
+Other configurations are detailed in the section [Advanced Configurations](#advanced-configuration).
+
+
+
+### Interactive Setup (Recommended)
+
+1. You can configure Main UI interactively by running:
+
+    ```bash
+    ./gradlew setup -Pinteractive=true --console=plain
+    ```
+
+    This will guide you through the configuration process for all required variables. For more information visit [Interactive Instalation](../../../../getting-started/interactive-installation.md) guide.
+
+2. Start the Docker services:
+    
+    ```bash title="Terminal"
+        ./gradlew resources.up
+    ```
+
+    This will start the **Main UI** container along with any other configured Docker services.
+
+### Manual Configuration
 
 1. Add the following lines to the `gradle.properties` file:
 
-    ``` title="gradle.properties"
-    docker_com.etendoerp.mainui=true
-    ETENDO_CLASSIC_URL=http://your.etendo.instance/etendo
-    authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
-    ws.maxInactiveInterval=seconds-number
+    ``` groovy title="gradle.properties"
+        docker_com.etendoerp.mainui=true
+        etendo.classic.url=http://host.docker.internal:8080/etendo
+        authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
+        ws.maxInactiveInterval=3600
+        next.public.app.url=http://localhost:3000
     ```
 
-    !!! warning
-        The `ws.maxInactiveInterval` variable accepts numeric values representing the seconds a session will last before expiring in the new Main UI interface. Note that this configuration is also used by Secure Web Services and does not affect session expiration in the classic Etendo interface. The recommended value is 3600, representing one hour, but you can modify the value as needed.
+    | Variable | Purpose (Simple Explanation) | Notes | Recommended Value (Local) | Recommended Value (Production) |
+    |---------|------------------------------|--------|-----------------------------|--------------------------------|
+    | **docker_com.etendoerp.mainui** | Enables the Main UI Docker service. | Default value may vary depending on the environment. | `true` | `true` |
+    | **etendo.classic.url** | Backend URL used by the Main UI server to connect to Etendo Classic. | If Main UI runs in Docker and Tomcat runs locally, `host.docker.internal` must be used. | `http://host.docker.internal:8080/etendo` | `https://your.backend.etendo.cloud/etendo` |
+    | **authentication.class** | Java class that manages authentication between the Main UI and Etendo Classic. | Required for Secure Web Services authentication. | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` |
+    | **ws.maxInactiveInterval** | Session duration (in seconds) for the Main UI WebSocket connection. | Does *not* affect the session timeout of Etendo Classic. Recommended value is 3600 seconds (1 hour). | `3600` | `3600` |
+    | **next.public.app.url** | Public URL where users access the Main UI application. | Must point to the reachable frontend URL; for local use, localhost is typical. | `http://localhost:3000` | `https://your.frontend.etendo.cloud` |
 
-2. Replace `your.etendo.instance` with your actual Etendo URL.
+3. Run the following commands to setup the module and update resources:
 
-    For example: 
-
-    ``` title="Etendo URL"
-    docker_com.etendoerp.mainui=true
-    ETENDO_CLASSIC_URL=http://localhost:8080/etendo
-    authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
-    ws.maxInactiveInterval=3600
-    ```
-
-3. Run the following commands to set up the module and update resources:
-
-    ```bash
-    ./gradlew setup
-    ./gradlew resources.up
+    ```bash title="Terminal"
+        ./gradlew setup
     ```
 
 4. Start the Docker services:
-
-    ```bash
-    ./gradlew resources.up
+    
+    ```bash title="Terminal"
+        ./gradlew resources.up
     ```
 
-This will start the **Main UI** container along with any other configured Docker services.
+    This will start the **Main UI** container along with any other configured Docker services.
 
 
 ## Accessing the Main UI
@@ -87,6 +126,7 @@ Once all services are running, the Main UI will be available at:
 
 !!!info
     The exact URL may vary depending on your Docker configuration.
+
 
 ## Advanced Configuration
 
@@ -161,8 +201,7 @@ com.etendorx.workspace-ui/
 4. Add your backend configuration:
 
     ```env
-    NEXT_PUBLIC_BACKEND_URL=http://localhost:8080/etendo
-    NEXT_PUBLIC_API_BASE_URL=http://localhost:8080/etendo
+    ETENDO_CLASSIC_URL=http://localhost:8080/etendo
     ```
     !!!info
         Replace the URLs with your actual Etendo backend URLs.
