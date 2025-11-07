@@ -75,8 +75,8 @@ This will guide you through the configuration process for all required variables
 
 1. Add the following lines to the `gradle.properties` file:
 ``` title="gradle.properties"
-    docker_com.etendoerp.mainui=false
-    etendo.classic.url=http://localhost:8080/etendo
+    docker_com.etendoerp.mainui=true
+    etendo.classic.url=http://host.docker.internal:8080/etendo
     authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
     ws.maxInactiveInterval=3600
     next.public.app.url=http://localhost:3000
@@ -214,8 +214,7 @@ com.etendorx.workspace-ui/
 4. Add your backend configuration:
 
     ```env
-    NEXT_PUBLIC_BACKEND_URL=http://localhost:8080/etendo
-    NEXT_PUBLIC_API_BASE_URL=http://localhost:8080/etendo
+    ETENDO_CLASSIC_URL=http://localhost:8080/etendo
     ```
     !!!info
         Replace the URLs with your actual Etendo backend URLs.
