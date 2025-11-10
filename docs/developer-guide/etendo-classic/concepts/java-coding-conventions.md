@@ -1,308 +1,188 @@
 ---
-search:
-  exclude: true
+title: Java Coding Conventions
+tags:
+    - Java
+    - Coding
+    - Conventions
+
+status: beta
 ---
-
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
 
 #  Java Coding Conventions
 
-##  Contents
+!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-  * 1  Overview 
-  * 2  Standard Code Conventions 
-  * 3  Skimmable Code: easy to read, easy to change 
-  * 4  Main Coding Principles 
-  * 5  Do's 
-    * 5.1  Formatting 
-      * 5.1.1  Use an IDE with automatic code formatting at save 
-      * 5.1.2  Openbravo Copyright on Openbravo Intellectual Property (must-do) 
-      * 5.1.3  Vertical Spacing 
-    * 5.2  Code Documentation Policy 
-      * 5.2.1  Class Javadoc (a must-do) 
-      * 5.2.2  Method Javadoc (a must-do) 
-      * 5.2.3  Javadoc for Class members 
-      * 5.2.4  Javadoc for Constants 
-      * 5.2.5  Javadoc Formatting 
-      * 5.2.6  Inline Commenting 
-    * 5.3  Exception Handling 
-      * 5.3.1  Only create Exceptions which do not need to be caught (Runtime Exception) 
-      * 5.3.2  Extend OBException 
-      * 5.3.3  Add context info to your Exception 
-    * 5.4  Use Java 1.5 Constructs 
-    * 5.5  Implement sensible methods 
-    * 5.6  Naming 
-    * 5.7  Defensive Coding 
-      * 5.7.1  Guard for not-implemented cases 
-      * 5.7.2  Do invariant checking (defensive coding) 
-    * 5.8  Use intermediate variables to increase readability 
-    * 5.9  Use logging - when appropriate 
-    * 5.10  Code and name at one level of abstraction/genericity 
-    * 5.11  Prefer class/type-branching over if-branching 
-    * 5.12  Use is/has/can prefixes for boolean Getters 
-    * 5.13  Implement toString in specific cases 
-  * 6  Don'ts 
-    * 6.1  Exception Handling Don'ts 
-      * 6.1.1  Prevent non-handling Catch block 
-      * 6.1.2  Don't hide caught exceptions 
-      * 6.1.3  Don't throw instances of Exception or Error 
-      * 6.1.4  Don't create empty catch blocks without comment 
-    * 6.2  Don't forget to remove auto-generated TODO's 
-    * 6.3  Don't use Vector (only when it is really needed) 
-    * 6.4  Don't extend/implement an interface just for its Constants 
-    * 6.5  Don't use double/float 
-    * 6.6  Don't pass Null 
-    * 6.7  Don't return Null 
-    * 6.8  Don't keep commented out code 
-    * 6.9  Be carefull with boolean (or other so-called selector) parameters 
-    * 6.10  Avoid negative conditionals 
-    * 6.11  Don't do this... 
-    * 6.12  Don't use constant values directly, use named constants 
-    * 6.13  Don't change input parameters 
-    * 6.14  String comparision using == 
-    * 6.15  Be carefull with the type of the argument using equals! 
-    * 6.16  Immutable types: methods which returns the adapted object 
-    * 6.17  Use static or non-static members in a servlet 
-    * 6.18  Naming Don'ts 
-  * 7  Test Driven Development 
-  * 8  Interesting Links 
-  * 9  Be-aware-of 
-    * 9.1  ThreadLocal and Tomcats re-use of Thread objects 
-    * 9.2  Class.forName and classloading 
-    * 9.3  Synchronized Blocks 
-
-  
----  
-  
 ##  Overview
 
-This document gives a description of the coding standards and coding
-principles used in the development of Openbravo.
+This document gives a description of the coding standards and coding principles used in the development of Openbravo.
 
-At Openbravo we use Eclipse 3.7 (Indigo), for a description on how-to setup
-Eclipse see this  how-to  .
+At Openbravo we use Eclipse 3.7 (Indigo), for a description on how-to setup Eclipse see this how-to.
 
 ##  Standard Code Conventions
 
-Openbravo uses the standard coding conventions as defined by Sun in this
-document:  Code Conventions for the JavaTM Programming Language
+Openbravo uses the standard coding conventions as defined by Sun in this document:  Code Conventions for the JavaTM Programming Language.
 
 ##  Skimmable Code: easy to read, easy to change
 
-Skimmable code has one main characteristic (next to being readable and
-understandable): it is code for which it is possible to read and change parts
-of the code without needing to fully understand the complete codebase (the
-rest of the code). Skimmable code is therefore naturally robust and easier to
-maintain than non-skimmable code.
+Skimmable code has one main characteristic (next to being readable and understandable): it is code for which it is possible to read and change parts of the code without needing to fully understand the complete codebase (the rest of the code). Skimmable code is therefore naturally robust and easier to maintain than non-skimmable code.
 
-When creating skimmable code one abstract term is important: lexical
-encapsulation. Lexical encapsulation concretely means that code is grouped
-together in clearly defined methods which are not longer than one
+When creating skimmable code one abstract term is important: lexical encapsulation. Lexical encapsulation concretely means that code is grouped together in clearly defined methods which are not longer than one
 window/screen.
 
-Other principles which help to create skimmable and therefore maintainable and
-understandable code:
+Other principles which help to create skimmable and therefore maintainable and understandable code:
 
-  * Use clear, readable and intention revealing names for variables, methods and classes 
-  * Use intermediate variables to increase readability (see below) 
-  * Make short methods which fit in one window/screen 
-  * Define variables and methods within the scope and close to where they are used 
-  * Use horizontal spacing to group statements together 
-  * Keep methods clear and focused. let a method do one thing: retrieve a value or change a value 
+* Use clear, readable and intention revealing names for variables, methods and classes 
+* Use intermediate variables to increase readability (see below) 
+* Make short methods which fit in one window/screen 
+* Define variables and methods within the scope and close to where they are used 
+* Use horizontal spacing to group statements together 
+* Keep methods clear and focused. let a method do one thing: retrieve a value or change a value 
 
-These are the main principles which help skimmability, other do's discussed in
-this document also facilitate maintainability, correctness, quality,
-robustness.
+These are the main principles which help skimmability, other do's discussed in this document also facilitate maintainability, correctness, quality, robustness.
 
 ##  Main Coding Principles
 
 ##  Do's
 
-In addition to the skimmability enablers and the standard (more formatting
-related) Coding Conventions an Openbravo programmer should follow these
-guidelines:
+In addition to the skimmability enablers and the standard (more formatting related) Coding Conventions an Openbravo programmer should follow these guidelines:
 
 ###  Formatting
 
 ####  Use an IDE with automatic code formatting at save
 
-Although Eclipse may be adviced there are other popular IDE's available. In
-any case, the source code should always be automatically formatted (when a
-file is saved) using the standard Sun Java code conventions as defined above.
+Although Eclipse may be adviced there are other popular IDE's available. In any case, the source code should always be automatically formatted (when a file is saved) using the standard Sun Java code conventions as defined above.
 
-To enable code formatting when saving and to use the Openbravo code formatting
-standard make sure to import the preferences provided in the config/eclipse
-folder in the development projects. This import step is described  here  in
-the  How_to_setup_Eclipse_IDE  howto.
+To enable code formatting when saving and to use the Openbravo code formatting standard make sure to import the preferences provided in the config/eclipse folder in the development projects. This import step is described  here  in the  How_to_setup_Eclipse_IDE  howto.
 
 ####  Openbravo Copyright on Openbravo Intellectual Property (must-do)
 
-Each file which is Openbravo Intellectual Property should have the following
-copyright message in the top:
+Each file which is Openbravo Intellectual Property should have the following copyright message in the top:
 
-    
-    
-    *************************************************************************
-    * The contents of this file are subject to the Openbravo  Public  License
-    * Version  1.0  (the  "License"),  being   the  Mozilla   Public  License
-    * Version 1.1  with a permitted attribution clause; you may not  use this
-    * file except in compliance with the License. You  may  obtain  a copy of
-    * the License at http://www.openbravo.com/legal/license.html
-    * Software distributed under the License  is  distributed  on  an "AS IS"
-    * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
-    * License for the specific  language  governing  rights  and  limitations
-    * under the License.
-    * The Original Code is Openbravo ERP.
-    * The Initial Developer of the Original Code is Openbravo SLU
-    * All portions are Copyright (C) 201 Openbravo SLU
-    * All Rights Reserved.
-    * Contributor(s):  ______________________________________.
-    ************************************************************************
-    
+```
+*************************************************************************
+* The contents of this file are subject to the Openbravo  Public  License
+* Version  1.0  (the  "License"),  being   the  Mozilla   Public  License
+* Version 1.1  with a permitted attribution clause; you may not  use this
+* file except in compliance with the License. You  may  obtain  a copy of
+* the License at http://www.openbravo.com/legal/license.html
+* Software distributed under the License  is  distributed  on  an "AS IS"
+* basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+* License for the specific  language  governing  rights  and  limitations
+* under the License.
+* The Original Code is Openbravo ERP.
+* The Initial Developer of the Original Code is Openbravo SLU
+* All portions are Copyright (C) 201 Openbravo SLU
+* All Rights Reserved.
+* Contributor(s):  ______________________________________.
+************************************************************************
+```    
 
 The year in the copyright statement is the current year when the file is new
 and contains two dates if the file is updated in a different year than it was
 created. For example a file created in 2006 and changed for the last time in
 2011 will have the following years: 2006 - 2011 specified near the (C) sign:
 
-    
-    
-    * All portions are Copyright (C) 2006 - 2011 Openbravo SLU
-    
+```
+* All portions are Copyright (C) 2006 - 2011 Openbravo SLU
+```
 
 ####  Vertical Spacing
 
 Use vertical spacing to separate different parts of the code and to make the
 code less dense to read. Here is an example without vertical spacing:
 
-    
-    
-    try {
-      configuration = new Configuration();
-      mapModel(configuration);
-      setInterceptor(configuration);
-      configuration.addProperties(getOpenbravoProperties());
-      // add a default second level cache
-      if (configuration.getProperties().get(
-           Environment.CACHE_PROVIDER) == null) {
-        configuration.getProperties().setProperty(
-        Environment.CACHE_PROVIDER,
-        HashtableCacheProvider.class.getName());
-      }
-      sessionFactory = configuration.buildSessionFactory();
-      log.debug("Session Factory initialized");
-    } catch (final Throwable t) {
-        throw new OBException(t);
-    }
 
-And here is the same example with horizontal spacing to make it easier to
-read:
-
-    
-    
-    try {
-      configuration = new Configuration();
-     
-      mapModel(configuration);
-     
-      setInterceptor(configuration);
-     
-      configuration.addProperties(getOpenbravoProperties());
-     
-      // add a default second level cache
-      if (configuration.getProperties().get(
-              Environment.CACHE_PROVIDER) == null) {
-        configuration.getProperties().setProperty(
-        Environment.CACHE_PROVIDER,
-        HashtableCacheProvider.class.getName());
-      }
-     
-      sessionFactory = configuration.buildSessionFactory();
-     
-      log.debug("Session Factory initialized");
-    } catch (final Throwable t) {
-      // this is done to get better visibility of the exceptions
-      t.printStackTrace(System.err);
-      throw new OBException(t);
+```
+try {
+    configuration = new Configuration();
+    mapModel(configuration);
+    setInterceptor(configuration);
+    configuration.addProperties(getOpenbravoProperties());
+    // add a default second level cache
+    if (configuration.getProperties().get(
+        Environment.CACHE_PROVIDER) == null) {
+    configuration.getProperties().setProperty(
+    Environment.CACHE_PROVIDER,
+    HashtableCacheProvider.class.getName());
     }
+    sessionFactory = configuration.buildSessionFactory();
+    log.debug("Session Factory initialized");
+} catch (final Throwable t) {
+    throw new OBException(t);
+}
+```
+
+And here is the same example with horizontal spacing to make it easier to read:
+
+```
+try {
+    configuration = new Configuration();
+ 
+    mapModel(configuration);
+ 
+    setInterceptor(configuration);
+ 
+    configuration.addProperties(getOpenbravoProperties());
+ 
+    // add a default second level cache
+    if (configuration.getProperties().get(
+            Environment.CACHE_PROVIDER) == null) {
+    configuration.getProperties().setProperty(
+    Environment.CACHE_PROVIDER,
+    HashtableCacheProvider.class.getName());
+    }
+ 
+    sessionFactory = configuration.buildSessionFactory();
+ 
+    log.debug("Session Factory initialized");
+} catch (final Throwable t) {
+    // this is done to get better visibility of the exceptions
+    t.printStackTrace(System.err);
+    throw new OBException(t);
+}
+```
 
 ###  Code Documentation Policy
 
-Well documented and commented code is great and helps to understand the
-meaning of the code thereby improving productivity and preventing future bugs.
+Well documented and commented code is great and helps to understand the meaning of the code thereby improving productivity and preventing future bugs.
 
-The Openbravo code documentation policy aims to combine a light-weight code
-documentation process which adds value to a developer navigating through the
-Openbravo code in his/her IDE. Comments and documentation should be easy to
-maintain and be up-to-date with the code it describes.
+The Openbravo code documentation policy aims to combine a light-weight code documentation process which adds value to a developer navigating through the Openbravo code in his/her IDE. Comments and documentation should be easy to maintain and be up-to-date with the code it describes.
 
-Documentation and comments can be divided in two main parts: Javadoc and
-inline commenting.
+Documentation and comments can be divided in two main parts: Javadoc and inline commenting.
 
-In Openbravo Javadoc comments have two main uses: to be used as the basis to
-generate Javadoc html pages and technical documentation and to support
-specific features of current IDEs, e.g. show Javadoc when hovering with the
-mouse over methods and constants.
+In Openbravo Javadoc comments have two main uses: to be used as the basis to generate Javadoc html pages and technical documentation and to support specific features of current IDEs, e.g. show Javadoc when hovering with the mouse over methods and constants.
 
-Inline commenting is used to clarify the meaning of the code and underlying
-implementation decisions which may influence future coding decisions.
+Inline commenting is used to clarify the meaning of the code and underlying implementation decisions which may influence future coding decisions.
 
-Note that all comments and documentation must be in English using the US
-notation (for example: organization instead of organisation).
+Note that all comments and documentation must be in English using the US notation (for example: organization instead of organisation).
 
 ####  Class Javadoc (a must-do)
 
-Each class must have a well-formatted Javadoc section in the top. The class
-doc comment must describe the overall function of the class and its relation
-to other classes.
+Each class must have a well-formatted Javadoc section in the top. The class doc comment must describe the overall function of the class and its relation to other classes.
 
-The class doc comments may not contain implementation details as they may
-change quickly with the risk of having outdated comments.
+The class doc comments may not contain implementation details as they may change quickly with the risk of having outdated comments.
 
-The class Javadoc must contain @author annotations with the name/login of the
-developers who have worked on that class.
+The class Javadoc must contain @author annotations with the name/login of the developers who have worked on that class.
 
-While writing Javadoc class comments also provide @link and @see annotations
-to related classes. This helps to place the class in the context of other
-classes.
+While writing Javadoc class comments also provide @link and @see annotations to related classes. This helps to place the class in the context of other classes.
 
 Here is an example of a class doc of the Entity class:
 
-    
-    
-    /**
-     * Models the business object type. The Entity is the main concept in the
-     * in-memory model. An entity corresponds to a {@link Table} in the database. An
-     * Entity has properties which are primitive typed, references or lists of child
-     * entities.
-     * 
-     * @see Property
-     * @see ModelProvider
-     * 
-     * @author iperdomo
-     * @author mtaal
-     */
+```
+/**
+    * Models the business object type. The Entity is the main concept in the
+    * in-memory model. An entity corresponds to a {@link Table} in the database. An
+    * Entity has properties which are primitive typed, references or lists of child
+    * entities.
+    * 
+    * @see Property
+    * @see ModelProvider
+    * 
+    * @author iperdomo
+    * @author mtaal
+    */
+```
 
 ####  Method Javadoc (a must-do)
 
@@ -316,45 +196,45 @@ The Javadoc of a method must describe the general logic of the method without
 too many implementation details. The input and output of the method should be
 described. Some other rules which must be followed:
 
-  * Every parameter must be described using the @param annotation (do not have empty @param annotation) 
-  * The return value must be described using the @return annotation (also here, prevent empty return annotations) 
-  * If the method throws an UncheckedException then this exception must be mentioned in the Javadoc using the @throws annotation. 
-  * It must specifically be documented if a method can return null so that the caller can take that into account. 
+* Every parameter must be described using the @param annotation (do not have empty @param annotation) 
+* The return value must be described using the @return annotation (also here, prevent empty return annotations) 
+* If the method throws an UncheckedException then this exception must be mentioned in the Javadoc using the @throws annotation. 
+* It must specifically be documented if a method can return null so that the caller can take that into account. 
 
-    
-    
-    /**
-    * The main entry point. This method walks through the elements in the root
-    * and parses them. The children of a business object (in the xml) are also
-    * parsed. Referenced objects are resolved through the
-    * {@link EntityResolver}.
-    * <p/>
-    * After a call to this method the to-be-inserted objects can be retrieved
-    * through the {@link #getToInsert()} method and the to-be-updated objects
-    * through the {@link #getToUpdate()} method.
-    * 
-    * @param xml
-    *   the xml string
-    * @return the list of BaseOBObject present in the root of the xml. This
-    *   list contains the to-be-updated, to-be-inserted as well as the
-    *   unchanged business objects
-    */
+```
+/**
+* The main entry point. This method walks through the elements in the root
+* and parses them. The children of a business object (in the xml) are also
+* parsed. Referenced objects are resolved through the
+* {@link EntityResolver}.
+* <p/>
+* After a call to this method the to-be-inserted objects can be retrieved
+* through the {@link #getToInsert()} method and the to-be-updated objects
+* through the {@link #getToUpdate()} method.
+* 
+* @param xml
+*   the xml string
+* @return the list of BaseOBObject present in the root of the xml. This
+*   list contains the to-be-updated, to-be-inserted as well as the
+*   unchanged business objects
+*/
+```
 
 or
 
-    
-    
-    /**
-    * Validates the values of the properties of the entityObject. The
-    * validation messages are collected into one ValidationException.
-    * 
-    * @param entityObject
-    *   the entity instance
-    * @throws ValidationException
-    */
-    public void validate(Object entityObject) {
-      ....
-    }
+```
+/**
+* Validates the values of the properties of the entityObject. The
+* validation messages are collected into one ValidationException.
+* 
+* @param entityObject
+*   the entity instance
+* @throws ValidationException
+*/
+public void validate(Object entityObject) {
+    ....
+}
+```
 
 ####  Javadoc for Class members
 
@@ -362,125 +242,112 @@ Members should not have Javadoc, as a class member is always private.
 
 ####  Javadoc for Constants
 
-Public final static Constants must have JavaDoc. Private constants should not
-have Javadoc.
+Public final static Constants must have JavaDoc. Private constants should not have Javadoc.
 
 ####  Javadoc Formatting
 
-The JavaDoc must use standard doc constructs like linking to Javadoc of other
-classes and use Javadoc formatting. See  here  for more information.
+The JavaDoc must use standard doc constructs like linking to Javadoc of other classes and use Javadoc formatting. See  here  for more information.
 
 ####  Inline Commenting
 
-Inline comments can be crucial for a developer to understand the meaning of
-code and to be informed about earlier implementation decision. However when
-commenting keep the following in mind:
+Inline comments can be crucial for a developer to understand the meaning of code and to be informed about earlier implementation decision. However when commenting keep the following in mind:
 
-  * The general philosophy is that there is only a minimal need for comments: the code itself should be readable (using descriptive names and variables to store intermediate results). 
-  * Comments should only be added if they add value and provide deeper insight which is not directly visible in the code itself. 
-  * Inline comments are hard to maintain and are quickly outdated because code changes quickly. So therefore comments must be placed as closely as possible to the code they refer to. 
-  * Remove outdated comments! 
+* The general philosophy is that there is only a minimal need for comments: the code itself should be readable (using descriptive names and variables to store intermediate results). 
+* Comments should only be added if they add value and provide deeper insight which is not directly visible in the code itself. 
+* Inline comments are hard to maintain and are quickly outdated because code changes quickly. So therefore comments must be placed as closely as possible to the code they refer to. 
+* Remove outdated comments! 
 
-Here is an example of some inline comments from the OBQuery class. In this
-case the inline comments are used to show examples which are handled by that
-part of the code.
+Here is an example of some inline comments from the OBQuery class. In this case the inline comments are used to show examples which are handled by that part of the code.
 
     
-    
-    // The following if is there because the clauses which are added should
-    // all be and-ed. Special cases which need to be handled:
-    // left join a left join b where a.id is not null or b.id is not null
-    // id='0' and exists (from ADModelObject as mo where mo.id=id)
-    // id='0'
-    boolean addWhereClause = true;
-    if (whereClause.trim().length() > 0) {
-      if (!whereClause.toLowerCase().contains("where")) {
-        // simple case: id='0'
-        whereClause = " where (" + whereClause + ")";
-          addWhereClause = false;
-      } else {
-        // check if the where is before the from
-        final int fromIndex = whereClause.toLowerCase().indexOf("from");
-        int whereIndex = -1;
-        if (fromIndex == -1) {
-          // already there and no from
-          // now find the place where to put the brackets
-          // case: left join a left join b where a.id is not null or
-          // b.id is not null
-     
-          whereIndex = whereClause.toLowerCase().indexOf("where");
-          check.isTrue(whereIndex != -1, "Where not found in string: " + whereClause);
-        } else {
-          // example: id='0' and exists (from ADModelObject as mo
-          // where mo.id=id)
-          // example: left join x where id='0' and x.id=id and exists
-          // (from ADModelObject as mo where mo.id=id)
-     
-          // check if the whereClause is before the first from
-          whereIndex = whereClause.toLowerCase().substring(0, fromIndex).indexOf("where");
-        }
-     
-        if (whereIndex != -1) {
-          // example: left join x where id='0' and x.id=id and exists
-          // (from ADModelObject as mo where mo.id=id)
-          addWhereClause = false;
-          // now put the ( at the correct place
-          final int endOfWhere = whereIndex + "where".length();
-          whereClause = whereClause.substring(0, endOfWhere) + " (" + whereClause.substring(endOfWhere) + ")";
-        } else { // no whereclause before the from
-          // example: id='0' and exists (from ADModelObject as mo
-          // where mo.id=id)
-          whereClause = " where (" + whereClause + ")";
-          addWhereClause = false;
-        }
-      }
+```
+// The following if is there because the clauses which are added should
+// all be and-ed. Special cases which need to be handled:
+// left join a left join b where a.id is not null or b.id is not null
+// id='0' and exists (from ADModelObject as mo where mo.id=id)
+// id='0'
+boolean addWhereClause = true;
+if (whereClause.trim().length() > 0) {
+    if (!whereClause.toLowerCase().contains("where")) {
+    // simple case: id='0'
+    whereClause = " where (" + whereClause + ")";
+        addWhereClause = false;
+    } else {
+    // check if the where is before the from
+    final int fromIndex = whereClause.toLowerCase().indexOf("from");
+    int whereIndex = -1;
+    if (fromIndex == -1) {
+        // already there and no from
+        // now find the place where to put the brackets
+        // case: left join a left join b where a.id is not null or
+        // b.id is not null
+ 
+        whereIndex = whereClause.toLowerCase().indexOf("where");
+        check.isTrue(whereIndex != -1, "Where not found in string: " + whereClause);
+    } else {
+        // example: id='0' and exists (from ADModelObject as mo
+        // where mo.id=id)
+        // example: left join x where id='0' and x.id=id and exists
+        // (from ADModelObject as mo where mo.id=id)
+ 
+        // check if the whereClause is before the first from
+        whereIndex = whereClause.toLowerCase().substring(0, fromIndex).indexOf("where");
     }
+ 
+    if (whereIndex != -1) {
+        // example: left join x where id='0' and x.id=id and exists
+        // (from ADModelObject as mo where mo.id=id)
+        addWhereClause = false;
+        // now put the ( at the correct place
+        final int endOfWhere = whereIndex + "where".length();
+        whereClause = whereClause.substring(0, endOfWhere) + " (" + whereClause.substring(endOfWhere) + ")";
+    } else { // no whereclause before the from
+        // example: id='0' and exists (from ADModelObject as mo
+        // where mo.id=id)
+        whereClause = " where (" + whereClause + ")";
+        addWhereClause = false;
+    }
+    }
+}
+```
 
 ###  Exception Handling
 
-####  Only create Exceptions which do not need to be caught (Runtime
-Exception)
+####  Only create Exceptions which do not need to be caught (Runtime Exception)
 
-Often you can use the standard OBException or another existing exception
-within the Openbravo codebase. However, when you know that calling code will
-want to catch a specific exception then it can make sense to create an own
-exception for the specific module which is being developed.
+Often you can use the standard OBException or another existing exception within the Openbravo codebase. However, when you know that calling code will want to catch a specific exception then it can make sense to create an own exception for the specific module which is being developed.
 
 ####  Extend OBException
 
-When creating a new exception always extend the OBException. The OBException
-takes care of logging. In addition this exception is an unchecked Exception.
-All new exceptions should be unchecked exceptions.
+When creating a new exception always extend the OBException. The OBException takes care of logging. In addition this exception is an unchecked Exception. All new exceptions should be unchecked exceptions.
 
 ####  Add context info to your Exception
 
-When throwing a new Exception or catching, packaging and re-throwing an
-exception it is vital that context information is added to the Exception
-message. Only then it is possible to determine for which business object or
-which situation a method fails
+When throwing a new Exception or catching, packaging and re-throwing an exception it is vital that context information is added to the Exception message. Only then it is possible to determine for which business object or which situation a method fails
 
-    
-    
-    if ((p = propertiesByName.get(propName)) == null) {
-      throw new OBException("Property " + propName
-         + " not defined for entity " + this);
-    }
+```
+if ((p = propertiesByName.get(propName)) == null) {
+    throw new OBException("Property " + propName
+        + " not defined for entity " + this);
+}
+```
 
-Note that in this case the 'this' makes sense because the object implements
-the toString method (see the next do).
+!!!info
+    In this case, the 'this' makes sense because the object implements the `toString` method (see the next do).
 
-Note: when adding context information to an exception then be aware of
-possible new exceptions when creating the exception.
+!!!note
+    when adding context information to an exception then be aware of possible new exceptions when creating the exception.
 
-    
-    
-    try {
-      ...
-    } catch (Exception e)
-      throw new OBException("Exception when submitting order " +
-        order.getId() + " with customer " + 
-        order.getCustomer().getId(), e);
-    }
+    ``` 
+        
+        try {
+        ...
+        } catch (Exception e)
+        throw new OBException("Exception when submitting order " +
+            order.getId() + " with customer " + 
+            order.getCustomer().getId(), e);
+        }
+    ```
 
 This exception throw will fail when the order is null or the customer of the
 order is null. This NPE will then hide the real exception.

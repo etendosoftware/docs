@@ -379,14 +379,14 @@ nav:
         - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
         - Development Model: developer-guide/etendo-classic/concepts/development-model.md
         - Development Project Structure: developer-guide/etendo-classic/concepts/development-project-structure.md
-#        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
+        - Dynamic Expressions: developer-guide/etendo-classic/concepts/dynamic-expressions.md
         - Element and Synchronize Terminology: developer-guide/etendo-classic/concepts/element-and-synchronize-terminology.md
-#        - Etendo Architecture: developer-guide/etendo-classic/concepts/etendo-architecture.md
+        - Etendo Architecture: developer-guide/etendo-classic/concepts/etendo-architecture.md
         - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
-#        - ExtensionPoints: developer-guide/etendo-classic/concepts/ExtensionPoints.md
+        - ExtensionPoints: developer-guide/etendo-classic/concepts/extensionpoints.md
         - Format xml: developer-guide/etendo-classic/concepts/format-xml.md
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
-#        - Java Coding Conventions: developer-guide/etendo-classic/concepts/Java_Coding_Conventions.md
+        - Java Coding Conventions: developer-guide/etendo-classic/concepts/java-coding-conventions.md
 #        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/javascript-coding-conventions.md
 #        - JSON REST Web Services: developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md
 #        - Main Development Concepts: developer-guide/etendo-classic/concepts/Main_Development_Concepts.md
