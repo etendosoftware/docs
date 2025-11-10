@@ -86,7 +86,7 @@ To start using this module correctly, the following installation and configurati
             - [GS1-128](https://www.gs1.org/standards/barcodes){target="_blank"}
             - SimpleBarcode
 
-        - **AI Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
+        - **Barcode Components Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
 
         - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
 
@@ -111,7 +111,8 @@ To start using this module correctly, the following installation and configurati
     
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-win-1.png)
 
-    !!! important
+    !!! note
+
         The system allows any **application identifier (AI)** to be freely configured to associate it with custom attributes or fields, providing flexibility to adapt to different internal coding schemes. The module is installed with a predefined configuration based on the **GS1-128** standard, which ensures the correct interpretation of codes in accordance with international standards. Nevertheless, users can adjust or redefine identifiers according to their particular needs. In such cases, the system will interpret the codes according to the user-defined configuration, but will not interpret GS1-128 codes in the standard way.
 
     Fields to note:
@@ -144,11 +145,6 @@ To start using this module correctly, the following installation and configurati
     === ":material-playlist-plus: GS1-128"
         
         The [GS1-128](https://www.gs1.org/standards/barcodes){target="_blank"} standard is a globally used barcode format that encodes structured information through **Application Identifiers (AIs)**. Each AI specifies the type of data included, such as product identifiers, batch numbers, expiration dates, or logistics details. This enables detailed and standardized interpretation of product and warehouse information. For more details, see the [official GS1-128 documentation](https://www.gs1.org/standards/barcodes){target="_blank"}.
-
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-gs1128-1.png)
-
-        !!! warning
-            Etendo recognizes and validates only the identifiers shown in the list below. Identifiers 90–99 (GS1‑128) are reserved for company‑specific use and can be freely assigned and mapped; the system only includes support to define **custom product attributes** that are interpreted dynamically (for example, you can map a *color* attribute to AI 93). Any identifier not present in the configured list (other than the free-use 90–99 range) requires additional development to be interpreted. Using an unknown identifier will not produce an error, but its content will not be validated or applied by the system.    
         
         !!! info 
             As indicated in the standard, when using a variable-length identifier, a separator must be added. The value declared by the standard is **FNC1**
@@ -166,12 +162,26 @@ To start using this module correctly, the following installation and configurati
         | **(93)** | Free Use                             | -                                                                       | -               |
         | **(94)** | Free Use                             | -                                                                       | -               |
         | **(95)** | Free Use                             | -                                                                       | -               |
-        | **(95)** | Free Use                             | -                                                                       | -               |
+        | **(96)** | Free Use                             | -                                                                       | -               |
         | **(97)** | Free Use                             | -                                                                       | -               |
         | **(98)** | Free Use                             | -                                                                       | -               |
         | **(99)** | Free Use                             | -                                                                       | -               |
 
         Thanks to this configuration, when scanning a *GS1-128* barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, When it reads an identifier 91, it associates it with a locator or when it reads an identifier 92, it associates it with a logistics unit
+
+        !!! warning "Barcode identification rules"
+
+            Etendo interprets only the identifiers defined in this configuration.
+            GS1-128 identifiers 90–99 are free-use codes and can be assigned to custom product attributes.
+
+            By default:
+
+            - AI 91 and 92 are used by Etendo.
+            - AI 93–99 remain available for custom product attributes that are resolved dynamically (e.g., 93 = color, 94 = size).
+
+            Users may change both the identifiers and the attributes they reference. However, any change is the user’s responsibility and may cause inconsistencies with standard GS1-128 parsing or external integrations.
+
+            If a different interpretation is required, a developer can create a custom **barcode algorithm**.
 
         <figure markdown="span">
             ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-attr-2.png)
