@@ -379,7 +379,7 @@ In the pop-up window, you can assign a user or enable automatic assignment. If m
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
 
 !!!Info
-    For more information about how Reception Task, visit [Reception Tasks](../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#reception-tasks).
+    For more information, visit [Reception Tasks](#reception-tasks).
 
 **Complete Receipt**
 
@@ -836,24 +836,17 @@ To **Relocate** inventory:
 
 ### Reception Tasks
 
-It allows create and control receipts directly from the mobile application using receipt tasks, which reproduce the same behavior and process flow as the goods receipt and ticket receipt windows in the ERP.
-
-!!!Info
-    For more information about how to use this functionality in Etendo, visit [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#inbound-receipt).
+It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
 
 #### Process Start (Etendo)
 
-The process begins by clicking the “Generate Receiving Task” button in the Receiving window of the ERP.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-boton-task-1.png)
-
-There, the task is assigned and then reflected in the mobile application of the assigned operator.
+The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned and then reflected in the mobile application of the assigned operator.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
 
 #### Access to Inventory Tasks (Etendo Mobile)
 
-When accessing Etendo Mobile in the Reception Tasks section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as Pending.
+When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
 
