@@ -5,6 +5,7 @@ tags:
 - Tbai
 - Batuz
 - Bizkaia
+- Álava
 - Factura
 - Gipuzkoa
 title: TicketBai y Batuz
@@ -18,7 +19,11 @@ title: TicketBai y Batuz
 
 Las funcionalidades de **TicketBai** y **Batuz** en Etendo ofrecen una solución integral para el cumplimiento de las normativas fiscales en el País Vasco, orientado a garantizar la **transparencia**, **reducir el fraude fiscal**, y **asegurar la correcta emisión de facturas** electrónicas certificadas.
 
-**TicketBai** es obligatorio para las empresas y profesionales que **operen en Gipuzkoa y estén sujetos al IVA o IAE**, mientras que **Batuz** se centra específicamente en **Bizkaia**, incluyendo además del sistema TicketBai, el Libro Registro de Operaciones Económicas (LROE).
+**TicketBai** es obligatorio para **todas las personas y entidades que realicen actividades económicas** en Álava, Bizkaia o Gipuzkoa (salvo algunas exoneraciones concretas). En Bizkaia, esta obligación forma parte del proyecto **Batuz**, que añade el Libro Registro de Operaciones Económicas (LROE) y la generación de borradores de IVA, Sociedades y Renta.
+
+!!! note "Diferencias territoriales"
+    - **TicketBai**: Obligatorio en Álava, Bizkaia y Gipuzkoa
+    - **Batuz (LROE)**: Exclusivo de Bizkaia
 
 A través de este módulo, Etendo facilita la **automatización de procesos** clave como la **emisión**, **validación** y **envío en tiempo real** de facturas a las haciendas forales. El sistema garantiza la trazabilidad de las transacciones mediante la firma electrónica de las facturas y la transmisión telemática a las autoridades fiscales.
 
@@ -26,7 +31,7 @@ A través de este módulo, Etendo facilita la **automatización de procesos** cl
 
 El módulo permite:
 
-- Enviar **automáticamente** los archivos XML con las facturas a las haciendas forales (Gipuzkoa o Bizkaia).
+- Enviar **automáticamente** los archivos XML con las facturas a las haciendas forales (Gipuzkoa, Bizkaia o Álava).
 - Recibir los XML de respuesta con la confirmación del envío de las facturas.
 
 La implementación cubre:
@@ -42,7 +47,7 @@ Al instalar este módulo, el usuario podrá comprobar que:
 
 1. Se crearán nuevas ventanas:
 
-    - **Configuración TBAI**, donde se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a **TicketBai/Batuz**, incluyendo los destinos **Gipuzkoa** y **Bizkaia**.
+    - **Configuración TBAI**, donde se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a **TicketBai/Batuz**, incluyendo los destinos **Gipuzkoa**, **Bizkaia** y **Álava**.
 
     - **TBAI Facturas Enviadas**, donde se podrá revisar el historial completo de todas las facturas enviadas tanto a **TicketBai** como a **Batuz**.
 
@@ -78,7 +83,7 @@ A continuación, si el proceso se ha ejecutado correctamente, el sistema mostrar
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/successful_dataset.png)
 
-Este dataset proveerá los datos necesarios para gestionar el envío de facturas a Gipuzkoa y Bizkaia.
+Este dataset proveerá los datos necesarios para gestionar el envío de facturas a Gipuzkoa, Bizkaia y Álava.
 
 ### Configuración TBAI
 
@@ -86,7 +91,7 @@ La ventana de Configuración TBAI le permitirá ajustar los parámetros necesari
 
 - **Organización**: Seleccione la organización o entidad legal que será responsable del envío de los registros de facturas.
 
-- **Destino**: Elija el destino Gipuzkoa o Bizkaia previamente creado por el dataset.
+- **Destino**: Elija el destino **Gipuzkoa**, **Bizkaia** o **Álava** previamente creado por el dataset.
 
 - **Fecha Acogido TBAI**: Especifique la fecha en la que la organización se acoge al sistema TBAI.
 
@@ -111,6 +116,9 @@ La ventana de Configuración TBAI le permitirá ajustar los parámetros necesari
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_conf.png)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_config_bizkaia.png)
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_config_alava.png)
+
 
 *No olvide adjuntar el certificado necesario.*
 
@@ -154,13 +162,34 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_sequence.png)
 
+### Tipo de Documento para Facturas Rectificativas
+
+Para realizar facturas rectificativas a enviar a TicketBai, es necesario primero crear un tipo de documento que se utilizará específicamente para este tipo de facturas.
+
+- Acceder a la ventana "**Secuencia de Documento (Numeración)**". En esta ventana se deberá elegir una secuencia ya existente o crear una nueva. Es importante que en la secuencia creada/elegida se marque la casilla "**Es Rectificativo**", y que además se asigne un valor en el campo "**Prefijo**". El prefijo asignado debe cumplir con las siguientes reglas:
+    
+    * Debe ser menor a 20 caracteres.
+    * No debe contener minúsculas.
+    * No debe contener las letras I, Ñ, O, W.
+    * No debe utilizar acentos.
+    * Puede utilizarse el guión medio (-).
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/rectificative_sequence.png)
+
+    Si la secuencia creada/elegida es transaccional, debe tenerse en cuenta que el campo "**Prefijo**" seguirá las normas de formato del campo "**Mask**". Es decir, habrá caracteres reservados que cambiarán su valor cuando se asigne un número de documento a la factura. 
+    
+    La documentación de [Secuencias](../../../basic-features/financial-management/accounting/setup.md#sequence-masking) de Etendo muestra los distintos caracteres reservados y el valor por el que se reemplaza cada uno.
+
+- Acceder a la ventana "**Tipo de Documento**". En esta ventana se deberá crear un nuevo tipo o elegir uno existente, el cual será utilizado exclusivamente para facturas rectificativas. Se debe marcar la casilla "**Es Rectificativo**" en el tipo de documento creado/elegido para que el sistema permita usarlo en rectificaciones. Si no se utilizan secuencias transaccionales, se debe asignar en el campo "**Sec. Doc. (Numeración)**" la secuencia rectificativa creada anteriormente. Esta secuencia sólo aparecerá si se ha marcado la casilla "**Es Rectificativo**" tanto en la secuencia como en el tipo de documento.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/rectificative_doctype.png)
 
 ## Proceso de Envío de Factura
 
 === "TicketBai"
     1. Creación de Factura de Venta
         
-        Para iniciar el proceso, cree una factura de venta utilizando una organización que tenga configurada la opción de TicketBai. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema.
+        Para iniciar el proceso, cree una factura de venta utilizando una organización que tenga configurada la opción de TicketBai. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema. Si la factura a crear es rectificativa, se debe utilizar para la misma un tipo de documento marcado como Rectificativo, y una secuencia configurada con un prefijo.
 
     2.  Registro de Factura en TicketBai
 
@@ -195,7 +224,7 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 
     1. Creación de Factura de Compra
         
-        Para iniciar el proceso, cree una factura de compra utilizando una organización que tenga configurada el destino Bizkaia. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema.
+        Para iniciar el proceso, cree una factura de compra utilizando una organización que tenga configurada el destino Bizkaia. Esta configuración se realiza desde la ventana de "**Configuración TBAI**" en el sistema. Si la factura a crear es rectificativa, se debe utilizar para la misma un tipo de documento marcado como Rectificativo, y una secuencia configurada con un prefijo.
 
     2.  Registro de Factura en Batuz
 
@@ -226,8 +255,18 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
     Tal y como sucede con otros procesos de Etendo, estos podrán configurarse para ser ejecutados de forma inmediata, planificada o programada con una cierta frecuencia, donde permitirán el alta masiva de facturas en Batuz con la cadencia de envío configurada.
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/process_request_batuz.png)
 
-    ---
+## Para saber más puede consultar:
+
+### Gipuzkoa
+- [Portal principal](https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai)
+- [Documentación técnica](https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai/documentacion-y-normativa)
+
+### Bizkaia (Batuz)
+- [Portal principal de Batuz](https://www.batuz.eus/es/inicio)
+- [Documentación técnica de Batuz](https://www.batuz.eus/es/documentacion-tecnica)
+
+### Álava
+- [Portal principal](https://web.araba.eus/es/hacienda/ticketbai)
+- [Documentación técnica](https://web.araba.eus/es/hacienda/ticketbai/documentacion-tecnica)
 
 This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-    

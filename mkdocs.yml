@@ -285,6 +285,7 @@ nav:
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Financial Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+            - Adjust Invoice Tax: user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
             - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
             - Business Partner Settlement: user-guide/etendo-classic/optional-features/bundles/financial-extensions/business-partner-settlement.md
@@ -361,15 +362,13 @@ nav:
       - Concepts:
         - Alerts: developer-guide/etendo-classic/concepts/alerts.md
         - Application Menu: developer-guide/etendo-classic/concepts/application-menu.md
-#        - Attachments: developer-guide/etendo-classic/concepts/Attachments.md
-#        - Authentication: developer-guide/etendo-classic/concepts/Authentication.md
-#        - Categories: developer-guide/etendo-classic/concepts/Categories.md
-#        - Category:Concepts: developer-guide/etendo-classic/concepts/Category_Concepts.md
+        - Attachments: developer-guide/etendo-classic/concepts/attachments.md
+        - Authentication: developer-guide/etendo-classic/concepts/authentication.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
-#        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
         - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/cluster-development-guidelines.md
-#        - Code Review Process: developer-guide/etendo-classic/concepts/Code_Review_Process.md
-#        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md
+        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
+        - Code Review Process: developer-guide/etendo-classic/concepts/code-review-process.md
+        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/common-issues-tips-and-tricks.md
         - Constraints: developer-guide/etendo-classic/concepts/constraints.md
         - Data Access Layer: developer-guide/etendo-classic/concepts/data-access-layer.md
         - Data Model: developer-guide/etendo-classic/concepts/data-model.md
