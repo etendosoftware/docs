@@ -362,15 +362,15 @@ nav:
       - Concepts:
         - Alerts: developer-guide/etendo-classic/concepts/alerts.md
         - Application Menu: developer-guide/etendo-classic/concepts/application-menu.md
-#        - Attachments: developer-guide/etendo-classic/concepts/Attachments.md
-#        - Authentication: developer-guide/etendo-classic/concepts/Authentication.md
+        - Attachments: developer-guide/etendo-classic/concepts/attachments.md
+        - Authentication: developer-guide/etendo-classic/concepts/authentication.md
 #        - Categories: developer-guide/etendo-classic/concepts/Categories.md
 #        - Category:Concepts: developer-guide/etendo-classic/concepts/Category_Concepts.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
-#        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
+        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
 #        - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/Cluster_Development_Guidelines.md
-#        - Code Review Process: developer-guide/etendo-classic/concepts/Code_Review_Process.md
-#        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md
+        - Code Review Process: developer-guide/etendo-classic/concepts/code-review-process.md
+        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/common-issues-tips-and-tricks.md
         - Constraints: developer-guide/etendo-classic/concepts/constraints.md
         - Data Access Layer: developer-guide/etendo-classic/concepts/data-access-layer.md
         - Data Model: developer-guide/etendo-classic/concepts/data-model.md
