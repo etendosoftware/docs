@@ -12,7 +12,7 @@ status: beta
 #  DBSourceManager
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
 ##  Overview
 
@@ -28,15 +28,13 @@ Therefore, the developer can focus on creating and changing its components (eith
 
 As previously stated, DBSourceManager is based on the ddlutils Apache project. Internally, its structure can be described as a series of classes to handle the Database model, and a series of classes which are related to how the objects and its changes are transformed into RDBMS-specific commands.
 
-For more information,visit [DBSM architecture]().
-
 ##  Common Tasks
 
 The main tasks which DBSourceManager allows the developer to do are the following:
 
-* **export.database** : this task generates XML files corresponding with the database physical objects and the Application Dictionary table contents. 
-* **update.database** : this task updates the database applying the changes which are necessary to transform it so that it follows the model described in the XML files. 
-* **export.config.script** : this task generates a configuration script of the current system. To know more about the configuration scripts, you can read this document. 
+* **`export.database`** : this task generates XML files corresponding with the database physical objects and the Application Dictionary table contents. 
+* **`update.database`** : this task updates the database applying the changes which are necessary to transform it so that it follows the model described in the XML files. 
+* **`export.config.script`** : this task generates a configuration script of the current system.
 
 For more information about the Etendo build tasks, visit [this document](../concepts/development-build-tasks.md). These tasks are related to the [modularity concepts](../concepts/modularity-concepts.md) in Etendo.
 

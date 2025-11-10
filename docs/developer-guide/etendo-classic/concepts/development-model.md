@@ -11,7 +11,7 @@ status: beta
 #  Development Model
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
     
 ##  Overview
 
@@ -29,14 +29,12 @@ It contains the structure of all the database elements used in Etendo: tables, t
 
 The Application Dictionary is the part of the source code of Etendo stored in the database. It is a set of declarative definitions of business elements an logic that are used to build and render the application. For example it contains the definion of windows, tables, forms, reports, processes, etc. It is stored in `AD` tables such as `AD_Window` or `AD_Column` and is part of the XML model.
 
-For a further explanation of the application dictionary and all the definitions included go to the [Application Dictionary]() article.
-
 ###  XML model
 
 The XML model contains the database schema and the Database Model and the Application Dictionary. In order to ease concurrent developments this information can be exported from database to plain XML files. These files
 maintain all the information required to generate the database and populate it with all data in Application Dictionary. It is stored in a neutral language compatible with the two database engines supported by  Etendo: PostgreSQL and Oracle.
 
-The synchronization from database to the XML model and vice versa is managed by the [DBSourceManager]().
+The synchronization from database to the XML model and vice versa is managed by the [DBSourceManager](../concepts/dbsourcemanager.md).
 
 ###  Source code
 
@@ -52,11 +50,11 @@ The Database is where the Application Dictionary and user's data are stored.
 
 ###  Apache Ant
 
-Apache Ant is a Java-based build tool. Etendo automates most of its development tasks using Apache Ant.
+[Apache Ant](https://ant.apache.org/){target="\_blank"} is a Java-based build tool. Etendo automates most of its development tasks using Apache Ant.
 
 ###  Eclipse IDE
 
-Etendo source code is Eclipse IDE ready. This means that the setup of Etendo source code within Eclipse IDE  is optimized to be done in a very few steps. ??
+Etendo source code is Eclipse IDE ready. This means that the setup of Etendo source code within Eclipse IDE is optimized to be done in a very few steps. ??
 
 ###  Mercurial
 
@@ -79,7 +77,7 @@ Etendo build tasks can be configured to manage the deployment in three different
 
     When Etendo is compiled, all the necessary files to be run in the server are copied to `WebContent` directory. It is possible to set the server to serve from this directory, which is the standard way to work from Eclipse IDE. In this case Eclipse will manage the deployment. 
 
-The deploy mode is set in the `Etendo.properties` ?? file, by the `deploy.mode` property.
+The deploy mode is set in the `Openbravo.properties` ?? file, by the `deploy.mode` property.
 
 ##  Source Code Structure
 
@@ -117,12 +115,12 @@ New developments (bug fixes or new features) usually include changes in both sou
 
 ###  DBSourceManager
 
-DBSourceManager is based on DdlUtils a small, easy-to-use component by Apache Foundation for working with Database Definition (DDL) files. These are **XML files** that contain the definition of the database schema (e.g., tables and columns). These files can be feed into DBSourceManager via their corresponding **Ant task** in order to create or alter the database. In the same way, DBSourceManager can generate a DDL file from an existing database.
+DBSourceManager is based on [DdlUtils](https://db.apache.org/ddlutils/){target="\_blank"} a small, easy-to-use component by Apache Foundation for working with Database Definition (DDL) files. These are **XML files** that contain the definition of the database schema (e.g., tables and columns). These files can be feed into DBSourceManager via their corresponding **Ant task** in order to create or alter the database. In the same way, DBSourceManager can generate a DDL file from an existing database.
 **Etendo has extended several DdlUtils capabilities** (for instance, support for check constraints, procedures and views; PL/SQL translation from Oracle to PostgreSQL; support for more database types, etc) and fine tuned others (for instance, export database schema objects, etc) to fully support ODE requirements.
 
 ###  How it Works
 
-Each Etendo system (working copy) has  a folder called `database` where all the **database code** (Database Model and Application Dictionary) are stored in **plain XML text files**. Source code in plain XML files inside the `src/database` folder is divided into:
+Each Etendo system (working copy) has  a folder called [`database`](../concepts/development-project-structure.md#src-db) where all the **database code** (Database Model and Application Dictionary) are stored in **plain XML text files**. Source code in plain XML files inside the `src/database` folder is divided into:
 
 * **model** Database model. 
 * **sourcedata** Application dictionary. 
@@ -137,13 +135,14 @@ Each Etendo system (working copy) has  a folder called `database` where all the 
 
 ODE provides the following **tasks to synchronize the database XML files with the database** itself:
 
-* **create.database** task: first reads the Database Model XML files inside `src-db/database/model` folder and creates schema objects in the Oracle or PostgreSQL database. After that, this task fills the database with the Application Dictionary taken from `src-db/database/sourcedata` folder. 
+* [**create.database**](../concepts/development-build-tasks.md) task: first reads the Database Model XML files inside `src-db/database/model` folder and creates schema objects in the Oracle or PostgreSQL database. After that, this task fills the database with the Application Dictionary taken from `src-db/database/sourcedata` folder. 
 
     !!!warning
         Keep in mind that this task re-creates the database from scratch which means that the existing database will first be dropped.
 
-* **update.database** task: compares the Database Model and the Application Dictionary stored in the database with the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. Differences are applied to the database, keeping custom ERP data (products, business partners, orders, invoices, etc) in the database untouched. 
-* **export.database** task: takes the Database Model and Application Dictionary stored in the database and overwrites the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. 
+* [**update.database**](../concepts/development-build-tasks.md) task: compares the Database Model and the Application Dictionary stored in the database with the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. Differences are applied to the database, keeping custom ERP data (products, business partners, orders, invoices, etc) in the database untouched. 
+
+* [**export.database**](../concepts/development-build-tasks.md) task: takes the Database Model and Application Dictionary stored in the database and overwrites the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. 
 
 As you can imagine, whenever any of these tasks are executed, **both models (the one inside `src-db/database` folder and the database itself) are forced to be identical**. The first two tasks modify the database so that it is equal to `src-db/database` folder content and the third one overwrites the `src-db/database` folder content to equal it to the database.
 
@@ -171,7 +170,7 @@ This data is installed/loaded into the database when installing Etendo.
 ![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-1.png){: .legacy-image-style}
 
 This section explains the most common way of developing Etendo and which build tasks should be used for each case. In most of the cases it is only necessary to use 3 tasks (`install.source`, `smartbuild` and
-`export.database`). There are a number of other tasks that can be used but they are not required for the standard process. They are explained in the [Development Build Tasks]() article.
+`export.database`). There are a number of other tasks that can be used but they are not required for the standard process. They are explained in the [Development Build Tasks](../concepts/development-build-tasks.md#libraries-build-tasks) article.
 
 The main task for the standard process is **smartbuild** which performs an incremental build of the system -only the modified components are rebuilt- as explained below. This task accepts two optional properties: `local` for local or remote developments which by default is set to `yes` and `restart` indicating if after the build process tomcat should be restarted with `no` as default value.
 
@@ -192,7 +191,7 @@ After all properties are configured, the following step is to build the applicat
 
 ###  Local Developments
 
-Once Etendo is up and running, it is possible to develop on it. Generally, new developments should be done through modules, further explanations about how to develop modules can be found in the Modularity article.
+Once Etendo is up and running, it is possible to develop on it. Generally, new developments should be done through modules.
 
 The standard way for developing locally consists on:
 
@@ -204,27 +203,34 @@ The standard way for developing locally consists on:
 
 Once your changes are done and before you test them, it is necessary to build the application. You can do an incremental build by just executing (from command line):
 
-    ant smartbuild
+```
+ant smartbuild
+```
 
 !!!note
     Remember that by default smartbuild considers only local changes so it does not synchronize the database from the XML files (`update database` is skipped).
 
 This task generates and compiles the sources for the modified elements, and, depending on the deploy mode, it also deploys them. It is possible to restart tomcat from the same task setting the property restart to yes, this would be:
-    
-    ant smartbuild -Dlocal=yes -Drestart=yes # Note the -Drestart=yes 
+
+```
+ant smartbuild -Dlocal=yes -Drestart=yes # Note the -Drestart=yes 
+```
 
 ####  Database Exportation
 
-In most cases, developments include modifications in the database. These modifications can be persisted in the database XML files using the DBSourceManager tool. DBSourceManager exports to XML files only the database
-changes of modules (including core) that are set as `In Development`. To export the database changes execute:
+In most cases, developments include modifications in the database. These modifications can be persisted in the database XML files using the [DBSourceManager](../concepts/dbsourcemanager.md) tool. DBSourceManager exports to XML files only the database changes of modules (including core) that are set as `In Development`. To export the database changes execute:
     
-    ant export.database
+```
+ant export.database
+```
 
 ###  Remote Developments
 
 Remote developments are done by other developers remotely and then are merged with the local sources. The main difference with local ones is that remote developments do no modify the database directly. The way a remote development can change objects in database is using XML files, so after updating (merging) the XML files it is necessary also to update the database. After updating the database the process is exactly the same as the local one, this is, compile and deploy the elements that have been modified since last build. All this (update the database, compile last modifications and deploy them) can be done at the same time with the **smartbuild** command:
     
-    ant smartbuild -Dlocal=no # Note the -Dlocal=no 
+```
+ant smartbuild -Dlocal=no # Note the -Dlocal=no 
+```
 
 The only difference with the local development is in the `local` parameter which makes the process to update the database in case the XML files were changed.
 
@@ -254,14 +260,16 @@ Specifically the following checks are done:
 * If the module adds UI artifacts such as a window or tab then its `Translation Required` field must be set to yes. 
 
 The module validation can be run separately through this Ant task:
-    
-    ant validate.modules -DmoduleJavaPackage=${javapackageofmodule}
+
+```
+ant validate.modules -DmoduleJavaPackage=${javapackageofmodule}
+```
 
 Whereby ${javapackageofmodule} equals the Java package of the module.
 
 ###  Test Ant Tasks
 
-Etendo has a number of Ant tasks for running  JUnit test cases. The main one is **run.tests** : `ant run.tests` will run the tests which are side effect free.
+Etendo has a number of Ant tasks for running  JUnit test cases. The main one is **`run.tests`** : `ant run.tests` will run the tests which are side effect free.
 
 ##  Core, modules and customizations
 
@@ -278,9 +286,9 @@ Etendo is designed to fulfil all customer requirements whatever they are. It is 
 
 So, regardless of the scope of a project - just a small bug fix or a large new functional module - development using ODE can be divided in one of the following categories:
 
-1. **Core**: A modification of the source code provided by the Etendo distribution. For contributing to Etendo core source code by fixing issues or doing core enhacements, please refer to the  contributor's guide  . 
-2. **Module**: A pluggable module that can be packaged independenty from the core of Etendo, distributed and deployed to other Etendo installations. For building modules that extend Etendo Core capabilities, please refer to the  modularity documentation  . 
-3. **Customization**: To **fit some customer requirements**, sometimes it is needed to update the Etendo core source code that cannot be packaged in a module. For making customizations, please also refer also to the  modularity documentation. 
+1. **Core**: A modification of the source code provided by the Etendo distribution.
+2. **Module**: A pluggable module that can be packaged independenty from the core of Etendo, distributed and deployed to other Etendo installations.  
+3. **Customization**: To **fit some customer requirements**, sometimes it is needed to update the Etendo core source code that cannot be packaged in a module.
 
 **Customer's production deployment** can therefore consist of **several elements** listed above such as bug fixes, module plugins, new features, etc.
 
@@ -290,7 +298,7 @@ Regardless of the objective, the development process' base is a **source code re
 
 This figure also explains the dependency tree in Etendo. **Etendo core** is completely **independent from modules and custom code** . A module depends on Etendo core and other modules it might be based on. Custom code depends on Etendo core and on all the modules the customer has installed.
 
-The development process is identical for all of the categories described above.
+The [development process](#development-process) is identical for all of the categories described above.
 
 ---
 

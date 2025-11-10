@@ -12,27 +12,29 @@ status: beta
 #  Deep Linking
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
   
 ##  Overview
 
-According to [Wikipedia]() "Deep linking, on the World Wide Web, is making a hyperlink that points to a specific page or image on a website, instead of that website's main or home page. Such links are called deep links". In the case of Etendo, it is the way to link with a URL directly to an specific functionality, e.g. a Window/Tab, a Manual Form, etc. This link can be built and attached in an email, or copied/pasted in an IM window, etc.
+According to [Wikipedia](https://en.wikipedia.org/wiki/Deep_linking){target="\_blank"}, "Deep linking, on the World Wide Web, is making a hyperlink that points to a specific page or image on a website, instead of that website's main or home page. Such links are called deep links". In the case of Etendo, it is the way to link with a URL directly to an specific functionality, e.g. a Window/Tab, a Manual Form, etc. This link can be built and attached in an email, or copied/pasted in an IM window, etc.
 
 ##  Retrieving a direct/deep link
 
 The Etendo user interface makes it very easy to retrieve an URL to a window, tab and specific record (in a child tab). See the icon in the top of the Etendo window.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Deep_Linking-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/deep-linking/deeplinking0.png)
 
 This icon can be clicked to create a direct link to a tab:
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Deep_Linking-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/deep-linking/deeplinking1.png)
   
 This example shows the direct link to the sales invoice header tab.
 
 ##  Structure of the URL
-  
-    http://server:port/obcontext/?params
+
+```  
+http://server:port/obcontext/?params
+```
 
 * **http://** The protocol to access the application (can be https if is an SSL enabled instance) 
 * **server** The name or IP address of the server 
@@ -44,9 +46,9 @@ For more information, visit [the structure of an URL](https://skorks.com/2010/05
 
 The following parameters are supported:
 
-* **tabId** (mandatory) the ID of the tab to which you want to link.
-* **recordId** the id of the record to be shown in the tab .
-* **command** the command parameter can be used to show the form in New mode, only one command is supported: NEW.
+* **`tabId`** (mandatory) the ID of the tab to which you want to link.
+* **`recordId`** the id of the record to be shown in the tab .
+* **`command`** the command parameter can be used to show the form in New mode, only one command is supported: NEW.
 
 !!! note
     * Linking to a (grand-)child tab only makes sense when also a recordId (of the record to be shown in the child tab) is defined. This is needed to determine which parent record to load in the parent tab 
