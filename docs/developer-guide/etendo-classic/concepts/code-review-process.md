@@ -12,7 +12,7 @@ status: beta
 # Code Review Process
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
 ##  Overview
 
@@ -32,7 +32,7 @@ Before going into further detail, it is good to define the goals which we want t
 
 * Let developers share knowledge, learn from each other and improve the understanding of each others' code. 
 
-The Etendo code review process should be supported by a toolset. Instead of making an upfront choice for a tool, the envisioned process is described. The next step is to determine if an existing tool can be chosen or that a code reviewing tool can be created by customizing current development tools (svn, mantis, eclipse).
+The Etendo code review process should be supported by a toolset. Instead of making an upfront choice for a tool, the envisioned process is described. The next step is to determine if an existing tool can be chosen or that a code reviewing tool can be created by customizing current development tools (github, Sonar, IntelliJ).
 
 But before describing the code review process, lets first emphasize the role of the developer in the software development process. Because high quality code starts and ends with the personal approach and drive of each developer.
 
@@ -159,7 +159,7 @@ The advantage of developing our own toolset is that it prevents yet-another-tool
 
 The manual review process is supported with the following tools which perform automatic code reviewing:
 
-* Eclipse compilers and warnings settings: the standard Etendo settings should be used
+* IntelliJ compilers and warnings settings: the standard Etendo settings should be used
 * FindBug 
 * CheckStyle 
 * PMD
@@ -180,11 +180,11 @@ There are different checklists for different situations. Each checklist is short
 * Do the changes correctly implement the required functionality? 
 * Does the change interfere with other code/functionality? 
 * Does the code adhere to the [coding conventions](../concepts/java-coding-conventions.md)? 
-    * Check for these topics: copyright statement, documentation, exception handling, Java 1.5 constructs, don'ts 
+    * Check for these topics: copyright statement, documentation, exception handling, Java constructs, don'ts 
 * Is the code readable and understandable, i.e. skimmable? 
 * Has the code been formatted according to the agreed coding format? 
 * Has the developer used defensive coding practices? 
-* Does Eclipse show any warnings in the code? 
+* Does IntelliJ show any warnings in the code? 
 * Intellectual Property: 
     * Does the commit contain a new external Library? If so has the legal advisor checked the license? 
     * Does the commit contain third-party code? Is so, has the third-party contributor signed a contributor agreement and has it been deposited with the Etendo Finance Department? 
@@ -200,11 +200,6 @@ There are different checklists for different situations. Each checklist is short
 * The javapackage of the table is set correctly? 
 * Have the correct types been chosen? Have foreign keys been set? 
 
-##  Links
-
-* http://www.review-board.org/ 
-* http://www.developer.com/tech/article.php/3579756 
-* http://www.methodsandtools.com/archive/archive.php?id=66 
 
 ##  Peer Types
 
@@ -232,10 +227,6 @@ The team lead peer approach has as disadvantage that he might get overloaded wit
 In this approach the work of a member of a team is reviewed by another member of that team. The advantage of this approach is that team members exchange knowledge and that team members together grow in their experience and knowledge level. Doing code reviews can help to more quickly develop developers skills. Another advantage is that the review work is divided.
 
 The disadvantage is that also inexperienced developers will do reviews which will probably result in less effective reviews.
-
-###  Second Reviewer
-
-Also the work of a peer reviewer should be reviewed. Therefore every peer (team lead or owner) should have a second peer assigned to him.
 
 ---
 

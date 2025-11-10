@@ -13,7 +13,7 @@ status: beta
 ##  Overview
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
     
 **Authentication** is the act verifying a user's identity. This can be done by asking for Username & Password and verify it against the built-in `AD_User` table or any other mechanism.
 
@@ -40,7 +40,7 @@ The following describes the flow of events happening when using the `DefaultAuth
 
 ##  How to Configure the Authentication Manager in Etendo
 
-The authentication manager used in Etendo is defined in the configuration file `Openbravo.properties`?. In the property `authentication.class` you have to write the class name of the authentication provider that Etendo will use for this purpose.
+The authentication manager used in Etendo is defined in the configuration file `gradle.properties`. In the property `authentication.class` you have to write the class name of the authentication provider that Etendo will use for this purpose.
 
 Etendo includes three `AuthenticationManager` implementations:
 
@@ -53,45 +53,47 @@ After installing Etendo, you do not need to configure anything if you want to us
 ##  Getting Authentication Manager
 
 !!!info
-    To obtain an instance of the Authentication Manager defined in the `Openbravo.properties`?, it is possible to use the `AuthenticationManager.getAuthenticationManager` method.
+    To obtain an instance of the Authentication Manager defined in the `gradle.properties`, it is possible to use the `AuthenticationManager.getAuthenticationManager` method.
 
 ##  Develop your own Authentication Manager
   
-You can also develop your own Authentication manager. To do this, you have to create a new java class that extends the abstract class `org.openbravo.authentication.AuthenticationManager` ?. This interface has the following methods:
-    
-        public void init(HttpServlet s) throws AuthenticationException;
+You can also develop your own Authentication manager. To do this, you have to create a new java class that extends the abstract class `org.openbravo.authentication.AuthenticationManager`. This interface has the following methods:
+
+    ```
+    public void init(HttpServlet s) throws AuthenticationException;
      
-        public final String authenticate(HttpServletRequest request, HttpServletResponse response)
-            throws AuthenticationException, ServletException, IOException
-     
-        public final String webServiceAuthenticate(HttpServletRequest request)
-            throws AuthenticationException
-     
-        public final String webServiceAuthenticate(String user, String password)
-            throws AuthenticationException
-     
-        public final String connectorAuthenticate(HttpServletRequest request)
-            throws AuthenticationException
-     
-        public final String connectorAuthenticate(String user, String password)
-            throws AuthenticationException
-     
-        protected abstract String doAuthenticate(HttpServletRequest request, HttpServletResponse response)
-            throws AuthenticationException, ServletException, IOException
-     
-        protected String doWebServiceAuthenticate(HttpServletRequest request)
-     
-        protected String doWebServiceAuthenticate(String user, String password)
-     
-        public final void logout(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-     
-        protected abstract void doLogout(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
+    public final String authenticate(HttpServletRequest request, HttpServletResponse response)
+        throws AuthenticationException, ServletException, IOException
+ 
+    public final String webServiceAuthenticate(HttpServletRequest request)
+        throws AuthenticationException
+ 
+    public final String webServiceAuthenticate(String user, String password)
+        throws AuthenticationException
+ 
+    public final String connectorAuthenticate(HttpServletRequest request)
+        throws AuthenticationException
+ 
+    public final String connectorAuthenticate(String user, String password)
+        throws AuthenticationException
+ 
+    protected abstract String doAuthenticate(HttpServletRequest request, HttpServletResponse response)
+        throws AuthenticationException, ServletException, IOException
+ 
+    protected String doWebServiceAuthenticate(HttpServletRequest request)
+ 
+    protected String doWebServiceAuthenticate(String user, String password)
+ 
+    public final void logout(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException
+ 
+    protected abstract void doLogout(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException
+    ```
 
 The method `init` is called after the class is instantiated. It can be used to read the configuration parameters of the authentication manager if needed.
 
-The method `authenticate` is called for each single request done which requires authentication. It invokes the abstract `doAuthenticate` method which if this request is authenticated, must the return the userid of the authenticated user. This id must be a valid ad_user_id? of a existing entry in the `AD_User` table.
+The method `authenticate` is called for each single request done which requires authentication. It invokes the abstract `doAuthenticate` method which if this request is authenticated, must the return the userid of the authenticated user. This id must be a valid ad_user_id of a existing entry in the `AD_User` table.
 
 Otherwise the method must perform the needed steps to acquire some authentication and then return null' as return-value for the function. Usually this consists of redirecting the user to some kind of Login-Page and asking for credentials. After these have been verified the **authenticate** method will be called again for the next request an now will succeed and return the userId as described above.
 
@@ -112,44 +114,6 @@ Web Service authentication invokes `webServiceAuthenticate` and connectors invok
 
 `webServiceAuthenticate` and `connectorAuthenticate` are overloaded to accept both `HttpServletRequest` parameter (default one) or `String, String` parameters. This second one should be used by other services where the default one is not suitable, this one receives user and password parameters.
 
-##  Authentication with an External Authentication Provider
-
-To authenticate with an external authentication provider, the provider configuration must be created, as system administrator, in the **Authentication Provider Configuration** window. In the header the following
-fields should be populated:
-
-* **Name**: a descriptive name for the authentication provider.
-* **Type**: the type or authentication protocol used by the provider.
-* **Sequence Number**: determines the position in the login page of the button linked to this configuration. Lower values appears first.
-* **Icon**: the image show in the button that is rendered in the login page linked to this configuration. 
-* **Description**: an optional text to include additional information about the configuration. 
-
-![](../../../assets/developer-guide/etendo-classic/concepts/Authentication-6.png){: .legacy-image-style}
-
-###  OpenID Authentication
-
-If the selected type in the header is OpenID then the **OpenID** subtab is displayed, allowing to configure the specific OpenID settings required by the external authentication provider:
-
-* **Client ID**: identifies the client application making a request to the authorization server. The client identifier is typically assigned by the authorization server when the client application is registered and is unique to the authorization server 
-* **Client Secret**: a confidential identifier known only to the client application and the authorization server. It is used to authenticate the client application when making requests to the authorization server to obtain an access token 
-* **Authorization URL**: the URL of the server to request for the authentication 
-* **Access Token URL**: the URL to request the OAuth 2.0 access token 
-* **Certificate URL**: the URL where the certificates required for the ID token verification can be requested. The supported certificate types that can be retrieved through this URL are: 
-    * X.509 in ASCII PEM format 
-    * JSON Web Key (JWK) 
-
-![](../../../assets/developer-guide/etendo-classic/concepts/Authentication-7.png){: .legacy-image-style}
-
-!!!Note
-    There can only be one active record in the OpenID subtab per configuration.
-
-!!!info
-    For the OpenID authentication it is expected that the **e-mail** is used to identify the user in the external authentication provider, so the e-mail provided in the authentication must be the e-mail of the Etendo User that is accessing into the application.  
-  
-###  Login Page
-
-Once configured the login page will display one button per active configuration.
-
-![](../../../assets/developer-guide/etendo-classic/concepts/Authentication-9.png){: .legacy-image-style}
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Attachments
 tags:
-  - Attachment
-  - Records
-  - API
+    - Attachment
+    - Records
+    - API
 
 status: beta
 ---
@@ -13,7 +13,7 @@ status: beta
 ##  Overview
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
 Etendo has an inbuilt attachment model where you can attach any number of records to a particular record like Sales Order, Goods Shipment, Invoices, etc. All the attachments can be then downloaded or deleted from the record itself.
 
@@ -33,8 +33,10 @@ It returns the path of the attachment relative to the attachment directory. The 
 
 For example, to fetch an attachment `test.txt` of recordId `0F3A10E019754BACA5844387FB37B0D5`, tableId `259`, the method can be used as follows:
     
-    String attachmentDirectory = TabAttachments.getAttachmentDirectory("259","0F3A10E019754BACA5844387FB37B0D5","test.txt");
-    
+```
+String attachmentDirectory = TabAttachments.getAttachmentDirectory("259","0F3A10E019754BACA5844387FB37B0D5","test.txt");
+```
+
 The API also handles the case where the attachment is stored using the earlier model of `tableId`- `recordId`.
 
 ###  API to Fetch Directory to Save New Attachments
