@@ -15,7 +15,7 @@ status: beta
     
 ##  Overview
 
-The **Etendo Development Environment** (abbreviated as **ODE** ) is a framework of tools, methodologies and processes to make Etendo development process easier and to help developers to be more efficient in tasks such as editing source code, debugging, testing, deploying and managing code repositories. ODE supports both Oracle and PostgreSQL based on environments. ODE is designed to support the development process for whatever the intent is (Etendo core contributions, modules and custom code) and whatever the scope is (from small bug fixes to complete new functional modules).
+The **Etendo Development Environment** (abbreviated as **ODE** ) is a framework of tools, methodologies and processes to make Etendo development process easier and to help developers to be more efficient in tasks such as editing source code, debugging, testing, deploying and managing code repositories. ODE supports both **Oracle** and **PostgreSQL** based on environments. ODE is designed to support the development process for whatever the intent is (Etendo core contributions, modules and custom code) and whatever the scope is (from small bug fixes to complete new functional modules).
 
 ##  Concepts
 
@@ -23,11 +23,12 @@ Before starting with the development process, let's explain some basic general c
 
 ###  Database Model
 
-It contains the structure of all the database elements used in Etendo: tables, triggers, views, sequences and functions. The Database Model is part of the XML model.
+It contains the structure of all the database elements used in Etendo: tables, triggers, views, sequences and functions. The Database Model is part of the     
+`XML` model.
 
 ###  Application Dictionary
 
-The Application Dictionary is the part of the source code of Etendo stored in the database. It is a set of declarative definitions of business elements an logic that are used to build and render the application. For example it contains the definion of windows, tables, forms, reports, processes, etc. It is stored in `AD` tables such as `AD_Window` or `AD_Column` and is part of the XML model.
+The Application Dictionary is the part of the source code of Etendo stored in the database. It is a set of declarative definitions of business elements and logic that are used to build and render the application. For example it contains the definition of windows, tables, forms, reports, processes, etc. It is stored in `AD` tables such as `AD_Window` or `AD_Column` and is part of the `XML` model.
 
 ###  XML model
 
@@ -38,27 +39,27 @@ The synchronization from database to the XML model and vice versa is managed by 
 
 ###  Source code
 
-It is where all the information required to build the whole Etendo system is. It includes the Database Model, the Application Dictionary, generated entiy classes, core classes to manage the system as well as java code, javascript code, html, reports and other files to implement functionality that complements the Application Dictionary.
+It is where all the information required to build the whole Etendo system is. It includes the Database Model, the Application Dictionary, generated entity classes, core classes to manage the system as well as java code, javascript code, html, reports and other files to implement functionality that complements the Application Dictionary.
 
 ###  Binaries
 
-During the build process, all Java classes in the system are compiled and transformed to binary files. These binary files can be packaged and deployed to a J2EE application server like Tomcat.
+During the build process, all `Java` classes in the system are compiled and transformed to binary files. These binary files can be packaged and deployed to a `J2EE` application server like Tomcat.
 
 ###  Database
 
 The Database is where the Application Dictionary and user's data are stored.
 
-###  Apache Ant
+###  Gradle
 
-[Apache Ant](https://ant.apache.org/){target="\_blank"} is a Java-based build tool. Etendo automates most of its development tasks using Apache Ant.
+[Gradle](https://http://gradle.org/){target="\_blank"} is a Groovy-based build tool. Etendo automates most of its development and compilation tasks using Gradle.
 
-###  Eclipse IDE
+###  IntelliJ IDEA
 
-Etendo source code is Eclipse IDE ready. This means that the setup of Etendo source code within Eclipse IDE is optimized to be done in a very few steps. ??
+Etendo source code is IntelliJ IDEA ready. This means that the setup of Etendo source code within IntelliJ IDEA is optimized to be done in a very few steps.
 
-###  Mercurial
+###  GitHub
 
-Mercurial is a distributed SCM which facilitates multiple developers to work in the same code managing revisions for each source code file. Etendo source code is maintained and freely available in the **Openbravo source code repositories** ?. So, modifications in source code can be done in your local mercurial repository or come from other external repositories, this must be taken into account when building the system.
+GitHub is a distributed SCM which facilitates multiple developers to work in the same code managing revisions for each source code file. Etendo source code and packages are maintained and freely available in the **Etendo Software repositories**. 
 
 ###  Deploy Modes
 
@@ -77,27 +78,28 @@ Etendo build tasks can be configured to manage the deployment in three different
 
     When Etendo is compiled, all the necessary files to be run in the server are copied to `WebContent` directory. It is possible to set the server to serve from this directory, which is the standard way to work from Eclipse IDE. In this case Eclipse will manage the deployment. 
 
-The deploy mode is set in the `Openbravo.properties` ?? file, by the `deploy.mode` property.
+The deploy mode is set in the `gradle.properties` file, by the `deploy.mode` property.
 
 ##  Source Code Structure
 
 The source code of Etendo is structured in different folders:
 
-* **config** : Here go all the configuration files of Etendo. The most important file is **Openbravo.properties** ? that contains all the deployment options and database connection properties. 
-* **legal** : Here go the Etendo licence and the licence files of all the third party components used by Etendo. 
-* **lib** : All the libraries files go in this folder. Libraries are separated between **lib/build** , libraries needed only to perform build tasks and **lib/runtime** libraries needed in runtime and during performing build tasks. 
-* **modules** : All the modules installed or in development with all its artifacts go in each own subfolder inside **modules** . 
-* **referencedata** : The standard and sample data stored in XML files go in this folder. 
-* **src** : This is the main folder for all the core source code file and resources. 
-* **src-core** : Source files and resources of the library **openbravo-core.jar** go. 
-* **src-trl** : Source files and resources of the library **openbravo-trl.jar** go. 
-* **src-wad** : Source files and resources of the library **openbravo-wad.jar** go. 
-* **src-util** : This folder is used for the Build Validation, Module Scripts and Diagnostic components needed to perform maintenance tasks for Etendo an modules. 
-* **src-db** : This go the source files and resources of the DBSourceManager tool and also the files of the Databasase Model and Application Dictionary. 
-* **src-gen** : In this folder go all the DAL entity generated java classes. 
-* **src-test** : In this folter go all the source files and resources of the tests. 
-* **web** : This is where all static web files are located like javascript files, images, skins, ... 
-* **WebContent** : This is where all the files needed to deploy Etendo are copied when executing the building tasks. An application server can serve the Etendo application directly from here or a package file can be built from here to be deployed. 
+- **config** : Here go all the configuration files of Etendo. The most important file is **gradle.properties** file and **Openbravo.properties** that contains all the deployment options and database connection properties. 
+- **legal** : Here go the Etendo licence and the licence files of all the third party components used by Etendo. 
+- **lib** : All the libraries files go in this folder. Libraries are separated between **lib/build** , libraries needed only to perform build tasks and **lib/runtime** libraries needed in runtime and during performing build tasks. 
+- **modules** : All the modules installed or in development with all its artifacts go in each own subfolder inside **modules** . 
+- **modules_core** : All the modules distributed with the Etendo Core. 
+- **referencedata** : The standard and sample data stored in XML files go in this folder. 
+- **src** : This is the main folder for all the core source code file and resources. 
+- **src-core** : Source files and resources of the library **openbravo-core.jar** go. 
+- **src-trl** : Source files and resources of the library **openbravo-trl.jar** go. 
+- **src-wad** : Source files and resources of the library **openbravo-wad.jar** go. 
+- **src-util** : This folder is used for the Build Validation, Module Scripts and Diagnostic components needed to perform maintenance tasks for Etendo an modules. 
+- **src-db** : This go the source files and resources of the DBSourceManager tool and also the files of the Databasase Model and Application Dictionary. 
+- **src-gen** : In this folder go all the DAL entity generated java classes. 
+- **src-test** : In this folder go all the source files and resources of the tests. 
+- **web** : This is where all static web files are located like javascript files, images, skins, ... 
+- **WebContent** : This is where all the files needed to deploy Etendo are copied when executing the building tasks. An application server can serve the Etendo application directly from here or a package file can be built from here to be deployed. 
 
 ##  Database Code Management
 
@@ -128,7 +130,7 @@ Each Etendo system (working copy) has  a folder called [`database`](../concepts/
 **Changes to the database can happen in 2 places** :
 
 1. **Inside `src-db/database` folder** (working copy): 
-    1. Through updates coming from the Mercurial repository. When changes come from a Mercurial update, they do not overwrite changes done in the working copy since these changes are merged within the plain XML files. 
+    1. Through updates coming from the GitHub repository. When changes come from a GitHub update, they do not overwrite changes done in the working copy since these changes are merged within the plain XML files. 
 2. **Inside the database** : 
     1. Editing the Application Dictionary using the Etendo Application Dictionary windows and processes. 
     2. Performing changes In the Database model (tables, procedures, etc.) using your favourite database management tool (PGAdmin, SQL Developer, TOAD, etc.). 
@@ -150,7 +152,7 @@ In summary, the `src-db/database` folder contains Etendo database source code (p
 
 !!! important
     Since changes to the database can happen within the text files or the database itself, it is extremely **important to guarantee that these changes do not happen simultaneously to both sides** because this situation would lead to system inconsistency and loss of data. This is guaranteed by using a check
-    based on the **Mercurial revision number** . Each time `create.database` or `update.database` tasks are launched, revision number of the working copy is saved into the database. `export.database` task checks that the revision number of the working copy matches with the revision number of the database.
+    based on the **GitHub revision number** . Each time `create.database` or `update.database` tasks are launched, revision number of the working copy is saved into the database. `export.database` task checks that the revision number of the working copy matches with the revision number of the database.
     If it matches, there is a guarantee that changes in our database will not overwrite changes done by other developers in the database XML files . If it does not, the developer will get an error and will be forced to switch the working copy to the current database revision number.  
   
   
@@ -167,27 +169,29 @@ This data is installed/loaded into the database when installing Etendo.
 
 ##  Development process
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-1.png)
 
 This section explains the most common way of developing Etendo and which build tasks should be used for each case. In most of the cases it is only necessary to use 3 tasks (`install.source`, `smartbuild` and
 `export.database`). There are a number of other tasks that can be used but they are not required for the standard process. They are explained in the [Development Build Tasks](../concepts/development-build-tasks.md#libraries-build-tasks) article.
 
 The main task for the standard process is **smartbuild** which performs an incremental build of the system -only the modified components are rebuilt- as explained below. This task accepts two optional properties: `local` for local or remote developments which by default is set to `yes` and `restart` indicating if after the build process tomcat should be restarted with `no` as default value.
 
-Local is used as a hint to the build task to let it know if there have been database changes coming from other developers through a pull of the Mercurial repository so it is needed to apply those changes to the database in the local instance. A developer working locally in her/his instances performs all database changes directly in the database so there is no need to update the database to build the system. But if the developer has just done a Mercurial pull then it is likely that other developers have done changes in the XML
+Local is used as a hint to the build task to let it know if there have been database changes coming from other developers through a pull of the GitHub repository so it is needed to apply those changes to the database in the local instance. A developer working locally in her/his instances performs all database changes directly in the database so there is no need to update the database to build the system. But if the developer has just done a GitHub pull then it is likely that other developers have done changes in the XML
 database files so it is needed to update the database with those changes.
 
 Smartbuild is an incremental process and avoids any task that is not needed. When development is local, smartbuild can skip the update of the database. In any case, developers are allowed to update their database from XML files at any time.
 
 ###  Initial installation
 
-After downloading the Etendo source files (for example from a clone repository using Mercurial) the next step is to install and deploy the system.
+After downloading the Etendo source files (for example from a clone repository using GitHub) the next step is to install and deploy the system.
 
-First, you have to properly configure all the required properties. All of them are stored in the `Etendo.properties` ? file, that **you have to configure properly before going ahead**.
+First, you have to properly configure all the required properties. All of them are stored in the `gradle.properties` file, that **you have to configure properly before going ahead**.
 
 After all properties are configured, the following step is to build the application from source code and deploy it. All this is done by the **install.source** task. This task creates the database, inserts sample data on it and compiles and deploys the application accordingly with the deployment mode chosen. To execute it just type in the Etendo root directory:
     
-    ant install.source
+```
+./gradlew install.source
+```
 
 ###  Local Developments
 
@@ -204,7 +208,7 @@ The standard way for developing locally consists on:
 Once your changes are done and before you test them, it is necessary to build the application. You can do an incremental build by just executing (from command line):
 
 ```
-ant smartbuild
+./gradlew  smartbuild
 ```
 
 !!!note
@@ -213,7 +217,7 @@ ant smartbuild
 This task generates and compiles the sources for the modified elements, and, depending on the deploy mode, it also deploys them. It is possible to restart tomcat from the same task setting the property restart to yes, this would be:
 
 ```
-ant smartbuild -Dlocal=yes -Drestart=yes # Note the -Drestart=yes 
+./gradlew smartbuild -Dlocal=yes -Drestart=yes # Note the -Drestart=yes 
 ```
 
 ####  Database Exportation
@@ -221,7 +225,7 @@ ant smartbuild -Dlocal=yes -Drestart=yes # Note the -Drestart=yes
 In most cases, developments include modifications in the database. These modifications can be persisted in the database XML files using the [DBSourceManager](../concepts/dbsourcemanager.md) tool. DBSourceManager exports to XML files only the database changes of modules (including core) that are set as `In Development`. To export the database changes execute:
     
 ```
-ant export.database
+./gradlew export.database
 ```
 
 ###  Remote Developments
@@ -229,7 +233,7 @@ ant export.database
 Remote developments are done by other developers remotely and then are merged with the local sources. The main difference with local ones is that remote developments do no modify the database directly. The way a remote development can change objects in database is using XML files, so after updating (merging) the XML files it is necessary also to update the database. After updating the database the process is exactly the same as the local one, this is, compile and deploy the elements that have been modified since last build. All this (update the database, compile last modifications and deploy them) can be done at the same time with the **smartbuild** command:
     
 ```
-ant smartbuild -Dlocal=no # Note the -Dlocal=no 
+./gradlew smartbuild -Dlocal=no # Note the -Dlocal=no 
 ```
 
 The only difference with the local development is in the `local` parameter which makes the process to update the database in case the XML files were changed.
@@ -246,30 +250,18 @@ The following checks are currently done:
 * Foreign key fields should be part of a foreign key constraint. 
 * Names of tables, columns and constraints are checked for their length (Oracle has a 30 character limit there). 
 
-###  Validate Module
+###  Gradle Test Tasks
 
-When a module is packaged with the `package.module` Ant task, then first it is checked for some common errors. If an error is detected then the `package.module` task will fail.
+Etendo has a number of Gradle tasks for running  JUnit test cases.
 
-Specifically the following checks are done:
 
-* A module should depend on the Core module, or depend on a module which depends on the Core module (recursively). 
-* The path inside the `modules/.../src` directory must correspond to the Java package defined for the module. 
-* The javapackages of the DataPackages which are part of the module must be in line with the Java package defined for the module. So if the module has the Java package org.example, then all Data Packages should have a Java package which starts with org.example. 
-* The license type and text must be set. 
-* If the module is an Industry Template then it must depend on core and the dependency must be set to 'Included'. 
-* If the module adds UI artifacts such as a window or tab then its `Translation Required` field must be set to yes. 
-
-The module validation can be run separately through this Ant task:
-
+``` bash title="Terminl"
+./gradlew test`
 ```
-ant validate.modules -DmoduleJavaPackage=${javapackageofmodule}
+``` bash title="Terminl"
+./gradlew test --tests <package>
 ```
-
-Whereby ${javapackageofmodule} equals the Java package of the module.
-
-###  Test Ant Tasks
-
-Etendo has a number of Ant tasks for running  JUnit test cases. The main one is **`run.tests`** : `ant run.tests` will run the tests which are side effect free.
+This tasks will run all tests defined in Etendo and installed modules.
 
 ##  Core, modules and customizations
 
@@ -282,8 +274,6 @@ Etendo is designed to fulfil all customer requirements whatever they are. It is 
     * **Industry Templates** : adaptation of Etendo Core and related modules to a industry specific operations (for example, a vertical for non-profit organizations). Only one `industry template` can be applied per customer installation. 
 * **Custom code** : customization of Etendo Core and related modules to completely fulfill customer requirements. 
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-2.png){: .legacy-image-style}
-
 So, regardless of the scope of a project - just a small bug fix or a large new functional module - development using ODE can be divided in one of the following categories:
 
 1. **Core**: A modification of the source code provided by the Etendo distribution.
@@ -294,7 +284,7 @@ So, regardless of the scope of a project - just a small bug fix or a large new f
 
 Regardless of the objective, the development process' base is a **source code repository** updated from different sources. ODE will keep track of the source for each change, but all of them will be managed in the same standard way.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-3.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-3.png)
 
 This figure also explains the dependency tree in Etendo. **Etendo core** is completely **independent from modules and custom code** . A module depends on Etendo core and other modules it might be based on. Custom code depends on Etendo core and on all the modules the customer has installed.
 

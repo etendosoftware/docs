@@ -16,7 +16,7 @@ status: beta
 
 ##  Overview
 
-This section describes the structure of an Etendo development project. Etendo has a tree directory structure that logically divides different core components (XmlEngine, SQLC, HttpBaseServlet) and WAD (Wizard for Application Dictionary) from Etendo itself (forms, reports, call-outs, combos, processes and so on).
+This section describes the structure of an Etendo development project. Etendo has a tree directory structure that logically divides different core components (`XmlEngine`, `SQLC`, `HttpBaseServlet`) and WAD (Wizard for Application Dictionary) from Etendo itself (forms, reports, call-outs, combos, processes and so on).
 
 ##  Project Structure
 
@@ -61,13 +61,13 @@ The **build** directory contains the `classes` sub-folder where all of the compi
 
 ###  config
 
-The **config** directory contains the Etendo configuration files. The config directory is where the setup script is downloaded to and executed from. Other configuration files in the config directory include the application properties file, Etendo.properties ?, which is generated after running the
-setup process, and logging and scheduling properties files (`log4j.lcf` and `quartz.properties`). In this folder, there are several .template files (`Openbravo.properties.template` ?, `Format.xml.template`, `log4j.lcf.template`, etc), which need to have their corresponding files (Openbravo.properties ?, Format.xml , etc) for Etendo to work correctly.
+The **config** directory contains the Etendo configuration files. The config directory is where the setup script is downloaded to and executed from. Other configuration files in the config directory include the application properties file, `Openbravo.properties`, which is generated after running the
+`./gradlew setup` process, and logging and scheduling properties files (`log4j.lcf` and `quartz.properties`). In this folder, there are several .template files (`Openbravo.properties.template`, `Format.xml.template`, `log4j.lcf.template`, etc), which need to have their corresponding files (Openbravo.properties, Format.xml , etc) for Etendo to work correctly.
 
 ```
 |-config
     |-log4j.lcf
-    |-Openbravo.properties ?
+    |-Openbravo.properties
     |-quartz.properties
     |-...
 ```
@@ -98,7 +98,7 @@ Next, there is the structure of a sample module.
 
 ```
 |-modules
-|-org.openbravo.examples.helloworld ?
+|-com.etendoerp.examples.helloworld 
     |-src
         ...
     |-src-db
@@ -156,7 +156,7 @@ The **src-core** directory contains the source code of the core components: XmlE
 |-src-core
     |-src
     |-org
-        |-openbravo ?
+        |-openbravo
             |-base
                 ...
                 |-HttpBaseServlet.java
@@ -203,12 +203,12 @@ src-util
     
 ###  src-gen
 
-The **src-gen** directory contains the DAL model objects generated from the Etendo model (tables, columns, references etc.) the during the ant generate.entities task.
+The **src-gen** directory contains the DAL model objects generated from the Etendo model (tables, columns, references etc.) during the ant generate.entities task.
 
 ```
 src-gen
     |-org
-    |-openbravo ?
+    |-openbravo
         |-model
 ```
     
@@ -219,10 +219,9 @@ The **src-test** directory contains the test source code, such as JUnit test and
 ```
 src-test
     |-src
-    |-org
-        |-openbravo ?
+    |-com
+        |-etendoerp
         |-test
-            |-ant
             |-base
             |-dal
             |-expression
@@ -237,7 +236,7 @@ The **src-trl** directory contains the source code of the code which generates e
 |-src-trl
     |-src
     |-org
-        |-openbravo ?
+        |-openbravo
             |-translate
 ```
 
@@ -249,7 +248,7 @@ The **src-wad** directory contains the source code of WAD (Wizard for Applicatio
 |-src-wad
     |-src
     |-org
-        |-openbravo ?
+        |-openbravo
             |-wad
 ```
 
@@ -263,7 +262,7 @@ Temporary folder containing files which are not committed to Mercurial. It is cr
 
 ###  web
 
-The **web** directory contains all of the web resources such as cascading style sheets (CSS), Javascript code, images and pop-up windows.
+The **web** directory contains all of the web resources such as cascading style sheets (`CSS`), `Javascript` code, images and pop-up windows.
 
 ```
 web
@@ -275,7 +274,7 @@ web
     
 ###  WebContent
 
-Is the web output folder for Eclipse, the output folder defines the webapp used by the Eclipse Tomcat integration. Contains WEB-INF (with web.xml and other important files) and META-INF.
+Is the web output folder for IntelliJ, the output folder defines the webapp used by the IntelliJ Tomcat integration. Contains WEB-INF (with web.xml and other important files) and META-INF.
 
 ---
 
