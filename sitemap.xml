@@ -73,6 +73,10 @@
          <lastmod>2025-11-11</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/cluster-development-guidelines/</loc>
+         <lastmod>2025-11-11</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/code-review-process/</loc>
          <lastmod>2025-11-11</lastmod>
     </url>
@@ -101,7 +105,23 @@
          <lastmod>2025-11-11</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/dbsourcemanager/</loc>
+         <lastmod>2025-11-11</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/deep-linking/</loc>
+         <lastmod>2025-11-11</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/development-build-tasks/</loc>
+         <lastmod>2025-11-11</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/development-model/</loc>
+         <lastmod>2025-11-11</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/development-project-structure/</loc>
          <lastmod>2025-11-11</lastmod>
     </url>
     <url>
