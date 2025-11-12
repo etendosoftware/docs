@@ -86,7 +86,7 @@ To start using this module correctly, the following installation and configurati
             - [GS1-128](https://www.gs1.org/standards/barcodes){target="_blank"}
             - SimpleBarcode
 
-        - **AI Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
+        - **Barcode Components Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
 
         - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
 
@@ -98,17 +98,22 @@ To start using this module correctly, the following installation and configurati
 
             - Inactive: The system only validates the product, without requiring a strict match in attributes or locator.
 
-5. **AI Configuration** Window 
+5. **Barcode Components Configuration** Window 
     
-    :material-menu:`Application` > `Warehouse Management` > `Setup` > `AI Configuration`
+    :material-menu:`Application` > `Warehouse Management` > `Setup` > `Barcode Components Configuration`
 
-    This window is part of the advanced barcode settings in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
+    This window is part of the **advanced barcode settings** in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
+
+    It allows users to define, configure, and apply their own identifiers so that the system can read and associate different **product attributes**, such as color, packaging type, batch, or any other relevant data, directly from the **GS1-128** codes used in logistics operations.
 
     !!! tip 
         The configurations shown below are predefined in the initial dataset, although they can be modified or new schemes or barcode types can be added.
-
     
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/ai-config-gs1128-1.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-win-1.png)
+
+    !!! note
+
+        The system allows any **application identifier (AI)** to be freely configured to associate it with custom attributes or fields, providing flexibility to adapt to different internal coding schemes. The module is installed with a predefined configuration based on the **GS1-128** standard, which ensures the correct interpretation of codes in accordance with international standards. Nevertheless, users can adjust or redefine identifiers according to their particular needs. In such cases, the system will interpret the codes according to the user-defined configuration, but will not interpret GS1-128 codes in the standard way.
 
     Fields to note:
 
@@ -117,43 +122,78 @@ To start using this module correctly, the following installation and configurati
     - **Name**: Descriptive name of the barcode configuration to easily identify it.  
     - **Description**: Additional details about the purpose or scope of this configuration.  
     - **Separator**: Character used to delimit variable-length fields in the code, typically **FNC1**.  
-    - **Apply to All Separators**: Checkbox indicating whether the defined separator applies globally to all variable-length identifiers in this configuration.  
-
-    **AI Configuration Lines** tab
-
-    - **AI**: Application Identifier code defined by GS1 (e.g., 01 for GTIN, 17 for expiration date).  
-    - **Description**: Explanation of the information the AI represents (e.g., product identifier, batch number).  
-    - **Fixed Length**: Indicates if the data length is always fixed according to the GS1 standard for that AI.  
-    - **Length**: Number of characters expected if the AI is fixed length, or maximum length if it is variable.  
-    - **Priority**: Defines the reading order when multiple identifiers are present, ensuring the system interprets the barcode correctly.  
-
+    - **Apply to All Separators**: Checkbox. If checked (Yes), the configured separator is appended to the end of every identifier — both fixed‑length and variable‑length AIs must end with the separator. If unchecked (No), the separator is applied only to variable‑length identifiers.
     
-    By default, to installing the dataset, the module  includes two main methods for code recognition:
+    **Barcode Component Lines** tab
+
+    - **AI**: Application Identifier code defined by GS1 (e.g., 01 for GTIN, 17 for expiration date).
+    - **Description**: Explanation of the information the AI represents (e.g., product identifier, batch number).
+    - **Fixed Length**: Indicates if the data length is always fixed according to the *GS1 standard* for that AI.
+   - **Length**: (Mandatory) Expected number of characters for fixed-length AIs, or maximum length for variable-length AIs.
+    - **Priority**: Defines the reading order when multiple identifiers are present, ensuring the system interprets the barcode correctly.  
+    - **Entity**: Type Entity selector. The options are: **Attribute, Locator, Order Line, Physical Inventory Line, Product, Reference Inventory, Shipping/Receiving Line**. 
+        
+        If **Product** is selected, default quick options are enabled via checkboxes to define *Lot*, *Serial Number*, or *Expiration Date*. In addition, a value can be defined from the *Entity Field*, which lists the different attributes available for the product. Each of these options is unique and cannot be combined with the others.
+
+        - **Entity Field**: Selector of fields available for the entity selected to assign the barcode value. The options depend on what is entered in Entity.
+        - **Lot**: Check to indicate that the attribute is of the lot type.
+        - **Serial No.**: Check to indicate that the attribute is of the serial number type. 
+        - **Expiration Date**: Check to indicate that the attribute is of the expiration date type.
+
+    By default, when installing the dataset, the module **includes two main methods for code recognition**:
 
     === ":material-playlist-plus: GS1-128"
         
         The [GS1-128](https://www.gs1.org/standards/barcodes){target="_blank"} standard is a globally used barcode format that encodes structured information through **Application Identifiers (AIs)**. Each AI specifies the type of data included, such as product identifiers, batch numbers, expiration dates, or logistics details. This enables detailed and standardized interpretation of product and warehouse information. For more details, see the [official GS1-128 documentation](https://www.gs1.org/standards/barcodes){target="_blank"}.
-
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-gs1128-1.png)
-
-        !!! warning
-            Etendo recognizes and validates only the identifiers shown in the list below. Any modification or inclusion of new identifiers, even those specific to the standard, requires additional development for interpretation; if an identifier that is not on the list is used, the system does not generate an error, but it will also not be able to validate its content.
         
         !!! info 
             As indicated in the standard, when using a variable-length identifier, a separator must be added. The value declared by the standard is **FNC1**
                             
         This configuration allows recognition of different Application Identifiers (AIs) used in warehouse processes. The main implemented codes are:
 
-        | AI Code | Description                          | Details                                                                 | Length Type     |
-        |---------|--------------------------------------|-------------------------------------------------------------------------|-----------------|
+        | AI Code  | Description                          | Details                                                                 | Length Type     |
+        |----------|--------------------------------------|-------------------------------------------------------------------------|-----------------|
         | **(01)** | GTIN (Global Trade Item Number)      | Globally identifies a commercial product using a 14-digit code.         | Fixed length    |
-        | **(10)** | Batch/Lot Number                     | Ensures traceability in manufacturing and distribution processes.        | Variable length |
-        | **(17)** | Expiration Date                      | Indicates product expiration date in format YYMMDD.                      | Fixed length    |
+        | **(10)** | Batch/Lot Number                     | Ensures traceability in manufacturing and distribution processes.       | Variable length |
+        | **(17)** | Expiration Date                      | Indicates product expiration date in format YYMMDD.                     | Fixed length    |
         | **(21)** | Serial Number                        | Unique serial number of an item.                                        | Variable length |
-        | **(91)** | Locator Code                         | Identifies the specific location within the warehouse.                   | Variable length |
-        | **(92)** | Logistics Unit                       | Identifies a logistics unit, such as a pallet or box.                    | Variable length |
+        | **(91)** | Locator Code                         | Identifies the specific location within the warehouse.                  | Variable length |
+        | **(92)** | Logistics Unit                       | Identifies a logistics unit, such as a pallet or box.                   | Variable length |
+        | **(93)** | Free Use                             | -                                                                       | -               |
+        | **(94)** | Free Use                             | -                                                                       | -               |
+        | **(95)** | Free Use                             | -                                                                       | -               |
+        | **(96)** | Free Use                             | -                                                                       | -               |
+        | **(97)** | Free Use                             | -                                                                       | -               |
+        | **(98)** | Free Use                             | -                                                                       | -               |
+        | **(99)** | Free Use                             | -                                                                       | -               |
 
-        Thanks to this configuration, when scanning a GS1-128 barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, When it reads an identifier 91, it associates it with a locator or when it reads an identifier 92, it associates it with a logistics unit
+        Thanks to this configuration, when scanning a *GS1-128* barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, When it reads an identifier 91, it associates it with a locator or when it reads an identifier 92, it associates it with a logistics unit
+
+        !!! warning "Barcode identification rules"
+
+            Etendo interprets only the identifiers defined in this configuration.
+            GS1-128 identifiers 90–99 are free-use codes and can be assigned to custom product attributes.
+
+            By default:
+
+            - AI 91 and 92 are used by Etendo.
+            - AI 93–99 remain available for custom product attributes that are resolved dynamically (e.g., 93 = color, 94 = size).
+
+            Users may change both the identifiers and the attributes they reference. However, any change is the user’s responsibility and may cause inconsistencies with standard GS1-128 parsing or external integrations.
+
+            If a different interpretation is required, a developer can create a custom **barcode algorithm**.
+
+        <figure markdown="span">
+            ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-attr-2.png)
+            <figcaption> Example: Custom Product Entity Configuration</figcaption>
+        </figure>
+    
+        !!! info "Configuration Restrictions and Validations"
+    
+            - When creating or modifying identifiers (AI), the system applies a series of validations designed to maintain the consistency and uniqueness of configurations.
+            - Each AI must be unique. There cannot be more than one record with the same AI number, regardless of the entity or associated field.
+            - When an AI is associated with a specific type of information such as Lot, Expiration Date, or Serial Number, that type cannot be repeated within the same configuration.
+            - The system allows for the inclusion of custom attributes in barcodes. During scanning, these attributes are interpreted dynamicaly as **additional product identifiers**, along with standard values, allowing for the validation and distinction of a unique product.
 
     === ":material-playlist-plus: Direct String Match"
 
@@ -368,6 +408,18 @@ The grouping is reflected in the Grouped by column of the selected lines (e.g., 
 **Clear Group By** 
 
 Button allows you to remove a line from your grouping without affecting the rest of the lines in the group.
+
+**Generate Reception Task** 
+
+Allows managing operational receptions from the mobile app through the creation of Reception Tasks. It is available when there is an Inbound Receipt that is not yet completed and has loaded lines.
+
+By pressing the button, a task linked to the selected document is generated and becomes visible in the mobile app and in the Task window of the ERP. 
+In the pop-up window, you can assign a user or enable automatic assignment. If multiple records are selected, one task will be created for each record, all assigned to the same user or role defined in the pop-up.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+
+!!!Info
+    For more information, visit [Reception Tasks](#reception-tasks).
 
 **Complete Receipt**
 
@@ -822,6 +874,7 @@ To **Relocate** inventory:
 - Complete **To Locator** field.
 - Confirm by pressing **Process** button.
 
+
 ### Relocation Tasks
 
 Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.
@@ -860,6 +913,37 @@ To perform a **relocation**:
 - See Success message.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
+### Reception Tasks
+
+It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
+
+#### Process Start (Etendo)
+
+The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned and then reflected in the mobile application of the assigned operator.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+
+#### Access to Inventory Tasks (Etendo Mobile)
+
+When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
+
+**Reception Tasks**
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1-a.png)
+
+To perform a **Reception**:
+
+- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Receipt** button.
+- **Scan** the products to stock them or **load** them manually.
+- Confirm the task with the **End Reception** button.
+- Confirm that you want to finish the task.
+- See **Success message**.
+
 
 
 ### All Tasks
