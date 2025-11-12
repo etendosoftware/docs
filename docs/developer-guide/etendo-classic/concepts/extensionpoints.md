@@ -155,7 +155,7 @@ It is possible to customize the stock that Warehouse Stock Management proposes.
 
 ###  `M_PriceList_Create` - Finish Process
 
-This extension point is called at the end of the `M_Pricelist_Create` function, the function that create prices based on parameters of the price list version. See Price List Version.
+This extension point is called at the end of the `M_Pricelist_Create` function, the function that create prices based on parameters of the price list version. See [Price List Version](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list-version).
 
 * Parameters: 
     * `Record_ID` (`p_String` column of `AD_EP_Instance_Para`). `M_PriceList_Version_ID` of the Price List Version that is being processed. 

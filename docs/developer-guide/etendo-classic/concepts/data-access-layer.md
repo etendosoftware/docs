@@ -918,9 +918,7 @@ instead of working with String parameters, you can work with the java
 Both classes contain javadoc with a detailed description on how to use the
 class.
 
-Another interesting part when working with direct database updates (outside of
-Hibernate) is the following section in the trouble shooting guide: [changes
-not visible in the DAL after calling stored procedure](/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#dal-queries-do-not-return-or-do-not-see-changes-in-the-database).
+Another interesting part when working with direct database updates (outside of Hibernate) is the following section in the trouble shooting guide: [changes not visible in the DAL after calling stored procedure](../concepts/common-issues-tips-and-tricks.md#dal-queries-do-not-return-or-do-not-see-changes-in-the-database).
 
 ##  The DalConnectionProvider
 

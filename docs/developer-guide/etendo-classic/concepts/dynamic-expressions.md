@@ -44,13 +44,13 @@ When the attribute value matches with a column name, it will be used as default 
 
 Preferences can be defined for a window and user. If no window is selected, the preference applies globally to the whole application; if one is selected, it will only be applied in that window. In a similar way, in case the user is blank, the preference will be shared among all users, other case the preference will be applied just to the selected user.
 
-For a list of current system preferences see  this wiki page.
+For a list of current system preferences, visit [this page](../../../user-guide/etendo-classic/basic-features/general-setup/application/preference.md).
 
 #####  Definition
 
 There are two ways of defining a preference, it can be switched by using the **Property List** check field:
 
-  * **Property**. (**Property List** checked). The preference can be taken from a fixed list. It is a list reference named `Property Configuration`. Modules can add new items to this list with the purpose that other modules can set values to them. 
+  * **Property**. (**Property List** checked). The preference can be taken from a fixed list. It is a [list reference](../concepts/data-model.md#list) named `Property Configuration`. Modules can add new items to this list with the purpose that other modules can set values to them. 
   * **Attribute**. (**Property List** unchecked). The preference is defined by the `Attribute` field, which is a free text input box. 
 
 #####  Visibility
@@ -102,7 +102,7 @@ It is possible that there are different session values types with the same name 
 
 ###  Using session values
 
-In Dynamic expressions session values are obtained by their name surrounded by at symbols (@). Thus to get the content of a session value called `myValue`, it would be done typing `@myValue@`. Doing it in this manner would follow the accessibility described above, but it is possible to explicitly obtain the global value (if exists) not taken into account the other ones, to do so the value would have a sharp symbol (#) as prefix. In the previous example it would be `@#myValue@`.
+In Dynamic expressions session values are obtained by their name surrounded by at symbols (@). Thus to get the content of a session value called `myValue`, it would be done typing `@myValue@`. Doing it in this manner would follow the [accessibility](#accessibility) described above, but it is possible to explicitly obtain the global value (if exists) not taken into account the other ones, to do so the value would have a sharp symbol (#) as prefix. In the previous example it would be `@#myValue@`.
 
 ###  Dynamic Expressions Types
 
