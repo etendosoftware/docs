@@ -185,11 +185,12 @@ When processing the transfer, all products are transferred from the source to th
 #### Generate Relocation Task
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}.  For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 Allows you to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to Etendo Mobile, where the operator can execute the movement from the corresponding sub-application. When pressed, the automatic or manual assignment pop-up opens.
 
-For more information visit, [Relocation Task](../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#relocation-tasks)
+!!! info
+    For more information,visit [Relocation Task](../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#relocation-tasks)
 
 #### Process Movement
 
