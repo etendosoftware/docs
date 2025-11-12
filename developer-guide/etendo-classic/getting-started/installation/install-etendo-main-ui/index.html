@@ -12897,9 +12897,10 @@ Other configurations are detailed in the section <a href="#advanced-configuratio
 <p>Add the following lines to the <code>gradle.properties</code> file:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">mainui</span><span class="o">=</span><span class="kc">true</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">etendo</span><span class="o">.</span><span class="na">classic</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">authentication</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">.</span><span class="na">auth</span><span class="o">.</span><span class="na">SWSAuthenticationManager</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">ws</span><span class="o">.</span><span class="na">maxInactiveInterval</span><span class="o">=</span><span class="mi">3600</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">next</span><span class="o">.</span><span class="na">public</span><span class="o">.</span><span class="na">app</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:3000</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">etendo</span><span class="o">.</span><span class="na">classic</span><span class="o">.</span><span class="na">host</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">authentication</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">.</span><span class="na">auth</span><span class="o">.</span><span class="na">SWSAuthenticationManager</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">ws</span><span class="o">.</span><span class="na">maxInactiveInterval</span><span class="o">=</span><span class="mi">3600</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">next</span><span class="o">.</span><span class="na">public</span><span class="o">.</span><span class="na">app</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:3000</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -12925,6 +12926,13 @@ Other configurations are detailed in the section <a href="#advanced-configuratio
 <td>If Main UI runs in Docker and Tomcat runs locally, <code>host.docker.internal</code> must be used.</td>
 <td><code>http://host.docker.internal:8080/etendo</code></td>
 <td><code>https://your.backend.etendo.cloud/etendo</code></td>
+</tr>
+<tr>
+<td><strong>etendo.classic.host</strong></td>
+<td>Client-side URL that the browser uses to make direct requests to Etendo Classic.</td>
+<td>URL that the browser uses for direct requests. In Docker hybrid mode, use <code>localhost</code></td>
+<td><code>http://localhost:8080/etendo</code></td>
+<td><code>https://your-domain.com/etendo</code></td>
 </tr>
 <tr>
 <td><strong>authentication.class</strong></td>
