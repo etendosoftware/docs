@@ -797,13 +797,6 @@ This corresponds to the same operation performed in Etendo **Physical Inventory*
 !!!Info
     For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
 
-**Inventory Relocation**
-
-Allows inventory to be moved between storages bin. This process corresponds to the same operation performed in the Etendo using a **Goods Movement** windows: transferring stock from one state or location to another, without changing the total quantity available.
-
-!!!Info
-    For more information about how to use this functionality in Etendo, visit [Goods Movement](../../../basic-features/warehouse-management/transactions.md#goods-movement).
-
 
 #### Process Start (Etendo)
 
@@ -816,7 +809,6 @@ The process begins with the creation of **Tasks** within Etendo, using the Task 
 With the installation of the **Advanced Warehouse Management** module, new specific tasks are incorporated that expand the possibilities of logistics management. The header retains the basic fields for a task and adds options in the *Task Type* field, which determine the type of action to be performed:
 
 - **Inventory Adjustment**: Used to plan stock counting or adjustment tasks. It can update existing quantities or register stock for products that previously had no inventory.
-- **Inventory Relocation**: Used to plan tasks for moving products between warehouses or storage locations.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-2.png)
 
@@ -860,20 +852,44 @@ To change inventory **Status**:
 - Confirm by pressing **Process** button.
 
 
-#### Inventory Relocation
+### Relocation Tasks
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-relocate-1.png)
+Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.
 
-To **Relocate** inventory:
+!!!Info
+    For more information about how to use this functionality in Etendo, visit [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement).
 
-- Enter the **Inventory Tasks** menu. There, tasks are divided by status: *Pending*, *In Progress*, and *Completed*.
-- Search and select the task from the list or by the search engine. 
-- When a card is selected, a screen with the task information opens. 
-- Press **Start Relocation** button
-- Complete **Quantity Count** field.
-- Complete **To Locator** field.
-- Confirm by pressing **Process** button.
+#### Process Start (Etendo)
 
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Goods Movement`
+
+The relocation process begins in the ERP from the **Generate Relocation Task** button in the Goods Movements window.
+
+Allows the manager to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to the mobile application, where the operator can execute the movement from the corresponding sub-application. When pressed, the automatic or manual assignment pop-up opens.
+
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/generate-relocation-task.png)
+
+Use of the **Generate Relocation Task** button is subject to system validation that determines its availability. It is only displayed when the *Goods Movement* document has not been processed and does not have a task already assigned to it.
+
+#### Access to Relocation Tasks (Etendo Mobile)
+
+When accessing Etendo Mobile in the Relocation Tasks section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as Pending.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-1.png)
+
+To perform a **relocation**:
+
+- Access the **Relocation Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Relocation** button.
+- Complete **Counted Quantity** field.
+- Complete **To Locator** field. (Optional)
+- Confirm the task with the **End Relocation** button.
+- Confirm that you want to finish the task.
+- See Success message.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
 ### Reception Tasks
 
 It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
