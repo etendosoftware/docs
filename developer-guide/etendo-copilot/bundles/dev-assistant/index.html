@@ -9591,9 +9591,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tables-windows-and-tabs-creator" class="md-nav__link">
+  <a href="#table-and-column-agent" class="md-nav__link">
     <span class="md-ellipsis">
-      Tables, Windows and Tabs Creator
+      Table and Column Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-tabs-and-fields-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows, Tabs and Fields Agent
     </span>
   </a>
   
@@ -12784,9 +12793,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tables-windows-and-tabs-creator" class="md-nav__link">
+  <a href="#table-and-column-agent" class="md-nav__link">
     <span class="md-ellipsis">
-      Tables, Windows and Tabs Creator
+      Table and Column Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-tabs-and-fields-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows, Tabs and Fields Agent
     </span>
   </a>
   
@@ -12972,15 +12990,9 @@
 <p><strong>Background Process Creator</strong> is an agent specialized in the automatic creation of Background Processes in Java. The agent reads previously indexed code and uses examples of classes extending <code>DalBaseProcess</code> to build new Background Processes.</p>
 <p><strong>Tools</strong></p>
 <ul>
-<li>
-<p><a href="../available-tools/openapi-tool.md">API Call Tool</a></p>
-</li>
-<li>
-<p><a href="../../available-tools/read-file-tool/">Read File Tool</a></p>
-</li>
-<li>
-<p><a href="../../available-tools/write-file-tool/">Write File Tool</a></p>
-</li>
+<li><a href="../available-tools/openapi-tool.md">API Call Tool</a></li>
+<li><a href="../../available-tools/read-file-tool/">Read File Tool</a></li>
+<li><a href="../../available-tools/write-file-tool/">Write File Tool</a></li>
 </ul>
 <p><strong>Functionality</strong></p>
 <p>Background Process Creator generates Background Processes in Java using indexed examples of classes that extend <code>DalBaseProcess</code>. To configure the agent properly, you need to provide the following parameters:</p>
@@ -13001,8 +13013,8 @@
 </li>
 <li>
 <p>Then, this is the result given by the agent.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png" data-desc-position="bottom"><img alt="background.png" src="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png" data-desc-position="bottom"><img alt="background.png" src="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png" data-desc-position="bottom"><img alt="background.png" src="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png" data-desc-position="bottom"><img alt="background.png" src="../../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png"></a></p>
 </li>
 </ol>
 <h4 id="button-process-creator">Button Process Creator</h4>
@@ -13537,46 +13549,53 @@
 </span></code></pre></div>
 </li>
 </ol>
-<h4 id="tables-windows-and-tabs-creator">Tables, Windows and Tabs Creator</h4>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The Tables, windows and tabs agent is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.</p>
-<p>For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the agent. This will help mitigate potential errors and ensure more accurate task completion.</p>
-</div>
-<p>The <strong>Tables, Windows and Tabs Creator</strong> is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  as well as tables and columns in the database.
-It is possible to give an input with all the necessary information, or the agent will go step by step, asking for more information. Also, depending on the context, the agent can make suggestions that the developer must confirm.</p>
+<h4 id="table-and-column-agent">Table and Column Agent</h4>
+<p>The <strong>Table and Column Agent</strong> is an intelligent assistant that automates the creation and management of database structures within the Etendo platform. It is specifically designed to help developers efficiently handle <strong>tables</strong>, <strong>columns</strong>, and <strong>views</strong>, ensuring all operations follow Etendo’s internal standards and database consistency rules.  </p>
+<p><strong>Functionality</strong></p>
+<p>This agent guides developers through the process of creating or modifying database entities, automatically validating module information and applying Etendo-specific procedures such as table registration, synchronization, and element correction. It uses the Etendo OpenAPI and dedicated webhooks to guarantee that each step—such as creating a table, adding a column, or generating a view—is executed correctly and in the proper sequence.  </p>
+<p>When requested, the agent:  </p>
+<ul>
+<li>Creates new tables, including all mandatory columns and metadata.  </li>
+<li>Adds, modifies, or removes columns with appropriate data types.  </li>
+<li>Validates and registers views within the database.  </li>
+<li>Executes the <strong>TableChecker</strong> and <strong>SyncTerms</strong> processes to ensure data integrity and synchronization.  </li>
+<li>Automatically manages related elements and maintains naming conventions and dependencies.  </li>
+</ul>
 <p><strong>Tools</strong></p>
 <ul>
-<li>
-<p><a href="../available-tools/openapi-tool.md">API Call Tool</a></p>
-</li>
-<li>
-<p><strong>Multiple Webhooks</strong>: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: <code>CreateAndRegisterTable</code>, <code>RegisterFields</code>, <code>RegisterWindow</code>, <code>RegisterTab</code>, <code>RegisterColumns</code>, <code>ElementsHandler</code>, <code>SyncTerms</code>.</p>
-</li>
+<li><a href="../../available-tools/api-call-tool/">API Call Tool</a></li>
 </ul>
-<p><strong>Functionality</strong></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>With this agent, it is possible to create: </p>
-<ul>
-<li><strong>Tables and Columns</strong>: both tables and columns are created based on user specification and the supported types are <code>string</code>, <code>number</code>, <code>tableDir</code>, <code>date</code>, <code>text</code> and <code>boolean</code> (each field will have default lengths unless specified).  </li>
-<li><strong>Windows</strong>: only Mantein type windows are supported</li>
-<li><strong>Tabs</strong>: Can be created at multiple levels, although it is important to make it clear to the agent to add the corresponding foreign keys.</li>
-<li><strong>Fields</strong>: Fields are created from columns, respecting the same name but without <em>"_"</em>.</li>
-<li><strong>Elements</strong>: The elements will be created automatically, sharing the name of the columns, but replacing the <em>"_"</em> with spaces. The help and description fields will also be added automatically.</li>
-<li><strong>Menu</strong>: A menu entry is automatically created, the developer must manually place it in the desired position.</li>
-</ul>
+<p><strong>Usage Example</strong></p>
+<ol>
+<li>Log in as <strong>System Administrator</strong> and verify that the module is set to <strong>development mode</strong>.  </li>
+<li>Open <strong>Copilot</strong> and select <strong>Table and Column Agent</strong>.  </li>
+<li>Ask the agent to create or modify a table (for example, “Create a new table for customer reviews with columns: ID, Customer, Rating, and Comment”).  </li>
+<li>The agent will create the table, add the specified columns, execute the <strong>TableChecker</strong>, synchronize the terms, and finalize the configuration.  </li>
+<li>Recompile using <code>./gradlew smartbuild --info</code> and restart Tomcat to apply the changes.  </li>
+</ol>
+<p>This agent ensures that all database updates are performed safely, consistently, and in full compliance with Etendo’s development standards.</p>
+<h4 id="windows-tabs-and-fields-agent">Windows, Tabs and Fields Agent</h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The windows, tabs and fields agent is currently in its <strong>beta</strong> testing phase. While it is designed to automate the process of creating windows, tabs, and fields, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.</p>
+<p>For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the agent. This will help mitigate potential errors and ensure more accurate task completion.</p>
 </div>
+<p>The <strong>Windows, Tabs and Fields Agent</strong> is a specialized development assistant for Etendo that automates the creation and registration of <strong>windows</strong>, <strong>tabs</strong>, and <strong>fields</strong> in the <strong>Application Dictionary (AD)</strong>. It no longer manages table or column creation, focusing instead on the configuration and linkage of user interface elements within Etendo.</p>
+<p><strong>Functionality</strong></p>
+<p>This agent streamlines the process of defining and registering interface structures by interacting directly with the Etendo OpenAPI. It validates data, retrieves existing information when needed, and ensures that all elements are correctly created and synchronized within the AD.  </p>
+<p>When requested, the agent can: </p>
 <ul>
-<li>
-<p>Ask the <strong>Tables, Windows and Tabs Creator</strong> for a window to add in the system and the module database prefix where the table will be exported. The agent will then register in the system the table and create it in database, including the mandatory columns. At this stage the agent checks if the module is in development. If is not, the agent prompts the user for a correct prefix from a module in development. Additionally, the agent checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.</p>
-</li>
-<li>
-<p>The agent will ask to the user for information to add, like columns, data types, help and description, etc.</p>
-</li>
-<li>
-<p>The user must confirm the steps or set up a modification about the given information.</p>
-</li>
+<li>Create and register <strong>windows</strong>, verifying if one already exists and reusing it when appropriate.  </li>
+<li>Add <strong>tabs</strong> to existing windows, automatically managing hierarchy and tab levels.  </li>
+<li>Create <strong>fields</strong> associated with a tab and its underlying table.  </li>
+<li>Retrieve data from existing <strong>windows</strong>, <strong>tabs</strong>, or <strong>tables</strong> to support editing or extension tasks.  </li>
+<li>Automatically generate <strong>descriptions</strong> and <strong>help comments</strong> for all created elements, ensuring Etendo’s documentation and usability standards are followed.  </li>
+<li>Synchronize terminology and update missing metadata through <strong>Sync Terms</strong> and <strong>Elements Handler</strong> processes.</li>
+</ul>
+<p>The agent operates through a guided workflow that includes data validation, synchronization, registration of components, and element verification — ensuring consistency, accuracy, and adherence to Etendo’s best practices.</p>
+<p><strong>Tools</strong></p>
+<ul>
+<li><a href="../../available-tools/api-call-tool/">API Call Tool</a></li>
 </ul>
 <p><strong>Usage Example</strong> </p>
 <ol>
@@ -13604,10 +13623,10 @@ It is possible to give an input with all the necessary information, or the agent
 </li>
 <li>
 <p>Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.</p>
-</li>
-</ol>
 <div class="language-text highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew export.database --info
 </span></code></pre></div>
+</li>
+</ol>
 <h4 id="webhook-creator">Webhook Creator</h4>
 <p><strong>Webhook Creator</strong> is an agent designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.</p>
 <p><strong>Tools</strong></p>
