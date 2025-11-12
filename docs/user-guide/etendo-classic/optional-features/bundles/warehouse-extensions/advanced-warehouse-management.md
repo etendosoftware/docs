@@ -831,7 +831,15 @@ Relocation tasks allow products to be moved from their original location to thei
 
 #### Process Start (Etendo)
 
-The receiving process begins in the ERP from the **Generate Relocation Task** button in the Goods Movements window.
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Goods Movement`
+
+The relocation process begins in the ERP from the **Generate Relocation Task** button in the Goods Movements window.
+
+Allows the manager to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to the mobile application, where the operator can execute the movement from the corresponding sub-application. When pressed, the automatic or manual assignment pop-up opens.
+
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/generate-relocation-task.png)
+
+Use of the **Generate Relocation Task** button is subject to system validation that determines its availability. It is only displayed when the *Goods Movement* document has not been processed and does not have a task already assigned to it.
 
 #### Access to Inventory Tasks (Etendo Mobile)
 
