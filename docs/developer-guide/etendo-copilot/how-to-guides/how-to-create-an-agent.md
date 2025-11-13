@@ -260,7 +260,7 @@ The steps to allow an agent to interact with Etendo Classic are:
 !!!warning
     If the behavior of the Knowledge Base File is `[Agent] Add to the agent as Knowledge Base`, the agent will not be able to use the information in the knowledge base file to generate responses without using the `Knowledge base Search` tool. So the agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.
 
-#### Auto Generation of Tools
+### Auto Generation of Tools
 
 When the OpenAPI Specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`, the agent will automatically generate tools for each method and endpoint of the API. These tools can be used to make requests to the API without the need to configure the API Call Tool. The agent will have a tool for each method and endpoint of the API. This functionality is currently in the experimental phase.
 
@@ -288,6 +288,29 @@ For example, we will create an agent to create Products in Etendo Classic, using
 4. You can start interacting with the agent. The agent will have the OpenAPI Specification in the prompt and will be able to use the API Call Tool to make requests to the API.
 
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-10.png)
+
+## Common Issues
+
+1. **Orphan Records After Module Uninstallation**
+
+    When uninstalling a custom module that contains an agent with which users have interacted, the `./gradlew update.database` command may fail due to orphan records in the `ETCOP_CONVERSATION` table.
+
+    **Problem**: Although the table has an `onDelete=setNull` constraint configured, the `update.database` command does not execute this action automatically when the module is uninstalled.
+
+    **Solution**: Manually set the `ETCOP_APP_ID` column to `null` in the `ETCOP_CONVERSATION` table before running the update.database command:
+
+    ```sql
+    UPDATE ETCOP_CONVERSATION 
+    SET ETCOP_APP_ID = NULL 
+    WHERE NOT EXISTS (
+        SELECT 1 
+        FROM ETCOP_APP 
+        WHERE ETCOP_APP.ETCOP_APP_ID = ETCOP_CONVERSATION.ETCOP_APP_ID
+    );
+    ```
+
+    After executing this SQL statement, you can proceed with the `./gradlew update.database` command.
+
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
