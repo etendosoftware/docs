@@ -6,6 +6,8 @@ tags:
   - Main UI
   - Docker
   - Etendo
+  - New UI
+  - Install New UI
 status: beta
 ---
 
