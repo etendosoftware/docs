@@ -6355,6 +6355,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../dynamic-expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynamic Expressions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../element-and-synchronize-terminology/" class="md-nav__link">
         
   
@@ -6378,6 +6408,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../etendo-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Etendo Architecture
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../etendo-jars/" class="md-nav__link">
         
   
@@ -6386,6 +6446,36 @@
     Etendo Jars
     
   </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensionpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ExtensionPoints
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
   
 
       </a>
@@ -6432,6 +6522,66 @@
     Inventory Status
     
   </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-coding-conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Java Coding Conventions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript-coding-conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JavaScript Coding Conventions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
   
 
       </a>
@@ -12787,8 +12937,8 @@
 <p>The structure for standard windows consists in <code>Windows</code>, <code>Tabs</code> and <code>Fields</code>.</p>
 <ul>
 <li><a href="#windows"><strong>Windows</strong></a>: Windows are holders for tabs. Their main purpose is to group a set of related tabs. They can be added to the application's menu.</li>
-<li><a href="#tabs"><strong>Tabs</strong></a>: Tabs are placed inside windows and can be ordered hierarchically. Each tab is linked to a unique <a href="../concepts/data_model.md#tables-in-application-dictionary">Application Dictionary Table</a> and contains a number of fields.</li>
-<li><a href="#fields"><strong>Fields</strong></a>: Fields are contained within tabs. Each field is associated to a <a href="../concepts/data_model.md#columns_in_application_dictionary">Column</a> in the same table than its tab.</li>
+<li><a href="#tabs"><strong>Tabs</strong></a>: Tabs are placed inside windows and can be ordered hierarchically. Each tab is linked to a unique <a href="../data-model/#tables-in-application-dictionary">Application Dictionary Table</a> and contains a number of fields.</li>
+<li><a href="#fields"><strong>Fields</strong></a>: Fields are contained within tabs. Each field is associated to a <a href="../data-model/#columns_in_application_dictionary">Column</a> in the same table than its tab.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-0.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-0.png"></a></p>
 <p>The following sections explain how <strong>Windows</strong>, <strong>Tabs</strong> and <strong>Fields</strong> are defined. They are managed from <code>Application Dictionary</code> &gt; <code>Windows, Tabs, and Fields</code> window.</p>
@@ -12893,7 +13043,7 @@ When a transactional window is accessed, it appears filtered by default. This is
 <p>This field is different than the <code>HQL Where Clause</code> which also accepts where clauses, but this clause is permanent and cannot be removed by the user.</p>
 </div>
 <h2 id="fields">Fields</h2>
-<p><code>Fields</code> are contained in tabs, each field has a <code>column</code> (from the same <code>table</code> as the tab's one) associated. It displays and allows editing the column's value. The way a field is displayed within the tab is determined by the <a href="../concepts/data_model.md#references">reference</a> its associated column has.</p>
+<p><code>Fields</code> are contained in tabs, each field has a <code>column</code> (from the same <code>table</code> as the tab's one) associated. It displays and allows editing the column's value. The way a field is displayed within the tab is determined by the <a href="../data-model/#references">reference</a> its associated column has.</p>
 <p>Some of the things to take into account when configuring a field are:</p>
 <ul>
 <li><code>Read Only Logic</code> which allows determining if field is read only (applies only when field is read-write).The Read Only indicates that this field may only be Read. It may not be updated. Note that it is defined at Column level in the Application Dictionary. It is a <a href="../concepts/dynamic_expressions.md">Dynamic Expression</a>.</li>
@@ -12902,7 +13052,7 @@ When a transactional window is accessed, it appears filtered by default. This is
 </ul>
 </li>
 <li><code>Central Maintenance</code>, how it works is explained in the document about <a href="../concepts/Element_and_Synchronize_Terminology.md">Elements and Synchronize Terminology</a>.</li>
-<li><a href="../concepts/data_model.md#callout"><code>Callout</code></a>, although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.</li>
+<li><a href="../data-model/#callout"><code>Callout</code></a>, although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.</li>
 <li><code>Field group</code>, fields can be assigned to a field group, when a group of fields has a field group, a separator is shown in the tab. Field Groups are defined in <code>Application Dictionary</code> &gt; <code>Setup</code> &gt; <code>Field Category</code> tab.</li>
 </ul>
 <hr>

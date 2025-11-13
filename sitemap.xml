@@ -125,11 +125,23 @@
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/dynamic-expressions/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/element-and-synchronize-terminology/</loc>
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-architecture/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-jars/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/extensionpoints/</loc>
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
@@ -138,6 +150,14 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/inventory-status/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/java-coding-conventions/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/javascript-coding-conventions/</loc>
          <lastmod>2025-11-13</lastmod>
     </url>
     <url>
