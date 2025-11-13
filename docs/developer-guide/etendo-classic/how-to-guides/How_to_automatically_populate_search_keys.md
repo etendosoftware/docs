@@ -1,65 +1,31 @@
 ---
-search:
-  exclude: true
+title: How to automatically populate search keys
+tags: 
+  - Ma
+  - Mas
+  - Cre
+  - Ad
+
+status: beta
 ---
-
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
 
 #  How to automatically populate search keys
 
-##  Introduction
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+  
+##  Overview
 
-Search keys are user defined identifiers or codes that allow to easily
-retrieve reference data such as customers, suppliers, products, payment terms,
-etc. They have been introduced in earlier versions of Openbravo and up to
-Openbravo 2.50 they were an effective way to enter data quickly. For example,
-while entering an invoice you could select the customer by opening the
-selector window and searching for it or, if you knew the search key of the
-customer that you were looking for, you could enter it and press ENTER; the
-system would then search the right customer based on that key and replace the
-key you entered with the customer name.
+**Search keys** are user defined identifiers or codes that allow to easily retrieve reference data such as customers, suppliers, products, payment terms, etc. They were an effective way to enter data quickly. For example, while entering an invoice the customer could be selected by opening the selector window and searching for it or, if you knew the search key of the **customer** that you were looking for, you could enter it and press **ENTER**; the system would then search the right customer based on that key and replace the key you entered with the customer name.
 
-In Openbravo 3, selectors have changed and they now automatically suggest the
-right value as you type. Going back to the previous example, you can now start
-typing the customer name on your invoice and the system automatically suggests
-the customers that match that entry as you type; once you have typed enough
-characters to have a unique match, you can confirm the selection by simply
-pressing ENTER or TAB and moving to the next field.
+By starting typing the **customer name** on the invoice, the system automatically suggests the customers that match that entry as you type; once you have typed enough characters to have a unique match, the selection can be confirmed by simply pressing **ENTER or TAB** and moving to the next field.
 
-This new technology is much more dynamic and user friendly. It also made
-search keys no longer needed for most entities. You can re-purpose the search
-key on product to store product codes - if you use product codes - or to store
-customer numbers on customers; however, on m and, after a while, that can be a
-bit annoying any other entities (product categories, business partner
-categories, etc.), there is really no longer a need to have a search key any
-longer.
+This funtionality is much more dynamic and user friendly. It also made search keys no longer needed for most entities. You can re-purpose the search key on product to store product codes - if you use product codes - or to store customer numbers on customers; however, on m and, after a while, that can be a
+bit annoying any other entities (product categories, business partner categories, etc.), there is really no longer a need to have a search key any longer.
 
-In many cases users end up entering the same value in the search key as they
-enter in the name.
+In many cases users end up entering the same value in the search key as they enter in the name.
 
-This article explains how you can configure Openbravo to automatically
-populate the Search Key fields and save time for your users.
+This section explains how to configure Etendo to automatically populate the **Search Key fields** and save time for the users.
 
 ##  Execution Steps
 
@@ -78,7 +44,7 @@ the one for business partners. Here is how you do it.
   * Login as system administrator 
   * You are going to have to make a modification to core, so you need to make sure that there is an active configuration template in your system with status In Development. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 Configuration templates are modules that contain changes to either core or to
 other modules. Using configuration templates you can personalize the core
 behavior of the system without affecting your ability to apply maintenance
@@ -99,7 +65,7 @@ Openbravo 3.
 @SQL=SELECT TO_CHAR(MAX(TO_NUMBER(value))+1,'FM00000000') FROM c_bpartner
 WHERE ad_client_id =@AD_CLIENT_ID@ AND value LIKE '0%'
 
-![](/assets/developer-guide/etendo-classic/how-to-
+![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_automatically_populate_search_keys-1.png){: .legacy-image-style}
 
   
@@ -127,17 +93,7 @@ field, so that you can save one click at data entry time. You can do that
 either as system administrator or, if you use Openbravo Professional Edition,
 as an end user thanks to the great Forms Personalization feature.
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_automatically_populate_search_keys  "
-
-This page has been accessed 8,293 times. This page was last modified on 9 May
-2013, at 11:57. Content is available under  Creative Commons Attribution-
-ShareAlike 2.5 Spain License  .
 
   
-**
-
-Category  :  HowTo
-
-**
+This work is a derivative of [How to Automatically Populate Search Keys](http://wiki.openbravo.com/wiki/How_to_automatically_populate_search_keys){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
