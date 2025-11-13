@@ -289,5 +289,28 @@ For example, we will create an agent to create Products in Etendo Classic, using
 
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-10.png)
 
+### Common Issues
+
+1. **Orphan Records After Module Uninstallation**
+
+    When uninstalling a custom module that contains an agent with which users have interacted, the `./gradlew update.database` command may fail due to orphan records in the `ETCOP_CONVERSATION` table.
+
+    **Problem**: Although the table has an `onDelete=setNull` constraint configured, the `update.database` command does not execute this action automatically when the module is uninstalled.
+
+    **Solution**: Manually set the `ETCOP_APP_ID` column to `null` in the `ETCOP_CONVERSATION` table before running the update.database command:
+
+    ```sql
+    UPDATE ETCOP_CONVERSATION 
+    SET ETCOP_APP_ID = NULL 
+    WHERE NOT EXISTS (
+        SELECT 1 
+        FROM ETCOP_APP 
+        WHERE ETCOP_APP.ETCOP_APP_ID = ETCOP_CONVERSATION.ETCOP_APP_ID
+    );
+    ```
+
+    After executing this SQL statement, you can proceed with the `./gradlew update.database` command.
+
+
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
