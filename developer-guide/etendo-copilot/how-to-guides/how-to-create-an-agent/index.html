@@ -10665,8 +10665,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Etendo Classic">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#auto-generation-of-tools" class="md-nav__link">
@@ -10674,11 +10673,6 @@
       Auto Generation of Tools
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -10693,6 +10687,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
   
 </li>
       
@@ -12852,8 +12855,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Etendo Classic">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#auto-generation-of-tools" class="md-nav__link">
@@ -12861,11 +12863,6 @@
       Auto Generation of Tools
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -12880,6 +12877,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
   
 </li>
       
@@ -13232,7 +13238,7 @@ The steps to allow an agent to interact with Etendo Classic are:</p>
 <p class="admonition-title">Warning</p>
 <p>If the behavior of the Knowledge Base File is <code>[Agent] Add to the agent as Knowledge Base</code>, the agent will not be able to use the information in the knowledge base file to generate responses without using the <code>Knowledge base Search</code> tool. So the agent needs to <strong>search</strong> in the knowledge base file to find the information. This is not recommended due to the performance of the agent.</p>
 </div>
-<h4 id="auto-generation-of-tools">Auto Generation of Tools</h4>
+<h3 id="auto-generation-of-tools">Auto Generation of Tools</h3>
 <p>When the OpenAPI Specification is added as a Knowledge Base File of type <code>OpenAPI Flow Specification</code>, the agent will automatically generate tools for each method and endpoint of the API. These tools can be used to make requests to the API without the need to configure the API Call Tool. The agent will have a tool for each method and endpoint of the API. This functionality is currently in the experimental phase.</p>
 <h3 id="example-of-copilot-interaction-with-etendo">Example of Copilot Interaction with Etendo</h3>
 <p>For example, we will create an agent to create Products in Etendo Classic, using an already defined flow with the endpoints needed to create Products, Product Categories and Prices. </p>
@@ -13259,6 +13265,24 @@ The steps to allow an agent to interact with Etendo Classic are:</p>
 <li>
 <p>You can start interacting with the agent. The agent will have the OpenAPI Specification in the prompt and will be able to use the API Call Tool to make requests to the API.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-10.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-10.png"></a></p>
+</li>
+</ol>
+<h2 id="common-issues">Common Issues</h2>
+<ol>
+<li>
+<p><strong>Orphan Records After Module Uninstallation</strong></p>
+<p>When uninstalling a custom module that contains an agent with which users have interacted, the <code>./gradlew update.database</code> command may fail due to orphan records in the <code>ETCOP_CONVERSATION</code> table.</p>
+<p><strong>Problem</strong>: Although the table has an <code>onDelete=setNull</code> constraint configured, the <code>update.database</code> command does not execute this action automatically when the module is uninstalled.</p>
+<p><strong>Solution</strong>: Manually set the <code>ETCOP_APP_ID</code> column to <code>null</code> in the <code>ETCOP_CONVERSATION</code> table before running the update.database command:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">ETCOP_CONVERSATION</span><span class="w"> </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SET</span><span class="w"> </span><span class="n">ETCOP_APP_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">ETCOP_APP</span><span class="w"> </span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ETCOP_APP</span><span class="p">.</span><span class="n">ETCOP_APP_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ETCOP_CONVERSATION</span><span class="p">.</span><span class="n">ETCOP_APP_ID</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">);</span>
+</span></code></pre></div>
+<p>After executing this SQL statement, you can proceed with the <code>./gradlew update.database</code> command.</p>
 </li>
 </ol>
 <hr>
