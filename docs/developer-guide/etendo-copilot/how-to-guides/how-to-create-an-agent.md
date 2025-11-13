@@ -260,7 +260,7 @@ The steps to allow an agent to interact with Etendo Classic are:
 !!!warning
     If the behavior of the Knowledge Base File is `[Agent] Add to the agent as Knowledge Base`, the agent will not be able to use the information in the knowledge base file to generate responses without using the `Knowledge base Search` tool. So the agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.
 
-#### Auto Generation of Tools
+### Auto Generation of Tools
 
 When the OpenAPI Specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`, the agent will automatically generate tools for each method and endpoint of the API. These tools can be used to make requests to the API without the need to configure the API Call Tool. The agent will have a tool for each method and endpoint of the API. This functionality is currently in the experimental phase.
 
@@ -289,7 +289,7 @@ For example, we will create an agent to create Products in Etendo Classic, using
 
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-10.png)
 
-### Common Issues
+## Common Issues
 
 1. **Orphan Records After Module Uninstallation**
 
