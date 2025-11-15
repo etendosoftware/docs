@@ -1309,6 +1309,23 @@ Fields to note:
 
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
 
+### Stock By Logistic Unit
+
+!!! info
+    To be able to include this functionality, the Stock Logistic Unit module must be installed. For more information visit [Stock Logistic Unit](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit/#overview).
+
+It allows view stock by logistics units (referenced inventory) in a clearer and more organized way. Users can apply filters by product, location, or type of logistics unit, providing them with a simplified and focused view of stock. For example, it is possible to filter by a specific location and a specific type of logistics unit to see how many logistics units there are and what products they contain. In addition, from this tab, users can navigate directly to the Logistics Unit (Referenced Inventory) window, accessing the full details of its contents.
+
+![](../../../../assets/drive/product-stock-by-logistic-unit-tab-1.png)
+
+Fields to note:
+
+- Logistic Unit: this field shows the Reference Inventory plus the type of Reference Inventory.
+- Logistic Unit Type: this field shows the type of Reference Inventory.
+- Storage Bin: space where the product is located.
+- Quantity in Hand: Available quantity.
+- Reserved Qty: Reserved quantity.
+
 ---
 
 This work is a derivative of [Master Data Management](https://wiki.openbravo.com/wiki/Master_Data_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
