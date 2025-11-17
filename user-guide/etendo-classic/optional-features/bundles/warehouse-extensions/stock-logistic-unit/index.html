@@ -3648,18 +3648,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#references-inventory-type" class="md-nav__link">
+  <a href="#referenced-inventory-type" class="md-nav__link">
     <span class="md-ellipsis">
-      References Inventory Type
+      Referenced Inventory Type
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alternate-uom" class="md-nav__link">
+  <a href="#product-alternate-uom" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternate UOM
+      Product - Alternate UOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-stock-by-logistic-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product - Stock By Logistic Unit
     </span>
   </a>
   
@@ -12755,18 +12764,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#references-inventory-type" class="md-nav__link">
+  <a href="#referenced-inventory-type" class="md-nav__link">
     <span class="md-ellipsis">
-      References Inventory Type
+      Referenced Inventory Type
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alternate-uom" class="md-nav__link">
+  <a href="#product-alternate-uom" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternate UOM
+      Product - Alternate UOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-stock-by-logistic-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product - Stock By Logistic Unit
     </span>
   </a>
   
@@ -12916,13 +12934,16 @@
 </li>
 </ul>
 <h3 id="unit-of-measure">Unit of Measure</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Product Setup</code> &gt; <code>Unit of Measure</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/uom.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/uom.png"></a></p>
 <p>In the Unit of Measure window, the module adds the units of measure <strong>Box</strong> and <strong>Pallets</strong> to facilitate the management of logistics units within the system.
 These UOM serve as the basis for configuring products with alternative units, while the user can create as many additional variants as needed based on the different box format used.</p>
-<h3 id="references-inventory-type">References Inventory Type</h3>
+<h3 id="referenced-inventory-type">Referenced Inventory Type</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Setup</code> &gt; <code>Referenced Inventory Type</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/referenced-inventory-type.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/referenced-inventory-type.png"></a></p>
 <p>In the Referenced Inventory Type window, the module adds the referenced inventory types <strong>Box</strong> and <strong>Pallet</strong>, each with its corresponding sequence. In this way, the referenced inventory retains traceability at the logistics unit level, ensuring consistency between the defined AUOMs and stock records. Reservations are updated using logic that allows alternative units of measurement to be taken into account.</p>
-<h3 id="alternate-uom">Alternate UOM</h3>
+<h3 id="product-alternate-uom">Product - Alternate UOM</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Product</code></p>
 <p>In the <a href="../../../../basic-features/master-data-management/master-data/#alternate-uom-tab">Alternate UOM</a> tab of the <strong>Product window</strong>, enabling the <strong>Enable UOM Management</strong> preference allows users to assign <em>Box</em> or <em>Pallet</em> as <strong>alternative units of measure</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -12934,6 +12955,18 @@ These UOM serve as the basis for configuring products with alternative units, wh
 <p><strong>Fields to note:</strong></p>
 <ul>
 <li><strong>Logistic Unit Type</strong>: Dropdown linked to <a href="../../../../basic-features/warehouse-management/setup/#referenced-inventory-type">Referenced Inventory Type</a>, used when registering incoming and outgoing goods.</li>
+</ul>
+<h3 id="product-stock-by-logistic-unit">Product - Stock By Logistic Unit</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Product</code></p>
+<p>It allows viewing stock by logistics units (referenced inventory) in a clearer and more organized way. Users can apply filters by product, location, or type of logistics unit, providing them with a simplified and focused view of stock. For example, it is possible to filter by a specific location and a specific type of logistics unit to see how many logistics units there are and what products they contain. In addition, from this tab, users can navigate directly to the Logistics Unit (Referenced Inventory) window, accessing the full details of its contents.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/product-stock-by-logistic-unit-tab-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/product-stock-by-logistic-unit-tab-1.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li>Logistic Unit: this field shows the Reference Inventory plus the type of Reference Inventory.</li>
+<li>Logistic Unit Type: this field shows the type of Reference Inventory.</li>
+<li>Storage Bin: space where the product is located.</li>
+<li>Quantity in Hand: Available quantity.</li>
+<li>Reserved Qty: Reserved quantity.</li>
 </ul>
 <h2 id="workflow">Workflow</h2>
 <p>The Stock Logistic Units module intervenes across the board in the processes of receiving, reserving, selling, and delivering products, providing comprehensive management based on alternative units of measure (AUOMs) and inventory references (IRs).
