@@ -36,7 +36,7 @@ The main tasks which DBSourceManager allows the developer to do are the followin
 * **`update.database`** : this task updates the database applying the changes which are necessary to transform it so that it follows the model described in the `XML` files. 
 * **`export.config.script`** : this task generates a configuration script of the current system.
 
-For more information about the Etendo build tasks, visit [Development Build Tasks](../concepts/development-build-tasks.md). These tasks are related to the [modularity concepts](../concepts/modularity-concepts.md) in Etendo.
+For more information about the Etendo build tasks, visit [Development Build Tasks](../developer-tools/etendo-gradle-plugin.md#build-tasks). These tasks are related to the [modularity concepts](../concepts/modularity-concepts.md) in Etendo.
 
 ##  More Information
 
