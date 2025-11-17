@@ -8,7 +8,7 @@
         <link rel="canonical" href="https://docs.etendo.software/developer-guide/etendo-classic/concepts/development-model/">
       
       
-        <link rel="prev" href="../development-build-tasks/">
+        <link rel="prev" href="../deep-linking/">
       
       
         <link rel="next" href="../development-project-structure/">
@@ -6257,29 +6257,6 @@
     <span class="md-status md-status--beta"></span>
   
 
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../development-build-tasks/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Development Build Tasks
-    
-  </span>
   
 
       </a>
@@ -13312,17 +13289,17 @@ Etendo build tasks can be configured to manage the deployment in three different
 <p>ODE provides the following <strong>tasks to synchronize the database XML files with the database</strong> itself:</p>
 <ul>
 <li>
-<p><a href="../development-build-tasks/"><strong>create.database</strong></a> task: first reads the Database Model XML files inside <code>src-db/database/model</code> folder and creates schema objects in the Oracle or PostgreSQL database. After that, this task fills the database with the Application Dictionary taken from <code>src-db/database/sourcedata</code> folder. </p>
+<p><a href="../../developer-tools/etendo-gradle-plugin/#database-tasks"><strong>create.database</strong></a> task: first reads the Database Model XML files inside <code>src-db/database/model</code> folder and creates schema objects in the Oracle or PostgreSQL database. After that, this task fills the database with the Application Dictionary taken from <code>src-db/database/sourcedata</code> folder. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Keep in mind that this task re-creates the database from scratch which means that the existing database will first be dropped.</p>
 </div>
 </li>
 <li>
-<p><a href="../development-build-tasks/"><strong>update.database</strong></a> task: compares the Database Model and the Application Dictionary stored in the database with the XML files inside the <code>src-db/database/model</code> and <code>src-db/database/sourcedata</code> folders. Differences are applied to the database, keeping custom ERP data (products, business partners, orders, invoices, etc) in the database untouched. </p>
+<p><a href="../../developer-tools/etendo-gradle-plugin/#update-database"><strong>update.database</strong></a> task: compares the Database Model and the Application Dictionary stored in the database with the XML files inside the <code>src-db/database/model</code> and <code>src-db/database/sourcedata</code> folders. Differences are applied to the database, keeping custom ERP data (products, business partners, orders, invoices, etc) in the database untouched. </p>
 </li>
 <li>
-<p><a href="../development-build-tasks/"><strong>export.database</strong></a> task: takes the Database Model and Application Dictionary stored in the database and overwrites the XML files inside the <code>src-db/database/model</code> and <code>src-db/database/sourcedata</code> folders. </p>
+<p><a href="../../developer-tools/etendo-gradle-plugin/#database-export"><strong>export.database</strong></a> task: takes the Database Model and Application Dictionary stored in the database and overwrites the XML files inside the <code>src-db/database/model</code> and <code>src-db/database/sourcedata</code> folders. </p>
 </li>
 </ul>
 <p>As you can imagine, whenever any of these tasks are executed, <strong>both models (the one inside <code>src-db/database</code> folder and the database itself) are forced to be identical</strong>. The first two tasks modify the database so that it is equal to <code>src-db/database</code> folder content and the third one overwrites the <code>src-db/database</code> folder content to equal it to the database.</p>
@@ -13345,7 +13322,7 @@ If it matches, there is a guarantee that changes in our database will not overwr
 <h2 id="development-process">Development process</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/concepts/Development_Model-1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/Development_Model-1.png"></a></p>
 <p>This section explains the most common way of developing Etendo and which build tasks should be used for each case. In most of the cases it is only necessary to use 3 tasks (<code>install.source</code>, <code>smartbuild</code> and
-<code>export.database</code>). There are a number of other tasks that can be used but they are not required for the standard process. They are explained in the <a href="../development-build-tasks/#libraries-build-tasks">Development Build Tasks</a> article.</p>
+<code>export.database</code>). There are a number of other tasks that can be used but they are not required for the standard process. They are explained in the <a href="../../developer-tools/etendo-gradle-plugin/#build-tasks">Development Build Tasks</a> article.</p>
 <p>The main task for the standard process is <strong>smartbuild</strong> which performs an incremental build of the system -only the modified components are rebuilt- as explained below. This task accepts two optional properties: <code>local</code> for local or remote developments which by default is set to <code>yes</code> and <code>restart</code> indicating if after the build process tomcat should be restarted with <code>no</code> as default value.</p>
 <p>Local is used as a hint to the build task to let it know if there have been database changes coming from other developers through a pull of the GitHub repository so it is needed to apply those changes to the database in the local instance. A developer working locally in her/his instances performs all database changes directly in the database so there is no need to update the database to build the system. But if the developer has just done a GitHub pull then it is likely that other developers have done changes in the XML
 database files so it is needed to update the database with those changes.</p>
