@@ -1309,6 +1309,17 @@ Fields to note:
 
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
 
+### Stock By Logistic Unit
+
+It allows viewing stock by logistics units (referenced inventory) in a clearer and more organized way.
+
+!!! info
+    For more information, visit [Stock Logistic Unit](../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product---stock-by-logistic-unit).
+
+
+!!! info
+    To be able to include this functionality, the **Stock Logistic Unit** module, part of Warehouse Extensions Bundle, must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+
 ---
 
 This work is a derivative of [Master Data Management](https://wiki.openbravo.com/wiki/Master_Data_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
