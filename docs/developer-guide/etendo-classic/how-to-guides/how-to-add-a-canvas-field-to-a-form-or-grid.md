@@ -29,10 +29,10 @@ We will illustrate how information from the record and form can be used to get d
 The implementation of canvas fields requires javascript development experience. 
 See the following concept pages for background information on javascript development:
 
-  * [Client Side Development and API](../concepts/Client_Side_Development_and_API.md)
-  * [JavaScript Coding Conventions](../concepts/JavaScript_Coding_Conventions.md) 
+  * [Client Side Development and API](../concepts/client-side-development-and-api.md)
+  * [JavaScript Coding Conventions](../concepts/javascript-coding-conventions.md) 
 
-It also makes sense to study the following page: [Etendo Architecture](../concepts/Etendo_Architecture.md).
+It also makes sense to study the following page: [Etendo Architecture](../concepts/etendo-architecture.md).
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
 

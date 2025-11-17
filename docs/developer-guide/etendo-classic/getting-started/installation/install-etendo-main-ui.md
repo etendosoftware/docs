@@ -6,6 +6,8 @@ tags:
   - Main UI
   - Docker
   - Etendo
+  - New UI
+  - Install New UI
 status: beta
 ---
 
@@ -90,6 +92,7 @@ Other configurations are detailed in the section [Advanced Configurations](#adva
     ``` groovy title="gradle.properties"
         docker_com.etendoerp.mainui=true
         etendo.classic.url=http://host.docker.internal:8080/etendo
+        etendo.classic.host=http://localhost:8080/etendo
         authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
         ws.maxInactiveInterval=3600
         next.public.app.url=http://localhost:3000
@@ -99,6 +102,7 @@ Other configurations are detailed in the section [Advanced Configurations](#adva
     |---------|------------------------------|--------|-----------------------------|--------------------------------|
     | **docker_com.etendoerp.mainui** | Enables the Main UI Docker service. | Default value may vary depending on the environment. | `true` | `true` |
     | **etendo.classic.url** | Backend URL used by the Main UI server to connect to Etendo Classic. | If Main UI runs in Docker and Tomcat runs locally, `host.docker.internal` must be used. | `http://host.docker.internal:8080/etendo` | `https://your.backend.etendo.cloud/etendo` |
+    | **etendo.classic.host** | Client-side URL that the browser uses to make direct requests to Etendo Classic. | URL that the browser uses for direct requests. In Docker hybrid mode, use `localhost` | `http://localhost:8080/etendo` | `https://your-domain.com/etendo` |
     | **authentication.class** | Java class that manages authentication between the Main UI and Etendo Classic. | Required for Secure Web Services authentication. | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` |
     | **ws.maxInactiveInterval** | Session duration (in seconds) for the Main UI WebSocket connection. | Does *not* affect the session timeout of Etendo Classic. Recommended value is 3600 seconds (1 hour). | `3600` | `3600` |
     | **next.public.app.url** | Public URL where users access the Main UI application. | Must point to the reachable frontend URL; for local use, localhost is typical. | `http://localhost:3000` | `https://your.frontend.etendo.cloud` |
