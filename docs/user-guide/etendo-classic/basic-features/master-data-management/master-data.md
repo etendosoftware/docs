@@ -1314,7 +1314,7 @@ It defines tax modification for products linked to service. Products linked to t
 !!! info
     To be able to include this functionality, the Stock Logistic Unit module must be installed. For more information visit [Stock Logistic Unit](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit/#overview).
 
-It allows view stock by logistics units (referenced inventory) in a clearer and more organized way. Users can apply filters by product, location, or type of logistics unit, providing them with a simplified and focused view of stock. For example, it is possible to filter by a specific location and a specific type of logistics unit to see how many logistics units there are and what products they contain. In addition, from this tab, users can navigate directly to the Logistics Unit (Referenced Inventory) window, accessing the full details of its contents.
+It allows viewing stock by logistics units (referenced inventory) in a clearer and more organized way. Users can apply filters by product, location, or type of logistics unit, providing them with a simplified and focused view of stock. For example, it is possible to filter by a specific location and a specific type of logistics unit to see how many logistics units there are and what products they contain. In addition, from this tab, users can navigate directly to the Logistics Unit (Referenced Inventory) window, accessing the full details of its contents.
 
 ![](../../../../assets/drive/product-stock-by-logistic-unit-tab-1.png)
 
