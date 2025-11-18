@@ -182,6 +182,7 @@ nav:
     - Requirements: getting-started/requirements.md
     - Install Etendo: getting-started/installation.md
     - Interactive Installation: getting-started/interactive-installation.md
+    - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
     - User interface:
       - Workspace: getting-started/user-interface/workspace.md
       - Navigation: getting-started/user-interface/navigation.md
@@ -376,7 +377,6 @@ nav:
         - Datasources: developer-guide/etendo-classic/concepts/datasources.md
         - DBSourceManager: developer-guide/etendo-classic/concepts/dbsourcemanager.md
         - Deep Linking: developer-guide/etendo-classic/concepts/deep-linking.md
-        - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
         - Development Model: developer-guide/etendo-classic/concepts/development-model.md
         - Development Project Structure: developer-guide/etendo-classic/concepts/development-project-structure.md
         - Dynamic Expressions: developer-guide/etendo-classic/concepts/dynamic-expressions.md
