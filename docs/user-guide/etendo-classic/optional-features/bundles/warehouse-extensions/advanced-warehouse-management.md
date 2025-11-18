@@ -76,6 +76,8 @@ To start using this module correctly, the following installation and configurati
     
     Fields to note:
 
+    **Header**
+
     - **Organization**: allows you to manage which organization will apply the configuration.
     - **Warehouse**: is a non-mandatory field that can be used to apply the configuration to a specific warehouse or to all warehouses in the organization.
     - **Active**: is checked or unchecked to enable or disable the configuration.
@@ -86,17 +88,26 @@ To start using this module correctly, the following installation and configurati
             - [GS1-128](https://www.gs1.org/standards/barcodes){target="_blank"}
             - SimpleBarcode
 
-        - **Barcode Components Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
+        - **Barcode Components Configuration**: Set of application identifiers defined by industry standards and used in barcodes. These identifiers enable the system to distinguish different types of information, as each AI specifies the type of data that follows it—such as product identifiers, batch numbers, expiration dates, or quantities. 
+        This field is required when one of the module's default algorithms (GS1-128 or Simple Barcode) is selected. For custom user-defined algorithms, this field may be left blank; however, the system will display a warning message if it remains empty. In all cases, the AI configuration is editable.
 
-        - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
+    **Preference** Tab
 
-    - **Picking Configuration**
+    This tab allows you to create, edit, and delete preference records. Records automatically inherit the Client and Organization from the header, and these fields are not editable. The tab fields replicate those currently available in the `General Setup` > `Application` > `Preference` window.
 
-        - **Exact Attribute Validation**: Checkbox, defines the validation level that the system will apply during the picking process.
+    Options such as **Search Related Barcode**, **Picking – Exact Attribute Validation**, and preferences for **Enable Stock Reservations** and **Enable UOM Management** can be managed as preferences directly from this tab.
 
-            - Active (Default): The system requires an exact match between the scanned code and the code defined in the Picking List, including product, attributes, and locator.
+    **Preferences Table**
 
-            - Inactive: The system only validates the product, without requiring a strict match in attributes or locator.
+    The following table summarizes the key preferences available in the Advanced Warehouse Configuration:
+
+    | Preference Name | Description | Options | Default Value |
+    |----------------|-------------|---------|---------------|
+    | **Picking – Exact Attribute Validation** | Defines the level of validation applied during the picking process. | **Yes**: Requires exact match between scanned code and Picking List (product, attributes, and locator).<br>**No**: Validates only the product, without strict attribute or locator matching. | Yes |
+    | **Search Related Barcode** | Allows the system to search for a product using multiple barcodes. | **No**: Searches only the primary barcode in the product's **UPC/EAN** field.<br>**Yes**: Searches both primary barcode and all additional barcodes in the **Barcode** tab. | No |
+    | **Enable Stock Reservations** | Enables or disables stock reservation functionality. | **Yes**: Activates stock reservations.<br>**No**: Deactivates stock reservations. | No |
+    | **Enable UOM Management** | Enables or disables alternative unit of measure management. | **Yes**: Activates AUOM functionality.<br>**No**: Deactivates AUOM functionality. | No |
+
 
 5. **Barcode Components Configuration** Window 
     
