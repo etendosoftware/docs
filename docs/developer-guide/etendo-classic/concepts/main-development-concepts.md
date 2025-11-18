@@ -18,43 +18,43 @@ status: beta
 
 Etendo is a software application which is being developed with the following design principles in mind:
 
-* [Open Source](https://commerce.orisha.com/){target="\_blank"}
-* ERP application framework 
-* [Model Driven Development](https://en.wikipedia.org/wiki/Model-driven_engineering){target="\_blank"}
-* [Modularity](../concepts/modularity-concepts.md) 
-* [Rich Internet Application (RIA)](../concepts/etendo-architecture.md#smartclient) 
-* Java - Lightweight J2EE 
-* Support for multiple databases
+- Open Source
+- ERP application framework 
+- [Model Driven Development](https://en.wikipedia.org/wiki/Model-driven_engineering){target="\_blank"}
+- [Modularity](../concepts/modularity-concepts.md) 
+- [Rich Internet Application (RIA)](../concepts/etendo-architecture.md#smartclient) 
+- Java - Lightweight J2EE 
+- Support for multiple databases
 
 The aim of Etendo is, while following these principles, to deliver an application which is state-of-the-art from both a technological as well as a functional point of view.
 
-###  Open Source
+### Open Source
 
 Etendo is an open source project built on open source technologies. We aim to leverage on the excellent infrastructure components developed by the open source community to ensure our platform benefits from the advantages and stability of components supported by a large community. Whenever necessary we contribute our developments back to the community.
 
-###  ERP Application Framework
+### ERP Application Framework
 
 Etendo is an application developed through an integrated development framework included in Etendo distribution. This integrated development framework takes care of a wide range of concerns in all the areas involved during the development process. Most relevant from low level to high level:
 
-* Integration with [Eclipse IDE](../how-to-guides/how-to-setup-eclipse-ide.md) 
-* Integration with SCM (Mercurial) 
-* [Automated build process](../concepts/development-build-tasks.md) 
-* Automated update process 
-* Automated deploy process 
-* Built-in infrastructure for several common development needs: 
-    * MVC framework (xmlEngine, httpBaseServlet, sqlc) 
-    * [Data_Access_Layer](../concepts/data-access-layer.md) (based on [Hibernate](https://hibernate.org/){target="\_blank"}) 
-    * Web server and servlet-container (integration with [Apache-Tomcat](https://tomcat.apache.org/){target="\_blank"} and support to other J2EE implementations) 
-    * [Reporting](../how-to-guides/how-to-create-a-report.md)(integration with [JasperReports](https://community.jaspersoft.com/download-jaspersoft/){target="\_blank"} engine) 
-    * [XML](../concepts/xml-rest-web-services) and [JSON]() REST Webservices 
-    * Emailing (integration with Sun mail) 
-    * Process scheduling (integration with Quartz) 
-* MDD development framework (Etendo [Application Dictionary](../concepts/data-model.md)) 
-* Multi-language user interface support 
-* Built-in security model 
-* Built-in enterprise model 
-* Multi-currency support 
-* Multi-general ledger support 
+- Integration with [IntelliJ IDEA](../getting-started/installation/install-etendo-development-environment.md) 
+- Integration with SCM (GitHub) 
+- [Automated build process](../developer-tools/etendo-gradle-plugin.md#build-tasks) 
+- Automated update process 
+- Automated deploy process 
+- Built-in infrastructure for several common development needs: 
+    - MVC framework (xmlEngine, httpBaseServlet, sqlc) 
+    - [Data Access Layer](../concepts/data-access-layer.md) (based on [Hibernate](https://hibernate.org/){target="\_blank"}) 
+    - Web server and servlet-container (integration with [Apache-Tomcat](https://tomcat.apache.org/){target="\_blank"} and support to other J2EE implementations) 
+    - [Reporting](../how-to-guides/how-to-create-a-report.md)(integration with [JasperReports](https://community.jaspersoft.com/download-jaspersoft/){target="\_blank"} engine) 
+    - [XML](../concepts/xml-rest-web-services) and [JSON REST Webservices](./json-rest-web-services.md) 
+    - Emailing 
+    - Process scheduling (integration with Quartz) 
+- MDD development framework (Etendo [Application Dictionary](../concepts/data-model.md#application-dictionary)) 
+- Multi-language user interface support.
+- Built-in security model.
+- Built-in enterprise model. 
+- Multi-currency support.
+- Multi-general ledger support. 
 
 ###  Model Driven Development
 
@@ -76,9 +76,9 @@ Modularity changes the way in which Etendo can be adapted to user needs. Instead
 
 This new approach has several advantages. Most important:
 
-* **Enables pure distributed development** : new functionality can be developed through modules in a pure distributed manner. The team developing the module can work isolated from other teams -they only need a stable API from the other modules they use- and the life cycle of this module -including releases- is independent from other modules. 
-* **Highly improves maintenance of code** : developing through modules means packaging independently. With a proper definition of module dependencies and keeping API's stable the process of updating an instance is straightforward and can be performed in one user click 
-* **Encourages sharing and re-use of new functionality** : developing through modules makes it quite simple to share this new functionality with other people. If developers want to share their modules, all they need is to package and publish them in  Etendo Forge  (Central Repository). After that these modules will be publicly available and other users can search for them and install them through a simple process. 
+- **Enables pure distributed development** : new functionality can be developed through modules in a pure distributed manner. The team developing the module can work isolated from other teams -they only need a stable API from the other modules they use- and the life cycle of this module -including releases- is independent from other modules. 
+- **Highly improves maintenance of code** : developing through modules means packaging independently. With a proper definition of module dependencies and keeping API's stable the process of updating an instance is straightforward and can be performed in one user click 
+- **Encourages sharing and re-use of new functionality** : developing through modules makes it quite simple to share this new functionality with other people. If developers want to share their modules, all they need is to package and publish them in  Etendo Forge  (Central Repository). After that these modules will be publicly available and other users can search for them and install them through a simple process. 
 
 ###  Pure Web Application - Rich Client
 
@@ -92,9 +92,9 @@ Traditionally, web applications had big limitations in regards of user interface
 
 Etendo uses Java as its backend programming language. There are many reasons for choosing Java as the server-side language:
 
-* Open Source nature 
-* Wide support for enterprise-level development 
-* Mature architecture for web applications 
+- Open Source nature 
+- Wide support for enterprise-level development 
+- Mature architecture for web applications 
 
 Etendo follows Java 2 Enterprise Edition architecture (J2EE) without making use of the EJB container. Instead of that Etendo uses lightweight infrastructure to implement access to data and business logic. Etendo has delivered a new Data Access Layer [(DAL)](../concepts/data-access-layer.md) based on Hibernate that provides a powerful but still lightweight persistence mechanism.
 
@@ -110,9 +110,9 @@ In future releases, Etendo aims to be database independent. The Data Access Laye
 
 Etendo runs on top of a group of well-known third party applications:
 
-* Apache-Tomcat. We use Apache Tomcat as the servlet container but others can be used instead 
-* Apache-Ant is used to automate a number of tasks such as build the system from source code 
-* PostgreSQL (8.3) or Oracle SE (10g-11g) database 
+- Apache-Tomcat. We use Apache Tomcat as the servlet container but others can be used instead 
+- Gradle 
+- PostgreSQL or Oracle SE database 
 
 All of these applications can be installed both on Linux or Windows.
 
@@ -120,7 +120,7 @@ All of these applications can be installed both on Linux or Windows.
 
 Etendo developers have three different ways to develop their code. Following the MDD approach, most common is to edit Etendo Application dictionary through a web browser connected to Etendo. Based on the new model definition the software artifacts can be generated automatically. A developer can also connect directly to the Etendo database through a sql client (eg. `pgAdmin`, `sqlDeveloper`) to manage database schema objects (tables, procedures, etc.). Finally developers can develop their own code through an integrated development environment such as Eclipse.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Main_Development_Concepts-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/main-development-concepts-0.png){: .legacy-image-style}
 
 All Etendo software artifacts are stored in text files in the development project. This includes the database definition and content. The large advantage of using text files for storing all software artifacts is that it is much easier to share and compare changes made by developers in a distributed environment.
 
@@ -128,7 +128,7 @@ Etendo uses a tool called [DBSourceManager](../concepts/dbsourcemanager.md) to m
 
 The process to build the system from Etendo source code includes a number of steps to generate the code at different levels (DAL, WAD and others) and put together that code with other code directly written by developers. Etendo has automated this process through an ant task.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Main_Development_Concepts-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/main-development-concepts-1.png){: .legacy-image-style}
 
 ###  Architecture
 
