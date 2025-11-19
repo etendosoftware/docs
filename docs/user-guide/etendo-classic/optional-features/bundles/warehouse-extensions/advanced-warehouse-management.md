@@ -102,11 +102,14 @@ To start using this module correctly, the following installation and configurati
     The following table summarizes the key preferences available in the Advanced Warehouse Configuration:
 
     | Preference Name | Description | Options | Default Value |
-    |----------------|-------------|---------|---------------|
-    | **Picking – Exact Attribute Validation** | Defines the level of validation applied during the picking process. | **Yes**: Requires exact match between scanned code and Picking List (product, attributes, and locator).<br>**No**: Validates only the product, without strict attribute or locator matching. | Yes |
-    | **Search Related Barcode** | Allows the system to search for a product using multiple barcodes. | **No**: Searches only the primary barcode in the product's **UPC/EAN** field.<br>**Yes**: Searches both primary barcode and all additional barcodes in the **Barcode** tab. | No |
-    | **Enable Stock Reservations** | Enables or disables stock reservation functionality. | **Yes**: Activates stock reservations.<br>**No**: Deactivates stock reservations. | No |
-    | **Enable UOM Management** | Enables or disables alternative unit of measure management. | **Yes**: Activates AUOM functionality.<br>**No**: Deactivates AUOM functionality. | No |
+    |-----------------|-------------|---------|---------------|
+    | **Picking – Exact Attribute Validation** | Defines the level of validation applied during the picking process. | **Y**: Requires exact match between scanned code and Picking List (product, attributes, and locator).<br>**N**: Validates only the product, without strict attribute or locator matching. | *Y* |
+    | **Search Related Barcode** | Allows Etendo to search for a product using multiple barcodes. | **N**: Searches only the primary barcode in the product's **UPC/EAN** field.<br>**Y**: Searches both primary barcode and all additional barcodes in the **Barcode** tab. | *N* |
+    | **Enable Stock Reservations** | Enables or disables stock reservation functionality. | **Y**: Activates stock reservations.<br>**N**: Deactivates stock reservations. | *N* |
+    | **Enable UOM Management** | Enables or disables alternative unit of measure management. | **Y**: Activates AUOM functionality.<br>**N**: Deactivates AUOM functionality. | *N* |
+    | **Create Warehouse Tasks** | Enables automatic generation of warehouse tasks (e.g., picking tasks) during Picking List creation. When disabled, tasks are not generated automatically and assignment is not available. | **Y**: Automatically generates warehouse tasks.<br>**N**: Does not generate tasks automatically. | *Y* |
+    | **Task From Date Completed Days** | Defines how many days backward from the current date Etendo Mobile displays tasks with Completed status. | Numeric value representing number of days. | *1* |
+
 
 
 5. **Barcode Components Configuration** Window 
@@ -215,26 +218,24 @@ To start using this module correctly, the following installation and configurati
 
 6. **Task** infrastructure:
 
-    The [Task](../platform-extensions/task.md) module, automatically installed as a dependency of this module, enables event management, triggering tasks creation and actions execution after dynamic changes, allowing automation of flows.
+    The [Task](../platform-extensions/task.md) module, installed automatically as a dependency, manages events and triggers task creation and actions after dynamic changes, enabling automation of workflows.
 
-    En particular al crear una picking list
+    Specifically, it is used when creating a Picking List.
 
     !!! warning "Required"
-        In order to use this module, a **developer** must follow the initial settings described in [Task - Initial Configuration](../../../../../developer-guide/etendo-classic/bundles/platform/task.md#initial-configuration).
+        A developer must complete the initial setup described in [Task - Initial Configuration](../../../../../developer-guide/etendo-classic/bundles/platform/task.md#initial-configuration) to use this module.
 
-    When installing `Advanced Warehouse Management` module, the **Task Types** required for picking and packing from the **Etendo Mobile** are included by default:
+    When the Advanced Warehouse Management module is installed, the Task Types required for picking and packing from Etendo Mobile are included by default:
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/task-type.png)
 
     **User Algorithm**
-    
-    Each **Task Type** will allow selecting the **warehouse operator assignment** algorithm, by default `Round-Robin By Section Algorithm` is used.
+
+    Each Task Type allows selecting the warehouse operator assignment algorithm. By default, the Round-Robin algorithm is used.
 
     **System Preferences**
 
-    - `CreateWarehouseTask`: This preference is set to "Y" (Yes) by default to enable automatic generation of warehouse tasks, such as picking tasks, when creating the Picking List. If set to "N" (No), tasks will not be generated automatically and the assignment option will not be available during picking creation.
-
-    - `fromDateCompleted`: Defines the number of days backward from the current date to display tasks with Completed status in Etendo Mobile. By default, the value is 1 and  will show the tasks completed the previous day.
+    The preferences `Create Warehouse Task` and `Task From Date Completed Days`, available in the *Preference* tab, relate to task functionality: `Create Warehouse Task` enables automatic creation of tasks when a picking is completed, and `Task From Date Completed Days` defines the default number of days for displaying completed tasks.
 
 
 ## Master Data Configuration
@@ -473,8 +474,8 @@ Finishes the receipt, generating and completing the corresponding **goods receip
 
 The option of stock reservations based on the unit defined in the sales order (AUOM field) has been added, which determines whether the product is sold in its base unit or in an alternative unit (for example, a single bottle or a box of 12).  
 
-!!! info
-    To use reservations, enable the **Enable Stock Reservations** and **Enable UOM Managemen** preference and set the **Stock Reservation** field in the Sales Order to *Automatic*. For details, see [Stock Logistic Unit](./stock-logistic-unit.md).
+!!! info 
+    By default, when the module is installed the preferences `Enable Stock Reservations` and `Enable UOM Management` are enabled. For details, see [Stock Logistic Unit - Preference](./stock-logistic-unit.md#preference).
 
 ### Reservation Flow
 
@@ -566,7 +567,7 @@ This screen contains:
 - A list of cards with tasks. 
 
 !!! Note
-    As explained above in the Tasks section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `fromDateCompleted`. This allows the user to define the number of days backwards, from the current date, to be used as a criterion for displaying tasks in Completed status.
+    As explained above in the Preference tab section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `Task From Date Completed Days`. This allows the user to define the number of days backwards, from the current date, to be used as a criterion for displaying tasks in Completed status.
 
 <br><br><br><br><br><br>
 
