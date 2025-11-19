@@ -270,20 +270,9 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
             - Advanced Business Partner: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md
             - Bulk Completion: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md
-          - Platform Extensions Bundle:
-            - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
-            - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
-            - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
-            - Task: user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md
-            - Print Provider: user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md
-          - Warehouse Extensions Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
-            - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
-            - Packing: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md
-            - Picking List: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md
-            - Stock Logistic Unit: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md
-          - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
-          - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+          - Etendo BI Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
+            - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
           - Financial Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
             - Adjust Invoice Tax: user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md
@@ -293,6 +282,17 @@ nav:
             - Conversion Rate Download Rule: user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-download-rule.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
             - Intercompany: user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md
+          - Platform Extensions Bundle:
+            - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+            - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
+            - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
+            - Print Provider: user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md
+            - Task: user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md
+          - Procurement Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+            - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
+          - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
+          - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
@@ -308,12 +308,12 @@ nav:
             - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
             - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
             - Veri*Factu: user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md
-          - Etendo BI Extensions Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
-            - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
-          - Procurement Extensions Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
-            - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
+          - Warehouse Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
+            - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
+            - Packing: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md
+            - Picking List: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md
+            - Stock Logistic Unit: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
