@@ -279,7 +279,7 @@ nav:
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
             - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
             - Business Partner Settlement: user-guide/etendo-classic/optional-features/bundles/financial-extensions/business-partner-settlement.md
-            - Conversion Rate Download Rule: user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-download-rule.md
+            - Conversion Rate Downloader: user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
             - Intercompany: user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md
           - Platform Extensions Bundle:
