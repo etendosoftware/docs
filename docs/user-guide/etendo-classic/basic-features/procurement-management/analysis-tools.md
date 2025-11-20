@@ -78,6 +78,12 @@ There is no specific field to note but just the dimensional primary and secondar
 
 :material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Purchase Invoice Dimensional Report`
 
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+!!! warning
+    If you do not have the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, the report will remain in a legacy version.
+
 ### Overview
 
 This report displays information about the purchase invoices received in the organization. It is a dimensional type of report that shows information about registered purchase invoices (Purchase Invoices in a status *Completed* or *Voided*) during a selected period of time.
@@ -86,18 +92,15 @@ This report can display the total purchase amount of a given supplier, split by 
 
 ### Parameters Window
 
-![](../../../../assets/drive/1clo6ovc9uHR_-6Qp0KbU9gWcOUbG3ocQ.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/purchase-invoice-dimensional-report-0.png)
 
 There is no specific field to note, but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
 ### Sample Report Output
 
-![](../../../../assets/drive/1ZQC2irKKXg1XSxOCL2IFC-hbfFPlbHYB.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/purchase-invoice-dimensional-report-1.png)
 
-There is also the possibility to export this report to a PDF or a XLS file:
-
-
-![](../../../../assets/drive/1SVvvkMUz-HUcjJKWdu7bSKuSpB5lY9Cz.png)
+There is also the possibility to export this report to a PDF or a XLS file.
 
 PDF format shows the same fields explained before, but in XLS format, it shows information related to selected invoices columns:
 
