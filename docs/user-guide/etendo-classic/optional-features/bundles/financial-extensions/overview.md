@@ -55,7 +55,6 @@ This extension enables controlled adjustments to invoice tax amounts to reconcil
     For more information, visit the [Adjust Invoice Tax user guide](./adjust-invoice-tax.md).
 
 
-
 ### Advanced Bank Account Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
@@ -164,16 +163,12 @@ This functionality allows the user to post or unpost multiple records at the sam
 ### Conversion Rate Downloader
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
+:octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
 !!! info
-    For more information, visit the [Conversion Rate Downloader -  User guide](./conversion-rate-download-rule.md) and the [Conversion Rate Downloader - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#conversion-rate-downloader).
-
-
-### Currency API Configuration
-
-:octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
+    For more information, visit the [Conversion Rate Downloader -  User guide](./conversion-rate-downloader.md).
 
 ### Deferred GL Journal
 
