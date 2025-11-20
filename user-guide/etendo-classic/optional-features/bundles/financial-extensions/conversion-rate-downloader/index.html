@@ -5,7 +5,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-download-rule/">
+        <link rel="canonical" href="https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader/">
       
       
         <link rel="prev" href="../business-partner-settlement/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Conversion Rate Download Rule - Etendo Documentation</title>
+        <title>Conversion Rate Downloader - Etendo Documentation</title>
       
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#conversion-rate-download-rule" class="md-skip">
+        <a href="#conversion-rate-downloader" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Conversion Rate Download Rule
+              Conversion Rate Downloader
             
           </span>
         </div>
@@ -3513,17 +3513,126 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conversion Rate Downloader
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Conversion Rate Download Rule
+    Conversion Rate Downloader
     
   </span>
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#currency-converters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Currency Converters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-rate-download-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Rate Download Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversion-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Rates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -12707,6 +12816,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#currency-converters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Currency Converters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-rate-download-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Rate Download Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversion-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Rates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -12730,7 +12922,19 @@
       
       
       
+        <span class="md-tag">Currencies</span>
+      
+    
+      
+      
+      
         <span class="md-tag">Currency</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Currency Data API</span>
       
     
       
@@ -12746,21 +12950,84 @@
   
 
 
-<h1 id="conversion-rate-download-rule">Conversion Rate Download Rule</h1>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Application</code> &gt; <code>Conversion Rate Download Rule</code></p>
+<h1 id="conversion-rate-downloader">Conversion Rate Downloader</h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.smf.currency.conversionrate</code><br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.smf.currency.apiconfig</code></p>
+<h2 id="overview">Overview</h2>
+<p>The Conversion Rate Downloader module <strong>automates the retrieval</strong> of currency exchange rates from external providers and inserts them into the system. It helps keep financial operations accurate by ensuring that up-to-date conversion rates are always available, reducing manual work and minimizing errors.</p>
+<p>In general, the configuration process involves three main steps:</p>
+<ol>
+<li><strong>Set up the external currency API connection</strong></li>
+<li><strong>Define the currency pairs to be downloaded</strong></li>
+<li><strong>Schedule the automatic download process</strong></li>
+</ol>
+<p>Once these steps are completed, the system retrieves conversion rates automatically according to the schedule, and the latest values become available for all financial transactions that require currency conversion.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
-<p>This module automatically generates conversion ranks with a background process using Apilayer. It allows keeping currency conversions up to date.</p>
-<p>Conversion rate, also called currency exchange rate, is the rate at which one currency may be converted into another one within a given period of time. Currency is an accepted medium of monetary exchange that may vary across countries.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1zFe45U_EkZAD3OWHF2CY89LpaZ2NDcj1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/1zFe45U_EkZAD3OWHF2CY89LpaZ2NDcj1.png"></a></p>
+<h2 id="initial-setup">Initial Setup</h2>
+<h3 id="currency-converters">Currency Converters</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Currency Converters</code></p>
+<p>This module can be extended to support different <strong>currency-conversion APIs</strong>. By default, it integrates with <a href="https://marketplace.apilayer.com/currency_data-api?utm_source=apilayermarketplace&amp;utm_medium=featured" target="_blank">APILayer – Currency Data API</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/currency-data-api.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/currency-data-api.png"></a></p>
+<p>To configure the connection:</p>
+<ol>
+<li>Register at <a href="https://marketplace.apilayer.com/" target="_blank">APILayer</a> and create an account.</li>
+<li>Subscribe to the <strong>Currency Data API</strong>. The free plan offers 100 monthly requests, sufficient for multiple daily updates. Copy the access token provided.</li>
+<li>
+<p>In the <strong>Currency Converters</strong> window, complete the following fields:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/currency-converters.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/currency-converters.png"></a></p>
+<ul>
+<li><strong>Service Classname</strong>: Java class used for the API connection. Default: <code>com.smf.currency.apiconfig.CurrencyLayerConverter</code></li>
+<li><strong>Client</strong>: Client allowed to use this configuration.</li>
+<li><strong>Organization</strong>: Organization allowed to use this configuration. Use <code>*</code> to allow all organizations.</li>
+<li><strong>Service Name</strong>: Identifier of this configuration, e.g., <code>Currency Data API</code>.</li>
+<li><strong>Service URL</strong>: API endpoint. Default: <code>https://api.apilayer.com/currency_data/</code></li>
+<li><strong>Token</strong>: API access token.</li>
+<li><strong>User</strong> <em>(optional)</em>: Not required for this configuration.</li>
+<li><strong>Password</strong> <em>(optional)</em>: Not required for this configuration.</li>
+<li><strong>Selected</strong>: Must be <strong>True</strong> to activate this configuration for the download process.</li>
+<li><strong>Active</strong>: Must be <strong>True</strong> to make the configuration available.</li>
+</ul>
+</li>
+</ol>
+<h3 id="conversion-rate-download-rule">Conversion Rate Download Rule</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Application</code> &gt; <code>Conversion Rate Download Rule</code></p>
+<p>After configuring the API, define the currency pairs to be downloaded.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>It is recommended to define rules in both directions. For example, <em>USD → EUR</em> and <em>EUR → USD</em>, to avoid issues in accounting scenarios that require conversions both ways.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/conversion-rate-download-rule.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/conversion-rate-download-rule.png"></a></p>
 <p>Fields to note:</p>
 <ul>
-<li><strong>From Currency</strong>: Original currency</li>
-<li><strong>To Currency</strong>: Target currency</li>
-<li><strong>Tolerance</strong>: The maximum difference allowed between the new conversion rate and the previous one. This is used to insert or not the new downloaded rate.</li>
+<li><strong>From Currency</strong>: Source currency.  </li>
+<li><strong>To Currency</strong>: Target currency.  </li>
+<li><strong>Tolerance</strong>: Maximum allowed difference between the new rate and the previous one. This prevents inserting extreme values during periods of volatility.</li>
 </ul>
+<h3 id="process-request">Process Request</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Process Scheduling</code> &gt; <code>Process Request</code></p>
+<p>To schedule the automatic download:</p>
+<ol>
+<li>Create a new record and select <strong><code>Conversion Rate Downloader</code></strong> in the <em>Process</em> field.</li>
+<li>Set the desired frequency (e.g., once per day).</li>
+<li>Schedule and save the process.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The <strong>Process Monitor</strong> tab allows reviewing execution status and possible errors.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/process-request.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/process-request.png"></a></p>
+<h2 id="execution">Execution</h2>
+<h3 id="conversion-rates">Conversion Rates</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Application</code> &gt; <code>Conversion Rates</code></p>
+<p>The system will download and insert conversion rates automatically according to the defined schedule.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit the <a href="../../../../basic-features/general-setup/application/conversion-rates/">Conversion Rates</a> documentation.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/conversion-rates.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/conversion-rates.png"></a></p>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L</a>.</p>
 
