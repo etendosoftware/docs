@@ -27,9 +27,9 @@ The calculation can be split into two steps:
 
 ##  Net Amount Calculation
 
-In **Etendo** cascade taxes calculation is supported ???. This means that when the **Net Amount** is being calculated there might not be a single rate to work with, but a relation of **different tax rates**.
+When the **Net Amount** is being calculated there might not be a single rate to work with, but a relation of **different tax rates**.
 
-Cascade taxes make the calculation of a net amount from a given gross amount a bit more difficult. You would normally divide the gross amount by the rate to get the net amount, but the rate might not be a unique one, in other words it might not be available therefore it has to be calculated.
+[Cascade taxes](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#tax-rate) make the calculation of a net amount from a given gross amount a bit more difficult. The gross amount would normally be divided by the rate to get the net amount, but the rate might not be a unique one, in other words it might not be available therefore it **has to be calculated**.
 
 To calculate the tax rate, it is necessary to calculate the tax amount that corresponds to the gross price. If the tax amount is divided by the gross price the tax rate is obtained:
 
@@ -66,9 +66,8 @@ If the tax rate is substituted by the previous formula and simplify it we get:
 
 This method returns the exact result, but its implementation requires to **round** the calculated tax amount.
 
-In former Openbravo MPs this was rounded to the **Price Precision** of the currency, thus having a higher price precision was recommended. ???
+The total gross amount is used to calculate the net amount which once divided by the quantity, allows us to obtain the net price. 
 
-After solving the issue  32265  , to help reducing the impact of this rounding issue instead of using the price, the total gross amount is used to calculate the net amount which once divided by the quantity, allow us to obtain the net price. ???
 The formula used then is:
 
 ` `
@@ -90,7 +89,7 @@ Besides, a single line might have tax amounts of different tax rates, if cascade
 
 As the net amounts are known, the standard methods to calculate the tax amounts based on net amounts are used. However, the calculated net amount has to be **rounded to the standard precision** of the currency.
   
-We can have some rounding issues when working with taxes calculated at document level.
+There might be some rounding issues when working with taxes calculated at document level:
 
 In some cases, the sum of the tax amounts and the net amount might not be equal to the total gross amount. The difference will be adjusted when completing the document in the tax amounts, by **adding or subtracting** the difference to the higher tax amount so the final sum is correct.
 

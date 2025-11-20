@@ -4,6 +4,7 @@ tags:
   - Constraint
   - Table
   - Create message
+  - Database
 
 
 status: beta
@@ -18,15 +19,16 @@ status: beta
 
 ###  Overview
 
-The section on [How to Add Columns to a Table](../how-to-guides/how-to-add-columns-to-a-table.md)  added a new **valid to** column to the `ht_salary` table.
+When adding new columns to a table like the **Valid To date** in the **ht_salary table**, it is often necessary to enforce logical rules so the data remains consistent. In this case, the Valid To date must always be the same as or later than the Valid From date. This rule can be enforced by adding a **database constraint** which is a `SQL-Expression`, which checks the validity of data whenever rows are inserted or updated.
 
-Logically the **valid to** date should always be after (or identical) to the **valid from** date. Enforcement of this logical restriction is possible with a database constraint which is a `SQL-Expression` which check if the data is valid on all modification done to the data in this table.
+!!!info
+    For more information visit, [How to Add Columns to a Table](../how-to-guides/how-to-add-columns-to-a-table.md).
+
 
 ###  Modularity
 
-The changes described in this section are done will all be part of the module with the dbprefix `HT2` so will be placed in the same module which added the **valid to** column in the first place.
 
-As the constraint will be placed in the module with dbprefix `HT2` as just explained but the table `ht_salary` is defined in another module `HT`, the constraint name must follow the usual rule and start with `EM_HT2` .
+As the constraint will be placed in the module with dbprefix `HT2` but the table **ht_salary** is defined in another module `HT`, the constraint name must follow the usual rule and start with `EM_HT2` .
 
 If the constraint would be added in the same module as its table, then this `EM_ naming-rule` would not be needed. However, the best practice is to let it start with the **full tablename** in that case to ensure its name will be unique across the database.
 
@@ -53,14 +55,14 @@ To add the constraint execute the following clause in database:
     ALTER TABLE HT_SALARY ADD CONSTRAINT EM_HT2_HT_SALARY_DATES_CHK CHECK  (VALIDTO>=VALIDFROM) ENABLE;
 
 !!! note
-    Adding an **unique constraint** to an existing module is considered as an API change and could affect to existing environments already populated. Before adding it, evaluate the risk and consider creating a buildvalidation  to check if the existing data complies. If it does not the buildvalidation can stop the update process and give a proper message.  
+    Adding a **unique constraint** to an existing module is considered as an API change and could affect to existing environments already populated. Before adding it, evaluate the risk and consider creating a buildvalidation to check if the existing data complies. If it does not, the buildvalidation can stop the update process and give a proper message.  
  
   
 ###  Adding a proper message
 
 Now when editing data in the `Employee Salary > Salary` tab and trying to use a **Valid to** date lying before the **Valid from** date we get an error message like shown below.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint-2.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint-2.png)
 
 However, this error message is not too useful yet for the user as it does not indicate at all why the save action was not done.
   
@@ -68,7 +70,7 @@ It would be better if it said something like **The Valid To date cannot be befor
 This is done by adding a new  Message. This leverage the Etendo translation system so the message can be translated and shown in a users language.
 
 !!! info
-    For more information on how to create a new message entry visit, [Messages](/home/luciacastillo/Desktop/docs.etendo.software/docs/developer-guide/etendo-classic/concepts/.Messages.md).
+    For more information on how to create a new message entry visit, [Messages](https://docs.etendo.software/developer-guide/etendo-classic/concepts/messages/).
 
 As a short summary:
 
@@ -79,10 +81,10 @@ In the `Application Dictionary > Message` window create a new record using the f
   * **Message type** : Depending on the type the UI for the message box will be different (green for success, yellow for warning...), in our case we want a red error message box, so we select **Error**. 
   * **Message text** : It is the user friendly message that will be displayed inside the message box. So let's enter: **The Valid To date may not be before the Valid From date**. 
 
-That's all now we have a message like:
+Then, we will have a message like:
 
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint-3.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint-3.png)
 
 ###  Export database
 
