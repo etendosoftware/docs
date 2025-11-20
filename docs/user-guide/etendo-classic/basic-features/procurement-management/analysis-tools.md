@@ -78,6 +78,12 @@ There is no specific field to note but just the dimensional primary and secondar
 
 :material-menu: `Application` > `Procurement Management` > `Analysis Tools` > `Purchase Invoice Dimensional Report`
 
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+!!! warning
+    If you do not have the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, the report will remain in a legacy version.
+
 ### Overview
 
 This report displays information about the purchase invoices received in the organization. It is a dimensional type of report that shows information about registered purchase invoices (Purchase Invoices in a status *Completed* or *Voided*) during a selected period of time.
@@ -86,18 +92,61 @@ This report can display the total purchase amount of a given supplier, split by 
 
 ### Parameters Window
 
-![](../../../../assets/drive/1clo6ovc9uHR_-6Qp0KbU9gWcOUbG3ocQ.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/purchase-invoice-dimensional-report-0.png)
 
-There is no specific field to note, but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
+This report includes several filters and configuration options that allow you to customize the information displayed:
+
+**Primary Filters:**
+
+- **Date From / Date To** *(Mandatory)*: Define the time period for which you want to generate the report. These fields filter invoices based on their invoice date.
+- **Amount Greater Than / Less Than**: Set monetary range filters to include only invoices above or below specific amounts. 
+- **Comparative Report**: Checkbox to enable comparative analysis between different periods or criteria. When enabled, additional date fields are displayed to define the comparison period *(Default: No)*.
+- **Show Financial Lines**: Checkbox to include or exclude financial lines in the report display *(Default: Yes)*.
+
+**Secondary Filters:**
+
+- **Organization** *(Mandatory)*: Filter invoices by the specific organization.
+- **Business Partner Category**: Filter invoices by the category assigned to the business partner (vendor).
+- **Business Partner**: Select one or multiple vendors to view only their invoices. Multiple business partners can be selected for broader filtering.
+- **Product Type**: Filter by the type of products included in the invoices. Available options are:
+    - **Expense type**: Products classified as expense items.
+    - **Item**: Standard inventory items or goods.
+    - **Resource**: Resources used in production or services.
+    - **Service**: Service-type products.
+- **Product Category**: Filter by the category of products included in the invoices.
+- **Product**: Select one or multiple products to view invoices containing those particular items. Multiple products can be selected for broader filtering.
+- **Currency** *(Mandatory)*: Filter to include only invoices recorded in the specified currency.
+
+**Dimensions:**
+
+- **Dimensional Grouping** *(Mandatory)*: Configure how data is grouped and displayed in the dimensional analysis. This determines both the dimensions by which data is grouped and the order in which they are applied. The available dimension options are:
+    - **Business Partner**: Group data by vendor.
+    - **Business Partner Group**: Group data by business partner categories.
+    - **Product**: Group data by individual products.
+    - **Product Group**: Group data by product categories.
+    - **Document No**: Group data by invoice document numbers.
+
+**Sort:**
+
+- **Sort** *(Mandatory)*: Define the sorting criteria for the report results. Available sorting options are:
+    - **Standard**: Default alphabetical sorting order by the selected dimensions.
+    - **By Ascending Amount**: Sort results by amount from lowest to highest.
+    - **By Descending Amount**: Sort results by amount from highest to lowest.
 
 ### Sample Report Output
 
-![](../../../../assets/drive/1ZQC2irKKXg1XSxOCL2IFC-hbfFPlbHYB.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/purchase-invoice-dimensional-report-1.png)
 
-There is also the possibility to export this report to a PDF or a XLS file:
+This sample output shows the dimensional grouping with four grouping levels as indicated in the header: "1.- Business Partner, 2.- Business Partner Group, 3.- Document No, 4.- Product". The report displays:
 
+- **Level 1 (Business Partner)**: "Be Soft Drinker, Inc." as the main vendor grouping with total amount of $1,328,580.00
+- **Level 2 (Business Partner Group)**: "Supplier" category showing the vendor classification
+- **Level 3 (Document No)**: Invoice numbers (10001680, 10001694, 10001708, 10001722, 10001736) with their respective subtotals
+- **Level 4 (Product)**: Individual products (Cherry Cola, Cola, Energy Drink, Lemonade, Plain Water) showing amounts and quantities for each invoice
 
-![](../../../../assets/drive/1SVvvkMUz-HUcjJKWdu7bSKuSpB5lY9Cz.png)
+Each grouping level shows subtotals, and the report concludes with a grand total of $1,328,580.00, demonstrating the hierarchical structure of the dimensional analysis.
+
+There is also the possibility to export this report to a PDF or a XLS file.
 
 PDF format shows the same fields explained before, but in XLS format, it shows information related to selected invoices columns:
 
