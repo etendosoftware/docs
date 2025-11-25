@@ -424,10 +424,10 @@ nav:
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
 #        - How to automatically populate search keys: developer-guide/etendo-classic/how-to-guides/How_to_automatically_populate_search_keys.md
 #        - How to call a stored procedure from the DAL: developer-guide/etendo-classic/how-to-guides/How_to_call_a_stored_procedure_from_the_DAL.md
-#        - How To Call An Openbravo Webservice From Java: developer-guide/etendo-classic/how-to-guides/How_To_Call_An_Openbravo_Webservice_From_Java.md
-#        - How to change an existing Report: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Report.md
+        - How to Call an Openbravo Webservice from Java: developer-guide/etendo-classic/how-to-guides/How-to-call-an-openbravo-webservice-from-java.md
+        - How to Change an Existing Report: developer-guide/etendo-classic/how-to-guides/How-to-change-an-existing-report.md
         - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
-#        - How to Change Fonts in Openbravo Reports: developer-guide/etendo-classic/how-to-guides/How_to_Change_Fonts_in_Openbravo_Reports.md
+        - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/How-to-change-fonts-in-oetendo-reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
 #        - How To Configure Log: developer-guide/etendo-classic/how-to-guides/How_To_Configure_Log.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
