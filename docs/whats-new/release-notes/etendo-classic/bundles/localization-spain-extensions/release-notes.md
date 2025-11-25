@@ -1,15 +1,18 @@
 ---
 title: Localizacion Española - Versiones Disponibles
 tags:
-  - Release Notes
-  - Localizacion Española
-  - Versiones
+    - Release Notes
+    - Localizacion Española
+    - Versiones
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.localization.spain.extensions`
 
 :material-store: Etendo Marketplace:  [Bundle de Localizacion Española](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}
 
 ## Introducción
+
+!!!warning
+    Necesitas permisos para acceder al contenido de repositorios privados.
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
