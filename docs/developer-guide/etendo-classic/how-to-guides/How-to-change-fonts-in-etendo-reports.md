@@ -1,11 +1,11 @@
 ---
 title: How to Change Fonts in Etendo Reports
 tags:
-  - Report customization
-  - Modules
-  - jrxml
-  - Template modification 
-  - Etendo Reports
+  - Etendo reports
+  - Custom fonts
+  - JasperReports
+  - FOP Configuration 
+  - Report Customization
 
 status: beta
 
@@ -46,10 +46,7 @@ In the above  link, find a detailed tutorial that describes **how to handle** cu
 ![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Change_Fonts_in_Openbravo_Reports-0.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Change_Fonts_in_Openbravo_Reports-1.png)
 
-View larger
 
   * 3\. Click on `JasperSoft Studio > Fonts`. Click **Add** . At this point provide a unique name for the Font Extension and the path to its extension by selecting the path of the downloaded `.ttf file`. 
   * 4\. Once done, set a PDF Encoding type for the new font in the wizard. 
@@ -61,10 +58,6 @@ View larger
 ![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Change_Fonts_in_Openbravo_Reports-2.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Change_Fonts_in_Openbravo_Reports-3.png)
-
-View larger
 
   * 9\. Stop tomcat 
   * 10\. Execute: 
@@ -121,10 +114,6 @@ guides/How_to_Change_Fonts_in_Openbravo_Reports-4.png)
 ![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Change_Fonts_in_Openbravo_Reports-5.png)
 
-View larger
-
-|  
----|---|---  
   
 And last, we have a **FOP Report** with the default font replaced:
 
@@ -133,11 +122,7 @@ And last, we have a **FOP Report** with the default font replaced:
 ![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Change_Fonts_in_Openbravo_Reports-6.png)
 
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Change_Fonts_in_Openbravo_Reports-7.png)
-
-View larger
 
 
-This work is a derivative of [How to Change Fonts in Etendo Reports](http://wiki.openbravo.com/wiki/How_to_Change_Fonts_in_Openbravo_Reports){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+This work is a derivative of [How to Change Fonts in Openbravo Reports](http://wiki.openbravo.com/wiki/How_to_Change_Fonts_in_Openbravo_Reports){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 

@@ -1,63 +1,28 @@
 ---
-search:
-  exclude: true
+title: How to Configure Log
+tags:
+  - Etendo 
+  - Custom 
+  - Jasp
+  - FOP 
+  - Report 
+
+status: beta
+
 ---
 
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+#  How to Configure Log
+ 
+!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-######  Toolbox
+##  Overview
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  How To Configure Log
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-log4j2  is introduced in Openbravo since **PR19Q1** . If you're using a
-previous version of Openbravo, please refer to
-How_To_Configure_Log_Using_Log4j1.x  to configure log using log4j 1.x.  
----|---  
-  
-##  Contents
-
-  * 1  Introduction 
-  * 2  Configuration 
-    * 2.1  File 
-    * 2.2  Log Verbosity 
-  * 3  Rotation 
-  * 4  Upgrade from previous versions 
-
-  
----  
-  
-##  Introduction
-
-Logging  allows developers  to insert messages when code is executed, these
-messages can be used to understand different issues in the backend code, such
-as errors, performance problems, etc.
-
-Starting from **PR19Q1** , Openbravo uses  log4j2  to log.
+Logging allows developers  to **insert messages** when code is executed, these messages can be used to understand different issues in the backend code, such as errors, performance problems, etc.
 
 ##  Configuration
 
-Logging is configured using 3 log configuration files, depending on the
-scenario:
+Logging is configured using 3 log configuration files, depending on the scenario:
 
   * ` config/log4j2.xml ` : Is the configuration for build tasks, both from the command line and the rebuild launched from the _Module Management_ Window. 
   * ` config/log4j2-web.xml ` : This configuration is used for the Web Application executed from a container such as Tomcat. 
@@ -187,16 +152,7 @@ using Java 11, you must add an option to ANT_OPTS in order to build Openbravo.
 See  [2]  for details.  
 ---|---  
   
-Retrieved from "  http://wiki.openbravo.com/wiki/How_To_Configure_Log  "
 
-This page has been accessed 29,884 times. This page was last modified on 17
-December 2019, at 11:36. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
 
-  
-**
-
-Category  :  HowTo
-
-**
+This work is a derivative of [How to Configure Log](http://wiki.openbravo.com/wiki/How_To_Configure_Log){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
