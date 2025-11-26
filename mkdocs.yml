@@ -422,6 +422,7 @@ nav:
 #        - How to add a masked text field: developer-guide/etendo-classic/how-to-guides/How_to_add_a_masked_text_field.md
         - How to Add a Rich Text Field and Column: developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column.md
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
+        - How to Add Telemetry to a Module: developer-guide/etendo-classic/how-to-guides/how-to-add-telemetry-to-a-module.md
 #        - How to automatically populate search keys: developer-guide/etendo-classic/how-to-guides/How_to_automatically_populate_search_keys.md
 #        - How to call a stored procedure from the DAL: developer-guide/etendo-classic/how-to-guides/How_to_call_a_stored_procedure_from_the_DAL.md
 #        - How To Call An Openbravo Webservice From Java: developer-guide/etendo-classic/how-to-guides/How_To_Call_An_Openbravo_Webservice_From_Java.md
@@ -529,7 +530,6 @@ nav:
 #        - How to Use an External Connection Pool: developer-guide/etendo-classic/how-to-guides/How_to_Use_an_External_Connection_Pool.md
         - How to Use Google Service Util: developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util.md
         - How to Use Property Fields: developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields.md
-        - How to Add Telemetry to a Module: developer-guide/etendo-classic/how-to-guides/how-to-add-telemetry-to-a-module.md
         - How to Use Secure Web Services: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
 #        - JSON REST Web Services: developer-guide/etendo-classic/how-to-guides/JSON_REST_Web_Services.md
 #        - Modules:How to create a Carrier Integration Module: developer-guide/etendo-classic/how-to-guides/Modules_How_to_create_a_Carrier_Integration_Module.md

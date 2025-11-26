@@ -6,15 +6,16 @@ tags:
   - Analytics
 ---
 
-#  How to Add Telemetry to an Etendo Classic Module
+#  How to Add Telemetry to an Etendo Module
 
 ##  Overview
 
-The Etendo Telemetry Module adds a thread-safe telemetry layer that lets you audit how end users interact with Etendo Classic. By collecting metrics from servlets, processes, and REST endpoints you can build historical usage dashboards, detect regressions, and better understand feature adoption. This guide explains how to wire telemetry events into any custom module using the `TelemetryUsageInfo` helper and the same approach followed by the `com.etendoerp.telemetry` reference module.
+The **Etendo Telemetry Module** adds a thread-safe telemetry layer that lets you audit how end users interact with Etendo. By collecting metrics from servlets, processes, and REST endpoints you can build historical usage dashboards, detect regressions, and better understand feature adoption. This guide explains how to wire telemetry events into any custom module using the `TelemetryUsageInfo` helper and the same approach followed by the `com.etendoerp.telemetry` reference module.
+
 
 ##  Example Module
 
-All of the snippets referenced here come from the `com.etendoerp.telemetry` module, which ships with reusable helpers and sample services. Clone that repository and review the `TrackingUtil` class if you want to see a complete implementation that you can extend in your own module.
+All of the snippets referenced here come from the [com.etendoerp.telemetry](https://github.com/etendosoftware/com.etendoerp.telemetry){target="_blank"} module, which ships with reusable helpers and sample services. **Clone** that repository and review the `TrackingUtil` class if you want to see a complete implementation that you can extend in your own module.
 
 ##  Telemetry building blocks
 
@@ -209,4 +210,8 @@ public void trackFeatureUsage(String featureId, Map<String, Object> featureData)
 - **Memory leaks**: Double-check that `TelemetryUsageInfo.clear()` executes in every path, including error branches, when using executors.
 - **JSON errors**: Wrap `JSONObject` mutations in try/catch blocks and make sure the metadata only contains serializable values.
 
-With these steps you can extend any Etendo Classic module with reliable telemetry that surfaces how your features perform in production without impacting end-user workflows.
+With these steps you can extend any Etendo module with reliable telemetry that surfaces how your features perform in production without impacting end-user workflows.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
