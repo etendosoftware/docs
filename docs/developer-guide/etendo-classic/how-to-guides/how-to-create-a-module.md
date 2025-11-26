@@ -27,7 +27,7 @@ A module is a piece of additional functionality that can be deployed optionally 
 additional reports, additional windows, connectors, content packs (translations, chart of accounts, list of tax codes, product categories, etc).
 
 !!!info
-    For a detailed description on the Etendo Classic modularity concept, see the [Modularity Guide](../concepts/Modularity_Concepts.md).
+    For a detailed description on the Etendo Classic modularity concept, see the [Modularity Guide](../concepts/modularity-concepts.md).
 
 This section explains only the standard module type, because that is most relevant for the other sections.
 
@@ -46,7 +46,7 @@ The process of developing a module has three main steps:
 !!!Important
     Every piece of Etendo Classic code belongs to a module, including Etendo Classic core itself. You should do all your developments through modules, including customizations. You can make changes directly in other modules -including Etendo Classic core- but it is highly recommended not to do that. It makes it much easier to maintain Etendo Classic if you restrict code changes to modules.
 
-A module can be distributed and downloaded by other Etendo Classic users via the central repository. For more information about the central repository and distribution of modules, visit the [Modularity Guide](../concepts/Modularity_Concepts.md).
+A module can be distributed and downloaded by other Etendo Classic users via the central repository. For more information about the central repository and distribution of modules, visit the [Modularity Guide](../concepts/modularity-concepts.md).
 
 The following sections discuss the main topic of this section: create and setup a module, and [publish it for distribution](how-to-publish-modules-to-github-repository.md).
 

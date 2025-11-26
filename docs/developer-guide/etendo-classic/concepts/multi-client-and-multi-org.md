@@ -16,11 +16,11 @@ status: beta
   
 ##  Overview
 
-This document describes multi-client and multi-organization from the development perspective. For a functional comprehension about these features read the  Functional Documentation.
+This document describes multi-client and multi-organization from the development perspective. For a functional comprehension about these features read the [Functional Documentation](../../../user-guide/etendo-classic/basic-features/general-setup/getting-started.md).
 
 ##  Structure
 
-At database and application dictionary level, all tables must have the structure needed to support multi-client and multi-org. It is described in the Database Tables document  .
+At database and application dictionary level, all tables must have the structure needed to support multi-client and multi-org. It is described in the [Database Tables document](../concepts/tables.md#clientorganization).
 
 ##  Filtering data
 
@@ -28,7 +28,7 @@ This section explains the code needed to properly filter data regarding client a
 
 ###  Data Access Layer
 
-The  Data Access Layer  provides several interfaces to make it easier to query for data:  OBCriteria  and  OBQuery  . These service classes take care of security and automatic filtering on readable clients and organizations.
+The [Data Access Layer](../concepts/data-access-layer.md)  provides several interfaces to make it easier to query for data:  OBCriteria  and  OBQuery ??? . These service classes take care of security and automatic filtering on readable clients and organizations.
 
 The filtering on readable clients and organizations can be disabled by calling the relevant methods (`setFilterReadableOrganizations/setFilterReadableClients`).
 
@@ -43,7 +43,7 @@ OBDal.getInstance().getReadableOrganizationsInClause();
 OBDal.getInstance().getReadableClientsInClause();
 ```
 
-The data access layer also checks for write access to clients/organizations when an object is inserted/updated. This check is done for each object which is saved (see  here  for more information). An additional check which is done is that an object may only refer to objects in the natural tree of its own organization.
+The data access layer also checks for write access to clients/organizations when an object is inserted/updated. This check is done for each object which is saved (see [here](../concepts/data-access-layer.md#write-access) for more information). An additional check which is done is that an object may only refer to objects in the natural tree of its own organization.
 
 ###  OrganizationStructureProvider
 
@@ -75,33 +75,27 @@ And the parameters section:
 
 This will create a couple of parameters: `adClientId` and `adOrgID`, how to pass them is explained in the following section.
 
-###  XSQL - Java Usage
+### XSQL - Java Usage
 
-####  Client
+#### Client
 
 Only the current logged client is accessible even though the role has permission for different clients. Additionally, depending on the user level defined for the role and on the access level for the table which is being accessed access to client 0 (system) is granted or denied.
 
 In order to obtain the list of accessible clients (current client and 0 in case it can be accessed), the `Utility.getContext` method is used, it has the following structure:
 
 ```
-
 public static String getContext(ConnectionProvider conn, VariablesSecureApp vars, String context, String window)
-
 ```
 
 or
 
-``` 
-
-public static String getContext(ConnectionProvider conn, VariablesSecureApp vars, String context, String window, int accessLevel)
-
 ```
-
+public static String getContext(ConnectionProvider conn, VariablesSecureApp vars, String context, String window, int accessLevel)
+```
 
 In the first case, access level is not passed so it is not taken into account to calculate if client 0 is accessible. This is the way it is generally used for manual code. A standard call to this method would be:
 
-``` 
-
+```
 String strClient = Utility.getContext(this, vars, "#User_Client", "");
 ```
   
@@ -117,7 +111,7 @@ Only data in an editable organization can be modified. Editable organizations ar
 
 The list of editable organizations is obtained with:
 
-``` 
+```
 Utility.getContext(conn, vars, "#User_Org", windowId, accesslevel)
 ```
 
@@ -127,7 +121,7 @@ This type must be used when displaying data which the user can modify. For examp
 
 Accessible data can be viewed but not modified. The list of accessible organizations consists in the standard tree of his orgList, this is, all the granted organizations, their ancestors and their descendants organizations. To obtain it:
 
-``` 
+```
 Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 ```
 
@@ -137,7 +131,7 @@ This type should be used when displaying information data. For example in report
 
 A record can make reference to other records with data defined in the standard tree of the parent record organization.
 
-```    
+```
 Utility.getReferenceableOrg(vars, currentOrg)
 ```
   
@@ -150,7 +144,7 @@ Selectors are a case that deserves a specif attention, they have two main elemen
 
 When a combo is used in a filter the list of organizations it receives is the accessible one:
 
-``` 
+```
 Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 ```
 
@@ -205,9 +199,9 @@ When developing transactional processes it must be taken into account that those
 
 It is possible to define a structure that allows to define objects in a organization and change some of their attributes for another organization lower in the organization tree hierarchy. Currently Etendo core implements it for  products  using the  `M_Product_Org`  table. In this case it is possible to define products for example in organization *, and overwrite some of their attributes for other organizations. The effect would be that by default attributes defined for product in organization * are used except in the case they are overwritten in the current organization. This management must be done manually when developing processes using these tables.
 
-For example this query is part of the  `MRP_ProcessPlan_Recalculate`  process, it looks for the values that are overwritten in the current organization and takes them if they exist:
+For example this query is part of the `MRP_ProcessPlan_Recalculate` process, it looks for the values that are overwritten in the current organization and takes them if they exist:
 
-``` 
+```
 SELECT QTY, planneddate, plannedorderdate, M_PRODUCT.M_PRODUCT_ID,
             COALESCE(M_PRODUCT_ORG.CAPACITY, M_PRODUCT.CAPACITY) AS CAPACITY,
             COALESCE(M_PRODUCT_ORG.DELAYMIN, M_PRODUCT.DELAYMIN, 0) AS DELAYMIN,

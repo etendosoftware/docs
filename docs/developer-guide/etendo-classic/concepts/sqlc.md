@@ -15,7 +15,7 @@ status: beta
     It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
 !!!info
-    In general, any new code should be written using the newer Data Access Layer. SqlC/xsql-based code should only be used in special cases or in case older code exists.  
+    In general, any new code should be written using the newer [Data Access Layer](../concepts/data-access-layer.md). SqlC/xsql-based code should only be used in special cases or in case older code exists.  
   
 ##  Overview
 
@@ -34,7 +34,7 @@ This simple example shows how to use SqlC with a simple SQL select statement.
 To let SqlC generate a java class which does execute this query it needs to be placed in a xml file: i.e. `src/org/openbravo/howto/Howto_data.xsql`.
 
     
-```  
+```
     <?xml version="1.0" encoding="UTF-8" ?>
      
     <SqlClass name="HowtoData" package="org.openbravo.howto">
@@ -131,7 +131,7 @@ If a generated class should have a different visibility then the optional attrib
 The following example shows how to define a generated class as public, so it can be used from any package.
  
 ```
- 
+
     <SqlClass name="PublicHowtoData" package="org.openbravo.howto" accessModifier="public">
     ...
     </SqlClass>
@@ -147,17 +147,18 @@ public class PublicHowtoData implements FieldProvider {
 
 The central part of an xsql file are the statements defined within. Here the common parts the definition of a `SqlMethod` are shown. The attributes which are specific to each statement type are explained in the corresponding later chapters.
 
- 
-    <SqlMethod
-    name="name"
-    static="true,false"
-    type="{constant,preparedStatement,statement,callableStatement}"
-    connection="true,false"
-    <SqlMethodComment></SqlMethodComment>
-    <Sql>
-        sql statement
-    </Sql>
-    </SqlMethod>
+```
+<SqlMethod
+name="name"
+static="true,false"
+type="{constant,preparedStatement,statement,callableStatement}"
+connection="true,false"
+<SqlMethodComment></SqlMethodComment>
+<Sql>
+    sql statement
+</Sql>
+</SqlMethod>
+```
 
 This xml tag defines a single statement / java-method. The name attribute does directly correspond to the java method which will be created to the statement.
 
@@ -194,8 +195,9 @@ However, in some circumstances, this default behavior is not intended. If severa
 
 In this case the optional connection attribute allows for a more fine granular transaction/connection handling. If it is added with value true the generated method signature is slightly different as shown here:
 
- 
-    public static HowtoData[] select(Connection conn, ConnectionProvider connectionProvider, String adUserId) throws ServletException {
+```
+public static HowtoData[] select(Connection conn, ConnectionProvider connectionProvider, String adUserId) throws ServletException {
+```
 
 Here, a connection object can be explicitely passed to the function. If the caller does disable autocommit for this connection and then passes the same connection on several method invocations, they can control the transaction in more detail.
 
@@ -224,22 +226,21 @@ The first benefit happens when the ResultSet of the query is huge. When reading 
 
 The second benefit it better usability and more readable code when using the generated function. The next short example does outline some sample code doing the same activity using the two different types of statements.
 
+```
+// sampleCall is defined as returns="multiple"
+SampleData[] rows = SampleData.sampleCall(this);
+if (rows != null && rows.length > 0) {
+SampleData row = rows[0];
+...
+}
+```
 
-
- 
-    // sampleCall is defined as returns="multiple"
-    SampleData[] rows = SampleData.sampleCall(this);
-    if (rows != null && rows.length > 0) {
-    SampleData row = rows[0];
-    ...
-    }
-
-
- 
-    // sampleCall is defined as returns="single"
-    SampleData row = SampleData.sampleCall(this);
-    ...
-    }
+```
+// sampleCall is defined as returns="single"
+SampleData row = SampleData.sampleCall(this);
+...
+}
+```
 
 !!!info
     This type of query does return a single row but does not tell the database that only a single row is needed. The database still needs to query and return all rows with potentially comes with a big overhead. To avoid this the select statement does needs to have the respective LIMIT/OFFSET or ROWNUM parts added.  
@@ -293,7 +294,7 @@ The simplest way is to add an optional where clause to a query is a parameter fo
 
 The following example uses this to either query for all orders in the database or to query for all orders of a specific business partner.
 
- 
+```
 <SqlMethod name="selectOrders" type="preparedStatement" return="multiple">
 <Sql>
     SELECT * from C_Order c
@@ -304,14 +305,16 @@ The following example uses this to either query for all orders in the database o
     <![CDATA[ AND c.C_BPARTNER_ID = ? ]]>
 </Parameter>
 </SqlMethod>
+```
 
 What happens at runtime for this example is defined by the value of the parameter bpartner. If the value is not null and not the empty String "", then the executed SQL statement is the following:
 
-
-    SELECT * FROM C_Order c
-    WHERE 1=1
-    AND c.C_BPARTNER_ID = ?
-    ORDER BY c.documentno
+```
+SELECT * FROM C_Order c
+WHERE 1=1
+AND c.C_BPARTNER_ID = ?
+ORDER BY c.documentno
+```
 
 If the value for the parameter is null or the empty String "" then the optional parameter is completely ignored for the statements' execution.
 
@@ -321,15 +324,16 @@ The recommended way to specify the AFTER location is to add extra clauses like "
 
 A variation of this is an optional parameter of type="none". Using this it is possible to add a constant String to an SQL statement depending on a parameters' value.
 
- 
-    <SqlMethod name="selectOrders" type="preparedStatement" return="multiple">
-    <Sql>
-        SELECT * from C_Order c
-        WHERE 1=1
-        ORDER BY c.documentno
-    </Sql>
-    <Parameter name="processed" optional="true" type="none" after="WHERE 1=1" text="AND c.processed = 'Y'"/>
-    </SqlMethod>
+```
+<SqlMethod name="selectOrders" type="preparedStatement" return="multiple">
+<Sql>
+    SELECT * from C_Order c
+    WHERE 1=1
+    ORDER BY c.documentno
+</Sql>
+<Parameter name="processed" optional="true" type="none" after="WHERE 1=1" text="AND c.processed = 'Y'"/>
+</SqlMethod>
+```
 
 In this example if the parameters' value is the parameter name (here: processed) then the option part defined by the parameter is added to the statement, otherwise the optional part is ignored for the statement execution.
 
@@ -337,29 +341,29 @@ In this example if the parameters' value is the parameter name (here: processed)
 
 A second variation is an optional parameter of type="argument". This can be used to optionally add a fixed part and to pass the complete value of the parameter (an arbitrary) to the query.
 
-
-
- 
-    <SqlMethod name="selectOrders" type="preparedStatement" return="multiple">
-    <Sql>
-        SELECT * from C_Order c
-        WHERE 1=1
-        ORDER BY c.documentno
-    </Sql>
-    <Parameter name="processed" optional="true" type="argument" after="WHERE 1=1">
-        <![CDATA[ AND c.C_BPARTNER_ID IN ]]>
-    </Parameter>
-    </SqlMethod>
+```
+<SqlMethod name="selectOrders" type="preparedStatement" return="multiple">
+<Sql>
+    SELECT * from C_Order c
+    WHERE 1=1
+    ORDER BY c.documentno
+</Sql>
+<Parameter name="processed" optional="true" type="argument" after="WHERE 1=1">
+    <![CDATA[ AND c.C_BPARTNER_ID IN ]]>
+</Parameter>
+</SqlMethod>
+```
 
 Here, again the optional parameter is completely ignored, if the parameters' value is null or the empty String "". Otherwise the executed statement does include the fixed part of the parameter followed by the parameters value, without using a placeholder of "?" of the statement/preparedStament.
 
 Assume that the value of the parameter at runtime is "('17','18','19') then the executed statement will be:
 
- 
-    SELECT * FROM C_Order c
-    WHERE 1=1
-    AND c.C_BPARTNER_ID IN ('17','18','19')
-    ORDER BY c.documentno
+```
+SELECT * FROM C_Order c
+WHERE 1=1
+AND c.C_BPARTNER_ID IN ('17','18','19')
+ORDER BY c.documentno
+```
 
 !!!Note
     The parameters' value is passed exactly as specified and not escaped encoded. The caller of the function needs to take care that no unchecked values are passed into the parameter to avoid SQL injections.  
@@ -368,7 +372,7 @@ Assume that the value of the parameter at runtime is "('17','18','19') then the 
 
 The last variation of optional parameters are defined with the type="replace". These allow to completely replace a part of an SQL statement with a new part.
 
- 
+```
 <SqlMethod name="countFrom" type="preparedStatement" return="String" default="">
     <Sql>
     <![CDATA[
@@ -377,6 +381,7 @@ The last variation of optional parameters are defined with the type="replace". T
     </Sql>
     <Parameter name="tablename" optional="true" type="replace" after="FROM " text="FACT_ACCT"/>
 </SqlMethod>
+```
 
 In this example the parameter tablename can be used to change the name of the table on which the count is executed on.
 
@@ -385,7 +390,7 @@ In this example the parameter tablename can be used to change the name of the ta
   
 ###  Scrollable Queries (memory-efficient)
 
-The queries returning multiple rows as described  SQLC#Returning_multiple_rows above  can consume a huge amount of memory when returning many rows.
+The queries returning multiple rows as described in [Returning Multiple Rows](#returning-multiple-rows) above can consume a huge amount of memory when returning many rows.
 
 This is not a problem if returning only few rows (<1000) but if the number of rows is unbounded and can be much higher then scrollable queries as described here can perform much better.
 
@@ -395,7 +400,7 @@ The change interface allows to get the result-rows one by one instead of a big a
 
 To use this type use a return scrollable type.
 
- 
+```
 <?xml version="1.0" encoding="UTF-8" ?>
  
 <SqlClass name="HowtoData" package="org.openbravo.howto">
@@ -408,27 +413,31 @@ To use this type use a return scrollable type.
     <Parameter name="adUserId"/>
     </SqlMethod>
 </SqlClass>
+```
 
 This will create a java class like the following:
  
 package org.openbravo.howto;
  
 class HowtoData implements FieldProvider, ScrollableFieldProvider {
- 
-    public boolean hasData() {}
-    public boolean next() throws ServletException {}
-    public ReportGeneralLedgerData get() throws ServletException {}
-    public void close() {}
- 
-    public static HowtoData select(ConnectionProvider connectionProvider, String adUserId) throws ServletException {
 
-As can be seen the select-method does no longer return an HowtoData[] but instead a instance of the class HowtoData. This instance can then be used to row by row retrieve the result.
+```
+public boolean hasData() {}
+public boolean next() throws ServletException {}
+public ReportGeneralLedgerData get() throws ServletException {}
+public void close() {}
+ 
+public static HowtoData select(ConnectionProvider connectionProvider, String adUserId) throws ServletException {
+```
+
+As seen here, the select-method does no longer return an HowtoData[] but instead a instance of the class HowtoData. This instance can then be used to row by row retrieve the result.
 
 !!!info "Important"
     Always call the close()-method when using a scrollable SqlMethod. This is best done using a try-finally block as shown in the examples below.  
   
 If you want to pass the data to Jasper Reports using the standard renderJR method nothing special needs to be done as a version of renderJR exists which can directly use those scrollable SqlMethod as seen below:
 
+```
 HowtoData data = null;
 try {
     data= HowtoData.select( .... );
@@ -438,11 +447,11 @@ try {
     data.close();
     }
 }
-
+```
   
 If you want to just use a scrollable SqlMethod in your own code you can get the results row by row as seen in the following example. A simple loop is sufficient.
 
-    
+```
 HowtoData data = null;
 try {
     data= HowtoData.select( .... );
@@ -454,6 +463,7 @@ try {
     data.close();
     }
 }
+```
 
 ###  Extra fields
 
@@ -480,27 +490,25 @@ For all of these statements the database does return the number of affected rows
 
 Another short example shows how the xsql file and the generated java method do look like for update type statements.
 
+```
+<SqlMethod name="setInDevelopment" type="preparedStatement" return="rowCount">
+<Sql>
+        UPDATE ad_module
+        SET isIndevelopment = 'Y'
+        WHERE ad_module_id = ?
+</Sql>
+<Parameter name="adModuleId"/>
+</SqlMethod>
+``` 
 
-
- 
-    <SqlMethod name="setInDevelopment" type="preparedStatement" return="rowCount">
-    <Sql>
-            UPDATE ad_module
-            SET isIndevelopment = 'Y'
-            WHERE ad_module_id = ?
-    </Sql>
-    <Parameter name="adModuleId"/>
-    </SqlMethod>
-
-
-    
- 
+```
 public static int setInDevelopment(ConnectionProvider connectionProvider, String adModuleId) throws ServletException {
  
     ...
  
     return(updateCount);
     }
+```
 
 ###  PL Function calls
 
@@ -510,22 +518,23 @@ select statement can be used as an alternative way to call the method, which is 
 
 First a simple example if the pl-function has no parameter of type out.
 
- 
-    <SqlMethod name="process1003900000" type="callableStatement" return="object" object="ActionButtonData">
-        <Sql><![CDATA[
-        CALL C_TAXPAYMENT_POST(?)
-        ]]></Sql>
-        <Parameter name="adPinstanceId"></Parameter>
-    </SqlMethod>
+```
+<SqlMethod name="process1003900000" type="callableStatement" return="object" object="ActionButtonData">
+    <Sql><![CDATA[
+    CALL C_TAXPAYMENT_POST(?)
+    ]]></Sql>
+    <Parameter name="adPinstanceId"></Parameter>
+</SqlMethod>
+```
 
-
- 
+```
     public static ActionButtonData process1003900000(ConnectionProvider connectionProvider, String adPinstanceId) throws ServletException {
  
     ...
  
     return (objectActionButtonData);
     }
+```
 
 The definition is similar to the definition of update statements. The needed attributes to define the pl function call are:
 
@@ -544,20 +553,20 @@ The second class of PL function calls are the ones with do return some data to t
 
 Another example does outline the usage for this class of function calls
 
- 
-    <SqlMethod name="nextDocType" type="callableStatement" return="object" object="CSResponse">
-        <Sql><![CDATA[
-        CALL AD_Sequence_DocType(?,?,?,?)
-        ]]></Sql>
-        <Parameter name="cDocTypeId"/>
-        <Parameter name="adClientId"/>
-        <Parameter name="updateNext"/>
-        <Parameter name="razon" type="out"/>
-    </SqlMethod>
+```
+<SqlMethod name="nextDocType" type="callableStatement" return="object" object="CSResponse">
+    <Sql><![CDATA[
+    CALL AD_Sequence_DocType(?,?,?,?)
+    ]]></Sql>
+    <Parameter name="cDocTypeId"/>
+    <Parameter name="adClientId"/>
+    <Parameter name="updateNext"/>
+    <Parameter name="razon" type="out"/>
+</SqlMethod>
+```
 
-
  
- 
+```
 class CSResponse {
     String razon;
 }
@@ -573,10 +582,11 @@ class DocumentNoData implements FieldProvider {
     return(objectCSResponse);
     }
 }
+```
 
-The difference from the previous example is that here the PL procedure AD_Sequence_DocType has a fourth parameter "razon" of type out. SqlC does expect the java class which is used to transport the result to have a accessible attribute of the same name "razon". The out parameters value will be fetched after the function call and stored in the attribute of an instance of the result class (here: bjectCSResponse.razon). This value can then later easily be read from the caller.
+The difference from the previous example is that here the PL procedure `AD_Sequence_DocType` has a fourth parameter `razon` of type out. SqlC does expect the java class which is used to transport the result to have a accessible attribute of the same name `razon`. The out parameters value will be fetched after the function call and stored in the attribute of an instance of the result class (here: bjectCSResponse.razon). This value can then later easily be read from the caller.
 
-In this example a class (CSResponse) different from the sqlc-generated class (DocumetNoData) is used to transport the return value. Alternatively the sqlc-generated class could have been used to achieve the same effect.
+In this example a class (CSResponse) different from the sqlc-generated class (`DocumetNoData`) is used to transport the return value. Alternatively the sqlc-generated class could have been used to achieve the same effect.
 
 ###  Constants
 

@@ -36,7 +36,7 @@ defining it as ID in Application Dictionary.
 
 ### Client/Organization
 
-As Etendo ERP is a [multi client and multi organization](Multi_Client_and_Multi_Org.md) application, all
+As Etendo ERP is a [multi client and multi organization](multi-client-and-multi-org.md) application, all
 data belongs to a client and an organization, so all tables must have these
 two columns:  
 

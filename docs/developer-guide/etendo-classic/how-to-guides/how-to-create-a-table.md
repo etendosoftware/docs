@@ -89,7 +89,7 @@ For this purpose, first log into Etendo Classic using a username with access to 
 Main fields of this window are (for more information, see the `AD_Table` table description):
 
 - _Data Package_ specifies to which java data package within the module the table will belong when used within [DAL](../concepts/Data_Access_Layer.md) (Data Access Layer).
-- _Name_ Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in [REST webservices](../../concepts/XML_REST_Web_Services.md) and in the [Data Access Layer](../../concepts/Data_Access_Layer.md#entity-naming).
+- _Name_ Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in [REST webservices](../../concepts/xml-rest-web-services.md) and in the [Data Access Layer](../../concepts/Data_Access_Layer.md#entity-naming).
 - _Description_ Gives a small description of the table.
 - _Help/Comments_ Defines the text that is displayed in Help window.
 - _DB Table name_ Defines database table name as it was defined by the `CREATE TABLE` during its creation.
@@ -122,7 +122,7 @@ This process tries to find an existing application element (within the currently
 
 Each table must have at least one column marked as an identifier. The actual values of identifier columns later get concatenated to be shown to the user as a representation of a particular record (see the link to the Sales Order within the Sales Invoice window). These identifiers will also be used to construct dropdown lists of records of that particular table. By default all columns with column name _Name_ are set as an identifier. In case there is no column with this _Name_ , no identifier is set and needs to be done so manually or compilation will fail.
 
-The name is used by the [Data Access Layer](../../concepts/Data_Access_Layer.md) and in [REST webservices](../../concepts/XML_REST_Web_Services.md). For specific columns (audit info, client/organization, active) it is important to be precise in the naming.
+The name is used by the [Data Access Layer](../../concepts/Data_Access_Layer.md) and in [REST webservices](../../concepts/xml-rest-web-services.md). For specific columns (audit info, client/organization, active) it is important to be precise in the naming.
 
 !!!note
     The columns that are named `line` or `seqNo` are used to contain the sequence number of a record (i.e. the number of a line in an invoice They take a default value like:

@@ -33,15 +33,6 @@ The developer can work in two modes in Etendo:
 
 Both approaches are discussed separately.
 
-##  Etendo Security Concepts
-
-The following functional documents give a good introduction in Etendo security concepts:
-
-* Security Setup 
-* Security Multi-Organization 
-* How to define user, roles, privileges and menus 
-* Configuration Manual, configuring roles and users 
-
 ##  Security concepts and Etendo Servlets
 
 The tables in the  `org.openbravo.model.ad.access` package define access control for windows/tabs, processes, workflow etc.
@@ -52,12 +43,12 @@ The security checks using this table are implemented by the `HttpSecureAppServle
 
 Etendo provides a standard way to extend sql queries with filters for accessible clients and organizations. This is discussed in detail in this section of the developers guide:
 
-* XSQL Definition 
-* XSQL Java Usage 
+* [XSQL Definition](../concepts/multi-client-and-multi-org.md#xsql---definition)
+* [XSQL Java Usage](../concepts/multi-client-and-multi-org.md#xsql---java-usage) 
 
 ##  Security concepts and the Data Access Layer
 
-For the developer the  Data Access Layer  provides several interfaces (OBCriteria  and  OBQuery  ) that take automatic care of specific security aspects:
+For the developer the [Data Access Layer](../concepts/data-access-layer.md) provides several interfaces (OBCriteria  and  OBQuery ??? ) that take automatic care of specific security aspects:
 
 * filter for readable clients/organizations 
 * filter for readable tables (based on  AD_Window_Access  ) 
@@ -145,8 +136,6 @@ The **Initial Client and Organization setup** forms automatically create some us
 ##  CSRF Protection
 
 Etendo is protected against CSRF (Cross-Site Request Forgery) attacks, both in the backoffice and in the POS.
-
-For a more detailed discussion about this attack and how this protection is implemented, see  this page.
 
 ---
 

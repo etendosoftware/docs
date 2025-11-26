@@ -352,7 +352,7 @@ An entity (corresponds to a table in Etendo Classic) has different names,
 relevant for different situations:
 
   * A table name (stored in _AD_Table.tablename_ ) which is the database table name in the physical database. 
-  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in [REST webservices](../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md) and client export/import. 
+  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in [REST webservices](../../../developer-guide/etendo-classic/concepts/xml-rest-web-services.md) and client export/import. 
   * A Java class name (stored in _AD_Table.classname_ ), the classname is used when generating the Java business object. It is unique within the data package of the table. 
 
 Each table (i.e. entity) in Etendo Classic belongs to a data package. A data
@@ -701,7 +701,7 @@ tables defined in the application dictionary. This means that:
   * database views are considered as normal business objects 
   * entities are generated for database views 
   * database views can be queried using HQL and the DAL query apis 
-  * database views can be accessed through the  [XML](../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md)  and  [JSON](../../../developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md) REST web service apis 
+  * database views can be accessed through the  [XML](../../../developer-guide/etendo-classic/concepts/xml-rest-web-services.md)  and  [JSON](../../../developer-guide/etendo-classic/concepts/json-rest-web-services.md) REST web service apis 
 
 There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and

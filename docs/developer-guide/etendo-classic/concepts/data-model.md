@@ -23,7 +23,7 @@ Once [tables](../concepts/Tables.md) are physically defined in database, they mu
 
 A table defined in the application dictionary has several names which are used by Etendo in different ways:
 
-- Logical name (`AD_Table`.name): used by the [Data Access Layer](../concepts/Data_Access_Layer.md) in [XML](../concepts/XML_REST_Web_Services.md) and [JSON](../concepts/JSON_REST_Web_Services.md) REST web services. See [here](../concepts/Data_Access_Layer.md#entity-naming) for more information.
+- Logical name (`AD_Table`.name): used by the [Data Access Layer](../concepts/Data_Access_Layer.md) in [XML](../concepts/xml-rest-web-services.md) and [JSON](../concepts/JSON_REST_Web_Services.md) REST web services. See [here](../concepts/Data_Access_Layer.md#entity-naming) for more information.
 - Physical name (`AD_Table`.tablename): is the name of the table in the database.
 - Class name (`AD_Table`.classname): the name of the [generated entity java class](../concepts/Data_Access_Layer.md#generated-business-object-classes).
 

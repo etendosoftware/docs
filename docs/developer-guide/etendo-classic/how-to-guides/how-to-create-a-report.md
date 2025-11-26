@@ -178,7 +178,7 @@ It is possible to create a report using a process definition. For more informati
   * Create a new record 
   * Fill all required fields 
     * *Module:* Pick your module 
-    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](../concepts/Modularity_Concepts.md#DB_prefix)) 
+    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](../concepts/modularity-concepts.md#DB_prefix)) 
     * *Name:* Product List 
     * *UI Pattern:* Report (Using JR templates) 
     * *Data Access Level:* Client/Organization 
