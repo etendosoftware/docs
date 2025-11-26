@@ -335,10 +335,11 @@ nav:
       - ✨ Getting Started: user-guide/etendo-copilot/getting-started.md
       - Setup and Usage: user-guide/etendo-copilot/setup-and-usage.md
       - Bundles:
-        - Copilot Extensions: 
+        - Copilot Extensions:
           - Overview: user-guide/etendo-copilot/bundles/overview.md
-          - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
-          
+          - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
+    - New UI:
+      - User Interface Improvements: user-guide/new-ui/ui-improvements.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
