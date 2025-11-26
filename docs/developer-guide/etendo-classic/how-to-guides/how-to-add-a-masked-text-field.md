@@ -1,5 +1,5 @@
 ---
-title: How to add a Masked Text Field
+title: How to Add a Masked Text Field
 tags: 
     - Masked text field
     - Masked reference
@@ -7,7 +7,7 @@ tags:
     - Add column
 ---
 
-# How to add a Masked Text Field
+# How to Add a Masked Text Field
 
 ## Overview
 

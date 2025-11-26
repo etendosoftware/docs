@@ -1,5 +1,5 @@
 ---
-title: How to add a Constraint
+title: How to Add a Constraint
 tags: 
     - Constraint
     - Table
@@ -11,7 +11,7 @@ status: beta
 ---
 
 
-# How to add a Constraint
+# How to Add a Constraint
 
 !!! example "IMPORTANT: THIS IS A BETA VERSION"
     This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.

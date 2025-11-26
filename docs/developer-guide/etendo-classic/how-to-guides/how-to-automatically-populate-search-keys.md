@@ -15,7 +15,7 @@ tags:
 
 By starting typing the **customer name** on the invoice, the system automatically suggests the customers that match that entry as you type; once you have typed enough characters to have a unique match, the selection can be confirmed by simply pressing **ENTER or TAB** and moving to the next field.
 
-This funtionality makes search keys no longer needed for most entities. You can repurpose the search key on product to store product codes, if product codes are used, or to store customer numbers on customers. 
+This functionality makes search keys no longer needed for most entities. You can repurpose the search key on product to store product codes, if product codes are used, or to store customer numbers on customers. 
 
 Users usually end up entering the same value in the search key as they enter in the name.
 
