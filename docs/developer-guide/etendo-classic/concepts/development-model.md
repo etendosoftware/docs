@@ -137,14 +137,14 @@ Each Etendo system (working copy) has  a folder called [`database`](../concepts/
 
 ODE provides the following **tasks to synchronize the database XML files with the database** itself:
 
-* [**create.database**](../concepts/development-build-tasks.md) task: first reads the Database Model XML files inside `src-db/database/model` folder and creates schema objects in the Oracle or PostgreSQL database. After that, this task fills the database with the Application Dictionary taken from `src-db/database/sourcedata` folder. 
+* [**create.database**](../developer-tools/etendo-gradle-plugin.md#database-tasks) task: first reads the Database Model XML files inside `src-db/database/model` folder and creates schema objects in the Oracle or PostgreSQL database. After that, this task fills the database with the Application Dictionary taken from `src-db/database/sourcedata` folder. 
 
     !!!warning
         Keep in mind that this task re-creates the database from scratch which means that the existing database will first be dropped.
 
-* [**update.database**](../concepts/development-build-tasks.md) task: compares the Database Model and the Application Dictionary stored in the database with the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. Differences are applied to the database, keeping custom ERP data (products, business partners, orders, invoices, etc) in the database untouched. 
+* [**update.database**](../developer-tools/etendo-gradle-plugin.md#update-database) task: compares the Database Model and the Application Dictionary stored in the database with the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. Differences are applied to the database, keeping custom ERP data (products, business partners, orders, invoices, etc) in the database untouched. 
 
-* [**export.database**](../concepts/development-build-tasks.md) task: takes the Database Model and Application Dictionary stored in the database and overwrites the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. 
+* [**export.database**](../developer-tools/etendo-gradle-plugin.md#database-export) task: takes the Database Model and Application Dictionary stored in the database and overwrites the XML files inside the `src-db/database/model` and `src-db/database/sourcedata` folders. 
 
 As you can imagine, whenever any of these tasks are executed, **both models (the one inside `src-db/database` folder and the database itself) are forced to be identical**. The first two tasks modify the database so that it is equal to `src-db/database` folder content and the third one overwrites the `src-db/database` folder content to equal it to the database.
 
@@ -172,7 +172,7 @@ This data is installed/loaded into the database when installing Etendo.
 ![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-1.png)
 
 This section explains the most common way of developing Etendo and which build tasks should be used for each case. In most of the cases it is only necessary to use 3 tasks (`install.source`, `smartbuild` and
-`export.database`). There are a number of other tasks that can be used but they are not required for the standard process. They are explained in the [Development Build Tasks](../concepts/development-build-tasks.md#libraries-build-tasks) article.
+`export.database`). There are a number of other tasks that can be used but they are not required for the standard process. They are explained in the [Development Build Tasks](../developer-tools/etendo-gradle-plugin.md#build-tasks) article.
 
 The main task for the standard process is **smartbuild** which performs an incremental build of the system -only the modified components are rebuilt- as explained below. This task accepts two optional properties: `local` for local or remote developments which by default is set to `yes` and `restart` indicating if after the build process tomcat should be restarted with `no` as default value.
 

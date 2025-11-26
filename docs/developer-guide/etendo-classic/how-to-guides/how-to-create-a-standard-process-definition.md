@@ -18,9 +18,9 @@ This section will add a new **Standard Process Definition** and create a menu en
 
 The implementation requires development experience. See the following concept pages for background information on action handlers and javascript development:
 
-  * [Action Handler](../../concepts/Etendo_Architecture.md)
-  * [Client Side Development and API](../../concepts/Client_Side_Development_and_API.md)
-  * [JavaScript Coding Conventions](../../concepts/JavaScript_Coding_Conventions.md)
+  * [Action Handler](../concepts/etendo-architecture.md)
+  * [Client Side Development and API](../concepts/client-side-development-and-api.md)
+  * [JavaScript Coding Conventions](../concepts/javascript-coding-conventions.md)
 
 
 ##  Steps to implement the Process
