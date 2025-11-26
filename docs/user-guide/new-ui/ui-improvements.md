@@ -36,12 +36,12 @@ This dual-layer approach ensures consistency in data storage while providing a u
 
 **Etendo Classic:**
 
-![alt text](../../assets/classic-date.png)
+[![Etendo Classic Date Format](../../assets/user-guide/newui/classic-date.png)](../../assets/user-guide/newui/classic-date.png)
 
 As shown in the image above, dates in Etendo Classic display in the standard format configured in the system.
 
 **New UI with Regional Configuration (en-US):**
 
-![alt text](../../assets/newui-date.png)
+[![New UI Date Format with Regional Configuration](../../assets/user-guide/newui/newui-date.png)](../../assets/user-guide/newui/newui-date.png)
 
 In the New UI, the same table now displays dates automatically formatted according to your browser's regional settings. In this example, the en-US (United States) regional configuration is applied, showing dates in the MM/DD/YYYY format. Users in different regions will see dates formatted according to their respective regional preferences, providing a more localized and intuitive experience.
