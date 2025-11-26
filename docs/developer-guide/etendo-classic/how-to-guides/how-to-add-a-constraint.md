@@ -1,32 +1,31 @@
 ---
 title: How to add a Constraint
 tags: 
-  - Constraint
-  - Table
-  - Create message
-  - Database
+    - Constraint
+    - Table
+    - Create message
+    - Database
 
 
 status: beta
 ---
 
 
-#  How to add a Constraint
+# How to add a Constraint
 
 !!! example "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
 
-###  Overview
+## Overview
 
 When adding new columns to a table like the **Valid To date** in the **ht_salary table**, it is often necessary to enforce logical rules so the data remains consistent. In this case, the Valid To date must always be the same as or later than the Valid From date. This rule can be enforced by adding a **database constraint** which is a `SQL-Expression`, which checks the validity of data whenever rows are inserted or updated.
 
 !!!info
-    For more information visit, [How to Add Columns to a Table](../how-to-guides/how-to-add-columns-to-a-table.md).
+    For more information visit, [How to Add Columns to a Table](./how-to-add-columns-to-a-table.md).
 
 
-###  Modularity
-
+##  Modularity
 
 As the constraint will be placed in the module with dbprefix `HT2` but the table **ht_salary** is defined in another module `HT`, the constraint name must follow the usual rule and start with `EM_HT2` .
 
@@ -36,33 +35,27 @@ If the constraint would be added in the same module as its table, then this `EM_
     Remember that in all cases the full constraint-name (like any other `db-object` name) is not allowed to be longer then 30 characters.  
  
   
-###  Add constraint to database
+## Add constraint to database
 
 To add the constraint execute the following clause in database:
 
-**PostgreSQL**
+``` SQL title="PostgreSQL"
+ALTER TABLE ht_salary ADD constraint em_ht2_ht_salary_date_chk CHECK (em_ht2_validto>=validfrom);
+```
 
-    
-    
-     
-    ALTER TABLE ht_salary ADD constraint em_ht2_ht_salary_date_chk CHECK (em_ht2_validto>=validfrom);
-
-**Oracle**
-
-    
-    
-     
-    ALTER TABLE HT_SALARY ADD CONSTRAINT EM_HT2_HT_SALARY_DATES_CHK CHECK  (VALIDTO>=VALIDFROM) ENABLE;
+``` SQL title="Oracle"
+ALTER TABLE HT_SALARY ADD CONSTRAINT EM_HT2_HT_SALARY_DATES_CHK CHECK  (VALIDTO>=VALIDFROM) ENABLE;
+```
 
 !!! note
     Adding a **unique constraint** to an existing module is considered as an API change and could affect to existing environments already populated. Before adding it, evaluate the risk and consider creating a buildvalidation to check if the existing data complies. If it does not, the buildvalidation can stop the update process and give a proper message.  
  
   
-###  Adding a proper message
+## Adding a proper message
 
 Now when editing data in the `Employee Salary > Salary` tab and trying to use a **Valid to** date lying before the **Valid from** date we get an error message like shown below.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint-2.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint-2.png)
 
 However, this error message is not too useful yet for the user as it does not indicate at all why the save action was not done.
   
@@ -70,13 +63,13 @@ It would be better if it said something like **The Valid To date cannot be befor
 This is done by adding a new  Message. This leverage the Etendo translation system so the message can be translated and shown in a users language.
 
 !!! info
-    For more information on how to create a new message entry visit, [Messages](https://docs.etendo.software/developer-guide/etendo-classic/concepts/messages/).
+    For more information on how to create a new message entry visit, [Messages](../../etendo-classic/concepts/messages.md).
 
 As a short summary:
 
 In the `Application Dictionary > Message` window create a new record using the following details:
 
-  * **Module** `Openbravo Howtos 2`as this is the module containing the constraint also. ???
+  * **Module** `Example HT2 Module` as this is the module containing the constraint also.
   * **Search key** : The search key must be exactly the same as the constraint's one, in this case `_em_ht2_ht_salary_dates_chk_` as this is the link between the constraint and the message. 
   * **Message type** : Depending on the type the UI for the message box will be different (green for success, yellow for warning...), in our case we want a red error message box, so we select **Error**. 
   * **Message text** : It is the user friendly message that will be displayed inside the message box. So let's enter: **The Valid To date may not be before the Valid From date**. 
@@ -84,19 +77,19 @@ In the `Application Dictionary > Message` window create a new record using the f
 Then, we will have a message like:
 
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint-3.png)
 
-###  Export database
+## Export database
 
-Whenever Application Dictionary or Physical database is modified, it is possible to export that information to `xml files`, this is the way Etendo maintains database data as part of its source code files. 
+Whenever Application Dictionary or Physical database is modified, it is possible to export that information to `XML` files, this is the way Etendo maintains database data as part of its source code files. 
 To do it just execute:
 
-    
-    
-     ant export.database
-    
+```groovy title="Terminal"
+./gradlew export.database
+```
+
 !!! info
-    For more information visit [Development Tasks Document](../concepts/development-build-tasks.md).
+    For more information visit [Development Tasks Document](../developer-tools/etendo-gradle-plugin.md#build-tasks).
 
 
 

@@ -1,31 +1,31 @@
 ---
 title: How Price Including Taxes are Calculated
 tags: 
-  - Taxes calculation
-  - Price lists
-  - Net amount
-  - Gross amount
-  - Tax rate
+    - Taxes calculation
+    - Price lists
+    - Net amount
+    - Gross amount
+    - Tax rate
 
 status: beta
 ---
   
 
-#  How Price Including Taxes are Calculated
+# How Price Including Taxes are Calculated
 
 !!! example "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-##  Overview
+## Overview
 
 Since the availability of the **Price Lists Including Taxes** feature, there has been some doubts on how net prices/amounts and tax amounts are calculated.
 
 The calculation can be split into two steps:
 
-  1. Calculate the **Net Amount** based on a given **Gross Amount** and then the corresponding **Tax Rate**.
-  2. Calculate the **Tax Amount** based on the newly calculated **Net Amount** which then needs to be adjusted so the **Net Amount** plus the **Tax Amount** is equal to the **Gross Amount**. 
+1. Calculate the **Net Amount** based on a given **Gross Amount** and then the corresponding **Tax Rate**.
+2. Calculate the **Tax Amount** based on the newly calculated **Net Amount** which then needs to be adjusted so the **Net Amount** plus the **Tax Amount** is equal to the **Gross Amount**. 
 
-##  Net Amount Calculation
+## Net Amount Calculation
 
 When the **Net Amount** is being calculated there might not be a single rate to work with, but a relation of **different tax rates**.
 
@@ -33,36 +33,28 @@ When the **Net Amount** is being calculated there might not be a single rate to 
 
 To calculate the tax rate, it is necessary to calculate the tax amount that corresponds to the gross price. If the tax amount is divided by the gross price the tax rate is obtained:
 
-` `
-
-    
-    
-               tax amount of gross price
-    tax rate = -------------------------
-                      gross price
+```   
+            tax amount of gross price
+tax rate = ---------------------------
+                gross price
+```
     
 
 Having the tax rate, the net price can be calculated:
 
-` `
-
-    
-    
-                  gross price  
-    net price =  -------------
-                   tax rate
-    
+``` 
+                gross price  
+net price = -----------------
+                tax rate
+``` 
 
 If the tax rate is substituted by the previous formula and simplify it we get:
 
-` `
-
-    
-    
-                                        gross price
-    net price = gross price * ( -------------------------- )
-                                 gross price + tax amount
-    
+```
+                                    gross price
+net price = gross price * ( ------------------------------ )
+                                gross price + tax amount
+```    
 
 This method returns the exact result, but its implementation requires to **round** the calculated tax amount.
 
@@ -70,16 +62,13 @@ The total gross amount is used to calculate the net amount which once divided by
 
 The formula used then is:
 
-` `
-
-    
-    
+``` 
                                                 gross amount 
     net price = gross amount * ( ------------------------------------------- ) / quantity
                                   gross amount + tax amount of gross amount
-    
+```    
 
-##  Taxes Calculation
+## Taxes Calculation
 
 Once the net amount is calculated, it is time to calculate the **final tax amount** of the Order or the Invoice.
 
