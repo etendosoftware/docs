@@ -424,12 +424,12 @@ nav:
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
 #        - How to automatically populate search keys: developer-guide/etendo-classic/how-to-guides/How_to_automatically_populate_search_keys.md
 #        - How to call a stored procedure from the DAL: developer-guide/etendo-classic/how-to-guides/How_to_call_a_stored_procedure_from_the_DAL.md
-        - How to Call an Etendo Webservice from Java: developer-guide/etendo-classic/how-to-guides/How-to-call-an-etendo-webservice-from-java.md
-        - How to Change an Existing Report: developer-guide/etendo-classic/how-to-guides/How-to-change-an-existing-report.md
+        - How to Call an Etendo Webservice from Java: developer-guide/etendo-classic/how-to-guides/how-to-call-an-etendo-webservice-from-java.md
+        - How to Change an Existing Report: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-report.md
         - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
-        - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/How-to-change-fonts-in-etendo-reports.md
+        - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
-        - How To Configure Log: developer-guide/etendo-classic/how-to-guides/How-to-configure-log.md
+        - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md
@@ -439,7 +439,7 @@ nav:
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
         - How to Create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
 #        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
-#        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
+        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/how-to-create-a-custom-tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
