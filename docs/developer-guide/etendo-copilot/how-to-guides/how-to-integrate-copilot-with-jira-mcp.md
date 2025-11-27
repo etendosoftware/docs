@@ -65,7 +65,7 @@ Create a new record and paste the following JSON (adjust `JIRA_URL`, `JIRA_USERN
   "transport": "stdio",
   "command": "uvx",
   "args": [
-    "--from", "etendo-mcp-atlassian==0.1.9",
+    "--from", "git+https://github.com/etendosoftware/etendo-mcp-atlassian.git@main",
     "etendo-mcp-atlassian",
     "--enabled-tools=jira_search,jira_get_issue,jira_get_all_projects,jira_get_project_issues,jira_get_worklog,jira_get_transitions,jira_search_fields,jira_get_agile_boards,jira_get_board_issues,jira_get_sprints_from_board,jira_get_sprint_issues,jira_get_link_types,jira_batch_get_changelogs,jira_get_user_profile,jira_download_attachments,jira_get_project_versions,jira_create_issue,jira_update_issue,jira_batch_create_issues,jira_add_comment,jira_transition_issue,jira_add_worklog,jira_link_to_epic,jira_create_issue_link"
   ],
