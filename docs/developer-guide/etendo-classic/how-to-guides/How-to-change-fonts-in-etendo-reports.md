@@ -18,7 +18,7 @@ status: beta
 
 ##  Overview
 
-This section explains how to change the fonts used in **Etendo reports**. Updating the default fonts can be useful in two main scenarios: enhancing the visual appearance of the reports with more readable or brand-aligned typography, or ensuring proper display of languages whose characters are not supported by the standard font set, such as Japanese, Arabic, or Vietnamese. Replacing the default fonts with ones that support the required character sets allows the reports to render correctly across different languages.
+This section explains how to **change the fonts** used in Etendo reports. Updating the default fonts can be useful in two main scenarios: enhancing the visual appearance of the reports with more readable or brand-aligned **typography**, or ensuring proper display of **languages** whose characters are not supported by the standard font set, such as Japanese, Arabic, or Vietnamese. Replacing the default fonts with ones that support the required character sets allows the reports to render correctly across different languages.
 
 !!!info
     For more information visit, [How to Create a Module](../how-to-guides/how-to-create-a-module.md) and [How to Create a Report](../how-to-guides/how-to-create-a-report.md). 
@@ -41,7 +41,7 @@ Studio](https://community.jaspersoft.com/download-jaspersoft/){target="\_blank"}
 In the above  link, find a detailed tutorial that describes **how to handle** custom fonts in Jaspersoft Studio. In short, these are the steps to carry out:
 
   * 1\. Get the desired `font's .ttf` file from the pc or from the Internet. 
-  * 2\. Create the Font Extension, go to `Window > Preferences`.
+  * 2\. Create the Font Extension, go to **Preferences window**.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Change_Fonts_in_Openbravo_Reports-0.png)
@@ -50,7 +50,7 @@ guides/How_to_Change_Fonts_in_Openbravo_Reports-0.png)
 
   * 3\. Click on `JasperSoft Studio > Fonts`. Click **Add** . At this point provide a unique name for the Font Extension and the path to its extension by selecting the path of the downloaded `.ttf file`. 
   * 4\. Once done, set a PDF Encoding type for the new font in the wizard. 
-  * 5\. Change the `fontName` and `pdfFontName` used in the text fields wanted to have being displayed with the new font in our report. Accomplish that by either using Jaspersoft Studio or making changes directly in the `.jrxml` file using a text editor. 
+  * 5\. Change the **fontName** and **pdfFontName** used in the text fields wanted to have being displayed with the new font in our report. Accomplish that by either using Jaspersoft Studio or making changes directly in the `.jrxml` file using a text editor. 
   * 6\. And, for the document(s), do not forget to to choose the same PDF Encoding type as the one set for the font in step 4. 
   * 7\. Export the font into a `.jar` file. Once again, Jaspersoft Studio can lend us a hand with doing this: Go to `JasperSoft Studio > Fonts` and this time click **Export** . Select the font and export it into a `.jar file`. 
   * 8\. Create a new module to keep the `.jar` file. Inside the module folder, create a subfolder `/lib/runtime` and put the exported `.jar` file in there. 
@@ -59,17 +59,16 @@ guides/How_to_Change_Fonts_in_Openbravo_Reports-0.png)
 guides/How_to_Change_Fonts_in_Openbravo_Reports-2.png)
 
 
-  * 9\. Stop tomcat 
+  * 9\. Stop tomcat.
   * 10\. Execute: 
     
         `ant smartbuild`
 
-  * 11\. Restart tomcat 
+  * 11\. Restart tomcat. 
 
 ###  Changing the font in FOP Reports
 
-Not every report in Etendo is designed as a `.jrxml` report. For example, the **Price List Report** is generated using **FOP**. The approach to change the font in this kind of reports is different; there is no need to change the report definition but make use of the **FOP configuration file**. These are the
-steps to follow:
+Not every report in Etendo is designed as a `.jrxml` report. For example, the **Price List Report** is generated using **FOP**. The approach to change the font in this kind of reports is different; there is no need to change the report definition but make use of the **FOP configuration file**. These are the steps to follow:
 
   1. Get the desired font's `.ttf` file from the system or download it from the Internet. For example: `DejaVuSans.ttf`.
 
@@ -104,20 +103,14 @@ After this change, all `.fo reports` in the application will use the **DejaVuSan
 
 The following screenshots show the results after successfully carrying out the steps mentioned above:
 
-First, we have a **Jasper Report** , where the font of the title has been replaced with another font:
+First, we have a **Jasper Report** where the font of the title has been replaced with another font:
 
 |
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Change_Fonts_in_Openbravo_Reports-4.png)
-
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Change_Fonts_in_Openbravo_Reports-5.png)
-
   
 And last, we have a **FOP Report** with the default font replaced:
-
-|
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_Change_Fonts_in_Openbravo_Reports-6.png)

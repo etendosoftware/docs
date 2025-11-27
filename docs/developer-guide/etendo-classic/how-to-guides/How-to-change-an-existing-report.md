@@ -19,7 +19,7 @@ status: beta
 
 ##  Overview
 
-When deploying Openbravo, one of the most common initial customizations is adapting the standard document templates such as **Orders, Shipments, and Invoices** to meet the company’s functional requirements and corporate branding. These documents are shared across customer and vendor processes, making it essential that they reflect accurate information and a consistent visual identity.
+When deploying Etendo, one of the most common initial customizations is adapting the standard document templates such as **Orders, Shipments, and Invoices** to meet the company’s functional requirements and corporate branding. These documents are shared across customer and vendor processes, making it essential that they reflect accurate information and a consistent visual identity.
 This guide describes how to modify existing report templates in a modular and maintainable way, using the Sales Order report as the reference example.
 
 !!!info 
@@ -83,7 +83,7 @@ After making a copy of the **base template** to the module, it is possible to ma
 
 ##  Defining the Report Template at Document Level
 
-Report templates are defined at document level. It is necessary to change it in order to work.
+Report templates are defined at **document level**. It is necessary to change it in order to work.
 
   * As Client Admin Role 
   * Go to: `Financial Management > Accounting > Setup > Document Type`
@@ -109,7 +109,7 @@ guides/How_to_change_an_existing_Report-10.png)
 
 ##  Testing the changes
 
-All the definitions required to use your customized Sales Order template has been done. There is only needed to verify that the new document template created renders the document as expected with an existing Sales Order document.
+All the definitions required to use the customized Sales Order template has been done. It is only needed to verify that the new document template created renders the document as expected with an existing Sales Order document.
 
   * Open any Sales Order using **Standard Order** as document type.
   * Print it.

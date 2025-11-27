@@ -1,9 +1,9 @@
 ---
-title: How to Call an Openbravo Webservice from Java 
+title: How to Call an Etendo Webservice from Java 
 
 tags:
   - Java class
-  - Openbravo webservice
+  - Etendo webservice
   - HTTP connections
   - Authentication
   - xml-processing
@@ -11,7 +11,7 @@ tags:
 status: beta
 ---
 
-#  How to Call an Openbravo Webservice from Java 
+#  How to Call an Etendo Webservice from Java 
   
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
@@ -19,7 +19,7 @@ status: beta
 
 ##  Overview
 
-This section explains how to prepare and implement a **Java class** capable of invoking Openbravo web services.You will learn which Java APIs are required to establish HTTP connections, authenticate requests, and process responses, especially those returned in XML format by XML REST webservices. Using Openbravo’s own `BaseWSTest.java` class as a reference, the guide shows how to build and extend methods for different HTTP operations (GET, POST, PUT, DELETE), handle authentication securely, and manage session behavior for high-frequency or stateless integrations.
+This section explains how to prepare and implement a **Java class** capable of invoking Etendo web services and which **Java APIs** are required to establish HTTP connections, authenticate requests, and process responses, especially those returned in XML format by XML REST webservices. Using Etendo's own `BaseWSTest.java` class as a reference, the guide shows how to build and extend methods for different HTTP operations (GET, POST, PUT, DELETE), handle authentication securely, and manage session behavior for high-frequency or stateless integrations.
 
 !!!info
     For more information visit, [XML REST web services](docs/developer-guide/etendo-classic/concepts/.XML_REST_Web_Services.md). 
@@ -27,12 +27,11 @@ This section explains how to prepare and implement a **Java class** capable of i
 
 ##  Execution Steps
 
-To call an **Openbravo Webservice** from a Java class, make use of several classes that provide the proper Java API to create a HTTP connection via the webservice's URL and to use classes of the `java.iopackage` that allow to read the data streams. Furthermore, optionally use some classes that ease processing the results that are returned in **XML format** in case of the **XML REST** type webservices, because they allow to get, parse and validate an XML document.
+To call an **Etendo Webservice** from a Java class, make use of several classes that provide the proper Java API to create a HTTP connection via the webservice's URL and to use classes of the `java.iopackage` that allow to read the data streams. Furthermore, optionally use some classes that ease processing the results that are returned in **XML format** in case of the **XML REST** type webservices, because they allow to get, parse and validate an XML document.
 
 ###  Example Code
 
-Openbravo has a **test** java class that exemplifies the above. This class is `BaseWSTest.java` and it is located inside the directory `src-test/org/openbravo/test/webservice`. To make a webservice request we have
-the **createConnection()** method which uses the httpURLConnection class to make a request to a webservice by using the specific command parameter and specifying the credentials (username/password).
+Etendo has a **test java class** that exemplifies the above. This class is `BaseWSTest.java` and it is located inside the directory `src-test/org/openbravo/test/webservice`. To make a webservice request we have the **createConnection()** method which uses the httpURLConnection class to make a request to a webservice by using the specific command parameter and specifying the credentials (username/password).  ????
 
     
     
@@ -60,7 +59,7 @@ the **createConnection()** method which uses the httpURLConnection class to make
 !!!note
     This sample code uses basic authentication, see below for more details.
 
-Using this function as base, will implement other methods for the other HTTP comamnds: **POST, PUT, GET and DELETE**. Furthermore, this class uses the `org.xml.sax library` to parse the XML results that will be returned after our HTTP request, which we refered to before. For example, the **GET** request:
+Using this function as base will implement other methods for the other HTTP comamnds: **POST, PUT, GET and DELETE**. Furthermore, this class uses the `org.xml.sax library` to parse the XML results that will be returned after our HTTP request. For example, the **GET** request:
 
     
     
@@ -99,11 +98,11 @@ Using this function as base, will implement other methods for the other HTTP com
           }
     }
 
-Thus, it is possible to utilize this class as the base for the development and implement the adaptations that are considered necessary. Using this class, we can implement calls to the webservices of your choice by simply specifying its path, that will be formed with the Openbravo URL ( **getOpenbravoURL()** ) plus the webservice part ( **wsPart** ).
+Thus, it is possible to utilize this class as the base for the development and implement the adaptations that are considered necessary. Using this class, it is possible to implement calls to the webservices of your choice by simply specifying its path, that will be formed with the Etendo URL **getOpenbravoURL()**  plus the webservice part **wsPart**.  ????
 
 ###  Login and Security
 
-Openbravo general webservices provide the same login and security control as the  XML REST  webservice.
+Etendo general webservices provide the same login and security control as the  XML REST  webservice.
 
 ###  Basic Authentication: 
 
@@ -122,9 +121,9 @@ This approach will need two requests:
 
 - The first one will fail with 401, return to the caller/client and then call the getPasswordAuthentication method above for a second request with credentials. As two requests are needed for this authentication it is less useful for high frequency calls. 
 
-To make this type of approach work in Openbravo code it is required to pass in the parameter `basicAuthentication=true` in the request url.
+To make this type of approach work in Etendo code it is required to pass in the parameter `basicAuthentication=true` in the request url.
 
-- Another approach to set credentials in the request header like this, this only requires one request as Openbravo will directly find the authentication information and will not throw a 401:
+- Another approach to set credentials in the request header like this, this only requires one request as Etendo will directly find the authentication information and will not throw a 401:
 
     
     
@@ -135,7 +134,7 @@ To make this type of approach work in Openbravo code it is required to pass in t
 
 ###  High Frequency - Stateless
 
-Client side code which calls webservices will typically **not maintain** the session cookie of the server. This means that every webservice request can create a new http session on the receiving server. This is not adviced for high frequency webservices. The implementor of the webservice within the Openbravo system can **force the call** being stateless. But the caller can also achieve this by passing a parameter. 
+Client side code which calls webservices will typically **not maintain** the session cookie of the server. This means that every webservice request can create a new http session on the receiving server. This is not adviced for high frequency webservices. The implementor of the webservice within the Etendo system can **force the call** being stateless. But the caller can also achieve this by passing a parameter. 
 
 
 This work is a derivative of [How to Call an Openbravo Webservice from Java](http://wiki.openbravo.com/wiki/How_To_Call_An_Openbravo_Webservice_From_Java){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
