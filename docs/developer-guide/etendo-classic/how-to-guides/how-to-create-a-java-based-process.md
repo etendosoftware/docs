@@ -1,57 +1,23 @@
 ---
-search:
-  exclude: true
+title: How to Create a Java Based Process
+tags: 
+    - Co
+    - Tabl
+    - Create 
+    - Data
+
+
+status: beta
 ---
 
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+# How to Create a Java Based Process
 
-######  Toolbox
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
 
-######  Search
+## Overview
 
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  How to create a Java Based Process
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  GUI
-for processes explained in this document is generated using 2.50
-infrastructure and are kept for backwards compatibility. If you are working
-with **3.0MP20** or greater, consider implementing a  Standard Process
-Definition  instead.  
----|---  
-  
-##  Contents
-
-  * 1  How to create a Java Based Process 
-  * 2  Example Module 
-  * 3  Development Steps 
-    * 3.1  Java class declaration 
-    * 3.2  Defining the user interface 
-    * 3.3  Add the process form to the menu 
-    * 3.4  Build Step 
-  * 4  The result 
-  * 5  Variant: Running the process from a button in another window 
-  * 6  Variant: Manual UI Pattern 
-
-  
----  
-  
-##  How to create a Java Based Process
 
 Java processes are one of the mechanisms Openbravo provides to implement
 business logic. A java process can be a  background  process or can have a
@@ -318,17 +284,6 @@ _org.openbravo.scheduling.Process_ interface. For manual processes the java
 class needs to extend _org.openbravo.base.secureApp.HttpSecureAppServlet_ ,
 this is a standard servlet that generates the pop-up.
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_create_a_Java_Based_Process  "
 
-This page has been accessed 40,112 times. This page was last modified on 19
-March 2013, at 13:54. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
+This work is a derivative of [How to Create a Java Based Process](http://wiki.openbravo.com/wiki/How_to_create_a_Java_Based_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 

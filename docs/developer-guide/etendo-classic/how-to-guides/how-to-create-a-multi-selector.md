@@ -1,55 +1,23 @@
 ---
-search:
-  exclude: true
+title: How to Create a Multi Selector
+tags: 
+    - Co
+    - Tabl
+    - Create 
+    - Data
+
+
+status: beta
 ---
 
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+# How to Create a Multi Selector
 
-######  Toolbox
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
 
-######  Search
+## Overview
 
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  How to create a Multi Selector
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-Contents in this document are available from **3.0MP20**  
----|---  
-  
-##  Contents
-
-  * 1  Introduction 
-  * 2  Example Module 
-  * 3  Steps to implement the Process 
-    * 3.1  Overview 
-    * 3.2  Defining the Selector 
-    * 3.3  Adding fields to Selector's Pop Up 
-    * 3.4  Using the Selector 
-    * 3.5  Retrieving values in backend 
-  * 4  Advanced topics 
-    * 4.1  Using custom query selector 
-  * 5  Limitations 
-
-  
----  
-  
-##  Introduction
 
 _Multi Selector_ is a reference that allows to select multiple items at the
 same time. It is intended to be used as parameter of _ Standard Process
@@ -146,17 +114,7 @@ same names are also required.
 Multi Selectors can only be used as parameters in _Standard Process
 Definition_ , they cannot be included in _Standard Windows_ .
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_create_a_Multi_Selector  "
 
-This page has been accessed 12,527 times. This page was last modified on 30
-January 2015, at 10:38. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
 
-  
-**
-
-Category  :  HowTo
-
-**
+This work is a derivative of [How to Create a Multi Selector](http://wiki.openbravo.com/wiki/How_to_create_a_Multi_Selector){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
