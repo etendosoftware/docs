@@ -1,45 +1,23 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+---
+title: How to Create a Tree Selector
+tags: 
+    - Co
+    - Tabl
+    - Create 
+    - Data
 
-######  Toolbox
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
+status: beta
+---
 
-######  Search
+# How to Create a Tree Selector
 
-######  Participate
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
 
-  
+## Overview
 
-#  How to Create a Tree Selector
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This feature is available from **Openbravo PR14Q2**  
----|---  
-  
-##  Contents
-
-  * 1  Introduction 
-  * 2  Defining a Tree Selector 
-    * 2.1  Define a Reference 
-    * 2.2  Define the Tree Selector 
-    * 2.3  Define the Tree Selector Fields 
-    * 2.4  Set the Value and Display Fields of the Tree Selector 
-
-  
----  
-  
-##  Introduction
 
 The Tree Selector described in this manual is a variant of the  Openbravo
 Selector  . It can only be applied on tables with  trees defined  .
@@ -53,14 +31,14 @@ Drop down tree:
   
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Tree_Selector-1.png){: .legacy-image-style}
+guides/How_to_Create_a_Tree_Selector-1.png)
 
 Popup tree:
 
   
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Tree_Selector-2.png){: .legacy-image-style}
+guides/How_to_Create_a_Tree_Selector-2.png)
 
 ##  Defining a Tree Selector
 
@@ -77,14 +55,14 @@ the most relevant fields:
   * Model, WAD and Runtime UI Implementation can be left empty most of the time if the reference is not a base reference. 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Tree_Selector-3.png){: .legacy-image-style}
+guides/How_to_Create_a_Tree_Selector-3.png)
 
 ###  Define the Tree Selector
 
 Create a new record in the Tree Reference tab.
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Tree_Selector-4.png){: .legacy-image-style}
+guides/How_to_Create_a_Tree_Selector-4.png)
 
   * Table: Tree Table this selector points to. 
   * Table Tree Category: Table Tree Category that will be used to represent hierarchically the data of the selected table. 
@@ -113,7 +91,7 @@ A selector must have at least two fields:
   * The other field will be used as Display Field and shown in the drop down tree and popup tree. 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Tree_Selector-5.png){: .legacy-image-style}
+guides/How_to_Create_a_Tree_Selector-5.png)
 
   * Name: Name of the field. It will be used in the title of the column in the popup. 
   * Property: is a column/property from the table selected in the Tree Reference tab. 
@@ -133,19 +111,8 @@ Field fields of the Tree Reference tab can be set.
   
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Tree_Selector-6.png){: .legacy-image-style}
+guides/How_to_Create_a_Tree_Selector-6.png)
 
-Retrieved from "  http://wiki.openbravo.com/wiki/How_to_Create_a_Tree_Selector
-"
 
-This page has been accessed 8,453 times. This page was last modified on 7
-March 2014, at 09:21. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
+This work is a derivative of [How to Create a Tree Selector](http://wiki.openbravo.com/wiki/How_to_Create_a_Tree_Selector){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 

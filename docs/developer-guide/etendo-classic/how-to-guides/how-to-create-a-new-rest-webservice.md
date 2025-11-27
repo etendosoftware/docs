@@ -1,50 +1,23 @@
 ---
-search:
-  exclude: true
+title: How to Create a New REST Webservice
+tags: 
+    - Co
+    - Tabl
+    - Create 
+    - Data
+
+
+status: beta
 ---
 
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+# How to Create a New REST Webservice
 
-######  Toolbox
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
 
-######  Search
+## Overview
 
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  How to create a new REST webservice
-
-##  Contents
-
-  * 1  Objective 
-  * 2  Module 
-  * 3  Implementing the webservice logic 
-  * 4  Registering the webservice 
-  * 5  Installing the webservice 
-  * 6  Calling the webservice 
-  * 7  Stateless Webservice Requests - HTTP Session 
-  * 8  Adding logic to do updates 
-  * 9  Relevant Links 
-  * 10  Tips & tricks and trouble shooting 
-
-  
----  
-  
-##  Objective
 
 In this howto article we will create a new webservice which returns all sales
 orders for a certain product. The article will focus on reading information
@@ -412,15 +385,13 @@ should not unnecessarily occupy resources on the server.
 You should see the xml showing a sales order:
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_new_REST_webservice-7.png){: .legacy-image-style}
+guides/How_to_create_a_new_REST_webservice-7.png)
 
 ##  Stateless Webservice Requests - HTTP Session
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This feature is available starting from ** 3.0PR17Q1  ** .  
----|---  
+
   
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+
 
 **Note:** important for high frequency webservice calls.  
   
@@ -531,17 +502,6 @@ For trouble shooting and tips and tricks please see this link  here  . The
 tips and tricks section for example discuss a firefox plugin to make it easy
 to test REST webservices.
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_create_a_new_REST_webservice  "
 
-This page has been accessed 40,334 times. This page was last modified on 16
-February 2017, at 09:44. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
+This work is a derivative of [How to Create a New REST Webservice](http://wiki.openbravo.com/wiki/How_to_create_a_new_REST_webservice){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 

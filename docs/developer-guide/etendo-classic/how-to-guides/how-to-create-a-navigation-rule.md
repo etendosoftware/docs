@@ -1,51 +1,26 @@
 ---
-search:
-  exclude: true
+title: How to Create a Navigation Rule
+tags: 
+    - Co
+    - Tabl
+    - Create 
+    - Data
+
+
+status: beta
 ---
 
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+# How to Create a Navigation Rule
 
-######  Toolbox
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
 
-######  Search
+## Overview
 
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  How to create a navigation rule
-
-##  Contents
-
-  * 1  Introduction 
-  * 2  Navigation Model 
-  * 3  Rules definition at field level 
-  * 4  Rules definition at table level 
-  * 5  Creating Rules 
-
-  
----  
-  
-##  Introduction
 
 This document describes how to create a navigation rule.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This functionality is available since Openbravo 3.0PR15Q4  
----|---  
   
 ##  Navigation Model
 
@@ -119,17 +94,5 @@ not a Return. The HQL Logic looks like:
 You can check in the Application Dictionary how this rule is created and how
 there are other rules for purchase and/or return orders.
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_create_a_navigation_rule  "
 
-This page has been accessed 4,986 times. This page was last modified on 5
-August 2015, at 11:59. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
-
+This work is a derivative of [How to Create a Navigation Rule](http://wiki.openbravo.com/wiki/How_to_create_a_navigation_rule){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
