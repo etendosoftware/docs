@@ -12,7 +12,7 @@ status: beta
 #  Multi-Client and Multi-Org
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
   
 ##  Overview
 
@@ -24,7 +24,7 @@ At database and application dictionary level, all tables must have the structure
 
 ##  Filtering data
 
-This section explains the code needed to properly filter data regarding client and organization in order to avoid accesses to not allowed information. These filters are different in case the development is using XSQL or DAL.
+This section explains the code needed to properly filter data regarding client and organization in order to avoid accesses to not allowed information. These filters are different in case the development is using `XSQL` or `DAL`.
 
 ###  Data Access Layer
 
@@ -32,13 +32,13 @@ The [Data Access Layer](../concepts/data-access-layer.md)  provides several inte
 
 The filtering on readable clients and organizations can be disabled by calling the relevant methods (`setFilterReadableOrganizations/setFilterReadableClients`).
 
-When querying directly for one object (the OBDal.get method) then no filtering on readable client/organization is done.
+When querying directly for one object (the `OBDal.get` method) then no filtering on readable client/organization is done.
 
-The data access layer also checks read access when accessing an object in-memory. These checks make a difference between readable and derived-readable entities. For derived readable entities a user may only see the value of identifier properties. See  here  for more information.
+The data access layer also checks read access when accessing an object in-memory. These checks make a difference between readable and derived-readable entities. For derived readable entities a user may only see the value of identifier properties.
 
 There are also cases where it makes sense to create your own HQL queries and execute them directly. To support this the OBDal service provides two convenience methods which can be used to add eadableClients/readableOrganizations in-clauses to the where-clause:
 
-```
+```java 
 OBDal.getInstance().getReadableOrganizationsInClause();
 OBDal.getInstance().getReadableClientsInClause();
 ```
@@ -47,7 +47,7 @@ The data access layer also checks for write access to clients/organizations when
 
 ###  OrganizationStructureProvider
 
-The OrganizationStructureProvider class is a Java utility class designed to help in very common organization-related tasks. For example, this class contains methods to find if an organization belongs to the natural tree of another organization, to find out the parent natural tree of an organization,
+The `OrganizationStructureProvider` class is a Java utility class designed to help in very common organization-related tasks. For example, this class contains methods to find if an organization belongs to the natural tree of another organization, to find out the parent natural tree of an organization,
 or the children tree of an organization.
 
 It is strongly advisable that if the DAL is being used, this class should be used too if any of these tasks needs to be done.
@@ -56,9 +56,9 @@ It is strongly advisable that if the DAL is being used, this class should be use
 
 All queries used to show or modify data should include filter by client and organization. The only exception to this rule are the queries that affect only to rows selected by a known ID (which has been obtained, in most cases, from a query following the rule), in this case as that row is known to be accessible by the user the filter is not needed.
 
-In the XSQL the where clause the query must look like:
+In the `XSQL` the where clause the query must look like:
 
-```
+```SQL
 SELECT ...     
     FROM ...
 WHERE ...
@@ -69,9 +69,11 @@ WHERE ...
 
 And the parameters section: 
 
+```XML 
 <Parameter name="adClientId" optional="true" type="replace" after="AND AD_CLIENT_ID IN (" text="'1'"/>
 
 <Parameter name="adOrgId" optional="true" type="replace" after="AND AD_ORG_ID IN (" text="'1'"/>
+```
 
 This will create a couple of parameters: `adClientId` and `adOrgID`, how to pass them is explained in the following section.
 
@@ -83,19 +85,19 @@ Only the current logged client is accessible even though the role has permission
 
 In order to obtain the list of accessible clients (current client and 0 in case it can be accessed), the `Utility.getContext` method is used, it has the following structure:
 
-```
+``` java
 public static String getContext(ConnectionProvider conn, VariablesSecureApp vars, String context, String window)
 ```
 
 or
 
-```
+``` java
 public static String getContext(ConnectionProvider conn, VariablesSecureApp vars, String context, String window, int accessLevel)
 ```
 
 In the first case, access level is not passed so it is not taken into account to calculate if client 0 is accessible. This is the way it is generally used for manual code. A standard call to this method would be:
 
-```
+``` java
 String strClient = Utility.getContext(this, vars, "#User_Client", "");
 ```
   
@@ -111,7 +113,7 @@ Only data in an editable organization can be modified. Editable organizations ar
 
 The list of editable organizations is obtained with:
 
-```
+``` java
 Utility.getContext(conn, vars, "#User_Org", windowId, accesslevel)
 ```
 
@@ -121,7 +123,7 @@ This type must be used when displaying data which the user can modify. For examp
 
 Accessible data can be viewed but not modified. The list of accessible organizations consists in the standard tree of his orgList, this is, all the granted organizations, their ancestors and their descendants organizations. To obtain it:
 
-```
+``` java
 Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 ```
 
@@ -131,7 +133,7 @@ This type should be used when displaying information data. For example in report
 
 A record can make reference to other records with data defined in the standard tree of the parent record organization.
 
-```
+``` java
 Utility.getReferenceableOrg(vars, currentOrg)
 ```
   
@@ -144,7 +146,7 @@ Selectors are a case that deserves a specif attention, they have two main elemen
 
 When a combo is used in a filter the list of organizations it receives is the accessible one:
 
-```
+``` java
 Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 ```
 
@@ -158,17 +160,17 @@ When a selector is called from a window which will not receive a record to refer
 
 The implementation for selectors require:
 
-* Add an input variable to all selectors to get the organization (defined in Application Dictionary || Reference || Reference >> Selector Reference >> Selector Reference Columns) 
+* Add an input variable to all selectors to get the organization (defined in `Application Dictionary` > `Reference` > `Reference` > `Selector Reference` Columns) 
 * In the _DEFAULT_ and _KEY_ commands read this variable with: 
 
-```
+``` java
 vars.getStringParameter("inpAD_Org_ID");
 ```
 
-* Add a new hidden variable in the HTML and store the read value there. 
-* In the _DATA_ command read information from the hidden HTML input and use it to obtain the referenceable list of orgs using: 
+* Add a new hidden variable in the `HTML` and store the read value there. 
+* In the _DATA_ command read information from the hidden `HTML` input and use it to obtain the referenceable list of orgs using: 
 
-```
+``` java
 Utility.getSelectorOrgs(conn, vars, readOrg);
 ```
 
@@ -201,7 +203,7 @@ It is possible to define a structure that allows to define objects in a organiza
 
 For example this query is part of the `MRP_ProcessPlan_Recalculate` process, it looks for the values that are overwritten in the current organization and takes them if they exist:
 
-```
+``` sql
 SELECT QTY, planneddate, plannedorderdate, M_PRODUCT.M_PRODUCT_ID,
             COALESCE(M_PRODUCT_ORG.CAPACITY, M_PRODUCT.CAPACITY) AS CAPACITY,
             COALESCE(M_PRODUCT_ORG.DELAYMIN, M_PRODUCT.DELAYMIN, 0) AS DELAYMIN,
