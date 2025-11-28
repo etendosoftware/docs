@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-#  Modularity Concepts
+# Modularity Concepts
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-##  Overview
+## Overview
 
 Etendo came with the new concept of **Modularity**: the ability for developers to build, package and distribute **Extension Modules** and for users to install, uninstall and update **Extension Modules**.
 
@@ -22,108 +22,99 @@ An **Extension Module** is a piece of additional functionality that can be deplo
 
 The objectives of modularity are:
 
-* Making it easier to contribute to Etendo by allowing distributed and decoupled development and maintenance of optional features. 
-* Providing the Community with a rich set of extensions to meet their unique business requirements without bloating the core product. 
-* Shorten the implementation cycles by enabling system integrators to develop micro-vertical templates. 
+- Making it easier to contribute to Etendo by allowing distributed and decoupled development and maintenance of optional features. 
+- Providing the Community with a rich set of extensions to meet their unique business requirements without bloating the core product. 
+- Shorten the implementation cycles by enabling system integrators to develop micro-vertical templates. 
 
 This document contains an overview of the process of developing Etendo Modules.
 
-##  Concepts
+## Concepts
 
 Before you start, it is required to understand some concepts. These concepts are described in detail in the following sections.
 
-####  Types of Extension Modules
+### Types of Extension Modules
 
 There are three types of **Extension Modules**:
 
-* **Modules** : Base content container. Within a **Module**, you can include all types of artifacts but **Configuration Scripts**: Application Dictionary components, Software resources and Reference data. **Modules** are the way to add new elements to Etendo. In a **Module**, you cannot modify elements of other modules -including core-. The reason of that is to avoid crossed dependencies between them. 
-* **Packs** : a **Pack** is a collection of modules and no more. They are intended to simplify deployment and to encourage fine grained modules. Special packs are localization and verticalization packs. 
-* **Templates** : a combination of a **Pack** and a **configuration script** that is able to modify the behavior of AD components in **Modules** included in the **Pack**. 
+- **Modules** : Base content container. Within a **Module**, you can include all types of artifacts but **Configuration Scripts**: Application Dictionary components, Software resources and Reference data. **Modules** are the way to add new elements to Etendo. In a **Module**, you cannot modify elements of other modules -including core-. The reason of that is to avoid crossed dependencies between them. 
+- **Bundle** : a **Bundle** is a collection of modules and no more. They are intended to simplify deployment and to encourage fine grained modules. Special bundle are localization and verticalization bundles. 
+- **Templates** : a combination of a **Module** and a **configuration script** that is able to modify the behavior of AD components in **Modules**. 
 
-The three of them are generically referred as **Modules**.
+!!! info 
+    The three of them are generically referred as **Modules**.
 
-####  Artifacts in an Extension Module
+### Artifacts in an Extension Module
 
 There are four types of artifacts that can be included in an **Extension Module**:
 
-* **Application Dictionary components** : Metadata that describe Etendo such as Windows, Tabs, Fields, Messages, etc. 
-* **Software Resources** : Etendo components not expressed as metadata such as xml definition of database schema objects, java classes, jar libraries, XML files, etc. 
-* **Reference Data** : Business information referred by transactions and that tend not to change frequently such as Charts of accounts, tax codes, banks, product categories, etc. They can be defined at system, client or organization level. 
-* **Configuration Script** : Changes in Application Dictionary Components applied to other modules to support a specific set of business processes, such as Hide / show tabs or fields, replace standard processes, etc. Only meaningful changes are allowed. 
+- **Application Dictionary components** : Metadata that describe Etendo such as Windows, Tabs, Fields, Messages, etc. 
+- **Software Resources** : Etendo components not expressed as metadata such as `XML` definition of database schema objects, java classes, XML files, etc. 
+- **Reference Data** : Business information referred by transactions and that tend not to change frequently such as *Charts of accounts*, *tax codes*, *banks*, *product categories*, etc. They can be defined at system, client or organization level. 
+- **Configuration Script** : Changes in *Application Dictionary Components* applied to other modules to support a specific set of business processes, such as **hide / show** tabs or fields, replace standard processes, etc. Only meaningful changes are allowed. 
 
 Etendo platform itself can not be modified through modules. In particular you are not allowed to modify wad (src-wad code) in a module. It should not be a limitation since the platform is designed to be extensible.
 
-####  Packaging and .obx files
+### Packaging and .zip and .jar files
 
 All the content of a module -code, utility files, data- is contained in a separate folder for each module. All the content in that folder is related to and only related to that module. There is a folder within the main Etendo folder called **modules** where all the modules that you have installed or developed are located. For each module there is a folder identified by the java package of the module. In that folder the source code structure of Etendo (config, src, src-db, lib, etc.) is replicated as required to store the content of the module.
 
-  
-Modules are distributed as .obx files which are compressed files of the module folder. You can directly decompress it using a zip tool to browse its content.
+!!! info 
+    Modules are distributed as `.zip` or `.jar` files which are compressed files of the module folder.
 
-  
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-0.png){: .legacy-image-style}
+![alt text](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-0.png)
 
-####  Module Management Console (MMC)
 
-This is a window in Etendo where System administrators can see installed **Extension modules** in their instances, and where they can install new ones and uninstall or update the ones that are already installed.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-1.png){: .legacy-image-style}
-
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-2.png){: .legacy-image-style}
-
-####  Central Repository
-
-The Central Repository is a system embedded in the Etendo Forge to provide services related to Etendo **Modules** for developers and users. 
+### Etendo Software GitHub Repository
+Supported Etendo modules are published as packages under the Etendo Software organization on GitHub. Licensed developers and partners with access can browse and download any package or repository available there.
 
 !!!info
-    Detailed description about Central Repository can be found in [Publishing Modules](../how-to-guides/how-to-publish-a-module.md#central-repository).
+    Detailed description about Etendo Repositories can be found in [Publishing Modules](../how-to-guides/how-to-publish-modules-to-github-repository.md) and [Use of Repositories in Etendo](../getting-started/installation/use-of-repositories-in-etendo.md) guides.
 
-##  Introduction to the process of developing a Module
+
+## Introduction to the process of developing a Module
 
 The process of developing a Module has three main steps:
 
-1. **Register** your Module in the Application Dictionary and in the Central Repository. 
+1. **Register** your Module in the Application Dictionary.
 2. **Develop** the artifacts included in your Module. Depending on the functional specification and technical design of your module it might include only one type of artifacts or a combination of them. In following sections each type of artifact is described in detail. 
-3. **Package** your module into an .obx file, and **publish** it in the Central Repository. 
 
-Steps 1 and 3 are common to all types of modules and straightforward. Step 2 depends on the requirements of your module. It has not significantly changed from the way you have developed Etendo code in previous releases to 2.50 but a few details that you need to know and that are described throughout later in this document. In particular the development tasks (create/update the
-database, build and compile the system, etc.) have been lightly modified to fit the Modularity paradigm.
-
+Steps 1 is common to all types of modules. Step 2 depends on the requirements of your module. It has not significantly changed from the way you have developed Etendo code in previous releases.
 Be aware that from now on every piece of Etendo code belongs to a module (you can see for example that the Etendo distribution in fact includes several modules, and one of them is **Core**). You should do all your new developments through modules, including your customizations. Still you can
 do changes directly in other modules -including Etendo core- but it is highly recommended not to do that. Maintenance will be dramatically better if you keep your changes isolated by doing them through modules, as you can update individual modules without doing any changes to other ones (so for
 example you can update the Etendo distribution modules, without doing any changes to your modules).
 
 Following sections will describe each step in detail.
 
-##  Register a Module
+### Register a Module
 
 The first thing you have to do is to create a new Module entry in the Module Window within the Application Dictionary menu folder.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-3.png){: .legacy-image-style}
+![alt text](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-1.png)
 
 There are some details that you need to be aware of:
 
-* Each module has its own native (base) **language**. In following sections the translation process is described, by now just choose the language you prefer to develop the UI of your module. Of course if you choose English it will be easier to disseminate (eg. to find people to translate it to other languages). 
-* `Name`, `description` and `help` are the properties used to explain in the Central Repository what your module is. Write them in natural style using the native language you have chosen. 
-* The **Version Number** is composed by three numbers separated by two dots to match the Etendo template  for version numbers. In this field, you need to have the current version you are working on (there might be multiple versions of your module). Later in this document, [Version Numbers](#version-numbers-and-how-dependencies-and-includes-are-managed) are explained in detail. 
-* The **java package** is a unique identifier of your module and has to match the Java packaging names rules as described in the Java spec. ([names](https://docs.oracle.com/javase/specs/){target="\_blank"}  and [package names](https://docs.oracle.com/javase/specs/#6.8.1){target="\_blank"}). You need to carefully set this value because you are not allowed to change it once your module is registered in the Central Repository. If your module includes java files, they have to be packaged within your module java package or in subpackages within it. Examples of java packages for a module are `com.yourcompany.yourPackage`, `org.yourfoundation.yourPackage.yourSubpackage`, etc. You will notice that modules released by Etendo start by `org.openbravo`. You should name your modules with a Java package which doesn't start by `org.openbravo`, but with an identifier of you, your company, or the project you belong to.  ???
-* Choose the type (Module, Pack, Template) as described in the [Concepts](#concepts) section. 
-* In development is a boolean property to let the system know that you are developing on that module. Only modules **in development** will be exported by development tools and the System will raise an error if you try to modify some component on a module that is not in development. 
-* Although you might have more than one module in development, you can set which one is choosen by **default** when developing. This is just a way to set a default value for the module when you edit the Application Dictionary.
+- Each module has its own native (base) **language**. In following sections the translation process is described, by now just choose the language you prefer to develop the UI of your module. Of course if you choose English it will be easier to disseminate (eg. to find people to translate it to other languages). 
+- `Name`, `description` and `help` are the properties used to explain in the Central Repository what your module is. Write them in natural style using the native language you have chosen. 
+- The **Version Number** is composed by three numbers separated by two dots to match the Etendo template  for version numbers. In this field, you need to have the current version you are working on (there might be multiple versions of your module). Later in this document, [Version Numbers](#version-numbers-and-how-dependencies-and-includes-are-managed) are explained in detail. 
+- The **java package** is a unique identifier of your module and has to match the Java packaging names rules as described in the Java spec. ([names](https://docs.oracle.com/javase/specs/){target="\_blank"}  and [package names](https://docs.oracle.com/javase/specs/#6.8.1){target="\_blank"}). You need to carefully set this value because you are not allowed to change it once your module is published. If your module includes java files, they have to be packaged within your module java package or in subpackages within it. Examples of java packages for a module are `com.yourcompany.yourPackage`, `org.yourfoundation.yourPackage.yourSubpackage`, etc. You will notice that modules released by Etendo start by `com.etendoerp`. You should name your modules with a Java package which doesn't start by `com.etendoerp`, but with an identifier of you, your company, or the project you belong to.
+- Choose the type (Module, Pack, Template) as described in the [Concepts](#concepts) section. 
+- In development is a boolean property to let the system know that you are developing on that module. Only modules **in development** will be exported by development tools and the System will raise an error if you try to modify some component on a module that is not in development. 
+- Although you might have more than one module in development, you can set which one is choosen by **default** when developing. This is just a way to set a default value for the module when you edit the Application Dictionary.
 
-!!!info
-    It is recommended to restart the instance after changing the development status of a module in order to update cache's status. Also note that production instances cannot have modules in "In development" status. 
+    !!! info
+        It is recommended to restart the instance after changing the development status of a module in order to update cache's status. Also note that production instances cannot have modules in "In development" status. 
 
-* Some modules will not have UI (eg. a connector to a banking system or a web service) so there is no need to translate them.
-* If your module is a **translation module** of another module you have to check this flag to allow users to search for translations. Later in this document there is a full description of how to create a  [translation](#translations) module. 
-* If your module has a **Chart of accounts**, you have to check this flag to allow the System to use them during the Initial Client/Organization Setup processes. Later in this document there is a full description of how to add a [Chart of Accounts](#chart-of-accounts-coa) to your module. 
-* If your module has standard **Reference Data** you have to check this flag to allow the System to use them during the Initial Client/Organization Setup processes. Later in this document there is a full description of how to add a [standard Reference Data](#standard-reference-data) to your module. 
-* You have also to choose the license you are using to distribute your module. Choose one **license type** from the drop-down list and write the **license agreement** that will be shown to the user when installing or updating your module. Be aware that Etendo does not supervise the content of your module nor the license you have choosen. You are responsible to set this information properly.
-* The **author** of the module will be shown to the User when browsing the Central Repository and when installing. Also the User will be able to navigate from there to the module **URL**.
-* If you are working on a new version of your module you can explain what are the changes this new version includes (fixed bugs in minor versions, new features in major ones) in the **Update information** field. 
+- Some modules will not have UI (eg. a connector to a banking system or a web service) so there is no need to translate them.
+- If your module is a **translation module** of another module you have to check this flag to allow users to search for translations. Later in this document there is a full description of how to create a  [translation](#translations) module. 
+- If your module has a **Chart of accounts**, you have to check this flag to allow the System to use them during the Initial Client/Organization Setup processes. Later in this document there is a full description of how to add a [Chart of Accounts](#chart-of-accounts-coa) to your module. 
+- If your module has standard **Reference Data** you have to check this flag to allow the System to use them during the Initial Client/Organization Setup processes. Later in this document there is a full description of how to add a [standard Reference Data](#standard-reference-data) to your module. 
+- You have also to choose the license you are using to distribute your module. Choose one **license type** from the drop-down list and write the **license agreement** that will be shown to the user when installing or updating your module. Be aware that Etendo does not supervise the content of your module nor the license you have choosen. You are responsible to set this information properly.
+- The **author** of the module will be shown to the User when installing. Also the User will be able to navigate from there to the module **URL**.
+- If you are working on a new version of your module you can explain what are the changes this new version includes (fixed bugs in minor versions, new features in major ones) in the **Update information** field. 
 
 The **Include** tab is intended only for **Packs** and **Industry Templates**. In this tab, you include all the modules that are members of the Pack. You can only choose from the ones that you have installed in your instance. You have to provide the **Version Number** for each of them following Etendo template
-as described. In a later section there is a description of how the system manages [Version Numbers](#version-numbers-and-how-dependencies-and-includes-are-managed) of **Includes** (for Packs and Industry Templates) and for **Dependencies** (for Modules). If you add a module here, when you package your module, this module will be packaged alongside it, in one .obx which will include both modules. This .obx file can then be used to install both modules simoultaneously. As mentioned before, this is the way to include other modules inside a "pack" of modules.
+as described. In a later section there is a description of how the system manages [Version Numbers](#version-numbers-and-how-dependencies-and-includes-are-managed) of **Includes** (for Packs and Industry Templates) and for **Dependencies** (for Modules).
 
 The **Dependency** tab is intended only for Modules. In this tab, you declare all the Modules that your Module depends on. It is of paramount importance that you declare them properly since the system will check that dependencies are met when the User installs or updates your module. It is also important to
 declare them as soon as you are aware of that because some tools and processes in the development process take into account dependencies and the result might be wrong if they are not declared when developing your module. You declare dependencies along the modules you have installed in your instance.
@@ -132,65 +123,56 @@ Typically, a module will depend on User Interface Application and in turn, it ha
 
 There is no need you to edit the **Translation** tab. It is a tool for translators and will be described in the [translation](#translations) section.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-5.png){: .legacy-image-style}
+![alt text](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-2.png)
 
 If your Module includes a table in the Application Dictionary then you need to register one (or many) **data packages** in your Module. For a full description on how packages are used, visit the [DAL developers manual](../concepts/data-access-layer.md). For each package you have to set the next properties:
 
-* **Name**, that will be used in the xml entities of tables assigned to it 
-* **Description**, used to explain what your package is for 
-* **Java package**, that has to match the Java packaging names rules as described in the Java spec. (  [names](https://docs.oracle.com/javase/specs/){target="\_blank"} and [package names](https://docs.oracle.com/javase/specs/#6.8.1){target="\_blank"}). It should be equal to Module package name (if there is only one package) or a subpackage of it. 
+- **Name**, that will be used in the xml entities of tables assigned to it 
+- **Description**, used to explain what your package is for 
+- **Java package**, that has to match the Java packaging names rules as described in the Java spec. ([names](https://docs.oracle.com/javase/specs/){target="\_blank"} and [package names](https://docs.oracle.com/javase/specs/#6.8.1){target="\_blank"}). It should be equal to Module package name (if there is only one package) or a subpackage of it. 
 
 If your Module includes any database schema object (a table, a stored procedure, etc.) or an AD message then you need to define the `DB_Prefix`. This is an up to seven characters length string. All your database schema object names need to start with this prefix so it needs to match Oracle and PostgreSql naming requirements (case insensitive and stored in uppercase, alphanumeric characters and start by an alphabetic character). You can only register one DB_Prefix, just Etendo core Module is allowed to have more than one. `DB_Prefix` is needed to guarantee that there are no naming clashes when installing modules.
 
-Once you have completed the set up of your Module, then you need to register it in the **Central Repository**. It is needed to ensure that your DB_Prefix and your java package are not already registered by other Modules and it is important to do it even you don't plan to publish your module. More information about this process can be found [here](../how-to-guides/how-to-publish-a-module.md#register-module).
+Once you have completed the set up of your module, it is needed to ensure that your `DB_Prefix` and your java package are not already registered by other Modules and it is important to do it even you don't plan to publish your module.
 
-Once you have completed the registration of your module, you are ready to start developing your artifacts.
-
-###  Naming
+### Naming
 
 It is of paramount importance to use proper names for modules. Especially for **Java Package** and **DB Prefix**. This is the only warranty there will not be conflicts when installing other modules. You can find some naming rules [here](../concepts/naming-guidelines-for-modules.md).
-
-It is a good practice to register the module in Central Repository just after setting these two properties, before starting the development. In this way, they will be reserved and in case of another module having registered them, it will not be allowed requiring them to be changed.
   
-
-####  Javapackage
+### Javapackage
 
 **Javapackage** should be a valid unique Java Package (see above). These are instructions from [java.sun.com](https://docs.oracle.com/javase/specs/#40169){target="\_blank"}:
 
-> _You form a unique package name by first having (or belonging to an
-> organization that has) an Internet domain name, such as sun.com. You then
-> reverse this name, component by component, to obtain, in this example,
-> com.sun, and use this as a prefix for your package names, using a convention
-> developed within your organization to further administer package names._
+You form a unique package name by first having (or belonging to an organization that has) an Internet domain name, such as sun.com. You then reverse this name, component by component, to obtain, in this example, com.sun, and use this as a prefix for your package names, using a convention developed within your organization to further administer package names.
 
 !!!example
     If your company is named **Foods & Beverages** and you have an Internet domain called fandb.com, all your java packages should start by `com.fandb`. If you create a CRM module, its java package could be `com.fandb.crm`.
 
 !!!Note
-    Please take into account that java packages starting by `org.openbravo` or `com.openbravo` should only be used by modules distributed by Etendo.
+    Please take into account that java packages starting by `com.etendoerp` or `com.smf` should only be used by modules distributed by Etendo.
 
-####  DB Prefix
+### DB Prefix
 
 It is a good practice to use a short prefix for your company followed by a prefix for your module. Following the previous example, all your dbprefixes could start by `FB`, and the one for the CRM module could be `FBCRM`.
 
 To determine if your desired DB Prefix is already in use:
 
-* Access the  modules list in Openbravo Forge ???
-* Click on the Filters link at the top right of the table of modules 
-* Make sure that DB Prefix is the selected filter criterion 
-* Type your desired DB Prefix in the edit box 
-* Click the Apply button 
+- Access the  modules list in Openbravo Forge ???
+- Click on the Filters link at the top right of the table of modules 
+- Make sure that DB Prefix is the selected filter criterion 
+- Type your desired DB Prefix in the edit box 
+- Click the Apply button 
 
 If no module appears, then your DB Prefix has not been used, and you should register it. If another module has your desired DB Prefix, repeat the last two steps until you have created an unused one that you are happy with.
 
 !!!info "About customization modules"  
-    Usually customization modules are not intended to be published in Central Repository. In this case, DBPrefix should start with `CUST`. Modules with these kind of DBPrefixes **cannot be registered** in Central Repository but are collision safe because no other module in Central Repository can use this DBPrefix. This is an important decision to be taken before starting the module development: in case there is any chance of publishing the module at some moment, it should follow the standard rule, if it is absolutely sure that it will not be published you can use `CUST` and do not register it.
+    Usually customization modules are not intended to be published in Central Repository. In this case, DBPrefix should start with `CUST`. Modules with these kind of DBPrefixes **cannot be registered** in Central Repository but are collision safe because no other module in Central Repository can use this DBPrefix. This is an important decision to be taken before starting the module development: in case there is any chance of publishing the module at some moment, it should follow the standard rule, if it is absolutely sure that it will not be published you can use `CUST`.
 
-##  Development of Module Artifacts
+## Development of Module Artifacts
 
 As stated in the Concepts section, there are four types of artifacts: **Application Dictionary Components**, **Software resources**, **Reference Data** and **Configuration Script**. The requirements of your module and its technical design will define the needed artifacts to build your module. This document explains the details you need to be aware for each type of artifact, one by one, related to modularity. It does not explain how to use them together to build solutions, it is described in the Etendo Developers Guide. At the end of this document, there is an explanation of a number of simple `Hello World` examples that cover all different type of solutions.
 
-###  Application Dictionary Components (AD components)
+### Application Dictionary Components (AD components)
 
 Most of AD components can be included in your module but a few exceptions that are explained later in this section. The general rule to describe how Applications Dictionary components are included in your module is simple: set the module field of that component to your module. If you only have one module
 in development or you are working in your default module it will be done automatically by the system.
@@ -201,19 +183,19 @@ Translations are managed in a particular way and you don't need to care about tr
 
 Access information is not included in modules, so you can forget it when developing your module. In a later section it will be explained how to include a particular configuration for Etendo rbac (role based access control).
   
-![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modconcepts1.png)
+![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-3.png)
   
 There are some details on top of the general rule that you should understand to have better control of the content of your module. It is worth to review each type of AD component.
 
-####  Table and Column
+#### Table and Column
 
 Registering tables in the AD is the first exception to the general rule. Tables are not assigned directly to a module but to a data package in a module. It is needed by DAL to properly manage packaging of generated entities and xml naming. Only packages of "in development" modules are available when you edit a table. The module of a table is the module of the package of a table.
 
 Columns are assigned by default to the module of their table. But you might want to add in your module a column within a table in a different module (eg. add a new column to the M_Product table in the core module). To do that you are forced to use a naming rule for that column: its physical name (`ColumnName` property) has to start by the prefix `EM_XXX_` where `XXX` is your module DB_Prefix (taking into account that the full column name must not be greater than 30 characters). `EM` stands for `External Module`. The `Create Columns from DB` process has into account all this rules when importing columns from the database. The same rule is applicable for `Name` property which is used to generate DAL's properties, therefore must be unique among different modules.
   
-![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modconcepts2.png)
+![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-4.png)
 
-####  Windows, Tabs and Fields
+#### Windows, Tabs and Fields
 
 Windows, Tabs and Fields follow the general rule. The three of them are linked to a module. By default, when you add a tab to window, it will be linked to the module of its window and, when you add a field to a tab, it will be linked to the module of its tab. This is true but when the window or tab modules are not in development. Then the defaulted module will be proposed. The `Create fields` process has into account all this rules when creating fields from table columns.
 
@@ -222,91 +204,91 @@ that you can not modify information in a module that is not in development. It a
 
 The tab class and mapping is automatically managed by the system and you not need to take care about it. In a later section it is explained how Class and Mapping are managed and what you can do to add additional entries there.
 
-####  Reference
+#### Reference
 
 There are four types of references: Data type, List validation, Search validation and Table validation. Only List validations and Table validations can be included in a module different to Etendo core. Data types and Search validations will be supported in modules in future releases (currently it requires to modify Etendo WAD).
 
 All the values included in a List validation are included in the module where the List validation is defined. You can not add in your module new values to a List validation in a different module nor modify the values included in it.
   
-![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modconcepts3.png)
+![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-5.png)
 
-####  Report and Process
+#### Report and Process
 
 Reports and Processes follow the general rule. You can declare a new process or report in your module by just creating a new entry in the Report and Process window and linking that entry to your module. All parameters in a Report or Process will be included in the module where the Report or Process
 is declared.
 
 For manual report and processes it is necessary to define the process mapping, this mapping can be anything within the module's package, for example `/org.mycompany.mymodule.report/MyReport.html`.
 
-####  Form
+#### Form
 
 Forms follow the general rule too. You can declare a new form in your module by just creating a new entry in the Form window and linking that entry to your module.
 
 For forms it is necessary to define the form mapping, this mapping can be anything within the module's package, for example `/org.mycompany.mymodule.form/MyForm.html`.
 
-####  Message
+#### Message
 
 Messages follow the general rule but with an additional detail you need to revise. You can declare a new message in your module by just creating a new entry in the Message window and linking that entry to your module, and the search key of the message has to start by your module db prefix (to avoid
 clashes between messages from different modules). It means that you can not include in your module a message with a numeric search key to be raised by a pl/sql object through the RAISE_APPLICATION_ERROR function. For more information, visit [Messages](../concepts/messages.md).
 
-####  Text Interfaces
+#### Text Interfaces
 
 Text interfaces window usually is not edited manually but entries are automatically generated by the translation process when it parses files to be translated. This process takes into account the packaging of the file being translated and the text interface entry is properly assigned to the module.
 This process should be transparent for developers but you can browse the entries that your manual developments have created and edit them.
 
 There is a detailed description on the translation process in the [Translations](#translations) section.
 
-####  Element
+#### Element
 
 Elements are usually automatically generated by the Synchronize terminology process when you create new columns. This process takes into account the name of the columns that you have included in your module and searchs in your module and the modules your module depends on for an element with that column name. If it is found, your column will be linked to that element; if not, a new element will be created in your module. This process should be transparent for developers but you can browse the elements included in your module and edit them.
 
-####  Field category, Auxiliar input, Callouts and Validations
+#### Field category, Auxiliar input, Callouts and Validations
 
 These four Application Dictionary components follow the general rule too. You can declare a new component of them in your module by just creating a new entry in the proper window and linking that entry to your module.
 
 Auxiliar input name must start with the module's DBPrefix.
 
-####  Model - Implementation mapping
+#### Model - Implementation mapping
 
 Model - Implementation mapping is generalization of the Model-Object concept that was present in previous releases. You can see a detailed description in the explanation of the [Model - Implementation concept](#model---implementation-concept).
 
 Through this new window you can include in your module the entries you need to add to the `web.xml` file of Etendo context.
   
-![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modconcepts4.png)
+![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-6.png)
 
 Model - Implementation mappings follow the general rule. You can declare a new entry in your module by just creating a new record in the Model - Implementation mapping window and linking that entry to your module. All mappings and parameters assigned to it will be included in the module where the Model - Implementation mapping is declared.
 
-###  Software Resources
+### Software Resources
 
-To develop your module you may require to include some software resources. Software resources are Etendo components not expressed as metadata such as xml definition of database schema object, java classes, jar libraries, XML files, etc. All you need to add to your module has to be packaged within openbravoMainFolder/modules/yourModuleJavaName (eg. for the module `org.openbravo.examples.helloworld` the packaging is `/home/user/src/openbravo/modules/org.openbravo.examples.helloworld` in a linux box or `c:\openbravo\modules\org.openbravo.examples.helloworld` in a windows one). Within this folder, you have the standard Etendo folders to hold your software resources (`src`, `src-db`, `lib`, etc). See the image in the [packaging](#packaging-and-obx-files) section for details.
+To develop your module you may require to include some software resources. Software resources are Etendo components not expressed as metadata such as xml definition of database schema object, java classes, jar libraries, XML files, etc. All you need to add to your module has to be packaged within `EtndoMainFolder/modules/yourModuleJavaName` (eg. for the module `com.etendoerp.examples.helloworld` the packaging is `/opt/EtendoERP/modules/com.etendoerp.examples.helloworld` in a linux. Within this folder, you have the standard Etendo folders to hold your software resources (`src`, `src-db`, `lib`, etc).
 
 The build process of Etendo takes into account the source code structure that is split into modules. Be aware that this concept is completely different from the `srcClient` that Etendo used in previous releases: you are not allowed to physically overwrite a file in Etendo core distribution. In
-fact, the packaging of your software resources should be located in `com.yourCompany.xxx` or `org.yourCompany.xxx` so you will not use `org.openbravo.xxx` to package your code any more.
+fact, the packaging of your software resources should be located in `com.yourCompany.xxx` or `org.yourCompany.xxx` so you will not use `com.etendoerp.xxx` to package your code any more.
 
 Similarly to AD components, although this general rule for packaging is applied to all software resources there are some details for each type of software resource (Database schema objects, java classes, jar libraries, web static content, etc.) that you need to be aware when developing your module.
 
-####  Database schema objects
+#### Database schema objects
 
 The typical flow to add a new database schema object (table, column, constraint, index, trigger, view, stored procedure, function) or modify it in Etendo is as it follows:
 
-* a developer uses her/his preferred tool as database client for development in Oracle or PostgreSql 
-* using sql scripts or GUI tools she/he creates or modifies the database schema object in the database following Etendo standards. 
-* if the database schema object is mapped with any Application dictionary (Tables&Columns, Reports&Processes) then the developer import the new db schema object from the database to the Application Dictionary. This process adds some new lines in AD tables. After that, the developer usually adjusts the imported information -eg. running the synchronize terminology process- and complete AD information to fully describe the solution she/he targets. It might require as well to create some Etendo code (java files, xsql files, etc.) to complete the solution 
-* once the solution is fully described, the developer builds the system to test that it is working as desired 
-* the last process is to export the database to `.xml` files through `DBSourceManager`. This tool exports every database schema object to a `.xml` file that uses a common syntax for both Oracle and PostgreSql so you can have different development environments commiting to the same line of code. Application Dictionary data is also exported in this process. So there are two different types of `.xml` files exported by `DBSourceManager`: model (db schema objects) and sourcedata (Application Dictionary metadata). 
+- a developer uses her/his preferred tool as database client for development in Oracle or PostgreSql 
+- using sql scripts or GUI tools she/he creates or modifies the database schema object in the database following Etendo standards. 
+- if the database schema object is mapped with any Application dictionary (Tables&Columns, Reports&Processes) then the developer import the new db schema object from the database to the Application Dictionary. This process adds some new lines in AD tables. After that, the developer usually adjusts the imported information -eg. running the synchronize terminology process- and complete AD information to fully describe the solution she/he targets. It might require as well to create some Etendo code (java files, xsql files, etc.) to complete the solution 
+- once the solution is fully described, the developer builds the system to test that it is working as desired 
+- the last process is to export the database to `.xml` files through `DBSourceManager`. This tool exports every database schema object to a `.xml` file that uses a common syntax for both Oracle and PostgreSql so you can have different development environments commiting to the same line of code. Application Dictionary data is also exported in this process. So there are two different types of `.xml` files exported by `DBSourceManager`: model (db schema objects) and sourcedata (Application Dictionary metadata). 
 
 From a modularity perspective, there is no need to do any additional task to take care of Application Dictionary metadata since it is managed by the system as described in the previous [Application Dictionary Components](#application-dictionary-components-ad-components) section. But to avoid naming clashes in the database and to allow `DBSourceManager` to know the module of not mapped database schema objects it is required to follow the next naming rule for database schema objects:
 
-* All main objects (tables, triggers, views, functions, stored procedures) have to start by your module db_prefix followed by an underscore ("_") symbol (eg. `MYMOD_MYTABLE`, `MYMOD_MYPROCEDURE`, etc.). 
-* Every object (tables, constraints, indexes, functions, triggers) needs to have a unique name in the database. To avoid any kind of duplication, constraint and index names in particular need to start with their table name. This ensures that there will be no name duplication in the whole database. 
-* Subparts of main objects (columns, constraints, indexes) are supposed to belong to the module of the main part except if their name starts by "EM_" + db_prefix + "_" (eg. `EM_MYMOD_MYCOLUMN`, `EM_MYMOD_MYCONSTRAINT`, etc.). EM stands for External Module. So you can use standard column names in your tables (eg. `C_BPARTNER_ID`, `M_PRODUCT_ID`, `NAME`, etc.) but if you want to add in your module a "part" (column, constraint, index) to a table in another module you need to use the prefix "EM_" + db_prefix + "_" for the name of that part. In any case, constraints and indexes in the same module and their table must start with the module's db_prefix, this is in this way because their name must be unique in the whole database. 
+- All main objects (tables, triggers, views, functions, stored procedures) have to start by your module db_prefix followed by an underscore ("_") symbol (eg. `MYMOD_MYTABLE`, `MYMOD_MYPROCEDURE`, etc.). 
+- Every object (tables, constraints, indexes, functions, triggers) needs to have a unique name in the database. To avoid any kind of duplication, constraint and index names in particular need to start with their table name. This ensures that there will be no name duplication in the whole database. 
+- Subparts of main objects (columns, constraints, indexes) are supposed to belong to the module of the main part except if their name starts by "EM_" + db_prefix + "_" (eg. `EM_MYMOD_MYCOLUMN`, `EM_MYMOD_MYCONSTRAINT`, etc.). EM stands for External Module. So you can use standard column names in your tables (eg. `C_BPARTNER_ID`, `M_PRODUCT_ID`, `NAME`, etc.) but if you want to add in your module a "part" (column, constraint, index) to a table in another module you need to use the prefix "EM_" + db_prefix + "_" for the name of that part. In any case, constraints and indexes in the same module and their table must start with the module's db_prefix, this is in this way because their name must be unique in the whole database. 
 
 Following this simple rule, you can include in your module as many database schema objects as you want. But be aware that you can not modify database schema objects in other modules as it would break the main rule: "a module can not modify components in other modules".
 
-When `DBSourceManager` exports the database, it will only take into account modules "in development", the other ones will not be exported. The exported xml files will be located within the src-db/database folder within the module folder. Look at [packaging](#packaging-and-obx-files) to see an example.
+When `DBSourceManager` exports the database, it will only take into account modules "in development", the other ones will not be exported. The exported xml files will be located within the `src-db/database` folder within the module folder.
 
 At the end of this document there are some examples explained that show how to include in your module any type of database schema object. You can use them as a reference to develop your module.
 
-#####  Exceptions
+**Naming Exceptions**
 
 It is possible to define database schema objects within a module that do not follow the naming rules explained in the section above. This is specially useful in order to move to modules existent Etendo instances in older versions. It is important to note that **this feature should not be used for new developments in general** . If a module contains a naming exception, it will not be possible to publish it to the Central Repository, because it would not be possible to guarantee that the object defined as a naming exception would not collide with another object defined in a different module.
 
@@ -317,17 +299,17 @@ Exceptions are defined in `Application Dictionary` > `Module` > `Module` > `Nami
 * **DB Object Type** : Defines the database object type (table, function, index...) 
 * **Object name** : It is the database object name. Note that it is the name in database, not in Application Dictionary. 
 
-#####  Extension Points
+**Extension Points**
 
 Extension Points allow the developer to attach execution code to predefined specific points inside Etendo PL/SQL functions. This functionality can be used to extend the functionality of some Core functions, without overwriting them in any way. This way of extending the functionality fits very well with Modularity, as it allows extension but also keeps maintainability and upgradeability.
 
 More about Extension Points can be found [here](../concepts/extensionpoints.md) and [here](../how-to-guides/how-to-use-an-extension-point.md).
 
-####  Java classes, other Etendo MVC objects and jar libraries
+#### Java classes, other Etendo MVC objects and jar libraries
 
 Java classes, other Etendo MVC objects (html, xml and xsql files) and jar libraries follow the general rule to add software resources in your module. You have to package this code within the src folder located in your module folder.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-11.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-7.png)
 
 When Etendo builds the system it will dynamically add to its java project all the src folders within all installed modules as java resources of the project. It uses an intermediate location, build folder, to generate code from xsql files and to compile all java resources and put them together. You can include in your module jar libraries made by you or by any other third party and use them along your code. All jar libraries included in the lib\runtime folder inside your module, are added to the classpath at compilation time and finally deployed to the Etendo context.
 
@@ -335,7 +317,7 @@ When working with Eclipse, if modules are added manually to the workspace (ie. n
 
 After the generation of code and compile process the build process deploys all the content to the Etendo context in the servlet container. There are two modes of deployment -class and war- that are explained later in the Advanced Concepts section.
 
-####  Web Static content (css files, images, javaScript)
+#### Web Static content (css files, images, javaScript)
 
 If you need to add some web Static content (css, images and javaScript) to your module you have to place these resources in the `web` folder of your module, within a folder named as the java package of your module to avoid clashes of files when deploying resources from different modules.
 
@@ -352,23 +334,23 @@ At execution time, once openbravo context is deployed and loaded you can get sol
 
 You can also reference to other web static content resources included in core or other modules. In that case, remember to explicitily declare the dependency to that module.
 
-####  Config files
+##### Config files
 
 You might also need to include some configuration files in the `config` folder of your module. These files will be copied to `WebContent/WEB-INF` when the system is built and deployed to Etendo context.
 
-For example, in HelloWorldService module there is file named `org.openbravo.examples.webservice-provider-config.xml` within the `config` folder. This file is copied to Etendo context and by this mean the class that implements the webservice is declared.
+For example, in HelloWorldService module there is file named `com.etendoerp.examples.webservice-provider-config.xml` within the `config` folder. This file is copied to Etendo context and by this mean the class that implements the webservice is declared.
 
 To avoid clashing of files deployed by different modules files within config-folder should be prefixed with the PackageName of the module.
 
-###  Reference Data
+### Reference Data
 
-Etendo Modularity supports Reference Data: business information referred by transactions and that tend not to change frequently such as translations, charts of accounts, tax codes, banks, product categories, etc. They can be defined at system, client or organization level and it will define when they are loaded into the instance: System information will be loaded at installation time while Client and Organization information will be loaded during the "Initial Client/Organization Setup" or "Enterprise module management" processes.
+Etendo Modularity supports Reference Data: business information referred by transactions and that tend not to change frequently such as translations, charts of accounts, tax codes, banks, product categories, etc. They can be defined at system, client or organization level and it will define when they are loaded into the instance: System information will be loaded at installation time while Client and Organization information will be loaded during the **Initial Client/Organization Setup** or **Enterprise module management** processes.
 
 Reference data modules are also versioned and can publish updates and upgrades during their life cycle.
 
 There are three types of reference data supported: Translations, Chart of Accounts and standard Reference Data.
 
-####  Translations
+#### Translations
 
 Translation modules are a special kind of module. They have to be marked as "Is translation module" in the Module window. No other contents than translations are allowed in translation modules, and only translations for one module to only one language, the native language declared for the module (eg.
 translation for core module to Spanish, translation for HR module to French) . Translation modules only depend on the module they translate.
@@ -384,7 +366,7 @@ installed: core is exported directly to the language folder (eg. es_ES) and any 
 
 Translation information is always at System level. When a translation module is installed the process takes care of all details to import a transalation pack: it will mark the Language as System Language if it was not and will load all translations in Etendo Application Dictionary.
 
-####  Chart of Accounts (CoA)
+#### Chart of Accounts (CoA)
 
 Tipically you should add just one Chart of Account in your module, although you can create as many modules including CoA as you want and then put them together in a pack if needed. Chart of Accounts are stored in a particular .csv file.
 
@@ -401,7 +383,7 @@ Now your module is ready to be packaged. Execute the ant task `package.module-Dm
 Chart of Accounts are always at Client/Organization level so nothing happens when you install this type of modules but just that the chart of accounts is available to be applied to new clients (during Initial Organization Setup), new organizations (during Initial Organization Setup) or to existing
 Client/Organizations (by Enterprise Module management).
 
-####  Standard Reference Data
+#### Standard Reference Data
 
 You can also include any other data in your module through standard reference data using data sets.
 
@@ -414,7 +396,7 @@ Data sets support advanced data definition to include full business objects (eg.
 
 You can create datasets in the **Data Set** window within the Application Dictionary menu folder.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modconcepts5.png)
+![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-8.png)
 
 There are some details you need to be aware when creating data sets:
 
@@ -428,7 +410,7 @@ There are some details you need to be aware when creating data sets:
 
 Next step is to define the collection of tables included in your data set.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-13.png){: .legacy-image-style}
+![alt text](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-9.png)
 
 Again some details you need to be aware:
 
@@ -443,7 +425,8 @@ import process will also import any referenced data needed to complete the opera
 
 Now you have to define the columns included for each table.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Modularity_Concepts-14.png){: .legacy-image-style}
+![alt text](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-10.png)
+
 
 Usually there is no need to define columns in your table since tipically you want to include all of them but audit info and you can do it in the table itself as described before. Some times you might want to exclude some other columns by checking the **Excluded** field.
 
@@ -452,11 +435,11 @@ in `referencedata/standard` subfolder within your module folder. Of course you c
 
 As described before you can also publish new versions of your reference data modules. Take into account that to ensure data consistency reference data is not deleted from the instance when applying an update/upgrade where the new data set does not include some records originally included. So instead of remove them from the data set you should inactivate them.
 
-####  Advanced topics
+#### Advanced topics
 
 There are special cases that must be taken into account when including tables and columns to reference data.
 
-#####  All columns in dataset are always reset, when updating reference data
+**All columns in dataset are always reset, when updating reference data**
 
 In case you are developing a module that contains a dataset at a **System/client**, **Client/Organization** or **Organization** data access level (actually all the possible ones, in except of **System only**), you must take into account that every time the user updates the reference data application (through **Enterprise Module Management** window) all the included columns will be updated. This is useful, but also little bit dangerous:
 
@@ -468,7 +451,7 @@ The user applies the dataset, and everything goes fine: sequences are imported t
 
 What can be done in order to avoid this kind of issues? Just don't include that value in the dataset, and set it through the default value of the column.
 
-###  Module Scripts and Build Validations
+### Module Scripts and Build Validations
 
 It is possible that your module needs to check if the system complies with some specific rule before installing it. If this is the case, a Build Validation can be used to verify it. A Build Validation is basically a process, defined as a Java class, which can connect to the database and to the
 Etendo sources, check whatever the developer wants, and finally return a result of the validation. If the result is not positive, the module is not applied in the system.
@@ -477,7 +460,7 @@ Also, it is possible that your module needs to do specific transformations to th
 
 If you want to know more about how to create Build Validations and Module Scripts, you can check this [link](../how-to-guides/how-to-create-build-validations-and-module-scripts.md). If you plan to use a module script to create a database object which uses some kind of database specific syntax or feature, you should exclude it from the dbsourcemanager standard model. To learn how to do this, read [this document](../how-to-guides/how-to-exclude-database-physical-objects-from-model.md).
 
-###  Configuration Script
+### Configuration Script
 
 Up to know we have seen how to extend Etendo through modules. As you remember modules are able to add new artifacts -application dictionary components, software resources and reference data- but are not allowed to modify other modueles to avoid crossed dependencies between them.
 
@@ -488,33 +471,16 @@ Create a configuration script is straightforward. You don't need to manually edi
 !!!info
     If you want to know more about how to create Industry Templates and configuration scripts, you can check out  this  document.
 
-###  Development tasks
+### Development tasks
 
-Read [Development Build Tasks](../concepts/development-build-tasks.md) to get a complete explanation of all available development tasks.
-
-##  Publish the .obx file of a Module
-
-Once you have finished developing your .obx file, you can publish it to the central repository.
-
-1. If you haven't exported your module yet, do 
+Read [Development Build Tasks](../developer-tools/etendo-gradle-plugin.md#build-tasks) to get a complete explanation of all available development tasks.
 
 
-
-    ant export.database
-
-2. Package your module using the following ant command, where _yourModuleJavaPackage_ is the java package you defined in your module: 
-
-
-
-    ant package.module -Dmodule=yourModulePackage
-
-3. Follow the steps defined in [Publish Version](../how-to-guides/how-to-publish-a-module.md#publish-version) document. 
-
-##  Advanced Concepts
+## Advanced Concepts
 
 This section explains in detail some advanced concepts of Etendo Modularity. It is not strictly necessary you to read all these details but it is worth to do it, it will help avoid mistakes when creating your modules.  
 
-###  Version Numbers and How Dependencies and Includes are Managed
+### Version Numbers and How Dependencies and Includes are Managed
 
 Different releases of an Etendo module are identified with a **version number**. An Etendo Version Number is an string up to 10 characters lenght following the format x.y.z where:
 
@@ -547,7 +513,7 @@ To enforce this behavior, it is of paramount importance to clearly state what ch
 
 These restrictions make the fixing bugs exercise more difficult but are a key factor to create a maintainable ecosystem. They should be guaranteed during the beta and production phase of any release of any module. During the alpha phase -when bug fixing activity is high- you could break this rule to get some flexibility and taking into account that there should not be any other module depending on it.
 
-####  Dependency types
+#### Dependency types
 
 Dependency type is defined by the **Dependency Enforcement** field, the possible values it can take are:
 
@@ -558,7 +524,7 @@ Dependency type is defined by the **Dependency Enforcement** field, the possible
 * **Minor Version** : In case both **First Version** and **Last Version** are defined, the compatibility is from the minor version in **First Version** to the minor version in **Last Version** (even they belong to the same major version). If **Last Version** is blank, the only compatible version will be the one defined by the **First Version**. 
 * **None** : There is no restriction between major versions, **First Version** defines the first compatible minor version and the compatibility is for all versions higher than this one including major versions. This type should normally not be used. 
 
-#####  User Editable Enforcement
+##### User Editable Enforcement
 
 Module owner can define whether the enforcement is overwriteable by user. By default it is not.
 
@@ -566,7 +532,7 @@ In case it is possible to overwrite the module dependency's enforcement, user wi
 
 Users can select the enforcement for **User Editable Enforcement** dependencies from the **Settings** tab in **Module Management** window.
 
-###  Model - Implementation concept
+### Model - Implementation concept
 
 AD_Model_Object is a table in Etendo Application Dictionary to link Application Dictionary components and the class (servlet) that implement that object. So this table is a mapping between the logical side (AD components) and the physical side (classes). It is useful for two main reasons:
 
@@ -584,7 +550,7 @@ With this extension the web.xml file in the Etendo context is extensible through
 
 More information about the Etendo model object mapping can be found [here](../concepts/model-object-mapping.md).
 
-##  Example on how to create your module
+## Example on how to create your module
 
 Now it is time to go practice. You can follow [this section](../how-to-guides/how-to-create-a-module.md) that will guide you step by step on how to create your first module.
 
