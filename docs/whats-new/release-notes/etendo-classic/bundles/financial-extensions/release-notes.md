@@ -12,6 +12,9 @@ tags:
 
 ## Overview
 
+!!!warning 
+    You need to have permissions to access the private repositories
+
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
 | [3.6.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.6.0){target="_blank"} | 05/11/2025 | 25.1.0 | 25.3.x | CS | :white_check_mark: |

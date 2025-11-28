@@ -16,7 +16,7 @@ status: beta
   
 ##  Overview
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Deep_linking){target="\_blank"}, "Deep linking, on the World Wide Web, is making a hyperlink that points to a specific page or image on a website, instead of that website's main or home page. Such links are called deep links". In the case of Etendo, it is the way to link with a URL directly to an specific functionality, e.g. a Window/Tab, a Manual Form, etc. This link can be built and attached in an email, or copied/pasted in an IM window, etc.
+According to [Wikipedia](https://en.wikipedia.org/wiki/Deep_linking){target="\_blank"}, Deep linking, is making a hyperlink that points to a specific page or image on a website, instead of that website's main or home page. Such links are called deep links". In the case of Etendo, it is the way to link with a URL directly to an specific functionality, e.g. a Window/Tab, a Manual Form, etc. This link can be built and attached in an email, or copied/pasted in an IM window, etc.
 
 ##  Retrieving a direct/deep link
 
@@ -56,10 +56,10 @@ The following parameters are supported:
 
 Here are some examples of hyperlinks:
 
-* http://localhost:8080/openbravo/?tabId=263 - Link to the sales invoice header 
-* http://localhost:8080/openbravo/?tabId=263&recordId=FF808181304ACF4201304AE46E4B003E - Link to a specific sales invoice 
-* http://localhost:8080/openbravo/?tabId=270&recordId=00C1DB5F5AB241D2A574B8CEBF482F8F - Link to a specific sales invoice line 
-* http://localhost:8080/openbravo/?tabId=263&command=NEW - Opens the sales invoice header window in NEW mode 
+* http://localhost:8080/etendo/?tabId=263 - Link to the sales invoice header 
+* http://localhost:8080/etendo/?tabId=263&recordId=FF808181304ACF4201304AE46E4B003E - Link to a specific sales invoice 
+* http://localhost:8080/etendo/?tabId=270&recordId=00C1DB5F5AB241D2A574B8CEBF482F8F - Link to a specific sales invoice line 
+* http://localhost:8080/etendo/?tabId=263&command=NEW - Opens the sales invoice header window in NEW mode 
 
 
 ---

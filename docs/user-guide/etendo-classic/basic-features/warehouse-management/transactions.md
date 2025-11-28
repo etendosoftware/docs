@@ -172,6 +172,33 @@ Some fields to note:
 
 Once **Process Movements** process is executed, the stock is updated.
 
+### Buttons
+
+#### Move a Storage Bin
+
+This button allows you to quickly transfer all products located in a Storage Bin A to another destination Storage Bin B.
+When you click it, the system automatically displays a list of products from the selected source location in the lines.
+When processing the transfer, all products are transferred from the source to the destination.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/move-storage-bin-button-1.png)
+
+#### Generate Relocation Task
+
+!!! info
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+
+Allows you to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to Etendo Mobile, where the operator can execute the movement from the corresponding sub-application. When pressed, the automatic or manual assignment pop-up opens.
+
+!!! info
+    For more information,visit [Relocation Task](../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#relocation-tasks)
+
+#### Process Movement
+
+This button processes the Goods Movement document. When executed, the system validates the movement information and updates the stock in the corresponding locations.
+
+![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/process-movement-button-1.png)
+
+
 ### Accounting
 
 !!! info

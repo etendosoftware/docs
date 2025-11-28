@@ -45,6 +45,7 @@ Open the **Enterprise Module Management** window and install the **Stock Logisti
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/dataset.png)
 
 ### Preference 
+
 :material-menu: `Application` > `General Setup` > `Application` > `Preference`
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/preference.png)
@@ -59,19 +60,25 @@ By default, the module includes three preconfigured preferences. These can be di
 
 ### Unit of Measure
 
+:material-menu: `Application` > `Master Data Management` > `Product Setup` > `Unit of Measure`
+
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/uom.png)
 
 In the Unit of Measure window, the module adds the units of measure **Box** and **Pallets** to facilitate the management of logistics units within the system.
 These UOM serve as the basis for configuring products with alternative units, while the user can create as many additional variants as needed based on the different box format used.
 
 
-### References Inventory Type
+### Referenced Inventory Type
+
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Referenced Inventory Type`
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/referenced-inventory-type.png)
 
 In the Referenced Inventory Type window, the module adds the referenced inventory types **Box** and **Pallet**, each with its corresponding sequence. In this way, the referenced inventory retains traceability at the logistics unit level, ensuring consistency between the defined AUOMs and stock records. Reservations are updated using logic that allows alternative units of measurement to be taken into account.
 
-### Alternate UOM
+### Product - Alternate UOM
+
+:material-menu: `Application` > `Master Data Management` > `Product`
 
 In the [Alternate UOM](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) tab of the **Product window**, enabling the **Enable UOM Management** preference allows users to assign *Box* or *Pallet* as **alternative units of measure**
 
@@ -88,6 +95,22 @@ An additional feature introduced is greater granularity through the ability to s
 **Fields to note:**
 
 - **Logistic Unit Type**: Dropdown linked to [Referenced Inventory Type](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type), used when registering incoming and outgoing goods.
+
+### Product - Stock By Logistic Unit
+
+:material-menu: `Application` > `Master Data Management` > `Product`
+
+It allows viewing stock by logistics units (referenced inventory) in a clearer and more organized way. Users can apply filters by product, location, or type of logistics unit, providing them with a simplified and focused view of stock. For example, it is possible to filter by a specific location and a specific type of logistics unit to see how many logistics units there are and what products they contain. In addition, from this tab, users can navigate directly to the Logistics Unit (Referenced Inventory) window, accessing the full details of its contents.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/product-stock-by-logistic-unit-tab-1.png)
+
+Fields to note:
+
+- Logistic Unit: this field shows the Reference Inventory plus the type of Reference Inventory.
+- Logistic Unit Type: this field shows the type of Reference Inventory.
+- Storage Bin: space where the product is located.
+- Quantity in Hand: Available quantity.
+- Reserved Qty: Reserved quantity.
 
 ## Workflow
 

@@ -76,6 +76,8 @@ To start using this module correctly, the following installation and configurati
     
     Fields to note:
 
+    **Header**
+
     - **Organization**: allows you to manage which organization will apply the configuration.
     - **Warehouse**: is a non-mandatory field that can be used to apply the configuration to a specific warehouse or to all warehouses in the organization.
     - **Active**: is checked or unchecked to enable or disable the configuration.
@@ -86,29 +88,46 @@ To start using this module correctly, the following installation and configurati
             - [GS1-128](https://www.gs1.org/standards/barcodes){target="_blank"}
             - SimpleBarcode
 
-        - **AI Configuration**: A set of Application Identifiers defined by GS1 standards that are used in barcodes. That helps to distinguish different types of information. Each AI specifies the type of data that follows it, such as product identifiers (GTINs), lot numbers, expiration dates, or quantities.
+        - **Barcode Components Configuration**: Set of application identifiers defined by industry standards and used in barcodes. These identifiers enable the system to distinguish different types of information, as each AI specifies the type of data that follows it—such as product identifiers, batch numbers, expiration dates, or quantities. 
+        This field is required when one of the module's default algorithms (GS1-128 or Simple Barcode) is selected. For custom user-defined algorithms, this field may be left blank; however, the system will display a warning message if it remains empty. In all cases, the AI configuration is editable.
 
-        - **Search Related Barcode**: Checkbox, which allows the sub-app to search for the product by more than one barcode.
+    **Preference** Tab
 
-    - **Picking Configuration**
+    This tab allows you to create, edit, and delete preference records. Records automatically inherit the Client and Organization from the header, and these fields are not editable. The tab fields replicate those currently available in the `General Setup` > `Application` > `Preference` window.
 
-        - **Exact Attribute Validation**: Checkbox, defines the validation level that the system will apply during the picking process.
+    Options such as **Search Related Barcode**, **Picking – Exact Attribute Validation**, and preferences for **Enable Stock Reservations** and **Enable UOM Management** can be managed as preferences directly from this tab.
 
-            - Active (Default): The system requires an exact match between the scanned code and the code defined in the Picking List, including product, attributes, and locator.
+    **Preferences Table**
 
-            - Inactive: The system only validates the product, without requiring a strict match in attributes or locator.
+    The following table summarizes the key preferences available in the Advanced Warehouse Configuration:
 
-5. **AI Configuration** Window 
+    | Preference Name | Description | Options | Default Value |
+    |-----------------|-------------|---------|---------------|
+    | **Picking – Exact Attribute Validation** | Defines the level of validation applied during the picking process. | **Y**: Requires exact match between scanned code and Picking List (product, attributes, and locator).<br>**N**: Validates only the product, without strict attribute or locator matching. | *Y* |
+    | **Search Related Barcode** | Allows Etendo to search for a product using multiple barcodes. | **N**: Searches only the primary barcode in the product's **UPC/EAN** field.<br>**Y**: Searches both primary barcode and all additional barcodes in the **Barcode** tab. | *N* |
+    | **Enable Stock Reservations** | Enables or disables stock reservation functionality. | **Y**: Activates stock reservations.<br>**N**: Deactivates stock reservations. | *N* |
+    | **Enable UOM Management** | Enables or disables alternative unit of measure management. | **Y**: Activates AUOM functionality.<br>**N**: Deactivates AUOM functionality. | *N* |
+    | **Create Warehouse Tasks** | Enables automatic generation of warehouse tasks (e.g., picking tasks) during Picking List creation. When disabled, tasks are not generated automatically and assignment is not available. | **Y**: Automatically generates warehouse tasks.<br>**N**: Does not generate tasks automatically. | *Y* |
+    | **Task From Date Completed Days** | Defines how many days backward from the current date Etendo Mobile displays tasks with Completed status. | Numeric value representing number of days. | *1* |
+
+
+
+5. **Barcode Components Configuration** Window 
     
-    :material-menu:`Application` > `Warehouse Management` > `Setup` > `AI Configuration`
+    :material-menu:`Application` > `Warehouse Management` > `Setup` > `Barcode Components Configuration`
 
-    This window is part of the advanced barcode settings in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
+    This window is part of the **advanced barcode settings** in the Etendo system and is used to manage and configure different types of barcodes. It allows the system to read and associate scanned codes with products and their relevant information.
+
+    It allows users to define, configure, and apply their own identifiers so that the system can read and associate different **product attributes**, such as color, packaging type, batch, or any other relevant data, directly from the **GS1-128** codes used in logistics operations.
 
     !!! tip 
         The configurations shown below are predefined in the initial dataset, although they can be modified or new schemes or barcode types can be added.
-
     
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/ai-config-gs1128-1.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-win-1.png)
+
+    !!! note
+
+        The system allows any **application identifier (AI)** to be freely configured to associate it with custom attributes or fields, providing flexibility to adapt to different internal coding schemes. The module is installed with a predefined configuration based on the **GS1-128** standard, which ensures the correct interpretation of codes in accordance with international standards. Nevertheless, users can adjust or redefine identifiers according to their particular needs. In such cases, the system will interpret the codes according to the user-defined configuration, but will not interpret GS1-128 codes in the standard way.
 
     Fields to note:
 
@@ -117,43 +136,78 @@ To start using this module correctly, the following installation and configurati
     - **Name**: Descriptive name of the barcode configuration to easily identify it.  
     - **Description**: Additional details about the purpose or scope of this configuration.  
     - **Separator**: Character used to delimit variable-length fields in the code, typically **FNC1**.  
-    - **Apply to All Separators**: Checkbox indicating whether the defined separator applies globally to all variable-length identifiers in this configuration.  
-
-    **AI Configuration Lines** tab
-
-    - **AI**: Application Identifier code defined by GS1 (e.g., 01 for GTIN, 17 for expiration date).  
-    - **Description**: Explanation of the information the AI represents (e.g., product identifier, batch number).  
-    - **Fixed Length**: Indicates if the data length is always fixed according to the GS1 standard for that AI.  
-    - **Length**: Number of characters expected if the AI is fixed length, or maximum length if it is variable.  
-    - **Priority**: Defines the reading order when multiple identifiers are present, ensuring the system interprets the barcode correctly.  
-
+    - **Apply to All Separators**: Checkbox. If checked (Yes), the configured separator is appended to the end of every identifier — both fixed‑length and variable‑length AIs must end with the separator. If unchecked (No), the separator is applied only to variable‑length identifiers.
     
-    By default, to installing the dataset, the module  includes two main methods for code recognition:
+    **Barcode Component Lines** tab
+
+    - **AI**: Application Identifier code defined by GS1 (e.g., 01 for GTIN, 17 for expiration date).
+    - **Description**: Explanation of the information the AI represents (e.g., product identifier, batch number).
+    - **Fixed Length**: Indicates if the data length is always fixed according to the *GS1 standard* for that AI.
+   - **Length**: (Mandatory) Expected number of characters for fixed-length AIs, or maximum length for variable-length AIs.
+    - **Priority**: Defines the reading order when multiple identifiers are present, ensuring the system interprets the barcode correctly.  
+    - **Entity**: Type Entity selector. The options are: **Attribute, Locator, Order Line, Physical Inventory Line, Product, Reference Inventory, Shipping/Receiving Line**. 
+        
+        If **Product** is selected, default quick options are enabled via checkboxes to define *Lot*, *Serial Number*, or *Expiration Date*. In addition, a value can be defined from the *Entity Field*, which lists the different attributes available for the product. Each of these options is unique and cannot be combined with the others.
+
+        - **Entity Field**: Selector of fields available for the entity selected to assign the barcode value. The options depend on what is entered in Entity.
+        - **Lot**: Check to indicate that the attribute is of the lot type.
+        - **Serial No.**: Check to indicate that the attribute is of the serial number type. 
+        - **Expiration Date**: Check to indicate that the attribute is of the expiration date type.
+
+    By default, when installing the dataset, the module **includes two main methods for code recognition**:
 
     === ":material-playlist-plus: GS1-128"
         
         The [GS1-128](https://www.gs1.org/standards/barcodes){target="_blank"} standard is a globally used barcode format that encodes structured information through **Application Identifiers (AIs)**. Each AI specifies the type of data included, such as product identifiers, batch numbers, expiration dates, or logistics details. This enables detailed and standardized interpretation of product and warehouse information. For more details, see the [official GS1-128 documentation](https://www.gs1.org/standards/barcodes){target="_blank"}.
-
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-gs1128-1.png)
-
-        !!! warning
-            Etendo recognizes and validates only the identifiers shown in the list below. Any modification or inclusion of new identifiers, even those specific to the standard, requires additional development for interpretation; if an identifier that is not on the list is used, the system does not generate an error, but it will also not be able to validate its content.
         
         !!! info 
             As indicated in the standard, when using a variable-length identifier, a separator must be added. The value declared by the standard is **FNC1**
                             
         This configuration allows recognition of different Application Identifiers (AIs) used in warehouse processes. The main implemented codes are:
 
-        | AI Code | Description                          | Details                                                                 | Length Type     |
-        |---------|--------------------------------------|-------------------------------------------------------------------------|-----------------|
+        | AI Code  | Description                          | Details                                                                 | Length Type     |
+        |----------|--------------------------------------|-------------------------------------------------------------------------|-----------------|
         | **(01)** | GTIN (Global Trade Item Number)      | Globally identifies a commercial product using a 14-digit code.         | Fixed length    |
-        | **(10)** | Batch/Lot Number                     | Ensures traceability in manufacturing and distribution processes.        | Variable length |
-        | **(17)** | Expiration Date                      | Indicates product expiration date in format YYMMDD.                      | Fixed length    |
+        | **(10)** | Batch/Lot Number                     | Ensures traceability in manufacturing and distribution processes.       | Variable length |
+        | **(17)** | Expiration Date                      | Indicates product expiration date in format YYMMDD.                     | Fixed length    |
         | **(21)** | Serial Number                        | Unique serial number of an item.                                        | Variable length |
-        | **(91)** | Locator Code                         | Identifies the specific location within the warehouse.                   | Variable length |
-        | **(92)** | Logistics Unit                       | Identifies a logistics unit, such as a pallet or box.                    | Variable length |
+        | **(91)** | Locator Code                         | Identifies the specific location within the warehouse.                  | Variable length |
+        | **(92)** | Logistics Unit                       | Identifies a logistics unit, such as a pallet or box.                   | Variable length |
+        | **(93)** | Free Use                             | -                                                                       | -               |
+        | **(94)** | Free Use                             | -                                                                       | -               |
+        | **(95)** | Free Use                             | -                                                                       | -               |
+        | **(96)** | Free Use                             | -                                                                       | -               |
+        | **(97)** | Free Use                             | -                                                                       | -               |
+        | **(98)** | Free Use                             | -                                                                       | -               |
+        | **(99)** | Free Use                             | -                                                                       | -               |
 
-        Thanks to this configuration, when scanning a GS1-128 barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, When it reads an identifier 91, it associates it with a locator or when it reads an identifier 92, it associates it with a logistics unit
+        Thanks to this configuration, when scanning a *GS1-128* barcode, it interprets the relevant information and applies it to the process in progress (receiving, picking, packing). For example, When it reads an identifier 91, it associates it with a locator or when it reads an identifier 92, it associates it with a logistics unit
+
+        !!! warning "Barcode identification rules"
+
+            Etendo interprets only the identifiers defined in this configuration.
+            GS1-128 identifiers 90–99 are free-use codes and can be assigned to custom product attributes.
+
+            By default:
+
+            - AI 91 and 92 are used by Etendo.
+            - AI 93–99 remain available for custom product attributes that are resolved dynamically (e.g., 93 = color, 94 = size).
+
+            Users may change both the identifiers and the attributes they reference. However, any change is the user’s responsibility and may cause inconsistencies with standard GS1-128 parsing or external integrations.
+
+            If a different interpretation is required, a developer can create a custom **barcode algorithm**.
+
+        <figure markdown="span">
+            ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-attr-2.png)
+            <figcaption> Example: Custom Product Entity Configuration</figcaption>
+        </figure>
+    
+        !!! info "Configuration Restrictions and Validations"
+    
+            - When creating or modifying identifiers (AI), the system applies a series of validations designed to maintain the consistency and uniqueness of configurations.
+            - Each AI must be unique. There cannot be more than one record with the same AI number, regardless of the entity or associated field.
+            - When an AI is associated with a specific type of information such as Lot, Expiration Date, or Serial Number, that type cannot be repeated within the same configuration.
+            - The system allows for the inclusion of custom attributes in barcodes. During scanning, these attributes are interpreted dynamicaly as **additional product identifiers**, along with standard values, allowing for the validation and distinction of a unique product.
 
     === ":material-playlist-plus: Direct String Match"
 
@@ -164,26 +218,24 @@ To start using this module correctly, the following installation and configurati
 
 6. **Task** infrastructure:
 
-    The [Task](../platform-extensions/task.md) module, automatically installed as a dependency of this module, enables event management, triggering tasks creation and actions execution after dynamic changes, allowing automation of flows.
+    The [Task](../platform-extensions/task.md) module, installed automatically as a dependency, manages events and triggers task creation and actions after dynamic changes, enabling automation of workflows.
 
-    En particular al crear una picking list
+    Specifically, it is used when creating a Picking List.
 
     !!! warning "Required"
-        In order to use this module, a **developer** must follow the initial settings described in [Task - Initial Configuration](../../../../../developer-guide/etendo-classic/bundles/platform/task.md#initial-configuration).
+        A developer must complete the initial setup described in [Task - Initial Configuration](../../../../../developer-guide/etendo-classic/bundles/platform/task.md#initial-configuration) to use this module.
 
-    When installing `Advanced Warehouse Management` module, the **Task Types** required for picking and packing from the **Etendo Mobile** are included by default:
+    When the Advanced Warehouse Management module is installed, the Task Types required for picking and packing from Etendo Mobile are included by default:
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/task-type.png)
 
     **User Algorithm**
-    
-    Each **Task Type** will allow selecting the **warehouse operator assignment** algorithm, by default `Round-Robin By Section Algorithm` is used.
+
+    Each Task Type allows selecting the warehouse operator assignment algorithm. By default, the Round-Robin algorithm is used.
 
     **System Preferences**
 
-    - `CreateWarehouseTask`: This preference is set to "Y" (Yes) by default to enable automatic generation of warehouse tasks, such as picking tasks, when creating the Picking List. If set to "N" (No), tasks will not be generated automatically and the assignment option will not be available during picking creation.
-
-    - `fromDateCompleted`: Defines the number of days backward from the current date to display tasks with Completed status in Etendo Mobile. By default, the value is 1 and  will show the tasks completed the previous day.
+    The preferences `Create Warehouse Task` and `Task From Date Completed Days`, available in the *Preference* tab, relate to task functionality: `Create Warehouse Task` enables automatic creation of tasks when a picking is completed, and `Task From Date Completed Days` defines the default number of days for displaying completed tasks.
 
 
 ## Master Data Configuration
@@ -369,6 +421,18 @@ The grouping is reflected in the Grouped by column of the selected lines (e.g., 
 
 Button allows you to remove a line from your grouping without affecting the rest of the lines in the group.
 
+**Generate Reception Task** 
+
+Allows managing operational receptions from the mobile app through the creation of Reception Tasks. It is available when there is an Inbound Receipt that is not yet completed and has loaded lines.
+
+By pressing the button, a task linked to the selected document is generated and becomes visible in the mobile app and in the Task window of the ERP. 
+In the pop-up window, you can assign a user or enable automatic assignment. If multiple records are selected, one task will be created for each record, all assigned to the same user or role defined in the pop-up.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+
+!!!Info
+    For more information, visit [Reception Tasks](#reception-tasks).
+
 **Complete Receipt**
 
 Finishes the receipt, generating and completing the corresponding **goods receipts**. In addition, if the receipt includes products with AUOM (pallet or box), the associated **Inventory Reference** record is automatically created.
@@ -410,8 +474,8 @@ Finishes the receipt, generating and completing the corresponding **goods receip
 
 The option of stock reservations based on the unit defined in the sales order (AUOM field) has been added, which determines whether the product is sold in its base unit or in an alternative unit (for example, a single bottle or a box of 12).  
 
-!!! info
-    To use reservations, enable the **Enable Stock Reservations** and **Enable UOM Managemen** preference and set the **Stock Reservation** field in the Sales Order to *Automatic*. For details, see [Stock Logistic Unit](./stock-logistic-unit.md).
+!!! info 
+    By default, when the module is installed the preferences `Enable Stock Reservations` and `Enable UOM Management` are enabled. For details, see [Stock Logistic Unit - Preference](./stock-logistic-unit.md#preference).
 
 ### Reservation Flow
 
@@ -503,7 +567,7 @@ This screen contains:
 - A list of cards with tasks. 
 
 !!! Note
-    As explained above in the Tasks section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `fromDateCompleted`. This allows the user to define the number of days backwards, from the current date, to be used as a criterion for displaying tasks in Completed status.
+    As explained above in the Preference tab section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `Task From Date Completed Days`. This allows the user to define the number of days backwards, from the current date, to be used as a criterion for displaying tasks in Completed status.
 
 <br><br><br><br><br><br>
 
@@ -745,13 +809,6 @@ This corresponds to the same operation performed in Etendo **Physical Inventory*
 !!!Info
     For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
 
-**Inventory Relocation**
-
-Allows inventory to be moved between storages bin. This process corresponds to the same operation performed in the Etendo using a **Goods Movement** windows: transferring stock from one state or location to another, without changing the total quantity available.
-
-!!!Info
-    For more information about how to use this functionality in Etendo, visit [Goods Movement](../../../basic-features/warehouse-management/transactions.md#goods-movement).
-
 
 #### Process Start (Etendo)
 
@@ -764,7 +821,6 @@ The process begins with the creation of **Tasks** within Etendo, using the Task 
 With the installation of the **Advanced Warehouse Management** module, new specific tasks are incorporated that expand the possibilities of logistics management. The header retains the basic fields for a task and adds options in the *Task Type* field, which determine the type of action to be performed:
 
 - **Inventory Adjustment**: Used to plan stock counting or adjustment tasks. It can update existing quantities or register stock for products that previously had no inventory.
-- **Inventory Relocation**: Used to plan tasks for moving products between warehouses or storage locations.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-2.png)
 
@@ -808,19 +864,75 @@ To change inventory **Status**:
 - Confirm by pressing **Process** button.
 
 
-#### Inventory Relocation
+### Relocation Tasks
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-relocate-1.png)
+Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.
 
-To **Relocate** inventory:
+!!!Info
+    For more information about how to use this functionality in Etendo, visit [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement).
 
-- Enter the **Inventory Tasks** menu. There, tasks are divided by status: *Pending*, *In Progress*, and *Completed*.
-- Search and select the task from the list or by the search engine. 
-- When a card is selected, a screen with the task information opens. 
-- Press **Start Relocation** button
-- Complete **Quantity Count** field.
-- Complete **To Locator** field.
-- Confirm by pressing **Process** button.
+#### Process Start (Etendo)
+
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Goods Movement`
+
+The relocation process begins in the ERP from the **Generate Relocation Task** button in the Goods Movements window.
+
+Allows the manager to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to the mobile application, where the operator can execute the movement from the corresponding sub-application. When pressed, the automatic or manual assignment pop-up opens.
+
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/generate-relocation-task.png)
+
+Use of the **Generate Relocation Task** button is subject to system validation that determines its availability. It is only displayed when the *Goods Movement* document has not been processed and does not have a task already assigned to it.
+
+#### Access to Relocation Tasks (Etendo Mobile)
+
+When accessing Etendo Mobile in the Relocation Tasks section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as Pending.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-1.png)
+
+To perform a **relocation**:
+
+- Access the **Relocation Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Relocation** button.
+- Complete **Counted Quantity** field.
+- Complete **To Locator** field. (Optional)
+- Confirm the task with the **End Relocation** button.
+- Confirm that you want to finish the task.
+- See Success message.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
+### Reception Tasks
+
+It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
+
+#### Process Start (Etendo)
+
+The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned and then reflected in the mobile application of the assigned operator.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+
+#### Access to Inventory Tasks (Etendo Mobile)
+
+When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
+
+**Reception Tasks**
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1-a.png)
+
+To perform a **Reception**:
+
+- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Receipt** button.
+- **Scan** the products to stock them or **load** them manually.
+- Confirm the task with the **End Reception** button.
+- Confirm that you want to finish the task.
+- See **Success message**.
+
 
 
 ### All Tasks

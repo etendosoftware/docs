@@ -182,6 +182,7 @@ nav:
     - Requirements: getting-started/requirements.md
     - Install Etendo: getting-started/installation.md
     - Interactive Installation: getting-started/interactive-installation.md
+    - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
     - User interface:
       - Workspace: getting-started/user-interface/workspace.md
       - Navigation: getting-started/user-interface/navigation.md
@@ -269,29 +270,29 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
             - Advanced Business Partner: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md
             - Bulk Completion: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md
-          - Platform Extensions Bundle:
-            - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
-            - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
-            - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
-            - Task: user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md
-            - Print Provider: user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md
-          - Warehouse Extensions Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
-            - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
-            - Packing: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md
-            - Picking List: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md
-            - Stock Logistic Unit: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md
-          - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
-          - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+          - Etendo BI Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
+            - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
           - Financial Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
             - Adjust Invoice Tax: user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
             - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
             - Business Partner Settlement: user-guide/etendo-classic/optional-features/bundles/financial-extensions/business-partner-settlement.md
-            - Conversion Rate Download Rule: user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-download-rule.md
+            - Conversion Rate Downloader: user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md
             - Bulk Posting: user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
             - Intercompany: user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md
+          - Platform Extensions Bundle:
+            - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+            - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
+            - Etendo RX: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md
+            - Print Provider: user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md
+            - Task: user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md
+          - Procurement Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+            - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
+          - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
+          - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
@@ -307,12 +308,12 @@ nav:
             - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
             - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
             - Veri*Factu: user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md
-          - Etendo BI Extensions Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
-            - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
-          - Procurement Extensions Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
-            - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
+          - Warehouse Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
+            - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
+            - Packing: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing.md
+            - Picking List: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking.md
+            - Stock Logistic Unit: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
@@ -334,10 +335,11 @@ nav:
       - ✨ Getting Started: user-guide/etendo-copilot/getting-started.md
       - Setup and Usage: user-guide/etendo-copilot/setup-and-usage.md
       - Bundles:
-        - Copilot Extensions: 
+        - Copilot Extensions:
           - Overview: user-guide/etendo-copilot/bundles/overview.md
-          - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
-          
+          - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
+    - New UI:
+      - User Interface Improvements: user-guide/new-ui/ui-improvements.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -376,7 +378,6 @@ nav:
         - Datasources: developer-guide/etendo-classic/concepts/datasources.md
         - DBSourceManager: developer-guide/etendo-classic/concepts/dbsourcemanager.md
         - Deep Linking: developer-guide/etendo-classic/concepts/deep-linking.md
-        - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
         - Development Model: developer-guide/etendo-classic/concepts/development-model.md
         - Development Project Structure: developer-guide/etendo-classic/concepts/development-project-structure.md
         - Dynamic Expressions: developer-guide/etendo-classic/concepts/dynamic-expressions.md
@@ -414,18 +415,17 @@ nav:
 #        - Category:Developers Guide: developer-guide/etendo-classic/how-to-guides/Category_Developers_Guide.md
 #        - Category:HowTo: developer-guide/etendo-classic/how-to-guides/Category_HowTo.md
 #        - Client Side Development and API: developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API.md
-#        - How Price Including Taxes are Calculated: developer-guide/etendo-classic/how-to-guides/How_Price_Including_Taxes_are_Calculated.md
+        - How Price Including Taxes are Calculated: developer-guide/etendo-classic/how-to-guides/how-price-including-taxes-are-calculated.md
         - How to Add a Button to the Toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
         - How to Add a Canvas Field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid.md
-#        - How to add a Constraint: developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint.md
+        - How to Add a Constraint: developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint.md
         - How to Add a Field to a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md
-#        - How to add a masked text field: developer-guide/etendo-classic/how-to-guides/How_to_add_a_masked_text_field.md
+        - How to Add a Masked Text Field: developer-guide/etendo-classic/how-to-guides/how-to-add-a-masked-text-field.md
         - How to Add a Rich Text Field and Column: developer-guide/etendo-classic/how-to-guides/how-to-add-a-rich-text-field-and-column.md
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
-#        - How to automatically populate search keys: developer-guide/etendo-classic/how-to-guides/How_to_automatically_populate_search_keys.md
-#        - How to call a stored procedure from the DAL: developer-guide/etendo-classic/how-to-guides/How_to_call_a_stored_procedure_from_the_DAL.md
+        - How to Add Telemetry to a Module: developer-guide/etendo-classic/how-to-guides/how-to-add-telemetry-to-a-module.md
+        - How to Automatically Populate Search Keys: developer-guide/etendo-classic/how-to-guides/how-to-automatically-populate-search-keys.md
 #        - How To Call An Openbravo Webservice From Java: developer-guide/etendo-classic/how-to-guides/How_To_Call_An_Openbravo_Webservice_From_Java.md
-#        - How to change an existing Report: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Report.md
         - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
 #        - How to Change Fonts in Openbravo Reports: developer-guide/etendo-classic/how-to-guides/How_to_Change_Fonts_in_Openbravo_Reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
@@ -624,6 +624,7 @@ nav:
         - How to Create a Spreadsheet and Tasks Agent: developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
+        - How to Customize an Agent with Agent Memories: developer-guide/etendo-copilot/how-to-guides/how-to-customize-an-agent-with-agent-memories.md
         - How to Debug an Agent Prompt with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith.md
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Explore ERP Data with MCP: developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp.md

@@ -16,20 +16,20 @@ status: beta
     
 ## Overview
 
-In Etendo, the system moves away from a classic servlet architecture to a Rich Internet Application (RIA) architecture. This is a radical paradigm shift resulting in a much more dynamic and versatile user interface. In a RIA architecture, the requests for data and for the page/user interface are separated. The page/user interfaces is loaded on the client once and then re-used while the user works in the application. This in contrast for requests for data and actions, these are executed continuously.
+In Etendo, the system moves away from a classic servlet architecture to a **Rich Internet Application (RIA)** architecture. This is a radical paradigm shift resulting in a much more dynamic and versatile user interface. In a RIA architecture, the requests for data and for the page/user interface are separated. The page/user interfaces is loaded on the client once and then re-used while the user works in the application. This in contrast for requests for data and actions, these are executed continuously.
 
-![](../../../assets/developer-guide/etendo-classic/concepts/etendo-architecture/etendoarchitecture0.png)
+![](../../../assets/developer-guide/etendo-classic/concepts/etendo-architecture/etendo-architecture.png)
 
 The Etendo architecture is implemented using Etendo Core and several related modules:
 
-* The JSON module provides the [JSON REST web service](../concepts/json-rest-web-services.md), it is used for the client-server data communication 
-* The  [Weld](#introducing-weld-dependency-injection-and-more)  module provides dependency injection and component management 
-* The Kernel module takes care of infrastructure tasks as request processing, event handling, [compression and caching](#etags-caching-and-compressing)
-* The DataSource module uses the JSON module and provides higher level data request functionality for querying and data related actions 
-* The Smartclient module provides the [Smartclient](https://smartclient.com/){target="\_blank"} user interface library 
-* The application module contains the implementation of the navigation bar, grids and forms and other application oriented client and server side code. 
+- The JSON module provides the [JSON REST web service](../concepts/json-rest-web-services.md), it is used for the client-server data communication 
+- The  [Weld](#introducing-weld-dependency-injection-and-more)  module provides dependency injection and component management 
+- The Kernel module takes care of infrastructure tasks as request processing, event handling, [compression and caching](#etags-caching-and-compressing)
+- The DataSource module uses the JSON module and provides higher level data request functionality for querying and data related actions 
+- The Smartclient module provides the [Smartclient](https://smartclient.com/){target="\_blank"} user interface library 
+- The application module contains the implementation of the navigation bar, grids and forms and other application oriented client and server side code. 
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Openbravo_3_Architecture-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/etendo-architecture-1.png)
   
 This section explains the concepts implemented by these modules.
 
@@ -41,13 +41,13 @@ Components are implemented in modules. A module has complete freedom on how to i
 
 A component can be retrieved using a URL (a **component request**). For example, this URL will retrieve the javascript for the sales invoice window:
 
-http://localhost:8080/openbravo/org.openbravo.client.kernel/OBUIAPP_MainLayout/View?viewId=_167 ???
+`http://localhost:8080/etendo/org.openbravo.client.kernel/OBUIAPP_MainLayout/View?viewId=_167`
 
 To explain the structure of this URL, the OBUIAPP_MainLayout identifies the client application module. The `ComponentProvider` of that module knows how to handle the last part of the URL: View?viewId=_167. It will create a `StandardWindowComponent` which gets the `viewId` (the `ADWindow` id) to generate the javascript. The generated javascript is postprocessed (compressed, syntax checking) before it is sent to the client.
 
 The following image illustrates the request flow processing in more detail:
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Openbravo_3_Architecture-2.png){:.legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/etendo-architecture-2.png)
 
 The overall request and generate flow operates as follows:
 
@@ -112,38 +112,15 @@ The defined components can be injected automatically in other components using *
 private MenuManager menuManager;
 ```
 
-####  Assignability Rules
+**Assignability Rules**
   
 CDI 2.0 defines under which circumstances the assignability of raw and parameterized types works within an injection point. This is specified with a set of rules defined [here](https://docs.jboss.org/cdi/spec/2.0/cdi-spec.html#assignable_parameters){target="\_blank"}.
 
-The Weld version used in versions prior to 3.0PR19Q3 [was not adhering](https://issues.redhat.com/browse/WELD-2575?focusedCommentId=13718376&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-13718376){target="\_blank"} to these rules and thus it allowed to define some injection points which are no longer valid starting from 3.0PR19Q3. For example, given the following class: ???
- 
-```
-public class DocGenerator<T extends BaseOBObject> {
-    ...
-}
-```
-
-Before 3.0PR19Q3 it was possible to define an injection point as follows: ???
+Starting from any Etendo version we need to use [wildcards](https://docs.oracle.com/javase/tutorial/extra/generics/wildcards.html){target="\_blank"} to define the injection point in order to follow the assignability rules:
 
 ```
 public class BaseGenerator {
  
-    // Before 3.0PR19Q3
-    @Inject
-    @Any
-    private Instance<DocGenerator<BaseOBObject>> docGenerators;
- 
-    ...
-}
-```
-
-Starting from 3.0PR19Q3 we need to use [wildcards](https://docs.oracle.com/javase/tutorial/extra/generics/wildcards.html){target="\_blank"} to define the injection point in order to follow the assignability rules:
-
-```
-public class BaseGenerator {
- 
-    // After 3.0PR19Q3
     @Inject
     @Any
     private Instance<DocGenerator<? extends BaseOBObject>> docGenerators;
@@ -166,9 +143,9 @@ The created instance will be integrated with Weld and can make use of its depend
 
 Weld will analyze the classpath to find components which have specific annotations.
 
-As the default Weld searches in all the class files in WEB-INF/classes but as a default the jar files in WEB-INF/lib are excluded from this search. See [here](https://docs.jboss.org/weld/reference/latest/en-US/html/ee.html#packaging-and-deployment){target="\_blank"}(Packaging and Deployment chapter of the Weld documentation) on how to create a jar file which is searched by Weld.
+As the default Weld searches in all the class files in `WEB-INF/classes` but as a default the jar files in `WEB-INF/lib` are excluded from this search. See [here](https://docs.jboss.org/weld/reference/latest/en-US/html/ee.html#packaging-and-deployment){target="\_blank"}(Packaging and Deployment chapter of the Weld documentation) on how to create a jar file which is searched by Weld.
 
-Etendo Weld will also exclude specific classes from WEB-INF/classes. This to prevent searching all classes specific exclusion filters have been specified. They can be found in the `config/beans.xml` file in the Weld
+Etendo Weld will also exclude specific classes from `WEB-INF/classes`. This to prevent searching all classes specific exclusion filters have been specified. They can be found in the `config/beans.xml` file in the Weld
 module. The classes which are caught by the exclusion filter will not be considered as components and will not be found by Etendo/Weld.
 
 ###  Weld module for developers
@@ -234,13 +211,13 @@ The output generated by a module can be compressed and syntax checked. For compr
 A module implementing functionality in the Etendo architecture should follow a fixed structure. The image below reflects the standard structure:
 
 * the java source code and templates are located in the src directory 
-* the static javascript should be located in this subdirectory: web/[modulepackage]/js 
-* the styling artifacts (images, css and javascript) should be located in this subdirectory: web/org.openbravo.userinterface.smartclient/3.00/[modulepackage] 
-* the javascript unit tests should be located in the web-test directory. 
+* the static javascript should be located in this subdirectory: `web/<modulepackage>/js`
+* the styling artifacts (images, css and javascript) should be located in this subdirectory: `web/org.openbravo.userinterface.smartclient/3.00/<modulepackage>`
+* the javascript unit tests should be located in the `web-test` directory. 
 
 By following this structure, the files will be copied to the correct location during the main build steps.  
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Openbravo_3_Architecture-7.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/etendo-architecture-7.png)
 
 ##  Component Provider
 
@@ -313,7 +290,7 @@ public List<ComponentResource> getGlobalComponentResources() {
 
 The code above shows how to register javascript and css resources. Also an example of a dynamic resource is shown, this will call the component to generate javascript.
 
-###  Finding all ComponentProviders
+**Finding all ComponentProviders**
 
 Etendo can find all the `ComponentProviders` because Weld will analyze the classpath and collect all classes which have a `@ComponentProvider` annotation. See the Weld section on classpath analyzing above.
 
@@ -321,7 +298,7 @@ Etendo can find all the `ComponentProviders` because Weld will analyze the class
 
 Etendo provides a convenient solution for executing actions on the server from the client. This is the so-called `ActionHandler` concept. The `ActionHandler` concept has a server and client-side part to it.
 
-###  ActionHandler: server side, calling from the client
+**ActionHandler: server side, calling from the client**
 
 !!!note
     By default `ActionHandlers` cannot be executed by Portal users. To make them accessible for portal users they must implement `org.openbravo.portal.PortalAccessible ` interface.  
@@ -332,8 +309,8 @@ For most cases, it makes sense to override/extend the `BaseActionHandler` class:
 
 ```
 package org.openbravo.client.application.examples;
- 
-....
+
+...
  
 public class MyActionHandler extends BaseActionHandler {
     /**
@@ -373,10 +350,8 @@ var callback = function(rpcResponse, data, rpcRequest) {
 // and call the server
 OB.RemoteCallManager.call('org.openbravo.client.application.examples.MyActionHandler', {}, {}, callback);
 ```
-
-###  How To
-
-This [How To](../how-to-guides/how-to-add-a-button-to-the-toolbar.md#adding-server-side-logic---implementation-steps) contains an example of a server-side ActionHandler which is called from the client.
+!!! info
+    For more information, visit [How to add a button to the toolbar](../how-to-guides/how-to-add-a-button-to-the-toolbar.md#adding-server-side-logic---implementation-steps). It's contains an example of a server-side ActionHandler which is called from the client.
 
 ##  Implement Application Initialization Logic
 
@@ -411,31 +386,31 @@ Business entity events are broadcasted on the event, so before the event is exec
 !!!note
     Business entity events **only** work when accessing the database through the data access layer, so they do **not** work for classic windows or direct jdbc calls.
 
-###  How To
-
-This [How To](../how-to-guides/how-to-implement-a-business-event-handler.md) gives a detailed description on how to implement your own event handler listening to business entity events.
+!!! info
+    For more information, visit [how to implement a business event handler](../how-to-guides/how-to-implement-a-business-event-handler.md). It's gives a detailed description on how to implement your own event handler listening to business entity events.
 
 ###  Event Classes and API
 
 The events are implemented as java classes, when an event is fired, an instance of this class is broadcasted and received by event handlers. The event instances all inherit from the base `EntityPersistenceEvent` class:
 
-* `EntityNewEvent` 
-* `EntityUpdateEvent`  
-* `EntityDeleteEvent` 
-* `TransactionBeginEvent.java` 
-* `TransactionCompletedEvent.java` 
+- `EntityNewEvent` 
+- `EntityUpdateEvent`  
+- `EntityDeleteEvent` 
+- `TransactionBeginEvent.java` 
+- `TransactionCompletedEvent.java` 
 
-The event classes have javadoc which gives more details on their API. ???
+The event classes have `javadoc` which gives more details.
 
 The most relevant APIs are discussed here:
 
-* `getTargetInstance` (available for all events): returns the business object which is the target of the event,
+- `getTargetInstance` (available for all events): returns the business object which is the target of the event,
+    
     !!!note
         Do not call set methods on this object directly, the new values are not persisted as Hibernate has already read the values from the object.
 
-* `setCurrentState`(Property property, Object value) (available for all events but only relevant for update/new events): sets a new value for the property on the target instance, the new value will be persisted and then the target instance is updated. The Property can be retrieved from the entity of the `targetInstance` (call `getEntity` on the target instance and then `getProperties` or `getProperty`). 
+- `setCurrentState`(Property property, Object value) (available for all events but only relevant for update/new events): sets a new value for the property on the target instance, the new value will be persisted and then the target instance is updated. The Property can be retrieved from the entity of the `targetInstance` (call `getEntity` on the target instance and then `getProperties` or `getProperty`). 
+- Object `getPreviousState`(Property property) (only available in the update event): returns the previous value (currently set in the database) for the property in the entity.
 
-* Object `getPreviousState`(Property property) (only available in the update event): returns the previous value (currently set in the database) for the property in the entity.
 
 ##  Implementing a new view
 
@@ -454,8 +429,7 @@ Etendo uses the [Smartclient](https://smartclient.com/){target="\_blank"} client
 * [Smartclient demo](https://smartclient.com/smartclient/showcase/?id=_Welcome){target="\_blank"} 
 * [Smartclient forum](https://forums.smartclient.com/){target="\_blank"}  
 
-It can help to have the Smartclient source code and reference material in your Eclipse workspace, it is very easy to search source code then. The latest Smartclient source code is available in this Mercurial repository:
-https://code.openbravo.com/erp/mods/org.openbravo.userinterface.smartclient.dev/. ???
+It can help to have the Smartclient source code and reference material in your IntelliJ workspace, it is very easy to search source code then. The latest Smartclient source code is available in this [corresponding repository](https://bitbucket.org/koodu_software/org.openbravo.userinterface.smartclient.dev)
 
 ---
 

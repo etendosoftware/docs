@@ -12,6 +12,9 @@ tags:
 
 ## Overview
 
+!!!warning 
+    You need to have permissions to access the private repositories
+
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
 | [3.2.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/3.2.0){target="_blank"} | 30/09/2025 | 25.1.0 | 25.3.x | CS | :white_check_mark: |
