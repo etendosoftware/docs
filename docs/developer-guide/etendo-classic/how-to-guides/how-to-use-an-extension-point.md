@@ -1,0 +1,82 @@
+---
+title: How to use an Extension Point
+tags: 
+    - Use
+    - Extension
+    - Point 
+    - Howto
+
+status: beta
+---
+
+
+#  How to use an Extension Point
+
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+
+##  Overview
+
+Extension Points are execution points that can be set in any PL/SQL Procedure and that is able to call other PL/SQL Procedures included in any module. This is useful to extend the functionality of existing procedures that contain such an extension point. For example, using the **C_Invoice_Post - Finish Process** Extension Point. It is possible for any module to add a PL/SQL procedure to be run whenever an Invoice is processed. This has been used in the Advanced Payables and Receivables module to generate the payment schedule for the processed invoice.
+
+Extension Points are managed in the window `Application Dictionary` > `Setup` > `Extension Points` . Here can be defined new extension points and new PL/SQL procedures attached to existing Extension Points.
+
+There is a complete list of available extension points and the parameters used in the [Extension Points](../concepts/extensionpoints.md) document.
+
+###  Procedures
+
+To attach a PL/SQL procedure to an existing Extension Point you must create a new record in the **Procedures** tab and fill in the field **Procedure** with the name of the PL/SQL procedure you want to be invoked in the Extension Point selected.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-an-extension-point/extensionpoints.png)
+
+Finally define the PL/SQL procedure with the same name defined in the field **Procedure** and with only one **character varying** parameter that will reference the `AD_EP_INSTANCE` record that contains all the parameter values used to invoke the PL/SQL procedure. For example all the PL/SQL procedures attached to the Extension Point **C_Invoice_Post - Finish Process** are
+invoked with the following parameters: `Record_ID`, `DocAction`, `User`, `Message` and `Result`. The definition of the PL/SQL and how the parameters are read can be seen in the following example:
+ 
+```
+CREATE OR REPLACE FUNCTION aprm_gen_paymentschedule_inv(p_ep_instance character varying)
+    RETURNS void AS
+$BODY$ DECLARE 
+ 
+p_record_id VARCHAR(60);
+p_message VARCHAR(2000);
+p_docAction VARCHAR(60);
+p_user VARCHAR(60);
+p_result NUMERIC;
+ 
+--TYPE RECORD IS REFCURSOR;
+Cur_Params RECORD;
+ 
+BEGIN
+ 
+    FOR Cur_Params IN (
+    SELECT *
+    FROM ad_ep_instance_para
+    WHERE ad_ep_instance_id = p_ep_instance
+    ) LOOP
+    IF (cur_params.parametername LIKE 'DocAction') THEN
+        p_docaction := Cur_Params.p_string;
+    ELSIF (cur_params.parametername LIKE 'Record_ID') THEN
+        p_record_id := cur_params.p_string;
+    ELSIF (cur_params.parametername LIKE 'User') THEN
+        p_user := cur_params.p_string;
+    ELSIF (cur_params.parametername LIKE 'Message') THEN
+        p_message := cur_params.p_text;
+    ELSIF (cur_params.parametername LIKE 'Result') THEN
+        p_result := cur_params.p_number;
+    END IF;
+    END LOOP;
+ 
+-- The code goes here
+ 
+END ; $BODY$
+    LANGUAGE plpgsql VOLATILE
+    COST 100;
+```
+
+There is a loop to obtain all the parameters, this loop iterates for all the defined  parameters. Here notice that the parameter is identified by `parametermame` which matches the defined parameter in the Extension Point and depending on its type the actual value is stored in one of the following columns: `p_string`, `p_number` or `p_date`.
+
+After the Extension Point attachement has been defined and the PL/SQL procedure has been created it will be executed under the conditions the Extension Point has been defined in the [Extension Points](../concepts/extensionpoints.md) document.
+
+---
+
+This work is a derivative of [How to Use an Extension Point](http://wiki.openbravo.com/wiki/How_to_use_an_Extension_Point){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
