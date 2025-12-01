@@ -1,16 +1,19 @@
 ---
 title: Essentials Extensions - Release Notes
 tags:
-  - Release Notes
-  - Essentials
-  - Bundle
-  - Versions
+    - Release Notes
+    - Essentials
+    - Bundle
+    - Versions
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.essentials.extensions`
 
 :material-store: Etendo Marketplace:  [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}
 
 ## Overview
+
+!!!warning 
+    You need to have permissions to access the private repositories
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |

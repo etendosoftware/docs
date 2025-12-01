@@ -37,7 +37,7 @@ module directory and packaged with the module.
 Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
 
 !!!info
-    For more information, read [How to add a Constraint](../how-to-guides/How_to_add_a_Constraint.md).
+    For more information, read [How to add a Constraint](../how-to-guides/how-to-add-a-constraint.md).
 
 ###  Messages
 
