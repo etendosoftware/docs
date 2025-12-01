@@ -9,23 +9,23 @@ tags:
 status: beta
 ---
 
-#  SQLC
+# SQLC
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-!!!info
-    In general, any new code should be written using the newer [Data Access Layer](../concepts/data-access-layer.md). SqlC/xsql-based code should only be used in special cases or in case older code exists.  
+!!! warning
+    In general, any new code should be written using the newer [Data Access Layer](../concepts/data-access-layer.md). `SqlC/xsql-based` code should only be used in special cases or in case older code exists.  
   
-##  Overview
+## Overview
 
 **SqlC** is a tool that **builds a java class from a file with SQL statements**. The java class contains the code necessary to connect it to a database, format the statement, execute it and return the resultset from the database. This is a common function for any statement execution. SqlC avoids this repetitive task building the java code from the definitions of the desired statements.
 
-##  A Simple Example
+## A Simple Example
 
 This simple example shows how to use SqlC with a simple SQL select statement.
 
-```
+``` SQL
     SELECT Attribute, Value, AD_Window_ID 
     FROM AD_Preference 
     WHERE AD_User_ID = ?
@@ -34,7 +34,7 @@ This simple example shows how to use SqlC with a simple SQL select statement.
 To let SqlC generate a java class which does execute this query it needs to be placed in a xml file: i.e. `src/org/openbravo/howto/Howto_data.xsql`.
 
     
-```
+``` XML
     <?xml version="1.0" encoding="UTF-8" ?>
      
     <SqlClass name="HowtoData" package="org.openbravo.howto">
@@ -53,7 +53,7 @@ This tells SqlC that a java class `org.openbravo.howto.HowtoData` should be gene
 
 The following snippet displays the interesting parts of the generated class from the perspective of its user.
 
-```
+``` java
     package org.openbravo.howto;
      
     class HowtoData implements FieldProvider {
@@ -84,11 +84,11 @@ In addition a single getField method was generated to allow getting data via the
 
 Finally, for the select statement a java method named select was generated which takes a parameter corresponding to the parameter definition in the xsql file. The method does execute the query and returns its result via an array of type of the generated class.
 
-##  Basics
+## Basics
 
 After the short example this section explains the basics which are applicable for all use cases of SqlC. After these have been shown the next section splits up into the different types of statements and how to use each of them with SqlC.
 
-###  Naming Convention
+### Naming Convention
 
 The source files for SqlC are xml files with the file ending xsql. Only files with this ending will be picked up by the Etendo build scripts. When the SqlC tool is run a single java class is generated per xsql file. This class contains one method per statement defined in the xsql file. The filename patterns for the source files and the resulting generated file look like the following:
 
@@ -98,13 +98,13 @@ The source files for SqlC are xml files with the file ending xsql. Only files wi
 
 Each file needs to reside inside a folder matching the java package in which the generated file is expected. The location of the xsql source file in the directory structure needs to match the declared package inside the file.
 
-###  Structure of the Source & Generated Files
+### Structure of the Source & Generated Files
 
 There is no formal DTD or XSD for the structure of xsql files. Instead the structure is informally explained here.
 
 As each xsql file corresponds to a single generated java file it must contain exactly one xml tag to define the java class. Optionally a single class comment may be specified which is carried over to a class level javadoc comment in the generated java file.
 
-```
+``` XML
 <SqlClass name="HowtoData" package="org.openbravo.howto">
 <SqlClassComment>Example for a sqlc generated class</SqlClassComment>
 </SqlClass>
@@ -114,7 +114,7 @@ The two attributes for the `SqlClass` define the java class- and package-name an
 
 The generated java class does implement a simple interface named `FieldProvider`.
 
-```
+``` java
 public interface FieldProvider {
 public String getField(String fieldName);
 }
@@ -122,7 +122,7 @@ public String getField(String fieldName);
 
 As already shown in the previous example this methods is one way of accessing the class data. Alternatively the generated attributes can be accessed directly.
 
-###  Visibility of the Generated Class
+### Visibility of the Generated Class
 
 By default, the generated java class will not contain a special access modifier. This means that the class can only be used from inside the java package it is defined in. It is not visible from all other java packages.
 
@@ -130,7 +130,7 @@ If a generated class should have a different visibility then the optional attrib
 
 The following example shows how to define a generated class as public, so it can be used from any package.
  
-```
+```XML
 
     <SqlClass name="PublicHowtoData" package="org.openbravo.howto" accessModifier="public">
     ...
@@ -143,7 +143,7 @@ public class PublicHowtoData implements FieldProvider {
 }
 ```
 
-###  SqlMethod definition: common parts
+### SqlMethod definition: common parts
 
 The central part of an xsql file are the statements defined within. Here the common parts the definition of a `SqlMethod` are shown. The attributes which are specific to each statement type are explained in the corresponding later chapters.
 
@@ -166,18 +166,18 @@ By default all methods are generated as static methods, this behavior can be cha
 
 The type attribute does distinguish between the following:
 
-* constant 
-    * No database access 
-    * Utility function to populate an data class instance 
+- constant 
+    - No database access 
+    - Utility function to populate an data class instance 
 
-* preparedStatement,statement 
-    * These are the main types and correspond to either database queries or select. 
-    * The difference between the two is the use of either a JDBC statement or a JDBC PreparedStatement to execute the statement. 
+- preparedStatement,statement 
+    - These are the main types and correspond to either database queries or select. 
+    - The difference between the two is the use of either a JDBC statement or a JDBC PreparedStatement to execute the statement. 
 
-* callableStatement 
-    * This type is only used for PL-method calls 
+- callableStatement 
+    - This type is only used for PL-method calls 
 
-###  Connection / Transaction handling
+### Connection / Transaction handling
 
 By default each invocation of a SqlC generated method is executed inside a single transaction which is committed automatically. Moreover each invocation does get an new database connection from the connection pool to execute the statement in.
 
@@ -201,22 +201,22 @@ public static HowtoData[] select(Connection conn, ConnectionProvider connectionP
 
 Here, a connection object can be explicitely passed to the function. If the caller does disable autocommit for this connection and then passes the same connection on several method invocations, they can control the transaction in more detail.
 
-##  Types of Statements
+## Types of Statements
 
 The following chapter explains a single statement type in more detail and explains the various extra attributes which are needed / useful in its context.
 
-###  Queries
+### Queries
 
 This first group and most common type of statements issues queries to the database. This group can be further divided by looking at the type of data returned by the query:
 
-####  Returning Multiple Rows
+#### Returning Multiple Rows
 
 This type of an sql statement was already covered in the first simple example of this concepts document. The query does return a number of zero or more rows and the generated java function returns an array of the generated class where each entry in the array represents a single row of the ResultSet.
 
 !!!note
     If the user of the function does only need the first row of the result then the next type of query statement should be used instead.  
   
-####  Returning a single row
+#### Returning a single row
 
 This type of sql statement differs only in the way the query result is returned. The query itself is sent to the database in the same way as for queries returning multiple rows. However the generated java code reads only the first row of the ResultSet from the database and returns it to the user.
 
@@ -246,7 +246,7 @@ SampleData row = SampleData.sampleCall(this);
     This type of query does return a single row but does not tell the database that only a single row is needed. The database still needs to query and return all rows with potentially comes with a big overhead. To avoid this the select statement does needs to have the respective LIMIT/OFFSET or ROWNUM parts added.  
 
   
-####  Returning a single value
+#### Returning a single value
 
 If the user of a query needs only a single value then an even simpler way is possible by directly returning a single value instead of one record or even an array of records.
 
@@ -262,7 +262,7 @@ When the return type is specified as "date" then a String is returned which is c
 
 For these three types of return values it is possible to specify a default value. This is done by adding optional 'default=<value>' attribute to the SqlMethod definition. In this case the defaultValue is returned to the caller, if the query does not return any rows.
 
-###  Parameters & Runtime modification of the query
+### Parameters & Runtime modification of the query
 
 This part explains how to pass parameters to the database statement to fill in values at runtime or even modify part of the complete SQL statement at runtime. This applies to all types of statements which are described here.
 
@@ -274,11 +274,11 @@ The parameters which are defined in the xsql file will end up as parameters if t
 !!!info
     If the same parameter (with the same name) is specified multiple times for a statement, it will still generate only a single java parameter. The placement of this single parameter corresponds to the location of the first parameter (of the duplicates) in the xsql file.  
   
-####  Mandatory parameters
+#### Mandatory parameters
 
 The most common type of parameters are non-optional parameters. These do simply specify a single value and a predefined position in the SQL statement. An example of this is the adUserId parameter in the first example. At runtime the value of it is passed as a parameter to the JDBC statement or preparedStament and the location of the corresponding question mark "?" in the statement.
 
-####  Optional parameters
+#### Optional parameters
 
 The second group are the optional parameters. These allow to optionally add and/or modify parts of the sql statement at runtime.
 
@@ -288,7 +288,7 @@ The first way is to not explicitely define a location for the runtime change. In
 
 The second, recommended way is to specify the location explicitely using the "after" attribute in the parameter definition. This way a explicit part of the query can be referenced for this purpose. The following example will outline how this looks like in practice.
 
-####  Optional parameters without type
+#### Optional parameters without type
 
 The simplest way is to add an optional where clause to a query is a parameter for it is passed at runtime and to ignore the optional part otherwise.
 
@@ -320,7 +320,7 @@ If the value for the parameter is null or the empty String "" then the optional 
 
 The recommended way to specify the AFTER location is to add extra clauses like "WHERE 1=1" or "AND 2=2" to the statement. This will not change the queries behavior and they always evaluate to true and provide an easy way to see the places in the query where optional parts will be placed.
 
-####  Optional parameters of type none
+#### Optional parameters of type none
 
 A variation of this is an optional parameter of type="none". Using this it is possible to add a constant String to an SQL statement depending on a parameters' value.
 
@@ -337,11 +337,11 @@ A variation of this is an optional parameter of type="none". Using this it is po
 
 In this example if the parameters' value is the parameter name (here: processed) then the option part defined by the parameter is added to the statement, otherwise the optional part is ignored for the statement execution.
 
-####  Optional parameters of type argument
+#### Optional parameters of type argument
 
 A second variation is an optional parameter of type="argument". This can be used to optionally add a fixed part and to pass the complete value of the parameter (an arbitrary) to the query.
 
-```
+``` SQL
 <SqlMethod name="selectOrders" type="preparedStatement" return="multiple">
 <Sql>
     SELECT * from C_Order c
@@ -358,7 +358,7 @@ Here, again the optional parameter is completely ignored, if the parameters' val
 
 Assume that the value of the parameter at runtime is "('17','18','19') then the executed statement will be:
 
-```
+``` SQL
 SELECT * FROM C_Order c
 WHERE 1=1
 AND c.C_BPARTNER_ID IN ('17','18','19')
@@ -368,11 +368,11 @@ ORDER BY c.documentno
 !!!Note
     The parameters' value is passed exactly as specified and not escaped encoded. The caller of the function needs to take care that no unchecked values are passed into the parameter to avoid SQL injections.  
   
-####  Optional Parameters of Type Replace
+#### Optional Parameters of Type Replace
 
 The last variation of optional parameters are defined with the type="replace". These allow to completely replace a part of an SQL statement with a new part.
 
-```
+``` SQL
 <SqlMethod name="countFrom" type="preparedStatement" return="String" default="">
     <Sql>
     <![CDATA[
@@ -385,22 +385,16 @@ The last variation of optional parameters are defined with the type="replace". T
 
 In this example the parameter tablename can be used to change the name of the table on which the count is executed on.
 
-!!!note 
+!!! note 
     The parameters' value is passed exactly as specified and not escaped encoded. The caller of the function needs to be careful that no unchecked values are passed into the parameter to avoid SQL injections.  
   
-###  Scrollable Queries (memory-efficient)
+### Scrollable Queries (memory-efficient)
 
-The queries returning multiple rows as described in [Returning Multiple Rows](#returning-multiple-rows) above can consume a huge amount of memory when returning many rows.
-
-This is not a problem if returning only few rows (<1000) but if the number of rows is unbounded and can be much higher then scrollable queries as described here can perform much better.
-
-This type of queries only change how to call the SqlcMethod from java, the SQL text itself does not need to be modified.
-
-The change interface allows to get the result-rows one by one instead of a big array containing all data.
+The queries returning multiple rows as described in [Returning Multiple Rows](#returning-multiple-rows) above can consume a huge amount of memory when returning many rows. This is not a problem if returning only few rows (<1000) but if the number of rows is unbounded and can be much higher then scrollable queries as described here can perform much better. This type of queries only change how to call the SqlcMethod from java, the SQL text itself does not need to be modified. The change interface allows to get the result-rows one by one instead of a big array containing all data.
 
 To use this type use a return scrollable type.
 
-```
+``` XML
 <?xml version="1.0" encoding="UTF-8" ?>
  
 <SqlClass name="HowtoData" package="org.openbravo.howto">
@@ -417,11 +411,12 @@ To use this type use a return scrollable type.
 
 This will create a java class like the following:
  
+``` java
 package org.openbravo.howto;
  
 class HowtoData implements FieldProvider, ScrollableFieldProvider {
 
-```
+
 public boolean hasData() {}
 public boolean next() throws ServletException {}
 public ReportGeneralLedgerData get() throws ServletException {}
@@ -430,14 +425,14 @@ public void close() {}
 public static HowtoData select(ConnectionProvider connectionProvider, String adUserId) throws ServletException {
 ```
 
-As seen here, the select-method does no longer return an HowtoData[] but instead a instance of the class HowtoData. This instance can then be used to row by row retrieve the result.
+As seen here, the select-method does no longer return an `HowtoData` but instead a instance of the class `HowtoData`. This instance can then be used to row by row retrieve the result.
 
 !!!info "Important"
-    Always call the close()-method when using a scrollable SqlMethod. This is best done using a try-finally block as shown in the examples below.  
+    Always call the `close()` method when using a scrollable SqlMethod. This is best done using a try-finally block as shown in the examples below.  
   
 If you want to pass the data to Jasper Reports using the standard renderJR method nothing special needs to be done as a version of renderJR exists which can directly use those scrollable SqlMethod as seen below:
 
-```
+```java
 HowtoData data = null;
 try {
     data= HowtoData.select( .... );
@@ -451,7 +446,7 @@ try {
   
 If you want to just use a scrollable SqlMethod in your own code you can get the results row by row as seen in the following example. A simple loop is sufficient.
 
-```
+``` java
 HowtoData data = null;
 try {
     data= HowtoData.select( .... );
@@ -465,32 +460,30 @@ try {
 }
 ```
 
-###  Extra fields
+### Extra fields
 
 The optional field tag allows to add additional non-ResultSet columns to the class which are filled and returned on the method executions.
 
-There tag needs two mandatory attributes "name" and "value". The name attributes specifies the user-defined name of the extra field. The value attribute specifies the value which the field should contain.
+There tag needs two mandatory attributes `name` and `value`. The name attributes specifies the user-defined name of the extra field. The value attribute specifies the value which the field should contain.
 
 Two possible values can be used:
 
-* void 
-    * Using the void value the extra field will be filled with the empty String "" and is just an extra filled which can be used by the methods' caller. 
-* count 
-    * Using the value each record will contain its index inside the ResultSet where the first record has the index one. 
+- **void**: Using the void value the extra field will be filled with the empty String "" and is just an extra filled which can be used by the methods' caller. 
+- **count**: Using the value each record will contain its index inside the `ResultSet` where the first record has the index one. 
 
-###  Updates
+### Updates
 
 The second group of possible statement are database updates. This does include the following sql statements:
 
-* INSERT 
-* UPDATE 
-* DELETE 
+- INSERT 
+- UPDATE 
+- DELETE 
 
-For all of these statements the database does return the number of affected rows instead of a query result. In SqlC the corresponding returnType for the SqlMethod is "rowCount". Specifying this returnType results in two actions. First the return type of the generated java function is changed to int corresponding to the number of affected rows of the statement. Second this type is implicitely used by SqlC to now that the sql statement is an update rather than a query.
+For all of these statements the database does return the number of affected rows instead of a query result. In SqlC the corresponding returnType for the SqlMethod is `rowCount`. Specifying this returnType results in two actions. First the return type of the generated java function is changed to int corresponding to the number of affected rows of the statement. Second this type is implicitely used by SqlC to now that the sql statement is an update rather than a query.
 
 Another short example shows how the xsql file and the generated java method do look like for update type statements.
 
-```
+```XML
 <SqlMethod name="setInDevelopment" type="preparedStatement" return="rowCount">
 <Sql>
         UPDATE ad_module
@@ -501,7 +494,7 @@ Another short example shows how the xsql file and the generated java method do l
 </SqlMethod>
 ``` 
 
-```
+``` java
 public static int setInDevelopment(ConnectionProvider connectionProvider, String adModuleId) throws ServletException {
  
     ...
@@ -510,15 +503,13 @@ public static int setInDevelopment(ConnectionProvider connectionProvider, String
     }
 ```
 
-###  PL Function calls
+### PL Function calls
 
-This section describes how SqlC can be used to call PL-functions and PL-procedures. PL-procedures are methods which run inside the DBMS and which do not return a result value (This can be compared to a method returning void in java) . PL-function are similar but do return a function result. In addition
-both types of PL-methods can have out-type Parameters. These to not accept an input value but are used to pass one result value back via this parameter. Using this facility a PL-method can return more than one result value per function call. If a PL-method does not contain out-type parameters, then a
-select statement can be used as an alternative way to call the method, which is considered to be more intuitive by some developers. However if out-type parameters are present a SqlC function all as present in here has to be used.
+This section describes how SqlC can be used to call PL-functions and PL-procedures. PL-procedures are methods which run inside the DBMS and which do not return a result value (This can be compared to a method returning void in java). PL-function are similar but do return a function result. In addition both types of PL-methods can have out-type Parameters. These to not accept an input value but are used to pass one result value back via this parameter. Using this facility a PL-method can return more than one result value per function call. If a PL-method does not contain out-type parameters, then a select statement can be used as an alternative way to call the method, which is considered to be more intuitive by some developers. However if out-type parameters are present a SqlC function all as present in here has to be used.
 
 First a simple example if the pl-function has no parameter of type out.
 
-```
+``` XML
 <SqlMethod name="process1003900000" type="callableStatement" return="object" object="ActionButtonData">
     <Sql><![CDATA[
     CALL C_TAXPAYMENT_POST(?)
@@ -527,7 +518,7 @@ First a simple example if the pl-function has no parameter of type out.
 </SqlMethod>
 ```
 
-```
+``` java
     public static ActionButtonData process1003900000(ConnectionProvider connectionProvider, String adPinstanceId) throws ServletException {
  
     ...
@@ -538,14 +529,10 @@ First a simple example if the pl-function has no parameter of type out.
 
 The definition is similar to the definition of update statements. The needed attributes to define the pl function call are:
 
-* type="callableStatement" 
-    * This tells SqlC that the SqlMethod is a PL function call. It will generate code for it using a JDBC callableStatement 
-* return="object" 
-    * This specifies that the return value of the java function will be an object 
-* object="ActionButtonData" 
-    * This specifies the java class which whould be used as return value. Attributes of the java class are used to carry the return values of the PL method back to the caller. 
-* import="<fully qualified classname>" (optional) 
-    * This optional attribute can be used if the class for the object-attribute is not in the same java package as the sqlc generated class. The value of the import statement is then used to generate a java import statement which does import the class from a different package. Only the import-attribute of the first SqlMethod will be used for this purpose. 
+- **type="callableStatement"**: This tells SqlC that the SqlMethod is a PL function call. It will generate code for it using a JDBC callableStatement 
+- **return="object"**: This specifies that the return value of the java function will be an object 
+- object="ActionButtonData": This specifies the java class which whould be used as return value. Attributes of the java class are used to carry the return values of the PL method back to the caller. 
+- **import="<fully qualified classname>"** (optional): This optional attribute can be used if the class for the object-attribute is not in the same java package as the sqlc generated class. The value of the import statement is then used to generate a java import statement which does import the class from a different package. Only the import-attribute of the first SqlMethod will be used for this purpose. 
 
 In this example we did not have any return values to carry back to the java code. SqlC does still use an object as return value but its type can be just the SqlC generated class and is essentially unused.
 
@@ -553,7 +540,7 @@ The second class of PL function calls are the ones with do return some data to t
 
 Another example does outline the usage for this class of function calls
 
-```
+``` XML
 <SqlMethod name="nextDocType" type="callableStatement" return="object" object="CSResponse">
     <Sql><![CDATA[
     CALL AD_Sequence_DocType(?,?,?,?)
@@ -566,7 +553,7 @@ Another example does outline the usage for this class of function calls
 ```
 
  
-```
+``` java
 class CSResponse {
     String razon;
 }
@@ -588,15 +575,15 @@ The difference from the previous example is that here the PL procedure `AD_Seque
 
 In this example a class (CSResponse) different from the sqlc-generated class (`DocumetNoData`) is used to transport the return value. Alternatively the sqlc-generated class could have been used to achieve the same effect.
 
-###  Constants
+### Constants
 
 The type of statement is different from the ones described above. It does not do any database interaction.
 
 Instead the purpose of the generated java function is to create, populate and return a single instance of the data class with values provides as parameters.
 
-The generated function does create a new object of the type of the data class. Then all fields which correspond to a column returned by the last processed function in the xsql file are initialized with some value. If the field corresponds to a 'Parameter' subtag of the method, then the field is initialized with the provided parameter value, if not it is initialized with an empty string “”.
+The generated function does create a new object of the type of the data class. Then all fields which correspond to a column returned by the last processed function in the xsql file are initialized with some value. If the field corresponds to a `Parameter` subtag of the method, then the field is initialized with the provided parameter value, if not it is initialized with an empty string “”.
 
-The parameter list of the generated function does exactly contain the specified parameter from present 'Parameter' subtags, all of the functions parameters are of type String.
+The parameter list of the generated function does exactly contain the specified parameter from present `Parameter` subtags, all of the functions parameters are of type String.
 
 ---
 

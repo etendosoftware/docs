@@ -13,7 +13,7 @@ status: beta
 ##  Overview
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
 Etendo has an inbuilt attachment model where you can attach any number of records to a particular record like Sales Order, Goods Shipment, Invoices, etc. All the attachments can be then downloaded or deleted from the record itself.
 

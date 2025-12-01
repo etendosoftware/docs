@@ -9,20 +9,20 @@ tags:
 status: beta
 ---
 
-#  Security Model
+# Security Model
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
   
-##  Overview
+## Overview
 
 This section discusses how different Etendo security concepts influence development in Etendo.
 
 Etendo's security concept consists of three main parts:
 
-* Multi-Client/Multi-organization: defines which client/organizations are visible to a user and referenceable from other client/organizations. 
-* Data access level (of a table): defines the client/organization which is allowed for data stored in a specific table. See the  access level  field of AD_Table. 
-* Access definition: Etendo has several access definitions, allowing for fine-grained access control, see the tables in the  `org.openbravo.model.ad.access`  package. 
+- Multi-Client/Multi-organization: defines which client/organizations are visible to a user and referenceable from other client/organizations. 
+- Data access level (of a table): defines the client/organization which is allowed for data stored in a specific table. See the  access level  field of `AD_Table`. 
+- Access definition: Etendo has several access definitions, allowing for fine-grained access control, see the tables in the  `org.openbravo.model.ad.access`  package. 
 
 This section will discuss security and access definitions from the perspective of a developer. Where necessary references to functional documentation is used.
 
@@ -33,45 +33,45 @@ The developer can work in two modes in Etendo:
 
 Both approaches are discussed separately.
 
-##  Security concepts and Etendo Servlets
+## Security concepts and Etendo Servlets
 
 The tables in the  `org.openbravo.model.ad.access` package define access control for windows/tabs, processes, workflow etc.
 
 The security checks using this table are implemented by the `HttpSecureAppServlet` servlet. Any servlet extending this class will automatically inherit this security implementation.
 
-##  Security concepts and XSQL and Manual Code
+## Security concepts and XSQL and Manual Code
 
 Etendo provides a standard way to extend sql queries with filters for accessible clients and organizations. This is discussed in detail in this section of the developers guide:
 
-* [XSQL Definition](../concepts/multi-client-and-multi-org.md#xsql---definition)
-* [XSQL Java Usage](../concepts/multi-client-and-multi-org.md#xsql---java-usage) 
+- [XSQL Definition](../concepts/multi-client-and-multi-org.md#xsql---definition)
+- [XSQL Java Usage](../concepts/multi-client-and-multi-org.md#xsql---java-usage) 
 
-##  Security concepts and the Data Access Layer
+## Security concepts and the Data Access Layer
 
-For the developer the [Data Access Layer](../concepts/data-access-layer.md) provides several interfaces (OBCriteria  and  OBQuery ??? ) that take automatic care of specific security aspects:
+For the developer the [Data Access Layer](../concepts/data-access-layer.md) provides several interfaces ( [OBCriteria](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBCriteria.java){target="\_blank"} and [OBQuery](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBQuery.java){target="\_blank"}) that take automatic care of specific security aspects:
 
-* filter for readable clients/organizations 
-* filter for readable tables (based on  AD_Window_Access  ) 
+- filter for readable `clients`/`organizations` 
+- filter for readable tables (based on  `AD_Window_Access`  ) 
 
 In addition checks are done when retrieving a value of a property. The data access layer makes a distinction between the following two read-modes (on object level):
 
-* direct readable: all properties of the object are readable, this readability is defined by the  `AD_Window_Access` table 
-* derived readable: only the id and identifier properties are readable, derived readable entities are the entities which are not directly readable but are refered to by directly readable entities. 
+- direct readable: all properties of the object are readable, this readability is defined by the  `AD_Window_Access` table 
+- derived readable: only the id and identifier properties are readable, derived readable entities are the entities which are not directly readable but are refered to by directly readable entities. 
 
-The DAL also checks write access when changing properties of a business object. Write access is also checked when an object is saved to the database. The following checks are done:
+The **DAL** also checks write access when changing properties of a business object. Write access is also checked when an object is saved to the database. The following checks are done:
 
-* the user has write access to the client/organization 
-* the user has write access to the table of the object (defined in the  `AD_Window_Access` table) 
-* the client/organization of the object fit to the  access level  of the table 
-* the object only refers to other objects which are in the natural tree of organizations of the object itself 
+- the user has write access to the `client`/`organization` 
+- the user has write access to the table of the object (defined in the  `AD_Window_Access` table) 
+- the `client`/`organization` of the object fit to the  access level  of the table
+- the object only refers to other objects which are in the natural tree of organizations of the object itself 
 
 The data access layer also performs specific authorization checks when an object is deleted: the user must have access to the object and it must be deletable  .
 
-For much more information on how the Data Access Layer implements security, see this link  .
+!!! ingo 
+    - For much more information on how the **Data Access Layer** implements security, see [this link](./data-access-layer.md#security-and-validation).
+    - For more information on the **Data Access Layer and multi-client/multi-organization**, see  [this link](./multi-client-and-multi-org.md#data-access-layer).
 
-For more information on the Data Access Layer and multi-client/multi-organization, see  this link  .
-
-##  Application Administrators
+## Application Administrators
 
 There is an administrator flag on the **Role** window that enables users to make configurations at different levels depending on their role.
 
@@ -101,7 +101,7 @@ There are 4 different levels on Etendo:
 - Users are able to configure setting at **Role** level on all the roles it is assigned to with the flag enabled. 
 - These settings are available to all the users logged with that role. 
 
-###  Upgrading from previous MPs
+### Upgrading from previous MPs
 
 When a role is created manually all the flags are set to false by default. There is a module script defined to set as true the flags based on the following rules:
 
@@ -119,7 +119,7 @@ When a role is created manually all the flags are set to false by default. There
 
 Notice that this module script only populates the flags the first time these flags are added. On the following core updates, the flags won't be updated and the configuration has to be done manually.
 
-###  Roles created by the Initial Client and Organization setup
+### Roles created by the Initial Client and Organization setup
 
 The **Initial Client and Organization setup** forms automatically create some users and roles. These ones have the flag initialized to true.
 
@@ -133,9 +133,6 @@ The **Initial Client and Organization setup** forms automatically create some us
 - The role and the organization created has the **Organization Administrator** flag set to true. 
 - The user created has the new role assigned with the **Role Administrator** set to true. 
 
-##  CSRF Protection
-
-Etendo is protected against CSRF (Cross-Site Request Forgery) attacks, both in the backoffice and in the POS.
 
 ---
 

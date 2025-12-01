@@ -13,7 +13,7 @@ status: beta
 ##  Overview
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
     
 **Authentication** is the act verifying a user's identity. This can be done by asking for Username & Password and verify it against the built-in `AD_User` table or any other mechanism.
 

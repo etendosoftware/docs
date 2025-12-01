@@ -9,24 +9,24 @@ tags:
 status: beta
 ---
 
-#  Multi-Client and Multi-Org
+# Multi-Client and Multi-Org
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
     This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
   
-##  Overview
+## Overview
 
 This document describes multi-client and multi-organization from the development perspective. For a functional comprehension about these features read the [Functional Documentation](../../../user-guide/etendo-classic/basic-features/general-setup/getting-started.md).
 
-##  Structure
+## Structure
 
 At database and application dictionary level, all tables must have the structure needed to support multi-client and multi-org. It is described in the [Database Tables document](../concepts/tables.md#clientorganization).
 
-##  Filtering data
+## Filtering data
 
 This section explains the code needed to properly filter data regarding client and organization in order to avoid accesses to not allowed information. These filters are different in case the development is using `XSQL` or `DAL`.
 
-###  Data Access Layer
+### Data Access Layer
 
 The [Data Access Layer](../concepts/data-access-layer.md)  provides several interfaces to make it easier to query for data:  OBCriteria  and  OBQuery ??? . These service classes take care of security and automatic filtering on readable clients and organizations.
 
@@ -45,14 +45,14 @@ OBDal.getInstance().getReadableClientsInClause();
 
 The data access layer also checks for write access to clients/organizations when an object is inserted/updated. This check is done for each object which is saved (see [here](../concepts/data-access-layer.md#write-access) for more information). An additional check which is done is that an object may only refer to objects in the natural tree of its own organization.
 
-###  OrganizationStructureProvider
+### OrganizationStructureProvider
 
 The `OrganizationStructureProvider` class is a Java utility class designed to help in very common organization-related tasks. For example, this class contains methods to find if an organization belongs to the natural tree of another organization, to find out the parent natural tree of an organization,
 or the children tree of an organization.
 
 It is strongly advisable that if the DAL is being used, this class should be used too if any of these tasks needs to be done.
 
-###  XSQL - Definition
+### XSQL - Definition
 
 All queries used to show or modify data should include filter by client and organization. The only exception to this rule are the queries that affect only to rows selected by a known ID (which has been obtained, in most cases, from a query following the rule), in this case as that row is known to be accessible by the user the filter is not needed.
 
@@ -103,11 +103,11 @@ String strClient = Utility.getContext(this, vars, "#User_Client", "");
   
 The second one receives accesslevel for the table which is being accessed, this is the way WAD windows obtain the client list.
 
-####  Organization
+#### Organization
 
 There are three levels for organization access **Editable** , **Accessible** and **Referenceable** .
 
-#####  Editable
+##### Editable
 
 Only data in an editable organization can be modified. Editable organizations are those explicitly granted to the role.
 
@@ -119,7 +119,7 @@ Utility.getContext(conn, vars, "#User_Org", windowId, accesslevel)
 
 This type must be used when displaying data which the user can modify. For example a process window that shows records the user can do an action with them.
 
-#####  Accessible
+##### Accessible
 
 Accessible data can be viewed but not modified. The list of accessible organizations consists in the standard tree of his orgList, this is, all the granted organizations, their ancestors and their descendants organizations. To obtain it:
 
@@ -129,7 +129,7 @@ Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 
 This type should be used when displaying information data. For example in reports. It is also used for combos in filters. For example a combo shown in a filter for a report.
 
-#####  Referenceable
+##### Referenceable
 
 A record can make reference to other records with data defined in the standard tree of the parent record organization.
 
@@ -138,11 +138,11 @@ Utility.getReferenceableOrg(vars, currentOrg)
 ```
   
 
-#####  Selectors (Searchs)
+##### Selectors (Searchs)
 
 Selectors are a case that deserves a specif attention, they have two main elements: **Filter** and **Data**.
 
-######  Filter
+###### Filter
 
 When a combo is used in a filter the list of organizations it receives is the accessible one:
 
@@ -152,7 +152,7 @@ Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 
 If another selector is used within the filter, no organization should be passed to it (it has no effect in the current implementation, see following chapter).
 
-######  Data
+###### Data
 
 As main purpose of selectors is to select data to be referred from other records, they implement **Referenceable** filtering.
 
@@ -181,7 +181,7 @@ The previously mentioned `Utility.getSelectorOrgs` method returns the referencea
 This implementation allows to automatically obtain the referenceable list of orgs for the wad windows and, by default, the accessible ones for manual code. If it were desirable for any manual window to get the referenceable list instead the accessible one it only would be necessary to modify the javascript
 calling the selector to include the organization.
 
-###  SQL - AD_IsOrgIncluded
+### SQL - AD_IsOrgIncluded
 
 `AD_IsOrgIncluded` is a database stored function that can be used to know whether two organizations belong to the same tree or not.
 
@@ -193,11 +193,11 @@ It receives 3 parameters:
 
 This function returns -1 in case 2nd organization is not an ascendant for 1st one or the level in the hierarchy in case it is.
 
-##  Transactions
+## Transactions
 
 When developing transactional processes it must be taken into account that those processes should only affect rows in editable client and organizations. They also must check that all objects involved in the process are in a correct organization (for example using `AD_IsOrgIncluded` function).
 
-###  Organization specific data
+### Organization specific data
 
 It is possible to define a structure that allows to define objects in a organization and change some of their attributes for another organization lower in the organization tree hierarchy. Currently Etendo core implements it for  products  using the  `M_Product_Org`  table. In this case it is possible to define products for example in organization *, and overwrite some of their attributes for other organizations. The effect would be that by default attributes defined for product in organization * are used except in the case they are overwritten in the current organization. This management must be done manually when developing processes using these tables.
 
