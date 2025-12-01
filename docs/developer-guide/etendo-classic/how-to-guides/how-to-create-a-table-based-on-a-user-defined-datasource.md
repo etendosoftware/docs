@@ -17,7 +17,7 @@ status: beta
 
 ##  Overview
 
-Two different data origins can be set for tables defined in the application dictionary: 'Tables' (database tables and views) and 'Datasource'. There are two main reasons why to use a datasource based table.
+Two different data origins can be set for tables defined in the application dictionary: **Tables** (database tables and views) and **Datasource**. There are two main reasons why to use a datasource based table.
 
 * To use as data origin objects other than database tables or views. For instance, a datasource based table can be defined that uses as data origin a Google Docs Spreadsheet, a CSV file, data obtained from a webservice, etc. 
 * To solve performance related problems. For instance, the Return from Customer window has a pick and execute window that suffers performance problems in systems with very high volumes. The cause of this problem is that the table used in that pick and execute window is based in a very complex database view. An user defined datasource can be created to build that view manually. This datasource has been included in the `module org.openbravo.highvolumedatasources` and has reduced the response time of that particular pick an execute window from >60 seconds to <1 second. 
