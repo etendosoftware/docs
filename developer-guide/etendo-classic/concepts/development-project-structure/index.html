@@ -7051,12 +7051,95 @@
   
   
     <li class="md-nav__item">
+      <a href="../modularity-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modularity Concepts
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-client-and-multi-org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Client and Multi-Org
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../naming-guidelines-for-modules/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Naming Guideliness for Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisite-knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisite Knowledge
     
   </span>
   
@@ -7097,6 +7180,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../security-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Model
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../selectors/" class="md-nav__link">
         
   
@@ -7105,6 +7218,36 @@
     Selectors
     
   </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQLC
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
   
 
       </a>
@@ -13576,7 +13719,7 @@
 <h1 id="development-project-structure">Development Project Structure</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANT: THIS IS A BETA VERSION</p>
-<p>It is under active development and may contain <strong>unstable or incomplete features</strong>. Use it <strong>at your own risk</strong>.</p>
+<p>This page is under active development and may contain <strong>unstable or incomplete features</strong>. Use it <strong>at your own risk</strong>.</p>
 </div>
 <h2 id="overview">Overview</h2>
 <p>This section describes the structure of an Etendo development project. Etendo has a tree directory structure that logically divides different core components (<code>XmlEngine</code>, <code>SQLC</code>, <code>HttpBaseServlet</code>) and WAD (Wizard for Application Dictionary) from Etendo itself (forms, reports, call-outs, combos, processes and so on).</p>
@@ -13675,7 +13818,7 @@
 </span></code></pre></div>
 <p>The <code>ad_ prefix</code> (in erpCommon folders/packages) denotes Application Dictionary. The directory name endings are pretty much self-explanatory. The difference between <code>ad_reports</code> and erpReports lays in the way we access a report within the application. If it is accessible directly through the menu, then it should be in <code>ad_reports</code>. On the other hand, some windows (Invoices, orders, etc.) have a Print icon in the toolbar, which generates a report. These reports should be stored in erpReports.</p>
 <h3 id="src-core">src-core</h3>
-<p>The <strong>src-core</strong> directory contains the source code of the core components: XmlEngine (View), <a href="../concepts/sqlc.md">SQLC</a> (Model), HttpBaseServlet (Controller) and ConnectionPool.   </p>
+<p>The <strong>src-core</strong> directory contains the source code of the core components: XmlEngine (View), <a href="../sqlc/">SQLC</a> (Model), HttpBaseServlet (Controller) and ConnectionPool.   </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>|-src-core
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    |-src
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    |-org

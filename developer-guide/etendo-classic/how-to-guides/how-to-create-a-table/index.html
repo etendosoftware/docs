@@ -6803,12 +6803,95 @@
   
   
     <li class="md-nav__item">
+      <a href="../../concepts/modularity-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modularity Concepts
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/multi-client-and-multi-org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Client and Multi-Org
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../concepts/naming-guidelines-for-modules/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Naming Guideliness for Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/prerequisite-knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisite Knowledge
     
   </span>
   
@@ -6849,6 +6932,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../concepts/security-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Model
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../concepts/selectors/" class="md-nav__link">
         
   
@@ -6857,6 +6970,36 @@
     Selectors
     
   </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/sqlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQLC
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
   
 
       </a>
@@ -13439,7 +13582,7 @@
 <p>Main fields of this window are (for more information, see the <code>AD_Table</code> table description):</p>
 <ul>
 <li><em>Data Package</em> specifies to which java data package within the module the table will belong when used within <a href="../concepts/Data_Access_Layer.md">DAL</a> (Data Access Layer).</li>
-<li><em>Name</em> Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in <a href="../../concepts/XML_REST_Web_Services.md">REST webservices</a> and in the <a href="../../concepts/Data_Access_Layer.md#entity-naming">Data Access Layer</a>.</li>
+<li><em>Name</em> Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in <a href="../../concepts/xml-rest-web-services.md">REST webservices</a> and in the <a href="../../concepts/Data_Access_Layer.md#entity-naming">Data Access Layer</a>.</li>
 <li><em>Description</em> Gives a small description of the table.</li>
 <li><em>Help/Comments</em> Defines the text that is displayed in Help window.</li>
 <li><em>DB Table name</em> Defines database table name as it was defined by the <code>CREATE TABLE</code> during its creation.</li>
@@ -13464,7 +13607,7 @@
 <p>This process tries to find an existing application element (within the currently developed module) and thus its label, help and description and if one is not found, a new one is created. This enables a centralized translation of the application/module.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-5.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-5.png"></a></p>
 <p>Each table must have at least one column marked as an identifier. The actual values of identifier columns later get concatenated to be shown to the user as a representation of a particular record (see the link to the Sales Order within the Sales Invoice window). These identifiers will also be used to construct dropdown lists of records of that particular table. By default all columns with column name <em>Name</em> are set as an identifier. In case there is no column with this <em>Name</em> , no identifier is set and needs to be done so manually or compilation will fail.</p>
-<p>The name is used by the <a href="../../concepts/Data_Access_Layer.md">Data Access Layer</a> and in <a href="../../concepts/XML_REST_Web_Services.md">REST webservices</a>. For specific columns (audit info, client/organization, active) it is important to be precise in the naming.</p>
+<p>The name is used by the <a href="../../concepts/Data_Access_Layer.md">Data Access Layer</a> and in <a href="../../concepts/xml-rest-web-services.md">REST webservices</a>. For specific columns (audit info, client/organization, active) it is important to be precise in the naming.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The columns that are named <code>line</code> or <code>seqNo</code> are used to contain the sequence number of a record (i.e. the number of a line in an invoice They take a default value like:</p>

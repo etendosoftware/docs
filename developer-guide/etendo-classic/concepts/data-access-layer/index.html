@@ -7404,12 +7404,95 @@
   
   
     <li class="md-nav__item">
+      <a href="../modularity-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modularity Concepts
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-client-and-multi-org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Client and Multi-Org
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../naming-guidelines-for-modules/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Naming Guideliness for Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisite-knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisite Knowledge
     
   </span>
   
@@ -7450,6 +7533,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../security-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Model
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../selectors/" class="md-nav__link">
         
   
@@ -7458,6 +7571,36 @@
     Selectors
     
   </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQLC
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
   
 
       </a>
@@ -14579,7 +14722,7 @@ Reference</a> section.</p>
 relevant for different situations:</p>
 <ul>
 <li>A table name (stored in <em>AD_Table.tablename</em> ) which is the database table name in the physical database. </li>
-<li>An entity name (present in <em>AD_Table.name</em> ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in <a href="../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md">REST webservices</a> and client export/import. </li>
+<li>An entity name (present in <em>AD_Table.name</em> ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in <a href="../../../developer-guide/etendo-classic/concepts/xml-rest-web-services.md">REST webservices</a> and client export/import. </li>
 <li>A Java class name (stored in <em>AD_Table.classname</em> ), the classname is used when generating the Java business object. It is unique within the data package of the table. </li>
 </ul>
 <p>Each table (i.e. entity) in Etendo Classic belongs to a data package. A data
@@ -14587,10 +14730,10 @@ package has a Java package field which defines the Java package in which the
 entity Java class is generated.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>AD_Table.name shouldn't contain blank spaces. If the name of the table
-contains spaces, the process of building the entity name will remove those
-spaces, e.g. 'My Table' will be converted to 'MyTable'.  </p>
 </div>
+<p><code>AD_Table.name</code> shouldn't contain blank spaces. If the name of the table
+    contains spaces, the process of building the entity name will remove those
+    spaces, e.g. <code>My Table</code> will be converted to <code>MyTable</code>.  </p>
 <h4 id="property-naming">Property Naming</h4>
 <p>For property naming, the logic is slightly different. The property naming logic
 has two distinct steps: </p>
@@ -14888,7 +15031,7 @@ tables defined in the application dictionary. This means that:</p>
 <li>database views are considered as normal business objects </li>
 <li>entities are generated for database views </li>
 <li>database views can be queried using HQL and the DAL query apis </li>
-<li>database views can be accessed through the  <a href="../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md">XML</a>  and  <a href="../../../developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md">JSON</a> REST web service apis </li>
+<li>database views can be accessed through the  <a href="../../../developer-guide/etendo-classic/concepts/xml-rest-web-services.md">XML</a>  and  <a href="../json-rest-web-services/">JSON</a> REST web service apis </li>
 </ul>
 <p>There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and
