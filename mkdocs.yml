@@ -425,11 +425,12 @@ nav:
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
         - How to Add Telemetry to a Module: developer-guide/etendo-classic/how-to-guides/how-to-add-telemetry-to-a-module.md
         - How to Automatically Populate Search Keys: developer-guide/etendo-classic/how-to-guides/how-to-automatically-populate-search-keys.md
-#        - How To Call An Openbravo Webservice From Java: developer-guide/etendo-classic/how-to-guides/How_To_Call_An_Openbravo_Webservice_From_Java.md
+        - How to Call an Etendo Webservice from Java: developer-guide/etendo-classic/how-to-guides/how-to-call-an-etendo-webservice-from-java.md
+        - How to Change an Existing Report: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-report.md
         - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
-#        - How to Change Fonts in Openbravo Reports: developer-guide/etendo-classic/how-to-guides/How_to_Change_Fonts_in_Openbravo_Reports.md
+        - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
-#        - How To Configure Log: developer-guide/etendo-classic/how-to-guides/How_To_Configure_Log.md
+        - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md
@@ -439,7 +440,7 @@ nav:
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
         - How to Create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
 #        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
-#        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
+        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/how-to-create-a-custom-tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
