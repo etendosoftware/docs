@@ -8,18 +8,18 @@ tags:
 status: beta
 ---
 
-#  How to Create a Custom Tree
+# How to Create a Custom Tree
  
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
     This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-##  Overview
+## Overview
 
 Etendo provides native support for hierarchical structures through **ADTree and LinkToParent** models. However, not all tree-based data fits into these standard structures. For those cases, Etendo allows developers to define **manual datasources** that manage trees stored in custom tables with their own hierarchy logic.
 
 This section explains how to **create and configure** a manual datasource to work with a custom tree table, enabling full tree navigation, loading, and interaction outside the ADTree and LinkToParent frameworks.
 
-##  TreeDatasourceService class
+## TreeDatasourceService class
 
 All the datasources from custom tables must be a subclass of **TreeDatasourceService**. This datasource is used in the following events:
 
@@ -30,7 +30,7 @@ All the datasources from custom tables must be a subclass of **TreeDatasourceSer
 
 The TreeDatasource class exposes the following abstract methods:
 
-###  addNewNode
+### addNewNode
 
 ``` java 
 protected void addNewNode(JSONObject bobProperties)
@@ -40,7 +40,7 @@ This method is invoked when a new record is **added using DAL to a table** whose
 
 The implementation of this method should take all the action needed to add the new record to the tree structure. For instance, if the custom tree is going to use the **ADTree** and **ADTree node tables**, at this point the ADTree node should be created for the new record.
 
-###  deleteNode
+### deleteNode
 
 ``` java 
 protected void deleteNode(JSONObject bobProperties)
@@ -50,7 +50,7 @@ This method is invoked when a new record is **delete using DAL from a table** wh
 
 The implementation of this method should take all the action needed to remove the new record to the tree structure. For instance, removing an **ADTree node**, reparenting the children of the deleted node, etc.
 
-###  moveNode
+### moveNode
 
 ``` java
 JSONObject moveNode(Map<String, String> parameters, String nodeId, String newParentId,
@@ -66,7 +66,7 @@ This method is invoked when a node is **moved using the tree grid view**. It has
 
 This method is in charge of making the change needed to keep the tree structure updated after the change (i.e. updating the node sequence number, etc). 
 
-###  fetchNodeChildren
+### fetchNodeChildren
 
     
     
@@ -81,7 +81,7 @@ It has the following parameters:
 
 - `Map<String,String>` parameters: All the parameters sent from the tree grid view or tree selector to the datasource. 
 - `Map<String,Object>` `datasourceParameters`: The parameters specific to this datasource 
-- `String parentId`: The id of the node whose childrens are being fetched. It will be **-1** when the tree root nodes are fetched. 
+- `String parentId`: The id of the node whose children are being fetched. It will be **-1** when the tree root nodes are fetched. 
 - `hqlWhereClause`: hql where clause to be applied when obtaining the children nodes. 
 - `hqlWhereClauseRootNodes`: hql where clause to be used to fetch the root nodes. It is defined in the Table Tree Category and in the Tree Reference. Most custom datasource will not use it because they have their own means to fetch the root nodes. 
 
@@ -98,14 +98,14 @@ This method should return a json object that contains all the properties of the 
 - `seqno`: if the tree is ordered, the sequence number of the node should be set. 
 - `_hasChildren`: a boolean to specify if the node has children on its own. 
 
-###  nodeConformsToWhereClause
+### nodeConformsToWhereClause
     
 ``` java 
 protected boolean nodeConformsToWhereClause(TableTree tableTree, String nodeId,
         String hqlWhereClause)
 ```
 
-This method is invoked when the **tree grid is filtered**. This method is in charge of cheking if a particular node of a table tree should be filtered out by a HQL Where Clause.
+This method is invoked when the **tree grid is filtered**. This method is in charge of checking if a particular node of a table tree should be filtered out by a HQL Where Clause.
 
 It has the following parameters:
 
@@ -115,7 +115,7 @@ It has the following parameters:
 
 This method should return true if the node conforms to the HQL where clause, false otherwise.
 
-###  getJSONObjectByRecordId
+### getJSONObjectByRecordId
 
 ``` java
 protected JSONObject getJSONObjectByRecordId(Map<String, String> parameters,
@@ -134,7 +134,7 @@ This method should return a json object that contains all the properties of the 
 - `seqno`: if the tree is ordered, the sequence number of the node should be set. 
 - `_hasChildren`: a boolean to specify if the node has children on its own.
 
-##  Example: AD_TAB table
+## Example: AD_TAB table
 
 In this section a **custom tree datasource for the ADTab table** is going to be described.
 

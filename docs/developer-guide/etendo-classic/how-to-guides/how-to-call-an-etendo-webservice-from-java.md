@@ -19,7 +19,7 @@ status: beta
 This section explains how to prepare and implement a **Java class** capable of invoking Etendo web services and which **Java APIs** are required to establish HTTP connections, authenticate requests, and process responses, especially those returned in XML format by XML REST webservices. Using Etendo's own `BaseWSTest.java` class as a reference, the guide shows how to build and extend methods for different HTTP operations (GET, POST, PUT, DELETE), handle authentication securely, and manage session behavior for high-frequency or stateless integrations.
 
 !!!info
-    For more information visit, [XML REST web services](docs/developer-guide/etendo-classic/concepts/.XML_REST_Web_Services.md). 
+    For more information visit, [XML REST web services](../../../developer-guide/etendo-classic/concepts/.XML_REST_Web_Services.md). 
 
 
 ## Execution Steps
