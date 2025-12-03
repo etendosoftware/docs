@@ -500,10 +500,11 @@ nav:
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler.md
         - How to Partition Tables with Etendo Database Extended Module: developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
-#        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
-#        - How to implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors.md
-#        - How To Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/How_To_Implement_FICExtension_Hook.md
-#        - How To Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/How_Tuo_Implement_JsonDataServiceExtraActions_Hook.md
+        - How to Implement a New Main View: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-new-main-view.md
+        - How to Implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/how-to-implement-create-new-in-selectors.md
+        - How To Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-ficextension-hook.md
+        - How To Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-jsondataserviceextraactions-hook.md
+        - How to Log Using Log4j1 x: developer-guide/etendo-classic/how-to-guides/how-to-log-using-log4j1-x.md
 #        - How To Log: developer-guide/etendo-classic/how-to-guides/How_To_Log.md
 #        - How to Migrate 2.50 Modules to 3.0: developer-guide/etendo-classic/how-to-guides/How_to_Migrate_2_50_Modules_to_3_0.md
 #        - How to migrate reports and processes to new Cost Engine: developer-guide/etendo-classic/how-to-guides/How_to_migrate_reports_and_processes_to_new_Cost_Engine.md
