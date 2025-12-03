@@ -7,15 +7,15 @@ tags:
   - Module
 ---
 
-#  How to Create a Module
+# How to Create a Module
 
-##  Overview
+## Overview
 
 Etendo uses the concept of Modularity. Modularity provides developers with the means to be able to develop, publish and distribute their work in a structured and controlled manner. For users of Etendo Classic, Modularity makes it possible to download, install and update custom developments.
 
 This section describes how to create a new module. It is of particular interest as it describes the first steps which should be followed in all of the other sections in this developer's guide and in Etendo Classic custom development in general.
 
-##  Introduction to Modularity
+## Introduction to Modularity
 
 The objectives of modularity are:
 
@@ -27,7 +27,7 @@ A module is a piece of additional functionality that can be deployed optionally 
 additional reports, additional windows, connectors, content packs (translations, chart of accounts, list of tax codes, product categories, etc).
 
 !!!info
-    For a detailed description on the Etendo Classic modularity concept, see the [Modularity Guide](../concepts/Modularity_Concepts.md).
+    For a detailed description on the Etendo Classic modularity concept, see the [Modularity Guide](../concepts/modularity-concepts.md).
 
 This section explains only the standard module type, because that is most relevant for the other sections.
 
@@ -46,11 +46,11 @@ The process of developing a module has three main steps:
 !!!Important
     Every piece of Etendo Classic code belongs to a module, including Etendo Classic core itself. You should do all your developments through modules, including customizations. You can make changes directly in other modules -including Etendo Classic core- but it is highly recommended not to do that. It makes it much easier to maintain Etendo Classic if you restrict code changes to modules.
 
-A module can be distributed and downloaded by other Etendo Classic users via the central repository. For more information about the central repository and distribution of modules, visit the [Modularity Guide](../concepts/Modularity_Concepts.md).
+A module can be distributed and downloaded by other Etendo Classic users via the central repository. For more information about the central repository and distribution of modules, visit the [Modularity Guide](../concepts/modularity-concepts.md).
 
 The following sections discuss the main topic of this section: create and setup a module, and [publish it for distribution](how-to-publish-modules-to-github-repository.md).
 
-##  Creating a Module
+## Creating a Module
 
 The first step in the development process is to create a new module. From the Application menu, select `Application Dictionary` > `Module`.
 
@@ -104,7 +104,7 @@ Data Package: Tables are linked to a module through the Data Package. The genera
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png)
 
 
-##  Develop your software artifacts
+## Develop your software artifacts
 
 Now, let's see how to develop the software artifacts required for the functionality of the module. While developing, the relation to the module is maintained in different ways:
 
@@ -114,7 +114,7 @@ Now, let's see how to develop the software artifacts required for the functional
 
 When the custom development is ready, the next step is to export the module.
 
-##  Exporting a Module
+## Exporting a Module
 
 Exporting a module creates a directory for your module under Etendo Classic root directory and the appropriate XML files for inclusion in the finished module. Modules that are not flagged as being in development are not exported.
 
@@ -150,7 +150,7 @@ Etendo Classic validates the database and module artifacts of a module when the 
     For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](../developer-tools/etendo-gradle-plugin.md#build-tasks)
 
 
-##  Creating a Source Directory
+## Creating a Source Directory
 
 To develop manual Java code you need a _src_ directory inside of your specific module:
 
@@ -174,7 +174,7 @@ Once the module is created and documented, the next step is to publish it for it
 
 For detailed information about this process, visit the [How to Publish Modules to Github Repository guide](how-to-publish-modules-to-github-repository.md)
 
-##  The Result
+## The Result
 
 The result of this section is a correctly set up module, which can be installed in an Etendo Classic instance that meets the module's requirements.
 

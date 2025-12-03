@@ -542,69 +542,66 @@ databaseMigration {
 Process properties require corresponding **Gradle** tasks that follow this pattern:
 
 
-**Required Task Features**
+**Recommended Task Features**
 
-1. **Must accept output parameter**: Tasks **must** receive an `output` parameter that specifies where to write results
-2. **Use writeResultsForInteractiveSetup utility**: Use the provided utility method to write results
+1. **Support optional `output` parameter**: Tasks should accept an `output` parameter when present, but it is not mandatory. When `output` is provided the task should write results there; when absent the task should still operate and either call the project-level writer (if present) without an explicit path or fallback to console output.
+2. **Use `project.writeResultsForInteractiveSetup` when available**: Prefer calling the project-registered closure to write JSON results in interactive flows.
 3. **Provide meaningful feedback**: Include progress messages for user awareness
 4. **Handle errors gracefully**: Provide clear error messages when configuration fails
 
-!!!warning "Critical Requirement"
-    Process property tasks **must** accept an `output` parameter. This is where the task writes its configuration results that will be applied to gradle.properties.
+!!! note "Output parameter is optional"
+    The `output` parameter may be provided by the interactive runner (for example when the setup orchestration expects JSON output). Tasks should support receiving `output` when supplied, but they should also work when `output` is not present by either calling the project closure without a path or printing results to console.
 
-**Using writeResultsForInteractiveSetup Utility**
+**Using the `writeResultsForInteractiveSetup` Project Closure**
 
-The Interactive Setup system provides a utility method `writeResultsForInteractiveSetup` to standardize how tasks communicate their configuration results back to the setup process.
+The Interactive Setup system exposes a standard writer as a closure registered on the Gradle `project` object: `project.writeResultsForInteractiveSetup(Map results, String outputPath = null)`. This lets module tasks remain decoupled from internal plugin classes and write results if the interactive flow is active.
 
 ```groovy
 // Example task for myModule.variables.setup process property
 task 'myModule.variables.setup' {
     description = "Configures MyModule integration variables"
-    
+
     doLast {
         try {
-            // Get the output parameter (REQUIRED)
+            // Get the optional output parameter (may be provided by the interactive runner)
             def outputPath = project.findProperty('output')
-            if (!outputPath) {
-                throw new RuntimeException("Missing required 'output' parameter")
-            }
-            
+
             // Execute configuration logic
             println "🔧 Configuring MyModule integration..."
-            
+
             // Your custom configuration logic here
             def apiEndpoint = "https://api.mymodule.com"
             def workspaceId = generateWorkspaceId()
             def apiKey = generateApiKey()
-            
+
             // Prepare results for the interactive setup
             def results = [
-                "myModule.api.endpoint": apiEndpoint,
-                "myModule.workspace.id": workspaceId,
-                "myModule.api.key": apiKey,
+                "myModule.api.endpoint"    : apiEndpoint,
+                "myModule.workspace.id"    : workspaceId,
+                "myModule.api.key"         : apiKey,
                 "myModule.features.enabled": "true",
-                "myModule.version": "1.0.0"
+                "myModule.version"         : "1.0.0"
             ]
-            
-            // Use the reusable function for JSON output (if called from interactive setup)
+
+            // Use the reusable function for JSON output (if the project has the closure)
             boolean wasWrittenAsJson = false
-            if (com.etendoerp.legacy.interactive.InteractiveSetupManager != null) {
+            if (project.hasProperty('writeResultsForInteractiveSetup')) {
                 try {
-                    wasWrittenAsJson = com.etendoerp.legacy.interactive.InteractiveSetupManager
-                        .writeResultsForInteractiveSetup(project, results, outputPath)
+                    // Call the closure; pass outputPath when present
+                    wasWrittenAsJson = outputPath ? project.writeResultsForInteractiveSetup(results, outputPath) : project.writeResultsForInteractiveSetup(results)
                 } catch (Exception e) {
-                    // Fallback if the method call fails - assume direct execution
-                    project.logger.debug("Failed to call InteractiveSetupManager.writeResultsForInteractiveSetup: ${e.message}")
+                    project.logger.debug("Failed to call project.writeResultsForInteractiveSetup: ${e.message}")
                     wasWrittenAsJson = false
                 }
+            } else {
+                project.logger.lifecycle('Interactive setup writer not registered on project; falling back to console output.')
             }
-            
+
             if (wasWrittenAsJson) {
                 println "✅ MyModule configuration completed: ${results.size()} properties configured"
             } else {
                 throw new RuntimeException("Failed to write configuration results")
             }
-            
         } catch (Exception e) {
             throw new RuntimeException("MyModule setup failed: ${e.message}", e)
         }
@@ -612,29 +609,23 @@ task 'myModule.variables.setup' {
 }
 ```
 
-**writeResultsForInteractiveSetup Method Signature**
+**Project Closure Signature**
 
-```groovy
-/**
- * Writes results for interactive setup tasks in JSON format.
- *
- * @param project The Gradle project context
- * @param results Map of property keys to values that were configured
- * @param outputPath Optional custom output file path (uses project.output if not provided)
- * @return boolean true if results were written successfully, false otherwise
- */
-static boolean writeResultsForInteractiveSetup(
-    Project project, 
-    Map<String, String> results, 
-    String outputPath = null
-)
 ```
+// Callable as a Groovy closure on `project`
+boolean writeResultsForInteractiveSetup(Map results, String outputPath = null)
+```
+
+- `results`: Map of key → value properties to write.
+- `outputPath` (optional): explicit output file path. If omitted, the writer will use the Gradle `-Poutput=...` property when present.
+
+The closure returns `true` when the results were successfully written as JSON (interactive mode) and `false` when not (so tasks can fallback to printing values to the console).
 
 ### Process Property Best Practices
 
 1. **Task Naming**: Task names should match the property key (e.g., `myModule.variables.setup` → `myModule.variables.setup`)
-2. **Accept output parameter**: Tasks **must** accept an `output` parameter to specify where results are written
-3. **JSON Output**: Always write results as JSON to the output file specified by `output` parameter
+2. **Accept optional output parameter**: Tasks should accept an `output` parameter when supplied to specify where results are written, but they MUST also behave sensibly when it is not supplied (console fallback or calling the project closure without an explicit path).
+3. **JSON Output when possible**: Prefer writing JSON using the `project.writeResultsForInteractiveSetup` closure when available; otherwise provide a console fallback.
 4. **Error Handling**: Provide meaningful error messages when processes fail
 5. **User Feedback**: Include progress messages to inform users what's happening
 6. **Result Validation**: Ensure all generated properties are valid and properly formatted

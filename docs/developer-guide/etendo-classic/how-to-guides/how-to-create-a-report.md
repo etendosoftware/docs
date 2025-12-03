@@ -10,7 +10,7 @@ tags:
   
 ##  Overview
 
-In this section, the user can find information about the steps required to create a new report in Etendo Classic. The example explained is a simple report with a list of products.
+In this section, the user can find information about the steps required to create a new report in Etendo. The example explained is a simple report with a list of products.
 
 ##  Setting up Jaspersoft Studio
   
@@ -178,7 +178,7 @@ It is possible to create a report using a process definition. For more informati
   * Create a new record 
   * Fill all required fields 
     * *Module:* Pick your module 
-    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](../concepts/Modularity_Concepts.md#DB_prefix)) 
+    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](../concepts/modularity-concepts.md#DB_prefix)) 
     * *Name:* Product List 
     * *UI Pattern:* Report (Using JR templates) 
     * *Data Access Level:* Client/Organization 
@@ -233,7 +233,7 @@ Also, a tutorial with the basics of how to design a report can be found [here](h
 
 ###  Configuring Cell Type in XLS Reports
 
-By default, Etendo Classic reporting engine exports the XLS data as strings. This is done in order to ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
+By default, Etendo reporting engine exports the XLS data as strings. This is done in order to ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
 
 If we want to have a particular format in a cell of our XLS report, and for example, display numbers inside a numeric cell, this default configuration can be overridden at template level.
 
