@@ -439,13 +439,12 @@ nav:
         - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md 
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
         - How to Create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
-#        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
+        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/how-to-create-a-configuration-script.md
         - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/how-to-create-a-custom-tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
         - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md
-#        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Manual UI Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Manual_UI_Process.md
         - How to Create a Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md
@@ -518,12 +517,12 @@ nav:
 #        - How to retrieve parents node by level in a tree: developer-guide/etendo-classic/how-to-guides/How_to_retrieve_parents_node_by_level_in_a_tree.md
         - How to Run an Initial Client Setup Process: developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md
 #        - How to sell a module: developer-guide/etendo-classic/how-to-guides/How_to_sell_a_module.md
-#        - How to send emails on events: developer-guide/etendo-classic/how-to-guides/How_to_send_emails_on_events.md
+        - How to Send Emails on Events: developer-guide/etendo-classic/how-to-guides/how-to-send-emails-on-events.md
 #        - How to setup Eclipse IDE: developer-guide/etendo-classic/how-to-guides/How_to_set_up_Eclipse_IDE.md
-#        - How To Setup ESLint And Prettier In Your IDE: developer-guide/etendo-classic/how-to-guides/How_To_Setup_ESLint_And_Prettier_In_Your_IDE.md
+#        - How to Setup ESLint And Prettier In Your IDE: developer-guide/etendo-classic/how-to-guides/How_To_Setup_ESLint_And_Prettier_In_Your_IDE.md
 #        - How to setup Visual Studio Code IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Visual_Studio_Code_IDE.md
-#        - How To Switch to Classic Mode: developer-guide/etendo-classic/how-to-guides/How_To_Switch_to_Classic_Mode.md
-#        - How To Upgrade a Library: developer-guide/etendo-classic/how-to-guides/How_To_Upgrade_a_Library.md
+#        - How to Switch to Classic Mode: developer-guide/etendo-classic/how-to-guides/How_To_Switch_to_Classic_Mode.md
+#        - How to Upgrade a Library: developer-guide/etendo-classic/how-to-guides/How_To_Upgrade_a_Library.md
 #        - How to use a new version of DBSourceManager: developer-guide/etendo-classic/how-to-guides/How_to_use_a_new_version_of_DBSourceManager.md
         - How to Use Advanced Sequences: developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md
         - How to use an Extension Point: developer-guide/etendo-classic/how-to-guides/how-to-use-an-extension-point.md
@@ -534,7 +533,6 @@ nav:
 #        - JSON REST Web Services: developer-guide/etendo-classic/how-to-guides/JSON_REST_Web_Services.md
 #        - Modules:How to create a Carrier Integration Module: developer-guide/etendo-classic/how-to-guides/Modules_How_to_create_a_Carrier_Integration_Module.md
 #        - QA Sampledata Export: developer-guide/etendo-classic/how-to-guides/QA_Sampledata_Export.md
-#        - XML REST Web Services: developer-guide/etendo-classic/how-to-guides/XML_REST_Web_Services.md
       - Developer Tools:
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
         - Etendo Database Extended Module: developer-guide/etendo-classic/developer-tools/etendo-database-extended-module.md

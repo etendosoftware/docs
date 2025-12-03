@@ -10,20 +10,20 @@ status: beta
 ---
 
 
-#  How to use an Extension Point
+# How to use an Extension Point
 
 !!! example "IMPORTANT: THIS IS A BETA VERSION"
     This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-##  Overview
+## Overview
 
-Extension Points are execution points that can be set in any PL/SQL Procedure and that is able to call other PL/SQL Procedures included in any module. This is useful to extend the functionality of existing procedures that contain such an extension point. For example, using the **C_Invoice_Post - Finish Process** Extension Point. It is possible for any module to add a PL/SQL procedure to be run whenever an Invoice is processed. This has been used in the Advanced Payables and Receivables module to generate the payment schedule for the processed invoice.
+Extension Points are execution points that can be set in any **PL/SQL Procedure** and that is able to call other PL/SQL Procedures included in any module. This is useful to extend the functionality of existing procedures that contain such an extension point. For example, using the *C_Invoice_Post - Finish Process* Extension Point. It is possible for any module to add a PL/SQL procedure to be run whenever an Invoice is processed. This has been used in the Advanced Payables and Receivables module to generate the payment schedule for the processed invoice.
 
-Extension Points are managed in the window `Application Dictionary` > `Setup` > `Extension Points` . Here can be defined new extension points and new PL/SQL procedures attached to existing Extension Points.
+Extension Points are managed in the window `Application Dictionary` > `Setup` > `Extension Points` . Here can be defined new extension points and new PL/SQL procedures attached to existing Extension Points. 
 
 There is a complete list of available extension points and the parameters used in the [Extension Points](../concepts/extensionpoints.md) document.
 
-###  Procedures
+### Procedures
 
 To attach a PL/SQL procedure to an existing Extension Point you must create a new record in the **Procedures** tab and fill in the field **Procedure** with the name of the PL/SQL procedure you want to be invoked in the Extension Point selected.
 
@@ -32,7 +32,7 @@ To attach a PL/SQL procedure to an existing Extension Point you must create a ne
 Finally define the PL/SQL procedure with the same name defined in the field **Procedure** and with only one **character varying** parameter that will reference the `AD_EP_INSTANCE` record that contains all the parameter values used to invoke the PL/SQL procedure. For example all the PL/SQL procedures attached to the Extension Point **C_Invoice_Post - Finish Process** are
 invoked with the following parameters: `Record_ID`, `DocAction`, `User`, `Message` and `Result`. The definition of the PL/SQL and how the parameters are read can be seen in the following example:
  
-```
+``` SQL
 CREATE OR REPLACE FUNCTION aprm_gen_paymentschedule_inv(p_ep_instance character varying)
     RETURNS void AS
 $BODY$ DECLARE 
