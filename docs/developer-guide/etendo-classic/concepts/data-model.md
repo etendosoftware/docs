@@ -5,6 +5,7 @@ tags:
     - Application Dictionary
     - Tables
     - Columns
+    - Decimal Precision
 ---
 
 # Data Model
