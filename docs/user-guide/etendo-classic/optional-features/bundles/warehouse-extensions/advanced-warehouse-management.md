@@ -801,7 +801,7 @@ Once completed, the task will appear in the Completed Tasks section. From there,
 
 Inventory adjustment tasks allow warehouse operators to perform physical counts and stock adjustments directly from the mobile app. These tasks are generated from physical inventories in the ERP system.
 
-This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product to the storage bin associated with the new status, accurately reflecting the current stock condition.
+This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product(s) to the storage bins associated with the new status, accurately reflecting the current stock condition.
 
 !!!Info
     For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
@@ -823,7 +823,7 @@ When accessing Etendo Mobile into the Adjustment Tasks section, all tasks and th
 
 To **Adjust** inventory
 
-- Access the **Adjustment Tasks** menu. Tasks are organized by status: *Pending*, *In Progress*, and *Completed*.
+- From the Etendo Mobile main menu, navigate to the **Adjustment Tasks** section. Tasks are organized by status: *Pending*, *In Progress*, and *Completed*.
 - Search for and select the desired task from the list or using the search function.
 - When a task is selected, a screen opens displaying the task information.
 - Press the **Start Adjustment** button to begin the process.
