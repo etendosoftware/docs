@@ -797,14 +797,11 @@ Once completed, the task will appear in the Completed Tasks section. From there,
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
 
 
-### Inventory Tasks
+### Adjustment Tasks
 
-Two types of tasks have been added:  **Inventory Adjustment** and **Inventory Relocation**.  These tasks are created and assigned directly from Etendo and are available in Etendo Mobile from the **Inventory Tasks** menu for the operator to execute.
+Inventory adjustment tasks allow warehouse operators to perform physical counts and stock adjustments directly from the mobile app. These tasks are generated from physical inventories in the ERP system.
 
-**Inventory Adjustment**
-Allows you to plan counting or stock adjustment tasks. It can be used to update existing quantities or to record stock for products that did not have previous inventory.
-
-This corresponds to the same operation performed in Etendo **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none. If the inventory status changes during the adjustment, the system automatically moves the product to the storage bin associated with that new status, reflecting the current stock condition.
+This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product to the storage bin associated with the new status, accurately reflecting the current stock condition.
 
 !!!Info
     For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
@@ -812,57 +809,30 @@ This corresponds to the same operation performed in Etendo **Physical Inventory*
 
 #### Process Start (Etendo)
 
-The process begins with the creation of **Tasks** within Etendo, using the Task window.
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Physical Inventory`
+
+The process begins by creating tasks within Etendo using the **Physical Inventory** window. A new record is created with product lines for which stock verification and adjustment is desired. Once this is ready, the task must be generated using the **Generate Task** button.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
 
-**Header**
+#### Access to Adjustment Tasks (Etendo Mobile)
 
-With the installation of the **Advanced Warehouse Management** module, new specific tasks are incorporated that expand the possibilities of logistics management. The header retains the basic fields for a task and adds options in the *Task Type* field, which determine the type of action to be performed:
-
-- **Inventory Adjustment**: Used to plan stock counting or adjustment tasks. It can update existing quantities or register stock for products that previously had no inventory.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-2.png)
-
-Fields to note:
-
-- **Product**: (required) Product on which the task will be performed. When you select a product, other related fields are automatically filled in.
-- **Storage bin**: (read-only) displays the current location of the selected product. It is automatically completed when the product is uploaded.
-- **Attribute Set Value**: (read-only) indicates the defined attributes of the product (e.g., lot, series). It is automatically completed when the product is uploaded.
-- **Quantity**: (read-only) reflects the current quantity available in the storage bin corresponding to the product. It is automatically completed when the product is uploaded.
-- **UOM**: (read-only) displays the unit of measure in which the product is managed. It is automatically completed when the product is uploaded.
-- **Creation Date**: (read-only) records the date and time the task was created.
-
-#### Access to Inventory Tasks (Etendo Mobile)
-
-When accessing Etendo Mobile into the Inventory Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
+When accessing Etendo Mobile into the Adjustment Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png)
 
-#### Inventory Adjustment 
+To **Adjust** inventory
 
-!!!Important 
-    These actions are possible through the use of the [movement rules](#movement-rules-configuration-window) functionality and the creation/use of [custom statuses](#creating-inventory-statuses) in Etendo, explained above.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-adjust-1.png)
-
-To **Adjust** inventory:
-
-- Enter the **Inventory Tasks** menu. There, tasks are divided by status: *Pending*, *In Progress*, and *Completed*.
-- Search and select the task from the list or by the search engine.
-- When a card is selected, a screen with the task information opens. 
-- Press **Start Adjustment** button
-- Complete **Quantity Count** field.
-- Confirm by pressing **Process** button.
+- Access the **Adjustment Tasks** menu. Tasks are organized by status: *Pending*, *In Progress*, and *Completed*.
+- Search for and select the desired task from the list or using the search function.
+- When a task is selected, a screen opens displaying the task information.
+- Press the **Start Adjustment** button to begin the process.
+- Enter relevant information including storage bin details and quantity counts.
+- Scan products to stock them or manually enter the data.
+- Confirm the task by pressing the **End Adjustment** button.
+- Confirm that you want to complete the task.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
-
-To change inventory **Status**:
-
-- Change the inventory Status in **To Status** field. 
-- The Default status options are: *Undefined*, *Blocked*, *Available*, *Quality-Control*, *Quarantine*, *Damage*, but each company can define its own statuses
-- Confirm by pressing **Process** button.
-
 
 ### Relocation Tasks
 
