@@ -51,7 +51,7 @@ To be able to configure a business partner sequence number, two preferences are 
 
 ![image_6.png](../../../../../assets/legacy/image_6.png)
 
-This property allows the automatic generation of sequence numbers for business partners. The default value is Y and, in case it is necessary to disable this automatic generation, a new preference must be created, but with the value N and the option “Selected” checked. In this case, the Document No field will be left blank.
+This property allows the automatic generation of sequence numbers for business partners. The default value is N and, in case it is necessary to enable this automatic generation, a new preference must be created, but with the value Y and the option "Selected" checked. When disabled, the Document No field will be left blank.
 
 #### Allow Jumps in Business Partner Document No
 
