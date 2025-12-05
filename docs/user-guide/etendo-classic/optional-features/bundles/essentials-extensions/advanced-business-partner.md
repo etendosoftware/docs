@@ -51,7 +51,7 @@ In order to configure a business partner sequence number, two preferences must b
 
 #### Auto Business Partner Document No
 
-This property allows the automatic generation of sequence numbers for business partners. The default value is *N* and, in case it is necessary to enable this automatic generation, **a new preference must be created**, but with the value `Y` and the option `Selected` checked. When is isabled, the *Document No* field will be left blank.
+This property allows the automatic generation of sequence numbers for business partners. The default value is *N* and, in case it is necessary to enable this automatic generation, **a new preference must be created**, but with the value `Y` and the option `Selected` checked. When is disabled, the *Document No* field will be left blank.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/advanced-business-partner-6.png)
 
