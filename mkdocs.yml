@@ -430,11 +430,11 @@ nav:
 #        - How to Change Fonts in Openbravo Reports: developer-guide/etendo-classic/how-to-guides/How_to_Change_Fonts_in_Openbravo_Reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
 #        - How To Configure Log: developer-guide/etendo-classic/how-to-guides/How_To_Configure_Log.md
-        - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
+        - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md
-        - How to Create a Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout.md
         - How to Create a Callout that Extends from Another Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout-that-extends-from-another-callout.md
+        - How to Create a Callout: developer-guide/etendo-classic/how-to-guides/how-to-create-a-callout.md
         - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-chart-of-accounts-module.md 
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
         - How to Create a Computed Column: developer-guide/etendo-classic/how-to-guides/how-to-create-a-computed-column.md
@@ -442,23 +442,23 @@ nav:
 #        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
-        - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
         - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Manual UI Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Manual_UI_Process.md
-        - How to Create a Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
+        - How to Create a Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md
 #        - How to create a Multi Selector: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector.md
         - How to Create a Navigable Link: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.md
         - How to Create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component.md
+        - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
 #        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
 #        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
         - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
 #        - How to create a QueryList Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_QueryList_Widget.md
-        - How to Create a Report: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md
         - How to Create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md
+        - How to Create a Report: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
         - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
         - How to Create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
@@ -498,7 +498,6 @@ nav:
         - How to Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler.md
-        - How to Partition Tables with Etendo Database Extended Module: developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
 #        - How to implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors.md
@@ -509,6 +508,7 @@ nav:
 #        - How to migrate reports and processes to new Cost Engine: developer-guide/etendo-classic/how-to-guides/How_to_migrate_reports_and_processes_to_new_Cost_Engine.md
 #        - How to Migrate Sources Format (since 3.0PR19Q1): developer-guide/etendo-classic/how-to-guides/How_to_Migrate_Sources_Format_since_3_0PR19Q1_.md
         - How To Modularize The Location Selector: developer-guide/etendo-classic/how-to-guides/how-to-modularize-the-location-selector.md
+        - How to Partition Tables with Etendo Database Extended Module: developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended.md
 #        - How To Partially Protest A Remittance: developer-guide/etendo-classic/how-to-guides/How_To_Partially_Protest_A_Remittance.md
         - How to Print Reports with Subreports: developer-guide/etendo-classic/how-to-guides/how-to-print-reports-with-subreports.md
 #        - How to publish a Module: developer-guide/etendo-classic/how-to-guides/How_to_publish_a_Module.md
