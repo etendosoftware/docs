@@ -1,0 +1,131 @@
+---
+title: How to Restrict the Movements of Nodes in a Tree
+tags: 
+    - Restrict
+    - Movements
+    - Node
+    - Tree
+status: beta
+---
+  
+# How to Restrict the Movements of Nodes in a Tree
+
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+
+## Overview
+
+The **Tree Grid View** allows to move a node to another parent or to another position within its current parent node.
+
+Some trees might have some restrictions on how a node can be moved to another position of the tree. For instance, the Organization tree does not allow to move a node if it belongs to an organization that is ready, and the Menu tree does not allow to move a node if it belongs to a menu item whose module is not in development.
+
+Developers can restrict the node movements or a particular tree by subclassing the `CheckTreeOperationManager` class.
+
+## CheckTreeOperationManager class
+
+### Overwriting the checkNodeMovement method
+
+The `CheckTreeOperationManager` is an abstract class that exposes one method:
+
+``` java
+public abstract ActionResponse checkNodeMovement(Map<String, String> parameters, String nodeId,
+    String newParentId, String prevNodeId, String nextNodeId);
+```
+
+This method checks if a particular node movement is valid. It has the following paramenters:
+
+  - **parameters**: parameters sent from the tree grid to the `TreeDatasourceService`. 
+  - **nodeId**: id of the node being moved. 
+  - **newParentId**: id of new parent of the node being moved. 
+  - **prevNodeId**, **nextNodeId**: ids of the nodes that will be respectively before and after the node if the movement is valid. 
+
+The `checkNodeMovement` method returns an object of utility class called `ActionResponse`, which has three attributes:
+
+``` java
+private boolean success;
+private String messageType;
+private String message;
+```
+
+The success attribute represents if the node movement is valid. The `messageType` and message attributes can be used to show a message in the client message bar regardless of the validity of the node movement.
+
+The `checkNodeMovement` method is executed by the `TreeDatasourceService` after each node movement if a `CheckTreeOperationManager` has been defined for the tree the node belongs to. If the `checkNodeMovement` method returns an `ActionResponse` with success = true, then the node movement will be committed and the node will be shown in the client side in its updated position. 
+If it returns an Action response with `success = false`, the node movement will be canceled and the node will be reverted to its original position in the client side.
+
+### Associating a `CheckTreeOperationManager` with a particular tree
+
+`CheckTreeOperationManagers` are instantiated using [Dependency Injection](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
+
+All implementations of `CheckTreeOperationManagers` must be application scoped and must have the name of the table associated with the tree as a qualifier. For instance, the `CheckTreeOperationManager` used for the menu tree has the following annotations:
+
+``` java
+    @ApplicationScoped
+    @Qualifier("ADMenu")
+```
+
+## Example: Organization Tree
+
+In the tree defined for the Organization table, nodes are not allowed to be moved if they belong to an organization that is set as ready.
+
+This is the complete implementation of its `CheckTreeOperationManager`:
+
+``` java
+package org.openbravo.service.datasource.treeChecks;
+ 
+import java.util.Map;
+ 
+import javax.enterprise.context.ApplicationScoped;
+ 
+import org.openbravo.client.kernel.ComponentProvider.Qualifier;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.erpCommon.utility.OBMessageUtils;
+import org.openbravo.model.common.enterprise.Organization;
+import org.openbravo.service.datasource.CheckTreeOperationManager;
+ 
+@ApplicationScoped
+@Qualifier("Organization")
+public class OrganizationTreeOperationManager extends CheckTreeOperationManager {
+ 
+    /**
+     * Only allows to move a node if it belong to a organization that is not set as ready
+     */
+    @Override
+    public ActionResponse checkNodeMovement(Map<String, String> parameters, String nodeId,
+        String newParentId, String prevNodeId, String nextNodeId) {
+        Organization organization = OBDal.getInstance().get(Organization.class, nodeId);
+        if (organization.isReady()) {
+            return new ActionResponse(false, "error", OBMessageUtils.messageBD("OrgIsReady"));
+        } else {
+            return new ActionResponse(true);
+        }
+    }
+}
+```
+
+These annotations guarantee that this `CheckTreeOperationManager` will be used in order to check if a node movement is valid for the Organization tree:
+
+``` java
+    @ApplicationScoped
+    @Qualifier("Organization")
+```
+
+The `nodeId` parameter represents the id of the node being moved. At this point it is known that the node belongs to the Organization tree. This line obtains the organization associated with the node based on the nodeId:
+
+``` java
+Organization organization = OBDal.getInstance().get(Organization.class, nodeId);
+```
+
+Once the organization is available, it is easy enough to return a proper `ActionResponse` depending on whether the organization is set as ready or not:
+``` java   
+if (organization.isReady()) {
+    return new ActionResponse(false, "error", OBMessageUtils.messageBD("OrgIsReady"));
+} else {
+    return new ActionResponse(true);
+}
+```
+If a user tried to move a node associated with an organization set as ready, this message will be displayed in his message bar:
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-restrict-the-movements-of-nodes-in-a-tree/moveorganization.png)
+
+---
+This work is a derivative of [How to Restrict the Movements of Nodes in a Tree](http://wiki.openbravo.com/wiki/How_to_Restrict_the_Movements_of_Nodes_in_a_Tree){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
