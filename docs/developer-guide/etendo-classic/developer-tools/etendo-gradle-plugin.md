@@ -398,7 +398,7 @@ This section contains a detailed listing of all available build tasks.
     | `-PupdateLeaf=true   `  | This updates automatically the version of the project being published. By default `false`.                         |
 
 
-### Uninstall Modules
+### Uninstall Modules (uninstallModule)
 
 === ":octicons-package-16: Source Modules"
 
