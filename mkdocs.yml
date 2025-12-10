@@ -485,13 +485,13 @@ nav:
           - How to Create JUnit Test Cases: developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases.md
 #        - How to Create Your Own Import Process with IDL: developer-guide/etendo-classic/how-to-guides/How_to_Create_Your_Own_Import_Process_with_IDL.md
         - How to Define a Table as a Tree: developer-guide/etendo-classic/how-to-guides/how-to-define-a-table-as-a-tree.md
-#        - How to define an on Create Default: developer-guide/etendo-classic/how-to-guides/How_to_define_an_on_Create_Default.md
+        - How to Define an on Create Default: developer-guide/etendo-classic/how-to-guides/how-to-define-an-on-create-default.md
         - How to Define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
-#        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/How_To_Define_Display_Logic_For_Tabs.md
-#        - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/How_to_Define_the_Timeout_of_a_Query.md
+        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-for-tabs.md
+        - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/how-to-define-the-timeout-of-a-query.md
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process.md
-#        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1.md
-#        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
+        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/how-to-do-a-complex-query-using-the-dal-1.md
+        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/how-to-do-a-complex-query-using-the-dal-2.md
         - How to Document an Endpoint with OpenAPI: developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md
         - How to Embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab.md
 #        - How To Enable Customization Of The Login Page: developer-guide/etendo-classic/how-to-guides/How_To_Enable_Customization_Of_The_Login_Page.md
