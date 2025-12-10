@@ -1,0 +1,113 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How To Implement FICExtension Hook
+
+##  Introduction
+
+This document explains how to implement the **FICExtension** Hook. The hook is
+executed in the _execute_ method of the **FormInitializationComponent** class
+just before the response is built.
+
+##  Hook Implementation
+
+This hook is implemented by extending the _FICExtension_ class. It has just
+one void method to implement: _execute_ . This method receives as parameters
+the instances of the objects used to build the response.
+
+**mode**
+
+     The execution mode. 
+**tab**
+
+     The _Tab_ owner of the _Form_ that it is being executed. 
+**columnValues**
+
+     _Map_ with the values of forms columns. 
+**row**
+
+     The _BaseOBObject_ that it is being edited in the form. 
+**changeEventCols**
+
+     The _List_ of dynamic columns that fire the CHANGE event mode. 
+**calloutMessages**
+
+     The _List_ of messages returned by the callouts that have been executed. 
+**attachments**
+
+     The _List_ with the attachments related to the record that it is being edited. 
+**jsExcuteCode**
+
+     The _List_ of JavaScript code returned by the callouts to be executed in the client. 
+**hiddenInputs**
+
+     The _Map_ with all the hidden fields with their values. 
+**noteCount**
+
+     count of notes available on the record that it is being edited. 
+**overwrittenAuxiliaryInputs**
+
+     The _List_ of the Auxiliary Inputs overriden by callouts. 
+
+  
+
+##  Example
+
+This example shows a message every time a new product is edited. You can find
+the code described below in the _org.openbravo.platform.features_ module.
+
+    
+    
+    public class ProductFICExtensionExample implements FICExtension {
+     
+     @Override
+      public void execute(String mode, Tab tab, Map<String, JSONObject> columnValues, BaseOBObject row,
+          List<String> changeEventCols, List<JSONObject> calloutMessages, List<JSONObject> attachments,
+          List<String> jsExcuteCode, Map<String, Object> hiddenInputs, int noteCount,
+          List<String> overwrittenAuxiliaryInputs) throws OBException {
+        if ("180".equals(tab.getId())) {
+          JSONObject jsonMessage = new JSONObject();
+          try {
+            jsonMessage.put("severity", "TYPE_WARNING");
+            jsonMessage.put("text", "Product form opened");
+          } catch (JSONException ignore) {
+          }
+          calloutMessages.add(jsonMessage);
+        }
+      }
+    }
+
+Retrieved from "
+http://wiki.openbravo.com/wiki/How_To_Implement_FICExtension_Hook  "
+
+This page has been accessed 2,893 times. This page was last modified on 7 May
+2015, at 09:09. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+

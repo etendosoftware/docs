@@ -12,6 +12,71 @@ tags:
 
 #
 
+## November 2025
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🚀 New module: Adjust Invoice Tax**
+    
+    ---
+
+    ![alt text](../assets/whats-new/etendo-news/adjust-invoice-tax.png){ width=500 align="right"}
+
+    In version [3.6.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 25**, the new [Adjust Invoice Tax](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md) module lets you correct invoice tax amounts by cents (± 0.01 in the invoice currency) — either sales or purchase invoices — when they are still in Draft status. This helps reconcile rounding differences that often cause invoice rejections, fiscal mismatches or accounting imbalances when integrating with external systems or tax authorities. Key benefits:
+		
+    - Prevents integration and fiscal errors due to rounding variances.
+    - Maintains full traceability: all manual adjustments are logged for audit and control.
+	- Supports any currency and works out-of-the-box for clients on core version 23+ with the Financial Extensions bundle installed.
+    ---
+
+    - Documentation: [Adjust Invoice Tax](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
+    - Blog: [Was Your Invoice Rejected Over a Few Cents? Discover How Etendo Solves Rounding and Accounting Imbalance Issues](https://etendo.software/en/invoice-tax-adjustment/){target="_blank"}
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🖥️ New UI: Beta 0.8.0**
+    
+    ---
+
+    ![](../assets/whats-new/etendo-news/newui-0.8.0.png){ width=500 align="right"}
+
+    In version [3.12.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle compatible with **Etendo 25**, new update published, a beta for the new **Workspace UI** was released in November, giving users early access to the refreshed interface: improved look & feel, more intuitive navigation, and modernized workflows. 
+    
+    --- 
+    - Documentation: [UI Improvements](../user-guide/new-ui/ui-improvements.md)
+    - Documentation: [New UI - Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md)
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Agent Memory & Smarter AI Workflows**
+    
+    ---
+
+    ![](../assets/whats-new/etendo-news/ai-memory.png){ width=500 align="right"}
+
+    In version [3.10.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle compatible with **Etendo 25**, this release introduces the Memory Tool, enabling persistent “agent memory”: agents can now store, update and recall context between sessions, thanks to a vector-database backend (Chroma).💡 What this means for your workflow:
+	
+    - Agents become more “stateful”: they can remember past interactions or key data to improve continuity and reduce redundant steps.
+	- Better automation: when configuring agents (text generation, tasks, integrations) — you can now rely on memory to maintain context over time, which enhances productivity and AI-driven processes.
+    
+    --- 
+    - Documentation: [How to Customize an Agent with Agent Memories](../developer-guide/etendo-copilot/how-to-guides/how-to-customize-an-agent-with-agent-memories.md)
+    
+</div>
+
+
+
+
 ## September 2025
 
 ### Etendo
@@ -19,10 +84,10 @@ tags:
 <div class="grid cards" markdown>
 
 - :octicons-rocket-24: **New Etendo release: Version 25.3 Now Available!**
-
-    ![Document Type](../assets/whats-new/etendo-news/document-type.png)
-
+    
     ---
+
+    ![Document Type](../assets/whats-new/etendo-news/document-type.png){ width=500 align="right"}
 
     The latest version [25.3](./release-notes/etendo-classic/release-notes.md) of Etendo is here! All supported modules have been updated for full integration.
     
@@ -62,7 +127,9 @@ tags:
 
 - :material-chart-bar: **All Control Over Unposted Documents: Easily identify, review, and post multiple pending documents in one place**
 
-    ![not-posted-documents](../assets/whats-new/etendo-news/not-posted-documents.png)
+    --- 
+
+    ![not-posted-documents](../assets/whats-new/etendo-news/not-posted-documents.png){ width=500 align="right"}
 
     In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle compatible with **Etendo 25**, the **Not Posted Documents** window, part of the **Bulk Posting** module, introduces a smarter and more efficient way to manage accounting records. Users can now:  
 
@@ -143,9 +210,12 @@ tags:
 ### Financial Extensions
 
 <div class="grid cards" markdown>
+
 - :material-chart-bar: **Balance Sheet and P&L Report Advanced: more powerful reporting**
 
-    ![alt text](../assets/whats-new/etendo-news/balance-sheet-advanced.png)
+    ---
+
+    ![alt text](../assets/whats-new/etendo-news/balance-sheet-advanced.png){ width=500 align="right"}
 
     In version [3.3.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the **Balance Sheet and P&L Report Advanced** gains new capabilities:
 
@@ -166,7 +236,9 @@ tags:
 
 - :material-new-box: **Try the Alpha of Etendo Main UI, the new Etendo interface**
 
-    ![new-ui](../assets/whats-new/etendo-news/new-ui.png)
+    ---
+
+    ![new-ui](../assets/whats-new/etendo-news/new-ui.png){ width=500 align="right"}
     
     In version [3.7.1](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, we introduced the Alpha release of the Etendo Main UI. Early builds include 0.2.0, 0.4.0, 0.4.1 and 0.5.0.
 
@@ -182,6 +254,7 @@ tags:
     - Try in demo environment: [Livebuilds](../live-builds/overview.md)
     - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
     - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
+
 </div>
 
 <div class="grid cards" markdown>
@@ -202,8 +275,11 @@ tags:
 <div class="grid cards" markdown>
 
 - :material-robot: **Etendo Copilot 3.5.0: Smarter, faster, and easier to use 🚀**
+    
+    ---
 
-    ![](../assets/whats-new/etendo-news/mcp.png)
+    ![](../assets/whats-new/etendo-news/mcp.png){ width=500 align="right"}
+
     With version [3.5.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, Copilot takes a big step forward. Here’s what’s new:
 
     -  **More powerful conversations** A new full-screen chat with conversation selector makes it easier to switch and keep track of different tasks.  
@@ -226,8 +302,6 @@ tags:
     Streamline your warehouse operations and deliver with speed and accuracy — all included in Etendo 25.
 
 </div>
-
-
 
 ## July 2025
 
@@ -300,7 +374,9 @@ tags:
 
 - :octicons-device-mobile-16: **Advanced Warehouse Management: Mobile-powered inventory**
 
-    ![alt text](../assets/whats-new/etendo-news/packing.png)
+    ---
+
+    ![alt text](../assets/whats-new/etendo-news/packing.png){ width=500 align="right"}
 
     In version [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of Warehouse Extensions bundle, unlock seamless warehouse operations with [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md) module, a feature-packed mobile sub-app that integrates deeply with Etendo Mobile to deliver full traceability and automated warehouse operations.
     
@@ -324,13 +400,11 @@ tags:
 - :octicons-rocket-24: **New Etendo Release: Version 25.1 Now Available!**
 
     ---
+
+    <iframe align="right" width="560" height="315" src="https://www.youtube.com/embed/OtHb45n2dgU?si=dttVeLQxnf97HGjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     The latest version [25.1.x](./release-notes/etendo-classic/release-notes.md) of Etendo is here! This release brings compatibility updates with **Java 17**, **PostgreSQL 16**, **Tomcat 9** and third-party dependencies, ensuring a modern and robust tech stack. All supported modules have been updated for full integration.  
     Want to know more? Check out the [developer updating guide](../developer-guide/etendo-classic/developer-changelog/apichanges.md).
-
-    ---
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/OtHb45n2dgU?si=dttVeLQxnf97HGjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 </div>
 

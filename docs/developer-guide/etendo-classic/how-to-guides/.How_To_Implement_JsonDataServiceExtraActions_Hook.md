@@ -1,0 +1,106 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How To Implement JsonDataServiceExtraActions Hook
+
+##  Introduction
+
+This document explains how to implement **JsonDataServiceExtraActions** Hook.
+This hook is called before and after each operation of
+_DefaultJSONDataService_ class.
+
+##  Hook Implementation
+
+The hook is implemented by extending the _JsonDataServiceExtraActions_ class.
+This class has two methods to implement:
+
+**doPreAction** method:
+
+This void method is called at the beginning of each _DefaultJSONDataService_
+action. It has 3 parameters:
+
+**parameters**
+
+     The Map with the parameters of the DataSource call. 
+**data**
+
+     _JSONArray_ with the records that are going to be inserted, updated or deleted. Modify this object in case it is required to modify the data before executing the action. Fetch operations receive an empty array. 
+**action**
+
+     DataSourceAction enum value with the action of the DataSource call. Possible values are FETCH, ADD, UPDATE and REMOVE. 
+
+**doPostAction** method:
+
+This void method is called at the end of each _DefaultJSONDataService_ action.
+It has 4 parameters:
+
+**parameters**
+
+     The Map with the parameters of the DataSource call. 
+**content**
+
+     JSONObject with the current content that is returned to the client. Modify this object in case it is required to modify the data before is returned. 
+**action**
+
+     DataSourceAction enum value with the action of the DataSource call. Possible values are FETCH, ADD, UPDATE and REMOVE. 
+**originalObject**
+
+     JSONObject String available only on ADD and UPDATE with the original values of the data. 
+
+##  Example
+
+This example logs a line every time a window is loaded. You can find the code
+described below in the _org.openbravo.platform.features_ module.
+
+    
+    
+    public class JsonDataServiceExtraActionsExample implements JsonDataServiceExtraActions {
+      private static final Logger log = LoggerFactory
+          .getLogger(JsonDataServiceExtraActionsExample.class);
+     
+      @Override
+      public void doPreAction(Map<String, String> parameters, JSONArray newData, DataSourceAction action) {
+        log.debug("JsonDataServiceExtraActionsExample doPreAction implementation");
+      }
+     
+      @Override
+      public void doPostAction(Map<String, String> parameters, JSONObject content,
+          DataSourceAction action, String originalObject) {
+      }
+    }
+
+Retrieved from "
+http://wiki.openbravo.com/wiki/How_To_Implement_JsonDataServiceExtraActions_Hook
+"
+
+This page has been accessed 3,282 times. This page was last modified on 7 May
+2015, at 09:09. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+
