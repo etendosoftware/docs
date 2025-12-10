@@ -398,57 +398,63 @@ This section contains a detailed listing of all available build tasks.
     | `-PupdateLeaf=true   `  | This updates automatically the version of the project being published. By default `false`.                         |
 
 
-### Uninstall Modules (uninstallModule)
+### Uninstall Modules (uninstallModule) 
 
-=== ":octicons-package-16: Source Modules"
+**:octicons-package-16: Source Modules**
 
-    To uninstall an Etendo module you need to run the gradle task.
+To uninstall an Etendo module you need to run the gradle task.
+
+``` bash title="Terminal"
+./gradlew uninstallModule -Ppkg=<modulename>
+```
+
+This task will try to delete the source module and the source dependencies which depends on it.
+
+If the module to uninstall is a dependency of other source module, an exception is thrown. You can force the uninstall providing the flag `-Pforce=true`.
+
+**:material-language-java: JAR Modules**
+
+1. To uninstall a dependency in `JAR` format, simply remove the dependency from the `build.gradle` file and recompile.
 
     ``` bash title="Terminal"
-    ./gradlew uninstallModule -Ppkg=<modulename>
+    ./gradlew update.database compile.complete smartbuild
     ```
 
-    This task will try to delete the source module and the source dependencies which depends on it.
+2. If you want to uninstall a transitive dependency, you can make use of **Gradle Exclusion Rules** (exclude dependencies) to prevent the extraction of a `JAR` dependency. In the `build.gradle` of the root project you can specify the dependency to exclude: 
 
-    If the module to uninstall is a dependency of other source module, an exception is thrown. You can force the uninstall providing the flag `-Pforce=true`.
+    - Exclude Dependencies in globaly: 
 
+        ``` groovy title="build.gradle"
+        configurations.implementation {
+            exclude group: 'com.etendoerp', module: 'test1'
+            exclude group: 'com.etendoerp', module: 'test2'
+        }
+        ```
 
-=== ":material-language-java: Jar Modules"
+    - Exclude transitive dependencies:
 
-    You can make use of Gradle exclusion rules to prevent the extraction of a JAR dependency.
-    In the `build.gradle` of the root project you can specify the dependency to exclude.
-
-    ``` groovy title="build.gradle"
-    configurations.implementation {
-      exclude group: 'com.test', module: 'custommodule1'
-      exclude group: 'com.test', module: 'custommodule2'
-    }
-    ```
-
-    If the dependency belongs to a `build.gradle` of a source module, it may be downloaded when the `javaCompile` task is executed. You can also make use of gradle exclude rules.
-
-    !!! warning
-        When you make use of exclude rules in a custom source module, the `pom.xml` can be affected when you publish a new version.
-
-    To prevent downloading dynamic JAR modules, you need to remove the dependency from each `build.gradle`.
-
-    The JAR module could also be a transitive dependency.
-    You can see the transitive dependencies tree running the gradle task
-    `./gradlew dependencies --info`
-    and remove the root parent dependency.
-
-    When you declare a dependency you can also exclude custom modules. See [Gradle dependency exclusion](https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html#sec:excluding-transitive-deps){target="_blank"}.
+        ``` groovy title="build.gradle"
+        dependencies {
+            implementation("com.etendoerp:test:1.0.0") {
+                exclude group: "com.etendoerp", module: "test2"
+            }
+        }
+        ```
 
     !!! info
-        Etendo JAR modules are dynamically extracted in the root project `build/etendo/modules` directory.
+        - [Gradle Global Dependency Exclusion](https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html#sec:excluding-transitive-deps){target="_blank"}
+        - [Gradle Transitive Dependency Exclusion](https://docs.gradle.org/current/userguide/how_to_exclude_transitive_dependencies.html){target="_blank"}
 
-    !!! warning
-        Each `build.gradle` file (from the root project or source modules) can be using the dependency directly or by transitivity and this can lead to resolution of the module.
+
+    !!! tip 
+        - You can also make use of **Gradle Exclude Rules** if the dependency belongs to a source module, apllying the rules in the module `build.gradle` file.
+        - A `JAR` module could also be a transitive dependency. You can see the transitive dependencies tree running the gradle task: `./gradlew dependencies --info` and exclude the root parent dependency.
+        - Etendo `JAR` modules are dynamically extracted in the root project `build/etendo/modules` directory.
 
     Finally you need to rebuild the system:
 
     ``` bash title="Terminal"
-    ./gradlew update.database compile.complete
+    ./gradlew update.database compile.complete smartbuild
     ```
 
 ### Internal Developer Tasks
@@ -458,7 +464,6 @@ This section contains a detailed listing of all available build tasks.
       ./gradlew cloneDependencies
                                     
       ```
-    
 
       ```groovy  title="build.gradle"
       ext.defaultExtensionModules = [
