@@ -23,7 +23,7 @@ The hook is implemented by extending the `JsonDataServiceExtraActions` class. Th
 
 - **doPreAction** method: This void method is called at the beginning of each `DefaultJSONDataService` action. It has 3 parameters:
 
-    - **parameters**: The Map with the parameters of the DataSource call. 
+    - **parameters**: The Map with the parameters of the `DataSource` call. 
     - **data**: `JSONArray` with the records that are going to be inserted, updated or deleted. Modify this object in case it is required to modify the data before executing the action. Fetch operations receive an empty array. 
     - **action**: `DataSourceAction` enum value with the action of the DataSource call. Possible values are FETCH, ADD, UPDATE and REMOVE. 
 

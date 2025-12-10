@@ -129,7 +129,7 @@ log.warn("Invoice {} could not be processed", invoice.getId());
 
 because it indicates the invoice that failed, so it would help to try to reproduce the problem. Depending on the process itself, it might also require to include some other parameters, for example:
 
-``` 
+```
 log.warn("Invoice {} could not be processed with action: {}", invoice.getId(), action);
 ```
 
@@ -144,7 +144,7 @@ Be careful when logging context not to create new exceptions. For example, the f
 
 Stack traces show the call stack of a thread in the moment they were generated, this is, recursively the line of code that was in execution as well as the line that invoked current method, the line that invoked that method and so on.
 
-Some times, they can give a great context to developers to find causes of problems.
+Sometimes, they can give a great context to developers to find causes of problems.
 
 The following code will log an error message and the stack trace of that thread when it occurred:
 

@@ -16,11 +16,11 @@ status: beta
   
 ##  Overview
 
-This howto discusses how a new **view** can be added to Etendo and made available through the menu and quick launch options.
+This section discusses how a new **view** can be added to Etendo and made available through the menu and quick launch options.
 
 A **view** is shown inside the tab of the multi-document-interface (MDI) in the main content area of the Etendo user interface. This is illustrated in the screenshot below which shows several opened tabs, what is shown inside a tab is called a view.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-0.png){: .legacy-image-style}  
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-implement-a-new-main-view/mainview0.png)
 
 ##  Terminology
 
@@ -35,9 +35,9 @@ This howto uses the following terminology:
 This howto is supported by an example module which shows example of the code shown and discussed in this howto.
 
 The code of the example module can be downloaded from this mercurial repository:
-https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/ ???
 
-The example module is available through the Central Repository (See 'Client Application Examples'), for more information see the  Examples Client Application  project page.
+The example module is available through the Central Repository (See 'Client Application Examples'), for more information see the  Examples Client Application  project page. ???
 
 !!!note 
     The example module also contains implementations of other howtos.  
@@ -47,7 +47,7 @@ The example module is available through the Central Repository (See 'Client Appl
     When implementing your own components it often makes sense to extend existing components. Make sure that your module then depends on the module providing the base types. This ensures that the javascript is loaded in the correct order. Most of the time it makes sense to add a dependency from your module to the Client `User Interface Application/client.application` module  
 
   
-##  Main flow of view handling
+##  Main Flow of View Handling
 
 A view is opened when a user makes a menu choice or uses quick launch (or through hyperlinks). To obtain and render the view the system goes through a number of steps:
 
@@ -74,7 +74,7 @@ Both implementation methods are discussed below in more detail.
 Implementing a view as static javascript is the most straight forward method. Any Smartclient canvas is allowed to be used as a view. When implementing your view in a static javascript you should take the following steps:
 
 * Create a javascript file with your view definition and place it in the correct directory 
-* Register the javascript file (and other static resources such as css files) in Etendo using a `ComponentProvider` 
+* Register the javascript file (and other static resources such as css files) in Etendo using a [`ComponentProvider`](../concepts/etendo-architecture.md#component-provider) 
 * Create a view implementation record with the correct name (the same name as the javascript class) 
 * Define a menu entry for the view implementation 
 
@@ -132,7 +132,7 @@ The javascript file should be placed inside the module in a directory: `web/[mod
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-4.png){: .legacy-image-style}
 
   
-The next step is to register the js file in Etendo. This is done through a `ComponentProvider`. For more detailed information on the `ComponentProvider` concept,  visit this page.
+The next step is to register the js file in Etendo. This is done through a `ComponentProvider`. For more detailed information, visit [`ComponentProvider`](../concepts/etendo-architecture.md#component-provider).
 
 The example module contains an example of a `ComponentProvider`, it has this method to tell Etendo where to find the javascript file which contains the view implementation:
 
@@ -196,16 +196,15 @@ the new simple view. Go to the menu window and select the menu entry added a few
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-10.png){: .legacy-image-style}
 
-Now log out and log in again, open the view through the menu (don't use any of the 'recent' links as they store the parameters also), now the result should be something like this:
+Now log out and log in again, open the view through the menu (do not use any of the 'recent' links as they store the parameters also), now the result should be something like this:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-11.png){: .legacy-image-style}
 
-###  Taking care of history/back button/page refresh
+###  Taking care of History/Back Button/Page Refresh
 
-If you had implemented your view by extending the **isc.Layout** base class, try to refresh the complete page with the view opened. You will see that the view get's re-opened but that the tab title is wrong and that the content is
-wrong. When opening a view Etendo will store information to be able to reconstruct the view when the page is refreshed or when the back/forward button in the browser is pressed.
+If you had implemented your view by extending the **isc.Layout** base class, try to refresh the complete page with the view opened. You will see that the view gets re-opened but that the tab title and the content are wrong. When opening a view, Etendo will store information to be able to reconstruct the view when the page is refreshed or when the back/forward button in the browser is pressed.
 
-The give Etendo the correct information the view needs to implement a function (getBookMarkParams):
+To give Etendo the correct information, the view needs to implement a function (getBookMarkParams):
 
 ```
 getBookMarkParams: function() {
@@ -218,9 +217,9 @@ getBookMarkParams: function() {
 ```
 
 !!!note
-    - The `getBookMarkParams` returns an object which is used to recreate the view instance when rebuilding the page, as you can see both the tab title and the labelContent are passed back (as well as the class name of the view).
+    - The `getBookMarkParams` returns an object which is used to recreate the view instance when rebuilding the page, as you can see, both the tab title and the `labelContent` are passed back (as well as the class name of the view).
 
-    - For a complete overview of the api which Etendo checks for additional functionality (opening a help view, preventing multiple tabs of the same type), see the View API section below.
+    - For a complete overview of the api which Etendo checks for additional functionality (opening a help view, preventing multiple tabs of the same type), see the [View API](#view-api) section below.
 
     - To avoid duplicating the above piece of code for your standard tabbed views, an **OBBaseView** wrapper class is available that includes all above actions. Hence, instead of extending the isc.Layout class, consider extending the OBBaseView, e.g.:
 
@@ -228,14 +227,14 @@ getBookMarkParams: function() {
     isc.defineClass("OBEXAPP_HelloWorldLabelView", isc.OBBaseView).addProperties({....});
     ```
 
-###  A more elaborate view: grid with button, parameterized messages
+###  A more Elaborate View: Grid with Button, Parameterized Messages
 
-In the previous step we created a simple view. This section shows a more complex example. It is part of the example module in the file example-grid-view.js. It shows a grid with a button which is enabled when selecting one or more records in the grid.
+In the previous step we created a simple view. This section shows a more complex example. It is part of the example module in the file `example-grid-view.js`. It shows a grid with a button which is enabled when selecting one or more records in the grid.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-12.png){: .legacy-image-style}
 
   
-The source code of the test view is shown below. It start with the definition of the grid class and then defines the view itself (further down). The class name of the view itself is OBEXAPP_SimpleView. So to make use of this view, a view implementation record with this name (OBEXAPP_SimpleView) should be created and added to the menu.
+The source code of the test view is shown below. It start with the definition of the grid class and then defines the view itself (further down). The class name of the view itself is `OBEXAPP_SimpleView`. So to make use of this view, a view implementation record with this name (`OBEXAPP_SimpleView`) should be created and added to the menu.
 
 ```
 // This javascript defines a grid and a layout containing the grid 
@@ -350,15 +349,15 @@ isc.OBEXAPP_SimpleView.addProperties({
 });
 ```
 
-Note that the button click shows a parameterized message. A message can contain parameters (%0, %1) which are substituted with real values when showing the message.
+!!!Note
+    The button click shows a parameterized message. A message can contain parameters (%0, %1) which are substituted with real values when showing the message.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-13.png){: .legacy-image-style}
+    ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-13.png){: .legacy-image-style}
 
 
 ##  View API
 
-Any Smartclient canvas can be used as an Etendo view. When opening a view Etendo will check if the view class/instance supports certain methods. If so then Etendo will make use of these methods. The methods are reflected in
-the OBBaseView type
+Any Smartclient canvas can be used as an Etendo view. When opening a view, Etendo will check if the view class/instance supports certain methods. If so, then Etendo will make use of these methods. The methods are reflected in the `OBBaseView` type.
     
 ```
 // = OBBaseView =
@@ -425,19 +424,18 @@ isc.OBBaseView.addProperties({
 });
 ```
   
+##  Dynamically Generated Javascript
 
-##  Dynamically generated javascript
+Instead of creating a static javascript file with a view definition, it is also possible to use dynamically generated javascript. The javascript is generated at the first usage of the view definition by the user.
 
-Instead of creating a static javascript file with a view definition it is also possible to use dynamically generated javascript. The javascript is generated at the first usage of the view definition by the user.
+To create a dynamically generated view, the following parts need to be implemented:
 
-To create a dynamically generated view the following parts need to be implemented:
-
-* create a java class (the component) which provides the template with information (from the database for example) 
+* create a java class (the component) which provides the template with information (from the database, for example) 
 * create a template which generates the javascript which creates the view definition on the client 
 
 Each of these steps is described in more detail below.
 
-The example module contains a Hello World component with a template (hello_world_view.js.ftl). This example creates a view with one clickable button.
+The example module contains a Hello World component with a template (`hello_world_view.js.ftl`). This example creates a view with one clickable button.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-14.png){: .legacy-image-style}  
 
@@ -445,8 +443,7 @@ The example module contains a Hello World component with a template (hello_world
 
 A component is useful when you want to add runtime information to the view definition javascript when it gets generated.
 
-If you don't have the requirement to use dynamic information in the generated javascript of your component then you don't need to implement a component (only a template). You can leave the class field empty in the view
-implementation record (see below).
+If you do not have the requirement to use dynamic information in the generated javascript of your component, then you do not need to implement a component (only a template). You can leave the class field empty in the view implementation record (see below).
 
 The example module has a hello world component which provides the current logged in user to the template. The component can be found in the module's src directory. Here is the code:
 
@@ -470,16 +467,16 @@ public class HelloWorldComponent extends BaseTemplateComponent {
 ```
 
 !!!note
-    For simplicity we choose to get the user name on the server, this information is also available on the client in the global OB.User object (which contains information about the currently logged in user).
+    For simplicity, we choose to get the user name on the server, this information is also available on the client in the global `OB.User` object (which contains information about the currently logged in user).
 
-###  Creating a template
+###  Creating a Template
 
 The template contains the actual javascript. A template consists of two parts:
 
-1. a template file (the template source) ending on ftl (a  freemarker  extension) which is located in the source tree (in the classpath). 
-2. a record in the template table 
+1. a template file (the template source) ending on ftl (a [freemarker](https://freemarker.sourceforge.io/docs/){target="\_blank"} extension) which is located in the source tree (in the classpath). 
+2. a record in the template table.
 
-###  The template source
+###  The Template Source
 
 To create the template for your view, create a ftl file in the source tree of your module. The ftl file should contain plain javascript with possible freemarker constructs to read information from the component.
 
@@ -503,8 +500,8 @@ isc.defineClass("OBAPPEX_HelloWorldButtonView", "Button").addProperties({
 Some special things in this template source:
 
 * as you can see, the templates extends the Smartclient Button class. 
-* the title of the message dialog button is retrieved through the OB.I18N.getLabel method. This is to support translation, see  this wiki page  for more information on this. 
-* See the `${data.name}` part, this is a  freemarker  template construct whereby information is retrieved from a java object. In the Etendo templating system the component instance is available as the `data` object. The `${data.name}` will call the accessor getName on the `HelloWorldComponent`. 
+* the title of the message dialog button is retrieved through the `OB.I18N.getLabel` method. This is to support translation.
+* See the `${data.name}` part, this is a [freemarker](https://freemarker.sourceforge.io/docs/){target="\_blank"} template construct whereby information is retrieved from a java object. In the Etendo templating system the component instance is available as the `data` object. The `${data.name}` will call the accessor getName on the `HelloWorldComponent`. 
 
 ###  Template Record
 
@@ -514,28 +511,26 @@ The next step is to let Etendo know that the template exists. This is done by re
 
 Some specifics:
 
-* the component type of the template has to be set to 'UI View Implementation' 
-* the template class path location contains the path to the template file (incl. the file itself) in the source 
-
-For a description of the other fields of the template record, see  here  .
+* the component type of the template has to be set to 'UI View Implementation'.
+* the template class path location contains the path to the template file (incl. the file itself) in the source.
 
 ###  Register the View Implementation
 
-To use the view implementation in a menu need to register it in Openbravo. This is done through the Application Dictionary > User Interface > View Implementation window.
+To use the view implementation in a menu need to register it in Etendo. This is done through the `Application Dictionary` > `User Interface` > `View Implementation` window.
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view-16.png){: .legacy-image-style}
   
 The client, organization, module, description and active fields are standard Etendo fields. The other fields have more specific meanings:
 
-* name: the name must be unique (it must start with the dbprefix of the module). The name is used to create the view type name on the client. 
-* classname: the classname of a class which extends the org.openbravo.client.kernel.BaseTemplateComponent class. If you don't have any specific component you can leave this field empty. 
-* template: a template set for the UI View Component type. 
+* `name`: the name must be unique (it must start with the dbprefix of the module). The name is used to create the view type name on the client. 
+* `classname`: the classname of a class which extends the `org.openbravo.client.kernel.BaseTemplateComponent` class. If you do not have any specific component you can leave this field empty. 
+* `template`: a template set for the UI View Component type. 
 
 If the view is implemented as static javascript then the classname and template can remain empty. The name should correspond to the class name used when calling `defineClass` (for the example above the name is: `OBAPPEX_HelloWorldLabelView`).
 
-The view implementation can be enabled or disabled by role through the View Role Access tab. When a new view is created it is automatically enabled for all roles.
+The view implementation can be enabled or disabled by role through the **View Role Access** tab. When a new view is created, it is automatically enabled for all roles.
 
-###  Use the view implementation in a menu entry
+###  Use the View Implementation in a Menu Entry
 
 The next step is to add the view as a menu item. This is done through `General Setup` > `Application` > `Menu`.
 
