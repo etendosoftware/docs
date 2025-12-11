@@ -499,11 +499,10 @@ nav:
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
-#        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
-#        - How to implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors.md
-#        - How To Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/How_To_Implement_FICExtension_Hook.md
-#        - How To Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/How_Tuo_Implement_JsonDataServiceExtraActions_Hook.md
-        - How To Log: developer-guide/etendo-classic/how-to-guides/how-to-log.md
+        - How to Implement Create New in Selector: developer-guide/etendo-classic/how-to-guides/how-to-implement-create-new-in-selector.md
+        - How To Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-ficextension-hook.md
+        - How To Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-jsondataserviceextraactions-hook.md
+        - How to Log Using Log4j1 x: developer-guide/etendo-classic/how-to-guides/how-to-log-using-log4j.md
 #        - How to Migrate 2.50 Modules to 3.0: developer-guide/etendo-classic/how-to-guides/How_to_Migrate_2_50_Modules_to_3_0.md
 #        - How to migrate reports and processes to new Cost Engine: developer-guide/etendo-classic/how-to-guides/How_to_migrate_reports_and_processes_to_new_Cost_Engine.md
 #        - How to Migrate Sources Format (since 3.0PR19Q1): developer-guide/etendo-classic/how-to-guides/How_to_Migrate_Sources_Format_since_3_0PR19Q1_.md
