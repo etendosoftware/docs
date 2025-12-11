@@ -58,7 +58,7 @@ Etendo allows the user to post transactions to the ledger only if the financial 
 
 This report lists every transaction posted to the ledger by showing every accounting dimension specified.
 
-![](../../../../../assets/drive/15B7fD-yrlWdAqXA0BmxcG_IA66xSpAoD.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/acct-transaction-details-1.png)
 
 Column Filters allow the user to filter the information to be shown by any of the accounting dimensions.
 
@@ -77,7 +77,7 @@ These reports need to be configured prior to be launched in the [Balance Sheet a
 
 ### Header
 
-![](../../../../../assets/drive/1RuYrg1NFpQZz9FOuNnPR47hpQCTwgzjv.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-1.png)
 
 As shown in the image above, data to fill in is:
 
@@ -111,11 +111,11 @@ Under the **Primary Filters** section, it is possible to specify:
 !!! info
     Please note that the word "Provisional" (en\_US) \[or "Provisional" (es\_ES)\] is shown whenever at least one of the periods for which the report has been launched for it is not closed yet.
 
-![](../../../../../assets/drive/1JYmJT5MghrfjqL3Y_qbNopzLK1GeXrFK.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-report-1.png)
 
 **P&L Report Example**
  
-![](../../../../../assets/drive/1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/profit-and-loss-report-1.png)
 
 ## Balance Sheet and P&L Structure Advanced
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure Advanced`
@@ -131,7 +131,7 @@ The **Balance Sheet and P&L Structure Advanced** report is an enhanced version o
 
 ### Header
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-2.png)
 
 Fields to note:
 
@@ -183,11 +183,11 @@ Also, in addition to the previous **Primary Filters**:
 
 In this report, the **View**, **Export to PDF**, and **Export to Excel** buttons are added to the top bar, allowing you to either view the information directly or export it in different formats as needed.
 
-![](../../../../../assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-3.png)
 
 **P&L Report Example**
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-2.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-4.png)
 
 ## Trial Balance
 
@@ -307,7 +307,7 @@ These dimensions are recorded when transactions are posted to the ledger. Transa
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-1.png)
 
 As shown in the image above, the fields to fill in for launching this report are:
 
@@ -343,7 +343,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
     - This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-2.png)
 
 ## General Ledger Report Advanced
 
@@ -356,13 +356,13 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 
 This **General Ledger Advanced** report is an enhanced version of the previous [General Ledger Report](#general-ledger-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-1.png)
 
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
 
+- Activity
 - 1st Dimension
 - 2nd Dimension
-- Activity
 - Sales Region
 - Sales Campaign
 - Cost Center
@@ -371,7 +371,7 @@ Moreover, the Organization filter was added, a filter that combines the original
 
 The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-2.png)
 
 In the Group By menu, the following options are added:
 
@@ -384,20 +384,20 @@ In the Group By menu, the following options are added:
 
 It is possible to select the desired accounting dimension for the grouping. When generating the report, the selected dimension appears in the header, indicating the grouping criteria used.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv4.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-4.png)
 
 ### Buttons
 
 In the toolbar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv3.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-3.png)
 
 !!!warning
     If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
 
 Also, with this functionality you can navigate to the related journal entry directly from the report. This allows easier and more efficient access to information. By clicking on a journal entry, the user can navigate to the Journal Entries Report window, applying all selected filters.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv5.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-5.png)
 
 ## Journal Entries Report
 
@@ -409,7 +409,7 @@ The Journal Entries Report is a list of all the journal vouchers of an organizat
 
 A journal entry is the recording of financial data in a journal voucher such that the debit equals credit and the debits are entered before the credits.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-1.png)
 
 As shown in the image above, the "Primary Filters" section allows the user to specify:
 
@@ -440,7 +440,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 
 - *HTML* format. An example of the HTML output:
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-2.png)
 
 - *PDF* format by using the "Print Record" action button of the Toolbar
 - or *XML* format by using the "Export to Excel" action button of the Toolbar.
@@ -456,7 +456,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 
 This **Journal Entries Advanced** report is an enhanced version of the previous [Journal Entries Report](#journal-entries-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-1.png)
 
 
 In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:
@@ -473,7 +473,7 @@ In addition to the previous basic filters: Date from, Date to, Organization, Gen
 
 The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-2.png)
 
 After using the available fields and checkboxes, the report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary. In each filter, more than one option can be selected.
 
@@ -481,14 +481,14 @@ After using the available fields and checkboxes, the report filters the transact
 
 In the upper bar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-3.png)
 
 !!!warning
     If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
 
 Also, with this functionality you can navigate to the related transaction directly from the entry number of reports. This improves traceability and streamlines accounting analysis. 
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-4.png)
 
 ## Create Tax Report
 
