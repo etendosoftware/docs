@@ -77,7 +77,7 @@ These reports need to be configured prior to be launched in the [Balance Sheet a
 
 ### Header
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-p&l-structure-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-1.png)
 
 As shown in the image above, data to fill in is:
 
@@ -131,7 +131,7 @@ The **Balance Sheet and P&L Structure Advanced** report is an enhanced version o
 
 ### Header
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-p&l-structure-2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-2.png)
 
 Fields to note:
 
@@ -183,11 +183,11 @@ Also, in addition to the previous **Primary Filters**:
 
 In this report, the **View**, **Export to PDF**, and **Export to Excel** buttons are added to the top bar, allowing you to either view the information directly or export it in different formats as needed.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-p&l-structure-3.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-3.png)
 
 **P&L Report Example**
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-p&l-structure-4.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-4.png)
 
 ## Trial Balance
 
