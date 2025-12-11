@@ -4,20 +4,16 @@ tags:
     - implement
     - FICExtension
     - hook
-
-status: beta
 ---
 
-#  How To Implement FICExtension Hook
+# How To Implement FICExtension Hook
 
-!!! example "IMPORTANT: THIS IS A BETA VERSION"
-    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-##  Overview
+## Overview
 
-This document explains how to implement the **FICExtension** Hook. The hook is executed in the _execute_ method of the **FormInitializationComponent** class just before the response is built.
+This document explains how to implement the **FICExtension** Hook. The hook is executed in the *execute* method of the **FormInitializationComponent** class just before the response is built.
 
-##  Hook Implementation
+## Hook Implementation
 
 This hook is implemented by extending the `FICExtension` class. It has just one void method to implement: `execute`. This method receives as parameters the instances of the objects used to build the response.
 
@@ -33,11 +29,11 @@ This hook is implemented by extending the `FICExtension` class. It has just one 
 - **noteCount**: Count of notes available on the record that it is being edited. 
 - **overwrittenAuxiliaryInputs**: The `List` of the Auxiliary Inputs overriden by callouts.   
 
-##  Example
+## Example
 
 This example shows a message every time a new product is edited. You can find the code described below in the `org.openbravo.platform.features` module.
 
-```
+``` java
 public class ProductFICExtensionExample implements FICExtension {
  
 @Override
