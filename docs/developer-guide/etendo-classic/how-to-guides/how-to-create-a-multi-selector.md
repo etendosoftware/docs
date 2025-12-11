@@ -1,11 +1,11 @@
 ---
 title: How to Create a Multi Selector
 tags: 
-    - Co
-    - Tabl
-    - Create 
-    - Data
-
+    - Multi Selector
+    - Parameters
+    - Selector Setup 
+    - Process Input
+    - Backend Values
 
 status: beta
 ---
@@ -19,73 +19,61 @@ status: beta
 ## Overview
 
 
-_Multi Selector_ is a reference that allows to select multiple items at the
-same time. It is intended to be used as parameter of _ Standard Process
-Definition  _ .
+**Multi Selector** is a reference that allows to select multiple items at the same time. It is intended to be used as parameter of [Standard Process Definition](../how-to-guides/how-to-create-a-standard-process-definition.md).
 
-Multi Selector reference is defined pretty much as regular selectors (which
-allow to select a single value). For more information about selectors take a
-look to this  example  .
+Multi Selector reference is defined pretty much as regular selectors (which allow to select a single value). 
 
-##  Example Module
 
-This howto is supported by an example module which shows examples of the code
-shown and discussed.
+##  Example Module 
 
-The code of the example module can be downloaded from this mercurial
-repository:
-https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+This section is supported by an example module which shows examples of the code shown and discussed.
 
-The example module is available through the Central Repository (See 'Client
-Application Examples'), for more information see the  Examples Client
-Application  project page.
+The code of the example module can be downloaded from this [repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}. 
+ 
+
 
 ##  Steps to implement the Process
 
 ###  Overview
 
-This howto explains how to create a Multi Order selector.
+This section explains how to create a **Multi Order selector**.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Multi_Selector-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-1.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Multi_Selector-2.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-2.png)
 
 ###  Defining the Selector
 
-  * As _System Administrator_ open _Reference_ window. 
+  * As **System Administrator** open **Reference** window. 
   * Create a new record. 
-    * Name: Multi Order Selector 
-    * Parent Reference: OBUISEL_Multi Selector Reference 
-  * In _Defined Selector_ tab, set the properties for the selector: 
-    * Template: Selector Template 
-    * Table: C_Order 
+    * Name: **Multi Order Selector** 
+    * Parent Reference: `OBUISEL_Multi` Selector Reference 
+  * In **Defined Selector** tab, set the properties for the selector: 
+    * Template: **Selector Template** 
+    * Table: `C_Order`
 
 ###  Adding fields to Selector's Pop Up
 
-Last step is to define which are the fields that will be present in the popup
-to select records.
+The last step is to define which are the fields that will be present in the popup to select records.
 
-  * Go to _Defined Selector Field_ tab 
+  * Go to **Defined Selector Field** tab 
   * Create records: 
-    * Name: it is the name the use will see (i.e. Business Partner) 
-    * Property: actual property to retrieve information from (i.e. businessPartner) 
-    * Sorting of columns in the grid: Position of this column in the grid (i.e. 20) 
+    * **Name**: it is the name the user will see (i.e. Business Partner).
+    * **Property**: actual property to retrieve information from (i.e. businessPartner). 
+    * **Sorting of columns** in the grid: Position of this column in the grid (i.e. 20). 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Multi_Selector-3.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-3.png)
 
 ###  Using the Selector
 
-This selector can be used as parameter for a Process Definition. In  this
-howto  it is used.
+This selector can be used as parameter for a **Process Definition**. 
+
+!!! info
+    For more information visit [How to Create a Standard Process Definition](../how-to-guides/how-to-create-a-standard-process-definition.md).
 
 ###  Retrieving values in backend
 
-In backend, the Java implementing the process, receives an ` JSONArray ` with
-the IDs of all selected rows. In case no row is selected, an empty array is
-received.
+In backend, the Java implementing the process, receives an ` JSONArray ` with the IDs of all selected rows. In case no row is selected, an empty array is received.
 
     
     
@@ -103,16 +91,11 @@ received.
 
 ###  Using custom query selector
 
-When using a  custom query to define the selector  , there must be an alias in
-the query named ` _identifier ` which will be used as user readable identifier
-for the selected records and another one named ` id ` which will be sent to
-backend as id of the selected records. Fields for these query columns with the
-same names are also required.
+When using a custom query to define the selector, there must be an alias in the query named ` _identifier ` which will be used as user readable identifier for the selected records and another one named ` id ` which will be sent to backend as id of the selected records. Fields for these query columns with the same names are also required. 
 
 ##  Limitations
 
-Multi Selectors can only be used as parameters in _Standard Process
-Definition_ , they cannot be included in _Standard Windows_ .
+Multi Selectors can only be used as parameters in **Standard Process Definition**, they cannot be included in **Standard Windows**.
 
 
 

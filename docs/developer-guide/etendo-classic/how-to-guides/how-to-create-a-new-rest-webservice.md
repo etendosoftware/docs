@@ -1,10 +1,10 @@
 ---
 title: How to Create a New REST Webservice
 tags: 
-    - Co
-    - Tabl
-    - Create 
-    - Data
+    - REST Webservice
+    - XML Output
+    - Module Setup 
+    - Webservice Registration
 
 
 status: beta
@@ -18,86 +18,64 @@ status: beta
 
 ## Overview
 
+This section explains how to create a **new web service** that returns all sales orders for a specific product. The focus is on **reading data** rather than updating the database. Because the response must be provided in XML format, the article also describes how to convert database objecFts into XML.
 
-In this howto article we will create a new webservice which returns all sales
-orders for a certain product. The article will focus on reading information
-and not updating the database. As the information is needed to be returned in
-xml format, we will show how objects read from the database can be converted
-to it.
+The final section explains how XML received through a web service request can be transformed into **business objects** and used to update the database.
 
-The last section describes how to convert xml (received through a web service
-request) to a business object structure and update the database.
+Etendo REST provides a CRUD-like interface that allows external applications to retrieve, update, create, and delete business objects through standard HTTP requests.
 
-Openbravo REST provides a  CRUD-like  interface so that external applications
-can retrieve, update, create and delete business objects through standard HTTP
-requests.
+The web service described here runs inside the Etendo REST framework, taking advantage of built-in features such as security and exception handling.
 
-We will add a webservice here which runs inside of the Openbravo REST
-framework. By implementing a new web service within Openbravo REST you can
-benefit from standard functionality such as security and exception handling.
+An Etendo REST web service implementation consists of two parts:
 
-An Openbravo REST webservice implementation consists of two parts:
+- A class that defines the web service behavior and implements the `org.openbravo.service.web.WebService` interface. ???
 
-  * A class implementing the desired web service behavior. This class should implement the interface: _org.openbravo.service.web.WebService_ . 
-  * A configuration file to register the webservice with Openbravo REST framework. 
+- A configuration file that registers the web service within the **Etendo REST** framework.
 
-Both parts will be discussed.
+Both elements are covered in this document.
 
-For an introduction to Openbravo REST, see:
 
-  1. REST Web Services concepts 
-  2. This blog post 
+!!! info
+    For an introduction to Etendo REST, refer to [REST Web Services concepts](../concepts/) and this [related blog post](http://mtopenbravo.blogspot.com/2009/02/openbravo-250-rest-webservices.html){target="\_blank"}.
+
+
 
 ##  Module
 
-All new developments must belong to a module that is not the _core_ module.
-Please follow the  How to create and package a module  section to create a new
-module.
+All new developments must belong to a module that is not the **core** module.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This article will assume such a module has been created accordingly.  
----|---  
-  
-  
+!!! info
+    Please read the [How to create and a module](../how-to-guides/how-to-create-a-module.md) section to create a new module.
 
 ##  Implementing the webservice logic
 
-The webservice shall return all the sales orders for a certain product. Here
-is the workflow of the service:
+The webservice shall return all the sales orders for a certain product. Here is the workflow of the service:
 
-  1. Receive the http request which contains the product ID as a parameter 
-  2. Read all sales orders which have this product in any of the order lines 
-  3. Convert the sales order(s) to an xml 
-  4. Return the xml to the client browser sending the request 
+  1. Receive the http request which contains the product ID as a parameter.
+  2. Read all sales orders which have this product in any of the order lines. 
+  3. Convert the sales order(s) to an xml. 
+  4. Return the xml to the client browser sending the request. 
 
-As mentioned above your webservice class should implement the interface
-_org.openbravo.service.web.WebService_ . This interface has four methods which
-correspond to the HTTP request methods: GET, POST, PUT, DELETE. The four
-methods all receive the same three parameters:
+As mentioned above the webservice class should implement the interface `org.openbravo.service.web.WebService`. This interface has four methods which correspond to the HTTP request methods: **GET, POST, PUT, DELETE**. The four methods all receive the same three parameters:
 
-  1. path: the part of the path after the context path, 
-  2. request: the Http request object, 
-  3. response: the Http response object. 
+  1. **path**: the part of the path after the context path, 
+  2. **request**: the Http request object, 
+  3. **response**: the Http response object. 
 
-Within our scenario the 'request' object is required in order to retrieve the
-'productID' parameter and the 'response' object to return the xml to the
-client browser.
+Within this scenario the **request** object is required in order to retrieve the **productID** parameter and the **response** object to return the xml to the client browser.
 
-Now assume that the webservice will be created in a module with javaPackage:
-org.openbravo.howtos. After creating a module (see the  how-to create and
-package a module  article) there should be a folder:
+Now assume that the webservice will be created in a module with javaPackage: `org.openbravo.howtos`. After creating a module there should be a folder:
 
     
     
     OpenbravoERP/modules/org.openbravo.howtos
     
 
-Create a _src_ directory in this folder and if you are using Eclipse add it to
-the source path (Java Build Path) of the openbravo project (see project
-properties in Eclipse). Within this folder, create the full folder structure
-according to the full package name we would like our webservice to reside in:
-_org.openbravo.howtos.service.getsalesorders_ . Hence, the folder structure
-that should be created is:
+Create a **src** directory in this folder and if Eclipse is being used, add it to the source path (Java Build Path) of the Etendo project (see project properties in Eclipse). Within this folder, create the full folder structure according to the full package name the webservice will reside in:
+
+   `org.openbravo.howtos.service.getsalesorders` 
+ 
+Hence, the folder structure that should be created is:
 
     
     
@@ -234,37 +212,31 @@ with the content given below:
       }
     }
 
-As you can see only the **doGet** method is implemented here, the update or
-delete would normally be handled in the other methods that do not apply to our
-requirements.
+As can be seen, only the **doGet** method is implemented here, the update or delete would normally be handled in the other methods that do not apply to our requirements.
 
 Here is the workflow of the doGet() method:
 
-  1. first, it queries for the  Product  and then for the  OrderLines 
-  2. for each OrderLine the  Order  is added to the result list. 
-  3. the result list is then converted to xml using the  org.openbravo.dal.xml.EntityXMLConverter  . This converter has different options as illustrated above. The javadoc of the EntityXMLConverter describes in detail what the meaning of these options is. 
+  1. first, it queries for the **Product** and then for the **OrderLines**, 
+  2. for each OrderLine the **Order** is added to the result list,
+  3. the result list is then converted to **xml** using the  `org.openbravo.dal.xml.EntityXMLConverter`. This converter has different options as illustrated above. The javadoc of the `EntityXMLConverter` describes in detail what the meaning of these options is. 
 
-After adding the above Java file you should have something similar to the
-following file structure:
+After adding the above Java file there should be something similar to the following file structure:
 
-  
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_new_REST_webservice-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice-1.png)
 
   
-If you use Eclipse, make sure you add the
-_OpenbravoERP/modules/org.openbravo.howtos/src_ folder as a source path to
-your project (right click on the Eclipse development project and select
-project properties and then Java Build Path, add the folder here). This way,
-Eclipse will know to compile any java sources found within the src folder and
-subfolders.
+If Eclipse is used, make sure to add the `OpenbravoERP/modules/org.openbravo.howtos/src` folder as a source path to
+the project. 
+
+!!! note
+     Right click on the **Eclipse development project** and select project properties and then Java Build Path, add the folder here. 
+     
+This way, Eclipse will know to compile any java sources found within the src folder and subfolders.
 
 ##  Registering the webservice
 
-Once the webservice is written you need to register it so that Openbravo ERP
-knows about it. Use an xml configuration file for this. This file needs to be
-created in the config folder in the module's folder:
+Once the webservice is written, register it so that Etendo knows about it. Use an **xml configuration file** for this. This file needs to be created in the config folder in the module's folder:
 
     
     
@@ -279,8 +251,7 @@ configuration files it needs a unique name, hence:
     <moduleJavaPackage>-provider-config.xml
     
 
-where <moduleJavaPackage> is the module's Java package you entered when
-defining the module. In our case, it would be:
+where `moduleJavaPackage` is the module's Java package entered when defining the module. In this case, it would be:
 
     
     
@@ -300,112 +271,75 @@ Now, to the contents of this file:
        </bean>
      </provider>
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 
-**IMPORTANT** : Make sure the first line defining the xml file contains no
-leading spaces or the webservice will not work due to the non well-formed
-syntax!  
+!!! note
+    Make sure the first line defining the xml file contains no leading spaces or the webservice will not work due to the non well-formed syntax!  
   
----|---  
   
-The content of the **configuration file is used in order to map the URL of the
-webservice to the class** which will execute the logic of that webservice. The
-singleton element is not used at the moment.
+The content of the configuration file is used in order to **map the URL of the webservice to the class** which will execute the logic of that webservice. The singleton element is not used at the moment.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 
-**IMPORTANT** : the URL used to access the webservice is reflected by the
-<name> registered here, prefixed by the module's java package, separated by a
-dot. Hence, the URL is defined by this formula: ** http://
-<serveraddress>/openbravo/ws/<moduleJavaPackage>.<name> ** . Note that only
-the <moduleJavaPackage> is used and not the entire package of the class that
-implements the webservice! More information on this will be given below.  
+!!! info
+    The URL used to access the webservice is reflected by the **name** registered here, prefixed by the module's java package, separated by a dot. Hence, the URL is defined by this formula http://(serveraddress)/openbravo/ws/(moduleJavaPackage).(name). 
+    
+!!! note
+    Note that only the `moduleJavaPackage` is used and not the entire package of the class that implements the webservice!   
   
----|---  
+
   
 ##  Installing the webservice
 
-The webservice can now be compiled, deployed and tested. To do so, use the
-following standard task used to compile manual code:
+The webservice can now be **compiled, deployed and tested**. To do so, use the following standard task used to compile manual code:
 
     
     
     ant compile.development -Dtab=xxx
     
 
-(note the xxx is used to execute a minimal compile step)
+!!! note
+    The xxx is used to execute a minimal compile step. 
 
-**Restart Tomcat.**
+Then, restart Tomcat.
 
-When installing the web service as a module, use the application's window
-_Application Dictionary || Application || Module Management_ to install it and
-rebuild the application.
+When installing the web service as a module, use the application's window `Application Dictionary > Application > Module Management` to install it and rebuild the application.
 
-The _org.openbravo.howtos-provider-config.xml_ file should now be present in
-the WEB-INF directory.
+The `org.openbravo.howtos-provider-config.xml` file should now be present in the WEB-INF directory.
 
 ##  Calling the webservice
 
-(Re-)Start Openbravo ERP and try out the webservice by entering this URL into
-the browser:
+(Re-)Start Etendo and try out the webservice by entering this URL into the browser:
 
     
     
     http://localhost:8080/openbravo/ws/org.openbravo.howtos.doIt?product=1000001&stateless=true
     
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-
-Note that the product ID may be different with your installation. Also see
-that the java package of the module is prefixed to the webservice's name
-defined inside the config file. Remember the formula: ** http://
-<serveraddress>/openbravo/ws/<moduleJavaPackage>.<webservicename> **  
+!!! note
+    Note that the product ID may be different with your installation. Also see that the java package of the module is prefixed to the webservice's name defined inside the config file. Remember the formula: **http://(serveraddress)/openbravo/ws/(moduleJavaPackage).(webservicename)**. 
   
----|---  
   
 You will probably be asked to login.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+!!! info
+    The user should have enough privileges to read sales orders and products. If you are using the standard Etendo SmallBazaar demo data and the Etendo user, then this article should work with the role **Etendo Admin**.  
+  
 
-**Note** : The user should have enough privileges to read sales orders and
-products. If you are using the standard Openbravo SmallBazaar demo data and
-the Openbravo user, then this article should work with the role _Openbravo
-Admin_ .  
+!!! note
+    The stateless parameter will prevent the server to create a http session. This is quite important for high frequency webservice calls which should not unnecessarily occupy resources on the server.  
   
----|---  
-  
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-
-**Note** : the stateless parameter will prevent the server to create a http
-session. This is quite important for high frequency webservice calls which
-should not unnecessarily occupy resources on the server.  
-  
----|---  
   
 You should see the xml showing a sales order:
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_new_REST_webservice-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice-7.png)
+
 
 ##  Stateless Webservice Requests - HTTP Session
 
 
-  
+Important for **high frequency** webservice calls. By default Etendo webservice requests are **statefull**. Meaning that each webservice call will create and use a **http session** in the Etendo server. Depending on how you setup the client to call the webservice this can even mean that each webservice request creates a new http session. This is not advisable for high-
+frequency webservice requests. In case of high volume calls it can make sense to move to a stateless implementation.
 
-
-**Note:** important for high frequency webservice calls.  
-  
----|---  
-  
-By default OB webservice requests are statefull. Meaning that each webservice
-call will create and use a http session in the OB server. Depending on how you
-setup the client to call the webservice this can even mean that each
-webservice request creates a new http session. This is not advisable for high-
-frequency webservice requests. In case of high volume calls it can make sense
-to move to a stateless implementation.
-
-There are 2 ways in which you can achieve a stateless handling of a webservice
-requests:
+There are 2 ways in which you can achieve a stateless handling of a webservice requests:
 
   * passing the parameter stateless=true in the request url. For example: 
 
@@ -423,15 +357,13 @@ requests:
     ...
     }
 
-When doing stateless requests the implementation of the webservice should not
-expect a http session to be present or create a new http session. For example
-the VariablesBase object can not be used in stateless webservice requests.
-Other than that most base framework functionality (like the data-access-layer
-and the OBContext object) is available for the logic.
+When doing stateless requests the implementation of the webservice should not expect a http session to be present or create a new http session. For example the VariablesBase object can not be used in stateless webservice requests. CONTINUE FROM HERE
+
+Other than that most base framework functionality (like the data-access-layer and the OBContext object) is available for the logic.
 
 ##  Adding logic to do updates
 
-So far we only discussed retrieving information from the database and
+So far, we only discussed retrieving information from the database and
 returning it as xml. Updating information should officially (according to the
 REST principle) be implemented in the PUT method, but you need to choose what
 is practical. For updating, a common flow is the following:

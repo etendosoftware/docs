@@ -1,10 +1,10 @@
 ---
 title: How to Create a Java Based Process
 tags: 
-    - Co
-    - Tabl
-    - Create 
-    - Data
+    - Java Process
+    - Etendo Setup
+    - Process Parameters 
+    - Module Development
 
 
 status: beta
@@ -18,66 +18,49 @@ status: beta
 
 ## Overview
 
+**Java processes** are one of the mechanisms Etendo provides to implement business logic. A Java process can run in the [background process](../how-to-guides/how-to-develop-a-dal-background-process.md) or offer a user interface that allows entering parameters. This section explains how to create a Java process that includes a user interface with user-defined **parameters**. 
 
-Java processes are one of the mechanisms Openbravo provides to implement
-business logic. A java process can be a  background  process or can have a
-user interface which allows entering parameters. In this howto we will discuss
-a java process supported with a user interface with parameters.
+It also describes the underlying infrastructure used to support Java processes in Etendo.
 
-This document discusses the Openbravo infrastructure for Java processes. For a
-generic description of java processes see this wiki page:  Processes  .
+!!! info
+    For a generic description of java processes visit [Processes](../concepts/processes.md).
 
 ##  Example Module
 
-This howto is supported by an example module which shows example of the code
-shown and discussed in this howto.
+This section is supported by an example module which shows example of the code shown and discussed here.
 
-The code of the example module can be downloaded from this mercurial
-repository:
-https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+The code of the example module can be downloaded from this [repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}. 
 
-The example module is available through the Central Repository (See 'Client
-Application Examples'), for more information see the  Examples Client
-Application  project page.
 
-For your specific development you should create a new module. Please follow
-the  How to create and package a module  section to create a new module.
+!!! info
+    For any specific development, create a new module. For more information vitit, [How to create a module](../how-to-guides/how-to-create-a-module.md).
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  The
-example module also contains implementations of other howtos.  
----|---  
-  
+
 ##  Development Steps
 
 The steps to create a java process supported by a user interface are:
 
-  1. create a java class implementing the business logic 
-  2. enter a new record in 'Report and Process', defining the pattern, the java class (step 1) and the parameters 
-  3. add the new process to the menu 
+  1. Create a **java class** implementing the business logic.
+  2. Enter a new record in **Report and Process**, defining the pattern, the java class (step 1) and the parameters. 
+  3. Add the **new process** to the menu.
 
 ###  Java class declaration
 
-First at all, take a look at the Java package in which the java class is
-defined, it must be included in the java package the module defines. The Java
-class implementing the process must implement the
-_org.openbravo.scheduling.Process_ interface, this is done usually extending
-the class _org.openbravo.service.db.DalBaseProcess_ that provides common code
-to use DAL in Processes. Extending this class there only needed to overwrite
-one method:
+First of all, take a look at the Java package in which the java class is defined, it must be included in the java package the module defines. The Java class implementing the process must implement the `org.openbravo.scheduling.Process` interface, this is done usually extending the class `org.openbravo.service.db.DalBaseProcess` that provides common code to use **DAL** in Processes. 
+
+Extending this class there is only needed to overwrite one method:
 
     
     
      
      public void doExecute(ProcessBundle bundle) throws Exception;
 
-This method receives a _ProcessBundle_ , this bundle contains all the
-parameters for the process. When the process finishes it must add a result to
-this bundle, this result is an _OBError_ instance that will be shown in the
-pop-up. For further explanations on messages read the  Messages
-documentation.
+This method receives a `ProcessBundle`, this bundle contains all the parameters for the process. When the process finishes it must add a result to this bundle, this result is an `OBError` instance that will be shown in the pop-up. 
 
-Let's explain it using a little example (this class and its parameters are
-used in the process definition further down in this howto):
+!!! info
+    For further explanations on messages read the [Messages](../concepts/messages.md) documentation.
+
+Let's see an example (this class and its parameters are used in the process definition further down in this section):  ???
 
     
     
@@ -128,19 +111,16 @@ used in the process definition further down in this howto):
       }
     }
 
-In this example a parameter named _cBpartnerId_ is expected. It is read by the
-following line:
+In this example a parameter named `cBpartnerId` is expected. It is read by the following line:
 
     
     
      
       final String bPartnerId = (String) bundle.getParams().get("cBpartnerId");
 
-The name of the parameter to use in the get method depends on the db column
-name entered in the parameters of the process (see below).
+The name of the parameter to use in the get method depends on the **db column name** entered in the parameters of the process.
 
-Once the process is finished a new OBError is created to handle the message
-and it is added as result to the _bundle_ .
+Once the process is finished a new `OBError` is created to handle the message and it is added as result to the **bundle**.
 
     
     
@@ -149,69 +129,56 @@ and it is added as result to the _bundle_ .
 
 ###  Defining the user interface
 
-The java class above shows how to implement the backend business logic. This
-section explains how to define a user interface which makes it possible to
-enter parameters.
+The java class above shows how to implement the **backend business logic**. This section explains how to define a user interface which makes it possible to enter parameters.
 
-To define process records one should normally be a System Admin.
+To define process records, it is needed to be a **System Admin**.
 
-The first step is to create a process record, go to Application Dictionary >
-Report and Process (or easier use quick launch and goto the Report and Process
-window directly). Create a new process record like shown in the example below.
+The first step is to create a process record, go to `Application Dictionary > Report and Process`. Create a new process record as shown in the example below.
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-2.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-2.png)
 
   
-The main thing here is to select UI Pattern: Standard. Further below it is
-explained what UI Pattern Manual means.
+The main aspect here is to select **UI Pattern: Standard**. 
 
-Then create a child record in Process Class and enter the fully qualified
-class name of the java class you created below.
+Then create a child record in **Process Class** and enter the fully qualified class name of the java class created below.
 
-**Important: check the default flag! If this is not done then a compile error
-will occur in the next build step.**
+!!! note
+    Check the default flag! If this is not done then a compile error will occur in the next build step.
 
-Now the parameters of the process need to be defined. Or more exactly their
-type and visualization. This is done through the Parameter child tab of the
-process. The example has three parameters: business partner, organization and
-a string. The screenshots below visualize their settings:
+Now the parameters of the process need to be defined. Or more exactly their type and visualization. This is done through the Parameter child tab of the process. The example has three parameters: **business partner, organization and
+a string**. The images below visualize their settings:
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-3.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-3.png)
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-4.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-4.png)
 
   
 Some notes:
 
-  * the db column name does not have to be a real database column, the value of this field is used to generate the parameter name used in the source code. It is adviced to use simple names without underscores (that's the simplest). 
-  * the application element defines the label in the user interface 
-  * the 2 reference fields denote the type of the field 
+  * the **db column name** does not have to be a real database column, the value of this field is used to generate the parameter name used in the source code. It is adviced to use simple names without underscores,
+  * the **application element** defines the label in the user interface,
+  * the 2 reference fields denote the **type of the field**.
 
 ###  Add the process form to the menu
 
-To make the process window available to the user it has to be added to a menu.
+To make the process window available to the user it has to be added to a **menu**.
+
 This is done like this:
 
-  
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-5.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-5.png)
 
   
 
 ###  Build Step
 
-After creating the process user interface, stop the application and type in
-the following command in a console (within the development project):
+After creating the process user interface, stop the application and type in the following command in a console (within the development project):
 
     
     
@@ -219,70 +186,53 @@ the following command in a console (within the development project):
 
 This will generate the process window.
 
-If you have eclipse running, refresh the development project.
+If Eclipse is running, refresh the development project.
 
-Then start the application and login with the client administrator (normally
-the system administrator will not have access).
+Then start the application and login with the client administrator (normally the system administrator will not have access).
 
 ##  The result
 
-Goto quick launch and enter the name of the new process or find it in the
-correct location in the menu.
+Go to quick launch and enter the name of the new process or find it in the correct location in the menu.
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-6.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-6.png)
 
   
 Enter some values and press ok. The result:
 
   
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-7.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-7.png)
 
 ##  Variant: Running the process from a button in another window
 
-A process can also be run from another window (from a button). A button in an
-Openbravo window needs a (dummy) database column. To accomplish this do the
-following:
+A process can also be run from another window (from a button). A button in an Etendo window needs a database column. To accomplish this, do the following:
 
-  * add a column to the table shown in the window 
-  * give the column the button reference and select the process 
-  * create a window, tab and field for the column 
+  * **add a column** to the table shown in the window,
+  * give the column the **button reference** and select the process, 
+  * create a **window, tab and field** for the column. 
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-8.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-8.png)
 
   
 This will show a button on the right in the window.
 
-  
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Java_Based_Process-9.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process-9.png)
 
   
-When a process is run from another window then the ProcessBundle will contain
-extra default parameters which can be useful:
+When a process is run from another window then the **ProcessBundle** will contain extra default parameters which can be useful:
 
-  * recordID: the id of the selected record 
-  * tabId: the id of the tab from which the process was called 
+  * **recordID**: the id of the selected record.
+  * **tabId**: the id of the tab from which the process was called.
 
 ##  Variant: Manual UI Pattern
 
-The difference between _Standard_ and _Manual_ _UI Pattern_ is that no pop-up
-is automatically generated for _Manual UI_ pattern processes, in this case the
-pop-up must be manually generated by the class implementing the process.
+The difference between **Standard and Manual UI Pattern** is that no pop-up is automatically generated for **Manual UI** pattern processes, in this case the pop-up must be manually generated by the class implementing the process.
 
-As shown above, java classes for standard processes implement the Manual
-processes are implemented by a Java class implementing the
-_org.openbravo.scheduling.Process_ interface. For manual processes the java
-class needs to extend _org.openbravo.base.secureApp.HttpSecureAppServlet_ ,
-this is a standard servlet that generates the pop-up.
+As shown above, java classes for standard processes implement the **Manual** processes are implemented by a Java class implementing the `org.openbravo.scheduling.Process` interface. For manual processes the java class needs to extend `org.openbravo.base.secureApp.HttpSecureAppServlet`, this is a standard servlet that generates the pop-up.
 
 
 This work is a derivative of [How to Create a Java Based Process](http://wiki.openbravo.com/wiki/How_to_create_a_Java_Based_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
