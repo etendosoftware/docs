@@ -24,7 +24,7 @@ The final section explains how XML received through a web service request can be
 
 Etendo REST provides a CRUD-like interface that allows external applications to retrieve, update, create, and delete business objects through standard HTTP requests.
 
-The web service described here runs inside the Etendo REST framework, taking advantage of built-in features such as security and exception handling.
+The web service described here runs inside the Etendo REST framework, taking advantage of built-in features such as **security** and **exception handling**.
 
 An Etendo REST web service implementation consists of two parts:
 
@@ -318,10 +318,10 @@ The `org.openbravo.howtos-provider-config.xml` file should now be present in the
     Note that the product ID may be different with your installation. Also see that the java package of the module is prefixed to the webservice's name defined inside the config file. Remember the formula: **http://(serveraddress)/openbravo/ws/(moduleJavaPackage).(webservicename)**. 
   
   
-You will probably be asked to login.
+The system will probably ask to login.
 
 !!! info
-    The user should have enough privileges to read sales orders and products. If you are using the standard Etendo SmallBazaar demo data and the Etendo user, then this article should work with the role **Etendo Admin**.  
+    The user should have enough privileges to read sales orders and products. If you are using the standard Etendo SmallBazaar demo data and the Etendo user, then this article should work with the role **System Administrator**.  
   
 
 !!! note
@@ -336,43 +336,42 @@ You should see the xml showing a sales order:
 ##  Stateless Webservice Requests - HTTP Session
 
 
-Important for **high frequency** webservice calls. By default Etendo webservice requests are **statefull**. Meaning that each webservice call will create and use a **http session** in the Etendo server. Depending on how you setup the client to call the webservice this can even mean that each webservice request creates a new http session. This is not advisable for high-
-frequency webservice requests. In case of high volume calls it can make sense to move to a stateless implementation.
+Important for **high frequency** webservice calls: by default, Etendo webservice requests are **statefull**, meaning that each webservice call will create and use a **http session** in the Etendo server. Depending on how you setup the client to call the webservice this can even mean that each webservice request creates a new http session. This is not advisable for high-
+frequency webservice requests. In case of high volume calls it can make sense to move to a **stateless implementation**.
 
-There are 2 ways in which you can achieve a stateless handling of a webservice requests:
+There are 2 ways in which a stateless handling of a webservice requests can be achieved:
 
-  * passing the parameter stateless=true in the request url. For example: 
-
-    
-    
-    http://localhost:8080/openbravo/ws/org.openbravo.howtos.doIt?product=1000001&stateless=true
-    
-
-  * annotating the webservice class with the AuthenticationManager.Stateless annotation: 
+  * Passing the parameter stateless=true in the request url. For example: 
 
     
     
-    @AuthenticationManager.Stateless
+    `http://localhost:8080/openbravo/ws/org.openbravo.howtos.doIt?product=1000001&stateless=true`
+    
+
+  * Annotating the webservice class with the `AuthenticationManager.Stateless` annotation: 
+
+    
+    
+      @AuthenticationManager.Stateless
     public class POSTestStatelessWebservice implements WebService {
     ...
     }
 
-When doing stateless requests the implementation of the webservice should not expect a http session to be present or create a new http session. For example the VariablesBase object can not be used in stateless webservice requests. CONTINUE FROM HERE
+When doing stateless requests, the implementation of the webservice should not expect a http session to be present or create a new http session. For example, the `VariablesBase` object can not be used in stateless webservice requests. 
 
-Other than that most base framework functionality (like the data-access-layer and the OBContext object) is available for the logic.
+Other than that, most base framework functionality (like the data-access-layer and the OBContext object) is available for the logic.
 
 ##  Adding logic to do updates
 
-So far, we only discussed retrieving information from the database and
-returning it as xml. Updating information should officially (according to the
-REST principle) be implemented in the PUT method, but you need to choose what
-is practical. For updating, a common flow is the following:
+So far, retrieving information from the database and returning it as **xml** has been discussed here. Updating information should officially (according to the REST principle) be implemented in the **PUT method**, but it is necessary to choose what is practical.
 
-  1. Receive the XML string from the request object. 
-  2. Convert the XML string to a set of Business Objects. 
-  3. Process these Business Objects, for example save them in the database. 
+For updating, a common flow is the following:
 
-Below you will find some sample code which follows this flow:
+  1. **Receive** the XML string from the request object. 
+  2. **Convert** the XML string to a set of Business Objects. 
+  3. **Process** these Business Objects, for example save them in the database. 
+
+Below, find some sample code which follows this flow:
 
     
     
@@ -423,16 +422,9 @@ Below you will find some sample code which follows this flow:
         OBDal.getInstance().rollbackAndClose();
       }
 
-##  Relevant Links
 
-For a more detailed description take a look at  Openbravo REST and other links
-.
-
-##  Tips & tricks and trouble shooting
-
-For trouble shooting and tips and tricks please see this link  here  . The
-tips and tricks section for example discuss a firefox plugin to make it easy
-to test REST webservices.
+!!! info
+    For a more detailed description, take a look at [JSON REST Web Services](../concepts/json-rest-web-services.md). 
 
 
 This work is a derivative of [How to Create a New REST Webservice](http://wiki.openbravo.com/wiki/How_to_create_a_new_REST_webservice){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

@@ -21,7 +21,7 @@ status: beta
 
 **Multi Selector** is a reference that allows to select multiple items at the same time. It is intended to be used as parameter of [Standard Process Definition](../how-to-guides/how-to-create-a-standard-process-definition.md).
 
-Multi Selector reference is defined pretty much as regular selectors (which allow to select a single value). 
+Multi Selector reference is defined pretty much as regular selectors, which allow to select a single value. 
 
 
 ##  Example Module 
@@ -31,10 +31,8 @@ This section is supported by an example module which shows examples of the code 
 The code of the example module can be downloaded from this [repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}. 
  
 
-
 ##  Steps to implement the Process
 
-###  Overview
 
 This section explains how to create a **Multi Order selector**.
 
@@ -93,9 +91,8 @@ In backend, the Java implementing the process, receives an ` JSONArray ` with th
 
 When using a custom query to define the selector, there must be an alias in the query named ` _identifier ` which will be used as user readable identifier for the selected records and another one named ` id ` which will be sent to backend as id of the selected records. Fields for these query columns with the same names are also required. 
 
-##  Limitations
-
-Multi Selectors can only be used as parameters in **Standard Process Definition**, they cannot be included in **Standard Windows**.
+!!! note
+    Multi Selectors can only be used as parameters in **Standard Process Definition**, they cannot be included in **Standard Windows**.
 
 
 
