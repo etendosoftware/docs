@@ -525,7 +525,7 @@ nav:
 #        - How to use a new version of DBSourceManager: developer-guide/etendo-classic/how-to-guides/How_to_use_a_new_version_of_DBSourceManager.md
         - How to Use Advanced Sequences: developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md
         - How to use an Extension Point: developer-guide/etendo-classic/how-to-guides/how-to-use-an-extension-point.md
-        - How to Use an External Connection Pool: developer-guide/etendo-classic/how-to-guides/how-to-use-an-external-connection-pool.md
+#       - How to Use an External Connection Pool: developer-guide/etendo-classic/how-to-guides/how-to-create-an-external-connection-pool.md
         - How to Use Google Service Util: developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util.md
         - How to Use Property Fields: developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields.md
         - How to Use Secure Web Services: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
