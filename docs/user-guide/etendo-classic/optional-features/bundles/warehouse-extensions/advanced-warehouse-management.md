@@ -532,12 +532,14 @@ When logging in to Etendo Mobile, the warehouse operator will be presented with 
 
 As seen above, the Advanced Warehouse Management option includes the following menus:
 
-- [Picking](#picking)
-- [Packing](#packing)
+- [Picking Tasks](#picking-tasks)
+- [Packing Tasks](#packing-tasks)
+- [Reception Tasks](#reception-tasks)
+- [Relocation Tasks](#relocation-tasks)
+- [Adjustment Tasks](#adjustment-tasks)
 - [All Tasks](#all-tasks)
-- [Inventory Management](#inventory-management)
 
-### Picking
+### Picking Tasks
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png)
 
@@ -557,7 +559,7 @@ The process is started in Etendo when a [Picking List](../../../../optional-feat
 
 When accessing **Etendo Mobile** into the **Picking** section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.jpg){align=right width=300}
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.png){align=right width=300}
  
 This screen contains:
 
@@ -627,14 +629,15 @@ On the other hand, the system also allows flexibility in the mode of operation t
 
 !!! Warning
     
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png){align=right width=200}
+
     Possible error scenarios:
 
     - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.   <br><br>
-    - If an attempt is made to enter a quantity greater than required, the system will charge the maximum defined in the product card. Once the quantity is completed and the product code is re-scanned or reloaded, the system does not add quantity to the product.
-    Additionally, if a quantity greater than the allowed maximum is entered, a popup will be displayed with the message: "Maximum quantity reached for product [ProductName]". <br><br>
-    - If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
+    - If an attempt is made to enter a quantity greater than required, the system will charge the maximum defined in the product card. Once the quantity is completed and the product code is re-scanned or reloaded, the system does not add quantity to the product. If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
+    
+    In both cases, the error message shown is the one displayed in the image.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png)
     
 
 #### Picking Completion
@@ -653,7 +656,7 @@ Once completed, the task will appear in the Completed Tasks section, where it is
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png)
 
 
-### Packing
+### Packing Tasks
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png)
 
@@ -671,7 +674,7 @@ Packing tasks are linked to a record in the **Packing** window.  The creation of
 
 #### Access to Packing Tasks (Etendo Mobile)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.jpg){align=right width=300}
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.png){align=right width=300}
 
 
 When accessing Etendo Mobile and selecting the **Packing** menu, the packing main screen with the number of available `Packing` tasks to the current user. 
@@ -687,6 +690,8 @@ This screen contains:
     - Status.
     - Task Type.
 
+<br clear="all">
+
 #### Product Packing
 
 1. The warehouse operator must **select a task**. To select the task, scroll or enter key data in the search engine.
@@ -701,9 +706,9 @@ This screen contains:
 
     - **Scan Barcode** button to activate the device camera and scan.
     - **Type barcode** allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.
-    - **Select Box** field to select the destination box when scanning the product.
+    - **Select Pack** field to select the destination pack when scanning the product.
     - **Quantity** field that acts as a multiplier to load the quantity when scanning the product.
-    - **+ Add Box** button that allows you to add new boxes.
+    - **+ Add Pack** button that allows you to add new boxes.
     - A list of **Product** cards, each showing:
 
         - Product
@@ -721,36 +726,36 @@ This screen contains:
         - Quantity
         - Packed Quantity with buttons `+` and `-`: that allow to add or subtract one by one the quantity manually.
 
-    - A list of **Boxes**, showing:
+    - A list of **Packs**, showing:
 
-        - Box name (or number)
+        - Pack name (or number)
         - Products and their quantities
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-4.png)
 
 
-    The view selectors by **Product** or by **Box** allow:
+    The view selectors by **Product** or by **Pack** allow:
 
-    - In the **Products** view, when entering a product card, it shows how that product was distributed in the different boxes, allowing you to browse product by product to review the quantities assigned per box.
+    - In the **Products** view, when entering a product card, it shows how that product was distributed in the different boxes, allowing you to browse product by product to review the quantities assigned per pack.
 
-    - In the **Boxes** view, when entering a box, the detailed contents are displayed with the possibility of browsing box by box to check which products are contained in each box.
+    - In the **Packs** view, when entering a pack, the detailed contents are displayed with the possibility of browsing pack by pack to check which products are contained in each pack.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-5.png)
 
     !!! tip 
-        In both views, it is possible to modify the quantities loaded and add boxes if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: 
+        In both views, it is possible to modify the quantities loaded and add packs if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: 
 
-        - The total load of products has not yet been completed, or previously assigned quantities are modified (decreased) to allow their relocation to the new box.
+        - The total load of products has not yet been completed, or previously assigned quantities are modified (decreased) to allow their relocation to the new pack.
 
-5. Once packing is started, the user selects or creates a box and starts loading products by scanning or manually entering data.
+5. Once packing is started, the user selects or creates a pack and starts loading products by scanning or manually entering data.
 
-    - Each packed product is registered under a specific box.
+    - Each packed product is registered under a specific pack.
     - You can switch between boxes to distribute products as needed.
 
     !!!Info
-        Newly created boxes cannot be deleted manually. However, if a box is left empty (no products added), it will be automatically removed at the end of the process. Only boxes with packed products will be saved and displayed.
+        Newly created packs cannot be deleted manually. However, if a pack is left empty (no products added), it will be automatically removed at the end of the process. Only packs with packed products will be saved and displayed.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-moblie-6.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-6.png)
 
 
 #### Packing Methods
@@ -767,19 +772,21 @@ In terms of how to perform packing, the system offers flexibility in operating m
 - Enter the quantity manually from the **Product** view or from the **Boxes** view.
 
 !!! Warning
+
     Possible error scenarios:
 
-    - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.
-    - If an attempt is made to enter more than the required quantity, an error message is also displayed "Packing for product [ProductName] is already complete.".
-    - If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png){align=right width=200}
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png)
+    - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.
+    - If an attempt is made to enter more than the required quantity, an error message is also displayed. If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
+
+    In both cases, the error message shown is the one displayed in the image.
 
 #### Packing Completion
 
 Once the products have been packed: 
 
-- The system displays a summary per box with the products included and the message *Packing completed successfully* is displayed.
+- The system displays a summary per pack with the products included and the message *Packing completed successfully* is displayed.
 
 - Until confirmed, the contents of the boxes can be edited.
 
@@ -792,47 +799,40 @@ Once the products have been packed:
 Once completed, the task will appear in the Completed Tasks section. From there, it is possible to review all validated information for that packing task, including:
 
 - In the Product view: which boxes each product was packed into.
-- In the Box view: which products were packed into each box.
+- In the Pack view: which products were packed into each pack.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
 
+### Reception Tasks
 
-### Adjustment Tasks
-
-Inventory adjustment tasks allow warehouse operators to perform physical counts and stock adjustments directly from the mobile app. These tasks are generated from physical inventories in the ERP system.
-
-This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product(s) to the storage bins associated with the new status, accurately reflecting the current stock condition.
-
-!!!Info
-    For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
-
+It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
 
 #### Process Start (Etendo)
 
-:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Physical Inventory`
+The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned and then reflected in the mobile application of the assigned operator.
 
-The process begins by creating tasks within Etendo using the **Physical Inventory** window. A new record is created with product lines for which stock verification and adjustment is desired. Once this is ready, the task must be generated using the **Generate Task** button.
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
+#### Access to Reception Tasks (Etendo Mobile)
 
-#### Access to Adjustment Tasks (Etendo Mobile)
+When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
 
-When accessing Etendo Mobile into the Adjustment Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png)
+**Reception Tasks**
 
-To **Adjust** inventory
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-2.png)
 
-- From the Etendo Mobile main menu, navigate to the **Adjustment Tasks** section. Tasks are organized by status: *Pending*, *In Progress*, and *Completed*.
-- Search for and select the desired task from the list or using the search function.
-- When a task is selected, a screen opens displaying the task information.
-- Press the **Start Adjustment** button to begin the process.
-- Enter relevant information including storage bin details and quantity counts.
-- Scan products to stock them or manually enter the data.
-- Confirm the task by pressing the **End Adjustment** button.
-- Confirm that you want to complete the task.
+To perform a **Reception**:
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
+- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Receipt** button.
+- **Scan** the products to stock them or **load** them manually.
+- Confirm the task with the **End Reception** button.
+- Confirm that you want to finish the task.
+- See **Success message**.
 
 ### Relocation Tasks
 
@@ -872,38 +872,43 @@ To perform a **relocation**:
 - See Success message.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
-### Reception Tasks
 
-It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
+### Adjustment Tasks
+
+Inventory adjustment tasks allow warehouse operators to perform physical counts and stock adjustments directly from the mobile app. These tasks are generated from physical inventories in the ERP system.
+
+This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product(s) to the storage bins associated with the new status, accurately reflecting the current stock condition.
+
+!!!Info
+    For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
+
 
 #### Process Start (Etendo)
 
-The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned and then reflected in the mobile application of the assigned operator.
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Physical Inventory`
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+The process begins by creating tasks within Etendo using the **Physical Inventory** window. A new record is created with product lines for which stock verification and adjustment is desired. Once this is ready, the task must be generated using the **Generate Task** button.
 
-#### Access to Inventory Tasks (Etendo Mobile)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
 
-When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
+#### Access to Adjustment Tasks (Etendo Mobile)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
+When accessing Etendo Mobile into the Adjustment Tasks section, all tasks and their corresponding statuses, belonging to the logged in user, will be displayed. By default, the tasks are shown in Pending status.
 
-**Reception Tasks**
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1-a.png)
+To **Adjust** inventory
 
-To perform a **Reception**:
+- From the Etendo Mobile main menu, navigate to the **Adjustment Tasks** section. Tasks are organized by status: *Pending*, *In Progress*, and *Completed*.
+- Search for and select the desired task from the list or using the search function.
+- When a task is selected, a screen opens displaying the task information.
+- Press the **Start Adjustment** button to begin the process.
+- Enter relevant information including storage bin details and quantity counts.
+- Scan products to stock them or manually enter the data.
+- Confirm the task by pressing the **End Adjustment** button.
+- Confirm that you want to complete the task.
 
-- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
-- Search for and select the task from the list or using the search engine.
-- When a task is selected, a screen with the task information opens.
-- Press the **Start Receipt** button.
-- **Scan** the products to stock them or **load** them manually.
-- Confirm the task with the **End Reception** button.
-- Confirm that you want to finish the task.
-- See **Success message**.
-
-
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
 
 ### All Tasks
 
