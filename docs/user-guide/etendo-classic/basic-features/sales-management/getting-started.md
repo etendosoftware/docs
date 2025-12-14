@@ -141,7 +141,7 @@ or for replacement.
 The following configuration options are available in this process:
 
 - [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons)
-- [Condition of the goods](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#condition-of-the-goods)
+- [Condition of the goods](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#condition-of-the-goods)
 - Accounts for [Cost of Goods Sold](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) (COGS) for returns and [Revenue for returns](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)
 
 ### Execution
