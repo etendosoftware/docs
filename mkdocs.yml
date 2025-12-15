@@ -262,7 +262,26 @@ nav:
           - Accounting:
             - Transactions: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md
             - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md
-            - Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md
+            - Setup: 
+              - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
+              - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
+              - Period Control Log: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/period-control-log.md
+              - Account Tree: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree.md
+              - General Ledger Configuration: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md
+              - Fiscal Calendar: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar.md
+              - Account Combination: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination.md
+              - Accounting Process: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-process.md
+              - GL Item: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md
+              - GL Category: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category.md
+              - Document Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type.md
+              - Document Sequence: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md
+              - Tax Category: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-category.md
+              - Business Partner Tax Category: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category.md
+              - Tax Rate: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md
+              - Cost Center: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center.md
+              - ABC Activity: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity.md
+              - Accounting Templates: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates.md
+              - Balance Sheet and P/L Structure: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure.md
           - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
