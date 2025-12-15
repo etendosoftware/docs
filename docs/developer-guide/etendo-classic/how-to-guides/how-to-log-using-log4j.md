@@ -1,16 +1,16 @@
 ---
-title: How To Log
+title: How To Log Using Log4j
 tags:
     - log
     - logging level
     - context
     - logging
     - log errors
-
+    - log4j
 status: beta
 ---
 
-# How To Log
+# How To Log Using Log4j
 
 !!! example "IMPORTANT: THIS IS A BETA VERSION"
     This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
@@ -28,7 +28,7 @@ Etendo generates a log file which serves different purposes:
 
 It is intended to be consumed by technical staff such as system administrators, developers, support team, etc.
 
-To learn how to configure logs, read [this document](../how-to-guides/how-to-configure-log.md) .
+To learn how to configure logs, read [this document](./how-to-configure-log.md) .
 
 ## How to log
 
