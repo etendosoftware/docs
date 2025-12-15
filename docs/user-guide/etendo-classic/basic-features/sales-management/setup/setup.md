@@ -24,7 +24,7 @@ This section describes the different windows that are necessary to set up the sa
 
 In this window, the user defines in which status the goods come from the customer. These values are used in the **Return Material Receipt** window.
 
-![Condition of the goods](../../../../../assets/drive/12vgLwH05GA2eHFM0hO6gh-oMJB8wQnae.png)
+![Condition of the goods](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/condition-of-the-goods-1.png)
 
 ## Sales Region
 
@@ -32,7 +32,7 @@ In this window, the user defines in which status the goods come from the custome
 
 In this section, the user can create sales regions to be used in sales operations and define a sales region to be used in the sales process.
 
-![Sales region](../../../../../assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F.png)
+![Sales region](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/sales-region-1.png)
 
 ## Commission
 
@@ -50,7 +50,7 @@ For detailed information about commission configuration, calculation methods, an
 
 In this section, the user can create specific sales channels to be used in sales operations and define a sales channel to be used in the sales process.
 
-![Channel window](../../../../../assets/drive/1BFtERRlthvXGBH9eadge2BdYwXJTqm4Z.png)
+![Channel window](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/channel-1.png)
 
 ## Sales Campaign
 
@@ -58,7 +58,7 @@ In this section, the user can create specific sales channels to be used in sales
 
 In this section, the user can create specific sales campaigns to be used in sales operations and define a sales campaign to be used in the sales process.
 
-![Sales campaign window](../../../../../assets/drive/1SwdM8FP349N8HNZhQF546HuE6rIzvoak.png)
+![Sales campaign window](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/sales-campaign-1.png)
 
 
 ## Reject Reason
@@ -67,7 +67,7 @@ In this section, the user can create specific sales campaigns to be used in sale
 
 In this window, the user defines the reasons to reject quotations. These values are used in the **Sales Quotation** window.
 
-![Reject reason window](../../../../../assets/drive/1zSNCUs2uojZGChPlX77p57T5i3J5vwaD.png)
+![Reject reason window](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/reject-reason-1.png)
 
 ---
 
