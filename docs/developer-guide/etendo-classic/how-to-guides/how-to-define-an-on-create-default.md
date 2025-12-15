@@ -16,14 +16,13 @@ status: beta
 
 ##  Overview
 
-In this document, it is briefly explained what an **onCreateDefault** is, in what situations it is useful, and how to correctly define one.
+In this section, it is briefly explained what an **onCreateDefault** is, in what situations it is useful, and how to correctly define one.
 
 ##  Concept
 
-`OnCreateDefaults` are SQL statements which are executed by the `update.database` task when a database column is  created. They are normally used to insert data into a newly created column. It is important to note that they are only executed when the column is being created. If the column is already in the database, `update.database` will not execute the `onCreateDefault` statement. To fill data into an already created column, you can use a Module Script. To find
-more about the Module Scripts, you can see this document in our Developers Guide.
+`OnCreateDefaults` are SQL statements which are executed by the `update.database` task when a database column is created. They are normally used to insert data into a newly created column. It is important to note that they are only executed when the column is being created. If the column is already in the database, `update.database` will not execute the `onCreateDefault` statement. To fill data into an already created column, you can use a Module Script. For more information about the Module Scripts, visit [How to Create Build Validations and Module Scripts](../how-to-guides/how-to-create-build-validations-and-module-scripts.md).
 
-##  Development process
+##  Development Process
 
 `onCreateDefault` statements are added directly to the XML file of the table. This means that the main development steps should be:
 
@@ -61,9 +60,7 @@ One limitation of the current implementation of `onCreateDefaults` is that, due 
 
 ##  How to Correctly Remove an `onCreateDefault`
 
-`onCreateDefaults` are also removed by editing the XML file. The correct way to remove it is to delete the contents inside the <onCreateDefault> tag, but leave the tag itself there. If you delete everything, including the tag, next
-time you export the module (or Core, if you are editing a Core column), there will be an inconsistency, as `DBSourceManager` will create an empty `onCreateDefault` element. In a practical example, the following column has an
-onCreateDefault:
+`onCreateDefaults` are also removed by editing the XML file. The correct way to remove it is to delete the contents inside the <onCreateDefault> tag, but leave the tag itself there. If you delete everything, including the tag, next time you export the module (or Core, if you are editing a Core column), there will be an inconsistency, as [`DBSourceManager`](../concepts/dbsourcemanager.md) will create an empty `onCreateDefault` element. In a practical example, the following column has an `onCreateDefault`:
 
 ```
 <column name="MYCOLUMN" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">

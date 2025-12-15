@@ -15,7 +15,7 @@ status: beta
 
 ##  Overview
 
-This section illustrates how a complex query can be programmed using Data Access Layer constructs. The solution will be using Hibernate HQL, so before reading this how-to, make sure you know the basics of HQL.
+This section illustrates how a complex query can be programmed using Data Access Layer constructs. The solution will be using [Hibernate HQL](https://docs.hibernate.org/orm/3.5/reference/en/html/queryhql.html){target="\_blank"}, so before reading this how-to, make sure you know the basics of HQL.
 
 !!!note
     This how-to is the first page of a 2-page series on more complex queries using the DAL. The 2 pages each describe a different query and pages can be read separately.
@@ -24,15 +24,13 @@ The how-to starts with an SQL query from the requisition-to-order form inside Pr
 
 ##  Setup a Test Case
 
-There is a separate how-to on creating test cases using the Data Access Layer (see  here). In this how-to, we will only give a summary.
+There is a separate how-to on creating test cases using the Data Access Layer (see [here](../how-to-guides/how-to-create-testcases/how-to-create-jest-testcases.md) and [here](../how-to-guides/how-to-create-testcases/how-to-create-junit-testcases.md)). In this how-to, we will only give a summary.
 
 The test case which we will be using is created inside of the modules directory of the Etendo development project. We will not actually create a new module in the database but it is best to place custom code separate from the main Etendo source tree. To create a new source folder in Eclipse, right-click on the project and select **New** and then source folder.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1-0.png){: .legacy-image-style}
 
-  
-In the source folder create a new package (right click on the new folder and select New > package): `org.openbravo.howto.query`. Inside of this package create a java file `QueryTest.java`. This file has the following content:
-
+In the source folder, create a new package (right click on the new folder and select New > package): `org.openbravo.howto.query`. Inside of this package create a java file `QueryTest.java`. This file has the following content:
 
 ```
 package org.openbravo.howto.query;
@@ -104,10 +102,10 @@ ORDER BY M_REQUISITIONLINE.NEEDBYDATE, M_REQUISITIONLINE.M_PRODUCT_ID, M_REQUISI
 
 This query is used in the Requisition-to-order form inside Procurement Management. It returns the requisition line  info with the identifiers of its business partner, product, pricelist, etc.
 
-The Hibernate Query Language supports querying for a complete business object. The columns specified in the select clause above are all related to the Requisition Line. So in HQL the query will be used to filter the main object: the Requisition Line, and then retrieve the required information from the Requisition Line object. A second step describes how to make the query more efficient to prevent the  N + 1 select problem.
+The [Hibernate Query Language](https://docs.hibernate.org/core/3.5/reference/en/html/queryhql.html){target="\_blank"} supports querying for a complete business object. The columns specified in the select clause above are all related to the Requisition Line. So in HQL the query will be used to filter the main object: the Requisition Line, and then retrieve the required information from the Requisition Line object. A second step describes how to make the query more efficient to prevent the  N + 1 select problem.
 
 !!! Note
-    In HQL we use the concept of an Entity and Properties. See here for an overview of the Requisition Line Entity.
+    In HQL, we use the concept of Entity and Properties.
 
 ##  Translating to HQL
 
@@ -118,7 +116,7 @@ The query and its results have been tested against the Small Bazaar test data. I
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1-2.png){: .legacy-image-style}
 
   
-Begin by setting the user context to the standard Etendo Admin user. The query will be build using a `StringBuilder`. The where-clause starts with 'as rl', this is because we know that we will query for the `RequisitionLine` and use the alias 'rl' in the rest of the where-clause. The DAL will add the select clause automatically later.
+Begin by setting the user context to the standard Etendo Admin user. The query will be build using a `StringBuilder`. The where-clause starts with 'as rl', this is because we know that we will query for the `RequisitionLine` and use the alias 'rl' in the rest of the where-clause. The [DAL](../concepts/data-access-layer.md) will add the select clause automatically later.
 
 ```
 setUserContext("100");

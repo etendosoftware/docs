@@ -15,17 +15,16 @@ status: beta
   
 ##  Overview
 
-This section illustrates how a complex query can be programmed using  Data Access Layer  constructs. The solution will be using Hibernate HQL, so before reading this how-to make sure that you know the basics of HQL.
+This section illustrates how a complex query can be programmed using [Data Access Layer](../concepts/data-access-layer.md) constructs. The solution will be using [Hibernate HQL](https://docs.hibernate.org/core/3.5/reference/en/html/queryhql.html){target="\_blank"}, so before reading this how-to make sure that you know the basics of HQL.
 
 !!!Note
     This how-to is the second page in a 2-page series on complex queries and the DAL. Each of the 2 pages discuss a different query, the 2 pages can be read separately.
 
-In this how-to, we will show how to develop a complex query using the Hibernate query API and Hibernate HQL. The how-to starts with an SQL query from pending goods receipt and translates it to a HQL representation. Different aspects of
-using HQL and the DAL are discussed, including performance and debugging aspects.
+In this how-to, we will show how to develop a complex query using the Hibernate query API and Hibernate HQL. The how-to starts with an SQL query from pending goods receipt and translates it to a HQL representation. Different aspects of using HQL and the [DAL](../concepts/data-access-layer.md) are discussed, including performance and debugging aspects.
 
 ##  Setup a Test Case
 
-There is a separate how-to on creating test cases using the Data Access Layer (see here). In this how-to, we will just give a summary.
+There is a separate how-to on creating test cases using the Data Access Layer (see [here](../how-to-guides/how-to-create-testcases/how-to-create-jest-testcases.md) and [here](../how-to-guides/how-to-create-testcases/how-to-create-junit-testcases.md)). In this how-to, we will just give a summary.
 
 The test case which we will be using is created inside of the modules directory of the Etendo development project. We will not actually create a new module in the database but it is best to place custom code separated from the main Etendo source tree. To create a new source folder in Eclipse right-click on the project and select **New** and then source folder.
 
@@ -55,7 +54,7 @@ public void testQueryOne() {
 }
 ```
 
-This test case inherits from the `OBBaseTest` class provided by Etendo. The base test class provides a user context and transaction handling. There is one test method in the class: `testQueryOne`. This method first selects the user context. The `commitTransaction()` at the end commits the transaction, if an exception occurs during the test then this statement will not be executed and the transaction is automatically rolled back.
+This test case inherits from the `OBBaseTest` class provided by Openbravo ???. The base test class provides a user context and transaction handling. There is one test method in the class: `testQueryOne`. This method first selects the user context. The `commitTransaction()` at the end commits the transaction, if an exception occurs during the test then this statement will not be executed and the transaction is automatically rolled back.
 
 You can right-click the Java file in Eclipse and then run as > junit testcase, you should see the green bar in the junit view:
 
@@ -97,7 +96,7 @@ ORDER BY C_BPARTNER_ID, ID
 
 This query is from the goods receipt pending manual.
 
-When translating this query to a Hibernate Query Language query the following aspects have to be taken into account:
+When translating this query to a [Hibernate Query Language](https://docs.hibernate.org/core/3.5/reference/en/html/queryhql.html){target="\_blank"} query the following aspects have to be taken into account:
 
 * Hibernate does not support the usage of select aliases inside the where clause. 
 * Hibernate does not support the use of a select, which selects results from another select. 
@@ -115,8 +114,7 @@ The next step is to translate this approach to HQL. We will ignore the select pa
 
 ##  Translating to HQL
 
-In this section, the above SQL is translated to HQL. For HQL we will be using the Entity/Property concept versus the Table/Column concept for SQL. See here for a complete listing of Etendo entities and their relations to the table
-and Java code.
+In this section, the above SQL is translated to HQL. For HQL, we will be using the Entity/Property concept versus the Table/Column concept for SQL.
 
 The query and its results have been tested against the **Small Bazaar** test data. It uses the Etendo Admin user, this user has been set to the Etendo Admin role as displayed below (note: check the default box).
 
@@ -143,8 +141,7 @@ whereClause.append(" (select sum(quantity) from ProcurementPOInvoiceMatch ").app
 ```
 
 !!!note
-    The HQL uses property and entity names of Etendo business objects. See the Entity Model reference manual for a complete listing of all entities. The Order Line entity is described  here. You can also find the correct names by checking out the generated code in the src-gen folder. You can search this folder using the table names to find the correct entity. 
-  
+    The HQL uses property and entity names of Etendo business objects. You can also find the correct names by checking out the generated code in the src-gen folder. You can search this folder using the table names to find the correct entity. 
   
 Add other filter options, the organisation and client filtering are done by the Data Access Layer so do not need to be taken into account explicitly. The Sales Transaction column in the database holds 'Y' or 'N', but because in Java
 we use booleans we can use true or false in the where-clause (here it is false).

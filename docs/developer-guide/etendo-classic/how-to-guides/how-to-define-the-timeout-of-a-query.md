@@ -20,7 +20,7 @@ Defining the timeout of a query allows to cancel its execution once a certain am
 
 ##  `QueryTimeOutUtil` class
 
-The `QueryTimeOutUtil` class provides `setQueryTimeOut` methods that defines the timeout of:
+The `QueryTimeOutUtil` class provides `setQueryTimeOut` methods that define the timeout of:
 
 * SQL statements 
 * Hibernate queries 
@@ -28,13 +28,13 @@ The `QueryTimeOutUtil` class provides `setQueryTimeOut` methods that defines the
 
 The first argument of the `setQueryTimeOut` method is the object whose query timeout is to be set. The second argument is a string that represents a timeout profile (see next section).
 
-This class also provides resetQueryTimeOut methods to reset the timeout to 0.
+This class also provides `resetQueryTimeOut` methods to reset the timeout to 0.
 
 ##  Timeout profiles
 
 Query timeouts are defined using timeout profiles. A timeout profile represents a server-side activity. For instance, the GRID timeout profile, defined in core, is used by the `DefaultJsonDataService` in the queries that are done to retrieve the records that will be shown in the grid.
 
-Query timeouts are declared in the `Openbravo.properties` file, using the db.queryTimeout.<profile_name>=#profile_timeout_in_seconds. For instance, to define a new profile called MY_PROCESS with a query timeout of 5 seconds, the following line must be added to `Openbravo.properties`:
+Query timeouts are declared in the `Openbravo.properties` file ???, using the `db.queryTimeout.<profile_name>=#profile_timeout_in_seconds`. For instance, to define a new profile called `MY_PROCESS` with a query timeout of 5 seconds, the following line must be added to `Openbravo.properties` ???:
 
 **db.queryTimeout.MY_PROCESS=5**
 
@@ -42,17 +42,17 @@ If the timeout is set to 0, the queries that use that profile will not have a li
 
 Etendo defines in its core these timeout profiles:
 
-* **db.queryTimeout.grid** : query used to populate the grid of the generated windows 
-* **db.queryTimeout.jsonWebService** : queries used in the JSON REST Webservice 
-* **db.queryTimeout.xmlWebService** : queries used in the XML REST Webservice 
-* **db.queryTimeout.scheduledProcess** : queries executed in scheduled processes 
-* **db.queryTimeout.manualProcess** : queries executed in manual processes 
+* **`db.queryTimeout.grid`**: query used to populate the grid of the generated windows 
+* **`db.queryTimeout.jsonWebService`**: queries used in the JSON REST Webservice 
+* **`db.queryTimeout.xmlWebService`**: queries used in the XML REST Webservice 
+* **`db.queryTimeout.scheduledProcess`**: queries executed in scheduled processes 
+* **`db.queryTimeout.manualProcess*`**: queries executed in manual processes 
 
-If you create a process and do not set a query profile for its queries, the db.queryTimeout.scheduledProcess or db.queryTimeout.manualProcess will be used by default. You can override these default profiles by executing QueryTimeOutUtil.getInstance().setQueryTimeOut on your query.
+If you create a process and do not set a query profile for its queries, the `db.queryTimeout.scheduledProcess` or `db.queryTimeout.manualProcess` will be used by default. You can override these default profiles by executing `QueryTimeOutUtil.getInstance().setQueryTimeOut` on your query.
 
 ##  Example
 
-Let's suppose a developer is using a query that is bound to be time-consuming, so he wants to allow specifying a limit in its execution time. The developer can reuse an existing query profile or create a new one. In this case none of the existing query profiles applies, so he uses a new one that he calls MY_TIME_CONSUMING_QUERY.
+Let us suppose a developer is using a query that is bound to be time-consuming, so he wants to allow specifying a limit in its execution time. The developer can reuse an existing query profile or create a new one. In this case, none of the existing query profiles applies, so he uses a new one that he calls `MY_TIME_CONSUMING_QUERY`.
 
 ```
 String hql = "update ...";
@@ -74,7 +74,6 @@ QueryTimeOutUtil.getInstance().resetQueryTimeOut(qry);
 ```
 
 When the module that contains this code is installed, the query will actually not have any timeout until the `db.queryTimeout.MY_TIME_CONSUMING_QUERY` parameter is added to `Openbravo.properties` with a value higher than 0.
-
 
 ---
 
