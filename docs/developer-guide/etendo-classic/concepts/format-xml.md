@@ -1,11 +1,13 @@
 ---
 title: Format XML
 tags:
-  - Concepts
   - Configuration
   - Numeric Formatting
   - XML Configuration
   - Format Mask
+  - Decimal Precision
+  - Decimal Point
+  - Precision Limit
 ---
 
 # Format XML

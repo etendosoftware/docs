@@ -5,8 +5,6 @@ tags:
     - Table
     - Create message
     - Database
-
-
 status: beta
 ---
 
@@ -25,7 +23,7 @@ When adding new columns to a table like the **Valid To date** in the **ht_salary
     For more information visit, [How to Add Columns to a Table](./how-to-add-columns-to-a-table.md).
 
 
-##  Modularity
+## Modularity
 
 As the constraint will be placed in the module with dbprefix `HT2` but the table **ht_salary** is defined in another module `HT`, the constraint name must follow the usual rule and start with `EM_HT2` .
 

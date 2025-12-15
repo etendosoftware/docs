@@ -100,6 +100,8 @@ This module provides updated information about the daily history stock of the pr
 
 ### Stock Logistic Unit
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yrP1iPmCk_U?si=Riy5plMo7lVDjVWS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 :octicons-package-16: Javapackage: `com.etendoerp.stock.logisticunit`
 
 The **Stock Logistic Unit** module extends Etendo’s standard warehouse management functionality by integrating Alternative Units of Measure (AUOM) with the Referenced Inventory model. It introduces new logistic unit types such as **Box** and **Pallet**, enabling traceability and efficient stock control in all warehouse operations.  

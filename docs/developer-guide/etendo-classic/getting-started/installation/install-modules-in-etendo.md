@@ -143,8 +143,8 @@ Based on the modules format you want to work with:
     - \[begin, )  From a base version to the latest one <br>
     - And any other possible combination.
 
-!!! tip "Gradle Exclusion Rules"
-    You can make use of Gradle exclusion rules to prevent downloading a specific transitive module. Refer to [Gradle Documentation](https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html#sec:excluding-transitive-deps){target="_blank"}
+!!! tip "Gradle Exclusion Rules - Exclude Dependencies"
+    You can make use of Gradle exclusion rules to prevent downloading a specific transitive module. Refer to [Gradle Documentation](https://docs.gradle.org/current/userguide/how_to_exclude_transitive_dependencies.html){target="_blank"}
 
 
 ### Resolve Dependencies

@@ -12,6 +12,15 @@ tags:
 
 :octicons-package-16: Javapackage: `com.etendoerp.platform.etendo-core`
 
+!!! warning
+    If you are upgrading Etendo, follow the guide: [Upgrade Etendo to Any Version](../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version.md)
+
+    There was a significant change in the software stack between **Etendo 25** and earlier versions. For more information, visit:
+
+    - [Etendo Installation - Requirements](../../../getting-started/requirements.md#software-stack)
+    - [Developer Changelog - Stack Upgrade](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md#etendo-platform-stack-upgrade)
+
+
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
 | [25Q3.3](https://github.com/etendosoftware/etendo_core/releases/tag/25.3.3){target="_blank"} | 15/11/2025 | 25.3.3 | QAA |  | :white_check_mark: |

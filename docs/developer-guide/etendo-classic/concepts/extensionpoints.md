@@ -4,20 +4,19 @@ tags:
     - ExtensionPoints
     - Validation
     - Process
-
 status: beta
 ---
 
-#  ExtensionPoints
+# ExtensionPoints
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
     
-##  Overview
+## Overview
 
 This is the list of available Extension Points on core procedures.
 
-###  `C_Order_Post` - Finish Process Extension Point
+### `C_Order_Post` - Finish Process Extension Point
 
 This extension point is called at the end of the `C_Order_Post1` function, the function that processes orders
 
@@ -30,7 +29,7 @@ This extension point is called at the end of the `C_Order_Post1` function, the f
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `C_Order_Post` - Validation Process
+### `C_Order_Post` - Validation Process
 
 This extension point is called at the beginning of the `C_Order_Post1` function, the function that processes orders
 
@@ -43,7 +42,7 @@ This extension point is called at the beginning of the `C_Order_Post1` function,
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `C_Invoice_Post` - Finish_Process Extension Point
+### `C_Invoice_Post` - Finish_Process Extension Point
 
 This extension point is called at the end of the `C_Invoice_Post` function, the function that processes invoices
 
@@ -56,7 +55,7 @@ This extension point is called at the end of the `C_Invoice_Post` function, the 
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `M_Inout_Post` - Finish_Process Extension Point
+### `M_Inout_Post` - Finish_Process Extension Point
 
 This extension point is called at the end of the `M_Inout_Post` function, the function that completes shipments
 
@@ -69,7 +68,7 @@ This extension point is called at the end of the `M_Inout_Post` function, the fu
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `M_Inout_Create` - Calling Post Process
+### `M_Inout_Create` - Calling Post Process
 
 This extension point is called inside the `M_Inout_Create` function, the function that creates shipments from orders. It allows depending on the result returned to call the function to complete the shipment created or not and leave the shipment in draft status.
 
@@ -79,7 +78,7 @@ This extension point is called inside the `M_Inout_Create` function, the functio
     * `User` (`p_String`). `AD_User_Id` who has launched the process. 
     * `Result` (`p_Number`). Integer to set the result of the process (NULL, execute the shipment complete process. Other value, do not execute the shipment complete process) 
 
-###  `M_Inout_Cancel` - Calling Post Process
+### `M_Inout_Cancel` - Calling Post Process
 
 This extension point is called inside the `M_Inout_Cancel` function, the function that cancels shipments from orders. It allows depending on the result returned to call the function to complete the shipment created or not and leave the shipment in draft status.
 
@@ -89,7 +88,7 @@ This extension point is called inside the `M_Inout_Cancel` function, the functio
     * `User` (`p_String`). `AD_User_Id` who has launched the process. 
     * `Result` (`p_Number`). Integer to set the result of the process (NULL, execute the shipment complete process. Other value, do not execute the shipment complete process) 
 
-###  `MA_Copy_Version` - Finish Process
+### `MA_Copy_Version` - Finish Process
 
 This extension point is called at the end of the `MA_Copy_Version` function, the function that copy process plan versions.
 
@@ -102,7 +101,7 @@ This extension point is called at the end of the `MA_Copy_Version` function, the
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `MA_Workrequirement_Process` - Finish Process
+### `MA_Workrequirement_Process` - Finish Process
 
 This extension point is called at the end of the `MA_Workrequirement_Process` function, the function that processes Works Requirements
 
@@ -114,7 +113,7 @@ This extension point is called at the end of the `MA_Workrequirement_Process` fu
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `MA_Productionrun_Standard` - Finish Process
+### `MA_Productionrun_Standard` - Finish Process
 
 This extension point is called at the end of the `MA_Productionrun_Standard` function, the function used by Create Standards process.
 
@@ -126,7 +125,7 @@ This extension point is called at the end of the `MA_Productionrun_Standard` fun
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `MA_Workeffort_Validate` - Finish Process
+### `MA_Workeffort_Validate` - Finish Process
 
 This extension point is called at the end of the `MA_Workeffort_Validate` function, the function that validates Works Efforts
 
@@ -138,7 +137,7 @@ This extension point is called at the end of the `MA_Workeffort_Validate` functi
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `M_Get_Stock` - Finish Process
+### `M_Get_Stock` - Finish Process
 
 This extension point is called at the end of the `M_Get_Stock` function, the function that gets stock from the Warehouse. This function is used in Warehouse Stock Management functionality.
 
@@ -153,7 +152,7 @@ It is possible to customize the stock that Warehouse Stock Management proposes.
 
 `Message` and `Result` have to be retrieved after the procedures have been launched as they might be changed by those procedures to set warnings and messages to the user.
 
-###  `M_PriceList_Create` - Finish Process
+### `M_PriceList_Create` - Finish Process
 
 This extension point is called at the end of the `M_Pricelist_Create` function, the function that create prices based on parameters of the price list version. See [Price List Version](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list-version).
 
