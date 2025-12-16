@@ -1,5 +1,12 @@
 ---
 title: Sales Management Setup
+tags:
+  - Sales management setup
+  - Commission
+  - Sales region
+  - Sales campaign
+  - Channel
+  - Reject Reason
 ---
 ## Overview
 
@@ -40,7 +47,7 @@ In this section, the user can create sales regions to be used in sales operation
 
 In this window, users can configure commission plans for sales representatives. The Commission functionality allows defining how and when commissions are calculated, and to whom they are paid. Commissions can be calculated based on net sales amount or profit margins, with support for complex scenarios through filters by business partner, product, or region.
 
-For detailed information about commission configuration, calculation methods, and examples, see the [Commission](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/commission.md) section.
+For detailed information about commission configuration, calculation methods, and examples, see the [Commission](./commission.md) section.
 
 ![Commission window](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission-1.png) 
 

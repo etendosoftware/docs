@@ -1,15 +1,20 @@
 ---
 title: Commission
+tags:
+    - Commission
+    - Net Amount
+    - Margin
+    - Basis Amount
+    - Sales Representative
 ---
 
-## Commission
+# Commission
 
 :material-menu: `Application` > `Sales Management` > `Setup` > `Commission`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=1CLcSz5b4iY_J4hy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-### Overview
+## Overview
 
 The Commission functionality in Etendo begins with the **Commission window**, where users configure the general settings for commission calculation which allows defining **how and when commissions** are going to be calculated and to **whom they are going to be paid**. Commissions can be calculated based on the sales defined in two documents: **Sales Orders and Sales Invoices**. 
 
@@ -33,7 +38,7 @@ Prior to use commissions, some **configurations** need to be done:
     - Create a [Product](../../../../etendo-classic/basic-features/master-data-management/master-data.md#product) and get it part of a **Price List** without pricing information as part of the required concept when the commission purchase invoice is created. 
 
 
-### Header 
+## Header 
 
 The user can define a sales commission to be used in the sales process. The header lists main terms that will be used to calculate the commission:
 
@@ -45,11 +50,11 @@ The user can define a sales commission to be used in the sales process. The head
 -   **Basis Document**: Whether the commission is calculated based on invoices or orders.
 -   **Last Run Date**: Last date when the process Generate Commission was performed.
 -   **Basis Status**: Whether the commission is calculated based on all documents or fully paid documents.
--   **Basis Amount**: Whether the commission is calculated based on **net amount** or **margin**. Etendo supports two main commission calculation methods: Net Amount (commissions based on total sales revenue) and Margin (commissions based on profit margins - selling price minus cost). This is a key setting that determines the calculation method (see [Commission Types](#commission-types) for detailed information).
+-   **Basis Amount**: Whether the commission is calculated based on **net amount** or **margin**. Etendo supports two main commission calculation methods: Net Amount (commissions based on total sales revenue) and Margin (commissions based on profit margins - selling price minus cost). This is a key setting that determines the calculation method (see [Basis Amount Options](#basis-amount-options) for detailed information).
 -   **List details**: See the result of the commission grouped or line by line. When the commission is calculated based on margin the list details is always checked.
 -   **Cascade**: Able to manage complex commissions (exclude some invoice/order lines, apply different multiplier quantity/amount for some invoice/order lines, exclude products from already defined product categories). When this field is checked the result of the commission is grouped on line by line.
 
-#### Commission Types
+### Basis Amount Options
 
 Etendo supports two distinct commission calculation methods through the **Basis Amount** field, each designed for different business scenarios:
 
@@ -85,7 +90,7 @@ Key characteristics:
     - **Margin**: Requires accurate product costing, promotes profitability
     - The choice between these methods should align with your sales strategy and business objectives
 
-### Lines
+## Lines
 
 The user can edit the selected commission amount.
 
@@ -104,15 +109,15 @@ Line tab allows the user to define in deep the conditions of the commission:
 -   **Subtract Amount**: The total net amount calculated based on the above criteria is subtracted by this amount therefore, from this number Etendo begins to calculate the commission.
 -   **Multiplier Amount**: coefficient (percentage) multiplying the result of the above amount. 
 
-### Buttons
+## Buttons
 
 -   **Copy Lines**: Allows to copy the configuration of other commissions.
--   **Generate Commission**: Based on the header and lines, the commission is generated. For example, if Monthly frequency is defined and the starting date is 01/03/2025 only orders/invoices of March will be taken into account. <br><br>
+-   **Generate Commission**: Based on the header and lines, the commission is generated. For example, if Monthly frequency is defined and the starting date is 14/12/2025 only orders/invoices of March will be taken into account. <br><br>
     ![Commission's pop up](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission-3.png)
 
-### Examples
+## Examples
 
-**Net Amount Commission Examples**
+### Net Amount Commission Examples
 
 The following examples demonstrate commission calculations based on **net sales amount**:
 
@@ -158,7 +163,7 @@ I want to pay different commission rates based on product categories: 10% for *A
     - **Multiplier Amount**: 0.05
 - **Result**: Alcoholic sales earn 10% commission, Fruit juice earn 5%
 
-**Margin Commission Examples**
+### Margin Commission Examples
 
 When **Basis Amount** is set to "Margin", commissions are calculated based on profit margins. Remember that this option is only available when **Basis Document** is set to *Invoice*.
 
@@ -182,6 +187,7 @@ I want to pay my sales representative 20% of the profit margin on all sales of *
 *Example 2: Graduated margin commission*
 
 I want to pay higher commission rates on higher-margin products in the *Soft Drinks* category:
+
 - 25% commission for items with margin above €1000
 - 15% commission for items with margin between €500-€1000  
 - 10% commission for items with margin below €500
@@ -221,14 +227,16 @@ I want to pay 18% commission on profit margins for all sales to business partner
 - **Result**: Commission = (Selling Price - Cost Price) × 18% for fully paid invoices to Customer - Tier 2 customers
 
 !!! info
-    Please note that quantity and amount fields can be used in combination for both commission types.
+    Please note that quantity and amount fields can be used in combination for both Basis Amount Options.
 
-**Complex Commission Example (Net Amount with Cascade)**
+### Complex Commission Example (Net Amount with Cascade)
 
 A complex commission example using **Net Amount** basis with cascade functionality:
 
 I want to calculate commission at 5% for business partner *Healthy Food Supermarkets, Co.*.
+
 I want to exclude *Soft Drinks* products.
+
 For 'Cola 0.5L' I want the commission to be 10%. Not 10% plus the 5% calculated in the first line. So this line will remove what was calculated previously for 'Cola 0.5L'.
 
 **Configuration:**
