@@ -323,7 +323,7 @@ nav:
           - How to Manage Prepaid Invoices in Payables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md
           - How to Manage Prepaid Invoices in Receivables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md
           - How to Transfer Funds Between Financial Accounts: user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts.md
-#          - How To Partially Protest A Remittance: developer-guide/etendo-classic/how-to-guides/How_To_Partially_Protest_A_Remittance.md
+#          - How To Partially Protest A Remittance: user-guide/etendo-classic/how-to-guides/How_To_Partially_Protest_A_Remittance.md
 
     - Etendo Mobile: 
       - ✨ Getting Started: user-guide/etendo-mobile/getting-started.md
@@ -407,10 +407,6 @@ nav:
         - Tables: developer-guide/etendo-classic/concepts/tables.md
 #        - XML REST Web Services: developer-guide/etendo-classic/concepts/xml-rest-web-services.md
       - How to Guides:
-#        - Categories: developer-guide/etendo-classic/how-to-guides/Categories.md
-#        - Category:Developers Guide: developer-guide/etendo-classic/how-to-guides/Category_Developers_Guide.md
-#        - Category:HowTo: developer-guide/etendo-classic/how-to-guides/Category_HowTo.md
-#        - Client Side Development and API: developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API.md
         - How Price Including Taxes are Calculated: developer-guide/etendo-classic/how-to-guides/how-price-including-taxes-are-calculated.md
         - How to Add a Button to the Toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
         - How to Add a Canvas Field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid.md
@@ -458,7 +454,6 @@ nav:
         - How to Create a Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table.md
 #        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md
 #        - How To Create a Trigger: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Trigger.md
-#        - How to create a Trigger: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger.md
         - How to Create a Window: developer-guide/etendo-classic/how-to-guides/how-to-create-a-window.md
         - How to Create Accounts Files: developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files.md
         - How to Create an Alert: developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert.md
@@ -487,17 +482,13 @@ nav:
         - How to Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler.md
-#        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
         - How to Implement Create New in Selector: developer-guide/etendo-classic/how-to-guides/how-to-implement-create-new-in-selector.md
         - How to Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-ficextension-hook.md
         - How to Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-jsondataserviceextraactions-hook.md
-        - How to Log Using Log4j1 x: developer-guide/etendo-classic/how-to-guides/how-to-log-using-log4j.md
-#        - How to migrate reports and processes to new Cost Engine: developer-guide/etendo-classic/how-to-guides/How_to_migrate_reports_and_processes_to_new_Cost_Engine.md
-        - How To Modularize The Location Selector: developer-guide/etendo-classic/how-to-guides/how-to-modularize-the-location-selector.md
-#        - How to Migrate Sources Format (since 3.0PR19Q1): developer-guide/etendo-classic/how-to-guides/How_to_Migrate_Sources_Format_since_3_0PR19Q1_.md
+        - How to Log Using Log4j: developer-guide/etendo-classic/how-to-guides/how-to-log-using-log4j.md
+        - How to Modularize the Location Selector: developer-guide/etendo-classic/how-to-guides/how-to-modularize-the-location-selector.md
         - How to Partition Tables with Etendo Database Extended Module: developer-guide/etendo-classic/how-to-guides/how-to-partition-tables-with-etendo-database-extended.md
         - How to Print Reports with Subreports: developer-guide/etendo-classic/how-to-guides/how-to-print-reports-with-subreports.md
-#        - How to publish a Module: developer-guide/etendo-classic/how-to-guides/How_to_publish_a_Module.md
         - How to Publish Modules to a GitHub Repository: developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md
         - How to Restrict the Movements of Nodes in a Tree: developer-guide/etendo-classic/how-to-guides/how-to-restrict-the-movements-of-nodes-in-a-tree.md
         - How to Retrieve Parents Node by Level in a Tree: developer-guide/etendo-classic/how-to-guides/how-to-retrieve-parents-node-by-level-in-a-tree.md
