@@ -121,6 +121,7 @@ Fields to note:
 
 - **Active**: checkbox to activate the knowledge base file.
 - **Type**: read-only field showing the type of file selected in the [Knowledge Base File window](#knowledge-base-file-window).
+- **Module**: Module in which this knowledge base file configuration will be exported. This field is only available with the `System Administrator` role.
 - **Alias** In case you select behaviour, `[Agent] Append the file content to the prompt`, by default it adds the file content dynamically to the end of the prompt, the alias can be used to replace the file content inside the prompt, using the wildcard @<alias>@, with the alias you define in this field. 
 
 ### Skills and Tools Tab
@@ -133,6 +134,7 @@ Fields to note:
 
 - **Skill/Tool**: The user can select any of the options available in this field, as many as necessary but one at the time.
 - **Description**: Read-only field. It shows the description of the tool, used by the agent to choose the appropriate tool for each case.
+- **Module**: Module in which this tool configuration will be exported. This field is only available with the `System Administrator` role.
 - **Active**: checkbox to activate the tool.
 
 !!!info
