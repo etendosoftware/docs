@@ -134,6 +134,7 @@ Fields to note:
 
 - **Skill/Tool**: The user can select any of the options available in this field, as many as necessary but one at the time.
 - **Description**: Read-only field. It shows the description of the tool, used by the agent to choose the appropriate tool for each case.
+- **Model**: This field appears only when the selected tool has the **Use Model** checkbox enabled in the [Skill/Tool window](#skilltool-window). It allows you to configure a specific LLM model for this tool in this agent. The model must be specified using the format `provider/modelname` (e.g., `openai/gpt-4`, `anthropic/claude-3-5-sonnet`). If left empty, a default model will be selected depending on the tool's implementation.
 - **Module**: Module in which this tool configuration will be exported. This field is only available with the `System Administrator` role.
 - **Active**: checkbox to activate the tool.
 
@@ -333,6 +334,10 @@ Fields to note:
 In this window , the user can find [available tools](../../developer-guide/etendo-copilot/available-tools/overview.md), distributed in the Copilot bundle, to be used in Copilot agents.
 
 ![](../../assets/user-guide/etendo-copilot/setup/skill-tool-window.png)
+
+Fields to note:
+
+- **Use Model**: Checkbox that indicates whether this tool requires an LLM model to function. When checked, a **Model** field will appear in the Skills and Tools tab of the Agent window, allowing you to configure a specific model for this tool in that agent.
 
 Some tools require to communicate with Etendo through WebHooks. Their configuration can be found in the Webhooks tab.
 
