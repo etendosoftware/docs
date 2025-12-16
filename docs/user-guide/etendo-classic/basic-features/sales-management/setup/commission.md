@@ -45,7 +45,8 @@ The user can define a sales commission to be used in the sales process. The head
 ![Commission's header](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission-1.png)
 
 -   **Business partner / Sales representative**: Used to create a purchase invoice or used to calculate the commission
--   **Frequency**: The process takes the orders/invoices that fits the corresponding period.
+-   **Currency**: The currency in which the commission will be calculated and paid. This is not a filter for invoices/orders - transactions in any currency will be converted to this currency for commission calculation purposes.
+-   **Frequency type**: The process takes the orders/invoices that fits the corresponding period.
 -   **Invoice product**: If an invoice is required, the new invoice will have this product.
 -   **Basis Document**: Whether the commission is calculated based on invoices or orders.
 -   **Last Run Date**: Last date when the process Generate Commission was performed.
@@ -184,34 +185,7 @@ I want to pay my sales representative 20% of the profit margin on all sales of *
     - **Multiplier Amount**: 0.20
 - **Result**: Commission = (Selling Price - Cost Price) × 20%
 
-*Example 2: Graduated margin commission*
-
-I want to pay higher commission rates on higher-margin products in the *Soft Drinks* category:
-
-- 25% commission for items with margin above €1000
-- 15% commission for items with margin between €500-€1000  
-- 10% commission for items with margin below €500
-
-**Configuration:**
-
-- In the header:
-    - Set **Basis Document** to "Invoice"
-    - Set **Basis Amount** to "Margin"
-    - Check **Cascade**
-- Line 1:
-    - **Product Category**: Soft Drinks
-    - **Subtract Amount**: 1000
-    - **Multiplier Amount**: 0.25
-- Line 2:
-    - **Product Category**: Soft Drinks
-    - **Subtract Amount**: 500
-    - **Multiplier Amount**: 0.15
-- Line 3:
-    - **Product Category**: Soft Drinks
-    - **Multiplier Amount**: 0.10
-- **Result**: Commission is calculated on the profit margin at different rates depending on the margin threshold
-
-*Example 3: Margin-based commission for specific customer segment*
+*Example 2: Margin-based commission for specific customer segment*
 
 I want to pay 18% commission on profit margins for all sales to business partners in the *Customer - Tier 2* category, but only for invoices that are fully paid.
 
@@ -235,8 +209,6 @@ A complex commission example using **Net Amount** basis with cascade functionali
 
 I want to calculate commission at 5% for business partner *Healthy Food Supermarkets, Co.*.
 
-I want to exclude *Soft Drinks* products.
-
 For 'Cola 0.5L' I want the commission to be 10%. Not 10% plus the 5% calculated in the first line. So this line will remove what was calculated previously for 'Cola 0.5L'.
 
 **Configuration:**
@@ -250,4 +222,4 @@ Finally, the result of the commission will be the combination of these three lin
 
 ---
 
-This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+This work is a derivative of [Commission](https://wiki.openbravo.com/wiki/Commission){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
