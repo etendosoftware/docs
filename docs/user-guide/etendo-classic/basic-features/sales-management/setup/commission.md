@@ -85,11 +85,6 @@ Key characteristics:
     - **Margin**: Requires accurate product costing, promotes profitability
     - The choice between these methods should align with your sales strategy and business objectives
 
-**Combining Commission Types**
-
-In complex sales scenarios, you can use the **Cascade** feature to create sophisticated commission structures that may combine different calculation methods for different products, customers, or sales scenarios within the same commission plan.
-
-
 ### Lines
 
 The user can edit the selected commission amount.
