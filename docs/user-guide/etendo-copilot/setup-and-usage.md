@@ -183,6 +183,14 @@ Fields to note:
 
 In the Knowledge Base File window, you can define the files with which the agents can interact.
 
+!!!info "Image Indexing"
+    When files are indexed in an agent's knowledge base, **image files are handled differently** from text documents:
+    
+    - **Text documents** (PDF, TXT, MD, etc.) are indexed in the main vector database for semantic search using the Knowledge Base Search tool
+    - **Image files** (PNG, JPG, JPEG, etc.) are indexed in a **separate image database** specifically designed for visual similarity search
+    - This image database is currently used by the [OCR Tool](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md) to find reference templates with visual markers that guide data extraction
+    - Each agent maintains its own image database, separate from its text knowledge base
+
 ### Header
 
 ![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-window.png)

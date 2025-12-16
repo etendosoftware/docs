@@ -144,13 +144,22 @@ The most crucial is to determine:
 !!! info
     More information about this window can be found in the [Knowledge Base File Window](../../../user-guide/etendo-copilot/setup-and-usage.md#knowledge-base-file-window) article.
 
-### Advanced settings
+!!!info "Image Files in Knowledge Base"
+    When files are indexed in an agent's knowledge base, **image files are handled separately** from text documents:
+    
+    - **Text documents** are indexed in the main vector database for semantic search
+    - **Image files** (PNG, JPG, JPEG) are indexed in a **separate image database** for visual similarity search
+    - This image database is used by tools like the [OCR Tool](../available-tools/ocr-tool.md) to find reference templates with visual markers
+    - The OCR Tool automatically searches this database to find similar reference images that guide data extraction
+    - Each agent maintains its own image database, independent from its text knowledge base
+
+### Advanced settings
 In the Knowledge Base File window, there is an advanced settings section that allows you to configure the following options in the splitting algorithm of the content of the file: 
 ![Advanced features](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-12.png)
 
 - **Skip Splitting**: Retrieves the entire document as one chunk, which is useful for small files.
-- **Max. Chunk Size**: This option allows to set the maximum size (tokens) of the chunks that will be created when the content is split. This is useful to avoid very large chunks that can cause performance issues. Depending on the file types, the splitting algorithm checks for **separators** to split the content semantically. For example, in markdown files, the splitting is done by headers, so each chunk will contain the content of a header and its subheaders. Or in the case of Java files, the splitting is done by classes, so each chunk will contain the content of a class and its methods. When the chunk size is reached, the content is split into a new chunk in the next separator found. This is useful to avoid very large chunks that can cause problems with the token limit of the model.  
-- **Chunk Overlap**: This option allows to set the overlap between chunks to avoid losing information when splitting. The overlap is the number of tokens repeated in each chunk. For example, if the chunk size is 100 and the overlap is 10, each chunk will contain 90 unique tokens and 10 repeated tokens from the previous chunk. Can be 0 if you don't want overlap between chunks.
+- **Max. Chunk Size**: This option allows you to set the maximum size (in tokens) of the chunks that will be created when the content is split. This is useful to avoid very large chunks that can cause performance issues. Depending on the file types, the splitting algorithm checks for **separators** to split the content semantically. For example, in markdown files, the splitting is done by headers, so each chunk will contain the content of a header and its subheaders. Or in the case of Java files, the splitting is done by classes, so each chunk will contain the content of a class and its methods. When the chunk size is reached, the content is split into a new chunk in the next separator found. This is useful to avoid very large chunks that can cause problems with the token limit of the model.  
+- **Chunk Overlap**: This option allows you to set the overlap between chunks to avoid losing information when splitting. The overlap is the number of tokens repeated in each chunk. For example, if the chunk size is 100 and the overlap is 10, each chunk will contain 90 unique tokens and 10 repeated tokens from the previous chunk. Can be 0 if you don't want overlap between chunks.
 
 
 ## Add Structured Outputs (JSON Schema)
