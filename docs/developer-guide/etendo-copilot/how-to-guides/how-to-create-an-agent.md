@@ -101,7 +101,7 @@ Currently, Copilot supports the following providers:
 - **OpenAI**: This provider is the default one and is the most used. It is the most versatile and has the best performance in most cases.
 - **Anthropic**: This provider is specialized in code generation. It is the best option for code-related tasks.
 - **Deepseek**: This provider is for general tasks like OpenAI, but cheaper.
-- **Ovider is for users that have their own models running in their own infrastructure. The support for this provider is in experimental phase. For more information visit, [How to Use and Run Self Hosted Models with Ollama](how-to-use-run-self-hosted-models-with-ollama.md) guide.llama (Self-hosted models)**: This pro
+- **Ollama (Self-hosted models)**: This provider is for users that have their own models running in their own infrastructure. The support for this provider is in experimental phase. For more information visit the [How to Use and Run Self Hosted Models with Ollama](how-to-use-run-self-hosted-models-with-ollama.md) guide.
 
 ### Default Model
 The default model for Etendo Copilot is `gpt-4.1` from **OpenAI**. This model is selected automatically if the agent hasn't a specific model selected.
@@ -118,9 +118,7 @@ Etendo Copilot provides a Window where you can see the available models and thei
 
 Models that support image inputs can work with images attached to the conversation. If the model does not support image inputs, it's possible to fix this by adding to the agent the `OCR Tool` that allows extracting text from images.
 
-This tool is available in the [Etendo Copilot ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack) module.
-
-The OCR Tool is a tool that allows extracting text and information from images. Maybe it's necessary to **explain** to the agent how to use it in the prompt.
+This tool is available in the [Etendo Copilot ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack) module. You may need to **explain** to the agent how to use it in the prompt.
 
 <br clear="all"> 
 
@@ -152,8 +150,110 @@ In the Knowledge Base File window, there is an advanced settings section that al
 
 - **Skip Splitting**: Retrieves the entire document as one chunk, which is useful for small files.
 - **Max. Chunk Size**: This option allows to set the maximum size (tokens) of the chunks that will be created when the content is split. This is useful to avoid very large chunks that can cause performance issues. Depending on the file types, the splitting algorithm checks for **separators** to split the content semantically. For example, in markdown files, the splitting is done by headers, so each chunk will contain the content of a header and its subheaders. Or in the case of Java files, the splitting is done by classes, so each chunk will contain the content of a class and its methods. When the chunk size is reached, the content is split into a new chunk in the next separator found. This is useful to avoid very large chunks that can cause problems with the token limit of the model.  
-- **Chunk Overlap**: This option allows to set the overlap between chunks. This is useful to avoid losing information when the content is split into chunks. The overlap is the number of tokens that are repeated in each chunk. For example, if the chunk size is 100 and the overlap is 10, each chunk will contain 90 unique tokens and 10 repeated tokens from the previous chunk. This is useful to avoid losing information when the content is split into chunks. Can be 0 if you don't want to have overlap between chunks.
+- **Chunk Overlap**: This option allows to set the overlap between chunks to avoid losing information when splitting. The overlap is the number of tokens repeated in each chunk. For example, if the chunk size is 100 and the overlap is 10, each chunk will contain 90 unique tokens and 10 repeated tokens from the previous chunk. Can be 0 if you don't want overlap between chunks.
 
+
+## Add Structured Outputs (JSON Schema)
+
+Starting in the latest release, the Agent configuration window includes a new field in the **Advanced Settings** section named **`JSON Schema for Structured Outputs`**. This field accepts a JSON Schema object which the agent will use to validate and format its responses.
+
+How to use the field:
+
+1. Open the Agent window and switch to the **Advanced Settings** tab.
+2. Locate the **`JSON Schema for Structured Outputs`** field.
+3. Paste a valid JSON Schema object into the field.
+4. Save the agent configuration and test with sample prompts.
+
+Important details:
+
+- The content must be valid JSON representing a JSON Schema. Use a JSON validator if unsure.
+- The agent will validate and attempt to format its response to match the schema.
+- If the agent fails to fully satisfy the schema, it will return a structured error describing validation issues.
+
+Example schema (Person record):
+
+```json
+{
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "email": {"type": "string", "format": "email"},
+        "department": {"type": "string"}
+    },
+    "required": ["name", "email"]
+}
+```
+
+Use cases:
+
+- Returning structured customer data for downstream processing.
+- Ensuring task extraction follows a predictable schema for integrations.
+- Producing event objects ready for ingestion by downstream systems.
+
+### Example: Multilingual Content Object (Bastian agent)
+
+Below is an example JSON Schema used in the `Bastian` agent (the Etendo wiki indexed) to return multilingual content and suggested questions.
+
+```json
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/content-object.schema.json",
+    "title": "Multilingual Content Object",
+    "description": "An object containing content in English, its Spanish translation, and related suggested questions.",
+    "type": "object",
+    "properties": {
+        "content_en": {
+            "type": "string",
+            "description": "The primary content of the object in the English language."
+        },
+        "suggested_questions": {
+            "type": "array",
+            "description": "A list of suggested questions related to the main content.",
+            "items": {
+                "type": "string",
+                "description": "A single suggested question string."
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+    },
+    "required": [
+        "content_en",
+        "suggested_questions"
+    ],
+    "additionalProperties": false
+}
+```
+
+#### Explanation of the structure:
+    - **$schema / title / description**: Metadata that documents the schema and the draft used (`draft/2020-12`).
+    - **type: object**: The response must be a JSON object.
+    - **properties**:
+        - `content_en` (string): Primary English content.
+        - `suggested_questions` (array[string]): One or more suggested question strings related to the content. `minItems: 1` enforces at least one suggestion; `uniqueItems: true` avoids duplicates.
+    - **required**: Ensures `content_en` and `suggested_questions` are always present.
+    - **additionalProperties: false**: Prevents extra fields beyond those declared; helps keep output strictly typed.
+
+    Why this schema is useful:
+
+    - Ensures the agent always returns the English text plus actionable suggested questions.
+    - Guarantees programmatic parsing without fragile text extraction.
+
+    Example usage (Bastian):
+
+    - Configure the `Bastian` agent's Advanced Settings `JSON Schema for Structured Outputs` with the schema above.
+    - Ask the agent a question like: `Summarize the Etendo installation steps for end users and suggest follow-up questions.`
+    - The agent will respond with a JSON object matching the schema.
+
+### Screenshots :
+
+- Screenshot 1 — JSON Schema field configured in the Agent Advanced Settings:
+
+    ![Screenshot - JSON Schema field configured](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/agent-json-schema-field.png)
+
+- Screenshot 2 — Example: question asked to `Bastian` and structured JSON response received:
+
+    ![Screenshot - Agent question and structured response](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/agent-bastian-response.png)
 
 ### Knowledge Base File Behavior
 
@@ -169,11 +269,11 @@ In the Knowledge Base File window, there is an advanced settings section that al
 
 !!! tip
     - **Remember the Synchronization**: After adding/modifying/deleting a knowledge base file from an Agent, its necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes.
-    - **Splitting**: We the indexation in the knowledge base file is done, the content is splitted in chunks depending of the type of the file. For example, if the file is a markdown file, the content is splitted in chunks by the headers. If the files are not large, its possible to mark as `Skip Splitting` in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.
+    - **Splitting**: When the indexation in the knowledge base file is done, the content is split into chunks depending on the type of the file. For example, if the file is a markdown file, the content is splitted in chunks by the headers. If the files are not large, its possible to mark as `Skip Splitting` in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.
 
 ### Add a Knowledge Base Example
 
-We got the example of the default Copilot agent `Bastian` that has a knowledge base file based in the Etendo Documentation from it GitHub repository. Copilot supports `.zip` format for the knowledge base file behavior, automatically extracting it and indexing the files inside.
+The default Copilot agent `Bastian` has a knowledge base file based on the Etendo Documentation from its GitHub repository. Copilot supports `.zip` format for the knowledge base file behavior, automatically extracting it and indexing the files inside.
 In this case, the `ZIP` file contains the Etendo Documentation in markdown format. The agent has the knowledge base file configured as `Remote File` and the behavior as `Add to the agent as Knowledge Base`. The agent has the following configuration:
 
 - Setting the Knowledge Base File:
@@ -234,7 +334,7 @@ To add a tool to an agent, follow these steps:
 For example, we will add a tool to the agent `Task Definition Agent` to allow to write a file with the task definition. The tool will be the `Write File Tool` that allows to write a file with the content provided. 
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-5.png)
 
-After adding the tool, the agent will have the tool available to use. The agent can use the tool to write a file with the task definition. The agent will use the tool to write the file with the task definition.
+After adding the tool, the agent will have the tool available to use. The agent can use the tool to write a file with the task definition.
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-6.png)
 
 We can check the created file:
@@ -242,7 +342,7 @@ We can check the created file:
 
 
 ## How to allow Copilot to Interact with an API or Etendo Classic?
-The most powerful and useful feature of Etendo Copilot is the ability to interact with APIs (including Etendo Classi)c. Currently the paradigm of AI agents is to automate and/or reuse what is **already done**. In other words, the utility arises from the fact that AI agents can use all the business logic that is already available.
+The most powerful and useful feature of Etendo Copilot is the ability to interact with APIs (including Etendo Classic). Currently the paradigm of AI agents is to automate and/or reuse what is **already done**. In other words, the utility arises from the fact that AI agents can use all the business logic that is already available.
 
 ### External API
 The most usual way is based on a combination of an OpenAPI Specification and a tool that allows to make requests to that API. To do this, the following steps are needed:

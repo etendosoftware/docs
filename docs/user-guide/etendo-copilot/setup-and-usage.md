@@ -79,6 +79,10 @@ Fields to note:
 - **Search Result Qty.**: This option allows you to set the number of search results in the knowledge base on which the agent will base its response. The default value is 4, but it can be changed to any value. This value is useful when the agent has a large knowledge base, and you want to increase/decrease the number of results returned by the agent.
 - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
+- **JSON Schema for Structured Outputs**: When configured, the agent will attempt to return responses that conform to the provided schema described in the JSON Schema format. This is useful for ensuring that the agent's outputs are structured and can be easily parsed or processed by other systems.
+
+
+
 
 ### Buttons
 
