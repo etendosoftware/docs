@@ -449,7 +449,7 @@ nav:
         - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
         - How to Create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md
         - How to Create a Report: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md
-#        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
+        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport.md
         - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
         - How to Create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
         - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource.md
@@ -484,6 +484,7 @@ nav:
         - How to Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler.md
+        - How to Implement a New Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-new-discount-and-promotion-type.md
         - How to Implement Create New in Selector: developer-guide/etendo-classic/how-to-guides/how-to-implement-create-new-in-selector.md
         - How to Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-ficextension-hook.md
         - How to Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-jsondataserviceextraactions-hook.md
