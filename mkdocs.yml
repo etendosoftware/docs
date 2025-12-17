@@ -247,7 +247,9 @@ nav:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/sales-management/getting-started.md
           - Transactions: user-guide/etendo-classic/basic-features/sales-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md
-          - Setup: user-guide/etendo-classic/basic-features/sales-management/setup.md 
+          - Setup: 
+            - Overview: user-guide/etendo-classic/basic-features/sales-management/setup/setup.md 
+            - Commission: user-guide/etendo-classic/basic-features/sales-management/setup/commission.md
         - Project and Service Management:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/project-and-service-management/getting-started.md
           - Transactions: user-guide/etendo-classic/basic-features/project-and-service-management/transactions.md

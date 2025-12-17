@@ -1458,7 +1458,7 @@ When the process is finished, a message is shown with the total number of create
 
 In this section, the user can create commissions and create corresponding invoices.
 
-This window is not editable since **commission** records are calculated in the [Commission](./setup.md#commission) window, however this window allows to create an invoice for the commissions previously calculated.
+This window is not editable since **commission** records are calculated in the [Commission](./setup/commission.md#commission) window, however this window allows to create an invoice for the commissions previously calculated.
 
 This window needs to be read as follows:
 
@@ -1470,7 +1470,7 @@ This window needs to be read as follows:
 
 From this window it is possible to visualize the commissions created. 
 
-![Commision payment header](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission3.png)
+![Commision payment header](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission-payment-1.png)
 
 
 - **Commission** field indicates which is the defined commission and therefore the conditions used to calculate the commission amount.
@@ -1484,7 +1484,7 @@ The user can edit individual sales order lines that yielded a selected commissio
 
 **Amounts** tab shows the amount calculated per each line defined in the commission  window.
 
-![Commision payment amount tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission4.png)
+![Commision payment amount tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission-payment-2.png)
 
 For example if the commission has two lines:
 
@@ -1511,7 +1511,7 @@ Create and edit the calculation and invoicing of sales commission.
 
 **Details** tab shows all the sales/invoice lines took into account to calculate the corresponding commission line.
 
-![Commision details tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission5.png)
+![Commision details tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission-payment-3.png)
 
 Fields to note:
 
