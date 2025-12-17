@@ -46,7 +46,7 @@ The key project and service management concepts mentioned in this chapter are:
 
 The following is entered in the application for the project and service management module:
 
-- [**Project Dimension**](../financial-management/accounting/setup.md#general-ledger-configuration#dimension): in order to be able to select projects on orders and invoices, the project dimension is created as a new record with type Project in the Dimension tab of the [General Ledger Configuration](../financial-management/accounting/setup.md#general-ledger-configuration) window.
+- [**Project Dimension**](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab): in order to be able to select projects on orders and invoices, the project dimension is created as a new record with type Project in the Dimension tab of the [General Ledger Configuration](../financial-management/accounting/setup/general-ledger-configuration.md) window.
 
 - [**Product**](../master-data-management/master-data.md#product):
     - **Service** and **Expense Type** Products Types: for the expense sheet products with product type Service (for time) and product type Expense Type (for expenses) are set up.

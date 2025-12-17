@@ -242,7 +242,7 @@ Fields to note:
     You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
     
     !!! info
-        For more information, visit [Business Partner Tax Category](../financial-management/accounting/setup.md#business-partner-tax-category).
+        For more information, visit [Business Partner Tax Category](../financial-management/accounting/setup/business-partner-tax-category.md).
 
 - **Maturity Date 1**: It indicates the day of the month, the first deadline, that invoices are due.
 
@@ -320,7 +320,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
 - **Tax Category**: You can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
     
     !!! info
-        For more information, visit [Tax Category](../financial-management/accounting/setup.md#tax-category).
+        For more information, visit [Tax Category](../financial-management/accounting/setup/tax-category.md).
 
 - **On Hold**: This checkbox allows blocking a vendor, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup which can be changed as required:
 

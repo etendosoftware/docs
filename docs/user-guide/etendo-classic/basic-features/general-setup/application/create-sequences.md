@@ -24,7 +24,7 @@ When selecting the **organization** and executing the process, Etendo creates th
 
 :material-menu: `Financial Management`>`Accounting`>`Setup`>`Document Sequence`
 
-After that, in the [Document Sequence](../../financial-management/accounting/setup.md#document-sequence) window the user can see and edit the sequences generated.
+After that, in the [Document Sequence](../../financial-management/accounting/setup/document-sequence.md) window the user can see and edit the sequences generated.
 
 <figure markdown="span">
   ![sequenceslist.png](../../../../../assets/legacy/technicaldocumentation/platform/sequenceslist.png)

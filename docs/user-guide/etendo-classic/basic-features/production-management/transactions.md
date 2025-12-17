@@ -558,7 +558,7 @@ The Calculate Standard Costs process is run to generate the standard (= theoreti
 
 Cost information is set up in several screens:
 
-- in the [Process Plan](setup.md#process-plan), the use of the [Cost center](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#cost-center) is defined
+- in the [Process Plan](setup.md#process-plan), the use of the [Cost center](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center.md) is defined
 - in the cost center, the following cost is defined:
   - **Employee information**: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the [Salary Category](#salary-category--employee) screen.
   - **Machine information**: the machine and usage information is entered in the cost center screen. The machine cost is entered in the [Machine](setup.md#machine_1) screen.

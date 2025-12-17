@@ -46,8 +46,8 @@ To include this data, there is a checkbox named *Include Accounting* which oblig
 
 If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
 
-  - a [Fiscal Calendar](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#fiscal-calendar) which can be shared by all the *Legal with Accounting* organizations types which belongs to that Client and 
-  - an [Account Tree](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-tree) or *Chart of Accounts* and a [General Ledger configuration](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#general-ledger-configuration) which is shared by all the organizations created within the Client.
+  - a [Fiscal Calendar](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar.md) which can be shared by all the *Legal with Accounting* organizations types which belongs to that Client and 
+  - an [Account Tree](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree.md) or *Chart of Accounts* and a [General Ledger configuration](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md) which is shared by all the organizations created within the Client.
 
 The *General Ledger Configuration* and the *Chart of Accounts* created by default can be later on customized. 
 
@@ -55,11 +55,11 @@ The *General Ledger Configuration* and the *Chart of Accounts* created by defaul
     For more information, read [General Setup](../../../user-guide/etendo-classic/basic-features/general-setup/getting-started.md). 
 
 
-The *General Ledger Configuration* is linked to the *Account Tree* as the *Account* is a mandatory [dimension](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension) of the general ledger configuration.
+The *General Ledger Configuration* is linked to the *Account Tree* as the *Account* is a mandatory [dimension](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab) of the general ledger configuration.
 
 ### Accounting file 
 
-Etendo also allows choosing the accounting `CSV` file with the corresponding chart of accounts ([Account Tree](../../../user-guide/etendo-classic//basic-features/financial-management/accounting/setup.md#account-tree)) to upload into the system from the field *Accounting File*. 
+Etendo also allows choosing the accounting `CSV` file with the corresponding chart of accounts ([Account Tree](../../../user-guide/etendo-classic//basic-features/financial-management/accounting/setup/account-tree.mdaccount-tree)) to upload into the system from the field *Accounting File*. 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
 
