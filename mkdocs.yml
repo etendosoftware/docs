@@ -281,7 +281,7 @@ nav:
               - Cost Center: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center.md
               - ABC Activity: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity.md
               - Accounting Templates: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates.md
-              - Balance Sheet and P/L Structure: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure.md
+              - Balance Sheet and P/L Structure Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup.md
           - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
