@@ -1,25 +1,21 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+---
+title: How to Use an External Connection Pool
+tags: 
+    - Use
+    - External
+    - Connection
+    - Pool 
+    - Howto
 
-######  Toolbox
+status: beta
+---
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
+# How to Use an External Connection Pool
 
-######  Search
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+## Overview
 
 #  How To Create a Trigger
 
